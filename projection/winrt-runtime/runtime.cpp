@@ -168,10 +168,10 @@ static PyObject* PyType_FromMetaclass(
  * @param base_type The base type, a tuple of base types or nullptr to use the base
  * slot.
  * @param metaclass Optional metaclass for the type.
- * @returns 0 on success or -1 on error.
+ * @returns New reference to the type object on success or nullptr on error.
  */
 
-int py::register_python_type(
+PyObject* py::register_python_type(
     PyObject* module,
     PyType_Spec* type_spec,
     PyObject* base_type,
@@ -182,16 +182,16 @@ int py::register_python_type(
 
     if (!type_object)
     {
-        return -1;
+        return nullptr;
     }
 
     if (PyModule_AddType(module, reinterpret_cast<PyTypeObject*>(type_object.get()))
         == -1)
     {
-        return -1;
+        return nullptr;
     }
 
-    return 0;
+    return type_object.detach();
 }
 
 /**

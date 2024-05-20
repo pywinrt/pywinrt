@@ -364,7 +364,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_identity(void) noex
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EnterpriseKeyCredentialRegistrationInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle EnterpriseKeyCredentialRegistrationInfo_type{py::register_python_type(module.get(), &type_spec_EnterpriseKeyCredentialRegistrationInfo, object_bases.get(), nullptr)};
+    if (!EnterpriseKeyCredentialRegistrationInfo_type)
     {
         return nullptr;
     }
@@ -375,7 +376,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_identity(void) noex
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EnterpriseKeyCredentialRegistrationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EnterpriseKeyCredentialRegistrationManager_Static.get())) == -1)
+    py::pyobj_handle EnterpriseKeyCredentialRegistrationManager_type{py::register_python_type(module.get(), &type_spec_EnterpriseKeyCredentialRegistrationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EnterpriseKeyCredentialRegistrationManager_Static.get()))};
+    if (!EnterpriseKeyCredentialRegistrationManager_type)
     {
         return nullptr;
     }

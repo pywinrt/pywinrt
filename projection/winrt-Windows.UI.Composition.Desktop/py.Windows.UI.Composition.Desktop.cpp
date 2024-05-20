@@ -140,7 +140,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_desktop(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DesktopWindowTarget, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DesktopWindowTarget_type{py::register_python_type(module.get(), &type_spec_DesktopWindowTarget, object_bases.get(), nullptr)};
+    if (!DesktopWindowTarget_type)
     {
         return nullptr;
     }

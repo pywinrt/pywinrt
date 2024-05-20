@@ -1073,27 +1073,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_identity_core(void)
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorAuthenticationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MicrosoftAccountMultiFactorAuthenticationManager_Static.get())) == -1)
+    py::pyobj_handle MicrosoftAccountMultiFactorAuthenticationManager_type{py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorAuthenticationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MicrosoftAccountMultiFactorAuthenticationManager_Static.get()))};
+    if (!MicrosoftAccountMultiFactorAuthenticationManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorGetSessionsResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MicrosoftAccountMultiFactorGetSessionsResult_type{py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorGetSessionsResult, object_bases.get(), nullptr)};
+    if (!MicrosoftAccountMultiFactorGetSessionsResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorOneTimeCodedInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MicrosoftAccountMultiFactorOneTimeCodedInfo_type{py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorOneTimeCodedInfo, object_bases.get(), nullptr)};
+    if (!MicrosoftAccountMultiFactorOneTimeCodedInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorSessionInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MicrosoftAccountMultiFactorSessionInfo_type{py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorSessionInfo, object_bases.get(), nullptr)};
+    if (!MicrosoftAccountMultiFactorSessionInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_type{py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo, object_bases.get(), nullptr)};
+    if (!MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_type)
     {
         return nullptr;
     }

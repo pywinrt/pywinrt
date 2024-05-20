@@ -3337,27 +3337,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdatatasks(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataTask, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataTask_type{py::register_python_type(module.get(), &type_spec_UserDataTask, object_bases.get(), nullptr)};
+    if (!UserDataTask_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataTaskBatch, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataTaskBatch_type{py::register_python_type(module.get(), &type_spec_UserDataTaskBatch, object_bases.get(), nullptr)};
+    if (!UserDataTaskBatch_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataTaskList, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataTaskList_type{py::register_python_type(module.get(), &type_spec_UserDataTaskList, object_bases.get(), nullptr)};
+    if (!UserDataTaskList_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataTaskListLimitedWriteOperations, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataTaskListLimitedWriteOperations_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListLimitedWriteOperations, object_bases.get(), nullptr)};
+    if (!UserDataTaskListLimitedWriteOperations_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataTaskListSyncManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataTaskListSyncManager_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListSyncManager, object_bases.get(), nullptr)};
+    if (!UserDataTaskListSyncManager_type)
     {
         return nullptr;
     }
@@ -3368,32 +3373,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdatatasks(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataTaskManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserDataTaskManager_Static.get())) == -1)
+    py::pyobj_handle UserDataTaskManager_type{py::register_python_type(module.get(), &type_spec_UserDataTaskManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserDataTaskManager_Static.get()))};
+    if (!UserDataTaskManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataTaskQueryOptions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataTaskQueryOptions_type{py::register_python_type(module.get(), &type_spec_UserDataTaskQueryOptions, object_bases.get(), nullptr)};
+    if (!UserDataTaskQueryOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataTaskReader, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataTaskReader_type{py::register_python_type(module.get(), &type_spec_UserDataTaskReader, object_bases.get(), nullptr)};
+    if (!UserDataTaskReader_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataTaskRecurrenceProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataTaskRecurrenceProperties_type{py::register_python_type(module.get(), &type_spec_UserDataTaskRecurrenceProperties, object_bases.get(), nullptr)};
+    if (!UserDataTaskRecurrenceProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataTaskRegenerationProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataTaskRegenerationProperties_type{py::register_python_type(module.get(), &type_spec_UserDataTaskRegenerationProperties, object_bases.get(), nullptr)};
+    if (!UserDataTaskRegenerationProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataTaskStore, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataTaskStore_type{py::register_python_type(module.get(), &type_spec_UserDataTaskStore, object_bases.get(), nullptr)};
+    if (!UserDataTaskStore_type)
     {
         return nullptr;
     }

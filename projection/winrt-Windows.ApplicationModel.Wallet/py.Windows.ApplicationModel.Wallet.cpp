@@ -3038,22 +3038,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_wallet(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WalletBarcode, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WalletBarcode_type{py::register_python_type(module.get(), &type_spec_WalletBarcode, object_bases.get(), nullptr)};
+    if (!WalletBarcode_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WalletItem, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WalletItem_type{py::register_python_type(module.get(), &type_spec_WalletItem, object_bases.get(), nullptr)};
+    if (!WalletItem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WalletItemCustomProperty, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WalletItemCustomProperty_type{py::register_python_type(module.get(), &type_spec_WalletItemCustomProperty, object_bases.get(), nullptr)};
+    if (!WalletItemCustomProperty_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WalletItemStore, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WalletItemStore_type{py::register_python_type(module.get(), &type_spec_WalletItemStore, object_bases.get(), nullptr)};
+    if (!WalletItemStore_type)
     {
         return nullptr;
     }
@@ -3064,22 +3068,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_wallet(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WalletManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WalletManager_Static.get())) == -1)
+    py::pyobj_handle WalletManager_type{py::register_python_type(module.get(), &type_spec_WalletManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WalletManager_Static.get()))};
+    if (!WalletManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WalletRelevantLocation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WalletRelevantLocation_type{py::register_python_type(module.get(), &type_spec_WalletRelevantLocation, object_bases.get(), nullptr)};
+    if (!WalletRelevantLocation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WalletTransaction, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WalletTransaction_type{py::register_python_type(module.get(), &type_spec_WalletTransaction, object_bases.get(), nullptr)};
+    if (!WalletTransaction_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WalletVerb, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WalletVerb_type{py::register_python_type(module.get(), &type_spec_WalletVerb, object_bases.get(), nullptr)};
+    if (!WalletVerb_type)
     {
         return nullptr;
     }

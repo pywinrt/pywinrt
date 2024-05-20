@@ -773,7 +773,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_datetimeformatting(void) noex
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DateTimeFormatter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DateTimeFormatter_Static.get())) == -1)
+    py::pyobj_handle DateTimeFormatter_type{py::register_python_type(module.get(), &type_spec_DateTimeFormatter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DateTimeFormatter_Static.get()))};
+    if (!DateTimeFormatter_type)
     {
         return nullptr;
     }

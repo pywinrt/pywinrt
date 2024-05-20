@@ -1463,7 +1463,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreIncrementalInkStroke, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreIncrementalInkStroke_type{py::register_python_type(module.get(), &type_spec_CoreIncrementalInkStroke, object_bases.get(), nullptr)};
+    if (!CoreIncrementalInkStroke_type)
     {
         return nullptr;
     }
@@ -1474,17 +1475,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreInkIndependentInputSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreInkIndependentInputSource_Static.get())) == -1)
+    py::pyobj_handle CoreInkIndependentInputSource_type{py::register_python_type(module.get(), &type_spec_CoreInkIndependentInputSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreInkIndependentInputSource_Static.get()))};
+    if (!CoreInkIndependentInputSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreInkPresenterHost, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreInkPresenterHost_type{py::register_python_type(module.get(), &type_spec_CoreInkPresenterHost, object_bases.get(), nullptr)};
+    if (!CoreInkPresenterHost_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWetStrokeUpdateEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWetStrokeUpdateEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWetStrokeUpdateEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWetStrokeUpdateEventArgs_type)
     {
         return nullptr;
     }
@@ -1495,7 +1499,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWetStrokeUpdateSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreWetStrokeUpdateSource_Static.get())) == -1)
+    py::pyobj_handle CoreWetStrokeUpdateSource_type{py::register_python_type(module.get(), &type_spec_CoreWetStrokeUpdateSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreWetStrokeUpdateSource_Static.get()))};
+    if (!CoreWetStrokeUpdateSource_type)
     {
         return nullptr;
     }

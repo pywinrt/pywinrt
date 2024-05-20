@@ -3647,7 +3647,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ColorHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorHelper_Static.get())) == -1)
+    py::pyobj_handle ColorHelper_type{py::register_python_type(module.get(), &type_spec_ColorHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorHelper_Static.get()))};
+    if (!ColorHelper_type)
     {
         return nullptr;
     }
@@ -3658,27 +3659,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Colors, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Colors_Static.get())) == -1)
+    py::pyobj_handle Colors_type{py::register_python_type(module.get(), &type_spec_Colors, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Colors_Static.get()))};
+    if (!Colors_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UIContentRoot, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UIContentRoot_type{py::register_python_type(module.get(), &type_spec_UIContentRoot, object_bases.get(), nullptr)};
+    if (!UIContentRoot_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UIContext, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UIContext_type{py::register_python_type(module.get(), &type_spec_UIContext, object_bases.get(), nullptr)};
+    if (!UIContext_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Color, nullptr, nullptr) == -1)
+    py::pyobj_handle Color_type{py::register_python_type(module.get(), &type_spec_Color, nullptr, nullptr)};
+    if (!Color_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowId, nullptr, nullptr) == -1)
+    py::pyobj_handle WindowId_type{py::register_python_type(module.get(), &type_spec_WindowId, nullptr, nullptr)};
+    if (!WindowId_type)
     {
         return nullptr;
     }

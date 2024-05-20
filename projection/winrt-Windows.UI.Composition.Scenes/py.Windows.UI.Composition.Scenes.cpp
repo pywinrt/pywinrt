@@ -4660,27 +4660,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_scenes(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneBoundingBox, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SceneBoundingBox_type{py::register_python_type(module.get(), &type_spec_SceneBoundingBox, object_bases.get(), nullptr)};
+    if (!SceneBoundingBox_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneComponent, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SceneComponent_type{py::register_python_type(module.get(), &type_spec_SceneComponent, object_bases.get(), nullptr)};
+    if (!SceneComponent_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneComponentCollection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SceneComponentCollection_type{py::register_python_type(module.get(), &type_spec_SceneComponentCollection, object_bases.get(), nullptr)};
+    if (!SceneComponentCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneMaterial, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SceneMaterial_type{py::register_python_type(module.get(), &type_spec_SceneMaterial, object_bases.get(), nullptr)};
+    if (!SceneMaterial_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneMaterialInput, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SceneMaterialInput_type{py::register_python_type(module.get(), &type_spec_SceneMaterialInput, object_bases.get(), nullptr)};
+    if (!SceneMaterialInput_type)
     {
         return nullptr;
     }
@@ -4691,12 +4696,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_scenes(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneMesh, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMesh_Static.get())) == -1)
+    py::pyobj_handle SceneMesh_type{py::register_python_type(module.get(), &type_spec_SceneMesh, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMesh_Static.get()))};
+    if (!SceneMesh_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneMeshMaterialAttributeMap, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SceneMeshMaterialAttributeMap_type{py::register_python_type(module.get(), &type_spec_SceneMeshMaterialAttributeMap, object_bases.get(), nullptr)};
+    if (!SceneMeshMaterialAttributeMap_type)
     {
         return nullptr;
     }
@@ -4707,7 +4714,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_scenes(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneMeshRendererComponent, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMeshRendererComponent_Static.get())) == -1)
+    py::pyobj_handle SceneMeshRendererComponent_type{py::register_python_type(module.get(), &type_spec_SceneMeshRendererComponent, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMeshRendererComponent_Static.get()))};
+    if (!SceneMeshRendererComponent_type)
     {
         return nullptr;
     }
@@ -4718,12 +4726,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_scenes(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneMetallicRoughnessMaterial, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMetallicRoughnessMaterial_Static.get())) == -1)
+    py::pyobj_handle SceneMetallicRoughnessMaterial_type{py::register_python_type(module.get(), &type_spec_SceneMetallicRoughnessMaterial, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMetallicRoughnessMaterial_Static.get()))};
+    if (!SceneMetallicRoughnessMaterial_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneModelTransform, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SceneModelTransform_type{py::register_python_type(module.get(), &type_spec_SceneModelTransform, object_bases.get(), nullptr)};
+    if (!SceneModelTransform_type)
     {
         return nullptr;
     }
@@ -4734,27 +4744,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_scenes(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneNode, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneNode_Static.get())) == -1)
+    py::pyobj_handle SceneNode_type{py::register_python_type(module.get(), &type_spec_SceneNode, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneNode_Static.get()))};
+    if (!SceneNode_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneNodeCollection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SceneNodeCollection_type{py::register_python_type(module.get(), &type_spec_SceneNodeCollection, object_bases.get(), nullptr)};
+    if (!SceneNodeCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneObject, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SceneObject_type{py::register_python_type(module.get(), &type_spec_SceneObject, object_bases.get(), nullptr)};
+    if (!SceneObject_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScenePbrMaterial, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ScenePbrMaterial_type{py::register_python_type(module.get(), &type_spec_ScenePbrMaterial, object_bases.get(), nullptr)};
+    if (!ScenePbrMaterial_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneRendererComponent, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SceneRendererComponent_type{py::register_python_type(module.get(), &type_spec_SceneRendererComponent, object_bases.get(), nullptr)};
+    if (!SceneRendererComponent_type)
     {
         return nullptr;
     }
@@ -4765,7 +4780,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_scenes(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneSurfaceMaterialInput, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneSurfaceMaterialInput_Static.get())) == -1)
+    py::pyobj_handle SceneSurfaceMaterialInput_type{py::register_python_type(module.get(), &type_spec_SceneSurfaceMaterialInput, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneSurfaceMaterialInput_Static.get()))};
+    if (!SceneSurfaceMaterialInput_type)
     {
         return nullptr;
     }
@@ -4776,7 +4792,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_scenes(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneVisual, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneVisual_Static.get())) == -1)
+    py::pyobj_handle SceneVisual_type{py::register_python_type(module.get(), &type_spec_SceneVisual, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneVisual_Static.get()))};
+    if (!SceneVisual_type)
     {
         return nullptr;
     }

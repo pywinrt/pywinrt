@@ -2838,7 +2838,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_xboxlive(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveDeviceAddress, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveDeviceAddress_Static.get())) == -1)
+    py::pyobj_handle XboxLiveDeviceAddress_type{py::register_python_type(module.get(), &type_spec_XboxLiveDeviceAddress, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveDeviceAddress_Static.get()))};
+    if (!XboxLiveDeviceAddress_type)
     {
         return nullptr;
     }
@@ -2849,17 +2850,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_xboxlive(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPair, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveEndpointPair_Static.get())) == -1)
+    py::pyobj_handle XboxLiveEndpointPair_type{py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPair, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveEndpointPair_Static.get()))};
+    if (!XboxLiveEndpointPair_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPairCreationResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle XboxLiveEndpointPairCreationResult_type{py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPairCreationResult, object_bases.get(), nullptr)};
+    if (!XboxLiveEndpointPairCreationResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPairStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle XboxLiveEndpointPairStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPairStateChangedEventArgs, object_bases.get(), nullptr)};
+    if (!XboxLiveEndpointPairStateChangedEventArgs_type)
     {
         return nullptr;
     }
@@ -2870,12 +2874,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_xboxlive(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPairTemplate, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveEndpointPairTemplate_Static.get())) == -1)
+    py::pyobj_handle XboxLiveEndpointPairTemplate_type{py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPairTemplate, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveEndpointPairTemplate_Static.get()))};
+    if (!XboxLiveEndpointPairTemplate_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveInboundEndpointPairCreatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle XboxLiveInboundEndpointPairCreatedEventArgs_type{py::register_python_type(module.get(), &type_spec_XboxLiveInboundEndpointPairCreatedEventArgs, object_bases.get(), nullptr)};
+    if (!XboxLiveInboundEndpointPairCreatedEventArgs_type)
     {
         return nullptr;
     }
@@ -2886,17 +2892,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_xboxlive(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveQualityOfServiceMeasurement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveQualityOfServiceMeasurement_Static.get())) == -1)
+    py::pyobj_handle XboxLiveQualityOfServiceMeasurement_type{py::register_python_type(module.get(), &type_spec_XboxLiveQualityOfServiceMeasurement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveQualityOfServiceMeasurement_Static.get()))};
+    if (!XboxLiveQualityOfServiceMeasurement_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveQualityOfServiceMetricResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle XboxLiveQualityOfServiceMetricResult_type{py::register_python_type(module.get(), &type_spec_XboxLiveQualityOfServiceMetricResult, object_bases.get(), nullptr)};
+    if (!XboxLiveQualityOfServiceMetricResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveQualityOfServicePrivatePayloadResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle XboxLiveQualityOfServicePrivatePayloadResult_type{py::register_python_type(module.get(), &type_spec_XboxLiveQualityOfServicePrivatePayloadResult, object_bases.get(), nullptr)};
+    if (!XboxLiveQualityOfServicePrivatePayloadResult_type)
     {
         return nullptr;
     }

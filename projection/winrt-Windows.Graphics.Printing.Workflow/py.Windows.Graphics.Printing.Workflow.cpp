@@ -4596,147 +4596,176 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_workflow(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowBackgroundSession, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowBackgroundSession_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowBackgroundSession, object_bases.get(), nullptr)};
+    if (!PrintWorkflowBackgroundSession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowBackgroundSetupRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowBackgroundSetupRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowBackgroundSetupRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!PrintWorkflowBackgroundSetupRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowConfiguration, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowConfiguration_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowConfiguration, object_bases.get(), nullptr)};
+    if (!PrintWorkflowConfiguration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowForegroundSession, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowForegroundSession_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowForegroundSession, object_bases.get(), nullptr)};
+    if (!PrintWorkflowForegroundSession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowForegroundSetupRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowForegroundSetupRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowForegroundSetupRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!PrintWorkflowForegroundSetupRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowJobActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowJobActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowJobActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!PrintWorkflowJobActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowJobBackgroundSession, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowJobBackgroundSession_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowJobBackgroundSession, object_bases.get(), nullptr)};
+    if (!PrintWorkflowJobBackgroundSession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowJobNotificationEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowJobNotificationEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowJobNotificationEventArgs, object_bases.get(), nullptr)};
+    if (!PrintWorkflowJobNotificationEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowJobStartingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowJobStartingEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowJobStartingEventArgs, object_bases.get(), nullptr)};
+    if (!PrintWorkflowJobStartingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowJobTriggerDetails, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowJobTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowJobTriggerDetails, object_bases.get(), nullptr)};
+    if (!PrintWorkflowJobTriggerDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowJobUISession, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowJobUISession_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowJobUISession, object_bases.get(), nullptr)};
+    if (!PrintWorkflowJobUISession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowObjectModelSourceFileContent, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowObjectModelSourceFileContent_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowObjectModelSourceFileContent, object_bases.get(), nullptr)};
+    if (!PrintWorkflowObjectModelSourceFileContent_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowObjectModelTargetPackage, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowObjectModelTargetPackage_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowObjectModelTargetPackage, object_bases.get(), nullptr)};
+    if (!PrintWorkflowObjectModelTargetPackage_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowPdlConverter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowPdlConverter_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowPdlConverter, object_bases.get(), nullptr)};
+    if (!PrintWorkflowPdlConverter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowPdlDataAvailableEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowPdlDataAvailableEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowPdlDataAvailableEventArgs, object_bases.get(), nullptr)};
+    if (!PrintWorkflowPdlDataAvailableEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowPdlModificationRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowPdlModificationRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowPdlModificationRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!PrintWorkflowPdlModificationRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowPdlSourceContent, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowPdlSourceContent_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowPdlSourceContent, object_bases.get(), nullptr)};
+    if (!PrintWorkflowPdlSourceContent_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowPdlTargetStream, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowPdlTargetStream_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowPdlTargetStream, object_bases.get(), nullptr)};
+    if (!PrintWorkflowPdlTargetStream_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowPrinterJob, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowPrinterJob_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowPrinterJob, object_bases.get(), nullptr)};
+    if (!PrintWorkflowPrinterJob_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowSourceContent, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowSourceContent_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowSourceContent, object_bases.get(), nullptr)};
+    if (!PrintWorkflowSourceContent_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowSpoolStreamContent, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowSpoolStreamContent_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowSpoolStreamContent, object_bases.get(), nullptr)};
+    if (!PrintWorkflowSpoolStreamContent_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowStreamTarget, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowStreamTarget_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowStreamTarget, object_bases.get(), nullptr)};
+    if (!PrintWorkflowStreamTarget_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowSubmittedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowSubmittedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowSubmittedEventArgs, object_bases.get(), nullptr)};
+    if (!PrintWorkflowSubmittedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowSubmittedOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowSubmittedOperation_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowSubmittedOperation, object_bases.get(), nullptr)};
+    if (!PrintWorkflowSubmittedOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowTarget, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowTarget_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowTarget, object_bases.get(), nullptr)};
+    if (!PrintWorkflowTarget_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowTriggerDetails, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowTriggerDetails, object_bases.get(), nullptr)};
+    if (!PrintWorkflowTriggerDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowUIActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowUIActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowUIActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!PrintWorkflowUIActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowUILauncher, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowUILauncher_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowUILauncher, object_bases.get(), nullptr)};
+    if (!PrintWorkflowUILauncher_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintWorkflowXpsDataAvailableEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintWorkflowXpsDataAvailableEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintWorkflowXpsDataAvailableEventArgs, object_bases.get(), nullptr)};
+    if (!PrintWorkflowXpsDataAvailableEventArgs_type)
     {
         return nullptr;
     }

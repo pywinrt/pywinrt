@@ -148,7 +148,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InputActivationListenerPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputActivationListenerPreview_Static.get())) == -1)
+    py::pyobj_handle InputActivationListenerPreview_type{py::register_python_type(module.get(), &type_spec_InputActivationListenerPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputActivationListenerPreview_Static.get()))};
+    if (!InputActivationListenerPreview_type)
     {
         return nullptr;
     }

@@ -1230,32 +1230,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core_animationmetrics(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AnimationDescription, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AnimationDescription_type{py::register_python_type(module.get(), &type_spec_AnimationDescription, object_bases.get(), nullptr)};
+    if (!AnimationDescription_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OpacityAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle OpacityAnimation_type{py::register_python_type(module.get(), &type_spec_OpacityAnimation, object_bases.get(), nullptr)};
+    if (!OpacityAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PropertyAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PropertyAnimation_type{py::register_python_type(module.get(), &type_spec_PropertyAnimation, object_bases.get(), nullptr)};
+    if (!PropertyAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScaleAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ScaleAnimation_type{py::register_python_type(module.get(), &type_spec_ScaleAnimation, object_bases.get(), nullptr)};
+    if (!ScaleAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TranslationAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle TranslationAnimation_type{py::register_python_type(module.get(), &type_spec_TranslationAnimation, object_bases.get(), nullptr)};
+    if (!TranslationAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPropertyAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IPropertyAnimation_type{py::register_python_type(module.get(), &type_spec_IPropertyAnimation, object_bases.get(), nullptr)};
+    if (!IPropertyAnimation_type)
     {
         return nullptr;
     }

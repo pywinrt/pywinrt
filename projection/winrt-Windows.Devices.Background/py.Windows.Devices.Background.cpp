@@ -289,12 +289,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_background(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DeviceServicingDetails, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DeviceServicingDetails_type{py::register_python_type(module.get(), &type_spec_DeviceServicingDetails, object_bases.get(), nullptr)};
+    if (!DeviceServicingDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DeviceUseDetails, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DeviceUseDetails_type{py::register_python_type(module.get(), &type_spec_DeviceUseDetails, object_bases.get(), nullptr)};
+    if (!DeviceUseDetails_type)
     {
         return nullptr;
     }

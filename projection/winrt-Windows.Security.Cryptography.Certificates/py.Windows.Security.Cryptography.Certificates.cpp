@@ -6741,12 +6741,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Certificate, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle Certificate_type{py::register_python_type(module.get(), &type_spec_Certificate, object_bases.get(), nullptr)};
+    if (!Certificate_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CertificateChain, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CertificateChain_type{py::register_python_type(module.get(), &type_spec_CertificateChain, object_bases.get(), nullptr)};
+    if (!CertificateChain_type)
     {
         return nullptr;
     }
@@ -6757,32 +6759,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CertificateEnrollmentManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CertificateEnrollmentManager_Static.get())) == -1)
+    py::pyobj_handle CertificateEnrollmentManager_type{py::register_python_type(module.get(), &type_spec_CertificateEnrollmentManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CertificateEnrollmentManager_Static.get()))};
+    if (!CertificateEnrollmentManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CertificateExtension, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CertificateExtension_type{py::register_python_type(module.get(), &type_spec_CertificateExtension, object_bases.get(), nullptr)};
+    if (!CertificateExtension_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CertificateKeyUsages, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CertificateKeyUsages_type{py::register_python_type(module.get(), &type_spec_CertificateKeyUsages, object_bases.get(), nullptr)};
+    if (!CertificateKeyUsages_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CertificateQuery, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CertificateQuery_type{py::register_python_type(module.get(), &type_spec_CertificateQuery, object_bases.get(), nullptr)};
+    if (!CertificateQuery_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CertificateRequestProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CertificateRequestProperties_type{py::register_python_type(module.get(), &type_spec_CertificateRequestProperties, object_bases.get(), nullptr)};
+    if (!CertificateRequestProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CertificateStore, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CertificateStore_type{py::register_python_type(module.get(), &type_spec_CertificateStore, object_bases.get(), nullptr)};
+    if (!CertificateStore_type)
     {
         return nullptr;
     }
@@ -6793,17 +6801,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CertificateStores, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CertificateStores_Static.get())) == -1)
+    py::pyobj_handle CertificateStores_type{py::register_python_type(module.get(), &type_spec_CertificateStores, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CertificateStores_Static.get()))};
+    if (!CertificateStores_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ChainBuildingParameters, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ChainBuildingParameters_type{py::register_python_type(module.get(), &type_spec_ChainBuildingParameters, object_bases.get(), nullptr)};
+    if (!ChainBuildingParameters_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ChainValidationParameters, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ChainValidationParameters_type{py::register_python_type(module.get(), &type_spec_ChainValidationParameters, object_bases.get(), nullptr)};
+    if (!ChainValidationParameters_type)
     {
         return nullptr;
     }
@@ -6814,7 +6825,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CmsAttachedSignature, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CmsAttachedSignature_Static.get())) == -1)
+    py::pyobj_handle CmsAttachedSignature_type{py::register_python_type(module.get(), &type_spec_CmsAttachedSignature, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CmsAttachedSignature_Static.get()))};
+    if (!CmsAttachedSignature_type)
     {
         return nullptr;
     }
@@ -6825,17 +6837,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CmsDetachedSignature, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CmsDetachedSignature_Static.get())) == -1)
+    py::pyobj_handle CmsDetachedSignature_type{py::register_python_type(module.get(), &type_spec_CmsDetachedSignature, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CmsDetachedSignature_Static.get()))};
+    if (!CmsDetachedSignature_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CmsSignerInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CmsSignerInfo_type{py::register_python_type(module.get(), &type_spec_CmsSignerInfo, object_bases.get(), nullptr)};
+    if (!CmsSignerInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CmsTimestampInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CmsTimestampInfo_type{py::register_python_type(module.get(), &type_spec_CmsTimestampInfo, object_bases.get(), nullptr)};
+    if (!CmsTimestampInfo_type)
     {
         return nullptr;
     }
@@ -6846,7 +6861,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KeyAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyAlgorithmNames_Static.get())) == -1)
+    py::pyobj_handle KeyAlgorithmNames_type{py::register_python_type(module.get(), &type_spec_KeyAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyAlgorithmNames_Static.get()))};
+    if (!KeyAlgorithmNames_type)
     {
         return nullptr;
     }
@@ -6857,7 +6873,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KeyAttestationHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyAttestationHelper_Static.get())) == -1)
+    py::pyobj_handle KeyAttestationHelper_type{py::register_python_type(module.get(), &type_spec_KeyAttestationHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyAttestationHelper_Static.get()))};
+    if (!KeyAttestationHelper_type)
     {
         return nullptr;
     }
@@ -6868,12 +6885,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KeyStorageProviderNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyStorageProviderNames_Static.get())) == -1)
+    py::pyobj_handle KeyStorageProviderNames_type{py::register_python_type(module.get(), &type_spec_KeyStorageProviderNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyStorageProviderNames_Static.get()))};
+    if (!KeyStorageProviderNames_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PfxImportParameters, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PfxImportParameters_type{py::register_python_type(module.get(), &type_spec_PfxImportParameters, object_bases.get(), nullptr)};
+    if (!PfxImportParameters_type)
     {
         return nullptr;
     }
@@ -6884,22 +6903,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StandardCertificateStoreNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardCertificateStoreNames_Static.get())) == -1)
+    py::pyobj_handle StandardCertificateStoreNames_type{py::register_python_type(module.get(), &type_spec_StandardCertificateStoreNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardCertificateStoreNames_Static.get()))};
+    if (!StandardCertificateStoreNames_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SubjectAlternativeNameInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SubjectAlternativeNameInfo_type{py::register_python_type(module.get(), &type_spec_SubjectAlternativeNameInfo, object_bases.get(), nullptr)};
+    if (!SubjectAlternativeNameInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserCertificateEnrollmentManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserCertificateEnrollmentManager_type{py::register_python_type(module.get(), &type_spec_UserCertificateEnrollmentManager, object_bases.get(), nullptr)};
+    if (!UserCertificateEnrollmentManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserCertificateStore, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserCertificateStore_type{py::register_python_type(module.get(), &type_spec_UserCertificateStore, object_bases.get(), nullptr)};
+    if (!UserCertificateStore_type)
     {
         return nullptr;
     }

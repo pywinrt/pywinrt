@@ -8580,12 +8580,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AdaptiveNotificationText, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AdaptiveNotificationText_type{py::register_python_type(module.get(), &type_spec_AdaptiveNotificationText, object_bases.get(), nullptr)};
+    if (!AdaptiveNotificationText_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BadgeNotification, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BadgeNotification_type{py::register_python_type(module.get(), &type_spec_BadgeNotification, object_bases.get(), nullptr)};
+    if (!BadgeNotification_type)
     {
         return nullptr;
     }
@@ -8596,17 +8598,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BadgeUpdateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BadgeUpdateManager_Static.get())) == -1)
+    py::pyobj_handle BadgeUpdateManager_type{py::register_python_type(module.get(), &type_spec_BadgeUpdateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BadgeUpdateManager_Static.get()))};
+    if (!BadgeUpdateManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BadgeUpdateManagerForUser, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BadgeUpdateManagerForUser_type{py::register_python_type(module.get(), &type_spec_BadgeUpdateManagerForUser, object_bases.get(), nullptr)};
+    if (!BadgeUpdateManagerForUser_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BadgeUpdater, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BadgeUpdater_type{py::register_python_type(module.get(), &type_spec_BadgeUpdater, object_bases.get(), nullptr)};
+    if (!BadgeUpdater_type)
     {
         return nullptr;
     }
@@ -8617,7 +8622,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownAdaptiveNotificationHints, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownAdaptiveNotificationHints_Static.get())) == -1)
+    py::pyobj_handle KnownAdaptiveNotificationHints_type{py::register_python_type(module.get(), &type_spec_KnownAdaptiveNotificationHints, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownAdaptiveNotificationHints_Static.get()))};
+    if (!KnownAdaptiveNotificationHints_type)
     {
         return nullptr;
     }
@@ -8628,7 +8634,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownAdaptiveNotificationTextStyles, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownAdaptiveNotificationTextStyles_Static.get())) == -1)
+    py::pyobj_handle KnownAdaptiveNotificationTextStyles_type{py::register_python_type(module.get(), &type_spec_KnownAdaptiveNotificationTextStyles, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownAdaptiveNotificationTextStyles_Static.get()))};
+    if (!KnownAdaptiveNotificationTextStyles_type)
     {
         return nullptr;
     }
@@ -8639,52 +8646,62 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownNotificationBindings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownNotificationBindings_Static.get())) == -1)
+    py::pyobj_handle KnownNotificationBindings_type{py::register_python_type(module.get(), &type_spec_KnownNotificationBindings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownNotificationBindings_Static.get()))};
+    if (!KnownNotificationBindings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Notification, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle Notification_type{py::register_python_type(module.get(), &type_spec_Notification, object_bases.get(), nullptr)};
+    if (!Notification_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NotificationBinding, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle NotificationBinding_type{py::register_python_type(module.get(), &type_spec_NotificationBinding, object_bases.get(), nullptr)};
+    if (!NotificationBinding_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NotificationData, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle NotificationData_type{py::register_python_type(module.get(), &type_spec_NotificationData, object_bases.get(), nullptr)};
+    if (!NotificationData_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NotificationVisual, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle NotificationVisual_type{py::register_python_type(module.get(), &type_spec_NotificationVisual, object_bases.get(), nullptr)};
+    if (!NotificationVisual_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScheduledTileNotification, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ScheduledTileNotification_type{py::register_python_type(module.get(), &type_spec_ScheduledTileNotification, object_bases.get(), nullptr)};
+    if (!ScheduledTileNotification_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScheduledToastNotification, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ScheduledToastNotification_type{py::register_python_type(module.get(), &type_spec_ScheduledToastNotification, object_bases.get(), nullptr)};
+    if (!ScheduledToastNotification_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScheduledToastNotificationShowingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ScheduledToastNotificationShowingEventArgs_type{py::register_python_type(module.get(), &type_spec_ScheduledToastNotificationShowingEventArgs, object_bases.get(), nullptr)};
+    if (!ScheduledToastNotificationShowingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ShownTileNotification, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ShownTileNotification_type{py::register_python_type(module.get(), &type_spec_ShownTileNotification, object_bases.get(), nullptr)};
+    if (!ShownTileNotification_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TileFlyoutNotification, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle TileFlyoutNotification_type{py::register_python_type(module.get(), &type_spec_TileFlyoutNotification, object_bases.get(), nullptr)};
+    if (!TileFlyoutNotification_type)
     {
         return nullptr;
     }
@@ -8695,17 +8712,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TileFlyoutUpdateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TileFlyoutUpdateManager_Static.get())) == -1)
+    py::pyobj_handle TileFlyoutUpdateManager_type{py::register_python_type(module.get(), &type_spec_TileFlyoutUpdateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TileFlyoutUpdateManager_Static.get()))};
+    if (!TileFlyoutUpdateManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TileFlyoutUpdater, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle TileFlyoutUpdater_type{py::register_python_type(module.get(), &type_spec_TileFlyoutUpdater, object_bases.get(), nullptr)};
+    if (!TileFlyoutUpdater_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TileNotification, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle TileNotification_type{py::register_python_type(module.get(), &type_spec_TileNotification, object_bases.get(), nullptr)};
+    if (!TileNotification_type)
     {
         return nullptr;
     }
@@ -8716,62 +8736,74 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TileUpdateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TileUpdateManager_Static.get())) == -1)
+    py::pyobj_handle TileUpdateManager_type{py::register_python_type(module.get(), &type_spec_TileUpdateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TileUpdateManager_Static.get()))};
+    if (!TileUpdateManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TileUpdateManagerForUser, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle TileUpdateManagerForUser_type{py::register_python_type(module.get(), &type_spec_TileUpdateManagerForUser, object_bases.get(), nullptr)};
+    if (!TileUpdateManagerForUser_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TileUpdater, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle TileUpdater_type{py::register_python_type(module.get(), &type_spec_TileUpdater, object_bases.get(), nullptr)};
+    if (!TileUpdater_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ToastActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ToastActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ToastActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ToastActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ToastCollection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ToastCollection_type{py::register_python_type(module.get(), &type_spec_ToastCollection, object_bases.get(), nullptr)};
+    if (!ToastCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ToastCollectionManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ToastCollectionManager_type{py::register_python_type(module.get(), &type_spec_ToastCollectionManager, object_bases.get(), nullptr)};
+    if (!ToastCollectionManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ToastDismissedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ToastDismissedEventArgs_type{py::register_python_type(module.get(), &type_spec_ToastDismissedEventArgs, object_bases.get(), nullptr)};
+    if (!ToastDismissedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ToastFailedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ToastFailedEventArgs_type{py::register_python_type(module.get(), &type_spec_ToastFailedEventArgs, object_bases.get(), nullptr)};
+    if (!ToastFailedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ToastNotification, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ToastNotification_type{py::register_python_type(module.get(), &type_spec_ToastNotification, object_bases.get(), nullptr)};
+    if (!ToastNotification_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ToastNotificationActionTriggerDetail, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ToastNotificationActionTriggerDetail_type{py::register_python_type(module.get(), &type_spec_ToastNotificationActionTriggerDetail, object_bases.get(), nullptr)};
+    if (!ToastNotificationActionTriggerDetail_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ToastNotificationHistory, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ToastNotificationHistory_type{py::register_python_type(module.get(), &type_spec_ToastNotificationHistory, object_bases.get(), nullptr)};
+    if (!ToastNotificationHistory_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ToastNotificationHistoryChangedTriggerDetail, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ToastNotificationHistoryChangedTriggerDetail_type{py::register_python_type(module.get(), &type_spec_ToastNotificationHistoryChangedTriggerDetail, object_bases.get(), nullptr)};
+    if (!ToastNotificationHistoryChangedTriggerDetail_type)
     {
         return nullptr;
     }
@@ -8782,32 +8814,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ToastNotificationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToastNotificationManager_Static.get())) == -1)
+    py::pyobj_handle ToastNotificationManager_type{py::register_python_type(module.get(), &type_spec_ToastNotificationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToastNotificationManager_Static.get()))};
+    if (!ToastNotificationManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ToastNotificationManagerForUser, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ToastNotificationManagerForUser_type{py::register_python_type(module.get(), &type_spec_ToastNotificationManagerForUser, object_bases.get(), nullptr)};
+    if (!ToastNotificationManagerForUser_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ToastNotifier, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ToastNotifier_type{py::register_python_type(module.get(), &type_spec_ToastNotifier, object_bases.get(), nullptr)};
+    if (!ToastNotifier_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserNotification, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserNotification_type{py::register_python_type(module.get(), &type_spec_UserNotification, object_bases.get(), nullptr)};
+    if (!UserNotification_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserNotificationChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserNotificationChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_UserNotificationChangedEventArgs, object_bases.get(), nullptr)};
+    if (!UserNotificationChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAdaptiveNotificationContent, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IAdaptiveNotificationContent_type{py::register_python_type(module.get(), &type_spec_IAdaptiveNotificationContent, object_bases.get(), nullptr)};
+    if (!IAdaptiveNotificationContent_type)
     {
         return nullptr;
     }

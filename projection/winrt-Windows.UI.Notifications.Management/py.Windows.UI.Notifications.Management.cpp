@@ -404,7 +404,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications_management(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserNotificationListener, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserNotificationListener_Static.get())) == -1)
+    py::pyobj_handle UserNotificationListener_type{py::register_python_type(module.get(), &type_spec_UserNotificationListener, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserNotificationListener_Static.get()))};
+    if (!UserNotificationListener_type)
     {
         return nullptr;
     }

@@ -237,12 +237,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_effects(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IGraphicsEffect, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IGraphicsEffect_type{py::register_python_type(module.get(), &type_spec_IGraphicsEffect, object_bases.get(), nullptr)};
+    if (!IGraphicsEffect_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IGraphicsEffectSource, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IGraphicsEffectSource_type{py::register_python_type(module.get(), &type_spec_IGraphicsEffectSource, object_bases.get(), nullptr)};
+    if (!IGraphicsEffectSource_type)
     {
         return nullptr;
     }

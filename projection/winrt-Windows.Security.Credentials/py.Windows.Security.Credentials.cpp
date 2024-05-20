@@ -2526,12 +2526,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_credentials(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KeyCredential, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle KeyCredential_type{py::register_python_type(module.get(), &type_spec_KeyCredential, object_bases.get(), nullptr)};
+    if (!KeyCredential_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KeyCredentialAttestationResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle KeyCredentialAttestationResult_type{py::register_python_type(module.get(), &type_spec_KeyCredentialAttestationResult, object_bases.get(), nullptr)};
+    if (!KeyCredentialAttestationResult_type)
     {
         return nullptr;
     }
@@ -2542,47 +2544,56 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_credentials(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KeyCredentialManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyCredentialManager_Static.get())) == -1)
+    py::pyobj_handle KeyCredentialManager_type{py::register_python_type(module.get(), &type_spec_KeyCredentialManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyCredentialManager_Static.get()))};
+    if (!KeyCredentialManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KeyCredentialOperationResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle KeyCredentialOperationResult_type{py::register_python_type(module.get(), &type_spec_KeyCredentialOperationResult, object_bases.get(), nullptr)};
+    if (!KeyCredentialOperationResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KeyCredentialRetrievalResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle KeyCredentialRetrievalResult_type{py::register_python_type(module.get(), &type_spec_KeyCredentialRetrievalResult, object_bases.get(), nullptr)};
+    if (!KeyCredentialRetrievalResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PasswordCredential, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PasswordCredential_type{py::register_python_type(module.get(), &type_spec_PasswordCredential, object_bases.get(), nullptr)};
+    if (!PasswordCredential_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PasswordCredentialPropertyStore, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PasswordCredentialPropertyStore_type{py::register_python_type(module.get(), &type_spec_PasswordCredentialPropertyStore, object_bases.get(), nullptr)};
+    if (!PasswordCredentialPropertyStore_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PasswordVault, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PasswordVault_type{py::register_python_type(module.get(), &type_spec_PasswordVault, object_bases.get(), nullptr)};
+    if (!PasswordVault_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccount, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebAccount_type{py::register_python_type(module.get(), &type_spec_WebAccount, object_bases.get(), nullptr)};
+    if (!WebAccount_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccountProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebAccountProvider_type{py::register_python_type(module.get(), &type_spec_WebAccountProvider, object_bases.get(), nullptr)};
+    if (!WebAccountProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWebAccount, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IWebAccount_type{py::register_python_type(module.get(), &type_spec_IWebAccount, object_bases.get(), nullptr)};
+    if (!IWebAccount_type)
     {
         return nullptr;
     }

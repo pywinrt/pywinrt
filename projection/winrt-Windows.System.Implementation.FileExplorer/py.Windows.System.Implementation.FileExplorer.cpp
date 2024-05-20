@@ -513,22 +513,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_implementation_fileexplorer(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SysStorageProviderEventReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SysStorageProviderEventReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_SysStorageProviderEventReceivedEventArgs, object_bases.get(), nullptr)};
+    if (!SysStorageProviderEventReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISysStorageProviderEventSource, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ISysStorageProviderEventSource_type{py::register_python_type(module.get(), &type_spec_ISysStorageProviderEventSource, object_bases.get(), nullptr)};
+    if (!ISysStorageProviderEventSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISysStorageProviderHandlerFactory, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ISysStorageProviderHandlerFactory_type{py::register_python_type(module.get(), &type_spec_ISysStorageProviderHandlerFactory, object_bases.get(), nullptr)};
+    if (!ISysStorageProviderHandlerFactory_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISysStorageProviderHttpRequestProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ISysStorageProviderHttpRequestProvider_type{py::register_python_type(module.get(), &type_spec_ISysStorageProviderHttpRequestProvider, object_bases.get(), nullptr)};
+    if (!ISysStorageProviderHttpRequestProvider_type)
     {
         return nullptr;
     }

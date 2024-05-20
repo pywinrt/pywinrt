@@ -434,7 +434,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_communicationblocking(void
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CommunicationBlockingAccessManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAccessManager_Static.get())) == -1)
+    py::pyobj_handle CommunicationBlockingAccessManager_type{py::register_python_type(module.get(), &type_spec_CommunicationBlockingAccessManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAccessManager_Static.get()))};
+    if (!CommunicationBlockingAccessManager_type)
     {
         return nullptr;
     }
@@ -445,7 +446,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_communicationblocking(void
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CommunicationBlockingAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAppManager_Static.get())) == -1)
+    py::pyobj_handle CommunicationBlockingAppManager_type{py::register_python_type(module.get(), &type_spec_CommunicationBlockingAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAppManager_Static.get()))};
+    if (!CommunicationBlockingAppManager_type)
     {
         return nullptr;
     }

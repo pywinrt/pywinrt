@@ -15196,117 +15196,140 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AggregateContactManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AggregateContactManager_type{py::register_python_type(module.get(), &type_spec_AggregateContactManager, object_bases.get(), nullptr)};
+    if (!AggregateContactManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Contact, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle Contact_type{py::register_python_type(module.get(), &type_spec_Contact, object_bases.get(), nullptr)};
+    if (!Contact_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactAddress, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactAddress_type{py::register_python_type(module.get(), &type_spec_ContactAddress, object_bases.get(), nullptr)};
+    if (!ContactAddress_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactAnnotation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactAnnotation_type{py::register_python_type(module.get(), &type_spec_ContactAnnotation, object_bases.get(), nullptr)};
+    if (!ContactAnnotation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactAnnotationList, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactAnnotationList_type{py::register_python_type(module.get(), &type_spec_ContactAnnotationList, object_bases.get(), nullptr)};
+    if (!ContactAnnotationList_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactAnnotationStore, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactAnnotationStore_type{py::register_python_type(module.get(), &type_spec_ContactAnnotationStore, object_bases.get(), nullptr)};
+    if (!ContactAnnotationStore_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactBatch, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactBatch_type{py::register_python_type(module.get(), &type_spec_ContactBatch, object_bases.get(), nullptr)};
+    if (!ContactBatch_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactCardDelayedDataLoader, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactCardDelayedDataLoader_type{py::register_python_type(module.get(), &type_spec_ContactCardDelayedDataLoader, object_bases.get(), nullptr)};
+    if (!ContactCardDelayedDataLoader_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactCardOptions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactCardOptions_type{py::register_python_type(module.get(), &type_spec_ContactCardOptions, object_bases.get(), nullptr)};
+    if (!ContactCardOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactChange, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactChange_type{py::register_python_type(module.get(), &type_spec_ContactChange, object_bases.get(), nullptr)};
+    if (!ContactChange_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactChangeReader, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactChangeReader_type{py::register_python_type(module.get(), &type_spec_ContactChangeReader, object_bases.get(), nullptr)};
+    if (!ContactChangeReader_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactChangeTracker, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactChangeTracker_type{py::register_python_type(module.get(), &type_spec_ContactChangeTracker, object_bases.get(), nullptr)};
+    if (!ContactChangeTracker_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactChangedDeferral, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactChangedDeferral_type{py::register_python_type(module.get(), &type_spec_ContactChangedDeferral, object_bases.get(), nullptr)};
+    if (!ContactChangedDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactChangedEventArgs, object_bases.get(), nullptr)};
+    if (!ContactChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactConnectedServiceAccount, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactConnectedServiceAccount_type{py::register_python_type(module.get(), &type_spec_ContactConnectedServiceAccount, object_bases.get(), nullptr)};
+    if (!ContactConnectedServiceAccount_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactDate, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactDate_type{py::register_python_type(module.get(), &type_spec_ContactDate, object_bases.get(), nullptr)};
+    if (!ContactDate_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactEmail, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactEmail_type{py::register_python_type(module.get(), &type_spec_ContactEmail, object_bases.get(), nullptr)};
+    if (!ContactEmail_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactField, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactField_type{py::register_python_type(module.get(), &type_spec_ContactField, object_bases.get(), nullptr)};
+    if (!ContactField_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactFieldFactory, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactFieldFactory_type{py::register_python_type(module.get(), &type_spec_ContactFieldFactory, object_bases.get(), nullptr)};
+    if (!ContactFieldFactory_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactGroup, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactGroup_type{py::register_python_type(module.get(), &type_spec_ContactGroup, object_bases.get(), nullptr)};
+    if (!ContactGroup_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactInformation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactInformation_type{py::register_python_type(module.get(), &type_spec_ContactInformation, object_bases.get(), nullptr)};
+    if (!ContactInformation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactInstantMessageField, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactInstantMessageField_type{py::register_python_type(module.get(), &type_spec_ContactInstantMessageField, object_bases.get(), nullptr)};
+    if (!ContactInstantMessageField_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactJobInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactJobInfo_type{py::register_python_type(module.get(), &type_spec_ContactJobInfo, object_bases.get(), nullptr)};
+    if (!ContactJobInfo_type)
     {
         return nullptr;
     }
@@ -15317,32 +15340,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactLaunchActionVerbs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactLaunchActionVerbs_Static.get())) == -1)
+    py::pyobj_handle ContactLaunchActionVerbs_type{py::register_python_type(module.get(), &type_spec_ContactLaunchActionVerbs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactLaunchActionVerbs_Static.get()))};
+    if (!ContactLaunchActionVerbs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactList, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactList_type{py::register_python_type(module.get(), &type_spec_ContactList, object_bases.get(), nullptr)};
+    if (!ContactList_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactListLimitedWriteOperations, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactListLimitedWriteOperations_type{py::register_python_type(module.get(), &type_spec_ContactListLimitedWriteOperations, object_bases.get(), nullptr)};
+    if (!ContactListLimitedWriteOperations_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactListSyncConstraints, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactListSyncConstraints_type{py::register_python_type(module.get(), &type_spec_ContactListSyncConstraints, object_bases.get(), nullptr)};
+    if (!ContactListSyncConstraints_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactListSyncManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactListSyncManager_type{py::register_python_type(module.get(), &type_spec_ContactListSyncManager, object_bases.get(), nullptr)};
+    if (!ContactListSyncManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactLocationField, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactLocationField_type{py::register_python_type(module.get(), &type_spec_ContactLocationField, object_bases.get(), nullptr)};
+    if (!ContactLocationField_type)
     {
         return nullptr;
     }
@@ -15353,37 +15382,44 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactManager_Static.get())) == -1)
+    py::pyobj_handle ContactManager_type{py::register_python_type(module.get(), &type_spec_ContactManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactManager_Static.get()))};
+    if (!ContactManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactManagerForUser, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactManagerForUser_type{py::register_python_type(module.get(), &type_spec_ContactManagerForUser, object_bases.get(), nullptr)};
+    if (!ContactManagerForUser_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactMatchReason, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactMatchReason_type{py::register_python_type(module.get(), &type_spec_ContactMatchReason, object_bases.get(), nullptr)};
+    if (!ContactMatchReason_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactPanel, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactPanel_type{py::register_python_type(module.get(), &type_spec_ContactPanel, object_bases.get(), nullptr)};
+    if (!ContactPanel_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactPanelClosingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactPanelClosingEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactPanelClosingEventArgs, object_bases.get(), nullptr)};
+    if (!ContactPanelClosingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactPanelLaunchFullAppRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactPanelLaunchFullAppRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactPanelLaunchFullAppRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!ContactPanelLaunchFullAppRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactPhone, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactPhone_type{py::register_python_type(module.get(), &type_spec_ContactPhone, object_bases.get(), nullptr)};
+    if (!ContactPhone_type)
     {
         return nullptr;
     }
@@ -15394,47 +15430,56 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactPicker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactPicker_Static.get())) == -1)
+    py::pyobj_handle ContactPicker_type{py::register_python_type(module.get(), &type_spec_ContactPicker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactPicker_Static.get()))};
+    if (!ContactPicker_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactQueryOptions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactQueryOptions_type{py::register_python_type(module.get(), &type_spec_ContactQueryOptions, object_bases.get(), nullptr)};
+    if (!ContactQueryOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactQueryTextSearch, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactQueryTextSearch_type{py::register_python_type(module.get(), &type_spec_ContactQueryTextSearch, object_bases.get(), nullptr)};
+    if (!ContactQueryTextSearch_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactReader, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactReader_type{py::register_python_type(module.get(), &type_spec_ContactReader, object_bases.get(), nullptr)};
+    if (!ContactReader_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactSignificantOther, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactSignificantOther_type{py::register_python_type(module.get(), &type_spec_ContactSignificantOther, object_bases.get(), nullptr)};
+    if (!ContactSignificantOther_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactStore, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactStore_type{py::register_python_type(module.get(), &type_spec_ContactStore, object_bases.get(), nullptr)};
+    if (!ContactStore_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactStoreNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactStoreNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_ContactStoreNotificationTriggerDetails, object_bases.get(), nullptr)};
+    if (!ContactStoreNotificationTriggerDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactWebsite, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactWebsite_type{py::register_python_type(module.get(), &type_spec_ContactWebsite, object_bases.get(), nullptr)};
+    if (!ContactWebsite_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FullContactCardOptions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FullContactCardOptions_type{py::register_python_type(module.get(), &type_spec_FullContactCardOptions, object_bases.get(), nullptr)};
+    if (!FullContactCardOptions_type)
     {
         return nullptr;
     }
@@ -15445,12 +15490,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownContactField, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownContactField_Static.get())) == -1)
+    py::pyobj_handle KnownContactField_type{py::register_python_type(module.get(), &type_spec_KnownContactField, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownContactField_Static.get()))};
+    if (!KnownContactField_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PinnedContactIdsQueryResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PinnedContactIdsQueryResult_type{py::register_python_type(module.get(), &type_spec_PinnedContactIdsQueryResult, object_bases.get(), nullptr)};
+    if (!PinnedContactIdsQueryResult_type)
     {
         return nullptr;
     }
@@ -15461,27 +15508,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PinnedContactManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PinnedContactManager_Static.get())) == -1)
+    py::pyobj_handle PinnedContactManager_type{py::register_python_type(module.get(), &type_spec_PinnedContactManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PinnedContactManager_Static.get()))};
+    if (!PinnedContactManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IContactField, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IContactField_type{py::register_python_type(module.get(), &type_spec_IContactField, object_bases.get(), nullptr)};
+    if (!IContactField_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IContactFieldFactory, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IContactFieldFactory_type{py::register_python_type(module.get(), &type_spec_IContactFieldFactory, object_bases.get(), nullptr)};
+    if (!IContactFieldFactory_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IContactInstantMessageFieldFactory, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IContactInstantMessageFieldFactory_type{py::register_python_type(module.get(), &type_spec_IContactInstantMessageFieldFactory, object_bases.get(), nullptr)};
+    if (!IContactInstantMessageFieldFactory_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IContactLocationFieldFactory, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IContactLocationFieldFactory_type{py::register_python_type(module.get(), &type_spec_IContactLocationFieldFactory, object_bases.get(), nullptr)};
+    if (!IContactLocationFieldFactory_type)
     {
         return nullptr;
     }

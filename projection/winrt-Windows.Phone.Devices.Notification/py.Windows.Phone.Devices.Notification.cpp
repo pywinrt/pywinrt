@@ -245,7 +245,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_devices_notification(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VibrationDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VibrationDevice_Static.get())) == -1)
+    py::pyobj_handle VibrationDevice_type{py::register_python_type(module.get(), &type_spec_VibrationDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VibrationDevice_Static.get()))};
+    if (!VibrationDevice_type)
     {
         return nullptr;
     }

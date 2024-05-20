@@ -2385,37 +2385,44 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception_provider(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownPerceptionFrameKind, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionFrameKind_Static.get())) == -1)
+    py::pyobj_handle KnownPerceptionFrameKind_type{py::register_python_type(module.get(), &type_spec_KnownPerceptionFrameKind, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionFrameKind_Static.get()))};
+    if (!KnownPerceptionFrameKind_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionControlGroup, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PerceptionControlGroup_type{py::register_python_type(module.get(), &type_spec_PerceptionControlGroup, object_bases.get(), nullptr)};
+    if (!PerceptionControlGroup_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionCorrelation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PerceptionCorrelation_type{py::register_python_type(module.get(), &type_spec_PerceptionCorrelation, object_bases.get(), nullptr)};
+    if (!PerceptionCorrelation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionCorrelationGroup, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PerceptionCorrelationGroup_type{py::register_python_type(module.get(), &type_spec_PerceptionCorrelationGroup, object_bases.get(), nullptr)};
+    if (!PerceptionCorrelationGroup_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionFaceAuthenticationGroup, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PerceptionFaceAuthenticationGroup_type{py::register_python_type(module.get(), &type_spec_PerceptionFaceAuthenticationGroup, object_bases.get(), nullptr)};
+    if (!PerceptionFaceAuthenticationGroup_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionFrame, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PerceptionFrame_type{py::register_python_type(module.get(), &type_spec_PerceptionFrame, object_bases.get(), nullptr)};
+    if (!PerceptionFrame_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionFrameProviderInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PerceptionFrameProviderInfo_type{py::register_python_type(module.get(), &type_spec_PerceptionFrameProviderInfo, object_bases.get(), nullptr)};
+    if (!PerceptionFrameProviderInfo_type)
     {
         return nullptr;
     }
@@ -2426,27 +2433,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception_provider(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionFrameProviderManagerService, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerceptionFrameProviderManagerService_Static.get())) == -1)
+    py::pyobj_handle PerceptionFrameProviderManagerService_type{py::register_python_type(module.get(), &type_spec_PerceptionFrameProviderManagerService, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerceptionFrameProviderManagerService_Static.get()))};
+    if (!PerceptionFrameProviderManagerService_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionPropertyChangeRequest, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PerceptionPropertyChangeRequest_type{py::register_python_type(module.get(), &type_spec_PerceptionPropertyChangeRequest, object_bases.get(), nullptr)};
+    if (!PerceptionPropertyChangeRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionVideoFrameAllocator, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PerceptionVideoFrameAllocator_type{py::register_python_type(module.get(), &type_spec_PerceptionVideoFrameAllocator, object_bases.get(), nullptr)};
+    if (!PerceptionVideoFrameAllocator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPerceptionFrameProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IPerceptionFrameProvider_type{py::register_python_type(module.get(), &type_spec_IPerceptionFrameProvider, object_bases.get(), nullptr)};
+    if (!IPerceptionFrameProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPerceptionFrameProviderManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IPerceptionFrameProviderManager_type{py::register_python_type(module.get(), &type_spec_IPerceptionFrameProviderManager, object_bases.get(), nullptr)};
+    if (!IPerceptionFrameProviderManager_type)
     {
         return nullptr;
     }

@@ -344,7 +344,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotedesktop_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteTextConnection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RemoteTextConnection_type{py::register_python_type(module.get(), &type_spec_RemoteTextConnection, object_bases.get(), nullptr)};
+    if (!RemoteTextConnection_type)
     {
         return nullptr;
     }

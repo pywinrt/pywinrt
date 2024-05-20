@@ -766,12 +766,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_transcoding(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaTranscoder, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MediaTranscoder_type{py::register_python_type(module.get(), &type_spec_MediaTranscoder, object_bases.get(), nullptr)};
+    if (!MediaTranscoder_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrepareTranscodeResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrepareTranscodeResult_type{py::register_python_type(module.get(), &type_spec_PrepareTranscodeResult, object_bases.get(), nullptr)};
+    if (!PrepareTranscodeResult_type)
     {
         return nullptr;
     }

@@ -1526,12 +1526,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appservice(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppServiceCatalog, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppServiceCatalog_Static.get())) == -1)
+    py::pyobj_handle AppServiceCatalog_type{py::register_python_type(module.get(), &type_spec_AppServiceCatalog, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppServiceCatalog_Static.get()))};
+    if (!AppServiceCatalog_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppServiceClosedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppServiceClosedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppServiceClosedEventArgs, object_bases.get(), nullptr)};
+    if (!AppServiceClosedEventArgs_type)
     {
         return nullptr;
     }
@@ -1542,37 +1544,44 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appservice(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppServiceConnection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppServiceConnection_Static.get())) == -1)
+    py::pyobj_handle AppServiceConnection_type{py::register_python_type(module.get(), &type_spec_AppServiceConnection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppServiceConnection_Static.get()))};
+    if (!AppServiceConnection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppServiceDeferral, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppServiceDeferral_type{py::register_python_type(module.get(), &type_spec_AppServiceDeferral, object_bases.get(), nullptr)};
+    if (!AppServiceDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppServiceRequest, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppServiceRequest_type{py::register_python_type(module.get(), &type_spec_AppServiceRequest, object_bases.get(), nullptr)};
+    if (!AppServiceRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppServiceRequestReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppServiceRequestReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppServiceRequestReceivedEventArgs, object_bases.get(), nullptr)};
+    if (!AppServiceRequestReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppServiceResponse, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppServiceResponse_type{py::register_python_type(module.get(), &type_spec_AppServiceResponse, object_bases.get(), nullptr)};
+    if (!AppServiceResponse_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppServiceTriggerDetails, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppServiceTriggerDetails_type{py::register_python_type(module.get(), &type_spec_AppServiceTriggerDetails, object_bases.get(), nullptr)};
+    if (!AppServiceTriggerDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StatelessAppServiceResponse, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StatelessAppServiceResponse_type{py::register_python_type(module.get(), &type_spec_StatelessAppServiceResponse, object_bases.get(), nullptr)};
+    if (!StatelessAppServiceResponse_type)
     {
         return nullptr;
     }

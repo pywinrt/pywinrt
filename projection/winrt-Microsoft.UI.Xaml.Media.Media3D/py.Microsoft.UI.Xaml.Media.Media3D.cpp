@@ -2319,7 +2319,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media_media3d(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositeTransform3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositeTransform3D_Static.get())) == -1)
+    py::pyobj_handle CompositeTransform3D_type{py::register_python_type(module.get(), &type_spec_CompositeTransform3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositeTransform3D_Static.get()))};
+    if (!CompositeTransform3D_type)
     {
         return nullptr;
     }
@@ -2330,7 +2331,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media_media3d(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Matrix3DHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Matrix3DHelper_Static.get())) == -1)
+    py::pyobj_handle Matrix3DHelper_type{py::register_python_type(module.get(), &type_spec_Matrix3DHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Matrix3DHelper_Static.get()))};
+    if (!Matrix3DHelper_type)
     {
         return nullptr;
     }
@@ -2341,17 +2343,20 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media_media3d(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerspectiveTransform3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerspectiveTransform3D_Static.get())) == -1)
+    py::pyobj_handle PerspectiveTransform3D_type{py::register_python_type(module.get(), &type_spec_PerspectiveTransform3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerspectiveTransform3D_Static.get()))};
+    if (!PerspectiveTransform3D_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Transform3D, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle Transform3D_type{py::register_python_type(module.get(), &type_spec_Transform3D, object_bases.get(), nullptr)};
+    if (!Transform3D_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Matrix3D, nullptr, nullptr) == -1)
+    py::pyobj_handle Matrix3D_type{py::register_python_type(module.get(), &type_spec_Matrix3D, nullptr, nullptr)};
+    if (!Matrix3D_type)
     {
         return nullptr;
     }

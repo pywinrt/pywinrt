@@ -3586,17 +3586,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_effects(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioCaptureEffectsManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AudioCaptureEffectsManager_type{py::register_python_type(module.get(), &type_spec_AudioCaptureEffectsManager, object_bases.get(), nullptr)};
+    if (!AudioCaptureEffectsManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioEffect, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AudioEffect_type{py::register_python_type(module.get(), &type_spec_AudioEffect, object_bases.get(), nullptr)};
+    if (!AudioEffect_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioEffectDefinition, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AudioEffectDefinition_type{py::register_python_type(module.get(), &type_spec_AudioEffectDefinition, object_bases.get(), nullptr)};
+    if (!AudioEffectDefinition_type)
     {
         return nullptr;
     }
@@ -3607,82 +3610,98 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_effects(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioEffectsManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AudioEffectsManager_Static.get())) == -1)
+    py::pyobj_handle AudioEffectsManager_type{py::register_python_type(module.get(), &type_spec_AudioEffectsManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AudioEffectsManager_Static.get()))};
+    if (!AudioEffectsManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioRenderEffectsManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AudioRenderEffectsManager_type{py::register_python_type(module.get(), &type_spec_AudioRenderEffectsManager, object_bases.get(), nullptr)};
+    if (!AudioRenderEffectsManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositeVideoFrameContext, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositeVideoFrameContext_type{py::register_python_type(module.get(), &type_spec_CompositeVideoFrameContext, object_bases.get(), nullptr)};
+    if (!CompositeVideoFrameContext_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProcessAudioFrameContext, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ProcessAudioFrameContext_type{py::register_python_type(module.get(), &type_spec_ProcessAudioFrameContext, object_bases.get(), nullptr)};
+    if (!ProcessAudioFrameContext_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProcessVideoFrameContext, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ProcessVideoFrameContext_type{py::register_python_type(module.get(), &type_spec_ProcessVideoFrameContext, object_bases.get(), nullptr)};
+    if (!ProcessVideoFrameContext_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SlowMotionEffectDefinition, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SlowMotionEffectDefinition_type{py::register_python_type(module.get(), &type_spec_SlowMotionEffectDefinition, object_bases.get(), nullptr)};
+    if (!SlowMotionEffectDefinition_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VideoCompositorDefinition, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VideoCompositorDefinition_type{py::register_python_type(module.get(), &type_spec_VideoCompositorDefinition, object_bases.get(), nullptr)};
+    if (!VideoCompositorDefinition_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VideoEffectDefinition, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VideoEffectDefinition_type{py::register_python_type(module.get(), &type_spec_VideoEffectDefinition, object_bases.get(), nullptr)};
+    if (!VideoEffectDefinition_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VideoTransformEffectDefinition, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VideoTransformEffectDefinition_type{py::register_python_type(module.get(), &type_spec_VideoTransformEffectDefinition, object_bases.get(), nullptr)};
+    if (!VideoTransformEffectDefinition_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VideoTransformSphericalProjection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VideoTransformSphericalProjection_type{py::register_python_type(module.get(), &type_spec_VideoTransformSphericalProjection, object_bases.get(), nullptr)};
+    if (!VideoTransformSphericalProjection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAudioEffectDefinition, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IAudioEffectDefinition_type{py::register_python_type(module.get(), &type_spec_IAudioEffectDefinition, object_bases.get(), nullptr)};
+    if (!IAudioEffectDefinition_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IBasicAudioEffect, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IBasicAudioEffect_type{py::register_python_type(module.get(), &type_spec_IBasicAudioEffect, object_bases.get(), nullptr)};
+    if (!IBasicAudioEffect_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IBasicVideoEffect, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IBasicVideoEffect_type{py::register_python_type(module.get(), &type_spec_IBasicVideoEffect, object_bases.get(), nullptr)};
+    if (!IBasicVideoEffect_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVideoCompositor, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVideoCompositor_type{py::register_python_type(module.get(), &type_spec_IVideoCompositor, object_bases.get(), nullptr)};
+    if (!IVideoCompositor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVideoCompositorDefinition, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVideoCompositorDefinition_type{py::register_python_type(module.get(), &type_spec_IVideoCompositorDefinition, object_bases.get(), nullptr)};
+    if (!IVideoCompositorDefinition_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVideoEffectDefinition, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVideoEffectDefinition_type{py::register_python_type(module.get(), &type_spec_IVideoEffectDefinition, object_bases.get(), nullptr)};
+    if (!IVideoEffectDefinition_type)
     {
         return nullptr;
     }

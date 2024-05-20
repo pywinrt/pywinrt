@@ -8926,37 +8926,44 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CallAnswerEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CallAnswerEventArgs_type{py::register_python_type(module.get(), &type_spec_CallAnswerEventArgs, object_bases.get(), nullptr)};
+    if (!CallAnswerEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CallRejectEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CallRejectEventArgs_type{py::register_python_type(module.get(), &type_spec_CallRejectEventArgs, object_bases.get(), nullptr)};
+    if (!CallRejectEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CallStateChangeEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CallStateChangeEventArgs_type{py::register_python_type(module.get(), &type_spec_CallStateChangeEventArgs, object_bases.get(), nullptr)};
+    if (!CallStateChangeEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LockScreenCallEndCallDeferral, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LockScreenCallEndCallDeferral_type{py::register_python_type(module.get(), &type_spec_LockScreenCallEndCallDeferral, object_bases.get(), nullptr)};
+    if (!LockScreenCallEndCallDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LockScreenCallEndRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LockScreenCallEndRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_LockScreenCallEndRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!LockScreenCallEndRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LockScreenCallUI, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LockScreenCallUI_type{py::register_python_type(module.get(), &type_spec_LockScreenCallUI, object_bases.get(), nullptr)};
+    if (!LockScreenCallUI_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MuteChangeEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MuteChangeEventArgs_type{py::register_python_type(module.get(), &type_spec_MuteChangeEventArgs, object_bases.get(), nullptr)};
+    if (!MuteChangeEventArgs_type)
     {
         return nullptr;
     }
@@ -8967,7 +8974,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCall, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCall_Static.get())) == -1)
+    py::pyobj_handle PhoneCall_type{py::register_python_type(module.get(), &type_spec_PhoneCall, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCall_Static.get()))};
+    if (!PhoneCall_type)
     {
         return nullptr;
     }
@@ -8978,27 +8986,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallBlocking, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallBlocking_Static.get())) == -1)
+    py::pyobj_handle PhoneCallBlocking_type{py::register_python_type(module.get(), &type_spec_PhoneCallBlocking, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallBlocking_Static.get()))};
+    if (!PhoneCallBlocking_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallHistoryEntry, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PhoneCallHistoryEntry_type{py::register_python_type(module.get(), &type_spec_PhoneCallHistoryEntry, object_bases.get(), nullptr)};
+    if (!PhoneCallHistoryEntry_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallHistoryEntryAddress, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PhoneCallHistoryEntryAddress_type{py::register_python_type(module.get(), &type_spec_PhoneCallHistoryEntryAddress, object_bases.get(), nullptr)};
+    if (!PhoneCallHistoryEntryAddress_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallHistoryEntryQueryOptions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PhoneCallHistoryEntryQueryOptions_type{py::register_python_type(module.get(), &type_spec_PhoneCallHistoryEntryQueryOptions, object_bases.get(), nullptr)};
+    if (!PhoneCallHistoryEntryQueryOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallHistoryEntryReader, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PhoneCallHistoryEntryReader_type{py::register_python_type(module.get(), &type_spec_PhoneCallHistoryEntryReader, object_bases.get(), nullptr)};
+    if (!PhoneCallHistoryEntryReader_type)
     {
         return nullptr;
     }
@@ -9009,22 +9022,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallHistoryManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallHistoryManager_Static.get())) == -1)
+    py::pyobj_handle PhoneCallHistoryManager_type{py::register_python_type(module.get(), &type_spec_PhoneCallHistoryManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallHistoryManager_Static.get()))};
+    if (!PhoneCallHistoryManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallHistoryManagerForUser, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PhoneCallHistoryManagerForUser_type{py::register_python_type(module.get(), &type_spec_PhoneCallHistoryManagerForUser, object_bases.get(), nullptr)};
+    if (!PhoneCallHistoryManagerForUser_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallHistoryStore, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PhoneCallHistoryStore_type{py::register_python_type(module.get(), &type_spec_PhoneCallHistoryStore, object_bases.get(), nullptr)};
+    if (!PhoneCallHistoryStore_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PhoneCallInfo_type{py::register_python_type(module.get(), &type_spec_PhoneCallInfo, object_bases.get(), nullptr)};
+    if (!PhoneCallInfo_type)
     {
         return nullptr;
     }
@@ -9035,17 +9052,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallManager_Static.get())) == -1)
+    py::pyobj_handle PhoneCallManager_type{py::register_python_type(module.get(), &type_spec_PhoneCallManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallManager_Static.get()))};
+    if (!PhoneCallManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallStore, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PhoneCallStore_type{py::register_python_type(module.get(), &type_spec_PhoneCallStore, object_bases.get(), nullptr)};
+    if (!PhoneCallStore_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallVideoCapabilities, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PhoneCallVideoCapabilities_type{py::register_python_type(module.get(), &type_spec_PhoneCallVideoCapabilities, object_bases.get(), nullptr)};
+    if (!PhoneCallVideoCapabilities_type)
     {
         return nullptr;
     }
@@ -9056,17 +9076,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallVideoCapabilitiesManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallVideoCapabilitiesManager_Static.get())) == -1)
+    py::pyobj_handle PhoneCallVideoCapabilitiesManager_type{py::register_python_type(module.get(), &type_spec_PhoneCallVideoCapabilitiesManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallVideoCapabilitiesManager_Static.get()))};
+    if (!PhoneCallVideoCapabilitiesManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallsResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PhoneCallsResult_type{py::register_python_type(module.get(), &type_spec_PhoneCallsResult, object_bases.get(), nullptr)};
+    if (!PhoneCallsResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneDialOptions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PhoneDialOptions_type{py::register_python_type(module.get(), &type_spec_PhoneDialOptions, object_bases.get(), nullptr)};
+    if (!PhoneDialOptions_type)
     {
         return nullptr;
     }
@@ -9077,22 +9100,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneLine, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneLine_Static.get())) == -1)
+    py::pyobj_handle PhoneLine_type{py::register_python_type(module.get(), &type_spec_PhoneLine, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneLine_Static.get()))};
+    if (!PhoneLine_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneLineCellularDetails, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PhoneLineCellularDetails_type{py::register_python_type(module.get(), &type_spec_PhoneLineCellularDetails, object_bases.get(), nullptr)};
+    if (!PhoneLineCellularDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneLineConfiguration, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PhoneLineConfiguration_type{py::register_python_type(module.get(), &type_spec_PhoneLineConfiguration, object_bases.get(), nullptr)};
+    if (!PhoneLineConfiguration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneLineDialResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PhoneLineDialResult_type{py::register_python_type(module.get(), &type_spec_PhoneLineDialResult, object_bases.get(), nullptr)};
+    if (!PhoneLineDialResult_type)
     {
         return nullptr;
     }
@@ -9103,22 +9130,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneLineTransportDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneLineTransportDevice_Static.get())) == -1)
+    py::pyobj_handle PhoneLineTransportDevice_type{py::register_python_type(module.get(), &type_spec_PhoneLineTransportDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneLineTransportDevice_Static.get()))};
+    if (!PhoneLineTransportDevice_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneLineWatcher, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PhoneLineWatcher_type{py::register_python_type(module.get(), &type_spec_PhoneLineWatcher, object_bases.get(), nullptr)};
+    if (!PhoneLineWatcher_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneLineWatcherEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PhoneLineWatcherEventArgs_type{py::register_python_type(module.get(), &type_spec_PhoneLineWatcherEventArgs, object_bases.get(), nullptr)};
+    if (!PhoneLineWatcherEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneVoicemail, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PhoneVoicemail_type{py::register_python_type(module.get(), &type_spec_PhoneVoicemail, object_bases.get(), nullptr)};
+    if (!PhoneVoicemail_type)
     {
         return nullptr;
     }
@@ -9129,12 +9160,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VoipCallCoordinator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoipCallCoordinator_Static.get())) == -1)
+    py::pyobj_handle VoipCallCoordinator_type{py::register_python_type(module.get(), &type_spec_VoipCallCoordinator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoipCallCoordinator_Static.get()))};
+    if (!VoipCallCoordinator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VoipPhoneCall, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VoipPhoneCall_type{py::register_python_type(module.get(), &type_spec_VoipPhoneCall, object_bases.get(), nullptr)};
+    if (!VoipPhoneCall_type)
     {
         return nullptr;
     }

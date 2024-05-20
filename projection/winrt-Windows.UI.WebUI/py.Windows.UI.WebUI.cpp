@@ -14146,52 +14146,62 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_webui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ActivatedDeferral, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ActivatedDeferral_type{py::register_python_type(module.get(), &type_spec_ActivatedDeferral, object_bases.get(), nullptr)};
+    if (!ActivatedDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ActivatedOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ActivatedOperation_type{py::register_python_type(module.get(), &type_spec_ActivatedOperation, object_bases.get(), nullptr)};
+    if (!ActivatedOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BackgroundActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BackgroundActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_BackgroundActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!BackgroundActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EnteredBackgroundEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle EnteredBackgroundEventArgs_type{py::register_python_type(module.get(), &type_spec_EnteredBackgroundEventArgs, object_bases.get(), nullptr)};
+    if (!EnteredBackgroundEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HtmlPrintDocumentSource, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle HtmlPrintDocumentSource_type{py::register_python_type(module.get(), &type_spec_HtmlPrintDocumentSource, object_bases.get(), nullptr)};
+    if (!HtmlPrintDocumentSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LeavingBackgroundEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LeavingBackgroundEventArgs_type{py::register_python_type(module.get(), &type_spec_LeavingBackgroundEventArgs, object_bases.get(), nullptr)};
+    if (!LeavingBackgroundEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NewWebUIViewCreatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle NewWebUIViewCreatedEventArgs_type{py::register_python_type(module.get(), &type_spec_NewWebUIViewCreatedEventArgs, object_bases.get(), nullptr)};
+    if (!NewWebUIViewCreatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SuspendingDeferral, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SuspendingDeferral_type{py::register_python_type(module.get(), &type_spec_SuspendingDeferral, object_bases.get(), nullptr)};
+    if (!SuspendingDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SuspendingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SuspendingEventArgs_type{py::register_python_type(module.get(), &type_spec_SuspendingEventArgs, object_bases.get(), nullptr)};
+    if (!SuspendingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SuspendingOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SuspendingOperation_type{py::register_python_type(module.get(), &type_spec_SuspendingOperation, object_bases.get(), nullptr)};
+    if (!SuspendingOperation_type)
     {
         return nullptr;
     }
@@ -14202,32 +14212,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_webui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIApplication, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebUIApplication_Static.get())) == -1)
+    py::pyobj_handle WebUIApplication_type{py::register_python_type(module.get(), &type_spec_WebUIApplication, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebUIApplication_Static.get()))};
+    if (!WebUIApplication_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIAppointmentsProviderAddAppointmentActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIAppointmentsProviderAddAppointmentActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs_type)
     {
         return nullptr;
     }
@@ -14238,207 +14254,248 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_webui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIBackgroundTaskInstance, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebUIBackgroundTaskInstance_Static.get())) == -1)
+    py::pyobj_handle WebUIBackgroundTaskInstance_type{py::register_python_type(module.get(), &type_spec_WebUIBackgroundTaskInstance, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebUIBackgroundTaskInstance_Static.get()))};
+    if (!WebUIBackgroundTaskInstance_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIBackgroundTaskInstanceRuntimeClass, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIBackgroundTaskInstanceRuntimeClass_type{py::register_python_type(module.get(), &type_spec_WebUIBackgroundTaskInstanceRuntimeClass, object_bases.get(), nullptr)};
+    if (!WebUIBackgroundTaskInstanceRuntimeClass_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIBarcodeScannerPreviewActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIBarcodeScannerPreviewActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIBarcodeScannerPreviewActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIBarcodeScannerPreviewActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUICachedFileUpdaterActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUICachedFileUpdaterActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUICachedFileUpdaterActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUICachedFileUpdaterActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUICameraSettingsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUICameraSettingsActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUICameraSettingsActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUICameraSettingsActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUICommandLineActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUICommandLineActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUICommandLineActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUICommandLineActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIContactCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIContactCallActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIContactCallActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIContactCallActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIContactMapActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIContactMapActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIContactMapActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIContactMapActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIContactMessageActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIContactMessageActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIContactMessageActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIContactMessageActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIContactPanelActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIContactPanelActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIContactPanelActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIContactPanelActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIContactPickerActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIContactPickerActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIContactPickerActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIContactPickerActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIContactPostActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIContactPostActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIContactPostActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIContactPostActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIContactVideoCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIContactVideoCallActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIContactVideoCallActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIContactVideoCallActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIDeviceActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIDeviceActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIDeviceActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIDeviceActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIDevicePairingActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIDevicePairingActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIDevicePairingActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIDevicePairingActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIDialReceiverActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIDialReceiverActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIDialReceiverActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIDialReceiverActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIFileActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIFileActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIFileActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIFileActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIFileOpenPickerActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIFileOpenPickerActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIFileOpenPickerActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIFileOpenPickerActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIFileOpenPickerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIFileOpenPickerContinuationEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIFileOpenPickerContinuationEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIFileOpenPickerContinuationEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIFileSavePickerActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIFileSavePickerActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIFileSavePickerActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIFileSavePickerActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIFileSavePickerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIFileSavePickerContinuationEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIFileSavePickerContinuationEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIFileSavePickerContinuationEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIFolderPickerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIFolderPickerContinuationEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIFolderPickerContinuationEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIFolderPickerContinuationEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUILaunchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUILaunchActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUILaunchActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUILaunchActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUILockScreenActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUILockScreenActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUILockScreenActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUILockScreenActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUILockScreenCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUILockScreenCallActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUILockScreenCallActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUILockScreenCallActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUILockScreenComponentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUILockScreenComponentActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUILockScreenComponentActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUILockScreenComponentActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUINavigatedDeferral, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUINavigatedDeferral_type{py::register_python_type(module.get(), &type_spec_WebUINavigatedDeferral, object_bases.get(), nullptr)};
+    if (!WebUINavigatedDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUINavigatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUINavigatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUINavigatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUINavigatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUINavigatedOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUINavigatedOperation_type{py::register_python_type(module.get(), &type_spec_WebUINavigatedOperation, object_bases.get(), nullptr)};
+    if (!WebUINavigatedOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIPhoneCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIPhoneCallActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIPhoneCallActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIPhoneCallActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIPrint3DWorkflowActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIPrint3DWorkflowActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIPrint3DWorkflowActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIPrint3DWorkflowActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIPrintTaskSettingsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIPrintTaskSettingsActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIPrintTaskSettingsActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIPrintTaskSettingsActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIPrintWorkflowForegroundTaskActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIPrintWorkflowForegroundTaskActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIPrintWorkflowForegroundTaskActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIPrintWorkflowForegroundTaskActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIProtocolActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIProtocolActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIProtocolActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIProtocolActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIProtocolForResultsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIProtocolForResultsActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIProtocolForResultsActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIProtocolForResultsActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIRestrictedLaunchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIRestrictedLaunchActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIRestrictedLaunchActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIRestrictedLaunchActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUISearchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUISearchActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUISearchActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUISearchActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIShareTargetActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIShareTargetActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIShareTargetActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIShareTargetActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIStartupTaskActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIStartupTaskActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIStartupTaskActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIStartupTaskActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIToastNotificationActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIToastNotificationActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIToastNotificationActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIToastNotificationActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIUserDataAccountProviderActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIUserDataAccountProviderActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIUserDataAccountProviderActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIUserDataAccountProviderActivatedEventArgs_type)
     {
         return nullptr;
     }
@@ -14449,42 +14506,50 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_webui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebUIView_Static.get())) == -1)
+    py::pyobj_handle WebUIView_type{py::register_python_type(module.get(), &type_spec_WebUIView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebUIView_Static.get()))};
+    if (!WebUIView_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIVoiceCommandActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIVoiceCommandActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIVoiceCommandActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIVoiceCommandActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIWalletActionActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIWalletActionActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIWalletActionActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIWalletActionActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIWebAccountProviderActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIWebAccountProviderActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIWebAccountProviderActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIWebAccountProviderActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIWebAuthenticationBrokerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUIWebAuthenticationBrokerContinuationEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUIWebAuthenticationBrokerContinuationEventArgs, object_bases.get(), nullptr)};
+    if (!WebUIWebAuthenticationBrokerContinuationEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IActivatedEventArgsDeferral, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IActivatedEventArgsDeferral_type{py::register_python_type(module.get(), &type_spec_IActivatedEventArgsDeferral, object_bases.get(), nullptr)};
+    if (!IActivatedEventArgsDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWebUIBackgroundTaskInstance, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IWebUIBackgroundTaskInstance_type{py::register_python_type(module.get(), &type_spec_IWebUIBackgroundTaskInstance, object_bases.get(), nullptr)};
+    if (!IWebUIBackgroundTaskInstance_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWebUINavigatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IWebUINavigatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IWebUINavigatedEventArgs, object_bases.get(), nullptr)};
+    if (!IWebUINavigatedEventArgs_type)
     {
         return nullptr;
     }

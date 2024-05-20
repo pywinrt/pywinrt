@@ -454,12 +454,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_extendedexecution_foregrou
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ExtendedExecutionForegroundRevokedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ExtendedExecutionForegroundRevokedEventArgs_type{py::register_python_type(module.get(), &type_spec_ExtendedExecutionForegroundRevokedEventArgs, object_bases.get(), nullptr)};
+    if (!ExtendedExecutionForegroundRevokedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ExtendedExecutionForegroundSession, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ExtendedExecutionForegroundSession_type{py::register_python_type(module.get(), &type_spec_ExtendedExecutionForegroundSession, object_bases.get(), nullptr)};
+    if (!ExtendedExecutionForegroundSession_type)
     {
         return nullptr;
     }

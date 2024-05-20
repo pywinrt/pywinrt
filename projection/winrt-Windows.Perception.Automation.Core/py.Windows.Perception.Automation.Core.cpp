@@ -149,7 +149,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_automation_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CorePerceptionAutomation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CorePerceptionAutomation_Static.get())) == -1)
+    py::pyobj_handle CorePerceptionAutomation_type{py::register_python_type(module.get(), &type_spec_CorePerceptionAutomation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CorePerceptionAutomation_Static.get()))};
+    if (!CorePerceptionAutomation_type)
     {
         return nullptr;
     }

@@ -423,7 +423,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_metadata(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ApiInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApiInformation_Static.get())) == -1)
+    py::pyobj_handle ApiInformation_type{py::register_python_type(module.get(), &type_spec_ApiInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApiInformation_Static.get()))};
+    if (!ApiInformation_type)
     {
         return nullptr;
     }

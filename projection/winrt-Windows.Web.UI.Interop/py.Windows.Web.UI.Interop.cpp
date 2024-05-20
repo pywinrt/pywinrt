@@ -2745,27 +2745,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_ui_interop(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControl, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControl_type{py::register_python_type(module.get(), &type_spec_WebViewControl, object_bases.get(), nullptr)};
+    if (!WebViewControl_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControlAcceleratorKeyPressedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControlAcceleratorKeyPressedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebViewControlAcceleratorKeyPressedEventArgs, object_bases.get(), nullptr)};
+    if (!WebViewControlAcceleratorKeyPressedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControlMoveFocusRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControlMoveFocusRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebViewControlMoveFocusRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!WebViewControlMoveFocusRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControlProcess, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControlProcess_type{py::register_python_type(module.get(), &type_spec_WebViewControlProcess, object_bases.get(), nullptr)};
+    if (!WebViewControlProcess_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControlProcessOptions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControlProcessOptions_type{py::register_python_type(module.get(), &type_spec_WebViewControlProcessOptions, object_bases.get(), nullptr)};
+    if (!WebViewControlProcessOptions_type)
     {
         return nullptr;
     }

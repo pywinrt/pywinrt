@@ -695,12 +695,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer_sharetarget(v
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_QuickLink, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle QuickLink_type{py::register_python_type(module.get(), &type_spec_QuickLink, object_bases.get(), nullptr)};
+    if (!QuickLink_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ShareOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ShareOperation_type{py::register_python_type(module.get(), &type_spec_ShareOperation, object_bases.get(), nullptr)};
+    if (!ShareOperation_type)
     {
         return nullptr;
     }

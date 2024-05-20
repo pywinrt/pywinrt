@@ -711,12 +711,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_dataprotection(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataAvailabilityStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataAvailabilityStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_UserDataAvailabilityStateChangedEventArgs, object_bases.get(), nullptr)};
+    if (!UserDataAvailabilityStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataBufferUnprotectResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataBufferUnprotectResult_type{py::register_python_type(module.get(), &type_spec_UserDataBufferUnprotectResult, object_bases.get(), nullptr)};
+    if (!UserDataBufferUnprotectResult_type)
     {
         return nullptr;
     }
@@ -727,12 +729,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_dataprotection(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataProtectionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserDataProtectionManager_Static.get())) == -1)
+    py::pyobj_handle UserDataProtectionManager_type{py::register_python_type(module.get(), &type_spec_UserDataProtectionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserDataProtectionManager_Static.get()))};
+    if (!UserDataProtectionManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataStorageItemProtectionInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataStorageItemProtectionInfo_type{py::register_python_type(module.get(), &type_spec_UserDataStorageItemProtectionInfo, object_bases.get(), nullptr)};
+    if (!UserDataStorageItemProtectionInfo_type)
     {
         return nullptr;
     }

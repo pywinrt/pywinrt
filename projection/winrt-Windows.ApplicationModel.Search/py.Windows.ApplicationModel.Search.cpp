@@ -2728,7 +2728,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_search(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LocalContentSuggestionSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LocalContentSuggestionSettings_type{py::register_python_type(module.get(), &type_spec_LocalContentSuggestionSettings, object_bases.get(), nullptr)};
+    if (!LocalContentSuggestionSettings_type)
     {
         return nullptr;
     }
@@ -2739,72 +2740,86 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_search(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SearchPane, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SearchPane_Static.get())) == -1)
+    py::pyobj_handle SearchPane_type{py::register_python_type(module.get(), &type_spec_SearchPane, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SearchPane_Static.get()))};
+    if (!SearchPane_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SearchPaneQueryChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SearchPaneQueryChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchPaneQueryChangedEventArgs, object_bases.get(), nullptr)};
+    if (!SearchPaneQueryChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SearchPaneQueryLinguisticDetails, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SearchPaneQueryLinguisticDetails_type{py::register_python_type(module.get(), &type_spec_SearchPaneQueryLinguisticDetails, object_bases.get(), nullptr)};
+    if (!SearchPaneQueryLinguisticDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SearchPaneQuerySubmittedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SearchPaneQuerySubmittedEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchPaneQuerySubmittedEventArgs, object_bases.get(), nullptr)};
+    if (!SearchPaneQuerySubmittedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SearchPaneResultSuggestionChosenEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SearchPaneResultSuggestionChosenEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchPaneResultSuggestionChosenEventArgs, object_bases.get(), nullptr)};
+    if (!SearchPaneResultSuggestionChosenEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SearchPaneSuggestionsRequest, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SearchPaneSuggestionsRequest_type{py::register_python_type(module.get(), &type_spec_SearchPaneSuggestionsRequest, object_bases.get(), nullptr)};
+    if (!SearchPaneSuggestionsRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SearchPaneSuggestionsRequestDeferral, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SearchPaneSuggestionsRequestDeferral_type{py::register_python_type(module.get(), &type_spec_SearchPaneSuggestionsRequestDeferral, object_bases.get(), nullptr)};
+    if (!SearchPaneSuggestionsRequestDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SearchPaneSuggestionsRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SearchPaneSuggestionsRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchPaneSuggestionsRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!SearchPaneSuggestionsRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SearchPaneVisibilityChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SearchPaneVisibilityChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchPaneVisibilityChangedEventArgs, object_bases.get(), nullptr)};
+    if (!SearchPaneVisibilityChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SearchQueryLinguisticDetails, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SearchQueryLinguisticDetails_type{py::register_python_type(module.get(), &type_spec_SearchQueryLinguisticDetails, object_bases.get(), nullptr)};
+    if (!SearchQueryLinguisticDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SearchSuggestionCollection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SearchSuggestionCollection_type{py::register_python_type(module.get(), &type_spec_SearchSuggestionCollection, object_bases.get(), nullptr)};
+    if (!SearchSuggestionCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SearchSuggestionsRequest, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SearchSuggestionsRequest_type{py::register_python_type(module.get(), &type_spec_SearchSuggestionsRequest, object_bases.get(), nullptr)};
+    if (!SearchSuggestionsRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SearchSuggestionsRequestDeferral, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SearchSuggestionsRequestDeferral_type{py::register_python_type(module.get(), &type_spec_SearchSuggestionsRequestDeferral, object_bases.get(), nullptr)};
+    if (!SearchSuggestionsRequestDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISearchPaneQueryChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ISearchPaneQueryChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ISearchPaneQueryChangedEventArgs, object_bases.get(), nullptr)};
+    if (!ISearchPaneQueryChangedEventArgs_type)
     {
         return nullptr;
     }

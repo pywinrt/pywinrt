@@ -5799,7 +5799,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ArcadeStick, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ArcadeStick_Static.get())) == -1)
+    py::pyobj_handle ArcadeStick_type{py::register_python_type(module.get(), &type_spec_ArcadeStick, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ArcadeStick_Static.get()))};
+    if (!ArcadeStick_type)
     {
         return nullptr;
     }
@@ -5810,7 +5811,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FlightStick, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlightStick_Static.get())) == -1)
+    py::pyobj_handle FlightStick_type{py::register_python_type(module.get(), &type_spec_FlightStick, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlightStick_Static.get()))};
+    if (!FlightStick_type)
     {
         return nullptr;
     }
@@ -5821,12 +5823,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Gamepad, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Gamepad_Static.get())) == -1)
+    py::pyobj_handle Gamepad_type{py::register_python_type(module.get(), &type_spec_Gamepad, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Gamepad_Static.get()))};
+    if (!Gamepad_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Headset, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle Headset_type{py::register_python_type(module.get(), &type_spec_Headset, object_bases.get(), nullptr)};
+    if (!Headset_type)
     {
         return nullptr;
     }
@@ -5837,7 +5841,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RacingWheel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RacingWheel_Static.get())) == -1)
+    py::pyobj_handle RacingWheel_type{py::register_python_type(module.get(), &type_spec_RacingWheel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RacingWheel_Static.get()))};
+    if (!RacingWheel_type)
     {
         return nullptr;
     }
@@ -5848,7 +5853,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RawGameController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RawGameController_Static.get())) == -1)
+    py::pyobj_handle RawGameController_type{py::register_python_type(module.get(), &type_spec_RawGameController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RawGameController_Static.get()))};
+    if (!RawGameController_type)
     {
         return nullptr;
     }
@@ -5859,47 +5865,56 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UINavigationController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UINavigationController_Static.get())) == -1)
+    py::pyobj_handle UINavigationController_type{py::register_python_type(module.get(), &type_spec_UINavigationController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UINavigationController_Static.get()))};
+    if (!UINavigationController_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IGameController, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IGameController_type{py::register_python_type(module.get(), &type_spec_IGameController, object_bases.get(), nullptr)};
+    if (!IGameController_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IGameControllerBatteryInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IGameControllerBatteryInfo_type{py::register_python_type(module.get(), &type_spec_IGameControllerBatteryInfo, object_bases.get(), nullptr)};
+    if (!IGameControllerBatteryInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ArcadeStickReading, nullptr, nullptr) == -1)
+    py::pyobj_handle ArcadeStickReading_type{py::register_python_type(module.get(), &type_spec_ArcadeStickReading, nullptr, nullptr)};
+    if (!ArcadeStickReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FlightStickReading, nullptr, nullptr) == -1)
+    py::pyobj_handle FlightStickReading_type{py::register_python_type(module.get(), &type_spec_FlightStickReading, nullptr, nullptr)};
+    if (!FlightStickReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GamepadReading, nullptr, nullptr) == -1)
+    py::pyobj_handle GamepadReading_type{py::register_python_type(module.get(), &type_spec_GamepadReading, nullptr, nullptr)};
+    if (!GamepadReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GamepadVibration, nullptr, nullptr) == -1)
+    py::pyobj_handle GamepadVibration_type{py::register_python_type(module.get(), &type_spec_GamepadVibration, nullptr, nullptr)};
+    if (!GamepadVibration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RacingWheelReading, nullptr, nullptr) == -1)
+    py::pyobj_handle RacingWheelReading_type{py::register_python_type(module.get(), &type_spec_RacingWheelReading, nullptr, nullptr)};
+    if (!RacingWheelReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UINavigationReading, nullptr, nullptr) == -1)
+    py::pyobj_handle UINavigationReading_type{py::register_python_type(module.get(), &type_spec_UINavigationReading, nullptr, nullptr)};
+    if (!UINavigationReading_type)
     {
         return nullptr;
     }

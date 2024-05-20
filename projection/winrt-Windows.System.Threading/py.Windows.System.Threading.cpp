@@ -466,7 +466,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_threading(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ThreadPool, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ThreadPool_Static.get())) == -1)
+    py::pyobj_handle ThreadPool_type{py::register_python_type(module.get(), &type_spec_ThreadPool, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ThreadPool_Static.get()))};
+    if (!ThreadPool_type)
     {
         return nullptr;
     }
@@ -477,7 +478,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_threading(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ThreadPoolTimer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ThreadPoolTimer_Static.get())) == -1)
+    py::pyobj_handle ThreadPoolTimer_type{py::register_python_type(module.get(), &type_spec_ThreadPoolTimer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ThreadPoolTimer_Static.get()))};
+    if (!ThreadPoolTimer_type)
     {
         return nullptr;
     }

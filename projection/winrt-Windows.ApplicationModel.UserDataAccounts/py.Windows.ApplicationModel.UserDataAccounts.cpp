@@ -1488,7 +1488,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts(void) noe
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataAccount, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataAccount_type{py::register_python_type(module.get(), &type_spec_UserDataAccount, object_bases.get(), nullptr)};
+    if (!UserDataAccount_type)
     {
         return nullptr;
     }
@@ -1499,22 +1500,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts(void) noe
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataAccountManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserDataAccountManager_Static.get())) == -1)
+    py::pyobj_handle UserDataAccountManager_type{py::register_python_type(module.get(), &type_spec_UserDataAccountManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserDataAccountManager_Static.get()))};
+    if (!UserDataAccountManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataAccountManagerForUser, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataAccountManagerForUser_type{py::register_python_type(module.get(), &type_spec_UserDataAccountManagerForUser, object_bases.get(), nullptr)};
+    if (!UserDataAccountManagerForUser_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataAccountStore, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataAccountStore_type{py::register_python_type(module.get(), &type_spec_UserDataAccountStore, object_bases.get(), nullptr)};
+    if (!UserDataAccountStore_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataAccountStoreChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataAccountStoreChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_UserDataAccountStoreChangedEventArgs, object_bases.get(), nullptr)};
+    if (!UserDataAccountStoreChangedEventArgs_type)
     {
         return nullptr;
     }

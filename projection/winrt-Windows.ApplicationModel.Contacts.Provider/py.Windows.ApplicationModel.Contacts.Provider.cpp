@@ -432,12 +432,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts_provider(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactPickerUI, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactPickerUI_type{py::register_python_type(module.get(), &type_spec_ContactPickerUI, object_bases.get(), nullptr)};
+    if (!ContactPickerUI_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContactRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactRemovedEventArgs, object_bases.get(), nullptr)};
+    if (!ContactRemovedEventArgs_type)
     {
         return nullptr;
     }

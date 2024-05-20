@@ -1092,17 +1092,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_credentials_ui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CredentialPicker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CredentialPicker_Static.get())) == -1)
+    py::pyobj_handle CredentialPicker_type{py::register_python_type(module.get(), &type_spec_CredentialPicker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CredentialPicker_Static.get()))};
+    if (!CredentialPicker_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CredentialPickerOptions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CredentialPickerOptions_type{py::register_python_type(module.get(), &type_spec_CredentialPickerOptions, object_bases.get(), nullptr)};
+    if (!CredentialPickerOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CredentialPickerResults, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CredentialPickerResults_type{py::register_python_type(module.get(), &type_spec_CredentialPickerResults, object_bases.get(), nullptr)};
+    if (!CredentialPickerResults_type)
     {
         return nullptr;
     }
@@ -1113,7 +1116,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_credentials_ui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserConsentVerifier, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserConsentVerifier_Static.get())) == -1)
+    py::pyobj_handle UserConsentVerifier_type{py::register_python_type(module.get(), &type_spec_UserConsentVerifier, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserConsentVerifier_Static.get()))};
+    if (!UserConsentVerifier_type)
     {
         return nullptr;
     }

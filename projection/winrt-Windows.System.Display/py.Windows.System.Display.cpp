@@ -204,7 +204,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_display(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayRequest, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayRequest_type{py::register_python_type(module.get(), &type_spec_DisplayRequest, object_bases.get(), nullptr)};
+    if (!DisplayRequest_type)
     {
         return nullptr;
     }

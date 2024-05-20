@@ -3320,77 +3320,92 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PropertySet, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PropertySet_type{py::register_python_type(module.get(), &type_spec_PropertySet, object_bases.get(), nullptr)};
+    if (!PropertySet_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StringMap, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StringMap_type{py::register_python_type(module.get(), &type_spec_StringMap, object_bases.get(), nullptr)};
+    if (!StringMap_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ValueSet, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ValueSet_type{py::register_python_type(module.get(), &type_spec_ValueSet, object_bases.get(), nullptr)};
+    if (!ValueSet_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IIterable, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IIterable_type{py::register_python_type(module.get(), &type_spec_IIterable, object_bases.get(), nullptr)};
+    if (!IIterable_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IIterator, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IIterator_type{py::register_python_type(module.get(), &type_spec_IIterator, object_bases.get(), nullptr)};
+    if (!IIterator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IKeyValuePair, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IKeyValuePair_type{py::register_python_type(module.get(), &type_spec_IKeyValuePair, object_bases.get(), nullptr)};
+    if (!IKeyValuePair_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IMapChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IMapChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_IMapChangedEventArgs, object_bases.get(), nullptr)};
+    if (!IMapChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IMapView, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IMapView_type{py::register_python_type(module.get(), &type_spec_IMapView, object_bases.get(), nullptr)};
+    if (!IMapView_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IMap, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IMap_type{py::register_python_type(module.get(), &type_spec_IMap, object_bases.get(), nullptr)};
+    if (!IMap_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IObservableMap, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IObservableMap_type{py::register_python_type(module.get(), &type_spec_IObservableMap, object_bases.get(), nullptr)};
+    if (!IObservableMap_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IObservableVector, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IObservableVector_type{py::register_python_type(module.get(), &type_spec_IObservableVector, object_bases.get(), nullptr)};
+    if (!IObservableVector_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPropertySet, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IPropertySet_type{py::register_python_type(module.get(), &type_spec_IPropertySet, object_bases.get(), nullptr)};
+    if (!IPropertySet_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVectorChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVectorChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_IVectorChangedEventArgs, object_bases.get(), nullptr)};
+    if (!IVectorChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVectorView, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVectorView_type{py::register_python_type(module.get(), &type_spec_IVectorView, object_bases.get(), nullptr)};
+    if (!IVectorView_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVector, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVector_type{py::register_python_type(module.get(), &type_spec_IVector, object_bases.get(), nullptr)};
+    if (!IVector_type)
     {
         return nullptr;
     }

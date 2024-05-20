@@ -350,7 +350,7 @@ namespace py
      * This must be changed if the runtime API changes in a way that breaks
      * binary compatibility.
      */
-    const uint16_t runtime_abi_version_major = 1;
+    const uint16_t runtime_abi_version_major = 2;
 
     /**
      * ABI version for runtime verification.
@@ -360,7 +360,7 @@ namespace py
      */
     const uint16_t runtime_abi_version_minor = 0;
 
-    int register_python_type(
+    PyObject* register_python_type(
         PyObject* module,
         PyType_Spec* type_spec,
         PyObject* base_type,
@@ -436,7 +436,7 @@ namespace py
         return 0;
     }
 
-    inline int register_python_type(
+    inline PyObject* register_python_type(
         PyObject* module,
         PyType_Spec* type_spec,
         PyObject* base_type,

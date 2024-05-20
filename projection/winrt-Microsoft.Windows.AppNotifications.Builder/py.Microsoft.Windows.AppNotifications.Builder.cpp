@@ -3082,7 +3082,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_appnotifications_builder(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppNotificationBuilder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppNotificationBuilder_Static.get())) == -1)
+    py::pyobj_handle AppNotificationBuilder_type{py::register_python_type(module.get(), &type_spec_AppNotificationBuilder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppNotificationBuilder_Static.get()))};
+    if (!AppNotificationBuilder_type)
     {
         return nullptr;
     }
@@ -3093,22 +3094,26 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_appnotifications_builder(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppNotificationButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppNotificationButton_Static.get())) == -1)
+    py::pyobj_handle AppNotificationButton_type{py::register_python_type(module.get(), &type_spec_AppNotificationButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppNotificationButton_Static.get()))};
+    if (!AppNotificationButton_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppNotificationComboBox, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppNotificationComboBox_type{py::register_python_type(module.get(), &type_spec_AppNotificationComboBox, object_bases.get(), nullptr)};
+    if (!AppNotificationComboBox_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppNotificationProgressBar, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppNotificationProgressBar_type{py::register_python_type(module.get(), &type_spec_AppNotificationProgressBar, object_bases.get(), nullptr)};
+    if (!AppNotificationProgressBar_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppNotificationTextProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppNotificationTextProperties_type{py::register_python_type(module.get(), &type_spec_AppNotificationTextProperties, object_bases.get(), nullptr)};
+    if (!AppNotificationTextProperties_type)
     {
         return nullptr;
     }

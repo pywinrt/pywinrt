@@ -148,7 +148,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input_interop(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PenDeviceInterop, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PenDeviceInterop_Static.get())) == -1)
+    py::pyobj_handle PenDeviceInterop_type{py::register_python_type(module.get(), &type_spec_PenDeviceInterop, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PenDeviceInterop_Static.get()))};
+    if (!PenDeviceInterop_type)
     {
         return nullptr;
     }

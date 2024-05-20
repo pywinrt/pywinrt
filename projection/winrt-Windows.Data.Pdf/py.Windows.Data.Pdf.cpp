@@ -1181,22 +1181,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_pdf(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PdfDocument, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PdfDocument_Static.get())) == -1)
+    py::pyobj_handle PdfDocument_type{py::register_python_type(module.get(), &type_spec_PdfDocument, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PdfDocument_Static.get()))};
+    if (!PdfDocument_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PdfPage, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PdfPage_type{py::register_python_type(module.get(), &type_spec_PdfPage, object_bases.get(), nullptr)};
+    if (!PdfPage_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PdfPageDimensions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PdfPageDimensions_type{py::register_python_type(module.get(), &type_spec_PdfPageDimensions, object_bases.get(), nullptr)};
+    if (!PdfPageDimensions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PdfPageRenderOptions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PdfPageRenderOptions_type{py::register_python_type(module.get(), &type_spec_PdfPageRenderOptions, object_bases.get(), nullptr)};
+    if (!PdfPageRenderOptions_type)
     {
         return nullptr;
     }

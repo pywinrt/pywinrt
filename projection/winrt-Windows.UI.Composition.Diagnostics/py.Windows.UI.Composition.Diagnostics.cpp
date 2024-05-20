@@ -399,7 +399,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_diagnostics(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionDebugHeatMaps, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionDebugHeatMaps_type{py::register_python_type(module.get(), &type_spec_CompositionDebugHeatMaps, object_bases.get(), nullptr)};
+    if (!CompositionDebugHeatMaps_type)
     {
         return nullptr;
     }
@@ -410,7 +411,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_diagnostics(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionDebugSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionDebugSettings_Static.get())) == -1)
+    py::pyobj_handle CompositionDebugSettings_type{py::register_python_type(module.get(), &type_spec_CompositionDebugSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionDebugSettings_Static.get()))};
+    if (!CompositionDebugSettings_type)
     {
         return nullptr;
     }

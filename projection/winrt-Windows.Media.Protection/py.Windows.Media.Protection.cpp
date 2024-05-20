@@ -1614,7 +1614,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ComponentLoadFailedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ComponentLoadFailedEventArgs_type{py::register_python_type(module.get(), &type_spec_ComponentLoadFailedEventArgs, object_bases.get(), nullptr)};
+    if (!ComponentLoadFailedEventArgs_type)
     {
         return nullptr;
     }
@@ -1625,52 +1626,62 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ComponentRenewal, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComponentRenewal_Static.get())) == -1)
+    py::pyobj_handle ComponentRenewal_type{py::register_python_type(module.get(), &type_spec_ComponentRenewal, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComponentRenewal_Static.get()))};
+    if (!ComponentRenewal_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HdcpSession, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle HdcpSession_type{py::register_python_type(module.get(), &type_spec_HdcpSession, object_bases.get(), nullptr)};
+    if (!HdcpSession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaProtectionManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MediaProtectionManager_type{py::register_python_type(module.get(), &type_spec_MediaProtectionManager, object_bases.get(), nullptr)};
+    if (!MediaProtectionManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaProtectionPMPServer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MediaProtectionPMPServer_type{py::register_python_type(module.get(), &type_spec_MediaProtectionPMPServer, object_bases.get(), nullptr)};
+    if (!MediaProtectionPMPServer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaProtectionServiceCompletion, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MediaProtectionServiceCompletion_type{py::register_python_type(module.get(), &type_spec_MediaProtectionServiceCompletion, object_bases.get(), nullptr)};
+    if (!MediaProtectionServiceCompletion_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProtectionCapabilities, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ProtectionCapabilities_type{py::register_python_type(module.get(), &type_spec_ProtectionCapabilities, object_bases.get(), nullptr)};
+    if (!ProtectionCapabilities_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RevocationAndRenewalInformation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RevocationAndRenewalInformation_type{py::register_python_type(module.get(), &type_spec_RevocationAndRenewalInformation, object_bases.get(), nullptr)};
+    if (!RevocationAndRenewalInformation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RevocationAndRenewalItem, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RevocationAndRenewalItem_type{py::register_python_type(module.get(), &type_spec_RevocationAndRenewalItem, object_bases.get(), nullptr)};
+    if (!RevocationAndRenewalItem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ServiceRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ServiceRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ServiceRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!ServiceRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IMediaProtectionServiceRequest, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IMediaProtectionServiceRequest_type{py::register_python_type(module.get(), &type_spec_IMediaProtectionServiceRequest, object_bases.get(), nullptr)};
+    if (!IMediaProtectionServiceRequest_type)
     {
         return nullptr;
     }

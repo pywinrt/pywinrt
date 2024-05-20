@@ -3545,12 +3545,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_fileproperties(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BasicProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BasicProperties_type{py::register_python_type(module.get(), &type_spec_BasicProperties, object_bases.get(), nullptr)};
+    if (!BasicProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DocumentProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DocumentProperties_type{py::register_python_type(module.get(), &type_spec_DocumentProperties, object_bases.get(), nullptr)};
+    if (!DocumentProperties_type)
     {
         return nullptr;
     }
@@ -3561,37 +3563,44 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_fileproperties(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GeotagHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeotagHelper_Static.get())) == -1)
+    py::pyobj_handle GeotagHelper_type{py::register_python_type(module.get(), &type_spec_GeotagHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeotagHelper_Static.get()))};
+    if (!GeotagHelper_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ImageProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ImageProperties_type{py::register_python_type(module.get(), &type_spec_ImageProperties, object_bases.get(), nullptr)};
+    if (!ImageProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MusicProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MusicProperties_type{py::register_python_type(module.get(), &type_spec_MusicProperties, object_bases.get(), nullptr)};
+    if (!MusicProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageItemContentProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StorageItemContentProperties_type{py::register_python_type(module.get(), &type_spec_StorageItemContentProperties, object_bases.get(), nullptr)};
+    if (!StorageItemContentProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageItemThumbnail, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StorageItemThumbnail_type{py::register_python_type(module.get(), &type_spec_StorageItemThumbnail, object_bases.get(), nullptr)};
+    if (!StorageItemThumbnail_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VideoProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VideoProperties_type{py::register_python_type(module.get(), &type_spec_VideoProperties, object_bases.get(), nullptr)};
+    if (!VideoProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IStorageItemExtraProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IStorageItemExtraProperties_type{py::register_python_type(module.get(), &type_spec_IStorageItemExtraProperties, object_bases.get(), nullptr)};
+    if (!IStorageItemExtraProperties_type)
     {
         return nullptr;
     }

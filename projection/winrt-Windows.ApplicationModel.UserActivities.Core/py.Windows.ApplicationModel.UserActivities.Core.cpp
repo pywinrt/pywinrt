@@ -182,7 +182,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_useractivities_core(void) 
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreUserActivityManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreUserActivityManager_Static.get())) == -1)
+    py::pyobj_handle CoreUserActivityManager_type{py::register_python_type(module.get(), &type_spec_CoreUserActivityManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreUserActivityManager_Static.get()))};
+    if (!CoreUserActivityManager_type)
     {
         return nullptr;
     }

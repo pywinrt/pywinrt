@@ -3954,7 +3954,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_provider(void) 
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccountClientView, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebAccountClientView_type{py::register_python_type(module.get(), &type_spec_WebAccountClientView, object_bases.get(), nullptr)};
+    if (!WebAccountClientView_type)
     {
         return nullptr;
     }
@@ -3965,92 +3966,110 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_provider(void) 
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccountManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebAccountManager_Static.get())) == -1)
+    py::pyobj_handle WebAccountManager_type{py::register_python_type(module.get(), &type_spec_WebAccountManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebAccountManager_Static.get()))};
+    if (!WebAccountManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderAddAccountOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebAccountProviderAddAccountOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderAddAccountOperation, object_bases.get(), nullptr)};
+    if (!WebAccountProviderAddAccountOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderDeleteAccountOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebAccountProviderDeleteAccountOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderDeleteAccountOperation, object_bases.get(), nullptr)};
+    if (!WebAccountProviderDeleteAccountOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderGetTokenSilentOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebAccountProviderGetTokenSilentOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderGetTokenSilentOperation, object_bases.get(), nullptr)};
+    if (!WebAccountProviderGetTokenSilentOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderManageAccountOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebAccountProviderManageAccountOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderManageAccountOperation, object_bases.get(), nullptr)};
+    if (!WebAccountProviderManageAccountOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderRequestTokenOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebAccountProviderRequestTokenOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderRequestTokenOperation, object_bases.get(), nullptr)};
+    if (!WebAccountProviderRequestTokenOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderRetrieveCookiesOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebAccountProviderRetrieveCookiesOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderRetrieveCookiesOperation, object_bases.get(), nullptr)};
+    if (!WebAccountProviderRetrieveCookiesOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderSignOutAccountOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebAccountProviderSignOutAccountOperation_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderSignOutAccountOperation, object_bases.get(), nullptr)};
+    if (!WebAccountProviderSignOutAccountOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderTriggerDetails, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebAccountProviderTriggerDetails_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderTriggerDetails, object_bases.get(), nullptr)};
+    if (!WebAccountProviderTriggerDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebProviderTokenRequest, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebProviderTokenRequest_type{py::register_python_type(module.get(), &type_spec_WebProviderTokenRequest, object_bases.get(), nullptr)};
+    if (!WebProviderTokenRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebProviderTokenResponse, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebProviderTokenResponse_type{py::register_python_type(module.get(), &type_spec_WebProviderTokenResponse, object_bases.get(), nullptr)};
+    if (!WebProviderTokenResponse_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderBaseReportOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IWebAccountProviderBaseReportOperation_type{py::register_python_type(module.get(), &type_spec_IWebAccountProviderBaseReportOperation, object_bases.get(), nullptr)};
+    if (!IWebAccountProviderBaseReportOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IWebAccountProviderOperation_type{py::register_python_type(module.get(), &type_spec_IWebAccountProviderOperation, object_bases.get(), nullptr)};
+    if (!IWebAccountProviderOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderSilentReportOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IWebAccountProviderSilentReportOperation_type{py::register_python_type(module.get(), &type_spec_IWebAccountProviderSilentReportOperation, object_bases.get(), nullptr)};
+    if (!IWebAccountProviderSilentReportOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderTokenObjects, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IWebAccountProviderTokenObjects_type{py::register_python_type(module.get(), &type_spec_IWebAccountProviderTokenObjects, object_bases.get(), nullptr)};
+    if (!IWebAccountProviderTokenObjects_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderTokenObjects2, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IWebAccountProviderTokenObjects2_type{py::register_python_type(module.get(), &type_spec_IWebAccountProviderTokenObjects2, object_bases.get(), nullptr)};
+    if (!IWebAccountProviderTokenObjects2_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderTokenOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IWebAccountProviderTokenOperation_type{py::register_python_type(module.get(), &type_spec_IWebAccountProviderTokenOperation, object_bases.get(), nullptr)};
+    if (!IWebAccountProviderTokenOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderUIReportOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IWebAccountProviderUIReportOperation_type{py::register_python_type(module.get(), &type_spec_IWebAccountProviderUIReportOperation, object_bases.get(), nullptr)};
+    if (!IWebAccountProviderUIReportOperation_type)
     {
         return nullptr;
     }

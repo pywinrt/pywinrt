@@ -1305,32 +1305,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_diagnostics(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpDiagnosticProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpDiagnosticProvider_Static.get())) == -1)
+    py::pyobj_handle HttpDiagnosticProvider_type{py::register_python_type(module.get(), &type_spec_HttpDiagnosticProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpDiagnosticProvider_Static.get()))};
+    if (!HttpDiagnosticProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpDiagnosticProviderRequestResponseCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle HttpDiagnosticProviderRequestResponseCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_HttpDiagnosticProviderRequestResponseCompletedEventArgs, object_bases.get(), nullptr)};
+    if (!HttpDiagnosticProviderRequestResponseCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpDiagnosticProviderRequestResponseTimestamps, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle HttpDiagnosticProviderRequestResponseTimestamps_type{py::register_python_type(module.get(), &type_spec_HttpDiagnosticProviderRequestResponseTimestamps, object_bases.get(), nullptr)};
+    if (!HttpDiagnosticProviderRequestResponseTimestamps_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpDiagnosticProviderRequestSentEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle HttpDiagnosticProviderRequestSentEventArgs_type{py::register_python_type(module.get(), &type_spec_HttpDiagnosticProviderRequestSentEventArgs, object_bases.get(), nullptr)};
+    if (!HttpDiagnosticProviderRequestSentEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpDiagnosticProviderResponseReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle HttpDiagnosticProviderResponseReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_HttpDiagnosticProviderResponseReceivedEventArgs, object_bases.get(), nullptr)};
+    if (!HttpDiagnosticProviderResponseReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpDiagnosticSourceLocation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle HttpDiagnosticSourceLocation_type{py::register_python_type(module.get(), &type_spec_HttpDiagnosticSourceLocation, object_bases.get(), nullptr)};
+    if (!HttpDiagnosticSourceLocation_type)
     {
         return nullptr;
     }

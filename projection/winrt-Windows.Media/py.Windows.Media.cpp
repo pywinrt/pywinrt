@@ -7557,22 +7557,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_media(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioBuffer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AudioBuffer_type{py::register_python_type(module.get(), &type_spec_AudioBuffer, object_bases.get(), nullptr)};
+    if (!AudioBuffer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioFrame, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AudioFrame_type{py::register_python_type(module.get(), &type_spec_AudioFrame, object_bases.get(), nullptr)};
+    if (!AudioFrame_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AutoRepeatModeChangeRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AutoRepeatModeChangeRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_AutoRepeatModeChangeRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!AutoRepeatModeChangeRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ImageDisplayProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ImageDisplayProperties_type{py::register_python_type(module.get(), &type_spec_ImageDisplayProperties, object_bases.get(), nullptr)};
+    if (!ImageDisplayProperties_type)
     {
         return nullptr;
     }
@@ -7583,12 +7587,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_media(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaControl, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaControl_Static.get())) == -1)
+    py::pyobj_handle MediaControl_type{py::register_python_type(module.get(), &type_spec_MediaControl, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaControl_Static.get()))};
+    if (!MediaControl_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaExtensionManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MediaExtensionManager_type{py::register_python_type(module.get(), &type_spec_MediaExtensionManager, object_bases.get(), nullptr)};
+    if (!MediaExtensionManager_type)
     {
         return nullptr;
     }
@@ -7599,42 +7605,50 @@ PyMODINIT_FUNC PyInit__winrt_windows_media(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaMarkerTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaMarkerTypes_Static.get())) == -1)
+    py::pyobj_handle MediaMarkerTypes_type{py::register_python_type(module.get(), &type_spec_MediaMarkerTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaMarkerTypes_Static.get()))};
+    if (!MediaMarkerTypes_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaProcessingTriggerDetails, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MediaProcessingTriggerDetails_type{py::register_python_type(module.get(), &type_spec_MediaProcessingTriggerDetails, object_bases.get(), nullptr)};
+    if (!MediaProcessingTriggerDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaTimelineController, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MediaTimelineController_type{py::register_python_type(module.get(), &type_spec_MediaTimelineController, object_bases.get(), nullptr)};
+    if (!MediaTimelineController_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaTimelineControllerFailedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MediaTimelineControllerFailedEventArgs_type{py::register_python_type(module.get(), &type_spec_MediaTimelineControllerFailedEventArgs, object_bases.get(), nullptr)};
+    if (!MediaTimelineControllerFailedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MusicDisplayProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MusicDisplayProperties_type{py::register_python_type(module.get(), &type_spec_MusicDisplayProperties, object_bases.get(), nullptr)};
+    if (!MusicDisplayProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlaybackPositionChangeRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PlaybackPositionChangeRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PlaybackPositionChangeRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!PlaybackPositionChangeRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlaybackRateChangeRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PlaybackRateChangeRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PlaybackRateChangeRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!PlaybackRateChangeRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ShuffleEnabledChangeRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ShuffleEnabledChangeRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ShuffleEnabledChangeRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!ShuffleEnabledChangeRequestedEventArgs_type)
     {
         return nullptr;
     }
@@ -7645,32 +7659,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_media(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemMediaTransportControls, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemMediaTransportControls_Static.get())) == -1)
+    py::pyobj_handle SystemMediaTransportControls_type{py::register_python_type(module.get(), &type_spec_SystemMediaTransportControls, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemMediaTransportControls_Static.get()))};
+    if (!SystemMediaTransportControls_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemMediaTransportControlsButtonPressedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SystemMediaTransportControlsButtonPressedEventArgs_type{py::register_python_type(module.get(), &type_spec_SystemMediaTransportControlsButtonPressedEventArgs, object_bases.get(), nullptr)};
+    if (!SystemMediaTransportControlsButtonPressedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemMediaTransportControlsDisplayUpdater, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SystemMediaTransportControlsDisplayUpdater_type{py::register_python_type(module.get(), &type_spec_SystemMediaTransportControlsDisplayUpdater, object_bases.get(), nullptr)};
+    if (!SystemMediaTransportControlsDisplayUpdater_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemMediaTransportControlsPropertyChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SystemMediaTransportControlsPropertyChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_SystemMediaTransportControlsPropertyChangedEventArgs, object_bases.get(), nullptr)};
+    if (!SystemMediaTransportControlsPropertyChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemMediaTransportControlsTimelineProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SystemMediaTransportControlsTimelineProperties_type{py::register_python_type(module.get(), &type_spec_SystemMediaTransportControlsTimelineProperties, object_bases.get(), nullptr)};
+    if (!SystemMediaTransportControlsTimelineProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VideoDisplayProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VideoDisplayProperties_type{py::register_python_type(module.get(), &type_spec_VideoDisplayProperties, object_bases.get(), nullptr)};
+    if (!VideoDisplayProperties_type)
     {
         return nullptr;
     }
@@ -7681,7 +7701,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_media(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VideoEffects, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VideoEffects_Static.get())) == -1)
+    py::pyobj_handle VideoEffects_type{py::register_python_type(module.get(), &type_spec_VideoEffects, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VideoEffects_Static.get()))};
+    if (!VideoEffects_type)
     {
         return nullptr;
     }
@@ -7692,32 +7713,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_media(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VideoFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VideoFrame_Static.get())) == -1)
+    py::pyobj_handle VideoFrame_type{py::register_python_type(module.get(), &type_spec_VideoFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VideoFrame_Static.get()))};
+    if (!VideoFrame_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IMediaExtension, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IMediaExtension_type{py::register_python_type(module.get(), &type_spec_IMediaExtension, object_bases.get(), nullptr)};
+    if (!IMediaExtension_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IMediaFrame, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IMediaFrame_type{py::register_python_type(module.get(), &type_spec_IMediaFrame, object_bases.get(), nullptr)};
+    if (!IMediaFrame_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IMediaMarker, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IMediaMarker_type{py::register_python_type(module.get(), &type_spec_IMediaMarker, object_bases.get(), nullptr)};
+    if (!IMediaMarker_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IMediaMarkers, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IMediaMarkers_type{py::register_python_type(module.get(), &type_spec_IMediaMarkers, object_bases.get(), nullptr)};
+    if (!IMediaMarkers_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaTimeRange, nullptr, nullptr) == -1)
+    py::pyobj_handle MediaTimeRange_type{py::register_python_type(module.get(), &type_spec_MediaTimeRange, nullptr, nullptr)};
+    if (!MediaTimeRange_type)
     {
         return nullptr;
     }

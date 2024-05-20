@@ -567,12 +567,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_policies(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NamedPolicy, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NamedPolicy_Static.get())) == -1)
+    py::pyobj_handle NamedPolicy_type{py::register_python_type(module.get(), &type_spec_NamedPolicy, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NamedPolicy_Static.get()))};
+    if (!NamedPolicy_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NamedPolicyData, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle NamedPolicyData_type{py::register_python_type(module.get(), &type_spec_NamedPolicyData, object_bases.get(), nullptr)};
+    if (!NamedPolicyData_type)
     {
         return nullptr;
     }

@@ -11144,7 +11144,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_vpn(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnAppId, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnAppId_type{py::register_python_type(module.get(), &type_spec_VpnAppId, object_bases.get(), nullptr)};
+    if (!VpnAppId_type)
     {
         return nullptr;
     }
@@ -11155,217 +11156,260 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_vpn(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnChannel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VpnChannel_Static.get())) == -1)
+    py::pyobj_handle VpnChannel_type{py::register_python_type(module.get(), &type_spec_VpnChannel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VpnChannel_Static.get()))};
+    if (!VpnChannel_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnChannelActivityEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnChannelActivityEventArgs_type{py::register_python_type(module.get(), &type_spec_VpnChannelActivityEventArgs, object_bases.get(), nullptr)};
+    if (!VpnChannelActivityEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnChannelActivityStateChangedArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnChannelActivityStateChangedArgs_type{py::register_python_type(module.get(), &type_spec_VpnChannelActivityStateChangedArgs, object_bases.get(), nullptr)};
+    if (!VpnChannelActivityStateChangedArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnChannelConfiguration, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnChannelConfiguration_type{py::register_python_type(module.get(), &type_spec_VpnChannelConfiguration, object_bases.get(), nullptr)};
+    if (!VpnChannelConfiguration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnCredential, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnCredential_type{py::register_python_type(module.get(), &type_spec_VpnCredential, object_bases.get(), nullptr)};
+    if (!VpnCredential_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnCustomCheckBox, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnCustomCheckBox_type{py::register_python_type(module.get(), &type_spec_VpnCustomCheckBox, object_bases.get(), nullptr)};
+    if (!VpnCustomCheckBox_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnCustomComboBox, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnCustomComboBox_type{py::register_python_type(module.get(), &type_spec_VpnCustomComboBox, object_bases.get(), nullptr)};
+    if (!VpnCustomComboBox_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnCustomEditBox, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnCustomEditBox_type{py::register_python_type(module.get(), &type_spec_VpnCustomEditBox, object_bases.get(), nullptr)};
+    if (!VpnCustomEditBox_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnCustomErrorBox, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnCustomErrorBox_type{py::register_python_type(module.get(), &type_spec_VpnCustomErrorBox, object_bases.get(), nullptr)};
+    if (!VpnCustomErrorBox_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnCustomPromptBooleanInput, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnCustomPromptBooleanInput_type{py::register_python_type(module.get(), &type_spec_VpnCustomPromptBooleanInput, object_bases.get(), nullptr)};
+    if (!VpnCustomPromptBooleanInput_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnCustomPromptOptionSelector, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnCustomPromptOptionSelector_type{py::register_python_type(module.get(), &type_spec_VpnCustomPromptOptionSelector, object_bases.get(), nullptr)};
+    if (!VpnCustomPromptOptionSelector_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnCustomPromptText, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnCustomPromptText_type{py::register_python_type(module.get(), &type_spec_VpnCustomPromptText, object_bases.get(), nullptr)};
+    if (!VpnCustomPromptText_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnCustomPromptTextInput, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnCustomPromptTextInput_type{py::register_python_type(module.get(), &type_spec_VpnCustomPromptTextInput, object_bases.get(), nullptr)};
+    if (!VpnCustomPromptTextInput_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnCustomTextBox, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnCustomTextBox_type{py::register_python_type(module.get(), &type_spec_VpnCustomTextBox, object_bases.get(), nullptr)};
+    if (!VpnCustomTextBox_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnDomainNameAssignment, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnDomainNameAssignment_type{py::register_python_type(module.get(), &type_spec_VpnDomainNameAssignment, object_bases.get(), nullptr)};
+    if (!VpnDomainNameAssignment_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnDomainNameInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnDomainNameInfo_type{py::register_python_type(module.get(), &type_spec_VpnDomainNameInfo, object_bases.get(), nullptr)};
+    if (!VpnDomainNameInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnForegroundActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnForegroundActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_VpnForegroundActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!VpnForegroundActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnForegroundActivationOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnForegroundActivationOperation_type{py::register_python_type(module.get(), &type_spec_VpnForegroundActivationOperation, object_bases.get(), nullptr)};
+    if (!VpnForegroundActivationOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnInterfaceId, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnInterfaceId_type{py::register_python_type(module.get(), &type_spec_VpnInterfaceId, object_bases.get(), nullptr)};
+    if (!VpnInterfaceId_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnManagementAgent, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnManagementAgent_type{py::register_python_type(module.get(), &type_spec_VpnManagementAgent, object_bases.get(), nullptr)};
+    if (!VpnManagementAgent_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnNamespaceAssignment, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnNamespaceAssignment_type{py::register_python_type(module.get(), &type_spec_VpnNamespaceAssignment, object_bases.get(), nullptr)};
+    if (!VpnNamespaceAssignment_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnNamespaceInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnNamespaceInfo_type{py::register_python_type(module.get(), &type_spec_VpnNamespaceInfo, object_bases.get(), nullptr)};
+    if (!VpnNamespaceInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnNativeProfile, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnNativeProfile_type{py::register_python_type(module.get(), &type_spec_VpnNativeProfile, object_bases.get(), nullptr)};
+    if (!VpnNativeProfile_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnPacketBuffer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnPacketBuffer_type{py::register_python_type(module.get(), &type_spec_VpnPacketBuffer, object_bases.get(), nullptr)};
+    if (!VpnPacketBuffer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnPacketBufferList, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnPacketBufferList_type{py::register_python_type(module.get(), &type_spec_VpnPacketBufferList, object_bases.get(), nullptr)};
+    if (!VpnPacketBufferList_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnPickedCredential, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnPickedCredential_type{py::register_python_type(module.get(), &type_spec_VpnPickedCredential, object_bases.get(), nullptr)};
+    if (!VpnPickedCredential_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnPlugInProfile, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnPlugInProfile_type{py::register_python_type(module.get(), &type_spec_VpnPlugInProfile, object_bases.get(), nullptr)};
+    if (!VpnPlugInProfile_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnRoute, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnRoute_type{py::register_python_type(module.get(), &type_spec_VpnRoute, object_bases.get(), nullptr)};
+    if (!VpnRoute_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnRouteAssignment, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnRouteAssignment_type{py::register_python_type(module.get(), &type_spec_VpnRouteAssignment, object_bases.get(), nullptr)};
+    if (!VpnRouteAssignment_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnSystemHealth, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnSystemHealth_type{py::register_python_type(module.get(), &type_spec_VpnSystemHealth, object_bases.get(), nullptr)};
+    if (!VpnSystemHealth_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnTrafficFilter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnTrafficFilter_type{py::register_python_type(module.get(), &type_spec_VpnTrafficFilter, object_bases.get(), nullptr)};
+    if (!VpnTrafficFilter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnTrafficFilterAssignment, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VpnTrafficFilterAssignment_type{py::register_python_type(module.get(), &type_spec_VpnTrafficFilterAssignment, object_bases.get(), nullptr)};
+    if (!VpnTrafficFilterAssignment_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVpnChannelStatics, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVpnChannelStatics_type{py::register_python_type(module.get(), &type_spec_IVpnChannelStatics, object_bases.get(), nullptr)};
+    if (!IVpnChannelStatics_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVpnCredential, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVpnCredential_type{py::register_python_type(module.get(), &type_spec_IVpnCredential, object_bases.get(), nullptr)};
+    if (!IVpnCredential_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVpnCustomPrompt, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVpnCustomPrompt_type{py::register_python_type(module.get(), &type_spec_IVpnCustomPrompt, object_bases.get(), nullptr)};
+    if (!IVpnCustomPrompt_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVpnCustomPromptElement, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVpnCustomPromptElement_type{py::register_python_type(module.get(), &type_spec_IVpnCustomPromptElement, object_bases.get(), nullptr)};
+    if (!IVpnCustomPromptElement_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVpnDomainNameInfoFactory, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVpnDomainNameInfoFactory_type{py::register_python_type(module.get(), &type_spec_IVpnDomainNameInfoFactory, object_bases.get(), nullptr)};
+    if (!IVpnDomainNameInfoFactory_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVpnInterfaceIdFactory, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVpnInterfaceIdFactory_type{py::register_python_type(module.get(), &type_spec_IVpnInterfaceIdFactory, object_bases.get(), nullptr)};
+    if (!IVpnInterfaceIdFactory_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVpnNamespaceInfoFactory, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVpnNamespaceInfoFactory_type{py::register_python_type(module.get(), &type_spec_IVpnNamespaceInfoFactory, object_bases.get(), nullptr)};
+    if (!IVpnNamespaceInfoFactory_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVpnPacketBufferFactory, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVpnPacketBufferFactory_type{py::register_python_type(module.get(), &type_spec_IVpnPacketBufferFactory, object_bases.get(), nullptr)};
+    if (!IVpnPacketBufferFactory_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVpnPlugIn, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVpnPlugIn_type{py::register_python_type(module.get(), &type_spec_IVpnPlugIn, object_bases.get(), nullptr)};
+    if (!IVpnPlugIn_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVpnProfile, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVpnProfile_type{py::register_python_type(module.get(), &type_spec_IVpnProfile, object_bases.get(), nullptr)};
+    if (!IVpnProfile_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVpnRouteFactory, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVpnRouteFactory_type{py::register_python_type(module.get(), &type_spec_IVpnRouteFactory, object_bases.get(), nullptr)};
+    if (!IVpnRouteFactory_type)
     {
         return nullptr;
     }

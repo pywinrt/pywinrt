@@ -3133,27 +3133,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_lights_effects(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LampArrayBitmapEffect, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LampArrayBitmapEffect_type{py::register_python_type(module.get(), &type_spec_LampArrayBitmapEffect, object_bases.get(), nullptr)};
+    if (!LampArrayBitmapEffect_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LampArrayBitmapRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LampArrayBitmapRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_LampArrayBitmapRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!LampArrayBitmapRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LampArrayBlinkEffect, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LampArrayBlinkEffect_type{py::register_python_type(module.get(), &type_spec_LampArrayBlinkEffect, object_bases.get(), nullptr)};
+    if (!LampArrayBlinkEffect_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LampArrayColorRampEffect, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LampArrayColorRampEffect_type{py::register_python_type(module.get(), &type_spec_LampArrayColorRampEffect, object_bases.get(), nullptr)};
+    if (!LampArrayColorRampEffect_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LampArrayCustomEffect, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LampArrayCustomEffect_type{py::register_python_type(module.get(), &type_spec_LampArrayCustomEffect, object_bases.get(), nullptr)};
+    if (!LampArrayCustomEffect_type)
     {
         return nullptr;
     }
@@ -3164,22 +3169,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_lights_effects(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LampArrayEffectPlaylist, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LampArrayEffectPlaylist_Static.get())) == -1)
+    py::pyobj_handle LampArrayEffectPlaylist_type{py::register_python_type(module.get(), &type_spec_LampArrayEffectPlaylist, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LampArrayEffectPlaylist_Static.get()))};
+    if (!LampArrayEffectPlaylist_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LampArraySolidEffect, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LampArraySolidEffect_type{py::register_python_type(module.get(), &type_spec_LampArraySolidEffect, object_bases.get(), nullptr)};
+    if (!LampArraySolidEffect_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LampArrayUpdateRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LampArrayUpdateRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_LampArrayUpdateRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!LampArrayUpdateRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ILampArrayEffect, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ILampArrayEffect_type{py::register_python_type(module.get(), &type_spec_ILampArrayEffect, object_bases.get(), nullptr)};
+    if (!ILampArrayEffect_type)
     {
         return nullptr;
     }

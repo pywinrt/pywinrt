@@ -1396,32 +1396,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer_dragdrop_core
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreDragDropManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreDragDropManager_Static.get())) == -1)
+    py::pyobj_handle CoreDragDropManager_type{py::register_python_type(module.get(), &type_spec_CoreDragDropManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreDragDropManager_Static.get()))};
+    if (!CoreDragDropManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreDragInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreDragInfo_type{py::register_python_type(module.get(), &type_spec_CoreDragInfo, object_bases.get(), nullptr)};
+    if (!CoreDragInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreDragOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreDragOperation_type{py::register_python_type(module.get(), &type_spec_CoreDragOperation, object_bases.get(), nullptr)};
+    if (!CoreDragOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreDragUIOverride, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreDragUIOverride_type{py::register_python_type(module.get(), &type_spec_CoreDragUIOverride, object_bases.get(), nullptr)};
+    if (!CoreDragUIOverride_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreDropOperationTargetRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreDropOperationTargetRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreDropOperationTargetRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreDropOperationTargetRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ICoreDropOperationTarget, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ICoreDropOperationTarget_type{py::register_python_type(module.get(), &type_spec_ICoreDropOperationTarget, object_bases.get(), nullptr)};
+    if (!ICoreDropOperationTarget_type)
     {
         return nullptr;
     }

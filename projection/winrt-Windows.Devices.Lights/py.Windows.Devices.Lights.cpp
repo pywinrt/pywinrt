@@ -1809,7 +1809,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_lights(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Lamp, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Lamp_Static.get())) == -1)
+    py::pyobj_handle Lamp_type{py::register_python_type(module.get(), &type_spec_Lamp, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Lamp_Static.get()))};
+    if (!Lamp_type)
     {
         return nullptr;
     }
@@ -1820,17 +1821,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_lights(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LampArray, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LampArray_Static.get())) == -1)
+    py::pyobj_handle LampArray_type{py::register_python_type(module.get(), &type_spec_LampArray, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LampArray_Static.get()))};
+    if (!LampArray_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LampAvailabilityChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LampAvailabilityChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_LampAvailabilityChangedEventArgs, object_bases.get(), nullptr)};
+    if (!LampAvailabilityChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LampInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LampInfo_type{py::register_python_type(module.get(), &type_spec_LampInfo, object_bases.get(), nullptr)};
+    if (!LampInfo_type)
     {
         return nullptr;
     }

@@ -7060,182 +7060,218 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IRawElementProviderSimple, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IRawElementProviderSimple_type{py::register_python_type(module.get(), &type_spec_IRawElementProviderSimple, object_bases.get(), nullptr)};
+    if (!IRawElementProviderSimple_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAnnotationProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IAnnotationProvider_type{py::register_python_type(module.get(), &type_spec_IAnnotationProvider, object_bases.get(), nullptr)};
+    if (!IAnnotationProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ICustomNavigationProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ICustomNavigationProvider_type{py::register_python_type(module.get(), &type_spec_ICustomNavigationProvider, object_bases.get(), nullptr)};
+    if (!ICustomNavigationProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IDockProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IDockProvider_type{py::register_python_type(module.get(), &type_spec_IDockProvider, object_bases.get(), nullptr)};
+    if (!IDockProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IDragProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IDragProvider_type{py::register_python_type(module.get(), &type_spec_IDragProvider, object_bases.get(), nullptr)};
+    if (!IDragProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IDropTargetProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IDropTargetProvider_type{py::register_python_type(module.get(), &type_spec_IDropTargetProvider, object_bases.get(), nullptr)};
+    if (!IDropTargetProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IExpandCollapseProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IExpandCollapseProvider_type{py::register_python_type(module.get(), &type_spec_IExpandCollapseProvider, object_bases.get(), nullptr)};
+    if (!IExpandCollapseProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IGridItemProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IGridItemProvider_type{py::register_python_type(module.get(), &type_spec_IGridItemProvider, object_bases.get(), nullptr)};
+    if (!IGridItemProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IGridProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IGridProvider_type{py::register_python_type(module.get(), &type_spec_IGridProvider, object_bases.get(), nullptr)};
+    if (!IGridProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IInvokeProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IInvokeProvider_type{py::register_python_type(module.get(), &type_spec_IInvokeProvider, object_bases.get(), nullptr)};
+    if (!IInvokeProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IItemContainerProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IItemContainerProvider_type{py::register_python_type(module.get(), &type_spec_IItemContainerProvider, object_bases.get(), nullptr)};
+    if (!IItemContainerProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IMultipleViewProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IMultipleViewProvider_type{py::register_python_type(module.get(), &type_spec_IMultipleViewProvider, object_bases.get(), nullptr)};
+    if (!IMultipleViewProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IObjectModelProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IObjectModelProvider_type{py::register_python_type(module.get(), &type_spec_IObjectModelProvider, object_bases.get(), nullptr)};
+    if (!IObjectModelProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IRangeValueProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IRangeValueProvider_type{py::register_python_type(module.get(), &type_spec_IRangeValueProvider, object_bases.get(), nullptr)};
+    if (!IRangeValueProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IScrollItemProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IScrollItemProvider_type{py::register_python_type(module.get(), &type_spec_IScrollItemProvider, object_bases.get(), nullptr)};
+    if (!IScrollItemProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IScrollProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IScrollProvider_type{py::register_python_type(module.get(), &type_spec_IScrollProvider, object_bases.get(), nullptr)};
+    if (!IScrollProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISelectionItemProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ISelectionItemProvider_type{py::register_python_type(module.get(), &type_spec_ISelectionItemProvider, object_bases.get(), nullptr)};
+    if (!ISelectionItemProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISelectionProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ISelectionProvider_type{py::register_python_type(module.get(), &type_spec_ISelectionProvider, object_bases.get(), nullptr)};
+    if (!ISelectionProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISpreadsheetItemProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ISpreadsheetItemProvider_type{py::register_python_type(module.get(), &type_spec_ISpreadsheetItemProvider, object_bases.get(), nullptr)};
+    if (!ISpreadsheetItemProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISpreadsheetProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ISpreadsheetProvider_type{py::register_python_type(module.get(), &type_spec_ISpreadsheetProvider, object_bases.get(), nullptr)};
+    if (!ISpreadsheetProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IStylesProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IStylesProvider_type{py::register_python_type(module.get(), &type_spec_IStylesProvider, object_bases.get(), nullptr)};
+    if (!IStylesProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISynchronizedInputProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ISynchronizedInputProvider_type{py::register_python_type(module.get(), &type_spec_ISynchronizedInputProvider, object_bases.get(), nullptr)};
+    if (!ISynchronizedInputProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ITableItemProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ITableItemProvider_type{py::register_python_type(module.get(), &type_spec_ITableItemProvider, object_bases.get(), nullptr)};
+    if (!ITableItemProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ITableProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ITableProvider_type{py::register_python_type(module.get(), &type_spec_ITableProvider, object_bases.get(), nullptr)};
+    if (!ITableProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ITextChildProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ITextChildProvider_type{py::register_python_type(module.get(), &type_spec_ITextChildProvider, object_bases.get(), nullptr)};
+    if (!ITextChildProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ITextEditProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ITextEditProvider_type{py::register_python_type(module.get(), &type_spec_ITextEditProvider, object_bases.get(), nullptr)};
+    if (!ITextEditProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ITextProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ITextProvider_type{py::register_python_type(module.get(), &type_spec_ITextProvider, object_bases.get(), nullptr)};
+    if (!ITextProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ITextProvider2, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ITextProvider2_type{py::register_python_type(module.get(), &type_spec_ITextProvider2, object_bases.get(), nullptr)};
+    if (!ITextProvider2_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ITextRangeProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ITextRangeProvider_type{py::register_python_type(module.get(), &type_spec_ITextRangeProvider, object_bases.get(), nullptr)};
+    if (!ITextRangeProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ITextRangeProvider2, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ITextRangeProvider2_type{py::register_python_type(module.get(), &type_spec_ITextRangeProvider2, object_bases.get(), nullptr)};
+    if (!ITextRangeProvider2_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IToggleProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IToggleProvider_type{py::register_python_type(module.get(), &type_spec_IToggleProvider, object_bases.get(), nullptr)};
+    if (!IToggleProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ITransformProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ITransformProvider_type{py::register_python_type(module.get(), &type_spec_ITransformProvider, object_bases.get(), nullptr)};
+    if (!ITransformProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ITransformProvider2, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ITransformProvider2_type{py::register_python_type(module.get(), &type_spec_ITransformProvider2, object_bases.get(), nullptr)};
+    if (!ITransformProvider2_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IValueProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IValueProvider_type{py::register_python_type(module.get(), &type_spec_IValueProvider, object_bases.get(), nullptr)};
+    if (!IValueProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVirtualizedItemProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVirtualizedItemProvider_type{py::register_python_type(module.get(), &type_spec_IVirtualizedItemProvider, object_bases.get(), nullptr)};
+    if (!IVirtualizedItemProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWindowProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IWindowProvider_type{py::register_python_type(module.get(), &type_spec_IWindowProvider, object_bases.get(), nullptr)};
+    if (!IWindowProvider_type)
     {
         return nullptr;
     }

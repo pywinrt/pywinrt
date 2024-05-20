@@ -456,12 +456,13 @@ struct py_type<%>
         }
 
         w.write(
-            "if (py::register_python_type(module.get(), &type_spec_@, %, %) == -1)\n",
+            "py::pyobj_handle @_type{py::register_python_type(module.get(), &type_spec_@, %, %)};\n",
+            type.TypeName(),
             type.TypeName(),
             bind<write_type_base>(type),
             metaclass);
 
-        w.write("{\n");
+        w.write("if (!@_type)\n{\n", type.TypeName());
         {
             writer::indent_guard g{w};
 

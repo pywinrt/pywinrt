@@ -1795,17 +1795,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_core(void) noex
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FindAllAccountsResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FindAllAccountsResult_type{py::register_python_type(module.get(), &type_spec_FindAllAccountsResult, object_bases.get(), nullptr)};
+    if (!FindAllAccountsResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccountEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebAccountEventArgs_type{py::register_python_type(module.get(), &type_spec_WebAccountEventArgs, object_bases.get(), nullptr)};
+    if (!WebAccountEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccountMonitor, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebAccountMonitor_type{py::register_python_type(module.get(), &type_spec_WebAccountMonitor, object_bases.get(), nullptr)};
+    if (!WebAccountMonitor_type)
     {
         return nullptr;
     }
@@ -1816,27 +1819,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_core(void) noex
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAuthenticationCoreManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebAuthenticationCoreManager_Static.get())) == -1)
+    py::pyobj_handle WebAuthenticationCoreManager_type{py::register_python_type(module.get(), &type_spec_WebAuthenticationCoreManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebAuthenticationCoreManager_Static.get()))};
+    if (!WebAuthenticationCoreManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebProviderError, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebProviderError_type{py::register_python_type(module.get(), &type_spec_WebProviderError, object_bases.get(), nullptr)};
+    if (!WebProviderError_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebTokenRequest, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebTokenRequest_type{py::register_python_type(module.get(), &type_spec_WebTokenRequest, object_bases.get(), nullptr)};
+    if (!WebTokenRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebTokenRequestResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebTokenRequestResult_type{py::register_python_type(module.get(), &type_spec_WebTokenRequestResult, object_bases.get(), nullptr)};
+    if (!WebTokenRequestResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebTokenResponse, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebTokenResponse_type{py::register_python_type(module.get(), &type_spec_WebTokenResponse, object_bases.get(), nullptr)};
+    if (!WebTokenResponse_type)
     {
         return nullptr;
     }

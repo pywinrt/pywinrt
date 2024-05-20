@@ -858,17 +858,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_printing(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AddPagesEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AddPagesEventArgs_type{py::register_python_type(module.get(), &type_spec_AddPagesEventArgs, object_bases.get(), nullptr)};
+    if (!AddPagesEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GetPreviewPageEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle GetPreviewPageEventArgs_type{py::register_python_type(module.get(), &type_spec_GetPreviewPageEventArgs, object_bases.get(), nullptr)};
+    if (!GetPreviewPageEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaginateEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PaginateEventArgs_type{py::register_python_type(module.get(), &type_spec_PaginateEventArgs, object_bases.get(), nullptr)};
+    if (!PaginateEventArgs_type)
     {
         return nullptr;
     }
@@ -879,7 +882,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_printing(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintDocument, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PrintDocument_Static.get())) == -1)
+    py::pyobj_handle PrintDocument_type{py::register_python_type(module.get(), &type_spec_PrintDocument, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PrintDocument_Static.get()))};
+    if (!PrintDocument_type)
     {
         return nullptr;
     }

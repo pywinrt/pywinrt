@@ -221,7 +221,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_resources(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CustomXamlResourceLoader, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CustomXamlResourceLoader_Static.get())) == -1)
+    py::pyobj_handle CustomXamlResourceLoader_type{py::register_python_type(module.get(), &type_spec_CustomXamlResourceLoader, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CustomXamlResourceLoader_Static.get()))};
+    if (!CustomXamlResourceLoader_type)
     {
         return nullptr;
     }

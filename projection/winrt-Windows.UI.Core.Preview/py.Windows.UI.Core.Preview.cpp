@@ -499,12 +499,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreAppWindowPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreAppWindowPreview_Static.get())) == -1)
+    py::pyobj_handle CoreAppWindowPreview_type{py::register_python_type(module.get(), &type_spec_CoreAppWindowPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreAppWindowPreview_Static.get()))};
+    if (!CoreAppWindowPreview_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemNavigationCloseRequestedPreviewEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SystemNavigationCloseRequestedPreviewEventArgs_type{py::register_python_type(module.get(), &type_spec_SystemNavigationCloseRequestedPreviewEventArgs, object_bases.get(), nullptr)};
+    if (!SystemNavigationCloseRequestedPreviewEventArgs_type)
     {
         return nullptr;
     }
@@ -515,7 +517,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemNavigationManagerPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemNavigationManagerPreview_Static.get())) == -1)
+    py::pyobj_handle SystemNavigationManagerPreview_type{py::register_python_type(module.get(), &type_spec_SystemNavigationManagerPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemNavigationManagerPreview_Static.get()))};
+    if (!SystemNavigationManagerPreview_type)
     {
         return nullptr;
     }

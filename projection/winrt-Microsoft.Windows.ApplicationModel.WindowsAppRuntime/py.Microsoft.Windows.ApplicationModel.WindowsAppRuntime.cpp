@@ -511,7 +511,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applicationmodel_windowsappruntim
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DeploymentInitializeOptions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DeploymentInitializeOptions_type{py::register_python_type(module.get(), &type_spec_DeploymentInitializeOptions, object_bases.get(), nullptr)};
+    if (!DeploymentInitializeOptions_type)
     {
         return nullptr;
     }
@@ -522,12 +523,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applicationmodel_windowsappruntim
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DeploymentManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DeploymentManager_Static.get())) == -1)
+    py::pyobj_handle DeploymentManager_type{py::register_python_type(module.get(), &type_spec_DeploymentManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DeploymentManager_Static.get()))};
+    if (!DeploymentManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DeploymentResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DeploymentResult_type{py::register_python_type(module.get(), &type_spec_DeploymentResult, object_bases.get(), nullptr)};
+    if (!DeploymentResult_type)
     {
         return nullptr;
     }

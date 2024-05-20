@@ -1145,7 +1145,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_pushnotifications(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PushNotificationChannel, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PushNotificationChannel_type{py::register_python_type(module.get(), &type_spec_PushNotificationChannel, object_bases.get(), nullptr)};
+    if (!PushNotificationChannel_type)
     {
         return nullptr;
     }
@@ -1156,27 +1157,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_pushnotifications(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PushNotificationChannelManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PushNotificationChannelManager_Static.get())) == -1)
+    py::pyobj_handle PushNotificationChannelManager_type{py::register_python_type(module.get(), &type_spec_PushNotificationChannelManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PushNotificationChannelManager_Static.get()))};
+    if (!PushNotificationChannelManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PushNotificationChannelManagerForUser, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PushNotificationChannelManagerForUser_type{py::register_python_type(module.get(), &type_spec_PushNotificationChannelManagerForUser, object_bases.get(), nullptr)};
+    if (!PushNotificationChannelManagerForUser_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PushNotificationChannelsRevokedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PushNotificationChannelsRevokedEventArgs_type{py::register_python_type(module.get(), &type_spec_PushNotificationChannelsRevokedEventArgs, object_bases.get(), nullptr)};
+    if (!PushNotificationChannelsRevokedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PushNotificationReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PushNotificationReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_PushNotificationReceivedEventArgs, object_bases.get(), nullptr)};
+    if (!PushNotificationReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RawNotification, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RawNotification_type{py::register_python_type(module.get(), &type_spec_RawNotification, object_bases.get(), nullptr)};
+    if (!RawNotification_type)
     {
         return nullptr;
     }

@@ -587,7 +587,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile_systemmanufacturers(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OemSupportInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle OemSupportInfo_type{py::register_python_type(module.get(), &type_spec_OemSupportInfo, object_bases.get(), nullptr)};
+    if (!OemSupportInfo_type)
     {
         return nullptr;
     }
@@ -598,12 +599,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile_systemmanufacturers(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SmbiosInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmbiosInformation_Static.get())) == -1)
+    py::pyobj_handle SmbiosInformation_type{py::register_python_type(module.get(), &type_spec_SmbiosInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmbiosInformation_Static.get()))};
+    if (!SmbiosInformation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemSupportDeviceInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SystemSupportDeviceInfo_type{py::register_python_type(module.get(), &type_spec_SystemSupportDeviceInfo, object_bases.get(), nullptr)};
+    if (!SystemSupportDeviceInfo_type)
     {
         return nullptr;
     }
@@ -614,7 +617,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile_systemmanufacturers(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemSupportInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemSupportInfo_Static.get())) == -1)
+    py::pyobj_handle SystemSupportInfo_type{py::register_python_type(module.get(), &type_spec_SystemSupportInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemSupportInfo_Static.get()))};
+    if (!SystemSupportInfo_type)
     {
         return nullptr;
     }

@@ -2579,42 +2579,50 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_text(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AlternateWordForm, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AlternateWordForm_type{py::register_python_type(module.get(), &type_spec_AlternateWordForm, object_bases.get(), nullptr)};
+    if (!AlternateWordForm_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SelectableWordSegment, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SelectableWordSegment_type{py::register_python_type(module.get(), &type_spec_SelectableWordSegment, object_bases.get(), nullptr)};
+    if (!SelectableWordSegment_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SelectableWordsSegmenter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SelectableWordsSegmenter_type{py::register_python_type(module.get(), &type_spec_SelectableWordsSegmenter, object_bases.get(), nullptr)};
+    if (!SelectableWordsSegmenter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SemanticTextQuery, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SemanticTextQuery_type{py::register_python_type(module.get(), &type_spec_SemanticTextQuery, object_bases.get(), nullptr)};
+    if (!SemanticTextQuery_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TextConversionGenerator, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle TextConversionGenerator_type{py::register_python_type(module.get(), &type_spec_TextConversionGenerator, object_bases.get(), nullptr)};
+    if (!TextConversionGenerator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TextPhoneme, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle TextPhoneme_type{py::register_python_type(module.get(), &type_spec_TextPhoneme, object_bases.get(), nullptr)};
+    if (!TextPhoneme_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TextPredictionGenerator, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle TextPredictionGenerator_type{py::register_python_type(module.get(), &type_spec_TextPredictionGenerator, object_bases.get(), nullptr)};
+    if (!TextPredictionGenerator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TextReverseConversionGenerator, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle TextReverseConversionGenerator_type{py::register_python_type(module.get(), &type_spec_TextReverseConversionGenerator, object_bases.get(), nullptr)};
+    if (!TextReverseConversionGenerator_type)
     {
         return nullptr;
     }
@@ -2625,22 +2633,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_text(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UnicodeCharacters, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UnicodeCharacters_Static.get())) == -1)
+    py::pyobj_handle UnicodeCharacters_type{py::register_python_type(module.get(), &type_spec_UnicodeCharacters, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UnicodeCharacters_Static.get()))};
+    if (!UnicodeCharacters_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WordSegment, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WordSegment_type{py::register_python_type(module.get(), &type_spec_WordSegment, object_bases.get(), nullptr)};
+    if (!WordSegment_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WordsSegmenter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WordsSegmenter_type{py::register_python_type(module.get(), &type_spec_WordsSegmenter, object_bases.get(), nullptr)};
+    if (!WordsSegmenter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TextSegment, nullptr, nullptr) == -1)
+    py::pyobj_handle TextSegment_type{py::register_python_type(module.get(), &type_spec_TextSegment, nullptr, nullptr)};
+    if (!TextSegment_type)
     {
         return nullptr;
     }

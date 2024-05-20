@@ -1255,7 +1255,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_I2cConnectionSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle I2cConnectionSettings_type{py::register_python_type(module.get(), &type_spec_I2cConnectionSettings, object_bases.get(), nullptr)};
+    if (!I2cConnectionSettings_type)
     {
         return nullptr;
     }
@@ -1266,7 +1267,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_I2cController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_I2cController_Static.get())) == -1)
+    py::pyobj_handle I2cController_type{py::register_python_type(module.get(), &type_spec_I2cController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_I2cController_Static.get()))};
+    if (!I2cController_type)
     {
         return nullptr;
     }
@@ -1277,17 +1279,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_I2cDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_I2cDevice_Static.get())) == -1)
+    py::pyobj_handle I2cDevice_type{py::register_python_type(module.get(), &type_spec_I2cDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_I2cDevice_Static.get()))};
+    if (!I2cDevice_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_II2cDeviceStatics, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle II2cDeviceStatics_type{py::register_python_type(module.get(), &type_spec_II2cDeviceStatics, object_bases.get(), nullptr)};
+    if (!II2cDeviceStatics_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_I2cTransferResult, nullptr, nullptr) == -1)
+    py::pyobj_handle I2cTransferResult_type{py::register_python_type(module.get(), &type_spec_I2cTransferResult, nullptr, nullptr)};
+    if (!I2cTransferResult_type)
     {
         return nullptr;
     }

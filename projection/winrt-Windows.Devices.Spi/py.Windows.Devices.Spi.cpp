@@ -1340,12 +1340,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_spi(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpiBusInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SpiBusInfo_type{py::register_python_type(module.get(), &type_spec_SpiBusInfo, object_bases.get(), nullptr)};
+    if (!SpiBusInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpiConnectionSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SpiConnectionSettings_type{py::register_python_type(module.get(), &type_spec_SpiConnectionSettings, object_bases.get(), nullptr)};
+    if (!SpiConnectionSettings_type)
     {
         return nullptr;
     }
@@ -1356,7 +1358,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_spi(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpiController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpiController_Static.get())) == -1)
+    py::pyobj_handle SpiController_type{py::register_python_type(module.get(), &type_spec_SpiController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpiController_Static.get()))};
+    if (!SpiController_type)
     {
         return nullptr;
     }
@@ -1367,12 +1370,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_spi(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpiDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpiDevice_Static.get())) == -1)
+    py::pyobj_handle SpiDevice_type{py::register_python_type(module.get(), &type_spec_SpiDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpiDevice_Static.get()))};
+    if (!SpiDevice_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISpiDeviceStatics, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ISpiDeviceStatics_type{py::register_python_type(module.get(), &type_spec_ISpiDeviceStatics, object_bases.get(), nullptr)};
+    if (!ISpiDeviceStatics_type)
     {
         return nullptr;
     }

@@ -266,7 +266,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_xamltypeinfo(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XamlControlsXamlMetaDataProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlControlsXamlMetaDataProvider_Static.get())) == -1)
+    py::pyobj_handle XamlControlsXamlMetaDataProvider_type{py::register_python_type(module.get(), &type_spec_XamlControlsXamlMetaDataProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlControlsXamlMetaDataProvider_Static.get()))};
+    if (!XamlControlsXamlMetaDataProvider_type)
     {
         return nullptr;
     }

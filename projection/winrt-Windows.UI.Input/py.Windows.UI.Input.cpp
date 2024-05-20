@@ -10273,17 +10273,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AttachableInputObject, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AttachableInputObject_type{py::register_python_type(module.get(), &type_spec_AttachableInputObject, object_bases.get(), nullptr)};
+    if (!AttachableInputObject_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CrossSlidingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CrossSlidingEventArgs_type{py::register_python_type(module.get(), &type_spec_CrossSlidingEventArgs, object_bases.get(), nullptr)};
+    if (!CrossSlidingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DraggingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DraggingEventArgs_type{py::register_python_type(module.get(), &type_spec_DraggingEventArgs, object_bases.get(), nullptr)};
+    if (!DraggingEventArgs_type)
     {
         return nullptr;
     }
@@ -10294,32 +10297,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EdgeGesture, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EdgeGesture_Static.get())) == -1)
+    py::pyobj_handle EdgeGesture_type{py::register_python_type(module.get(), &type_spec_EdgeGesture, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EdgeGesture_Static.get()))};
+    if (!EdgeGesture_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EdgeGestureEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle EdgeGestureEventArgs_type{py::register_python_type(module.get(), &type_spec_EdgeGestureEventArgs, object_bases.get(), nullptr)};
+    if (!EdgeGestureEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GestureRecognizer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle GestureRecognizer_type{py::register_python_type(module.get(), &type_spec_GestureRecognizer, object_bases.get(), nullptr)};
+    if (!GestureRecognizer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HoldingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle HoldingEventArgs_type{py::register_python_type(module.get(), &type_spec_HoldingEventArgs, object_bases.get(), nullptr)};
+    if (!HoldingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InputActivationListener, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle InputActivationListener_type{py::register_python_type(module.get(), &type_spec_InputActivationListener, object_bases.get(), nullptr)};
+    if (!InputActivationListener_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InputActivationListenerActivationChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle InputActivationListenerActivationChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_InputActivationListenerActivationChangedEventArgs, object_bases.get(), nullptr)};
+    if (!InputActivationListenerActivationChangedEventArgs_type)
     {
         return nullptr;
     }
@@ -10330,32 +10339,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KeyboardDeliveryInterceptor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyboardDeliveryInterceptor_Static.get())) == -1)
+    py::pyobj_handle KeyboardDeliveryInterceptor_type{py::register_python_type(module.get(), &type_spec_KeyboardDeliveryInterceptor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyboardDeliveryInterceptor_Static.get()))};
+    if (!KeyboardDeliveryInterceptor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ManipulationCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ManipulationCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationCompletedEventArgs, object_bases.get(), nullptr)};
+    if (!ManipulationCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ManipulationInertiaStartingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ManipulationInertiaStartingEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationInertiaStartingEventArgs, object_bases.get(), nullptr)};
+    if (!ManipulationInertiaStartingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ManipulationStartedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ManipulationStartedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationStartedEventArgs, object_bases.get(), nullptr)};
+    if (!ManipulationStartedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ManipulationUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ManipulationUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationUpdatedEventArgs, object_bases.get(), nullptr)};
+    if (!ManipulationUpdatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MouseWheelParameters, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MouseWheelParameters_type{py::register_python_type(module.get(), &type_spec_MouseWheelParameters, object_bases.get(), nullptr)};
+    if (!MouseWheelParameters_type)
     {
         return nullptr;
     }
@@ -10366,12 +10381,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PointerPoint, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerPoint_Static.get())) == -1)
+    py::pyobj_handle PointerPoint_type{py::register_python_type(module.get(), &type_spec_PointerPoint, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerPoint_Static.get()))};
+    if (!PointerPoint_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PointerPointProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PointerPointProperties_type{py::register_python_type(module.get(), &type_spec_PointerPointProperties, object_bases.get(), nullptr)};
+    if (!PointerPointProperties_type)
     {
         return nullptr;
     }
@@ -10382,7 +10399,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PointerVisualizationSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerVisualizationSettings_Static.get())) == -1)
+    py::pyobj_handle PointerVisualizationSettings_type{py::register_python_type(module.get(), &type_spec_PointerVisualizationSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerVisualizationSettings_Static.get()))};
+    if (!PointerVisualizationSettings_type)
     {
         return nullptr;
     }
@@ -10393,27 +10411,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RadialController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadialController_Static.get())) == -1)
+    py::pyobj_handle RadialController_type{py::register_python_type(module.get(), &type_spec_RadialController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadialController_Static.get()))};
+    if (!RadialController_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RadialControllerButtonClickedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RadialControllerButtonClickedEventArgs_type{py::register_python_type(module.get(), &type_spec_RadialControllerButtonClickedEventArgs, object_bases.get(), nullptr)};
+    if (!RadialControllerButtonClickedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RadialControllerButtonHoldingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RadialControllerButtonHoldingEventArgs_type{py::register_python_type(module.get(), &type_spec_RadialControllerButtonHoldingEventArgs, object_bases.get(), nullptr)};
+    if (!RadialControllerButtonHoldingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RadialControllerButtonPressedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RadialControllerButtonPressedEventArgs_type{py::register_python_type(module.get(), &type_spec_RadialControllerButtonPressedEventArgs, object_bases.get(), nullptr)};
+    if (!RadialControllerButtonPressedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RadialControllerButtonReleasedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RadialControllerButtonReleasedEventArgs_type{py::register_python_type(module.get(), &type_spec_RadialControllerButtonReleasedEventArgs, object_bases.get(), nullptr)};
+    if (!RadialControllerButtonReleasedEventArgs_type)
     {
         return nullptr;
     }
@@ -10424,17 +10447,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RadialControllerConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadialControllerConfiguration_Static.get())) == -1)
+    py::pyobj_handle RadialControllerConfiguration_type{py::register_python_type(module.get(), &type_spec_RadialControllerConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadialControllerConfiguration_Static.get()))};
+    if (!RadialControllerConfiguration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RadialControllerControlAcquiredEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RadialControllerControlAcquiredEventArgs_type{py::register_python_type(module.get(), &type_spec_RadialControllerControlAcquiredEventArgs, object_bases.get(), nullptr)};
+    if (!RadialControllerControlAcquiredEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RadialControllerMenu, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RadialControllerMenu_type{py::register_python_type(module.get(), &type_spec_RadialControllerMenu, object_bases.get(), nullptr)};
+    if (!RadialControllerMenu_type)
     {
         return nullptr;
     }
@@ -10445,37 +10471,44 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RadialControllerMenuItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadialControllerMenuItem_Static.get())) == -1)
+    py::pyobj_handle RadialControllerMenuItem_type{py::register_python_type(module.get(), &type_spec_RadialControllerMenuItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadialControllerMenuItem_Static.get()))};
+    if (!RadialControllerMenuItem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RadialControllerRotationChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RadialControllerRotationChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_RadialControllerRotationChangedEventArgs, object_bases.get(), nullptr)};
+    if (!RadialControllerRotationChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RadialControllerScreenContact, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RadialControllerScreenContact_type{py::register_python_type(module.get(), &type_spec_RadialControllerScreenContact, object_bases.get(), nullptr)};
+    if (!RadialControllerScreenContact_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RadialControllerScreenContactContinuedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RadialControllerScreenContactContinuedEventArgs_type{py::register_python_type(module.get(), &type_spec_RadialControllerScreenContactContinuedEventArgs, object_bases.get(), nullptr)};
+    if (!RadialControllerScreenContactContinuedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RadialControllerScreenContactEndedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RadialControllerScreenContactEndedEventArgs_type{py::register_python_type(module.get(), &type_spec_RadialControllerScreenContactEndedEventArgs, object_bases.get(), nullptr)};
+    if (!RadialControllerScreenContactEndedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RadialControllerScreenContactStartedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RadialControllerScreenContactStartedEventArgs_type{py::register_python_type(module.get(), &type_spec_RadialControllerScreenContactStartedEventArgs, object_bases.get(), nullptr)};
+    if (!RadialControllerScreenContactStartedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RightTappedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RightTappedEventArgs_type{py::register_python_type(module.get(), &type_spec_RightTappedEventArgs, object_bases.get(), nullptr)};
+    if (!RightTappedEventArgs_type)
     {
         return nullptr;
     }
@@ -10486,47 +10519,56 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemButtonEventController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemButtonEventController_Static.get())) == -1)
+    py::pyobj_handle SystemButtonEventController_type{py::register_python_type(module.get(), &type_spec_SystemButtonEventController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemButtonEventController_Static.get()))};
+    if (!SystemButtonEventController_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemFunctionButtonEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SystemFunctionButtonEventArgs_type{py::register_python_type(module.get(), &type_spec_SystemFunctionButtonEventArgs, object_bases.get(), nullptr)};
+    if (!SystemFunctionButtonEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemFunctionLockChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SystemFunctionLockChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_SystemFunctionLockChangedEventArgs, object_bases.get(), nullptr)};
+    if (!SystemFunctionLockChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemFunctionLockIndicatorChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SystemFunctionLockIndicatorChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_SystemFunctionLockIndicatorChangedEventArgs, object_bases.get(), nullptr)};
+    if (!SystemFunctionLockIndicatorChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TappedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle TappedEventArgs_type{py::register_python_type(module.get(), &type_spec_TappedEventArgs, object_bases.get(), nullptr)};
+    if (!TappedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPointerPointTransform, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IPointerPointTransform_type{py::register_python_type(module.get(), &type_spec_IPointerPointTransform, object_bases.get(), nullptr)};
+    if (!IPointerPointTransform_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CrossSlideThresholds, nullptr, nullptr) == -1)
+    py::pyobj_handle CrossSlideThresholds_type{py::register_python_type(module.get(), &type_spec_CrossSlideThresholds, nullptr, nullptr)};
+    if (!CrossSlideThresholds_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ManipulationDelta, nullptr, nullptr) == -1)
+    py::pyobj_handle ManipulationDelta_type{py::register_python_type(module.get(), &type_spec_ManipulationDelta, nullptr, nullptr)};
+    if (!ManipulationDelta_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ManipulationVelocities, nullptr, nullptr) == -1)
+    py::pyobj_handle ManipulationVelocities_type{py::register_python_type(module.get(), &type_spec_ManipulationVelocities, nullptr, nullptr)};
+    if (!ManipulationVelocities_type)
     {
         return nullptr;
     }

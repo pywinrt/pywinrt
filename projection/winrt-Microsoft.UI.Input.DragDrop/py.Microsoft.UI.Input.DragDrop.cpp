@@ -1472,32 +1472,38 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input_dragdrop(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DragDropManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragDropManager_Static.get())) == -1)
+    py::pyobj_handle DragDropManager_type{py::register_python_type(module.get(), &type_spec_DragDropManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragDropManager_Static.get()))};
+    if (!DragDropManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DragInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DragInfo_type{py::register_python_type(module.get(), &type_spec_DragInfo, object_bases.get(), nullptr)};
+    if (!DragInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DragOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DragOperation_type{py::register_python_type(module.get(), &type_spec_DragOperation, object_bases.get(), nullptr)};
+    if (!DragOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DragUIOverride, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DragUIOverride_type{py::register_python_type(module.get(), &type_spec_DragUIOverride, object_bases.get(), nullptr)};
+    if (!DragUIOverride_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DropOperationTargetRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DropOperationTargetRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_DropOperationTargetRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!DropOperationTargetRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IDropOperationTarget, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IDropOperationTarget_type{py::register_python_type(module.get(), &type_spec_IDropOperationTarget, object_bases.get(), nullptr)};
+    if (!IDropOperationTarget_type)
     {
         return nullptr;
     }

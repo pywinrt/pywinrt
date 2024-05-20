@@ -21354,82 +21354,98 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_web_webview2_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2_type{py::register_python_type(module.get(), &type_spec_CoreWebView2, object_bases.get(), nullptr)};
+    if (!CoreWebView2_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2AcceleratorKeyPressedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2AcceleratorKeyPressedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2AcceleratorKeyPressedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2AcceleratorKeyPressedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2BasicAuthenticationRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2BasicAuthenticationRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2BasicAuthenticationRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2BasicAuthenticationRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2BasicAuthenticationResponse, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2BasicAuthenticationResponse_type{py::register_python_type(module.get(), &type_spec_CoreWebView2BasicAuthenticationResponse, object_bases.get(), nullptr)};
+    if (!CoreWebView2BasicAuthenticationResponse_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2BrowserExtension, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2BrowserExtension_type{py::register_python_type(module.get(), &type_spec_CoreWebView2BrowserExtension, object_bases.get(), nullptr)};
+    if (!CoreWebView2BrowserExtension_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2BrowserProcessExitedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2BrowserProcessExitedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2BrowserProcessExitedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2BrowserProcessExitedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2Certificate, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2Certificate_type{py::register_python_type(module.get(), &type_spec_CoreWebView2Certificate, object_bases.get(), nullptr)};
+    if (!CoreWebView2Certificate_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2ClientCertificate, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2ClientCertificate_type{py::register_python_type(module.get(), &type_spec_CoreWebView2ClientCertificate, object_bases.get(), nullptr)};
+    if (!CoreWebView2ClientCertificate_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2ClientCertificateRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2ClientCertificateRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2ClientCertificateRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2ClientCertificateRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2CompositionController, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2CompositionController_type{py::register_python_type(module.get(), &type_spec_CoreWebView2CompositionController, object_bases.get(), nullptr)};
+    if (!CoreWebView2CompositionController_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2ContentLoadingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2ContentLoadingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2ContentLoadingEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2ContentLoadingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2ContextMenuItem, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2ContextMenuItem_type{py::register_python_type(module.get(), &type_spec_CoreWebView2ContextMenuItem, object_bases.get(), nullptr)};
+    if (!CoreWebView2ContextMenuItem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2ContextMenuRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2ContextMenuRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2ContextMenuRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2ContextMenuRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2ContextMenuTarget, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2ContextMenuTarget_type{py::register_python_type(module.get(), &type_spec_CoreWebView2ContextMenuTarget, object_bases.get(), nullptr)};
+    if (!CoreWebView2ContextMenuTarget_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2Controller, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2Controller_type{py::register_python_type(module.get(), &type_spec_CoreWebView2Controller, object_bases.get(), nullptr)};
+    if (!CoreWebView2Controller_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2ControllerOptions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2ControllerOptions_type{py::register_python_type(module.get(), &type_spec_CoreWebView2ControllerOptions, object_bases.get(), nullptr)};
+    if (!CoreWebView2ControllerOptions_type)
     {
         return nullptr;
     }
@@ -21440,47 +21456,56 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_web_webview2_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2ControllerWindowReference, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreWebView2ControllerWindowReference_Static.get())) == -1)
+    py::pyobj_handle CoreWebView2ControllerWindowReference_type{py::register_python_type(module.get(), &type_spec_CoreWebView2ControllerWindowReference, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreWebView2ControllerWindowReference_Static.get()))};
+    if (!CoreWebView2ControllerWindowReference_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2Cookie, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2Cookie_type{py::register_python_type(module.get(), &type_spec_CoreWebView2Cookie, object_bases.get(), nullptr)};
+    if (!CoreWebView2Cookie_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2CookieManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2CookieManager_type{py::register_python_type(module.get(), &type_spec_CoreWebView2CookieManager, object_bases.get(), nullptr)};
+    if (!CoreWebView2CookieManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2CustomSchemeRegistration, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2CustomSchemeRegistration_type{py::register_python_type(module.get(), &type_spec_CoreWebView2CustomSchemeRegistration, object_bases.get(), nullptr)};
+    if (!CoreWebView2CustomSchemeRegistration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2DOMContentLoadedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2DOMContentLoadedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2DOMContentLoadedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2DOMContentLoadedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2DevToolsProtocolEventReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2DevToolsProtocolEventReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2DevToolsProtocolEventReceivedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2DevToolsProtocolEventReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2DevToolsProtocolEventReceiver, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2DevToolsProtocolEventReceiver_type{py::register_python_type(module.get(), &type_spec_CoreWebView2DevToolsProtocolEventReceiver, object_bases.get(), nullptr)};
+    if (!CoreWebView2DevToolsProtocolEventReceiver_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2DownloadOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2DownloadOperation_type{py::register_python_type(module.get(), &type_spec_CoreWebView2DownloadOperation, object_bases.get(), nullptr)};
+    if (!CoreWebView2DownloadOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2DownloadStartingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2DownloadStartingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2DownloadStartingEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2DownloadStartingEventArgs_type)
     {
         return nullptr;
     }
@@ -21491,182 +21516,218 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_web_webview2_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2Environment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreWebView2Environment_Static.get())) == -1)
+    py::pyobj_handle CoreWebView2Environment_type{py::register_python_type(module.get(), &type_spec_CoreWebView2Environment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreWebView2Environment_Static.get()))};
+    if (!CoreWebView2Environment_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2EnvironmentOptions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2EnvironmentOptions_type{py::register_python_type(module.get(), &type_spec_CoreWebView2EnvironmentOptions, object_bases.get(), nullptr)};
+    if (!CoreWebView2EnvironmentOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2File, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2File_type{py::register_python_type(module.get(), &type_spec_CoreWebView2File, object_bases.get(), nullptr)};
+    if (!CoreWebView2File_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2Frame, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2Frame_type{py::register_python_type(module.get(), &type_spec_CoreWebView2Frame, object_bases.get(), nullptr)};
+    if (!CoreWebView2Frame_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2FrameCreatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2FrameCreatedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2FrameCreatedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2FrameCreatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2FrameInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2FrameInfo_type{py::register_python_type(module.get(), &type_spec_CoreWebView2FrameInfo, object_bases.get(), nullptr)};
+    if (!CoreWebView2FrameInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2HttpHeadersCollectionIterator, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2HttpHeadersCollectionIterator_type{py::register_python_type(module.get(), &type_spec_CoreWebView2HttpHeadersCollectionIterator, object_bases.get(), nullptr)};
+    if (!CoreWebView2HttpHeadersCollectionIterator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2HttpRequestHeaders, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2HttpRequestHeaders_type{py::register_python_type(module.get(), &type_spec_CoreWebView2HttpRequestHeaders, object_bases.get(), nullptr)};
+    if (!CoreWebView2HttpRequestHeaders_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2HttpResponseHeaders, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2HttpResponseHeaders_type{py::register_python_type(module.get(), &type_spec_CoreWebView2HttpResponseHeaders, object_bases.get(), nullptr)};
+    if (!CoreWebView2HttpResponseHeaders_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2LaunchingExternalUriSchemeEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2LaunchingExternalUriSchemeEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2LaunchingExternalUriSchemeEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2LaunchingExternalUriSchemeEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2MoveFocusRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2MoveFocusRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2MoveFocusRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2MoveFocusRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2NavigationCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2NavigationCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2NavigationCompletedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2NavigationCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2NavigationStartingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2NavigationStartingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2NavigationStartingEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2NavigationStartingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2NewWindowRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2NewWindowRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2NewWindowRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2NewWindowRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2PermissionRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2PermissionRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2PermissionRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2PermissionRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2PermissionSetting, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2PermissionSetting_type{py::register_python_type(module.get(), &type_spec_CoreWebView2PermissionSetting, object_bases.get(), nullptr)};
+    if (!CoreWebView2PermissionSetting_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2PointerInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2PointerInfo_type{py::register_python_type(module.get(), &type_spec_CoreWebView2PointerInfo, object_bases.get(), nullptr)};
+    if (!CoreWebView2PointerInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2PrintSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2PrintSettings_type{py::register_python_type(module.get(), &type_spec_CoreWebView2PrintSettings, object_bases.get(), nullptr)};
+    if (!CoreWebView2PrintSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2ProcessExtendedInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2ProcessExtendedInfo_type{py::register_python_type(module.get(), &type_spec_CoreWebView2ProcessExtendedInfo, object_bases.get(), nullptr)};
+    if (!CoreWebView2ProcessExtendedInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2ProcessFailedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2ProcessFailedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2ProcessFailedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2ProcessFailedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2ProcessInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2ProcessInfo_type{py::register_python_type(module.get(), &type_spec_CoreWebView2ProcessInfo, object_bases.get(), nullptr)};
+    if (!CoreWebView2ProcessInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2Profile, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2Profile_type{py::register_python_type(module.get(), &type_spec_CoreWebView2Profile, object_bases.get(), nullptr)};
+    if (!CoreWebView2Profile_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2ScriptDialogOpeningEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2ScriptDialogOpeningEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2ScriptDialogOpeningEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2ScriptDialogOpeningEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2ServerCertificateErrorDetectedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2ServerCertificateErrorDetectedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2ServerCertificateErrorDetectedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2ServerCertificateErrorDetectedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2Settings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2Settings_type{py::register_python_type(module.get(), &type_spec_CoreWebView2Settings, object_bases.get(), nullptr)};
+    if (!CoreWebView2Settings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2SharedBuffer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2SharedBuffer_type{py::register_python_type(module.get(), &type_spec_CoreWebView2SharedBuffer, object_bases.get(), nullptr)};
+    if (!CoreWebView2SharedBuffer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2SourceChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2SourceChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2SourceChangedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2SourceChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2WebMessageReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2WebMessageReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2WebMessageReceivedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2WebMessageReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2WebResourceRequest, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2WebResourceRequest_type{py::register_python_type(module.get(), &type_spec_CoreWebView2WebResourceRequest, object_bases.get(), nullptr)};
+    if (!CoreWebView2WebResourceRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2WebResourceRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2WebResourceRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2WebResourceRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2WebResourceRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2WebResourceResponse, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2WebResourceResponse_type{py::register_python_type(module.get(), &type_spec_CoreWebView2WebResourceResponse, object_bases.get(), nullptr)};
+    if (!CoreWebView2WebResourceResponse_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2WebResourceResponseReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2WebResourceResponseReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2WebResourceResponseReceivedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreWebView2WebResourceResponseReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2WebResourceResponseView, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2WebResourceResponseView_type{py::register_python_type(module.get(), &type_spec_CoreWebView2WebResourceResponseView, object_bases.get(), nullptr)};
+    if (!CoreWebView2WebResourceResponseView_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2WindowFeatures, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreWebView2WindowFeatures_type{py::register_python_type(module.get(), &type_spec_CoreWebView2WindowFeatures, object_bases.get(), nullptr)};
+    if (!CoreWebView2WindowFeatures_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ICoreWebView2DispatchAdapter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ICoreWebView2DispatchAdapter_type{py::register_python_type(module.get(), &type_spec_ICoreWebView2DispatchAdapter, object_bases.get(), nullptr)};
+    if (!ICoreWebView2DispatchAdapter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWebView2PhysicalKeyStatus, nullptr, nullptr) == -1)
+    py::pyobj_handle CoreWebView2PhysicalKeyStatus_type{py::register_python_type(module.get(), &type_spec_CoreWebView2PhysicalKeyStatus, nullptr, nullptr)};
+    if (!CoreWebView2PhysicalKeyStatus_type)
     {
         return nullptr;
     }

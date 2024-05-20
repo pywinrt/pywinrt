@@ -576,7 +576,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls_provider(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallOrigin, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PhoneCallOrigin_type{py::register_python_type(module.get(), &type_spec_PhoneCallOrigin, object_bases.get(), nullptr)};
+    if (!PhoneCallOrigin_type)
     {
         return nullptr;
     }
@@ -587,7 +588,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls_provider(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallOriginManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallOriginManager_Static.get())) == -1)
+    py::pyobj_handle PhoneCallOriginManager_type{py::register_python_type(module.get(), &type_spec_PhoneCallOriginManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallOriginManager_Static.get()))};
+    if (!PhoneCallOriginManager_type)
     {
         return nullptr;
     }

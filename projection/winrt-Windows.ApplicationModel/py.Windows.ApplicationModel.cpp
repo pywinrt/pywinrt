@@ -8080,7 +8080,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppDisplayInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppDisplayInfo_type{py::register_python_type(module.get(), &type_spec_AppDisplayInfo, object_bases.get(), nullptr)};
+    if (!AppDisplayInfo_type)
     {
         return nullptr;
     }
@@ -8091,12 +8092,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppInfo_Static.get())) == -1)
+    py::pyobj_handle AppInfo_type{py::register_python_type(module.get(), &type_spec_AppInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppInfo_Static.get()))};
+    if (!AppInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppInstallerInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppInstallerInfo_type{py::register_python_type(module.get(), &type_spec_AppInstallerInfo, object_bases.get(), nullptr)};
+    if (!AppInstallerInfo_type)
     {
         return nullptr;
     }
@@ -8107,7 +8110,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppInstance, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppInstance_Static.get())) == -1)
+    py::pyobj_handle AppInstance_type{py::register_python_type(module.get(), &type_spec_AppInstance, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppInstance_Static.get()))};
+    if (!AppInstance_type)
     {
         return nullptr;
     }
@@ -8118,7 +8122,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CameraApplicationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CameraApplicationManager_Static.get())) == -1)
+    py::pyobj_handle CameraApplicationManager_type{py::register_python_type(module.get(), &type_spec_CameraApplicationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CameraApplicationManager_Static.get()))};
+    if (!CameraApplicationManager_type)
     {
         return nullptr;
     }
@@ -8129,22 +8134,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DesignMode, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DesignMode_Static.get())) == -1)
+    py::pyobj_handle DesignMode_type{py::register_python_type(module.get(), &type_spec_DesignMode, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DesignMode_Static.get()))};
+    if (!DesignMode_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EnteredBackgroundEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle EnteredBackgroundEventArgs_type{py::register_python_type(module.get(), &type_spec_EnteredBackgroundEventArgs, object_bases.get(), nullptr)};
+    if (!EnteredBackgroundEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FindRelatedPackagesOptions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FindRelatedPackagesOptions_type{py::register_python_type(module.get(), &type_spec_FindRelatedPackagesOptions, object_bases.get(), nullptr)};
+    if (!FindRelatedPackagesOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FullTrustProcessLaunchResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FullTrustProcessLaunchResult_type{py::register_python_type(module.get(), &type_spec_FullTrustProcessLaunchResult, object_bases.get(), nullptr)};
+    if (!FullTrustProcessLaunchResult_type)
     {
         return nullptr;
     }
@@ -8155,17 +8164,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FullTrustProcessLauncher, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FullTrustProcessLauncher_Static.get())) == -1)
+    py::pyobj_handle FullTrustProcessLauncher_type{py::register_python_type(module.get(), &type_spec_FullTrustProcessLauncher, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FullTrustProcessLauncher_Static.get()))};
+    if (!FullTrustProcessLauncher_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LeavingBackgroundEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LeavingBackgroundEventArgs_type{py::register_python_type(module.get(), &type_spec_LeavingBackgroundEventArgs, object_bases.get(), nullptr)};
+    if (!LeavingBackgroundEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LimitedAccessFeatureRequestResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LimitedAccessFeatureRequestResult_type{py::register_python_type(module.get(), &type_spec_LimitedAccessFeatureRequestResult, object_bases.get(), nullptr)};
+    if (!LimitedAccessFeatureRequestResult_type)
     {
         return nullptr;
     }
@@ -8176,7 +8188,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LimitedAccessFeatures, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LimitedAccessFeatures_Static.get())) == -1)
+    py::pyobj_handle LimitedAccessFeatures_type{py::register_python_type(module.get(), &type_spec_LimitedAccessFeatures, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LimitedAccessFeatures_Static.get()))};
+    if (!LimitedAccessFeatures_type)
     {
         return nullptr;
     }
@@ -8187,7 +8200,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Package, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Package_Static.get())) == -1)
+    py::pyobj_handle Package_type{py::register_python_type(module.get(), &type_spec_Package, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Package_Static.get()))};
+    if (!Package_type)
     {
         return nullptr;
     }
@@ -8198,27 +8212,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageCatalog, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PackageCatalog_Static.get())) == -1)
+    py::pyobj_handle PackageCatalog_type{py::register_python_type(module.get(), &type_spec_PackageCatalog, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PackageCatalog_Static.get()))};
+    if (!PackageCatalog_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageCatalogAddOptionalPackageResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PackageCatalogAddOptionalPackageResult_type{py::register_python_type(module.get(), &type_spec_PackageCatalogAddOptionalPackageResult, object_bases.get(), nullptr)};
+    if (!PackageCatalogAddOptionalPackageResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageCatalogAddResourcePackageResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PackageCatalogAddResourcePackageResult_type{py::register_python_type(module.get(), &type_spec_PackageCatalogAddResourcePackageResult, object_bases.get(), nullptr)};
+    if (!PackageCatalogAddResourcePackageResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageCatalogRemoveOptionalPackagesResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PackageCatalogRemoveOptionalPackagesResult_type{py::register_python_type(module.get(), &type_spec_PackageCatalogRemoveOptionalPackagesResult, object_bases.get(), nullptr)};
+    if (!PackageCatalogRemoveOptionalPackagesResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageCatalogRemoveResourcePackagesResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PackageCatalogRemoveResourcePackagesResult_type{py::register_python_type(module.get(), &type_spec_PackageCatalogRemoveResourcePackagesResult, object_bases.get(), nullptr)};
+    if (!PackageCatalogRemoveResourcePackagesResult_type)
     {
         return nullptr;
     }
@@ -8229,52 +8248,62 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageContentGroup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PackageContentGroup_Static.get())) == -1)
+    py::pyobj_handle PackageContentGroup_type{py::register_python_type(module.get(), &type_spec_PackageContentGroup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PackageContentGroup_Static.get()))};
+    if (!PackageContentGroup_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageContentGroupStagingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PackageContentGroupStagingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageContentGroupStagingEventArgs, object_bases.get(), nullptr)};
+    if (!PackageContentGroupStagingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageId, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PackageId_type{py::register_python_type(module.get(), &type_spec_PackageId, object_bases.get(), nullptr)};
+    if (!PackageId_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageInstallingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PackageInstallingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageInstallingEventArgs, object_bases.get(), nullptr)};
+    if (!PackageInstallingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageStagingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PackageStagingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageStagingEventArgs, object_bases.get(), nullptr)};
+    if (!PackageStagingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageStatus, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PackageStatus_type{py::register_python_type(module.get(), &type_spec_PackageStatus, object_bases.get(), nullptr)};
+    if (!PackageStatus_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageStatusChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PackageStatusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageStatusChangedEventArgs, object_bases.get(), nullptr)};
+    if (!PackageStatusChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageUninstallingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PackageUninstallingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageUninstallingEventArgs, object_bases.get(), nullptr)};
+    if (!PackageUninstallingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageUpdateAvailabilityResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PackageUpdateAvailabilityResult_type{py::register_python_type(module.get(), &type_spec_PackageUpdateAvailabilityResult, object_bases.get(), nullptr)};
+    if (!PackageUpdateAvailabilityResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageUpdatingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PackageUpdatingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageUpdatingEventArgs, object_bases.get(), nullptr)};
+    if (!PackageUpdatingEventArgs_type)
     {
         return nullptr;
     }
@@ -8285,62 +8314,74 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StartupTask, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StartupTask_Static.get())) == -1)
+    py::pyobj_handle StartupTask_type{py::register_python_type(module.get(), &type_spec_StartupTask, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StartupTask_Static.get()))};
+    if (!StartupTask_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SuspendingDeferral, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SuspendingDeferral_type{py::register_python_type(module.get(), &type_spec_SuspendingDeferral, object_bases.get(), nullptr)};
+    if (!SuspendingDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SuspendingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SuspendingEventArgs_type{py::register_python_type(module.get(), &type_spec_SuspendingEventArgs, object_bases.get(), nullptr)};
+    if (!SuspendingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SuspendingOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SuspendingOperation_type{py::register_python_type(module.get(), &type_spec_SuspendingOperation, object_bases.get(), nullptr)};
+    if (!SuspendingOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IEnteredBackgroundEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IEnteredBackgroundEventArgs_type{py::register_python_type(module.get(), &type_spec_IEnteredBackgroundEventArgs, object_bases.get(), nullptr)};
+    if (!IEnteredBackgroundEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ILeavingBackgroundEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ILeavingBackgroundEventArgs_type{py::register_python_type(module.get(), &type_spec_ILeavingBackgroundEventArgs, object_bases.get(), nullptr)};
+    if (!ILeavingBackgroundEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPackageCatalogStatics2, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IPackageCatalogStatics2_type{py::register_python_type(module.get(), &type_spec_IPackageCatalogStatics2, object_bases.get(), nullptr)};
+    if (!IPackageCatalogStatics2_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISuspendingDeferral, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ISuspendingDeferral_type{py::register_python_type(module.get(), &type_spec_ISuspendingDeferral, object_bases.get(), nullptr)};
+    if (!ISuspendingDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISuspendingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ISuspendingEventArgs_type{py::register_python_type(module.get(), &type_spec_ISuspendingEventArgs, object_bases.get(), nullptr)};
+    if (!ISuspendingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISuspendingOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ISuspendingOperation_type{py::register_python_type(module.get(), &type_spec_ISuspendingOperation, object_bases.get(), nullptr)};
+    if (!ISuspendingOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageInstallProgress, nullptr, nullptr) == -1)
+    py::pyobj_handle PackageInstallProgress_type{py::register_python_type(module.get(), &type_spec_PackageInstallProgress, nullptr, nullptr)};
+    if (!PackageInstallProgress_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageVersion, nullptr, nullptr) == -1)
+    py::pyobj_handle PackageVersion_type{py::register_python_type(module.get(), &type_spec_PackageVersion, nullptr, nullptr)};
+    if (!PackageVersion_type)
     {
         return nullptr;
     }

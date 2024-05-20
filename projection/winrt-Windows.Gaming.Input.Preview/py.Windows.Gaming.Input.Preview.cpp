@@ -1171,7 +1171,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameControllerProviderInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameControllerProviderInfo_Static.get())) == -1)
+    py::pyobj_handle GameControllerProviderInfo_type{py::register_python_type(module.get(), &type_spec_GameControllerProviderInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameControllerProviderInfo_Static.get()))};
+    if (!GameControllerProviderInfo_type)
     {
         return nullptr;
     }
@@ -1182,12 +1183,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LegacyGipGameControllerProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LegacyGipGameControllerProvider_Static.get())) == -1)
+    py::pyobj_handle LegacyGipGameControllerProvider_type{py::register_python_type(module.get(), &type_spec_LegacyGipGameControllerProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LegacyGipGameControllerProvider_Static.get()))};
+    if (!LegacyGipGameControllerProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HeadsetGeqGains, nullptr, nullptr) == -1)
+    py::pyobj_handle HeadsetGeqGains_type{py::register_python_type(module.get(), &type_spec_HeadsetGeqGains, nullptr, nullptr)};
+    if (!HeadsetGeqGains_type)
     {
         return nullptr;
     }

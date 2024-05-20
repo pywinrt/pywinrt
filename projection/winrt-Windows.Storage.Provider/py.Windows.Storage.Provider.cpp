@@ -5580,42 +5580,50 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_provider(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CachedFileUpdater, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CachedFileUpdater_Static.get())) == -1)
+    py::pyobj_handle CachedFileUpdater_type{py::register_python_type(module.get(), &type_spec_CachedFileUpdater, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CachedFileUpdater_Static.get()))};
+    if (!CachedFileUpdater_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CachedFileUpdaterUI, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CachedFileUpdaterUI_type{py::register_python_type(module.get(), &type_spec_CachedFileUpdaterUI, object_bases.get(), nullptr)};
+    if (!CachedFileUpdaterUI_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileUpdateRequest, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FileUpdateRequest_type{py::register_python_type(module.get(), &type_spec_FileUpdateRequest, object_bases.get(), nullptr)};
+    if (!FileUpdateRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileUpdateRequestDeferral, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FileUpdateRequestDeferral_type{py::register_python_type(module.get(), &type_spec_FileUpdateRequestDeferral, object_bases.get(), nullptr)};
+    if (!FileUpdateRequestDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileUpdateRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FileUpdateRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_FileUpdateRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!FileUpdateRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageProviderFileTypeInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StorageProviderFileTypeInfo_type{py::register_python_type(module.get(), &type_spec_StorageProviderFileTypeInfo, object_bases.get(), nullptr)};
+    if (!StorageProviderFileTypeInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageProviderGetContentInfoForPathResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StorageProviderGetContentInfoForPathResult_type{py::register_python_type(module.get(), &type_spec_StorageProviderGetContentInfoForPathResult, object_bases.get(), nullptr)};
+    if (!StorageProviderGetContentInfoForPathResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageProviderGetPathForContentUriResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StorageProviderGetPathForContentUriResult_type{py::register_python_type(module.get(), &type_spec_StorageProviderGetPathForContentUriResult, object_bases.get(), nullptr)};
+    if (!StorageProviderGetPathForContentUriResult_type)
     {
         return nullptr;
     }
@@ -5626,52 +5634,62 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_provider(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageProviderItemProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageProviderItemProperties_Static.get())) == -1)
+    py::pyobj_handle StorageProviderItemProperties_type{py::register_python_type(module.get(), &type_spec_StorageProviderItemProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageProviderItemProperties_Static.get()))};
+    if (!StorageProviderItemProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageProviderItemProperty, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StorageProviderItemProperty_type{py::register_python_type(module.get(), &type_spec_StorageProviderItemProperty, object_bases.get(), nullptr)};
+    if (!StorageProviderItemProperty_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageProviderItemPropertyDefinition, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StorageProviderItemPropertyDefinition_type{py::register_python_type(module.get(), &type_spec_StorageProviderItemPropertyDefinition, object_bases.get(), nullptr)};
+    if (!StorageProviderItemPropertyDefinition_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageProviderKnownFolderEntry, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StorageProviderKnownFolderEntry_type{py::register_python_type(module.get(), &type_spec_StorageProviderKnownFolderEntry, object_bases.get(), nullptr)};
+    if (!StorageProviderKnownFolderEntry_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageProviderKnownFolderSyncInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StorageProviderKnownFolderSyncInfo_type{py::register_python_type(module.get(), &type_spec_StorageProviderKnownFolderSyncInfo, object_bases.get(), nullptr)};
+    if (!StorageProviderKnownFolderSyncInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageProviderKnownFolderSyncRequestArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StorageProviderKnownFolderSyncRequestArgs_type{py::register_python_type(module.get(), &type_spec_StorageProviderKnownFolderSyncRequestArgs, object_bases.get(), nullptr)};
+    if (!StorageProviderKnownFolderSyncRequestArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageProviderMoreInfoUI, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StorageProviderMoreInfoUI_type{py::register_python_type(module.get(), &type_spec_StorageProviderMoreInfoUI, object_bases.get(), nullptr)};
+    if (!StorageProviderMoreInfoUI_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageProviderQuotaUI, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StorageProviderQuotaUI_type{py::register_python_type(module.get(), &type_spec_StorageProviderQuotaUI, object_bases.get(), nullptr)};
+    if (!StorageProviderQuotaUI_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageProviderStatusUI, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StorageProviderStatusUI_type{py::register_python_type(module.get(), &type_spec_StorageProviderStatusUI, object_bases.get(), nullptr)};
+    if (!StorageProviderStatusUI_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageProviderSyncRootInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StorageProviderSyncRootInfo_type{py::register_python_type(module.get(), &type_spec_StorageProviderSyncRootInfo, object_bases.get(), nullptr)};
+    if (!StorageProviderSyncRootInfo_type)
     {
         return nullptr;
     }
@@ -5682,47 +5700,56 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_provider(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageProviderSyncRootManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageProviderSyncRootManager_Static.get())) == -1)
+    py::pyobj_handle StorageProviderSyncRootManager_type{py::register_python_type(module.get(), &type_spec_StorageProviderSyncRootManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageProviderSyncRootManager_Static.get()))};
+    if (!StorageProviderSyncRootManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IStorageProviderItemPropertySource, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IStorageProviderItemPropertySource_type{py::register_python_type(module.get(), &type_spec_IStorageProviderItemPropertySource, object_bases.get(), nullptr)};
+    if (!IStorageProviderItemPropertySource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IStorageProviderKnownFolderSyncInfoSource, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IStorageProviderKnownFolderSyncInfoSource_type{py::register_python_type(module.get(), &type_spec_IStorageProviderKnownFolderSyncInfoSource, object_bases.get(), nullptr)};
+    if (!IStorageProviderKnownFolderSyncInfoSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IStorageProviderKnownFolderSyncInfoSourceFactory, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IStorageProviderKnownFolderSyncInfoSourceFactory_type{py::register_python_type(module.get(), &type_spec_IStorageProviderKnownFolderSyncInfoSourceFactory, object_bases.get(), nullptr)};
+    if (!IStorageProviderKnownFolderSyncInfoSourceFactory_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IStorageProviderPropertyCapabilities, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IStorageProviderPropertyCapabilities_type{py::register_python_type(module.get(), &type_spec_IStorageProviderPropertyCapabilities, object_bases.get(), nullptr)};
+    if (!IStorageProviderPropertyCapabilities_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IStorageProviderStatusUISource, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IStorageProviderStatusUISource_type{py::register_python_type(module.get(), &type_spec_IStorageProviderStatusUISource, object_bases.get(), nullptr)};
+    if (!IStorageProviderStatusUISource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IStorageProviderStatusUISourceFactory, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IStorageProviderStatusUISourceFactory_type{py::register_python_type(module.get(), &type_spec_IStorageProviderStatusUISourceFactory, object_bases.get(), nullptr)};
+    if (!IStorageProviderStatusUISourceFactory_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IStorageProviderUICommand, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IStorageProviderUICommand_type{py::register_python_type(module.get(), &type_spec_IStorageProviderUICommand, object_bases.get(), nullptr)};
+    if (!IStorageProviderUICommand_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IStorageProviderUriSource, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IStorageProviderUriSource_type{py::register_python_type(module.get(), &type_spec_IStorageProviderUriSource, object_bases.get(), nullptr)};
+    if (!IStorageProviderUriSource_type)
     {
         return nullptr;
     }

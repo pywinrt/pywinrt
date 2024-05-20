@@ -257,12 +257,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_deployment_preview(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ClassicAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClassicAppManager_Static.get())) == -1)
+    py::pyobj_handle ClassicAppManager_type{py::register_python_type(module.get(), &type_spec_ClassicAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClassicAppManager_Static.get()))};
+    if (!ClassicAppManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InstalledClassicAppInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle InstalledClassicAppInfo_type{py::register_python_type(module.get(), &type_spec_InstalledClassicAppInfo, object_bases.get(), nullptr)};
+    if (!InstalledClassicAppInfo_type)
     {
         return nullptr;
     }

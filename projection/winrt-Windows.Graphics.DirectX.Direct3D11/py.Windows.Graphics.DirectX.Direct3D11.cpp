@@ -736,22 +736,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_directx_direct3d11(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IDirect3DDevice, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IDirect3DDevice_type{py::register_python_type(module.get(), &type_spec_IDirect3DDevice, object_bases.get(), nullptr)};
+    if (!IDirect3DDevice_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IDirect3DSurface, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IDirect3DSurface_type{py::register_python_type(module.get(), &type_spec_IDirect3DSurface, object_bases.get(), nullptr)};
+    if (!IDirect3DSurface_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Direct3DMultisampleDescription, nullptr, nullptr) == -1)
+    py::pyobj_handle Direct3DMultisampleDescription_type{py::register_python_type(module.get(), &type_spec_Direct3DMultisampleDescription, nullptr, nullptr)};
+    if (!Direct3DMultisampleDescription_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Direct3DSurfaceDescription, nullptr, nullptr) == -1)
+    py::pyobj_handle Direct3DSurfaceDescription_type{py::register_python_type(module.get(), &type_spec_Direct3DSurfaceDescription, nullptr, nullptr)};
+    if (!Direct3DSurfaceDescription_type)
     {
         return nullptr;
     }

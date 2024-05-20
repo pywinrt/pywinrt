@@ -330,21 +330,23 @@ namespace py::cpp::_winrt
             return nullptr;
         }
 
-        if (py::register_python_type(module.get(), &Object_type_spec, nullptr, nullptr)
-            == -1)
+        pyobj_handle Object_type{
+            register_python_type(module.get(), &Object_type_spec, nullptr, nullptr)};
+        if (!Object_type)
         {
             return nullptr;
         }
 
-        if (py::register_python_type(module.get(), &Array_type_spec, nullptr, nullptr)
-            == -1)
+        pyobj_handle Array_type{
+            register_python_type(module.get(), &Array_type_spec, nullptr, nullptr)};
+        if (!Array_type)
         {
             return nullptr;
         }
 
-        if (py::register_python_type(
-                module.get(), &MappingIter_type_spec, nullptr, nullptr)
-            == -1)
+        pyobj_handle MappingIter_type{register_python_type(
+            module.get(), &MappingIter_type_spec, nullptr, nullptr)};
+        if (!MappingIter_type)
         {
             return nullptr;
         }

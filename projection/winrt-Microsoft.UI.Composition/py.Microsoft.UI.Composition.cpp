@@ -28576,7 +28576,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AmbientLight, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AmbientLight_type{py::register_python_type(module.get(), &type_spec_AmbientLight, object_bases.get(), nullptr)};
+    if (!AmbientLight_type)
     {
         return nullptr;
     }
@@ -28587,62 +28588,74 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AnimationController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnimationController_Static.get())) == -1)
+    py::pyobj_handle AnimationController_type{py::register_python_type(module.get(), &type_spec_AnimationController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnimationController_Static.get()))};
+    if (!AnimationController_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AnimationPropertyInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AnimationPropertyInfo_type{py::register_python_type(module.get(), &type_spec_AnimationPropertyInfo, object_bases.get(), nullptr)};
+    if (!AnimationPropertyInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BackEasingFunction, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BackEasingFunction_type{py::register_python_type(module.get(), &type_spec_BackEasingFunction, object_bases.get(), nullptr)};
+    if (!BackEasingFunction_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BooleanKeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BooleanKeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_BooleanKeyFrameAnimation, object_bases.get(), nullptr)};
+    if (!BooleanKeyFrameAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BounceEasingFunction, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BounceEasingFunction_type{py::register_python_type(module.get(), &type_spec_BounceEasingFunction, object_bases.get(), nullptr)};
+    if (!BounceEasingFunction_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BounceScalarNaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BounceScalarNaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_BounceScalarNaturalMotionAnimation, object_bases.get(), nullptr)};
+    if (!BounceScalarNaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BounceVector2NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BounceVector2NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_BounceVector2NaturalMotionAnimation, object_bases.get(), nullptr)};
+    if (!BounceVector2NaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BounceVector3NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BounceVector3NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_BounceVector3NaturalMotionAnimation, object_bases.get(), nullptr)};
+    if (!BounceVector3NaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CircleEasingFunction, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CircleEasingFunction_type{py::register_python_type(module.get(), &type_spec_CircleEasingFunction, object_bases.get(), nullptr)};
+    if (!CircleEasingFunction_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ColorKeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ColorKeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_ColorKeyFrameAnimation, object_bases.get(), nullptr)};
+    if (!ColorKeyFrameAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionAnimation_type{py::register_python_type(module.get(), &type_spec_CompositionAnimation, object_bases.get(), nullptr)};
+    if (!CompositionAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionAnimationGroup, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionAnimationGroup_type{py::register_python_type(module.get(), &type_spec_CompositionAnimationGroup, object_bases.get(), nullptr)};
+    if (!CompositionAnimationGroup_type)
     {
         return nullptr;
     }
@@ -28653,62 +28666,74 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionApiInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionApiInformation_Static.get())) == -1)
+    py::pyobj_handle CompositionApiInformation_type{py::register_python_type(module.get(), &type_spec_CompositionApiInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionApiInformation_Static.get()))};
+    if (!CompositionApiInformation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionBackdropBrush, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionBackdropBrush_type{py::register_python_type(module.get(), &type_spec_CompositionBackdropBrush, object_bases.get(), nullptr)};
+    if (!CompositionBackdropBrush_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionBatchCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionBatchCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_CompositionBatchCompletedEventArgs, object_bases.get(), nullptr)};
+    if (!CompositionBatchCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionBrush, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionBrush_type{py::register_python_type(module.get(), &type_spec_CompositionBrush, object_bases.get(), nullptr)};
+    if (!CompositionBrush_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionCapabilities, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionCapabilities_type{py::register_python_type(module.get(), &type_spec_CompositionCapabilities, object_bases.get(), nullptr)};
+    if (!CompositionCapabilities_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionClip, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionClip_type{py::register_python_type(module.get(), &type_spec_CompositionClip, object_bases.get(), nullptr)};
+    if (!CompositionClip_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionColorBrush, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionColorBrush_type{py::register_python_type(module.get(), &type_spec_CompositionColorBrush, object_bases.get(), nullptr)};
+    if (!CompositionColorBrush_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionColorGradientStop, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionColorGradientStop_type{py::register_python_type(module.get(), &type_spec_CompositionColorGradientStop, object_bases.get(), nullptr)};
+    if (!CompositionColorGradientStop_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionColorGradientStopCollection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionColorGradientStopCollection_type{py::register_python_type(module.get(), &type_spec_CompositionColorGradientStopCollection, object_bases.get(), nullptr)};
+    if (!CompositionColorGradientStopCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionCommitBatch, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionCommitBatch_type{py::register_python_type(module.get(), &type_spec_CompositionCommitBatch, object_bases.get(), nullptr)};
+    if (!CompositionCommitBatch_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionContainerShape, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionContainerShape_type{py::register_python_type(module.get(), &type_spec_CompositionContainerShape, object_bases.get(), nullptr)};
+    if (!CompositionContainerShape_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionDrawingSurface, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionDrawingSurface_type{py::register_python_type(module.get(), &type_spec_CompositionDrawingSurface, object_bases.get(), nullptr)};
+    if (!CompositionDrawingSurface_type)
     {
         return nullptr;
     }
@@ -28719,77 +28744,92 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionEasingFunction, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionEasingFunction_Static.get())) == -1)
+    py::pyobj_handle CompositionEasingFunction_type{py::register_python_type(module.get(), &type_spec_CompositionEasingFunction, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionEasingFunction_Static.get()))};
+    if (!CompositionEasingFunction_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionEffectBrush, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionEffectBrush_type{py::register_python_type(module.get(), &type_spec_CompositionEffectBrush, object_bases.get(), nullptr)};
+    if (!CompositionEffectBrush_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionEffectFactory, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionEffectFactory_type{py::register_python_type(module.get(), &type_spec_CompositionEffectFactory, object_bases.get(), nullptr)};
+    if (!CompositionEffectFactory_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionEffectSourceParameter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionEffectSourceParameter_type{py::register_python_type(module.get(), &type_spec_CompositionEffectSourceParameter, object_bases.get(), nullptr)};
+    if (!CompositionEffectSourceParameter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionEllipseGeometry, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionEllipseGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionEllipseGeometry, object_bases.get(), nullptr)};
+    if (!CompositionEllipseGeometry_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionGeometricClip, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionGeometricClip_type{py::register_python_type(module.get(), &type_spec_CompositionGeometricClip, object_bases.get(), nullptr)};
+    if (!CompositionGeometricClip_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionGeometry, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionGeometry, object_bases.get(), nullptr)};
+    if (!CompositionGeometry_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionGradientBrush, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionGradientBrush_type{py::register_python_type(module.get(), &type_spec_CompositionGradientBrush, object_bases.get(), nullptr)};
+    if (!CompositionGradientBrush_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionGraphicsDevice, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionGraphicsDevice_type{py::register_python_type(module.get(), &type_spec_CompositionGraphicsDevice, object_bases.get(), nullptr)};
+    if (!CompositionGraphicsDevice_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionLight, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionLight_type{py::register_python_type(module.get(), &type_spec_CompositionLight, object_bases.get(), nullptr)};
+    if (!CompositionLight_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionLineGeometry, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionLineGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionLineGeometry, object_bases.get(), nullptr)};
+    if (!CompositionLineGeometry_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionLinearGradientBrush, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionLinearGradientBrush_type{py::register_python_type(module.get(), &type_spec_CompositionLinearGradientBrush, object_bases.get(), nullptr)};
+    if (!CompositionLinearGradientBrush_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionMaskBrush, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionMaskBrush_type{py::register_python_type(module.get(), &type_spec_CompositionMaskBrush, object_bases.get(), nullptr)};
+    if (!CompositionMaskBrush_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionMipmapSurface, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionMipmapSurface_type{py::register_python_type(module.get(), &type_spec_CompositionMipmapSurface, object_bases.get(), nullptr)};
+    if (!CompositionMipmapSurface_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionNineGridBrush, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionNineGridBrush_type{py::register_python_type(module.get(), &type_spec_CompositionNineGridBrush, object_bases.get(), nullptr)};
+    if (!CompositionNineGridBrush_type)
     {
         return nullptr;
     }
@@ -28800,27 +28840,32 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionObject, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionObject_Static.get())) == -1)
+    py::pyobj_handle CompositionObject_type{py::register_python_type(module.get(), &type_spec_CompositionObject, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionObject_Static.get()))};
+    if (!CompositionObject_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionPath, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionPath_type{py::register_python_type(module.get(), &type_spec_CompositionPath, object_bases.get(), nullptr)};
+    if (!CompositionPath_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionPathGeometry, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionPathGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionPathGeometry, object_bases.get(), nullptr)};
+    if (!CompositionPathGeometry_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionProjectedShadow, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionProjectedShadow_type{py::register_python_type(module.get(), &type_spec_CompositionProjectedShadow, object_bases.get(), nullptr)};
+    if (!CompositionProjectedShadow_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowCaster, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionProjectedShadowCaster_type{py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowCaster, object_bases.get(), nullptr)};
+    if (!CompositionProjectedShadowCaster_type)
     {
         return nullptr;
     }
@@ -28831,92 +28876,110 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowCasterCollection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionProjectedShadowCasterCollection_Static.get())) == -1)
+    py::pyobj_handle CompositionProjectedShadowCasterCollection_type{py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowCasterCollection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionProjectedShadowCasterCollection_Static.get()))};
+    if (!CompositionProjectedShadowCasterCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowReceiver, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionProjectedShadowReceiver_type{py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowReceiver, object_bases.get(), nullptr)};
+    if (!CompositionProjectedShadowReceiver_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowReceiverUnorderedCollection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionProjectedShadowReceiverUnorderedCollection_type{py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowReceiverUnorderedCollection, object_bases.get(), nullptr)};
+    if (!CompositionProjectedShadowReceiverUnorderedCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionPropertySet, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionPropertySet_type{py::register_python_type(module.get(), &type_spec_CompositionPropertySet, object_bases.get(), nullptr)};
+    if (!CompositionPropertySet_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionRadialGradientBrush, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionRadialGradientBrush_type{py::register_python_type(module.get(), &type_spec_CompositionRadialGradientBrush, object_bases.get(), nullptr)};
+    if (!CompositionRadialGradientBrush_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionRectangleGeometry, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionRectangleGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionRectangleGeometry, object_bases.get(), nullptr)};
+    if (!CompositionRectangleGeometry_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionRoundedRectangleGeometry, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionRoundedRectangleGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionRoundedRectangleGeometry, object_bases.get(), nullptr)};
+    if (!CompositionRoundedRectangleGeometry_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionScopedBatch, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionScopedBatch_type{py::register_python_type(module.get(), &type_spec_CompositionScopedBatch, object_bases.get(), nullptr)};
+    if (!CompositionScopedBatch_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionShadow, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionShadow_type{py::register_python_type(module.get(), &type_spec_CompositionShadow, object_bases.get(), nullptr)};
+    if (!CompositionShadow_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionShape, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionShape_type{py::register_python_type(module.get(), &type_spec_CompositionShape, object_bases.get(), nullptr)};
+    if (!CompositionShape_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionShapeCollection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionShapeCollection_type{py::register_python_type(module.get(), &type_spec_CompositionShapeCollection, object_bases.get(), nullptr)};
+    if (!CompositionShapeCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionSpriteShape, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionSpriteShape_type{py::register_python_type(module.get(), &type_spec_CompositionSpriteShape, object_bases.get(), nullptr)};
+    if (!CompositionSpriteShape_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionStrokeDashArray, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionStrokeDashArray_type{py::register_python_type(module.get(), &type_spec_CompositionStrokeDashArray, object_bases.get(), nullptr)};
+    if (!CompositionStrokeDashArray_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionSurfaceBrush, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionSurfaceBrush_type{py::register_python_type(module.get(), &type_spec_CompositionSurfaceBrush, object_bases.get(), nullptr)};
+    if (!CompositionSurfaceBrush_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionTransform, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionTransform_type{py::register_python_type(module.get(), &type_spec_CompositionTransform, object_bases.get(), nullptr)};
+    if (!CompositionTransform_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionViewBox, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionViewBox_type{py::register_python_type(module.get(), &type_spec_CompositionViewBox, object_bases.get(), nullptr)};
+    if (!CompositionViewBox_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionVirtualDrawingSurface, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionVirtualDrawingSurface_type{py::register_python_type(module.get(), &type_spec_CompositionVirtualDrawingSurface, object_bases.get(), nullptr)};
+    if (!CompositionVirtualDrawingSurface_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionVisualSurface, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositionVisualSurface_type{py::register_python_type(module.get(), &type_spec_CompositionVisualSurface, object_bases.get(), nullptr)};
+    if (!CompositionVisualSurface_type)
     {
         return nullptr;
     }
@@ -28927,237 +28990,284 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Compositor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Compositor_Static.get())) == -1)
+    py::pyobj_handle Compositor_type{py::register_python_type(module.get(), &type_spec_Compositor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Compositor_Static.get()))};
+    if (!Compositor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContainerVisual, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ContainerVisual_type{py::register_python_type(module.get(), &type_spec_ContainerVisual, object_bases.get(), nullptr)};
+    if (!ContainerVisual_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CubicBezierEasingFunction, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CubicBezierEasingFunction_type{py::register_python_type(module.get(), &type_spec_CubicBezierEasingFunction, object_bases.get(), nullptr)};
+    if (!CubicBezierEasingFunction_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DistantLight, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DistantLight_type{py::register_python_type(module.get(), &type_spec_DistantLight, object_bases.get(), nullptr)};
+    if (!DistantLight_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DropShadow, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DropShadow_type{py::register_python_type(module.get(), &type_spec_DropShadow, object_bases.get(), nullptr)};
+    if (!DropShadow_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ElasticEasingFunction, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ElasticEasingFunction_type{py::register_python_type(module.get(), &type_spec_ElasticEasingFunction, object_bases.get(), nullptr)};
+    if (!ElasticEasingFunction_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ExponentialEasingFunction, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ExponentialEasingFunction_type{py::register_python_type(module.get(), &type_spec_ExponentialEasingFunction, object_bases.get(), nullptr)};
+    if (!ExponentialEasingFunction_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ExpressionAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ExpressionAnimation_type{py::register_python_type(module.get(), &type_spec_ExpressionAnimation, object_bases.get(), nullptr)};
+    if (!ExpressionAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ImplicitAnimationCollection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ImplicitAnimationCollection_type{py::register_python_type(module.get(), &type_spec_ImplicitAnimationCollection, object_bases.get(), nullptr)};
+    if (!ImplicitAnimationCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InitialValueExpressionCollection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle InitialValueExpressionCollection_type{py::register_python_type(module.get(), &type_spec_InitialValueExpressionCollection, object_bases.get(), nullptr)};
+    if (!InitialValueExpressionCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InsetClip, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle InsetClip_type{py::register_python_type(module.get(), &type_spec_InsetClip, object_bases.get(), nullptr)};
+    if (!InsetClip_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle KeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_KeyFrameAnimation, object_bases.get(), nullptr)};
+    if (!KeyFrameAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LayerVisual, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LayerVisual_type{py::register_python_type(module.get(), &type_spec_LayerVisual, object_bases.get(), nullptr)};
+    if (!LayerVisual_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LinearEasingFunction, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LinearEasingFunction_type{py::register_python_type(module.get(), &type_spec_LinearEasingFunction, object_bases.get(), nullptr)};
+    if (!LinearEasingFunction_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_NaturalMotionAnimation, object_bases.get(), nullptr)};
+    if (!NaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PathKeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PathKeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_PathKeyFrameAnimation, object_bases.get(), nullptr)};
+    if (!PathKeyFrameAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PointLight, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PointLight_type{py::register_python_type(module.get(), &type_spec_PointLight, object_bases.get(), nullptr)};
+    if (!PointLight_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PowerEasingFunction, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PowerEasingFunction_type{py::register_python_type(module.get(), &type_spec_PowerEasingFunction, object_bases.get(), nullptr)};
+    if (!PowerEasingFunction_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_QuaternionKeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle QuaternionKeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_QuaternionKeyFrameAnimation, object_bases.get(), nullptr)};
+    if (!QuaternionKeyFrameAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RectangleClip, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RectangleClip_type{py::register_python_type(module.get(), &type_spec_RectangleClip, object_bases.get(), nullptr)};
+    if (!RectangleClip_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RedirectVisual, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RedirectVisual_type{py::register_python_type(module.get(), &type_spec_RedirectVisual, object_bases.get(), nullptr)};
+    if (!RedirectVisual_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RenderingDeviceReplacedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RenderingDeviceReplacedEventArgs_type{py::register_python_type(module.get(), &type_spec_RenderingDeviceReplacedEventArgs, object_bases.get(), nullptr)};
+    if (!RenderingDeviceReplacedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScalarKeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ScalarKeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_ScalarKeyFrameAnimation, object_bases.get(), nullptr)};
+    if (!ScalarKeyFrameAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScalarNaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ScalarNaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_ScalarNaturalMotionAnimation, object_bases.get(), nullptr)};
+    if (!ScalarNaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ShapeVisual, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ShapeVisual_type{py::register_python_type(module.get(), &type_spec_ShapeVisual, object_bases.get(), nullptr)};
+    if (!ShapeVisual_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SineEasingFunction, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SineEasingFunction_type{py::register_python_type(module.get(), &type_spec_SineEasingFunction, object_bases.get(), nullptr)};
+    if (!SineEasingFunction_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpotLight, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SpotLight_type{py::register_python_type(module.get(), &type_spec_SpotLight, object_bases.get(), nullptr)};
+    if (!SpotLight_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpringScalarNaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SpringScalarNaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_SpringScalarNaturalMotionAnimation, object_bases.get(), nullptr)};
+    if (!SpringScalarNaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpringVector2NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SpringVector2NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_SpringVector2NaturalMotionAnimation, object_bases.get(), nullptr)};
+    if (!SpringVector2NaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpringVector3NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SpringVector3NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_SpringVector3NaturalMotionAnimation, object_bases.get(), nullptr)};
+    if (!SpringVector3NaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpriteVisual, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SpriteVisual_type{py::register_python_type(module.get(), &type_spec_SpriteVisual, object_bases.get(), nullptr)};
+    if (!SpriteVisual_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StepEasingFunction, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StepEasingFunction_type{py::register_python_type(module.get(), &type_spec_StepEasingFunction, object_bases.get(), nullptr)};
+    if (!StepEasingFunction_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Vector2KeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle Vector2KeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_Vector2KeyFrameAnimation, object_bases.get(), nullptr)};
+    if (!Vector2KeyFrameAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Vector2NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle Vector2NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_Vector2NaturalMotionAnimation, object_bases.get(), nullptr)};
+    if (!Vector2NaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Vector3KeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle Vector3KeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_Vector3KeyFrameAnimation, object_bases.get(), nullptr)};
+    if (!Vector3KeyFrameAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Vector3NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle Vector3NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_Vector3NaturalMotionAnimation, object_bases.get(), nullptr)};
+    if (!Vector3NaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Vector4KeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle Vector4KeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_Vector4KeyFrameAnimation, object_bases.get(), nullptr)};
+    if (!Vector4KeyFrameAnimation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Visual, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle Visual_type{py::register_python_type(module.get(), &type_spec_Visual, object_bases.get(), nullptr)};
+    if (!Visual_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VisualCollection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VisualCollection_type{py::register_python_type(module.get(), &type_spec_VisualCollection, object_bases.get(), nullptr)};
+    if (!VisualCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VisualUnorderedCollection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VisualUnorderedCollection_type{py::register_python_type(module.get(), &type_spec_VisualUnorderedCollection, object_bases.get(), nullptr)};
+    if (!VisualUnorderedCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAnimationObject, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IAnimationObject_type{py::register_python_type(module.get(), &type_spec_IAnimationObject, object_bases.get(), nullptr)};
+    if (!IAnimationObject_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ICompositionAnimationBase, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ICompositionAnimationBase_type{py::register_python_type(module.get(), &type_spec_ICompositionAnimationBase, object_bases.get(), nullptr)};
+    if (!ICompositionAnimationBase_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ICompositionSupportsSystemBackdrop, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ICompositionSupportsSystemBackdrop_type{py::register_python_type(module.get(), &type_spec_ICompositionSupportsSystemBackdrop, object_bases.get(), nullptr)};
+    if (!ICompositionSupportsSystemBackdrop_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ICompositionSurface, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ICompositionSurface_type{py::register_python_type(module.get(), &type_spec_ICompositionSurface, object_bases.get(), nullptr)};
+    if (!ICompositionSurface_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ICompositionSurfaceFacade, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ICompositionSurfaceFacade_type{py::register_python_type(module.get(), &type_spec_ICompositionSurfaceFacade, object_bases.get(), nullptr)};
+    if (!ICompositionSurfaceFacade_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVisualElement, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVisualElement_type{py::register_python_type(module.get(), &type_spec_IVisualElement, object_bases.get(), nullptr)};
+    if (!IVisualElement_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVisualElement2, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IVisualElement2_type{py::register_python_type(module.get(), &type_spec_IVisualElement2, object_bases.get(), nullptr)};
+    if (!IVisualElement2_type)
     {
         return nullptr;
     }

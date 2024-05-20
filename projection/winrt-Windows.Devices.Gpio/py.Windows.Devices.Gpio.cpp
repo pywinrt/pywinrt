@@ -2044,12 +2044,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_gpio(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GpioChangeCounter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle GpioChangeCounter_type{py::register_python_type(module.get(), &type_spec_GpioChangeCounter, object_bases.get(), nullptr)};
+    if (!GpioChangeCounter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GpioChangeReader, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle GpioChangeReader_type{py::register_python_type(module.get(), &type_spec_GpioChangeReader, object_bases.get(), nullptr)};
+    if (!GpioChangeReader_type)
     {
         return nullptr;
     }
@@ -2060,27 +2062,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_gpio(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GpioController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GpioController_Static.get())) == -1)
+    py::pyobj_handle GpioController_type{py::register_python_type(module.get(), &type_spec_GpioController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GpioController_Static.get()))};
+    if (!GpioController_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GpioPin, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle GpioPin_type{py::register_python_type(module.get(), &type_spec_GpioPin, object_bases.get(), nullptr)};
+    if (!GpioPin_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GpioPinValueChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle GpioPinValueChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_GpioPinValueChangedEventArgs, object_bases.get(), nullptr)};
+    if (!GpioPinValueChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GpioChangeCount, nullptr, nullptr) == -1)
+    py::pyobj_handle GpioChangeCount_type{py::register_python_type(module.get(), &type_spec_GpioChangeCount, nullptr, nullptr)};
+    if (!GpioChangeCount_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GpioChangeRecord, nullptr, nullptr) == -1)
+    py::pyobj_handle GpioChangeRecord_type{py::register_python_type(module.get(), &type_spec_GpioChangeRecord, nullptr, nullptr)};
+    if (!GpioChangeRecord_type)
     {
         return nullptr;
     }

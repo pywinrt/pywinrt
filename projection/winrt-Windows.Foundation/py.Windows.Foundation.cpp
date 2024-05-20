@@ -7746,7 +7746,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Deferral, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle Deferral_type{py::register_python_type(module.get(), &type_spec_Deferral, object_bases.get(), nullptr)};
+    if (!Deferral_type)
     {
         return nullptr;
     }
@@ -7757,12 +7758,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GuidHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidHelper_Static.get())) == -1)
+    py::pyobj_handle GuidHelper_type{py::register_python_type(module.get(), &type_spec_GuidHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidHelper_Static.get()))};
+    if (!GuidHelper_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MemoryBuffer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MemoryBuffer_type{py::register_python_type(module.get(), &type_spec_MemoryBuffer, object_bases.get(), nullptr)};
+    if (!MemoryBuffer_type)
     {
         return nullptr;
     }
@@ -7773,7 +7776,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PropertyValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PropertyValue_Static.get())) == -1)
+    py::pyobj_handle PropertyValue_type{py::register_python_type(module.get(), &type_spec_PropertyValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PropertyValue_Static.get()))};
+    if (!PropertyValue_type)
     {
         return nullptr;
     }
@@ -7784,112 +7788,134 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Uri, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Uri_Static.get())) == -1)
+    py::pyobj_handle Uri_type{py::register_python_type(module.get(), &type_spec_Uri, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Uri_Static.get()))};
+    if (!Uri_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WwwFormUrlDecoder, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WwwFormUrlDecoder_type{py::register_python_type(module.get(), &type_spec_WwwFormUrlDecoder, object_bases.get(), nullptr)};
+    if (!WwwFormUrlDecoder_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WwwFormUrlDecoderEntry, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WwwFormUrlDecoderEntry_type{py::register_python_type(module.get(), &type_spec_WwwFormUrlDecoderEntry, object_bases.get(), nullptr)};
+    if (!WwwFormUrlDecoderEntry_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAsyncAction, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IAsyncAction_type{py::register_python_type(module.get(), &type_spec_IAsyncAction, object_bases.get(), nullptr)};
+    if (!IAsyncAction_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAsyncActionWithProgress, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IAsyncActionWithProgress_type{py::register_python_type(module.get(), &type_spec_IAsyncActionWithProgress, object_bases.get(), nullptr)};
+    if (!IAsyncActionWithProgress_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAsyncInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IAsyncInfo_type{py::register_python_type(module.get(), &type_spec_IAsyncInfo, object_bases.get(), nullptr)};
+    if (!IAsyncInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAsyncOperationWithProgress, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IAsyncOperationWithProgress_type{py::register_python_type(module.get(), &type_spec_IAsyncOperationWithProgress, object_bases.get(), nullptr)};
+    if (!IAsyncOperationWithProgress_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAsyncOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IAsyncOperation_type{py::register_python_type(module.get(), &type_spec_IAsyncOperation, object_bases.get(), nullptr)};
+    if (!IAsyncOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IClosable, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IClosable_type{py::register_python_type(module.get(), &type_spec_IClosable, object_bases.get(), nullptr)};
+    if (!IClosable_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IGetActivationFactory, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IGetActivationFactory_type{py::register_python_type(module.get(), &type_spec_IGetActivationFactory, object_bases.get(), nullptr)};
+    if (!IGetActivationFactory_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IMemoryBuffer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IMemoryBuffer_type{py::register_python_type(module.get(), &type_spec_IMemoryBuffer, object_bases.get(), nullptr)};
+    if (!IMemoryBuffer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IMemoryBufferReference, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IMemoryBufferReference_type{py::register_python_type(module.get(), &type_spec_IMemoryBufferReference, object_bases.get(), nullptr)};
+    if (!IMemoryBufferReference_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPropertyValue, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IPropertyValue_type{py::register_python_type(module.get(), &type_spec_IPropertyValue, object_bases.get(), nullptr)};
+    if (!IPropertyValue_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IReferenceArray, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IReferenceArray_type{py::register_python_type(module.get(), &type_spec_IReferenceArray, object_bases.get(), nullptr)};
+    if (!IReferenceArray_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IReference, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IReference_type{py::register_python_type(module.get(), &type_spec_IReference, object_bases.get(), nullptr)};
+    if (!IReference_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IStringable, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IStringable_type{py::register_python_type(module.get(), &type_spec_IStringable, object_bases.get(), nullptr)};
+    if (!IStringable_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWwwFormUrlDecoderEntry, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IWwwFormUrlDecoderEntry_type{py::register_python_type(module.get(), &type_spec_IWwwFormUrlDecoderEntry, object_bases.get(), nullptr)};
+    if (!IWwwFormUrlDecoderEntry_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EventRegistrationToken, nullptr, nullptr) == -1)
+    py::pyobj_handle EventRegistrationToken_type{py::register_python_type(module.get(), &type_spec_EventRegistrationToken, nullptr, nullptr)};
+    if (!EventRegistrationToken_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HResult, nullptr, nullptr) == -1)
+    py::pyobj_handle HResult_type{py::register_python_type(module.get(), &type_spec_HResult, nullptr, nullptr)};
+    if (!HResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Point, nullptr, nullptr) == -1)
+    py::pyobj_handle Point_type{py::register_python_type(module.get(), &type_spec_Point, nullptr, nullptr)};
+    if (!Point_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Rect, nullptr, nullptr) == -1)
+    py::pyobj_handle Rect_type{py::register_python_type(module.get(), &type_spec_Rect, nullptr, nullptr)};
+    if (!Rect_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Size, nullptr, nullptr) == -1)
+    py::pyobj_handle Size_type{py::register_python_type(module.get(), &type_spec_Size, nullptr, nullptr)};
+    if (!Size_type)
     {
         return nullptr;
     }

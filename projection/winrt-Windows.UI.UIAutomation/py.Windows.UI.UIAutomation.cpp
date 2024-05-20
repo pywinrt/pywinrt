@@ -467,22 +467,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_uiautomation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AutomationConnection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AutomationConnection_type{py::register_python_type(module.get(), &type_spec_AutomationConnection, object_bases.get(), nullptr)};
+    if (!AutomationConnection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AutomationConnectionBoundObject, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AutomationConnectionBoundObject_type{py::register_python_type(module.get(), &type_spec_AutomationConnectionBoundObject, object_bases.get(), nullptr)};
+    if (!AutomationConnectionBoundObject_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AutomationElement, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AutomationElement_type{py::register_python_type(module.get(), &type_spec_AutomationElement, object_bases.get(), nullptr)};
+    if (!AutomationElement_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AutomationTextRange, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AutomationTextRange_type{py::register_python_type(module.get(), &type_spec_AutomationTextRange, object_bases.get(), nullptr)};
+    if (!AutomationTextRange_type)
     {
         return nullptr;
     }

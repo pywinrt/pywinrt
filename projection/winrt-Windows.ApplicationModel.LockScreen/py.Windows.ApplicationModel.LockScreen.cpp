@@ -985,27 +985,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_lockscreen(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LockApplicationHost, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LockApplicationHost_Static.get())) == -1)
+    py::pyobj_handle LockApplicationHost_type{py::register_python_type(module.get(), &type_spec_LockApplicationHost, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LockApplicationHost_Static.get()))};
+    if (!LockApplicationHost_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LockScreenBadge, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LockScreenBadge_type{py::register_python_type(module.get(), &type_spec_LockScreenBadge, object_bases.get(), nullptr)};
+    if (!LockScreenBadge_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LockScreenInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LockScreenInfo_type{py::register_python_type(module.get(), &type_spec_LockScreenInfo, object_bases.get(), nullptr)};
+    if (!LockScreenInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LockScreenUnlockingDeferral, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LockScreenUnlockingDeferral_type{py::register_python_type(module.get(), &type_spec_LockScreenUnlockingDeferral, object_bases.get(), nullptr)};
+    if (!LockScreenUnlockingDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LockScreenUnlockingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LockScreenUnlockingEventArgs_type{py::register_python_type(module.get(), &type_spec_LockScreenUnlockingEventArgs, object_bases.get(), nullptr)};
+    if (!LockScreenUnlockingEventArgs_type)
     {
         return nullptr;
     }

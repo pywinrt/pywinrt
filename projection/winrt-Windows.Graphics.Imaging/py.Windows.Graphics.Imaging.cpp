@@ -6366,12 +6366,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_imaging(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BitmapBuffer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BitmapBuffer_type{py::register_python_type(module.get(), &type_spec_BitmapBuffer, object_bases.get(), nullptr)};
+    if (!BitmapBuffer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BitmapCodecInformation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BitmapCodecInformation_type{py::register_python_type(module.get(), &type_spec_BitmapCodecInformation, object_bases.get(), nullptr)};
+    if (!BitmapCodecInformation_type)
     {
         return nullptr;
     }
@@ -6382,7 +6384,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_imaging(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BitmapDecoder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapDecoder_Static.get())) == -1)
+    py::pyobj_handle BitmapDecoder_type{py::register_python_type(module.get(), &type_spec_BitmapDecoder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapDecoder_Static.get()))};
+    if (!BitmapDecoder_type)
     {
         return nullptr;
     }
@@ -6393,47 +6396,56 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_imaging(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BitmapEncoder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapEncoder_Static.get())) == -1)
+    py::pyobj_handle BitmapEncoder_type{py::register_python_type(module.get(), &type_spec_BitmapEncoder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapEncoder_Static.get()))};
+    if (!BitmapEncoder_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BitmapFrame, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BitmapFrame_type{py::register_python_type(module.get(), &type_spec_BitmapFrame, object_bases.get(), nullptr)};
+    if (!BitmapFrame_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BitmapProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BitmapProperties_type{py::register_python_type(module.get(), &type_spec_BitmapProperties, object_bases.get(), nullptr)};
+    if (!BitmapProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BitmapPropertiesView, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BitmapPropertiesView_type{py::register_python_type(module.get(), &type_spec_BitmapPropertiesView, object_bases.get(), nullptr)};
+    if (!BitmapPropertiesView_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BitmapPropertySet, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BitmapPropertySet_type{py::register_python_type(module.get(), &type_spec_BitmapPropertySet, object_bases.get(), nullptr)};
+    if (!BitmapPropertySet_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BitmapTransform, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BitmapTransform_type{py::register_python_type(module.get(), &type_spec_BitmapTransform, object_bases.get(), nullptr)};
+    if (!BitmapTransform_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BitmapTypedValue, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle BitmapTypedValue_type{py::register_python_type(module.get(), &type_spec_BitmapTypedValue, object_bases.get(), nullptr)};
+    if (!BitmapTypedValue_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ImageStream, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ImageStream_type{py::register_python_type(module.get(), &type_spec_ImageStream, object_bases.get(), nullptr)};
+    if (!ImageStream_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PixelDataProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PixelDataProvider_type{py::register_python_type(module.get(), &type_spec_PixelDataProvider, object_bases.get(), nullptr)};
+    if (!PixelDataProvider_type)
     {
         return nullptr;
     }
@@ -6444,37 +6456,44 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_imaging(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SoftwareBitmap, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SoftwareBitmap_Static.get())) == -1)
+    py::pyobj_handle SoftwareBitmap_type{py::register_python_type(module.get(), &type_spec_SoftwareBitmap, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SoftwareBitmap_Static.get()))};
+    if (!SoftwareBitmap_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IBitmapFrame, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IBitmapFrame_type{py::register_python_type(module.get(), &type_spec_IBitmapFrame, object_bases.get(), nullptr)};
+    if (!IBitmapFrame_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IBitmapFrameWithSoftwareBitmap, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IBitmapFrameWithSoftwareBitmap_type{py::register_python_type(module.get(), &type_spec_IBitmapFrameWithSoftwareBitmap, object_bases.get(), nullptr)};
+    if (!IBitmapFrameWithSoftwareBitmap_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IBitmapPropertiesView, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IBitmapPropertiesView_type{py::register_python_type(module.get(), &type_spec_IBitmapPropertiesView, object_bases.get(), nullptr)};
+    if (!IBitmapPropertiesView_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BitmapBounds, nullptr, nullptr) == -1)
+    py::pyobj_handle BitmapBounds_type{py::register_python_type(module.get(), &type_spec_BitmapBounds, nullptr, nullptr)};
+    if (!BitmapBounds_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BitmapPlaneDescription, nullptr, nullptr) == -1)
+    py::pyobj_handle BitmapPlaneDescription_type{py::register_python_type(module.get(), &type_spec_BitmapPlaneDescription, nullptr, nullptr)};
+    if (!BitmapPlaneDescription_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BitmapSize, nullptr, nullptr) == -1)
+    py::pyobj_handle BitmapSize_type{py::register_python_type(module.get(), &type_spec_BitmapSize, nullptr, nullptr)};
+    if (!BitmapSize_type)
     {
         return nullptr;
     }

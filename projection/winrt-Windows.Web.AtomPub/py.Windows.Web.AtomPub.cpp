@@ -2105,22 +2105,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_atompub(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AtomPubClient, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AtomPubClient_type{py::register_python_type(module.get(), &type_spec_AtomPubClient, object_bases.get(), nullptr)};
+    if (!AtomPubClient_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceCollection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ResourceCollection_type{py::register_python_type(module.get(), &type_spec_ResourceCollection, object_bases.get(), nullptr)};
+    if (!ResourceCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ServiceDocument, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ServiceDocument_type{py::register_python_type(module.get(), &type_spec_ServiceDocument, object_bases.get(), nullptr)};
+    if (!ServiceDocument_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Workspace, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle Workspace_type{py::register_python_type(module.get(), &type_spec_Workspace, object_bases.get(), nullptr)};
+    if (!Workspace_type)
     {
         return nullptr;
     }

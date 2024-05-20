@@ -5830,17 +5830,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_display_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayAdapter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayAdapter_Static.get())) == -1)
+    py::pyobj_handle DisplayAdapter_type{py::register_python_type(module.get(), &type_spec_DisplayAdapter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayAdapter_Static.get()))};
+    if (!DisplayAdapter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayDevice, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayDevice_type{py::register_python_type(module.get(), &type_spec_DisplayDevice, object_bases.get(), nullptr)};
+    if (!DisplayDevice_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayFence, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayFence_type{py::register_python_type(module.get(), &type_spec_DisplayFence, object_bases.get(), nullptr)};
+    if (!DisplayFence_type)
     {
         return nullptr;
     }
@@ -5851,42 +5854,50 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_display_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayManager_Static.get())) == -1)
+    py::pyobj_handle DisplayManager_type{py::register_python_type(module.get(), &type_spec_DisplayManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayManager_Static.get()))};
+    if (!DisplayManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayManagerChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayManagerChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_DisplayManagerChangedEventArgs, object_bases.get(), nullptr)};
+    if (!DisplayManagerChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayManagerDisabledEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayManagerDisabledEventArgs_type{py::register_python_type(module.get(), &type_spec_DisplayManagerDisabledEventArgs, object_bases.get(), nullptr)};
+    if (!DisplayManagerDisabledEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayManagerEnabledEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayManagerEnabledEventArgs_type{py::register_python_type(module.get(), &type_spec_DisplayManagerEnabledEventArgs, object_bases.get(), nullptr)};
+    if (!DisplayManagerEnabledEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayManagerPathsFailedOrInvalidatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayManagerPathsFailedOrInvalidatedEventArgs_type{py::register_python_type(module.get(), &type_spec_DisplayManagerPathsFailedOrInvalidatedEventArgs, object_bases.get(), nullptr)};
+    if (!DisplayManagerPathsFailedOrInvalidatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayManagerResultWithState, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayManagerResultWithState_type{py::register_python_type(module.get(), &type_spec_DisplayManagerResultWithState, object_bases.get(), nullptr)};
+    if (!DisplayManagerResultWithState_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayModeInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayModeInfo_type{py::register_python_type(module.get(), &type_spec_DisplayModeInfo, object_bases.get(), nullptr)};
+    if (!DisplayModeInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayPath, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayPath_type{py::register_python_type(module.get(), &type_spec_DisplayPath, object_bases.get(), nullptr)};
+    if (!DisplayPath_type)
     {
         return nullptr;
     }
@@ -5897,57 +5908,68 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_display_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayPrimaryDescription, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayPrimaryDescription_Static.get())) == -1)
+    py::pyobj_handle DisplayPrimaryDescription_type{py::register_python_type(module.get(), &type_spec_DisplayPrimaryDescription, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayPrimaryDescription_Static.get()))};
+    if (!DisplayPrimaryDescription_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayScanout, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayScanout_type{py::register_python_type(module.get(), &type_spec_DisplayScanout, object_bases.get(), nullptr)};
+    if (!DisplayScanout_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplaySource, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplaySource_type{py::register_python_type(module.get(), &type_spec_DisplaySource, object_bases.get(), nullptr)};
+    if (!DisplaySource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayState, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayState_type{py::register_python_type(module.get(), &type_spec_DisplayState, object_bases.get(), nullptr)};
+    if (!DisplayState_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayStateOperationResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayStateOperationResult_type{py::register_python_type(module.get(), &type_spec_DisplayStateOperationResult, object_bases.get(), nullptr)};
+    if (!DisplayStateOperationResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplaySurface, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplaySurface_type{py::register_python_type(module.get(), &type_spec_DisplaySurface, object_bases.get(), nullptr)};
+    if (!DisplaySurface_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayTarget, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayTarget_type{py::register_python_type(module.get(), &type_spec_DisplayTarget, object_bases.get(), nullptr)};
+    if (!DisplayTarget_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayTask, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayTask_type{py::register_python_type(module.get(), &type_spec_DisplayTask, object_bases.get(), nullptr)};
+    if (!DisplayTask_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayTaskPool, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayTaskPool_type{py::register_python_type(module.get(), &type_spec_DisplayTaskPool, object_bases.get(), nullptr)};
+    if (!DisplayTaskPool_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayTaskResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayTaskResult_type{py::register_python_type(module.get(), &type_spec_DisplayTaskResult, object_bases.get(), nullptr)};
+    if (!DisplayTaskResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayView, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayView_type{py::register_python_type(module.get(), &type_spec_DisplayView, object_bases.get(), nullptr)};
+    if (!DisplayView_type)
     {
         return nullptr;
     }
@@ -5958,12 +5980,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_display_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayWireFormat, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayWireFormat_Static.get())) == -1)
+    py::pyobj_handle DisplayWireFormat_type{py::register_python_type(module.get(), &type_spec_DisplayWireFormat, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayWireFormat_Static.get()))};
+    if (!DisplayWireFormat_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayPresentationRate, nullptr, nullptr) == -1)
+    py::pyobj_handle DisplayPresentationRate_type{py::register_python_type(module.get(), &type_spec_DisplayPresentationRate, nullptr, nullptr)};
+    if (!DisplayPresentationRate_type)
     {
         return nullptr;
     }

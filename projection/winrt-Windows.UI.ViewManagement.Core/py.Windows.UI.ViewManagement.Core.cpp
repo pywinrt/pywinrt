@@ -2342,17 +2342,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreFrameworkInputView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreFrameworkInputView_Static.get())) == -1)
+    py::pyobj_handle CoreFrameworkInputView_type{py::register_python_type(module.get(), &type_spec_CoreFrameworkInputView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreFrameworkInputView_Static.get()))};
+    if (!CoreFrameworkInputView_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreFrameworkInputViewAnimationStartingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreFrameworkInputViewAnimationStartingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreFrameworkInputViewAnimationStartingEventArgs, object_bases.get(), nullptr)};
+    if (!CoreFrameworkInputViewAnimationStartingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreFrameworkInputViewOcclusionsChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreFrameworkInputViewOcclusionsChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreFrameworkInputViewOcclusionsChangedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreFrameworkInputViewOcclusionsChangedEventArgs_type)
     {
         return nullptr;
     }
@@ -2363,37 +2366,44 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreInputView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreInputView_Static.get())) == -1)
+    py::pyobj_handle CoreInputView_type{py::register_python_type(module.get(), &type_spec_CoreInputView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreInputView_Static.get()))};
+    if (!CoreInputView_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreInputViewAnimationStartingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreInputViewAnimationStartingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreInputViewAnimationStartingEventArgs, object_bases.get(), nullptr)};
+    if (!CoreInputViewAnimationStartingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreInputViewHidingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreInputViewHidingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreInputViewHidingEventArgs, object_bases.get(), nullptr)};
+    if (!CoreInputViewHidingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreInputViewOcclusion, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreInputViewOcclusion_type{py::register_python_type(module.get(), &type_spec_CoreInputViewOcclusion, object_bases.get(), nullptr)};
+    if (!CoreInputViewOcclusion_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreInputViewOcclusionsChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreInputViewOcclusionsChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreInputViewOcclusionsChangedEventArgs, object_bases.get(), nullptr)};
+    if (!CoreInputViewOcclusionsChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreInputViewShowingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreInputViewShowingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreInputViewShowingEventArgs, object_bases.get(), nullptr)};
+    if (!CoreInputViewShowingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreInputViewTransferringXYFocusEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CoreInputViewTransferringXYFocusEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreInputViewTransferringXYFocusEventArgs, object_bases.get(), nullptr)};
+    if (!CoreInputViewTransferringXYFocusEventArgs_type)
     {
         return nullptr;
     }
@@ -2404,7 +2414,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UISettingsController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UISettingsController_Static.get())) == -1)
+    py::pyobj_handle UISettingsController_type{py::register_python_type(module.get(), &type_spec_UISettingsController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UISettingsController_Static.get()))};
+    if (!UISettingsController_type)
     {
         return nullptr;
     }

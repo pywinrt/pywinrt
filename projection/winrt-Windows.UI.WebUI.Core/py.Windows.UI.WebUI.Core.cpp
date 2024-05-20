@@ -1848,47 +1848,56 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_webui_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUICommandBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebUICommandBar_Static.get())) == -1)
+    py::pyobj_handle WebUICommandBar_type{py::register_python_type(module.get(), &type_spec_WebUICommandBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebUICommandBar_Static.get()))};
+    if (!WebUICommandBar_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUICommandBarBitmapIcon, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUICommandBarBitmapIcon_type{py::register_python_type(module.get(), &type_spec_WebUICommandBarBitmapIcon, object_bases.get(), nullptr)};
+    if (!WebUICommandBarBitmapIcon_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUICommandBarConfirmationButton, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUICommandBarConfirmationButton_type{py::register_python_type(module.get(), &type_spec_WebUICommandBarConfirmationButton, object_bases.get(), nullptr)};
+    if (!WebUICommandBarConfirmationButton_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUICommandBarIconButton, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUICommandBarIconButton_type{py::register_python_type(module.get(), &type_spec_WebUICommandBarIconButton, object_bases.get(), nullptr)};
+    if (!WebUICommandBarIconButton_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUICommandBarItemInvokedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUICommandBarItemInvokedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUICommandBarItemInvokedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUICommandBarItemInvokedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUICommandBarSizeChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUICommandBarSizeChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebUICommandBarSizeChangedEventArgs, object_bases.get(), nullptr)};
+    if (!WebUICommandBarSizeChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUICommandBarSymbolIcon, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebUICommandBarSymbolIcon_type{py::register_python_type(module.get(), &type_spec_WebUICommandBarSymbolIcon, object_bases.get(), nullptr)};
+    if (!WebUICommandBarSymbolIcon_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWebUICommandBarElement, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IWebUICommandBarElement_type{py::register_python_type(module.get(), &type_spec_IWebUICommandBarElement, object_bases.get(), nullptr)};
+    if (!IWebUICommandBarElement_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWebUICommandBarIcon, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IWebUICommandBarIcon_type{py::register_python_type(module.get(), &type_spec_IWebUICommandBarIcon, object_bases.get(), nullptr)};
+    if (!IWebUICommandBarIcon_type)
     {
         return nullptr;
     }

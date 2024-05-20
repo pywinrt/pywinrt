@@ -544,12 +544,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_compression(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Compressor, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle Compressor_type{py::register_python_type(module.get(), &type_spec_Compressor, object_bases.get(), nullptr)};
+    if (!Compressor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Decompressor, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle Decompressor_type{py::register_python_type(module.get(), &type_spec_Decompressor, object_bases.get(), nullptr)};
+    if (!Decompressor_type)
     {
         return nullptr;
     }

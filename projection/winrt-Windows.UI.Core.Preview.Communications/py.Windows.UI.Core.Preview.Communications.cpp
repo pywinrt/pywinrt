@@ -1499,27 +1499,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core_preview_communications(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PreviewTeamCleanupRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PreviewTeamCleanupRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PreviewTeamCleanupRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!PreviewTeamCleanupRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PreviewTeamCommandInvokedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PreviewTeamCommandInvokedEventArgs_type{py::register_python_type(module.get(), &type_spec_PreviewTeamCommandInvokedEventArgs, object_bases.get(), nullptr)};
+    if (!PreviewTeamCommandInvokedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PreviewTeamDeviceCredentials, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PreviewTeamDeviceCredentials_type{py::register_python_type(module.get(), &type_spec_PreviewTeamDeviceCredentials, object_bases.get(), nullptr)};
+    if (!PreviewTeamDeviceCredentials_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PreviewTeamEndMeetingRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PreviewTeamEndMeetingRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PreviewTeamEndMeetingRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!PreviewTeamEndMeetingRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PreviewTeamJoinMeetingRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PreviewTeamJoinMeetingRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PreviewTeamJoinMeetingRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!PreviewTeamJoinMeetingRequestedEventArgs_type)
     {
         return nullptr;
     }
@@ -1530,7 +1535,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core_preview_communications(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PreviewTeamView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PreviewTeamView_Static.get())) == -1)
+    py::pyobj_handle PreviewTeamView_type{py::register_python_type(module.get(), &type_spec_PreviewTeamView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PreviewTeamView_Static.get()))};
+    if (!PreviewTeamView_type)
     {
         return nullptr;
     }

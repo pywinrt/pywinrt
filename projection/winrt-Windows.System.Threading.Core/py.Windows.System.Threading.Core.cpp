@@ -473,7 +473,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_threading_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PreallocatedWorkItem, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PreallocatedWorkItem_type{py::register_python_type(module.get(), &type_spec_PreallocatedWorkItem, object_bases.get(), nullptr)};
+    if (!PreallocatedWorkItem_type)
     {
         return nullptr;
     }
@@ -484,7 +485,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_threading_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SignalNotifier, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SignalNotifier_Static.get())) == -1)
+    py::pyobj_handle SignalNotifier_type{py::register_python_type(module.get(), &type_spec_SignalNotifier, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SignalNotifier_Static.get()))};
+    if (!SignalNotifier_type)
     {
         return nullptr;
     }

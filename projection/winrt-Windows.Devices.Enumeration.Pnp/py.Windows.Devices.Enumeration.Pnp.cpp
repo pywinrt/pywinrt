@@ -1235,22 +1235,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_enumeration_pnp(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PnpObject, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PnpObject_Static.get())) == -1)
+    py::pyobj_handle PnpObject_type{py::register_python_type(module.get(), &type_spec_PnpObject, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PnpObject_Static.get()))};
+    if (!PnpObject_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PnpObjectCollection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PnpObjectCollection_type{py::register_python_type(module.get(), &type_spec_PnpObjectCollection, object_bases.get(), nullptr)};
+    if (!PnpObjectCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PnpObjectUpdate, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PnpObjectUpdate_type{py::register_python_type(module.get(), &type_spec_PnpObjectUpdate, object_bases.get(), nullptr)};
+    if (!PnpObjectUpdate_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PnpObjectWatcher, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PnpObjectWatcher_type{py::register_python_type(module.get(), &type_spec_PnpObjectWatcher, object_bases.get(), nullptr)};
+    if (!PnpObjectWatcher_type)
     {
         return nullptr;
     }

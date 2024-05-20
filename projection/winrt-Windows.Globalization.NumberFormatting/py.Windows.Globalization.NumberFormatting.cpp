@@ -5779,77 +5779,92 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_numberformatting(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CurrencyFormatter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CurrencyFormatter_type{py::register_python_type(module.get(), &type_spec_CurrencyFormatter, object_bases.get(), nullptr)};
+    if (!CurrencyFormatter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DecimalFormatter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DecimalFormatter_type{py::register_python_type(module.get(), &type_spec_DecimalFormatter, object_bases.get(), nullptr)};
+    if (!DecimalFormatter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IncrementNumberRounder, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IncrementNumberRounder_type{py::register_python_type(module.get(), &type_spec_IncrementNumberRounder, object_bases.get(), nullptr)};
+    if (!IncrementNumberRounder_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NumeralSystemTranslator, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle NumeralSystemTranslator_type{py::register_python_type(module.get(), &type_spec_NumeralSystemTranslator, object_bases.get(), nullptr)};
+    if (!NumeralSystemTranslator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PercentFormatter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PercentFormatter_type{py::register_python_type(module.get(), &type_spec_PercentFormatter, object_bases.get(), nullptr)};
+    if (!PercentFormatter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PermilleFormatter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PermilleFormatter_type{py::register_python_type(module.get(), &type_spec_PermilleFormatter, object_bases.get(), nullptr)};
+    if (!PermilleFormatter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SignificantDigitsNumberRounder, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SignificantDigitsNumberRounder_type{py::register_python_type(module.get(), &type_spec_SignificantDigitsNumberRounder, object_bases.get(), nullptr)};
+    if (!SignificantDigitsNumberRounder_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INumberFormatter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle INumberFormatter_type{py::register_python_type(module.get(), &type_spec_INumberFormatter, object_bases.get(), nullptr)};
+    if (!INumberFormatter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INumberFormatter2, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle INumberFormatter2_type{py::register_python_type(module.get(), &type_spec_INumberFormatter2, object_bases.get(), nullptr)};
+    if (!INumberFormatter2_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INumberFormatterOptions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle INumberFormatterOptions_type{py::register_python_type(module.get(), &type_spec_INumberFormatterOptions, object_bases.get(), nullptr)};
+    if (!INumberFormatterOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INumberParser, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle INumberParser_type{py::register_python_type(module.get(), &type_spec_INumberParser, object_bases.get(), nullptr)};
+    if (!INumberParser_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INumberRounder, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle INumberRounder_type{py::register_python_type(module.get(), &type_spec_INumberRounder, object_bases.get(), nullptr)};
+    if (!INumberRounder_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INumberRounderOption, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle INumberRounderOption_type{py::register_python_type(module.get(), &type_spec_INumberRounderOption, object_bases.get(), nullptr)};
+    if (!INumberRounderOption_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISignedZeroOption, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ISignedZeroOption_type{py::register_python_type(module.get(), &type_spec_ISignedZeroOption, object_bases.get(), nullptr)};
+    if (!ISignedZeroOption_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISignificantDigitsOption, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ISignificantDigitsOption_type{py::register_python_type(module.get(), &type_spec_ISignificantDigitsOption, object_bases.get(), nullptr)};
+    if (!ISignificantDigitsOption_type)
     {
         return nullptr;
     }

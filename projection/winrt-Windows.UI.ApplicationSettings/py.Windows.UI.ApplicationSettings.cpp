@@ -1937,22 +1937,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_applicationsettings(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AccountsSettingsPane, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AccountsSettingsPane_Static.get())) == -1)
+    py::pyobj_handle AccountsSettingsPane_type{py::register_python_type(module.get(), &type_spec_AccountsSettingsPane, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AccountsSettingsPane_Static.get()))};
+    if (!AccountsSettingsPane_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AccountsSettingsPaneCommandsRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AccountsSettingsPaneCommandsRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_AccountsSettingsPaneCommandsRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!AccountsSettingsPaneCommandsRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AccountsSettingsPaneEventDeferral, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AccountsSettingsPaneEventDeferral_type{py::register_python_type(module.get(), &type_spec_AccountsSettingsPaneEventDeferral, object_bases.get(), nullptr)};
+    if (!AccountsSettingsPaneEventDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CredentialCommand, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CredentialCommand_type{py::register_python_type(module.get(), &type_spec_CredentialCommand, object_bases.get(), nullptr)};
+    if (!CredentialCommand_type)
     {
         return nullptr;
     }
@@ -1963,7 +1967,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_applicationsettings(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SettingsCommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsCommand_Static.get())) == -1)
+    py::pyobj_handle SettingsCommand_type{py::register_python_type(module.get(), &type_spec_SettingsCommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsCommand_Static.get()))};
+    if (!SettingsCommand_type)
     {
         return nullptr;
     }
@@ -1974,32 +1979,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_applicationsettings(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SettingsPane, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsPane_Static.get())) == -1)
+    py::pyobj_handle SettingsPane_type{py::register_python_type(module.get(), &type_spec_SettingsPane, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsPane_Static.get()))};
+    if (!SettingsPane_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SettingsPaneCommandsRequest, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SettingsPaneCommandsRequest_type{py::register_python_type(module.get(), &type_spec_SettingsPaneCommandsRequest, object_bases.get(), nullptr)};
+    if (!SettingsPaneCommandsRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SettingsPaneCommandsRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SettingsPaneCommandsRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_SettingsPaneCommandsRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!SettingsPaneCommandsRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccountCommand, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebAccountCommand_type{py::register_python_type(module.get(), &type_spec_WebAccountCommand, object_bases.get(), nullptr)};
+    if (!WebAccountCommand_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccountInvokedArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebAccountInvokedArgs_type{py::register_python_type(module.get(), &type_spec_WebAccountInvokedArgs, object_bases.get(), nullptr)};
+    if (!WebAccountInvokedArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderCommand, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebAccountProviderCommand_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderCommand, object_bases.get(), nullptr)};
+    if (!WebAccountProviderCommand_type)
     {
         return nullptr;
     }

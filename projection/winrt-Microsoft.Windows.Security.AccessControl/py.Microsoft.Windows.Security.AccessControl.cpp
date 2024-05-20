@@ -345,12 +345,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_security_accesscontrol(void) noex
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SecurityDescriptorHelpers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SecurityDescriptorHelpers_Static.get())) == -1)
+    py::pyobj_handle SecurityDescriptorHelpers_type{py::register_python_type(module.get(), &type_spec_SecurityDescriptorHelpers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SecurityDescriptorHelpers_Static.get()))};
+    if (!SecurityDescriptorHelpers_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppContainerNameAndAccess, nullptr, nullptr) == -1)
+    py::pyobj_handle AppContainerNameAndAccess_type{py::register_python_type(module.get(), &type_spec_AppContainerNameAndAccess, nullptr, nullptr)};
+    if (!AppContainerNameAndAccess_type)
     {
         return nullptr;
     }

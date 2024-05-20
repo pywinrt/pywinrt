@@ -533,12 +533,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_fonts(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LanguageFont, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LanguageFont_type{py::register_python_type(module.get(), &type_spec_LanguageFont, object_bases.get(), nullptr)};
+    if (!LanguageFont_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LanguageFontGroup, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LanguageFontGroup_type{py::register_python_type(module.get(), &type_spec_LanguageFontGroup, object_bases.get(), nullptr)};
+    if (!LanguageFontGroup_type)
     {
         return nullptr;
     }

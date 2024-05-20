@@ -1009,22 +1009,26 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_navigation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FrameNavigationOptions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FrameNavigationOptions_type{py::register_python_type(module.get(), &type_spec_FrameNavigationOptions, object_bases.get(), nullptr)};
+    if (!FrameNavigationOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NavigatingCancelEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle NavigatingCancelEventArgs_type{py::register_python_type(module.get(), &type_spec_NavigatingCancelEventArgs, object_bases.get(), nullptr)};
+    if (!NavigatingCancelEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NavigationEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle NavigationEventArgs_type{py::register_python_type(module.get(), &type_spec_NavigationEventArgs, object_bases.get(), nullptr)};
+    if (!NavigationEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NavigationFailedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle NavigationFailedEventArgs_type{py::register_python_type(module.get(), &type_spec_NavigationFailedEventArgs, object_bases.get(), nullptr)};
+    if (!NavigationFailedEventArgs_type)
     {
         return nullptr;
     }
@@ -1035,7 +1039,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_navigation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PageStackEntry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PageStackEntry_Static.get())) == -1)
+    py::pyobj_handle PageStackEntry_type{py::register_python_type(module.get(), &type_spec_PageStackEntry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PageStackEntry_Static.get()))};
+    if (!PageStackEntry_type)
     {
         return nullptr;
     }

@@ -769,12 +769,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_custom(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CustomDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CustomDevice_Static.get())) == -1)
+    py::pyobj_handle CustomDevice_type{py::register_python_type(module.get(), &type_spec_CustomDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CustomDevice_Static.get()))};
+    if (!CustomDevice_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IOControlCode, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IOControlCode_type{py::register_python_type(module.get(), &type_spec_IOControlCode, object_bases.get(), nullptr)};
+    if (!IOControlCode_type)
     {
         return nullptr;
     }
@@ -785,12 +787,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_custom(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownDeviceTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownDeviceTypes_Static.get())) == -1)
+    py::pyobj_handle KnownDeviceTypes_type{py::register_python_type(module.get(), &type_spec_KnownDeviceTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownDeviceTypes_Static.get()))};
+    if (!KnownDeviceTypes_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IIOControlCode, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IIOControlCode_type{py::register_python_type(module.get(), &type_spec_IIOControlCode, object_bases.get(), nullptr)};
+    if (!IIOControlCode_type)
     {
         return nullptr;
     }

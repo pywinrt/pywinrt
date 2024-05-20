@@ -320,7 +320,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositorController, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CompositorController_type{py::register_python_type(module.get(), &type_spec_CompositorController, object_bases.get(), nullptr)};
+    if (!CompositorController_type)
     {
         return nullptr;
     }

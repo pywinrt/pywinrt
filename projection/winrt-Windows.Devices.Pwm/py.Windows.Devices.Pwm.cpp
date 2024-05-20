@@ -773,12 +773,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pwm(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PwmController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PwmController_Static.get())) == -1)
+    py::pyobj_handle PwmController_type{py::register_python_type(module.get(), &type_spec_PwmController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PwmController_Static.get()))};
+    if (!PwmController_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PwmPin, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PwmPin_type{py::register_python_type(module.get(), &type_spec_PwmPin, object_bases.get(), nullptr)};
+    if (!PwmPin_type)
     {
         return nullptr;
     }

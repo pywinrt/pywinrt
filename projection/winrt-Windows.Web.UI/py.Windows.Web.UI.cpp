@@ -3721,82 +3721,98 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_ui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControlContentLoadingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControlContentLoadingEventArgs_type{py::register_python_type(module.get(), &type_spec_WebViewControlContentLoadingEventArgs, object_bases.get(), nullptr)};
+    if (!WebViewControlContentLoadingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControlDOMContentLoadedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControlDOMContentLoadedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebViewControlDOMContentLoadedEventArgs, object_bases.get(), nullptr)};
+    if (!WebViewControlDOMContentLoadedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControlDeferredPermissionRequest, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControlDeferredPermissionRequest_type{py::register_python_type(module.get(), &type_spec_WebViewControlDeferredPermissionRequest, object_bases.get(), nullptr)};
+    if (!WebViewControlDeferredPermissionRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControlLongRunningScriptDetectedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControlLongRunningScriptDetectedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebViewControlLongRunningScriptDetectedEventArgs, object_bases.get(), nullptr)};
+    if (!WebViewControlLongRunningScriptDetectedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControlNavigationCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControlNavigationCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebViewControlNavigationCompletedEventArgs, object_bases.get(), nullptr)};
+    if (!WebViewControlNavigationCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControlNavigationStartingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControlNavigationStartingEventArgs_type{py::register_python_type(module.get(), &type_spec_WebViewControlNavigationStartingEventArgs, object_bases.get(), nullptr)};
+    if (!WebViewControlNavigationStartingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControlNewWindowRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControlNewWindowRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebViewControlNewWindowRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!WebViewControlNewWindowRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControlPermissionRequest, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControlPermissionRequest_type{py::register_python_type(module.get(), &type_spec_WebViewControlPermissionRequest, object_bases.get(), nullptr)};
+    if (!WebViewControlPermissionRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControlPermissionRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControlPermissionRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebViewControlPermissionRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!WebViewControlPermissionRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControlScriptNotifyEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControlScriptNotifyEventArgs_type{py::register_python_type(module.get(), &type_spec_WebViewControlScriptNotifyEventArgs, object_bases.get(), nullptr)};
+    if (!WebViewControlScriptNotifyEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControlSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControlSettings_type{py::register_python_type(module.get(), &type_spec_WebViewControlSettings, object_bases.get(), nullptr)};
+    if (!WebViewControlSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControlUnsupportedUriSchemeIdentifiedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs, object_bases.get(), nullptr)};
+    if (!WebViewControlUnsupportedUriSchemeIdentifiedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControlUnviewableContentIdentifiedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControlUnviewableContentIdentifiedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebViewControlUnviewableContentIdentifiedEventArgs, object_bases.get(), nullptr)};
+    if (!WebViewControlUnviewableContentIdentifiedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebViewControlWebResourceRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebViewControlWebResourceRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebViewControlWebResourceRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!WebViewControlWebResourceRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWebViewControl, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IWebViewControl_type{py::register_python_type(module.get(), &type_spec_IWebViewControl, object_bases.get(), nullptr)};
+    if (!IWebViewControl_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWebViewControl2, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IWebViewControl2_type{py::register_python_type(module.get(), &type_spec_IWebViewControl2, object_bases.get(), nullptr)};
+    if (!IWebViewControl2_type)
     {
         return nullptr;
     }

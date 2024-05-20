@@ -1081,12 +1081,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_cortana(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CortanaActionableInsights, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CortanaActionableInsights_Static.get())) == -1)
+    py::pyobj_handle CortanaActionableInsights_type{py::register_python_type(module.get(), &type_spec_CortanaActionableInsights, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CortanaActionableInsights_Static.get()))};
+    if (!CortanaActionableInsights_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CortanaActionableInsightsOptions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CortanaActionableInsightsOptions_type{py::register_python_type(module.get(), &type_spec_CortanaActionableInsightsOptions, object_bases.get(), nullptr)};
+    if (!CortanaActionableInsightsOptions_type)
     {
         return nullptr;
     }
@@ -1097,7 +1099,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_cortana(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CortanaPermissionsManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CortanaPermissionsManager_Static.get())) == -1)
+    py::pyobj_handle CortanaPermissionsManager_type{py::register_python_type(module.get(), &type_spec_CortanaPermissionsManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CortanaPermissionsManager_Static.get()))};
+    if (!CortanaPermissionsManager_type)
     {
         return nullptr;
     }
@@ -1108,7 +1111,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_cortana(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CortanaSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CortanaSettings_Static.get())) == -1)
+    py::pyobj_handle CortanaSettings_type{py::register_python_type(module.get(), &type_spec_CortanaSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CortanaSettings_Static.get()))};
+    if (!CortanaSettings_type)
     {
         return nullptr;
     }

@@ -448,7 +448,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_resources(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceLoader, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ResourceLoader_Static.get())) == -1)
+    py::pyobj_handle ResourceLoader_type{py::register_python_type(module.get(), &type_spec_ResourceLoader, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ResourceLoader_Static.get()))};
+    if (!ResourceLoader_type)
     {
         return nullptr;
     }

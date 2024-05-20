@@ -1298,7 +1298,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appextensions(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppExtension, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppExtension_type{py::register_python_type(module.get(), &type_spec_AppExtension, object_bases.get(), nullptr)};
+    if (!AppExtension_type)
     {
         return nullptr;
     }
@@ -1309,32 +1310,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appextensions(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppExtensionCatalog, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppExtensionCatalog_Static.get())) == -1)
+    py::pyobj_handle AppExtensionCatalog_type{py::register_python_type(module.get(), &type_spec_AppExtensionCatalog, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppExtensionCatalog_Static.get()))};
+    if (!AppExtensionCatalog_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppExtensionPackageInstalledEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppExtensionPackageInstalledEventArgs_type{py::register_python_type(module.get(), &type_spec_AppExtensionPackageInstalledEventArgs, object_bases.get(), nullptr)};
+    if (!AppExtensionPackageInstalledEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppExtensionPackageStatusChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppExtensionPackageStatusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppExtensionPackageStatusChangedEventArgs, object_bases.get(), nullptr)};
+    if (!AppExtensionPackageStatusChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppExtensionPackageUninstallingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppExtensionPackageUninstallingEventArgs_type{py::register_python_type(module.get(), &type_spec_AppExtensionPackageUninstallingEventArgs, object_bases.get(), nullptr)};
+    if (!AppExtensionPackageUninstallingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppExtensionPackageUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppExtensionPackageUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppExtensionPackageUpdatedEventArgs, object_bases.get(), nullptr)};
+    if (!AppExtensionPackageUpdatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppExtensionPackageUpdatingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppExtensionPackageUpdatingEventArgs_type{py::register_python_type(module.get(), &type_spec_AppExtensionPackageUpdatingEventArgs, object_bases.get(), nullptr)};
+    if (!AppExtensionPackageUpdatingEventArgs_type)
     {
         return nullptr;
     }

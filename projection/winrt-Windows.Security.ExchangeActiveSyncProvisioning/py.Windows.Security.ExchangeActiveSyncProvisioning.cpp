@@ -1106,17 +1106,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_exchangeactivesyncprovisioning(voi
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EasClientDeviceInformation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle EasClientDeviceInformation_type{py::register_python_type(module.get(), &type_spec_EasClientDeviceInformation, object_bases.get(), nullptr)};
+    if (!EasClientDeviceInformation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EasClientSecurityPolicy, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle EasClientSecurityPolicy_type{py::register_python_type(module.get(), &type_spec_EasClientSecurityPolicy, object_bases.get(), nullptr)};
+    if (!EasClientSecurityPolicy_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EasComplianceResults, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle EasComplianceResults_type{py::register_python_type(module.get(), &type_spec_EasComplianceResults, object_bases.get(), nullptr)};
+    if (!EasComplianceResults_type)
     {
         return nullptr;
     }

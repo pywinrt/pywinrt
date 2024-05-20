@@ -136,7 +136,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ApplicationProfile, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationProfile_Static.get())) == -1)
+    py::pyobj_handle ApplicationProfile_type{py::register_python_type(module.get(), &type_spec_ApplicationProfile, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationProfile_Static.get()))};
+    if (!ApplicationProfile_type)
     {
         return nullptr;
     }

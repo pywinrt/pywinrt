@@ -4114,87 +4114,104 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_payments(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentAddress, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PaymentAddress_type{py::register_python_type(module.get(), &type_spec_PaymentAddress, object_bases.get(), nullptr)};
+    if (!PaymentAddress_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentCanMakePaymentResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PaymentCanMakePaymentResult_type{py::register_python_type(module.get(), &type_spec_PaymentCanMakePaymentResult, object_bases.get(), nullptr)};
+    if (!PaymentCanMakePaymentResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentCurrencyAmount, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PaymentCurrencyAmount_type{py::register_python_type(module.get(), &type_spec_PaymentCurrencyAmount, object_bases.get(), nullptr)};
+    if (!PaymentCurrencyAmount_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentDetails, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PaymentDetails_type{py::register_python_type(module.get(), &type_spec_PaymentDetails, object_bases.get(), nullptr)};
+    if (!PaymentDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentDetailsModifier, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PaymentDetailsModifier_type{py::register_python_type(module.get(), &type_spec_PaymentDetailsModifier, object_bases.get(), nullptr)};
+    if (!PaymentDetailsModifier_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentItem, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PaymentItem_type{py::register_python_type(module.get(), &type_spec_PaymentItem, object_bases.get(), nullptr)};
+    if (!PaymentItem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentMediator, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PaymentMediator_type{py::register_python_type(module.get(), &type_spec_PaymentMediator, object_bases.get(), nullptr)};
+    if (!PaymentMediator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentMerchantInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PaymentMerchantInfo_type{py::register_python_type(module.get(), &type_spec_PaymentMerchantInfo, object_bases.get(), nullptr)};
+    if (!PaymentMerchantInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentMethodData, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PaymentMethodData_type{py::register_python_type(module.get(), &type_spec_PaymentMethodData, object_bases.get(), nullptr)};
+    if (!PaymentMethodData_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentOptions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PaymentOptions_type{py::register_python_type(module.get(), &type_spec_PaymentOptions, object_bases.get(), nullptr)};
+    if (!PaymentOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentRequest, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PaymentRequest_type{py::register_python_type(module.get(), &type_spec_PaymentRequest, object_bases.get(), nullptr)};
+    if (!PaymentRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentRequestChangedArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PaymentRequestChangedArgs_type{py::register_python_type(module.get(), &type_spec_PaymentRequestChangedArgs, object_bases.get(), nullptr)};
+    if (!PaymentRequestChangedArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentRequestChangedResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PaymentRequestChangedResult_type{py::register_python_type(module.get(), &type_spec_PaymentRequestChangedResult, object_bases.get(), nullptr)};
+    if (!PaymentRequestChangedResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentRequestSubmitResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PaymentRequestSubmitResult_type{py::register_python_type(module.get(), &type_spec_PaymentRequestSubmitResult, object_bases.get(), nullptr)};
+    if (!PaymentRequestSubmitResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentResponse, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PaymentResponse_type{py::register_python_type(module.get(), &type_spec_PaymentResponse, object_bases.get(), nullptr)};
+    if (!PaymentResponse_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentShippingOption, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PaymentShippingOption_type{py::register_python_type(module.get(), &type_spec_PaymentShippingOption, object_bases.get(), nullptr)};
+    if (!PaymentShippingOption_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentToken, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PaymentToken_type{py::register_python_type(module.get(), &type_spec_PaymentToken, object_bases.get(), nullptr)};
+    if (!PaymentToken_type)
     {
         return nullptr;
     }

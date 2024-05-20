@@ -1319,17 +1319,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_printers_extensions(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Print3DWorkflow, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle Print3DWorkflow_type{py::register_python_type(module.get(), &type_spec_Print3DWorkflow, object_bases.get(), nullptr)};
+    if (!Print3DWorkflow_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Print3DWorkflowPrintRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle Print3DWorkflowPrintRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_Print3DWorkflowPrintRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!Print3DWorkflowPrintRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Print3DWorkflowPrinterChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle Print3DWorkflowPrinterChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_Print3DWorkflowPrinterChangedEventArgs, object_bases.get(), nullptr)};
+    if (!Print3DWorkflowPrinterChangedEventArgs_type)
     {
         return nullptr;
     }
@@ -1340,32 +1343,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_printers_extensions(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintExtensionContext, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PrintExtensionContext_Static.get())) == -1)
+    py::pyobj_handle PrintExtensionContext_type{py::register_python_type(module.get(), &type_spec_PrintExtensionContext, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PrintExtensionContext_Static.get()))};
+    if (!PrintExtensionContext_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintNotificationEventDetails, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintNotificationEventDetails_type{py::register_python_type(module.get(), &type_spec_PrintNotificationEventDetails, object_bases.get(), nullptr)};
+    if (!PrintNotificationEventDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTaskConfiguration, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintTaskConfiguration_type{py::register_python_type(module.get(), &type_spec_PrintTaskConfiguration, object_bases.get(), nullptr)};
+    if (!PrintTaskConfiguration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTaskConfigurationSaveRequest, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintTaskConfigurationSaveRequest_type{py::register_python_type(module.get(), &type_spec_PrintTaskConfigurationSaveRequest, object_bases.get(), nullptr)};
+    if (!PrintTaskConfigurationSaveRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTaskConfigurationSaveRequestedDeferral, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintTaskConfigurationSaveRequestedDeferral_type{py::register_python_type(module.get(), &type_spec_PrintTaskConfigurationSaveRequestedDeferral, object_bases.get(), nullptr)};
+    if (!PrintTaskConfigurationSaveRequestedDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTaskConfigurationSaveRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintTaskConfigurationSaveRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintTaskConfigurationSaveRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!PrintTaskConfigurationSaveRequestedEventArgs_type)
     {
         return nullptr;
     }

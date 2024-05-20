@@ -1377,27 +1377,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_popups(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MessageDialog, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MessageDialog_type{py::register_python_type(module.get(), &type_spec_MessageDialog, object_bases.get(), nullptr)};
+    if (!MessageDialog_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PopupMenu, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PopupMenu_type{py::register_python_type(module.get(), &type_spec_PopupMenu, object_bases.get(), nullptr)};
+    if (!PopupMenu_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UICommand, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UICommand_type{py::register_python_type(module.get(), &type_spec_UICommand, object_bases.get(), nullptr)};
+    if (!UICommand_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UICommandSeparator, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UICommandSeparator_type{py::register_python_type(module.get(), &type_spec_UICommandSeparator, object_bases.get(), nullptr)};
+    if (!UICommandSeparator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IUICommand, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IUICommand_type{py::register_python_type(module.get(), &type_spec_IUICommand, object_bases.get(), nullptr)};
+    if (!IUICommand_type)
     {
         return nullptr;
     }

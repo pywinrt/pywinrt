@@ -952,22 +952,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_search_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RequestingFocusOnKeyboardInputEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RequestingFocusOnKeyboardInputEventArgs_type{py::register_python_type(module.get(), &type_spec_RequestingFocusOnKeyboardInputEventArgs, object_bases.get(), nullptr)};
+    if (!RequestingFocusOnKeyboardInputEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SearchSuggestion, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SearchSuggestion_type{py::register_python_type(module.get(), &type_spec_SearchSuggestion, object_bases.get(), nullptr)};
+    if (!SearchSuggestion_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SearchSuggestionManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SearchSuggestionManager_type{py::register_python_type(module.get(), &type_spec_SearchSuggestionManager, object_bases.get(), nullptr)};
+    if (!SearchSuggestionManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SearchSuggestionsRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SearchSuggestionsRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchSuggestionsRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!SearchSuggestionsRequestedEventArgs_type)
     {
         return nullptr;
     }

@@ -559,7 +559,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LowLevelDevicesAggregateProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LowLevelDevicesAggregateProvider_type{py::register_python_type(module.get(), &type_spec_LowLevelDevicesAggregateProvider, object_bases.get(), nullptr)};
+    if (!LowLevelDevicesAggregateProvider_type)
     {
         return nullptr;
     }
@@ -570,12 +571,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LowLevelDevicesController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LowLevelDevicesController_Static.get())) == -1)
+    py::pyobj_handle LowLevelDevicesController_type{py::register_python_type(module.get(), &type_spec_LowLevelDevicesController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LowLevelDevicesController_Static.get()))};
+    if (!LowLevelDevicesController_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ILowLevelDevicesAggregateProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ILowLevelDevicesAggregateProvider_type{py::register_python_type(module.get(), &type_spec_ILowLevelDevicesAggregateProvider, object_bases.get(), nullptr)};
+    if (!ILowLevelDevicesAggregateProvider_type)
     {
         return nullptr;
     }

@@ -29034,17 +29034,20 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBarButtonTemplateSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppBarButtonTemplateSettings_type{py::register_python_type(module.get(), &type_spec_AppBarButtonTemplateSettings, object_bases.get(), nullptr)};
+    if (!AppBarButtonTemplateSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBarTemplateSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppBarTemplateSettings_type{py::register_python_type(module.get(), &type_spec_AppBarTemplateSettings, object_bases.get(), nullptr)};
+    if (!AppBarTemplateSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBarToggleButtonTemplateSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AppBarToggleButtonTemplateSettings_type{py::register_python_type(module.get(), &type_spec_AppBarToggleButtonTemplateSettings, object_bases.get(), nullptr)};
+    if (!AppBarToggleButtonTemplateSettings_type)
     {
         return nullptr;
     }
@@ -29055,7 +29058,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AutoSuggestBoxHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutoSuggestBoxHelper_Static.get())) == -1)
+    py::pyobj_handle AutoSuggestBoxHelper_type{py::register_python_type(module.get(), &type_spec_AutoSuggestBoxHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutoSuggestBoxHelper_Static.get()))};
+    if (!AutoSuggestBoxHelper_type)
     {
         return nullptr;
     }
@@ -29066,22 +29070,26 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ButtonBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ButtonBase_Static.get())) == -1)
+    py::pyobj_handle ButtonBase_type{py::register_python_type(module.get(), &type_spec_ButtonBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ButtonBase_Static.get()))};
+    if (!ButtonBase_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CalendarPanel, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CalendarPanel_type{py::register_python_type(module.get(), &type_spec_CalendarPanel, object_bases.get(), nullptr)};
+    if (!CalendarPanel_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CalendarViewTemplateSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CalendarViewTemplateSettings_type{py::register_python_type(module.get(), &type_spec_CalendarViewTemplateSettings, object_bases.get(), nullptr)};
+    if (!CalendarViewTemplateSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CarouselPanel, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CarouselPanel_type{py::register_python_type(module.get(), &type_spec_CarouselPanel, object_bases.get(), nullptr)};
+    if (!CarouselPanel_type)
     {
         return nullptr;
     }
@@ -29092,7 +29100,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ColorPickerSlider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorPickerSlider_Static.get())) == -1)
+    py::pyobj_handle ColorPickerSlider_type{py::register_python_type(module.get(), &type_spec_ColorPickerSlider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorPickerSlider_Static.get()))};
+    if (!ColorPickerSlider_type)
     {
         return nullptr;
     }
@@ -29103,7 +29112,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ColorSpectrum, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorSpectrum_Static.get())) == -1)
+    py::pyobj_handle ColorSpectrum_type{py::register_python_type(module.get(), &type_spec_ColorSpectrum, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorSpectrum_Static.get()))};
+    if (!ColorSpectrum_type)
     {
         return nullptr;
     }
@@ -29114,7 +29124,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ColumnMajorUniformToLargestGridLayout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColumnMajorUniformToLargestGridLayout_Static.get())) == -1)
+    py::pyobj_handle ColumnMajorUniformToLargestGridLayout_type{py::register_python_type(module.get(), &type_spec_ColumnMajorUniformToLargestGridLayout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColumnMajorUniformToLargestGridLayout_Static.get()))};
+    if (!ColumnMajorUniformToLargestGridLayout_type)
     {
         return nullptr;
     }
@@ -29125,12 +29136,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ComboBoxHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComboBoxHelper_Static.get())) == -1)
+    py::pyobj_handle ComboBoxHelper_type{py::register_python_type(module.get(), &type_spec_ComboBoxHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComboBoxHelper_Static.get()))};
+    if (!ComboBoxHelper_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ComboBoxTemplateSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ComboBoxTemplateSettings_type{py::register_python_type(module.get(), &type_spec_ComboBoxTemplateSettings, object_bases.get(), nullptr)};
+    if (!ComboBoxTemplateSettings_type)
     {
         return nullptr;
     }
@@ -29141,7 +29154,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CommandBarFlyoutCommandBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommandBarFlyoutCommandBar_Static.get())) == -1)
+    py::pyobj_handle CommandBarFlyoutCommandBar_type{py::register_python_type(module.get(), &type_spec_CommandBarFlyoutCommandBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommandBarFlyoutCommandBar_Static.get()))};
+    if (!CommandBarFlyoutCommandBar_type)
     {
         return nullptr;
     }
@@ -29152,17 +29166,20 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CommandBarFlyoutCommandBarAutomationProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommandBarFlyoutCommandBarAutomationProperties_Static.get())) == -1)
+    py::pyobj_handle CommandBarFlyoutCommandBarAutomationProperties_type{py::register_python_type(module.get(), &type_spec_CommandBarFlyoutCommandBarAutomationProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommandBarFlyoutCommandBarAutomationProperties_Static.get()))};
+    if (!CommandBarFlyoutCommandBarAutomationProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CommandBarFlyoutCommandBarTemplateSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CommandBarFlyoutCommandBarTemplateSettings_type{py::register_python_type(module.get(), &type_spec_CommandBarFlyoutCommandBarTemplateSettings, object_bases.get(), nullptr)};
+    if (!CommandBarFlyoutCommandBarTemplateSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CommandBarTemplateSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CommandBarTemplateSettings_type{py::register_python_type(module.get(), &type_spec_CommandBarTemplateSettings, object_bases.get(), nullptr)};
+    if (!CommandBarTemplateSettings_type)
     {
         return nullptr;
     }
@@ -29173,7 +29190,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CornerRadiusFilterConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CornerRadiusFilterConverter_Static.get())) == -1)
+    py::pyobj_handle CornerRadiusFilterConverter_type{py::register_python_type(module.get(), &type_spec_CornerRadiusFilterConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CornerRadiusFilterConverter_Static.get()))};
+    if (!CornerRadiusFilterConverter_type)
     {
         return nullptr;
     }
@@ -29184,22 +29202,26 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CornerRadiusToThicknessConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CornerRadiusToThicknessConverter_Static.get())) == -1)
+    py::pyobj_handle CornerRadiusToThicknessConverter_type{py::register_python_type(module.get(), &type_spec_CornerRadiusToThicknessConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CornerRadiusToThicknessConverter_Static.get()))};
+    if (!CornerRadiusToThicknessConverter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DragCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DragCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_DragCompletedEventArgs, object_bases.get(), nullptr)};
+    if (!DragCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DragDeltaEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DragDeltaEventArgs_type{py::register_python_type(module.get(), &type_spec_DragDeltaEventArgs, object_bases.get(), nullptr)};
+    if (!DragDeltaEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DragStartedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DragStartedEventArgs_type{py::register_python_type(module.get(), &type_spec_DragStartedEventArgs, object_bases.get(), nullptr)};
+    if (!DragStartedEventArgs_type)
     {
         return nullptr;
     }
@@ -29210,17 +29232,20 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FlyoutBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlyoutBase_Static.get())) == -1)
+    py::pyobj_handle FlyoutBase_type{py::register_python_type(module.get(), &type_spec_FlyoutBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlyoutBase_Static.get()))};
+    if (!FlyoutBase_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FlyoutBaseClosingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FlyoutBaseClosingEventArgs_type{py::register_python_type(module.get(), &type_spec_FlyoutBaseClosingEventArgs, object_bases.get(), nullptr)};
+    if (!FlyoutBaseClosingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FlyoutShowOptions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FlyoutShowOptions_type{py::register_python_type(module.get(), &type_spec_FlyoutShowOptions, object_bases.get(), nullptr)};
+    if (!FlyoutShowOptions_type)
     {
         return nullptr;
     }
@@ -29231,7 +29256,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GeneratorPositionHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeneratorPositionHelper_Static.get())) == -1)
+    py::pyobj_handle GeneratorPositionHelper_type{py::register_python_type(module.get(), &type_spec_GeneratorPositionHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeneratorPositionHelper_Static.get()))};
+    if (!GeneratorPositionHelper_type)
     {
         return nullptr;
     }
@@ -29242,12 +29268,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GridViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItemPresenter_Static.get())) == -1)
+    py::pyobj_handle GridViewItemPresenter_type{py::register_python_type(module.get(), &type_spec_GridViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItemPresenter_Static.get()))};
+    if (!GridViewItemPresenter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GridViewItemTemplateSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle GridViewItemTemplateSettings_type{py::register_python_type(module.get(), &type_spec_GridViewItemTemplateSettings, object_bases.get(), nullptr)};
+    if (!GridViewItemTemplateSettings_type)
     {
         return nullptr;
     }
@@ -29258,12 +29286,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InfoBarPanel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InfoBarPanel_Static.get())) == -1)
+    py::pyobj_handle InfoBarPanel_type{py::register_python_type(module.get(), &type_spec_InfoBarPanel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InfoBarPanel_Static.get()))};
+    if (!InfoBarPanel_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ItemsChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ItemsChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ItemsChangedEventArgs, object_bases.get(), nullptr)};
+    if (!ItemsChangedEventArgs_type)
     {
         return nullptr;
     }
@@ -29274,7 +29304,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JumpListItemBackgroundConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemBackgroundConverter_Static.get())) == -1)
+    py::pyobj_handle JumpListItemBackgroundConverter_type{py::register_python_type(module.get(), &type_spec_JumpListItemBackgroundConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemBackgroundConverter_Static.get()))};
+    if (!JumpListItemBackgroundConverter_type)
     {
         return nullptr;
     }
@@ -29285,7 +29316,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JumpListItemForegroundConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemForegroundConverter_Static.get())) == -1)
+    py::pyobj_handle JumpListItemForegroundConverter_type{py::register_python_type(module.get(), &type_spec_JumpListItemForegroundConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemForegroundConverter_Static.get()))};
+    if (!JumpListItemForegroundConverter_type)
     {
         return nullptr;
     }
@@ -29296,7 +29328,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LayoutInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LayoutInformation_Static.get())) == -1)
+    py::pyobj_handle LayoutInformation_type{py::register_python_type(module.get(), &type_spec_LayoutInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LayoutInformation_Static.get()))};
+    if (!LayoutInformation_type)
     {
         return nullptr;
     }
@@ -29307,12 +29340,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ListViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItemPresenter_Static.get())) == -1)
+    py::pyobj_handle ListViewItemPresenter_type{py::register_python_type(module.get(), &type_spec_ListViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItemPresenter_Static.get()))};
+    if (!ListViewItemPresenter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ListViewItemTemplateSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ListViewItemTemplateSettings_type{py::register_python_type(module.get(), &type_spec_ListViewItemTemplateSettings, object_bases.get(), nullptr)};
+    if (!ListViewItemTemplateSettings_type)
     {
         return nullptr;
     }
@@ -29323,27 +29358,32 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LoopingSelector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LoopingSelector_Static.get())) == -1)
+    py::pyobj_handle LoopingSelector_type{py::register_python_type(module.get(), &type_spec_LoopingSelector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LoopingSelector_Static.get()))};
+    if (!LoopingSelector_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LoopingSelectorItem, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LoopingSelectorItem_type{py::register_python_type(module.get(), &type_spec_LoopingSelectorItem, object_bases.get(), nullptr)};
+    if (!LoopingSelectorItem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LoopingSelectorPanel, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle LoopingSelectorPanel_type{py::register_python_type(module.get(), &type_spec_LoopingSelectorPanel, object_bases.get(), nullptr)};
+    if (!LoopingSelectorPanel_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MenuFlyoutItemTemplateSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MenuFlyoutItemTemplateSettings_type{py::register_python_type(module.get(), &type_spec_MenuFlyoutItemTemplateSettings, object_bases.get(), nullptr)};
+    if (!MenuFlyoutItemTemplateSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MenuFlyoutPresenterTemplateSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MenuFlyoutPresenterTemplateSettings_type{py::register_python_type(module.get(), &type_spec_MenuFlyoutPresenterTemplateSettings, object_bases.get(), nullptr)};
+    if (!MenuFlyoutPresenterTemplateSettings_type)
     {
         return nullptr;
     }
@@ -29354,7 +29394,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MonochromaticOverlayPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MonochromaticOverlayPresenter_Static.get())) == -1)
+    py::pyobj_handle MonochromaticOverlayPresenter_type{py::register_python_type(module.get(), &type_spec_MonochromaticOverlayPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MonochromaticOverlayPresenter_Static.get()))};
+    if (!MonochromaticOverlayPresenter_type)
     {
         return nullptr;
     }
@@ -29365,7 +29406,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NavigationViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemPresenter_Static.get())) == -1)
+    py::pyobj_handle NavigationViewItemPresenter_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemPresenter_Static.get()))};
+    if (!NavigationViewItemPresenter_type)
     {
         return nullptr;
     }
@@ -29376,12 +29418,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NavigationViewItemPresenterTemplateSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemPresenterTemplateSettings_Static.get())) == -1)
+    py::pyobj_handle NavigationViewItemPresenterTemplateSettings_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemPresenterTemplateSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemPresenterTemplateSettings_Static.get()))};
+    if (!NavigationViewItemPresenterTemplateSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OrientedVirtualizingPanel, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle OrientedVirtualizingPanel_type{py::register_python_type(module.get(), &type_spec_OrientedVirtualizingPanel, object_bases.get(), nullptr)};
+    if (!OrientedVirtualizingPanel_type)
     {
         return nullptr;
     }
@@ -29392,22 +29436,26 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PickerFlyoutBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PickerFlyoutBase_Static.get())) == -1)
+    py::pyobj_handle PickerFlyoutBase_type{py::register_python_type(module.get(), &type_spec_PickerFlyoutBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PickerFlyoutBase_Static.get()))};
+    if (!PickerFlyoutBase_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PivotHeaderItem, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PivotHeaderItem_type{py::register_python_type(module.get(), &type_spec_PivotHeaderItem, object_bases.get(), nullptr)};
+    if (!PivotHeaderItem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PivotHeaderPanel, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PivotHeaderPanel_type{py::register_python_type(module.get(), &type_spec_PivotHeaderPanel, object_bases.get(), nullptr)};
+    if (!PivotHeaderPanel_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PivotPanel, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PivotPanel_type{py::register_python_type(module.get(), &type_spec_PivotPanel, object_bases.get(), nullptr)};
+    if (!PivotPanel_type)
     {
         return nullptr;
     }
@@ -29418,7 +29466,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Popup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Popup_Static.get())) == -1)
+    py::pyobj_handle Popup_type{py::register_python_type(module.get(), &type_spec_Popup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Popup_Static.get()))};
+    if (!Popup_type)
     {
         return nullptr;
     }
@@ -29429,12 +29478,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RangeBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeBase_Static.get())) == -1)
+    py::pyobj_handle RangeBase_type{py::register_python_type(module.get(), &type_spec_RangeBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeBase_Static.get()))};
+    if (!RangeBase_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RangeBaseValueChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RangeBaseValueChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_RangeBaseValueChangedEventArgs, object_bases.get(), nullptr)};
+    if (!RangeBaseValueChangedEventArgs_type)
     {
         return nullptr;
     }
@@ -29445,17 +29496,20 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RepeatButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatButton_Static.get())) == -1)
+    py::pyobj_handle RepeatButton_type{py::register_python_type(module.get(), &type_spec_RepeatButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatButton_Static.get()))};
+    if (!RepeatButton_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RepeatedScrollSnapPoint, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RepeatedScrollSnapPoint_type{py::register_python_type(module.get(), &type_spec_RepeatedScrollSnapPoint, object_bases.get(), nullptr)};
+    if (!RepeatedScrollSnapPoint_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RepeatedZoomSnapPoint, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle RepeatedZoomSnapPoint_type{py::register_python_type(module.get(), &type_spec_RepeatedZoomSnapPoint, object_bases.get(), nullptr)};
+    if (!RepeatedZoomSnapPoint_type)
     {
         return nullptr;
     }
@@ -29466,32 +29520,38 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScrollBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollBar_Static.get())) == -1)
+    py::pyobj_handle ScrollBar_type{py::register_python_type(module.get(), &type_spec_ScrollBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollBar_Static.get()))};
+    if (!ScrollBar_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScrollControllerAddScrollVelocityRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ScrollControllerAddScrollVelocityRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ScrollControllerAddScrollVelocityRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!ScrollControllerAddScrollVelocityRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScrollControllerPanRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ScrollControllerPanRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ScrollControllerPanRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!ScrollControllerPanRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScrollControllerScrollByRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ScrollControllerScrollByRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ScrollControllerScrollByRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!ScrollControllerScrollByRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScrollControllerScrollToRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ScrollControllerScrollToRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ScrollControllerScrollToRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!ScrollControllerScrollToRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScrollEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ScrollEventArgs_type{py::register_python_type(module.get(), &type_spec_ScrollEventArgs, object_bases.get(), nullptr)};
+    if (!ScrollEventArgs_type)
     {
         return nullptr;
     }
@@ -29502,17 +29562,20 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScrollPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollPresenter_Static.get())) == -1)
+    py::pyobj_handle ScrollPresenter_type{py::register_python_type(module.get(), &type_spec_ScrollPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollPresenter_Static.get()))};
+    if (!ScrollPresenter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScrollSnapPoint, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ScrollSnapPoint_type{py::register_python_type(module.get(), &type_spec_ScrollSnapPoint, object_bases.get(), nullptr)};
+    if (!ScrollSnapPoint_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScrollSnapPointBase, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ScrollSnapPointBase_type{py::register_python_type(module.get(), &type_spec_ScrollSnapPointBase, object_bases.get(), nullptr)};
+    if (!ScrollSnapPointBase_type)
     {
         return nullptr;
     }
@@ -29523,7 +29586,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Selector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Selector_Static.get())) == -1)
+    py::pyobj_handle Selector_type{py::register_python_type(module.get(), &type_spec_Selector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Selector_Static.get()))};
+    if (!Selector_type)
     {
         return nullptr;
     }
@@ -29534,22 +29598,26 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SelectorItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorItem_Static.get())) == -1)
+    py::pyobj_handle SelectorItem_type{py::register_python_type(module.get(), &type_spec_SelectorItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorItem_Static.get()))};
+    if (!SelectorItem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SnapPointBase, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SnapPointBase_type{py::register_python_type(module.get(), &type_spec_SnapPointBase, object_bases.get(), nullptr)};
+    if (!SnapPointBase_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SplitViewTemplateSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SplitViewTemplateSettings_type{py::register_python_type(module.get(), &type_spec_SplitViewTemplateSettings, object_bases.get(), nullptr)};
+    if (!SplitViewTemplateSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TabViewListView, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle TabViewListView_type{py::register_python_type(module.get(), &type_spec_TabViewListView, object_bases.get(), nullptr)};
+    if (!TabViewListView_type)
     {
         return nullptr;
     }
@@ -29560,7 +29628,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Thumb, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Thumb_Static.get())) == -1)
+    py::pyobj_handle Thumb_type{py::register_python_type(module.get(), &type_spec_Thumb, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Thumb_Static.get()))};
+    if (!Thumb_type)
     {
         return nullptr;
     }
@@ -29571,7 +29640,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TickBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TickBar_Static.get())) == -1)
+    py::pyobj_handle TickBar_type{py::register_python_type(module.get(), &type_spec_TickBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TickBar_Static.get()))};
+    if (!TickBar_type)
     {
         return nullptr;
     }
@@ -29582,47 +29652,56 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ToggleButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleButton_Static.get())) == -1)
+    py::pyobj_handle ToggleButton_type{py::register_python_type(module.get(), &type_spec_ToggleButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleButton_Static.get()))};
+    if (!ToggleButton_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ToggleSwitchTemplateSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ToggleSwitchTemplateSettings_type{py::register_python_type(module.get(), &type_spec_ToggleSwitchTemplateSettings, object_bases.get(), nullptr)};
+    if (!ToggleSwitchTemplateSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ToolTipTemplateSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ToolTipTemplateSettings_type{py::register_python_type(module.get(), &type_spec_ToolTipTemplateSettings, object_bases.get(), nullptr)};
+    if (!ToolTipTemplateSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ZoomSnapPoint, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ZoomSnapPoint_type{py::register_python_type(module.get(), &type_spec_ZoomSnapPoint, object_bases.get(), nullptr)};
+    if (!ZoomSnapPoint_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ZoomSnapPointBase, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ZoomSnapPointBase_type{py::register_python_type(module.get(), &type_spec_ZoomSnapPointBase, object_bases.get(), nullptr)};
+    if (!ZoomSnapPointBase_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IScrollController, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IScrollController_type{py::register_python_type(module.get(), &type_spec_IScrollController, object_bases.get(), nullptr)};
+    if (!IScrollController_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IScrollControllerPanningInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IScrollControllerPanningInfo_type{py::register_python_type(module.get(), &type_spec_IScrollControllerPanningInfo, object_bases.get(), nullptr)};
+    if (!IScrollControllerPanningInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IScrollSnapPointsInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IScrollSnapPointsInfo_type{py::register_python_type(module.get(), &type_spec_IScrollSnapPointsInfo, object_bases.get(), nullptr)};
+    if (!IScrollSnapPointsInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GeneratorPosition, nullptr, nullptr) == -1)
+    py::pyobj_handle GeneratorPosition_type{py::register_python_type(module.get(), &type_spec_GeneratorPosition, nullptr, nullptr)};
+    if (!GeneratorPosition_type)
     {
         return nullptr;
     }

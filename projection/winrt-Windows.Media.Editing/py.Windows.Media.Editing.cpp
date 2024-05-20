@@ -2379,12 +2379,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_editing(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BackgroundAudioTrack, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundAudioTrack_Static.get())) == -1)
+    py::pyobj_handle BackgroundAudioTrack_type{py::register_python_type(module.get(), &type_spec_BackgroundAudioTrack, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundAudioTrack_Static.get()))};
+    if (!BackgroundAudioTrack_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmbeddedAudioTrack, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle EmbeddedAudioTrack_type{py::register_python_type(module.get(), &type_spec_EmbeddedAudioTrack, object_bases.get(), nullptr)};
+    if (!EmbeddedAudioTrack_type)
     {
         return nullptr;
     }
@@ -2395,7 +2397,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_editing(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaClip, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaClip_Static.get())) == -1)
+    py::pyobj_handle MediaClip_type{py::register_python_type(module.get(), &type_spec_MediaClip, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaClip_Static.get()))};
+    if (!MediaClip_type)
     {
         return nullptr;
     }
@@ -2406,17 +2409,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_editing(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaComposition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaComposition_Static.get())) == -1)
+    py::pyobj_handle MediaComposition_type{py::register_python_type(module.get(), &type_spec_MediaComposition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaComposition_Static.get()))};
+    if (!MediaComposition_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaOverlay, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MediaOverlay_type{py::register_python_type(module.get(), &type_spec_MediaOverlay, object_bases.get(), nullptr)};
+    if (!MediaOverlay_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaOverlayLayer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MediaOverlayLayer_type{py::register_python_type(module.get(), &type_spec_MediaOverlayLayer, object_bases.get(), nullptr)};
+    if (!MediaOverlayLayer_type)
     {
         return nullptr;
     }

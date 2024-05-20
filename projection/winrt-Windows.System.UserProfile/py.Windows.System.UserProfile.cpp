@@ -2466,12 +2466,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AdvertisingManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdvertisingManager_Static.get())) == -1)
+    py::pyobj_handle AdvertisingManager_type{py::register_python_type(module.get(), &type_spec_AdvertisingManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdvertisingManager_Static.get()))};
+    if (!AdvertisingManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AdvertisingManagerForUser, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AdvertisingManagerForUser_type{py::register_python_type(module.get(), &type_spec_AdvertisingManagerForUser, object_bases.get(), nullptr)};
+    if (!AdvertisingManagerForUser_type)
     {
         return nullptr;
     }
@@ -2482,7 +2484,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AssignedAccessSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AssignedAccessSettings_Static.get())) == -1)
+    py::pyobj_handle AssignedAccessSettings_type{py::register_python_type(module.get(), &type_spec_AssignedAccessSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AssignedAccessSettings_Static.get()))};
+    if (!AssignedAccessSettings_type)
     {
         return nullptr;
     }
@@ -2493,7 +2496,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DiagnosticsSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DiagnosticsSettings_Static.get())) == -1)
+    py::pyobj_handle DiagnosticsSettings_type{py::register_python_type(module.get(), &type_spec_DiagnosticsSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DiagnosticsSettings_Static.get()))};
+    if (!DiagnosticsSettings_type)
     {
         return nullptr;
     }
@@ -2504,7 +2508,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FirstSignInSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FirstSignInSettings_Static.get())) == -1)
+    py::pyobj_handle FirstSignInSettings_type{py::register_python_type(module.get(), &type_spec_FirstSignInSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FirstSignInSettings_Static.get()))};
+    if (!FirstSignInSettings_type)
     {
         return nullptr;
     }
@@ -2515,12 +2520,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GlobalizationPreferences, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GlobalizationPreferences_Static.get())) == -1)
+    py::pyobj_handle GlobalizationPreferences_type{py::register_python_type(module.get(), &type_spec_GlobalizationPreferences, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GlobalizationPreferences_Static.get()))};
+    if (!GlobalizationPreferences_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GlobalizationPreferencesForUser, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle GlobalizationPreferencesForUser_type{py::register_python_type(module.get(), &type_spec_GlobalizationPreferencesForUser, object_bases.get(), nullptr)};
+    if (!GlobalizationPreferencesForUser_type)
     {
         return nullptr;
     }
@@ -2531,7 +2538,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LockScreen, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LockScreen_Static.get())) == -1)
+    py::pyobj_handle LockScreen_type{py::register_python_type(module.get(), &type_spec_LockScreen, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LockScreen_Static.get()))};
+    if (!LockScreen_type)
     {
         return nullptr;
     }
@@ -2542,7 +2550,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserInformation_Static.get())) == -1)
+    py::pyobj_handle UserInformation_type{py::register_python_type(module.get(), &type_spec_UserInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserInformation_Static.get()))};
+    if (!UserInformation_type)
     {
         return nullptr;
     }
@@ -2553,7 +2562,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserProfilePersonalizationSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserProfilePersonalizationSettings_Static.get())) == -1)
+    py::pyobj_handle UserProfilePersonalizationSettings_type{py::register_python_type(module.get(), &type_spec_UserProfilePersonalizationSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserProfilePersonalizationSettings_Static.get()))};
+    if (!UserProfilePersonalizationSettings_type)
     {
         return nullptr;
     }

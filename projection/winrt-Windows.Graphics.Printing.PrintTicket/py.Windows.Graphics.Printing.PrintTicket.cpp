@@ -2441,42 +2441,50 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_printticket(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTicketCapabilities, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintTicketCapabilities_type{py::register_python_type(module.get(), &type_spec_PrintTicketCapabilities, object_bases.get(), nullptr)};
+    if (!PrintTicketCapabilities_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTicketFeature, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintTicketFeature_type{py::register_python_type(module.get(), &type_spec_PrintTicketFeature, object_bases.get(), nullptr)};
+    if (!PrintTicketFeature_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTicketOption, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintTicketOption_type{py::register_python_type(module.get(), &type_spec_PrintTicketOption, object_bases.get(), nullptr)};
+    if (!PrintTicketOption_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTicketParameterDefinition, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintTicketParameterDefinition_type{py::register_python_type(module.get(), &type_spec_PrintTicketParameterDefinition, object_bases.get(), nullptr)};
+    if (!PrintTicketParameterDefinition_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTicketParameterInitializer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintTicketParameterInitializer_type{py::register_python_type(module.get(), &type_spec_PrintTicketParameterInitializer, object_bases.get(), nullptr)};
+    if (!PrintTicketParameterInitializer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTicketValue, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PrintTicketValue_type{py::register_python_type(module.get(), &type_spec_PrintTicketValue, object_bases.get(), nullptr)};
+    if (!PrintTicketValue_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WorkflowPrintTicket, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WorkflowPrintTicket_type{py::register_python_type(module.get(), &type_spec_WorkflowPrintTicket, object_bases.get(), nullptr)};
+    if (!WorkflowPrintTicket_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WorkflowPrintTicketValidationResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WorkflowPrintTicketValidationResult_type{py::register_python_type(module.get(), &type_spec_WorkflowPrintTicketValidationResult, object_bases.get(), nullptr)};
+    if (!WorkflowPrintTicketValidationResult_type)
     {
         return nullptr;
     }

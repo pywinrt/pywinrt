@@ -445,17 +445,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics_telemetry(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlatformTelemetryClient, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlatformTelemetryClient_Static.get())) == -1)
+    py::pyobj_handle PlatformTelemetryClient_type{py::register_python_type(module.get(), &type_spec_PlatformTelemetryClient, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlatformTelemetryClient_Static.get()))};
+    if (!PlatformTelemetryClient_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlatformTelemetryRegistrationResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PlatformTelemetryRegistrationResult_type{py::register_python_type(module.get(), &type_spec_PlatformTelemetryRegistrationResult, object_bases.get(), nullptr)};
+    if (!PlatformTelemetryRegistrationResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlatformTelemetryRegistrationSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PlatformTelemetryRegistrationSettings_type{py::register_python_type(module.get(), &type_spec_PlatformTelemetryRegistrationSettings, object_bases.get(), nullptr)};
+    if (!PlatformTelemetryRegistrationSettings_type)
     {
         return nullptr;
     }

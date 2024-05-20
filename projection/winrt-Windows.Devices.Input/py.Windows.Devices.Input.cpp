@@ -2704,12 +2704,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KeyboardCapabilities, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle KeyboardCapabilities_type{py::register_python_type(module.get(), &type_spec_KeyboardCapabilities, object_bases.get(), nullptr)};
+    if (!KeyboardCapabilities_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MouseCapabilities, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MouseCapabilities_type{py::register_python_type(module.get(), &type_spec_MouseCapabilities, object_bases.get(), nullptr)};
+    if (!MouseCapabilities_type)
     {
         return nullptr;
     }
@@ -2720,12 +2722,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MouseDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MouseDevice_Static.get())) == -1)
+    py::pyobj_handle MouseDevice_type{py::register_python_type(module.get(), &type_spec_MouseDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MouseDevice_Static.get()))};
+    if (!MouseDevice_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MouseEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle MouseEventArgs_type{py::register_python_type(module.get(), &type_spec_MouseEventArgs, object_bases.get(), nullptr)};
+    if (!MouseEventArgs_type)
     {
         return nullptr;
     }
@@ -2736,7 +2740,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PenButtonListener, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PenButtonListener_Static.get())) == -1)
+    py::pyobj_handle PenButtonListener_type{py::register_python_type(module.get(), &type_spec_PenButtonListener, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PenButtonListener_Static.get()))};
+    if (!PenButtonListener_type)
     {
         return nullptr;
     }
@@ -2747,7 +2752,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PenDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PenDevice_Static.get())) == -1)
+    py::pyobj_handle PenDevice_type{py::register_python_type(module.get(), &type_spec_PenDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PenDevice_Static.get()))};
+    if (!PenDevice_type)
     {
         return nullptr;
     }
@@ -2758,32 +2764,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PenDockListener, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PenDockListener_Static.get())) == -1)
+    py::pyobj_handle PenDockListener_type{py::register_python_type(module.get(), &type_spec_PenDockListener, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PenDockListener_Static.get()))};
+    if (!PenDockListener_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PenDockedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PenDockedEventArgs_type{py::register_python_type(module.get(), &type_spec_PenDockedEventArgs, object_bases.get(), nullptr)};
+    if (!PenDockedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PenTailButtonClickedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PenTailButtonClickedEventArgs_type{py::register_python_type(module.get(), &type_spec_PenTailButtonClickedEventArgs, object_bases.get(), nullptr)};
+    if (!PenTailButtonClickedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PenTailButtonDoubleClickedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PenTailButtonDoubleClickedEventArgs_type{py::register_python_type(module.get(), &type_spec_PenTailButtonDoubleClickedEventArgs, object_bases.get(), nullptr)};
+    if (!PenTailButtonDoubleClickedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PenTailButtonLongPressedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PenTailButtonLongPressedEventArgs_type{py::register_python_type(module.get(), &type_spec_PenTailButtonLongPressedEventArgs, object_bases.get(), nullptr)};
+    if (!PenTailButtonLongPressedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PenUndockedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PenUndockedEventArgs_type{py::register_python_type(module.get(), &type_spec_PenUndockedEventArgs, object_bases.get(), nullptr)};
+    if (!PenUndockedEventArgs_type)
     {
         return nullptr;
     }
@@ -2794,22 +2806,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PointerDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerDevice_Static.get())) == -1)
+    py::pyobj_handle PointerDevice_type{py::register_python_type(module.get(), &type_spec_PointerDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerDevice_Static.get()))};
+    if (!PointerDevice_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TouchCapabilities, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle TouchCapabilities_type{py::register_python_type(module.get(), &type_spec_TouchCapabilities, object_bases.get(), nullptr)};
+    if (!TouchCapabilities_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MouseDelta, nullptr, nullptr) == -1)
+    py::pyobj_handle MouseDelta_type{py::register_python_type(module.get(), &type_spec_MouseDelta, nullptr, nullptr)};
+    if (!MouseDelta_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PointerDeviceUsage, nullptr, nullptr) == -1)
+    py::pyobj_handle PointerDeviceUsage_type{py::register_python_type(module.get(), &type_spec_PointerDeviceUsage, nullptr, nullptr)};
+    if (!PointerDeviceUsage_type)
     {
         return nullptr;
     }

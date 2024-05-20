@@ -2045,7 +2045,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_preview(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DeliveryOptimizationSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DeliveryOptimizationSettings_Static.get())) == -1)
+    py::pyobj_handle DeliveryOptimizationSettings_type{py::register_python_type(module.get(), &type_spec_DeliveryOptimizationSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DeliveryOptimizationSettings_Static.get()))};
+    if (!DeliveryOptimizationSettings_type)
     {
         return nullptr;
     }
@@ -2056,12 +2057,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_preview(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StoreConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StoreConfiguration_Static.get())) == -1)
+    py::pyobj_handle StoreConfiguration_type{py::register_python_type(module.get(), &type_spec_StoreConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StoreConfiguration_Static.get()))};
+    if (!StoreConfiguration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StoreHardwareManufacturerInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StoreHardwareManufacturerInfo_type{py::register_python_type(module.get(), &type_spec_StoreHardwareManufacturerInfo, object_bases.get(), nullptr)};
+    if (!StoreHardwareManufacturerInfo_type)
     {
         return nullptr;
     }
@@ -2072,22 +2075,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_preview(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorePreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorePreview_Static.get())) == -1)
+    py::pyobj_handle StorePreview_type{py::register_python_type(module.get(), &type_spec_StorePreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorePreview_Static.get()))};
+    if (!StorePreview_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorePreviewProductInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StorePreviewProductInfo_type{py::register_python_type(module.get(), &type_spec_StorePreviewProductInfo, object_bases.get(), nullptr)};
+    if (!StorePreviewProductInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorePreviewPurchaseResults, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StorePreviewPurchaseResults_type{py::register_python_type(module.get(), &type_spec_StorePreviewPurchaseResults, object_bases.get(), nullptr)};
+    if (!StorePreviewPurchaseResults_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorePreviewSkuInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle StorePreviewSkuInfo_type{py::register_python_type(module.get(), &type_spec_StorePreviewSkuInfo, object_bases.get(), nullptr)};
+    if (!StorePreviewSkuInfo_type)
     {
         return nullptr;
     }
@@ -2098,7 +2105,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_preview(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAuthenticationCoreManagerHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebAuthenticationCoreManagerHelper_Static.get())) == -1)
+    py::pyobj_handle WebAuthenticationCoreManagerHelper_type{py::register_python_type(module.get(), &type_spec_WebAuthenticationCoreManagerHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebAuthenticationCoreManagerHelper_Static.get()))};
+    if (!WebAuthenticationCoreManagerHelper_type)
     {
         return nullptr;
     }

@@ -2410,12 +2410,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AnalyticsInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnalyticsInfo_Static.get())) == -1)
+    py::pyobj_handle AnalyticsInfo_type{py::register_python_type(module.get(), &type_spec_AnalyticsInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnalyticsInfo_Static.get()))};
+    if (!AnalyticsInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AnalyticsVersionInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AnalyticsVersionInfo_type{py::register_python_type(module.get(), &type_spec_AnalyticsVersionInfo, object_bases.get(), nullptr)};
+    if (!AnalyticsVersionInfo_type)
     {
         return nullptr;
     }
@@ -2426,7 +2428,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppApplicability, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppApplicability_Static.get())) == -1)
+    py::pyobj_handle AppApplicability_type{py::register_python_type(module.get(), &type_spec_AppApplicability, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppApplicability_Static.get()))};
+    if (!AppApplicability_type)
     {
         return nullptr;
     }
@@ -2437,7 +2440,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EducationSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EducationSettings_Static.get())) == -1)
+    py::pyobj_handle EducationSettings_type{py::register_python_type(module.get(), &type_spec_EducationSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EducationSettings_Static.get()))};
+    if (!EducationSettings_type)
     {
         return nullptr;
     }
@@ -2448,12 +2452,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HardwareIdentification, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HardwareIdentification_Static.get())) == -1)
+    py::pyobj_handle HardwareIdentification_type{py::register_python_type(module.get(), &type_spec_HardwareIdentification, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HardwareIdentification_Static.get()))};
+    if (!HardwareIdentification_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HardwareToken, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle HardwareToken_type{py::register_python_type(module.get(), &type_spec_HardwareToken, object_bases.get(), nullptr)};
+    if (!HardwareToken_type)
     {
         return nullptr;
     }
@@ -2464,7 +2470,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownRetailInfoProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRetailInfoProperties_Static.get())) == -1)
+    py::pyobj_handle KnownRetailInfoProperties_type{py::register_python_type(module.get(), &type_spec_KnownRetailInfoProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRetailInfoProperties_Static.get()))};
+    if (!KnownRetailInfoProperties_type)
     {
         return nullptr;
     }
@@ -2475,7 +2482,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlatformAutomaticAppSignInManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlatformAutomaticAppSignInManager_Static.get())) == -1)
+    py::pyobj_handle PlatformAutomaticAppSignInManager_type{py::register_python_type(module.get(), &type_spec_PlatformAutomaticAppSignInManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlatformAutomaticAppSignInManager_Static.get()))};
+    if (!PlatformAutomaticAppSignInManager_type)
     {
         return nullptr;
     }
@@ -2486,7 +2494,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlatformDiagnosticsAndUsageDataSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlatformDiagnosticsAndUsageDataSettings_Static.get())) == -1)
+    py::pyobj_handle PlatformDiagnosticsAndUsageDataSettings_type{py::register_python_type(module.get(), &type_spec_PlatformDiagnosticsAndUsageDataSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlatformDiagnosticsAndUsageDataSettings_Static.get()))};
+    if (!PlatformDiagnosticsAndUsageDataSettings_type)
     {
         return nullptr;
     }
@@ -2497,7 +2506,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RetailInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RetailInfo_Static.get())) == -1)
+    py::pyobj_handle RetailInfo_type{py::register_python_type(module.get(), &type_spec_RetailInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RetailInfo_Static.get()))};
+    if (!RetailInfo_type)
     {
         return nullptr;
     }
@@ -2508,7 +2518,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SharedModeSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SharedModeSettings_Static.get())) == -1)
+    py::pyobj_handle SharedModeSettings_type{py::register_python_type(module.get(), &type_spec_SharedModeSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SharedModeSettings_Static.get()))};
+    if (!SharedModeSettings_type)
     {
         return nullptr;
     }
@@ -2519,7 +2530,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SmartAppControlPolicy, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmartAppControlPolicy_Static.get())) == -1)
+    py::pyobj_handle SmartAppControlPolicy_type{py::register_python_type(module.get(), &type_spec_SmartAppControlPolicy, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmartAppControlPolicy_Static.get()))};
+    if (!SmartAppControlPolicy_type)
     {
         return nullptr;
     }
@@ -2530,12 +2542,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemIdentification, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemIdentification_Static.get())) == -1)
+    py::pyobj_handle SystemIdentification_type{py::register_python_type(module.get(), &type_spec_SystemIdentification, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemIdentification_Static.get()))};
+    if (!SystemIdentification_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemIdentificationInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SystemIdentificationInfo_type{py::register_python_type(module.get(), &type_spec_SystemIdentificationInfo, object_bases.get(), nullptr)};
+    if (!SystemIdentificationInfo_type)
     {
         return nullptr;
     }
@@ -2546,12 +2560,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemSetupInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemSetupInfo_Static.get())) == -1)
+    py::pyobj_handle SystemSetupInfo_type{py::register_python_type(module.get(), &type_spec_SystemSetupInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemSetupInfo_Static.get()))};
+    if (!SystemSetupInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UnsupportedAppRequirement, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UnsupportedAppRequirement_type{py::register_python_type(module.get(), &type_spec_UnsupportedAppRequirement, object_bases.get(), nullptr)};
+    if (!UnsupportedAppRequirement_type)
     {
         return nullptr;
     }
@@ -2562,7 +2578,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowsIntegrityPolicy, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowsIntegrityPolicy_Static.get())) == -1)
+    py::pyobj_handle WindowsIntegrityPolicy_type{py::register_python_type(module.get(), &type_spec_WindowsIntegrityPolicy, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowsIntegrityPolicy_Static.get()))};
+    if (!WindowsIntegrityPolicy_type)
     {
         return nullptr;
     }

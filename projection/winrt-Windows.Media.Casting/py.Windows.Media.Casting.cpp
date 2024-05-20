@@ -1609,12 +1609,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_casting(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CastingConnection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CastingConnection_type{py::register_python_type(module.get(), &type_spec_CastingConnection, object_bases.get(), nullptr)};
+    if (!CastingConnection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CastingConnectionErrorOccurredEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CastingConnectionErrorOccurredEventArgs_type{py::register_python_type(module.get(), &type_spec_CastingConnectionErrorOccurredEventArgs, object_bases.get(), nullptr)};
+    if (!CastingConnectionErrorOccurredEventArgs_type)
     {
         return nullptr;
     }
@@ -1625,27 +1627,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_casting(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CastingDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CastingDevice_Static.get())) == -1)
+    py::pyobj_handle CastingDevice_type{py::register_python_type(module.get(), &type_spec_CastingDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CastingDevice_Static.get()))};
+    if (!CastingDevice_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CastingDevicePicker, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CastingDevicePicker_type{py::register_python_type(module.get(), &type_spec_CastingDevicePicker, object_bases.get(), nullptr)};
+    if (!CastingDevicePicker_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CastingDevicePickerFilter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CastingDevicePickerFilter_type{py::register_python_type(module.get(), &type_spec_CastingDevicePickerFilter, object_bases.get(), nullptr)};
+    if (!CastingDevicePickerFilter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CastingDeviceSelectedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CastingDeviceSelectedEventArgs_type{py::register_python_type(module.get(), &type_spec_CastingDeviceSelectedEventArgs, object_bases.get(), nullptr)};
+    if (!CastingDeviceSelectedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CastingSource, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CastingSource_type{py::register_python_type(module.get(), &type_spec_CastingSource, object_bases.get(), nullptr)};
+    if (!CastingSource_type)
     {
         return nullptr;
     }

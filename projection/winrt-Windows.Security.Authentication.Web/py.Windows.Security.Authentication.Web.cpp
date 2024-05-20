@@ -462,12 +462,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAuthenticationBroker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebAuthenticationBroker_Static.get())) == -1)
+    py::pyobj_handle WebAuthenticationBroker_type{py::register_python_type(module.get(), &type_spec_WebAuthenticationBroker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebAuthenticationBroker_Static.get()))};
+    if (!WebAuthenticationBroker_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAuthenticationResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle WebAuthenticationResult_type{py::register_python_type(module.get(), &type_spec_WebAuthenticationResult, object_bases.get(), nullptr)};
+    if (!WebAuthenticationResult_type)
     {
         return nullptr;
     }

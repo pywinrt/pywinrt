@@ -664,17 +664,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors_custom(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CustomSensor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CustomSensor_Static.get())) == -1)
+    py::pyobj_handle CustomSensor_type{py::register_python_type(module.get(), &type_spec_CustomSensor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CustomSensor_Static.get()))};
+    if (!CustomSensor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CustomSensorReading, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CustomSensorReading_type{py::register_python_type(module.get(), &type_spec_CustomSensorReading, object_bases.get(), nullptr)};
+    if (!CustomSensorReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CustomSensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CustomSensorReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_CustomSensorReadingChangedEventArgs, object_bases.get(), nullptr)};
+    if (!CustomSensorReadingChangedEventArgs_type)
     {
         return nullptr;
     }

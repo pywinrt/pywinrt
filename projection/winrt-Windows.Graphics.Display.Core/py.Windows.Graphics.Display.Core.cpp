@@ -1223,17 +1223,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_display_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HdmiDisplayInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HdmiDisplayInformation_Static.get())) == -1)
+    py::pyobj_handle HdmiDisplayInformation_type{py::register_python_type(module.get(), &type_spec_HdmiDisplayInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HdmiDisplayInformation_Static.get()))};
+    if (!HdmiDisplayInformation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HdmiDisplayMode, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle HdmiDisplayMode_type{py::register_python_type(module.get(), &type_spec_HdmiDisplayMode, object_bases.get(), nullptr)};
+    if (!HdmiDisplayMode_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HdmiDisplayHdr2086Metadata, nullptr, nullptr) == -1)
+    py::pyobj_handle HdmiDisplayHdr2086Metadata_type{py::register_python_type(module.get(), &type_spec_HdmiDisplayHdr2086Metadata, nullptr, nullptr)};
+    if (!HdmiDisplayHdr2086Metadata_type)
     {
         return nullptr;
     }

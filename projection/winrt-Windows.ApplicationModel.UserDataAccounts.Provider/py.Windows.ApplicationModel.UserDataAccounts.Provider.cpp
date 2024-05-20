@@ -711,27 +711,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts_provider(
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataAccountPartnerAccountInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataAccountPartnerAccountInfo_type{py::register_python_type(module.get(), &type_spec_UserDataAccountPartnerAccountInfo, object_bases.get(), nullptr)};
+    if (!UserDataAccountPartnerAccountInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataAccountProviderAddAccountOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataAccountProviderAddAccountOperation_type{py::register_python_type(module.get(), &type_spec_UserDataAccountProviderAddAccountOperation, object_bases.get(), nullptr)};
+    if (!UserDataAccountProviderAddAccountOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataAccountProviderResolveErrorsOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataAccountProviderResolveErrorsOperation_type{py::register_python_type(module.get(), &type_spec_UserDataAccountProviderResolveErrorsOperation, object_bases.get(), nullptr)};
+    if (!UserDataAccountProviderResolveErrorsOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataAccountProviderSettingsOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle UserDataAccountProviderSettingsOperation_type{py::register_python_type(module.get(), &type_spec_UserDataAccountProviderSettingsOperation, object_bases.get(), nullptr)};
+    if (!UserDataAccountProviderSettingsOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IUserDataAccountProviderOperation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IUserDataAccountProviderOperation_type{py::register_python_type(module.get(), &type_spec_IUserDataAccountProviderOperation, object_bases.get(), nullptr)};
+    if (!IUserDataAccountProviderOperation_type)
     {
         return nullptr;
     }

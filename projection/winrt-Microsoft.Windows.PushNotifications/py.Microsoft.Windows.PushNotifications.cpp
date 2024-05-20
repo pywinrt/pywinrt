@@ -994,12 +994,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_pushnotifications(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PushNotificationChannel, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PushNotificationChannel_type{py::register_python_type(module.get(), &type_spec_PushNotificationChannel, object_bases.get(), nullptr)};
+    if (!PushNotificationChannel_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PushNotificationCreateChannelResult, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PushNotificationCreateChannelResult_type{py::register_python_type(module.get(), &type_spec_PushNotificationCreateChannelResult, object_bases.get(), nullptr)};
+    if (!PushNotificationCreateChannelResult_type)
     {
         return nullptr;
     }
@@ -1010,17 +1012,20 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_pushnotifications(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PushNotificationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PushNotificationManager_Static.get())) == -1)
+    py::pyobj_handle PushNotificationManager_type{py::register_python_type(module.get(), &type_spec_PushNotificationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PushNotificationManager_Static.get()))};
+    if (!PushNotificationManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PushNotificationReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle PushNotificationReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_PushNotificationReceivedEventArgs, object_bases.get(), nullptr)};
+    if (!PushNotificationReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PushNotificationCreateChannelStatus, nullptr, nullptr) == -1)
+    py::pyobj_handle PushNotificationCreateChannelStatus_type{py::register_python_type(module.get(), &type_spec_PushNotificationCreateChannelStatus, nullptr, nullptr)};
+    if (!PushNotificationCreateChannelStatus_type)
     {
         return nullptr;
     }

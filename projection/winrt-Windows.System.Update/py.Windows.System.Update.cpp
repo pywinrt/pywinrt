@@ -1077,12 +1077,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_update(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemUpdateItem, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SystemUpdateItem_type{py::register_python_type(module.get(), &type_spec_SystemUpdateItem, object_bases.get(), nullptr)};
+    if (!SystemUpdateItem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemUpdateLastErrorInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle SystemUpdateLastErrorInfo_type{py::register_python_type(module.get(), &type_spec_SystemUpdateLastErrorInfo, object_bases.get(), nullptr)};
+    if (!SystemUpdateLastErrorInfo_type)
     {
         return nullptr;
     }
@@ -1093,7 +1095,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_update(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemUpdateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemUpdateManager_Static.get())) == -1)
+    py::pyobj_handle SystemUpdateManager_type{py::register_python_type(module.get(), &type_spec_SystemUpdateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemUpdateManager_Static.get()))};
+    if (!SystemUpdateManager_type)
     {
         return nullptr;
     }

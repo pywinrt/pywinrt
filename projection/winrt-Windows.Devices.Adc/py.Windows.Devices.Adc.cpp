@@ -600,7 +600,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_adc(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AdcChannel, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AdcChannel_type{py::register_python_type(module.get(), &type_spec_AdcChannel, object_bases.get(), nullptr)};
+    if (!AdcChannel_type)
     {
         return nullptr;
     }
@@ -611,7 +612,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_adc(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AdcController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdcController_Static.get())) == -1)
+    py::pyobj_handle AdcController_type{py::register_python_type(module.get(), &type_spec_AdcController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdcController_Static.get()))};
+    if (!AdcController_type)
     {
         return nullptr;
     }

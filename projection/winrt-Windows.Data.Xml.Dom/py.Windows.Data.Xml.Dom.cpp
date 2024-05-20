@@ -17156,27 +17156,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_xml_dom(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DtdEntity, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DtdEntity_type{py::register_python_type(module.get(), &type_spec_DtdEntity, object_bases.get(), nullptr)};
+    if (!DtdEntity_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DtdNotation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DtdNotation_type{py::register_python_type(module.get(), &type_spec_DtdNotation, object_bases.get(), nullptr)};
+    if (!DtdNotation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XmlAttribute, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle XmlAttribute_type{py::register_python_type(module.get(), &type_spec_XmlAttribute, object_bases.get(), nullptr)};
+    if (!XmlAttribute_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XmlCDataSection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle XmlCDataSection_type{py::register_python_type(module.get(), &type_spec_XmlCDataSection, object_bases.get(), nullptr)};
+    if (!XmlCDataSection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XmlComment, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle XmlComment_type{py::register_python_type(module.get(), &type_spec_XmlComment, object_bases.get(), nullptr)};
+    if (!XmlComment_type)
     {
         return nullptr;
     }
@@ -17187,82 +17192,98 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_xml_dom(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XmlDocument, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XmlDocument_Static.get())) == -1)
+    py::pyobj_handle XmlDocument_type{py::register_python_type(module.get(), &type_spec_XmlDocument, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XmlDocument_Static.get()))};
+    if (!XmlDocument_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XmlDocumentFragment, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle XmlDocumentFragment_type{py::register_python_type(module.get(), &type_spec_XmlDocumentFragment, object_bases.get(), nullptr)};
+    if (!XmlDocumentFragment_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XmlDocumentType, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle XmlDocumentType_type{py::register_python_type(module.get(), &type_spec_XmlDocumentType, object_bases.get(), nullptr)};
+    if (!XmlDocumentType_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XmlDomImplementation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle XmlDomImplementation_type{py::register_python_type(module.get(), &type_spec_XmlDomImplementation, object_bases.get(), nullptr)};
+    if (!XmlDomImplementation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XmlElement, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle XmlElement_type{py::register_python_type(module.get(), &type_spec_XmlElement, object_bases.get(), nullptr)};
+    if (!XmlElement_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XmlEntityReference, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle XmlEntityReference_type{py::register_python_type(module.get(), &type_spec_XmlEntityReference, object_bases.get(), nullptr)};
+    if (!XmlEntityReference_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XmlLoadSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle XmlLoadSettings_type{py::register_python_type(module.get(), &type_spec_XmlLoadSettings, object_bases.get(), nullptr)};
+    if (!XmlLoadSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XmlNamedNodeMap, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle XmlNamedNodeMap_type{py::register_python_type(module.get(), &type_spec_XmlNamedNodeMap, object_bases.get(), nullptr)};
+    if (!XmlNamedNodeMap_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XmlNodeList, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle XmlNodeList_type{py::register_python_type(module.get(), &type_spec_XmlNodeList, object_bases.get(), nullptr)};
+    if (!XmlNodeList_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XmlProcessingInstruction, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle XmlProcessingInstruction_type{py::register_python_type(module.get(), &type_spec_XmlProcessingInstruction, object_bases.get(), nullptr)};
+    if (!XmlProcessingInstruction_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XmlText, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle XmlText_type{py::register_python_type(module.get(), &type_spec_XmlText, object_bases.get(), nullptr)};
+    if (!XmlText_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IXmlCharacterData, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IXmlCharacterData_type{py::register_python_type(module.get(), &type_spec_IXmlCharacterData, object_bases.get(), nullptr)};
+    if (!IXmlCharacterData_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IXmlNode, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IXmlNode_type{py::register_python_type(module.get(), &type_spec_IXmlNode, object_bases.get(), nullptr)};
+    if (!IXmlNode_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IXmlNodeSelector, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IXmlNodeSelector_type{py::register_python_type(module.get(), &type_spec_IXmlNodeSelector, object_bases.get(), nullptr)};
+    if (!IXmlNodeSelector_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IXmlNodeSerializer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IXmlNodeSerializer_type{py::register_python_type(module.get(), &type_spec_IXmlNodeSerializer, object_bases.get(), nullptr)};
+    if (!IXmlNodeSerializer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IXmlText, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle IXmlText_type{py::register_python_type(module.get(), &type_spec_IXmlText, object_bases.get(), nullptr)};
+    if (!IXmlText_type)
     {
         return nullptr;
     }

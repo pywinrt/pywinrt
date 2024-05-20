@@ -3049,77 +3049,92 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_devices_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CameraIntrinsics, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle CameraIntrinsics_type{py::register_python_type(module.get(), &type_spec_CameraIntrinsics, object_bases.get(), nullptr)};
+    if (!CameraIntrinsics_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DepthCorrelatedCoordinateMapper, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DepthCorrelatedCoordinateMapper_type{py::register_python_type(module.get(), &type_spec_DepthCorrelatedCoordinateMapper, object_bases.get(), nullptr)};
+    if (!DepthCorrelatedCoordinateMapper_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FrameControlCapabilities, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FrameControlCapabilities_type{py::register_python_type(module.get(), &type_spec_FrameControlCapabilities, object_bases.get(), nullptr)};
+    if (!FrameControlCapabilities_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FrameController, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FrameController_type{py::register_python_type(module.get(), &type_spec_FrameController, object_bases.get(), nullptr)};
+    if (!FrameController_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FrameExposureCapabilities, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FrameExposureCapabilities_type{py::register_python_type(module.get(), &type_spec_FrameExposureCapabilities, object_bases.get(), nullptr)};
+    if (!FrameExposureCapabilities_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FrameExposureCompensationCapabilities, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FrameExposureCompensationCapabilities_type{py::register_python_type(module.get(), &type_spec_FrameExposureCompensationCapabilities, object_bases.get(), nullptr)};
+    if (!FrameExposureCompensationCapabilities_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FrameExposureCompensationControl, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FrameExposureCompensationControl_type{py::register_python_type(module.get(), &type_spec_FrameExposureCompensationControl, object_bases.get(), nullptr)};
+    if (!FrameExposureCompensationControl_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FrameExposureControl, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FrameExposureControl_type{py::register_python_type(module.get(), &type_spec_FrameExposureControl, object_bases.get(), nullptr)};
+    if (!FrameExposureControl_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FrameFlashCapabilities, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FrameFlashCapabilities_type{py::register_python_type(module.get(), &type_spec_FrameFlashCapabilities, object_bases.get(), nullptr)};
+    if (!FrameFlashCapabilities_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FrameFlashControl, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FrameFlashControl_type{py::register_python_type(module.get(), &type_spec_FrameFlashControl, object_bases.get(), nullptr)};
+    if (!FrameFlashControl_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FrameFocusCapabilities, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FrameFocusCapabilities_type{py::register_python_type(module.get(), &type_spec_FrameFocusCapabilities, object_bases.get(), nullptr)};
+    if (!FrameFocusCapabilities_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FrameFocusControl, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FrameFocusControl_type{py::register_python_type(module.get(), &type_spec_FrameFocusControl, object_bases.get(), nullptr)};
+    if (!FrameFocusControl_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FrameIsoSpeedCapabilities, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FrameIsoSpeedCapabilities_type{py::register_python_type(module.get(), &type_spec_FrameIsoSpeedCapabilities, object_bases.get(), nullptr)};
+    if (!FrameIsoSpeedCapabilities_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FrameIsoSpeedControl, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle FrameIsoSpeedControl_type{py::register_python_type(module.get(), &type_spec_FrameIsoSpeedControl, object_bases.get(), nullptr)};
+    if (!FrameIsoSpeedControl_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VariablePhotoSequenceController, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle VariablePhotoSequenceController_type{py::register_python_type(module.get(), &type_spec_VariablePhotoSequenceController, object_bases.get(), nullptr)};
+    if (!VariablePhotoSequenceController_type)
     {
         return nullptr;
     }

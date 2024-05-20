@@ -3502,7 +3502,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_display(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AdvancedColorInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle AdvancedColorInfo_type{py::register_python_type(module.get(), &type_spec_AdvancedColorInfo, object_bases.get(), nullptr)};
+    if (!AdvancedColorInfo_type)
     {
         return nullptr;
     }
@@ -3513,7 +3514,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_display(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BrightnessOverride, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BrightnessOverride_Static.get())) == -1)
+    py::pyobj_handle BrightnessOverride_type{py::register_python_type(module.get(), &type_spec_BrightnessOverride, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BrightnessOverride_Static.get()))};
+    if (!BrightnessOverride_type)
     {
         return nullptr;
     }
@@ -3524,7 +3526,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_display(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BrightnessOverrideSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BrightnessOverrideSettings_Static.get())) == -1)
+    py::pyobj_handle BrightnessOverrideSettings_type{py::register_python_type(module.get(), &type_spec_BrightnessOverrideSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BrightnessOverrideSettings_Static.get()))};
+    if (!BrightnessOverrideSettings_type)
     {
         return nullptr;
     }
@@ -3535,7 +3538,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_display(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ColorOverrideSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorOverrideSettings_Static.get())) == -1)
+    py::pyobj_handle ColorOverrideSettings_type{py::register_python_type(module.get(), &type_spec_ColorOverrideSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorOverrideSettings_Static.get()))};
+    if (!ColorOverrideSettings_type)
     {
         return nullptr;
     }
@@ -3546,17 +3550,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_display(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayEnhancementOverride, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayEnhancementOverride_Static.get())) == -1)
+    py::pyobj_handle DisplayEnhancementOverride_type{py::register_python_type(module.get(), &type_spec_DisplayEnhancementOverride, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayEnhancementOverride_Static.get()))};
+    if (!DisplayEnhancementOverride_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayEnhancementOverrideCapabilities, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayEnhancementOverrideCapabilities_type{py::register_python_type(module.get(), &type_spec_DisplayEnhancementOverrideCapabilities, object_bases.get(), nullptr)};
+    if (!DisplayEnhancementOverrideCapabilities_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayEnhancementOverrideCapabilitiesChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle DisplayEnhancementOverrideCapabilitiesChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_DisplayEnhancementOverrideCapabilitiesChangedEventArgs, object_bases.get(), nullptr)};
+    if (!DisplayEnhancementOverrideCapabilitiesChangedEventArgs_type)
     {
         return nullptr;
     }
@@ -3567,7 +3574,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_display(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayInformation_Static.get())) == -1)
+    py::pyobj_handle DisplayInformation_type{py::register_python_type(module.get(), &type_spec_DisplayInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayInformation_Static.get()))};
+    if (!DisplayInformation_type)
     {
         return nullptr;
     }
@@ -3578,7 +3586,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_display(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayProperties_Static.get())) == -1)
+    py::pyobj_handle DisplayProperties_type{py::register_python_type(module.get(), &type_spec_DisplayProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayProperties_Static.get()))};
+    if (!DisplayProperties_type)
     {
         return nullptr;
     }
@@ -3589,12 +3598,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_display(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayServices, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayServices_Static.get())) == -1)
+    py::pyobj_handle DisplayServices_type{py::register_python_type(module.get(), &type_spec_DisplayServices, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayServices_Static.get()))};
+    if (!DisplayServices_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NitRange, nullptr, nullptr) == -1)
+    py::pyobj_handle NitRange_type{py::register_python_type(module.get(), &type_spec_NitRange, nullptr, nullptr)};
+    if (!NitRange_type)
     {
         return nullptr;
     }

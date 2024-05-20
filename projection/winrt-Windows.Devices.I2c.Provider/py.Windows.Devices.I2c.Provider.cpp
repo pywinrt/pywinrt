@@ -963,27 +963,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c_provider(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProviderI2cConnectionSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle ProviderI2cConnectionSettings_type{py::register_python_type(module.get(), &type_spec_ProviderI2cConnectionSettings, object_bases.get(), nullptr)};
+    if (!ProviderI2cConnectionSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_II2cControllerProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle II2cControllerProvider_type{py::register_python_type(module.get(), &type_spec_II2cControllerProvider, object_bases.get(), nullptr)};
+    if (!II2cControllerProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_II2cDeviceProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle II2cDeviceProvider_type{py::register_python_type(module.get(), &type_spec_II2cDeviceProvider, object_bases.get(), nullptr)};
+    if (!II2cDeviceProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_II2cProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle II2cProvider_type{py::register_python_type(module.get(), &type_spec_II2cProvider, object_bases.get(), nullptr)};
+    if (!II2cProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProviderI2cTransferResult, nullptr, nullptr) == -1)
+    py::pyobj_handle ProviderI2cTransferResult_type{py::register_python_type(module.get(), &type_spec_ProviderI2cTransferResult, nullptr, nullptr)};
+    if (!ProviderI2cTransferResult_type)
     {
         return nullptr;
     }
