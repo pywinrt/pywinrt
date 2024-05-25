@@ -26,6 +26,12 @@ setup(
             sources=["py.Windows.UI.Xaml.Controls.Primitives.cpp"],
             include_dirs=get_include_dirs(),
             libraries=["windowsapp"],
+        ),
+        Extension(
+            "winrt._winrt_windows_ui_xaml_controls_primitives_",
+            sources=["py.Windows.UI.Xaml.Controls.Primitives_.cpp"],
+            include_dirs=get_include_dirs(),
+            libraries=["windowsapp"],
         )
     ],
 )
