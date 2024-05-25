@@ -140,19 +140,68 @@ static void custom_set(winrt::hresult& instance, int32_t value)
 })");
         }
 
+        auto all_class_types = filter_types(settings.filter, members.classes);
+        std::vector<TypeDef> class_types{};
+        std::copy_if(
+            all_class_types.begin(),
+            all_class_types.end(),
+            std::back_inserter(class_types),
+            std::not_fn(is_circular_dependency));
+
         auto segments = get_dotted_name_segments(ns);
         w.write("\n\nnamespace py::cpp::%\n{", bind_list("::", segments));
         {
             writer::indent_guard g{w};
 
-            settings.filter.bind_each<write_inspectable_type>(members.classes)(w);
+            settings.filter.bind_each<write_inspectable_type>(class_types)(w);
             settings.filter.bind_each<write_inspectable_type>(members.interfaces)(w);
             settings.filter.bind_each<write_struct>(members.structs)(w);
             write_namespace_initialization(w, ns, members);
         }
         w.write("} // py::cpp::%\n", bind_list("::", segments));
 
-        write_namespace_module_init_function(w, ns, members);
+        write_namespace_module_init_function(w, ns, members, class_types);
+
+        w.flush_to_file(folder / filename);
+        return std::move(w.needed_namespaces);
+    }
+
+    /**
+     * Writes _<namespace>_.cpp file.
+     *
+     * This is only used in cases of circular dependencies.
+     */
+    inline auto write_secondary_namespace_cpp(
+        stdfs::path const& folder,
+        std::string_view const& ns,
+        cache::namespace_members const& members)
+    {
+        writer w;
+        w.current_namespace = ns;
+        auto filename = w.write_temp("py.%_.cpp", ns);
+
+        write_license(w);
+        w.write("#include \"py.%.h\"\n", ns);
+
+        auto all_class_types = filter_types(settings.filter, members.classes);
+        std::vector<TypeDef> class_types{};
+        std::copy_if(
+            all_class_types.begin(),
+            all_class_types.end(),
+            std::back_inserter(class_types),
+            is_circular_dependency);
+
+        auto segments = get_dotted_name_segments(ns);
+        w.write("\n\nnamespace py::cpp::%\n{", bind_list("::", segments));
+        {
+            writer::indent_guard g{w};
+
+            settings.filter.bind_each<write_inspectable_type>(class_types)(w);
+            write_namespace_initialization(w, ns, members, true);
+        }
+        w.write("} // py::cpp::%\n", bind_list("::", segments));
+
+        write_namespace_module_init_function(w, ns, members, class_types, true);
 
         w.flush_to_file(folder / filename);
         return std::move(w.needed_namespaces);
@@ -192,6 +241,14 @@ static void custom_set(winrt::hresult& instance, int32_t value)
 
         w.write("import winrt.system\n");
         w.write("from winrt import %\n", bind<write_ns_module_name>(ns));
+
+        // if we have a circular dependency, we need to import the secondary
+        // extension module
+        auto class_types = filter_types(settings.filter, members.classes);
+        if (std::any_of(class_types.begin(), class_types.end(), is_circular_dependency))
+        {
+            w.write("from winrt import %_\n", bind<write_ns_module_name>(ns));
+        }
 
         // Search for any type names that got quoted in the delegates and
         // collect them to determine if any imports are needed.
@@ -302,7 +359,32 @@ static void custom_set(winrt::hresult& instance, int32_t value)
                 bind_list<write_type_name>(", ", delegate_types));
         }
 
-        if (!enum_types.empty() || !delegate_types.empty())
+        auto all_class_types = filter_types(settings.filter, members.classes);
+
+        std::vector<TypeDef> primary_class_types{};
+        std::copy_if(
+            all_class_types.begin(),
+            all_class_types.end(),
+            std::back_inserter(primary_class_types),
+            std::not_fn(is_circular_dependency));
+
+        std::vector<TypeDef> secondary_class_types{};
+        std::copy_if(
+            all_class_types.begin(),
+            all_class_types.end(),
+            std::back_inserter(secondary_class_types),
+            is_circular_dependency);
+
+        if (!secondary_class_types.empty())
+        {
+            w.write(
+                "from winrt.%_ import %\n",
+                bind<write_ns_module_name>(ns),
+                bind_list<write_type_name>(", ", secondary_class_types));
+        }
+
+        if (!enum_types.empty() || !delegate_types.empty()
+            || !secondary_class_types.empty())
         {
             w.write("\n");
         }
@@ -312,11 +394,127 @@ static void custom_set(winrt::hresult& instance, int32_t value)
         w.write("\n");
 
         settings.filter.bind_each<write_python_typing_for_struct>(members.structs)(w);
-        settings.filter.bind_each<write_python_typing_for_object>(members.classes)(w);
+        settings.filter.bind_each<write_python_typing_for_object>(primary_class_types)(
+            w);
         settings.filter.bind_each<write_python_typing_for_object>(members.interfaces)(
             w);
 
         auto file_name = w.write_temp("%.pyi", bind<write_ns_module_name>(ns));
+        w.flush_to_file(folder / file_name);
+    }
+
+    /**
+     * Writes the secodary .pyi file for a namespace for handling circular depedencies.
+     *
+     * @param folder The folder to write the file to.
+     * @param needed_namespaces The set of namespaces that are needed by this namespace.
+     * @param ns The namespace to write the file for.
+     * @param members The members of the namespace.
+     */
+    inline void write_secondary_namespace_pyi(
+        stdfs::path const& folder,
+        std::set<std::string> const& needed_namespaces,
+        std::string_view const& ns,
+        cache::namespace_members const& members)
+    {
+        writer w;
+        w.current_namespace = ns;
+
+        write_license(w, "#");
+
+        w.write("import datetime\n");
+        w.write("import sys\n");
+        w.write("import types\n");
+        w.write("import typing\n");
+        w.write("import uuid as _uuid\n");
+        w.write("from builtins import property as _property\n");
+        w.write("\n");
+        w.write("import winrt._winrt\n");
+        w.write("import winrt.system\n");
+
+        w.write_each<write_python_import_namespace>(needed_namespaces);
+        w.write("\n");
+
+        auto enum_types = filter_types(settings.filter, members.enums);
+        if (!enum_types.empty())
+        {
+            w.write(
+                "from winrt.% import %\n",
+                bind<write_python_subpackage>(ns),
+                bind_list<write_type_name>(", ", enum_types));
+        }
+
+        auto delegate_types = filter_types(settings.filter, members.delegates);
+        if (!delegate_types.empty())
+        {
+            w.write(
+                "from winrt.% import %\n",
+                bind<write_python_subpackage>(ns),
+                bind_list<write_type_name>(", ", delegate_types));
+        }
+
+        auto struct_types = filter_types(settings.filter, members.structs);
+        if (!struct_types.empty())
+        {
+            w.write(
+                "from winrt.% import %\n",
+                bind<write_ns_module_name>(ns),
+                bind_list<write_type_name>(", ", struct_types));
+        }
+
+        auto all_class_types = filter_types(settings.filter, members.classes);
+
+        std::vector<TypeDef> primary_class_types{};
+        std::copy_if(
+            all_class_types.begin(),
+            all_class_types.end(),
+            std::back_inserter(primary_class_types),
+            std::not_fn(is_circular_dependency));
+
+        std::vector<TypeDef> secondary_class_types{};
+        std::copy_if(
+            all_class_types.begin(),
+            all_class_types.end(),
+            std::back_inserter(secondary_class_types),
+            is_circular_dependency);
+
+        if (!primary_class_types.empty())
+        {
+            w.write(
+                "from winrt.% import %\n",
+                bind<write_ns_module_name>(ns),
+                bind_list<write_type_name>(", ", primary_class_types));
+        }
+
+        auto all_interface_types = filter_types(settings.filter, members.interfaces);
+        std::vector<TypeDef> interface_types{};
+        std::copy_if(
+            all_interface_types.begin(),
+            all_interface_types.end(),
+            std::back_inserter(interface_types),
+            std::not_fn(is_exclusive_to));
+
+        if (!interface_types.empty())
+        {
+            w.write(
+                "from winrt.% import %\n",
+                bind<write_ns_module_name>(ns),
+                bind_list<write_type_name>(", ", interface_types));
+        }
+
+        if (!enum_types.empty() || !delegate_types.empty() || !struct_types.empty()
+            || !primary_class_types.empty() || !interface_types.empty())
+        {
+            w.write("\n");
+        }
+
+        w.write("Self = typing.TypeVar('Self')\n");
+        w.write("\n");
+
+        settings.filter.bind_each<write_python_typing_for_object>(
+            secondary_class_types)(w);
+
+        auto file_name = w.write_temp("%_.pyi", bind<write_ns_module_name>(ns));
         w.flush_to_file(folder / file_name);
     }
 

@@ -6,6 +6,7 @@ import uuid as _uuid
 
 import winrt.system
 from winrt import _winrt_microsoft_ui_xaml_controls_primitives
+from winrt import _winrt_microsoft_ui_xaml_controls_primitives_
 
 __all__ = [
     "AnimationDirection",
@@ -259,7 +260,7 @@ ButtonBase = _winrt_microsoft_ui_xaml_controls_primitives.ButtonBase
 CalendarPanel = _winrt_microsoft_ui_xaml_controls_primitives.CalendarPanel
 CalendarViewTemplateSettings = _winrt_microsoft_ui_xaml_controls_primitives.CalendarViewTemplateSettings
 CarouselPanel = _winrt_microsoft_ui_xaml_controls_primitives.CarouselPanel
-ColorPickerSlider = _winrt_microsoft_ui_xaml_controls_primitives.ColorPickerSlider
+ColorPickerSlider = _winrt_microsoft_ui_xaml_controls_primitives_.ColorPickerSlider
 ColorSpectrum = _winrt_microsoft_ui_xaml_controls_primitives.ColorSpectrum
 ColumnMajorUniformToLargestGridLayout = _winrt_microsoft_ui_xaml_controls_primitives.ColumnMajorUniformToLargestGridLayout
 ComboBoxHelper = _winrt_microsoft_ui_xaml_controls_primitives.ComboBoxHelper
@@ -318,7 +319,7 @@ Selector = _winrt_microsoft_ui_xaml_controls_primitives.Selector
 SelectorItem = _winrt_microsoft_ui_xaml_controls_primitives.SelectorItem
 SnapPointBase = _winrt_microsoft_ui_xaml_controls_primitives.SnapPointBase
 SplitViewTemplateSettings = _winrt_microsoft_ui_xaml_controls_primitives.SplitViewTemplateSettings
-TabViewListView = _winrt_microsoft_ui_xaml_controls_primitives.TabViewListView
+TabViewListView = _winrt_microsoft_ui_xaml_controls_primitives_.TabViewListView
 Thumb = _winrt_microsoft_ui_xaml_controls_primitives.Thumb
 TickBar = _winrt_microsoft_ui_xaml_controls_primitives.TickBar
 ToggleButton = _winrt_microsoft_ui_xaml_controls_primitives.ToggleButton

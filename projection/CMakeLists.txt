@@ -132,6 +132,9 @@ else()
     )
     set(app_packages
         "winrt-Microsoft.Windows.AppNotifications"
+        "winrt-Microsoft.Ui.Xaml"
+        "winrt-Microsoft.Ui.Xaml.Controls"
+        "winrt-Microsoft.Ui.Xaml.Controls.Primitives"
     )
     set(interop_packages
         "interop/winrt-Windows.Foundation.Interop"
@@ -141,6 +144,13 @@ else()
         "interop/winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
     )
 endif()
+
+set (circular_depedency_packages
+    "winrt-Microsoft.Ui.Xaml.Controls"
+    "winrt-Microsoft.Ui.Xaml.Controls.Primitives"
+    "winrt-Windows.Ui.Xaml.Controls"
+    "winrt-Windows.Ui.Xaml.Controls.Primitives"
+)
 
 foreach(package ${packages} ${app_packages} ${interop_packages} ${app_interop_packages})
     pywinrt_add_namespace_package(${package})
@@ -190,6 +200,23 @@ foreach(package ${packages} ${app_packages} ${interop_packages} ${app_interop_pa
         target_link_libraries(${package_target} PRIVATE "Microsoft.WindowsAppRuntime.Bootstrap")
         install(FILES "${WINDOWS_APP_SDK_PATH}/runtimes/win10-${WINDOWS_APP_SDK_ARCH}/native/Microsoft.WindowsAppRuntime.Bootstrap.dll"
             DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
+    endif()
+
+    # HACK: For now, there are only two known packages with circular depedencies
+    # that need this, so hard coding.
+    if (${package} IN_LIST circular_depedency_packages)
+        string(REPLACE "winrt-" "" package_namespace "${package}")
+        pywinrt_add_library(${package_target}_ "${package}/py.${package_namespace}_.cpp")
+        target_include_directories(${package_target}_ PRIVATE "${package}/cppwinrt" "${package}")
+        if (package IN_LIST app_packages)
+            target_include_directories(${package_target}_ PRIVATE
+                "${WINRT_WINDOWS_APP_SDK_PATH}/cppwinrt"
+                "${WINRT_WINDOWS_APP_SDK_PATH}/pywinrt"
+            )
+        endif()
+        target_precompile_headers(${package_target}_ REUSE_FROM ${first_target})
+        set_target_properties(${package_target}_ PROPERTIES DEFINE_SYMBOL "")
+        install(TARGETS ${package_target}_ DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
     endif()
 endforeach()
 

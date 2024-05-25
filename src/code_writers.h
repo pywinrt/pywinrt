@@ -175,10 +175,14 @@ namespace pywinrt
             return;
         }
 
+        auto is_circular_depedency = get_category(type) == category::class_type
+                                     && is_circular_dependency(type);
+
         w.write(
-            "@ = %.@\n",
+            "@ = %%.@\n",
             type.TypeName(),
             bind<write_ns_module_name>(type.TypeNamespace()),
+            is_circular_depedency ? "_" : "",
             type.TypeName());
 
         if (implements_imap(type))
@@ -513,12 +517,13 @@ struct py_type<%>
     /**
      * Writes the namespace module definition structure.
      */
-    void write_ns_module_def_struct(writer& w, std::string_view const& ns)
+    void write_ns_module_def_struct(
+        writer& w, std::string_view const& ns, bool secondary = false)
     {
         auto format = R"(
 static PyModuleDef module_def
     = {PyModuleDef_HEAD_INIT,
-       "%",
+       "%%",
        module_doc,
        0,
        nullptr,
@@ -529,30 +534,44 @@ static PyModuleDef module_def
 
 )";
 
-        w.write(format, bind<write_ns_module_name>(ns));
+        w.write(format, bind<write_ns_module_name>(ns), secondary ? "_" : "");
     }
 
     /**
      * Writes all namespace initialization members except for the public init function.
      */
     void write_namespace_initialization(
-        writer& w, std::string_view const& ns, cache::namespace_members const& members)
+        writer& w,
+        std::string_view const& ns,
+        cache::namespace_members const& members,
+        bool secondary = false)
     {
         w.write("\n// ----- % Initialization --------------------\n", ns);
 
         write_ns_module_doc_string(w, ns);
-        write_ns_module_def_struct(w, ns);
+        write_ns_module_def_struct(w, ns, secondary);
     }
 
     /**
      * Writes the namespace module PyMODINIT_FUNC function delecaration.
+     * @param w The writer to write to.
+     * @param ns The WinRT namespace (CamelCase, dotted).
+     * @param members The namespace members.
+     * @param class_types The class types in the module.
+     * @param secondary True if this is a secondary module for breaking circular
+     * depedencies.
      */
     void write_namespace_module_init_function(
-        writer& w, std::string_view const& ns, cache::namespace_members const& members)
+        writer& w,
+        std::string_view const& ns,
+        cache::namespace_members const& members,
+        std::vector<TypeDef> const& class_types,
+        bool secondary = false)
     {
         w.write(
-            "\nPyMODINIT_FUNC PyInit_%(void) noexcept\n{\n",
-            bind<write_ns_module_name>(ns));
+            "\nPyMODINIT_FUNC PyInit_%%(void) noexcept\n{\n",
+            bind<write_ns_module_name>(ns),
+            secondary ? "_" : "");
         {
             writer::indent_guard g{w};
 
@@ -598,8 +617,8 @@ static PyModuleDef module_def
 
             std::vector<TypeDef> composeable_classes{};
             std::copy_if(
-                members.classes.begin(),
-                members.classes.end(),
+                class_types.begin(),
+                class_types.end(),
                 std::back_inserter(composeable_classes),
                 is_composable);
 
@@ -609,8 +628,8 @@ static PyModuleDef module_def
 
             std::vector<TypeDef> sealed_classes{};
             std::copy_if(
-                members.classes.begin(),
-                members.classes.end(),
+                class_types.begin(),
+                class_types.end(),
                 std::back_inserter(sealed_classes),
                 std::not_fn(is_composable));
 
@@ -619,10 +638,15 @@ static PyModuleDef module_def
                 composeable_classes)(w);
             settings.filter.bind_each<write_ns_module_init_python_type>(sealed_classes)(
                 w);
-            settings.filter.bind_each<write_ns_module_init_python_type>(
-                members.interfaces)(w);
-            settings.filter.bind_each<write_ns_module_init_python_type>(
-                members.structs)(w);
+
+            if (!secondary)
+            {
+                settings.filter.bind_each<write_ns_module_init_python_type>(
+                    members.interfaces)(w);
+                settings.filter.bind_each<write_ns_module_init_python_type>(
+                    members.structs)(w);
+            }
+
             w.write("\nreturn module.detach();\n");
         }
         w.write("}\n");
@@ -2235,7 +2259,7 @@ return 0;
         w.write("};\n");
     }
 
-    void write_type_slot_table(writer& w, TypeDef const& type)
+    void write_type_slot_table(writer& w, TypeDef const& type, bool secondary = false)
     {
         auto category = get_category(type);
         auto name = type.TypeName();
@@ -2327,7 +2351,7 @@ return 0;
         w.write("};\n");
     }
 
-    void write_type_spec(writer& w, TypeDef const& type)
+    void write_type_spec(writer& w, TypeDef const& type, bool secondary = false)
     {
         auto type_size
             = is_static_class(type)
@@ -2337,7 +2361,7 @@ return 0;
         auto format = R"(
 static PyType_Spec type_spec_@ =
 {
-    "winrt.%.@",
+    "winrt.%%.@",
     %,
     0,
     Py_TPFLAGS_DEFAULT,
@@ -2349,6 +2373,7 @@ static PyType_Spec type_spec_@ =
             format,
             type_name,
             bind<write_ns_module_name>(type.TypeNamespace()),
+            secondary ? "_" : "",
             type_name,
             type_size,
             type_name);
@@ -2457,7 +2482,7 @@ static PyType_Spec type_spec_@ =
         w.write("};\n");
     }
 
-    void write_metaclass(writer& w, TypeDef const& type)
+    void write_metaclass(writer& w, TypeDef const& type, bool secondary = false)
     {
         if (!requires_metaclass(type))
         {
@@ -2486,7 +2511,7 @@ static PyType_Spec type_spec_@ =
         auto format = R"(
 static PyType_Spec type_spec_@_Static =
 {
-    "winrt.%.@_Static",
+    "winrt.%%.@_Static",
     static_cast<int>(PyType_Type.tp_basicsize),
     static_cast<int>(PyType_Type.tp_itemsize),
     Py_TPFLAGS_DEFAULT,
@@ -2498,6 +2523,7 @@ static PyType_Spec type_spec_@_Static =
             format,
             type.TypeName(),
             bind<write_ns_module_name>(type.TypeNamespace()),
+            secondary ? "_" : "",
             type.TypeName(),
             type.TypeName());
     }
@@ -2531,6 +2557,9 @@ static PyType_Spec type_spec_@_Static =
 
         auto guard{w.push_generic_params(type.GenericParam())};
 
+        auto secondary = get_category(type) == category::class_type
+                         && is_circular_dependency(type);
+
         w.write(
             "\n// ----- @ % --------------------\n",
             type.TypeName(),
@@ -2540,9 +2569,9 @@ static PyType_Spec type_spec_@_Static =
         write_method_functions(w, type);
         write_method_table(w, type);
         write_getset_table(w, type);
-        write_type_slot_table(w, type);
-        write_type_spec(w, type);
-        write_metaclass(w, type);
+        write_type_slot_table(w, type, secondary);
+        write_type_spec(w, type, secondary);
+        write_metaclass(w, type, secondary);
     }
 
 #pragma region pinterface functions

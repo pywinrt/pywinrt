@@ -6,6 +6,7 @@ import uuid as _uuid
 
 import winrt.system
 from winrt import _winrt_windows_ui_xaml_controls_primitives
+from winrt import _winrt_windows_ui_xaml_controls_primitives_
 
 __all__ = [
     "AnimationDirection",
@@ -206,7 +207,7 @@ ButtonBase = _winrt_windows_ui_xaml_controls_primitives.ButtonBase
 CalendarPanel = _winrt_windows_ui_xaml_controls_primitives.CalendarPanel
 CalendarViewTemplateSettings = _winrt_windows_ui_xaml_controls_primitives.CalendarViewTemplateSettings
 CarouselPanel = _winrt_windows_ui_xaml_controls_primitives.CarouselPanel
-ColorPickerSlider = _winrt_windows_ui_xaml_controls_primitives.ColorPickerSlider
+ColorPickerSlider = _winrt_windows_ui_xaml_controls_primitives_.ColorPickerSlider
 ColorSpectrum = _winrt_windows_ui_xaml_controls_primitives.ColorSpectrum
 ComboBoxTemplateSettings = _winrt_windows_ui_xaml_controls_primitives.ComboBoxTemplateSettings
 CommandBarFlyoutCommandBar = _winrt_windows_ui_xaml_controls_primitives.CommandBarFlyoutCommandBar

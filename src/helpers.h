@@ -1014,4 +1014,33 @@ namespace pywinrt
         std::reverse(sorted_types.begin(), sorted_types.end());
         types = sorted_types;
     }
+
+    /**
+     * Tests if a type has a circular dependency.
+     *
+     * In other words, the type depends on a type in a namespace that
+     * is a child namespace of the @p type's namespace.
+     */
+    bool is_circular_dependency(TypeDef const& type)
+    {
+        std::string prefix{type.TypeNamespace()};
+        prefix.append(".");
+
+        return std::visit(
+            impl::overloaded{
+                [&](type_definition const& t)
+                {
+                    if (t.TypeNamespace()._Starts_with(prefix))
+                    {
+                        return true;
+                    }
+
+                    return is_circular_dependency(t);
+                },
+                [](auto)
+                {
+                    return false;
+                }},
+            get_type_semantics(type.Extends()));
+    }
 } // namespace pywinrt

@@ -252,9 +252,22 @@ Where <spec> is one or more of:
 
                         auto namespaces
                             = write_namespace_cpp(ns_package_dir, ns, members);
+                        write_namespace_pyi(ns_winrt_dir, namespaces, ns, members);
+
+                        if (std::any_of(
+                                members.classes.begin(),
+                                members.classes.end(),
+                                is_circular_dependency))
+                        {
+                            auto secondary_namespaces = write_secondary_namespace_cpp(
+                                ns_package_dir, ns, members);
+                            write_secondary_namespace_pyi(
+                                ns_winrt_dir, secondary_namespaces, ns, members);
+
+                            namespaces.merge(secondary_namespaces);
+                        }
                         write_namespace_h(header_dir, ns, namespaces, members);
                         write_namespace_dunder_init_py(ns_dir, ns, members);
-                        write_namespace_pyi(ns_winrt_dir, namespaces, ns, members);
                         write_pywinrt_version_txt(ns_package_dir);
                         write_requirements_txt(ns_package_dir);
                         write_all_requirements_txt(ns_package_dir, namespaces);
