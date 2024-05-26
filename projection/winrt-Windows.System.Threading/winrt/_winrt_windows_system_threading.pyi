@@ -9,7 +9,7 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation
+import winrt.windows.foundation as windows_foundation
 
 from winrt.windows.system.threading import WorkItemOptions, WorkItemPriority
 from winrt.windows.system.threading import TimerDestroyedHandler, TimerElapsedHandler, WorkItemHandler
@@ -19,11 +19,11 @@ Self = typing.TypeVar('Self')
 @typing.final
 class ThreadPool_Static(type):
     @typing.overload
-    def run_async(cls, handler: typing.Optional[WorkItemHandler], /) -> winrt.windows.foundation.IAsyncAction: ...
+    def run_async(cls, handler: typing.Optional[WorkItemHandler], /) -> windows_foundation.IAsyncAction: ...
     @typing.overload
-    def run_async(cls, handler: typing.Optional[WorkItemHandler], priority: WorkItemPriority, /) -> winrt.windows.foundation.IAsyncAction: ...
+    def run_async(cls, handler: typing.Optional[WorkItemHandler], priority: WorkItemPriority, /) -> windows_foundation.IAsyncAction: ...
     @typing.overload
-    def run_async(cls, handler: typing.Optional[WorkItemHandler], priority: WorkItemPriority, options: WorkItemOptions, /) -> winrt.windows.foundation.IAsyncAction: ...
+    def run_async(cls, handler: typing.Optional[WorkItemHandler], priority: WorkItemPriority, options: WorkItemOptions, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
 class ThreadPool(winrt.system.Object, metaclass=ThreadPool_Static):

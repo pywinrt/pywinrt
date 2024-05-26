@@ -9,8 +9,8 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation
-import winrt.windows.foundation.collections
+import winrt.windows.foundation as windows_foundation
+import winrt.windows.foundation.collections as windows_foundation_collections
 
 Self = typing.TypeVar('Self')
 
@@ -38,5 +38,5 @@ class EnterpriseKeyCredentialRegistrationManager_Static(type):
 class EnterpriseKeyCredentialRegistrationManager(winrt.system.Object, metaclass=EnterpriseKeyCredentialRegistrationManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EnterpriseKeyCredentialRegistrationManager: ...
-    def get_registrations_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[EnterpriseKeyCredentialRegistrationInfo]]: ...
+    def get_registrations_async(self) -> windows_foundation.IAsyncOperation[windows_foundation_collections.IVectorView[EnterpriseKeyCredentialRegistrationInfo]]: ...
 

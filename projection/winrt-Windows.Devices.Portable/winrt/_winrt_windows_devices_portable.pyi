@@ -9,7 +9,7 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.storage
+import winrt.windows.storage as windows_storage
 
 from winrt.windows.devices.portable import ServiceDeviceType
 
@@ -27,7 +27,7 @@ class ServiceDevice(winrt.system.Object, metaclass=ServiceDevice_Static):
 
 @typing.final
 class StorageDevice_Static(type):
-    def from_id(cls, device_id: str, /) -> typing.Optional[winrt.windows.storage.StorageFolder]: ...
+    def from_id(cls, device_id: str, /) -> typing.Optional[windows_storage.StorageFolder]: ...
     def get_device_selector(cls) -> str: ...
 
 @typing.final

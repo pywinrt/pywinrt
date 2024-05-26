@@ -9,8 +9,8 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation.collections
-import winrt.windows.gaming.input
+import winrt.windows.foundation.collections as windows_foundation_collections
+import winrt.windows.gaming.input as windows_gaming_input
 
 from winrt.windows.ui.input.preview.injection import InjectedInputButtonChangeKind, InjectedInputKeyOptions, InjectedInputMouseOptions, InjectedInputPenButtons, InjectedInputPenParameters, InjectedInputPointerOptions, InjectedInputShortcut, InjectedInputTouchParameters, InjectedInputVisualizationMode
 
@@ -44,7 +44,7 @@ class InjectedInputGamepadInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InjectedInputGamepadInfo: ...
     @typing.overload
-    def __new__(cls: typing.Type[InjectedInputGamepadInfo], reading: winrt.windows.gaming.input.GamepadReading) -> InjectedInputGamepadInfo:...
+    def __new__(cls: typing.Type[InjectedInputGamepadInfo], reading: windows_gaming_input.GamepadReading) -> InjectedInputGamepadInfo:...
     @typing.overload
     def __new__(cls: typing.Type[InjectedInputGamepadInfo]) -> InjectedInputGamepadInfo:...
     @_property
@@ -72,9 +72,9 @@ class InjectedInputGamepadInfo(winrt.system.Object):
     @left_thumbstick_x.setter
     def left_thumbstick_x(self, value: winrt.system.Double) -> None: ...
     @_property
-    def buttons(self) -> winrt.windows.gaming.input.GamepadButtons: ...
+    def buttons(self) -> windows_gaming_input.GamepadButtons: ...
     @buttons.setter
-    def buttons(self, value: winrt.windows.gaming.input.GamepadButtons) -> None: ...
+    def buttons(self, value: windows_gaming_input.GamepadButtons) -> None: ...
 
 @typing.final
 class InjectedInputKeyboardInfo(winrt.system.Object):

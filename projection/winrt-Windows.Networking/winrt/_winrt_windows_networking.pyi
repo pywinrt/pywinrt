@@ -9,7 +9,7 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.networking.connectivity
+import winrt.windows.networking.connectivity as windows_networking_connectivity
 
 from winrt.windows.networking import DomainNameType, HostNameSortOptions, HostNameType
 
@@ -54,7 +54,7 @@ class HostName(winrt.system.Object, metaclass=HostName_Static):
     @_property
     def display_name(self) -> str: ...
     @_property
-    def i_p_information(self) -> typing.Optional[winrt.windows.networking.connectivity.IPInformation]: ...
+    def i_p_information(self) -> typing.Optional[windows_networking_connectivity.IPInformation]: ...
     @_property
     def raw_name(self) -> str: ...
     @_property

@@ -7,8 +7,8 @@ import winrt.system
 from winrt import _winrt_testcomponent
 
 if typing.TYPE_CHECKING:
-    import winrt.windows.foundation
-    import winrt.windows.foundation.collections
+    import winrt.windows.foundation as windows_foundation
+    import winrt.windows.foundation.collections as windows_foundation_collections
 
 
 __all__ = [
@@ -80,16 +80,16 @@ Array6Handler = typing.Callable[[winrt.system.Array[winrt.system.Int16], winrt.s
 Array7Handler = typing.Callable[[winrt.system.Array[winrt.system.Int32], winrt.system.Array[winrt.system.Int32]], typing.Tuple[winrt.system.Int32, winrt.system.Array[winrt.system.Int32]]]
 Array8Handler = typing.Callable[[winrt.system.Array[winrt.system.Int64], winrt.system.Array[winrt.system.Int64]], typing.Tuple[winrt.system.Int64, winrt.system.Array[winrt.system.Int64]]]
 Array9Handler = typing.Callable[[winrt.system.Array[winrt.system.Single], winrt.system.Array[winrt.system.Single]], typing.Tuple[winrt.system.Single, winrt.system.Array[winrt.system.Single]]]
-Async1Handler = typing.Callable[["winrt.windows.foundation.IAsyncAction", bool], "winrt.windows.foundation.IAsyncAction"]
-Async2Handler = typing.Callable[["winrt.windows.foundation.IAsyncAction", bool, winrt.system.Int32], "winrt.windows.foundation.IAsyncActionWithProgress[winrt.system.Int32]"]
-Async3Handler = typing.Callable[["winrt.windows.foundation.IAsyncAction", bool, winrt.system.Int32], "winrt.windows.foundation.IAsyncOperation[winrt.system.Int32]"]
-Async4Handler = typing.Callable[["winrt.windows.foundation.IAsyncAction", bool, winrt.system.Int32, winrt.system.Int32], "winrt.windows.foundation.IAsyncOperationWithProgress[winrt.system.Int32, winrt.system.Int32]"]
-Collection1Handler = typing.Callable[[typing.Iterable[str]], typing.Tuple[typing.Optional["winrt.windows.foundation.collections.IIterable[str]"], typing.Optional["winrt.windows.foundation.collections.IIterable[str]"]]]
-Collection2Handler = typing.Callable[[typing.Iterable["winrt.windows.foundation.collections.IKeyValuePair[str, str]"]], typing.Tuple[typing.Optional["winrt.windows.foundation.collections.IIterable[winrt.windows.foundation.collections.IKeyValuePair[str, str]]"], typing.Optional["winrt.windows.foundation.collections.IIterable[winrt.windows.foundation.collections.IKeyValuePair[str, str]]"]]]
-Collection3Handler = typing.Callable[["winrt.windows.foundation.collections.IMap[str, str]"], typing.Tuple[typing.Optional["winrt.windows.foundation.collections.IMap[str, str]"], typing.Optional["winrt.windows.foundation.collections.IMap[str, str]"]]]
-Collection4Handler = typing.Callable[["winrt.windows.foundation.collections.IMapView[str, str]"], typing.Tuple[typing.Optional["winrt.windows.foundation.collections.IMapView[str, str]"], typing.Optional["winrt.windows.foundation.collections.IMapView[str, str]"]]]
-Collection5Handler = typing.Callable[["winrt.windows.foundation.collections.IVector[str]"], typing.Tuple[typing.Optional["winrt.windows.foundation.collections.IVector[str]"], typing.Optional["winrt.windows.foundation.collections.IVector[str]"]]]
-Collection6Handler = typing.Callable[["winrt.windows.foundation.collections.IVectorView[str]"], typing.Tuple[typing.Optional["winrt.windows.foundation.collections.IVectorView[str]"], typing.Optional["winrt.windows.foundation.collections.IVectorView[str]"]]]
+Async1Handler = typing.Callable[["windows_foundation.IAsyncAction", bool], "windows_foundation.IAsyncAction"]
+Async2Handler = typing.Callable[["windows_foundation.IAsyncAction", bool, winrt.system.Int32], "windows_foundation.IAsyncActionWithProgress[winrt.system.Int32]"]
+Async3Handler = typing.Callable[["windows_foundation.IAsyncAction", bool, winrt.system.Int32], "windows_foundation.IAsyncOperation[winrt.system.Int32]"]
+Async4Handler = typing.Callable[["windows_foundation.IAsyncAction", bool, winrt.system.Int32, winrt.system.Int32], "windows_foundation.IAsyncOperationWithProgress[winrt.system.Int32, winrt.system.Int32]"]
+Collection1Handler = typing.Callable[[typing.Iterable[str]], typing.Tuple[typing.Optional["windows_foundation_collections.IIterable[str]"], typing.Optional["windows_foundation_collections.IIterable[str]"]]]
+Collection2Handler = typing.Callable[[typing.Iterable["windows_foundation_collections.IKeyValuePair[str, str]"]], typing.Tuple[typing.Optional["windows_foundation_collections.IIterable[windows_foundation_collections.IKeyValuePair[str, str]]"], typing.Optional["windows_foundation_collections.IIterable[windows_foundation_collections.IKeyValuePair[str, str]]"]]]
+Collection3Handler = typing.Callable[["windows_foundation_collections.IMap[str, str]"], typing.Tuple[typing.Optional["windows_foundation_collections.IMap[str, str]"], typing.Optional["windows_foundation_collections.IMap[str, str]"]]]
+Collection4Handler = typing.Callable[["windows_foundation_collections.IMapView[str, str]"], typing.Tuple[typing.Optional["windows_foundation_collections.IMapView[str, str]"], typing.Optional["windows_foundation_collections.IMapView[str, str]"]]]
+Collection5Handler = typing.Callable[["windows_foundation_collections.IVector[str]"], typing.Tuple[typing.Optional["windows_foundation_collections.IVector[str]"], typing.Optional["windows_foundation_collections.IVector[str]"]]]
+Collection6Handler = typing.Callable[["windows_foundation_collections.IVectorView[str]"], typing.Tuple[typing.Optional["windows_foundation_collections.IVectorView[str]"], typing.Optional["windows_foundation_collections.IVectorView[str]"]]]
 Param10Handler = typing.Callable[[winrt.system.Double], typing.Tuple[winrt.system.Double, winrt.system.Double]]
 Param11Handler = typing.Callable[[winrt.system.Char16], typing.Tuple[winrt.system.Char16, winrt.system.Char16]]
 Param12Handler = typing.Callable[[str], typing.Tuple[str, str]]

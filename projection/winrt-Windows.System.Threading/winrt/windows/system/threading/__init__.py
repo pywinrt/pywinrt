@@ -8,7 +8,7 @@ import winrt.system
 from winrt import _winrt_windows_system_threading
 
 if typing.TYPE_CHECKING:
-    import winrt.windows.foundation
+    import winrt.windows.foundation as windows_foundation
 
 
 __all__ = [
@@ -34,4 +34,4 @@ ThreadPool = _winrt_windows_system_threading.ThreadPool
 ThreadPoolTimer = _winrt_windows_system_threading.ThreadPoolTimer
 TimerDestroyedHandler = typing.Callable[[typing.Optional[ThreadPoolTimer]], None]
 TimerElapsedHandler = typing.Callable[[typing.Optional[ThreadPoolTimer]], None]
-WorkItemHandler = typing.Callable[["winrt.windows.foundation.IAsyncAction"], None]
+WorkItemHandler = typing.Callable[["windows_foundation.IAsyncAction"], None]

@@ -9,7 +9,7 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation
+import winrt.windows.foundation as windows_foundation
 
 from winrt.windows.phone.system.power import PowerSavingMode
 
@@ -17,8 +17,8 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PowerManager_Static(type):
-    def add_power_saving_mode_changed(cls, change_handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
-    def remove_power_saving_mode_changed(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    def add_power_saving_mode_changed(cls, change_handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    def remove_power_saving_mode_changed(cls, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @_property
     def power_saving_mode(cls) -> PowerSavingMode: ...
     @_property

@@ -9,17 +9,17 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation
-import winrt.windows.media
+import winrt.windows.foundation as windows_foundation
+import winrt.windows.media as windows_media
 
 Self = typing.TypeVar('Self')
 
 @typing.final
 class SoundLevelBroker_Static(type):
-    def add_sound_level_changed(cls, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
-    def remove_sound_level_changed(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    def add_sound_level_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    def remove_sound_level_changed(cls, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @_property
-    def sound_level(cls) -> winrt.windows.media.SoundLevel: ...
+    def sound_level(cls) -> windows_media.SoundLevel: ...
 
 @typing.final
 class SoundLevelBroker(winrt.system.Object, metaclass=SoundLevelBroker_Static):

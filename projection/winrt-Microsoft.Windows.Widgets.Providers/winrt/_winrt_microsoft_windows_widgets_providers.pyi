@@ -9,8 +9,8 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.microsoft.windows.widgets
-import winrt.windows.foundation
+import winrt.microsoft.windows.widgets as microsoft_windows_widgets
+import winrt.windows.foundation as windows_foundation
 
 Self = typing.TypeVar('Self')
 
@@ -47,7 +47,7 @@ class WidgetContext(winrt.system.Object):
     @_property
     def is_active(self) -> bool: ...
     @_property
-    def size(self) -> winrt.microsoft.windows.widgets.WidgetSize: ...
+    def size(self) -> microsoft_windows_widgets.WidgetSize: ...
 
 @typing.final
 class WidgetContextChangedArgs(winrt.system.Object):

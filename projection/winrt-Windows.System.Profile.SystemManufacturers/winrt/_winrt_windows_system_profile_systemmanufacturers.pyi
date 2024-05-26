@@ -9,7 +9,7 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation
+import winrt.windows.foundation as windows_foundation
 
 Self = typing.TypeVar('Self')
 
@@ -18,9 +18,9 @@ class OemSupportInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OemSupportInfo: ...
     @_property
-    def support_app_link(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
+    def support_app_link(self) -> typing.Optional[windows_foundation.Uri]: ...
     @_property
-    def support_link(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
+    def support_link(self) -> typing.Optional[windows_foundation.Uri]: ...
     @_property
     def support_provider(self) -> str: ...
 

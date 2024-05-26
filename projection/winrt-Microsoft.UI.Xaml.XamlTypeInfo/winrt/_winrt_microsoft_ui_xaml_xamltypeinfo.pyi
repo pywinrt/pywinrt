@@ -9,8 +9,8 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.microsoft.ui.xaml.markup
-import winrt.windows.ui.xaml.interop
+import winrt.microsoft.ui.xaml.markup as microsoft_ui_xaml_markup
+import winrt.windows.ui.xaml.interop as windows_ui_xaml_interop
 
 Self = typing.TypeVar('Self')
 
@@ -23,6 +23,6 @@ class XamlControlsXamlMetaDataProvider(winrt.system.Object, metaclass=XamlContro
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlControlsXamlMetaDataProvider: ...
     def __new__(cls: typing.Type[XamlControlsXamlMetaDataProvider]) -> XamlControlsXamlMetaDataProvider:...
-    def get_xaml_type(self, type: winrt.windows.ui.xaml.interop.TypeName, /) -> typing.Optional[winrt.microsoft.ui.xaml.markup.IXamlType]: ...
-    def get_xmlns_definitions(self) -> winrt.microsoft.ui.xaml.markup.XmlnsDefinition: ...
+    def get_xaml_type(self, type: windows_ui_xaml_interop.TypeName, /) -> typing.Optional[microsoft_ui_xaml_markup.IXamlType]: ...
+    def get_xmlns_definitions(self) -> microsoft_ui_xaml_markup.XmlnsDefinition: ...
 

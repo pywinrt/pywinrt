@@ -8,7 +8,7 @@ import winrt.system
 from winrt import _winrt_windows_security_isolation
 
 if typing.TYPE_CHECKING:
-    import winrt.windows.foundation.collections
+    import winrt.windows.foundation.collections as windows_foundation_collections
 
 
 __all__ = [
@@ -174,5 +174,5 @@ IsolatedWindowsEnvironmentStartProcessResult = _winrt_windows_security_isolation
 IsolatedWindowsEnvironmentTelemetryParameters = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentTelemetryParameters
 IsolatedWindowsEnvironmentUserInfo = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentUserInfo
 IsolatedWindowsHostMessenger = _winrt_windows_security_isolation.IsolatedWindowsHostMessenger
-HostMessageReceivedCallback = typing.Callable[[_uuid.UUID, "winrt.windows.foundation.collections.IVectorView[winrt.system.Object]"], None]
-MessageReceivedCallback = typing.Callable[[_uuid.UUID, "winrt.windows.foundation.collections.IVectorView[winrt.system.Object]"], None]
+HostMessageReceivedCallback = typing.Callable[[_uuid.UUID, "windows_foundation_collections.IVectorView[winrt.system.Object]"], None]
+MessageReceivedCallback = typing.Callable[[_uuid.UUID, "windows_foundation_collections.IVectorView[winrt.system.Object]"], None]

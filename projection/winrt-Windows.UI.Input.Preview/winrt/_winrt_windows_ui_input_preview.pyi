@@ -9,14 +9,14 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.ui.input
-import winrt.windows.ui.windowmanagement
+import winrt.windows.ui.input as windows_ui_input
+import winrt.windows.ui.windowmanagement as windows_ui_windowmanagement
 
 Self = typing.TypeVar('Self')
 
 @typing.final
 class InputActivationListenerPreview_Static(type):
-    def create_for_application_window(cls, window: typing.Optional[winrt.windows.ui.windowmanagement.AppWindow], /) -> typing.Optional[winrt.windows.ui.input.InputActivationListener]: ...
+    def create_for_application_window(cls, window: typing.Optional[windows_ui_windowmanagement.AppWindow], /) -> typing.Optional[windows_ui_input.InputActivationListener]: ...
 
 @typing.final
 class InputActivationListenerPreview(winrt.system.Object, metaclass=InputActivationListenerPreview_Static):
