@@ -540,14 +540,54 @@ static void custom_set(winrt::hresult& instance, int32_t value)
      * Writes a `requirements.txt` file.
      *
      * @param folder The folder to write the file to.
+     * @param ns The namespace to write the file for.
+     * @param members The members of the namespace.
      */
-    inline void write_requirements_txt(stdfs::path const& folder)
+    inline void write_requirements_txt(
+        stdfs::path const& folder,
+        std::string_view const& ns,
+        cache::namespace_members const& members)
     {
         writer w{};
+        w.current_namespace = ns;
 
         write_license(w, "#");
 
         w.write("winrt-runtime==%\n", PYWINRT_VERSION_STRING);
+
+        auto class_types = filter_types(settings.filter, members.classes);
+        std::set<std::string_view> required_namespaces{};
+
+        // collect unique modules required because they implement a base type
+        // used by a class in this namespace
+        for (auto&& type : class_types)
+        {
+            std::visit(
+                impl::overloaded{
+                    [&](type_definition const& base)
+                    {
+                        if (base.TypeName() == "System")
+                        {
+                            return;
+                        }
+
+                        if (base.TypeNamespace() == ns)
+                        {
+                            return;
+                        }
+
+                        required_namespaces.insert(base.TypeNamespace());
+                    },
+                    [&](auto const&)
+                    {
+                    }},
+                get_type_semantics(type.Extends()));
+        }
+
+        for (auto&& ns : required_namespaces)
+        {
+            w.write("winrt-%==%\n", ns, PYWINRT_VERSION_STRING);
+        }
 
         w.flush_to_file(folder / "requirements.txt");
     }
