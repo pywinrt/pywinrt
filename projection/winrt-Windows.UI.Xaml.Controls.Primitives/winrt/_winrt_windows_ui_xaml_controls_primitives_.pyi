@@ -9,8 +9,8 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.ui.xaml
-import winrt.windows.ui.xaml.controls
+import winrt.windows.ui.xaml as windows_ui_xaml
+import winrt.windows.ui.xaml.controls as windows_ui_xaml_controls
 
 from winrt.windows.ui.xaml.controls.primitives import AnimationDirection, ComponentResourceLocation, EdgeTransitionLocation, FlyoutPlacementMode, FlyoutShowMode, GeneratorDirection, GroupHeaderPlacement, ListViewItemPresenterCheckMode, ListViewItemPresenterSelectionIndicatorMode, PlacementMode, PopupPlacementMode, ScrollEventType, ScrollingIndicatorMode, SliderSnapsTo, SnapPointsAlignment, TickPlacement
 from winrt.windows.ui.xaml.controls.primitives import DragCompletedEventHandler, DragDeltaEventHandler, DragStartedEventHandler, ItemsChangedEventHandler, RangeBaseValueChangedEventHandler, ScrollEventHandler
@@ -23,7 +23,7 @@ Self = typing.TypeVar('Self')
 @typing.final
 class ColorPickerSlider_Static(type):
     @_property
-    def color_channel_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+    def color_channel_property(cls) -> typing.Optional[windows_ui_xaml.DependencyProperty]: ...
 
 @typing.final
 class ColorPickerSlider(winrt.system.Object, metaclass=ColorPickerSlider_Static):
@@ -31,7 +31,7 @@ class ColorPickerSlider(winrt.system.Object, metaclass=ColorPickerSlider_Static)
     def _from(obj: winrt.system.Object, /) -> ColorPickerSlider: ...
     def __new__(cls: typing.Type[ColorPickerSlider]) -> ColorPickerSlider:...
     @_property
-    def color_channel(self) -> winrt.windows.ui.xaml.controls.ColorPickerHsvChannel: ...
+    def color_channel(self) -> windows_ui_xaml_controls.ColorPickerHsvChannel: ...
     @color_channel.setter
-    def color_channel(self, value: winrt.windows.ui.xaml.controls.ColorPickerHsvChannel) -> None: ...
+    def color_channel(self, value: windows_ui_xaml_controls.ColorPickerHsvChannel) -> None: ...
 

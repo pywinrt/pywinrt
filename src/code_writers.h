@@ -116,6 +116,15 @@ namespace pywinrt
         w.write("%", bind_list<write_python_identifier>(".", segments));
     }
 
+    /**
+     * Writes a namespace as a single identifier (underscores instead of dots).
+     */
+    void write_python_subpackage_alias(writer& w, std::string_view const& ns)
+    {
+        auto segments = get_dotted_name_segments(ns);
+        w.write("%", bind_list<write_lower_case>("_", segments));
+    }
+
     void write_license(writer& w, std::string_view comment_marker = "//")
     {
         w.write(
@@ -208,7 +217,10 @@ namespace pywinrt
      */
     void write_python_import_namespace(writer& w, std::string_view const& ns)
     {
-        w.write("import winrt.%\n", bind<write_python_subpackage>(ns));
+        w.write(
+            "import winrt.% as %\n",
+            bind<write_python_subpackage>(ns),
+            bind<write_python_subpackage_alias>(ns));
     }
 
     void write_python_enum(writer& w, TypeDef const& type)
@@ -4777,12 +4789,13 @@ if (!return_value)
                 ", ", filter_py_in_params(signature.params())),
             bind<write_return_typing>(signature));
 
-        // Surround any types starting with winrt. other than winrt.system with
+        // Surround any types matching "namespace_alias.TypeName" with
         // quotes to avoid import errors at runtime. Since we don't have recursive
         // regex, we have to do some ugly stuff with [] for nested generics.
         decl = std::regex_replace(
             decl,
-            std::regex(R"(winrt\.(?!system\.)[\w\.]+(?:\[[^\]\[]*(?:\[[^\]]*\])?\])?)"),
+            std::regex(
+                R"(\b[a-z]+(?:_[a-z]+)+\.[a-zA-Z]+(?:\[[^\]\[]*(?:\[[^\]]*\])?\])?)"),
             "\"$&\"");
 
         w.write("%", decl);

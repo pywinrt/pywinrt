@@ -9,7 +9,7 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.graphics.effects
+import winrt.windows.graphics.effects as windows_graphics_effects
 
 from winrt.microsoft.ui.composition.effects import SceneLightingEffectReflectanceModel
 
@@ -29,9 +29,9 @@ class SceneLightingEffect(winrt.system.Object):
     @specular_amount.setter
     def specular_amount(self, value: winrt.system.Single) -> None: ...
     @_property
-    def normal_map_source(self) -> typing.Optional[winrt.windows.graphics.effects.IGraphicsEffectSource]: ...
+    def normal_map_source(self) -> typing.Optional[windows_graphics_effects.IGraphicsEffectSource]: ...
     @normal_map_source.setter
-    def normal_map_source(self, value: typing.Optional[winrt.windows.graphics.effects.IGraphicsEffectSource]) -> None: ...
+    def normal_map_source(self, value: typing.Optional[windows_graphics_effects.IGraphicsEffectSource]) -> None: ...
     @_property
     def diffuse_amount(self) -> winrt.system.Single: ...
     @diffuse_amount.setter

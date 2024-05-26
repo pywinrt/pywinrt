@@ -9,8 +9,8 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation
-import winrt.windows.graphics.imaging
+import winrt.windows.foundation as windows_foundation
+import winrt.windows.graphics.imaging as windows_graphics_imaging
 
 Self = typing.TypeVar('Self')
 
@@ -22,5 +22,5 @@ class InkWorkspaceHostedAppManager_Static(type):
 class InkWorkspaceHostedAppManager(winrt.system.Object, metaclass=InkWorkspaceHostedAppManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkWorkspaceHostedAppManager: ...
-    def set_thumbnail_async(self, bitmap: typing.Optional[winrt.windows.graphics.imaging.SoftwareBitmap], /) -> winrt.windows.foundation.IAsyncAction: ...
+    def set_thumbnail_async(self, bitmap: typing.Optional[windows_graphics_imaging.SoftwareBitmap], /) -> windows_foundation.IAsyncAction: ...
 

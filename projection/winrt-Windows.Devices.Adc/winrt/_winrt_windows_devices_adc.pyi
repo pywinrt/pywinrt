@@ -9,9 +9,9 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.devices.adc.provider
-import winrt.windows.foundation
-import winrt.windows.foundation.collections
+import winrt.windows.devices.adc.provider as windows_devices_adc_provider
+import winrt.windows.foundation as windows_foundation
+import winrt.windows.foundation.collections as windows_foundation_collections
 
 from winrt.windows.devices.adc import AdcChannelMode
 
@@ -31,8 +31,8 @@ class AdcChannel(winrt.system.Object):
 
 @typing.final
 class AdcController_Static(type):
-    def get_controllers_async(cls, provider: typing.Optional[winrt.windows.devices.adc.provider.IAdcProvider], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[AdcController]]: ...
-    def get_default_async(cls) -> winrt.windows.foundation.IAsyncOperation[AdcController]: ...
+    def get_controllers_async(cls, provider: typing.Optional[windows_devices_adc_provider.IAdcProvider], /) -> windows_foundation.IAsyncOperation[windows_foundation_collections.IVectorView[AdcController]]: ...
+    def get_default_async(cls) -> windows_foundation.IAsyncOperation[AdcController]: ...
 
 @typing.final
 class AdcController(winrt.system.Object, metaclass=AdcController_Static):

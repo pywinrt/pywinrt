@@ -9,14 +9,14 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.microsoft.ui.input
-import winrt.windows.devices.input
+import winrt.microsoft.ui.input as microsoft_ui_input
+import winrt.windows.devices.input as windows_devices_input
 
 Self = typing.TypeVar('Self')
 
 @typing.final
 class PenDeviceInterop_Static(type):
-    def from_pointer_point(cls, pointer_point: typing.Optional[winrt.microsoft.ui.input.PointerPoint], /) -> typing.Optional[winrt.windows.devices.input.PenDevice]: ...
+    def from_pointer_point(cls, pointer_point: typing.Optional[microsoft_ui_input.PointerPoint], /) -> typing.Optional[windows_devices_input.PenDevice]: ...
 
 @typing.final
 class PenDeviceInterop(winrt.system.Object, metaclass=PenDeviceInterop_Static):

@@ -9,7 +9,7 @@ from winrt import _winrt_microsoft_ui_xaml_controls
 from winrt import _winrt_microsoft_ui_xaml_controls_
 
 if typing.TYPE_CHECKING:
-    import winrt.windows.foundation
+    import winrt.windows.foundation as windows_foundation
 
 
 __all__ = [
@@ -1495,7 +1495,7 @@ DragItemsStartingEventHandler = typing.Callable[[typing.Optional[winrt.system.Ob
 HubSectionHeaderClickEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[HubSectionHeaderClickEventArgs]], None]
 ItemClickEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[ItemClickEventArgs]], None]
 ListViewItemToKeyHandler = typing.Callable[[typing.Optional[winrt.system.Object]], str]
-ListViewKeyToItemHandler = typing.Callable[[str], "winrt.windows.foundation.IAsyncOperation[winrt.system.Object]"]
+ListViewKeyToItemHandler = typing.Callable[[str], "windows_foundation.IAsyncOperation[winrt.system.Object]"]
 SectionsInViewChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[SectionsInViewChangedEventArgs]], None]
 SelectionChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[SelectionChangedEventArgs]], None]
 SemanticZoomViewChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[SemanticZoomViewChangedEventArgs]], None]

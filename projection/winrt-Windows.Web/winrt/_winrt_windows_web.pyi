@@ -9,8 +9,8 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation
-import winrt.windows.storage.streams
+import winrt.windows.foundation as windows_foundation
+import winrt.windows.storage.streams as windows_storage_streams
 
 from winrt.windows.web import WebErrorStatus
 
@@ -29,5 +29,5 @@ class WebError(winrt.system.Object, metaclass=WebError_Static):
 class IUriToStreamResolver(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IUriToStreamResolver: ...
-    def uri_to_stream_async(self, uri: typing.Optional[winrt.windows.foundation.Uri], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.storage.streams.IInputStream]: ...
+    def uri_to_stream_async(self, uri: typing.Optional[windows_foundation.Uri], /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IInputStream]: ...
 

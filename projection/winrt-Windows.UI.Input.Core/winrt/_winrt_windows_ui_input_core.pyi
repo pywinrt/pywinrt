@@ -9,25 +9,25 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.applicationmodel.core
-import winrt.windows.system
-import winrt.windows.ui.core
-import winrt.windows.ui.input
+import winrt.windows.applicationmodel.core as windows_applicationmodel_core
+import winrt.windows.system as windows_system
+import winrt.windows.ui.core as windows_ui_core
+import winrt.windows.ui.input as windows_ui_input
 
 Self = typing.TypeVar('Self')
 
 @typing.final
 class RadialControllerIndependentInputSource_Static(type):
-    def create_for_view(cls, view: typing.Optional[winrt.windows.applicationmodel.core.CoreApplicationView], /) -> typing.Optional[RadialControllerIndependentInputSource]: ...
+    def create_for_view(cls, view: typing.Optional[windows_applicationmodel_core.CoreApplicationView], /) -> typing.Optional[RadialControllerIndependentInputSource]: ...
 
 @typing.final
 class RadialControllerIndependentInputSource(winrt.system.Object, metaclass=RadialControllerIndependentInputSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerIndependentInputSource: ...
     @_property
-    def controller(self) -> typing.Optional[winrt.windows.ui.input.RadialController]: ...
+    def controller(self) -> typing.Optional[windows_ui_input.RadialController]: ...
     @_property
-    def dispatcher(self) -> typing.Optional[winrt.windows.ui.core.CoreDispatcher]: ...
+    def dispatcher(self) -> typing.Optional[windows_ui_core.CoreDispatcher]: ...
     @_property
-    def dispatcher_queue(self) -> typing.Optional[winrt.windows.system.DispatcherQueue]: ...
+    def dispatcher_queue(self) -> typing.Optional[windows_system.DispatcherQueue]: ...
 

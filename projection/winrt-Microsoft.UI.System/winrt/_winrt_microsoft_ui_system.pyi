@@ -9,21 +9,21 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.microsoft.ui
-import winrt.windows.foundation
+import winrt.microsoft.ui as microsoft_ui
+import winrt.windows.foundation as windows_foundation
 
 Self = typing.TypeVar('Self')
 
 @typing.final
 class ThemeSettings_Static(type):
-    def create_for_window_id(cls, window_id: winrt.microsoft.ui.WindowId, /) -> typing.Optional[ThemeSettings]: ...
+    def create_for_window_id(cls, window_id: microsoft_ui.WindowId, /) -> typing.Optional[ThemeSettings]: ...
 
 @typing.final
 class ThemeSettings(winrt.system.Object, metaclass=ThemeSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ThemeSettings: ...
-    def add_changed(self, handler: winrt.windows.foundation.TypedEventHandler[ThemeSettings, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
-    def remove_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    def add_changed(self, handler: windows_foundation.TypedEventHandler[ThemeSettings, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    def remove_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @_property
     def high_contrast(self) -> bool: ...
     @_property

@@ -9,8 +9,8 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.microsoft.ui.xaml
-import winrt.microsoft.ui.xaml.controls
+import winrt.microsoft.ui.xaml as microsoft_ui_xaml
+import winrt.microsoft.ui.xaml.controls as microsoft_ui_xaml_controls
 
 from winrt.microsoft.ui.xaml.controls.primitives import AnimationDirection, ComponentResourceLocation, CornerRadiusFilterKind, CornerRadiusToThicknessConverterKind, EdgeTransitionLocation, FlyoutPlacementMode, FlyoutShowMode, GeneratorDirection, GroupHeaderPlacement, ListViewItemPresenterCheckMode, ListViewItemPresenterSelectionIndicatorMode, PlacementMode, PopupPlacementMode, ScrollEventType, ScrollSnapPointsAlignment, ScrollingIndicatorMode, SliderSnapsTo, SnapPointsAlignment, TickPlacement
 from winrt.microsoft.ui.xaml.controls.primitives import DragCompletedEventHandler, DragDeltaEventHandler, DragStartedEventHandler, ItemsChangedEventHandler, RangeBaseValueChangedEventHandler, ScrollEventHandler
@@ -23,7 +23,7 @@ Self = typing.TypeVar('Self')
 @typing.final
 class ColorPickerSlider_Static(type):
     @_property
-    def color_channel_property(cls) -> typing.Optional[winrt.microsoft.ui.xaml.DependencyProperty]: ...
+    def color_channel_property(cls) -> typing.Optional[microsoft_ui_xaml.DependencyProperty]: ...
 
 @typing.final
 class ColorPickerSlider(winrt.system.Object, metaclass=ColorPickerSlider_Static):
@@ -31,9 +31,9 @@ class ColorPickerSlider(winrt.system.Object, metaclass=ColorPickerSlider_Static)
     def _from(obj: winrt.system.Object, /) -> ColorPickerSlider: ...
     def __new__(cls: typing.Type[ColorPickerSlider]) -> ColorPickerSlider:...
     @_property
-    def color_channel(self) -> winrt.microsoft.ui.xaml.controls.ColorPickerHsvChannel: ...
+    def color_channel(self) -> microsoft_ui_xaml_controls.ColorPickerHsvChannel: ...
     @color_channel.setter
-    def color_channel(self, value: winrt.microsoft.ui.xaml.controls.ColorPickerHsvChannel) -> None: ...
+    def color_channel(self, value: microsoft_ui_xaml_controls.ColorPickerHsvChannel) -> None: ...
 
 @typing.final
 class TabViewListView(winrt.system.Object):

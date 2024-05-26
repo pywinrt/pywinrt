@@ -9,14 +9,14 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation
-import winrt.windows.ui.windowmanagement
+import winrt.windows.foundation as windows_foundation
+import winrt.windows.ui.windowmanagement as windows_ui_windowmanagement
 
 Self = typing.TypeVar('Self')
 
 @typing.final
 class WindowManagementPreview_Static(type):
-    def set_preferred_min_size(cls, window: typing.Optional[winrt.windows.ui.windowmanagement.AppWindow], preferred_frame_min_size: winrt.windows.foundation.Size, /) -> None: ...
+    def set_preferred_min_size(cls, window: typing.Optional[windows_ui_windowmanagement.AppWindow], preferred_frame_min_size: windows_foundation.Size, /) -> None: ...
 
 @typing.final
 class WindowManagementPreview(winrt.system.Object, metaclass=WindowManagementPreview_Static):
