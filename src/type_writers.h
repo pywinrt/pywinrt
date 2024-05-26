@@ -305,6 +305,10 @@ namespace pywinrt
             {
                 write("winrt::guid");
             }
+            else if (ns == "System" && name == "Object")
+            {
+                write("winrt::Windows::Foundation::IUnknown");
+            }
             else
             {
                 write(find_required(type));
@@ -319,6 +323,10 @@ namespace pywinrt
             if (ns == "System" && name == "Guid")
             {
                 write("_uuid.UUID");
+            }
+            else if (ns == "System" && name == "Object")
+            {
+                write("winrt.system.Object");
             }
             else
             {
