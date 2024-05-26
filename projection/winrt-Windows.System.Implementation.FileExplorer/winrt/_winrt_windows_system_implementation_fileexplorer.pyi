@@ -9,8 +9,8 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation
-import winrt.windows.web.http
+import winrt.windows.foundation as windows_foundation
+import winrt.windows.web.http as windows_web_http
 
 Self = typing.TypeVar('Self')
 
@@ -26,8 +26,8 @@ class SysStorageProviderEventReceivedEventArgs(winrt.system.Object):
 class ISysStorageProviderEventSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISysStorageProviderEventSource: ...
-    def add_event_received(self, handler: winrt.windows.foundation.TypedEventHandler[ISysStorageProviderEventSource, SysStorageProviderEventReceivedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
-    def remove_event_received(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    def add_event_received(self, handler: windows_foundation.TypedEventHandler[ISysStorageProviderEventSource, SysStorageProviderEventReceivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    def remove_event_received(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
 class ISysStorageProviderHandlerFactory(winrt.system.Object):
@@ -40,5 +40,5 @@ class ISysStorageProviderHandlerFactory(winrt.system.Object):
 class ISysStorageProviderHttpRequestProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISysStorageProviderHttpRequestProvider: ...
-    def send_request_async(self, request: typing.Optional[winrt.windows.web.http.HttpRequestMessage], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.web.http.HttpResponseMessage]: ...
+    def send_request_async(self, request: typing.Optional[windows_web_http.HttpRequestMessage], /) -> windows_foundation.IAsyncOperation[windows_web_http.HttpResponseMessage]: ...
 

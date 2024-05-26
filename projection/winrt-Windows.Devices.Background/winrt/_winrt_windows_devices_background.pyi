@@ -9,7 +9,7 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation
+import winrt.windows.foundation as windows_foundation
 
 Self = typing.TypeVar('Self')
 

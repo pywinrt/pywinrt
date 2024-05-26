@@ -9,7 +9,7 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.graphics.directx
+import winrt.windows.graphics.directx as windows_graphics_directx
 
 from winrt.windows.graphics.directx.direct3d11 import Direct3DBindings, Direct3DUsage
 
@@ -25,9 +25,9 @@ class Direct3DMultisampleDescription:
 class Direct3DSurfaceDescription:
     width: winrt.system.Int32
     height: winrt.system.Int32
-    format: winrt.windows.graphics.directx.DirectXPixelFormat
+    format: windows_graphics_directx.DirectXPixelFormat
     multisample_description: Direct3DMultisampleDescription
-    def __init__(self, width: winrt.system.Int32, height: winrt.system.Int32, format: winrt.windows.graphics.directx.DirectXPixelFormat, multisample_description: Direct3DMultisampleDescription) -> None: ...
+    def __init__(self, width: winrt.system.Int32, height: winrt.system.Int32, format: windows_graphics_directx.DirectXPixelFormat, multisample_description: Direct3DMultisampleDescription) -> None: ...
 
 @typing.final
 class IDirect3DDevice(winrt.system.Object):

@@ -9,13 +9,13 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.ui
+import winrt.windows.ui as windows_ui
 
 Self = typing.TypeVar('Self')
 
 @typing.final
 class ToastOcclusionManagerPreview_Static(type):
-    def set_toast_window_margin(cls, app_window_id: winrt.windows.ui.WindowId, margin: winrt.system.Double, /) -> None: ...
+    def set_toast_window_margin(cls, app_window_id: windows_ui.WindowId, margin: winrt.system.Double, /) -> None: ...
 
 @typing.final
 class ToastOcclusionManagerPreview(winrt.system.Object, metaclass=ToastOcclusionManagerPreview_Static):

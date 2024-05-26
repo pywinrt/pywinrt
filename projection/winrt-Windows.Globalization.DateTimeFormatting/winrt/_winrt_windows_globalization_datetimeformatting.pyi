@@ -9,8 +9,8 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation
-import winrt.windows.foundation.collections
+import winrt.windows.foundation as windows_foundation
+import winrt.windows.foundation.collections as windows_foundation_collections
 
 from winrt.windows.globalization.datetimeformatting import DayFormat, DayOfWeekFormat, HourFormat, MinuteFormat, MonthFormat, SecondFormat, YearFormat
 
@@ -72,11 +72,11 @@ class DateTimeFormatter(winrt.system.Object, metaclass=DateTimeFormatter_Static)
     @_property
     def include_year(self) -> YearFormat: ...
     @_property
-    def languages(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
+    def languages(self) -> typing.Optional[windows_foundation_collections.IVectorView[str]]: ...
     @_property
     def calendar(self) -> str: ...
     @_property
-    def patterns(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
+    def patterns(self) -> typing.Optional[windows_foundation_collections.IVectorView[str]]: ...
     @_property
     def resolved_geographic_region(self) -> str: ...
     @_property

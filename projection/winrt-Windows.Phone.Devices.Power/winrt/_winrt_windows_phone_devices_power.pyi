@@ -9,7 +9,7 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation
+import winrt.windows.foundation as windows_foundation
 
 Self = typing.TypeVar('Self')
 
@@ -21,8 +21,8 @@ class Battery_Static(type):
 class Battery(winrt.system.Object, metaclass=Battery_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Battery: ...
-    def add_remaining_charge_percent_changed(self, change_handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
-    def remove_remaining_charge_percent_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    def add_remaining_charge_percent_changed(self, change_handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    def remove_remaining_charge_percent_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @_property
     def remaining_charge_percent(self) -> winrt.system.Int32: ...
     @_property

@@ -9,14 +9,14 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation
-import winrt.windows.foundation.collections
+import winrt.windows.foundation as windows_foundation
+import winrt.windows.foundation.collections as windows_foundation_collections
 
 Self = typing.TypeVar('Self')
 
 @typing.final
 class InstalledDesktopApp_Static(type):
-    def get_inventory_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[InstalledDesktopApp]]: ...
+    def get_inventory_async(cls) -> windows_foundation.IAsyncOperation[windows_foundation_collections.IVectorView[InstalledDesktopApp]]: ...
 
 @typing.final
 class InstalledDesktopApp(winrt.system.Object, metaclass=InstalledDesktopApp_Static):

@@ -9,16 +9,16 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.applicationmodel.activation
-import winrt.windows.foundation.numerics
-import winrt.windows.perception.spatial
+import winrt.windows.applicationmodel.activation as windows_applicationmodel_activation
+import winrt.windows.foundation.numerics as windows_foundation_numerics
+import winrt.windows.perception.spatial as windows_perception_spatial
 
 Self = typing.TypeVar('Self')
 
 @typing.final
 class HolographicApplicationPreview_Static(type):
     def is_current_view_presented_on_holographic_display(cls) -> bool: ...
-    def is_holographic_activation(cls, activated_event_args: typing.Optional[winrt.windows.applicationmodel.activation.IActivatedEventArgs], /) -> bool: ...
+    def is_holographic_activation(cls, activated_event_args: typing.Optional[windows_applicationmodel_activation.IActivatedEventArgs], /) -> bool: ...
 
 @typing.final
 class HolographicApplicationPreview(winrt.system.Object, metaclass=HolographicApplicationPreview_Static):
@@ -35,7 +35,7 @@ class HolographicKeyboardPlacementOverridePreview(winrt.system.Object, metaclass
     def _from(obj: winrt.system.Object, /) -> HolographicKeyboardPlacementOverridePreview: ...
     def reset_placement_override(self) -> None: ...
     @typing.overload
-    def set_placement_override(self, coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem], top_center_position: winrt.windows.foundation.numerics.Vector3, normal: winrt.windows.foundation.numerics.Vector3, /) -> None: ...
+    def set_placement_override(self, coordinate_system: typing.Optional[windows_perception_spatial.SpatialCoordinateSystem], top_center_position: windows_foundation_numerics.Vector3, normal: windows_foundation_numerics.Vector3, /) -> None: ...
     @typing.overload
-    def set_placement_override(self, coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem], top_center_position: winrt.windows.foundation.numerics.Vector3, normal: winrt.windows.foundation.numerics.Vector3, max_size: winrt.windows.foundation.numerics.Vector2, /) -> None: ...
+    def set_placement_override(self, coordinate_system: typing.Optional[windows_perception_spatial.SpatialCoordinateSystem], top_center_position: windows_foundation_numerics.Vector3, normal: windows_foundation_numerics.Vector3, max_size: windows_foundation_numerics.Vector2, /) -> None: ...
 

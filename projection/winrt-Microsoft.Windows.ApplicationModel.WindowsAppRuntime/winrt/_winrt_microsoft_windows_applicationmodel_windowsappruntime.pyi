@@ -9,7 +9,7 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation
+import winrt.windows.foundation as windows_foundation
 
 from winrt.microsoft.windows.applicationmodel.windowsappruntime import DeploymentStatus
 
@@ -46,9 +46,9 @@ class DeploymentManager(winrt.system.Object, metaclass=DeploymentManager_Static)
 class DeploymentResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeploymentResult: ...
-    def __new__(cls: typing.Type[DeploymentResult], status: DeploymentStatus, extended_error: winrt.windows.foundation.HResult) -> DeploymentResult:...
+    def __new__(cls: typing.Type[DeploymentResult], status: DeploymentStatus, extended_error: windows_foundation.HResult) -> DeploymentResult:...
     @_property
-    def extended_error(self) -> winrt.windows.foundation.HResult: ...
+    def extended_error(self) -> windows_foundation.HResult: ...
     @_property
     def status(self) -> DeploymentStatus: ...
 

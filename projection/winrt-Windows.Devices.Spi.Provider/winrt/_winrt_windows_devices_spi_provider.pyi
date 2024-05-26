@@ -9,8 +9,8 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation
-import winrt.windows.foundation.collections
+import winrt.windows.foundation as windows_foundation
+import winrt.windows.foundation.collections as windows_foundation_collections
 
 from winrt.windows.devices.spi.provider import ProviderSpiMode, ProviderSpiSharingMode
 
@@ -68,5 +68,5 @@ class ISpiDeviceProvider(winrt.system.Object):
 class ISpiProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpiProvider: ...
-    def get_controllers_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[ISpiControllerProvider]]: ...
+    def get_controllers_async(self) -> windows_foundation.IAsyncOperation[windows_foundation_collections.IVectorView[ISpiControllerProvider]]: ...
 

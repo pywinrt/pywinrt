@@ -9,7 +9,7 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation.collections
+import winrt.windows.foundation.collections as windows_foundation_collections
 
 from winrt.windows.devices.adc.provider import ProviderAdcChannelMode
 
@@ -40,5 +40,5 @@ class IAdcControllerProvider(winrt.system.Object):
 class IAdcProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAdcProvider: ...
-    def get_controllers(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[IAdcControllerProvider]]: ...
+    def get_controllers(self) -> typing.Optional[windows_foundation_collections.IVectorView[IAdcControllerProvider]]: ...
 

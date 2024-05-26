@@ -9,8 +9,8 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation.numerics
-import winrt.windows.perception.spatial
+import winrt.windows.foundation.numerics as windows_foundation_numerics
+import winrt.windows.perception.spatial as windows_perception_spatial
 
 Self = typing.TypeVar('Self')
 
@@ -24,7 +24,7 @@ class HolographicKeyboard(winrt.system.Object, metaclass=HolographicKeyboard_Sta
     def _from(obj: winrt.system.Object, /) -> HolographicKeyboard: ...
     def reset_placement_override(self) -> None: ...
     @typing.overload
-    def set_placement_override(self, coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem], top_center_position: winrt.windows.foundation.numerics.Vector3, orientation: winrt.windows.foundation.numerics.Quaternion, /) -> None: ...
+    def set_placement_override(self, coordinate_system: typing.Optional[windows_perception_spatial.SpatialCoordinateSystem], top_center_position: windows_foundation_numerics.Vector3, orientation: windows_foundation_numerics.Quaternion, /) -> None: ...
     @typing.overload
-    def set_placement_override(self, coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem], top_center_position: winrt.windows.foundation.numerics.Vector3, orientation: winrt.windows.foundation.numerics.Quaternion, max_size: winrt.windows.foundation.numerics.Vector2, /) -> None: ...
+    def set_placement_override(self, coordinate_system: typing.Optional[windows_perception_spatial.SpatialCoordinateSystem], top_center_position: windows_foundation_numerics.Vector3, orientation: windows_foundation_numerics.Quaternion, max_size: windows_foundation_numerics.Vector2, /) -> None: ...
 

@@ -9,13 +9,13 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
-import winrt.windows.foundation
+import winrt.windows.foundation as windows_foundation
 
 Self = typing.TypeVar('Self')
 
 @typing.final
 class CorePerceptionAutomation_Static(type):
-    def set_activation_factory_provider(cls, provider: typing.Optional[winrt.windows.foundation.IGetActivationFactory], /) -> None: ...
+    def set_activation_factory_provider(cls, provider: typing.Optional[windows_foundation.IGetActivationFactory], /) -> None: ...
 
 @typing.final
 class CorePerceptionAutomation(winrt.system.Object, metaclass=CorePerceptionAutomation_Static):

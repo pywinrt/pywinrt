@@ -463,11 +463,17 @@ namespace pywinrt
             }
             else
             {
-                write("winrt.");
-
+                // same as write_python_subpackage_alias() but we can't call that here
                 for (auto c : ns)
                 {
-                    write(static_cast<char>(::tolower(c)));
+                    if (c == '.')
+                    {
+                        write("_");
+                    }
+                    else
+                    {
+                        write(static_cast<char>(::tolower(c)));
+                    }
                 }
 
                 write(".@", name);
