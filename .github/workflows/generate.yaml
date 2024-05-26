@@ -9,10 +9,13 @@ on:
       - .github/workflows/generate.yaml
       - projection/winrt-sdk/src/winrt_sdk/cppwinrt/**
       - projection/winrt-sdk/src/winrt_sdk/pywinrt/**
+      - projection/winrt-*/winrt/**/__init__.py
+      - projection/winrt-*/winrt/_winrt_*.pyi
       - projection/winrt-*/py.*.cpp
       - projection/winrt-*/pyproject.toml
-      - projection/winrt-*/setup.py
       - projection/winrt-*/README.md
+      - projection/winrt-*/requirements.txt
+      - projection/winrt-*/setup.py
       - src/**
       - scripts/build.cmd
       - scripts/fetch-tools.ps1
