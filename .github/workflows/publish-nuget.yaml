@@ -11,5 +11,5 @@ jobs:
       - name: build and publish
         run: |
           $version = $env:GITHUB_REF.Replace("refs/tags/v", "")
-          ./scripts/build_pywinrt_nuget.cmd "$version"
+          dotnet pack PyWinRT -o . /p:Version="$version"
           nuget push "PyWinRT.$version.nupkg" -ApiKey "${{ secrets.NUGET_API_KEY }}" -Source 'https://api.nuget.org/v3/index.json'

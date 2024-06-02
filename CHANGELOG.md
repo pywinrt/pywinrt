@@ -9,6 +9,9 @@
   interop package.
 - Added `_iids_` and `_runtime_class_name_` properties to `system.Object`.
 
+### Changed
+- PyWinRT.exe is now a dotnet tool.
+
 ### Fixed
 - Fixed possible crash when checking if API is available at runtime.
 - Fixed memory leak when converting Python object to `char16_t` or `hstring`.

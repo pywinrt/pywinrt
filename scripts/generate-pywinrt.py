@@ -12,25 +12,25 @@ if "--nuget" in sys.argv:
 
     if not PYWINRT_EXE.exists():
         raise RuntimeError(
-            "pywinrt.exe not found. Please run `./scripts/fetch-tools.cmd`"
+            "PyWinRT.exe not found. Please run `./scripts/fetch-tools.cmd`"
         )
 elif "--debug" in sys.argv:
     PYWINRT_EXE = (
-        REPO_ROOT_PATH / "_build" / "Windows" / "x86" / "Debug" / "pywinrt.exe"
+        REPO_ROOT_PATH / "PyWinRT" / "bin" / "Debug" / "net8.0" / "PyWinRT.exe"
     )
 
     if not PYWINRT_EXE.exists():
         raise RuntimeError(
-            "pywinrt.exe not found. Please run `./vsdevcmd-build.cmd --build-type Debug`"
+            "PyWinRT.exe not found. Please run `dotnet build PyWinRT`"
         )
 else:
     PYWINRT_EXE = (
-        REPO_ROOT_PATH / "_build" / "Windows" / "x86" / "Release" / "pywinrt.exe"
+        REPO_ROOT_PATH / "PyWinRT" / "bin" / "Release" / "net8.0" / "PyWinRT.exe"
     )
 
     if not PYWINRT_EXE.exists():
         raise RuntimeError(
-            "pywinrt.exe not found. Please run `./scripts/vsdevcmd-build.cmd`"
+            "PyWinRT.exe not found. Please run `dotnet build PyWinRT -c Release`"
         )
 
 
@@ -56,11 +56,11 @@ if "--minimal" in sys.argv:
 subprocess.check_call(
     [
         PYWINRT_EXE,
-        "-input",
+        "--input",
         WINDOWS_SDK,
-        "-output",
+        "--output",
         PROJECTION_PATH,
-        "-header-path",
+        "--header-path",
         SDK_PACKAGE_PATH,
     ]
     + include_args
@@ -85,15 +85,15 @@ WINDOWS_APP_SDK_PACKAGE_PATH = (
 subprocess.check_call(
     [
         PYWINRT_EXE,
-        "-input",
+        "--input",
         WINDOWS_APP_SDK_PACKAGE_METADATA,
-        "-input",
+        "--input",
         WINDOWS_APP_SDK_PACKAGE_METADATA2,
-        "-reference",
+        "--reference",
         WINDOWS_SDK,
-        "-output",
+        "--output",
         PROJECTION_PATH,
-        "-header-path",
+        "--header-path",
         WINDOWS_APP_SDK_PACKAGE_PATH,
     ]
 )
@@ -112,11 +112,11 @@ TEST_PACKAGE_METADATA = (
 subprocess.check_call(
     [
         PYWINRT_EXE,
-        "-input",
+        "--input",
         TEST_PACKAGE_METADATA,
-        "-reference",
+        "--reference",
         WINDOWS_SDK,
-        "-output",
+        "--output",
         PROJECTION_PATH,
     ]
 )
