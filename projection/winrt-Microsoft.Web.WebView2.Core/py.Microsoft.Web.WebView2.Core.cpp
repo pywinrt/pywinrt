@@ -12206,7 +12206,8 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             else
             {
                 return nullptr;
-            }}
+            }
+        }
         catch (...)
         {
             py::to_PyErr();

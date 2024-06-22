@@ -401,7 +401,8 @@ namespace py::impl::Windows::Foundation::Collections
                 else
                 {
                     return nullptr;
-                }}
+                }
+            }
             catch (...)
             {
                 py::to_PyErr();
