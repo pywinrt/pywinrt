@@ -69,8 +69,7 @@ static class IterWriterExtensions
             w.Indent++;
             w.WriteLine("return nullptr;");
             w.Indent--;
-            // FIXME: make this WriteLine
-            w.Write("}");
+            w.WriteLine("}");
         });
     }
 }

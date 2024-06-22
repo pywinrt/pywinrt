@@ -2598,7 +2598,8 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
             else
             {
                 return nullptr;
-            }}
+            }
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -3104,7 +3105,8 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
             else
             {
                 return nullptr;
-            }}
+            }
+        }
         catch (...)
         {
             py::to_PyErr();

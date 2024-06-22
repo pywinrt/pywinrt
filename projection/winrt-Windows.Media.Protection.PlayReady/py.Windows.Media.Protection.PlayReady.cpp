@@ -2599,7 +2599,8 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             else
             {
                 return nullptr;
-            }}
+            }
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -5241,7 +5242,8 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             else
             {
                 return nullptr;
-            }}
+            }
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -6643,7 +6645,8 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             else
             {
                 return nullptr;
-            }}
+            }
+        }
         catch (...)
         {
             py::to_PyErr();
