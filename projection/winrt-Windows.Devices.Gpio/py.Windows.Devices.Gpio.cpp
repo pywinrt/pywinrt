@@ -1038,8 +1038,8 @@ namespace py::cpp::Windows::Devices::Gpio
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Gpio::GpioSharingMode>(args, 1);
-                winrt::Windows::Devices::Gpio::GpioPin param2 { nullptr };
-                winrt::Windows::Devices::Gpio::GpioOpenStatus param3 {  };
+                winrt::Windows::Devices::Gpio::GpioPin param2{nullptr};
+                winrt::Windows::Devices::Gpio::GpioOpenStatus param3{};
 
                 auto return_value = self->obj.TryOpenPin(param0, param1, param2, param3);
 

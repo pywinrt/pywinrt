@@ -583,8 +583,8 @@ namespace py::impl::Windows::Foundation::Collections
                         return nullptr;
                     }
 
-                    winrt::Windows::Foundation::Collections::IMapView<K, V> param0 { nullptr };
-                    winrt::Windows::Foundation::Collections::IMapView<K, V> param1 { nullptr };
+                    winrt::Windows::Foundation::Collections::IMapView<K, V> param0{nullptr};
+                    winrt::Windows::Foundation::Collections::IMapView<K, V> param1{nullptr};
 
                     _obj.Split(param0, param1);
 
@@ -1570,7 +1570,7 @@ namespace py::impl::Windows::Foundation::Collections
                     }
 
                     auto param0 = py::convert_to<T>(args, 0);
-                    uint32_t param1 {  };
+                    uint32_t param1{};
 
                     auto return_value = _obj.IndexOf(param0, param1);
 
@@ -2022,7 +2022,7 @@ namespace py::impl::Windows::Foundation::Collections
                     }
 
                     auto param0 = py::convert_to<T>(args, 0);
-                    uint32_t param1 {  };
+                    uint32_t param1{};
 
                     auto return_value = _obj.IndexOf(param0, param1);
 
@@ -2357,7 +2357,7 @@ namespace py::impl::Windows::Foundation::Collections
                     }
 
                     auto param0 = py::convert_to<T>(args, 0);
-                    uint32_t param1 {  };
+                    uint32_t param1{};
 
                     auto return_value = _obj.IndexOf(param0, param1);
 

@@ -1897,7 +1897,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 }
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -3680,7 +3680,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 }
 
                 auto param0 = py::convert_to<double>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -4651,7 +4651,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
-                winrt::Windows::Foundation::Point param1 {  };
+                winrt::Windows::Foundation::Point param1{};
 
                 auto return_value = self->obj.TryTransform(param0, param1);
 
@@ -5214,7 +5214,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 }
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Geometry>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -6720,7 +6720,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 }
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::GradientStop>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -10137,7 +10137,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 }
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PathFigure>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -11094,7 +11094,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 }
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PathSegment>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -12702,7 +12702,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -17129,7 +17129,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 }
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 

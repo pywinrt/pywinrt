@@ -460,7 +460,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::Pnp::PnpObject>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 

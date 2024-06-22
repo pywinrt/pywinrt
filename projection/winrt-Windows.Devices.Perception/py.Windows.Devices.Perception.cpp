@@ -1915,7 +1915,7 @@ namespace py::cpp::Windows::Devices::Perception
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Foundation::Numerics::float4x4 param1 {  };
+                winrt::Windows::Foundation::Numerics::float4x4 param1{};
 
                 auto return_value = self->obj.TryGetTransformTo(param0, param1);
 
@@ -4503,7 +4503,7 @@ namespace py::cpp::Windows::Devices::Perception
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Foundation::Numerics::float4x4 param1 {  };
+                winrt::Windows::Foundation::Numerics::float4x4 param1{};
 
                 auto return_value = self->obj.TryGetTransformTo(param0, param1);
 
@@ -6702,7 +6702,7 @@ namespace py::cpp::Windows::Devices::Perception
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Foundation::Numerics::float4x4 param1 {  };
+                winrt::Windows::Foundation::Numerics::float4x4 param1{};
 
                 auto return_value = self->obj.TryGetTransformTo(param0, param1);
 

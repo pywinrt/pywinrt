@@ -11493,7 +11493,7 @@ namespace py::cpp::Windows::UI::WebUI
                 }
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
-                winrt::Windows::Web::UI::WebViewControlDeferredPermissionRequest param1 { nullptr };
+                winrt::Windows::Web::UI::WebViewControlDeferredPermissionRequest param1{nullptr};
 
                 self->obj.GetDeferredPermissionRequestById(param0, param1);
 

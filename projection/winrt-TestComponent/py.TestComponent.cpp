@@ -1727,7 +1727,7 @@ namespace py::cpp::TestComponent
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
-                winrt::Windows::Foundation::Collections::IIterable<winrt::hstring> param1 { nullptr };
+                winrt::Windows::Foundation::Collections::IIterable<winrt::hstring> param1{nullptr};
 
                 auto return_value = self->obj.Collection1(param0, param1);
 
@@ -1803,7 +1803,7 @@ namespace py::cpp::TestComponent
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(args, 0);
-                winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>> param1 { nullptr };
+                winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>> param1{nullptr};
 
                 auto return_value = self->obj.Collection2(param0, param1);
 
@@ -1879,7 +1879,7 @@ namespace py::cpp::TestComponent
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(args, 0);
-                winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring> param1 { nullptr };
+                winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring> param1{nullptr};
 
                 auto return_value = self->obj.Collection3(param0, param1);
 
@@ -1955,7 +1955,7 @@ namespace py::cpp::TestComponent
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(args, 0);
-                winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring> param1 { nullptr };
+                winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring> param1{nullptr};
 
                 auto return_value = self->obj.Collection4(param0, param1);
 
@@ -2031,7 +2031,7 @@ namespace py::cpp::TestComponent
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::hstring>>(args, 0);
-                winrt::Windows::Foundation::Collections::IVector<winrt::hstring> param1 { nullptr };
+                winrt::Windows::Foundation::Collections::IVector<winrt::hstring> param1{nullptr};
 
                 auto return_value = self->obj.Collection5(param0, param1);
 
@@ -2107,7 +2107,7 @@ namespace py::cpp::TestComponent
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(args, 0);
-                winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring> param1 { nullptr };
+                winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring> param1{nullptr};
 
                 auto return_value = self->obj.Collection6(param0, param1);
 
@@ -2247,7 +2247,7 @@ namespace py::cpp::TestComponent
                 }
 
                 auto param0 = py::convert_to<bool>(args, 0);
-                bool param1 {  };
+                bool param1{};
 
                 auto return_value = self->obj.Param1(param0, param1);
 
@@ -2291,7 +2291,7 @@ namespace py::cpp::TestComponent
                 }
 
                 auto param0 = py::convert_to<double>(args, 0);
-                double param1 {  };
+                double param1{};
 
                 auto return_value = self->obj.Param10(param0, param1);
 
@@ -2367,7 +2367,7 @@ namespace py::cpp::TestComponent
                 }
 
                 auto param0 = py::convert_to<char16_t>(args, 0);
-                char16_t param1 {  };
+                char16_t param1{};
 
                 auto return_value = self->obj.Param11(param0, param1);
 
@@ -2443,7 +2443,7 @@ namespace py::cpp::TestComponent
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::hstring param1 {  };
+                winrt::hstring param1{};
 
                 auto return_value = self->obj.Param12(param0, param1);
 
@@ -2520,7 +2520,7 @@ namespace py::cpp::TestComponent
 
                 auto param0 = py::convert_to<winrt::TestComponent::Blittable>(args, 0);
                 auto param1 = py::convert_to<winrt::TestComponent::Blittable>(args, 1);
-                winrt::TestComponent::Blittable param2 {  };
+                winrt::TestComponent::Blittable param2{};
 
                 auto return_value = self->obj.Param13(param0, param1, param2);
 
@@ -2597,7 +2597,7 @@ namespace py::cpp::TestComponent
 
                 auto param0 = py::convert_to<winrt::TestComponent::NonBlittable>(args, 0);
                 auto param1 = py::convert_to<winrt::TestComponent::NonBlittable>(args, 1);
-                winrt::TestComponent::NonBlittable param2 {  };
+                winrt::TestComponent::NonBlittable param2{};
 
                 auto return_value = self->obj.Param14(param0, param1, param2);
 
@@ -2674,7 +2674,7 @@ namespace py::cpp::TestComponent
 
                 auto param0 = py::convert_to<winrt::TestComponent::Nested>(args, 0);
                 auto param1 = py::convert_to<winrt::TestComponent::Nested>(args, 1);
-                winrt::TestComponent::Nested param2 {  };
+                winrt::TestComponent::Nested param2{};
 
                 auto return_value = self->obj.Param15(param0, param1, param2);
 
@@ -2782,7 +2782,7 @@ namespace py::cpp::TestComponent
                 }
 
                 auto param0 = py::convert_to<uint8_t>(args, 0);
-                uint8_t param1 {  };
+                uint8_t param1{};
 
                 auto return_value = self->obj.Param2(param0, param1);
 
@@ -2858,7 +2858,7 @@ namespace py::cpp::TestComponent
                 }
 
                 auto param0 = py::convert_to<uint16_t>(args, 0);
-                uint16_t param1 {  };
+                uint16_t param1{};
 
                 auto return_value = self->obj.Param3(param0, param1);
 
@@ -2934,7 +2934,7 @@ namespace py::cpp::TestComponent
                 }
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.Param4(param0, param1);
 
@@ -3010,7 +3010,7 @@ namespace py::cpp::TestComponent
                 }
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
-                uint64_t param1 {  };
+                uint64_t param1{};
 
                 auto return_value = self->obj.Param5(param0, param1);
 
@@ -3086,7 +3086,7 @@ namespace py::cpp::TestComponent
                 }
 
                 auto param0 = py::convert_to<int16_t>(args, 0);
-                int16_t param1 {  };
+                int16_t param1{};
 
                 auto return_value = self->obj.Param6(param0, param1);
 
@@ -3162,7 +3162,7 @@ namespace py::cpp::TestComponent
                 }
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
-                int32_t param1 {  };
+                int32_t param1{};
 
                 auto return_value = self->obj.Param7(param0, param1);
 
@@ -3238,7 +3238,7 @@ namespace py::cpp::TestComponent
                 }
 
                 auto param0 = py::convert_to<int64_t>(args, 0);
-                int64_t param1 {  };
+                int64_t param1{};
 
                 auto return_value = self->obj.Param8(param0, param1);
 
@@ -3314,7 +3314,7 @@ namespace py::cpp::TestComponent
                 }
 
                 auto param0 = py::convert_to<float>(args, 0);
-                float param1 {  };
+                float param1{};
 
                 auto return_value = self->obj.Param9(param0, param1);
 

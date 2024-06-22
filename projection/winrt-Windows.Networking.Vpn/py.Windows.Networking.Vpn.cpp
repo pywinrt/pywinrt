@@ -807,7 +807,7 @@ namespace py::cpp::Windows::Networking::Vpn
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnDataPathType>(args, 0);
-                winrt::Windows::Networking::Vpn::VpnPacketBuffer param1 { nullptr };
+                winrt::Windows::Networking::Vpn::VpnPacketBuffer param1{nullptr};
 
                 self->obj.RequestVpnPacketBuffer(param0, param1);
 
@@ -10622,7 +10622,7 @@ namespace py::cpp::Windows::Networking::Vpn
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnChannel>(args, 0);
-                winrt::Windows::Networking::Vpn::VpnPacketBuffer param1 { nullptr };
+                winrt::Windows::Networking::Vpn::VpnPacketBuffer param1{nullptr};
 
                 self->obj.GetKeepAlivePayload(param0, param1);
 

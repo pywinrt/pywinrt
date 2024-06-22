@@ -1048,7 +1048,6 @@ static class WriterExtensions
                 w.WriteLine($"auto {paramName} = py::convert_to<{typeName}>({args(param.Index)});");
                 break;
             case ParamCategory.Out:
-                // FIXME: remove extra whitespace and nullptr
                 var elementType = param.ParameterType.GetElementType();
                 var value =
                     elementType.FullName == "System.String"
@@ -1056,7 +1055,7 @@ static class WriterExtensions
                     || elementType.IsValueType
                         ? ""
                         : "nullptr";
-                w.WriteLine($"{typeName} {paramName} {{ {value} }};");
+                w.WriteLine($"{typeName} {paramName}{{{value}}};");
                 break;
             case ParamCategory.PassArray:
             case ParamCategory.FillArray:

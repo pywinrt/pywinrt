@@ -2229,7 +2229,7 @@ namespace py::cpp::Windows::UI::Shell
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Shell::WindowTab>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 

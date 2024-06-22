@@ -1602,7 +1602,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
-                float param2 {  };
+                float param2{};
 
                 auto return_value = self->obj.GetRegularSnapPoints(param0, param1, param2);
 
@@ -16439,7 +16439,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
-                float param2 {  };
+                float param2{};
 
                 auto return_value = self->obj.GetRegularSnapPoints(param0, param1, param2);
 
@@ -17602,8 +17602,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
-                int32_t param1 {  };
-                int32_t param2 {  };
+                int32_t param1{};
+                int32_t param2{};
 
                 self->obj.GetInsertionIndexes(param0, param1, param2);
 
@@ -17680,7 +17680,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
-                float param2 {  };
+                float param2{};
 
                 auto return_value = self->obj.GetRegularSnapPoints(param0, param1, param2);
 
@@ -19078,7 +19078,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
-                float param2 {  };
+                float param2{};
 
                 auto return_value = self->obj.GetRegularSnapPoints(param0, param1, param2);
 
@@ -28614,7 +28614,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
-                float param2 {  };
+                float param2{};
 
                 auto return_value = self->obj.GetRegularSnapPoints(param0, param1, param2);
 

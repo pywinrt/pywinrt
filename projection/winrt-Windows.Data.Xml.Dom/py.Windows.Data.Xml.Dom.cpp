@@ -10946,7 +10946,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -11461,7 +11461,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::IXmlNode>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 

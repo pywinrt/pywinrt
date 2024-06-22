@@ -619,7 +619,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -1483,7 +1483,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -2234,8 +2234,8 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource> param0 { nullptr };
-                winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource> param1 { nullptr };
+                winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource> param0{nullptr};
+                winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::NamedResource> param1{nullptr};
 
                 self->obj.Split(param0, param1);
 
@@ -2763,8 +2763,8 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::ResourceMap> param0 { nullptr };
-                winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::ResourceMap> param1 { nullptr };
+                winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::ResourceMap> param0{nullptr};
+                winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::ApplicationModel::Resources::Core::ResourceMap> param1{nullptr};
 
                 self->obj.Split(param0, param1);
 
@@ -3439,8 +3439,8 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                     return nullptr;
                 }
 
-                winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring> param0 { nullptr };
-                winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring> param1 { nullptr };
+                winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring> param0{nullptr};
+                winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring> param1{nullptr};
 
                 self->obj.Split(param0, param1);
 
@@ -4209,7 +4209,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 

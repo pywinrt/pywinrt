@@ -92,7 +92,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 }
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
-                winrt::Windows::Foundation::IInspectable param1 {  };
+                winrt::Windows::Foundation::IInspectable param1{};
 
                 auto return_value = self->obj.TryCreateAnimatedVisual(param0, param1);
 
@@ -282,7 +282,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 }
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
-                winrt::Windows::Foundation::IInspectable param1 {  };
+                winrt::Windows::Foundation::IInspectable param1{};
 
                 auto return_value = self->obj.TryCreateAnimatedVisual(param0, param1);
 
@@ -472,7 +472,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 }
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
-                winrt::Windows::Foundation::IInspectable param1 {  };
+                winrt::Windows::Foundation::IInspectable param1{};
 
                 auto return_value = self->obj.TryCreateAnimatedVisual(param0, param1);
 
@@ -662,7 +662,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 }
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
-                winrt::Windows::Foundation::IInspectable param1 {  };
+                winrt::Windows::Foundation::IInspectable param1{};
 
                 auto return_value = self->obj.TryCreateAnimatedVisual(param0, param1);
 
@@ -852,7 +852,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 }
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
-                winrt::Windows::Foundation::IInspectable param1 {  };
+                winrt::Windows::Foundation::IInspectable param1{};
 
                 auto return_value = self->obj.TryCreateAnimatedVisual(param0, param1);
 
@@ -1042,7 +1042,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 }
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
-                winrt::Windows::Foundation::IInspectable param1 {  };
+                winrt::Windows::Foundation::IInspectable param1{};
 
                 auto return_value = self->obj.TryCreateAnimatedVisual(param0, param1);
 
@@ -1232,7 +1232,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 }
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
-                winrt::Windows::Foundation::IInspectable param1 {  };
+                winrt::Windows::Foundation::IInspectable param1{};
 
                 auto return_value = self->obj.TryCreateAnimatedVisual(param0, param1);
 
@@ -1422,7 +1422,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
                 }
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
-                winrt::Windows::Foundation::IInspectable param1 {  };
+                winrt::Windows::Foundation::IInspectable param1{};
 
                 auto return_value = self->obj.TryCreateAnimatedVisual(param0, param1);
 

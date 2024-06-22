@@ -1932,7 +1932,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
-                winrt::Windows::Devices::Geolocation::Geopoint param1 { nullptr };
+                winrt::Windows::Devices::Geolocation::Geopoint param1{nullptr};
 
                 self->obj.GetLocationFromOffset(param0, param1);
 
@@ -1961,7 +1961,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>(args, 1);
-                winrt::Windows::Devices::Geolocation::Geopoint param2 { nullptr };
+                winrt::Windows::Devices::Geolocation::Geopoint param2{nullptr};
 
                 self->obj.GetLocationFromOffset(param0, param1, param2);
 
@@ -2031,7 +2031,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
-                winrt::Windows::Foundation::Point param1 {  };
+                winrt::Windows::Foundation::Point param1{};
 
                 self->obj.GetOffsetFromLocation(param0, param1);
 
@@ -2101,7 +2101,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
-                bool param1 {  };
+                bool param1{};
 
                 self->obj.IsLocationInView(param0, param1);
 
@@ -2455,7 +2455,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
-                winrt::Windows::Devices::Geolocation::Geopoint param1 { nullptr };
+                winrt::Windows::Devices::Geolocation::Geopoint param1{nullptr};
 
                 auto return_value = self->obj.TryGetLocationFromOffset(param0, param1);
 
@@ -2489,7 +2489,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>(args, 1);
-                winrt::Windows::Devices::Geolocation::Geopoint param2 { nullptr };
+                winrt::Windows::Devices::Geolocation::Geopoint param2{nullptr};
 
                 auto return_value = self->obj.TryGetLocationFromOffset(param0, param1, param2);
 
@@ -13717,7 +13717,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheet param1 { nullptr };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheet param1{nullptr};
 
                 auto return_value = winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheet::TryParseFromJson(param0, param1);
 

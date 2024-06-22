@@ -9682,7 +9682,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::IMediaStreamDescriptor>(args, 0);
-                winrt::Windows::Media::Protection::PlayReady::NDMediaStreamType param1 {  };
+                winrt::Windows::Media::Protection::PlayReady::NDMediaStreamType param1{};
 
                 auto return_value = self->obj.GetStreamInformation(param0, param1);
 

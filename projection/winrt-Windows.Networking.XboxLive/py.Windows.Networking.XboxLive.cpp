@@ -248,7 +248,7 @@ namespace py::cpp::Windows::Networking::XboxLive
                 }
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 self->obj.GetSnapshotAsBytes(param0, param1);
 

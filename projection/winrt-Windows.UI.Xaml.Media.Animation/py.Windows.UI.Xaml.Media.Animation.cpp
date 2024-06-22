@@ -2025,7 +2025,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -5743,7 +5743,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -11602,7 +11602,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -13312,7 +13312,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -20903,7 +20903,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Timeline>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -21608,7 +21608,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Transition>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 

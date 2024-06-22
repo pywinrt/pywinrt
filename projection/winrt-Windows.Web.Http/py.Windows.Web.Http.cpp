@@ -252,7 +252,7 @@ namespace py::cpp::Windows::Web::Http
                     return nullptr;
                 }
 
-                uint64_t param0 {  };
+                uint64_t param0{};
 
                 auto return_value = self->obj.TryComputeLength(param0);
 
@@ -1812,7 +1812,7 @@ namespace py::cpp::Windows::Web::Http
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpCookie>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -2437,7 +2437,7 @@ namespace py::cpp::Windows::Web::Http
                     return nullptr;
                 }
 
-                uint64_t param0 {  };
+                uint64_t param0{};
 
                 auto return_value = self->obj.TryComputeLength(param0);
 
@@ -4049,7 +4049,7 @@ namespace py::cpp::Windows::Web::Http
                     return nullptr;
                 }
 
-                uint64_t param0 {  };
+                uint64_t param0{};
 
                 auto return_value = self->obj.TryComputeLength(param0);
 
@@ -4589,7 +4589,7 @@ namespace py::cpp::Windows::Web::Http
                     return nullptr;
                 }
 
-                uint64_t param0 {  };
+                uint64_t param0{};
 
                 auto return_value = self->obj.TryComputeLength(param0);
 
@@ -6270,7 +6270,7 @@ namespace py::cpp::Windows::Web::Http
                     return nullptr;
                 }
 
-                uint64_t param0 {  };
+                uint64_t param0{};
 
                 auto return_value = self->obj.TryComputeLength(param0);
 
@@ -6708,7 +6708,7 @@ namespace py::cpp::Windows::Web::Http
                     return nullptr;
                 }
 
-                uint64_t param0 {  };
+                uint64_t param0{};
 
                 auto return_value = self->obj.TryComputeLength(param0);
 
@@ -7253,7 +7253,7 @@ namespace py::cpp::Windows::Web::Http
                     return nullptr;
                 }
 
-                uint64_t param0 {  };
+                uint64_t param0{};
 
                 auto return_value = self->obj.TryComputeLength(param0);
 
