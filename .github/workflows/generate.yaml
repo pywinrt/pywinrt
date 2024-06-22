@@ -16,10 +16,8 @@ on:
       - projection/winrt-*/README.md
       - projection/winrt-*/requirements.txt
       - projection/winrt-*/setup.py
-      - src/**
-      - scripts/build.cmd
+      - PyWinRT/**
       - scripts/fetch-tools.ps1
-      - scripts/vsdevcmd-build.cmd
       - scripts/generate-cppwinrt.py
       - scripts/generate-pywinrt.py
       - scripts/generate-pyproject.py
@@ -29,7 +27,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-      - run: ./scripts/vsdevcmd-build.cmd
+      - run: dotnet build PyWinRT -c Release
       - run: ./scripts/fetch-tools.ps1 -noPyWinRT
       - run: python3 ./scripts/generate-cppwinrt.py
       - run: python3 ./scripts/generate-pywinrt.py

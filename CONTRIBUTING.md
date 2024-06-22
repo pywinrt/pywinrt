@@ -27,22 +27,18 @@ Once Nuget is installed, run:
 - Black
 - ClangFormat
 
-## Building pywinrt.exe
+## Building PyWinRT.exe
 
-If you are not already in a Visual Studio command prompt, run:
+Building this tool requires .NET 8.0 SDK.
 
-    .\scripts\vsdevcmd-build.cmd
+    dotnet build PyWinRT -c Release
 
-Otherwise you can run:
-
-    .\scripts\build.cmd
-
-The resulting executable will be `_build\Windows\x86\Debug\pywinrt.exe`.
+The resulting executable will be `PyWinRT\bin\Release\net8.0\PyWinRT.exe`.
 
 
 ## Regenerating the projection
 
-Once a local build of `pywinrt.exe` is built, it can be used to update
+Once a local build of `PyWinRT.exe` is built, it can be used to update
 the generated files of the projection. This requires that the Windows SDK is
 installed either via the Visual Studio Installer or standalone.
 
@@ -90,9 +86,9 @@ If using MSYS2 shell for MINGW, this can be simplified to:
 
 ## Building the Nuget package
 
-To build the nuget package for the `pywinrt.exe` tool.
+To build the nuget package for the `PyWinRT.exe` tool.
 
-    .\scripts\build_pywinrt_nuget.cmd
+    dotnet pack PyWinRT
 
 ## Building Python wheels
 
