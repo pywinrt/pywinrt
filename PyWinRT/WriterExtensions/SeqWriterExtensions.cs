@@ -159,12 +159,9 @@ static class SeqWriterExtensions
             w.WriteLine("if (step != 1)");
             w.WriteLine("{");
             w.Indent++;
-            // FIXME: put on single line
-            w.WriteLine("PyErr_SetString(");
-            w.Indent++;
-            w.WriteLine("PyExc_NotImplementedError,");
-            w.WriteLine("\"slices with step other than 1 are not implemented\");");
-            w.Indent--;
+            w.WriteLine(
+                "PyErr_SetString(PyExc_NotImplementedError, \"slices with step other than 1 are not implemented\");"
+            );
             w.WriteLine("return nullptr;");
             w.Indent--;
             w.WriteLine("}");
