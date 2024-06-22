@@ -447,9 +447,8 @@ static class FileWriters
                     w.WriteLine("@typing.overload");
                 }
 
-                // FIXME: space after :
                 w.WriteLine(
-                    $"def __new__(cls: typing.Type[{type.Name}]{paramList}) -> {type.Name}:..."
+                    $"def __new__(cls: typing.Type[{type.Name}]{paramList}) -> {type.Name}: ..."
                 );
             }
 
