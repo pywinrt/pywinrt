@@ -10,7 +10,6 @@ from winrt import _winrt_microsoft_ui_xaml
 if typing.TYPE_CHECKING:
     import winrt.windows.applicationmodel as windows_applicationmodel
 
-
 __all__ = [
     "ApplicationHighContrastAdjustment",
     "ApplicationRequiresPointerMode",

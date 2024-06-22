@@ -10,7 +10,6 @@ from winrt import _winrt_microsoft_ui_xaml_controls
 if typing.TYPE_CHECKING:
     import winrt.windows.foundation as windows_foundation
 
-
 __all__ = [
     "AnnotatedScrollBarScrollingEventKind",
     "AppBarClosedDisplayMode",

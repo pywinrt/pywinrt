@@ -557,9 +557,6 @@ static class FileWriters
             }
 
             w.Indent--;
-
-            // FIXME: remove this
-            w.WriteBlankLine();
         }
 
         w.WriteBlankLine();
