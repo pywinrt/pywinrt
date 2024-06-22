@@ -181,13 +181,12 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { }
     };
 
-    static PyType_Slot _type_slots_AnimationDescription[] = 
-    {
+    static PyType_Slot _type_slots_AnimationDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimationDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimationDescription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimationDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimationDescription) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AnimationDescription = {
@@ -388,13 +387,12 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { }
     };
 
-    static PyType_Slot _type_slots_OpacityAnimation[] = 
-    {
+    static PyType_Slot _type_slots_OpacityAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OpacityAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OpacityAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OpacityAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OpacityAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OpacityAnimation = {
@@ -555,13 +553,12 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { }
     };
 
-    static PyType_Slot _type_slots_PropertyAnimation[] = 
-    {
+    static PyType_Slot _type_slots_PropertyAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PropertyAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PropertyAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PropertyAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PropertyAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PropertyAnimation = {
@@ -822,13 +819,12 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { }
     };
 
-    static PyType_Slot _type_slots_ScaleAnimation[] = 
-    {
+    static PyType_Slot _type_slots_ScaleAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScaleAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScaleAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScaleAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScaleAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ScaleAnimation = {
@@ -989,13 +985,12 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { }
     };
 
-    static PyType_Slot _type_slots_TranslationAnimation[] = 
-    {
+    static PyType_Slot _type_slots_TranslationAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TranslationAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TranslationAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TranslationAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TranslationAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TranslationAnimation = {
@@ -1156,13 +1151,12 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { }
     };
 
-    static PyType_Slot _type_slots_IPropertyAnimation[] = 
-    {
+    static PyType_Slot _type_slots_IPropertyAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPropertyAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPropertyAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPropertyAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPropertyAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPropertyAnimation = {

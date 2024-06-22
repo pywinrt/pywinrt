@@ -322,13 +322,12 @@ namespace py::cpp::Windows::Devices::Gpio
         { }
     };
 
-    static PyType_Slot _type_slots_GpioChangeCounter[] = 
-    {
+    static PyType_Slot _type_slots_GpioChangeCounter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioChangeCounter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GpioChangeCounter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioChangeCounter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioChangeCounter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GpioChangeCounter = {
@@ -844,13 +843,12 @@ namespace py::cpp::Windows::Devices::Gpio
         { }
     };
 
-    static PyType_Slot _type_slots_GpioChangeReader[] = 
-    {
+    static PyType_Slot _type_slots_GpioChangeReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioChangeReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GpioChangeReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioChangeReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioChangeReader) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GpioChangeReader = {
@@ -1125,13 +1123,12 @@ namespace py::cpp::Windows::Devices::Gpio
         { }
     };
 
-    static PyType_Slot _type_slots_GpioController[] = 
-    {
+    static PyType_Slot _type_slots_GpioController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GpioController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GpioController = {
@@ -1563,13 +1560,12 @@ namespace py::cpp::Windows::Devices::Gpio
         { }
     };
 
-    static PyType_Slot _type_slots_GpioPin[] = 
-    {
+    static PyType_Slot _type_slots_GpioPin[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioPin) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GpioPin) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioPin) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioPin) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GpioPin = {
@@ -1650,13 +1646,12 @@ namespace py::cpp::Windows::Devices::Gpio
         { }
     };
 
-    static PyType_Slot _type_slots_GpioPinValueChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GpioPinValueChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioPinValueChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GpioPinValueChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioPinValueChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioPinValueChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GpioPinValueChangedEventArgs = {
@@ -1808,14 +1803,13 @@ namespace py::cpp::Windows::Devices::Gpio
         { }
     };
 
-    static PyType_Slot _type_slots_GpioChangeCount[] = 
-    {
+    static PyType_Slot _type_slots_GpioChangeCount[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioChangeCount) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GpioChangeCount) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GpioChangeCount) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioChangeCount) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioChangeCount) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GpioChangeCount = {
@@ -1967,14 +1961,13 @@ namespace py::cpp::Windows::Devices::Gpio
         { }
     };
 
-    static PyType_Slot _type_slots_GpioChangeRecord[] = 
-    {
+    static PyType_Slot _type_slots_GpioChangeRecord[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioChangeRecord) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GpioChangeRecord) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GpioChangeRecord) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioChangeRecord) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioChangeRecord) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GpioChangeRecord = {

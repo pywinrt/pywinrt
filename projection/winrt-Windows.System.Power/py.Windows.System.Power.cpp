@@ -264,12 +264,11 @@ namespace py::cpp::Windows::System::Power
         { }
     };
 
-    static PyType_Slot _type_slots_BackgroundEnergyManager[] = 
-    {
+    static PyType_Slot _type_slots_BackgroundEnergyManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundEnergyManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundEnergyManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundEnergyManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BackgroundEnergyManager = {
@@ -533,12 +532,11 @@ namespace py::cpp::Windows::System::Power
         { }
     };
 
-    static PyType_Slot _type_slots_ForegroundEnergyManager[] = 
-    {
+    static PyType_Slot _type_slots_ForegroundEnergyManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ForegroundEnergyManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ForegroundEnergyManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ForegroundEnergyManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ForegroundEnergyManager = {
@@ -916,12 +914,11 @@ namespace py::cpp::Windows::System::Power
         { }
     };
 
-    static PyType_Slot _type_slots_PowerManager[] = 
-    {
+    static PyType_Slot _type_slots_PowerManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PowerManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PowerManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PowerManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PowerManager = {

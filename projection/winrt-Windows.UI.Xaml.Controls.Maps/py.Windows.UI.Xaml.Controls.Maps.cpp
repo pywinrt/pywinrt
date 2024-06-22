@@ -123,13 +123,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_CustomMapTileDataSource[] = 
-    {
+    static PyType_Slot _type_slots_CustomMapTileDataSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CustomMapTileDataSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CustomMapTileDataSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CustomMapTileDataSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CustomMapTileDataSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CustomMapTileDataSource = {
@@ -388,13 +387,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_HttpMapTileDataSource[] = 
-    {
+    static PyType_Slot _type_slots_HttpMapTileDataSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpMapTileDataSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpMapTileDataSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpMapTileDataSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpMapTileDataSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpMapTileDataSource = {
@@ -585,13 +583,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_LocalMapTileDataSource[] = 
-    {
+    static PyType_Slot _type_slots_LocalMapTileDataSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LocalMapTileDataSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LocalMapTileDataSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LocalMapTileDataSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LocalMapTileDataSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LocalMapTileDataSource = {
@@ -714,13 +711,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapActualCameraChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapActualCameraChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapActualCameraChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapActualCameraChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapActualCameraChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapActualCameraChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapActualCameraChangedEventArgs = {
@@ -843,13 +839,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapActualCameraChangingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapActualCameraChangingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapActualCameraChangingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapActualCameraChangingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapActualCameraChangingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapActualCameraChangingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapActualCameraChangingEventArgs = {
@@ -1203,13 +1198,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapBillboard[] = 
-    {
+    static PyType_Slot _type_slots_MapBillboard[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapBillboard) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapBillboard) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapBillboard) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapBillboard) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapBillboard = {
@@ -1614,13 +1608,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapCamera[] = 
-    {
+    static PyType_Slot _type_slots_MapCamera[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapCamera) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapCamera) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapCamera) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapCamera) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapCamera = {
@@ -1763,13 +1756,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapContextRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapContextRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapContextRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapContextRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapContextRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapContextRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapContextRequestedEventArgs = {
@@ -6208,13 +6200,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapControl[] = 
-    {
+    static PyType_Slot _type_slots_MapControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapControl = {
@@ -6386,13 +6377,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapControlBusinessLandmarkClickEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapControlBusinessLandmarkClickEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControlBusinessLandmarkClickEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControlBusinessLandmarkClickEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControlBusinessLandmarkClickEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControlBusinessLandmarkClickEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapControlBusinessLandmarkClickEventArgs = {
@@ -6495,13 +6485,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapControlBusinessLandmarkPointerEnteredEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapControlBusinessLandmarkPointerEnteredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControlBusinessLandmarkPointerEnteredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControlBusinessLandmarkPointerEnteredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControlBusinessLandmarkPointerEnteredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControlBusinessLandmarkPointerEnteredEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapControlBusinessLandmarkPointerEnteredEventArgs = {
@@ -6604,13 +6593,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapControlBusinessLandmarkPointerExitedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapControlBusinessLandmarkPointerExitedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControlBusinessLandmarkPointerExitedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControlBusinessLandmarkPointerExitedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControlBusinessLandmarkPointerExitedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControlBusinessLandmarkPointerExitedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapControlBusinessLandmarkPointerExitedEventArgs = {
@@ -6713,13 +6701,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapControlBusinessLandmarkRightTappedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapControlBusinessLandmarkRightTappedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControlBusinessLandmarkRightTappedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControlBusinessLandmarkRightTappedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControlBusinessLandmarkRightTappedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControlBusinessLandmarkRightTappedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapControlBusinessLandmarkRightTappedEventArgs = {
@@ -7195,13 +7182,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapControlDataHelper[] = 
-    {
+    static PyType_Slot _type_slots_MapControlDataHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControlDataHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControlDataHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControlDataHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControlDataHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapControlDataHelper = {
@@ -7370,13 +7356,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapControlTransitFeatureClickEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapControlTransitFeatureClickEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControlTransitFeatureClickEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControlTransitFeatureClickEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControlTransitFeatureClickEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControlTransitFeatureClickEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapControlTransitFeatureClickEventArgs = {
@@ -7519,13 +7504,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapControlTransitFeaturePointerEnteredEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapControlTransitFeaturePointerEnteredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControlTransitFeaturePointerEnteredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControlTransitFeaturePointerEnteredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControlTransitFeaturePointerEnteredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControlTransitFeaturePointerEnteredEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapControlTransitFeaturePointerEnteredEventArgs = {
@@ -7668,13 +7652,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapControlTransitFeaturePointerExitedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapControlTransitFeaturePointerExitedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControlTransitFeaturePointerExitedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControlTransitFeaturePointerExitedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControlTransitFeaturePointerExitedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControlTransitFeaturePointerExitedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapControlTransitFeaturePointerExitedEventArgs = {
@@ -7817,13 +7800,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapControlTransitFeatureRightTappedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapControlTransitFeatureRightTappedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapControlTransitFeatureRightTappedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapControlTransitFeatureRightTappedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapControlTransitFeatureRightTappedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapControlTransitFeatureRightTappedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapControlTransitFeatureRightTappedEventArgs = {
@@ -7906,13 +7888,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapCustomExperience[] = 
-    {
+    static PyType_Slot _type_slots_MapCustomExperience[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapCustomExperience) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapCustomExperience) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapCustomExperience) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapCustomExperience) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapCustomExperience = {
@@ -7995,13 +7976,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapCustomExperienceChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapCustomExperienceChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapCustomExperienceChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapCustomExperienceChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapCustomExperienceChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapCustomExperienceChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapCustomExperienceChangedEventArgs = {
@@ -8553,13 +8533,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapElement[] = 
-    {
+    static PyType_Slot _type_slots_MapElement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElement) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapElement = {
@@ -9057,13 +9036,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapElement3D[] = 
-    {
+    static PyType_Slot _type_slots_MapElement3D[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElement3D) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElement3D) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElement3D) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElement3D) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapElement3D = {
@@ -9236,13 +9214,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapElementClickEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapElementClickEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElementClickEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElementClickEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElementClickEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElementClickEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapElementClickEventArgs = {
@@ -9385,13 +9362,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapElementPointerEnteredEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapElementPointerEnteredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElementPointerEnteredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElementPointerEnteredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElementPointerEnteredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElementPointerEnteredEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapElementPointerEnteredEventArgs = {
@@ -9534,13 +9510,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapElementPointerExitedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapElementPointerExitedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElementPointerExitedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElementPointerExitedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElementPointerExitedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElementPointerExitedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapElementPointerExitedEventArgs = {
@@ -9870,13 +9845,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapElementsLayer[] = 
-    {
+    static PyType_Slot _type_slots_MapElementsLayer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElementsLayer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElementsLayer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElementsLayer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElementsLayer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapElementsLayer = {
@@ -10045,13 +10019,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapElementsLayerClickEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapElementsLayerClickEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElementsLayerClickEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElementsLayerClickEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElementsLayerClickEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElementsLayerClickEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapElementsLayerClickEventArgs = {
@@ -10194,13 +10167,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapElementsLayerContextRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapElementsLayerContextRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElementsLayerContextRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElementsLayerContextRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElementsLayerContextRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElementsLayerContextRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapElementsLayerContextRequestedEventArgs = {
@@ -10343,13 +10315,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapElementsLayerPointerEnteredEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapElementsLayerPointerEnteredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElementsLayerPointerEnteredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElementsLayerPointerEnteredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElementsLayerPointerEnteredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElementsLayerPointerEnteredEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapElementsLayerPointerEnteredEventArgs = {
@@ -10492,13 +10463,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapElementsLayerPointerExitedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapElementsLayerPointerExitedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapElementsLayerPointerExitedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapElementsLayerPointerExitedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapElementsLayerPointerExitedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapElementsLayerPointerExitedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapElementsLayerPointerExitedEventArgs = {
@@ -10897,13 +10867,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapIcon[] = 
-    {
+    static PyType_Slot _type_slots_MapIcon[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapIcon) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapIcon) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapIcon) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapIcon) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapIcon = {
@@ -11055,13 +11024,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapInputEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapInputEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapInputEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapInputEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapInputEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapInputEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapInputEventArgs = {
@@ -11317,13 +11285,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapItemsControl[] = 
-    {
+    static PyType_Slot _type_slots_MapItemsControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapItemsControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapItemsControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapItemsControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapItemsControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapItemsControl = {
@@ -11635,13 +11602,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapLayer[] = 
-    {
+    static PyType_Slot _type_slots_MapLayer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapLayer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapLayer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapLayer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapLayer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapLayer = {
@@ -11804,13 +11770,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapModel3D[] = 
-    {
+    static PyType_Slot _type_slots_MapModel3D[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapModel3D) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapModel3D) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapModel3D) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapModel3D) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapModel3D = {
@@ -12236,13 +12201,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapPolygon[] = 
-    {
+    static PyType_Slot _type_slots_MapPolygon[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapPolygon) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapPolygon) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapPolygon) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapPolygon) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapPolygon = {
@@ -12583,13 +12547,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapPolyline[] = 
-    {
+    static PyType_Slot _type_slots_MapPolyline[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapPolyline) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapPolyline) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapPolyline) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapPolyline) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapPolyline = {
@@ -12739,13 +12702,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapRightTappedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapRightTappedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapRightTappedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapRightTappedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapRightTappedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapRightTappedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapRightTappedEventArgs = {
@@ -12946,13 +12908,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapRouteView[] = 
-    {
+    static PyType_Slot _type_slots_MapRouteView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapRouteView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapRouteView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapRouteView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapRouteView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapRouteView = {
@@ -13323,13 +13284,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapScene[] = 
-    {
+    static PyType_Slot _type_slots_MapScene[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapScene) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapScene) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapScene) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapScene) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapScene = {
@@ -13700,13 +13660,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapStyleSheet[] = 
-    {
+    static PyType_Slot _type_slots_MapStyleSheet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapStyleSheet) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapStyleSheet) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapStyleSheet) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapStyleSheet) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapStyleSheet = {
@@ -14983,12 +14942,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapStyleSheetEntries[] = 
-    {
+    static PyType_Slot _type_slots_MapStyleSheetEntries[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapStyleSheetEntries) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapStyleSheetEntries) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapStyleSheetEntries) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapStyleSheetEntries = {
@@ -15161,12 +15119,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapStyleSheetEntryStates[] = 
-    {
+    static PyType_Slot _type_slots_MapStyleSheetEntryStates[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapStyleSheetEntryStates) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapStyleSheetEntryStates) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapStyleSheetEntryStates) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapStyleSheetEntryStates = {
@@ -15317,13 +15274,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapTargetCameraChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapTargetCameraChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapTargetCameraChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapTargetCameraChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapTargetCameraChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapTargetCameraChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapTargetCameraChangedEventArgs = {
@@ -15484,13 +15440,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapTileBitmapRequest[] = 
-    {
+    static PyType_Slot _type_slots_MapTileBitmapRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapTileBitmapRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapTileBitmapRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapTileBitmapRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapTileBitmapRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapTileBitmapRequest = {
@@ -15604,13 +15559,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapTileBitmapRequestDeferral[] = 
-    {
+    static PyType_Slot _type_slots_MapTileBitmapRequestDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapTileBitmapRequestDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapTileBitmapRequestDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapTileBitmapRequestDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapTileBitmapRequestDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapTileBitmapRequestDeferral = {
@@ -15793,13 +15747,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapTileBitmapRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapTileBitmapRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapTileBitmapRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapTileBitmapRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapTileBitmapRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapTileBitmapRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapTileBitmapRequestedEventArgs = {
@@ -15882,13 +15835,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapTileDataSource[] = 
-    {
+    static PyType_Slot _type_slots_MapTileDataSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapTileDataSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapTileDataSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapTileDataSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapTileDataSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapTileDataSource = {
@@ -17107,13 +17059,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapTileSource[] = 
-    {
+    static PyType_Slot _type_slots_MapTileSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapTileSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapTileSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapTileSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapTileSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapTileSource = {
@@ -17314,13 +17265,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapTileUriRequest[] = 
-    {
+    static PyType_Slot _type_slots_MapTileUriRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapTileUriRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapTileUriRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapTileUriRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapTileUriRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapTileUriRequest = {
@@ -17434,13 +17384,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapTileUriRequestDeferral[] = 
-    {
+    static PyType_Slot _type_slots_MapTileUriRequestDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapTileUriRequestDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapTileUriRequestDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapTileUriRequestDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapTileUriRequestDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapTileUriRequestDeferral = {
@@ -17623,13 +17572,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapTileUriRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MapTileUriRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapTileUriRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapTileUriRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapTileUriRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapTileUriRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapTileUriRequestedEventArgs = {
@@ -18020,13 +17968,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_StreetsideExperience[] = 
-    {
+    static PyType_Slot _type_slots_StreetsideExperience[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StreetsideExperience) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StreetsideExperience) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StreetsideExperience) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StreetsideExperience) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StreetsideExperience = {
@@ -18159,13 +18106,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_StreetsidePanorama[] = 
-    {
+    static PyType_Slot _type_slots_StreetsidePanorama[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StreetsidePanorama) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StreetsidePanorama) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StreetsidePanorama) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StreetsidePanorama) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StreetsidePanorama = {
@@ -18343,14 +18289,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapZoomLevelRange[] = 
-    {
+    static PyType_Slot _type_slots_MapZoomLevelRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapZoomLevelRange) },
         { Py_tp_init, reinterpret_cast<void*>(_init_MapZoomLevelRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapZoomLevelRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapZoomLevelRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapZoomLevelRange) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapZoomLevelRange = {

@@ -740,13 +740,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { }
     };
 
-    static PyType_Slot _type_slots_AppInstallItem[] = 
-    {
+    static PyType_Slot _type_slots_AppInstallItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppInstallItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppInstallItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppInstallItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppInstallItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppInstallItem = {
@@ -2182,13 +2181,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { }
     };
 
-    static PyType_Slot _type_slots_AppInstallManager[] = 
-    {
+    static PyType_Slot _type_slots_AppInstallManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppInstallManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppInstallManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppInstallManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppInstallManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppInstallManager = {
@@ -2269,13 +2267,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { }
     };
 
-    static PyType_Slot _type_slots_AppInstallManagerItemEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppInstallManagerItemEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppInstallManagerItemEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppInstallManagerItemEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppInstallManagerItemEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppInstallManagerItemEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppInstallManagerItemEventArgs = {
@@ -3078,13 +3075,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { }
     };
 
-    static PyType_Slot _type_slots_AppInstallOptions[] = 
-    {
+    static PyType_Slot _type_slots_AppInstallOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppInstallOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppInstallOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppInstallOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppInstallOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppInstallOptions = {
@@ -3305,13 +3301,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { }
     };
 
-    static PyType_Slot _type_slots_AppInstallStatus[] = 
-    {
+    static PyType_Slot _type_slots_AppInstallStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppInstallStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppInstallStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppInstallStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppInstallStatus) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppInstallStatus = {
@@ -3538,13 +3533,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { }
     };
 
-    static PyType_Slot _type_slots_AppUpdateOptions[] = 
-    {
+    static PyType_Slot _type_slots_AppUpdateOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppUpdateOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppUpdateOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppUpdateOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppUpdateOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppUpdateOptions = {
@@ -3625,13 +3619,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { }
     };
 
-    static PyType_Slot _type_slots_GetEntitlementResult[] = 
-    {
+    static PyType_Slot _type_slots_GetEntitlementResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GetEntitlementResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GetEntitlementResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GetEntitlementResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GetEntitlementResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GetEntitlementResult = {

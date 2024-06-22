@@ -232,13 +232,12 @@ namespace py::cpp::Windows::Data::Pdf
         { }
     };
 
-    static PyType_Slot _type_slots_PdfDocument[] = 
-    {
+    static PyType_Slot _type_slots_PdfDocument[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PdfDocument) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PdfDocument) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PdfDocument) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PdfDocument) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PdfDocument = {
@@ -561,13 +560,12 @@ namespace py::cpp::Windows::Data::Pdf
         { }
     };
 
-    static PyType_Slot _type_slots_PdfPage[] = 
-    {
+    static PyType_Slot _type_slots_PdfPage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PdfPage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PdfPage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PdfPage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PdfPage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PdfPage = {
@@ -728,13 +726,12 @@ namespace py::cpp::Windows::Data::Pdf
         { }
     };
 
-    static PyType_Slot _type_slots_PdfPageDimensions[] = 
-    {
+    static PyType_Slot _type_slots_PdfPageDimensions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PdfPageDimensions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PdfPageDimensions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PdfPageDimensions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PdfPageDimensions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PdfPageDimensions = {
@@ -1105,13 +1102,12 @@ namespace py::cpp::Windows::Data::Pdf
         { }
     };
 
-    static PyType_Slot _type_slots_PdfPageRenderOptions[] = 
-    {
+    static PyType_Slot _type_slots_PdfPageRenderOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PdfPageRenderOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PdfPageRenderOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PdfPageRenderOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PdfPageRenderOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PdfPageRenderOptions = {

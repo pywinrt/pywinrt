@@ -320,13 +320,12 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ProviderSpiConnectionSettings[] = 
-    {
+    static PyType_Slot _type_slots_ProviderSpiConnectionSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProviderSpiConnectionSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProviderSpiConnectionSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProviderSpiConnectionSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProviderSpiConnectionSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProviderSpiConnectionSettings = {
@@ -419,13 +418,12 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ISpiControllerProvider[] = 
-    {
+    static PyType_Slot _type_slots_ISpiControllerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISpiControllerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISpiControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISpiControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISpiControllerProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISpiControllerProvider = {
@@ -712,13 +710,12 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ISpiDeviceProvider[] = 
-    {
+    static PyType_Slot _type_slots_ISpiDeviceProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISpiDeviceProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISpiDeviceProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISpiDeviceProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISpiDeviceProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISpiDeviceProvider = {
@@ -809,13 +806,12 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ISpiProvider[] = 
-    {
+    static PyType_Slot _type_slots_ISpiProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISpiProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISpiProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISpiProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISpiProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISpiProvider = {

@@ -84,12 +84,11 @@ namespace py::cpp::Windows::Devices::Portable
         { }
     };
 
-    static PyType_Slot _type_slots_ServiceDevice[] = 
-    {
+    static PyType_Slot _type_slots_ServiceDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ServiceDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ServiceDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ServiceDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ServiceDevice = {
@@ -203,12 +202,11 @@ namespace py::cpp::Windows::Devices::Portable
         { }
     };
 
-    static PyType_Slot _type_slots_StorageDevice[] = 
-    {
+    static PyType_Slot _type_slots_StorageDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StorageDevice = {

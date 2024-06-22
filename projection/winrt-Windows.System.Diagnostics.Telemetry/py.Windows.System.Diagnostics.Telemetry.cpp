@@ -74,12 +74,11 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
         { }
     };
 
-    static PyType_Slot _type_slots_PlatformTelemetryClient[] = 
-    {
+    static PyType_Slot _type_slots_PlatformTelemetryClient[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlatformTelemetryClient) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlatformTelemetryClient) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlatformTelemetryClient) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlatformTelemetryClient = {
@@ -186,13 +185,12 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
         { }
     };
 
-    static PyType_Slot _type_slots_PlatformTelemetryRegistrationResult[] = 
-    {
+    static PyType_Slot _type_slots_PlatformTelemetryRegistrationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlatformTelemetryRegistrationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlatformTelemetryRegistrationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlatformTelemetryRegistrationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlatformTelemetryRegistrationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlatformTelemetryRegistrationResult = {
@@ -371,13 +369,12 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
         { }
     };
 
-    static PyType_Slot _type_slots_PlatformTelemetryRegistrationSettings[] = 
-    {
+    static PyType_Slot _type_slots_PlatformTelemetryRegistrationSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlatformTelemetryRegistrationSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlatformTelemetryRegistrationSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlatformTelemetryRegistrationSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlatformTelemetryRegistrationSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlatformTelemetryRegistrationSettings = {

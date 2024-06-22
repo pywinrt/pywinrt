@@ -714,13 +714,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataTask[] = 
-    {
+    static PyType_Slot _type_slots_UserDataTask[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTask) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTask) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTask) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTask) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataTask = {
@@ -801,13 +800,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataTaskBatch[] = 
-    {
+    static PyType_Slot _type_slots_UserDataTaskBatch[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskBatch) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskBatch) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskBatch) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskBatch) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataTaskBatch = {
@@ -1348,13 +1346,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataTaskList[] = 
-    {
+    static PyType_Slot _type_slots_UserDataTaskList[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskList) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskList) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskList) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskList) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataTaskList = {
@@ -1543,13 +1540,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataTaskListLimitedWriteOperations[] = 
-    {
+    static PyType_Slot _type_slots_UserDataTaskListLimitedWriteOperations[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskListLimitedWriteOperations) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskListLimitedWriteOperations) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskListLimitedWriteOperations) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskListLimitedWriteOperations) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataTaskListLimitedWriteOperations = {
@@ -1829,13 +1825,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataTaskListSyncManager[] = 
-    {
+    static PyType_Slot _type_slots_UserDataTaskListSyncManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskListSyncManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskListSyncManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskListSyncManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskListSyncManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataTaskListSyncManager = {
@@ -2008,13 +2003,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataTaskManager[] = 
-    {
+    static PyType_Slot _type_slots_UserDataTaskManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataTaskManager = {
@@ -2220,13 +2214,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataTaskQueryOptions[] = 
-    {
+    static PyType_Slot _type_slots_UserDataTaskQueryOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskQueryOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskQueryOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskQueryOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskQueryOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataTaskQueryOptions = {
@@ -2317,13 +2310,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataTaskReader[] = 
-    {
+    static PyType_Slot _type_slots_UserDataTaskReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskReader) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataTaskReader = {
@@ -2790,13 +2782,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataTaskRecurrenceProperties[] = 
-    {
+    static PyType_Slot _type_slots_UserDataTaskRecurrenceProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskRecurrenceProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskRecurrenceProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskRecurrenceProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskRecurrenceProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataTaskRecurrenceProperties = {
@@ -3071,13 +3062,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataTaskRegenerationProperties[] = 
-    {
+    static PyType_Slot _type_slots_UserDataTaskRegenerationProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskRegenerationProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskRegenerationProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskRegenerationProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskRegenerationProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataTaskRegenerationProperties = {
@@ -3253,13 +3243,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataTaskStore[] = 
-    {
+    static PyType_Slot _type_slots_UserDataTaskStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataTaskStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataTaskStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataTaskStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataTaskStore) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataTaskStore = {

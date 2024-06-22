@@ -265,13 +265,12 @@ namespace py::cpp::Microsoft::UI::Text
         { }
     };
 
-    static PyType_Slot _type_slots_FontWeights[] = 
-    {
+    static PyType_Slot _type_slots_FontWeights[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FontWeights) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FontWeights) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FontWeights) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FontWeights) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FontWeights = {
@@ -1297,13 +1296,12 @@ namespace py::cpp::Microsoft::UI::Text
         { }
     };
 
-    static PyType_Slot _type_slots_RichEditTextDocument[] = 
-    {
+    static PyType_Slot _type_slots_RichEditTextDocument[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RichEditTextDocument) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RichEditTextDocument) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RichEditTextDocument) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RichEditTextDocument) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RichEditTextDocument = {
@@ -2927,13 +2925,12 @@ namespace py::cpp::Microsoft::UI::Text
         { }
     };
 
-    static PyType_Slot _type_slots_RichEditTextRange[] = 
-    {
+    static PyType_Slot _type_slots_RichEditTextRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RichEditTextRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RichEditTextRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RichEditTextRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RichEditTextRange) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RichEditTextRange = {
@@ -3112,12 +3109,11 @@ namespace py::cpp::Microsoft::UI::Text
         { }
     };
 
-    static PyType_Slot _type_slots_TextConstants[] = 
-    {
+    static PyType_Slot _type_slots_TextConstants[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextConstants) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextConstants) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextConstants) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TextConstants = {
@@ -4430,13 +4426,12 @@ namespace py::cpp::Microsoft::UI::Text
         { }
     };
 
-    static PyType_Slot _type_slots_ITextCharacterFormat[] = 
-    {
+    static PyType_Slot _type_slots_ITextCharacterFormat[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextCharacterFormat) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextCharacterFormat) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextCharacterFormat) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextCharacterFormat) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ITextCharacterFormat = {
@@ -5728,13 +5723,12 @@ namespace py::cpp::Microsoft::UI::Text
         { }
     };
 
-    static PyType_Slot _type_slots_ITextParagraphFormat[] = 
-    {
+    static PyType_Slot _type_slots_ITextParagraphFormat[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextParagraphFormat) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextParagraphFormat) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextParagraphFormat) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextParagraphFormat) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ITextParagraphFormat = {
@@ -7358,13 +7352,12 @@ namespace py::cpp::Microsoft::UI::Text
         { }
     };
 
-    static PyType_Slot _type_slots_ITextRange[] = 
-    {
+    static PyType_Slot _type_slots_ITextRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextRange) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ITextRange = {
@@ -9291,13 +9284,12 @@ namespace py::cpp::Microsoft::UI::Text
         { }
     };
 
-    static PyType_Slot _type_slots_ITextSelection[] = 
-    {
+    static PyType_Slot _type_slots_ITextSelection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextSelection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextSelection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextSelection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextSelection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ITextSelection = {

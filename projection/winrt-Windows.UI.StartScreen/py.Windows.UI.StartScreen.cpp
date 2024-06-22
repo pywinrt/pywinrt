@@ -212,13 +212,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { }
     };
 
-    static PyType_Slot _type_slots_JumpList[] = 
-    {
+    static PyType_Slot _type_slots_JumpList[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JumpList) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_JumpList) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JumpList) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JumpList) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_JumpList = {
@@ -619,13 +618,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { }
     };
 
-    static PyType_Slot _type_slots_JumpListItem[] = 
-    {
+    static PyType_Slot _type_slots_JumpListItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JumpListItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_JumpListItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JumpListItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JumpListItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_JumpListItem = {
@@ -1892,13 +1890,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { }
     };
 
-    static PyType_Slot _type_slots_SecondaryTile[] = 
-    {
+    static PyType_Slot _type_slots_SecondaryTile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryTile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryTile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryTile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryTile) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SecondaryTile = {
@@ -2583,13 +2580,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { }
     };
 
-    static PyType_Slot _type_slots_SecondaryTileVisualElements[] = 
-    {
+    static PyType_Slot _type_slots_SecondaryTileVisualElements[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryTileVisualElements) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryTileVisualElements) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryTileVisualElements) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryTileVisualElements) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SecondaryTileVisualElements = {
@@ -2890,13 +2886,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { }
     };
 
-    static PyType_Slot _type_slots_StartScreenManager[] = 
-    {
+    static PyType_Slot _type_slots_StartScreenManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StartScreenManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StartScreenManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StartScreenManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StartScreenManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StartScreenManager = {
@@ -3128,13 +3123,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { }
     };
 
-    static PyType_Slot _type_slots_TileMixedRealityModel[] = 
-    {
+    static PyType_Slot _type_slots_TileMixedRealityModel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileMixedRealityModel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TileMixedRealityModel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileMixedRealityModel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileMixedRealityModel) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TileMixedRealityModel = {
@@ -3285,13 +3279,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { }
     };
 
-    static PyType_Slot _type_slots_VisualElementsRequest[] = 
-    {
+    static PyType_Slot _type_slots_VisualElementsRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VisualElementsRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VisualElementsRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VisualElementsRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VisualElementsRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VisualElementsRequest = {
@@ -3383,13 +3376,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { }
     };
 
-    static PyType_Slot _type_slots_VisualElementsRequestDeferral[] = 
-    {
+    static PyType_Slot _type_slots_VisualElementsRequestDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VisualElementsRequestDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VisualElementsRequestDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VisualElementsRequestDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VisualElementsRequestDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VisualElementsRequestDeferral = {
@@ -3470,13 +3462,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { }
     };
 
-    static PyType_Slot _type_slots_VisualElementsRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_VisualElementsRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VisualElementsRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VisualElementsRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VisualElementsRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VisualElementsRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VisualElementsRequestedEventArgs = {

@@ -178,13 +178,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreDragDropManager[] = 
-    {
+    static PyType_Slot _type_slots_CoreDragDropManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreDragDropManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreDragDropManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreDragDropManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreDragDropManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreDragDropManager = {
@@ -351,13 +350,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreDragInfo[] = 
-    {
+    static PyType_Slot _type_slots_CoreDragInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreDragInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreDragInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreDragInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreDragInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreDragInfo = {
@@ -674,13 +672,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreDragOperation[] = 
-    {
+    static PyType_Slot _type_slots_CoreDragOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreDragOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreDragOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreDragOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreDragOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreDragOperation = {
@@ -1019,13 +1016,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreDragUIOverride[] = 
-    {
+    static PyType_Slot _type_slots_CoreDragUIOverride[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreDragUIOverride) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreDragUIOverride) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreDragUIOverride) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreDragUIOverride) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreDragUIOverride = {
@@ -1119,13 +1115,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreDropOperationTargetRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CoreDropOperationTargetRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreDropOperationTargetRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreDropOperationTargetRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreDropOperationTargetRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreDropOperationTargetRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreDropOperationTargetRequestedEventArgs = {
@@ -1316,13 +1311,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         { }
     };
 
-    static PyType_Slot _type_slots_ICoreDropOperationTarget[] = 
-    {
+    static PyType_Slot _type_slots_ICoreDropOperationTarget[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICoreDropOperationTarget) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICoreDropOperationTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICoreDropOperationTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICoreDropOperationTarget) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ICoreDropOperationTarget = {

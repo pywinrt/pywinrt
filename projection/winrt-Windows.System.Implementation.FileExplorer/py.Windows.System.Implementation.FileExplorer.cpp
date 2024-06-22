@@ -100,13 +100,12 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         { }
     };
 
-    static PyType_Slot _type_slots_SysStorageProviderEventReceivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SysStorageProviderEventReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SysStorageProviderEventReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SysStorageProviderEventReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SysStorageProviderEventReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SysStorageProviderEventReceivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SysStorageProviderEventReceivedEventArgs = {
@@ -212,13 +211,12 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         { }
     };
 
-    static PyType_Slot _type_slots_ISysStorageProviderEventSource[] = 
-    {
+    static PyType_Slot _type_slots_ISysStorageProviderEventSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISysStorageProviderEventSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISysStorageProviderEventSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISysStorageProviderEventSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISysStorageProviderEventSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISysStorageProviderEventSource = {
@@ -344,13 +342,12 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         { }
     };
 
-    static PyType_Slot _type_slots_ISysStorageProviderHandlerFactory[] = 
-    {
+    static PyType_Slot _type_slots_ISysStorageProviderHandlerFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISysStorageProviderHandlerFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISysStorageProviderHandlerFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISysStorageProviderHandlerFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISysStorageProviderHandlerFactory) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISysStorageProviderHandlerFactory = {
@@ -443,13 +440,12 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         { }
     };
 
-    static PyType_Slot _type_slots_ISysStorageProviderHttpRequestProvider[] = 
-    {
+    static PyType_Slot _type_slots_ISysStorageProviderHttpRequestProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISysStorageProviderHttpRequestProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISysStorageProviderHttpRequestProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISysStorageProviderHttpRequestProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISysStorageProviderHttpRequestProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISysStorageProviderHttpRequestProvider = {

@@ -96,13 +96,12 @@ namespace py::cpp::Windows::Media::Protection
         { }
     };
 
-    static PyType_Slot _type_slots_ComponentLoadFailedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ComponentLoadFailedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ComponentLoadFailedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ComponentLoadFailedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ComponentLoadFailedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ComponentLoadFailedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ComponentLoadFailedEventArgs = {
@@ -160,12 +159,11 @@ namespace py::cpp::Windows::Media::Protection
         { }
     };
 
-    static PyType_Slot _type_slots_ComponentRenewal[] = 
-    {
+    static PyType_Slot _type_slots_ComponentRenewal[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ComponentRenewal) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ComponentRenewal) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ComponentRenewal) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ComponentRenewal = {
@@ -465,13 +463,12 @@ namespace py::cpp::Windows::Media::Protection
         { }
     };
 
-    static PyType_Slot _type_slots_HdcpSession[] = 
-    {
+    static PyType_Slot _type_slots_HdcpSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HdcpSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HdcpSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HdcpSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HdcpSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HdcpSession = {
@@ -709,13 +706,12 @@ namespace py::cpp::Windows::Media::Protection
         { }
     };
 
-    static PyType_Slot _type_slots_MediaProtectionManager[] = 
-    {
+    static PyType_Slot _type_slots_MediaProtectionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaProtectionManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaProtectionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaProtectionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaProtectionManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaProtectionManager = {
@@ -820,13 +816,12 @@ namespace py::cpp::Windows::Media::Protection
         { }
     };
 
-    static PyType_Slot _type_slots_MediaProtectionPMPServer[] = 
-    {
+    static PyType_Slot _type_slots_MediaProtectionPMPServer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaProtectionPMPServer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaProtectionPMPServer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaProtectionPMPServer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaProtectionPMPServer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaProtectionPMPServer = {
@@ -920,13 +915,12 @@ namespace py::cpp::Windows::Media::Protection
         { }
     };
 
-    static PyType_Slot _type_slots_MediaProtectionServiceCompletion[] = 
-    {
+    static PyType_Slot _type_slots_MediaProtectionServiceCompletion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaProtectionServiceCompletion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaProtectionServiceCompletion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaProtectionServiceCompletion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaProtectionServiceCompletion) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaProtectionServiceCompletion = {
@@ -1042,13 +1036,12 @@ namespace py::cpp::Windows::Media::Protection
         { }
     };
 
-    static PyType_Slot _type_slots_ProtectionCapabilities[] = 
-    {
+    static PyType_Slot _type_slots_ProtectionCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtectionCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtectionCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtectionCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtectionCapabilities) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProtectionCapabilities = {
@@ -1129,13 +1122,12 @@ namespace py::cpp::Windows::Media::Protection
         { }
     };
 
-    static PyType_Slot _type_slots_RevocationAndRenewalInformation[] = 
-    {
+    static PyType_Slot _type_slots_RevocationAndRenewalInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RevocationAndRenewalInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RevocationAndRenewalInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RevocationAndRenewalInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RevocationAndRenewalInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RevocationAndRenewalInformation = {
@@ -1296,13 +1288,12 @@ namespace py::cpp::Windows::Media::Protection
         { }
     };
 
-    static PyType_Slot _type_slots_RevocationAndRenewalItem[] = 
-    {
+    static PyType_Slot _type_slots_RevocationAndRenewalItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RevocationAndRenewalItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RevocationAndRenewalItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RevocationAndRenewalItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RevocationAndRenewalItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RevocationAndRenewalItem = {
@@ -1423,13 +1414,12 @@ namespace py::cpp::Windows::Media::Protection
         { }
     };
 
-    static PyType_Slot _type_slots_ServiceRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ServiceRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ServiceRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ServiceRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ServiceRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ServiceRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ServiceRequestedEventArgs = {
@@ -1530,13 +1520,12 @@ namespace py::cpp::Windows::Media::Protection
         { }
     };
 
-    static PyType_Slot _type_slots_IMediaProtectionServiceRequest[] = 
-    {
+    static PyType_Slot _type_slots_IMediaProtectionServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMediaProtectionServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMediaProtectionServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMediaProtectionServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMediaProtectionServiceRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IMediaProtectionServiceRequest = {

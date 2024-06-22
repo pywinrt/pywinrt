@@ -76,13 +76,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_AppBarButtonTemplateSettings[] = 
-    {
+    static PyType_Slot _type_slots_AppBarButtonTemplateSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppBarButtonTemplateSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppBarButtonTemplateSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppBarButtonTemplateSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppBarButtonTemplateSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppBarButtonTemplateSettings = {
@@ -343,13 +342,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_AppBarTemplateSettings[] = 
-    {
+    static PyType_Slot _type_slots_AppBarTemplateSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppBarTemplateSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppBarTemplateSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppBarTemplateSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppBarTemplateSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppBarTemplateSettings = {
@@ -430,13 +428,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_AppBarToggleButtonTemplateSettings[] = 
-    {
+    static PyType_Slot _type_slots_AppBarToggleButtonTemplateSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppBarToggleButtonTemplateSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppBarToggleButtonTemplateSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppBarToggleButtonTemplateSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppBarToggleButtonTemplateSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppBarToggleButtonTemplateSettings = {
@@ -821,13 +818,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_ButtonBase[] = 
-    {
+    static PyType_Slot _type_slots_ButtonBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ButtonBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ButtonBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ButtonBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ButtonBase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ButtonBase = {
@@ -940,13 +936,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_CalendarPanel[] = 
-    {
+    static PyType_Slot _type_slots_CalendarPanel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CalendarPanel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CalendarPanel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CalendarPanel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CalendarPanel) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CalendarPanel = {
@@ -1307,13 +1302,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_CalendarViewTemplateSettings[] = 
-    {
+    static PyType_Slot _type_slots_CalendarViewTemplateSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CalendarViewTemplateSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CalendarViewTemplateSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CalendarViewTemplateSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CalendarViewTemplateSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CalendarViewTemplateSettings = {
@@ -2340,13 +2334,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_CarouselPanel[] = 
-    {
+    static PyType_Slot _type_slots_CarouselPanel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CarouselPanel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CarouselPanel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CarouselPanel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CarouselPanel) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CarouselPanel = {
@@ -2496,13 +2489,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_ColorPickerSlider[] = 
-    {
+    static PyType_Slot _type_slots_ColorPickerSlider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorPickerSlider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorPickerSlider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorPickerSlider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ColorPickerSlider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ColorPickerSlider = {
@@ -3326,13 +3318,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_ColorSpectrum[] = 
-    {
+    static PyType_Slot _type_slots_ColorSpectrum[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorSpectrum) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorSpectrum) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorSpectrum) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ColorSpectrum) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ColorSpectrum = {
@@ -3528,13 +3519,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_ComboBoxTemplateSettings[] = 
-    {
+    static PyType_Slot _type_slots_ComboBoxTemplateSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ComboBoxTemplateSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ComboBoxTemplateSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ComboBoxTemplateSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ComboBoxTemplateSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ComboBoxTemplateSettings = {
@@ -3637,13 +3627,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_CommandBarFlyoutCommandBar[] = 
-    {
+    static PyType_Slot _type_slots_CommandBarFlyoutCommandBar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CommandBarFlyoutCommandBar) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CommandBarFlyoutCommandBar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CommandBarFlyoutCommandBar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CommandBarFlyoutCommandBar) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CommandBarFlyoutCommandBar = {
@@ -4104,13 +4093,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_CommandBarFlyoutCommandBarTemplateSettings[] = 
-    {
+    static PyType_Slot _type_slots_CommandBarFlyoutCommandBarTemplateSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CommandBarFlyoutCommandBarTemplateSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CommandBarFlyoutCommandBarTemplateSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CommandBarFlyoutCommandBarTemplateSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CommandBarFlyoutCommandBarTemplateSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CommandBarFlyoutCommandBarTemplateSettings = {
@@ -4411,13 +4399,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_CommandBarTemplateSettings[] = 
-    {
+    static PyType_Slot _type_slots_CommandBarTemplateSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CommandBarTemplateSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CommandBarTemplateSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CommandBarTemplateSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CommandBarTemplateSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CommandBarTemplateSettings = {
@@ -4564,13 +4551,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_DragCompletedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DragCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DragCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DragCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DragCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DragCompletedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DragCompletedEventArgs = {
@@ -4696,13 +4682,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_DragDeltaEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DragDeltaEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DragDeltaEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DragDeltaEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DragDeltaEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DragDeltaEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DragDeltaEventArgs = {
@@ -4828,13 +4813,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_DragStartedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DragStartedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DragStartedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DragStartedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DragStartedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DragStartedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DragStartedEventArgs = {
@@ -6097,13 +6081,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_FlyoutBase[] = 
-    {
+    static PyType_Slot _type_slots_FlyoutBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FlyoutBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FlyoutBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FlyoutBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FlyoutBase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FlyoutBase = {
@@ -6253,13 +6236,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_FlyoutBaseClosingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_FlyoutBaseClosingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FlyoutBaseClosingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FlyoutBaseClosingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FlyoutBaseClosingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FlyoutBaseClosingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FlyoutBaseClosingEventArgs = {
@@ -6534,13 +6516,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_FlyoutShowOptions[] = 
-    {
+    static PyType_Slot _type_slots_FlyoutShowOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FlyoutShowOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FlyoutShowOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FlyoutShowOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FlyoutShowOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FlyoutShowOptions = {
@@ -6633,13 +6614,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_GeneratorPositionHelper[] = 
-    {
+    static PyType_Slot _type_slots_GeneratorPositionHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeneratorPositionHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeneratorPositionHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeneratorPositionHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeneratorPositionHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GeneratorPositionHelper = {
@@ -8222,13 +8202,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_GridViewItemPresenter[] = 
-    {
+    static PyType_Slot _type_slots_GridViewItemPresenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GridViewItemPresenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GridViewItemPresenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GridViewItemPresenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GridViewItemPresenter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GridViewItemPresenter = {
@@ -8356,13 +8335,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_GridViewItemTemplateSettings[] = 
-    {
+    static PyType_Slot _type_slots_GridViewItemTemplateSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GridViewItemTemplateSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GridViewItemTemplateSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GridViewItemTemplateSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GridViewItemTemplateSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GridViewItemTemplateSettings = {
@@ -8523,13 +8501,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_ItemsChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ItemsChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ItemsChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ItemsChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ItemsChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ItemsChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ItemsChangedEventArgs = {
@@ -8816,13 +8793,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_JumpListItemBackgroundConverter[] = 
-    {
+    static PyType_Slot _type_slots_JumpListItemBackgroundConverter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JumpListItemBackgroundConverter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_JumpListItemBackgroundConverter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JumpListItemBackgroundConverter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JumpListItemBackgroundConverter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_JumpListItemBackgroundConverter = {
@@ -9136,13 +9112,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_JumpListItemForegroundConverter[] = 
-    {
+    static PyType_Slot _type_slots_JumpListItemForegroundConverter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JumpListItemForegroundConverter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_JumpListItemForegroundConverter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JumpListItemForegroundConverter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JumpListItemForegroundConverter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_JumpListItemForegroundConverter = {
@@ -9323,13 +9298,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_LayoutInformation[] = 
-    {
+    static PyType_Slot _type_slots_LayoutInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LayoutInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LayoutInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LayoutInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LayoutInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LayoutInformation = {
@@ -13393,13 +13367,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_ListViewItemPresenter[] = 
-    {
+    static PyType_Slot _type_slots_ListViewItemPresenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListViewItemPresenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListViewItemPresenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListViewItemPresenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListViewItemPresenter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ListViewItemPresenter = {
@@ -13564,13 +13537,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_ListViewItemTemplateSettings[] = 
-    {
+    static PyType_Slot _type_slots_ListViewItemTemplateSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListViewItemTemplateSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListViewItemTemplateSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListViewItemTemplateSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListViewItemTemplateSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ListViewItemTemplateSettings = {
@@ -14145,13 +14117,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_LoopingSelector[] = 
-    {
+    static PyType_Slot _type_slots_LoopingSelector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoopingSelector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoopingSelector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoopingSelector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoopingSelector) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LoopingSelector = {
@@ -14244,13 +14215,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_LoopingSelectorItem[] = 
-    {
+    static PyType_Slot _type_slots_LoopingSelectorItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoopingSelectorItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoopingSelectorItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoopingSelectorItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoopingSelectorItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LoopingSelectorItem = {
@@ -14520,13 +14490,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_LoopingSelectorPanel[] = 
-    {
+    static PyType_Slot _type_slots_LoopingSelectorPanel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoopingSelectorPanel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoopingSelectorPanel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoopingSelectorPanel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoopingSelectorPanel) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LoopingSelectorPanel = {
@@ -14607,13 +14576,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_MenuFlyoutItemTemplateSettings[] = 
-    {
+    static PyType_Slot _type_slots_MenuFlyoutItemTemplateSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MenuFlyoutItemTemplateSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MenuFlyoutItemTemplateSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MenuFlyoutItemTemplateSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MenuFlyoutItemTemplateSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MenuFlyoutItemTemplateSettings = {
@@ -14694,13 +14662,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_MenuFlyoutPresenterTemplateSettings[] = 
-    {
+    static PyType_Slot _type_slots_MenuFlyoutPresenterTemplateSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MenuFlyoutPresenterTemplateSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MenuFlyoutPresenterTemplateSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MenuFlyoutPresenterTemplateSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MenuFlyoutPresenterTemplateSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MenuFlyoutPresenterTemplateSettings = {
@@ -14850,13 +14817,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_NavigationViewItemPresenter[] = 
-    {
+    static PyType_Slot _type_slots_NavigationViewItemPresenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NavigationViewItemPresenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NavigationViewItemPresenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NavigationViewItemPresenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NavigationViewItemPresenter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NavigationViewItemPresenter = {
@@ -15933,13 +15899,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_OrientedVirtualizingPanel[] = 
-    {
+    static PyType_Slot _type_slots_OrientedVirtualizingPanel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OrientedVirtualizingPanel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OrientedVirtualizingPanel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OrientedVirtualizingPanel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OrientedVirtualizingPanel) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OrientedVirtualizingPanel = {
@@ -16083,13 +16048,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_PickerFlyoutBase[] = 
-    {
+    static PyType_Slot _type_slots_PickerFlyoutBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PickerFlyoutBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PickerFlyoutBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PickerFlyoutBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PickerFlyoutBase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PickerFlyoutBase = {
@@ -16200,13 +16164,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_PivotHeaderItem[] = 
-    {
+    static PyType_Slot _type_slots_PivotHeaderItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PivotHeaderItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PivotHeaderItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PivotHeaderItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PivotHeaderItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PivotHeaderItem = {
@@ -16289,13 +16252,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_PivotHeaderPanel[] = 
-    {
+    static PyType_Slot _type_slots_PivotHeaderPanel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PivotHeaderPanel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PivotHeaderPanel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PivotHeaderPanel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PivotHeaderPanel) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PivotHeaderPanel = {
@@ -16587,13 +16549,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_PivotPanel[] = 
-    {
+    static PyType_Slot _type_slots_PivotPanel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PivotPanel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PivotPanel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PivotPanel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PivotPanel) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PivotPanel = {
@@ -17521,13 +17482,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_Popup[] = 
-    {
+    static PyType_Slot _type_slots_Popup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Popup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Popup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Popup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Popup) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Popup = {
@@ -17763,13 +17723,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_ProgressBarTemplateSettings[] = 
-    {
+    static PyType_Slot _type_slots_ProgressBarTemplateSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProgressBarTemplateSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProgressBarTemplateSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProgressBarTemplateSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProgressBarTemplateSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProgressBarTemplateSettings = {
@@ -17890,13 +17849,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_ProgressRingTemplateSettings[] = 
-    {
+    static PyType_Slot _type_slots_ProgressRingTemplateSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProgressRingTemplateSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProgressRingTemplateSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProgressRingTemplateSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProgressRingTemplateSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProgressRingTemplateSettings = {
@@ -18337,13 +18295,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_RangeBase[] = 
-    {
+    static PyType_Slot _type_slots_RangeBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RangeBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RangeBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RangeBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RangeBase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RangeBase = {
@@ -18474,13 +18431,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_RangeBaseValueChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RangeBaseValueChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RangeBaseValueChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RangeBaseValueChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RangeBaseValueChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RangeBaseValueChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RangeBaseValueChangedEventArgs = {
@@ -18697,13 +18653,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_RepeatButton[] = 
-    {
+    static PyType_Slot _type_slots_RepeatButton[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RepeatButton) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RepeatButton) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RepeatButton) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RepeatButton) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RepeatButton = {
@@ -19059,13 +19014,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_ScrollBar[] = 
-    {
+    static PyType_Slot _type_slots_ScrollBar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScrollBar) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScrollBar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScrollBar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScrollBar) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ScrollBar = {
@@ -19216,13 +19170,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_ScrollEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ScrollEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScrollEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScrollEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScrollEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScrollEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ScrollEventArgs = {
@@ -19694,13 +19647,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_Selector[] = 
-    {
+    static PyType_Slot _type_slots_Selector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Selector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Selector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Selector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Selector) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Selector = {
@@ -19859,13 +19811,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_SelectorItem[] = 
-    {
+    static PyType_Slot _type_slots_SelectorItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SelectorItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SelectorItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SelectorItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SelectorItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SelectorItem = {
@@ -20072,13 +20023,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_SettingsFlyoutTemplateSettings[] = 
-    {
+    static PyType_Slot _type_slots_SettingsFlyoutTemplateSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SettingsFlyoutTemplateSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SettingsFlyoutTemplateSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SettingsFlyoutTemplateSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SettingsFlyoutTemplateSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SettingsFlyoutTemplateSettings = {
@@ -20259,13 +20209,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_SplitViewTemplateSettings[] = 
-    {
+    static PyType_Slot _type_slots_SplitViewTemplateSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SplitViewTemplateSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SplitViewTemplateSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SplitViewTemplateSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SplitViewTemplateSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SplitViewTemplateSettings = {
@@ -20553,13 +20502,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_Thumb[] = 
-    {
+    static PyType_Slot _type_slots_Thumb[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Thumb) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Thumb) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Thumb) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Thumb) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Thumb = {
@@ -20735,13 +20683,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_TickBar[] = 
-    {
+    static PyType_Slot _type_slots_TickBar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TickBar) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TickBar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TickBar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TickBar) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TickBar = {
@@ -21119,13 +21066,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_ToggleButton[] = 
-    {
+    static PyType_Slot _type_slots_ToggleButton[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToggleButton) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToggleButton) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToggleButton) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToggleButton) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToggleButton = {
@@ -21373,13 +21319,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_ToggleSwitchTemplateSettings[] = 
-    {
+    static PyType_Slot _type_slots_ToggleSwitchTemplateSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToggleSwitchTemplateSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToggleSwitchTemplateSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToggleSwitchTemplateSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToggleSwitchTemplateSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToggleSwitchTemplateSettings = {
@@ -21480,13 +21425,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_ToolTipTemplateSettings[] = 
-    {
+    static PyType_Slot _type_slots_ToolTipTemplateSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToolTipTemplateSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToolTipTemplateSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToolTipTemplateSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToolTipTemplateSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToolTipTemplateSettings = {
@@ -21756,13 +21700,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_IScrollSnapPointsInfo[] = 
-    {
+    static PyType_Slot _type_slots_IScrollSnapPointsInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IScrollSnapPointsInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IScrollSnapPointsInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IScrollSnapPointsInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IScrollSnapPointsInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IScrollSnapPointsInfo = {
@@ -21914,14 +21857,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot _type_slots_GeneratorPosition[] = 
-    {
+    static PyType_Slot _type_slots_GeneratorPosition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeneratorPosition) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GeneratorPosition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeneratorPosition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeneratorPosition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeneratorPosition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GeneratorPosition = {

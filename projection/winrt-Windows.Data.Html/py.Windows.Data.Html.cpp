@@ -53,12 +53,11 @@ namespace py::cpp::Windows::Data::Html
         { }
     };
 
-    static PyType_Slot _type_slots_HtmlUtilities[] = 
-    {
+    static PyType_Slot _type_slots_HtmlUtilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HtmlUtilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HtmlUtilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HtmlUtilities) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HtmlUtilities = {

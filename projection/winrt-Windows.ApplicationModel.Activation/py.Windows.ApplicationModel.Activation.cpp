@@ -176,13 +176,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentsProviderAddAppointmentActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentsProviderAddAppointmentActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentsProviderAddAppointmentActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentsProviderAddAppointmentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentsProviderAddAppointmentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentsProviderAddAppointmentActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentsProviderAddAppointmentActivatedEventArgs = {
@@ -363,13 +362,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentsProviderRemoveAppointmentActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentsProviderRemoveAppointmentActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentsProviderRemoveAppointmentActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentsProviderRemoveAppointmentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentsProviderRemoveAppointmentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentsProviderRemoveAppointmentActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentsProviderRemoveAppointmentActivatedEventArgs = {
@@ -550,13 +548,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentsProviderReplaceAppointmentActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentsProviderReplaceAppointmentActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentsProviderReplaceAppointmentActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentsProviderReplaceAppointmentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentsProviderReplaceAppointmentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentsProviderReplaceAppointmentActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentsProviderReplaceAppointmentActivatedEventArgs = {
@@ -777,13 +774,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs = {
@@ -984,13 +980,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentsProviderShowTimeFrameActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentsProviderShowTimeFrameActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentsProviderShowTimeFrameActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentsProviderShowTimeFrameActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentsProviderShowTimeFrameActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentsProviderShowTimeFrameActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentsProviderShowTimeFrameActivatedEventArgs = {
@@ -1071,13 +1066,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_BackgroundActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_BackgroundActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BackgroundActivatedEventArgs = {
@@ -1238,13 +1232,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerPreviewActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerPreviewActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerPreviewActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerPreviewActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerPreviewActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerPreviewActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerPreviewActivatedEventArgs = {
@@ -1405,13 +1398,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_CachedFileUpdaterActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CachedFileUpdaterActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CachedFileUpdaterActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CachedFileUpdaterActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CachedFileUpdaterActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CachedFileUpdaterActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CachedFileUpdaterActivatedEventArgs = {
@@ -1572,13 +1564,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_CameraSettingsActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CameraSettingsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CameraSettingsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CameraSettingsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CameraSettingsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CameraSettingsActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CameraSettingsActivatedEventArgs = {
@@ -1739,13 +1730,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_CommandLineActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CommandLineActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CommandLineActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CommandLineActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CommandLineActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CommandLineActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CommandLineActivatedEventArgs = {
@@ -1924,13 +1914,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_CommandLineActivationOperation[] = 
-    {
+    static PyType_Slot _type_slots_CommandLineActivationOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CommandLineActivationOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CommandLineActivationOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CommandLineActivationOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CommandLineActivationOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CommandLineActivationOperation = {
@@ -2131,13 +2120,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ContactCallActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ContactCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactCallActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContactCallActivatedEventArgs = {
@@ -2318,13 +2306,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ContactMapActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ContactMapActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactMapActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactMapActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactMapActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactMapActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContactMapActivatedEventArgs = {
@@ -2525,13 +2512,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ContactMessageActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ContactMessageActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactMessageActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactMessageActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactMessageActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactMessageActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContactMessageActivatedEventArgs = {
@@ -2712,13 +2698,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ContactPanelActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ContactPanelActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactPanelActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactPanelActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactPanelActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactPanelActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContactPanelActivatedEventArgs = {
@@ -2859,13 +2844,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ContactPickerActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ContactPickerActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactPickerActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactPickerActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactPickerActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactPickerActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContactPickerActivatedEventArgs = {
@@ -3066,13 +3050,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ContactPostActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ContactPostActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactPostActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactPostActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactPostActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactPostActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContactPostActivatedEventArgs = {
@@ -3273,13 +3256,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ContactVideoCallActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ContactVideoCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactVideoCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactVideoCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactVideoCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactVideoCallActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContactVideoCallActivatedEventArgs = {
@@ -3500,13 +3482,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DeviceActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceActivatedEventArgs = {
@@ -3667,13 +3648,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_DevicePairingActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DevicePairingActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePairingActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePairingActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePairingActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePairingActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DevicePairingActivatedEventArgs = {
@@ -3914,13 +3894,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_DialReceiverActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DialReceiverActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialReceiverActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialReceiverActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialReceiverActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialReceiverActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DialReceiverActivatedEventArgs = {
@@ -4181,13 +4160,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_FileActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_FileActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileActivatedEventArgs = {
@@ -4368,13 +4346,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_FileOpenPickerActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_FileOpenPickerActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileOpenPickerActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileOpenPickerActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileOpenPickerActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileOpenPickerActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileOpenPickerActivatedEventArgs = {
@@ -4555,13 +4532,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_FileOpenPickerContinuationEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_FileOpenPickerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileOpenPickerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileOpenPickerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileOpenPickerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileOpenPickerContinuationEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileOpenPickerContinuationEventArgs = {
@@ -4762,13 +4738,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_FileSavePickerActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_FileSavePickerActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileSavePickerActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileSavePickerActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileSavePickerActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileSavePickerActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileSavePickerActivatedEventArgs = {
@@ -4949,13 +4924,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_FileSavePickerContinuationEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_FileSavePickerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileSavePickerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileSavePickerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileSavePickerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileSavePickerContinuationEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileSavePickerContinuationEventArgs = {
@@ -5136,13 +5110,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_FolderPickerContinuationEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_FolderPickerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FolderPickerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FolderPickerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FolderPickerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FolderPickerContinuationEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FolderPickerContinuationEventArgs = {
@@ -5403,13 +5376,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_LaunchActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_LaunchActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LaunchActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LaunchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LaunchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LaunchActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LaunchActivatedEventArgs = {
@@ -5570,13 +5542,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_LockScreenActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_LockScreenActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LockScreenActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LockScreenActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LockScreenActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LockScreenActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LockScreenActivatedEventArgs = {
@@ -5797,13 +5768,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_LockScreenCallActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_LockScreenCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LockScreenCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LockScreenCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LockScreenCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LockScreenCallActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LockScreenCallActivatedEventArgs = {
@@ -5924,13 +5894,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_LockScreenComponentActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_LockScreenComponentActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LockScreenComponentActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LockScreenComponentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LockScreenComponentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LockScreenComponentActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LockScreenComponentActivatedEventArgs = {
@@ -6091,13 +6060,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_PhoneCallActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PhoneCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneCallActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhoneCallActivatedEventArgs = {
@@ -6238,13 +6206,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_PickerReturnedActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PickerReturnedActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PickerReturnedActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PickerReturnedActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PickerReturnedActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PickerReturnedActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PickerReturnedActivatedEventArgs = {
@@ -6385,13 +6352,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_Print3DWorkflowActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_Print3DWorkflowActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Print3DWorkflowActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Print3DWorkflowActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Print3DWorkflowActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Print3DWorkflowActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Print3DWorkflowActivatedEventArgs = {
@@ -6532,13 +6498,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_PrintTaskSettingsActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PrintTaskSettingsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTaskSettingsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTaskSettingsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTaskSettingsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTaskSettingsActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintTaskSettingsActivatedEventArgs = {
@@ -6779,13 +6744,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ProtocolActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ProtocolActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtocolActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtocolActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtocolActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtocolActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProtocolActivatedEventArgs = {
@@ -7046,13 +7010,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ProtocolForResultsActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ProtocolForResultsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtocolForResultsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtocolForResultsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtocolForResultsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtocolForResultsActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProtocolForResultsActivatedEventArgs = {
@@ -7213,13 +7176,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_RestrictedLaunchActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RestrictedLaunchActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RestrictedLaunchActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RestrictedLaunchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RestrictedLaunchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RestrictedLaunchActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RestrictedLaunchActivatedEventArgs = {
@@ -7460,13 +7422,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_SearchActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SearchActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SearchActivatedEventArgs = {
@@ -7627,13 +7588,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ShareTargetActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ShareTargetActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ShareTargetActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ShareTargetActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ShareTargetActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ShareTargetActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ShareTargetActivatedEventArgs = {
@@ -7759,13 +7719,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_SplashScreen[] = 
-    {
+    static PyType_Slot _type_slots_SplashScreen[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SplashScreen) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SplashScreen) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SplashScreen) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SplashScreen) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SplashScreen = {
@@ -7926,13 +7885,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_StartupTaskActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_StartupTaskActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StartupTaskActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StartupTaskActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StartupTaskActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StartupTaskActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StartupTaskActivatedEventArgs = {
@@ -8013,13 +7971,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_TileActivatedInfo[] = 
-    {
+    static PyType_Slot _type_slots_TileActivatedInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileActivatedInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TileActivatedInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileActivatedInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileActivatedInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TileActivatedInfo = {
@@ -8220,13 +8177,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ToastNotificationActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ToastNotificationActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotificationActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastNotificationActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotificationActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotificationActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToastNotificationActivatedEventArgs = {
@@ -8367,13 +8323,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataAccountProviderActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_UserDataAccountProviderActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataAccountProviderActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataAccountProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataAccountProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataAccountProviderActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataAccountProviderActivatedEventArgs = {
@@ -8534,13 +8489,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_VoiceCommandActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_VoiceCommandActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VoiceCommandActivatedEventArgs = {
@@ -8721,13 +8675,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_WalletActionActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WalletActionActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletActionActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WalletActionActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletActionActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletActionActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WalletActionActivatedEventArgs = {
@@ -8888,13 +8841,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_WebAccountProviderActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebAccountProviderActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountProviderActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountProviderActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebAccountProviderActivatedEventArgs = {
@@ -9055,13 +9007,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_WebAuthenticationBrokerContinuationEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebAuthenticationBrokerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAuthenticationBrokerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAuthenticationBrokerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAuthenticationBrokerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAuthenticationBrokerContinuationEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebAuthenticationBrokerContinuationEventArgs = {
@@ -9182,13 +9133,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IActivatedEventArgs = {
@@ -9329,13 +9279,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IActivatedEventArgsWithUser[] = 
-    {
+    static PyType_Slot _type_slots_IActivatedEventArgsWithUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IActivatedEventArgsWithUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IActivatedEventArgsWithUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IActivatedEventArgsWithUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IActivatedEventArgsWithUser) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IActivatedEventArgsWithUser = {
@@ -9476,13 +9425,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IApplicationViewActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IApplicationViewActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IApplicationViewActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IApplicationViewActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IApplicationViewActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IApplicationViewActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IApplicationViewActivatedEventArgs = {
@@ -9623,13 +9571,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IAppointmentsProviderActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IAppointmentsProviderActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentsProviderActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentsProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentsProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentsProviderActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAppointmentsProviderActivatedEventArgs = {
@@ -9790,13 +9737,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IAppointmentsProviderAddAppointmentActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IAppointmentsProviderAddAppointmentActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentsProviderAddAppointmentActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentsProviderAddAppointmentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentsProviderAddAppointmentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentsProviderAddAppointmentActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAppointmentsProviderAddAppointmentActivatedEventArgs = {
@@ -9957,13 +9903,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IAppointmentsProviderRemoveAppointmentActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IAppointmentsProviderRemoveAppointmentActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentsProviderRemoveAppointmentActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentsProviderRemoveAppointmentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentsProviderRemoveAppointmentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentsProviderRemoveAppointmentActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAppointmentsProviderRemoveAppointmentActivatedEventArgs = {
@@ -10124,13 +10069,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IAppointmentsProviderReplaceAppointmentActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IAppointmentsProviderReplaceAppointmentActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentsProviderReplaceAppointmentActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentsProviderReplaceAppointmentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentsProviderReplaceAppointmentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentsProviderReplaceAppointmentActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAppointmentsProviderReplaceAppointmentActivatedEventArgs = {
@@ -10331,13 +10275,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs = {
@@ -10518,13 +10461,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IAppointmentsProviderShowTimeFrameActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IAppointmentsProviderShowTimeFrameActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentsProviderShowTimeFrameActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentsProviderShowTimeFrameActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentsProviderShowTimeFrameActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentsProviderShowTimeFrameActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAppointmentsProviderShowTimeFrameActivatedEventArgs = {
@@ -10605,13 +10547,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IBackgroundActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IBackgroundActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBackgroundActivatedEventArgs = {
@@ -10752,13 +10693,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IBarcodeScannerPreviewActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IBarcodeScannerPreviewActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBarcodeScannerPreviewActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBarcodeScannerPreviewActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBarcodeScannerPreviewActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBarcodeScannerPreviewActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBarcodeScannerPreviewActivatedEventArgs = {
@@ -10899,13 +10839,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ICachedFileUpdaterActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ICachedFileUpdaterActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICachedFileUpdaterActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICachedFileUpdaterActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICachedFileUpdaterActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICachedFileUpdaterActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ICachedFileUpdaterActivatedEventArgs = {
@@ -11066,13 +11005,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ICameraSettingsActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ICameraSettingsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICameraSettingsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICameraSettingsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICameraSettingsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICameraSettingsActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ICameraSettingsActivatedEventArgs = {
@@ -11213,13 +11151,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ICommandLineActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ICommandLineActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICommandLineActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICommandLineActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICommandLineActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICommandLineActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ICommandLineActivatedEventArgs = {
@@ -11360,13 +11297,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IContactActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IContactActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IContactActivatedEventArgs = {
@@ -11567,13 +11503,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IContactCallActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IContactCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactCallActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IContactCallActivatedEventArgs = {
@@ -11754,13 +11689,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IContactMapActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IContactMapActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactMapActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactMapActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactMapActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactMapActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IContactMapActivatedEventArgs = {
@@ -11961,13 +11895,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IContactMessageActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IContactMessageActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactMessageActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactMessageActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactMessageActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactMessageActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IContactMessageActivatedEventArgs = {
@@ -12068,13 +12001,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IContactPanelActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IContactPanelActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactPanelActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactPanelActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactPanelActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactPanelActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IContactPanelActivatedEventArgs = {
@@ -12215,13 +12147,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IContactPickerActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IContactPickerActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactPickerActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactPickerActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactPickerActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactPickerActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IContactPickerActivatedEventArgs = {
@@ -12422,13 +12353,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IContactPostActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IContactPostActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactPostActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactPostActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactPostActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactPostActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IContactPostActivatedEventArgs = {
@@ -12629,13 +12559,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IContactVideoCallActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IContactVideoCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactVideoCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactVideoCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactVideoCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactVideoCallActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IContactVideoCallActivatedEventArgs = {
@@ -12776,13 +12705,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IContactsProviderActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IContactsProviderActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactsProviderActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactsProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactsProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactsProviderActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IContactsProviderActivatedEventArgs = {
@@ -12923,13 +12851,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IContinuationActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IContinuationActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContinuationActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContinuationActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContinuationActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContinuationActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IContinuationActivatedEventArgs = {
@@ -13090,13 +13017,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IDeviceActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IDeviceActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDeviceActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDeviceActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDeviceActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDeviceActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IDeviceActivatedEventArgs = {
@@ -13237,13 +13163,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IDevicePairingActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IDevicePairingActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDevicePairingActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDevicePairingActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDevicePairingActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDevicePairingActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IDevicePairingActivatedEventArgs = {
@@ -13424,13 +13349,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IDialReceiverActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IDialReceiverActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDialReceiverActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDialReceiverActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDialReceiverActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDialReceiverActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IDialReceiverActivatedEventArgs = {
@@ -13591,13 +13515,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IFileActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IFileActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IFileActivatedEventArgs = {
@@ -13738,13 +13661,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IFileActivatedEventArgsWithCallerPackageFamilyName[] = 
-    {
+    static PyType_Slot _type_slots_IFileActivatedEventArgsWithCallerPackageFamilyName[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileActivatedEventArgsWithCallerPackageFamilyName) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileActivatedEventArgsWithCallerPackageFamilyName) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileActivatedEventArgsWithCallerPackageFamilyName) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileActivatedEventArgsWithCallerPackageFamilyName) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IFileActivatedEventArgsWithCallerPackageFamilyName = {
@@ -13925,13 +13847,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IFileActivatedEventArgsWithNeighboringFiles[] = 
-    {
+    static PyType_Slot _type_slots_IFileActivatedEventArgsWithNeighboringFiles[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileActivatedEventArgsWithNeighboringFiles) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileActivatedEventArgsWithNeighboringFiles) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileActivatedEventArgsWithNeighboringFiles) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileActivatedEventArgsWithNeighboringFiles) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IFileActivatedEventArgsWithNeighboringFiles = {
@@ -14072,13 +13993,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IFileOpenPickerActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IFileOpenPickerActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileOpenPickerActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileOpenPickerActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileOpenPickerActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileOpenPickerActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IFileOpenPickerActivatedEventArgs = {
@@ -14159,13 +14079,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IFileOpenPickerActivatedEventArgs2[] = 
-    {
+    static PyType_Slot _type_slots_IFileOpenPickerActivatedEventArgs2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileOpenPickerActivatedEventArgs2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileOpenPickerActivatedEventArgs2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileOpenPickerActivatedEventArgs2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileOpenPickerActivatedEventArgs2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IFileOpenPickerActivatedEventArgs2 = {
@@ -14326,13 +14245,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IFileOpenPickerContinuationEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IFileOpenPickerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileOpenPickerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileOpenPickerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileOpenPickerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileOpenPickerContinuationEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IFileOpenPickerContinuationEventArgs = {
@@ -14473,13 +14391,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IFileSavePickerActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IFileSavePickerActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileSavePickerActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileSavePickerActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileSavePickerActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileSavePickerActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IFileSavePickerActivatedEventArgs = {
@@ -14580,13 +14497,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IFileSavePickerActivatedEventArgs2[] = 
-    {
+    static PyType_Slot _type_slots_IFileSavePickerActivatedEventArgs2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileSavePickerActivatedEventArgs2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileSavePickerActivatedEventArgs2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileSavePickerActivatedEventArgs2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileSavePickerActivatedEventArgs2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IFileSavePickerActivatedEventArgs2 = {
@@ -14747,13 +14663,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IFileSavePickerContinuationEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IFileSavePickerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileSavePickerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileSavePickerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileSavePickerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileSavePickerContinuationEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IFileSavePickerContinuationEventArgs = {
@@ -14914,13 +14829,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IFolderPickerContinuationEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IFolderPickerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFolderPickerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFolderPickerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFolderPickerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFolderPickerContinuationEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IFolderPickerContinuationEventArgs = {
@@ -15081,13 +14995,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ILaunchActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ILaunchActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILaunchActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILaunchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILaunchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILaunchActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ILaunchActivatedEventArgs = {
@@ -15268,13 +15181,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ILaunchActivatedEventArgs2[] = 
-    {
+    static PyType_Slot _type_slots_ILaunchActivatedEventArgs2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILaunchActivatedEventArgs2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILaunchActivatedEventArgs2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILaunchActivatedEventArgs2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILaunchActivatedEventArgs2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ILaunchActivatedEventArgs2 = {
@@ -15415,13 +15327,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ILockScreenActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ILockScreenActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILockScreenActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILockScreenActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILockScreenActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILockScreenActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ILockScreenActivatedEventArgs = {
@@ -15602,13 +15513,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ILockScreenCallActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ILockScreenCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILockScreenCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILockScreenCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILockScreenCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILockScreenCallActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ILockScreenCallActivatedEventArgs = {
@@ -15749,13 +15659,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IPhoneCallActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IPhoneCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPhoneCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPhoneCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPhoneCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPhoneCallActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPhoneCallActivatedEventArgs = {
@@ -15896,13 +15805,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IPickerReturnedActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IPickerReturnedActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPickerReturnedActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPickerReturnedActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPickerReturnedActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPickerReturnedActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPickerReturnedActivatedEventArgs = {
@@ -16043,13 +15951,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IPrelaunchActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IPrelaunchActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPrelaunchActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrelaunchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrelaunchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrelaunchActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPrelaunchActivatedEventArgs = {
@@ -16190,13 +16097,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IPrint3DWorkflowActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IPrint3DWorkflowActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPrint3DWorkflowActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrint3DWorkflowActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrint3DWorkflowActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrint3DWorkflowActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPrint3DWorkflowActivatedEventArgs = {
@@ -16337,13 +16243,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IPrintTaskSettingsActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IPrintTaskSettingsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPrintTaskSettingsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrintTaskSettingsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrintTaskSettingsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrintTaskSettingsActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPrintTaskSettingsActivatedEventArgs = {
@@ -16484,13 +16389,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IProtocolActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IProtocolActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IProtocolActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IProtocolActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IProtocolActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IProtocolActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IProtocolActivatedEventArgs = {
@@ -16651,13 +16555,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData[] = 
-    {
+    static PyType_Slot _type_slots_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData = {
@@ -16798,13 +16701,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IProtocolForResultsActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IProtocolForResultsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IProtocolForResultsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IProtocolForResultsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IProtocolForResultsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IProtocolForResultsActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IProtocolForResultsActivatedEventArgs = {
@@ -16945,13 +16847,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IRestrictedLaunchActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IRestrictedLaunchActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IRestrictedLaunchActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRestrictedLaunchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRestrictedLaunchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRestrictedLaunchActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IRestrictedLaunchActivatedEventArgs = {
@@ -17112,13 +17013,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ISearchActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ISearchActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISearchActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISearchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISearchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISearchActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISearchActivatedEventArgs = {
@@ -17199,13 +17099,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_ISearchActivatedEventArgsWithLinguisticDetails[] = 
-    {
+    static PyType_Slot _type_slots_ISearchActivatedEventArgsWithLinguisticDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISearchActivatedEventArgsWithLinguisticDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISearchActivatedEventArgsWithLinguisticDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISearchActivatedEventArgsWithLinguisticDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISearchActivatedEventArgsWithLinguisticDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISearchActivatedEventArgsWithLinguisticDetails = {
@@ -17346,13 +17245,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IShareTargetActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IShareTargetActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IShareTargetActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IShareTargetActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IShareTargetActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IShareTargetActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IShareTargetActivatedEventArgs = {
@@ -17493,13 +17391,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IStartupTaskActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IStartupTaskActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStartupTaskActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStartupTaskActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStartupTaskActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStartupTaskActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IStartupTaskActivatedEventArgs = {
@@ -17660,13 +17557,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IToastNotificationActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IToastNotificationActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IToastNotificationActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IToastNotificationActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IToastNotificationActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IToastNotificationActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IToastNotificationActivatedEventArgs = {
@@ -17807,13 +17703,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IUserDataAccountProviderActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IUserDataAccountProviderActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IUserDataAccountProviderActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IUserDataAccountProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IUserDataAccountProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IUserDataAccountProviderActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IUserDataAccountProviderActivatedEventArgs = {
@@ -17954,13 +17849,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IViewSwitcherProvider[] = 
-    {
+    static PyType_Slot _type_slots_IViewSwitcherProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IViewSwitcherProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IViewSwitcherProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IViewSwitcherProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IViewSwitcherProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IViewSwitcherProvider = {
@@ -18101,13 +17995,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IVoiceCommandActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IVoiceCommandActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVoiceCommandActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVoiceCommandActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVoiceCommandActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVoiceCommandActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVoiceCommandActivatedEventArgs = {
@@ -18288,13 +18181,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IWalletActionActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IWalletActionActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWalletActionActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWalletActionActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWalletActionActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWalletActionActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IWalletActionActivatedEventArgs = {
@@ -18435,13 +18327,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IWebAccountProviderActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IWebAccountProviderActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccountProviderActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccountProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccountProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccountProviderActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IWebAccountProviderActivatedEventArgs = {
@@ -18602,13 +18493,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { }
     };
 
-    static PyType_Slot _type_slots_IWebAuthenticationBrokerContinuationEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IWebAuthenticationBrokerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAuthenticationBrokerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAuthenticationBrokerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAuthenticationBrokerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAuthenticationBrokerContinuationEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IWebAuthenticationBrokerContinuationEventArgs = {

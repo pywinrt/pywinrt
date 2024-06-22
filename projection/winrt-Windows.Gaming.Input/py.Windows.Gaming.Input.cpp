@@ -483,13 +483,12 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
-    static PyType_Slot _type_slots_ArcadeStick[] = 
-    {
+    static PyType_Slot _type_slots_ArcadeStick[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ArcadeStick) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ArcadeStick) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ArcadeStick) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ArcadeStick) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ArcadeStick = {
@@ -1024,13 +1023,12 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
-    static PyType_Slot _type_slots_FlightStick[] = 
-    {
+    static PyType_Slot _type_slots_FlightStick[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FlightStick) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FlightStick) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FlightStick) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FlightStick) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FlightStick = {
@@ -1593,13 +1591,12 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
-    static PyType_Slot _type_slots_Gamepad[] = 
-    {
+    static PyType_Slot _type_slots_Gamepad[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Gamepad) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Gamepad) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Gamepad) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Gamepad) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Gamepad = {
@@ -1757,13 +1754,12 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
-    static PyType_Slot _type_slots_Headset[] = 
-    {
+    static PyType_Slot _type_slots_Headset[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Headset) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Headset) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Headset) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Headset) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Headset = {
@@ -2371,13 +2367,12 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
-    static PyType_Slot _type_slots_RacingWheel[] = 
-    {
+    static PyType_Slot _type_slots_RacingWheel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RacingWheel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RacingWheel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RacingWheel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RacingWheel) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RacingWheel = {
@@ -3108,13 +3103,12 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
-    static PyType_Slot _type_slots_RawGameController[] = 
-    {
+    static PyType_Slot _type_slots_RawGameController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RawGameController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RawGameController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RawGameController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RawGameController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RawGameController = {
@@ -3661,13 +3655,12 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
-    static PyType_Slot _type_slots_UINavigationController[] = 
-    {
+    static PyType_Slot _type_slots_UINavigationController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UINavigationController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UINavigationController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UINavigationController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UINavigationController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UINavigationController = {
@@ -3950,13 +3943,12 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
-    static PyType_Slot _type_slots_IGameController[] = 
-    {
+    static PyType_Slot _type_slots_IGameController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGameController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGameController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGameController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGameController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IGameController = {
@@ -4047,13 +4039,12 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
-    static PyType_Slot _type_slots_IGameControllerBatteryInfo[] = 
-    {
+    static PyType_Slot _type_slots_IGameControllerBatteryInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGameControllerBatteryInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGameControllerBatteryInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGameControllerBatteryInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGameControllerBatteryInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IGameControllerBatteryInfo = {
@@ -4205,14 +4196,13 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
-    static PyType_Slot _type_slots_ArcadeStickReading[] = 
-    {
+    static PyType_Slot _type_slots_ArcadeStickReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ArcadeStickReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ArcadeStickReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ArcadeStickReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ArcadeStickReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ArcadeStickReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ArcadeStickReading = {
@@ -4539,14 +4529,13 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
-    static PyType_Slot _type_slots_FlightStickReading[] = 
-    {
+    static PyType_Slot _type_slots_FlightStickReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FlightStickReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_FlightStickReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FlightStickReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FlightStickReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FlightStickReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FlightStickReading = {
@@ -4908,14 +4897,13 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
-    static PyType_Slot _type_slots_GamepadReading[] = 
-    {
+    static PyType_Slot _type_slots_GamepadReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GamepadReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GamepadReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GamepadReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GamepadReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GamepadReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GamepadReading = {
@@ -5137,14 +5125,13 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
-    static PyType_Slot _type_slots_GamepadVibration[] = 
-    {
+    static PyType_Slot _type_slots_GamepadVibration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GamepadVibration) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GamepadVibration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GamepadVibration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GamepadVibration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GamepadVibration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GamepadVibration = {
@@ -5506,14 +5493,13 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
-    static PyType_Slot _type_slots_RacingWheelReading[] = 
-    {
+    static PyType_Slot _type_slots_RacingWheelReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RacingWheelReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RacingWheelReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RacingWheelReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RacingWheelReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RacingWheelReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RacingWheelReading = {
@@ -5700,14 +5686,13 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
-    static PyType_Slot _type_slots_UINavigationReading[] = 
-    {
+    static PyType_Slot _type_slots_UINavigationReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UINavigationReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_UINavigationReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UINavigationReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UINavigationReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UINavigationReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UINavigationReading = {

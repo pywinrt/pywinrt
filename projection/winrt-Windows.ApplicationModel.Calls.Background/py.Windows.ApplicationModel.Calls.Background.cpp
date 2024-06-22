@@ -116,13 +116,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
         { }
     };
 
-    static PyType_Slot _type_slots_PhoneCallBlockedTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_PhoneCallBlockedTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneCallBlockedTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneCallBlockedTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneCallBlockedTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneCallBlockedTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhoneCallBlockedTriggerDetails = {
@@ -223,13 +222,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
         { }
     };
 
-    static PyType_Slot _type_slots_PhoneCallOriginDataRequestTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_PhoneCallOriginDataRequestTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneCallOriginDataRequestTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneCallOriginDataRequestTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneCallOriginDataRequestTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneCallOriginDataRequestTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhoneCallOriginDataRequestTriggerDetails = {
@@ -410,13 +408,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
         { }
     };
 
-    static PyType_Slot _type_slots_PhoneIncomingCallDismissedTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_PhoneIncomingCallDismissedTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneIncomingCallDismissedTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneIncomingCallDismissedTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneIncomingCallDismissedTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneIncomingCallDismissedTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhoneIncomingCallDismissedTriggerDetails = {
@@ -517,13 +514,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
         { }
     };
 
-    static PyType_Slot _type_slots_PhoneIncomingCallNotificationTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_PhoneIncomingCallNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneIncomingCallNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneIncomingCallNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneIncomingCallNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneIncomingCallNotificationTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhoneIncomingCallNotificationTriggerDetails = {
@@ -656,13 +652,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
         { }
     };
 
-    static PyType_Slot _type_slots_PhoneLineChangedTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_PhoneLineChangedTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneLineChangedTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneLineChangedTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneLineChangedTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneLineChangedTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhoneLineChangedTriggerDetails = {
@@ -783,13 +778,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
         { }
     };
 
-    static PyType_Slot _type_slots_PhoneNewVoicemailMessageTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_PhoneNewVoicemailMessageTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneNewVoicemailMessageTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneNewVoicemailMessageTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneNewVoicemailMessageTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneNewVoicemailMessageTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhoneNewVoicemailMessageTriggerDetails = {

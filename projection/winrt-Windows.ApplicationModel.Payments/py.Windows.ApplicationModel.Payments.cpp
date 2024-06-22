@@ -626,13 +626,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { }
     };
 
-    static PyType_Slot _type_slots_PaymentAddress[] = 
-    {
+    static PyType_Slot _type_slots_PaymentAddress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentAddress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentAddress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentAddress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentAddress) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaymentAddress = {
@@ -737,13 +736,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { }
     };
 
-    static PyType_Slot _type_slots_PaymentCanMakePaymentResult[] = 
-    {
+    static PyType_Slot _type_slots_PaymentCanMakePaymentResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentCanMakePaymentResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentCanMakePaymentResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentCanMakePaymentResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentCanMakePaymentResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaymentCanMakePaymentResult = {
@@ -990,13 +988,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { }
     };
 
-    static PyType_Slot _type_slots_PaymentCurrencyAmount[] = 
-    {
+    static PyType_Slot _type_slots_PaymentCurrencyAmount[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentCurrencyAmount) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentCurrencyAmount) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentCurrencyAmount) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentCurrencyAmount) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaymentCurrencyAmount = {
@@ -1302,13 +1299,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { }
     };
 
-    static PyType_Slot _type_slots_PaymentDetails[] = 
-    {
+    static PyType_Slot _type_slots_PaymentDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaymentDetails = {
@@ -1509,13 +1505,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { }
     };
 
-    static PyType_Slot _type_slots_PaymentDetailsModifier[] = 
-    {
+    static PyType_Slot _type_slots_PaymentDetailsModifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentDetailsModifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentDetailsModifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentDetailsModifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentDetailsModifier) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaymentDetailsModifier = {
@@ -1745,13 +1740,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { }
     };
 
-    static PyType_Slot _type_slots_PaymentItem[] = 
-    {
+    static PyType_Slot _type_slots_PaymentItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaymentItem = {
@@ -1949,13 +1943,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { }
     };
 
-    static PyType_Slot _type_slots_PaymentMediator[] = 
-    {
+    static PyType_Slot _type_slots_PaymentMediator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentMediator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentMediator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentMediator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentMediator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaymentMediator = {
@@ -2093,13 +2086,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { }
     };
 
-    static PyType_Slot _type_slots_PaymentMerchantInfo[] = 
-    {
+    static PyType_Slot _type_slots_PaymentMerchantInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentMerchantInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentMerchantInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentMerchantInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentMerchantInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaymentMerchantInfo = {
@@ -2240,13 +2232,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { }
     };
 
-    static PyType_Slot _type_slots_PaymentMethodData[] = 
-    {
+    static PyType_Slot _type_slots_PaymentMethodData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentMethodData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentMethodData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentMethodData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentMethodData) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaymentMethodData = {
@@ -2569,13 +2560,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { }
     };
 
-    static PyType_Slot _type_slots_PaymentOptions[] = 
-    {
+    static PyType_Slot _type_slots_PaymentOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaymentOptions = {
@@ -2815,13 +2805,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { }
     };
 
-    static PyType_Slot _type_slots_PaymentRequest[] = 
-    {
+    static PyType_Slot _type_slots_PaymentRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaymentRequest = {
@@ -2975,13 +2964,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { }
     };
 
-    static PyType_Slot _type_slots_PaymentRequestChangedArgs[] = 
-    {
+    static PyType_Slot _type_slots_PaymentRequestChangedArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentRequestChangedArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentRequestChangedArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentRequestChangedArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentRequestChangedArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaymentRequestChangedArgs = {
@@ -3226,13 +3214,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { }
     };
 
-    static PyType_Slot _type_slots_PaymentRequestChangedResult[] = 
-    {
+    static PyType_Slot _type_slots_PaymentRequestChangedResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentRequestChangedResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentRequestChangedResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentRequestChangedResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentRequestChangedResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaymentRequestChangedResult = {
@@ -3333,13 +3320,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { }
     };
 
-    static PyType_Slot _type_slots_PaymentRequestSubmitResult[] = 
-    {
+    static PyType_Slot _type_slots_PaymentRequestSubmitResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentRequestSubmitResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentRequestSubmitResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentRequestSubmitResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentRequestSubmitResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaymentRequestSubmitResult = {
@@ -3552,13 +3538,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { }
     };
 
-    static PyType_Slot _type_slots_PaymentResponse[] = 
-    {
+    static PyType_Slot _type_slots_PaymentResponse[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentResponse) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentResponse) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentResponse) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentResponse) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaymentResponse = {
@@ -3871,13 +3856,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { }
     };
 
-    static PyType_Slot _type_slots_PaymentShippingOption[] = 
-    {
+    static PyType_Slot _type_slots_PaymentShippingOption[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentShippingOption) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentShippingOption) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentShippingOption) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentShippingOption) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaymentShippingOption = {
@@ -4018,13 +4002,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { }
     };
 
-    static PyType_Slot _type_slots_PaymentToken[] = 
-    {
+    static PyType_Slot _type_slots_PaymentToken[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentToken) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentToken) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentToken) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentToken) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaymentToken = {

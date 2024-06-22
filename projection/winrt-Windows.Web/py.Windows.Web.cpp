@@ -53,12 +53,11 @@ namespace py::cpp::Windows::Web
         { }
     };
 
-    static PyType_Slot _type_slots_WebError[] = 
-    {
+    static PyType_Slot _type_slots_WebError[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebError) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebError = {
@@ -177,13 +176,12 @@ namespace py::cpp::Windows::Web
         { }
     };
 
-    static PyType_Slot _type_slots_IUriToStreamResolver[] = 
-    {
+    static PyType_Slot _type_slots_IUriToStreamResolver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IUriToStreamResolver) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IUriToStreamResolver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IUriToStreamResolver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IUriToStreamResolver) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IUriToStreamResolver = {

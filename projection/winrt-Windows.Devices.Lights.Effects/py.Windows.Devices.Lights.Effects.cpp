@@ -338,13 +338,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_LampArrayBitmapEffect[] = 
-    {
+    static PyType_Slot _type_slots_LampArrayBitmapEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampArrayBitmapEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampArrayBitmapEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampArrayBitmapEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampArrayBitmapEffect) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LampArrayBitmapEffect = {
@@ -458,13 +457,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_LampArrayBitmapRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_LampArrayBitmapRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampArrayBitmapRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampArrayBitmapRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampArrayBitmapRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampArrayBitmapRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LampArrayBitmapRequestedEventArgs = {
@@ -982,13 +980,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_LampArrayBlinkEffect[] = 
-    {
+    static PyType_Slot _type_slots_LampArrayBlinkEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampArrayBlinkEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampArrayBlinkEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampArrayBlinkEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampArrayBlinkEffect) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LampArrayBlinkEffect = {
@@ -1314,13 +1311,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_LampArrayColorRampEffect[] = 
-    {
+    static PyType_Slot _type_slots_LampArrayColorRampEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampArrayColorRampEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampArrayColorRampEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampArrayColorRampEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampArrayColorRampEffect) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LampArrayColorRampEffect = {
@@ -1595,13 +1591,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_LampArrayCustomEffect[] = 
-    {
+    static PyType_Slot _type_slots_LampArrayCustomEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampArrayCustomEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampArrayCustomEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampArrayCustomEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampArrayCustomEffect) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LampArrayCustomEffect = {
@@ -2342,8 +2337,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_LampArrayEffectPlaylist[] = 
-    {
+    static PyType_Slot _type_slots_LampArrayEffectPlaylist[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampArrayEffectPlaylist) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampArrayEffectPlaylist) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampArrayEffectPlaylist) },
@@ -2352,7 +2346,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_LampArrayEffectPlaylist) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_LampArrayEffectPlaylist) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_LampArrayEffectPlaylist) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LampArrayEffectPlaylist = {
@@ -2706,13 +2700,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_LampArraySolidEffect[] = 
-    {
+    static PyType_Slot _type_slots_LampArraySolidEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampArraySolidEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampArraySolidEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampArraySolidEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampArraySolidEffect) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LampArraySolidEffect = {
@@ -2928,13 +2921,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_LampArrayUpdateRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_LampArrayUpdateRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampArrayUpdateRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampArrayUpdateRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampArrayUpdateRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampArrayUpdateRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LampArrayUpdateRequestedEventArgs = {
@@ -3043,13 +3035,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_ILampArrayEffect[] = 
-    {
+    static PyType_Slot _type_slots_ILampArrayEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILampArrayEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILampArrayEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILampArrayEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILampArrayEffect) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ILampArrayEffect = {

@@ -126,13 +126,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreTextCompositionCompletedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CoreTextCompositionCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextCompositionCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextCompositionCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextCompositionCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextCompositionCompletedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreTextCompositionCompletedEventArgs = {
@@ -233,13 +232,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreTextCompositionSegment[] = 
-    {
+    static PyType_Slot _type_slots_CoreTextCompositionSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextCompositionSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextCompositionSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextCompositionSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextCompositionSegment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreTextCompositionSegment = {
@@ -350,13 +348,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreTextCompositionStartedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CoreTextCompositionStartedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextCompositionStartedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextCompositionStartedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextCompositionStartedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextCompositionStartedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreTextCompositionStartedEventArgs = {
@@ -1220,13 +1217,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreTextEditContext[] = 
-    {
+    static PyType_Slot _type_slots_CoreTextEditContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextEditContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextEditContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextEditContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextEditContext) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreTextEditContext = {
@@ -1505,13 +1501,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreTextFormatUpdatingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CoreTextFormatUpdatingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextFormatUpdatingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextFormatUpdatingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextFormatUpdatingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextFormatUpdatingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreTextFormatUpdatingEventArgs = {
@@ -1668,13 +1663,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreTextLayoutBounds[] = 
-    {
+    static PyType_Slot _type_slots_CoreTextLayoutBounds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextLayoutBounds) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextLayoutBounds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextLayoutBounds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextLayoutBounds) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreTextLayoutBounds = {
@@ -1845,13 +1839,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreTextLayoutRequest[] = 
-    {
+    static PyType_Slot _type_slots_CoreTextLayoutRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextLayoutRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextLayoutRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextLayoutRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextLayoutRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreTextLayoutRequest = {
@@ -1932,13 +1925,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreTextLayoutRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CoreTextLayoutRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextLayoutRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextLayoutRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextLayoutRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextLayoutRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreTextLayoutRequestedEventArgs = {
@@ -2097,13 +2089,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreTextSelectionRequest[] = 
-    {
+    static PyType_Slot _type_slots_CoreTextSelectionRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextSelectionRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextSelectionRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextSelectionRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextSelectionRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreTextSelectionRequest = {
@@ -2184,13 +2175,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreTextSelectionRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CoreTextSelectionRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextSelectionRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextSelectionRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextSelectionRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextSelectionRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreTextSelectionRequestedEventArgs = {
@@ -2369,13 +2359,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreTextSelectionUpdatingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CoreTextSelectionUpdatingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextSelectionUpdatingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextSelectionUpdatingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextSelectionUpdatingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextSelectionUpdatingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreTextSelectionUpdatingEventArgs = {
@@ -2421,12 +2410,11 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreTextServicesConstants[] = 
-    {
+    static PyType_Slot _type_slots_CoreTextServicesConstants[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextServicesConstants) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextServicesConstants) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextServicesConstants) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreTextServicesConstants = {
@@ -2637,13 +2625,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreTextServicesManager[] = 
-    {
+    static PyType_Slot _type_slots_CoreTextServicesManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextServicesManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextServicesManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextServicesManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextServicesManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreTextServicesManager = {
@@ -2848,13 +2835,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreTextTextRequest[] = 
-    {
+    static PyType_Slot _type_slots_CoreTextTextRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextTextRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextTextRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextTextRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextTextRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreTextTextRequest = {
@@ -2935,13 +2921,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreTextTextRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CoreTextTextRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextTextRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextTextRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextTextRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextTextRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreTextTextRequestedEventArgs = {
@@ -3180,13 +3165,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreTextTextUpdatingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CoreTextTextUpdatingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextTextUpdatingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextTextUpdatingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextTextUpdatingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextTextUpdatingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreTextTextUpdatingEventArgs = {
@@ -3338,14 +3322,13 @@ namespace py::cpp::Windows::UI::Text::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreTextRange[] = 
-    {
+    static PyType_Slot _type_slots_CoreTextRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextRange) },
         { Py_tp_init, reinterpret_cast<void*>(_init_CoreTextRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextRange) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreTextRange = {

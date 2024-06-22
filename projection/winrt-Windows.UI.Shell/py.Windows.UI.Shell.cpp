@@ -53,12 +53,11 @@ namespace py::cpp::Windows::UI::Shell
         { }
     };
 
-    static PyType_Slot _type_slots_AdaptiveCardBuilder[] = 
-    {
+    static PyType_Slot _type_slots_AdaptiveCardBuilder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveCardBuilder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveCardBuilder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveCardBuilder) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdaptiveCardBuilder = {
@@ -196,13 +195,12 @@ namespace py::cpp::Windows::UI::Shell
         { }
     };
 
-    static PyType_Slot _type_slots_FocusSession[] = 
-    {
+    static PyType_Slot _type_slots_FocusSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FocusSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FocusSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FocusSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FocusSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FocusSession = {
@@ -489,13 +487,12 @@ namespace py::cpp::Windows::UI::Shell
         { }
     };
 
-    static PyType_Slot _type_slots_FocusSessionManager[] = 
-    {
+    static PyType_Slot _type_slots_FocusSessionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FocusSessionManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FocusSessionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FocusSessionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FocusSessionManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FocusSessionManager = {
@@ -711,13 +708,12 @@ namespace py::cpp::Windows::UI::Shell
         { }
     };
 
-    static PyType_Slot _type_slots_SecurityAppManager[] = 
-    {
+    static PyType_Slot _type_slots_SecurityAppManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecurityAppManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecurityAppManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecurityAppManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecurityAppManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SecurityAppManager = {
@@ -846,13 +842,12 @@ namespace py::cpp::Windows::UI::Shell
         { }
     };
 
-    static PyType_Slot _type_slots_ShareWindowCommandEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ShareWindowCommandEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ShareWindowCommandEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ShareWindowCommandEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ShareWindowCommandEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ShareWindowCommandEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ShareWindowCommandEventArgs = {
@@ -1125,13 +1120,12 @@ namespace py::cpp::Windows::UI::Shell
         { }
     };
 
-    static PyType_Slot _type_slots_ShareWindowCommandSource[] = 
-    {
+    static PyType_Slot _type_slots_ShareWindowCommandSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ShareWindowCommandSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ShareWindowCommandSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ShareWindowCommandSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ShareWindowCommandSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ShareWindowCommandSource = {
@@ -1507,13 +1501,12 @@ namespace py::cpp::Windows::UI::Shell
         { }
     };
 
-    static PyType_Slot _type_slots_TaskbarManager[] = 
-    {
+    static PyType_Slot _type_slots_TaskbarManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TaskbarManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TaskbarManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TaskbarManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TaskbarManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TaskbarManager = {
@@ -1893,13 +1886,12 @@ namespace py::cpp::Windows::UI::Shell
         { }
     };
 
-    static PyType_Slot _type_slots_WindowTab[] = 
-    {
+    static PyType_Slot _type_slots_WindowTab[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowTab) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowTab) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowTab) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowTab) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WindowTab = {
@@ -1980,13 +1972,12 @@ namespace py::cpp::Windows::UI::Shell
         { }
     };
 
-    static PyType_Slot _type_slots_WindowTabCloseRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WindowTabCloseRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowTabCloseRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowTabCloseRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowTabCloseRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowTabCloseRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WindowTabCloseRequestedEventArgs = {
@@ -2621,8 +2612,7 @@ namespace py::cpp::Windows::UI::Shell
         { }
     };
 
-    static PyType_Slot _type_slots_WindowTabCollection[] = 
-    {
+    static PyType_Slot _type_slots_WindowTabCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowTabCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowTabCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowTabCollection) },
@@ -2632,7 +2622,7 @@ namespace py::cpp::Windows::UI::Shell
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_WindowTabCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_WindowTabCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_WindowTabCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WindowTabCollection = {
@@ -2811,13 +2801,12 @@ namespace py::cpp::Windows::UI::Shell
         { }
     };
 
-    static PyType_Slot _type_slots_WindowTabGroup[] = 
-    {
+    static PyType_Slot _type_slots_WindowTabGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowTabGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowTabGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowTabGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowTabGroup) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WindowTabGroup = {
@@ -2963,13 +2952,12 @@ namespace py::cpp::Windows::UI::Shell
         { }
     };
 
-    static PyType_Slot _type_slots_WindowTabIcon[] = 
-    {
+    static PyType_Slot _type_slots_WindowTabIcon[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowTabIcon) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowTabIcon) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowTabIcon) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowTabIcon) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WindowTabIcon = {
@@ -3379,13 +3367,12 @@ namespace py::cpp::Windows::UI::Shell
         { }
     };
 
-    static PyType_Slot _type_slots_WindowTabManager[] = 
-    {
+    static PyType_Slot _type_slots_WindowTabManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowTabManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowTabManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowTabManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowTabManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WindowTabManager = {
@@ -3494,13 +3481,12 @@ namespace py::cpp::Windows::UI::Shell
         { }
     };
 
-    static PyType_Slot _type_slots_WindowTabSwitchRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WindowTabSwitchRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowTabSwitchRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowTabSwitchRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowTabSwitchRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowTabSwitchRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WindowTabSwitchRequestedEventArgs = {
@@ -3659,13 +3645,12 @@ namespace py::cpp::Windows::UI::Shell
         { }
     };
 
-    static PyType_Slot _type_slots_WindowTabTearOutRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WindowTabTearOutRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowTabTearOutRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowTabTearOutRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowTabTearOutRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowTabTearOutRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WindowTabTearOutRequestedEventArgs = {
@@ -3864,13 +3849,12 @@ namespace py::cpp::Windows::UI::Shell
         { }
     };
 
-    static PyType_Slot _type_slots_WindowTabThumbnailRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WindowTabThumbnailRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowTabThumbnailRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowTabThumbnailRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowTabThumbnailRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowTabThumbnailRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WindowTabThumbnailRequestedEventArgs = {
@@ -3961,13 +3945,12 @@ namespace py::cpp::Windows::UI::Shell
         { }
     };
 
-    static PyType_Slot _type_slots_IAdaptiveCard[] = 
-    {
+    static PyType_Slot _type_slots_IAdaptiveCard[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAdaptiveCard) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAdaptiveCard) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAdaptiveCard) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAdaptiveCard) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAdaptiveCard = {
@@ -4060,13 +4043,12 @@ namespace py::cpp::Windows::UI::Shell
         { }
     };
 
-    static PyType_Slot _type_slots_IAdaptiveCardBuilderStatics[] = 
-    {
+    static PyType_Slot _type_slots_IAdaptiveCardBuilderStatics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAdaptiveCardBuilderStatics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAdaptiveCardBuilderStatics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAdaptiveCardBuilderStatics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAdaptiveCardBuilderStatics) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAdaptiveCardBuilderStatics = {

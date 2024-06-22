@@ -121,13 +121,12 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_EnhancedWaypoint[] = 
-    {
+    static PyType_Slot _type_slots_EnhancedWaypoint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EnhancedWaypoint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EnhancedWaypoint) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EnhancedWaypoint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EnhancedWaypoint) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EnhancedWaypoint = {
@@ -228,13 +227,12 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_ManeuverWarning[] = 
-    {
+    static PyType_Slot _type_slots_ManeuverWarning[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManeuverWarning) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManeuverWarning) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManeuverWarning) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManeuverWarning) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ManeuverWarning = {
@@ -615,13 +613,12 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapAddress[] = 
-    {
+    static PyType_Slot _type_slots_MapAddress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapAddress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapAddress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapAddress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapAddress) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapAddress = {
@@ -762,13 +759,12 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapLocation[] = 
-    {
+    static PyType_Slot _type_slots_MapLocation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapLocation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapLocation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapLocation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapLocation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapLocation = {
@@ -901,12 +897,11 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapLocationFinder[] = 
-    {
+    static PyType_Slot _type_slots_MapLocationFinder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapLocationFinder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapLocationFinder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapLocationFinder) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapLocationFinder = {
@@ -1034,13 +1029,12 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapLocationFinderResult[] = 
-    {
+    static PyType_Slot _type_slots_MapLocationFinderResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapLocationFinderResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapLocationFinderResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapLocationFinderResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapLocationFinderResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapLocationFinderResult = {
@@ -1127,12 +1121,11 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapManager[] = 
-    {
+    static PyType_Slot _type_slots_MapManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapManager = {
@@ -1440,13 +1433,12 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapRoute[] = 
-    {
+    static PyType_Slot _type_slots_MapRoute[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapRoute) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapRoute) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapRoute) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapRoute) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapRoute = {
@@ -1769,13 +1761,12 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapRouteDrivingOptions[] = 
-    {
+    static PyType_Slot _type_slots_MapRouteDrivingOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapRouteDrivingOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapRouteDrivingOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapRouteDrivingOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapRouteDrivingOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapRouteDrivingOptions = {
@@ -2115,12 +2106,11 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapRouteFinder[] = 
-    {
+    static PyType_Slot _type_slots_MapRouteFinder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapRouteFinder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapRouteFinder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapRouteFinder) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapRouteFinder = {
@@ -2271,13 +2261,12 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapRouteFinderResult[] = 
-    {
+    static PyType_Slot _type_slots_MapRouteFinderResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapRouteFinderResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapRouteFinderResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapRouteFinderResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapRouteFinderResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapRouteFinderResult = {
@@ -2478,13 +2467,12 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapRouteLeg[] = 
-    {
+    static PyType_Slot _type_slots_MapRouteLeg[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapRouteLeg) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapRouteLeg) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapRouteLeg) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapRouteLeg) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapRouteLeg = {
@@ -2745,13 +2733,12 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapRouteManeuver[] = 
-    {
+    static PyType_Slot _type_slots_MapRouteManeuver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapRouteManeuver) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MapRouteManeuver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapRouteManeuver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapRouteManeuver) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapRouteManeuver = {
@@ -2910,12 +2897,11 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_MapService[] = 
-    {
+    static PyType_Slot _type_slots_MapService[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapService) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapService) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapService) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MapService = {
@@ -3347,13 +3333,12 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_PlaceInfo[] = 
-    {
+    static PyType_Slot _type_slots_PlaceInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlaceInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlaceInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlaceInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlaceInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlaceInfo = {
@@ -3562,13 +3547,12 @@ namespace py::cpp::Windows::Services::Maps
         { }
     };
 
-    static PyType_Slot _type_slots_PlaceInfoCreateOptions[] = 
-    {
+    static PyType_Slot _type_slots_PlaceInfoCreateOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlaceInfoCreateOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlaceInfoCreateOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlaceInfoCreateOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlaceInfoCreateOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlaceInfoCreateOptions = {

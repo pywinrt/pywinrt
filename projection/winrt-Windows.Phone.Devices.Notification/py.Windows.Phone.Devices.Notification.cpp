@@ -149,13 +149,12 @@ namespace py::cpp::Windows::Phone::Devices::Notification
         { }
     };
 
-    static PyType_Slot _type_slots_VibrationDevice[] = 
-    {
+    static PyType_Slot _type_slots_VibrationDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VibrationDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VibrationDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VibrationDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VibrationDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VibrationDevice = {

@@ -376,13 +376,12 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
         { }
     };
 
-    static PyType_Slot _type_slots_AppCapability[] = 
-    {
+    static PyType_Slot _type_slots_AppCapability[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppCapability) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppCapability) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppCapability) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppCapability) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppCapability = {
@@ -472,13 +471,12 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
         { }
     };
 
-    static PyType_Slot _type_slots_AppCapabilityAccessChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppCapabilityAccessChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppCapabilityAccessChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppCapabilityAccessChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppCapabilityAccessChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppCapabilityAccessChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppCapabilityAccessChangedEventArgs = {

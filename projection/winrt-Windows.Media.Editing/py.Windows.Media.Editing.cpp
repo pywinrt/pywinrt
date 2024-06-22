@@ -450,13 +450,12 @@ namespace py::cpp::Windows::Media::Editing
         { }
     };
 
-    static PyType_Slot _type_slots_BackgroundAudioTrack[] = 
-    {
+    static PyType_Slot _type_slots_BackgroundAudioTrack[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundAudioTrack) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundAudioTrack) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundAudioTrack) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundAudioTrack) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BackgroundAudioTrack = {
@@ -574,13 +573,12 @@ namespace py::cpp::Windows::Media::Editing
         { }
     };
 
-    static PyType_Slot _type_slots_EmbeddedAudioTrack[] = 
-    {
+    static PyType_Slot _type_slots_EmbeddedAudioTrack[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmbeddedAudioTrack) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmbeddedAudioTrack) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmbeddedAudioTrack) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmbeddedAudioTrack) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmbeddedAudioTrack = {
@@ -1180,13 +1178,12 @@ namespace py::cpp::Windows::Media::Editing
         { }
     };
 
-    static PyType_Slot _type_slots_MediaClip[] = 
-    {
+    static PyType_Slot _type_slots_MediaClip[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaClip) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaClip) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaClip) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaClip) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaClip = {
@@ -1749,13 +1746,12 @@ namespace py::cpp::Windows::Media::Editing
         { }
     };
 
-    static PyType_Slot _type_slots_MediaComposition[] = 
-    {
+    static PyType_Slot _type_slots_MediaComposition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaComposition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaComposition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaComposition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaComposition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaComposition = {
@@ -2125,13 +2121,12 @@ namespace py::cpp::Windows::Media::Editing
         { }
     };
 
-    static PyType_Slot _type_slots_MediaOverlay[] = 
-    {
+    static PyType_Slot _type_slots_MediaOverlay[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaOverlay) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaOverlay) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaOverlay) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaOverlay) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaOverlay = {
@@ -2299,13 +2294,12 @@ namespace py::cpp::Windows::Media::Editing
         { }
     };
 
-    static PyType_Slot _type_slots_MediaOverlayLayer[] = 
-    {
+    static PyType_Slot _type_slots_MediaOverlayLayer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaOverlayLayer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaOverlayLayer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaOverlayLayer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaOverlayLayer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaOverlayLayer = {

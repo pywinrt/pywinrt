@@ -116,13 +116,12 @@ namespace py::cpp::Windows::Devices::Background
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceServicingDetails[] = 
-    {
+    static PyType_Slot _type_slots_DeviceServicingDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceServicingDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceServicingDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceServicingDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceServicingDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceServicingDetails = {
@@ -223,13 +222,12 @@ namespace py::cpp::Windows::Devices::Background
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceUseDetails[] = 
-    {
+    static PyType_Slot _type_slots_DeviceUseDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceUseDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceUseDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceUseDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceUseDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceUseDetails = {

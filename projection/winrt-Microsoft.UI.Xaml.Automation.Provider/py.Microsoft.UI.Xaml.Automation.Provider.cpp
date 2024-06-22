@@ -56,13 +56,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IRawElementProviderSimple[] = 
-    {
+    static PyType_Slot _type_slots_IRawElementProviderSimple[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IRawElementProviderSimple) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRawElementProviderSimple) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRawElementProviderSimple) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRawElementProviderSimple) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IRawElementProviderSimple = {
@@ -223,13 +222,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IAnnotationProvider[] = 
-    {
+    static PyType_Slot _type_slots_IAnnotationProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAnnotationProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAnnotationProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAnnotationProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAnnotationProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAnnotationProvider = {
@@ -322,13 +320,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ICustomNavigationProvider[] = 
-    {
+    static PyType_Slot _type_slots_ICustomNavigationProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICustomNavigationProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICustomNavigationProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICustomNavigationProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICustomNavigationProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ICustomNavigationProvider = {
@@ -442,13 +439,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IDockProvider[] = 
-    {
+    static PyType_Slot _type_slots_IDockProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDockProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDockProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDockProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDockProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IDockProvider = {
@@ -599,13 +595,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IDragProvider[] = 
-    {
+    static PyType_Slot _type_slots_IDragProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDragProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDragProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDragProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDragProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IDragProvider = {
@@ -706,13 +701,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IDropTargetProvider[] = 
-    {
+    static PyType_Slot _type_slots_IDropTargetProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDropTargetProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDropTargetProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDropTargetProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDropTargetProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IDropTargetProvider = {
@@ -855,13 +849,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IExpandCollapseProvider[] = 
-    {
+    static PyType_Slot _type_slots_IExpandCollapseProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IExpandCollapseProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IExpandCollapseProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IExpandCollapseProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IExpandCollapseProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IExpandCollapseProvider = {
@@ -1022,13 +1015,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IGridItemProvider[] = 
-    {
+    static PyType_Slot _type_slots_IGridItemProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGridItemProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGridItemProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGridItemProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGridItemProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IGridItemProvider = {
@@ -1162,13 +1154,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IGridProvider[] = 
-    {
+    static PyType_Slot _type_slots_IGridProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGridProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGridProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGridProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGridProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IGridProvider = {
@@ -1260,13 +1251,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IInvokeProvider[] = 
-    {
+    static PyType_Slot _type_slots_IInvokeProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IInvokeProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInvokeProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInvokeProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInvokeProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IInvokeProvider = {
@@ -1361,13 +1351,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IItemContainerProvider[] = 
-    {
+    static PyType_Slot _type_slots_IItemContainerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IItemContainerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IItemContainerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IItemContainerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IItemContainerProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IItemContainerProvider = {
@@ -1543,13 +1532,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IMultipleViewProvider[] = 
-    {
+    static PyType_Slot _type_slots_IMultipleViewProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMultipleViewProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMultipleViewProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMultipleViewProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMultipleViewProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IMultipleViewProvider = {
@@ -1640,13 +1628,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IObjectModelProvider[] = 
-    {
+    static PyType_Slot _type_slots_IObjectModelProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IObjectModelProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IObjectModelProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IObjectModelProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IObjectModelProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IObjectModelProvider = {
@@ -1860,13 +1847,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IRangeValueProvider[] = 
-    {
+    static PyType_Slot _type_slots_IRangeValueProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IRangeValueProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRangeValueProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRangeValueProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRangeValueProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IRangeValueProvider = {
@@ -1958,13 +1944,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IScrollItemProvider[] = 
-    {
+    static PyType_Slot _type_slots_IScrollItemProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IScrollItemProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IScrollItemProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IScrollItemProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IScrollItemProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IScrollItemProvider = {
@@ -2213,13 +2198,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IScrollProvider[] = 
-    {
+    static PyType_Slot _type_slots_IScrollProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IScrollProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IScrollProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IScrollProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IScrollProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IScrollProvider = {
@@ -2413,13 +2397,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ISelectionItemProvider[] = 
-    {
+    static PyType_Slot _type_slots_ISelectionItemProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISelectionItemProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISelectionItemProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISelectionItemProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISelectionItemProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISelectionItemProvider = {
@@ -2550,13 +2533,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ISelectionProvider[] = 
-    {
+    static PyType_Slot _type_slots_ISelectionProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISelectionProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISelectionProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISelectionProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISelectionProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISelectionProvider = {
@@ -2697,13 +2679,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ISpreadsheetItemProvider[] = 
-    {
+    static PyType_Slot _type_slots_ISpreadsheetItemProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISpreadsheetItemProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISpreadsheetItemProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISpreadsheetItemProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISpreadsheetItemProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISpreadsheetItemProvider = {
@@ -2796,13 +2777,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ISpreadsheetProvider[] = 
-    {
+    static PyType_Slot _type_slots_ISpreadsheetProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISpreadsheetProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISpreadsheetProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISpreadsheetProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISpreadsheetProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISpreadsheetProvider = {
@@ -3003,13 +2983,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IStylesProvider[] = 
-    {
+    static PyType_Slot _type_slots_IStylesProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStylesProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStylesProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStylesProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStylesProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IStylesProvider = {
@@ -3134,13 +3113,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ISynchronizedInputProvider[] = 
-    {
+    static PyType_Slot _type_slots_ISynchronizedInputProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISynchronizedInputProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISynchronizedInputProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISynchronizedInputProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISynchronizedInputProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISynchronizedInputProvider = {
@@ -3261,13 +3239,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ITableItemProvider[] = 
-    {
+    static PyType_Slot _type_slots_ITableItemProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITableItemProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITableItemProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITableItemProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITableItemProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ITableItemProvider = {
@@ -3408,13 +3385,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ITableProvider[] = 
-    {
+    static PyType_Slot _type_slots_ITableProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITableProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITableProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITableProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITableProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ITableProvider = {
@@ -3515,13 +3491,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ITextChildProvider[] = 
-    {
+    static PyType_Slot _type_slots_ITextChildProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextChildProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextChildProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextChildProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextChildProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ITextChildProvider = {
@@ -3806,13 +3781,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ITextEditProvider[] = 
-    {
+    static PyType_Slot _type_slots_ITextEditProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextEditProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextEditProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextEditProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextEditProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ITextEditProvider = {
@@ -4037,13 +4011,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ITextProvider[] = 
-    {
+    static PyType_Slot _type_slots_ITextProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ITextProvider = {
@@ -4344,13 +4317,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ITextProvider2[] = 
-    {
+    static PyType_Slot _type_slots_ITextProvider2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextProvider2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextProvider2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextProvider2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextProvider2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ITextProvider2 = {
@@ -4999,13 +4971,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ITextRangeProvider[] = 
-    {
+    static PyType_Slot _type_slots_ITextRangeProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextRangeProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextRangeProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextRangeProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextRangeProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ITextRangeProvider = {
@@ -5685,13 +5656,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ITextRangeProvider2[] = 
-    {
+    static PyType_Slot _type_slots_ITextRangeProvider2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextRangeProvider2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextRangeProvider2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextRangeProvider2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextRangeProvider2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ITextRangeProvider2 = {
@@ -5803,13 +5773,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IToggleProvider[] = 
-    {
+    static PyType_Slot _type_slots_IToggleProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IToggleProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IToggleProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IToggleProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IToggleProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IToggleProvider = {
@@ -6031,13 +6000,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ITransformProvider[] = 
-    {
+    static PyType_Slot _type_slots_ITransformProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITransformProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITransformProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITransformProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITransformProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ITransformProvider = {
@@ -6405,13 +6373,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ITransformProvider2[] = 
-    {
+    static PyType_Slot _type_slots_ITransformProvider2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITransformProvider2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITransformProvider2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITransformProvider2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITransformProvider2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ITransformProvider2 = {
@@ -6545,13 +6512,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IValueProvider[] = 
-    {
+    static PyType_Slot _type_slots_IValueProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IValueProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IValueProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IValueProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IValueProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IValueProvider = {
@@ -6643,13 +6609,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IVirtualizedItemProvider[] = 
-    {
+    static PyType_Slot _type_slots_IVirtualizedItemProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVirtualizedItemProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVirtualizedItemProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVirtualizedItemProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVirtualizedItemProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVirtualizedItemProvider = {
@@ -6926,13 +6891,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IWindowProvider[] = 
-    {
+    static PyType_Slot _type_slots_IWindowProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWindowProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWindowProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWindowProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWindowProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IWindowProvider = {

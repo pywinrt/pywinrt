@@ -224,14 +224,13 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_Buffer[] = 
-    {
+    static PyType_Slot _type_slots_Buffer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Buffer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Buffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Buffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Buffer) },
         { Py_bf_getbuffer, reinterpret_cast<void*>(_get_buffer_Buffer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Buffer = {
@@ -1169,13 +1168,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_DataReader[] = 
-    {
+    static PyType_Slot _type_slots_DataReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataReader) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataReader = {
@@ -1467,14 +1465,13 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_DataReaderLoadOperation[] = 
-    {
+    static PyType_Slot _type_slots_DataReaderLoadOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataReaderLoadOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataReaderLoadOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataReaderLoadOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataReaderLoadOperation) },
         { Py_am_await, reinterpret_cast<void*>(_await_DataReaderLoadOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataReaderLoadOperation = {
@@ -2442,13 +2439,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_DataWriter[] = 
-    {
+    static PyType_Slot _type_slots_DataWriter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataWriter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataWriter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataWriter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataWriter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataWriter = {
@@ -2714,14 +2710,13 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_DataWriterStoreOperation[] = 
-    {
+    static PyType_Slot _type_slots_DataWriterStoreOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataWriterStoreOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataWriterStoreOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataWriterStoreOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataWriterStoreOperation) },
         { Py_am_await, reinterpret_cast<void*>(_await_DataWriterStoreOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataWriterStoreOperation = {
@@ -2868,13 +2863,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_FileInputStream[] = 
-    {
+    static PyType_Slot _type_slots_FileInputStream[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileInputStream) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileInputStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileInputStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileInputStream) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileInputStream = {
@@ -3049,13 +3043,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_FileOutputStream[] = 
-    {
+    static PyType_Slot _type_slots_FileOutputStream[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileOutputStream) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileOutputStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileOutputStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileOutputStream) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileOutputStream = {
@@ -3719,13 +3712,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_FileRandomAccessStream[] = 
-    {
+    static PyType_Slot _type_slots_FileRandomAccessStream[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileRandomAccessStream) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileRandomAccessStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileRandomAccessStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileRandomAccessStream) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileRandomAccessStream = {
@@ -4220,13 +4212,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_InMemoryRandomAccessStream[] = 
-    {
+    static PyType_Slot _type_slots_InMemoryRandomAccessStream[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InMemoryRandomAccessStream) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InMemoryRandomAccessStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InMemoryRandomAccessStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InMemoryRandomAccessStream) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InMemoryRandomAccessStream = {
@@ -4373,13 +4364,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_InputStreamOverStream[] = 
-    {
+    static PyType_Slot _type_slots_InputStreamOverStream[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InputStreamOverStream) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InputStreamOverStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InputStreamOverStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InputStreamOverStream) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InputStreamOverStream = {
@@ -4554,13 +4544,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_OutputStreamOverStream[] = 
-    {
+    static PyType_Slot _type_slots_OutputStreamOverStream[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OutputStreamOverStream) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OutputStreamOverStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OutputStreamOverStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OutputStreamOverStream) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OutputStreamOverStream = {
@@ -4673,12 +4662,11 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_RandomAccessStream[] = 
-    {
+    static PyType_Slot _type_slots_RandomAccessStream[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RandomAccessStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RandomAccessStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RandomAccessStream) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RandomAccessStream = {
@@ -5149,13 +5137,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_RandomAccessStreamOverStream[] = 
-    {
+    static PyType_Slot _type_slots_RandomAccessStreamOverStream[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RandomAccessStreamOverStream) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RandomAccessStreamOverStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RandomAccessStreamOverStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RandomAccessStreamOverStream) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RandomAccessStreamOverStream = {
@@ -5339,13 +5326,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_RandomAccessStreamReference[] = 
-    {
+    static PyType_Slot _type_slots_RandomAccessStreamReference[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RandomAccessStreamReference) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RandomAccessStreamReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RandomAccessStreamReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RandomAccessStreamReference) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RandomAccessStreamReference = {
@@ -5516,14 +5502,13 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_IBuffer[] = 
-    {
+    static PyType_Slot _type_slots_IBuffer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBuffer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBuffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBuffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBuffer) },
         { Py_bf_getbuffer, reinterpret_cast<void*>(_get_buffer_IBuffer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBuffer = {
@@ -5604,13 +5589,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_IContentTypeProvider[] = 
-    {
+    static PyType_Slot _type_slots_IContentTypeProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContentTypeProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContentTypeProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContentTypeProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContentTypeProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IContentTypeProvider = {
@@ -6414,13 +6398,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_IDataReader[] = 
-    {
+    static PyType_Slot _type_slots_IDataReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDataReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDataReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDataReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDataReader) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IDataReader = {
@@ -7299,13 +7282,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_IDataWriter[] = 
-    {
+    static PyType_Slot _type_slots_IDataWriter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDataWriter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDataWriter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDataWriter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDataWriter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IDataWriter = {
@@ -7452,13 +7434,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_IInputStream[] = 
-    {
+    static PyType_Slot _type_slots_IInputStream[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IInputStream) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInputStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInputStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInputStream) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IInputStream = {
@@ -7549,13 +7530,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_IInputStreamReference[] = 
-    {
+    static PyType_Slot _type_slots_IInputStreamReference[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IInputStreamReference) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInputStreamReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInputStreamReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInputStreamReference) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IInputStreamReference = {
@@ -7730,13 +7710,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_IOutputStream[] = 
-    {
+    static PyType_Slot _type_slots_IOutputStream[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IOutputStream) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IOutputStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IOutputStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IOutputStream) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IOutputStream = {
@@ -7863,13 +7842,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_IPropertySetSerializer[] = 
-    {
+    static PyType_Slot _type_slots_IPropertySetSerializer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPropertySetSerializer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPropertySetSerializer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPropertySetSerializer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPropertySetSerializer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPropertySetSerializer = {
@@ -8313,13 +8291,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_IRandomAccessStream[] = 
-    {
+    static PyType_Slot _type_slots_IRandomAccessStream[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IRandomAccessStream) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRandomAccessStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRandomAccessStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRandomAccessStream) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IRandomAccessStream = {
@@ -8410,13 +8387,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_IRandomAccessStreamReference[] = 
-    {
+    static PyType_Slot _type_slots_IRandomAccessStreamReference[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IRandomAccessStreamReference) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRandomAccessStreamReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRandomAccessStreamReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRandomAccessStreamReference) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IRandomAccessStreamReference = {
@@ -8880,13 +8856,12 @@ namespace py::cpp::Windows::Storage::Streams
         { }
     };
 
-    static PyType_Slot _type_slots_IRandomAccessStreamWithContentType[] = 
-    {
+    static PyType_Slot _type_slots_IRandomAccessStreamWithContentType[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IRandomAccessStreamWithContentType) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRandomAccessStreamWithContentType) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRandomAccessStreamWithContentType) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRandomAccessStreamWithContentType) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IRandomAccessStreamWithContentType = {

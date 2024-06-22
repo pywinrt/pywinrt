@@ -422,13 +422,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { }
     };
 
-    static PyType_Slot _type_slots_WiFiDirectService[] = 
-    {
+    static PyType_Slot _type_slots_WiFiDirectService[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectService) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectService) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectService) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectService) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WiFiDirectService = {
@@ -1178,13 +1177,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { }
     };
 
-    static PyType_Slot _type_slots_WiFiDirectServiceAdvertiser[] = 
-    {
+    static PyType_Slot _type_slots_WiFiDirectServiceAdvertiser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectServiceAdvertiser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectServiceAdvertiser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectServiceAdvertiser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectServiceAdvertiser) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WiFiDirectServiceAdvertiser = {
@@ -1285,13 +1283,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { }
     };
 
-    static PyType_Slot _type_slots_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs = {
@@ -1392,13 +1389,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { }
     };
 
-    static PyType_Slot _type_slots_WiFiDirectServiceProvisioningInfo[] = 
-    {
+    static PyType_Slot _type_slots_WiFiDirectServiceProvisioningInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectServiceProvisioningInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectServiceProvisioningInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectServiceProvisioningInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectServiceProvisioningInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WiFiDirectServiceProvisioningInfo = {
@@ -1499,13 +1495,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { }
     };
 
-    static PyType_Slot _type_slots_WiFiDirectServiceRemotePortAddedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WiFiDirectServiceRemotePortAddedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectServiceRemotePortAddedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectServiceRemotePortAddedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectServiceRemotePortAddedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectServiceRemotePortAddedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WiFiDirectServiceRemotePortAddedEventArgs = {
@@ -1942,13 +1937,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { }
     };
 
-    static PyType_Slot _type_slots_WiFiDirectServiceSession[] = 
-    {
+    static PyType_Slot _type_slots_WiFiDirectServiceSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectServiceSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectServiceSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectServiceSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectServiceSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WiFiDirectServiceSession = {
@@ -2029,13 +2023,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { }
     };
 
-    static PyType_Slot _type_slots_WiFiDirectServiceSessionDeferredEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WiFiDirectServiceSessionDeferredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectServiceSessionDeferredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectServiceSessionDeferredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectServiceSessionDeferredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectServiceSessionDeferredEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WiFiDirectServiceSessionDeferredEventArgs = {
@@ -2208,13 +2201,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { }
     };
 
-    static PyType_Slot _type_slots_WiFiDirectServiceSessionRequest[] = 
-    {
+    static PyType_Slot _type_slots_WiFiDirectServiceSessionRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectServiceSessionRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectServiceSessionRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectServiceSessionRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectServiceSessionRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WiFiDirectServiceSessionRequest = {
@@ -2305,13 +2297,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { }
     };
 
-    static PyType_Slot _type_slots_WiFiDirectServiceSessionRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WiFiDirectServiceSessionRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiDirectServiceSessionRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiDirectServiceSessionRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiDirectServiceSessionRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiDirectServiceSessionRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WiFiDirectServiceSessionRequestedEventArgs = {

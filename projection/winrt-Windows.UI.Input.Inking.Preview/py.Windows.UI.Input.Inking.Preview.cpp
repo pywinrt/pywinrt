@@ -163,13 +163,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_PalmRejectionDelayZonePreview[] = 
-    {
+    static PyType_Slot _type_slots_PalmRejectionDelayZonePreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PalmRejectionDelayZonePreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PalmRejectionDelayZonePreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PalmRejectionDelayZonePreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PalmRejectionDelayZonePreview) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PalmRejectionDelayZonePreview = {

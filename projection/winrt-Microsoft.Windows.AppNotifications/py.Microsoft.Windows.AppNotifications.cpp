@@ -456,13 +456,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
         { }
     };
 
-    static PyType_Slot _type_slots_AppNotification[] = 
-    {
+    static PyType_Slot _type_slots_AppNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppNotification) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppNotification = {
@@ -583,13 +582,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
         { }
     };
 
-    static PyType_Slot _type_slots_AppNotificationActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppNotificationActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppNotificationActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppNotificationActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppNotificationActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppNotificationActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppNotificationActivatedEventArgs = {
@@ -1155,13 +1153,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
         { }
     };
 
-    static PyType_Slot _type_slots_AppNotificationManager[] = 
-    {
+    static PyType_Slot _type_slots_AppNotificationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppNotificationManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppNotificationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppNotificationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppNotificationManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppNotificationManager = {
@@ -1513,13 +1510,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
         { }
     };
 
-    static PyType_Slot _type_slots_AppNotificationProgressData[] = 
-    {
+    static PyType_Slot _type_slots_AppNotificationProgressData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppNotificationProgressData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppNotificationProgressData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppNotificationProgressData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppNotificationProgressData) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppNotificationProgressData = {

@@ -71,12 +71,11 @@ namespace py::cpp::Windows::Phone::System
         { }
     };
 
-    static PyType_Slot _type_slots_SystemProtection[] = 
-    {
+    static PyType_Slot _type_slots_SystemProtection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemProtection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemProtection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemProtection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemProtection = {

@@ -88,12 +88,11 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
         { }
     };
 
-    static PyType_Slot _type_slots_SecurityDescriptorHelpers[] = 
-    {
+    static PyType_Slot _type_slots_SecurityDescriptorHelpers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecurityDescriptorHelpers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecurityDescriptorHelpers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecurityDescriptorHelpers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SecurityDescriptorHelpers = {
@@ -272,14 +271,13 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
         { }
     };
 
-    static PyType_Slot _type_slots_AppContainerNameAndAccess[] = 
-    {
+    static PyType_Slot _type_slots_AppContainerNameAndAccess[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppContainerNameAndAccess) },
         { Py_tp_init, reinterpret_cast<void*>(_init_AppContainerNameAndAccess) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppContainerNameAndAccess) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppContainerNameAndAccess) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppContainerNameAndAccess) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppContainerNameAndAccess = {

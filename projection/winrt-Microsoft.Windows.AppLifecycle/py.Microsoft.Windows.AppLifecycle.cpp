@@ -224,12 +224,11 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
         { }
     };
 
-    static PyType_Slot _type_slots_ActivationRegistrationManager[] = 
-    {
+    static PyType_Slot _type_slots_ActivationRegistrationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivationRegistrationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivationRegistrationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivationRegistrationManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ActivationRegistrationManager = {
@@ -361,13 +360,12 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
         { }
     };
 
-    static PyType_Slot _type_slots_AppActivationArguments[] = 
-    {
+    static PyType_Slot _type_slots_AppActivationArguments[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppActivationArguments) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppActivationArguments) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppActivationArguments) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppActivationArguments) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppActivationArguments = {
@@ -746,13 +744,12 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
         { }
     };
 
-    static PyType_Slot _type_slots_AppInstance[] = 
-    {
+    static PyType_Slot _type_slots_AppInstance[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppInstance) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppInstance) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppInstance) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppInstance) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppInstance = {

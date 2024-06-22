@@ -216,13 +216,12 @@ namespace py::cpp::Windows::System::Update
         { }
     };
 
-    static PyType_Slot _type_slots_SystemUpdateItem[] = 
-    {
+    static PyType_Slot _type_slots_SystemUpdateItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemUpdateItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemUpdateItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemUpdateItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemUpdateItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemUpdateItem = {
@@ -343,13 +342,12 @@ namespace py::cpp::Windows::System::Update
         { }
     };
 
-    static PyType_Slot _type_slots_SystemUpdateLastErrorInfo[] = 
-    {
+    static PyType_Slot _type_slots_SystemUpdateLastErrorInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemUpdateLastErrorInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemUpdateLastErrorInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemUpdateLastErrorInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemUpdateLastErrorInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemUpdateLastErrorInfo = {
@@ -963,12 +961,11 @@ namespace py::cpp::Windows::System::Update
         { }
     };
 
-    static PyType_Slot _type_slots_SystemUpdateManager[] = 
-    {
+    static PyType_Slot _type_slots_SystemUpdateManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemUpdateManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemUpdateManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemUpdateManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemUpdateManager = {

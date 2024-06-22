@@ -262,13 +262,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
         { }
     };
 
-    static PyType_Slot _type_slots_QuickLink[] = 
-    {
+    static PyType_Slot _type_slots_QuickLink[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_QuickLink) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_QuickLink) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_QuickLink) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_QuickLink) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_QuickLink = {
@@ -629,13 +628,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
         { }
     };
 
-    static PyType_Slot _type_slots_ShareOperation[] = 
-    {
+    static PyType_Slot _type_slots_ShareOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ShareOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ShareOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ShareOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ShareOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ShareOperation = {

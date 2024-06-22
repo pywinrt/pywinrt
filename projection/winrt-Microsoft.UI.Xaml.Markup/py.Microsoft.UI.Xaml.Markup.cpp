@@ -78,13 +78,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         { }
     };
 
-    static PyType_Slot _type_slots_MarkupExtension[] = 
-    {
+    static PyType_Slot _type_slots_MarkupExtension[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MarkupExtension) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MarkupExtension) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MarkupExtension) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MarkupExtension) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MarkupExtension = {
@@ -227,13 +226,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         { }
     };
 
-    static PyType_Slot _type_slots_ProvideValueTargetProperty[] = 
-    {
+    static PyType_Slot _type_slots_ProvideValueTargetProperty[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProvideValueTargetProperty) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProvideValueTargetProperty) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProvideValueTargetProperty) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProvideValueTargetProperty) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProvideValueTargetProperty = {
@@ -327,13 +325,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         { }
     };
 
-    static PyType_Slot _type_slots_XamlBinaryWriter[] = 
-    {
+    static PyType_Slot _type_slots_XamlBinaryWriter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlBinaryWriter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlBinaryWriter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlBinaryWriter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlBinaryWriter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XamlBinaryWriter = {
@@ -1177,13 +1174,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         { }
     };
 
-    static PyType_Slot _type_slots_XamlBindingHelper[] = 
-    {
+    static PyType_Slot _type_slots_XamlBindingHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlBindingHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlBindingHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlBindingHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlBindingHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XamlBindingHelper = {
@@ -1324,13 +1320,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         { }
     };
 
-    static PyType_Slot _type_slots_XamlMarkupHelper[] = 
-    {
+    static PyType_Slot _type_slots_XamlMarkupHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlMarkupHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlMarkupHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlMarkupHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlMarkupHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XamlMarkupHelper = {
@@ -1479,13 +1474,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         { }
     };
 
-    static PyType_Slot _type_slots_XamlReader[] = 
-    {
+    static PyType_Slot _type_slots_XamlReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlReader) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XamlReader = {
@@ -1640,13 +1634,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         { }
     };
 
-    static PyType_Slot _type_slots_IComponentConnector[] = 
-    {
+    static PyType_Slot _type_slots_IComponentConnector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IComponentConnector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IComponentConnector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IComponentConnector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IComponentConnector) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IComponentConnector = {
@@ -1780,13 +1773,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         { }
     };
 
-    static PyType_Slot _type_slots_IDataTemplateComponent[] = 
-    {
+    static PyType_Slot _type_slots_IDataTemplateComponent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDataTemplateComponent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDataTemplateComponent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDataTemplateComponent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDataTemplateComponent) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IDataTemplateComponent = {
@@ -1887,13 +1879,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         { }
     };
 
-    static PyType_Slot _type_slots_IProvideValueTarget[] = 
-    {
+    static PyType_Slot _type_slots_IProvideValueTarget[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IProvideValueTarget) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IProvideValueTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IProvideValueTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IProvideValueTarget) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IProvideValueTarget = {
@@ -1974,13 +1965,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         { }
     };
 
-    static PyType_Slot _type_slots_IRootObjectProvider[] = 
-    {
+    static PyType_Slot _type_slots_IRootObjectProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IRootObjectProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRootObjectProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRootObjectProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRootObjectProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IRootObjectProvider = {
@@ -2061,13 +2051,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         { }
     };
 
-    static PyType_Slot _type_slots_IUriContext[] = 
-    {
+    static PyType_Slot _type_slots_IUriContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IUriContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IUriContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IUriContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IUriContext) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IUriContext = {
@@ -2162,13 +2151,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         { }
     };
 
-    static PyType_Slot _type_slots_IXamlBindScopeDiagnostics[] = 
-    {
+    static PyType_Slot _type_slots_IXamlBindScopeDiagnostics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXamlBindScopeDiagnostics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlBindScopeDiagnostics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlBindScopeDiagnostics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlBindScopeDiagnostics) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IXamlBindScopeDiagnostics = {
@@ -2415,13 +2403,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         { }
     };
 
-    static PyType_Slot _type_slots_IXamlMember[] = 
-    {
+    static PyType_Slot _type_slots_IXamlMember[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXamlMember) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlMember) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlMember) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlMember) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IXamlMember = {
@@ -2544,13 +2531,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         { }
     };
 
-    static PyType_Slot _type_slots_IXamlMetadataProvider[] = 
-    {
+    static PyType_Slot _type_slots_IXamlMetadataProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXamlMetadataProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlMetadataProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlMetadataProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlMetadataProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IXamlMetadataProvider = {
@@ -3065,13 +3051,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         { }
     };
 
-    static PyType_Slot _type_slots_IXamlType[] = 
-    {
+    static PyType_Slot _type_slots_IXamlType[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXamlType) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlType) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlType) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlType) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IXamlType = {
@@ -3164,13 +3149,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         { }
     };
 
-    static PyType_Slot _type_slots_IXamlTypeResolver[] = 
-    {
+    static PyType_Slot _type_slots_IXamlTypeResolver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXamlTypeResolver) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlTypeResolver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlTypeResolver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlTypeResolver) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IXamlTypeResolver = {
@@ -3357,14 +3341,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         { }
     };
 
-    static PyType_Slot _type_slots_XamlBinaryWriterErrorInformation[] = 
-    {
+    static PyType_Slot _type_slots_XamlBinaryWriterErrorInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlBinaryWriterErrorInformation) },
         { Py_tp_init, reinterpret_cast<void*>(_init_XamlBinaryWriterErrorInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlBinaryWriterErrorInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlBinaryWriterErrorInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlBinaryWriterErrorInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XamlBinaryWriterErrorInformation = {
@@ -3516,14 +3499,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         { }
     };
 
-    static PyType_Slot _type_slots_XmlnsDefinition[] = 
-    {
+    static PyType_Slot _type_slots_XmlnsDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlnsDefinition) },
         { Py_tp_init, reinterpret_cast<void*>(_init_XmlnsDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlnsDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlnsDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlnsDefinition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XmlnsDefinition = {

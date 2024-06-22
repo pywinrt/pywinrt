@@ -177,13 +177,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnAppId[] = 
-    {
+    static PyType_Slot _type_slots_VpnAppId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnAppId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnAppId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnAppId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnAppId) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnAppId = {
@@ -1459,13 +1458,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnChannel[] = 
-    {
+    static PyType_Slot _type_slots_VpnChannel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnChannel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnChannel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnChannel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnChannel) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnChannel = {
@@ -1572,13 +1570,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnChannelActivityEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_VpnChannelActivityEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnChannelActivityEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnChannelActivityEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnChannelActivityEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnChannelActivityEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnChannelActivityEventArgs = {
@@ -1659,13 +1656,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnChannelActivityStateChangedArgs[] = 
-    {
+    static PyType_Slot _type_slots_VpnChannelActivityStateChangedArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnChannelActivityStateChangedArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnChannelActivityStateChangedArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnChannelActivityStateChangedArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnChannelActivityStateChangedArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnChannelActivityStateChangedArgs = {
@@ -1806,13 +1802,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnChannelConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_VpnChannelConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnChannelConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnChannelConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnChannelConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnChannelConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnChannelConfiguration = {
@@ -1953,13 +1948,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnCredential[] = 
-    {
+    static PyType_Slot _type_slots_VpnCredential[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCredential) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCredential) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCredential) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCredential) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnCredential = {
@@ -2254,13 +2248,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnCustomCheckBox[] = 
-    {
+    static PyType_Slot _type_slots_VpnCustomCheckBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCustomCheckBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCustomCheckBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCustomCheckBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCustomCheckBox) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnCustomCheckBox = {
@@ -2555,13 +2548,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnCustomComboBox[] = 
-    {
+    static PyType_Slot _type_slots_VpnCustomComboBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCustomComboBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCustomComboBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCustomComboBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCustomComboBox) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnCustomComboBox = {
@@ -2904,13 +2896,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnCustomEditBox[] = 
-    {
+    static PyType_Slot _type_slots_VpnCustomEditBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCustomEditBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCustomEditBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCustomEditBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCustomEditBox) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnCustomEditBox = {
@@ -3137,13 +3128,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnCustomErrorBox[] = 
-    {
+    static PyType_Slot _type_slots_VpnCustomErrorBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCustomErrorBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCustomErrorBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCustomErrorBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCustomErrorBox) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnCustomErrorBox = {
@@ -3438,13 +3428,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnCustomPromptBooleanInput[] = 
-    {
+    static PyType_Slot _type_slots_VpnCustomPromptBooleanInput[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCustomPromptBooleanInput) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCustomPromptBooleanInput) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCustomPromptBooleanInput) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCustomPromptBooleanInput) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnCustomPromptBooleanInput = {
@@ -3711,13 +3700,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnCustomPromptOptionSelector[] = 
-    {
+    static PyType_Slot _type_slots_VpnCustomPromptOptionSelector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCustomPromptOptionSelector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCustomPromptOptionSelector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCustomPromptOptionSelector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCustomPromptOptionSelector) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnCustomPromptOptionSelector = {
@@ -3992,13 +3980,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnCustomPromptText[] = 
-    {
+    static PyType_Slot _type_slots_VpnCustomPromptText[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCustomPromptText) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCustomPromptText) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCustomPromptText) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCustomPromptText) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnCustomPromptText = {
@@ -4341,13 +4328,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnCustomPromptTextInput[] = 
-    {
+    static PyType_Slot _type_slots_VpnCustomPromptTextInput[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCustomPromptTextInput) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCustomPromptTextInput) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCustomPromptTextInput) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCustomPromptTextInput) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnCustomPromptTextInput = {
@@ -4622,13 +4608,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnCustomTextBox[] = 
-    {
+    static PyType_Slot _type_slots_VpnCustomTextBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnCustomTextBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnCustomTextBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnCustomTextBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnCustomTextBox) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnCustomTextBox = {
@@ -4779,13 +4764,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnDomainNameAssignment[] = 
-    {
+    static PyType_Slot _type_slots_VpnDomainNameAssignment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnDomainNameAssignment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnDomainNameAssignment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnDomainNameAssignment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnDomainNameAssignment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnDomainNameAssignment = {
@@ -5029,13 +5013,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnDomainNameInfo[] = 
-    {
+    static PyType_Slot _type_slots_VpnDomainNameInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnDomainNameInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnDomainNameInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnDomainNameInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnDomainNameInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnDomainNameInfo = {
@@ -5236,13 +5219,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnForegroundActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_VpnForegroundActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnForegroundActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnForegroundActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnForegroundActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnForegroundActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnForegroundActivatedEventArgs = {
@@ -5336,13 +5318,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnForegroundActivationOperation[] = 
-    {
+    static PyType_Slot _type_slots_VpnForegroundActivationOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnForegroundActivationOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnForegroundActivationOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnForegroundActivationOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnForegroundActivationOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnForegroundActivationOperation = {
@@ -5466,13 +5447,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnInterfaceId[] = 
-    {
+    static PyType_Slot _type_slots_VpnInterfaceId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnInterfaceId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnInterfaceId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnInterfaceId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnInterfaceId) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnInterfaceId = {
@@ -5842,13 +5822,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnManagementAgent[] = 
-    {
+    static PyType_Slot _type_slots_VpnManagementAgent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnManagementAgent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnManagementAgent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnManagementAgent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnManagementAgent) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnManagementAgent = {
@@ -6027,13 +6006,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnNamespaceAssignment[] = 
-    {
+    static PyType_Slot _type_slots_VpnNamespaceAssignment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnNamespaceAssignment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnNamespaceAssignment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnNamespaceAssignment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnNamespaceAssignment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnNamespaceAssignment = {
@@ -6264,13 +6242,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnNamespaceInfo[] = 
-    {
+    static PyType_Slot _type_slots_VpnNamespaceInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnNamespaceInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnNamespaceInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnNamespaceInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnNamespaceInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnNamespaceInfo = {
@@ -6905,13 +6882,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnNativeProfile[] = 
-    {
+    static PyType_Slot _type_slots_VpnNativeProfile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnNativeProfile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnNativeProfile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnNativeProfile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnNativeProfile) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnNativeProfile = {
@@ -7182,13 +7158,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnPacketBuffer[] = 
-    {
+    static PyType_Slot _type_slots_VpnPacketBuffer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnPacketBuffer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnPacketBuffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnPacketBuffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnPacketBuffer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnPacketBuffer = {
@@ -7517,14 +7492,13 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnPacketBufferList[] = 
-    {
+    static PyType_Slot _type_slots_VpnPacketBufferList[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnPacketBufferList) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnPacketBufferList) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnPacketBufferList) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnPacketBufferList) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_VpnPacketBufferList) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnPacketBufferList = {
@@ -7645,13 +7619,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnPickedCredential[] = 
-    {
+    static PyType_Slot _type_slots_VpnPickedCredential[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnPickedCredential) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnPickedCredential) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnPickedCredential) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnPickedCredential) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnPickedCredential = {
@@ -8142,13 +8115,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnPlugInProfile[] = 
-    {
+    static PyType_Slot _type_slots_VpnPlugInProfile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnPlugInProfile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnPlugInProfile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnPlugInProfile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnPlugInProfile) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnPlugInProfile = {
@@ -8330,13 +8302,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnRoute[] = 
-    {
+    static PyType_Slot _type_slots_VpnRoute[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnRoute) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnRoute) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnRoute) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnRoute) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnRoute = {
@@ -8659,13 +8630,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnRouteAssignment[] = 
-    {
+    static PyType_Slot _type_slots_VpnRouteAssignment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnRouteAssignment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnRouteAssignment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnRouteAssignment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnRouteAssignment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnRouteAssignment = {
@@ -8746,13 +8716,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnSystemHealth[] = 
-    {
+    static PyType_Slot _type_slots_VpnSystemHealth[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnSystemHealth) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnSystemHealth) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnSystemHealth) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnSystemHealth) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnSystemHealth = {
@@ -9081,13 +9050,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnTrafficFilter[] = 
-    {
+    static PyType_Slot _type_slots_VpnTrafficFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnTrafficFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnTrafficFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnTrafficFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnTrafficFilter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnTrafficFilter = {
@@ -9286,13 +9254,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_VpnTrafficFilterAssignment[] = 
-    {
+    static PyType_Slot _type_slots_VpnTrafficFilterAssignment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VpnTrafficFilterAssignment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VpnTrafficFilterAssignment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VpnTrafficFilterAssignment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VpnTrafficFilterAssignment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VpnTrafficFilterAssignment = {
@@ -9387,13 +9354,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_IVpnChannelStatics[] = 
-    {
+    static PyType_Slot _type_slots_IVpnChannelStatics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnChannelStatics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnChannelStatics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnChannelStatics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnChannelStatics) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVpnChannelStatics = {
@@ -9534,13 +9500,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_IVpnCredential[] = 
-    {
+    static PyType_Slot _type_slots_IVpnCredential[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnCredential) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnCredential) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnCredential) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnCredential) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVpnCredential = {
@@ -9745,13 +9710,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_IVpnCustomPrompt[] = 
-    {
+    static PyType_Slot _type_slots_IVpnCustomPrompt[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnCustomPrompt) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnCustomPrompt) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnCustomPrompt) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnCustomPrompt) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVpnCustomPrompt = {
@@ -9956,13 +9920,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_IVpnCustomPromptElement[] = 
-    {
+    static PyType_Slot _type_slots_IVpnCustomPromptElement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnCustomPromptElement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnCustomPromptElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnCustomPromptElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnCustomPromptElement) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVpnCustomPromptElement = {
@@ -10058,13 +10021,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_IVpnDomainNameInfoFactory[] = 
-    {
+    static PyType_Slot _type_slots_IVpnDomainNameInfoFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnDomainNameInfoFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnDomainNameInfoFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnDomainNameInfoFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnDomainNameInfoFactory) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVpnDomainNameInfoFactory = {
@@ -10157,13 +10119,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_IVpnInterfaceIdFactory[] = 
-    {
+    static PyType_Slot _type_slots_IVpnInterfaceIdFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnInterfaceIdFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnInterfaceIdFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnInterfaceIdFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnInterfaceIdFactory) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVpnInterfaceIdFactory = {
@@ -10258,13 +10219,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_IVpnNamespaceInfoFactory[] = 
-    {
+    static PyType_Slot _type_slots_IVpnNamespaceInfoFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnNamespaceInfoFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnNamespaceInfoFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnNamespaceInfoFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnNamespaceInfoFactory) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVpnNamespaceInfoFactory = {
@@ -10359,13 +10319,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_IVpnPacketBufferFactory[] = 
-    {
+    static PyType_Slot _type_slots_IVpnPacketBufferFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnPacketBufferFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnPacketBufferFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnPacketBufferFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnPacketBufferFactory) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVpnPacketBufferFactory = {
@@ -10603,13 +10562,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_IVpnPlugIn[] = 
-    {
+    static PyType_Slot _type_slots_IVpnPlugIn[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnPlugIn) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnPlugIn) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnPlugIn) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnPlugIn) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVpnPlugIn = {
@@ -10894,13 +10852,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_IVpnProfile[] = 
-    {
+    static PyType_Slot _type_slots_IVpnProfile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnProfile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnProfile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnProfile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnProfile) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVpnProfile = {
@@ -10994,13 +10951,12 @@ namespace py::cpp::Windows::Networking::Vpn
         { }
     };
 
-    static PyType_Slot _type_slots_IVpnRouteFactory[] = 
-    {
+    static PyType_Slot _type_slots_IVpnRouteFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnRouteFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnRouteFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnRouteFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnRouteFactory) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVpnRouteFactory = {

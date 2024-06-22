@@ -896,8 +896,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpCacheDirectiveHeaderValueCollection[] = 
-    {
+    static PyType_Slot _type_slots_HttpCacheDirectiveHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpCacheDirectiveHeaderValueCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpCacheDirectiveHeaderValueCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpCacheDirectiveHeaderValueCollection) },
@@ -908,7 +907,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpCacheDirectiveHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpCacheDirectiveHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpCacheDirectiveHeaderValueCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpCacheDirectiveHeaderValueCollection = {
@@ -1187,14 +1186,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpChallengeHeaderValue[] = 
-    {
+    static PyType_Slot _type_slots_HttpChallengeHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpChallengeHeaderValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpChallengeHeaderValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpChallengeHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpChallengeHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpChallengeHeaderValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpChallengeHeaderValue = {
@@ -1930,8 +1928,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpChallengeHeaderValueCollection[] = 
-    {
+    static PyType_Slot _type_slots_HttpChallengeHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpChallengeHeaderValueCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpChallengeHeaderValueCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpChallengeHeaderValueCollection) },
@@ -1942,7 +1939,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpChallengeHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpChallengeHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpChallengeHeaderValueCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpChallengeHeaderValueCollection = {
@@ -2165,14 +2162,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpConnectionOptionHeaderValue[] = 
-    {
+    static PyType_Slot _type_slots_HttpConnectionOptionHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpConnectionOptionHeaderValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpConnectionOptionHeaderValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpConnectionOptionHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpConnectionOptionHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpConnectionOptionHeaderValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpConnectionOptionHeaderValue = {
@@ -2908,8 +2904,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpConnectionOptionHeaderValueCollection[] = 
-    {
+    static PyType_Slot _type_slots_HttpConnectionOptionHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpConnectionOptionHeaderValueCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpConnectionOptionHeaderValueCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpConnectionOptionHeaderValueCollection) },
@@ -2920,7 +2915,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpConnectionOptionHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpConnectionOptionHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpConnectionOptionHeaderValueCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpConnectionOptionHeaderValueCollection = {
@@ -3143,14 +3138,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpContentCodingHeaderValue[] = 
-    {
+    static PyType_Slot _type_slots_HttpContentCodingHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpContentCodingHeaderValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpContentCodingHeaderValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpContentCodingHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpContentCodingHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpContentCodingHeaderValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpContentCodingHeaderValue = {
@@ -3886,8 +3880,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpContentCodingHeaderValueCollection[] = 
-    {
+    static PyType_Slot _type_slots_HttpContentCodingHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpContentCodingHeaderValueCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpContentCodingHeaderValueCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpContentCodingHeaderValueCollection) },
@@ -3898,7 +3891,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpContentCodingHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpContentCodingHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpContentCodingHeaderValueCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpContentCodingHeaderValueCollection = {
@@ -4157,14 +4150,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpContentCodingWithQualityHeaderValue[] = 
-    {
+    static PyType_Slot _type_slots_HttpContentCodingWithQualityHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpContentCodingWithQualityHeaderValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpContentCodingWithQualityHeaderValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpContentCodingWithQualityHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpContentCodingWithQualityHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpContentCodingWithQualityHeaderValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpContentCodingWithQualityHeaderValue = {
@@ -4900,8 +4892,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpContentCodingWithQualityHeaderValueCollection[] = 
-    {
+    static PyType_Slot _type_slots_HttpContentCodingWithQualityHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpContentCodingWithQualityHeaderValueCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpContentCodingWithQualityHeaderValueCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpContentCodingWithQualityHeaderValueCollection) },
@@ -4912,7 +4903,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpContentCodingWithQualityHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpContentCodingWithQualityHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpContentCodingWithQualityHeaderValueCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpContentCodingWithQualityHeaderValueCollection = {
@@ -5375,14 +5366,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpContentDispositionHeaderValue[] = 
-    {
+    static PyType_Slot _type_slots_HttpContentDispositionHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpContentDispositionHeaderValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpContentDispositionHeaderValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpContentDispositionHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpContentDispositionHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpContentDispositionHeaderValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpContentDispositionHeaderValue = {
@@ -6368,8 +6358,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpContentHeaderCollection[] = 
-    {
+    static PyType_Slot _type_slots_HttpContentHeaderCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpContentHeaderCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpContentHeaderCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpContentHeaderCollection) },
@@ -6380,7 +6369,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_mp_length, reinterpret_cast<void*>(_map_length_HttpContentHeaderCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_HttpContentHeaderCollection) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_HttpContentHeaderCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpContentHeaderCollection = {
@@ -6724,14 +6713,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpContentRangeHeaderValue[] = 
-    {
+    static PyType_Slot _type_slots_HttpContentRangeHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpContentRangeHeaderValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpContentRangeHeaderValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpContentRangeHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpContentRangeHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpContentRangeHeaderValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpContentRangeHeaderValue = {
@@ -7045,14 +7033,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpCookiePairHeaderValue[] = 
-    {
+    static PyType_Slot _type_slots_HttpCookiePairHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpCookiePairHeaderValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpCookiePairHeaderValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpCookiePairHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpCookiePairHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpCookiePairHeaderValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpCookiePairHeaderValue = {
@@ -7788,8 +7775,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpCookiePairHeaderValueCollection[] = 
-    {
+    static PyType_Slot _type_slots_HttpCookiePairHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpCookiePairHeaderValueCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpCookiePairHeaderValueCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpCookiePairHeaderValueCollection) },
@@ -7800,7 +7786,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpCookiePairHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpCookiePairHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpCookiePairHeaderValueCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpCookiePairHeaderValueCollection = {
@@ -8079,14 +8065,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpCredentialsHeaderValue[] = 
-    {
+    static PyType_Slot _type_slots_HttpCredentialsHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpCredentialsHeaderValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpCredentialsHeaderValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpCredentialsHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpCredentialsHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpCredentialsHeaderValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpCredentialsHeaderValue = {
@@ -8332,14 +8317,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpDateOrDeltaHeaderValue[] = 
-    {
+    static PyType_Slot _type_slots_HttpDateOrDeltaHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpDateOrDeltaHeaderValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpDateOrDeltaHeaderValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpDateOrDeltaHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpDateOrDeltaHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpDateOrDeltaHeaderValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpDateOrDeltaHeaderValue = {
@@ -8673,14 +8657,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpExpectationHeaderValue[] = 
-    {
+    static PyType_Slot _type_slots_HttpExpectationHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpExpectationHeaderValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpExpectationHeaderValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpExpectationHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpExpectationHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpExpectationHeaderValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpExpectationHeaderValue = {
@@ -9416,8 +9399,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpExpectationHeaderValueCollection[] = 
-    {
+    static PyType_Slot _type_slots_HttpExpectationHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpExpectationHeaderValueCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpExpectationHeaderValueCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpExpectationHeaderValueCollection) },
@@ -9428,7 +9410,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpExpectationHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpExpectationHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpExpectationHeaderValueCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpExpectationHeaderValueCollection = {
@@ -10137,8 +10119,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpLanguageHeaderValueCollection[] = 
-    {
+    static PyType_Slot _type_slots_HttpLanguageHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpLanguageHeaderValueCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpLanguageHeaderValueCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpLanguageHeaderValueCollection) },
@@ -10149,7 +10130,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpLanguageHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpLanguageHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpLanguageHeaderValueCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpLanguageHeaderValueCollection = {
@@ -10408,14 +10389,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpLanguageRangeWithQualityHeaderValue[] = 
-    {
+    static PyType_Slot _type_slots_HttpLanguageRangeWithQualityHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpLanguageRangeWithQualityHeaderValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpLanguageRangeWithQualityHeaderValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpLanguageRangeWithQualityHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpLanguageRangeWithQualityHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpLanguageRangeWithQualityHeaderValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpLanguageRangeWithQualityHeaderValue = {
@@ -11151,8 +11131,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpLanguageRangeWithQualityHeaderValueCollection[] = 
-    {
+    static PyType_Slot _type_slots_HttpLanguageRangeWithQualityHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpLanguageRangeWithQualityHeaderValueCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpLanguageRangeWithQualityHeaderValueCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpLanguageRangeWithQualityHeaderValueCollection) },
@@ -11163,7 +11142,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpLanguageRangeWithQualityHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpLanguageRangeWithQualityHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpLanguageRangeWithQualityHeaderValueCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpLanguageRangeWithQualityHeaderValueCollection = {
@@ -11482,14 +11461,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpMediaTypeHeaderValue[] = 
-    {
+    static PyType_Slot _type_slots_HttpMediaTypeHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpMediaTypeHeaderValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpMediaTypeHeaderValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpMediaTypeHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpMediaTypeHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpMediaTypeHeaderValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpMediaTypeHeaderValue = {
@@ -11899,14 +11877,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpMediaTypeWithQualityHeaderValue[] = 
-    {
+    static PyType_Slot _type_slots_HttpMediaTypeWithQualityHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpMediaTypeWithQualityHeaderValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpMediaTypeWithQualityHeaderValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpMediaTypeWithQualityHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpMediaTypeWithQualityHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpMediaTypeWithQualityHeaderValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpMediaTypeWithQualityHeaderValue = {
@@ -12642,8 +12619,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpMediaTypeWithQualityHeaderValueCollection[] = 
-    {
+    static PyType_Slot _type_slots_HttpMediaTypeWithQualityHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpMediaTypeWithQualityHeaderValueCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpMediaTypeWithQualityHeaderValueCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpMediaTypeWithQualityHeaderValueCollection) },
@@ -12654,7 +12630,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpMediaTypeWithQualityHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpMediaTypeWithQualityHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpMediaTypeWithQualityHeaderValueCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpMediaTypeWithQualityHeaderValueCollection = {
@@ -13363,8 +13339,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpMethodHeaderValueCollection[] = 
-    {
+    static PyType_Slot _type_slots_HttpMethodHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpMethodHeaderValueCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpMethodHeaderValueCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpMethodHeaderValueCollection) },
@@ -13375,7 +13350,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpMethodHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpMethodHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpMethodHeaderValueCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpMethodHeaderValueCollection = {
@@ -13662,14 +13637,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpNameValueHeaderValue[] = 
-    {
+    static PyType_Slot _type_slots_HttpNameValueHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpNameValueHeaderValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpNameValueHeaderValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpNameValueHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpNameValueHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpNameValueHeaderValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpNameValueHeaderValue = {
@@ -13955,14 +13929,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpProductHeaderValue[] = 
-    {
+    static PyType_Slot _type_slots_HttpProductHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpProductHeaderValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpProductHeaderValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpProductHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpProductHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpProductHeaderValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpProductHeaderValue = {
@@ -14248,14 +14221,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpProductInfoHeaderValue[] = 
-    {
+    static PyType_Slot _type_slots_HttpProductInfoHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpProductInfoHeaderValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpProductInfoHeaderValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpProductInfoHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpProductInfoHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpProductInfoHeaderValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpProductInfoHeaderValue = {
@@ -14991,8 +14963,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpProductInfoHeaderValueCollection[] = 
-    {
+    static PyType_Slot _type_slots_HttpProductInfoHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpProductInfoHeaderValueCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpProductInfoHeaderValueCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpProductInfoHeaderValueCollection) },
@@ -15003,7 +14974,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpProductInfoHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpProductInfoHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpProductInfoHeaderValueCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpProductInfoHeaderValueCollection = {
@@ -16128,8 +16099,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpRequestHeaderCollection[] = 
-    {
+    static PyType_Slot _type_slots_HttpRequestHeaderCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpRequestHeaderCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpRequestHeaderCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpRequestHeaderCollection) },
@@ -16140,7 +16110,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_mp_length, reinterpret_cast<void*>(_map_length_HttpRequestHeaderCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_HttpRequestHeaderCollection) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_HttpRequestHeaderCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpRequestHeaderCollection = {
@@ -16965,8 +16935,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpResponseHeaderCollection[] = 
-    {
+    static PyType_Slot _type_slots_HttpResponseHeaderCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpResponseHeaderCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpResponseHeaderCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpResponseHeaderCollection) },
@@ -16977,7 +16946,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_mp_length, reinterpret_cast<void*>(_map_length_HttpResponseHeaderCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_HttpResponseHeaderCollection) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_HttpResponseHeaderCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpResponseHeaderCollection = {
@@ -17220,14 +17189,13 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpTransferCodingHeaderValue[] = 
-    {
+    static PyType_Slot _type_slots_HttpTransferCodingHeaderValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpTransferCodingHeaderValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpTransferCodingHeaderValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpTransferCodingHeaderValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpTransferCodingHeaderValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpTransferCodingHeaderValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpTransferCodingHeaderValue = {
@@ -17963,8 +17931,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { }
     };
 
-    static PyType_Slot _type_slots_HttpTransferCodingHeaderValueCollection[] = 
-    {
+    static PyType_Slot _type_slots_HttpTransferCodingHeaderValueCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpTransferCodingHeaderValueCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpTransferCodingHeaderValueCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpTransferCodingHeaderValueCollection) },
@@ -17975,7 +17942,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpTransferCodingHeaderValueCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpTransferCodingHeaderValueCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_HttpTransferCodingHeaderValueCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpTransferCodingHeaderValueCollection = {

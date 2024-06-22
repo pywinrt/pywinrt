@@ -116,13 +116,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { }
     };
 
-    static PyType_Slot _type_slots_GuidanceAudioNotificationRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GuidanceAudioNotificationRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceAudioNotificationRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceAudioNotificationRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceAudioNotificationRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceAudioNotificationRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GuidanceAudioNotificationRequestedEventArgs = {
@@ -223,13 +222,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { }
     };
 
-    static PyType_Slot _type_slots_GuidanceLaneInfo[] = 
-    {
+    static PyType_Slot _type_slots_GuidanceLaneInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceLaneInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceLaneInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceLaneInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceLaneInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GuidanceLaneInfo = {
@@ -530,13 +528,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { }
     };
 
-    static PyType_Slot _type_slots_GuidanceManeuver[] = 
-    {
+    static PyType_Slot _type_slots_GuidanceManeuver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceManeuver) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceManeuver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceManeuver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceManeuver) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GuidanceManeuver = {
@@ -697,13 +694,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { }
     };
 
-    static PyType_Slot _type_slots_GuidanceMapMatchedCoordinate[] = 
-    {
+    static PyType_Slot _type_slots_GuidanceMapMatchedCoordinate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceMapMatchedCoordinate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceMapMatchedCoordinate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceMapMatchedCoordinate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceMapMatchedCoordinate) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GuidanceMapMatchedCoordinate = {
@@ -1627,13 +1623,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { }
     };
 
-    static PyType_Slot _type_slots_GuidanceNavigator[] = 
-    {
+    static PyType_Slot _type_slots_GuidanceNavigator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceNavigator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceNavigator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceNavigator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceNavigator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GuidanceNavigator = {
@@ -1741,13 +1736,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { }
     };
 
-    static PyType_Slot _type_slots_GuidanceReroutedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GuidanceReroutedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceReroutedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceReroutedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceReroutedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceReroutedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GuidanceReroutedEventArgs = {
@@ -2008,13 +2002,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { }
     };
 
-    static PyType_Slot _type_slots_GuidanceRoadSegment[] = 
-    {
+    static PyType_Slot _type_slots_GuidanceRoadSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceRoadSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceRoadSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceRoadSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceRoadSegment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GuidanceRoadSegment = {
@@ -2175,13 +2168,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { }
     };
 
-    static PyType_Slot _type_slots_GuidanceRoadSignpost[] = 
-    {
+    static PyType_Slot _type_slots_GuidanceRoadSignpost[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceRoadSignpost) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceRoadSignpost) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceRoadSignpost) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceRoadSignpost) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GuidanceRoadSignpost = {
@@ -2454,13 +2446,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { }
     };
 
-    static PyType_Slot _type_slots_GuidanceRoute[] = 
-    {
+    static PyType_Slot _type_slots_GuidanceRoute[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceRoute) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceRoute) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceRoute) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceRoute) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GuidanceRoute = {
@@ -2752,13 +2743,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { }
     };
 
-    static PyType_Slot _type_slots_GuidanceTelemetryCollector[] = 
-    {
+    static PyType_Slot _type_slots_GuidanceTelemetryCollector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceTelemetryCollector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceTelemetryCollector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceTelemetryCollector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceTelemetryCollector) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GuidanceTelemetryCollector = {
@@ -3125,13 +3115,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { }
     };
 
-    static PyType_Slot _type_slots_GuidanceUpdatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GuidanceUpdatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidanceUpdatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GuidanceUpdatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidanceUpdatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidanceUpdatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GuidanceUpdatedEventArgs = {

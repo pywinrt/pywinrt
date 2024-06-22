@@ -226,13 +226,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }
     };
 
-    static PyType_Slot _type_slots_InkAnalysisInkBullet[] = 
-    {
+    static PyType_Slot _type_slots_InkAnalysisInkBullet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisInkBullet) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisInkBullet) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisInkBullet) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisInkBullet) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkAnalysisInkBullet = {
@@ -503,13 +502,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }
     };
 
-    static PyType_Slot _type_slots_InkAnalysisInkDrawing[] = 
-    {
+    static PyType_Slot _type_slots_InkAnalysisInkDrawing[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisInkDrawing) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisInkDrawing) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisInkDrawing) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisInkDrawing) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkAnalysisInkDrawing = {
@@ -760,13 +758,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }
     };
 
-    static PyType_Slot _type_slots_InkAnalysisInkWord[] = 
-    {
+    static PyType_Slot _type_slots_InkAnalysisInkWord[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisInkWord) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisInkWord) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisInkWord) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisInkWord) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkAnalysisInkWord = {
@@ -1017,13 +1014,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }
     };
 
-    static PyType_Slot _type_slots_InkAnalysisLine[] = 
-    {
+    static PyType_Slot _type_slots_InkAnalysisLine[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisLine) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisLine) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisLine) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisLine) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkAnalysisLine = {
@@ -1254,13 +1250,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }
     };
 
-    static PyType_Slot _type_slots_InkAnalysisListItem[] = 
-    {
+    static PyType_Slot _type_slots_InkAnalysisListItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisListItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisListItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisListItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisListItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkAnalysisListItem = {
@@ -1471,13 +1466,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }
     };
 
-    static PyType_Slot _type_slots_InkAnalysisNode[] = 
-    {
+    static PyType_Slot _type_slots_InkAnalysisNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisNode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkAnalysisNode = {
@@ -1708,13 +1702,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }
     };
 
-    static PyType_Slot _type_slots_InkAnalysisParagraph[] = 
-    {
+    static PyType_Slot _type_slots_InkAnalysisParagraph[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisParagraph) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisParagraph) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisParagraph) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisParagraph) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkAnalysisParagraph = {
@@ -1795,13 +1788,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }
     };
 
-    static PyType_Slot _type_slots_InkAnalysisResult[] = 
-    {
+    static PyType_Slot _type_slots_InkAnalysisResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkAnalysisResult = {
@@ -2064,13 +2056,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }
     };
 
-    static PyType_Slot _type_slots_InkAnalysisRoot[] = 
-    {
+    static PyType_Slot _type_slots_InkAnalysisRoot[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisRoot) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisRoot) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisRoot) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisRoot) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkAnalysisRoot = {
@@ -2301,13 +2292,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }
     };
 
-    static PyType_Slot _type_slots_InkAnalysisWritingRegion[] = 
-    {
+    static PyType_Slot _type_slots_InkAnalysisWritingRegion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalysisWritingRegion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalysisWritingRegion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalysisWritingRegion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalysisWritingRegion) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkAnalysisWritingRegion = {
@@ -2690,13 +2680,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }
     };
 
-    static PyType_Slot _type_slots_InkAnalyzer[] = 
-    {
+    static PyType_Slot _type_slots_InkAnalyzer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkAnalyzer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkAnalyzer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkAnalyzer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkAnalyzer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkAnalyzer = {
@@ -2907,13 +2896,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }
     };
 
-    static PyType_Slot _type_slots_IInkAnalysisNode[] = 
-    {
+    static PyType_Slot _type_slots_IInkAnalysisNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IInkAnalysisNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInkAnalysisNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInkAnalysisNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInkAnalysisNode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IInkAnalysisNode = {
@@ -3004,13 +2992,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { }
     };
 
-    static PyType_Slot _type_slots_IInkAnalyzerFactory[] = 
-    {
+    static PyType_Slot _type_slots_IInkAnalyzerFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IInkAnalyzerFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInkAnalyzerFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInkAnalyzerFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInkAnalyzerFactory) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IInkAnalyzerFactory = {

@@ -168,13 +168,12 @@ namespace py::cpp::Windows::Media::DialProtocol
         { }
     };
 
-    static PyType_Slot _type_slots_DialApp[] = 
-    {
+    static PyType_Slot _type_slots_DialApp[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialApp) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialApp) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialApp) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialApp) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DialApp = {
@@ -275,13 +274,12 @@ namespace py::cpp::Windows::Media::DialProtocol
         { }
     };
 
-    static PyType_Slot _type_slots_DialAppStateDetails[] = 
-    {
+    static PyType_Slot _type_slots_DialAppStateDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialAppStateDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialAppStateDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialAppStateDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialAppStateDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DialAppStateDetails = {
@@ -527,13 +525,12 @@ namespace py::cpp::Windows::Media::DialProtocol
         { }
     };
 
-    static PyType_Slot _type_slots_DialDevice[] = 
-    {
+    static PyType_Slot _type_slots_DialDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DialDevice = {
@@ -992,13 +989,12 @@ namespace py::cpp::Windows::Media::DialProtocol
         { }
     };
 
-    static PyType_Slot _type_slots_DialDevicePicker[] = 
-    {
+    static PyType_Slot _type_slots_DialDevicePicker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialDevicePicker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialDevicePicker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialDevicePicker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialDevicePicker) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DialDevicePicker = {
@@ -1079,13 +1075,12 @@ namespace py::cpp::Windows::Media::DialProtocol
         { }
     };
 
-    static PyType_Slot _type_slots_DialDevicePickerFilter[] = 
-    {
+    static PyType_Slot _type_slots_DialDevicePickerFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialDevicePickerFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialDevicePickerFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialDevicePickerFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialDevicePickerFilter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DialDevicePickerFilter = {
@@ -1166,13 +1161,12 @@ namespace py::cpp::Windows::Media::DialProtocol
         { }
     };
 
-    static PyType_Slot _type_slots_DialDeviceSelectedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DialDeviceSelectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialDeviceSelectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialDeviceSelectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialDeviceSelectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialDeviceSelectedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DialDeviceSelectedEventArgs = {
@@ -1253,13 +1247,12 @@ namespace py::cpp::Windows::Media::DialProtocol
         { }
     };
 
-    static PyType_Slot _type_slots_DialDisconnectButtonClickedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DialDisconnectButtonClickedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialDisconnectButtonClickedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialDisconnectButtonClickedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialDisconnectButtonClickedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialDisconnectButtonClickedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DialDisconnectButtonClickedEventArgs = {
@@ -1431,13 +1424,12 @@ namespace py::cpp::Windows::Media::DialProtocol
         { }
     };
 
-    static PyType_Slot _type_slots_DialReceiverApp[] = 
-    {
+    static PyType_Slot _type_slots_DialReceiverApp[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialReceiverApp) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialReceiverApp) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialReceiverApp) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialReceiverApp) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DialReceiverApp = {

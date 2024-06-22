@@ -96,13 +96,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_AppActivationResult[] = 
-    {
+    static PyType_Slot _type_slots_AppActivationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppActivationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppActivationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppActivationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppActivationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppActivationResult = {
@@ -440,13 +439,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_AppDiagnosticInfo[] = 
-    {
+    static PyType_Slot _type_slots_AppDiagnosticInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppDiagnosticInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppDiagnosticInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppDiagnosticInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppDiagnosticInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppDiagnosticInfo = {
@@ -799,13 +797,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_AppDiagnosticInfoWatcher[] = 
-    {
+    static PyType_Slot _type_slots_AppDiagnosticInfoWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppDiagnosticInfoWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppDiagnosticInfoWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppDiagnosticInfoWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppDiagnosticInfoWatcher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppDiagnosticInfoWatcher = {
@@ -886,13 +883,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_AppDiagnosticInfoWatcherEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppDiagnosticInfoWatcherEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppDiagnosticInfoWatcherEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppDiagnosticInfoWatcherEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppDiagnosticInfoWatcherEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppDiagnosticInfoWatcherEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppDiagnosticInfoWatcherEventArgs = {
@@ -973,13 +969,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_AppExecutionStateChangeResult[] = 
-    {
+    static PyType_Slot _type_slots_AppExecutionStateChangeResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppExecutionStateChangeResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppExecutionStateChangeResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppExecutionStateChangeResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppExecutionStateChangeResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppExecutionStateChangeResult = {
@@ -1140,13 +1135,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_AppMemoryReport[] = 
-    {
+    static PyType_Slot _type_slots_AppMemoryReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppMemoryReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppMemoryReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppMemoryReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppMemoryReport) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppMemoryReport = {
@@ -1247,13 +1241,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_AppMemoryUsageLimitChangingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppMemoryUsageLimitChangingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppMemoryUsageLimitChangingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppMemoryUsageLimitChangingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppMemoryUsageLimitChangingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppMemoryUsageLimitChangingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppMemoryUsageLimitChangingEventArgs = {
@@ -1394,13 +1387,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_AppResourceGroupBackgroundTaskReport[] = 
-    {
+    static PyType_Slot _type_slots_AppResourceGroupBackgroundTaskReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppResourceGroupBackgroundTaskReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppResourceGroupBackgroundTaskReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppResourceGroupBackgroundTaskReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppResourceGroupBackgroundTaskReport) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppResourceGroupBackgroundTaskReport = {
@@ -1711,13 +1703,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_AppResourceGroupInfo[] = 
-    {
+    static PyType_Slot _type_slots_AppResourceGroupInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppResourceGroupInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppResourceGroupInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppResourceGroupInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppResourceGroupInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppResourceGroupInfo = {
@@ -2085,13 +2076,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_AppResourceGroupInfoWatcher[] = 
-    {
+    static PyType_Slot _type_slots_AppResourceGroupInfoWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppResourceGroupInfoWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppResourceGroupInfoWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppResourceGroupInfoWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppResourceGroupInfoWatcher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppResourceGroupInfoWatcher = {
@@ -2192,13 +2182,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_AppResourceGroupInfoWatcherEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppResourceGroupInfoWatcherEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppResourceGroupInfoWatcherEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppResourceGroupInfoWatcherEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppResourceGroupInfoWatcherEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppResourceGroupInfoWatcherEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppResourceGroupInfoWatcherEventArgs = {
@@ -2299,13 +2288,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs = {
@@ -2446,13 +2434,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_AppResourceGroupMemoryReport[] = 
-    {
+    static PyType_Slot _type_slots_AppResourceGroupMemoryReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppResourceGroupMemoryReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppResourceGroupMemoryReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppResourceGroupMemoryReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppResourceGroupMemoryReport) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppResourceGroupMemoryReport = {
@@ -2553,13 +2540,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_AppResourceGroupStateReport[] = 
-    {
+    static PyType_Slot _type_slots_AppResourceGroupStateReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppResourceGroupStateReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppResourceGroupStateReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppResourceGroupStateReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppResourceGroupStateReport) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppResourceGroupStateReport = {
@@ -2753,13 +2739,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_AppUriHandlerHost[] = 
-    {
+    static PyType_Slot _type_slots_AppUriHandlerHost[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppUriHandlerHost) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppUriHandlerHost) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppUriHandlerHost) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppUriHandlerHost) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppUriHandlerHost = {
@@ -3005,13 +2990,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_AppUriHandlerRegistration[] = 
-    {
+    static PyType_Slot _type_slots_AppUriHandlerRegistration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppUriHandlerRegistration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppUriHandlerRegistration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppUriHandlerRegistration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppUriHandlerRegistration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppUriHandlerRegistration = {
@@ -3267,13 +3251,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_AppUriHandlerRegistrationManager[] = 
-    {
+    static PyType_Slot _type_slots_AppUriHandlerRegistrationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppUriHandlerRegistrationManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppUriHandlerRegistrationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppUriHandlerRegistrationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppUriHandlerRegistrationManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppUriHandlerRegistrationManager = {
@@ -3361,12 +3344,11 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_DateTimeSettings[] = 
-    {
+    static PyType_Slot _type_slots_DateTimeSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DateTimeSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DateTimeSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DateTimeSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DateTimeSettings = {
@@ -3675,13 +3657,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_DispatcherQueue[] = 
-    {
+    static PyType_Slot _type_slots_DispatcherQueue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DispatcherQueue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DispatcherQueue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DispatcherQueue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DispatcherQueue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DispatcherQueue = {
@@ -3847,13 +3828,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_DispatcherQueueController[] = 
-    {
+    static PyType_Slot _type_slots_DispatcherQueueController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DispatcherQueueController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DispatcherQueueController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DispatcherQueueController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DispatcherQueueController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DispatcherQueueController = {
@@ -3970,13 +3950,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_DispatcherQueueShutdownStartingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DispatcherQueueShutdownStartingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DispatcherQueueShutdownStartingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DispatcherQueueShutdownStartingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DispatcherQueueShutdownStartingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DispatcherQueueShutdownStartingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DispatcherQueueShutdownStartingEventArgs = {
@@ -4260,13 +4239,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_DispatcherQueueTimer[] = 
-    {
+    static PyType_Slot _type_slots_DispatcherQueueTimer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DispatcherQueueTimer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DispatcherQueueTimer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DispatcherQueueTimer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DispatcherQueueTimer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DispatcherQueueTimer = {
@@ -4417,13 +4395,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_FolderLauncherOptions[] = 
-    {
+    static PyType_Slot _type_slots_FolderLauncherOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FolderLauncherOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FolderLauncherOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FolderLauncherOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FolderLauncherOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FolderLauncherOptions = {
@@ -4640,12 +4617,11 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_KnownUserProperties[] = 
-    {
+    static PyType_Slot _type_slots_KnownUserProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownUserProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownUserProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownUserProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KnownUserProperties = {
@@ -4781,13 +4757,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_LaunchUriResult[] = 
-    {
+    static PyType_Slot _type_slots_LaunchUriResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LaunchUriResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LaunchUriResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LaunchUriResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LaunchUriResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LaunchUriResult = {
@@ -5557,12 +5532,11 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_Launcher[] = 
-    {
+    static PyType_Slot _type_slots_Launcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Launcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Launcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Launcher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Launcher = {
@@ -6232,13 +6206,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_LauncherOptions[] = 
-    {
+    static PyType_Slot _type_slots_LauncherOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LauncherOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LauncherOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LauncherOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LauncherOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LauncherOptions = {
@@ -6443,13 +6416,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_LauncherUIOptions[] = 
-    {
+    static PyType_Slot _type_slots_LauncherUIOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LauncherUIOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LauncherUIOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LauncherUIOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LauncherUIOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LauncherUIOptions = {
@@ -6776,12 +6748,11 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_MemoryManager[] = 
-    {
+    static PyType_Slot _type_slots_MemoryManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MemoryManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MemoryManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MemoryManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MemoryManager = {
@@ -6894,12 +6865,11 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_ProcessLauncher[] = 
-    {
+    static PyType_Slot _type_slots_ProcessLauncher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessLauncher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessLauncher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessLauncher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProcessLauncher = {
@@ -7200,13 +7170,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_ProcessLauncherOptions[] = 
-    {
+    static PyType_Slot _type_slots_ProcessLauncherOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessLauncherOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessLauncherOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessLauncherOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessLauncherOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProcessLauncherOptions = {
@@ -7287,13 +7256,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_ProcessLauncherResult[] = 
-    {
+    static PyType_Slot _type_slots_ProcessLauncherResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessLauncherResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessLauncherResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessLauncherResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessLauncherResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProcessLauncherResult = {
@@ -7394,13 +7362,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_ProcessMemoryReport[] = 
-    {
+    static PyType_Slot _type_slots_ProcessMemoryReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessMemoryReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessMemoryReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessMemoryReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessMemoryReport) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProcessMemoryReport = {
@@ -7494,13 +7461,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_ProtocolForResultsOperation[] = 
-    {
+    static PyType_Slot _type_slots_ProtocolForResultsOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtocolForResultsOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtocolForResultsOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtocolForResultsOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtocolForResultsOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProtocolForResultsOperation = {
@@ -7604,12 +7570,11 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteLauncher[] = 
-    {
+    static PyType_Slot _type_slots_RemoteLauncher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteLauncher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteLauncher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteLauncher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteLauncher = {
@@ -7786,13 +7751,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteLauncherOptions[] = 
-    {
+    static PyType_Slot _type_slots_RemoteLauncherOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteLauncherOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteLauncherOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteLauncherOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteLauncherOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteLauncherOptions = {
@@ -7967,12 +7931,11 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_ShutdownManager[] = 
-    {
+    static PyType_Slot _type_slots_ShutdownManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ShutdownManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ShutdownManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ShutdownManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ShutdownManager = {
@@ -8148,12 +8111,11 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_TimeZoneSettings[] = 
-    {
+    static PyType_Slot _type_slots_TimeZoneSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimeZoneSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimeZoneSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimeZoneSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TimeZoneSettings = {
@@ -8591,13 +8553,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_User[] = 
-    {
+    static PyType_Slot _type_slots_User[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_User) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_User) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_User) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_User) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_User = {
@@ -8718,13 +8679,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_UserAuthenticationStatusChangeDeferral[] = 
-    {
+    static PyType_Slot _type_slots_UserAuthenticationStatusChangeDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserAuthenticationStatusChangeDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserAuthenticationStatusChangeDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserAuthenticationStatusChangeDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserAuthenticationStatusChangeDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserAuthenticationStatusChangeDeferral = {
@@ -8875,13 +8835,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_UserAuthenticationStatusChangingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_UserAuthenticationStatusChangingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserAuthenticationStatusChangingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserAuthenticationStatusChangingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserAuthenticationStatusChangingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserAuthenticationStatusChangingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserAuthenticationStatusChangingEventArgs = {
@@ -8982,13 +8941,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_UserChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_UserChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserChangedEventArgs = {
@@ -9091,12 +9049,11 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_UserDeviceAssociation[] = 
-    {
+    static PyType_Slot _type_slots_UserDeviceAssociation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDeviceAssociation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDeviceAssociation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDeviceAssociation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDeviceAssociation = {
@@ -9243,13 +9200,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_UserDeviceAssociationChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_UserDeviceAssociationChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDeviceAssociationChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDeviceAssociationChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDeviceAssociationChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDeviceAssociationChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDeviceAssociationChangedEventArgs = {
@@ -9487,13 +9443,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_UserPicker[] = 
-    {
+    static PyType_Slot _type_slots_UserPicker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserPicker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserPicker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserPicker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserPicker) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserPicker = {
@@ -9977,13 +9932,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_UserWatcher[] = 
-    {
+    static PyType_Slot _type_slots_UserWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserWatcher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserWatcher = {
@@ -10092,13 +10046,12 @@ namespace py::cpp::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_ILauncherViewOptions[] = 
-    {
+    static PyType_Slot _type_slots_ILauncherViewOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILauncherViewOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILauncherViewOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILauncherViewOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILauncherViewOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ILauncherViewOptions = {

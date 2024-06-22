@@ -568,13 +568,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { }
     };
 
-    static PyType_Slot _type_slots_WebUICommandBar[] = 
-    {
+    static PyType_Slot _type_slots_WebUICommandBar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUICommandBar) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUICommandBar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUICommandBar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUICommandBar) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUICommandBar = {
@@ -746,13 +745,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { }
     };
 
-    static PyType_Slot _type_slots_WebUICommandBarBitmapIcon[] = 
-    {
+    static PyType_Slot _type_slots_WebUICommandBarBitmapIcon[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUICommandBarBitmapIcon) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUICommandBarBitmapIcon) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUICommandBarBitmapIcon) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUICommandBarBitmapIcon) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUICommandBarBitmapIcon = {
@@ -928,13 +926,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { }
     };
 
-    static PyType_Slot _type_slots_WebUICommandBarConfirmationButton[] = 
-    {
+    static PyType_Slot _type_slots_WebUICommandBarConfirmationButton[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUICommandBarConfirmationButton) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUICommandBarConfirmationButton) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUICommandBarConfirmationButton) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUICommandBarConfirmationButton) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUICommandBarConfirmationButton = {
@@ -1302,13 +1299,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { }
     };
 
-    static PyType_Slot _type_slots_WebUICommandBarIconButton[] = 
-    {
+    static PyType_Slot _type_slots_WebUICommandBarIconButton[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUICommandBarIconButton) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUICommandBarIconButton) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUICommandBarIconButton) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUICommandBarIconButton) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUICommandBarIconButton = {
@@ -1389,13 +1385,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { }
     };
 
-    static PyType_Slot _type_slots_WebUICommandBarItemInvokedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUICommandBarItemInvokedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUICommandBarItemInvokedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUICommandBarItemInvokedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUICommandBarItemInvokedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUICommandBarItemInvokedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUICommandBarItemInvokedEventArgs = {
@@ -1476,13 +1471,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { }
     };
 
-    static PyType_Slot _type_slots_WebUICommandBarSizeChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUICommandBarSizeChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUICommandBarSizeChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUICommandBarSizeChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUICommandBarSizeChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUICommandBarSizeChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUICommandBarSizeChangedEventArgs = {
@@ -1628,13 +1622,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { }
     };
 
-    static PyType_Slot _type_slots_WebUICommandBarSymbolIcon[] = 
-    {
+    static PyType_Slot _type_slots_WebUICommandBarSymbolIcon[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUICommandBarSymbolIcon) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUICommandBarSymbolIcon) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUICommandBarSymbolIcon) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUICommandBarSymbolIcon) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUICommandBarSymbolIcon = {
@@ -1695,13 +1688,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { }
     };
 
-    static PyType_Slot _type_slots_IWebUICommandBarElement[] = 
-    {
+    static PyType_Slot _type_slots_IWebUICommandBarElement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebUICommandBarElement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebUICommandBarElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebUICommandBarElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebUICommandBarElement) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IWebUICommandBarElement = {
@@ -1762,13 +1754,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { }
     };
 
-    static PyType_Slot _type_slots_IWebUICommandBarIcon[] = 
-    {
+    static PyType_Slot _type_slots_IWebUICommandBarIcon[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebUICommandBarIcon) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebUICommandBarIcon) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebUICommandBarIcon) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebUICommandBarIcon) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IWebUICommandBarIcon = {

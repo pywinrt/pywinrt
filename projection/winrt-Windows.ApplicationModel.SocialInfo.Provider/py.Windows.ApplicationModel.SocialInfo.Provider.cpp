@@ -270,13 +270,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_SocialDashboardItemUpdater[] = 
-    {
+    static PyType_Slot _type_slots_SocialDashboardItemUpdater[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocialDashboardItemUpdater) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SocialDashboardItemUpdater) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocialDashboardItemUpdater) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocialDashboardItemUpdater) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SocialDashboardItemUpdater = {
@@ -427,13 +426,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_SocialFeedUpdater[] = 
-    {
+    static PyType_Slot _type_slots_SocialFeedUpdater[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocialFeedUpdater) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SocialFeedUpdater) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocialFeedUpdater) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocialFeedUpdater) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SocialFeedUpdater = {
@@ -648,12 +646,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_SocialInfoProviderManager[] = 
-    {
+    static PyType_Slot _type_slots_SocialInfoProviderManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocialInfoProviderManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocialInfoProviderManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocialInfoProviderManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SocialInfoProviderManager = {

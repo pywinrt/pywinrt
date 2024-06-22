@@ -1797,12 +1797,11 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_AccessoryManager[] = 
-    {
+    static PyType_Slot _type_slots_AccessoryManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccessoryManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccessoryManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccessoryManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AccessoryManager = {
@@ -2170,13 +2169,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_AlarmNotificationTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_AlarmNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AlarmNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AlarmNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AlarmNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AlarmNotificationTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AlarmNotificationTriggerDetails = {
@@ -2277,13 +2275,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_AppNotificationInfo[] = 
-    {
+    static PyType_Slot _type_slots_AppNotificationInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppNotificationInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppNotificationInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppNotificationInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppNotificationInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppNotificationInfo = {
@@ -2384,13 +2381,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_BinaryId[] = 
-    {
+    static PyType_Slot _type_slots_BinaryId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BinaryId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BinaryId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BinaryId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BinaryId) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BinaryId = {
@@ -2619,13 +2615,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_CalendarChangedNotificationTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_CalendarChangedNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CalendarChangedNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CalendarChangedNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CalendarChangedNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CalendarChangedNotificationTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CalendarChangedNotificationTriggerDetails = {
@@ -3014,13 +3009,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_CortanaTileNotificationTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_CortanaTileNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CortanaTileNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CortanaTileNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CortanaTileNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CortanaTileNotificationTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CortanaTileNotificationTriggerDetails = {
@@ -3121,13 +3115,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_EmailAccountInfo[] = 
-    {
+    static PyType_Slot _type_slots_EmailAccountInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailAccountInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailAccountInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailAccountInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailAccountInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailAccountInfo = {
@@ -3228,13 +3221,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_EmailFolderInfo[] = 
-    {
+    static PyType_Slot _type_slots_EmailFolderInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailFolderInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailFolderInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailFolderInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailFolderInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailFolderInfo = {
@@ -3563,13 +3555,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_EmailNotificationTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_EmailNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailNotificationTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailNotificationTriggerDetails = {
@@ -3838,13 +3829,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_EmailReadNotificationTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_EmailReadNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailReadNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailReadNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailReadNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailReadNotificationTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailReadNotificationTriggerDetails = {
@@ -4073,13 +4063,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_MediaControlsTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_MediaControlsTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaControlsTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaControlsTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaControlsTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaControlsTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaControlsTriggerDetails = {
@@ -4280,13 +4269,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_MediaMetadata[] = 
-    {
+    static PyType_Slot _type_slots_MediaMetadata[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaMetadata) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaMetadata) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaMetadata) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaMetadata) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaMetadata = {
@@ -4587,13 +4575,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_PhoneCallDetails[] = 
-    {
+    static PyType_Slot _type_slots_PhoneCallDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneCallDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneCallDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneCallDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneCallDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhoneCallDetails = {
@@ -4794,13 +4781,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_PhoneLineDetails[] = 
-    {
+    static PyType_Slot _type_slots_PhoneLineDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneLineDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneLineDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneLineDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneLineDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhoneLineDetails = {
@@ -5049,13 +5035,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_PhoneNotificationTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_PhoneNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneNotificationTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhoneNotificationTriggerDetails = {
@@ -5404,13 +5389,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_ReminderNotificationTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_ReminderNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ReminderNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ReminderNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ReminderNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ReminderNotificationTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ReminderNotificationTriggerDetails = {
@@ -5531,13 +5515,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_SpeedDialEntry[] = 
-    {
+    static PyType_Slot _type_slots_SpeedDialEntry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeedDialEntry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeedDialEntry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeedDialEntry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeedDialEntry) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeedDialEntry = {
@@ -5638,13 +5621,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_TextResponse[] = 
-    {
+    static PyType_Slot _type_slots_TextResponse[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextResponse) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextResponse) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextResponse) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextResponse) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TextResponse = {
@@ -5953,13 +5935,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_ToastNotificationTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_ToastNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotificationTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToastNotificationTriggerDetails = {
@@ -6120,13 +6101,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_VolumeInfo[] = 
-    {
+    static PyType_Slot _type_slots_VolumeInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VolumeInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VolumeInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VolumeInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VolumeInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VolumeInfo = {
@@ -6315,13 +6295,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot _type_slots_IAccessoryNotificationTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_IAccessoryNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAccessoryNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAccessoryNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAccessoryNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAccessoryNotificationTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAccessoryNotificationTriggerDetails = {

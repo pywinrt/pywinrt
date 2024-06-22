@@ -295,13 +295,12 @@ namespace py::cpp::Windows::Graphics::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_HdmiDisplayInformation[] = 
-    {
+    static PyType_Slot _type_slots_HdmiDisplayInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HdmiDisplayInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HdmiDisplayInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HdmiDisplayInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HdmiDisplayInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HdmiDisplayInformation = {
@@ -640,13 +639,12 @@ namespace py::cpp::Windows::Graphics::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_HdmiDisplayMode[] = 
-    {
+    static PyType_Slot _type_slots_HdmiDisplayMode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HdmiDisplayMode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HdmiDisplayMode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HdmiDisplayMode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HdmiDisplayMode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HdmiDisplayMode = {
@@ -1148,14 +1146,13 @@ namespace py::cpp::Windows::Graphics::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_HdmiDisplayHdr2086Metadata[] = 
-    {
+    static PyType_Slot _type_slots_HdmiDisplayHdr2086Metadata[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HdmiDisplayHdr2086Metadata) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HdmiDisplayHdr2086Metadata) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HdmiDisplayHdr2086Metadata) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HdmiDisplayHdr2086Metadata) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HdmiDisplayHdr2086Metadata) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HdmiDisplayHdr2086Metadata = {

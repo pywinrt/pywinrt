@@ -216,13 +216,12 @@ namespace py::cpp::Windows::Media::Playlists
         { }
     };
 
-    static PyType_Slot _type_slots_Playlist[] = 
-    {
+    static PyType_Slot _type_slots_Playlist[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Playlist) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Playlist) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Playlist) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Playlist) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Playlist = {

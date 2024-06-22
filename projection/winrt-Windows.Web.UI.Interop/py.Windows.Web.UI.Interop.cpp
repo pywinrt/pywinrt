@@ -1903,13 +1903,12 @@ namespace py::cpp::Windows::Web::UI::Interop
         { }
     };
 
-    static PyType_Slot _type_slots_WebViewControl[] = 
-    {
+    static PyType_Slot _type_slots_WebViewControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebViewControl = {
@@ -2098,13 +2097,12 @@ namespace py::cpp::Windows::Web::UI::Interop
         { }
     };
 
-    static PyType_Slot _type_slots_WebViewControlAcceleratorKeyPressedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebViewControlAcceleratorKeyPressedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControlAcceleratorKeyPressedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControlAcceleratorKeyPressedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControlAcceleratorKeyPressedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControlAcceleratorKeyPressedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebViewControlAcceleratorKeyPressedEventArgs = {
@@ -2185,13 +2183,12 @@ namespace py::cpp::Windows::Web::UI::Interop
         { }
     };
 
-    static PyType_Slot _type_slots_WebViewControlMoveFocusRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebViewControlMoveFocusRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControlMoveFocusRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControlMoveFocusRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControlMoveFocusRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControlMoveFocusRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebViewControlMoveFocusRequestedEventArgs = {
@@ -2488,13 +2485,12 @@ namespace py::cpp::Windows::Web::UI::Interop
         { }
     };
 
-    static PyType_Slot _type_slots_WebViewControlProcess[] = 
-    {
+    static PyType_Slot _type_slots_WebViewControlProcess[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControlProcess) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControlProcess) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControlProcess) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControlProcess) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebViewControlProcess = {
@@ -2673,13 +2669,12 @@ namespace py::cpp::Windows::Web::UI::Interop
         { }
     };
 
-    static PyType_Slot _type_slots_WebViewControlProcessOptions[] = 
-    {
+    static PyType_Slot _type_slots_WebViewControlProcessOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebViewControlProcessOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebViewControlProcessOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebViewControlProcessOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebViewControlProcessOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebViewControlProcessOptions = {

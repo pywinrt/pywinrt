@@ -249,13 +249,12 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         { }
     };
 
-    static PyType_Slot _type_slots_OnlineIdAuthenticator[] = 
-    {
+    static PyType_Slot _type_slots_OnlineIdAuthenticator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OnlineIdAuthenticator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OnlineIdAuthenticator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OnlineIdAuthenticator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OnlineIdAuthenticator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OnlineIdAuthenticator = {
@@ -376,13 +375,12 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         { }
     };
 
-    static PyType_Slot _type_slots_OnlineIdServiceTicket[] = 
-    {
+    static PyType_Slot _type_slots_OnlineIdServiceTicket[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OnlineIdServiceTicket) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OnlineIdServiceTicket) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OnlineIdServiceTicket) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OnlineIdServiceTicket) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OnlineIdServiceTicket = {
@@ -523,13 +521,12 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         { }
     };
 
-    static PyType_Slot _type_slots_OnlineIdServiceTicketRequest[] = 
-    {
+    static PyType_Slot _type_slots_OnlineIdServiceTicketRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OnlineIdServiceTicketRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OnlineIdServiceTicketRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OnlineIdServiceTicketRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OnlineIdServiceTicketRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OnlineIdServiceTicketRequest = {
@@ -606,12 +603,11 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         { }
     };
 
-    static PyType_Slot _type_slots_OnlineIdSystemAuthenticator[] = 
-    {
+    static PyType_Slot _type_slots_OnlineIdSystemAuthenticator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OnlineIdSystemAuthenticator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OnlineIdSystemAuthenticator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OnlineIdSystemAuthenticator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OnlineIdSystemAuthenticator = {
@@ -799,13 +795,12 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         { }
     };
 
-    static PyType_Slot _type_slots_OnlineIdSystemAuthenticatorForUser[] = 
-    {
+    static PyType_Slot _type_slots_OnlineIdSystemAuthenticatorForUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OnlineIdSystemAuthenticatorForUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OnlineIdSystemAuthenticatorForUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OnlineIdSystemAuthenticatorForUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OnlineIdSystemAuthenticatorForUser) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OnlineIdSystemAuthenticatorForUser = {
@@ -906,13 +901,12 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         { }
     };
 
-    static PyType_Slot _type_slots_OnlineIdSystemIdentity[] = 
-    {
+    static PyType_Slot _type_slots_OnlineIdSystemIdentity[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OnlineIdSystemIdentity) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OnlineIdSystemIdentity) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OnlineIdSystemIdentity) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OnlineIdSystemIdentity) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OnlineIdSystemIdentity = {
@@ -1033,13 +1027,12 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         { }
     };
 
-    static PyType_Slot _type_slots_OnlineIdSystemTicketResult[] = 
-    {
+    static PyType_Slot _type_slots_OnlineIdSystemTicketResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OnlineIdSystemTicketResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OnlineIdSystemTicketResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OnlineIdSystemTicketResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OnlineIdSystemTicketResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OnlineIdSystemTicketResult = {
@@ -1306,14 +1299,13 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         { }
     };
 
-    static PyType_Slot _type_slots_SignOutUserOperation[] = 
-    {
+    static PyType_Slot _type_slots_SignOutUserOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SignOutUserOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SignOutUserOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SignOutUserOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SignOutUserOperation) },
         { Py_am_await, reinterpret_cast<void*>(_await_SignOutUserOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SignOutUserOperation = {
@@ -1579,14 +1571,13 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         { }
     };
 
-    static PyType_Slot _type_slots_UserAuthenticationOperation[] = 
-    {
+    static PyType_Slot _type_slots_UserAuthenticationOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserAuthenticationOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserAuthenticationOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserAuthenticationOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserAuthenticationOperation) },
         { Py_am_await, reinterpret_cast<void*>(_await_UserAuthenticationOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserAuthenticationOperation = {
@@ -1807,13 +1798,12 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         { }
     };
 
-    static PyType_Slot _type_slots_UserIdentity[] = 
-    {
+    static PyType_Slot _type_slots_UserIdentity[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserIdentity) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserIdentity) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserIdentity) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserIdentity) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserIdentity = {

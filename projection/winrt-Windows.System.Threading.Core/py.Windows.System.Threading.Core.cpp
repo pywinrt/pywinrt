@@ -143,13 +143,12 @@ namespace py::cpp::Windows::System::Threading::Core
         { }
     };
 
-    static PyType_Slot _type_slots_PreallocatedWorkItem[] = 
-    {
+    static PyType_Slot _type_slots_PreallocatedWorkItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PreallocatedWorkItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PreallocatedWorkItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PreallocatedWorkItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PreallocatedWorkItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PreallocatedWorkItem = {
@@ -380,13 +379,12 @@ namespace py::cpp::Windows::System::Threading::Core
         { }
     };
 
-    static PyType_Slot _type_slots_SignalNotifier[] = 
-    {
+    static PyType_Slot _type_slots_SignalNotifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SignalNotifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SignalNotifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SignalNotifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SignalNotifier) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SignalNotifier = {

@@ -421,12 +421,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot _type_slots_AsymmetricAlgorithmNames[] = 
-    {
+    static PyType_Slot _type_slots_AsymmetricAlgorithmNames[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AsymmetricAlgorithmNames) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AsymmetricAlgorithmNames) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AsymmetricAlgorithmNames) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AsymmetricAlgorithmNames = {
@@ -786,13 +785,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot _type_slots_AsymmetricKeyAlgorithmProvider[] = 
-    {
+    static PyType_Slot _type_slots_AsymmetricKeyAlgorithmProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AsymmetricKeyAlgorithmProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AsymmetricKeyAlgorithmProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AsymmetricKeyAlgorithmProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AsymmetricKeyAlgorithmProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AsymmetricKeyAlgorithmProvider = {
@@ -1240,12 +1238,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CryptographicEngine[] = 
-    {
+    static PyType_Slot _type_slots_CryptographicEngine[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CryptographicEngine) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CryptographicEngine) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CryptographicEngine) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CryptographicEngine = {
@@ -1406,13 +1403,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CryptographicHash[] = 
-    {
+    static PyType_Slot _type_slots_CryptographicHash[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CryptographicHash) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CryptographicHash) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CryptographicHash) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CryptographicHash) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CryptographicHash = {
@@ -1593,13 +1589,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CryptographicKey[] = 
-    {
+    static PyType_Slot _type_slots_CryptographicKey[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CryptographicKey) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CryptographicKey) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CryptographicKey) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CryptographicKey) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CryptographicKey = {
@@ -2500,12 +2495,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot _type_slots_EccCurveNames[] = 
-    {
+    static PyType_Slot _type_slots_EccCurveNames[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EccCurveNames) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EccCurveNames) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EccCurveNames) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EccCurveNames = {
@@ -2677,13 +2671,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot _type_slots_EncryptedAndAuthenticatedData[] = 
-    {
+    static PyType_Slot _type_slots_EncryptedAndAuthenticatedData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EncryptedAndAuthenticatedData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EncryptedAndAuthenticatedData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EncryptedAndAuthenticatedData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EncryptedAndAuthenticatedData) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EncryptedAndAuthenticatedData = {
@@ -2805,12 +2798,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot _type_slots_HashAlgorithmNames[] = 
-    {
+    static PyType_Slot _type_slots_HashAlgorithmNames[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HashAlgorithmNames) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HashAlgorithmNames) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HashAlgorithmNames) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HashAlgorithmNames = {
@@ -3034,13 +3026,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot _type_slots_HashAlgorithmProvider[] = 
-    {
+    static PyType_Slot _type_slots_HashAlgorithmProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HashAlgorithmProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HashAlgorithmProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HashAlgorithmProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HashAlgorithmProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HashAlgorithmProvider = {
@@ -3473,12 +3464,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot _type_slots_KeyDerivationAlgorithmNames[] = 
-    {
+    static PyType_Slot _type_slots_KeyDerivationAlgorithmNames[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyDerivationAlgorithmNames) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyDerivationAlgorithmNames) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyDerivationAlgorithmNames) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KeyDerivationAlgorithmNames = {
@@ -3667,13 +3657,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot _type_slots_KeyDerivationAlgorithmProvider[] = 
-    {
+    static PyType_Slot _type_slots_KeyDerivationAlgorithmProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyDerivationAlgorithmProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyDerivationAlgorithmProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyDerivationAlgorithmProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyDerivationAlgorithmProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KeyDerivationAlgorithmProvider = {
@@ -4006,13 +3995,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot _type_slots_KeyDerivationParameters[] = 
-    {
+    static PyType_Slot _type_slots_KeyDerivationParameters[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyDerivationParameters) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyDerivationParameters) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyDerivationParameters) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyDerivationParameters) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KeyDerivationParameters = {
@@ -4182,12 +4170,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot _type_slots_MacAlgorithmNames[] = 
-    {
+    static PyType_Slot _type_slots_MacAlgorithmNames[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MacAlgorithmNames) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MacAlgorithmNames) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MacAlgorithmNames) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MacAlgorithmNames = {
@@ -4414,13 +4401,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot _type_slots_MacAlgorithmProvider[] = 
-    {
+    static PyType_Slot _type_slots_MacAlgorithmProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MacAlgorithmProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MacAlgorithmProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MacAlgorithmProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MacAlgorithmProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MacAlgorithmProvider = {
@@ -4539,12 +4525,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot _type_slots_PersistedKeyProvider[] = 
-    {
+    static PyType_Slot _type_slots_PersistedKeyProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PersistedKeyProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PersistedKeyProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PersistedKeyProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PersistedKeyProvider = {
@@ -4959,12 +4944,11 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot _type_slots_SymmetricAlgorithmNames[] = 
-    {
+    static PyType_Slot _type_slots_SymmetricAlgorithmNames[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SymmetricAlgorithmNames) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SymmetricAlgorithmNames) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SymmetricAlgorithmNames) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SymmetricAlgorithmNames = {
@@ -5172,13 +5156,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot _type_slots_SymmetricKeyAlgorithmProvider[] = 
-    {
+    static PyType_Slot _type_slots_SymmetricKeyAlgorithmProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SymmetricKeyAlgorithmProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SymmetricKeyAlgorithmProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SymmetricKeyAlgorithmProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SymmetricKeyAlgorithmProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SymmetricKeyAlgorithmProvider = {

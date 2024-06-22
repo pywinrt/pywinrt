@@ -236,13 +236,12 @@ namespace py::cpp::Windows::Media::AppRecording
         { }
     };
 
-    static PyType_Slot _type_slots_AppRecordingManager[] = 
-    {
+    static PyType_Slot _type_slots_AppRecordingManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppRecordingManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppRecordingManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppRecordingManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppRecordingManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppRecordingManager = {
@@ -409,13 +408,12 @@ namespace py::cpp::Windows::Media::AppRecording
         { }
     };
 
-    static PyType_Slot _type_slots_AppRecordingResult[] = 
-    {
+    static PyType_Slot _type_slots_AppRecordingResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppRecordingResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppRecordingResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppRecordingResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppRecordingResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppRecordingResult = {
@@ -536,13 +534,12 @@ namespace py::cpp::Windows::Media::AppRecording
         { }
     };
 
-    static PyType_Slot _type_slots_AppRecordingSaveScreenshotResult[] = 
-    {
+    static PyType_Slot _type_slots_AppRecordingSaveScreenshotResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppRecordingSaveScreenshotResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppRecordingSaveScreenshotResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppRecordingSaveScreenshotResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppRecordingSaveScreenshotResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppRecordingSaveScreenshotResult = {
@@ -643,13 +640,12 @@ namespace py::cpp::Windows::Media::AppRecording
         { }
     };
 
-    static PyType_Slot _type_slots_AppRecordingSavedScreenshotInfo[] = 
-    {
+    static PyType_Slot _type_slots_AppRecordingSavedScreenshotInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppRecordingSavedScreenshotInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppRecordingSavedScreenshotInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppRecordingSavedScreenshotInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppRecordingSavedScreenshotInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppRecordingSavedScreenshotInfo = {
@@ -790,13 +786,12 @@ namespace py::cpp::Windows::Media::AppRecording
         { }
     };
 
-    static PyType_Slot _type_slots_AppRecordingStatus[] = 
-    {
+    static PyType_Slot _type_slots_AppRecordingStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppRecordingStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppRecordingStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppRecordingStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppRecordingStatus) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppRecordingStatus = {
@@ -1037,13 +1032,12 @@ namespace py::cpp::Windows::Media::AppRecording
         { }
     };
 
-    static PyType_Slot _type_slots_AppRecordingStatusDetails[] = 
-    {
+    static PyType_Slot _type_slots_AppRecordingStatusDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppRecordingStatusDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppRecordingStatusDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppRecordingStatusDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppRecordingStatusDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppRecordingStatusDetails = {

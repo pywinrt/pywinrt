@@ -116,13 +116,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { }
     };
 
-    static PyType_Slot _type_slots_FindAllAccountsResult[] = 
-    {
+    static PyType_Slot _type_slots_FindAllAccountsResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FindAllAccountsResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FindAllAccountsResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FindAllAccountsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FindAllAccountsResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FindAllAccountsResult = {
@@ -203,13 +202,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { }
     };
 
-    static PyType_Slot _type_slots_WebAccountEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebAccountEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebAccountEventArgs = {
@@ -450,13 +448,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { }
     };
 
-    static PyType_Slot _type_slots_WebAccountMonitor[] = 
-    {
+    static PyType_Slot _type_slots_WebAccountMonitor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountMonitor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountMonitor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountMonitor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountMonitor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebAccountMonitor = {
@@ -850,12 +847,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { }
     };
 
-    static PyType_Slot _type_slots_WebAuthenticationCoreManager[] = 
-    {
+    static PyType_Slot _type_slots_WebAuthenticationCoreManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAuthenticationCoreManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAuthenticationCoreManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAuthenticationCoreManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebAuthenticationCoreManager = {
@@ -1033,13 +1029,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { }
     };
 
-    static PyType_Slot _type_slots_WebProviderError[] = 
-    {
+    static PyType_Slot _type_slots_WebProviderError[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebProviderError) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebProviderError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebProviderError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebProviderError) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebProviderError = {
@@ -1343,13 +1338,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { }
     };
 
-    static PyType_Slot _type_slots_WebTokenRequest[] = 
-    {
+    static PyType_Slot _type_slots_WebTokenRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebTokenRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebTokenRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebTokenRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebTokenRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebTokenRequest = {
@@ -1500,13 +1494,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { }
     };
 
-    static PyType_Slot _type_slots_WebTokenRequestResult[] = 
-    {
+    static PyType_Slot _type_slots_WebTokenRequestResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebTokenRequestResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebTokenRequestResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebTokenRequestResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebTokenRequestResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebTokenRequestResult = {
@@ -1717,13 +1710,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { }
     };
 
-    static PyType_Slot _type_slots_WebTokenResponse[] = 
-    {
+    static PyType_Slot _type_slots_WebTokenResponse[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebTokenResponse) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebTokenResponse) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebTokenResponse) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebTokenResponse) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebTokenResponse = {

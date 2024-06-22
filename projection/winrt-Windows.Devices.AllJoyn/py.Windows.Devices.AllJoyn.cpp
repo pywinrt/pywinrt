@@ -548,13 +548,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynAboutData[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynAboutData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynAboutData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynAboutData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynAboutData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynAboutData) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynAboutData = {
@@ -991,13 +990,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynAboutDataView[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynAboutDataView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynAboutDataView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynAboutDataView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynAboutDataView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynAboutDataView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynAboutDataView = {
@@ -1243,13 +1241,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynAcceptSessionJoinerEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynAcceptSessionJoinerEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynAcceptSessionJoinerEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynAcceptSessionJoinerEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynAcceptSessionJoinerEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynAcceptSessionJoinerEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynAcceptSessionJoinerEventArgs = {
@@ -1370,13 +1367,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynAuthenticationCompleteEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynAuthenticationCompleteEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynAuthenticationCompleteEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynAuthenticationCompleteEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynAuthenticationCompleteEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynAuthenticationCompleteEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynAuthenticationCompleteEventArgs = {
@@ -2051,13 +2047,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynBusAttachment[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynBusAttachment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynBusAttachment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynBusAttachment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynBusAttachment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynBusAttachment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynBusAttachment = {
@@ -2185,13 +2180,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynBusAttachmentStateChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynBusAttachmentStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynBusAttachmentStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynBusAttachmentStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynBusAttachmentStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynBusAttachmentStateChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynBusAttachmentStateChangedEventArgs = {
@@ -2485,13 +2479,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynBusObject[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynBusObject[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynBusObject) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynBusObject) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynBusObject) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynBusObject) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynBusObject = {
@@ -2596,13 +2589,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynBusObjectStoppedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynBusObjectStoppedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynBusObjectStoppedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynBusObjectStoppedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynBusObjectStoppedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynBusObjectStoppedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynBusObjectStoppedEventArgs = {
@@ -2827,13 +2819,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynCredentials[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynCredentials[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynCredentials) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynCredentials) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynCredentials) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynCredentials) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynCredentials = {
@@ -3004,13 +2995,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynCredentialsRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynCredentialsRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynCredentialsRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynCredentialsRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynCredentialsRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynCredentialsRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynCredentialsRequestedEventArgs = {
@@ -3252,13 +3242,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynCredentialsVerificationRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynCredentialsVerificationRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynCredentialsVerificationRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynCredentialsVerificationRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynCredentialsVerificationRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynCredentialsVerificationRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynCredentialsVerificationRequestedEventArgs = {
@@ -3363,13 +3352,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynMessageInfo[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynMessageInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynMessageInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynMessageInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynMessageInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynMessageInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynMessageInfo = {
@@ -3474,13 +3462,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynProducerStoppedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynProducerStoppedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynProducerStoppedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynProducerStoppedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynProducerStoppedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynProducerStoppedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynProducerStoppedEventArgs = {
@@ -3658,13 +3645,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynServiceInfo[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynServiceInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynServiceInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynServiceInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynServiceInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynServiceInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynServiceInfo = {
@@ -3795,13 +3781,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynServiceInfoRemovedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynServiceInfoRemovedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynServiceInfoRemovedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynServiceInfoRemovedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynServiceInfoRemovedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynServiceInfoRemovedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynServiceInfoRemovedEventArgs = {
@@ -4121,13 +4106,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynSession[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynSession = {
@@ -4258,13 +4242,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynSessionJoinedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynSessionJoinedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynSessionJoinedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynSessionJoinedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynSessionJoinedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynSessionJoinedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynSessionJoinedEventArgs = {
@@ -4369,13 +4352,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynSessionLostEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynSessionLostEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynSessionLostEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynSessionLostEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynSessionLostEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynSessionLostEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynSessionLostEventArgs = {
@@ -4480,13 +4462,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynSessionMemberAddedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynSessionMemberAddedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynSessionMemberAddedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynSessionMemberAddedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynSessionMemberAddedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynSessionMemberAddedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynSessionMemberAddedEventArgs = {
@@ -4591,13 +4572,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynSessionMemberRemovedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynSessionMemberRemovedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynSessionMemberRemovedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynSessionMemberRemovedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynSessionMemberRemovedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynSessionMemberRemovedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynSessionMemberRemovedEventArgs = {
@@ -4966,12 +4946,11 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynStatus[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynStatus) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynStatus = {
@@ -5119,13 +5098,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_AllJoynWatcherStoppedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AllJoynWatcherStoppedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AllJoynWatcherStoppedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AllJoynWatcherStoppedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AllJoynWatcherStoppedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AllJoynWatcherStoppedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AllJoynWatcherStoppedEventArgs = {
@@ -5217,13 +5195,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_IAllJoynAcceptSessionJoiner[] = 
-    {
+    static PyType_Slot _type_slots_IAllJoynAcceptSessionJoiner[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAllJoynAcceptSessionJoiner) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAllJoynAcceptSessionJoiner) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAllJoynAcceptSessionJoiner) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAllJoynAcceptSessionJoiner) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAllJoynAcceptSessionJoiner = {
@@ -5317,13 +5294,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot _type_slots_IAllJoynProducer[] = 
-    {
+    static PyType_Slot _type_slots_IAllJoynProducer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAllJoynProducer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAllJoynProducer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAllJoynProducer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAllJoynProducer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAllJoynProducer = {

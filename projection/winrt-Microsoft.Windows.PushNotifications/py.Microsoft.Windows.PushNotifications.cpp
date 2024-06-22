@@ -127,13 +127,12 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         { }
     };
 
-    static PyType_Slot _type_slots_PushNotificationChannel[] = 
-    {
+    static PyType_Slot _type_slots_PushNotificationChannel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PushNotificationChannel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PushNotificationChannel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PushNotificationChannel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PushNotificationChannel) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PushNotificationChannel = {
@@ -254,13 +253,12 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         { }
     };
 
-    static PyType_Slot _type_slots_PushNotificationCreateChannelResult[] = 
-    {
+    static PyType_Slot _type_slots_PushNotificationCreateChannelResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PushNotificationCreateChannelResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PushNotificationCreateChannelResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PushNotificationCreateChannelResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PushNotificationCreateChannelResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PushNotificationCreateChannelResult = {
@@ -539,13 +537,12 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         { }
     };
 
-    static PyType_Slot _type_slots_PushNotificationManager[] = 
-    {
+    static PyType_Slot _type_slots_PushNotificationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PushNotificationManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PushNotificationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PushNotificationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PushNotificationManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PushNotificationManager = {
@@ -728,13 +725,12 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         { }
     };
 
-    static PyType_Slot _type_slots_PushNotificationReceivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PushNotificationReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PushNotificationReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PushNotificationReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PushNotificationReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PushNotificationReceivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PushNotificationReceivedEventArgs = {
@@ -921,14 +917,13 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         { }
     };
 
-    static PyType_Slot _type_slots_PushNotificationCreateChannelStatus[] = 
-    {
+    static PyType_Slot _type_slots_PushNotificationCreateChannelStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PushNotificationCreateChannelStatus) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PushNotificationCreateChannelStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PushNotificationCreateChannelStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PushNotificationCreateChannelStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PushNotificationCreateChannelStatus) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PushNotificationCreateChannelStatus = {

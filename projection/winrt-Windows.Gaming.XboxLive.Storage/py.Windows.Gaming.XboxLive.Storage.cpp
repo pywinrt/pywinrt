@@ -96,13 +96,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { }
     };
 
-    static PyType_Slot _type_slots_GameSaveBlobGetResult[] = 
-    {
+    static PyType_Slot _type_slots_GameSaveBlobGetResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameSaveBlobGetResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameSaveBlobGetResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameSaveBlobGetResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameSaveBlobGetResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GameSaveBlobGetResult = {
@@ -203,13 +202,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { }
     };
 
-    static PyType_Slot _type_slots_GameSaveBlobInfo[] = 
-    {
+    static PyType_Slot _type_slots_GameSaveBlobInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameSaveBlobInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameSaveBlobInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameSaveBlobInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameSaveBlobInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GameSaveBlobInfo = {
@@ -310,13 +308,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { }
     };
 
-    static PyType_Slot _type_slots_GameSaveBlobInfoGetResult[] = 
-    {
+    static PyType_Slot _type_slots_GameSaveBlobInfoGetResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameSaveBlobInfoGetResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameSaveBlobInfoGetResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameSaveBlobInfoGetResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameSaveBlobInfoGetResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GameSaveBlobInfoGetResult = {
@@ -458,13 +455,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { }
     };
 
-    static PyType_Slot _type_slots_GameSaveBlobInfoQuery[] = 
-    {
+    static PyType_Slot _type_slots_GameSaveBlobInfoQuery[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameSaveBlobInfoQuery) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameSaveBlobInfoQuery) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameSaveBlobInfoQuery) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameSaveBlobInfoQuery) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GameSaveBlobInfoQuery = {
@@ -729,13 +725,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { }
     };
 
-    static PyType_Slot _type_slots_GameSaveContainer[] = 
-    {
+    static PyType_Slot _type_slots_GameSaveContainer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameSaveContainer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameSaveContainer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameSaveContainer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameSaveContainer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GameSaveContainer = {
@@ -896,13 +891,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { }
     };
 
-    static PyType_Slot _type_slots_GameSaveContainerInfo[] = 
-    {
+    static PyType_Slot _type_slots_GameSaveContainerInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameSaveContainerInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameSaveContainerInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameSaveContainerInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameSaveContainerInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GameSaveContainerInfo = {
@@ -1003,13 +997,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { }
     };
 
-    static PyType_Slot _type_slots_GameSaveContainerInfoGetResult[] = 
-    {
+    static PyType_Slot _type_slots_GameSaveContainerInfoGetResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameSaveContainerInfoGetResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameSaveContainerInfoGetResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameSaveContainerInfoGetResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameSaveContainerInfoGetResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GameSaveContainerInfoGetResult = {
@@ -1151,13 +1144,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { }
     };
 
-    static PyType_Slot _type_slots_GameSaveContainerInfoQuery[] = 
-    {
+    static PyType_Slot _type_slots_GameSaveContainerInfoQuery[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameSaveContainerInfoQuery) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameSaveContainerInfoQuery) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameSaveContainerInfoQuery) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameSaveContainerInfoQuery) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GameSaveContainerInfoQuery = {
@@ -1238,13 +1230,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { }
     };
 
-    static PyType_Slot _type_slots_GameSaveOperationResult[] = 
-    {
+    static PyType_Slot _type_slots_GameSaveOperationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameSaveOperationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameSaveOperationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameSaveOperationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameSaveOperationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GameSaveOperationResult = {
@@ -1553,13 +1544,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { }
     };
 
-    static PyType_Slot _type_slots_GameSaveProvider[] = 
-    {
+    static PyType_Slot _type_slots_GameSaveProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameSaveProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameSaveProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameSaveProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameSaveProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GameSaveProvider = {
@@ -1687,13 +1677,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { }
     };
 
-    static PyType_Slot _type_slots_GameSaveProviderGetResult[] = 
-    {
+    static PyType_Slot _type_slots_GameSaveProviderGetResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameSaveProviderGetResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameSaveProviderGetResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameSaveProviderGetResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameSaveProviderGetResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GameSaveProviderGetResult = {

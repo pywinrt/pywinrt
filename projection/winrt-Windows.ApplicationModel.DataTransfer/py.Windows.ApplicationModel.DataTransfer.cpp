@@ -533,12 +533,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_Clipboard[] = 
-    {
+    static PyType_Slot _type_slots_Clipboard[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Clipboard) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Clipboard) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Clipboard) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Clipboard = {
@@ -793,13 +792,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_ClipboardContentOptions[] = 
-    {
+    static PyType_Slot _type_slots_ClipboardContentOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClipboardContentOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ClipboardContentOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClipboardContentOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClipboardContentOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ClipboardContentOptions = {
@@ -860,13 +858,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_ClipboardHistoryChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ClipboardHistoryChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClipboardHistoryChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ClipboardHistoryChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClipboardHistoryChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClipboardHistoryChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ClipboardHistoryChangedEventArgs = {
@@ -987,13 +984,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_ClipboardHistoryItem[] = 
-    {
+    static PyType_Slot _type_slots_ClipboardHistoryItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClipboardHistoryItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ClipboardHistoryItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClipboardHistoryItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClipboardHistoryItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ClipboardHistoryItem = {
@@ -1094,13 +1090,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_ClipboardHistoryItemsResult[] = 
-    {
+    static PyType_Slot _type_slots_ClipboardHistoryItemsResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClipboardHistoryItemsResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ClipboardHistoryItemsResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClipboardHistoryItemsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClipboardHistoryItemsResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ClipboardHistoryItemsResult = {
@@ -1835,13 +1830,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_DataPackage[] = 
-    {
+    static PyType_Slot _type_slots_DataPackage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataPackage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataPackage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataPackage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataPackage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataPackage = {
@@ -2840,8 +2834,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_DataPackagePropertySet[] = 
-    {
+    static PyType_Slot _type_slots_DataPackagePropertySet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataPackagePropertySet) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataPackagePropertySet) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataPackagePropertySet) },
@@ -2851,7 +2844,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { Py_mp_length, reinterpret_cast<void*>(_map_length_DataPackagePropertySet) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_DataPackagePropertySet) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_DataPackagePropertySet) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataPackagePropertySet = {
@@ -3426,8 +3419,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_DataPackagePropertySetView[] = 
-    {
+    static PyType_Slot _type_slots_DataPackagePropertySetView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataPackagePropertySetView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataPackagePropertySetView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataPackagePropertySetView) },
@@ -3436,7 +3428,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { Py_sq_contains, reinterpret_cast<void*>(_map_contains_DataPackagePropertySetView) },
         { Py_mp_length, reinterpret_cast<void*>(_map_length_DataPackagePropertySetView) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_DataPackagePropertySetView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataPackagePropertySetView = {
@@ -4057,13 +4049,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_DataPackageView[] = 
-    {
+    static PyType_Slot _type_slots_DataPackageView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataPackageView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataPackageView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataPackageView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataPackageView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataPackageView = {
@@ -4155,13 +4146,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_DataProviderDeferral[] = 
-    {
+    static PyType_Slot _type_slots_DataProviderDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataProviderDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataProviderDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataProviderDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataProviderDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataProviderDeferral = {
@@ -4325,13 +4315,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_DataProviderRequest[] = 
-    {
+    static PyType_Slot _type_slots_DataProviderRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataProviderRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataProviderRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataProviderRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataProviderRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataProviderRequest = {
@@ -4523,13 +4512,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_DataRequest[] = 
-    {
+    static PyType_Slot _type_slots_DataRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataRequest = {
@@ -4621,13 +4609,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_DataRequestDeferral[] = 
-    {
+    static PyType_Slot _type_slots_DataRequestDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataRequestDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataRequestDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataRequestDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataRequestDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataRequestDeferral = {
@@ -4708,13 +4695,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_DataRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DataRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataRequestedEventArgs = {
@@ -5019,13 +5005,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_DataTransferManager[] = 
-    {
+    static PyType_Slot _type_slots_DataTransferManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataTransferManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataTransferManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataTransferManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataTransferManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataTransferManager = {
@@ -5142,12 +5127,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_HtmlFormatHelper[] = 
-    {
+    static PyType_Slot _type_slots_HtmlFormatHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HtmlFormatHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HtmlFormatHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HtmlFormatHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HtmlFormatHelper = {
@@ -5275,13 +5259,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_OperationCompletedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_OperationCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OperationCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OperationCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OperationCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OperationCompletedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OperationCompletedEventArgs = {
@@ -5362,13 +5345,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_ShareCompletedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ShareCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ShareCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ShareCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ShareCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ShareCompletedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ShareCompletedEventArgs = {
@@ -5564,13 +5546,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_ShareProvider[] = 
-    {
+    static PyType_Slot _type_slots_ShareProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ShareProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ShareProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ShareProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ShareProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ShareProvider = {
@@ -5702,13 +5683,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_ShareProviderOperation[] = 
-    {
+    static PyType_Slot _type_slots_ShareProviderOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ShareProviderOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ShareProviderOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ShareProviderOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ShareProviderOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ShareProviderOperation = {
@@ -5839,13 +5819,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_ShareProvidersRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ShareProvidersRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ShareProvidersRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ShareProvidersRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ShareProvidersRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ShareProvidersRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ShareProvidersRequestedEventArgs = {
@@ -5946,13 +5925,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_ShareTargetInfo[] = 
-    {
+    static PyType_Slot _type_slots_ShareTargetInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ShareTargetInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ShareTargetInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ShareTargetInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ShareTargetInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ShareTargetInfo = {
@@ -6131,13 +6109,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_ShareUIOptions[] = 
-    {
+    static PyType_Slot _type_slots_ShareUIOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ShareUIOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ShareUIOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ShareUIOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ShareUIOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ShareUIOptions = {
@@ -6258,12 +6235,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_SharedStorageAccessManager[] = 
-    {
+    static PyType_Slot _type_slots_SharedStorageAccessManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SharedStorageAccessManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SharedStorageAccessManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SharedStorageAccessManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SharedStorageAccessManager = {
@@ -6489,12 +6465,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_StandardDataFormats[] = 
-    {
+    static PyType_Slot _type_slots_StandardDataFormats[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StandardDataFormats) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StandardDataFormats) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StandardDataFormats) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StandardDataFormats = {
@@ -6609,13 +6584,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot _type_slots_TargetApplicationChosenEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_TargetApplicationChosenEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetApplicationChosenEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetApplicationChosenEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetApplicationChosenEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetApplicationChosenEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TargetApplicationChosenEventArgs = {

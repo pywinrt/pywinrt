@@ -408,14 +408,13 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpBufferContent[] = 
-    {
+    static PyType_Slot _type_slots_HttpBufferContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpBufferContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpBufferContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpBufferContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpBufferContent) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpBufferContent) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpBufferContent = {
@@ -1276,14 +1275,13 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpClient[] = 
-    {
+    static PyType_Slot _type_slots_HttpClient[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpClient) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpClient) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpClient) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpClient) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpClient) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpClient = {
@@ -1665,14 +1663,13 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpCookie[] = 
-    {
+    static PyType_Slot _type_slots_HttpCookie[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpCookie) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpCookie) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpCookie) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpCookie) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpCookie) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpCookie = {
@@ -1992,8 +1989,7 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpCookieCollection[] = 
-    {
+    static PyType_Slot _type_slots_HttpCookieCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpCookieCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpCookieCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpCookieCollection) },
@@ -2002,7 +1998,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_HttpCookieCollection) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_HttpCookieCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_HttpCookieCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpCookieCollection = {
@@ -2181,13 +2177,12 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpCookieManager[] = 
-    {
+    static PyType_Slot _type_slots_HttpCookieManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpCookieManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpCookieManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpCookieManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpCookieManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpCookieManager = {
@@ -2583,14 +2578,13 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpFormUrlEncodedContent[] = 
-    {
+    static PyType_Slot _type_slots_HttpFormUrlEncodedContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpFormUrlEncodedContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpFormUrlEncodedContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpFormUrlEncodedContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpFormUrlEncodedContent) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpFormUrlEncodedContent) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpFormUrlEncodedContent = {
@@ -2846,14 +2840,13 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpGetBufferResult[] = 
-    {
+    static PyType_Slot _type_slots_HttpGetBufferResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpGetBufferResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpGetBufferResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpGetBufferResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpGetBufferResult) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpGetBufferResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpGetBufferResult = {
@@ -3109,14 +3102,13 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpGetInputStreamResult[] = 
-    {
+    static PyType_Slot _type_slots_HttpGetInputStreamResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpGetInputStreamResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpGetInputStreamResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpGetInputStreamResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpGetInputStreamResult) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpGetInputStreamResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpGetInputStreamResult = {
@@ -3372,14 +3364,13 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpGetStringResult[] = 
-    {
+    static PyType_Slot _type_slots_HttpGetStringResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpGetStringResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpGetStringResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpGetStringResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpGetStringResult) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpGetStringResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpGetStringResult = {
@@ -3660,14 +3651,13 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpMethod[] = 
-    {
+    static PyType_Slot _type_slots_HttpMethod[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpMethod) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpMethod) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpMethod) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpMethod) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpMethod) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpMethod = {
@@ -4200,15 +4190,14 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpMultipartContent[] = 
-    {
+    static PyType_Slot _type_slots_HttpMultipartContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpMultipartContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpMultipartContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpMultipartContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpMultipartContent) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpMultipartContent) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_HttpMultipartContent) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpMultipartContent = {
@@ -4738,15 +4727,14 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpMultipartFormDataContent[] = 
-    {
+    static PyType_Slot _type_slots_HttpMultipartFormDataContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpMultipartFormDataContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpMultipartFormDataContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpMultipartFormDataContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpMultipartFormDataContent) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpMultipartFormDataContent) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_HttpMultipartFormDataContent) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpMultipartFormDataContent = {
@@ -5192,14 +5180,13 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpRequestMessage[] = 
-    {
+    static PyType_Slot _type_slots_HttpRequestMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpRequestMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpRequestMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpRequestMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpRequestMessage) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpRequestMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpRequestMessage = {
@@ -5435,14 +5422,13 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpRequestResult[] = 
-    {
+    static PyType_Slot _type_slots_HttpRequestResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpRequestResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpRequestResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpRequestResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpRequestResult) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpRequestResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpRequestResult = {
@@ -5993,14 +5979,13 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpResponseMessage[] = 
-    {
+    static PyType_Slot _type_slots_HttpResponseMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpResponseMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpResponseMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpResponseMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpResponseMessage) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpResponseMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpResponseMessage = {
@@ -6396,14 +6381,13 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpStreamContent[] = 
-    {
+    static PyType_Slot _type_slots_HttpStreamContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpStreamContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpStreamContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpStreamContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpStreamContent) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpStreamContent) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpStreamContent = {
@@ -6832,14 +6816,13 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpStringContent[] = 
-    {
+    static PyType_Slot _type_slots_HttpStringContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpStringContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpStringContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpStringContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpStringContent) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpStringContent) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpStringContent = {
@@ -7023,14 +7006,13 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpTransportInformation[] = 
-    {
+    static PyType_Slot _type_slots_HttpTransportInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpTransportInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpTransportInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpTransportInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpTransportInformation) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HttpTransportInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpTransportInformation = {
@@ -7359,13 +7341,12 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_IHttpContent[] = 
-    {
+    static PyType_Slot _type_slots_IHttpContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IHttpContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IHttpContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IHttpContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IHttpContent) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IHttpContent = {
@@ -7657,14 +7638,13 @@ namespace py::cpp::Windows::Web::Http
         { }
     };
 
-    static PyType_Slot _type_slots_HttpProgress[] = 
-    {
+    static PyType_Slot _type_slots_HttpProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HttpProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpProgress) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpProgress = {

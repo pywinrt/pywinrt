@@ -96,13 +96,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_DiagnosticActionResult[] = 
-    {
+    static PyType_Slot _type_slots_DiagnosticActionResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DiagnosticActionResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DiagnosticActionResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DiagnosticActionResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DiagnosticActionResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DiagnosticActionResult = {
@@ -306,13 +305,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_DiagnosticInvoker[] = 
-    {
+    static PyType_Slot _type_slots_DiagnosticInvoker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DiagnosticInvoker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DiagnosticInvoker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DiagnosticInvoker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DiagnosticInvoker) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DiagnosticInvoker = {
@@ -431,13 +429,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_ProcessCpuUsage[] = 
-    {
+    static PyType_Slot _type_slots_ProcessCpuUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessCpuUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessCpuUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessCpuUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessCpuUsage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProcessCpuUsage = {
@@ -538,13 +535,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_ProcessCpuUsageReport[] = 
-    {
+    static PyType_Slot _type_slots_ProcessCpuUsageReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessCpuUsageReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessCpuUsageReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessCpuUsageReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessCpuUsageReport) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProcessCpuUsageReport = {
@@ -884,13 +880,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_ProcessDiagnosticInfo[] = 
-    {
+    static PyType_Slot _type_slots_ProcessDiagnosticInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessDiagnosticInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessDiagnosticInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessDiagnosticInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessDiagnosticInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProcessDiagnosticInfo = {
@@ -1009,13 +1004,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_ProcessDiskUsage[] = 
-    {
+    static PyType_Slot _type_slots_ProcessDiskUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessDiskUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessDiskUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessDiskUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessDiskUsage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProcessDiskUsage = {
@@ -1196,13 +1190,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_ProcessDiskUsageReport[] = 
-    {
+    static PyType_Slot _type_slots_ProcessDiskUsageReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessDiskUsageReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessDiskUsageReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessDiskUsageReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessDiskUsageReport) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProcessDiskUsageReport = {
@@ -1293,13 +1286,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_ProcessMemoryUsage[] = 
-    {
+    static PyType_Slot _type_slots_ProcessMemoryUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessMemoryUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessMemoryUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessMemoryUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessMemoryUsage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProcessMemoryUsage = {
@@ -1600,13 +1592,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_ProcessMemoryUsageReport[] = 
-    {
+    static PyType_Slot _type_slots_ProcessMemoryUsageReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessMemoryUsageReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessMemoryUsageReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessMemoryUsageReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessMemoryUsageReport) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProcessMemoryUsageReport = {
@@ -1697,13 +1688,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_SystemCpuUsage[] = 
-    {
+    static PyType_Slot _type_slots_SystemCpuUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemCpuUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemCpuUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemCpuUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemCpuUsage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemCpuUsage = {
@@ -1824,13 +1814,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_SystemCpuUsageReport[] = 
-    {
+    static PyType_Slot _type_slots_SystemCpuUsageReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemCpuUsageReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemCpuUsageReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemCpuUsageReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemCpuUsageReport) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemCpuUsageReport = {
@@ -2010,13 +1999,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_SystemDiagnosticInfo[] = 
-    {
+    static PyType_Slot _type_slots_SystemDiagnosticInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemDiagnosticInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemDiagnosticInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemDiagnosticInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemDiagnosticInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemDiagnosticInfo = {
@@ -2135,13 +2123,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_SystemMemoryUsage[] = 
-    {
+    static PyType_Slot _type_slots_SystemMemoryUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemMemoryUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemMemoryUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemMemoryUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemMemoryUsage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemMemoryUsage = {
@@ -2262,13 +2249,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_SystemMemoryUsageReport[] = 
-    {
+    static PyType_Slot _type_slots_SystemMemoryUsageReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemMemoryUsageReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemMemoryUsageReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemMemoryUsageReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemMemoryUsageReport) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemMemoryUsageReport = {

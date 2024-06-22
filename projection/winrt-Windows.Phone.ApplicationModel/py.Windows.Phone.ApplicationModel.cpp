@@ -41,12 +41,11 @@ namespace py::cpp::Windows::Phone::ApplicationModel
         { }
     };
 
-    static PyType_Slot _type_slots_ApplicationProfile[] = 
-    {
+    static PyType_Slot _type_slots_ApplicationProfile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ApplicationProfile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ApplicationProfile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ApplicationProfile) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ApplicationProfile = {

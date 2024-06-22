@@ -116,13 +116,12 @@ namespace py::cpp::Windows::Data::Text
         { }
     };
 
-    static PyType_Slot _type_slots_AlternateWordForm[] = 
-    {
+    static PyType_Slot _type_slots_AlternateWordForm[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AlternateWordForm) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AlternateWordForm) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AlternateWordForm) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AlternateWordForm) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AlternateWordForm = {
@@ -223,13 +222,12 @@ namespace py::cpp::Windows::Data::Text
         { }
     };
 
-    static PyType_Slot _type_slots_SelectableWordSegment[] = 
-    {
+    static PyType_Slot _type_slots_SelectableWordSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SelectableWordSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SelectableWordSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SelectableWordSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SelectableWordSegment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SelectableWordSegment = {
@@ -434,13 +432,12 @@ namespace py::cpp::Windows::Data::Text
         { }
     };
 
-    static PyType_Slot _type_slots_SelectableWordsSegmenter[] = 
-    {
+    static PyType_Slot _type_slots_SelectableWordsSegmenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SelectableWordsSegmenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SelectableWordsSegmenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SelectableWordsSegmenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SelectableWordsSegmenter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SelectableWordsSegmenter = {
@@ -606,13 +603,12 @@ namespace py::cpp::Windows::Data::Text
         { }
     };
 
-    static PyType_Slot _type_slots_SemanticTextQuery[] = 
-    {
+    static PyType_Slot _type_slots_SemanticTextQuery[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SemanticTextQuery) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SemanticTextQuery) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SemanticTextQuery) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SemanticTextQuery) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SemanticTextQuery = {
@@ -790,13 +786,12 @@ namespace py::cpp::Windows::Data::Text
         { }
     };
 
-    static PyType_Slot _type_slots_TextConversionGenerator[] = 
-    {
+    static PyType_Slot _type_slots_TextConversionGenerator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextConversionGenerator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextConversionGenerator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextConversionGenerator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextConversionGenerator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TextConversionGenerator = {
@@ -897,13 +892,12 @@ namespace py::cpp::Windows::Data::Text
         { }
     };
 
-    static PyType_Slot _type_slots_TextPhoneme[] = 
-    {
+    static PyType_Slot _type_slots_TextPhoneme[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextPhoneme) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextPhoneme) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextPhoneme) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextPhoneme) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TextPhoneme = {
@@ -1185,13 +1179,12 @@ namespace py::cpp::Windows::Data::Text
         { }
     };
 
-    static PyType_Slot _type_slots_TextPredictionGenerator[] = 
-    {
+    static PyType_Slot _type_slots_TextPredictionGenerator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextPredictionGenerator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextPredictionGenerator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextPredictionGenerator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextPredictionGenerator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TextPredictionGenerator = {
@@ -1380,13 +1373,12 @@ namespace py::cpp::Windows::Data::Text
         { }
     };
 
-    static PyType_Slot _type_slots_TextReverseConversionGenerator[] = 
-    {
+    static PyType_Slot _type_slots_TextReverseConversionGenerator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextReverseConversionGenerator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextReverseConversionGenerator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextReverseConversionGenerator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextReverseConversionGenerator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TextReverseConversionGenerator = {
@@ -1955,12 +1947,11 @@ namespace py::cpp::Windows::Data::Text
         { }
     };
 
-    static PyType_Slot _type_slots_UnicodeCharacters[] = 
-    {
+    static PyType_Slot _type_slots_UnicodeCharacters[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UnicodeCharacters) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UnicodeCharacters) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UnicodeCharacters) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UnicodeCharacters = {
@@ -2123,13 +2114,12 @@ namespace py::cpp::Windows::Data::Text
         { }
     };
 
-    static PyType_Slot _type_slots_WordSegment[] = 
-    {
+    static PyType_Slot _type_slots_WordSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WordSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WordSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WordSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WordSegment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WordSegment = {
@@ -2334,13 +2324,12 @@ namespace py::cpp::Windows::Data::Text
         { }
     };
 
-    static PyType_Slot _type_slots_WordsSegmenter[] = 
-    {
+    static PyType_Slot _type_slots_WordsSegmenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WordsSegmenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WordsSegmenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WordsSegmenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WordsSegmenter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WordsSegmenter = {
@@ -2492,14 +2481,13 @@ namespace py::cpp::Windows::Data::Text
         { }
     };
 
-    static PyType_Slot _type_slots_TextSegment[] = 
-    {
+    static PyType_Slot _type_slots_TextSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextSegment) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TextSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextSegment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TextSegment = {

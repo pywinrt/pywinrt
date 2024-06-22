@@ -76,13 +76,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechContinuousRecognitionCompletedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SpeechContinuousRecognitionCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechContinuousRecognitionCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechContinuousRecognitionCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechContinuousRecognitionCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechContinuousRecognitionCompletedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechContinuousRecognitionCompletedEventArgs = {
@@ -163,13 +162,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechContinuousRecognitionResultGeneratedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SpeechContinuousRecognitionResultGeneratedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechContinuousRecognitionResultGeneratedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechContinuousRecognitionResultGeneratedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechContinuousRecognitionResultGeneratedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechContinuousRecognitionResultGeneratedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechContinuousRecognitionResultGeneratedEventArgs = {
@@ -539,13 +537,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechContinuousRecognitionSession[] = 
-    {
+    static PyType_Slot _type_slots_SpeechContinuousRecognitionSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechContinuousRecognitionSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechContinuousRecognitionSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechContinuousRecognitionSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechContinuousRecognitionSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechContinuousRecognitionSession = {
@@ -626,13 +623,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechRecognitionCompilationResult[] = 
-    {
+    static PyType_Slot _type_slots_SpeechRecognitionCompilationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechRecognitionCompilationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechRecognitionCompilationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechRecognitionCompilationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechRecognitionCompilationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechRecognitionCompilationResult = {
@@ -917,13 +913,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechRecognitionGrammarFileConstraint[] = 
-    {
+    static PyType_Slot _type_slots_SpeechRecognitionGrammarFileConstraint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechRecognitionGrammarFileConstraint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechRecognitionGrammarFileConstraint) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechRecognitionGrammarFileConstraint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechRecognitionGrammarFileConstraint) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechRecognitionGrammarFileConstraint = {
@@ -1004,13 +999,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechRecognitionHypothesis[] = 
-    {
+    static PyType_Slot _type_slots_SpeechRecognitionHypothesis[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechRecognitionHypothesis) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechRecognitionHypothesis) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechRecognitionHypothesis) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechRecognitionHypothesis) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechRecognitionHypothesis = {
@@ -1091,13 +1085,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechRecognitionHypothesisGeneratedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SpeechRecognitionHypothesisGeneratedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechRecognitionHypothesisGeneratedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechRecognitionHypothesisGeneratedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechRecognitionHypothesisGeneratedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechRecognitionHypothesisGeneratedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechRecognitionHypothesisGeneratedEventArgs = {
@@ -1382,13 +1375,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechRecognitionListConstraint[] = 
-    {
+    static PyType_Slot _type_slots_SpeechRecognitionListConstraint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechRecognitionListConstraint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechRecognitionListConstraint) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechRecognitionListConstraint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechRecognitionListConstraint) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechRecognitionListConstraint = {
@@ -1469,13 +1461,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechRecognitionQualityDegradingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SpeechRecognitionQualityDegradingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechRecognitionQualityDegradingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechRecognitionQualityDegradingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechRecognitionQualityDegradingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechRecognitionQualityDegradingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechRecognitionQualityDegradingEventArgs = {
@@ -1748,13 +1739,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechRecognitionResult[] = 
-    {
+    static PyType_Slot _type_slots_SpeechRecognitionResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechRecognitionResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechRecognitionResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechRecognitionResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechRecognitionResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechRecognitionResult = {
@@ -1835,13 +1825,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechRecognitionSemanticInterpretation[] = 
-    {
+    static PyType_Slot _type_slots_SpeechRecognitionSemanticInterpretation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechRecognitionSemanticInterpretation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechRecognitionSemanticInterpretation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechRecognitionSemanticInterpretation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechRecognitionSemanticInterpretation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechRecognitionSemanticInterpretation = {
@@ -2148,13 +2137,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechRecognitionTopicConstraint[] = 
-    {
+    static PyType_Slot _type_slots_SpeechRecognitionTopicConstraint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechRecognitionTopicConstraint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechRecognitionTopicConstraint) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechRecognitionTopicConstraint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechRecognitionTopicConstraint) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechRecognitionTopicConstraint = {
@@ -2379,13 +2367,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechRecognitionVoiceCommandDefinitionConstraint[] = 
-    {
+    static PyType_Slot _type_slots_SpeechRecognitionVoiceCommandDefinitionConstraint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechRecognitionVoiceCommandDefinitionConstraint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechRecognitionVoiceCommandDefinitionConstraint) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechRecognitionVoiceCommandDefinitionConstraint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechRecognitionVoiceCommandDefinitionConstraint) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechRecognitionVoiceCommandDefinitionConstraint = {
@@ -2998,13 +2985,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechRecognizer[] = 
-    {
+    static PyType_Slot _type_slots_SpeechRecognizer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechRecognizer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechRecognizer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechRecognizer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechRecognizer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechRecognizer = {
@@ -3114,13 +3100,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechRecognizerStateChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SpeechRecognizerStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechRecognizerStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechRecognizerStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechRecognizerStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechRecognizerStateChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechRecognizerStateChangedEventArgs = {
@@ -3325,13 +3310,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechRecognizerTimeouts[] = 
-    {
+    static PyType_Slot _type_slots_SpeechRecognizerTimeouts[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechRecognizerTimeouts) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechRecognizerTimeouts) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechRecognizerTimeouts) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechRecognizerTimeouts) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechRecognizerTimeouts = {
@@ -3584,13 +3568,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechRecognizerUIOptions[] = 
-    {
+    static PyType_Slot _type_slots_SpeechRecognizerUIOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechRecognizerUIOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechRecognizerUIOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechRecognizerUIOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechRecognizerUIOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechRecognizerUIOptions = {
@@ -3667,12 +3650,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_VoiceCommandManager[] = 
-    {
+    static PyType_Slot _type_slots_VoiceCommandManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VoiceCommandManager = {
@@ -3833,13 +3815,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_VoiceCommandSet[] = 
-    {
+    static PyType_Slot _type_slots_VoiceCommandSet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandSet) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandSet) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandSet) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandSet) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VoiceCommandSet = {
@@ -4064,13 +4045,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { }
     };
 
-    static PyType_Slot _type_slots_ISpeechRecognitionConstraint[] = 
-    {
+    static PyType_Slot _type_slots_ISpeechRecognitionConstraint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISpeechRecognitionConstraint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISpeechRecognitionConstraint) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISpeechRecognitionConstraint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISpeechRecognitionConstraint) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISpeechRecognitionConstraint = {

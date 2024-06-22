@@ -715,13 +715,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattCharacteristic[] = 
-    {
+    static PyType_Slot _type_slots_GattCharacteristic[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattCharacteristic) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattCharacteristic) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattCharacteristic) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattCharacteristic) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattCharacteristic = {
@@ -2313,12 +2312,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattCharacteristicUuids[] = 
-    {
+    static PyType_Slot _type_slots_GattCharacteristicUuids[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattCharacteristicUuids) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattCharacteristicUuids) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattCharacteristicUuids) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattCharacteristicUuids = {
@@ -2545,13 +2543,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattCharacteristicsResult[] = 
-    {
+    static PyType_Slot _type_slots_GattCharacteristicsResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattCharacteristicsResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattCharacteristicsResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattCharacteristicsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattCharacteristicsResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattCharacteristicsResult = {
@@ -2692,13 +2689,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattClientNotificationResult[] = 
-    {
+    static PyType_Slot _type_slots_GattClientNotificationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattClientNotificationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattClientNotificationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattClientNotificationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattClientNotificationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattClientNotificationResult = {
@@ -2992,13 +2988,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattDescriptor[] = 
-    {
+    static PyType_Slot _type_slots_GattDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattDescriptor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattDescriptor = {
@@ -3165,12 +3160,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattDescriptorUuids[] = 
-    {
+    static PyType_Slot _type_slots_GattDescriptorUuids[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattDescriptorUuids) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattDescriptorUuids) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattDescriptorUuids) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattDescriptorUuids = {
@@ -3322,13 +3316,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattDescriptorsResult[] = 
-    {
+    static PyType_Slot _type_slots_GattDescriptorsResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattDescriptorsResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattDescriptorsResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattDescriptorsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattDescriptorsResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattDescriptorsResult = {
@@ -4244,13 +4237,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattDeviceService[] = 
-    {
+    static PyType_Slot _type_slots_GattDeviceService[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattDeviceService) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattDeviceService) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattDeviceService) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattDeviceService) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattDeviceService = {
@@ -4402,13 +4394,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattDeviceServicesResult[] = 
-    {
+    static PyType_Slot _type_slots_GattDeviceServicesResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattDeviceServicesResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattDeviceServicesResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattDeviceServicesResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattDeviceServicesResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattDeviceServicesResult = {
@@ -4870,13 +4861,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattLocalCharacteristic[] = 
-    {
+    static PyType_Slot _type_slots_GattLocalCharacteristic[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattLocalCharacteristic) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattLocalCharacteristic) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattLocalCharacteristic) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattLocalCharacteristic) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattLocalCharacteristic = {
@@ -5219,13 +5209,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattLocalCharacteristicParameters[] = 
-    {
+    static PyType_Slot _type_slots_GattLocalCharacteristicParameters[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattLocalCharacteristicParameters) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattLocalCharacteristicParameters) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattLocalCharacteristicParameters) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattLocalCharacteristicParameters) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattLocalCharacteristicParameters = {
@@ -5326,13 +5315,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattLocalCharacteristicResult[] = 
-    {
+    static PyType_Slot _type_slots_GattLocalCharacteristicResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattLocalCharacteristicResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattLocalCharacteristicResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattLocalCharacteristicResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattLocalCharacteristicResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattLocalCharacteristicResult = {
@@ -5563,13 +5551,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattLocalDescriptor[] = 
-    {
+    static PyType_Slot _type_slots_GattLocalDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattLocalDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattLocalDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattLocalDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattLocalDescriptor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattLocalDescriptor = {
@@ -5796,13 +5783,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattLocalDescriptorParameters[] = 
-    {
+    static PyType_Slot _type_slots_GattLocalDescriptorParameters[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattLocalDescriptorParameters) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattLocalDescriptorParameters) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattLocalDescriptorParameters) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattLocalDescriptorParameters) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattLocalDescriptorParameters = {
@@ -5903,13 +5889,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattLocalDescriptorResult[] = 
-    {
+    static PyType_Slot _type_slots_GattLocalDescriptorResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattLocalDescriptorResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattLocalDescriptorResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattLocalDescriptorResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattLocalDescriptorResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattLocalDescriptorResult = {
@@ -6043,13 +6028,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattLocalService[] = 
-    {
+    static PyType_Slot _type_slots_GattLocalService[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattLocalService) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattLocalService) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattLocalService) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattLocalService) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattLocalService = {
@@ -6264,13 +6248,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattPresentationFormat[] = 
-    {
+    static PyType_Slot _type_slots_GattPresentationFormat[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattPresentationFormat) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattPresentationFormat) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattPresentationFormat) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattPresentationFormat) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattPresentationFormat = {
@@ -6837,12 +6820,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattPresentationFormatTypes[] = 
-    {
+    static PyType_Slot _type_slots_GattPresentationFormatTypes[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattPresentationFormatTypes) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattPresentationFormatTypes) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattPresentationFormatTypes) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattPresentationFormatTypes = {
@@ -7244,12 +7226,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattProtocolError[] = 
-    {
+    static PyType_Slot _type_slots_GattProtocolError[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattProtocolError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattProtocolError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattProtocolError) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattProtocolError = {
@@ -7412,13 +7393,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattReadClientCharacteristicConfigurationDescriptorResult[] = 
-    {
+    static PyType_Slot _type_slots_GattReadClientCharacteristicConfigurationDescriptorResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattReadClientCharacteristicConfigurationDescriptorResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattReadClientCharacteristicConfigurationDescriptorResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattReadClientCharacteristicConfigurationDescriptorResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattReadClientCharacteristicConfigurationDescriptorResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattReadClientCharacteristicConfigurationDescriptorResult = {
@@ -7650,13 +7630,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattReadRequest[] = 
-    {
+    static PyType_Slot _type_slots_GattReadRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattReadRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattReadRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattReadRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattReadRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattReadRequest = {
@@ -7797,13 +7776,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattReadRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GattReadRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattReadRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattReadRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattReadRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattReadRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattReadRequestedEventArgs = {
@@ -7924,13 +7902,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattReadResult[] = 
-    {
+    static PyType_Slot _type_slots_GattReadResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattReadResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattReadResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattReadResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattReadResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattReadResult = {
@@ -8107,13 +8084,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattReliableWriteTransaction[] = 
-    {
+    static PyType_Slot _type_slots_GattReliableWriteTransaction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattReliableWriteTransaction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattReliableWriteTransaction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattReliableWriteTransaction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattReliableWriteTransaction) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattReliableWriteTransaction = {
@@ -8214,13 +8190,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattRequestStateChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GattRequestStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattRequestStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattRequestStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattRequestStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattRequestStateChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattRequestStateChangedEventArgs = {
@@ -8480,13 +8455,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattServiceProvider[] = 
-    {
+    static PyType_Slot _type_slots_GattServiceProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattServiceProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattServiceProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattServiceProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattServiceProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattServiceProvider = {
@@ -8613,13 +8587,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattServiceProviderAdvertisementStatusChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GattServiceProviderAdvertisementStatusChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattServiceProviderAdvertisementStatusChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattServiceProviderAdvertisementStatusChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattServiceProviderAdvertisementStatusChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattServiceProviderAdvertisementStatusChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattServiceProviderAdvertisementStatusChangedEventArgs = {
@@ -8846,13 +8819,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattServiceProviderAdvertisingParameters[] = 
-    {
+    static PyType_Slot _type_slots_GattServiceProviderAdvertisingParameters[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattServiceProviderAdvertisingParameters) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattServiceProviderAdvertisingParameters) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattServiceProviderAdvertisingParameters) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattServiceProviderAdvertisingParameters) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattServiceProviderAdvertisingParameters = {
@@ -8953,13 +8925,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattServiceProviderResult[] = 
-    {
+    static PyType_Slot _type_slots_GattServiceProviderResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattServiceProviderResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattServiceProviderResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattServiceProviderResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattServiceProviderResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattServiceProviderResult = {
@@ -9404,12 +9375,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattServiceUuids[] = 
-    {
+    static PyType_Slot _type_slots_GattServiceUuids[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattServiceUuids) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattServiceUuids) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattServiceUuids) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattServiceUuids = {
@@ -9818,13 +9788,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattSession[] = 
-    {
+    static PyType_Slot _type_slots_GattSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattSession = {
@@ -9951,13 +9920,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattSessionStatusChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GattSessionStatusChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattSessionStatusChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattSessionStatusChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattSessionStatusChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattSessionStatusChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattSessionStatusChangedEventArgs = {
@@ -10103,13 +10071,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattSubscribedClient[] = 
-    {
+    static PyType_Slot _type_slots_GattSubscribedClient[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattSubscribedClient) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattSubscribedClient) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattSubscribedClient) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattSubscribedClient) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattSubscribedClient = {
@@ -10210,13 +10177,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattValueChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GattValueChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattValueChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattValueChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattValueChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattValueChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattValueChangedEventArgs = {
@@ -10466,13 +10432,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattWriteRequest[] = 
-    {
+    static PyType_Slot _type_slots_GattWriteRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattWriteRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattWriteRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattWriteRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattWriteRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattWriteRequest = {
@@ -10613,13 +10578,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattWriteRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GattWriteRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattWriteRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattWriteRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattWriteRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattWriteRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattWriteRequestedEventArgs = {
@@ -10720,13 +10684,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GattWriteResult[] = 
-    {
+    static PyType_Slot _type_slots_GattWriteResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattWriteResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattWriteResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattWriteResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattWriteResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattWriteResult = {

@@ -174,13 +174,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
         { }
     };
 
-    static PyType_Slot _type_slots_FrameNavigationOptions[] = 
-    {
+    static PyType_Slot _type_slots_FrameNavigationOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameNavigationOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameNavigationOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameNavigationOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameNavigationOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FrameNavigationOptions = {
@@ -369,13 +368,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
         { }
     };
 
-    static PyType_Slot _type_slots_NavigatingCancelEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_NavigatingCancelEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NavigatingCancelEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NavigatingCancelEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NavigatingCancelEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NavigatingCancelEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NavigatingCancelEventArgs = {
@@ -584,13 +582,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
         { }
     };
 
-    static PyType_Slot _type_slots_NavigationEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_NavigationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NavigationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NavigationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NavigationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NavigationEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NavigationEventArgs = {
@@ -739,13 +736,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
         { }
     };
 
-    static PyType_Slot _type_slots_NavigationFailedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_NavigationFailedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NavigationFailedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NavigationFailedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NavigationFailedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NavigationFailedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NavigationFailedEventArgs = {
@@ -911,13 +907,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
         { }
     };
 
-    static PyType_Slot _type_slots_PageStackEntry[] = 
-    {
+    static PyType_Slot _type_slots_PageStackEntry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PageStackEntry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PageStackEntry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PageStackEntry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PageStackEntry) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PageStackEntry = {

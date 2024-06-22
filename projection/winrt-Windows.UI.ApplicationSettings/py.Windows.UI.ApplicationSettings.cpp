@@ -280,13 +280,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { }
     };
 
-    static PyType_Slot _type_slots_AccountsSettingsPane[] = 
-    {
+    static PyType_Slot _type_slots_AccountsSettingsPane[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccountsSettingsPane) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccountsSettingsPane) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccountsSettingsPane) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccountsSettingsPane) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AccountsSettingsPane = {
@@ -556,13 +555,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { }
     };
 
-    static PyType_Slot _type_slots_AccountsSettingsPaneCommandsRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AccountsSettingsPaneCommandsRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccountsSettingsPaneCommandsRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccountsSettingsPaneCommandsRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccountsSettingsPaneCommandsRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccountsSettingsPaneCommandsRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AccountsSettingsPaneCommandsRequestedEventArgs = {
@@ -654,13 +652,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { }
     };
 
-    static PyType_Slot _type_slots_AccountsSettingsPaneEventDeferral[] = 
-    {
+    static PyType_Slot _type_slots_AccountsSettingsPaneEventDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccountsSettingsPaneEventDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccountsSettingsPaneEventDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccountsSettingsPaneEventDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccountsSettingsPaneEventDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AccountsSettingsPaneEventDeferral = {
@@ -801,13 +798,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { }
     };
 
-    static PyType_Slot _type_slots_CredentialCommand[] = 
-    {
+    static PyType_Slot _type_slots_CredentialCommand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CredentialCommand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CredentialCommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CredentialCommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CredentialCommand) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CredentialCommand = {
@@ -1057,13 +1053,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { }
     };
 
-    static PyType_Slot _type_slots_SettingsCommand[] = 
-    {
+    static PyType_Slot _type_slots_SettingsCommand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SettingsCommand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SettingsCommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SettingsCommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SettingsCommand) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SettingsCommand = {
@@ -1273,13 +1268,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { }
     };
 
-    static PyType_Slot _type_slots_SettingsPane[] = 
-    {
+    static PyType_Slot _type_slots_SettingsPane[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SettingsPane) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SettingsPane) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SettingsPane) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SettingsPane) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SettingsPane = {
@@ -1388,13 +1382,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { }
     };
 
-    static PyType_Slot _type_slots_SettingsPaneCommandsRequest[] = 
-    {
+    static PyType_Slot _type_slots_SettingsPaneCommandsRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SettingsPaneCommandsRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SettingsPaneCommandsRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SettingsPaneCommandsRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SettingsPaneCommandsRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SettingsPaneCommandsRequest = {
@@ -1475,13 +1468,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { }
     };
 
-    static PyType_Slot _type_slots_SettingsPaneCommandsRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SettingsPaneCommandsRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SettingsPaneCommandsRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SettingsPaneCommandsRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SettingsPaneCommandsRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SettingsPaneCommandsRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SettingsPaneCommandsRequestedEventArgs = {
@@ -1628,13 +1620,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { }
     };
 
-    static PyType_Slot _type_slots_WebAccountCommand[] = 
-    {
+    static PyType_Slot _type_slots_WebAccountCommand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountCommand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountCommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountCommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountCommand) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebAccountCommand = {
@@ -1715,13 +1706,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { }
     };
 
-    static PyType_Slot _type_slots_WebAccountInvokedArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebAccountInvokedArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountInvokedArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountInvokedArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountInvokedArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountInvokedArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebAccountInvokedArgs = {
@@ -1847,13 +1837,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         { }
     };
 
-    static PyType_Slot _type_slots_WebAccountProviderCommand[] = 
-    {
+    static PyType_Slot _type_slots_WebAccountProviderCommand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountProviderCommand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountProviderCommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountProviderCommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountProviderCommand) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebAccountProviderCommand = {

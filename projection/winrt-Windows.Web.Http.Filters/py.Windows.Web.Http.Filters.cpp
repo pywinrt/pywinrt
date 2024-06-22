@@ -829,13 +829,12 @@ namespace py::cpp::Windows::Web::Http::Filters
         { }
     };
 
-    static PyType_Slot _type_slots_HttpBaseProtocolFilter[] = 
-    {
+    static PyType_Slot _type_slots_HttpBaseProtocolFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpBaseProtocolFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpBaseProtocolFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpBaseProtocolFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpBaseProtocolFilter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpBaseProtocolFilter = {
@@ -1018,13 +1017,12 @@ namespace py::cpp::Windows::Web::Http::Filters
         { }
     };
 
-    static PyType_Slot _type_slots_HttpCacheControl[] = 
-    {
+    static PyType_Slot _type_slots_HttpCacheControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpCacheControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpCacheControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpCacheControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpCacheControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpCacheControl = {
@@ -1246,13 +1244,12 @@ namespace py::cpp::Windows::Web::Http::Filters
         { }
     };
 
-    static PyType_Slot _type_slots_HttpServerCustomValidationRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_HttpServerCustomValidationRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpServerCustomValidationRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpServerCustomValidationRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpServerCustomValidationRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpServerCustomValidationRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HttpServerCustomValidationRequestedEventArgs = {
@@ -1397,13 +1394,12 @@ namespace py::cpp::Windows::Web::Http::Filters
         { }
     };
 
-    static PyType_Slot _type_slots_IHttpFilter[] = 
-    {
+    static PyType_Slot _type_slots_IHttpFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IHttpFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IHttpFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IHttpFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IHttpFilter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IHttpFilter = {

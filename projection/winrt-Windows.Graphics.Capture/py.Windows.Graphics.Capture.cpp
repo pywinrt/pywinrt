@@ -168,13 +168,12 @@ namespace py::cpp::Windows::Graphics::Capture
         { }
     };
 
-    static PyType_Slot _type_slots_Direct3D11CaptureFrame[] = 
-    {
+    static PyType_Slot _type_slots_Direct3D11CaptureFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Direct3D11CaptureFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Direct3D11CaptureFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Direct3D11CaptureFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Direct3D11CaptureFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Direct3D11CaptureFrame = {
@@ -518,13 +517,12 @@ namespace py::cpp::Windows::Graphics::Capture
         { }
     };
 
-    static PyType_Slot _type_slots_Direct3D11CaptureFramePool[] = 
-    {
+    static PyType_Slot _type_slots_Direct3D11CaptureFramePool[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Direct3D11CaptureFramePool) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Direct3D11CaptureFramePool) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Direct3D11CaptureFramePool) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Direct3D11CaptureFramePool) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Direct3D11CaptureFramePool = {
@@ -609,12 +607,11 @@ namespace py::cpp::Windows::Graphics::Capture
         { }
     };
 
-    static PyType_Slot _type_slots_GraphicsCaptureAccess[] = 
-    {
+    static PyType_Slot _type_slots_GraphicsCaptureAccess[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GraphicsCaptureAccess) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GraphicsCaptureAccess) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GraphicsCaptureAccess) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GraphicsCaptureAccess = {
@@ -879,13 +876,12 @@ namespace py::cpp::Windows::Graphics::Capture
         { }
     };
 
-    static PyType_Slot _type_slots_GraphicsCaptureItem[] = 
-    {
+    static PyType_Slot _type_slots_GraphicsCaptureItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GraphicsCaptureItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GraphicsCaptureItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GraphicsCaptureItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GraphicsCaptureItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GraphicsCaptureItem = {
@@ -1026,13 +1022,12 @@ namespace py::cpp::Windows::Graphics::Capture
         { }
     };
 
-    static PyType_Slot _type_slots_GraphicsCapturePicker[] = 
-    {
+    static PyType_Slot _type_slots_GraphicsCapturePicker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GraphicsCapturePicker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GraphicsCapturePicker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GraphicsCapturePicker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GraphicsCapturePicker) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GraphicsCapturePicker = {
@@ -1301,13 +1296,12 @@ namespace py::cpp::Windows::Graphics::Capture
         { }
     };
 
-    static PyType_Slot _type_slots_GraphicsCaptureSession[] = 
-    {
+    static PyType_Slot _type_slots_GraphicsCaptureSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GraphicsCaptureSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GraphicsCaptureSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GraphicsCaptureSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GraphicsCaptureSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GraphicsCaptureSession = {

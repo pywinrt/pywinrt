@@ -76,13 +76,12 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
         { }
     };
 
-    static PyType_Slot _type_slots_ExtendedExecutionRevokedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ExtendedExecutionRevokedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExtendedExecutionRevokedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExtendedExecutionRevokedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExtendedExecutionRevokedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExtendedExecutionRevokedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ExtendedExecutionRevokedEventArgs = {
@@ -436,13 +435,12 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
         { }
     };
 
-    static PyType_Slot _type_slots_ExtendedExecutionSession[] = 
-    {
+    static PyType_Slot _type_slots_ExtendedExecutionSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExtendedExecutionSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExtendedExecutionSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExtendedExecutionSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExtendedExecutionSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ExtendedExecutionSession = {

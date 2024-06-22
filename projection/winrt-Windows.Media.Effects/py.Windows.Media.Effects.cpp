@@ -131,13 +131,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_AudioCaptureEffectsManager[] = 
-    {
+    static PyType_Slot _type_slots_AudioCaptureEffectsManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioCaptureEffectsManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioCaptureEffectsManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioCaptureEffectsManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioCaptureEffectsManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioCaptureEffectsManager = {
@@ -218,13 +217,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_AudioEffect[] = 
-    {
+    static PyType_Slot _type_slots_AudioEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioEffect) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioEffect = {
@@ -365,13 +363,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_AudioEffectDefinition[] = 
-    {
+    static PyType_Slot _type_slots_AudioEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioEffectDefinition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioEffectDefinition = {
@@ -506,12 +503,11 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_AudioEffectsManager[] = 
-    {
+    static PyType_Slot _type_slots_AudioEffectsManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioEffectsManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioEffectsManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioEffectsManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioEffectsManager = {
@@ -745,13 +741,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_AudioRenderEffectsManager[] = 
-    {
+    static PyType_Slot _type_slots_AudioRenderEffectsManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioRenderEffectsManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioRenderEffectsManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioRenderEffectsManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioRenderEffectsManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioRenderEffectsManager = {
@@ -904,13 +899,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_CompositeVideoFrameContext[] = 
-    {
+    static PyType_Slot _type_slots_CompositeVideoFrameContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositeVideoFrameContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositeVideoFrameContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositeVideoFrameContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositeVideoFrameContext) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositeVideoFrameContext = {
@@ -1011,13 +1005,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_ProcessAudioFrameContext[] = 
-    {
+    static PyType_Slot _type_slots_ProcessAudioFrameContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessAudioFrameContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessAudioFrameContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessAudioFrameContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessAudioFrameContext) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProcessAudioFrameContext = {
@@ -1118,13 +1111,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_ProcessVideoFrameContext[] = 
-    {
+    static PyType_Slot _type_slots_ProcessVideoFrameContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProcessVideoFrameContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessVideoFrameContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessVideoFrameContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessVideoFrameContext) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProcessVideoFrameContext = {
@@ -1295,13 +1287,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_SlowMotionEffectDefinition[] = 
-    {
+    static PyType_Slot _type_slots_SlowMotionEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SlowMotionEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SlowMotionEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SlowMotionEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SlowMotionEffectDefinition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SlowMotionEffectDefinition = {
@@ -1442,13 +1433,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_VideoCompositorDefinition[] = 
-    {
+    static PyType_Slot _type_slots_VideoCompositorDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoCompositorDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoCompositorDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoCompositorDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoCompositorDefinition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VideoCompositorDefinition = {
@@ -1589,13 +1579,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_VideoEffectDefinition[] = 
-    {
+    static PyType_Slot _type_slots_VideoEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoEffectDefinition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VideoEffectDefinition = {
@@ -2026,13 +2015,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_VideoTransformEffectDefinition[] = 
-    {
+    static PyType_Slot _type_slots_VideoTransformEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoTransformEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoTransformEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoTransformEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoTransformEffectDefinition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VideoTransformEffectDefinition = {
@@ -2333,13 +2321,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_VideoTransformSphericalProjection[] = 
-    {
+    static PyType_Slot _type_slots_VideoTransformSphericalProjection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoTransformSphericalProjection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoTransformSphericalProjection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoTransformSphericalProjection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoTransformSphericalProjection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VideoTransformSphericalProjection = {
@@ -2440,13 +2427,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_IAudioEffectDefinition[] = 
-    {
+    static PyType_Slot _type_slots_IAudioEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAudioEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAudioEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAudioEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAudioEffectDefinition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAudioEffectDefinition = {
@@ -2710,13 +2696,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_IBasicAudioEffect[] = 
-    {
+    static PyType_Slot _type_slots_IBasicAudioEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBasicAudioEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBasicAudioEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBasicAudioEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBasicAudioEffect) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBasicAudioEffect = {
@@ -3021,13 +3006,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_IBasicVideoEffect[] = 
-    {
+    static PyType_Slot _type_slots_IBasicVideoEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBasicVideoEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBasicVideoEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBasicVideoEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBasicVideoEffect) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBasicVideoEffect = {
@@ -3272,13 +3256,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_IVideoCompositor[] = 
-    {
+    static PyType_Slot _type_slots_IVideoCompositor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVideoCompositor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVideoCompositor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVideoCompositor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVideoCompositor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVideoCompositor = {
@@ -3379,13 +3362,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_IVideoCompositorDefinition[] = 
-    {
+    static PyType_Slot _type_slots_IVideoCompositorDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVideoCompositorDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVideoCompositorDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVideoCompositorDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVideoCompositorDefinition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVideoCompositorDefinition = {
@@ -3486,13 +3468,12 @@ namespace py::cpp::Windows::Media::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_IVideoEffectDefinition[] = 
-    {
+    static PyType_Slot _type_slots_IVideoEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVideoEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVideoEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVideoEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVideoEffectDefinition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVideoEffectDefinition = {

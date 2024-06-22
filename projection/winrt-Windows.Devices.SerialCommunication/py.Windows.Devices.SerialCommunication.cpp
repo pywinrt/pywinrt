@@ -76,13 +76,12 @@ namespace py::cpp::Windows::Devices::SerialCommunication
         { }
     };
 
-    static PyType_Slot _type_slots_ErrorReceivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ErrorReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ErrorReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ErrorReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ErrorReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ErrorReceivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ErrorReceivedEventArgs = {
@@ -163,13 +162,12 @@ namespace py::cpp::Windows::Devices::SerialCommunication
         { }
     };
 
-    static PyType_Slot _type_slots_PinChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PinChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PinChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PinChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PinChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PinChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PinChangedEventArgs = {
@@ -1144,13 +1142,12 @@ namespace py::cpp::Windows::Devices::SerialCommunication
         { }
     };
 
-    static PyType_Slot _type_slots_SerialDevice[] = 
-    {
+    static PyType_Slot _type_slots_SerialDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SerialDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SerialDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SerialDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SerialDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SerialDevice = {

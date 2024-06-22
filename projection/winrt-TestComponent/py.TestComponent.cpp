@@ -231,12 +231,11 @@ namespace py::cpp::TestComponent
         { }
     };
 
-    static PyType_Slot _type_slots_TestRunner[] = 
-    {
+    static PyType_Slot _type_slots_TestRunner[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TestRunner) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TestRunner) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TestRunner) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TestRunner = {
@@ -3630,13 +3629,12 @@ namespace py::cpp::TestComponent
         { }
     };
 
-    static PyType_Slot _type_slots_ITests[] = 
-    {
+    static PyType_Slot _type_slots_ITests[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ITests) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITests) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITests) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITests) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ITests = {
@@ -4068,14 +4066,13 @@ namespace py::cpp::TestComponent
         { }
     };
 
-    static PyType_Slot _type_slots_Blittable[] = 
-    {
+    static PyType_Slot _type_slots_Blittable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Blittable) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Blittable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Blittable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Blittable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Blittable) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Blittable = {
@@ -4227,14 +4224,13 @@ namespace py::cpp::TestComponent
         { }
     };
 
-    static PyType_Slot _type_slots_Nested[] = 
-    {
+    static PyType_Slot _type_slots_Nested[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Nested) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Nested) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Nested) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Nested) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Nested) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Nested = {
@@ -4456,14 +4452,13 @@ namespace py::cpp::TestComponent
         { }
     };
 
-    static PyType_Slot _type_slots_NonBlittable[] = 
-    {
+    static PyType_Slot _type_slots_NonBlittable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NonBlittable) },
         { Py_tp_init, reinterpret_cast<void*>(_init_NonBlittable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NonBlittable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NonBlittable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NonBlittable) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NonBlittable = {

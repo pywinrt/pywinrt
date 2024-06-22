@@ -96,13 +96,12 @@ namespace py::cpp::Windows::UI::Accessibility
         { }
     };
 
-    static PyType_Slot _type_slots_ScreenReaderPositionChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ScreenReaderPositionChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScreenReaderPositionChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScreenReaderPositionChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScreenReaderPositionChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScreenReaderPositionChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ScreenReaderPositionChangedEventArgs = {
@@ -250,13 +249,12 @@ namespace py::cpp::Windows::UI::Accessibility
         { }
     };
 
-    static PyType_Slot _type_slots_ScreenReaderService[] = 
-    {
+    static PyType_Slot _type_slots_ScreenReaderService[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScreenReaderService) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScreenReaderService) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScreenReaderService) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScreenReaderService) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ScreenReaderService = {

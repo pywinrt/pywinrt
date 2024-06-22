@@ -96,13 +96,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Slot _type_slots_BufferProtectUnprotectResult[] = 
-    {
+    static PyType_Slot _type_slots_BufferProtectUnprotectResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BufferProtectUnprotectResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BufferProtectUnprotectResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BufferProtectUnprotectResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BufferProtectUnprotectResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BufferProtectUnprotectResult = {
@@ -203,13 +202,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Slot _type_slots_DataProtectionInfo[] = 
-    {
+    static PyType_Slot _type_slots_DataProtectionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataProtectionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataProtectionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataProtectionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataProtectionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataProtectionInfo = {
@@ -426,12 +424,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Slot _type_slots_DataProtectionManager[] = 
-    {
+    static PyType_Slot _type_slots_DataProtectionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataProtectionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataProtectionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataProtectionManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataProtectionManager = {
@@ -603,13 +600,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Slot _type_slots_FileProtectionInfo[] = 
-    {
+    static PyType_Slot _type_slots_FileProtectionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileProtectionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileProtectionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileProtectionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileProtectionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileProtectionInfo = {
@@ -974,12 +970,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Slot _type_slots_FileProtectionManager[] = 
-    {
+    static PyType_Slot _type_slots_FileProtectionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileProtectionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileProtectionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileProtectionManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileProtectionManager = {
@@ -1166,12 +1161,11 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Slot _type_slots_FileRevocationManager[] = 
-    {
+    static PyType_Slot _type_slots_FileRevocationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileRevocationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileRevocationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileRevocationManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileRevocationManager = {
@@ -1333,13 +1327,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Slot _type_slots_FileUnprotectOptions[] = 
-    {
+    static PyType_Slot _type_slots_FileUnprotectOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileUnprotectOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileUnprotectOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileUnprotectOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileUnprotectOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileUnprotectOptions = {
@@ -1420,13 +1413,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Slot _type_slots_ProtectedAccessResumedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ProtectedAccessResumedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtectedAccessResumedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtectedAccessResumedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtectedAccessResumedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtectedAccessResumedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProtectedAccessResumedEventArgs = {
@@ -1557,13 +1549,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Slot _type_slots_ProtectedAccessSuspendingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ProtectedAccessSuspendingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtectedAccessSuspendingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtectedAccessSuspendingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtectedAccessSuspendingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtectedAccessSuspendingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProtectedAccessSuspendingEventArgs = {
@@ -1664,13 +1655,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Slot _type_slots_ProtectedContainerExportResult[] = 
-    {
+    static PyType_Slot _type_slots_ProtectedContainerExportResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtectedContainerExportResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtectedContainerExportResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtectedContainerExportResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtectedContainerExportResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProtectedContainerExportResult = {
@@ -1771,13 +1761,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Slot _type_slots_ProtectedContainerImportResult[] = 
-    {
+    static PyType_Slot _type_slots_ProtectedContainerImportResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtectedContainerImportResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtectedContainerImportResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtectedContainerImportResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtectedContainerImportResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProtectedContainerImportResult = {
@@ -1858,13 +1847,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Slot _type_slots_ProtectedContentRevokedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ProtectedContentRevokedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtectedContentRevokedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtectedContentRevokedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtectedContentRevokedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtectedContentRevokedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProtectedContentRevokedEventArgs = {
@@ -1985,13 +1973,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Slot _type_slots_ProtectedFileCreateResult[] = 
-    {
+    static PyType_Slot _type_slots_ProtectedFileCreateResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtectedFileCreateResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtectedFileCreateResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtectedFileCreateResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtectedFileCreateResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProtectedFileCreateResult = {
@@ -2287,13 +2274,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Slot _type_slots_ProtectionPolicyAuditInfo[] = 
-    {
+    static PyType_Slot _type_slots_ProtectionPolicyAuditInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtectionPolicyAuditInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtectionPolicyAuditInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtectionPolicyAuditInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtectionPolicyAuditInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProtectionPolicyAuditInfo = {
@@ -3549,13 +3535,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Slot _type_slots_ProtectionPolicyManager[] = 
-    {
+    static PyType_Slot _type_slots_ProtectionPolicyManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProtectionPolicyManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProtectionPolicyManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProtectionPolicyManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProtectionPolicyManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProtectionPolicyManager = {
@@ -3717,13 +3702,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { }
     };
 
-    static PyType_Slot _type_slots_ThreadNetworkContext[] = 
-    {
+    static PyType_Slot _type_slots_ThreadNetworkContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ThreadNetworkContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ThreadNetworkContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ThreadNetworkContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ThreadNetworkContext) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ThreadNetworkContext = {

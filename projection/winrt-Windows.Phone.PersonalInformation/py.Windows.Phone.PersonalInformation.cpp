@@ -318,13 +318,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         { }
     };
 
-    static PyType_Slot _type_slots_ContactAddress[] = 
-    {
+    static PyType_Slot _type_slots_ContactAddress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactAddress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactAddress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactAddress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactAddress) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContactAddress = {
@@ -465,13 +464,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         { }
     };
 
-    static PyType_Slot _type_slots_ContactChangeRecord[] = 
-    {
+    static PyType_Slot _type_slots_ContactChangeRecord[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactChangeRecord) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactChangeRecord) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactChangeRecord) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactChangeRecord) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContactChangeRecord = {
@@ -987,13 +985,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         { }
     };
 
-    static PyType_Slot _type_slots_ContactInformation[] = 
-    {
+    static PyType_Slot _type_slots_ContactInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContactInformation = {
@@ -1170,13 +1167,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         { }
     };
 
-    static PyType_Slot _type_slots_ContactQueryOptions[] = 
-    {
+    static PyType_Slot _type_slots_ContactQueryOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactQueryOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactQueryOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactQueryOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactQueryOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContactQueryOptions = {
@@ -1348,13 +1344,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         { }
     };
 
-    static PyType_Slot _type_slots_ContactQueryResult[] = 
-    {
+    static PyType_Slot _type_slots_ContactQueryResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactQueryResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactQueryResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactQueryResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactQueryResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContactQueryResult = {
@@ -1787,13 +1782,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         { }
     };
 
-    static PyType_Slot _type_slots_ContactStore[] = 
-    {
+    static PyType_Slot _type_slots_ContactStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactStore) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContactStore = {
@@ -2511,12 +2505,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         { }
     };
 
-    static PyType_Slot _type_slots_KnownContactProperties[] = 
-    {
+    static PyType_Slot _type_slots_KnownContactProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownContactProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownContactProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownContactProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KnownContactProperties = {
@@ -3307,13 +3300,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         { }
     };
 
-    static PyType_Slot _type_slots_StoredContact[] = 
-    {
+    static PyType_Slot _type_slots_StoredContact[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StoredContact) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StoredContact) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StoredContact) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StoredContact) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StoredContact = {
@@ -3776,13 +3768,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         { }
     };
 
-    static PyType_Slot _type_slots_IContactInformation[] = 
-    {
+    static PyType_Slot _type_slots_IContactInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IContactInformation = {
@@ -3891,13 +3882,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         { }
     };
 
-    static PyType_Slot _type_slots_IContactInformation2[] = 
-    {
+    static PyType_Slot _type_slots_IContactInformation2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactInformation2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactInformation2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactInformation2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactInformation2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IContactInformation2 = {

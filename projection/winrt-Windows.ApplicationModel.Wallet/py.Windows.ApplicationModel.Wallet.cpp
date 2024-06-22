@@ -166,13 +166,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { }
     };
 
-    static PyType_Slot _type_slots_WalletBarcode[] = 
-    {
+    static PyType_Slot _type_slots_WalletBarcode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletBarcode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WalletBarcode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletBarcode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletBarcode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WalletBarcode = {
@@ -1482,13 +1481,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { }
     };
 
-    static PyType_Slot _type_slots_WalletItem[] = 
-    {
+    static PyType_Slot _type_slots_WalletItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WalletItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WalletItem = {
@@ -1814,13 +1812,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { }
     };
 
-    static PyType_Slot _type_slots_WalletItemCustomProperty[] = 
-    {
+    static PyType_Slot _type_slots_WalletItemCustomProperty[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletItemCustomProperty) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WalletItemCustomProperty) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletItemCustomProperty) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletItemCustomProperty) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WalletItemCustomProperty = {
@@ -2172,13 +2169,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { }
     };
 
-    static PyType_Slot _type_slots_WalletItemStore[] = 
-    {
+    static PyType_Slot _type_slots_WalletItemStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletItemStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WalletItemStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletItemStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletItemStore) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WalletItemStore = {
@@ -2234,12 +2230,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { }
     };
 
-    static PyType_Slot _type_slots_WalletManager[] = 
-    {
+    static PyType_Slot _type_slots_WalletManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WalletManager = {
@@ -2444,13 +2439,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { }
     };
 
-    static PyType_Slot _type_slots_WalletRelevantLocation[] = 
-    {
+    static PyType_Slot _type_slots_WalletRelevantLocation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletRelevantLocation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WalletRelevantLocation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletRelevantLocation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletRelevantLocation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WalletRelevantLocation = {
@@ -2821,13 +2815,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { }
     };
 
-    static PyType_Slot _type_slots_WalletTransaction[] = 
-    {
+    static PyType_Slot _type_slots_WalletTransaction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletTransaction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WalletTransaction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletTransaction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletTransaction) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WalletTransaction = {
@@ -2960,13 +2953,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { }
     };
 
-    static PyType_Slot _type_slots_WalletVerb[] = 
-    {
+    static PyType_Slot _type_slots_WalletVerb[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletVerb) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WalletVerb) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletVerb) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletVerb) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WalletVerb = {

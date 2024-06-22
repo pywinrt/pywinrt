@@ -108,13 +108,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_AttachableInputObject[] = 
-    {
+    static PyType_Slot _type_slots_AttachableInputObject[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AttachableInputObject) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AttachableInputObject) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AttachableInputObject) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AttachableInputObject) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AttachableInputObject = {
@@ -255,13 +254,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_CrossSlidingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CrossSlidingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CrossSlidingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CrossSlidingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CrossSlidingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CrossSlidingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CrossSlidingEventArgs = {
@@ -402,13 +400,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_DraggingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DraggingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DraggingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DraggingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DraggingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DraggingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DraggingEventArgs = {
@@ -633,13 +630,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_EdgeGesture[] = 
-    {
+    static PyType_Slot _type_slots_EdgeGesture[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EdgeGesture) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EdgeGesture) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EdgeGesture) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EdgeGesture) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EdgeGesture = {
@@ -746,13 +742,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_EdgeGestureEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_EdgeGestureEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EdgeGestureEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EdgeGestureEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EdgeGestureEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EdgeGestureEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EdgeGestureEventArgs = {
@@ -2632,13 +2627,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_GestureRecognizer[] = 
-    {
+    static PyType_Slot _type_slots_GestureRecognizer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GestureRecognizer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GestureRecognizer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GestureRecognizer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GestureRecognizer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GestureRecognizer = {
@@ -2799,13 +2793,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_HoldingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_HoldingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HoldingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HoldingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HoldingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HoldingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HoldingEventArgs = {
@@ -2931,13 +2924,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_InputActivationListener[] = 
-    {
+    static PyType_Slot _type_slots_InputActivationListener[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InputActivationListener) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InputActivationListener) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InputActivationListener) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InputActivationListener) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InputActivationListener = {
@@ -3018,13 +3010,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_InputActivationListenerActivationChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_InputActivationListenerActivationChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InputActivationListenerActivationChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InputActivationListenerActivationChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InputActivationListenerActivationChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InputActivationListenerActivationChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InputActivationListenerActivationChangedEventArgs = {
@@ -3252,13 +3243,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_KeyboardDeliveryInterceptor[] = 
-    {
+    static PyType_Slot _type_slots_KeyboardDeliveryInterceptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyboardDeliveryInterceptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyboardDeliveryInterceptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyboardDeliveryInterceptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyboardDeliveryInterceptor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KeyboardDeliveryInterceptor = {
@@ -3465,13 +3455,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_ManipulationCompletedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ManipulationCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManipulationCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationCompletedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ManipulationCompletedEventArgs = {
@@ -3652,13 +3641,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_ManipulationInertiaStartingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ManipulationInertiaStartingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationInertiaStartingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManipulationInertiaStartingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationInertiaStartingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationInertiaStartingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ManipulationInertiaStartingEventArgs = {
@@ -3799,13 +3787,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_ManipulationStartedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ManipulationStartedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationStartedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManipulationStartedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationStartedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationStartedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ManipulationStartedEventArgs = {
@@ -4006,13 +3993,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_ManipulationUpdatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ManipulationUpdatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationUpdatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManipulationUpdatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationUpdatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationUpdatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ManipulationUpdatedEventArgs = {
@@ -4265,13 +4251,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_MouseWheelParameters[] = 
-    {
+    static PyType_Slot _type_slots_MouseWheelParameters[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MouseWheelParameters) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MouseWheelParameters) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MouseWheelParameters) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MouseWheelParameters) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MouseWheelParameters = {
@@ -4596,13 +4581,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_PointerPoint[] = 
-    {
+    static PyType_Slot _type_slots_PointerPoint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointerPoint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointerPoint) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointerPoint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointerPoint) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PointerPoint = {
@@ -5216,13 +5200,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_PointerPointProperties[] = 
-    {
+    static PyType_Slot _type_slots_PointerPointProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointerPointProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointerPointProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointerPointProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointerPointProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PointerPointProperties = {
@@ -5408,13 +5391,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_PointerVisualizationSettings[] = 
-    {
+    static PyType_Slot _type_slots_PointerVisualizationSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointerVisualizationSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointerVisualizationSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointerVisualizationSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointerVisualizationSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PointerVisualizationSettings = {
@@ -6125,13 +6107,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_RadialController[] = 
-    {
+    static PyType_Slot _type_slots_RadialController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RadialController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RadialController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RadialController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RadialController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RadialController = {
@@ -6259,13 +6240,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_RadialControllerButtonClickedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RadialControllerButtonClickedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RadialControllerButtonClickedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RadialControllerButtonClickedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RadialControllerButtonClickedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RadialControllerButtonClickedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RadialControllerButtonClickedEventArgs = {
@@ -6366,13 +6346,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_RadialControllerButtonHoldingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RadialControllerButtonHoldingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RadialControllerButtonHoldingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RadialControllerButtonHoldingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RadialControllerButtonHoldingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RadialControllerButtonHoldingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RadialControllerButtonHoldingEventArgs = {
@@ -6473,13 +6452,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_RadialControllerButtonPressedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RadialControllerButtonPressedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RadialControllerButtonPressedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RadialControllerButtonPressedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RadialControllerButtonPressedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RadialControllerButtonPressedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RadialControllerButtonPressedEventArgs = {
@@ -6580,13 +6558,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_RadialControllerButtonReleasedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RadialControllerButtonReleasedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RadialControllerButtonReleasedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RadialControllerButtonReleasedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RadialControllerButtonReleasedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RadialControllerButtonReleasedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RadialControllerButtonReleasedEventArgs = {
@@ -6962,13 +6939,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_RadialControllerConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_RadialControllerConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RadialControllerConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RadialControllerConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RadialControllerConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RadialControllerConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RadialControllerConfiguration = {
@@ -7117,13 +7093,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_RadialControllerControlAcquiredEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RadialControllerControlAcquiredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RadialControllerControlAcquiredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RadialControllerControlAcquiredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RadialControllerControlAcquiredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RadialControllerControlAcquiredEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RadialControllerControlAcquiredEventArgs = {
@@ -7345,13 +7320,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_RadialControllerMenu[] = 
-    {
+    static PyType_Slot _type_slots_RadialControllerMenu[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RadialControllerMenu) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RadialControllerMenu) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RadialControllerMenu) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RadialControllerMenu) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RadialControllerMenu = {
@@ -7645,13 +7619,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_RadialControllerMenuItem[] = 
-    {
+    static PyType_Slot _type_slots_RadialControllerMenuItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RadialControllerMenuItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RadialControllerMenuItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RadialControllerMenuItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RadialControllerMenuItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RadialControllerMenuItem = {
@@ -7820,13 +7793,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_RadialControllerRotationChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RadialControllerRotationChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RadialControllerRotationChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RadialControllerRotationChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RadialControllerRotationChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RadialControllerRotationChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RadialControllerRotationChangedEventArgs = {
@@ -7927,13 +7899,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_RadialControllerScreenContact[] = 
-    {
+    static PyType_Slot _type_slots_RadialControllerScreenContact[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RadialControllerScreenContact) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RadialControllerScreenContact) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RadialControllerScreenContact) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RadialControllerScreenContact) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RadialControllerScreenContact = {
@@ -8054,13 +8025,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_RadialControllerScreenContactContinuedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RadialControllerScreenContactContinuedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RadialControllerScreenContactContinuedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RadialControllerScreenContactContinuedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RadialControllerScreenContactContinuedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RadialControllerScreenContactContinuedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RadialControllerScreenContactContinuedEventArgs = {
@@ -8161,13 +8131,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_RadialControllerScreenContactEndedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RadialControllerScreenContactEndedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RadialControllerScreenContactEndedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RadialControllerScreenContactEndedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RadialControllerScreenContactEndedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RadialControllerScreenContactEndedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RadialControllerScreenContactEndedEventArgs = {
@@ -8288,13 +8257,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_RadialControllerScreenContactStartedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RadialControllerScreenContactStartedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RadialControllerScreenContactStartedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RadialControllerScreenContactStartedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RadialControllerScreenContactStartedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RadialControllerScreenContactStartedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RadialControllerScreenContactStartedEventArgs = {
@@ -8415,13 +8383,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_RightTappedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RightTappedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RightTappedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RightTappedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RightTappedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RightTappedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RightTappedEventArgs = {
@@ -8693,13 +8660,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_SystemButtonEventController[] = 
-    {
+    static PyType_Slot _type_slots_SystemButtonEventController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemButtonEventController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemButtonEventController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemButtonEventController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemButtonEventController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemButtonEventController = {
@@ -8854,13 +8820,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_SystemFunctionButtonEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SystemFunctionButtonEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemFunctionButtonEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemFunctionButtonEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemFunctionButtonEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemFunctionButtonEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemFunctionButtonEventArgs = {
@@ -9009,13 +8974,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_SystemFunctionLockChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SystemFunctionLockChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemFunctionLockChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemFunctionLockChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemFunctionLockChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemFunctionLockChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemFunctionLockChangedEventArgs = {
@@ -9164,13 +9128,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_SystemFunctionLockIndicatorChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SystemFunctionLockIndicatorChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemFunctionLockIndicatorChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemFunctionLockIndicatorChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemFunctionLockIndicatorChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemFunctionLockIndicatorChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemFunctionLockIndicatorChangedEventArgs = {
@@ -9311,13 +9274,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_TappedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_TappedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TappedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TappedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TappedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TappedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TappedEventArgs = {
@@ -9475,13 +9437,12 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_IPointerPointTransform[] = 
-    {
+    static PyType_Slot _type_slots_IPointerPointTransform[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPointerPointTransform) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPointerPointTransform) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPointerPointTransform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPointerPointTransform) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPointerPointTransform = {
@@ -9703,14 +9664,13 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_CrossSlideThresholds[] = 
-    {
+    static PyType_Slot _type_slots_CrossSlideThresholds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CrossSlideThresholds) },
         { Py_tp_init, reinterpret_cast<void*>(_init_CrossSlideThresholds) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CrossSlideThresholds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CrossSlideThresholds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CrossSlideThresholds) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CrossSlideThresholds = {
@@ -9932,14 +9892,13 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_ManipulationDelta[] = 
-    {
+    static PyType_Slot _type_slots_ManipulationDelta[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationDelta) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ManipulationDelta) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManipulationDelta) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationDelta) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationDelta) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ManipulationDelta = {
@@ -10126,14 +10085,13 @@ namespace py::cpp::Windows::UI::Input
         { }
     };
 
-    static PyType_Slot _type_slots_ManipulationVelocities[] = 
-    {
+    static PyType_Slot _type_slots_ManipulationVelocities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationVelocities) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ManipulationVelocities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManipulationVelocities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationVelocities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationVelocities) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ManipulationVelocities = {

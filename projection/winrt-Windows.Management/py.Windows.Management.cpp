@@ -386,13 +386,12 @@ namespace py::cpp::Windows::Management
         { }
     };
 
-    static PyType_Slot _type_slots_MdmAlert[] = 
-    {
+    static PyType_Slot _type_slots_MdmAlert[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MdmAlert) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MdmAlert) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MdmAlert) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MdmAlert) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MdmAlert = {
@@ -644,13 +643,12 @@ namespace py::cpp::Windows::Management
         { }
     };
 
-    static PyType_Slot _type_slots_MdmSession[] = 
-    {
+    static PyType_Slot _type_slots_MdmSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MdmSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MdmSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MdmSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MdmSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MdmSession = {
@@ -788,12 +786,11 @@ namespace py::cpp::Windows::Management
         { }
     };
 
-    static PyType_Slot _type_slots_MdmSessionManager[] = 
-    {
+    static PyType_Slot _type_slots_MdmSessionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MdmSessionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MdmSessionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MdmSessionManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MdmSessionManager = {

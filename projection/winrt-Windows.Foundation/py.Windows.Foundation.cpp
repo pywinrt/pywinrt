@@ -183,13 +183,12 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_Deferral[] = 
-    {
+    static PyType_Slot _type_slots_Deferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Deferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Deferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Deferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Deferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Deferral = {
@@ -296,12 +295,11 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_GuidHelper[] = 
-    {
+    static PyType_Slot _type_slots_GuidHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GuidHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GuidHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GuidHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GuidHelper = {
@@ -496,13 +494,12 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_MemoryBuffer[] = 
-    {
+    static PyType_Slot _type_slots_MemoryBuffer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MemoryBuffer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MemoryBuffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MemoryBuffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MemoryBuffer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MemoryBuffer = {
@@ -1736,12 +1733,11 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_PropertyValue[] = 
-    {
+    static PyType_Slot _type_slots_PropertyValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PropertyValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PropertyValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PropertyValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PropertyValue = {
@@ -2415,14 +2411,13 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_Uri[] = 
-    {
+    static PyType_Slot _type_slots_Uri[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Uri) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Uri) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Uri) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Uri) },
         { Py_tp_str, reinterpret_cast<void*>(_str_Uri) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Uri = {
@@ -2825,8 +2820,7 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_WwwFormUrlDecoder[] = 
-    {
+    static PyType_Slot _type_slots_WwwFormUrlDecoder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WwwFormUrlDecoder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WwwFormUrlDecoder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WwwFormUrlDecoder) },
@@ -2835,7 +2829,7 @@ namespace py::cpp::Windows::Foundation
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_WwwFormUrlDecoder) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_WwwFormUrlDecoder) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_WwwFormUrlDecoder) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WwwFormUrlDecoder = {
@@ -2936,13 +2930,12 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_WwwFormUrlDecoderEntry[] = 
-    {
+    static PyType_Slot _type_slots_WwwFormUrlDecoderEntry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WwwFormUrlDecoderEntry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WwwFormUrlDecoderEntry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WwwFormUrlDecoderEntry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WwwFormUrlDecoderEntry) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WwwFormUrlDecoderEntry = {
@@ -3209,14 +3202,13 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_IAsyncAction[] = 
-    {
+    static PyType_Slot _type_slots_IAsyncAction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAsyncAction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAsyncAction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncAction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncAction) },
         { Py_am_await, reinterpret_cast<void*>(_await_IAsyncAction) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAsyncAction = {
@@ -3426,14 +3418,13 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_IAsyncActionWithProgress[] = 
-    {
+    static PyType_Slot _type_slots_IAsyncActionWithProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAsyncActionWithProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAsyncActionWithProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncActionWithProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncActionWithProgress) },
         { Py_am_await, reinterpret_cast<void*>(_await_IAsyncActionWithProgress) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAsyncActionWithProgress = {
@@ -3616,13 +3607,12 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_IAsyncInfo[] = 
-    {
+    static PyType_Slot _type_slots_IAsyncInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAsyncInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAsyncInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAsyncInfo = {
@@ -3832,14 +3822,13 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_IAsyncOperationWithProgress[] = 
-    {
+    static PyType_Slot _type_slots_IAsyncOperationWithProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAsyncOperationWithProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAsyncOperationWithProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncOperationWithProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncOperationWithProgress) },
         { Py_am_await, reinterpret_cast<void*>(_await_IAsyncOperationWithProgress) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAsyncOperationWithProgress = {
@@ -4004,14 +3993,13 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_IAsyncOperation[] = 
-    {
+    static PyType_Slot _type_slots_IAsyncOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAsyncOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAsyncOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncOperation) },
         { Py_am_await, reinterpret_cast<void*>(_await_IAsyncOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAsyncOperation = {
@@ -4124,13 +4112,12 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_IClosable[] = 
-    {
+    static PyType_Slot _type_slots_IClosable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IClosable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IClosable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IClosable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IClosable) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IClosable = {
@@ -4223,13 +4210,12 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_IGetActivationFactory[] = 
-    {
+    static PyType_Slot _type_slots_IGetActivationFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGetActivationFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGetActivationFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGetActivationFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGetActivationFactory) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IGetActivationFactory = {
@@ -4372,13 +4358,12 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_IMemoryBuffer[] = 
-    {
+    static PyType_Slot _type_slots_IMemoryBuffer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMemoryBuffer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMemoryBuffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMemoryBuffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMemoryBuffer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IMemoryBuffer = {
@@ -4570,14 +4555,13 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_IMemoryBufferReference[] = 
-    {
+    static PyType_Slot _type_slots_IMemoryBufferReference[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMemoryBufferReference) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMemoryBufferReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMemoryBufferReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMemoryBufferReference) },
         { Py_bf_getbuffer, reinterpret_cast<void*>(_get_buffer_IMemoryBufferReference) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IMemoryBufferReference = {
@@ -5959,13 +5943,12 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_IPropertyValue[] = 
-    {
+    static PyType_Slot _type_slots_IPropertyValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPropertyValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPropertyValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPropertyValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPropertyValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPropertyValue = {
@@ -6284,13 +6267,12 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_IReferenceArray[] = 
-    {
+    static PyType_Slot _type_slots_IReferenceArray[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IReferenceArray) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IReferenceArray) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IReferenceArray) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IReferenceArray) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IReferenceArray = {
@@ -6609,13 +6591,12 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_IReference[] = 
-    {
+    static PyType_Slot _type_slots_IReference[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IReference) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IReference) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IReference = {
@@ -6719,14 +6700,13 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_IStringable[] = 
-    {
+    static PyType_Slot _type_slots_IStringable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStringable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStringable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStringable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStringable) },
         { Py_tp_str, reinterpret_cast<void*>(_str_IStringable) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IStringable = {
@@ -6827,13 +6807,12 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_IWwwFormUrlDecoderEntry[] = 
-    {
+    static PyType_Slot _type_slots_IWwwFormUrlDecoderEntry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWwwFormUrlDecoderEntry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWwwFormUrlDecoderEntry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWwwFormUrlDecoderEntry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWwwFormUrlDecoderEntry) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IWwwFormUrlDecoderEntry = {
@@ -6950,14 +6929,13 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_EventRegistrationToken[] = 
-    {
+    static PyType_Slot _type_slots_EventRegistrationToken[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EventRegistrationToken) },
         { Py_tp_init, reinterpret_cast<void*>(_init_EventRegistrationToken) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EventRegistrationToken) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EventRegistrationToken) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EventRegistrationToken) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EventRegistrationToken = {
@@ -7074,14 +7052,13 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_HResult[] = 
-    {
+    static PyType_Slot _type_slots_HResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HResult) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HResult = {
@@ -7233,14 +7210,13 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_Point[] = 
-    {
+    static PyType_Slot _type_slots_Point[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Point) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Point) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Point) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Point) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Point) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Point = {
@@ -7462,14 +7438,13 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_Rect[] = 
-    {
+    static PyType_Slot _type_slots_Rect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Rect) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Rect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Rect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Rect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Rect) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Rect = {
@@ -7621,14 +7596,13 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
-    static PyType_Slot _type_slots_Size[] = 
-    {
+    static PyType_Slot _type_slots_Size[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Size) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Size) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Size) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Size) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Size) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Size = {

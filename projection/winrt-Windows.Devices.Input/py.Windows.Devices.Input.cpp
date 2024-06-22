@@ -98,13 +98,12 @@ namespace py::cpp::Windows::Devices::Input
         { }
     };
 
-    static PyType_Slot _type_slots_KeyboardCapabilities[] = 
-    {
+    static PyType_Slot _type_slots_KeyboardCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyboardCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyboardCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyboardCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyboardCapabilities) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KeyboardCapabilities = {
@@ -287,13 +286,12 @@ namespace py::cpp::Windows::Devices::Input
         { }
     };
 
-    static PyType_Slot _type_slots_MouseCapabilities[] = 
-    {
+    static PyType_Slot _type_slots_MouseCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MouseCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MouseCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MouseCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MouseCapabilities) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MouseCapabilities = {
@@ -428,13 +426,12 @@ namespace py::cpp::Windows::Devices::Input
         { }
     };
 
-    static PyType_Slot _type_slots_MouseDevice[] = 
-    {
+    static PyType_Slot _type_slots_MouseDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MouseDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MouseDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MouseDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MouseDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MouseDevice = {
@@ -541,13 +538,12 @@ namespace py::cpp::Windows::Devices::Input
         { }
     };
 
-    static PyType_Slot _type_slots_MouseEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MouseEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MouseEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MouseEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MouseEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MouseEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MouseEventArgs = {
@@ -847,13 +843,12 @@ namespace py::cpp::Windows::Devices::Input
         { }
     };
 
-    static PyType_Slot _type_slots_PenButtonListener[] = 
-    {
+    static PyType_Slot _type_slots_PenButtonListener[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PenButtonListener) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PenButtonListener) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PenButtonListener) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PenButtonListener) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PenButtonListener = {
@@ -1011,13 +1006,12 @@ namespace py::cpp::Windows::Devices::Input
         { }
     };
 
-    static PyType_Slot _type_slots_PenDevice[] = 
-    {
+    static PyType_Slot _type_slots_PenDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PenDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PenDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PenDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PenDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PenDevice = {
@@ -1298,13 +1292,12 @@ namespace py::cpp::Windows::Devices::Input
         { }
     };
 
-    static PyType_Slot _type_slots_PenDockListener[] = 
-    {
+    static PyType_Slot _type_slots_PenDockListener[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PenDockListener) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PenDockListener) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PenDockListener) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PenDockListener) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PenDockListener = {
@@ -1391,13 +1384,12 @@ namespace py::cpp::Windows::Devices::Input
         { }
     };
 
-    static PyType_Slot _type_slots_PenDockedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PenDockedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PenDockedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PenDockedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PenDockedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PenDockedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PenDockedEventArgs = {
@@ -1458,13 +1450,12 @@ namespace py::cpp::Windows::Devices::Input
         { }
     };
 
-    static PyType_Slot _type_slots_PenTailButtonClickedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PenTailButtonClickedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PenTailButtonClickedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PenTailButtonClickedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PenTailButtonClickedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PenTailButtonClickedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PenTailButtonClickedEventArgs = {
@@ -1525,13 +1516,12 @@ namespace py::cpp::Windows::Devices::Input
         { }
     };
 
-    static PyType_Slot _type_slots_PenTailButtonDoubleClickedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PenTailButtonDoubleClickedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PenTailButtonDoubleClickedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PenTailButtonDoubleClickedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PenTailButtonDoubleClickedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PenTailButtonDoubleClickedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PenTailButtonDoubleClickedEventArgs = {
@@ -1592,13 +1582,12 @@ namespace py::cpp::Windows::Devices::Input
         { }
     };
 
-    static PyType_Slot _type_slots_PenTailButtonLongPressedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PenTailButtonLongPressedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PenTailButtonLongPressedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PenTailButtonLongPressedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PenTailButtonLongPressedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PenTailButtonLongPressedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PenTailButtonLongPressedEventArgs = {
@@ -1659,13 +1648,12 @@ namespace py::cpp::Windows::Devices::Input
         { }
     };
 
-    static PyType_Slot _type_slots_PenUndockedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PenUndockedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PenUndockedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PenUndockedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PenUndockedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PenUndockedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PenUndockedEventArgs = {
@@ -1926,13 +1914,12 @@ namespace py::cpp::Windows::Devices::Input
         { }
     };
 
-    static PyType_Slot _type_slots_PointerDevice[] = 
-    {
+    static PyType_Slot _type_slots_PointerDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointerDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointerDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointerDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointerDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PointerDevice = {
@@ -2082,13 +2069,12 @@ namespace py::cpp::Windows::Devices::Input
         { }
     };
 
-    static PyType_Slot _type_slots_TouchCapabilities[] = 
-    {
+    static PyType_Slot _type_slots_TouchCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TouchCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TouchCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TouchCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TouchCapabilities) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TouchCapabilities = {
@@ -2240,14 +2226,13 @@ namespace py::cpp::Windows::Devices::Input
         { }
     };
 
-    static PyType_Slot _type_slots_MouseDelta[] = 
-    {
+    static PyType_Slot _type_slots_MouseDelta[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MouseDelta) },
         { Py_tp_init, reinterpret_cast<void*>(_init_MouseDelta) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MouseDelta) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MouseDelta) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MouseDelta) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MouseDelta = {
@@ -2609,14 +2594,13 @@ namespace py::cpp::Windows::Devices::Input
         { }
     };
 
-    static PyType_Slot _type_slots_PointerDeviceUsage[] = 
-    {
+    static PyType_Slot _type_slots_PointerDeviceUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointerDeviceUsage) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PointerDeviceUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointerDeviceUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointerDeviceUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointerDeviceUsage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PointerDeviceUsage = {

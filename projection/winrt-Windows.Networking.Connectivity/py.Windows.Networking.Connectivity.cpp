@@ -156,13 +156,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_AttributedNetworkUsage[] = 
-    {
+    static PyType_Slot _type_slots_AttributedNetworkUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AttributedNetworkUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AttributedNetworkUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AttributedNetworkUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AttributedNetworkUsage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AttributedNetworkUsage = {
@@ -581,13 +580,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_CellularApnContext[] = 
-    {
+    static PyType_Slot _type_slots_CellularApnContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CellularApnContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CellularApnContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CellularApnContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CellularApnContext) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CellularApnContext = {
@@ -748,13 +746,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_ConnectionCost[] = 
-    {
+    static PyType_Slot _type_slots_ConnectionCost[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectionCost) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConnectionCost) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectionCost) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectionCost) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ConnectionCost = {
@@ -1429,13 +1426,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_ConnectionProfile[] = 
-    {
+    static PyType_Slot _type_slots_ConnectionProfile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectionProfile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConnectionProfile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectionProfile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectionProfile) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ConnectionProfile = {
@@ -1970,13 +1966,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_ConnectionProfileFilter[] = 
-    {
+    static PyType_Slot _type_slots_ConnectionProfileFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectionProfileFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConnectionProfileFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectionProfileFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectionProfileFilter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ConnectionProfileFilter = {
@@ -2109,13 +2104,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_ConnectionSession[] = 
-    {
+    static PyType_Slot _type_slots_ConnectionSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectionSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConnectionSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectionSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectionSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ConnectionSession = {
@@ -2216,13 +2210,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_ConnectivityInterval[] = 
-    {
+    static PyType_Slot _type_slots_ConnectivityInterval[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectivityInterval) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConnectivityInterval) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectivityInterval) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectivityInterval) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ConnectivityInterval = {
@@ -2344,12 +2337,11 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_ConnectivityManager[] = 
-    {
+    static PyType_Slot _type_slots_ConnectivityManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectivityManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectivityManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectivityManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ConnectivityManager = {
@@ -2558,13 +2550,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_DataPlanStatus[] = 
-    {
+    static PyType_Slot _type_slots_DataPlanStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataPlanStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataPlanStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataPlanStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataPlanStatus) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataPlanStatus = {
@@ -2665,13 +2656,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_DataPlanUsage[] = 
-    {
+    static PyType_Slot _type_slots_DataPlanUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataPlanUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataPlanUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataPlanUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataPlanUsage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataPlanUsage = {
@@ -2772,13 +2762,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_DataUsage[] = 
-    {
+    static PyType_Slot _type_slots_DataUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataUsage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataUsage = {
@@ -2879,13 +2868,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_IPInformation[] = 
-    {
+    static PyType_Slot _type_slots_IPInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPInformation = {
@@ -3006,13 +2994,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_LanIdentifier[] = 
-    {
+    static PyType_Slot _type_slots_LanIdentifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LanIdentifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LanIdentifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LanIdentifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LanIdentifier) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LanIdentifier = {
@@ -3113,13 +3100,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_LanIdentifierData[] = 
-    {
+    static PyType_Slot _type_slots_LanIdentifierData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LanIdentifierData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LanIdentifierData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LanIdentifierData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LanIdentifierData) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LanIdentifierData = {
@@ -3310,13 +3296,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_NetworkAdapter[] = 
-    {
+    static PyType_Slot _type_slots_NetworkAdapter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkAdapter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkAdapter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkAdapter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkAdapter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NetworkAdapter = {
@@ -3598,12 +3583,11 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_NetworkInformation[] = 
-    {
+    static PyType_Slot _type_slots_NetworkInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NetworkInformation = {
@@ -3746,13 +3730,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_NetworkItem[] = 
-    {
+    static PyType_Slot _type_slots_NetworkItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NetworkItem = {
@@ -3853,13 +3836,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_NetworkSecuritySettings[] = 
-    {
+    static PyType_Slot _type_slots_NetworkSecuritySettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkSecuritySettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkSecuritySettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkSecuritySettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkSecuritySettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NetworkSecuritySettings = {
@@ -4080,13 +4062,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_NetworkStateChangeEventDetails[] = 
-    {
+    static PyType_Slot _type_slots_NetworkStateChangeEventDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkStateChangeEventDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkStateChangeEventDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkStateChangeEventDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkStateChangeEventDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NetworkStateChangeEventDetails = {
@@ -4207,13 +4188,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_NetworkUsage[] = 
-    {
+    static PyType_Slot _type_slots_NetworkUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkUsage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NetworkUsage = {
@@ -4334,13 +4314,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_ProviderNetworkUsage[] = 
-    {
+    static PyType_Slot _type_slots_ProviderNetworkUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProviderNetworkUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProviderNetworkUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProviderNetworkUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProviderNetworkUsage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProviderNetworkUsage = {
@@ -4441,13 +4420,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_ProxyConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_ProxyConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProxyConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProxyConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProxyConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProxyConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProxyConfiguration = {
@@ -4594,13 +4572,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_RoutePolicy[] = 
-    {
+    static PyType_Slot _type_slots_RoutePolicy[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RoutePolicy) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RoutePolicy) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RoutePolicy) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RoutePolicy) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RoutePolicy = {
@@ -4691,13 +4668,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_WlanConnectionProfileDetails[] = 
-    {
+    static PyType_Slot _type_slots_WlanConnectionProfileDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WlanConnectionProfileDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WlanConnectionProfileDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WlanConnectionProfileDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WlanConnectionProfileDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WlanConnectionProfileDetails = {
@@ -4898,13 +4874,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_WwanConnectionProfileDetails[] = 
-    {
+    static PyType_Slot _type_slots_WwanConnectionProfileDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WwanConnectionProfileDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WwanConnectionProfileDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WwanConnectionProfileDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WwanConnectionProfileDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WwanConnectionProfileDetails = {
@@ -5056,14 +5031,13 @@ namespace py::cpp::Windows::Networking::Connectivity
         { }
     };
 
-    static PyType_Slot _type_slots_NetworkUsageStates[] = 
-    {
+    static PyType_Slot _type_slots_NetworkUsageStates[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkUsageStates) },
         { Py_tp_init, reinterpret_cast<void*>(_init_NetworkUsageStates) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkUsageStates) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkUsageStates) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkUsageStates) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NetworkUsageStates = {

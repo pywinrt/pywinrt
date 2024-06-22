@@ -304,13 +304,12 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
         { }
     };
 
-    static PyType_Slot _type_slots_OfflineMapPackage[] = 
-    {
+    static PyType_Slot _type_slots_OfflineMapPackage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OfflineMapPackage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OfflineMapPackage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OfflineMapPackage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OfflineMapPackage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OfflineMapPackage = {
@@ -439,13 +438,12 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
         { }
     };
 
-    static PyType_Slot _type_slots_OfflineMapPackageQueryResult[] = 
-    {
+    static PyType_Slot _type_slots_OfflineMapPackageQueryResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OfflineMapPackageQueryResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OfflineMapPackageQueryResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OfflineMapPackageQueryResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OfflineMapPackageQueryResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OfflineMapPackageQueryResult = {
@@ -526,13 +524,12 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
         { }
     };
 
-    static PyType_Slot _type_slots_OfflineMapPackageStartDownloadResult[] = 
-    {
+    static PyType_Slot _type_slots_OfflineMapPackageStartDownloadResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OfflineMapPackageStartDownloadResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OfflineMapPackageStartDownloadResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OfflineMapPackageStartDownloadResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OfflineMapPackageStartDownloadResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OfflineMapPackageStartDownloadResult = {

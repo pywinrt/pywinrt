@@ -295,12 +295,11 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
         { }
     };
 
-    static PyType_Slot _type_slots_ClosedCaptionProperties[] = 
-    {
+    static PyType_Slot _type_slots_ClosedCaptionProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClosedCaptionProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClosedCaptionProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClosedCaptionProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ClosedCaptionProperties = {

@@ -116,13 +116,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbBulkInEndpointDescriptor[] = 
-    {
+    static PyType_Slot _type_slots_UsbBulkInEndpointDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbBulkInEndpointDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbBulkInEndpointDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbBulkInEndpointDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbBulkInEndpointDescriptor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbBulkInEndpointDescriptor = {
@@ -352,13 +351,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbBulkInPipe[] = 
-    {
+    static PyType_Slot _type_slots_UsbBulkInPipe[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbBulkInPipe) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbBulkInPipe) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbBulkInPipe) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbBulkInPipe) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbBulkInPipe = {
@@ -479,13 +477,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbBulkOutEndpointDescriptor[] = 
-    {
+    static PyType_Slot _type_slots_UsbBulkOutEndpointDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbBulkOutEndpointDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbBulkOutEndpointDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbBulkOutEndpointDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbBulkOutEndpointDescriptor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbBulkOutEndpointDescriptor = {
@@ -664,13 +661,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbBulkOutPipe[] = 
-    {
+    static PyType_Slot _type_slots_UsbBulkOutPipe[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbBulkOutPipe) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbBulkOutPipe) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbBulkOutPipe) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbBulkOutPipe) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbBulkOutPipe = {
@@ -791,13 +787,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_UsbConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbConfiguration = {
@@ -1013,13 +1008,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbConfigurationDescriptor[] = 
-    {
+    static PyType_Slot _type_slots_UsbConfigurationDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbConfigurationDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbConfigurationDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbConfigurationDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbConfigurationDescriptor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbConfigurationDescriptor = {
@@ -1321,13 +1315,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbControlRequestType[] = 
-    {
+    static PyType_Slot _type_slots_UsbControlRequestType[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbControlRequestType) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbControlRequestType) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbControlRequestType) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbControlRequestType) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbControlRequestType = {
@@ -1461,13 +1454,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbDescriptor[] = 
-    {
+    static PyType_Slot _type_slots_UsbDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbDescriptor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbDescriptor = {
@@ -1882,13 +1874,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbDevice[] = 
-    {
+    static PyType_Slot _type_slots_UsbDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbDevice = {
@@ -2143,13 +2134,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbDeviceClass[] = 
-    {
+    static PyType_Slot _type_slots_UsbDeviceClass[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbDeviceClass) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbDeviceClass) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbDeviceClass) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbDeviceClass) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbDeviceClass = {
@@ -2381,13 +2371,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbDeviceClasses[] = 
-    {
+    static PyType_Slot _type_slots_UsbDeviceClasses[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbDeviceClasses) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbDeviceClasses) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbDeviceClasses) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbDeviceClasses) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbDeviceClasses = {
@@ -2602,13 +2591,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbDeviceDescriptor[] = 
-    {
+    static PyType_Slot _type_slots_UsbDeviceDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbDeviceDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbDeviceDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbDeviceDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbDeviceDescriptor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbDeviceDescriptor = {
@@ -2884,13 +2872,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbEndpointDescriptor[] = 
-    {
+    static PyType_Slot _type_slots_UsbEndpointDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbEndpointDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbEndpointDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbEndpointDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbEndpointDescriptor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbEndpointDescriptor = {
@@ -3118,13 +3105,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbInterface[] = 
-    {
+    static PyType_Slot _type_slots_UsbInterface[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbInterface) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbInterface) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbInterface) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbInterface) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbInterface = {
@@ -3360,13 +3346,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbInterfaceDescriptor[] = 
-    {
+    static PyType_Slot _type_slots_UsbInterfaceDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbInterfaceDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbInterfaceDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbInterfaceDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbInterfaceDescriptor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbInterfaceDescriptor = {
@@ -3624,13 +3609,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbInterfaceSetting[] = 
-    {
+    static PyType_Slot _type_slots_UsbInterfaceSetting[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbInterfaceSetting) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbInterfaceSetting) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbInterfaceSetting) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbInterfaceSetting) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbInterfaceSetting = {
@@ -3771,13 +3755,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbInterruptInEndpointDescriptor[] = 
-    {
+    static PyType_Slot _type_slots_UsbInterruptInEndpointDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbInterruptInEndpointDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbInterruptInEndpointDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbInterruptInEndpointDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbInterruptInEndpointDescriptor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbInterruptInEndpointDescriptor = {
@@ -3858,13 +3841,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbInterruptInEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_UsbInterruptInEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbInterruptInEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbInterruptInEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbInterruptInEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbInterruptInEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbInterruptInEventArgs = {
@@ -4020,13 +4002,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbInterruptInPipe[] = 
-    {
+    static PyType_Slot _type_slots_UsbInterruptInPipe[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbInterruptInPipe) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbInterruptInPipe) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbInterruptInPipe) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbInterruptInPipe) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbInterruptInPipe = {
@@ -4167,13 +4148,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbInterruptOutEndpointDescriptor[] = 
-    {
+    static PyType_Slot _type_slots_UsbInterruptOutEndpointDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbInterruptOutEndpointDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbInterruptOutEndpointDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbInterruptOutEndpointDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbInterruptOutEndpointDescriptor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbInterruptOutEndpointDescriptor = {
@@ -4352,13 +4332,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbInterruptOutPipe[] = 
-    {
+    static PyType_Slot _type_slots_UsbInterruptOutPipe[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbInterruptOutPipe) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbInterruptOutPipe) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbInterruptOutPipe) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbInterruptOutPipe) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbInterruptOutPipe = {
@@ -4696,13 +4675,12 @@ namespace py::cpp::Windows::Devices::Usb
         { }
     };
 
-    static PyType_Slot _type_slots_UsbSetupPacket[] = 
-    {
+    static PyType_Slot _type_slots_UsbSetupPacket[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UsbSetupPacket) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UsbSetupPacket) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UsbSetupPacket) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UsbSetupPacket) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UsbSetupPacket = {

@@ -198,13 +198,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         { }
     };
 
-    static PyType_Slot _type_slots_BasicProperties[] = 
-    {
+    static PyType_Slot _type_slots_BasicProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BasicProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BasicProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BasicProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BasicProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BasicProperties = {
@@ -483,13 +482,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         { }
     };
 
-    static PyType_Slot _type_slots_DocumentProperties[] = 
-    {
+    static PyType_Slot _type_slots_DocumentProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DocumentProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DocumentProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DocumentProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DocumentProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DocumentProperties = {
@@ -611,12 +609,11 @@ namespace py::cpp::Windows::Storage::FileProperties
         { }
     };
 
-    static PyType_Slot _type_slots_GeotagHelper[] = 
-    {
+    static PyType_Slot _type_slots_GeotagHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeotagHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeotagHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeotagHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GeotagHelper = {
@@ -1167,13 +1164,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         { }
     };
 
-    static PyType_Slot _type_slots_ImageProperties[] = 
-    {
+    static PyType_Slot _type_slots_ImageProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ImageProperties = {
@@ -1888,13 +1884,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         { }
     };
 
-    static PyType_Slot _type_slots_MusicProperties[] = 
-    {
+    static PyType_Slot _type_slots_MusicProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MusicProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MusicProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MusicProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MusicProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MusicProperties = {
@@ -2157,13 +2152,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         { }
     };
 
-    static PyType_Slot _type_slots_StorageItemContentProperties[] = 
-    {
+    static PyType_Slot _type_slots_StorageItemContentProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageItemContentProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageItemContentProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageItemContentProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageItemContentProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StorageItemContentProperties = {
@@ -2707,13 +2701,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         { }
     };
 
-    static PyType_Slot _type_slots_StorageItemThumbnail[] = 
-    {
+    static PyType_Slot _type_slots_StorageItemThumbnail[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageItemThumbnail) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageItemThumbnail) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageItemThumbnail) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageItemThumbnail) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StorageItemThumbnail = {
@@ -3316,13 +3309,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         { }
     };
 
-    static PyType_Slot _type_slots_VideoProperties[] = 
-    {
+    static PyType_Slot _type_slots_VideoProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VideoProperties = {
@@ -3465,13 +3457,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         { }
     };
 
-    static PyType_Slot _type_slots_IStorageItemExtraProperties[] = 
-    {
+    static PyType_Slot _type_slots_IStorageItemExtraProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageItemExtraProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageItemExtraProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageItemExtraProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageItemExtraProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IStorageItemExtraProperties = {

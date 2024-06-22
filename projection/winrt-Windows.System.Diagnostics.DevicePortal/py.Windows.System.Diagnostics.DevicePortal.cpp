@@ -311,13 +311,12 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
         { }
     };
 
-    static PyType_Slot _type_slots_DevicePortalConnection[] = 
-    {
+    static PyType_Slot _type_slots_DevicePortalConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePortalConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePortalConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePortalConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePortalConnection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DevicePortalConnection = {
@@ -424,13 +423,12 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
         { }
     };
 
-    static PyType_Slot _type_slots_DevicePortalConnectionClosedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DevicePortalConnectionClosedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePortalConnectionClosedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePortalConnectionClosedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePortalConnectionClosedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePortalConnectionClosedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DevicePortalConnectionClosedEventArgs = {
@@ -601,13 +599,12 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
         { }
     };
 
-    static PyType_Slot _type_slots_DevicePortalConnectionRequestReceivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DevicePortalConnectionRequestReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePortalConnectionRequestReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePortalConnectionRequestReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePortalConnectionRequestReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePortalConnectionRequestReceivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DevicePortalConnectionRequestReceivedEventArgs = {

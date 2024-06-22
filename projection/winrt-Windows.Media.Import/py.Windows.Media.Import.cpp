@@ -316,13 +316,12 @@ namespace py::cpp::Windows::Media::Import
         { }
     };
 
-    static PyType_Slot _type_slots_PhotoImportDeleteImportedItemsFromSourceResult[] = 
-    {
+    static PyType_Slot _type_slots_PhotoImportDeleteImportedItemsFromSourceResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportDeleteImportedItemsFromSourceResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportDeleteImportedItemsFromSourceResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportDeleteImportedItemsFromSourceResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportDeleteImportedItemsFromSourceResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhotoImportDeleteImportedItemsFromSourceResult = {
@@ -1142,13 +1141,12 @@ namespace py::cpp::Windows::Media::Import
         { }
     };
 
-    static PyType_Slot _type_slots_PhotoImportFindItemsResult[] = 
-    {
+    static PyType_Slot _type_slots_PhotoImportFindItemsResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportFindItemsResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportFindItemsResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportFindItemsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportFindItemsResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhotoImportFindItemsResult = {
@@ -1499,13 +1497,12 @@ namespace py::cpp::Windows::Media::Import
         { }
     };
 
-    static PyType_Slot _type_slots_PhotoImportImportItemsResult[] = 
-    {
+    static PyType_Slot _type_slots_PhotoImportImportItemsResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportImportItemsResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportImportItemsResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportImportItemsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportImportItemsResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhotoImportImportItemsResult = {
@@ -1854,13 +1851,12 @@ namespace py::cpp::Windows::Media::Import
         { }
     };
 
-    static PyType_Slot _type_slots_PhotoImportItem[] = 
-    {
+    static PyType_Slot _type_slots_PhotoImportItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhotoImportItem = {
@@ -1941,13 +1937,12 @@ namespace py::cpp::Windows::Media::Import
         { }
     };
 
-    static PyType_Slot _type_slots_PhotoImportItemImportedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PhotoImportItemImportedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportItemImportedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportItemImportedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportItemImportedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportItemImportedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhotoImportItemImportedEventArgs = {
@@ -2061,12 +2056,11 @@ namespace py::cpp::Windows::Media::Import
         { }
     };
 
-    static PyType_Slot _type_slots_PhotoImportManager[] = 
-    {
+    static PyType_Slot _type_slots_PhotoImportManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhotoImportManager = {
@@ -2255,13 +2249,12 @@ namespace py::cpp::Windows::Media::Import
         { }
     };
 
-    static PyType_Slot _type_slots_PhotoImportOperation[] = 
-    {
+    static PyType_Slot _type_slots_PhotoImportOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhotoImportOperation = {
@@ -2342,13 +2335,12 @@ namespace py::cpp::Windows::Media::Import
         { }
     };
 
-    static PyType_Slot _type_slots_PhotoImportSelectionChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PhotoImportSelectionChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportSelectionChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportSelectionChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportSelectionChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportSelectionChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhotoImportSelectionChangedEventArgs = {
@@ -2822,13 +2814,12 @@ namespace py::cpp::Windows::Media::Import
         { }
     };
 
-    static PyType_Slot _type_slots_PhotoImportSession[] = 
-    {
+    static PyType_Slot _type_slots_PhotoImportSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhotoImportSession = {
@@ -2949,13 +2940,12 @@ namespace py::cpp::Windows::Media::Import
         { }
     };
 
-    static PyType_Slot _type_slots_PhotoImportSidecar[] = 
-    {
+    static PyType_Slot _type_slots_PhotoImportSidecar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportSidecar) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportSidecar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportSidecar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportSidecar) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhotoImportSidecar = {
@@ -3428,13 +3418,12 @@ namespace py::cpp::Windows::Media::Import
         { }
     };
 
-    static PyType_Slot _type_slots_PhotoImportSource[] = 
-    {
+    static PyType_Slot _type_slots_PhotoImportSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhotoImportSource = {
@@ -3693,13 +3682,12 @@ namespace py::cpp::Windows::Media::Import
         { }
     };
 
-    static PyType_Slot _type_slots_PhotoImportStorageMedium[] = 
-    {
+    static PyType_Slot _type_slots_PhotoImportStorageMedium[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportStorageMedium) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportStorageMedium) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportStorageMedium) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportStorageMedium) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhotoImportStorageMedium = {
@@ -3860,13 +3848,12 @@ namespace py::cpp::Windows::Media::Import
         { }
     };
 
-    static PyType_Slot _type_slots_PhotoImportVideoSegment[] = 
-    {
+    static PyType_Slot _type_slots_PhotoImportVideoSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportVideoSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportVideoSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportVideoSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportVideoSegment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhotoImportVideoSegment = {
@@ -4123,14 +4110,13 @@ namespace py::cpp::Windows::Media::Import
         { }
     };
 
-    static PyType_Slot _type_slots_PhotoImportProgress[] = 
-    {
+    static PyType_Slot _type_slots_PhotoImportProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PhotoImportProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportProgress) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhotoImportProgress = {

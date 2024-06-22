@@ -116,13 +116,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { }
     };
 
-    static PyType_Slot _type_slots_VoiceCommand[] = 
-    {
+    static PyType_Slot _type_slots_VoiceCommand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommand) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VoiceCommand = {
@@ -203,13 +202,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { }
     };
 
-    static PyType_Slot _type_slots_VoiceCommandCompletedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_VoiceCommandCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandCompletedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VoiceCommandCompletedEventArgs = {
@@ -290,13 +288,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { }
     };
 
-    static PyType_Slot _type_slots_VoiceCommandConfirmationResult[] = 
-    {
+    static PyType_Slot _type_slots_VoiceCommandConfirmationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandConfirmationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandConfirmationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandConfirmationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandConfirmationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VoiceCommandConfirmationResult = {
@@ -763,13 +760,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { }
     };
 
-    static PyType_Slot _type_slots_VoiceCommandContentTile[] = 
-    {
+    static PyType_Slot _type_slots_VoiceCommandContentTile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandContentTile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandContentTile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandContentTile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandContentTile) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VoiceCommandContentTile = {
@@ -903,13 +899,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { }
     };
 
-    static PyType_Slot _type_slots_VoiceCommandDefinition[] = 
-    {
+    static PyType_Slot _type_slots_VoiceCommandDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandDefinition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VoiceCommandDefinition = {
@@ -986,12 +981,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { }
     };
 
-    static PyType_Slot _type_slots_VoiceCommandDefinitionManager[] = 
-    {
+    static PyType_Slot _type_slots_VoiceCommandDefinitionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandDefinitionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandDefinitionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandDefinitionManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VoiceCommandDefinitionManager = {
@@ -1099,13 +1093,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { }
     };
 
-    static PyType_Slot _type_slots_VoiceCommandDisambiguationResult[] = 
-    {
+    static PyType_Slot _type_slots_VoiceCommandDisambiguationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandDisambiguationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandDisambiguationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandDisambiguationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandDisambiguationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VoiceCommandDisambiguationResult = {
@@ -1455,13 +1448,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { }
     };
 
-    static PyType_Slot _type_slots_VoiceCommandResponse[] = 
-    {
+    static PyType_Slot _type_slots_VoiceCommandResponse[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandResponse) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandResponse) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandResponse) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandResponse) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VoiceCommandResponse = {
@@ -1868,13 +1860,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { }
     };
 
-    static PyType_Slot _type_slots_VoiceCommandServiceConnection[] = 
-    {
+    static PyType_Slot _type_slots_VoiceCommandServiceConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandServiceConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandServiceConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandServiceConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandServiceConnection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VoiceCommandServiceConnection = {
@@ -2079,13 +2070,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { }
     };
 
-    static PyType_Slot _type_slots_VoiceCommandUserMessage[] = 
-    {
+    static PyType_Slot _type_slots_VoiceCommandUserMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceCommandUserMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceCommandUserMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceCommandUserMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceCommandUserMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VoiceCommandUserMessage = {

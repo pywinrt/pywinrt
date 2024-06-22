@@ -1083,13 +1083,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { }
     };
 
-    static PyType_Slot _type_slots_AppWindow[] = 
-    {
+    static PyType_Slot _type_slots_AppWindow[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppWindow) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppWindow) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppWindow) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppWindow) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppWindow = {
@@ -1337,13 +1336,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { }
     };
 
-    static PyType_Slot _type_slots_AppWindowChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppWindowChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppWindowChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppWindowChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppWindowChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppWindowChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppWindowChangedEventArgs = {
@@ -1452,13 +1450,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { }
     };
 
-    static PyType_Slot _type_slots_AppWindowClosingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppWindowClosingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppWindowClosingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppWindowClosingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppWindowClosingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppWindowClosingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppWindowClosingEventArgs = {
@@ -1539,13 +1536,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { }
     };
 
-    static PyType_Slot _type_slots_AppWindowPresenter[] = 
-    {
+    static PyType_Slot _type_slots_AppWindowPresenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppWindowPresenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppWindowPresenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppWindowPresenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppWindowPresenter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppWindowPresenter = {
@@ -2479,13 +2475,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { }
     };
 
-    static PyType_Slot _type_slots_AppWindowTitleBar[] = 
-    {
+    static PyType_Slot _type_slots_AppWindowTitleBar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppWindowTitleBar) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppWindowTitleBar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppWindowTitleBar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppWindowTitleBar) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppWindowTitleBar = {
@@ -2649,13 +2644,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { }
     };
 
-    static PyType_Slot _type_slots_CompactOverlayPresenter[] = 
-    {
+    static PyType_Slot _type_slots_CompactOverlayPresenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompactOverlayPresenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompactOverlayPresenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompactOverlayPresenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompactOverlayPresenter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompactOverlayPresenter = {
@@ -3026,13 +3020,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayArea[] = 
-    {
+    static PyType_Slot _type_slots_DisplayArea[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayArea) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayArea) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayArea) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayArea) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayArea = {
@@ -3432,13 +3425,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayAreaWatcher[] = 
-    {
+    static PyType_Slot _type_slots_DisplayAreaWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayAreaWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayAreaWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayAreaWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayAreaWatcher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayAreaWatcher = {
@@ -3528,13 +3520,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { }
     };
 
-    static PyType_Slot _type_slots_FullScreenPresenter[] = 
-    {
+    static PyType_Slot _type_slots_FullScreenPresenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FullScreenPresenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FullScreenPresenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FullScreenPresenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FullScreenPresenter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FullScreenPresenter = {
@@ -4225,13 +4216,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { }
     };
 
-    static PyType_Slot _type_slots_OverlappedPresenter[] = 
-    {
+    static PyType_Slot _type_slots_OverlappedPresenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OverlappedPresenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OverlappedPresenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OverlappedPresenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OverlappedPresenter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OverlappedPresenter = {

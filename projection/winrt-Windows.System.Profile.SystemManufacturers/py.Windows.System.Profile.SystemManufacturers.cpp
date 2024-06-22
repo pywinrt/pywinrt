@@ -116,13 +116,12 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
         { }
     };
 
-    static PyType_Slot _type_slots_OemSupportInfo[] = 
-    {
+    static PyType_Slot _type_slots_OemSupportInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OemSupportInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OemSupportInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OemSupportInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OemSupportInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OemSupportInfo = {
@@ -168,12 +167,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
         { }
     };
 
-    static PyType_Slot _type_slots_SmbiosInformation[] = 
-    {
+    static PyType_Slot _type_slots_SmbiosInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmbiosInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmbiosInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmbiosInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmbiosInformation = {
@@ -400,13 +398,12 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
         { }
     };
 
-    static PyType_Slot _type_slots_SystemSupportDeviceInfo[] = 
-    {
+    static PyType_Slot _type_slots_SystemSupportDeviceInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemSupportDeviceInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemSupportDeviceInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemSupportDeviceInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemSupportDeviceInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemSupportDeviceInfo = {
@@ -490,12 +487,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
         { }
     };
 
-    static PyType_Slot _type_slots_SystemSupportInfo[] = 
-    {
+    static PyType_Slot _type_slots_SystemSupportInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemSupportInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemSupportInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemSupportInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemSupportInfo = {

@@ -531,13 +531,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_Accelerometer[] = 
-    {
+    static PyType_Slot _type_slots_Accelerometer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Accelerometer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Accelerometer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Accelerometer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Accelerometer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Accelerometer = {
@@ -770,13 +769,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_AccelerometerDataThreshold[] = 
-    {
+    static PyType_Slot _type_slots_AccelerometerDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccelerometerDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccelerometerDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccelerometerDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccelerometerDataThreshold) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AccelerometerDataThreshold = {
@@ -957,13 +955,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_AccelerometerReading[] = 
-    {
+    static PyType_Slot _type_slots_AccelerometerReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccelerometerReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccelerometerReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccelerometerReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccelerometerReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AccelerometerReading = {
@@ -1044,13 +1041,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_AccelerometerReadingChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AccelerometerReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccelerometerReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccelerometerReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccelerometerReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccelerometerReadingChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AccelerometerReadingChangedEventArgs = {
@@ -1131,13 +1127,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_AccelerometerShakenEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AccelerometerShakenEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccelerometerShakenEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccelerometerShakenEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccelerometerShakenEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccelerometerShakenEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AccelerometerShakenEventArgs = {
@@ -1514,13 +1509,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_ActivitySensor[] = 
-    {
+    static PyType_Slot _type_slots_ActivitySensor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivitySensor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActivitySensor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivitySensor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivitySensor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ActivitySensor = {
@@ -1670,13 +1664,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_ActivitySensorReading[] = 
-    {
+    static PyType_Slot _type_slots_ActivitySensorReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivitySensorReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActivitySensorReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivitySensorReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivitySensorReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ActivitySensorReading = {
@@ -1757,13 +1750,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_ActivitySensorReadingChangeReport[] = 
-    {
+    static PyType_Slot _type_slots_ActivitySensorReadingChangeReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivitySensorReadingChangeReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActivitySensorReadingChangeReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivitySensorReadingChangeReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivitySensorReadingChangeReport) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ActivitySensorReadingChangeReport = {
@@ -1844,13 +1836,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_ActivitySensorReadingChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ActivitySensorReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivitySensorReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActivitySensorReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivitySensorReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivitySensorReadingChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ActivitySensorReadingChangedEventArgs = {
@@ -1941,13 +1932,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_ActivitySensorTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_ActivitySensorTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivitySensorTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActivitySensorTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivitySensorTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivitySensorTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ActivitySensorTriggerDetails = {
@@ -2056,13 +2046,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_AdaptiveDimmingOptions[] = 
-    {
+    static PyType_Slot _type_slots_AdaptiveDimmingOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveDimmingOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveDimmingOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveDimmingOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveDimmingOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdaptiveDimmingOptions = {
@@ -2383,13 +2372,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_Altimeter[] = 
-    {
+    static PyType_Slot _type_slots_Altimeter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Altimeter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Altimeter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Altimeter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Altimeter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Altimeter = {
@@ -2556,13 +2544,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_AltimeterReading[] = 
-    {
+    static PyType_Slot _type_slots_AltimeterReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AltimeterReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AltimeterReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AltimeterReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AltimeterReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AltimeterReading = {
@@ -2643,13 +2630,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_AltimeterReadingChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AltimeterReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AltimeterReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AltimeterReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AltimeterReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AltimeterReadingChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AltimeterReadingChangedEventArgs = {
@@ -3050,13 +3036,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_Barometer[] = 
-    {
+    static PyType_Slot _type_slots_Barometer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Barometer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Barometer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Barometer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Barometer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Barometer = {
@@ -3193,13 +3178,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_BarometerDataThreshold[] = 
-    {
+    static PyType_Slot _type_slots_BarometerDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarometerDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarometerDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarometerDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarometerDataThreshold) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarometerDataThreshold = {
@@ -3340,13 +3324,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_BarometerReading[] = 
-    {
+    static PyType_Slot _type_slots_BarometerReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarometerReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarometerReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarometerReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarometerReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarometerReading = {
@@ -3427,13 +3410,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_BarometerReadingChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_BarometerReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarometerReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarometerReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarometerReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarometerReadingChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarometerReadingChangedEventArgs = {
@@ -3882,13 +3864,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_Compass[] = 
-    {
+    static PyType_Slot _type_slots_Compass[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Compass) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Compass) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Compass) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Compass) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Compass = {
@@ -4025,13 +4006,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_CompassDataThreshold[] = 
-    {
+    static PyType_Slot _type_slots_CompassDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompassDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompassDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompassDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompassDataThreshold) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompassDataThreshold = {
@@ -4212,13 +4192,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_CompassReading[] = 
-    {
+    static PyType_Slot _type_slots_CompassReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompassReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompassReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompassReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompassReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompassReading = {
@@ -4299,13 +4278,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_CompassReadingChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CompassReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompassReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompassReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompassReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompassReadingChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompassReadingChangedEventArgs = {
@@ -4754,13 +4732,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_Gyrometer[] = 
-    {
+    static PyType_Slot _type_slots_Gyrometer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Gyrometer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Gyrometer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Gyrometer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Gyrometer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Gyrometer = {
@@ -4993,13 +4970,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_GyrometerDataThreshold[] = 
-    {
+    static PyType_Slot _type_slots_GyrometerDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GyrometerDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GyrometerDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GyrometerDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GyrometerDataThreshold) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GyrometerDataThreshold = {
@@ -5180,13 +5156,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_GyrometerReading[] = 
-    {
+    static PyType_Slot _type_slots_GyrometerReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GyrometerReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GyrometerReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GyrometerReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GyrometerReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GyrometerReading = {
@@ -5267,13 +5242,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_GyrometerReadingChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GyrometerReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GyrometerReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GyrometerReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GyrometerReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GyrometerReadingChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GyrometerReadingChangedEventArgs = {
@@ -5394,13 +5368,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_HingeAngleReading[] = 
-    {
+    static PyType_Slot _type_slots_HingeAngleReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HingeAngleReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HingeAngleReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HingeAngleReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HingeAngleReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HingeAngleReading = {
@@ -5745,13 +5718,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_HingeAngleSensor[] = 
-    {
+    static PyType_Slot _type_slots_HingeAngleSensor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HingeAngleSensor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HingeAngleSensor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HingeAngleSensor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HingeAngleSensor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HingeAngleSensor = {
@@ -5861,13 +5833,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_HingeAngleSensorReadingChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_HingeAngleSensorReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HingeAngleSensorReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HingeAngleSensorReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HingeAngleSensorReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HingeAngleSensorReadingChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HingeAngleSensorReadingChangedEventArgs = {
@@ -6048,13 +6019,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_HumanPresenceFeatures[] = 
-    {
+    static PyType_Slot _type_slots_HumanPresenceFeatures[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HumanPresenceFeatures) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HumanPresenceFeatures) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HumanPresenceFeatures) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HumanPresenceFeatures) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HumanPresenceFeatures = {
@@ -6439,13 +6409,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_HumanPresenceSensor[] = 
-    {
+    static PyType_Slot _type_slots_HumanPresenceSensor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HumanPresenceSensor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HumanPresenceSensor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HumanPresenceSensor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HumanPresenceSensor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HumanPresenceSensor = {
@@ -6636,13 +6605,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_HumanPresenceSensorReading[] = 
-    {
+    static PyType_Slot _type_slots_HumanPresenceSensorReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HumanPresenceSensorReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HumanPresenceSensorReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HumanPresenceSensorReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HumanPresenceSensorReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HumanPresenceSensorReading = {
@@ -6723,13 +6691,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_HumanPresenceSensorReadingChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_HumanPresenceSensorReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HumanPresenceSensorReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HumanPresenceSensorReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HumanPresenceSensorReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HumanPresenceSensorReadingChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HumanPresenceSensorReadingChangedEventArgs = {
@@ -7004,13 +6971,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_HumanPresenceSensorReadingUpdate[] = 
-    {
+    static PyType_Slot _type_slots_HumanPresenceSensorReadingUpdate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HumanPresenceSensorReadingUpdate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HumanPresenceSensorReadingUpdate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HumanPresenceSensorReadingUpdate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HumanPresenceSensorReadingUpdate) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HumanPresenceSensorReadingUpdate = {
@@ -7772,13 +7738,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_HumanPresenceSettings[] = 
-    {
+    static PyType_Slot _type_slots_HumanPresenceSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HumanPresenceSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HumanPresenceSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HumanPresenceSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HumanPresenceSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HumanPresenceSettings = {
@@ -8330,13 +8295,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_Inclinometer[] = 
-    {
+    static PyType_Slot _type_slots_Inclinometer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Inclinometer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Inclinometer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Inclinometer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Inclinometer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Inclinometer = {
@@ -8570,13 +8534,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_InclinometerDataThreshold[] = 
-    {
+    static PyType_Slot _type_slots_InclinometerDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InclinometerDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InclinometerDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InclinometerDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InclinometerDataThreshold) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InclinometerDataThreshold = {
@@ -8777,13 +8740,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_InclinometerReading[] = 
-    {
+    static PyType_Slot _type_slots_InclinometerReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InclinometerReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InclinometerReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InclinometerReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InclinometerReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InclinometerReading = {
@@ -8864,13 +8826,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_InclinometerReadingChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_InclinometerReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InclinometerReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InclinometerReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InclinometerReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InclinometerReadingChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InclinometerReadingChangedEventArgs = {
@@ -9271,13 +9232,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_LightSensor[] = 
-    {
+    static PyType_Slot _type_slots_LightSensor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LightSensor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LightSensor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LightSensor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LightSensor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LightSensor = {
@@ -9462,13 +9422,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_LightSensorDataThreshold[] = 
-    {
+    static PyType_Slot _type_slots_LightSensorDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LightSensorDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LightSensorDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LightSensorDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LightSensorDataThreshold) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LightSensorDataThreshold = {
@@ -9609,13 +9568,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_LightSensorReading[] = 
-    {
+    static PyType_Slot _type_slots_LightSensorReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LightSensorReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LightSensorReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LightSensorReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LightSensorReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LightSensorReading = {
@@ -9696,13 +9654,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_LightSensorReadingChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_LightSensorReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LightSensorReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LightSensorReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LightSensorReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LightSensorReadingChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LightSensorReadingChangedEventArgs = {
@@ -9811,13 +9768,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_LockOnLeaveOptions[] = 
-    {
+    static PyType_Slot _type_slots_LockOnLeaveOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LockOnLeaveOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LockOnLeaveOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LockOnLeaveOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LockOnLeaveOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LockOnLeaveOptions = {
@@ -10266,13 +10222,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_Magnetometer[] = 
-    {
+    static PyType_Slot _type_slots_Magnetometer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Magnetometer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Magnetometer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Magnetometer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Magnetometer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Magnetometer = {
@@ -10505,13 +10460,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_MagnetometerDataThreshold[] = 
-    {
+    static PyType_Slot _type_slots_MagnetometerDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MagnetometerDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MagnetometerDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MagnetometerDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MagnetometerDataThreshold) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MagnetometerDataThreshold = {
@@ -10712,13 +10666,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_MagnetometerReading[] = 
-    {
+    static PyType_Slot _type_slots_MagnetometerReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MagnetometerReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MagnetometerReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MagnetometerReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MagnetometerReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MagnetometerReading = {
@@ -10799,13 +10752,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_MagnetometerReadingChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MagnetometerReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MagnetometerReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MagnetometerReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MagnetometerReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MagnetometerReadingChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MagnetometerReadingChangedEventArgs = {
@@ -11347,13 +11299,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_OrientationSensor[] = 
-    {
+    static PyType_Slot _type_slots_OrientationSensor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OrientationSensor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OrientationSensor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OrientationSensor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OrientationSensor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OrientationSensor = {
@@ -11563,13 +11514,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_OrientationSensorReading[] = 
-    {
+    static PyType_Slot _type_slots_OrientationSensorReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OrientationSensorReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OrientationSensorReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OrientationSensorReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OrientationSensorReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OrientationSensorReading = {
@@ -11650,13 +11600,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_OrientationSensorReadingChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_OrientationSensorReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OrientationSensorReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OrientationSensorReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OrientationSensorReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OrientationSensorReadingChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OrientationSensorReadingChangedEventArgs = {
@@ -12072,13 +12021,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_Pedometer[] = 
-    {
+    static PyType_Slot _type_slots_Pedometer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Pedometer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Pedometer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Pedometer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Pedometer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Pedometer = {
@@ -12194,13 +12142,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_PedometerDataThreshold[] = 
-    {
+    static PyType_Slot _type_slots_PedometerDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PedometerDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PedometerDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PedometerDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PedometerDataThreshold) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PedometerDataThreshold = {
@@ -12341,13 +12288,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_PedometerReading[] = 
-    {
+    static PyType_Slot _type_slots_PedometerReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PedometerReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PedometerReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PedometerReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PedometerReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PedometerReading = {
@@ -12428,13 +12374,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_PedometerReadingChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PedometerReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PedometerReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PedometerReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PedometerReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PedometerReadingChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PedometerReadingChangedEventArgs = {
@@ -12751,13 +12696,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_ProximitySensor[] = 
-    {
+    static PyType_Slot _type_slots_ProximitySensor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProximitySensor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProximitySensor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProximitySensor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProximitySensor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProximitySensor = {
@@ -12870,13 +12814,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_ProximitySensorDataThreshold[] = 
-    {
+    static PyType_Slot _type_slots_ProximitySensorDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProximitySensorDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProximitySensorDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProximitySensorDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProximitySensorDataThreshold) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProximitySensorDataThreshold = {
@@ -12989,13 +12932,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_ProximitySensorDisplayOnOffController[] = 
-    {
+    static PyType_Slot _type_slots_ProximitySensorDisplayOnOffController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProximitySensorDisplayOnOffController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProximitySensorDisplayOnOffController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProximitySensorDisplayOnOffController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProximitySensorDisplayOnOffController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProximitySensorDisplayOnOffController = {
@@ -13116,13 +13058,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_ProximitySensorReading[] = 
-    {
+    static PyType_Slot _type_slots_ProximitySensorReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProximitySensorReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProximitySensorReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProximitySensorReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProximitySensorReading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProximitySensorReading = {
@@ -13203,13 +13144,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_ProximitySensorReadingChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ProximitySensorReadingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProximitySensorReadingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProximitySensorReadingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProximitySensorReadingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProximitySensorReadingChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProximitySensorReadingChangedEventArgs = {
@@ -13310,13 +13250,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_SensorDataThresholdTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_SensorDataThresholdTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SensorDataThresholdTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SensorDataThresholdTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SensorDataThresholdTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SensorDataThresholdTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SensorDataThresholdTriggerDetails = {
@@ -13457,13 +13396,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_SensorQuaternion[] = 
-    {
+    static PyType_Slot _type_slots_SensorQuaternion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SensorQuaternion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SensorQuaternion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SensorQuaternion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SensorQuaternion) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SensorQuaternion = {
@@ -13704,13 +13642,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_SensorRotationMatrix[] = 
-    {
+    static PyType_Slot _type_slots_SensorRotationMatrix[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SensorRotationMatrix) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SensorRotationMatrix) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SensorRotationMatrix) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SensorRotationMatrix) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SensorRotationMatrix = {
@@ -14003,13 +13940,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_SimpleOrientationSensor[] = 
-    {
+    static PyType_Slot _type_slots_SimpleOrientationSensor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SimpleOrientationSensor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SimpleOrientationSensor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SimpleOrientationSensor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SimpleOrientationSensor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SimpleOrientationSensor = {
@@ -14138,13 +14074,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_SimpleOrientationSensorOrientationChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SimpleOrientationSensorOrientationChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SimpleOrientationSensorOrientationChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SimpleOrientationSensorOrientationChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SimpleOrientationSensorOrientationChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SimpleOrientationSensorOrientationChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SimpleOrientationSensorOrientationChangedEventArgs = {
@@ -14301,13 +14236,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_WakeOnApproachOptions[] = 
-    {
+    static PyType_Slot _type_slots_WakeOnApproachOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WakeOnApproachOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WakeOnApproachOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WakeOnApproachOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WakeOnApproachOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WakeOnApproachOptions = {
@@ -14590,13 +14524,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_IHumanPresenceSensorExtension[] = 
-    {
+    static PyType_Slot _type_slots_IHumanPresenceSensorExtension[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IHumanPresenceSensorExtension) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IHumanPresenceSensorExtension) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IHumanPresenceSensorExtension) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IHumanPresenceSensorExtension) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IHumanPresenceSensorExtension = {
@@ -14657,13 +14590,12 @@ namespace py::cpp::Windows::Devices::Sensors
         { }
     };
 
-    static PyType_Slot _type_slots_ISensorDataThreshold[] = 
-    {
+    static PyType_Slot _type_slots_ISensorDataThreshold[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISensorDataThreshold) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISensorDataThreshold) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISensorDataThreshold) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISensorDataThreshold) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISensorDataThreshold = {

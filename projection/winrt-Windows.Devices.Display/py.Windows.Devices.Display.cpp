@@ -579,13 +579,12 @@ namespace py::cpp::Windows::Devices::Display
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayMonitor[] = 
-    {
+    static PyType_Slot _type_slots_DisplayMonitor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayMonitor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayMonitor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayMonitor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayMonitor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayMonitor = {

@@ -236,13 +236,12 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         { }
     };
 
-    static PyType_Slot _type_slots_AppExtension[] = 
-    {
+    static PyType_Slot _type_slots_AppExtension[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppExtension) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppExtension) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppExtension) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppExtension) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppExtension = {
@@ -621,13 +620,12 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         { }
     };
 
-    static PyType_Slot _type_slots_AppExtensionCatalog[] = 
-    {
+    static PyType_Slot _type_slots_AppExtensionCatalog[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppExtensionCatalog) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppExtensionCatalog) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppExtensionCatalog) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppExtensionCatalog) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppExtensionCatalog = {
@@ -774,13 +772,12 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         { }
     };
 
-    static PyType_Slot _type_slots_AppExtensionPackageInstalledEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppExtensionPackageInstalledEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppExtensionPackageInstalledEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppExtensionPackageInstalledEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppExtensionPackageInstalledEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppExtensionPackageInstalledEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppExtensionPackageInstalledEventArgs = {
@@ -881,13 +878,12 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         { }
     };
 
-    static PyType_Slot _type_slots_AppExtensionPackageStatusChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppExtensionPackageStatusChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppExtensionPackageStatusChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppExtensionPackageStatusChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppExtensionPackageStatusChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppExtensionPackageStatusChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppExtensionPackageStatusChangedEventArgs = {
@@ -988,13 +984,12 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         { }
     };
 
-    static PyType_Slot _type_slots_AppExtensionPackageUninstallingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppExtensionPackageUninstallingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppExtensionPackageUninstallingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppExtensionPackageUninstallingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppExtensionPackageUninstallingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppExtensionPackageUninstallingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppExtensionPackageUninstallingEventArgs = {
@@ -1115,13 +1110,12 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         { }
     };
 
-    static PyType_Slot _type_slots_AppExtensionPackageUpdatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppExtensionPackageUpdatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppExtensionPackageUpdatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppExtensionPackageUpdatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppExtensionPackageUpdatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppExtensionPackageUpdatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppExtensionPackageUpdatedEventArgs = {
@@ -1222,13 +1216,12 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         { }
     };
 
-    static PyType_Slot _type_slots_AppExtensionPackageUpdatingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppExtensionPackageUpdatingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppExtensionPackageUpdatingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppExtensionPackageUpdatingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppExtensionPackageUpdatingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppExtensionPackageUpdatingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppExtensionPackageUpdatingEventArgs = {

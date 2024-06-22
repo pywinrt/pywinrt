@@ -489,13 +489,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CameraIntrinsics[] = 
-    {
+    static PyType_Slot _type_slots_CameraIntrinsics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CameraIntrinsics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CameraIntrinsics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CameraIntrinsics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CameraIntrinsics) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CameraIntrinsics = {
@@ -746,13 +745,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DepthCorrelatedCoordinateMapper[] = 
-    {
+    static PyType_Slot _type_slots_DepthCorrelatedCoordinateMapper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DepthCorrelatedCoordinateMapper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DepthCorrelatedCoordinateMapper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DepthCorrelatedCoordinateMapper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DepthCorrelatedCoordinateMapper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DepthCorrelatedCoordinateMapper = {
@@ -933,13 +931,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { }
     };
 
-    static PyType_Slot _type_slots_FrameControlCapabilities[] = 
-    {
+    static PyType_Slot _type_slots_FrameControlCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameControlCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameControlCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameControlCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameControlCapabilities) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FrameControlCapabilities = {
@@ -1170,13 +1167,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { }
     };
 
-    static PyType_Slot _type_slots_FrameController[] = 
-    {
+    static PyType_Slot _type_slots_FrameController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FrameController = {
@@ -1317,13 +1313,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { }
     };
 
-    static PyType_Slot _type_slots_FrameExposureCapabilities[] = 
-    {
+    static PyType_Slot _type_slots_FrameExposureCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameExposureCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameExposureCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameExposureCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameExposureCapabilities) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FrameExposureCapabilities = {
@@ -1464,13 +1459,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { }
     };
 
-    static PyType_Slot _type_slots_FrameExposureCompensationCapabilities[] = 
-    {
+    static PyType_Slot _type_slots_FrameExposureCompensationCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameExposureCompensationCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameExposureCompensationCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameExposureCompensationCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameExposureCompensationCapabilities) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FrameExposureCompensationCapabilities = {
@@ -1579,13 +1573,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { }
     };
 
-    static PyType_Slot _type_slots_FrameExposureCompensationControl[] = 
-    {
+    static PyType_Slot _type_slots_FrameExposureCompensationControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameExposureCompensationControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameExposureCompensationControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameExposureCompensationControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameExposureCompensationControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FrameExposureCompensationControl = {
@@ -1742,13 +1735,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { }
     };
 
-    static PyType_Slot _type_slots_FrameExposureControl[] = 
-    {
+    static PyType_Slot _type_slots_FrameExposureControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameExposureControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameExposureControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameExposureControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameExposureControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FrameExposureControl = {
@@ -1869,13 +1861,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { }
     };
 
-    static PyType_Slot _type_slots_FrameFlashCapabilities[] = 
-    {
+    static PyType_Slot _type_slots_FrameFlashCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameFlashCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameFlashCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameFlashCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameFlashCapabilities) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FrameFlashCapabilities = {
@@ -2128,13 +2119,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { }
     };
 
-    static PyType_Slot _type_slots_FrameFlashControl[] = 
-    {
+    static PyType_Slot _type_slots_FrameFlashControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameFlashControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameFlashControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameFlashControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameFlashControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FrameFlashControl = {
@@ -2275,13 +2265,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { }
     };
 
-    static PyType_Slot _type_slots_FrameFocusCapabilities[] = 
-    {
+    static PyType_Slot _type_slots_FrameFocusCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameFocusCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameFocusCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameFocusCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameFocusCapabilities) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FrameFocusCapabilities = {
@@ -2390,13 +2379,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { }
     };
 
-    static PyType_Slot _type_slots_FrameFocusControl[] = 
-    {
+    static PyType_Slot _type_slots_FrameFocusControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameFocusControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameFocusControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameFocusControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameFocusControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FrameFocusControl = {
@@ -2537,13 +2525,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { }
     };
 
-    static PyType_Slot _type_slots_FrameIsoSpeedCapabilities[] = 
-    {
+    static PyType_Slot _type_slots_FrameIsoSpeedCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameIsoSpeedCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameIsoSpeedCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameIsoSpeedCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameIsoSpeedCapabilities) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FrameIsoSpeedCapabilities = {
@@ -2700,13 +2687,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { }
     };
 
-    static PyType_Slot _type_slots_FrameIsoSpeedControl[] = 
-    {
+    static PyType_Slot _type_slots_FrameIsoSpeedControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameIsoSpeedControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameIsoSpeedControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameIsoSpeedControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameIsoSpeedControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FrameIsoSpeedControl = {
@@ -2957,13 +2943,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { }
     };
 
-    static PyType_Slot _type_slots_VariablePhotoSequenceController[] = 
-    {
+    static PyType_Slot _type_slots_VariablePhotoSequenceController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VariablePhotoSequenceController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VariablePhotoSequenceController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VariablePhotoSequenceController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VariablePhotoSequenceController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VariablePhotoSequenceController = {

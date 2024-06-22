@@ -228,13 +228,12 @@ namespace py::cpp::Windows::Devices::Custom
         { }
     };
 
-    static PyType_Slot _type_slots_CustomDevice[] = 
-    {
+    static PyType_Slot _type_slots_CustomDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CustomDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CustomDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CustomDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CustomDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CustomDevice = {
@@ -449,13 +448,12 @@ namespace py::cpp::Windows::Devices::Custom
         { }
     };
 
-    static PyType_Slot _type_slots_IOControlCode[] = 
-    {
+    static PyType_Slot _type_slots_IOControlCode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IOControlCode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IOControlCode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IOControlCode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IOControlCode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IOControlCode = {
@@ -501,12 +499,11 @@ namespace py::cpp::Windows::Devices::Custom
         { }
     };
 
-    static PyType_Slot _type_slots_KnownDeviceTypes[] = 
-    {
+    static PyType_Slot _type_slots_KnownDeviceTypes[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownDeviceTypes) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownDeviceTypes) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownDeviceTypes) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KnownDeviceTypes = {
@@ -693,13 +690,12 @@ namespace py::cpp::Windows::Devices::Custom
         { }
     };
 
-    static PyType_Slot _type_slots_IIOControlCode[] = 
-    {
+    static PyType_Slot _type_slots_IIOControlCode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IIOControlCode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IIOControlCode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IIOControlCode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IIOControlCode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IIOControlCode = {

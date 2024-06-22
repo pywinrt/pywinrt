@@ -125,13 +125,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_DeliveryOptimizationSettings[] = 
-    {
+    static PyType_Slot _type_slots_DeliveryOptimizationSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeliveryOptimizationSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeliveryOptimizationSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeliveryOptimizationSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeliveryOptimizationSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeliveryOptimizationSettings = {
@@ -1030,12 +1029,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_StoreConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_StoreConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StoreConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StoreConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StoreConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StoreConfiguration = {
@@ -1228,13 +1226,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_StoreHardwareManufacturerInfo[] = 
-    {
+    static PyType_Slot _type_slots_StoreHardwareManufacturerInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StoreHardwareManufacturerInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StoreHardwareManufacturerInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StoreHardwareManufacturerInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StoreHardwareManufacturerInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StoreHardwareManufacturerInfo = {
@@ -1322,12 +1319,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_StorePreview[] = 
-    {
+    static PyType_Slot _type_slots_StorePreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorePreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorePreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorePreview) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StorePreview = {
@@ -1515,13 +1511,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_StorePreviewProductInfo[] = 
-    {
+    static PyType_Slot _type_slots_StorePreviewProductInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorePreviewProductInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorePreviewProductInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorePreviewProductInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorePreviewProductInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StorePreviewProductInfo = {
@@ -1602,13 +1597,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_StorePreviewPurchaseResults[] = 
-    {
+    static PyType_Slot _type_slots_StorePreviewPurchaseResults[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorePreviewPurchaseResults) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorePreviewPurchaseResults) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorePreviewPurchaseResults) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorePreviewPurchaseResults) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StorePreviewPurchaseResults = {
@@ -1849,13 +1843,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_StorePreviewSkuInfo[] = 
-    {
+    static PyType_Slot _type_slots_StorePreviewSkuInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorePreviewSkuInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorePreviewSkuInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorePreviewSkuInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorePreviewSkuInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StorePreviewSkuInfo = {
@@ -1936,12 +1929,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_WebAuthenticationCoreManagerHelper[] = 
-    {
+    static PyType_Slot _type_slots_WebAuthenticationCoreManagerHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAuthenticationCoreManagerHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAuthenticationCoreManagerHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAuthenticationCoreManagerHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebAuthenticationCoreManagerHelper = {

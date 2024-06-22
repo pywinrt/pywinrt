@@ -86,13 +86,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { }
     };
 
-    static PyType_Slot _type_slots_TargetedContentAction[] = 
-    {
+    static PyType_Slot _type_slots_TargetedContentAction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentAction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentAction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentAction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentAction) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TargetedContentAction = {
@@ -183,13 +182,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { }
     };
 
-    static PyType_Slot _type_slots_TargetedContentAvailabilityChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_TargetedContentAvailabilityChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentAvailabilityChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentAvailabilityChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentAvailabilityChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentAvailabilityChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TargetedContentAvailabilityChangedEventArgs = {
@@ -300,13 +298,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { }
     };
 
-    static PyType_Slot _type_slots_TargetedContentChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_TargetedContentChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TargetedContentChangedEventArgs = {
@@ -533,13 +530,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { }
     };
 
-    static PyType_Slot _type_slots_TargetedContentCollection[] = 
-    {
+    static PyType_Slot _type_slots_TargetedContentCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TargetedContentCollection = {
@@ -743,13 +739,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { }
     };
 
-    static PyType_Slot _type_slots_TargetedContentContainer[] = 
-    {
+    static PyType_Slot _type_slots_TargetedContentContainer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentContainer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentContainer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentContainer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentContainer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TargetedContentContainer = {
@@ -866,13 +861,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { }
     };
 
-    static PyType_Slot _type_slots_TargetedContentFile[] = 
-    {
+    static PyType_Slot _type_slots_TargetedContentFile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentFile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentFile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentFile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentFile) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TargetedContentFile = {
@@ -1003,13 +997,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { }
     };
 
-    static PyType_Slot _type_slots_TargetedContentImage[] = 
-    {
+    static PyType_Slot _type_slots_TargetedContentImage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentImage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentImage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentImage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentImage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TargetedContentImage = {
@@ -1216,13 +1209,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { }
     };
 
-    static PyType_Slot _type_slots_TargetedContentItem[] = 
-    {
+    static PyType_Slot _type_slots_TargetedContentItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TargetedContentItem = {
@@ -1323,13 +1315,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { }
     };
 
-    static PyType_Slot _type_slots_TargetedContentItemState[] = 
-    {
+    static PyType_Slot _type_slots_TargetedContentItemState[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentItemState) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentItemState) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentItemState) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentItemState) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TargetedContentItemState = {
@@ -1470,13 +1461,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { }
     };
 
-    static PyType_Slot _type_slots_TargetedContentObject[] = 
-    {
+    static PyType_Slot _type_slots_TargetedContentObject[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentObject) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentObject) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentObject) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentObject) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TargetedContentObject = {
@@ -1567,13 +1557,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { }
     };
 
-    static PyType_Slot _type_slots_TargetedContentStateChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_TargetedContentStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentStateChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TargetedContentStateChangedEventArgs = {
@@ -1881,13 +1870,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { }
     };
 
-    static PyType_Slot _type_slots_TargetedContentSubscription[] = 
-    {
+    static PyType_Slot _type_slots_TargetedContentSubscription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentSubscription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentSubscription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentSubscription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentSubscription) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TargetedContentSubscription = {
@@ -2114,13 +2102,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { }
     };
 
-    static PyType_Slot _type_slots_TargetedContentSubscriptionOptions[] = 
-    {
+    static PyType_Slot _type_slots_TargetedContentSubscriptionOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentSubscriptionOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentSubscriptionOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentSubscriptionOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentSubscriptionOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TargetedContentSubscriptionOptions = {
@@ -2501,13 +2488,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { }
     };
 
-    static PyType_Slot _type_slots_TargetedContentValue[] = 
-    {
+    static PyType_Slot _type_slots_TargetedContentValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetedContentValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetedContentValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetedContentValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetedContentValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TargetedContentValue = {

@@ -78,13 +78,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_AddDeleteThemeTransition[] = 
-    {
+    static PyType_Slot _type_slots_AddDeleteThemeTransition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AddDeleteThemeTransition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AddDeleteThemeTransition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AddDeleteThemeTransition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AddDeleteThemeTransition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AddDeleteThemeTransition = {
@@ -234,13 +233,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_BackEase[] = 
-    {
+    static PyType_Slot _type_slots_BackEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackEase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BackEase = {
@@ -349,13 +347,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_BasicConnectedAnimationConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_BasicConnectedAnimationConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BasicConnectedAnimationConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BasicConnectedAnimationConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BasicConnectedAnimationConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BasicConnectedAnimationConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BasicConnectedAnimationConfiguration = {
@@ -505,13 +502,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_BeginStoryboard[] = 
-    {
+    static PyType_Slot _type_slots_BeginStoryboard[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BeginStoryboard) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BeginStoryboard) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BeginStoryboard) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BeginStoryboard) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BeginStoryboard = {
@@ -754,13 +750,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_BounceEase[] = 
-    {
+    static PyType_Slot _type_slots_BounceEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BounceEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BounceEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BounceEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BounceEase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BounceEase = {
@@ -870,13 +865,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_CircleEase[] = 
-    {
+    static PyType_Slot _type_slots_CircleEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CircleEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CircleEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CircleEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CircleEase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CircleEase = {
@@ -1294,13 +1288,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_ColorAnimation[] = 
-    {
+    static PyType_Slot _type_slots_ColorAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ColorAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ColorAnimation = {
@@ -1500,13 +1493,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_ColorAnimationUsingKeyFrames[] = 
-    {
+    static PyType_Slot _type_slots_ColorAnimationUsingKeyFrames[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorAnimationUsingKeyFrames) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorAnimationUsingKeyFrames) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorAnimationUsingKeyFrames) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ColorAnimationUsingKeyFrames) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ColorAnimationUsingKeyFrames = {
@@ -1727,13 +1719,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_ColorKeyFrame[] = 
-    {
+    static PyType_Slot _type_slots_ColorKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ColorKeyFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ColorKeyFrame = {
@@ -2383,8 +2374,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_ColorKeyFrameCollection[] = 
-    {
+    static PyType_Slot _type_slots_ColorKeyFrameCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorKeyFrameCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorKeyFrameCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorKeyFrameCollection) },
@@ -2394,7 +2384,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_ColorKeyFrameCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_ColorKeyFrameCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_ColorKeyFrameCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ColorKeyFrameCollection = {
@@ -2627,13 +2617,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_CommonNavigationTransitionInfo[] = 
-    {
+    static PyType_Slot _type_slots_CommonNavigationTransitionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CommonNavigationTransitionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CommonNavigationTransitionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CommonNavigationTransitionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CommonNavigationTransitionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CommonNavigationTransitionInfo = {
@@ -2982,13 +2971,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_ConnectedAnimation[] = 
-    {
+    static PyType_Slot _type_slots_ConnectedAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectedAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConnectedAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectedAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectedAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ConnectedAnimation = {
@@ -3049,13 +3037,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_ConnectedAnimationConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_ConnectedAnimationConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectedAnimationConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConnectedAnimationConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectedAnimationConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectedAnimationConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ConnectedAnimationConfiguration = {
@@ -3306,13 +3293,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_ConnectedAnimationService[] = 
-    {
+    static PyType_Slot _type_slots_ConnectedAnimationService[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectedAnimationService) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConnectedAnimationService) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectedAnimationService) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectedAnimationService) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ConnectedAnimationService = {
@@ -3555,13 +3541,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_ContentThemeTransition[] = 
-    {
+    static PyType_Slot _type_slots_ContentThemeTransition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentThemeTransition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentThemeTransition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentThemeTransition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentThemeTransition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContentThemeTransition = {
@@ -3987,13 +3972,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_ContinuumNavigationTransitionInfo[] = 
-    {
+    static PyType_Slot _type_slots_ContinuumNavigationTransitionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContinuumNavigationTransitionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContinuumNavigationTransitionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContinuumNavigationTransitionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContinuumNavigationTransitionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContinuumNavigationTransitionInfo = {
@@ -4111,13 +4095,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_CubicEase[] = 
-    {
+    static PyType_Slot _type_slots_CubicEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CubicEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CubicEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CubicEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CubicEase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CubicEase = {
@@ -4200,13 +4183,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_DirectConnectedAnimationConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_DirectConnectedAnimationConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DirectConnectedAnimationConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DirectConnectedAnimationConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DirectConnectedAnimationConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DirectConnectedAnimationConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DirectConnectedAnimationConfiguration = {
@@ -4289,13 +4271,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_DiscreteColorKeyFrame[] = 
-    {
+    static PyType_Slot _type_slots_DiscreteColorKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DiscreteColorKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DiscreteColorKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DiscreteColorKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DiscreteColorKeyFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DiscreteColorKeyFrame = {
@@ -4378,13 +4359,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_DiscreteDoubleKeyFrame[] = 
-    {
+    static PyType_Slot _type_slots_DiscreteDoubleKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DiscreteDoubleKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DiscreteDoubleKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DiscreteDoubleKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DiscreteDoubleKeyFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DiscreteDoubleKeyFrame = {
@@ -4467,13 +4447,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_DiscreteObjectKeyFrame[] = 
-    {
+    static PyType_Slot _type_slots_DiscreteObjectKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DiscreteObjectKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DiscreteObjectKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DiscreteObjectKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DiscreteObjectKeyFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DiscreteObjectKeyFrame = {
@@ -4556,13 +4535,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_DiscretePointKeyFrame[] = 
-    {
+    static PyType_Slot _type_slots_DiscretePointKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DiscretePointKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DiscretePointKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DiscretePointKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DiscretePointKeyFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DiscretePointKeyFrame = {
@@ -4980,13 +4958,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_DoubleAnimation[] = 
-    {
+    static PyType_Slot _type_slots_DoubleAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DoubleAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DoubleAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DoubleAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DoubleAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DoubleAnimation = {
@@ -5186,13 +5163,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_DoubleAnimationUsingKeyFrames[] = 
-    {
+    static PyType_Slot _type_slots_DoubleAnimationUsingKeyFrames[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DoubleAnimationUsingKeyFrames) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DoubleAnimationUsingKeyFrames) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DoubleAnimationUsingKeyFrames) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DoubleAnimationUsingKeyFrames) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DoubleAnimationUsingKeyFrames = {
@@ -5413,13 +5389,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_DoubleKeyFrame[] = 
-    {
+    static PyType_Slot _type_slots_DoubleKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DoubleKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DoubleKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DoubleKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DoubleKeyFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DoubleKeyFrame = {
@@ -6069,8 +6044,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_DoubleKeyFrameCollection[] = 
-    {
+    static PyType_Slot _type_slots_DoubleKeyFrameCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DoubleKeyFrameCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DoubleKeyFrameCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DoubleKeyFrameCollection) },
@@ -6080,7 +6054,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_DoubleKeyFrameCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_DoubleKeyFrameCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_DoubleKeyFrameCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DoubleKeyFrameCollection = {
@@ -6230,13 +6204,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_DragItemThemeAnimation[] = 
-    {
+    static PyType_Slot _type_slots_DragItemThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DragItemThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DragItemThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DragItemThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DragItemThemeAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DragItemThemeAnimation = {
@@ -6546,13 +6519,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_DragOverThemeAnimation[] = 
-    {
+    static PyType_Slot _type_slots_DragOverThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DragOverThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DragOverThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DragOverThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DragOverThemeAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DragOverThemeAnimation = {
@@ -6663,13 +6635,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_DrillInNavigationTransitionInfo[] = 
-    {
+    static PyType_Slot _type_slots_DrillInNavigationTransitionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DrillInNavigationTransitionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DrillInNavigationTransitionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DrillInNavigationTransitionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DrillInNavigationTransitionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DrillInNavigationTransitionInfo = {
@@ -7020,13 +6991,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_DrillInThemeAnimation[] = 
-    {
+    static PyType_Slot _type_slots_DrillInThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DrillInThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DrillInThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DrillInThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DrillInThemeAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DrillInThemeAnimation = {
@@ -7406,13 +7376,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_DrillOutThemeAnimation[] = 
-    {
+    static PyType_Slot _type_slots_DrillOutThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DrillOutThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DrillOutThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DrillOutThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DrillOutThemeAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DrillOutThemeAnimation = {
@@ -7591,13 +7560,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_DropTargetItemThemeAnimation[] = 
-    {
+    static PyType_Slot _type_slots_DropTargetItemThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DropTargetItemThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DropTargetItemThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DropTargetItemThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DropTargetItemThemeAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DropTargetItemThemeAnimation = {
@@ -7773,13 +7741,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_EasingColorKeyFrame[] = 
-    {
+    static PyType_Slot _type_slots_EasingColorKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EasingColorKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EasingColorKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EasingColorKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EasingColorKeyFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EasingColorKeyFrame = {
@@ -7955,13 +7922,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_EasingDoubleKeyFrame[] = 
-    {
+    static PyType_Slot _type_slots_EasingDoubleKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EasingDoubleKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EasingDoubleKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EasingDoubleKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EasingDoubleKeyFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EasingDoubleKeyFrame = {
@@ -8147,13 +8113,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_EasingFunctionBase[] = 
-    {
+    static PyType_Slot _type_slots_EasingFunctionBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EasingFunctionBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EasingFunctionBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EasingFunctionBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EasingFunctionBase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EasingFunctionBase = {
@@ -8329,13 +8294,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_EasingPointKeyFrame[] = 
-    {
+    static PyType_Slot _type_slots_EasingPointKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EasingPointKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EasingPointKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EasingPointKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EasingPointKeyFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EasingPointKeyFrame = {
@@ -8511,13 +8475,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_EdgeUIThemeTransition[] = 
-    {
+    static PyType_Slot _type_slots_EdgeUIThemeTransition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EdgeUIThemeTransition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EdgeUIThemeTransition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EdgeUIThemeTransition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EdgeUIThemeTransition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EdgeUIThemeTransition = {
@@ -8760,13 +8723,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_ElasticEase[] = 
-    {
+    static PyType_Slot _type_slots_ElasticEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ElasticEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ElasticEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ElasticEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ElasticEase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ElasticEase = {
@@ -8959,13 +8921,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_EntranceNavigationTransitionInfo[] = 
-    {
+    static PyType_Slot _type_slots_EntranceNavigationTransitionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EntranceNavigationTransitionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EntranceNavigationTransitionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EntranceNavigationTransitionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EntranceNavigationTransitionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EntranceNavigationTransitionInfo = {
@@ -9277,13 +9238,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_EntranceThemeTransition[] = 
-    {
+    static PyType_Slot _type_slots_EntranceThemeTransition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EntranceThemeTransition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EntranceThemeTransition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EntranceThemeTransition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EntranceThemeTransition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EntranceThemeTransition = {
@@ -9461,13 +9421,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_ExponentialEase[] = 
-    {
+    static PyType_Slot _type_slots_ExponentialEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExponentialEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExponentialEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExponentialEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExponentialEase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ExponentialEase = {
@@ -9643,13 +9602,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_FadeInThemeAnimation[] = 
-    {
+    static PyType_Slot _type_slots_FadeInThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FadeInThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FadeInThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FadeInThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FadeInThemeAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FadeInThemeAnimation = {
@@ -9825,13 +9783,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_FadeOutThemeAnimation[] = 
-    {
+    static PyType_Slot _type_slots_FadeOutThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FadeOutThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FadeOutThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FadeOutThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FadeOutThemeAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FadeOutThemeAnimation = {
@@ -9988,13 +9945,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_GravityConnectedAnimationConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_GravityConnectedAnimationConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GravityConnectedAnimationConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GravityConnectedAnimationConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GravityConnectedAnimationConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GravityConnectedAnimationConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GravityConnectedAnimationConfiguration = {
@@ -10173,13 +10129,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_KeySpline[] = 
-    {
+    static PyType_Slot _type_slots_KeySpline[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeySpline) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeySpline) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeySpline) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeySpline) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KeySpline = {
@@ -10271,13 +10226,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_KeyTimeHelper[] = 
-    {
+    static PyType_Slot _type_slots_KeyTimeHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyTimeHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyTimeHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyTimeHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyTimeHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KeyTimeHelper = {
@@ -10386,13 +10340,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_LinearColorKeyFrame[] = 
-    {
+    static PyType_Slot _type_slots_LinearColorKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LinearColorKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LinearColorKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LinearColorKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LinearColorKeyFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LinearColorKeyFrame = {
@@ -10475,13 +10428,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_LinearDoubleKeyFrame[] = 
-    {
+    static PyType_Slot _type_slots_LinearDoubleKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LinearDoubleKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LinearDoubleKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LinearDoubleKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LinearDoubleKeyFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LinearDoubleKeyFrame = {
@@ -10564,13 +10516,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_LinearPointKeyFrame[] = 
-    {
+    static PyType_Slot _type_slots_LinearPointKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LinearPointKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LinearPointKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LinearPointKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LinearPointKeyFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LinearPointKeyFrame = {
@@ -10720,13 +10671,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_NavigationThemeTransition[] = 
-    {
+    static PyType_Slot _type_slots_NavigationThemeTransition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NavigationThemeTransition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NavigationThemeTransition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NavigationThemeTransition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NavigationThemeTransition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NavigationThemeTransition = {
@@ -10813,13 +10763,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_NavigationTransitionInfo[] = 
-    {
+    static PyType_Slot _type_slots_NavigationTransitionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NavigationTransitionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NavigationTransitionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NavigationTransitionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NavigationTransitionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NavigationTransitionInfo = {
@@ -10989,13 +10938,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_ObjectAnimationUsingKeyFrames[] = 
-    {
+    static PyType_Slot _type_slots_ObjectAnimationUsingKeyFrames[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ObjectAnimationUsingKeyFrames) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ObjectAnimationUsingKeyFrames) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ObjectAnimationUsingKeyFrames) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ObjectAnimationUsingKeyFrames) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ObjectAnimationUsingKeyFrames = {
@@ -11216,13 +11164,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_ObjectKeyFrame[] = 
-    {
+    static PyType_Slot _type_slots_ObjectKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ObjectKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ObjectKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ObjectKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ObjectKeyFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ObjectKeyFrame = {
@@ -11872,8 +11819,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_ObjectKeyFrameCollection[] = 
-    {
+    static PyType_Slot _type_slots_ObjectKeyFrameCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ObjectKeyFrameCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ObjectKeyFrameCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ObjectKeyFrameCollection) },
@@ -11883,7 +11829,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_ObjectKeyFrameCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_ObjectKeyFrameCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_ObjectKeyFrameCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ObjectKeyFrameCollection = {
@@ -12033,13 +11979,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_PaneThemeTransition[] = 
-    {
+    static PyType_Slot _type_slots_PaneThemeTransition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaneThemeTransition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaneThemeTransition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaneThemeTransition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaneThemeTransition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaneThemeTransition = {
@@ -12483,13 +12428,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_PointAnimation[] = 
-    {
+    static PyType_Slot _type_slots_PointAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PointAnimation = {
@@ -12689,13 +12633,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_PointAnimationUsingKeyFrames[] = 
-    {
+    static PyType_Slot _type_slots_PointAnimationUsingKeyFrames[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointAnimationUsingKeyFrames) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointAnimationUsingKeyFrames) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointAnimationUsingKeyFrames) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointAnimationUsingKeyFrames) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PointAnimationUsingKeyFrames = {
@@ -12916,13 +12859,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_PointKeyFrame[] = 
-    {
+    static PyType_Slot _type_slots_PointKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointKeyFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PointKeyFrame = {
@@ -13572,8 +13514,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_PointKeyFrameCollection[] = 
-    {
+    static PyType_Slot _type_slots_PointKeyFrameCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointKeyFrameCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointKeyFrameCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointKeyFrameCollection) },
@@ -13583,7 +13524,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_PointKeyFrameCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_PointKeyFrameCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_PointKeyFrameCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PointKeyFrameCollection = {
@@ -13733,13 +13674,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_PointerDownThemeAnimation[] = 
-    {
+    static PyType_Slot _type_slots_PointerDownThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointerDownThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointerDownThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointerDownThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointerDownThemeAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PointerDownThemeAnimation = {
@@ -13915,13 +13855,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_PointerUpThemeAnimation[] = 
-    {
+    static PyType_Slot _type_slots_PointerUpThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointerUpThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointerUpThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointerUpThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointerUpThemeAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PointerUpThemeAnimation = {
@@ -14231,13 +14170,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_PopInThemeAnimation[] = 
-    {
+    static PyType_Slot _type_slots_PopInThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PopInThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PopInThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PopInThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PopInThemeAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PopInThemeAnimation = {
@@ -14415,13 +14353,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_PopOutThemeAnimation[] = 
-    {
+    static PyType_Slot _type_slots_PopOutThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PopOutThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PopOutThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PopOutThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PopOutThemeAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PopOutThemeAnimation = {
@@ -14664,13 +14601,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_PopupThemeTransition[] = 
-    {
+    static PyType_Slot _type_slots_PopupThemeTransition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PopupThemeTransition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PopupThemeTransition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PopupThemeTransition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PopupThemeTransition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PopupThemeTransition = {
@@ -14847,13 +14783,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_PowerEase[] = 
-    {
+    static PyType_Slot _type_slots_PowerEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PowerEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PowerEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PowerEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PowerEase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PowerEase = {
@@ -14962,13 +14897,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_QuadraticEase[] = 
-    {
+    static PyType_Slot _type_slots_QuadraticEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_QuadraticEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_QuadraticEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_QuadraticEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_QuadraticEase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_QuadraticEase = {
@@ -15051,13 +14985,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_QuarticEase[] = 
-    {
+    static PyType_Slot _type_slots_QuarticEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_QuarticEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_QuarticEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_QuarticEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_QuarticEase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_QuarticEase = {
@@ -15140,13 +15073,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_QuinticEase[] = 
-    {
+    static PyType_Slot _type_slots_QuinticEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_QuinticEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_QuinticEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_QuinticEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_QuinticEase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_QuinticEase = {
@@ -15229,13 +15161,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_ReorderThemeTransition[] = 
-    {
+    static PyType_Slot _type_slots_ReorderThemeTransition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ReorderThemeTransition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ReorderThemeTransition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ReorderThemeTransition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ReorderThemeTransition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ReorderThemeTransition = {
@@ -15471,13 +15402,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_RepeatBehaviorHelper[] = 
-    {
+    static PyType_Slot _type_slots_RepeatBehaviorHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RepeatBehaviorHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RepeatBehaviorHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RepeatBehaviorHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RepeatBehaviorHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RepeatBehaviorHelper = {
@@ -15792,13 +15722,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_RepositionThemeAnimation[] = 
-    {
+    static PyType_Slot _type_slots_RepositionThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RepositionThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RepositionThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RepositionThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RepositionThemeAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RepositionThemeAnimation = {
@@ -15976,13 +15905,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_RepositionThemeTransition[] = 
-    {
+    static PyType_Slot _type_slots_RepositionThemeTransition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RepositionThemeTransition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RepositionThemeTransition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RepositionThemeTransition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RepositionThemeTransition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RepositionThemeTransition = {
@@ -16091,13 +16019,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_SineEase[] = 
-    {
+    static PyType_Slot _type_slots_SineEase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SineEase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SineEase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SineEase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SineEase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SineEase = {
@@ -16247,13 +16174,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_SlideNavigationTransitionInfo[] = 
-    {
+    static PyType_Slot _type_slots_SlideNavigationTransitionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SlideNavigationTransitionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SlideNavigationTransitionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SlideNavigationTransitionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SlideNavigationTransitionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SlideNavigationTransitionInfo = {
@@ -16429,13 +16355,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_SplineColorKeyFrame[] = 
-    {
+    static PyType_Slot _type_slots_SplineColorKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SplineColorKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SplineColorKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SplineColorKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SplineColorKeyFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SplineColorKeyFrame = {
@@ -16611,13 +16536,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_SplineDoubleKeyFrame[] = 
-    {
+    static PyType_Slot _type_slots_SplineDoubleKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SplineDoubleKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SplineDoubleKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SplineDoubleKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SplineDoubleKeyFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SplineDoubleKeyFrame = {
@@ -16793,13 +16717,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_SplinePointKeyFrame[] = 
-    {
+    static PyType_Slot _type_slots_SplinePointKeyFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SplinePointKeyFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SplinePointKeyFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SplinePointKeyFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SplinePointKeyFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SplinePointKeyFrame = {
@@ -17645,13 +17568,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_SplitCloseThemeAnimation[] = 
-    {
+    static PyType_Slot _type_slots_SplitCloseThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SplitCloseThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SplitCloseThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SplitCloseThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SplitCloseThemeAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SplitCloseThemeAnimation = {
@@ -18507,13 +18429,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_SplitOpenThemeAnimation[] = 
-    {
+    static PyType_Slot _type_slots_SplitOpenThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SplitOpenThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SplitOpenThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SplitOpenThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SplitOpenThemeAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SplitOpenThemeAnimation = {
@@ -19132,13 +19053,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_Storyboard[] = 
-    {
+    static PyType_Slot _type_slots_Storyboard[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Storyboard) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Storyboard) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Storyboard) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Storyboard) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Storyboard = {
@@ -19253,13 +19173,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_SuppressNavigationTransitionInfo[] = 
-    {
+    static PyType_Slot _type_slots_SuppressNavigationTransitionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SuppressNavigationTransitionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SuppressNavigationTransitionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SuppressNavigationTransitionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SuppressNavigationTransitionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SuppressNavigationTransitionInfo = {
@@ -19543,13 +19462,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_SwipeBackThemeAnimation[] = 
-    {
+    static PyType_Slot _type_slots_SwipeBackThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SwipeBackThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SwipeBackThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SwipeBackThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SwipeBackThemeAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SwipeBackThemeAnimation = {
@@ -19861,13 +19779,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_SwipeHintThemeAnimation[] = 
-    {
+    static PyType_Slot _type_slots_SwipeHintThemeAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SwipeHintThemeAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SwipeHintThemeAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SwipeHintThemeAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SwipeHintThemeAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SwipeHintThemeAnimation = {
@@ -20450,13 +20367,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_Timeline[] = 
-    {
+    static PyType_Slot _type_slots_Timeline[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Timeline) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Timeline) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Timeline) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Timeline) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Timeline = {
@@ -21111,8 +21027,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_TimelineCollection[] = 
-    {
+    static PyType_Slot _type_slots_TimelineCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimelineCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimelineCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimelineCollection) },
@@ -21122,7 +21037,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_TimelineCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_TimelineCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_TimelineCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TimelineCollection = {
@@ -21183,13 +21098,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_Transition[] = 
-    {
+    static PyType_Slot _type_slots_Transition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Transition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Transition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Transition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Transition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Transition = {
@@ -21812,8 +21726,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_TransitionCollection[] = 
-    {
+    static PyType_Slot _type_slots_TransitionCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TransitionCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TransitionCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TransitionCollection) },
@@ -21823,7 +21736,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_TransitionCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_TransitionCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_TransitionCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TransitionCollection = {
@@ -21940,14 +21853,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_KeyTime[] = 
-    {
+    static PyType_Slot _type_slots_KeyTime[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyTime) },
         { Py_tp_init, reinterpret_cast<void*>(_init_KeyTime) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyTime) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyTime) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyTime) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KeyTime = {
@@ -22134,14 +22046,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { }
     };
 
-    static PyType_Slot _type_slots_RepeatBehavior[] = 
-    {
+    static PyType_Slot _type_slots_RepeatBehavior[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RepeatBehavior) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RepeatBehavior) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RepeatBehavior) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RepeatBehavior) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RepeatBehavior) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RepeatBehavior = {

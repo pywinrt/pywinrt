@@ -76,13 +76,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }
     };
 
-    static PyType_Slot _type_slots_CustomQueryParametersRequestedArgs[] = 
-    {
+    static PyType_Slot _type_slots_CustomQueryParametersRequestedArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CustomQueryParametersRequestedArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CustomQueryParametersRequestedArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CustomQueryParametersRequestedArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CustomQueryParametersRequestedArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CustomQueryParametersRequestedArgs = {
@@ -208,13 +207,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }
     };
 
-    static PyType_Slot _type_slots_CustomQueryParametersUpdateOptions[] = 
-    {
+    static PyType_Slot _type_slots_CustomQueryParametersUpdateOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CustomQueryParametersUpdateOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CustomQueryParametersUpdateOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CustomQueryParametersUpdateOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CustomQueryParametersUpdateOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CustomQueryParametersUpdateOptions = {
@@ -315,13 +313,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }
     };
 
-    static PyType_Slot _type_slots_FeedDisabledArgs[] = 
-    {
+    static PyType_Slot _type_slots_FeedDisabledArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedDisabledArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedDisabledArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedDisabledArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedDisabledArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FeedDisabledArgs = {
@@ -422,13 +419,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }
     };
 
-    static PyType_Slot _type_slots_FeedEnabledArgs[] = 
-    {
+    static PyType_Slot _type_slots_FeedEnabledArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedEnabledArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedEnabledArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedEnabledArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedEnabledArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FeedEnabledArgs = {
@@ -581,13 +577,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }
     };
 
-    static PyType_Slot _type_slots_FeedManager[] = 
-    {
+    static PyType_Slot _type_slots_FeedManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FeedManager = {
@@ -694,13 +689,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }
     };
 
-    static PyType_Slot _type_slots_FeedProviderDisabledArgs[] = 
-    {
+    static PyType_Slot _type_slots_FeedProviderDisabledArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedProviderDisabledArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedProviderDisabledArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedProviderDisabledArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedProviderDisabledArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FeedProviderDisabledArgs = {
@@ -781,13 +775,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }
     };
 
-    static PyType_Slot _type_slots_FeedProviderEnabledArgs[] = 
-    {
+    static PyType_Slot _type_slots_FeedProviderEnabledArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedProviderEnabledArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedProviderEnabledArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedProviderEnabledArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedProviderEnabledArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FeedProviderEnabledArgs = {
@@ -888,13 +881,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }
     };
 
-    static PyType_Slot _type_slots_FeedProviderInfo[] = 
-    {
+    static PyType_Slot _type_slots_FeedProviderInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FeedProviderInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedProviderInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedProviderInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedProviderInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FeedProviderInfo = {
@@ -1018,13 +1010,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }
     };
 
-    static PyType_Slot _type_slots_IFeedManager[] = 
-    {
+    static PyType_Slot _type_slots_IFeedManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFeedManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IFeedManager = {
@@ -1250,13 +1241,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { }
     };
 
-    static PyType_Slot _type_slots_IFeedProvider[] = 
-    {
+    static PyType_Slot _type_slots_IFeedProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFeedProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IFeedProvider = {

@@ -126,13 +126,12 @@ namespace py::cpp::Windows::Devices::Printers
         { }
     };
 
-    static PyType_Slot _type_slots_IppAttributeError[] = 
-    {
+    static PyType_Slot _type_slots_IppAttributeError[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IppAttributeError) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IppAttributeError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IppAttributeError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IppAttributeError) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IppAttributeError = {
@@ -1956,13 +1955,12 @@ namespace py::cpp::Windows::Devices::Printers
         { }
     };
 
-    static PyType_Slot _type_slots_IppAttributeValue[] = 
-    {
+    static PyType_Slot _type_slots_IppAttributeValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IppAttributeValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IppAttributeValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IppAttributeValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IppAttributeValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IppAttributeValue = {
@@ -2152,13 +2150,12 @@ namespace py::cpp::Windows::Devices::Printers
         { }
     };
 
-    static PyType_Slot _type_slots_IppIntegerRange[] = 
-    {
+    static PyType_Slot _type_slots_IppIntegerRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IppIntegerRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IppIntegerRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IppIntegerRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IppIntegerRange) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IppIntegerRange = {
@@ -2631,13 +2628,12 @@ namespace py::cpp::Windows::Devices::Printers
         { }
     };
 
-    static PyType_Slot _type_slots_IppPrintDevice[] = 
-    {
+    static PyType_Slot _type_slots_IppPrintDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IppPrintDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IppPrintDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IppPrintDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IppPrintDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IppPrintDevice = {
@@ -2813,13 +2809,12 @@ namespace py::cpp::Windows::Devices::Printers
         { }
     };
 
-    static PyType_Slot _type_slots_IppResolution[] = 
-    {
+    static PyType_Slot _type_slots_IppResolution[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IppResolution) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IppResolution) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IppResolution) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IppResolution) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IppResolution = {
@@ -2920,13 +2915,12 @@ namespace py::cpp::Windows::Devices::Printers
         { }
     };
 
-    static PyType_Slot _type_slots_IppSetAttributesResult[] = 
-    {
+    static PyType_Slot _type_slots_IppSetAttributesResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IppSetAttributesResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IppSetAttributesResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IppSetAttributesResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IppSetAttributesResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IppSetAttributesResult = {
@@ -3052,13 +3046,12 @@ namespace py::cpp::Windows::Devices::Printers
         { }
     };
 
-    static PyType_Slot _type_slots_IppTextWithLanguage[] = 
-    {
+    static PyType_Slot _type_slots_IppTextWithLanguage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IppTextWithLanguage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IppTextWithLanguage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IppTextWithLanguage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IppTextWithLanguage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IppTextWithLanguage = {
@@ -3237,13 +3230,12 @@ namespace py::cpp::Windows::Devices::Printers
         { }
     };
 
-    static PyType_Slot _type_slots_PageConfigurationSettings[] = 
-    {
+    static PyType_Slot _type_slots_PageConfigurationSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PageConfigurationSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PageConfigurationSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PageConfigurationSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PageConfigurationSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PageConfigurationSettings = {
@@ -3394,13 +3386,12 @@ namespace py::cpp::Windows::Devices::Printers
         { }
     };
 
-    static PyType_Slot _type_slots_PdlPassthroughProvider[] = 
-    {
+    static PyType_Slot _type_slots_PdlPassthroughProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PdlPassthroughProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PdlPassthroughProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PdlPassthroughProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PdlPassthroughProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PdlPassthroughProvider = {
@@ -3594,13 +3585,12 @@ namespace py::cpp::Windows::Devices::Printers
         { }
     };
 
-    static PyType_Slot _type_slots_PdlPassthroughTarget[] = 
-    {
+    static PyType_Slot _type_slots_PdlPassthroughTarget[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PdlPassthroughTarget) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PdlPassthroughTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PdlPassthroughTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PdlPassthroughTarget) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PdlPassthroughTarget = {
@@ -3741,13 +3731,12 @@ namespace py::cpp::Windows::Devices::Printers
         { }
     };
 
-    static PyType_Slot _type_slots_Print3DDevice[] = 
-    {
+    static PyType_Slot _type_slots_Print3DDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Print3DDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Print3DDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Print3DDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Print3DDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Print3DDevice = {
@@ -3929,13 +3918,12 @@ namespace py::cpp::Windows::Devices::Printers
         { }
     };
 
-    static PyType_Slot _type_slots_PrintSchema[] = 
-    {
+    static PyType_Slot _type_slots_PrintSchema[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintSchema) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintSchema) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintSchema) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintSchema) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintSchema = {

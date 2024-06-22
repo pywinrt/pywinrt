@@ -116,13 +116,12 @@ namespace py::cpp::Windows::UI::UIAutomation
         { }
     };
 
-    static PyType_Slot _type_slots_AutomationConnection[] = 
-    {
+    static PyType_Slot _type_slots_AutomationConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationConnection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AutomationConnection = {
@@ -203,13 +202,12 @@ namespace py::cpp::Windows::UI::UIAutomation
         { }
     };
 
-    static PyType_Slot _type_slots_AutomationConnectionBoundObject[] = 
-    {
+    static PyType_Slot _type_slots_AutomationConnectionBoundObject[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationConnectionBoundObject) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationConnectionBoundObject) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationConnectionBoundObject) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationConnectionBoundObject) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AutomationConnectionBoundObject = {
@@ -330,13 +328,12 @@ namespace py::cpp::Windows::UI::UIAutomation
         { }
     };
 
-    static PyType_Slot _type_slots_AutomationElement[] = 
-    {
+    static PyType_Slot _type_slots_AutomationElement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationElement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationElement) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AutomationElement = {
@@ -397,13 +394,12 @@ namespace py::cpp::Windows::UI::UIAutomation
         { }
     };
 
-    static PyType_Slot _type_slots_AutomationTextRange[] = 
-    {
+    static PyType_Slot _type_slots_AutomationTextRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationTextRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationTextRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationTextRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationTextRange) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AutomationTextRange = {

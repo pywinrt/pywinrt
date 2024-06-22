@@ -381,13 +381,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
         { }
     };
 
-    static PyType_Slot _type_slots_MicrosoftAccountMultiFactorAuthenticationManager[] = 
-    {
+    static PyType_Slot _type_slots_MicrosoftAccountMultiFactorAuthenticationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MicrosoftAccountMultiFactorAuthenticationManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MicrosoftAccountMultiFactorAuthenticationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MicrosoftAccountMultiFactorAuthenticationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MicrosoftAccountMultiFactorAuthenticationManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MicrosoftAccountMultiFactorAuthenticationManager = {
@@ -514,13 +513,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
         { }
     };
 
-    static PyType_Slot _type_slots_MicrosoftAccountMultiFactorGetSessionsResult[] = 
-    {
+    static PyType_Slot _type_slots_MicrosoftAccountMultiFactorGetSessionsResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MicrosoftAccountMultiFactorGetSessionsResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MicrosoftAccountMultiFactorGetSessionsResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MicrosoftAccountMultiFactorGetSessionsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MicrosoftAccountMultiFactorGetSessionsResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MicrosoftAccountMultiFactorGetSessionsResult = {
@@ -661,13 +659,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
         { }
     };
 
-    static PyType_Slot _type_slots_MicrosoftAccountMultiFactorOneTimeCodedInfo[] = 
-    {
+    static PyType_Slot _type_slots_MicrosoftAccountMultiFactorOneTimeCodedInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MicrosoftAccountMultiFactorOneTimeCodedInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MicrosoftAccountMultiFactorOneTimeCodedInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MicrosoftAccountMultiFactorOneTimeCodedInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MicrosoftAccountMultiFactorOneTimeCodedInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MicrosoftAccountMultiFactorOneTimeCodedInfo = {
@@ -868,13 +865,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
         { }
     };
 
-    static PyType_Slot _type_slots_MicrosoftAccountMultiFactorSessionInfo[] = 
-    {
+    static PyType_Slot _type_slots_MicrosoftAccountMultiFactorSessionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MicrosoftAccountMultiFactorSessionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MicrosoftAccountMultiFactorSessionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MicrosoftAccountMultiFactorSessionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MicrosoftAccountMultiFactorSessionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MicrosoftAccountMultiFactorSessionInfo = {
@@ -995,13 +991,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
         { }
     };
 
-    static PyType_Slot _type_slots_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo[] = 
-    {
+    static PyType_Slot _type_slots_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo = {

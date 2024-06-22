@@ -183,13 +183,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionConditionalValue[] = 
-    {
+    static PyType_Slot _type_slots_CompositionConditionalValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionConditionalValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionConditionalValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionConditionalValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionConditionalValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionConditionalValue = {
@@ -436,14 +435,13 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionInteractionSourceCollection[] = 
-    {
+    static PyType_Slot _type_slots_CompositionInteractionSourceCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionInteractionSourceCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionInteractionSourceCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionInteractionSourceCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionInteractionSourceCollection) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_CompositionInteractionSourceCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionInteractionSourceCollection = {
@@ -648,13 +646,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_InteractionSourceConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_InteractionSourceConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InteractionSourceConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InteractionSourceConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InteractionSourceConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InteractionSourceConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InteractionSourceConfiguration = {
@@ -1889,13 +1886,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_InteractionTracker[] = 
-    {
+    static PyType_Slot _type_slots_InteractionTracker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InteractionTracker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InteractionTracker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InteractionTracker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InteractionTracker) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InteractionTracker = {
@@ -2025,13 +2021,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_InteractionTrackerCustomAnimationStateEnteredArgs[] = 
-    {
+    static PyType_Slot _type_slots_InteractionTrackerCustomAnimationStateEnteredArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InteractionTrackerCustomAnimationStateEnteredArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InteractionTrackerCustomAnimationStateEnteredArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InteractionTrackerCustomAnimationStateEnteredArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InteractionTrackerCustomAnimationStateEnteredArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InteractionTrackerCustomAnimationStateEnteredArgs = {
@@ -2132,13 +2127,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_InteractionTrackerIdleStateEnteredArgs[] = 
-    {
+    static PyType_Slot _type_slots_InteractionTrackerIdleStateEnteredArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InteractionTrackerIdleStateEnteredArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InteractionTrackerIdleStateEnteredArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InteractionTrackerIdleStateEnteredArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InteractionTrackerIdleStateEnteredArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InteractionTrackerIdleStateEnteredArgs = {
@@ -2199,13 +2193,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_InteractionTrackerInertiaModifier[] = 
-    {
+    static PyType_Slot _type_slots_InteractionTrackerInertiaModifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InteractionTrackerInertiaModifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InteractionTrackerInertiaModifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InteractionTrackerInertiaModifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InteractionTrackerInertiaModifier) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InteractionTrackerInertiaModifier = {
@@ -2393,13 +2386,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_InteractionTrackerInertiaMotion[] = 
-    {
+    static PyType_Slot _type_slots_InteractionTrackerInertiaMotion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InteractionTrackerInertiaMotion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InteractionTrackerInertiaMotion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InteractionTrackerInertiaMotion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InteractionTrackerInertiaMotion) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InteractionTrackerInertiaMotion = {
@@ -2613,13 +2605,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_InteractionTrackerInertiaNaturalMotion[] = 
-    {
+    static PyType_Slot _type_slots_InteractionTrackerInertiaNaturalMotion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InteractionTrackerInertiaNaturalMotion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InteractionTrackerInertiaNaturalMotion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InteractionTrackerInertiaNaturalMotion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InteractionTrackerInertiaNaturalMotion) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InteractionTrackerInertiaNaturalMotion = {
@@ -2833,13 +2824,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_InteractionTrackerInertiaRestingValue[] = 
-    {
+    static PyType_Slot _type_slots_InteractionTrackerInertiaRestingValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InteractionTrackerInertiaRestingValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InteractionTrackerInertiaRestingValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InteractionTrackerInertiaRestingValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InteractionTrackerInertiaRestingValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InteractionTrackerInertiaRestingValue = {
@@ -3106,13 +3096,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_InteractionTrackerInertiaStateEnteredArgs[] = 
-    {
+    static PyType_Slot _type_slots_InteractionTrackerInertiaStateEnteredArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InteractionTrackerInertiaStateEnteredArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InteractionTrackerInertiaStateEnteredArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InteractionTrackerInertiaStateEnteredArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InteractionTrackerInertiaStateEnteredArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InteractionTrackerInertiaStateEnteredArgs = {
@@ -3213,13 +3202,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_InteractionTrackerInteractingStateEnteredArgs[] = 
-    {
+    static PyType_Slot _type_slots_InteractionTrackerInteractingStateEnteredArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InteractionTrackerInteractingStateEnteredArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InteractionTrackerInteractingStateEnteredArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InteractionTrackerInteractingStateEnteredArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InteractionTrackerInteractingStateEnteredArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InteractionTrackerInteractingStateEnteredArgs = {
@@ -3300,13 +3288,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_InteractionTrackerRequestIgnoredArgs[] = 
-    {
+    static PyType_Slot _type_slots_InteractionTrackerRequestIgnoredArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InteractionTrackerRequestIgnoredArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InteractionTrackerRequestIgnoredArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InteractionTrackerRequestIgnoredArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InteractionTrackerRequestIgnoredArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InteractionTrackerRequestIgnoredArgs = {
@@ -3427,13 +3414,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_InteractionTrackerValuesChangedArgs[] = 
-    {
+    static PyType_Slot _type_slots_InteractionTrackerValuesChangedArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InteractionTrackerValuesChangedArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InteractionTrackerValuesChangedArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InteractionTrackerValuesChangedArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InteractionTrackerValuesChangedArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InteractionTrackerValuesChangedArgs = {
@@ -3494,13 +3480,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_InteractionTrackerVector2InertiaModifier[] = 
-    {
+    static PyType_Slot _type_slots_InteractionTrackerVector2InertiaModifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InteractionTrackerVector2InertiaModifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InteractionTrackerVector2InertiaModifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InteractionTrackerVector2InertiaModifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InteractionTrackerVector2InertiaModifier) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InteractionTrackerVector2InertiaModifier = {
@@ -3688,13 +3673,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_InteractionTrackerVector2InertiaNaturalMotion[] = 
-    {
+    static PyType_Slot _type_slots_InteractionTrackerVector2InertiaNaturalMotion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InteractionTrackerVector2InertiaNaturalMotion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InteractionTrackerVector2InertiaNaturalMotion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InteractionTrackerVector2InertiaNaturalMotion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InteractionTrackerVector2InertiaNaturalMotion) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InteractionTrackerVector2InertiaNaturalMotion = {
@@ -4633,13 +4617,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_VisualInteractionSource[] = 
-    {
+    static PyType_Slot _type_slots_VisualInteractionSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VisualInteractionSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VisualInteractionSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VisualInteractionSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VisualInteractionSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VisualInteractionSource = {
@@ -4727,13 +4710,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_ICompositionInteractionSource[] = 
-    {
+    static PyType_Slot _type_slots_ICompositionInteractionSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICompositionInteractionSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICompositionInteractionSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICompositionInteractionSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICompositionInteractionSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ICompositionInteractionSource = {
@@ -4998,13 +4980,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }
     };
 
-    static PyType_Slot _type_slots_IInteractionTrackerOwner[] = 
-    {
+    static PyType_Slot _type_slots_IInteractionTrackerOwner[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IInteractionTrackerOwner) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInteractionTrackerOwner) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInteractionTrackerOwner) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInteractionTrackerOwner) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IInteractionTrackerOwner = {

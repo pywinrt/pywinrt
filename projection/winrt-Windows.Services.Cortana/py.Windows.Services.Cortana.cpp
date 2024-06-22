@@ -325,13 +325,12 @@ namespace py::cpp::Windows::Services::Cortana
         { }
     };
 
-    static PyType_Slot _type_slots_CortanaActionableInsights[] = 
-    {
+    static PyType_Slot _type_slots_CortanaActionableInsights[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CortanaActionableInsights) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CortanaActionableInsights) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CortanaActionableInsights) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CortanaActionableInsights) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CortanaActionableInsights = {
@@ -537,13 +536,12 @@ namespace py::cpp::Windows::Services::Cortana
         { }
     };
 
-    static PyType_Slot _type_slots_CortanaActionableInsightsOptions[] = 
-    {
+    static PyType_Slot _type_slots_CortanaActionableInsightsOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CortanaActionableInsightsOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CortanaActionableInsightsOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CortanaActionableInsightsOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CortanaActionableInsightsOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CortanaActionableInsightsOptions = {
@@ -759,13 +757,12 @@ namespace py::cpp::Windows::Services::Cortana
         { }
     };
 
-    static PyType_Slot _type_slots_CortanaPermissionsManager[] = 
-    {
+    static PyType_Slot _type_slots_CortanaPermissionsManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CortanaPermissionsManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CortanaPermissionsManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CortanaPermissionsManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CortanaPermissionsManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CortanaPermissionsManager = {
@@ -978,13 +975,12 @@ namespace py::cpp::Windows::Services::Cortana
         { }
     };
 
-    static PyType_Slot _type_slots_CortanaSettings[] = 
-    {
+    static PyType_Slot _type_slots_CortanaSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CortanaSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CortanaSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CortanaSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CortanaSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CortanaSettings = {

@@ -726,12 +726,11 @@ namespace py::cpp::Microsoft::Windows::System::Power
         { }
     };
 
-    static PyType_Slot _type_slots_PowerManager[] = 
-    {
+    static PyType_Slot _type_slots_PowerManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PowerManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PowerManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PowerManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PowerManager = {

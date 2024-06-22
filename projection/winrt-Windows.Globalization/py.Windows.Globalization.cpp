@@ -138,12 +138,11 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Slot _type_slots_ApplicationLanguages[] = 
-    {
+    static PyType_Slot _type_slots_ApplicationLanguages[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ApplicationLanguages) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ApplicationLanguages) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ApplicationLanguages) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ApplicationLanguages = {
@@ -2963,13 +2962,12 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Slot _type_slots_Calendar[] = 
-    {
+    static PyType_Slot _type_slots_Calendar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Calendar) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Calendar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Calendar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Calendar) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Calendar = {
@@ -3281,12 +3279,11 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Slot _type_slots_CalendarIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_CalendarIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CalendarIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CalendarIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CalendarIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CalendarIdentifiers = {
@@ -3391,12 +3388,11 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Slot _type_slots_ClockIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_ClockIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ClockIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ClockIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ClockIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ClockIdentifiers = {
@@ -3549,13 +3545,12 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Slot _type_slots_CurrencyAmount[] = 
-    {
+    static PyType_Slot _type_slots_CurrencyAmount[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CurrencyAmount) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CurrencyAmount) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CurrencyAmount) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CurrencyAmount) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CurrencyAmount = {
@@ -6660,12 +6655,11 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Slot _type_slots_CurrencyIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_CurrencyIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CurrencyIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CurrencyIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CurrencyIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CurrencyIdentifiers = {
@@ -7121,13 +7115,12 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Slot _type_slots_GeographicRegion[] = 
-    {
+    static PyType_Slot _type_slots_GeographicRegion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeographicRegion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeographicRegion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeographicRegion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeographicRegion) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GeographicRegion = {
@@ -7274,13 +7267,12 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Slot _type_slots_JapanesePhoneme[] = 
-    {
+    static PyType_Slot _type_slots_JapanesePhoneme[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JapanesePhoneme) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_JapanesePhoneme) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JapanesePhoneme) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JapanesePhoneme) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_JapanesePhoneme = {
@@ -7359,12 +7351,11 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Slot _type_slots_JapanesePhoneticAnalyzer[] = 
-    {
+    static PyType_Slot _type_slots_JapanesePhoneticAnalyzer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JapanesePhoneticAnalyzer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JapanesePhoneticAnalyzer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JapanesePhoneticAnalyzer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_JapanesePhoneticAnalyzer = {
@@ -7739,13 +7730,12 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Slot _type_slots_Language[] = 
-    {
+    static PyType_Slot _type_slots_Language[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Language) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Language) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Language) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Language) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Language = {
@@ -8713,12 +8703,11 @@ namespace py::cpp::Windows::Globalization
         { }
     };
 
-    static PyType_Slot _type_slots_NumeralSystemIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_NumeralSystemIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NumeralSystemIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NumeralSystemIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NumeralSystemIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NumeralSystemIdentifiers = {

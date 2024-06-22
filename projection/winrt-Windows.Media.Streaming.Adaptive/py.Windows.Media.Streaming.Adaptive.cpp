@@ -990,13 +990,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { }
     };
 
-    static PyType_Slot _type_slots_AdaptiveMediaSource[] = 
-    {
+    static PyType_Slot _type_slots_AdaptiveMediaSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdaptiveMediaSource = {
@@ -1229,13 +1228,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { }
     };
 
-    static PyType_Slot _type_slots_AdaptiveMediaSourceAdvancedSettings[] = 
-    {
+    static PyType_Slot _type_slots_AdaptiveMediaSourceAdvancedSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceAdvancedSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceAdvancedSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceAdvancedSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceAdvancedSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdaptiveMediaSourceAdvancedSettings = {
@@ -1356,13 +1354,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { }
     };
 
-    static PyType_Slot _type_slots_AdaptiveMediaSourceCorrelatedTimes[] = 
-    {
+    static PyType_Slot _type_slots_AdaptiveMediaSourceCorrelatedTimes[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceCorrelatedTimes) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceCorrelatedTimes) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceCorrelatedTimes) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceCorrelatedTimes) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdaptiveMediaSourceCorrelatedTimes = {
@@ -1503,13 +1500,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { }
     };
 
-    static PyType_Slot _type_slots_AdaptiveMediaSourceCreationResult[] = 
-    {
+    static PyType_Slot _type_slots_AdaptiveMediaSourceCreationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceCreationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceCreationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceCreationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceCreationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdaptiveMediaSourceCreationResult = {
@@ -1810,13 +1806,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { }
     };
 
-    static PyType_Slot _type_slots_AdaptiveMediaSourceDiagnosticAvailableEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AdaptiveMediaSourceDiagnosticAvailableEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceDiagnosticAvailableEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceDiagnosticAvailableEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceDiagnosticAvailableEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceDiagnosticAvailableEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDiagnosticAvailableEventArgs = {
@@ -1922,13 +1917,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { }
     };
 
-    static PyType_Slot _type_slots_AdaptiveMediaSourceDiagnostics[] = 
-    {
+    static PyType_Slot _type_slots_AdaptiveMediaSourceDiagnostics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceDiagnostics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceDiagnostics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceDiagnostics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceDiagnostics) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDiagnostics = {
@@ -2049,13 +2043,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { }
     };
 
-    static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadBitrateChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadBitrateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceDownloadBitrateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceDownloadBitrateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceDownloadBitrateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceDownloadBitrateChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadBitrateChangedEventArgs = {
@@ -2316,13 +2309,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { }
     };
 
-    static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadCompletedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceDownloadCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceDownloadCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceDownloadCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceDownloadCompletedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadCompletedEventArgs = {
@@ -2603,13 +2595,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { }
     };
 
-    static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadFailedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadFailedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceDownloadFailedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceDownloadFailedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceDownloadFailedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceDownloadFailedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadFailedEventArgs = {
@@ -2701,13 +2692,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { }
     };
 
-    static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadRequestedDeferral[] = 
-    {
+    static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadRequestedDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceDownloadRequestedDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceDownloadRequestedDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceDownloadRequestedDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceDownloadRequestedDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadRequestedDeferral = {
@@ -2978,13 +2968,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { }
     };
 
-    static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceDownloadRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceDownloadRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceDownloadRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceDownloadRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadRequestedEventArgs = {
@@ -3381,13 +3370,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { }
     };
 
-    static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadResult[] = 
-    {
+    static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceDownloadResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceDownloadResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceDownloadResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceDownloadResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadResult = {
@@ -3528,13 +3516,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { }
     };
 
-    static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadStatistics[] = 
-    {
+    static PyType_Slot _type_slots_AdaptiveMediaSourceDownloadStatistics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourceDownloadStatistics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourceDownloadStatistics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourceDownloadStatistics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourceDownloadStatistics) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadStatistics = {
@@ -3655,13 +3642,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { }
     };
 
-    static PyType_Slot _type_slots_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs = {

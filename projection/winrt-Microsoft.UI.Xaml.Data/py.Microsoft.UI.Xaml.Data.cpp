@@ -606,13 +606,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_Binding[] = 
-    {
+    static PyType_Slot _type_slots_Binding[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Binding) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Binding) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Binding) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Binding) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Binding = {
@@ -695,13 +694,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_BindingBase[] = 
-    {
+    static PyType_Slot _type_slots_BindingBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BindingBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BindingBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BindingBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BindingBase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BindingBase = {
@@ -833,13 +831,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_BindingExpression[] = 
-    {
+    static PyType_Slot _type_slots_BindingExpression[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BindingExpression) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BindingExpression) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BindingExpression) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BindingExpression) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BindingExpression = {
@@ -900,13 +897,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_BindingExpressionBase[] = 
-    {
+    static PyType_Slot _type_slots_BindingExpressionBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BindingExpressionBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BindingExpressionBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BindingExpressionBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BindingExpressionBase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BindingExpressionBase = {
@@ -1001,13 +997,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_BindingOperations[] = 
-    {
+    static PyType_Slot _type_slots_BindingOperations[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BindingOperations) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BindingOperations) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BindingOperations) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BindingOperations) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BindingOperations = {
@@ -1356,13 +1351,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_CollectionViewSource[] = 
-    {
+    static PyType_Slot _type_slots_CollectionViewSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CollectionViewSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CollectionViewSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CollectionViewSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CollectionViewSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CollectionViewSource = {
@@ -1557,13 +1551,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_CurrentChangingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CurrentChangingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CurrentChangingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CurrentChangingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CurrentChangingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CurrentChangingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CurrentChangingEventArgs = {
@@ -1696,13 +1689,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_DataErrorsChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DataErrorsChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DataErrorsChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataErrorsChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataErrorsChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataErrorsChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DataErrorsChangedEventArgs = {
@@ -1848,13 +1840,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_ItemIndexRange[] = 
-    {
+    static PyType_Slot _type_slots_ItemIndexRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ItemIndexRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ItemIndexRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ItemIndexRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ItemIndexRange) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ItemIndexRange = {
@@ -1959,13 +1950,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_PropertyChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PropertyChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PropertyChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PropertyChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PropertyChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PropertyChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PropertyChangedEventArgs = {
@@ -2096,13 +2086,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_RelativeSource[] = 
-    {
+    static PyType_Slot _type_slots_RelativeSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RelativeSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RelativeSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RelativeSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RelativeSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RelativeSource = {
@@ -3174,8 +3163,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_ICollectionView[] = 
-    {
+    static PyType_Slot _type_slots_ICollectionView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICollectionView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICollectionView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICollectionView) },
@@ -3185,7 +3173,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_ICollectionView) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_ICollectionView) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_ICollectionView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ICollectionView = {
@@ -3276,13 +3264,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_ICollectionViewFactory[] = 
-    {
+    static PyType_Slot _type_slots_ICollectionViewFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICollectionViewFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICollectionViewFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICollectionViewFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICollectionViewFactory) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ICollectionViewFactory = {
@@ -3383,13 +3370,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_ICollectionViewGroup[] = 
-    {
+    static PyType_Slot _type_slots_ICollectionViewGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICollectionViewGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICollectionViewGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICollectionViewGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICollectionViewGroup) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ICollectionViewGroup = {
@@ -3664,13 +3650,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_ICustomProperty[] = 
-    {
+    static PyType_Slot _type_slots_ICustomProperty[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICustomProperty) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICustomProperty) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICustomProperty) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICustomProperty) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ICustomProperty = {
@@ -3846,13 +3831,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_ICustomPropertyProvider[] = 
-    {
+    static PyType_Slot _type_slots_ICustomPropertyProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICustomPropertyProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICustomPropertyProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICustomPropertyProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICustomPropertyProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ICustomPropertyProvider = {
@@ -3999,13 +3983,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_IItemsRangeInfo[] = 
-    {
+    static PyType_Slot _type_slots_IItemsRangeInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IItemsRangeInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IItemsRangeInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IItemsRangeInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IItemsRangeInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IItemsRangeInfo = {
@@ -4163,13 +4146,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_INotifyDataErrorInfo[] = 
-    {
+    static PyType_Slot _type_slots_INotifyDataErrorInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INotifyDataErrorInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INotifyDataErrorInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INotifyDataErrorInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INotifyDataErrorInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INotifyDataErrorInfo = {
@@ -4275,13 +4257,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_INotifyPropertyChanged[] = 
-    {
+    static PyType_Slot _type_slots_INotifyPropertyChanged[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INotifyPropertyChanged) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INotifyPropertyChanged) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INotifyPropertyChanged) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INotifyPropertyChanged) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INotifyPropertyChanged = {
@@ -4470,13 +4451,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_ISelectionInfo[] = 
-    {
+    static PyType_Slot _type_slots_ISelectionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISelectionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISelectionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISelectionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISelectionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISelectionInfo = {
@@ -4589,13 +4569,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_ISupportIncrementalLoading[] = 
-    {
+    static PyType_Slot _type_slots_ISupportIncrementalLoading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISupportIncrementalLoading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISupportIncrementalLoading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISupportIncrementalLoading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISupportIncrementalLoading) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISupportIncrementalLoading = {
@@ -4726,13 +4705,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_IValueConverter[] = 
-    {
+    static PyType_Slot _type_slots_IValueConverter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IValueConverter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IValueConverter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IValueConverter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IValueConverter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IValueConverter = {
@@ -4849,14 +4827,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot _type_slots_LoadMoreItemsResult[] = 
-    {
+    static PyType_Slot _type_slots_LoadMoreItemsResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoadMoreItemsResult) },
         { Py_tp_init, reinterpret_cast<void*>(_init_LoadMoreItemsResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoadMoreItemsResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoadMoreItemsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoadMoreItemsResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LoadMoreItemsResult = {

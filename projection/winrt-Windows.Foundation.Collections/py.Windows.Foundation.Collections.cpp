@@ -465,8 +465,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { }
     };
 
-    static PyType_Slot _type_slots_PropertySet[] = 
-    {
+    static PyType_Slot _type_slots_PropertySet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PropertySet) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PropertySet) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PropertySet) },
@@ -476,7 +475,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_mp_length, reinterpret_cast<void*>(_map_length_PropertySet) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_PropertySet) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_PropertySet) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PropertySet = {
@@ -946,8 +945,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { }
     };
 
-    static PyType_Slot _type_slots_StringMap[] = 
-    {
+    static PyType_Slot _type_slots_StringMap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StringMap) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StringMap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StringMap) },
@@ -957,7 +955,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_mp_length, reinterpret_cast<void*>(_map_length_StringMap) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_StringMap) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_StringMap) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StringMap = {
@@ -1427,8 +1425,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { }
     };
 
-    static PyType_Slot _type_slots_ValueSet[] = 
-    {
+    static PyType_Slot _type_slots_ValueSet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ValueSet) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ValueSet) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ValueSet) },
@@ -1438,7 +1435,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_mp_length, reinterpret_cast<void*>(_map_length_ValueSet) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_ValueSet) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_ValueSet) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ValueSet = {
@@ -1486,14 +1483,13 @@ namespace py::cpp::Windows::Foundation::Collections
         { }
     };
 
-    static PyType_Slot _type_slots_IIterable[] = 
-    {
+    static PyType_Slot _type_slots_IIterable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IIterable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IIterable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IIterable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IIterable) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_IIterable) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IIterable = {
@@ -1592,15 +1588,14 @@ namespace py::cpp::Windows::Foundation::Collections
         { }
     };
 
-    static PyType_Slot _type_slots_IIterator[] = 
-    {
+    static PyType_Slot _type_slots_IIterator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IIterator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IIterator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IIterator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IIterator) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_IIterator) },
         { Py_tp_iternext, reinterpret_cast<void*>(_iterator_next_IIterator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IIterator = {
@@ -1677,13 +1672,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { }
     };
 
-    static PyType_Slot _type_slots_IKeyValuePair[] = 
-    {
+    static PyType_Slot _type_slots_IKeyValuePair[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IKeyValuePair) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IKeyValuePair) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IKeyValuePair) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IKeyValuePair) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IKeyValuePair = {
@@ -1760,13 +1754,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { }
     };
 
-    static PyType_Slot _type_slots_IMapChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IMapChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMapChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMapChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMapChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMapChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IMapChangedEventArgs = {
@@ -1867,8 +1860,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { }
     };
 
-    static PyType_Slot _type_slots_IMapView[] = 
-    {
+    static PyType_Slot _type_slots_IMapView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMapView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMapView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMapView) },
@@ -1877,7 +1869,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_sq_contains, reinterpret_cast<void*>(_map_contains_IMapView) },
         { Py_mp_length, reinterpret_cast<void*>(_map_length_IMapView) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_IMapView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IMapView = {
@@ -2001,8 +1993,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { }
     };
 
-    static PyType_Slot _type_slots_IMap[] = 
-    {
+    static PyType_Slot _type_slots_IMap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMap) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMap) },
@@ -2012,7 +2003,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_mp_length, reinterpret_cast<void*>(_map_length_IMap) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_IMap) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_IMap) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IMap = {
@@ -2176,8 +2167,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { }
     };
 
-    static PyType_Slot _type_slots_IObservableMap[] = 
-    {
+    static PyType_Slot _type_slots_IObservableMap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IObservableMap) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IObservableMap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IObservableMap) },
@@ -2187,7 +2177,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_mp_length, reinterpret_cast<void*>(_map_length_IObservableMap) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_IObservableMap) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_IObservableMap) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IObservableMap = {
@@ -2381,8 +2371,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { }
     };
 
-    static PyType_Slot _type_slots_IObservableVector[] = 
-    {
+    static PyType_Slot _type_slots_IObservableVector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IObservableVector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IObservableVector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IObservableVector) },
@@ -2392,7 +2381,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_IObservableVector) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_IObservableVector) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_IObservableVector) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IObservableVector = {
@@ -2840,8 +2829,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { }
     };
 
-    static PyType_Slot _type_slots_IPropertySet[] = 
-    {
+    static PyType_Slot _type_slots_IPropertySet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPropertySet) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPropertySet) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPropertySet) },
@@ -2851,7 +2839,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_mp_length, reinterpret_cast<void*>(_map_length_IPropertySet) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_IPropertySet) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_IPropertySet) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPropertySet = {
@@ -2952,13 +2940,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { }
     };
 
-    static PyType_Slot _type_slots_IVectorChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IVectorChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVectorChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVectorChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVectorChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVectorChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVectorChangedEventArgs = {
@@ -3059,8 +3046,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { }
     };
 
-    static PyType_Slot _type_slots_IVectorView[] = 
-    {
+    static PyType_Slot _type_slots_IVectorView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVectorView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVectorView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVectorView) },
@@ -3069,7 +3055,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_IVectorView) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_IVectorView) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_IVectorView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVectorView = {
@@ -3223,8 +3209,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { }
     };
 
-    static PyType_Slot _type_slots_IVector[] = 
-    {
+    static PyType_Slot _type_slots_IVector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVector) },
@@ -3234,7 +3219,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_IVector) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_IVector) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_IVector) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVector = {

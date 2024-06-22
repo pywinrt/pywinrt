@@ -76,13 +76,12 @@ namespace py::cpp::Windows::Networking::Proximity
         { }
     };
 
-    static PyType_Slot _type_slots_ConnectionRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ConnectionRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConnectionRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConnectionRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConnectionRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConnectionRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ConnectionRequestedEventArgs = {
@@ -689,12 +688,11 @@ namespace py::cpp::Windows::Networking::Proximity
         { }
     };
 
-    static PyType_Slot _type_slots_PeerFinder[] = 
-    {
+    static PyType_Slot _type_slots_PeerFinder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PeerFinder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PeerFinder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PeerFinder) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PeerFinder = {
@@ -893,13 +891,12 @@ namespace py::cpp::Windows::Networking::Proximity
         { }
     };
 
-    static PyType_Slot _type_slots_PeerInformation[] = 
-    {
+    static PyType_Slot _type_slots_PeerInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PeerInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PeerInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PeerInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PeerInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PeerInformation = {
@@ -1267,13 +1264,12 @@ namespace py::cpp::Windows::Networking::Proximity
         { }
     };
 
-    static PyType_Slot _type_slots_PeerWatcher[] = 
-    {
+    static PyType_Slot _type_slots_PeerWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PeerWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PeerWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PeerWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PeerWatcher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PeerWatcher = {
@@ -1835,13 +1831,12 @@ namespace py::cpp::Windows::Networking::Proximity
         { }
     };
 
-    static PyType_Slot _type_slots_ProximityDevice[] = 
-    {
+    static PyType_Slot _type_slots_ProximityDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProximityDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProximityDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProximityDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProximityDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProximityDevice = {
@@ -2010,13 +2005,12 @@ namespace py::cpp::Windows::Networking::Proximity
         { }
     };
 
-    static PyType_Slot _type_slots_ProximityMessage[] = 
-    {
+    static PyType_Slot _type_slots_ProximityMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProximityMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProximityMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProximityMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProximityMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProximityMessage = {
@@ -2137,13 +2131,12 @@ namespace py::cpp::Windows::Networking::Proximity
         { }
     };
 
-    static PyType_Slot _type_slots_TriggeredConnectionStateChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_TriggeredConnectionStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TriggeredConnectionStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TriggeredConnectionStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TriggeredConnectionStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TriggeredConnectionStateChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TriggeredConnectionStateChangedEventArgs = {

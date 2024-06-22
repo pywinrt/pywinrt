@@ -98,13 +98,12 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_AddPagesEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AddPagesEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AddPagesEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AddPagesEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AddPagesEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AddPagesEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AddPagesEventArgs = {
@@ -207,13 +206,12 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_GetPreviewPageEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GetPreviewPageEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GetPreviewPageEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GetPreviewPageEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GetPreviewPageEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GetPreviewPageEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GetPreviewPageEventArgs = {
@@ -336,13 +334,12 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_PaginateEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PaginateEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaginateEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaginateEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaginateEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaginateEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaginateEventArgs = {
@@ -762,13 +759,12 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_PrintDocument[] = 
-    {
+    static PyType_Slot _type_slots_PrintDocument[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintDocument) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintDocument) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintDocument) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintDocument) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintDocument = {

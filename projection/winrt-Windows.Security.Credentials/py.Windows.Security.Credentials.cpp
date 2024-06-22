@@ -188,13 +188,12 @@ namespace py::cpp::Windows::Security::Credentials
         { }
     };
 
-    static PyType_Slot _type_slots_KeyCredential[] = 
-    {
+    static PyType_Slot _type_slots_KeyCredential[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyCredential) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyCredential) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyCredential) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyCredential) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KeyCredential = {
@@ -315,13 +314,12 @@ namespace py::cpp::Windows::Security::Credentials
         { }
     };
 
-    static PyType_Slot _type_slots_KeyCredentialAttestationResult[] = 
-    {
+    static PyType_Slot _type_slots_KeyCredentialAttestationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyCredentialAttestationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyCredentialAttestationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyCredentialAttestationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyCredentialAttestationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KeyCredentialAttestationResult = {
@@ -500,12 +498,11 @@ namespace py::cpp::Windows::Security::Credentials
         { }
     };
 
-    static PyType_Slot _type_slots_KeyCredentialManager[] = 
-    {
+    static PyType_Slot _type_slots_KeyCredentialManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyCredentialManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyCredentialManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyCredentialManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KeyCredentialManager = {
@@ -636,13 +633,12 @@ namespace py::cpp::Windows::Security::Credentials
         { }
     };
 
-    static PyType_Slot _type_slots_KeyCredentialOperationResult[] = 
-    {
+    static PyType_Slot _type_slots_KeyCredentialOperationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyCredentialOperationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyCredentialOperationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyCredentialOperationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyCredentialOperationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KeyCredentialOperationResult = {
@@ -743,13 +739,12 @@ namespace py::cpp::Windows::Security::Credentials
         { }
     };
 
-    static PyType_Slot _type_slots_KeyCredentialRetrievalResult[] = 
-    {
+    static PyType_Slot _type_slots_KeyCredentialRetrievalResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyCredentialRetrievalResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyCredentialRetrievalResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyCredentialRetrievalResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyCredentialRetrievalResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KeyCredentialRetrievalResult = {
@@ -1044,13 +1039,12 @@ namespace py::cpp::Windows::Security::Credentials
         { }
     };
 
-    static PyType_Slot _type_slots_PasswordCredential[] = 
-    {
+    static PyType_Slot _type_slots_PasswordCredential[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PasswordCredential) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PasswordCredential) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PasswordCredential) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PasswordCredential) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PasswordCredential = {
@@ -1520,8 +1514,7 @@ namespace py::cpp::Windows::Security::Credentials
         { }
     };
 
-    static PyType_Slot _type_slots_PasswordCredentialPropertyStore[] = 
-    {
+    static PyType_Slot _type_slots_PasswordCredentialPropertyStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PasswordCredentialPropertyStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PasswordCredentialPropertyStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PasswordCredentialPropertyStore) },
@@ -1531,7 +1524,7 @@ namespace py::cpp::Windows::Security::Credentials
         { Py_mp_length, reinterpret_cast<void*>(_map_length_PasswordCredentialPropertyStore) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_PasswordCredentialPropertyStore) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_PasswordCredentialPropertyStore) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PasswordCredentialPropertyStore = {
@@ -1807,13 +1800,12 @@ namespace py::cpp::Windows::Security::Credentials
         { }
     };
 
-    static PyType_Slot _type_slots_PasswordVault[] = 
-    {
+    static PyType_Slot _type_slots_PasswordVault[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PasswordVault) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PasswordVault) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PasswordVault) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PasswordVault) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PasswordVault = {
@@ -2082,13 +2074,12 @@ namespace py::cpp::Windows::Security::Credentials
         { }
     };
 
-    static PyType_Slot _type_slots_WebAccount[] = 
-    {
+    static PyType_Slot _type_slots_WebAccount[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccount) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccount) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccount) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccount) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebAccount = {
@@ -2315,13 +2306,12 @@ namespace py::cpp::Windows::Security::Credentials
         { }
     };
 
-    static PyType_Slot _type_slots_WebAccountProvider[] = 
-    {
+    static PyType_Slot _type_slots_WebAccountProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebAccountProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAccountProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAccountProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAccountProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebAccountProvider = {
@@ -2442,13 +2432,12 @@ namespace py::cpp::Windows::Security::Credentials
         { }
     };
 
-    static PyType_Slot _type_slots_IWebAccount[] = 
-    {
+    static PyType_Slot _type_slots_IWebAccount[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccount) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccount) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccount) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccount) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IWebAccount = {

@@ -86,13 +86,12 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
         { }
     };
 
-    static PyType_Slot _type_slots_PreviewTeamCleanupRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PreviewTeamCleanupRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PreviewTeamCleanupRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PreviewTeamCleanupRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PreviewTeamCleanupRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PreviewTeamCleanupRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PreviewTeamCleanupRequestedEventArgs = {
@@ -173,13 +172,12 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
         { }
     };
 
-    static PyType_Slot _type_slots_PreviewTeamCommandInvokedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PreviewTeamCommandInvokedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PreviewTeamCommandInvokedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PreviewTeamCommandInvokedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PreviewTeamCommandInvokedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PreviewTeamCommandInvokedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PreviewTeamCommandInvokedEventArgs = {
@@ -322,13 +320,12 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
         { }
     };
 
-    static PyType_Slot _type_slots_PreviewTeamDeviceCredentials[] = 
-    {
+    static PyType_Slot _type_slots_PreviewTeamDeviceCredentials[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PreviewTeamDeviceCredentials) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PreviewTeamDeviceCredentials) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PreviewTeamDeviceCredentials) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PreviewTeamDeviceCredentials) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PreviewTeamDeviceCredentials = {
@@ -419,13 +416,12 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
         { }
     };
 
-    static PyType_Slot _type_slots_PreviewTeamEndMeetingRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PreviewTeamEndMeetingRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PreviewTeamEndMeetingRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PreviewTeamEndMeetingRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PreviewTeamEndMeetingRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PreviewTeamEndMeetingRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PreviewTeamEndMeetingRequestedEventArgs = {
@@ -536,13 +532,12 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
         { }
     };
 
-    static PyType_Slot _type_slots_PreviewTeamJoinMeetingRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PreviewTeamJoinMeetingRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PreviewTeamJoinMeetingRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PreviewTeamJoinMeetingRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PreviewTeamJoinMeetingRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PreviewTeamJoinMeetingRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PreviewTeamJoinMeetingRequestedEventArgs = {
@@ -1399,13 +1394,12 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
         { }
     };
 
-    static PyType_Slot _type_slots_PreviewTeamView[] = 
-    {
+    static PyType_Slot _type_slots_PreviewTeamView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PreviewTeamView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PreviewTeamView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PreviewTeamView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PreviewTeamView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PreviewTeamView = {

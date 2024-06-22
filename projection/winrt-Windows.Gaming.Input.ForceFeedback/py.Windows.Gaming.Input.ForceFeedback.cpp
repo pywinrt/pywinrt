@@ -269,13 +269,12 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { }
     };
 
-    static PyType_Slot _type_slots_ConditionForceEffect[] = 
-    {
+    static PyType_Slot _type_slots_ConditionForceEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConditionForceEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConditionForceEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConditionForceEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConditionForceEffect) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ConditionForceEffect = {
@@ -563,13 +562,12 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { }
     };
 
-    static PyType_Slot _type_slots_ConstantForceEffect[] = 
-    {
+    static PyType_Slot _type_slots_ConstantForceEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConstantForceEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConstantForceEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConstantForceEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConstantForceEffect) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ConstantForceEffect = {
@@ -985,13 +983,12 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { }
     };
 
-    static PyType_Slot _type_slots_ForceFeedbackMotor[] = 
-    {
+    static PyType_Slot _type_slots_ForceFeedbackMotor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ForceFeedbackMotor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ForceFeedbackMotor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ForceFeedbackMotor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ForceFeedbackMotor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ForceFeedbackMotor = {
@@ -1307,13 +1304,12 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { }
     };
 
-    static PyType_Slot _type_slots_PeriodicForceEffect[] = 
-    {
+    static PyType_Slot _type_slots_PeriodicForceEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PeriodicForceEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PeriodicForceEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PeriodicForceEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PeriodicForceEffect) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PeriodicForceEffect = {
@@ -1603,13 +1599,12 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { }
     };
 
-    static PyType_Slot _type_slots_RampForceEffect[] = 
-    {
+    static PyType_Slot _type_slots_RampForceEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RampForceEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RampForceEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RampForceEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RampForceEffect) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RampForceEffect = {
@@ -1800,13 +1795,12 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { }
     };
 
-    static PyType_Slot _type_slots_IForceFeedbackEffect[] = 
-    {
+    static PyType_Slot _type_slots_IForceFeedbackEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IForceFeedbackEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IForceFeedbackEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IForceFeedbackEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IForceFeedbackEffect) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IForceFeedbackEffect = {

@@ -174,12 +174,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { }
     };
 
-    static PyType_Slot _type_slots_LocalCategories[] = 
-    {
+    static PyType_Slot _type_slots_LocalCategories[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LocalCategories) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LocalCategories) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LocalCategories) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LocalCategories = {
@@ -473,13 +472,12 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { }
     };
 
-    static PyType_Slot _type_slots_LocalLocation[] = 
-    {
+    static PyType_Slot _type_slots_LocalLocation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LocalLocation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LocalLocation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LocalLocation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LocalLocation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LocalLocation = {
@@ -540,12 +538,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { }
     };
 
-    static PyType_Slot _type_slots_LocalLocationFinder[] = 
-    {
+    static PyType_Slot _type_slots_LocalLocationFinder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LocalLocationFinder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LocalLocationFinder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LocalLocationFinder) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LocalLocationFinder = {
@@ -672,13 +669,12 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { }
     };
 
-    static PyType_Slot _type_slots_LocalLocationFinderResult[] = 
-    {
+    static PyType_Slot _type_slots_LocalLocationFinderResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LocalLocationFinderResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LocalLocationFinderResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LocalLocationFinderResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LocalLocationFinderResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LocalLocationFinderResult = {
@@ -799,13 +795,12 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { }
     };
 
-    static PyType_Slot _type_slots_LocalLocationHoursOfOperationItem[] = 
-    {
+    static PyType_Slot _type_slots_LocalLocationHoursOfOperationItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LocalLocationHoursOfOperationItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LocalLocationHoursOfOperationItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LocalLocationHoursOfOperationItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LocalLocationHoursOfOperationItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LocalLocationHoursOfOperationItem = {
@@ -926,13 +921,12 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { }
     };
 
-    static PyType_Slot _type_slots_LocalLocationRatingInfo[] = 
-    {
+    static PyType_Slot _type_slots_LocalLocationRatingInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LocalLocationRatingInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LocalLocationRatingInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LocalLocationRatingInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LocalLocationRatingInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LocalLocationRatingInfo = {
@@ -990,12 +984,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { }
     };
 
-    static PyType_Slot _type_slots_PlaceInfoHelper[] = 
-    {
+    static PyType_Slot _type_slots_PlaceInfoHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlaceInfoHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlaceInfoHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlaceInfoHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlaceInfoHelper = {

@@ -1185,13 +1185,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         { }
     };
 
-    static PyType_Slot _type_slots_FileInformation[] = 
-    {
+    static PyType_Slot _type_slots_FileInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileInformation = {
@@ -1574,13 +1573,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         { }
     };
 
-    static PyType_Slot _type_slots_FileInformationFactory[] = 
-    {
+    static PyType_Slot _type_slots_FileInformationFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileInformationFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileInformationFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileInformationFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileInformationFactory) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileInformationFactory = {
@@ -3114,13 +3112,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         { }
     };
 
-    static PyType_Slot _type_slots_FolderInformation[] = 
-    {
+    static PyType_Slot _type_slots_FolderInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FolderInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FolderInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FolderInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FolderInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FolderInformation = {
@@ -3391,13 +3388,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         { }
     };
 
-    static PyType_Slot _type_slots_IStorageItemInformation[] = 
-    {
+    static PyType_Slot _type_slots_IStorageItemInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageItemInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageItemInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageItemInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageItemInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IStorageItemInformation = {

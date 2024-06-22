@@ -279,13 +279,12 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
         { }
     };
 
-    static PyType_Slot _type_slots_Geofence[] = 
-    {
+    static PyType_Slot _type_slots_Geofence[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Geofence) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Geofence) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Geofence) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Geofence) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Geofence = {
@@ -545,13 +544,12 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
         { }
     };
 
-    static PyType_Slot _type_slots_GeofenceMonitor[] = 
-    {
+    static PyType_Slot _type_slots_GeofenceMonitor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeofenceMonitor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeofenceMonitor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeofenceMonitor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeofenceMonitor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GeofenceMonitor = {
@@ -718,13 +716,12 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
         { }
     };
 
-    static PyType_Slot _type_slots_GeofenceStateChangeReport[] = 
-    {
+    static PyType_Slot _type_slots_GeofenceStateChangeReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeofenceStateChangeReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeofenceStateChangeReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeofenceStateChangeReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeofenceStateChangeReport) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GeofenceStateChangeReport = {

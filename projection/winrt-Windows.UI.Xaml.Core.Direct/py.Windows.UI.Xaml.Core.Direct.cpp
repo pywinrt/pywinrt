@@ -1835,13 +1835,12 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         { }
     };
 
-    static PyType_Slot _type_slots_XamlDirect[] = 
-    {
+    static PyType_Slot _type_slots_XamlDirect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlDirect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlDirect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlDirect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlDirect) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XamlDirect = {
@@ -1928,13 +1927,12 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         { }
     };
 
-    static PyType_Slot _type_slots_IXamlDirectObject[] = 
-    {
+    static PyType_Slot _type_slots_IXamlDirectObject[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXamlDirectObject) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlDirectObject) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlDirectObject) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlDirectObject) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IXamlDirectObject = {

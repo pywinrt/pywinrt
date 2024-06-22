@@ -203,13 +203,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreIncrementalInkStroke[] = 
-    {
+    static PyType_Slot _type_slots_CoreIncrementalInkStroke[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreIncrementalInkStroke) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreIncrementalInkStroke) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreIncrementalInkStroke) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreIncrementalInkStroke) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreIncrementalInkStroke = {
@@ -684,13 +683,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreInkIndependentInputSource[] = 
-    {
+    static PyType_Slot _type_slots_CoreInkIndependentInputSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreInkIndependentInputSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreInkIndependentInputSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreInkIndependentInputSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreInkIndependentInputSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreInkIndependentInputSource = {
@@ -867,13 +865,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreInkPresenterHost[] = 
-    {
+    static PyType_Slot _type_slots_CoreInkPresenterHost[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreInkPresenterHost) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreInkPresenterHost) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreInkPresenterHost) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreInkPresenterHost) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreInkPresenterHost = {
@@ -1022,13 +1019,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreWetStrokeUpdateEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CoreWetStrokeUpdateEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWetStrokeUpdateEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWetStrokeUpdateEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWetStrokeUpdateEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWetStrokeUpdateEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreWetStrokeUpdateEventArgs = {
@@ -1365,13 +1361,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreWetStrokeUpdateSource[] = 
-    {
+    static PyType_Slot _type_slots_CoreWetStrokeUpdateSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWetStrokeUpdateSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWetStrokeUpdateSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWetStrokeUpdateSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWetStrokeUpdateSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreWetStrokeUpdateSource = {

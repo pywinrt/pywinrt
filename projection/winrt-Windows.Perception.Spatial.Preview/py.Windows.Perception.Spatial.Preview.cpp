@@ -116,13 +116,12 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialGraphInteropFrameOfReferencePreview[] = 
-    {
+    static PyType_Slot _type_slots_SpatialGraphInteropFrameOfReferencePreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialGraphInteropFrameOfReferencePreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialGraphInteropFrameOfReferencePreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialGraphInteropFrameOfReferencePreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialGraphInteropFrameOfReferencePreview) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialGraphInteropFrameOfReferencePreview = {
@@ -328,12 +327,11 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialGraphInteropPreview[] = 
-    {
+    static PyType_Slot _type_slots_SpatialGraphInteropPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialGraphInteropPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialGraphInteropPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialGraphInteropPreview) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialGraphInteropPreview = {

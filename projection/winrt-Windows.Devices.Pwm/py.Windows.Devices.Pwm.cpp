@@ -340,13 +340,12 @@ namespace py::cpp::Windows::Devices::Pwm
         { }
     };
 
-    static PyType_Slot _type_slots_PwmController[] = 
-    {
+    static PyType_Slot _type_slots_PwmController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PwmController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PwmController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PwmController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PwmController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PwmController = {
@@ -701,13 +700,12 @@ namespace py::cpp::Windows::Devices::Pwm
         { }
     };
 
-    static PyType_Slot _type_slots_PwmPin[] = 
-    {
+    static PyType_Slot _type_slots_PwmPin[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PwmPin) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PwmPin) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PwmPin) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PwmPin) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PwmPin = {

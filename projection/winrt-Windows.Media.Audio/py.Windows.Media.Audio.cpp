@@ -551,13 +551,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioDeviceInputNode[] = 
-    {
+    static PyType_Slot _type_slots_AudioDeviceInputNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioDeviceInputNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioDeviceInputNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioDeviceInputNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioDeviceInputNode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioDeviceInputNode = {
@@ -1033,13 +1032,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioDeviceOutputNode[] = 
-    {
+    static PyType_Slot _type_slots_AudioDeviceOutputNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioDeviceOutputNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioDeviceOutputNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioDeviceOutputNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioDeviceOutputNode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioDeviceOutputNode = {
@@ -1905,13 +1903,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioFileInputNode[] = 
-    {
+    static PyType_Slot _type_slots_AudioFileInputNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioFileInputNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioFileInputNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioFileInputNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioFileInputNode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioFileInputNode = {
@@ -2389,13 +2386,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioFileOutputNode[] = 
-    {
+    static PyType_Slot _type_slots_AudioFileOutputNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioFileOutputNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioFileOutputNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioFileOutputNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioFileOutputNode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioFileOutputNode = {
@@ -2476,13 +2472,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioFrameCompletedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AudioFrameCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioFrameCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioFrameCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioFrameCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioFrameCompletedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioFrameCompletedEventArgs = {
@@ -3240,13 +3235,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioFrameInputNode[] = 
-    {
+    static PyType_Slot _type_slots_AudioFrameInputNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioFrameInputNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioFrameInputNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioFrameInputNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioFrameInputNode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioFrameInputNode = {
@@ -3684,13 +3678,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioFrameOutputNode[] = 
-    {
+    static PyType_Slot _type_slots_AudioFrameOutputNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioFrameOutputNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioFrameOutputNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioFrameOutputNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioFrameOutputNode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioFrameOutputNode = {
@@ -4691,13 +4684,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioGraph[] = 
-    {
+    static PyType_Slot _type_slots_AudioGraph[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioGraph) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioGraph) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioGraph) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioGraph) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioGraph = {
@@ -4836,13 +4828,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioGraphBatchUpdater[] = 
-    {
+    static PyType_Slot _type_slots_AudioGraphBatchUpdater[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioGraphBatchUpdater) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioGraphBatchUpdater) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioGraphBatchUpdater) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioGraphBatchUpdater) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioGraphBatchUpdater = {
@@ -4971,13 +4962,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioGraphConnection[] = 
-    {
+    static PyType_Slot _type_slots_AudioGraphConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioGraphConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioGraphConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioGraphConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioGraphConnection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioGraphConnection = {
@@ -5398,13 +5388,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioGraphSettings[] = 
-    {
+    static PyType_Slot _type_slots_AudioGraphSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioGraphSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioGraphSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioGraphSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioGraphSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioGraphSettings = {
@@ -5485,13 +5474,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioGraphUnrecoverableErrorOccurredEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AudioGraphUnrecoverableErrorOccurredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioGraphUnrecoverableErrorOccurredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioGraphUnrecoverableErrorOccurredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioGraphUnrecoverableErrorOccurredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioGraphUnrecoverableErrorOccurredEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioGraphUnrecoverableErrorOccurredEventArgs = {
@@ -5987,13 +5975,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioNodeEmitter[] = 
-    {
+    static PyType_Slot _type_slots_AudioNodeEmitter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioNodeEmitter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioNodeEmitter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioNodeEmitter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioNodeEmitter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioNodeEmitter = {
@@ -6114,13 +6101,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioNodeEmitterConeProperties[] = 
-    {
+    static PyType_Slot _type_slots_AudioNodeEmitterConeProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioNodeEmitterConeProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioNodeEmitterConeProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioNodeEmitterConeProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioNodeEmitterConeProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioNodeEmitterConeProperties = {
@@ -6327,13 +6313,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioNodeEmitterDecayModel[] = 
-    {
+    static PyType_Slot _type_slots_AudioNodeEmitterDecayModel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioNodeEmitterDecayModel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioNodeEmitterDecayModel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioNodeEmitterDecayModel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioNodeEmitterDecayModel) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioNodeEmitterDecayModel = {
@@ -6461,13 +6446,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioNodeEmitterNaturalDecayModelProperties[] = 
-    {
+    static PyType_Slot _type_slots_AudioNodeEmitterNaturalDecayModelProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioNodeEmitterNaturalDecayModelProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioNodeEmitterNaturalDecayModelProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioNodeEmitterNaturalDecayModelProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioNodeEmitterNaturalDecayModelProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioNodeEmitterNaturalDecayModelProperties = {
@@ -6630,13 +6614,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioNodeEmitterShape[] = 
-    {
+    static PyType_Slot _type_slots_AudioNodeEmitterShape[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioNodeEmitterShape) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioNodeEmitterShape) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioNodeEmitterShape) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioNodeEmitterShape) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioNodeEmitterShape = {
@@ -6938,13 +6921,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioNodeListener[] = 
-    {
+    static PyType_Slot _type_slots_AudioNodeListener[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioNodeListener) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioNodeListener) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioNodeListener) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioNodeListener) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioNodeListener = {
@@ -7323,13 +7305,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioPlaybackConnection[] = 
-    {
+    static PyType_Slot _type_slots_AudioPlaybackConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioPlaybackConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioPlaybackConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioPlaybackConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioPlaybackConnection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioPlaybackConnection = {
@@ -7457,13 +7438,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioPlaybackConnectionOpenResult[] = 
-    {
+    static PyType_Slot _type_slots_AudioPlaybackConnectionOpenResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioPlaybackConnectionOpenResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioPlaybackConnectionOpenResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioPlaybackConnectionOpenResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioPlaybackConnectionOpenResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioPlaybackConnectionOpenResult = {
@@ -7793,13 +7773,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioStateMonitor[] = 
-    {
+    static PyType_Slot _type_slots_AudioStateMonitor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioStateMonitor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioStateMonitor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioStateMonitor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioStateMonitor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioStateMonitor = {
@@ -8364,13 +8343,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_AudioSubmixNode[] = 
-    {
+    static PyType_Slot _type_slots_AudioSubmixNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioSubmixNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioSubmixNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioSubmixNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioSubmixNode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioSubmixNode = {
@@ -8491,13 +8469,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_CreateAudioDeviceInputNodeResult[] = 
-    {
+    static PyType_Slot _type_slots_CreateAudioDeviceInputNodeResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CreateAudioDeviceInputNodeResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CreateAudioDeviceInputNodeResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CreateAudioDeviceInputNodeResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CreateAudioDeviceInputNodeResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CreateAudioDeviceInputNodeResult = {
@@ -8618,13 +8595,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_CreateAudioDeviceOutputNodeResult[] = 
-    {
+    static PyType_Slot _type_slots_CreateAudioDeviceOutputNodeResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CreateAudioDeviceOutputNodeResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CreateAudioDeviceOutputNodeResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CreateAudioDeviceOutputNodeResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CreateAudioDeviceOutputNodeResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CreateAudioDeviceOutputNodeResult = {
@@ -8745,13 +8721,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_CreateAudioFileInputNodeResult[] = 
-    {
+    static PyType_Slot _type_slots_CreateAudioFileInputNodeResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CreateAudioFileInputNodeResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CreateAudioFileInputNodeResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CreateAudioFileInputNodeResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CreateAudioFileInputNodeResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CreateAudioFileInputNodeResult = {
@@ -8872,13 +8847,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_CreateAudioFileOutputNodeResult[] = 
-    {
+    static PyType_Slot _type_slots_CreateAudioFileOutputNodeResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CreateAudioFileOutputNodeResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CreateAudioFileOutputNodeResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CreateAudioFileOutputNodeResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CreateAudioFileOutputNodeResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CreateAudioFileOutputNodeResult = {
@@ -8999,13 +8973,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_CreateAudioGraphResult[] = 
-    {
+    static PyType_Slot _type_slots_CreateAudioGraphResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CreateAudioGraphResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CreateAudioGraphResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CreateAudioGraphResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CreateAudioGraphResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CreateAudioGraphResult = {
@@ -9126,13 +9099,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_CreateMediaSourceAudioInputNodeResult[] = 
-    {
+    static PyType_Slot _type_slots_CreateMediaSourceAudioInputNodeResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CreateMediaSourceAudioInputNodeResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CreateMediaSourceAudioInputNodeResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CreateMediaSourceAudioInputNodeResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CreateMediaSourceAudioInputNodeResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CreateMediaSourceAudioInputNodeResult = {
@@ -9401,13 +9373,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_EchoEffectDefinition[] = 
-    {
+    static PyType_Slot _type_slots_EchoEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EchoEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EchoEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EchoEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EchoEffectDefinition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EchoEffectDefinition = {
@@ -9612,13 +9583,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_EqualizerBand[] = 
-    {
+    static PyType_Slot _type_slots_EqualizerBand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EqualizerBand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EqualizerBand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EqualizerBand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EqualizerBand) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EqualizerBand = {
@@ -9763,13 +9733,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_EqualizerEffectDefinition[] = 
-    {
+    static PyType_Slot _type_slots_EqualizerEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EqualizerEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EqualizerEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EqualizerEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EqualizerEffectDefinition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EqualizerEffectDefinition = {
@@ -9850,13 +9819,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_FrameInputNodeQuantumStartedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_FrameInputNodeQuantumStartedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameInputNodeQuantumStartedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameInputNodeQuantumStartedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameInputNodeQuantumStartedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameInputNodeQuantumStartedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FrameInputNodeQuantumStartedEventArgs = {
@@ -10077,13 +10045,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_LimiterEffectDefinition[] = 
-    {
+    static PyType_Slot _type_slots_LimiterEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LimiterEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LimiterEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LimiterEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LimiterEffectDefinition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LimiterEffectDefinition = {
@@ -10949,13 +10916,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_MediaSourceAudioInputNode[] = 
-    {
+    static PyType_Slot _type_slots_MediaSourceAudioInputNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaSourceAudioInputNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaSourceAudioInputNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaSourceAudioInputNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaSourceAudioInputNode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaSourceAudioInputNode = {
@@ -12184,13 +12150,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_ReverbEffectDefinition[] = 
-    {
+    static PyType_Slot _type_slots_ReverbEffectDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ReverbEffectDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ReverbEffectDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ReverbEffectDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ReverbEffectDefinition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ReverbEffectDefinition = {
@@ -12271,13 +12236,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_SetDefaultSpatialAudioFormatResult[] = 
-    {
+    static PyType_Slot _type_slots_SetDefaultSpatialAudioFormatResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SetDefaultSpatialAudioFormatResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SetDefaultSpatialAudioFormatResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SetDefaultSpatialAudioFormatResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SetDefaultSpatialAudioFormatResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SetDefaultSpatialAudioFormatResult = {
@@ -12558,13 +12522,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialAudioDeviceConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_SpatialAudioDeviceConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialAudioDeviceConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialAudioDeviceConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialAudioDeviceConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialAudioDeviceConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialAudioDeviceConfiguration = {
@@ -12792,13 +12755,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialAudioFormatConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_SpatialAudioFormatConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialAudioFormatConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialAudioFormatConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialAudioFormatConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialAudioFormatConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialAudioFormatConfiguration = {
@@ -12984,12 +12946,11 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialAudioFormatSubtype[] = 
-    {
+    static PyType_Slot _type_slots_SpatialAudioFormatSubtype[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialAudioFormatSubtype) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialAudioFormatSubtype) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialAudioFormatSubtype) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialAudioFormatSubtype = {
@@ -13537,13 +13498,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_IAudioInputNode[] = 
-    {
+    static PyType_Slot _type_slots_IAudioInputNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAudioInputNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAudioInputNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAudioInputNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAudioInputNode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAudioInputNode = {
@@ -14079,13 +14039,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_IAudioInputNode2[] = 
-    {
+    static PyType_Slot _type_slots_IAudioInputNode2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAudioInputNode2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAudioInputNode2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAudioInputNode2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAudioInputNode2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAudioInputNode2 = {
@@ -14493,13 +14452,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_IAudioNode[] = 
-    {
+    static PyType_Slot _type_slots_IAudioNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAudioNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAudioNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAudioNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAudioNode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAudioNode = {
@@ -14955,13 +14913,12 @@ namespace py::cpp::Windows::Media::Audio
         { }
     };
 
-    static PyType_Slot _type_slots_IAudioNodeWithListener[] = 
-    {
+    static PyType_Slot _type_slots_IAudioNodeWithListener[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAudioNodeWithListener) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAudioNodeWithListener) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAudioNodeWithListener) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAudioNodeWithListener) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAudioNodeWithListener = {

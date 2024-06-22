@@ -521,12 +521,11 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { }
     };
 
-    static PyType_Slot _type_slots_CurrentApp[] = 
-    {
+    static PyType_Slot _type_slots_CurrentApp[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CurrentApp) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CurrentApp) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CurrentApp) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CurrentApp = {
@@ -1028,12 +1027,11 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { }
     };
 
-    static PyType_Slot _type_slots_CurrentAppSimulator[] = 
-    {
+    static PyType_Slot _type_slots_CurrentAppSimulator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CurrentAppSimulator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CurrentAppSimulator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CurrentAppSimulator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CurrentAppSimulator = {
@@ -1258,13 +1256,12 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { }
     };
 
-    static PyType_Slot _type_slots_LicenseInformation[] = 
-    {
+    static PyType_Slot _type_slots_LicenseInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LicenseInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LicenseInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LicenseInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LicenseInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LicenseInformation = {
@@ -1525,13 +1522,12 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { }
     };
 
-    static PyType_Slot _type_slots_ListingInformation[] = 
-    {
+    static PyType_Slot _type_slots_ListingInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListingInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListingInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListingInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListingInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ListingInformation = {
@@ -1672,13 +1668,12 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { }
     };
 
-    static PyType_Slot _type_slots_ProductLicense[] = 
-    {
+    static PyType_Slot _type_slots_ProductLicense[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProductLicense) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProductLicense) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProductLicense) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProductLicense) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProductLicense = {
@@ -1979,13 +1974,12 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { }
     };
 
-    static PyType_Slot _type_slots_ProductListing[] = 
-    {
+    static PyType_Slot _type_slots_ProductListing[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProductListing) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProductListing) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProductListing) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProductListing) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProductListing = {
@@ -2227,13 +2221,12 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { }
     };
 
-    static PyType_Slot _type_slots_ProductPurchaseDisplayProperties[] = 
-    {
+    static PyType_Slot _type_slots_ProductPurchaseDisplayProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProductPurchaseDisplayProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProductPurchaseDisplayProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProductPurchaseDisplayProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProductPurchaseDisplayProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProductPurchaseDisplayProperties = {
@@ -2374,13 +2367,12 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { }
     };
 
-    static PyType_Slot _type_slots_PurchaseResults[] = 
-    {
+    static PyType_Slot _type_slots_PurchaseResults[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PurchaseResults) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PurchaseResults) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PurchaseResults) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PurchaseResults) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PurchaseResults = {
@@ -2501,13 +2493,12 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { }
     };
 
-    static PyType_Slot _type_slots_UnfulfilledConsumable[] = 
-    {
+    static PyType_Slot _type_slots_UnfulfilledConsumable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UnfulfilledConsumable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UnfulfilledConsumable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UnfulfilledConsumable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UnfulfilledConsumable) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UnfulfilledConsumable = {

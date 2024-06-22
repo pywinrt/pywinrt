@@ -551,13 +551,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkDrawingAttributes[] = 
-    {
+    static PyType_Slot _type_slots_InkDrawingAttributes[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkDrawingAttributes) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkDrawingAttributes) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkDrawingAttributes) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkDrawingAttributes) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkDrawingAttributes = {
@@ -692,13 +691,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkDrawingAttributesPencilProperties[] = 
-    {
+    static PyType_Slot _type_slots_InkDrawingAttributesPencilProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkDrawingAttributesPencilProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkDrawingAttributesPencilProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkDrawingAttributesPencilProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkDrawingAttributesPencilProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkDrawingAttributesPencilProperties = {
@@ -903,13 +901,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkInputConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_InkInputConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkInputConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkInputConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkInputConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkInputConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkInputConfiguration = {
@@ -1066,13 +1063,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkInputProcessingConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_InkInputProcessingConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkInputProcessingConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkInputProcessingConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkInputProcessingConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkInputProcessingConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkInputProcessingConfiguration = {
@@ -1879,13 +1875,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkManager[] = 
-    {
+    static PyType_Slot _type_slots_InkManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkManager = {
@@ -2090,13 +2085,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkModelerAttributes[] = 
-    {
+    static PyType_Slot _type_slots_InkModelerAttributes[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkModelerAttributes) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkModelerAttributes) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkModelerAttributes) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkModelerAttributes) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkModelerAttributes = {
@@ -2301,13 +2295,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkPoint[] = 
-    {
+    static PyType_Slot _type_slots_InkPoint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkPoint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkPoint) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkPoint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkPoint) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkPoint = {
@@ -2856,13 +2849,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkPresenter[] = 
-    {
+    static PyType_Slot _type_slots_InkPresenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkPresenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkPresenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkPresenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkPresenter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkPresenter = {
@@ -3495,13 +3487,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkPresenterProtractor[] = 
-    {
+    static PyType_Slot _type_slots_InkPresenterProtractor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkPresenterProtractor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkPresenterProtractor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkPresenterProtractor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkPresenterProtractor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkPresenterProtractor = {
@@ -3990,13 +3981,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkPresenterRuler[] = 
-    {
+    static PyType_Slot _type_slots_InkPresenterRuler[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkPresenterRuler) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkPresenterRuler) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkPresenterRuler) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkPresenterRuler) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkPresenterRuler = {
@@ -4137,13 +4127,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkRecognitionResult[] = 
-    {
+    static PyType_Slot _type_slots_InkRecognitionResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkRecognitionResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkRecognitionResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkRecognitionResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkRecognitionResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkRecognitionResult = {
@@ -4224,13 +4213,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkRecognizer[] = 
-    {
+    static PyType_Slot _type_slots_InkRecognizer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkRecognizer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkRecognizer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkRecognizer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkRecognizer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkRecognizer = {
@@ -4409,13 +4397,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkRecognizerContainer[] = 
-    {
+    static PyType_Slot _type_slots_InkRecognizerContainer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkRecognizerContainer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkRecognizerContainer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkRecognizerContainer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkRecognizerContainer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkRecognizerContainer = {
@@ -4886,13 +4873,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkStroke[] = 
-    {
+    static PyType_Slot _type_slots_InkStroke[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkStroke) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkStroke) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkStroke) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkStroke) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkStroke = {
@@ -5193,13 +5179,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkStrokeBuilder[] = 
-    {
+    static PyType_Slot _type_slots_InkStrokeBuilder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkStrokeBuilder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkStrokeBuilder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkStrokeBuilder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkStrokeBuilder) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkStrokeBuilder = {
@@ -5829,13 +5814,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkStrokeContainer[] = 
-    {
+    static PyType_Slot _type_slots_InkStrokeContainer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkStrokeContainer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkStrokeContainer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkStrokeContainer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkStrokeContainer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkStrokeContainer = {
@@ -6096,13 +6080,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkStrokeInput[] = 
-    {
+    static PyType_Slot _type_slots_InkStrokeInput[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkStrokeInput) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkStrokeInput) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkStrokeInput) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkStrokeInput) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkStrokeInput = {
@@ -6303,13 +6286,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkStrokeRenderingSegment[] = 
-    {
+    static PyType_Slot _type_slots_InkStrokeRenderingSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkStrokeRenderingSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkStrokeRenderingSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkStrokeRenderingSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkStrokeRenderingSegment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkStrokeRenderingSegment = {
@@ -6390,13 +6372,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkStrokesCollectedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_InkStrokesCollectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkStrokesCollectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkStrokesCollectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkStrokesCollectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkStrokesCollectedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkStrokesCollectedEventArgs = {
@@ -6477,13 +6458,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkStrokesErasedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_InkStrokesErasedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkStrokesErasedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkStrokesErasedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkStrokesErasedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkStrokesErasedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkStrokesErasedEventArgs = {
@@ -6605,13 +6585,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkSynchronizer[] = 
-    {
+    static PyType_Slot _type_slots_InkSynchronizer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkSynchronizer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkSynchronizer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkSynchronizer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkSynchronizer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkSynchronizer = {
@@ -7007,13 +6986,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_InkUnprocessedInput[] = 
-    {
+    static PyType_Slot _type_slots_InkUnprocessedInput[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkUnprocessedInput) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkUnprocessedInput) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkUnprocessedInput) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkUnprocessedInput) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkUnprocessedInput = {
@@ -7256,13 +7234,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_PenAndInkSettings[] = 
-    {
+    static PyType_Slot _type_slots_PenAndInkSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PenAndInkSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PenAndInkSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PenAndInkSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PenAndInkSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PenAndInkSettings = {
@@ -7382,13 +7359,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_IInkPointFactory[] = 
-    {
+    static PyType_Slot _type_slots_IInkPointFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IInkPointFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInkPointFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInkPointFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInkPointFactory) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IInkPointFactory = {
@@ -7481,13 +7457,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_IInkPresenterRulerFactory[] = 
-    {
+    static PyType_Slot _type_slots_IInkPresenterRulerFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IInkPresenterRulerFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInkPresenterRulerFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInkPresenterRulerFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInkPresenterRulerFactory) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IInkPresenterRulerFactory = {
@@ -7760,13 +7735,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_IInkPresenterStencil[] = 
-    {
+    static PyType_Slot _type_slots_IInkPresenterStencil[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IInkPresenterStencil) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInkPresenterStencil) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInkPresenterStencil) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInkPresenterStencil) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IInkPresenterStencil = {
@@ -7923,13 +7897,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_IInkRecognizerContainer[] = 
-    {
+    static PyType_Slot _type_slots_IInkRecognizerContainer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IInkRecognizerContainer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInkRecognizerContainer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInkRecognizerContainer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInkRecognizerContainer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IInkRecognizerContainer = {
@@ -8420,13 +8393,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }
     };
 
-    static PyType_Slot _type_slots_IInkStrokeContainer[] = 
-    {
+    static PyType_Slot _type_slots_IInkStrokeContainer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IInkStrokeContainer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInkStrokeContainer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInkStrokeContainer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInkStrokeContainer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IInkStrokeContainer = {

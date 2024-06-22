@@ -443,13 +443,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_ControlChannelTrigger[] = 
-    {
+    static PyType_Slot _type_slots_ControlChannelTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ControlChannelTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ControlChannelTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ControlChannelTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ControlChannelTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ControlChannelTrigger = {
@@ -1131,13 +1130,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_DatagramSocket[] = 
-    {
+    static PyType_Slot _type_slots_DatagramSocket[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DatagramSocket) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DatagramSocket) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DatagramSocket) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DatagramSocket) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DatagramSocket = {
@@ -1464,13 +1462,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_DatagramSocketControl[] = 
-    {
+    static PyType_Slot _type_slots_DatagramSocketControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DatagramSocketControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DatagramSocketControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DatagramSocketControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DatagramSocketControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DatagramSocketControl = {
@@ -1611,13 +1608,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_DatagramSocketInformation[] = 
-    {
+    static PyType_Slot _type_slots_DatagramSocketInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DatagramSocketInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DatagramSocketInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DatagramSocketInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DatagramSocketInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DatagramSocketInformation = {
@@ -1798,13 +1794,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_DatagramSocketMessageReceivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DatagramSocketMessageReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DatagramSocketMessageReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DatagramSocketMessageReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DatagramSocketMessageReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DatagramSocketMessageReceivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DatagramSocketMessageReceivedEventArgs = {
@@ -2286,13 +2281,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_MessageWebSocket[] = 
-    {
+    static PyType_Slot _type_slots_MessageWebSocket[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MessageWebSocket) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MessageWebSocket) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MessageWebSocket) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MessageWebSocket) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MessageWebSocket = {
@@ -2797,13 +2791,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_MessageWebSocketControl[] = 
-    {
+    static PyType_Slot _type_slots_MessageWebSocketControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MessageWebSocketControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MessageWebSocketControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MessageWebSocketControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MessageWebSocketControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MessageWebSocketControl = {
@@ -3004,13 +2997,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_MessageWebSocketInformation[] = 
-    {
+    static PyType_Slot _type_slots_MessageWebSocketInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MessageWebSocketInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MessageWebSocketInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MessageWebSocketInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MessageWebSocketInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MessageWebSocketInformation = {
@@ -3171,13 +3163,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_MessageWebSocketMessageReceivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MessageWebSocketMessageReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MessageWebSocketMessageReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MessageWebSocketMessageReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MessageWebSocketMessageReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MessageWebSocketMessageReceivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MessageWebSocketMessageReceivedEventArgs = {
@@ -3462,13 +3453,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_ServerMessageWebSocket[] = 
-    {
+    static PyType_Slot _type_slots_ServerMessageWebSocket[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ServerMessageWebSocket) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ServerMessageWebSocket) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ServerMessageWebSocket) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ServerMessageWebSocket) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ServerMessageWebSocket = {
@@ -3577,13 +3567,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_ServerMessageWebSocketControl[] = 
-    {
+    static PyType_Slot _type_slots_ServerMessageWebSocketControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ServerMessageWebSocketControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ServerMessageWebSocketControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ServerMessageWebSocketControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ServerMessageWebSocketControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ServerMessageWebSocketControl = {
@@ -3704,13 +3693,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_ServerMessageWebSocketInformation[] = 
-    {
+    static PyType_Slot _type_slots_ServerMessageWebSocketInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ServerMessageWebSocketInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ServerMessageWebSocketInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ServerMessageWebSocketInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ServerMessageWebSocketInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ServerMessageWebSocketInformation = {
@@ -3950,13 +3938,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_ServerStreamWebSocket[] = 
-    {
+    static PyType_Slot _type_slots_ServerStreamWebSocket[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ServerStreamWebSocket) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ServerStreamWebSocket) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ServerStreamWebSocket) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ServerStreamWebSocket) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ServerStreamWebSocket = {
@@ -4077,13 +4064,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_ServerStreamWebSocketInformation[] = 
-    {
+    static PyType_Slot _type_slots_ServerStreamWebSocketInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ServerStreamWebSocketInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ServerStreamWebSocketInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ServerStreamWebSocketInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ServerStreamWebSocketInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ServerStreamWebSocketInformation = {
@@ -4188,13 +4174,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_SocketActivityContext[] = 
-    {
+    static PyType_Slot _type_slots_SocketActivityContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocketActivityContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SocketActivityContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocketActivityContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocketActivityContext) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SocketActivityContext = {
@@ -4414,13 +4399,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_SocketActivityInformation[] = 
-    {
+    static PyType_Slot _type_slots_SocketActivityInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocketActivityInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SocketActivityInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocketActivityInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocketActivityInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SocketActivityInformation = {
@@ -4547,13 +4531,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_SocketActivityTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_SocketActivityTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocketActivityTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SocketActivityTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocketActivityTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocketActivityTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SocketActivityTriggerDetails = {
@@ -4611,12 +4594,11 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_SocketError[] = 
-    {
+    static PyType_Slot _type_slots_SocketError[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocketError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocketError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocketError) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SocketError = {
@@ -5205,13 +5187,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_StreamSocket[] = 
-    {
+    static PyType_Slot _type_slots_StreamSocket[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StreamSocket) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StreamSocket) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StreamSocket) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StreamSocket) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StreamSocket = {
@@ -5702,13 +5683,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_StreamSocketControl[] = 
-    {
+    static PyType_Slot _type_slots_StreamSocketControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StreamSocketControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StreamSocketControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StreamSocketControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StreamSocketControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StreamSocketControl = {
@@ -6049,13 +6029,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_StreamSocketInformation[] = 
-    {
+    static PyType_Slot _type_slots_StreamSocketInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StreamSocketInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StreamSocketInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StreamSocketInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StreamSocketInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StreamSocketInformation = {
@@ -6523,13 +6502,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_StreamSocketListener[] = 
-    {
+    static PyType_Slot _type_slots_StreamSocketListener[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StreamSocketListener) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StreamSocketListener) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StreamSocketListener) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StreamSocketListener) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StreamSocketListener = {
@@ -6610,13 +6588,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_StreamSocketListenerConnectionReceivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_StreamSocketListenerConnectionReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StreamSocketListenerConnectionReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StreamSocketListenerConnectionReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StreamSocketListenerConnectionReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StreamSocketListenerConnectionReceivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StreamSocketListenerConnectionReceivedEventArgs = {
@@ -6917,13 +6894,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_StreamSocketListenerControl[] = 
-    {
+    static PyType_Slot _type_slots_StreamSocketListenerControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StreamSocketListenerControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StreamSocketListenerControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StreamSocketListenerControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StreamSocketListenerControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StreamSocketListenerControl = {
@@ -7004,13 +6980,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_StreamSocketListenerInformation[] = 
-    {
+    static PyType_Slot _type_slots_StreamSocketListenerInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StreamSocketListenerInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StreamSocketListenerInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StreamSocketListenerInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StreamSocketListenerInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StreamSocketListenerInformation = {
@@ -7403,13 +7378,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_StreamWebSocket[] = 
-    {
+    static PyType_Slot _type_slots_StreamWebSocket[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StreamWebSocket) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StreamWebSocket) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StreamWebSocket) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StreamWebSocket) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StreamWebSocket = {
@@ -7818,13 +7792,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_StreamWebSocketControl[] = 
-    {
+    static PyType_Slot _type_slots_StreamWebSocketControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StreamWebSocketControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StreamWebSocketControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StreamWebSocketControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StreamWebSocketControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StreamWebSocketControl = {
@@ -8025,13 +7998,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_StreamWebSocketInformation[] = 
-    {
+    static PyType_Slot _type_slots_StreamWebSocketInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StreamWebSocketInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StreamWebSocketInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StreamWebSocketInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StreamWebSocketInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StreamWebSocketInformation = {
@@ -8132,13 +8104,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_WebSocketClosedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebSocketClosedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebSocketClosedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebSocketClosedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebSocketClosedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebSocketClosedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebSocketClosedEventArgs = {
@@ -8196,12 +8167,11 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_WebSocketError[] = 
-    {
+    static PyType_Slot _type_slots_WebSocketError[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebSocketError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebSocketError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebSocketError) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebSocketError = {
@@ -8343,13 +8313,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_WebSocketKeepAlive[] = 
-    {
+    static PyType_Slot _type_slots_WebSocketKeepAlive[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebSocketKeepAlive) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebSocketKeepAlive) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebSocketKeepAlive) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebSocketKeepAlive) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebSocketKeepAlive = {
@@ -8551,13 +8520,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_WebSocketServerCustomValidationRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebSocketServerCustomValidationRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebSocketServerCustomValidationRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebSocketServerCustomValidationRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebSocketServerCustomValidationRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebSocketServerCustomValidationRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebSocketServerCustomValidationRequestedEventArgs = {
@@ -8638,13 +8606,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_IControlChannelTriggerEventDetails[] = 
-    {
+    static PyType_Slot _type_slots_IControlChannelTriggerEventDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IControlChannelTriggerEventDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IControlChannelTriggerEventDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IControlChannelTriggerEventDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IControlChannelTriggerEventDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IControlChannelTriggerEventDetails = {
@@ -8765,13 +8732,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_IControlChannelTriggerResetEventDetails[] = 
-    {
+    static PyType_Slot _type_slots_IControlChannelTriggerResetEventDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IControlChannelTriggerResetEventDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IControlChannelTriggerResetEventDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IControlChannelTriggerResetEventDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IControlChannelTriggerResetEventDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IControlChannelTriggerResetEventDetails = {
@@ -9037,13 +9003,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_IWebSocket[] = 
-    {
+    static PyType_Slot _type_slots_IWebSocket[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebSocket) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebSocket) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebSocket) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebSocket) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IWebSocket = {
@@ -9268,13 +9233,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_IWebSocketControl[] = 
-    {
+    static PyType_Slot _type_slots_IWebSocketControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebSocketControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebSocketControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebSocketControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebSocketControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IWebSocketControl = {
@@ -9519,13 +9483,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_IWebSocketControl2[] = 
-    {
+    static PyType_Slot _type_slots_IWebSocketControl2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebSocketControl2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebSocketControl2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebSocketControl2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebSocketControl2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IWebSocketControl2 = {
@@ -9646,13 +9609,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_IWebSocketInformation[] = 
-    {
+    static PyType_Slot _type_slots_IWebSocketInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebSocketInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebSocketInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebSocketInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebSocketInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IWebSocketInformation = {
@@ -9853,13 +9815,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_IWebSocketInformation2[] = 
-    {
+    static PyType_Slot _type_slots_IWebSocketInformation2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebSocketInformation2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebSocketInformation2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebSocketInformation2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebSocketInformation2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IWebSocketInformation2 = {
@@ -10151,14 +10112,13 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_BandwidthStatistics[] = 
-    {
+    static PyType_Slot _type_slots_BandwidthStatistics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BandwidthStatistics) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BandwidthStatistics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BandwidthStatistics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BandwidthStatistics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BandwidthStatistics) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BandwidthStatistics = {
@@ -10380,14 +10340,13 @@ namespace py::cpp::Windows::Networking::Sockets
         { }
     };
 
-    static PyType_Slot _type_slots_RoundTripTimeStatistics[] = 
-    {
+    static PyType_Slot _type_slots_RoundTripTimeStatistics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RoundTripTimeStatistics) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RoundTripTimeStatistics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RoundTripTimeStatistics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RoundTripTimeStatistics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RoundTripTimeStatistics) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RoundTripTimeStatistics = {

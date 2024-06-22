@@ -156,13 +156,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity
         { }
     };
 
-    static PyType_Slot _type_slots_EnterpriseKeyCredentialRegistrationInfo[] = 
-    {
+    static PyType_Slot _type_slots_EnterpriseKeyCredentialRegistrationInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EnterpriseKeyCredentialRegistrationInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EnterpriseKeyCredentialRegistrationInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EnterpriseKeyCredentialRegistrationInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EnterpriseKeyCredentialRegistrationInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EnterpriseKeyCredentialRegistrationInfo = {
@@ -272,13 +271,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity
         { }
     };
 
-    static PyType_Slot _type_slots_EnterpriseKeyCredentialRegistrationManager[] = 
-    {
+    static PyType_Slot _type_slots_EnterpriseKeyCredentialRegistrationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EnterpriseKeyCredentialRegistrationManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EnterpriseKeyCredentialRegistrationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EnterpriseKeyCredentialRegistrationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EnterpriseKeyCredentialRegistrationManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EnterpriseKeyCredentialRegistrationManager = {

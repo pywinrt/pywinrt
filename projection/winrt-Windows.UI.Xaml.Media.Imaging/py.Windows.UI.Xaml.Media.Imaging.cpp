@@ -770,13 +770,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_BitmapImage[] = 
-    {
+    static PyType_Slot _type_slots_BitmapImage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapImage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapImage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapImage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapImage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BitmapImage = {
@@ -1013,13 +1012,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_BitmapSource[] = 
-    {
+    static PyType_Slot _type_slots_BitmapSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BitmapSource = {
@@ -1155,13 +1153,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_DownloadProgressEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DownloadProgressEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DownloadProgressEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DownloadProgressEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DownloadProgressEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DownloadProgressEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DownloadProgressEventArgs = {
@@ -1406,13 +1403,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_RenderTargetBitmap[] = 
-    {
+    static PyType_Slot _type_slots_RenderTargetBitmap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RenderTargetBitmap) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RenderTargetBitmap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RenderTargetBitmap) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RenderTargetBitmap) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RenderTargetBitmap = {
@@ -1606,13 +1602,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_SoftwareBitmapSource[] = 
-    {
+    static PyType_Slot _type_slots_SoftwareBitmapSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SoftwareBitmapSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SoftwareBitmapSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SoftwareBitmapSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SoftwareBitmapSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SoftwareBitmapSource = {
@@ -1715,13 +1710,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_SurfaceImageSource[] = 
-    {
+    static PyType_Slot _type_slots_SurfaceImageSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SurfaceImageSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SurfaceImageSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SurfaceImageSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SurfaceImageSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SurfaceImageSource = {
@@ -2142,13 +2136,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_SvgImageSource[] = 
-    {
+    static PyType_Slot _type_slots_SvgImageSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SvgImageSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SvgImageSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SvgImageSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SvgImageSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SvgImageSource = {
@@ -2257,13 +2250,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_SvgImageSourceFailedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SvgImageSourceFailedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SvgImageSourceFailedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SvgImageSourceFailedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SvgImageSourceFailedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SvgImageSourceFailedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SvgImageSourceFailedEventArgs = {
@@ -2324,13 +2316,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_SvgImageSourceOpenedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SvgImageSourceOpenedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SvgImageSourceOpenedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SvgImageSourceOpenedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SvgImageSourceOpenedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SvgImageSourceOpenedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SvgImageSourceOpenedEventArgs = {
@@ -2433,13 +2424,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_VirtualSurfaceImageSource[] = 
-    {
+    static PyType_Slot _type_slots_VirtualSurfaceImageSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VirtualSurfaceImageSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VirtualSurfaceImageSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VirtualSurfaceImageSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VirtualSurfaceImageSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VirtualSurfaceImageSource = {
@@ -2576,13 +2566,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_WriteableBitmap[] = 
-    {
+    static PyType_Slot _type_slots_WriteableBitmap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WriteableBitmap) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WriteableBitmap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WriteableBitmap) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WriteableBitmap) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WriteableBitmap = {
@@ -2643,13 +2632,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_XamlRenderingBackgroundTask[] = 
-    {
+    static PyType_Slot _type_slots_XamlRenderingBackgroundTask[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlRenderingBackgroundTask) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlRenderingBackgroundTask) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlRenderingBackgroundTask) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlRenderingBackgroundTask) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XamlRenderingBackgroundTask = {

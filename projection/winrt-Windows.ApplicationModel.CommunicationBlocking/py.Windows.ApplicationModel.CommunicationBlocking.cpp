@@ -194,12 +194,11 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
         { }
     };
 
-    static PyType_Slot _type_slots_CommunicationBlockingAccessManager[] = 
-    {
+    static PyType_Slot _type_slots_CommunicationBlockingAccessManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CommunicationBlockingAccessManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CommunicationBlockingAccessManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CommunicationBlockingAccessManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CommunicationBlockingAccessManager = {
@@ -335,12 +334,11 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
         { }
     };
 
-    static PyType_Slot _type_slots_CommunicationBlockingAppManager[] = 
-    {
+    static PyType_Slot _type_slots_CommunicationBlockingAppManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CommunicationBlockingAppManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CommunicationBlockingAppManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CommunicationBlockingAppManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CommunicationBlockingAppManager = {

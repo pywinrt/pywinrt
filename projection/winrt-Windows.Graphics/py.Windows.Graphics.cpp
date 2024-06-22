@@ -56,13 +56,12 @@ namespace py::cpp::Windows::Graphics
         { }
     };
 
-    static PyType_Slot _type_slots_IGeometrySource2D[] = 
-    {
+    static PyType_Slot _type_slots_IGeometrySource2D[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGeometrySource2D) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGeometrySource2D) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGeometrySource2D) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGeometrySource2D) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IGeometrySource2D = {
@@ -214,14 +213,13 @@ namespace py::cpp::Windows::Graphics
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayAdapterId[] = 
-    {
+    static PyType_Slot _type_slots_DisplayAdapterId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayAdapterId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_DisplayAdapterId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayAdapterId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayAdapterId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayAdapterId) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayAdapterId = {
@@ -338,14 +336,13 @@ namespace py::cpp::Windows::Graphics
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayId[] = 
-    {
+    static PyType_Slot _type_slots_DisplayId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_DisplayId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayId) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayId = {
@@ -497,14 +494,13 @@ namespace py::cpp::Windows::Graphics
         { }
     };
 
-    static PyType_Slot _type_slots_PointInt32[] = 
-    {
+    static PyType_Slot _type_slots_PointInt32[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointInt32) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PointInt32) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointInt32) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointInt32) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointInt32) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PointInt32 = {
@@ -726,14 +722,13 @@ namespace py::cpp::Windows::Graphics
         { }
     };
 
-    static PyType_Slot _type_slots_RectInt32[] = 
-    {
+    static PyType_Slot _type_slots_RectInt32[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RectInt32) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RectInt32) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RectInt32) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RectInt32) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RectInt32) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RectInt32 = {
@@ -885,14 +880,13 @@ namespace py::cpp::Windows::Graphics
         { }
     };
 
-    static PyType_Slot _type_slots_SizeInt32[] = 
-    {
+    static PyType_Slot _type_slots_SizeInt32[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SizeInt32) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SizeInt32) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SizeInt32) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SizeInt32) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SizeInt32) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SizeInt32 = {

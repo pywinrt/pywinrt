@@ -156,13 +156,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }
     };
 
-    static PyType_Slot _type_slots_CivicAddress[] = 
-    {
+    static PyType_Slot _type_slots_CivicAddress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CivicAddress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CivicAddress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CivicAddress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CivicAddress) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CivicAddress = {
@@ -517,13 +516,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }
     };
 
-    static PyType_Slot _type_slots_GeoboundingBox[] = 
-    {
+    static PyType_Slot _type_slots_GeoboundingBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeoboundingBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeoboundingBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeoboundingBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeoboundingBox) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GeoboundingBox = {
@@ -770,13 +768,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }
     };
 
-    static PyType_Slot _type_slots_Geocircle[] = 
-    {
+    static PyType_Slot _type_slots_Geocircle[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Geocircle) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Geocircle) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Geocircle) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Geocircle) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Geocircle = {
@@ -1097,13 +1094,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }
     };
 
-    static PyType_Slot _type_slots_Geocoordinate[] = 
-    {
+    static PyType_Slot _type_slots_Geocoordinate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Geocoordinate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Geocoordinate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Geocoordinate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Geocoordinate) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Geocoordinate = {
@@ -1264,13 +1260,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }
     };
 
-    static PyType_Slot _type_slots_GeocoordinateSatelliteData[] = 
-    {
+    static PyType_Slot _type_slots_GeocoordinateSatelliteData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeocoordinateSatelliteData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeocoordinateSatelliteData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeocoordinateSatelliteData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeocoordinateSatelliteData) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GeocoordinateSatelliteData = {
@@ -1884,13 +1879,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }
     };
 
-    static PyType_Slot _type_slots_Geolocator[] = 
-    {
+    static PyType_Slot _type_slots_Geolocator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Geolocator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Geolocator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Geolocator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Geolocator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Geolocator = {
@@ -2117,13 +2111,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }
     };
 
-    static PyType_Slot _type_slots_Geopath[] = 
-    {
+    static PyType_Slot _type_slots_Geopath[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Geopath) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Geopath) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Geopath) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Geopath) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Geopath = {
@@ -2321,13 +2314,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }
     };
 
-    static PyType_Slot _type_slots_Geopoint[] = 
-    {
+    static PyType_Slot _type_slots_Geopoint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Geopoint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Geopoint) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Geopoint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Geopoint) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Geopoint = {
@@ -2448,13 +2440,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }
     };
 
-    static PyType_Slot _type_slots_Geoposition[] = 
-    {
+    static PyType_Slot _type_slots_Geoposition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Geoposition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Geoposition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Geoposition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Geoposition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Geoposition = {
@@ -2575,13 +2566,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }
     };
 
-    static PyType_Slot _type_slots_Geovisit[] = 
-    {
+    static PyType_Slot _type_slots_Geovisit[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Geovisit) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Geovisit) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Geovisit) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Geovisit) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Geovisit = {
@@ -2822,13 +2812,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }
     };
 
-    static PyType_Slot _type_slots_GeovisitMonitor[] = 
-    {
+    static PyType_Slot _type_slots_GeovisitMonitor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeovisitMonitor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeovisitMonitor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeovisitMonitor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeovisitMonitor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GeovisitMonitor = {
@@ -2935,13 +2924,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }
     };
 
-    static PyType_Slot _type_slots_GeovisitStateChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GeovisitStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeovisitStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeovisitStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeovisitStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeovisitStateChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GeovisitStateChangedEventArgs = {
@@ -3032,13 +3020,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }
     };
 
-    static PyType_Slot _type_slots_GeovisitTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_GeovisitTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeovisitTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeovisitTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeovisitTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeovisitTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GeovisitTriggerDetails = {
@@ -3119,13 +3106,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }
     };
 
-    static PyType_Slot _type_slots_PositionChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PositionChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PositionChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PositionChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PositionChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PositionChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PositionChangedEventArgs = {
@@ -3206,13 +3192,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }
     };
 
-    static PyType_Slot _type_slots_StatusChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_StatusChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StatusChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StatusChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StatusChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StatusChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StatusChangedEventArgs = {
@@ -3313,13 +3298,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }
     };
 
-    static PyType_Slot _type_slots_VenueData[] = 
-    {
+    static PyType_Slot _type_slots_VenueData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VenueData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VenueData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VenueData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VenueData) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VenueData = {
@@ -3440,13 +3424,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }
     };
 
-    static PyType_Slot _type_slots_IGeoshape[] = 
-    {
+    static PyType_Slot _type_slots_IGeoshape[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGeoshape) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGeoshape) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGeoshape) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGeoshape) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IGeoshape = {
@@ -3633,14 +3616,13 @@ namespace py::cpp::Windows::Devices::Geolocation
         { }
     };
 
-    static PyType_Slot _type_slots_BasicGeoposition[] = 
-    {
+    static PyType_Slot _type_slots_BasicGeoposition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BasicGeoposition) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BasicGeoposition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BasicGeoposition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BasicGeoposition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BasicGeoposition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BasicGeoposition = {

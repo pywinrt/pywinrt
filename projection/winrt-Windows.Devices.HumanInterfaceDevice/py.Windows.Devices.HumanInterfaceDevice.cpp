@@ -184,13 +184,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { }
     };
 
-    static PyType_Slot _type_slots_HidBooleanControl[] = 
-    {
+    static PyType_Slot _type_slots_HidBooleanControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidBooleanControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidBooleanControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidBooleanControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidBooleanControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HidBooleanControl = {
@@ -391,13 +390,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { }
     };
 
-    static PyType_Slot _type_slots_HidBooleanControlDescription[] = 
-    {
+    static PyType_Slot _type_slots_HidBooleanControlDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidBooleanControlDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidBooleanControlDescription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidBooleanControlDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidBooleanControlDescription) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HidBooleanControlDescription = {
@@ -538,13 +536,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { }
     };
 
-    static PyType_Slot _type_slots_HidCollection[] = 
-    {
+    static PyType_Slot _type_slots_HidCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HidCollection = {
@@ -1221,13 +1218,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { }
     };
 
-    static PyType_Slot _type_slots_HidDevice[] = 
-    {
+    static PyType_Slot _type_slots_HidDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HidDevice = {
@@ -1513,13 +1509,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { }
     };
 
-    static PyType_Slot _type_slots_HidFeatureReport[] = 
-    {
+    static PyType_Slot _type_slots_HidFeatureReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidFeatureReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidFeatureReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidFeatureReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidFeatureReport) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HidFeatureReport = {
@@ -1790,13 +1785,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { }
     };
 
-    static PyType_Slot _type_slots_HidInputReport[] = 
-    {
+    static PyType_Slot _type_slots_HidInputReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidInputReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidInputReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidInputReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidInputReport) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HidInputReport = {
@@ -1877,13 +1871,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { }
     };
 
-    static PyType_Slot _type_slots_HidInputReportReceivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_HidInputReportReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidInputReportReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidInputReportReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidInputReportReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidInputReportReceivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HidInputReportReceivedEventArgs = {
@@ -2140,13 +2133,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { }
     };
 
-    static PyType_Slot _type_slots_HidNumericControl[] = 
-    {
+    static PyType_Slot _type_slots_HidNumericControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidNumericControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidNumericControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidNumericControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidNumericControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HidNumericControl = {
@@ -2527,13 +2519,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { }
     };
 
-    static PyType_Slot _type_slots_HidNumericControlDescription[] = 
-    {
+    static PyType_Slot _type_slots_HidNumericControlDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidNumericControlDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidNumericControlDescription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidNumericControlDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidNumericControlDescription) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HidNumericControlDescription = {
@@ -2792,13 +2783,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { }
     };
 
-    static PyType_Slot _type_slots_HidOutputReport[] = 
-    {
+    static PyType_Slot _type_slots_HidOutputReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidOutputReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidOutputReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidOutputReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidOutputReport) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HidOutputReport = {

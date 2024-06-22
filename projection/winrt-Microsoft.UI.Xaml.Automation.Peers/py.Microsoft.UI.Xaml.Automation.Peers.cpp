@@ -80,13 +80,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_AnimatedVisualPlayerAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_AnimatedVisualPlayerAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimatedVisualPlayerAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimatedVisualPlayerAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimatedVisualPlayerAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimatedVisualPlayerAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AnimatedVisualPlayerAutomationPeer = {
@@ -520,13 +519,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_AppBarAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_AppBarAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppBarAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppBarAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppBarAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppBarAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppBarAutomationPeer = {
@@ -693,13 +691,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_AppBarButtonAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_AppBarButtonAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppBarButtonAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppBarButtonAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppBarButtonAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppBarButtonAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppBarButtonAutomationPeer = {
@@ -784,13 +781,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_AppBarToggleButtonAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_AppBarToggleButtonAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppBarToggleButtonAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppBarToggleButtonAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppBarToggleButtonAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppBarToggleButtonAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppBarToggleButtonAutomationPeer = {
@@ -906,13 +902,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_AutoSuggestBoxAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_AutoSuggestBoxAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutoSuggestBoxAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutoSuggestBoxAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutoSuggestBoxAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutoSuggestBoxAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AutoSuggestBoxAutomationPeer = {
@@ -2677,13 +2672,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_AutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_AutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AutomationPeer = {
@@ -2958,13 +2952,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_AutomationPeerAnnotation[] = 
-    {
+    static PyType_Slot _type_slots_AutomationPeerAnnotation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationPeerAnnotation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationPeerAnnotation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationPeerAnnotation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationPeerAnnotation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AutomationPeerAnnotation = {
@@ -3107,13 +3100,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_BreadcrumbBarItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_BreadcrumbBarItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BreadcrumbBarItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BreadcrumbBarItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BreadcrumbBarItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BreadcrumbBarItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BreadcrumbBarItemAutomationPeer = {
@@ -3229,13 +3221,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ButtonAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ButtonAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ButtonAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ButtonAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ButtonAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ButtonAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ButtonAutomationPeer = {
@@ -3296,13 +3287,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ButtonBaseAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ButtonBaseAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ButtonBaseAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ButtonBaseAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ButtonBaseAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ButtonBaseAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ButtonBaseAutomationPeer = {
@@ -3491,13 +3481,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_CalendarDatePickerAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_CalendarDatePickerAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CalendarDatePickerAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CalendarDatePickerAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CalendarDatePickerAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CalendarDatePickerAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CalendarDatePickerAutomationPeer = {
@@ -3582,13 +3571,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_CheckBoxAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_CheckBoxAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CheckBoxAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CheckBoxAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CheckBoxAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CheckBoxAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CheckBoxAutomationPeer = {
@@ -3673,13 +3661,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ColorPickerSliderAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ColorPickerSliderAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorPickerSliderAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorPickerSliderAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorPickerSliderAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ColorPickerSliderAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ColorPickerSliderAutomationPeer = {
@@ -3764,13 +3751,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ColorSpectrumAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ColorSpectrumAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorSpectrumAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorSpectrumAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorSpectrumAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ColorSpectrumAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ColorSpectrumAutomationPeer = {
@@ -4226,13 +4212,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ComboBoxAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ComboBoxAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ComboBoxAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ComboBoxAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ComboBoxAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ComboBoxAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ComboBoxAutomationPeer = {
@@ -4317,13 +4302,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ComboBoxItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ComboBoxItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ComboBoxItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ComboBoxItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ComboBoxItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ComboBoxItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ComboBoxItemAutomationPeer = {
@@ -4440,13 +4424,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ComboBoxItemDataAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ComboBoxItemDataAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ComboBoxItemDataAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ComboBoxItemDataAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ComboBoxItemDataAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ComboBoxItemDataAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ComboBoxItemDataAutomationPeer = {
@@ -4531,13 +4514,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_DatePickerAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_DatePickerAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DatePickerAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DatePickerAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DatePickerAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DatePickerAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DatePickerAutomationPeer = {
@@ -4598,13 +4580,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_DatePickerFlyoutPresenterAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_DatePickerFlyoutPresenterAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DatePickerFlyoutPresenterAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DatePickerFlyoutPresenterAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DatePickerFlyoutPresenterAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DatePickerFlyoutPresenterAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DatePickerFlyoutPresenterAutomationPeer = {
@@ -4771,13 +4752,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_DropDownButtonAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_DropDownButtonAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DropDownButtonAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DropDownButtonAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DropDownButtonAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DropDownButtonAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DropDownButtonAutomationPeer = {
@@ -4944,13 +4924,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ExpanderAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ExpanderAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExpanderAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExpanderAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExpanderAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExpanderAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ExpanderAutomationPeer = {
@@ -5035,13 +5014,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_FlipViewAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_FlipViewAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FlipViewAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FlipViewAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FlipViewAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FlipViewAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FlipViewAutomationPeer = {
@@ -5126,13 +5104,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_FlipViewItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_FlipViewItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FlipViewItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FlipViewItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FlipViewItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FlipViewItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FlipViewItemAutomationPeer = {
@@ -5249,13 +5226,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_FlipViewItemDataAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_FlipViewItemDataAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FlipViewItemDataAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FlipViewItemDataAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FlipViewItemDataAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FlipViewItemDataAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FlipViewItemDataAutomationPeer = {
@@ -5340,13 +5316,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_FlyoutPresenterAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_FlyoutPresenterAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FlyoutPresenterAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FlyoutPresenterAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FlyoutPresenterAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FlyoutPresenterAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FlyoutPresenterAutomationPeer = {
@@ -5513,13 +5488,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_FrameworkElementAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_FrameworkElementAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FrameworkElementAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FrameworkElementAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FrameworkElementAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FrameworkElementAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FrameworkElementAutomationPeer = {
@@ -5631,13 +5605,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_GridViewAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_GridViewAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GridViewAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GridViewAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GridViewAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GridViewAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GridViewAutomationPeer = {
@@ -5722,13 +5695,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_GridViewHeaderItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_GridViewHeaderItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GridViewHeaderItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GridViewHeaderItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GridViewHeaderItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GridViewHeaderItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GridViewHeaderItemAutomationPeer = {
@@ -5813,13 +5785,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_GridViewItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_GridViewItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GridViewItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GridViewItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GridViewItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GridViewItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GridViewItemAutomationPeer = {
@@ -5936,13 +5907,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_GridViewItemDataAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_GridViewItemDataAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GridViewItemDataAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GridViewItemDataAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GridViewItemDataAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GridViewItemDataAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GridViewItemDataAutomationPeer = {
@@ -6027,13 +5997,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_GroupItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_GroupItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GroupItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GroupItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GroupItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GroupItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GroupItemAutomationPeer = {
@@ -6118,13 +6087,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_HubAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_HubAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HubAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HubAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HubAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HubAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HubAutomationPeer = {
@@ -6240,13 +6208,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_HubSectionAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_HubSectionAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HubSectionAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HubSectionAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HubSectionAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HubSectionAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HubSectionAutomationPeer = {
@@ -6362,13 +6329,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_HyperlinkButtonAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_HyperlinkButtonAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HyperlinkButtonAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HyperlinkButtonAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HyperlinkButtonAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HyperlinkButtonAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HyperlinkButtonAutomationPeer = {
@@ -6453,13 +6419,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ImageAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ImageAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ImageAutomationPeer = {
@@ -6544,13 +6509,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_InfoBarAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_InfoBarAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InfoBarAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InfoBarAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InfoBarAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InfoBarAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InfoBarAutomationPeer = {
@@ -6707,13 +6671,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ItemAutomationPeer = {
@@ -6962,13 +6925,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ItemContainerAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ItemContainerAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ItemContainerAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ItemContainerAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ItemContainerAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ItemContainerAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ItemContainerAutomationPeer = {
@@ -7119,13 +7081,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ItemsControlAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ItemsControlAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ItemsControlAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ItemsControlAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ItemsControlAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ItemsControlAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ItemsControlAutomationPeer = {
@@ -7280,13 +7241,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ItemsViewAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ItemsViewAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ItemsViewAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ItemsViewAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ItemsViewAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ItemsViewAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ItemsViewAutomationPeer = {
@@ -7371,13 +7331,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ListBoxAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ListBoxAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListBoxAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListBoxAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListBoxAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListBoxAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ListBoxAutomationPeer = {
@@ -7462,13 +7421,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ListBoxItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ListBoxItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListBoxItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListBoxItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListBoxItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListBoxItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ListBoxItemAutomationPeer = {
@@ -7585,13 +7543,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ListBoxItemDataAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ListBoxItemDataAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListBoxItemDataAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListBoxItemDataAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListBoxItemDataAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListBoxItemDataAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ListBoxItemDataAutomationPeer = {
@@ -7652,13 +7609,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ListPickerFlyoutPresenterAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ListPickerFlyoutPresenterAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListPickerFlyoutPresenterAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListPickerFlyoutPresenterAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListPickerFlyoutPresenterAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListPickerFlyoutPresenterAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ListPickerFlyoutPresenterAutomationPeer = {
@@ -7743,13 +7699,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ListViewAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ListViewAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListViewAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListViewAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListViewAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListViewAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ListViewAutomationPeer = {
@@ -7874,13 +7829,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ListViewBaseAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ListViewBaseAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListViewBaseAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListViewBaseAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListViewBaseAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListViewBaseAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ListViewBaseAutomationPeer = {
@@ -7941,13 +7895,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ListViewBaseHeaderItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ListViewBaseHeaderItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListViewBaseHeaderItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListViewBaseHeaderItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListViewBaseHeaderItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListViewBaseHeaderItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ListViewBaseHeaderItemAutomationPeer = {
@@ -8032,13 +7985,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ListViewHeaderItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ListViewHeaderItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListViewHeaderItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListViewHeaderItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListViewHeaderItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListViewHeaderItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ListViewHeaderItemAutomationPeer = {
@@ -8123,13 +8075,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ListViewItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ListViewItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListViewItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListViewItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListViewItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListViewItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ListViewItemAutomationPeer = {
@@ -8246,13 +8197,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ListViewItemDataAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ListViewItemDataAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ListViewItemDataAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListViewItemDataAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ListViewItemDataAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ListViewItemDataAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ListViewItemDataAutomationPeer = {
@@ -8605,13 +8555,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_LoopingSelectorAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_LoopingSelectorAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoopingSelectorAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoopingSelectorAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoopingSelectorAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoopingSelectorAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LoopingSelectorAutomationPeer = {
@@ -8836,13 +8785,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_LoopingSelectorItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_LoopingSelectorItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoopingSelectorItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoopingSelectorItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoopingSelectorItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoopingSelectorItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LoopingSelectorItemAutomationPeer = {
@@ -8934,13 +8882,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_LoopingSelectorItemDataAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_LoopingSelectorItemDataAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoopingSelectorItemDataAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoopingSelectorItemDataAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoopingSelectorItemDataAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoopingSelectorItemDataAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LoopingSelectorItemDataAutomationPeer = {
@@ -9025,13 +8972,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_MediaPlayerElementAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_MediaPlayerElementAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaPlayerElementAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaPlayerElementAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaPlayerElementAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaPlayerElementAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaPlayerElementAutomationPeer = {
@@ -9116,13 +9062,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_MediaTransportControlsAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_MediaTransportControlsAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaTransportControlsAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaTransportControlsAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaTransportControlsAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaTransportControlsAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaTransportControlsAutomationPeer = {
@@ -9207,13 +9152,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_MenuBarAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_MenuBarAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MenuBarAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MenuBarAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MenuBarAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MenuBarAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MenuBarAutomationPeer = {
@@ -9411,13 +9355,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_MenuBarItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_MenuBarItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MenuBarItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MenuBarItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MenuBarItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MenuBarItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MenuBarItemAutomationPeer = {
@@ -9533,13 +9476,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_MenuFlyoutItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_MenuFlyoutItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MenuFlyoutItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MenuFlyoutItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MenuFlyoutItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MenuFlyoutItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MenuFlyoutItemAutomationPeer = {
@@ -9624,13 +9566,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_MenuFlyoutPresenterAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_MenuFlyoutPresenterAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MenuFlyoutPresenterAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MenuFlyoutPresenterAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MenuFlyoutPresenterAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MenuFlyoutPresenterAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MenuFlyoutPresenterAutomationPeer = {
@@ -9715,13 +9656,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_NavigationViewAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_NavigationViewAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NavigationViewAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NavigationViewAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NavigationViewAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NavigationViewAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NavigationViewAutomationPeer = {
@@ -9888,13 +9828,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_NavigationViewItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_NavigationViewItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NavigationViewItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NavigationViewItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NavigationViewItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NavigationViewItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NavigationViewItemAutomationPeer = {
@@ -9979,13 +9918,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_NumberBoxAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_NumberBoxAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NumberBoxAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NumberBoxAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NumberBoxAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NumberBoxAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NumberBoxAutomationPeer = {
@@ -10070,13 +10008,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_PasswordBoxAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_PasswordBoxAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PasswordBoxAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PasswordBoxAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PasswordBoxAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PasswordBoxAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PasswordBoxAutomationPeer = {
@@ -10161,13 +10098,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_PersonPictureAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_PersonPictureAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PersonPictureAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PersonPictureAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PersonPictureAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PersonPictureAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PersonPictureAutomationPeer = {
@@ -10228,13 +10164,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_PickerFlyoutPresenterAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_PickerFlyoutPresenterAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PickerFlyoutPresenterAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PickerFlyoutPresenterAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PickerFlyoutPresenterAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PickerFlyoutPresenterAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PickerFlyoutPresenterAutomationPeer = {
@@ -10319,13 +10254,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_PipsPagerAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_PipsPagerAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PipsPagerAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PipsPagerAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PipsPagerAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PipsPagerAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PipsPagerAutomationPeer = {
@@ -10668,13 +10602,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_PivotAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_PivotAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PivotAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PivotAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PivotAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PivotAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PivotAutomationPeer = {
@@ -10759,13 +10692,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_PivotItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_PivotItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PivotItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PivotItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PivotItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PivotItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PivotItemAutomationPeer = {
@@ -11046,13 +10978,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_PivotItemDataAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_PivotItemDataAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PivotItemDataAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PivotItemDataAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PivotItemDataAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PivotItemDataAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PivotItemDataAutomationPeer = {
@@ -11137,13 +11068,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ProgressBarAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ProgressBarAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProgressBarAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProgressBarAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProgressBarAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProgressBarAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProgressBarAutomationPeer = {
@@ -11381,13 +11311,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ProgressRingAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ProgressRingAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProgressRingAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProgressRingAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProgressRingAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProgressRingAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProgressRingAutomationPeer = {
@@ -11605,13 +11534,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_RadioButtonAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_RadioButtonAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RadioButtonAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RadioButtonAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RadioButtonAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RadioButtonAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RadioButtonAutomationPeer = {
@@ -11696,13 +11624,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_RadioButtonsAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_RadioButtonsAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RadioButtonsAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RadioButtonsAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RadioButtonsAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RadioButtonsAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RadioButtonsAutomationPeer = {
@@ -11940,13 +11867,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_RangeBaseAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_RangeBaseAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RangeBaseAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RangeBaseAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RangeBaseAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RangeBaseAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RangeBaseAutomationPeer = {
@@ -12031,13 +11957,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_RatingControlAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_RatingControlAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RatingControlAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RatingControlAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RatingControlAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RatingControlAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RatingControlAutomationPeer = {
@@ -12153,13 +12078,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_RepeatButtonAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_RepeatButtonAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RepeatButtonAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RepeatButtonAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RepeatButtonAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RepeatButtonAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RepeatButtonAutomationPeer = {
@@ -12244,13 +12168,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_RepeaterAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_RepeaterAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RepeaterAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RepeaterAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RepeaterAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RepeaterAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RepeaterAutomationPeer = {
@@ -12335,13 +12258,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_RichEditBoxAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_RichEditBoxAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RichEditBoxAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RichEditBoxAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RichEditBoxAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RichEditBoxAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RichEditBoxAutomationPeer = {
@@ -12426,13 +12348,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_RichTextBlockAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_RichTextBlockAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RichTextBlockAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RichTextBlockAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RichTextBlockAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RichTextBlockAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RichTextBlockAutomationPeer = {
@@ -12517,13 +12438,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_RichTextBlockOverflowAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_RichTextBlockOverflowAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RichTextBlockOverflowAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RichTextBlockOverflowAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RichTextBlockOverflowAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RichTextBlockOverflowAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RichTextBlockOverflowAutomationPeer = {
@@ -12608,13 +12528,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ScrollBarAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ScrollBarAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScrollBarAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScrollBarAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScrollBarAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScrollBarAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ScrollBarAutomationPeer = {
@@ -12887,13 +12806,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ScrollViewerAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ScrollViewerAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScrollViewerAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScrollViewerAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScrollViewerAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScrollViewerAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ScrollViewerAutomationPeer = {
@@ -13048,13 +12966,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_SelectorAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_SelectorAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SelectorAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SelectorAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SelectorAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SelectorAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SelectorAutomationPeer = {
@@ -13139,13 +13056,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_SelectorBarItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_SelectorBarItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SelectorBarItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SelectorBarItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SelectorBarItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SelectorBarItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SelectorBarItemAutomationPeer = {
@@ -13364,13 +13280,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_SelectorItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_SelectorItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SelectorItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SelectorItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SelectorItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SelectorItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SelectorItemAutomationPeer = {
@@ -13506,13 +13421,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_SemanticZoomAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_SemanticZoomAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SemanticZoomAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SemanticZoomAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SemanticZoomAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SemanticZoomAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SemanticZoomAutomationPeer = {
@@ -13597,13 +13511,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_SliderAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_SliderAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SliderAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SliderAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SliderAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SliderAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SliderAutomationPeer = {
@@ -13801,13 +13714,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_SplitButtonAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_SplitButtonAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SplitButtonAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SplitButtonAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SplitButtonAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SplitButtonAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SplitButtonAutomationPeer = {
@@ -13892,13 +13804,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_TabViewAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_TabViewAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TabViewAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TabViewAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TabViewAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TabViewAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TabViewAutomationPeer = {
@@ -13983,13 +13894,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_TabViewItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_TabViewItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TabViewItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TabViewItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TabViewItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TabViewItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TabViewItemAutomationPeer = {
@@ -14074,13 +13984,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_TeachingTipAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_TeachingTipAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TeachingTipAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TeachingTipAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TeachingTipAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TeachingTipAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TeachingTipAutomationPeer = {
@@ -14165,13 +14074,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_TextBlockAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_TextBlockAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextBlockAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextBlockAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextBlockAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextBlockAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TextBlockAutomationPeer = {
@@ -14256,13 +14164,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_TextBoxAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_TextBoxAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextBoxAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextBoxAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextBoxAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextBoxAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TextBoxAutomationPeer = {
@@ -14347,13 +14254,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ThumbAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ThumbAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ThumbAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ThumbAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ThumbAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ThumbAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ThumbAutomationPeer = {
@@ -14438,13 +14344,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_TimePickerAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_TimePickerAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimePickerAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimePickerAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimePickerAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimePickerAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TimePickerAutomationPeer = {
@@ -14505,13 +14410,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_TimePickerFlyoutPresenterAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_TimePickerFlyoutPresenterAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimePickerFlyoutPresenterAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimePickerFlyoutPresenterAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimePickerFlyoutPresenterAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimePickerFlyoutPresenterAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TimePickerFlyoutPresenterAutomationPeer = {
@@ -14647,13 +14551,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ToggleButtonAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ToggleButtonAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToggleButtonAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToggleButtonAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToggleButtonAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToggleButtonAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToggleButtonAutomationPeer = {
@@ -14789,13 +14692,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ToggleMenuFlyoutItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ToggleMenuFlyoutItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToggleMenuFlyoutItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToggleMenuFlyoutItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToggleMenuFlyoutItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToggleMenuFlyoutItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToggleMenuFlyoutItemAutomationPeer = {
@@ -15013,13 +14915,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ToggleSplitButtonAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ToggleSplitButtonAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToggleSplitButtonAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToggleSplitButtonAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToggleSplitButtonAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToggleSplitButtonAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToggleSplitButtonAutomationPeer = {
@@ -15155,13 +15056,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_ToggleSwitchAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_ToggleSwitchAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToggleSwitchAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToggleSwitchAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToggleSwitchAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToggleSwitchAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToggleSwitchAutomationPeer = {
@@ -15328,13 +15228,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_TreeViewItemAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_TreeViewItemAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TreeViewItemAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TreeViewItemAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TreeViewItemAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TreeViewItemAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TreeViewItemAutomationPeer = {
@@ -15502,13 +15401,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_TreeViewItemDataAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_TreeViewItemDataAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TreeViewItemDataAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TreeViewItemDataAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TreeViewItemDataAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TreeViewItemDataAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TreeViewItemDataAutomationPeer = {
@@ -15593,13 +15491,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_TreeViewListAutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_TreeViewListAutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TreeViewListAutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TreeViewListAutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TreeViewListAutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TreeViewListAutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TreeViewListAutomationPeer = {
@@ -15684,13 +15581,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_WebView2AutomationPeer[] = 
-    {
+    static PyType_Slot _type_slots_WebView2AutomationPeer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebView2AutomationPeer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebView2AutomationPeer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebView2AutomationPeer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebView2AutomationPeer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebView2AutomationPeer = {
@@ -15842,14 +15738,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         { }
     };
 
-    static PyType_Slot _type_slots_RawElementProviderRuntimeId[] = 
-    {
+    static PyType_Slot _type_slots_RawElementProviderRuntimeId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RawElementProviderRuntimeId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RawElementProviderRuntimeId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RawElementProviderRuntimeId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RawElementProviderRuntimeId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RawElementProviderRuntimeId) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RawElementProviderRuntimeId = {

@@ -100,12 +100,11 @@ namespace py::cpp::Windows::System::Power::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_BackgroundEnergyDiagnostics[] = 
-    {
+    static PyType_Slot _type_slots_BackgroundEnergyDiagnostics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundEnergyDiagnostics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundEnergyDiagnostics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundEnergyDiagnostics) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BackgroundEnergyDiagnostics = {
@@ -238,12 +237,11 @@ namespace py::cpp::Windows::System::Power::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_ForegroundEnergyDiagnostics[] = 
-    {
+    static PyType_Slot _type_slots_ForegroundEnergyDiagnostics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ForegroundEnergyDiagnostics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ForegroundEnergyDiagnostics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ForegroundEnergyDiagnostics) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ForegroundEnergyDiagnostics = {

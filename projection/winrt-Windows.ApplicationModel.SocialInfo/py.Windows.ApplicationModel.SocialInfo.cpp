@@ -302,13 +302,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         { }
     };
 
-    static PyType_Slot _type_slots_SocialFeedChildItem[] = 
-    {
+    static PyType_Slot _type_slots_SocialFeedChildItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocialFeedChildItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SocialFeedChildItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocialFeedChildItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocialFeedChildItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SocialFeedChildItem = {
@@ -513,13 +512,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         { }
     };
 
-    static PyType_Slot _type_slots_SocialFeedContent[] = 
-    {
+    static PyType_Slot _type_slots_SocialFeedContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocialFeedContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SocialFeedContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocialFeedContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocialFeedContent) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SocialFeedContent = {
@@ -1066,13 +1064,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         { }
     };
 
-    static PyType_Slot _type_slots_SocialFeedItem[] = 
-    {
+    static PyType_Slot _type_slots_SocialFeedItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocialFeedItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SocialFeedItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocialFeedItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocialFeedItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SocialFeedItem = {
@@ -1367,13 +1364,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         { }
     };
 
-    static PyType_Slot _type_slots_SocialFeedSharedItem[] = 
-    {
+    static PyType_Slot _type_slots_SocialFeedSharedItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocialFeedSharedItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SocialFeedSharedItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocialFeedSharedItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocialFeedSharedItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SocialFeedSharedItem = {
@@ -1632,13 +1628,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         { }
     };
 
-    static PyType_Slot _type_slots_SocialItemThumbnail[] = 
-    {
+    static PyType_Slot _type_slots_SocialItemThumbnail[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocialItemThumbnail) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SocialItemThumbnail) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocialItemThumbnail) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocialItemThumbnail) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SocialItemThumbnail = {
@@ -1891,13 +1886,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         { }
     };
 
-    static PyType_Slot _type_slots_SocialUserInfo[] = 
-    {
+    static PyType_Slot _type_slots_SocialUserInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocialUserInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SocialUserInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocialUserInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocialUserInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SocialUserInfo = {

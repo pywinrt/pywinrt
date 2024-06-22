@@ -196,13 +196,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { }
     };
 
-    static PyType_Slot _type_slots_NamedResource[] = 
-    {
+    static PyType_Slot _type_slots_NamedResource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NamedResource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NamedResource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NamedResource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NamedResource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NamedResource = {
@@ -475,13 +474,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { }
     };
 
-    static PyType_Slot _type_slots_ResourceCandidate[] = 
-    {
+    static PyType_Slot _type_slots_ResourceCandidate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceCandidate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceCandidate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceCandidate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceCandidate) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ResourceCandidate = {
@@ -801,8 +799,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { }
     };
 
-    static PyType_Slot _type_slots_ResourceCandidateVectorView[] = 
-    {
+    static PyType_Slot _type_slots_ResourceCandidateVectorView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceCandidateVectorView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceCandidateVectorView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceCandidateVectorView) },
@@ -811,7 +808,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_ResourceCandidateVectorView) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_ResourceCandidateVectorView) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_ResourceCandidateVectorView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ResourceCandidateVectorView = {
@@ -1304,13 +1301,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { }
     };
 
-    static PyType_Slot _type_slots_ResourceContext[] = 
-    {
+    static PyType_Slot _type_slots_ResourceContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceContext) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ResourceContext = {
@@ -1661,8 +1657,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { }
     };
 
-    static PyType_Slot _type_slots_ResourceContextLanguagesVectorView[] = 
-    {
+    static PyType_Slot _type_slots_ResourceContextLanguagesVectorView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceContextLanguagesVectorView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceContextLanguagesVectorView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceContextLanguagesVectorView) },
@@ -1671,7 +1666,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_ResourceContextLanguagesVectorView) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_ResourceContextLanguagesVectorView) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_ResourceContextLanguagesVectorView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ResourceContextLanguagesVectorView = {
@@ -1974,13 +1969,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { }
     };
 
-    static PyType_Slot _type_slots_ResourceManager[] = 
-    {
+    static PyType_Slot _type_slots_ResourceManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ResourceManager = {
@@ -2407,8 +2401,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { }
     };
 
-    static PyType_Slot _type_slots_ResourceMap[] = 
-    {
+    static PyType_Slot _type_slots_ResourceMap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceMap) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceMap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceMap) },
@@ -2417,7 +2410,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { Py_sq_contains, reinterpret_cast<void*>(_map_contains_ResourceMap) },
         { Py_mp_length, reinterpret_cast<void*>(_map_length_ResourceMap) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_ResourceMap) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ResourceMap = {
@@ -2607,15 +2600,14 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { }
     };
 
-    static PyType_Slot _type_slots_ResourceMapIterator[] = 
-    {
+    static PyType_Slot _type_slots_ResourceMapIterator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceMapIterator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceMapIterator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceMapIterator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceMapIterator) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_ResourceMapIterator) },
         { Py_tp_iternext, reinterpret_cast<void*>(_iterator_next_ResourceMapIterator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ResourceMapIterator = {
@@ -2910,8 +2902,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { }
     };
 
-    static PyType_Slot _type_slots_ResourceMapMapView[] = 
-    {
+    static PyType_Slot _type_slots_ResourceMapMapView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceMapMapView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceMapMapView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceMapMapView) },
@@ -2920,7 +2911,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { Py_sq_contains, reinterpret_cast<void*>(_map_contains_ResourceMapMapView) },
         { Py_mp_length, reinterpret_cast<void*>(_map_length_ResourceMapMapView) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_ResourceMapMapView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ResourceMapMapView = {
@@ -3110,15 +3101,14 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { }
     };
 
-    static PyType_Slot _type_slots_ResourceMapMapViewIterator[] = 
-    {
+    static PyType_Slot _type_slots_ResourceMapMapViewIterator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceMapMapViewIterator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceMapMapViewIterator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceMapMapViewIterator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceMapMapViewIterator) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_ResourceMapMapViewIterator) },
         { Py_tp_iternext, reinterpret_cast<void*>(_iterator_next_ResourceMapMapViewIterator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ResourceMapMapViewIterator = {
@@ -3279,13 +3269,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { }
     };
 
-    static PyType_Slot _type_slots_ResourceQualifier[] = 
-    {
+    static PyType_Slot _type_slots_ResourceQualifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceQualifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceQualifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceQualifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceQualifier) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ResourceQualifier = {
@@ -3580,8 +3569,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { }
     };
 
-    static PyType_Slot _type_slots_ResourceQualifierMapView[] = 
-    {
+    static PyType_Slot _type_slots_ResourceQualifierMapView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceQualifierMapView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceQualifierMapView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceQualifierMapView) },
@@ -3590,7 +3578,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { Py_sq_contains, reinterpret_cast<void*>(_map_contains_ResourceQualifierMapView) },
         { Py_mp_length, reinterpret_cast<void*>(_map_length_ResourceQualifierMapView) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_ResourceQualifierMapView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ResourceQualifierMapView = {
@@ -4038,8 +4026,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { }
     };
 
-    static PyType_Slot _type_slots_ResourceQualifierObservableMap[] = 
-    {
+    static PyType_Slot _type_slots_ResourceQualifierObservableMap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceQualifierObservableMap) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceQualifierObservableMap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceQualifierObservableMap) },
@@ -4049,7 +4036,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { Py_mp_length, reinterpret_cast<void*>(_map_length_ResourceQualifierObservableMap) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_ResourceQualifierObservableMap) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_ResourceQualifierObservableMap) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ResourceQualifierObservableMap = {
@@ -4369,8 +4356,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { }
     };
 
-    static PyType_Slot _type_slots_ResourceQualifierVectorView[] = 
-    {
+    static PyType_Slot _type_slots_ResourceQualifierVectorView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceQualifierVectorView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceQualifierVectorView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceQualifierVectorView) },
@@ -4379,7 +4365,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_ResourceQualifierVectorView) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_ResourceQualifierVectorView) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_ResourceQualifierVectorView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ResourceQualifierVectorView = {
@@ -4636,14 +4622,13 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { }
     };
 
-    static PyType_Slot _type_slots_ResourceLayoutInfo[] = 
-    {
+    static PyType_Slot _type_slots_ResourceLayoutInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceLayoutInfo) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ResourceLayoutInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceLayoutInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceLayoutInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceLayoutInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ResourceLayoutInfo = {
