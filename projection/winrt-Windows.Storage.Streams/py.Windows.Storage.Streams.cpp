@@ -1159,7 +1159,7 @@ namespace py::cpp::Windows::Storage::Streams
         { "_assign_array_", _assign_array_DataReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DataReader), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DataReader), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_DataReader), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_DataReader), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2437,7 +2437,7 @@ namespace py::cpp::Windows::Storage::Streams
         { "_assign_array_", _assign_array_DataWriter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DataWriter), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DataWriter), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_DataWriter), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_DataWriter), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2870,7 +2870,7 @@ namespace py::cpp::Windows::Storage::Streams
         { "_assign_array_", _assign_array_FileInputStream, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FileInputStream), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_FileInputStream), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_FileInputStream), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_FileInputStream), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3053,7 +3053,7 @@ namespace py::cpp::Windows::Storage::Streams
         { "_assign_array_", _assign_array_FileOutputStream, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FileOutputStream), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_FileOutputStream), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_FileOutputStream), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_FileOutputStream), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3721,7 +3721,7 @@ namespace py::cpp::Windows::Storage::Streams
         { "_assign_array_", _assign_array_FileRandomAccessStream, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FileRandomAccessStream), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_FileRandomAccessStream), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_FileRandomAccessStream), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_FileRandomAccessStream), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4224,7 +4224,7 @@ namespace py::cpp::Windows::Storage::Streams
         { "_assign_array_", _assign_array_InMemoryRandomAccessStream, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InMemoryRandomAccessStream), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_InMemoryRandomAccessStream), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_InMemoryRandomAccessStream), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_InMemoryRandomAccessStream), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4383,7 +4383,7 @@ namespace py::cpp::Windows::Storage::Streams
         { "_assign_array_", _assign_array_InputStreamOverStream, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InputStreamOverStream), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_InputStreamOverStream), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_InputStreamOverStream), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_InputStreamOverStream), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4566,7 +4566,7 @@ namespace py::cpp::Windows::Storage::Streams
         { "_assign_array_", _assign_array_OutputStreamOverStream, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OutputStreamOverStream), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_OutputStreamOverStream), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_OutputStreamOverStream), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_OutputStreamOverStream), METH_VARARGS, nullptr },
         { }
     };
 
@@ -5161,7 +5161,7 @@ namespace py::cpp::Windows::Storage::Streams
         { "_assign_array_", _assign_array_RandomAccessStreamOverStream, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RandomAccessStreamOverStream), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_RandomAccessStreamOverStream), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_RandomAccessStreamOverStream), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_RandomAccessStreamOverStream), METH_VARARGS, nullptr },
         { }
     };
 
@@ -7480,7 +7480,7 @@ namespace py::cpp::Windows::Storage::Streams
         { "_assign_array_", _assign_array_IInputStream, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IInputStream), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IInputStream), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IInputStream), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IInputStream), METH_VARARGS, nullptr },
         { }
     };
 
@@ -7762,7 +7762,7 @@ namespace py::cpp::Windows::Storage::Streams
         { "_assign_array_", _assign_array_IOutputStream, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IOutputStream), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IOutputStream), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IOutputStream), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IOutputStream), METH_VARARGS, nullptr },
         { }
     };
 
@@ -8345,7 +8345,7 @@ namespace py::cpp::Windows::Storage::Streams
         { "_assign_array_", _assign_array_IRandomAccessStream, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IRandomAccessStream), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IRandomAccessStream), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IRandomAccessStream), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IRandomAccessStream), METH_VARARGS, nullptr },
         { }
     };
 
@@ -8915,7 +8915,7 @@ namespace py::cpp::Windows::Storage::Streams
         { "_assign_array_", _assign_array_IRandomAccessStreamWithContentType, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IRandomAccessStreamWithContentType), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IRandomAccessStreamWithContentType), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IRandomAccessStreamWithContentType), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IRandomAccessStreamWithContentType), METH_VARARGS, nullptr },
         { }
     };
 

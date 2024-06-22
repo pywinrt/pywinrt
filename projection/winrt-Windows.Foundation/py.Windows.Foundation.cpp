@@ -175,7 +175,7 @@ namespace py::cpp::Windows::Foundation
         { "_assign_array_", _assign_array_Deferral, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Deferral), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_Deferral), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_Deferral), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_Deferral), METH_VARARGS, nullptr },
         { }
     };
 
@@ -492,7 +492,7 @@ namespace py::cpp::Windows::Foundation
         { "_assign_array_", _assign_array_MemoryBuffer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MemoryBuffer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MemoryBuffer), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MemoryBuffer), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MemoryBuffer), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4140,7 +4140,7 @@ namespace py::cpp::Windows::Foundation
         { "_assign_array_", _assign_array_IClosable, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IClosable), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IClosable), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IClosable), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IClosable), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4392,7 +4392,7 @@ namespace py::cpp::Windows::Foundation
         { "_assign_array_", _assign_array_IMemoryBuffer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMemoryBuffer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IMemoryBuffer), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IMemoryBuffer), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IMemoryBuffer), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4591,7 +4591,7 @@ namespace py::cpp::Windows::Foundation
         { "_assign_array_", _assign_array_IMemoryBufferReference, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMemoryBufferReference), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IMemoryBufferReference), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IMemoryBufferReference), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IMemoryBufferReference), METH_VARARGS, nullptr },
         { }
     };
 

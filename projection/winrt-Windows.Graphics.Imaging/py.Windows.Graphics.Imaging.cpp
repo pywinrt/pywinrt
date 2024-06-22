@@ -192,7 +192,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "_assign_array_", _assign_array_BitmapBuffer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BitmapBuffer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_BitmapBuffer), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_BitmapBuffer), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_BitmapBuffer), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3979,7 +3979,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "_assign_array_", _assign_array_ImageStream, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ImageStream), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ImageStream), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ImageStream), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ImageStream), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4793,7 +4793,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "_assign_array_", _assign_array_SoftwareBitmap, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SoftwareBitmap), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_SoftwareBitmap), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_SoftwareBitmap), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_SoftwareBitmap), METH_VARARGS, nullptr },
         { }
     };
 

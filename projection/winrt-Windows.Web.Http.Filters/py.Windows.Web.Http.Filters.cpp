@@ -807,7 +807,7 @@ namespace py::cpp::Windows::Web::Http::Filters
         { "_assign_array_", _assign_array_HttpBaseProtocolFilter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpBaseProtocolFilter), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpBaseProtocolFilter), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HttpBaseProtocolFilter), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpBaseProtocolFilter), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1395,7 +1395,7 @@ namespace py::cpp::Windows::Web::Http::Filters
         { "_assign_array_", _assign_array_IHttpFilter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IHttpFilter), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IHttpFilter), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IHttpFilter), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IHttpFilter), METH_VARARGS, nullptr },
         { }
     };
 

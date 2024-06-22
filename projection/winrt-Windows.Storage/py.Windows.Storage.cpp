@@ -880,7 +880,7 @@ namespace py::cpp::Windows::Storage
         { "_assign_array_", _assign_array_ApplicationData, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ApplicationData), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ApplicationData), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ApplicationData), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ApplicationData), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1662,7 +1662,7 @@ namespace py::cpp::Windows::Storage
         { "_assign_array_", _assign_array_ApplicationDataContainer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ApplicationDataContainer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ApplicationDataContainer), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ApplicationDataContainer), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ApplicationDataContainer), METH_VARARGS, nullptr },
         { }
     };
 
@@ -8511,7 +8511,7 @@ namespace py::cpp::Windows::Storage
         { "_assign_array_", _assign_array_StorageStreamTransaction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageStreamTransaction), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_StorageStreamTransaction), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_StorageStreamTransaction), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_StorageStreamTransaction), METH_VARARGS, nullptr },
         { }
     };
 
@@ -8728,7 +8728,7 @@ namespace py::cpp::Windows::Storage
         { "_assign_array_", _assign_array_StreamedFileDataRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StreamedFileDataRequest), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_StreamedFileDataRequest), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_StreamedFileDataRequest), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_StreamedFileDataRequest), METH_VARARGS, nullptr },
         { }
     };
 

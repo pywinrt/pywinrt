@@ -692,7 +692,7 @@ namespace py::cpp::Windows::Devices::Pwm
         { "_assign_array_", _assign_array_PwmPin, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PwmPin), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PwmPin), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_PwmPin), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_PwmPin), METH_VARARGS, nullptr },
         { }
     };
 

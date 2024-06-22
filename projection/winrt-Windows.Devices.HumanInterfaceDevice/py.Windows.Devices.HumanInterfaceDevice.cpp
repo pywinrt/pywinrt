@@ -1214,7 +1214,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { "_assign_array_", _assign_array_HidDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HidDevice), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HidDevice), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HidDevice), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HidDevice), METH_VARARGS, nullptr },
         { }
     };
 

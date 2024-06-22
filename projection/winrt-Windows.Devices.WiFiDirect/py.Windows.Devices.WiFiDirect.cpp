@@ -1119,7 +1119,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { "_assign_array_", _assign_array_WiFiDirectConnectionRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectConnectionRequest), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_WiFiDirectConnectionRequest), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_WiFiDirectConnectionRequest), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_WiFiDirectConnectionRequest), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1554,7 +1554,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { "_assign_array_", _assign_array_WiFiDirectDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WiFiDirectDevice), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_WiFiDirectDevice), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_WiFiDirectDevice), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_WiFiDirectDevice), METH_VARARGS, nullptr },
         { }
     };
 

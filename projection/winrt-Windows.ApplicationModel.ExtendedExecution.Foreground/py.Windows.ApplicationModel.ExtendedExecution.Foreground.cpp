@@ -380,7 +380,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
         { "_assign_array_", _assign_array_ExtendedExecutionForegroundSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ExtendedExecutionForegroundSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ExtendedExecutionForegroundSession), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ExtendedExecutionForegroundSession), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ExtendedExecutionForegroundSession), METH_VARARGS, nullptr },
         { }
     };
 

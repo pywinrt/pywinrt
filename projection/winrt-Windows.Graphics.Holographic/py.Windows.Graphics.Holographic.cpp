@@ -2221,7 +2221,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "_assign_array_", _assign_array_HolographicFramePresentationMonitor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicFramePresentationMonitor), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HolographicFramePresentationMonitor), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HolographicFramePresentationMonitor), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HolographicFramePresentationMonitor), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2710,7 +2710,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "_assign_array_", _assign_array_HolographicFrameScanoutMonitor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicFrameScanoutMonitor), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HolographicFrameScanoutMonitor), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HolographicFrameScanoutMonitor), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HolographicFrameScanoutMonitor), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3078,7 +3078,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "_assign_array_", _assign_array_HolographicQuadLayer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicQuadLayer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HolographicQuadLayer), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HolographicQuadLayer), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HolographicQuadLayer), METH_VARARGS, nullptr },
         { }
     };
 

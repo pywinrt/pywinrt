@@ -935,7 +935,7 @@ namespace py::cpp::Windows::Devices::Midi
         { "_assign_array_", _assign_array_MidiInPort, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiInPort), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MidiInPort), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MidiInPort), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MidiInPort), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1748,7 +1748,7 @@ namespace py::cpp::Windows::Devices::Midi
         { "_assign_array_", _assign_array_MidiOutPort, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiOutPort), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MidiOutPort), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MidiOutPort), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MidiOutPort), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3379,7 +3379,7 @@ namespace py::cpp::Windows::Devices::Midi
         { "_assign_array_", _assign_array_MidiSynthesizer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MidiSynthesizer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MidiSynthesizer), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MidiSynthesizer), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MidiSynthesizer), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4544,7 +4544,7 @@ namespace py::cpp::Windows::Devices::Midi
         { "_assign_array_", _assign_array_IMidiOutPort, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMidiOutPort), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IMidiOutPort), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IMidiOutPort), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IMidiOutPort), METH_VARARGS, nullptr },
         { }
     };
 

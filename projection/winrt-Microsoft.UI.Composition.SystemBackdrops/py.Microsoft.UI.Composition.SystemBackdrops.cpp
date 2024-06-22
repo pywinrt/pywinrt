@@ -751,7 +751,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { "_assign_array_", _assign_array_DesktopAcrylicController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DesktopAcrylicController), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DesktopAcrylicController), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_DesktopAcrylicController), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_DesktopAcrylicController), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1556,7 +1556,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { "_assign_array_", _assign_array_MicaController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MicaController), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MicaController), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MicaController), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MicaController), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2026,7 +2026,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { "_assign_array_", _assign_array_ISystemBackdropController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISystemBackdropController), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ISystemBackdropController), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ISystemBackdropController), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ISystemBackdropController), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2372,7 +2372,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { "_assign_array_", _assign_array_ISystemBackdropControllerWithTargets, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISystemBackdropControllerWithTargets), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ISystemBackdropControllerWithTargets), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ISystemBackdropControllerWithTargets), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ISystemBackdropControllerWithTargets), METH_VARARGS, nullptr },
         { }
     };
 

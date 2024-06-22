@@ -660,7 +660,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { "_assign_array_", _assign_array_AppServiceConnection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppServiceConnection), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AppServiceConnection), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_AppServiceConnection), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_AppServiceConnection), METH_VARARGS, nullptr },
         { }
     };
 

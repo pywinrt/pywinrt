@@ -2636,7 +2636,7 @@ namespace py::cpp::Windows::System::RemoteSystems
         { "_assign_array_", _assign_array_RemoteSystemSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RemoteSystemSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_RemoteSystemSession), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_RemoteSystemSession), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_RemoteSystemSession), METH_VARARGS, nullptr },
         { }
     };
 

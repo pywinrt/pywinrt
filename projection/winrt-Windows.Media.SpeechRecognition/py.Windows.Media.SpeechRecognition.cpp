@@ -3010,7 +3010,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { "_assign_array_", _assign_array_SpeechRecognizer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpeechRecognizer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_SpeechRecognizer), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_SpeechRecognizer), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_SpeechRecognizer), METH_VARARGS, nullptr },
         { }
     };
 

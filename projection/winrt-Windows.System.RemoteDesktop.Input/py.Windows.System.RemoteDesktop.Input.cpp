@@ -271,7 +271,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
         { "_assign_array_", _assign_array_RemoteTextConnection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RemoteTextConnection), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_RemoteTextConnection), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_RemoteTextConnection), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_RemoteTextConnection), METH_VARARGS, nullptr },
         { }
     };
 

@@ -1346,7 +1346,7 @@ namespace py::cpp::Windows::Devices::Display::Core
         { "_assign_array_", _assign_array_DisplayManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DisplayManager), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DisplayManager), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_DisplayManager), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_DisplayManager), METH_VARARGS, nullptr },
         { }
     };
 

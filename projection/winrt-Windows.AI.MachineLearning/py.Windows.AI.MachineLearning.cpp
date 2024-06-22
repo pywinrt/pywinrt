@@ -875,7 +875,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_assign_array_", _assign_array_LearningModel, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LearningModel), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LearningModel), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_LearningModel), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_LearningModel), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2037,7 +2037,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_assign_array_", _assign_array_LearningModelSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LearningModelSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LearningModelSession), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_LearningModelSession), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_LearningModelSession), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3034,7 +3034,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_assign_array_", _assign_array_TensorBoolean, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorBoolean), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorBoolean), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_TensorBoolean), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorBoolean), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3482,7 +3482,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_assign_array_", _assign_array_TensorDouble, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorDouble), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorDouble), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_TensorDouble), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorDouble), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4119,7 +4119,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_assign_array_", _assign_array_TensorFloat, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorFloat), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorFloat), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_TensorFloat), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorFloat), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4567,7 +4567,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_assign_array_", _assign_array_TensorFloat16Bit, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorFloat16Bit), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorFloat16Bit), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_TensorFloat16Bit), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorFloat16Bit), METH_VARARGS, nullptr },
         { }
     };
 
@@ -5015,7 +5015,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_assign_array_", _assign_array_TensorInt16Bit, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorInt16Bit), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorInt16Bit), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_TensorInt16Bit), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorInt16Bit), METH_VARARGS, nullptr },
         { }
     };
 
@@ -5463,7 +5463,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_assign_array_", _assign_array_TensorInt32Bit, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorInt32Bit), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorInt32Bit), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_TensorInt32Bit), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorInt32Bit), METH_VARARGS, nullptr },
         { }
     };
 
@@ -5911,7 +5911,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_assign_array_", _assign_array_TensorInt64Bit, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorInt64Bit), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorInt64Bit), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_TensorInt64Bit), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorInt64Bit), METH_VARARGS, nullptr },
         { }
     };
 
@@ -6359,7 +6359,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_assign_array_", _assign_array_TensorInt8Bit, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorInt8Bit), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorInt8Bit), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_TensorInt8Bit), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorInt8Bit), METH_VARARGS, nullptr },
         { }
     };
 
@@ -6775,7 +6775,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_assign_array_", _assign_array_TensorString, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorString), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorString), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_TensorString), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorString), METH_VARARGS, nullptr },
         { }
     };
 
@@ -7222,7 +7222,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_assign_array_", _assign_array_TensorUInt16Bit, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorUInt16Bit), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorUInt16Bit), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_TensorUInt16Bit), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorUInt16Bit), METH_VARARGS, nullptr },
         { }
     };
 
@@ -7670,7 +7670,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_assign_array_", _assign_array_TensorUInt32Bit, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorUInt32Bit), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorUInt32Bit), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_TensorUInt32Bit), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorUInt32Bit), METH_VARARGS, nullptr },
         { }
     };
 
@@ -8118,7 +8118,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_assign_array_", _assign_array_TensorUInt64Bit, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorUInt64Bit), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorUInt64Bit), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_TensorUInt64Bit), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorUInt64Bit), METH_VARARGS, nullptr },
         { }
     };
 
@@ -8566,7 +8566,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         { "_assign_array_", _assign_array_TensorUInt8Bit, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TensorUInt8Bit), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_TensorUInt8Bit), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_TensorUInt8Bit), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_TensorUInt8Bit), METH_VARARGS, nullptr },
         { }
     };
 

@@ -157,7 +157,7 @@ namespace py::cpp::Windows::Graphics::Capture
         { "_assign_array_", _assign_array_Direct3D11CaptureFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Direct3D11CaptureFrame), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_Direct3D11CaptureFrame), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_Direct3D11CaptureFrame), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_Direct3D11CaptureFrame), METH_VARARGS, nullptr },
         { }
     };
 
@@ -511,7 +511,7 @@ namespace py::cpp::Windows::Graphics::Capture
         { "_assign_array_", _assign_array_Direct3D11CaptureFramePool, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Direct3D11CaptureFramePool), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_Direct3D11CaptureFramePool), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_Direct3D11CaptureFramePool), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_Direct3D11CaptureFramePool), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1301,7 +1301,7 @@ namespace py::cpp::Windows::Graphics::Capture
         { "_assign_array_", _assign_array_GraphicsCaptureSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GraphicsCaptureSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_GraphicsCaptureSession), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_GraphicsCaptureSession), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_GraphicsCaptureSession), METH_VARARGS, nullptr },
         { }
     };
 

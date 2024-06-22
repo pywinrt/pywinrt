@@ -11678,7 +11678,7 @@ namespace py::cpp::Windows::Media::Playback
         { "_assign_array_", _assign_array_MediaPlayer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaPlayer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MediaPlayer), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MediaPlayer), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MediaPlayer), METH_VARARGS, nullptr },
         { }
     };
 
@@ -12192,7 +12192,7 @@ namespace py::cpp::Windows::Media::Playback
         { "_assign_array_", _assign_array_MediaPlayerSurface, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaPlayerSurface), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MediaPlayerSurface), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MediaPlayerSurface), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MediaPlayerSurface), METH_VARARGS, nullptr },
         { }
     };
 

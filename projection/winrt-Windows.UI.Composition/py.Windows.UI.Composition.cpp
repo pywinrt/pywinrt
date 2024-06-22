@@ -9182,7 +9182,7 @@ namespace py::cpp::Windows::UI::Composition
         { "_assign_array_", _assign_array_CompositionObject, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionObject), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_CompositionObject), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_CompositionObject), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_CompositionObject), METH_VARARGS, nullptr },
         { }
     };
 
@@ -18687,7 +18687,7 @@ namespace py::cpp::Windows::UI::Composition
         { "_assign_array_", _assign_array_Compositor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Compositor), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_Compositor), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_Compositor), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_Compositor), METH_VARARGS, nullptr },
         { }
     };
 

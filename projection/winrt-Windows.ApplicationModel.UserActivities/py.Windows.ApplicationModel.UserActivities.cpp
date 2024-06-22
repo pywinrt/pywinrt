@@ -1945,7 +1945,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { "_assign_array_", _assign_array_UserActivitySession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserActivitySession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_UserActivitySession), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_UserActivitySession), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_UserActivitySession), METH_VARARGS, nullptr },
         { }
     };
 

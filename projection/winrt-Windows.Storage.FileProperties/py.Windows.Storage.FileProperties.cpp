@@ -2702,7 +2702,7 @@ namespace py::cpp::Windows::Storage::FileProperties
         { "_assign_array_", _assign_array_StorageItemThumbnail, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageItemThumbnail), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_StorageItemThumbnail), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_StorageItemThumbnail), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_StorageItemThumbnail), METH_VARARGS, nullptr },
         { }
     };
 

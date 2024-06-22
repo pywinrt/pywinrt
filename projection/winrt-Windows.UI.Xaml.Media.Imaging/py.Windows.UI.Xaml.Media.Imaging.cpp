@@ -1606,7 +1606,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         { "_assign_array_", _assign_array_SoftwareBitmapSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SoftwareBitmapSource), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_SoftwareBitmapSource), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_SoftwareBitmapSource), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_SoftwareBitmapSource), METH_VARARGS, nullptr },
         { }
     };
 

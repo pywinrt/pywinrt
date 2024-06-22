@@ -223,7 +223,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { "_assign_array_", _assign_array_DragDropManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DragDropManager), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DragDropManager), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_DragDropManager), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_DragDropManager), METH_VARARGS, nullptr },
         { }
     };
 
@@ -743,7 +743,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { "_assign_array_", _assign_array_DragOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DragOperation), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DragOperation), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_DragOperation), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_DragOperation), METH_VARARGS, nullptr },
         { }
     };
 

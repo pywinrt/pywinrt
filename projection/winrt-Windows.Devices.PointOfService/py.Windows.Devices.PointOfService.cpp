@@ -529,7 +529,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_assign_array_", _assign_array_BarcodeScanner, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScanner), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_BarcodeScanner), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_BarcodeScanner), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_BarcodeScanner), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4124,7 +4124,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_assign_array_", _assign_array_CashDrawer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CashDrawer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_CashDrawer), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_CashDrawer), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_CashDrawer), METH_VARARGS, nullptr },
         { }
     };
 
@@ -6237,7 +6237,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_assign_array_", _assign_array_ClaimedBarcodeScanner, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ClaimedBarcodeScanner), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ClaimedBarcodeScanner), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ClaimedBarcodeScanner), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ClaimedBarcodeScanner), METH_VARARGS, nullptr },
         { }
     };
 
@@ -6782,7 +6782,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_assign_array_", _assign_array_ClaimedCashDrawer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ClaimedCashDrawer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ClaimedCashDrawer), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ClaimedCashDrawer), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ClaimedCashDrawer), METH_VARARGS, nullptr },
         { }
     };
 
@@ -8310,7 +8310,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_assign_array_", _assign_array_ClaimedLineDisplay, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ClaimedLineDisplay), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ClaimedLineDisplay), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ClaimedLineDisplay), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ClaimedLineDisplay), METH_VARARGS, nullptr },
         { }
     };
 
@@ -9416,7 +9416,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_assign_array_", _assign_array_ClaimedMagneticStripeReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ClaimedMagneticStripeReader), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ClaimedMagneticStripeReader), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ClaimedMagneticStripeReader), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ClaimedMagneticStripeReader), METH_VARARGS, nullptr },
         { }
     };
 
@@ -10113,7 +10113,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_assign_array_", _assign_array_ClaimedPosPrinter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ClaimedPosPrinter), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ClaimedPosPrinter), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ClaimedPosPrinter), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ClaimedPosPrinter), METH_VARARGS, nullptr },
         { }
     };
 
@@ -12815,7 +12815,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_assign_array_", _assign_array_LineDisplay, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LineDisplay), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LineDisplay), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_LineDisplay), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_LineDisplay), METH_VARARGS, nullptr },
         { }
     };
 
@@ -15558,7 +15558,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_assign_array_", _assign_array_LineDisplayWindow, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LineDisplayWindow), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LineDisplayWindow), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_LineDisplayWindow), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_LineDisplayWindow), METH_VARARGS, nullptr },
         { }
     };
 
@@ -16037,7 +16037,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_assign_array_", _assign_array_MagneticStripeReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MagneticStripeReader), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MagneticStripeReader), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MagneticStripeReader), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MagneticStripeReader), METH_VARARGS, nullptr },
         { }
     };
 
@@ -18594,7 +18594,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "_assign_array_", _assign_array_PosPrinter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PosPrinter), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PosPrinter), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_PosPrinter), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_PosPrinter), METH_VARARGS, nullptr },
         { }
     };
 

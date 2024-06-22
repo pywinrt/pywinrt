@@ -2110,7 +2110,7 @@ namespace py::cpp::Windows::Networking::Connectivity
         { "_assign_array_", _assign_array_ConnectionSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ConnectionSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ConnectionSession), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ConnectionSession), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ConnectionSession), METH_VARARGS, nullptr },
         { }
     };
 

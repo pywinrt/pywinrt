@@ -399,7 +399,7 @@ namespace py::cpp::Windows::Web::Http
         { "_assign_array_", _assign_array_HttpBufferContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpBufferContent), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpBufferContent), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HttpBufferContent), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpBufferContent), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1268,7 +1268,7 @@ namespace py::cpp::Windows::Web::Http
         { "_assign_array_", _assign_array_HttpClient, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpClient), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpClient), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HttpClient), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpClient), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2584,7 +2584,7 @@ namespace py::cpp::Windows::Web::Http
         { "_assign_array_", _assign_array_HttpFormUrlEncodedContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpFormUrlEncodedContent), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpFormUrlEncodedContent), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HttpFormUrlEncodedContent), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpFormUrlEncodedContent), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2845,7 +2845,7 @@ namespace py::cpp::Windows::Web::Http
         { "_assign_array_", _assign_array_HttpGetBufferResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpGetBufferResult), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpGetBufferResult), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HttpGetBufferResult), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpGetBufferResult), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3110,7 +3110,7 @@ namespace py::cpp::Windows::Web::Http
         { "_assign_array_", _assign_array_HttpGetInputStreamResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpGetInputStreamResult), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpGetInputStreamResult), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HttpGetInputStreamResult), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpGetInputStreamResult), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3375,7 +3375,7 @@ namespace py::cpp::Windows::Web::Http
         { "_assign_array_", _assign_array_HttpGetStringResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpGetStringResult), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpGetStringResult), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HttpGetStringResult), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpGetStringResult), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4211,7 +4211,7 @@ namespace py::cpp::Windows::Web::Http
         { "_assign_array_", _assign_array_HttpMultipartContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpMultipartContent), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpMultipartContent), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HttpMultipartContent), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpMultipartContent), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4751,7 +4751,7 @@ namespace py::cpp::Windows::Web::Http
         { "_assign_array_", _assign_array_HttpMultipartFormDataContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpMultipartFormDataContent), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpMultipartFormDataContent), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HttpMultipartFormDataContent), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpMultipartFormDataContent), METH_VARARGS, nullptr },
         { }
     };
 
@@ -5201,7 +5201,7 @@ namespace py::cpp::Windows::Web::Http
         { "_assign_array_", _assign_array_HttpRequestMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpRequestMessage), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpRequestMessage), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HttpRequestMessage), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpRequestMessage), METH_VARARGS, nullptr },
         { }
     };
 
@@ -5449,7 +5449,7 @@ namespace py::cpp::Windows::Web::Http
         { "_assign_array_", _assign_array_HttpRequestResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpRequestResult), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpRequestResult), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HttpRequestResult), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpRequestResult), METH_VARARGS, nullptr },
         { }
     };
 
@@ -6005,7 +6005,7 @@ namespace py::cpp::Windows::Web::Http
         { "_assign_array_", _assign_array_HttpResponseMessage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpResponseMessage), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpResponseMessage), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HttpResponseMessage), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpResponseMessage), METH_VARARGS, nullptr },
         { }
     };
 
@@ -6417,7 +6417,7 @@ namespace py::cpp::Windows::Web::Http
         { "_assign_array_", _assign_array_HttpStreamContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpStreamContent), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpStreamContent), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HttpStreamContent), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpStreamContent), METH_VARARGS, nullptr },
         { }
     };
 
@@ -6855,7 +6855,7 @@ namespace py::cpp::Windows::Web::Http
         { "_assign_array_", _assign_array_HttpStringContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpStringContent), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpStringContent), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HttpStringContent), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HttpStringContent), METH_VARARGS, nullptr },
         { }
     };
 
@@ -7386,7 +7386,7 @@ namespace py::cpp::Windows::Web::Http
         { "_assign_array_", _assign_array_IHttpContent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IHttpContent), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IHttpContent), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IHttpContent), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IHttpContent), METH_VARARGS, nullptr },
         { }
     };
 

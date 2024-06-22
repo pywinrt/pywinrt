@@ -3318,7 +3318,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "_assign_array_", _assign_array_ContactCardDelayedDataLoader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactCardDelayedDataLoader), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ContactCardDelayedDataLoader), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ContactCardDelayedDataLoader), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ContactCardDelayedDataLoader), METH_VARARGS, nullptr },
         { }
     };
 

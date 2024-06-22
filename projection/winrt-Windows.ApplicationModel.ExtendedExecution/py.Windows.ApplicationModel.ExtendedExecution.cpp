@@ -427,7 +427,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
         { "_assign_array_", _assign_array_ExtendedExecutionSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ExtendedExecutionSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ExtendedExecutionSession), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ExtendedExecutionSession), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ExtendedExecutionSession), METH_VARARGS, nullptr },
         { }
     };
 

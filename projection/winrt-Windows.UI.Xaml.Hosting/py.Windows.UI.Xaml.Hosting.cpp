@@ -344,7 +344,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { "_assign_array_", _assign_array_DesignerAppManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DesignerAppManager), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DesignerAppManager), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_DesignerAppManager), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_DesignerAppManager), METH_VARARGS, nullptr },
         { }
     };
 
@@ -575,7 +575,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { "_assign_array_", _assign_array_DesignerAppView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DesignerAppView), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DesignerAppView), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_DesignerAppView), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_DesignerAppView), METH_VARARGS, nullptr },
         { }
     };
 
@@ -910,7 +910,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { "_assign_array_", _assign_array_DesktopWindowXamlSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DesktopWindowXamlSource), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DesktopWindowXamlSource), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_DesktopWindowXamlSource), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_DesktopWindowXamlSource), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1664,7 +1664,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { "_assign_array_", _assign_array_WindowsXamlManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsXamlManager), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_WindowsXamlManager), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_WindowsXamlManager), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_WindowsXamlManager), METH_VARARGS, nullptr },
         { }
     };
 
