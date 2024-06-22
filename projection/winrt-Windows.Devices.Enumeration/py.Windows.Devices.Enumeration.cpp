@@ -1484,7 +1484,8 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();

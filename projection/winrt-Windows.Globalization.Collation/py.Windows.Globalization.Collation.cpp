@@ -479,7 +479,8 @@ namespace py::cpp::Windows::Globalization::Collation
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();

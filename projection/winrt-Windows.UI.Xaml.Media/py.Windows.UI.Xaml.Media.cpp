@@ -2298,7 +2298,8 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -3970,7 +3971,8 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -5514,7 +5516,8 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -7030,7 +7033,8 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -10404,7 +10408,8 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -11371,7 +11376,8 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -12989,7 +12995,8 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -17620,7 +17627,8 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -18474,7 +18482,8 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();

@@ -1040,7 +1040,8 @@ namespace py::cpp::Windows::Data::Json
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();

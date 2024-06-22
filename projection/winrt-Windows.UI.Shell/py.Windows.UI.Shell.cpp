@@ -2595,7 +2595,8 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();

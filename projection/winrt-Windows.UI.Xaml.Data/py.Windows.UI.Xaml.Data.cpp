@@ -2993,7 +2993,8 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();

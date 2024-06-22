@@ -811,7 +811,8 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -3421,7 +3422,8 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
