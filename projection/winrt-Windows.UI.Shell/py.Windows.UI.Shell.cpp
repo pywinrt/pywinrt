@@ -2558,10 +2558,7 @@ namespace py::cpp::Windows::UI::Shell
 
             if (!PySlice_Check(slice))
             {
-                PyErr_Format(
-                    PyExc_TypeError,
-                    "indicies must be integers, not '%s'",
-                    Py_TYPE(slice)->tp_name);
+                PyErr_Format(PyExc_TypeError, "indices must be integers, not '%s'", Py_TYPE(slice)->tp_name);
             }
 
             Py_ssize_t start, stop, step, length;

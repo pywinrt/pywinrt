@@ -130,13 +130,9 @@ static class SeqWriterExtensions
             w.WriteLine("if (!PySlice_Check(slice))");
             w.WriteLine("{");
             w.Indent++;
-            // FIXME: put on single line
-            w.WriteLine("PyErr_Format(");
-            w.Indent++;
-            w.WriteLine("PyExc_TypeError,");
-            w.WriteLine("\"indicies must be integers, not '%s'\",");
-            w.WriteLine("Py_TYPE(slice)->tp_name);");
-            w.Indent--;
+            w.WriteLine(
+                "PyErr_Format(PyExc_TypeError, \"indices must be integers, not '%s'\", Py_TYPE(slice)->tp_name);"
+            );
             w.Indent--;
             w.WriteLine("}");
             w.WriteBlankLine();
