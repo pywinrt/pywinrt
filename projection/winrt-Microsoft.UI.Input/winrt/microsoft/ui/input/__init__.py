@@ -96,7 +96,7 @@ class FocusNavigationResult(enum.IntEnum):
     NO_FOCUSABLE_ELEMENTS = 2
 
 class GestureSettings(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     TAP = 0x1
     DOUBLE_TAP = 0x2
     HOLD = 0x4
@@ -126,7 +126,7 @@ class InputActivationState(enum.IntEnum):
     ACTIVATED = 2
 
 class InputPointerSourceDeviceKinds(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     TOUCH = 0x1
     PEN = 0x2
     MOUSE = 0x4
@@ -181,7 +181,7 @@ class PointerUpdateKind(enum.IntEnum):
     X_BUTTON2_RELEASED = 10
 
 class VirtualKeyStates(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     DOWN = 0x1
     LOCKED = 0x2
 

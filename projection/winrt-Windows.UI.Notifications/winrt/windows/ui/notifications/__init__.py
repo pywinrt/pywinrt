@@ -69,7 +69,7 @@ class BadgeTemplateType(enum.IntEnum):
     BADGE_NUMBER = 1
 
 class NotificationKinds(enum.IntFlag):
-    UNKNOWN = 0
+    UNKNOWN = 0x0
     TOAST = 0x1
 
 class NotificationMirroring(enum.IntEnum):

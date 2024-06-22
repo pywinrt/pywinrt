@@ -40,14 +40,14 @@ class InjectedInputButtonChangeKind(enum.IntEnum):
     FIFTH_BUTTON_UP = 10
 
 class InjectedInputKeyOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     EXTENDED_KEY = 0x1
     KEY_UP = 0x2
     SCAN_CODE = 0x8
     UNICODE = 0x4
 
 class InjectedInputMouseOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     MOVE = 0x1
     LEFT_DOWN = 0x2
     LEFT_UP = 0x4
@@ -64,20 +64,20 @@ class InjectedInputMouseOptions(enum.IntFlag):
     ABSOLUTE = 0x8000
 
 class InjectedInputPenButtons(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     BARREL = 0x1
     INVERTED = 0x2
     ERASER = 0x4
 
 class InjectedInputPenParameters(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     PRESSURE = 0x1
     ROTATION = 0x2
     TILT_X = 0x4
     TILT_Y = 0x8
 
 class InjectedInputPointerOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     NEW = 0x1
     IN_RANGE = 0x2
     IN_CONTACT = 0x4
@@ -97,7 +97,7 @@ class InjectedInputShortcut(enum.IntEnum):
     SEARCH = 2
 
 class InjectedInputTouchParameters(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     CONTACT = 0x1
     ORIENTATION = 0x2
     PRESSURE = 0x4

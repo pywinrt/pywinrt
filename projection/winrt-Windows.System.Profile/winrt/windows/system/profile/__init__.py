@@ -53,7 +53,7 @@ class SystemOutOfBoxExperienceState(enum.IntEnum):
     COMPLETED = 2
 
 class UnsupportedAppRequirementReasons(enum.IntFlag):
-    UNKNOWN = 0
+    UNKNOWN = 0x0
     DENIED_BY_SYSTEM = 0x1
 
 AnalyticsInfo = _winrt_windows_system_profile.AnalyticsInfo

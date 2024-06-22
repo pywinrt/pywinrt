@@ -496,11 +496,11 @@ class ContentLinkChangeKind(enum.IntEnum):
     EDITED = 2
 
 class DisabledFormattingAccelerators(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     BOLD = 0x1
     ITALIC = 0x2
     UNDERLINE = 0x4
-    ALL = 0xffffffff
+    ALL = 0xFFFFFFFF
 
 class HandwritingPanelPlacementAlignment(enum.IntEnum):
     AUTO = 0

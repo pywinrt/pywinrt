@@ -44,7 +44,7 @@ __all__ = [
 ]
 
 class AccessoryNotificationType(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     PHONE = 0x1
     EMAIL = 0x2
     REMINDER = 0x4
@@ -107,7 +107,7 @@ class PhoneNotificationType(enum.IntEnum):
     PHONE_MUTE_CHANGED = 4
 
 class PlaybackCapability(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     PLAY = 0x1
     PAUSE = 0x2
     STOP = 0x4

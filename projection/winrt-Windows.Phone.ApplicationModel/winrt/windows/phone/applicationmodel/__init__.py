@@ -11,7 +11,7 @@ __all__ = [
 ]
 
 class ApplicationProfileModes(enum.IntFlag):
-    DEFAULT = 0
+    DEFAULT = 0x0
     ALTERNATE = 0x1
 
 ApplicationProfile = _winrt_windows_phone_applicationmodel.ApplicationProfile

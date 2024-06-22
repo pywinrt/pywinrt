@@ -401,7 +401,7 @@ class VirtualKey(enum.IntEnum):
     GAMEPAD_RIGHT_THUMBSTICK_LEFT = 218
 
 class VirtualKeyModifiers(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     CONTROL = 0x1
     MENU = 0x2
     SHIFT = 0x4

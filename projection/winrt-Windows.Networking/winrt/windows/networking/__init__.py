@@ -18,7 +18,7 @@ class DomainNameType(enum.IntEnum):
     FULLY_QUALIFIED = 1
 
 class HostNameSortOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     OPTIMIZE_FOR_LONG_CONNECTIONS = 0x2
 
 class HostNameType(enum.IntEnum):

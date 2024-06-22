@@ -125,7 +125,7 @@ __all__ = [
 ]
 
 class DataClasses(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     GPRS = 0x1
     EDGE = 0x2
     UMTS = 0x4

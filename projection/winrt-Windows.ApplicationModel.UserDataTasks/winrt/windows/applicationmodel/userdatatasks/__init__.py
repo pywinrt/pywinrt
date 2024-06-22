@@ -34,7 +34,7 @@ __all__ = [
 ]
 
 class UserDataTaskDaysOfWeek(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     SUNDAY = 0x1
     MONDAY = 0x2
     TUESDAY = 0x4

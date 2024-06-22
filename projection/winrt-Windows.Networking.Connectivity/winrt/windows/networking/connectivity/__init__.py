@@ -124,12 +124,12 @@ class NetworkEncryptionType(enum.IntEnum):
     GCMP256 = 11
 
 class NetworkTypes(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     INTERNET = 0x1
     PRIVATE_NETWORK = 0x2
 
 class RoamingStates(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     NOT_ROAMING = 0x1
     ROAMING = 0x2
 
@@ -139,7 +139,7 @@ class TriStates(enum.IntEnum):
     YES = 2
 
 class WwanDataClass(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     GPRS = 0x1
     EDGE = 0x2
     UMTS = 0x4

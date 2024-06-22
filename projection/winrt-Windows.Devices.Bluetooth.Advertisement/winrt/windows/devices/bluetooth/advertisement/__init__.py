@@ -25,7 +25,7 @@ __all__ = [
 ]
 
 class BluetoothLEAdvertisementFlags(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     LIMITED_DISCOVERABLE_MODE = 0x1
     GENERAL_DISCOVERABLE_MODE = 0x2
     CLASSIC_NOT_SUPPORTED = 0x4

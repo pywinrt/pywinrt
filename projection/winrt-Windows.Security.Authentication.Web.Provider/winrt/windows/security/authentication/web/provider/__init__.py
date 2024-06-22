@@ -49,7 +49,7 @@ class WebAccountScope(enum.IntEnum):
     PER_APPLICATION = 1
 
 class WebAccountSelectionOptions(enum.IntFlag):
-    DEFAULT = 0
+    DEFAULT = 0x0
     NEW = 0x1
 
 WebAccountClientView = _winrt_windows_security_authentication_web_provider.WebAccountClientView

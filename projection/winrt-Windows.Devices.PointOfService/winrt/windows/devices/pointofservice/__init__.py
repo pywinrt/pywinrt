@@ -227,7 +227,7 @@ class PosConnectionTypes(enum.IntFlag):
     LOCAL = 0x1
     I_P = 0x2
     BLUETOOTH = 0x4
-    ALL = 0xffffffff
+    ALL = 0xFFFFFFFF
 
 class PosPrinterAlignment(enum.IntEnum):
     LEFT = 0
@@ -240,14 +240,14 @@ class PosPrinterBarcodeTextPosition(enum.IntEnum):
     BELOW = 2
 
 class PosPrinterCartridgeSensors(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     REMOVED = 0x1
     EMPTY = 0x2
     HEAD_CLEANING = 0x4
     NEAR_END = 0x8
 
 class PosPrinterColorCapabilities(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     PRIMARY = 0x1
     CUSTOM1 = 0x2
     CUSTOM2 = 0x4
@@ -290,7 +290,7 @@ class PosPrinterMapMode(enum.IntEnum):
     METRIC = 3
 
 class PosPrinterMarkFeedCapabilities(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     TO_TAKE_UP = 0x1
     TO_CUTTER = 0x2
     TO_CURRENT_TOP_OF_FORM = 0x4
@@ -314,7 +314,7 @@ class PosPrinterRotation(enum.IntEnum):
     ROTATE180 = 3
 
 class PosPrinterRuledLineCapabilities(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     HORIZONTAL = 0x1
     VERTICAL = 0x2
 

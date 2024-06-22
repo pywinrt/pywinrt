@@ -600,11 +600,9 @@ static class FileWriters
             {
                 if (field.Constant is not null)
                 {
-                    // FIXME: drop != "0" check
-                    var value =
-                        type.Type.HasFlagsAttribute() && field.Constant.ToString() != "0"
-                            ? $"0x{field.Constant:X}".ToLowerInvariant()
-                            : field.Constant.ToString();
+                    var value = type.Type.HasFlagsAttribute()
+                        ? $"0x{field.Constant:X}"
+                        : field.Constant.ToString();
                     w.WriteLine($"{field.Name.ToPythonConstant()} = {value}");
                 }
             }

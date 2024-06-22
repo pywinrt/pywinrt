@@ -12,7 +12,7 @@ __all__ = [
 ]
 
 class CompositionDebugOverdrawContentKinds(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     OFFSCREEN_RENDERED = 0x1
     COLORS = 0x2
     EFFECTS = 0x4
@@ -20,7 +20,7 @@ class CompositionDebugOverdrawContentKinds(enum.IntFlag):
     LIGHTS = 0x10
     SURFACES = 0x20
     SWAP_CHAINS = 0x40
-    ALL = 0xffffffff
+    ALL = 0xFFFFFFFF
 
 CompositionDebugHeatMaps = _winrt_windows_ui_composition_diagnostics.CompositionDebugHeatMaps
 CompositionDebugSettings = _winrt_windows_ui_composition_diagnostics.CompositionDebugSettings

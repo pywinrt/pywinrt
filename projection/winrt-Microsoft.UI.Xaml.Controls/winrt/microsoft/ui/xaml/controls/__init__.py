@@ -560,14 +560,14 @@ class ContentDialogResult(enum.IntEnum):
     SECONDARY = 2
 
 class DisabledFormattingAccelerators(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     BOLD = 0x1
     ITALIC = 0x2
     UNDERLINE = 0x4
-    ALL = 0xffffffff
+    ALL = 0xFFFFFFFF
 
 class ElementRealizationOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     FORCE_CREATE = 0x1
     SUPPRESS_AUTO_RECYCLE = 0x2
 
@@ -783,13 +783,13 @@ class ScrollingContentOrientation(enum.IntEnum):
     BOTH = 3
 
 class ScrollingInputKinds(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     TOUCH = 0x1
     PEN = 0x2
     MOUSE_WHEEL = 0x4
     KEYBOARD = 0x8
     GAMEPAD = 0x10
-    ALL = 0xff
+    ALL = 0xFF
 
 class ScrollingInteractionState(enum.IntEnum):
     IDLE = 0

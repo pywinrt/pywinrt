@@ -33,7 +33,7 @@ __all__ = [
 ]
 
 class ArcadeStickButtons(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     STICK_UP = 0x1
     STICK_DOWN = 0x2
     STICK_LEFT = 0x4
@@ -48,7 +48,7 @@ class ArcadeStickButtons(enum.IntFlag):
     SPECIAL2 = 0x800
 
 class FlightStickButtons(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     FIRE_PRIMARY = 0x1
     FIRE_SECONDARY = 0x2
 
@@ -140,7 +140,7 @@ class GameControllerSwitchPosition(enum.IntEnum):
     UP_LEFT = 8
 
 class GamepadButtons(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     MENU = 0x1
     VIEW = 0x2
     A = 0x4
@@ -161,7 +161,7 @@ class GamepadButtons(enum.IntFlag):
     PADDLE4 = 0x20000
 
 class OptionalUINavigationButtons(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     CONTEXT1 = 0x1
     CONTEXT2 = 0x2
     CONTEXT3 = 0x4
@@ -176,7 +176,7 @@ class OptionalUINavigationButtons(enum.IntFlag):
     SCROLL_RIGHT = 0x800
 
 class RacingWheelButtons(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     PREVIOUS_GEAR = 0x1
     NEXT_GEAR = 0x2
     D_PAD_UP = 0x4
@@ -201,7 +201,7 @@ class RacingWheelButtons(enum.IntFlag):
     BUTTON16 = 0x200000
 
 class RequiredUINavigationButtons(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     MENU = 0x1
     VIEW = 0x2
     ACCEPT = 0x4

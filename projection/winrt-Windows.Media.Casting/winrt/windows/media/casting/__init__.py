@@ -35,7 +35,7 @@ class CastingConnectionState(enum.IntEnum):
     CONNECTING = 4
 
 class CastingPlaybackTypes(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     AUDIO = 0x1
     VIDEO = 0x2
     PICTURE = 0x4

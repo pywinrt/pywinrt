@@ -19,7 +19,7 @@ class TokenBindingKeyType(enum.IntEnum):
     ANY_EXISTING = 2
 
 class WebAuthenticationOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     SILENT_MODE = 0x1
     USE_TITLE = 0x2
     USE_HTTP_POST = 0x4

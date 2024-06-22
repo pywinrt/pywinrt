@@ -49,7 +49,7 @@ class FileOpenDisposition(enum.IntEnum):
     TRUNCATE_EXISTING = 4
 
 class InputStreamOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     PARTIAL = 0x1
     READ_AHEAD = 0x2
 

@@ -35,7 +35,7 @@ __all__ = [
 ]
 
 class PrintOptionStates(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     ENABLED = 0x1
     CONSTRAINED = 0x2
 

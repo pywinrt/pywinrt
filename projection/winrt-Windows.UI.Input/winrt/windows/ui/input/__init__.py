@@ -86,7 +86,7 @@ class GazeInputAccessStatus(enum.IntEnum):
     DENIED_BY_SYSTEM = 3
 
 class GestureSettings(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     TAP = 0x1
     DOUBLE_TAP = 0x2
     HOLD = 0x4

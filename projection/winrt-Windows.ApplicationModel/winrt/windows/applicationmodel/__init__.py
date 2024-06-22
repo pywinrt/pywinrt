@@ -60,7 +60,7 @@ __all__ = [
 ]
 
 class AddResourcePackageOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     FORCE_TARGET_APP_SHUTDOWN = 0x1
     APPLY_UPDATE_IF_AVAILABLE = 0x2
 

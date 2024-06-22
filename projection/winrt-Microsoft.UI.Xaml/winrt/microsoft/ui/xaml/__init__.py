@@ -151,8 +151,8 @@ __all__ = [
 ]
 
 class ApplicationHighContrastAdjustment(enum.IntFlag):
-    NONE = 0
-    AUTO = 0xffffffff
+    NONE = 0x0
+    AUTO = 0xFFFFFFFF
 
 class ApplicationRequiresPointerMode(enum.IntEnum):
     AUTO = 0
@@ -214,9 +214,9 @@ class DurationType(enum.IntEnum):
     FOREVER = 2
 
 class ElementHighContrastAdjustment(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     APPLICATION = 0x80000000
-    AUTO = 0xffffffff
+    AUTO = 0xFFFFFFFF
 
 class ElementSoundKind(enum.IntEnum):
     FOCUS = 0

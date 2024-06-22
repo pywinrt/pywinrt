@@ -56,7 +56,7 @@ __all__ = [
 ]
 
 class GattCharacteristicProperties(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     BROADCAST = 0x1
     READ = 0x2
     WRITE_WITHOUT_RESPONSE = 0x4

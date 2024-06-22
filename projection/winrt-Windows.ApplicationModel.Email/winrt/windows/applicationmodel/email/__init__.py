@@ -229,12 +229,12 @@ class EmailQueryKind(enum.IntEnum):
     UNSEEN = 5
 
 class EmailQuerySearchFields(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     SUBJECT = 0x1
     SENDER = 0x2
     PREVIEW = 0x4
     RECIPIENTS = 0x8
-    ALL = 0xffffffff
+    ALL = 0xFFFFFFFF
 
 class EmailQuerySearchScope(enum.IntEnum):
     LOCAL = 0

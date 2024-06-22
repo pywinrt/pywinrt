@@ -36,7 +36,7 @@ class PhoneLineChangeKind(enum.IntEnum):
     PROPERTIES_CHANGED = 2
 
 class PhoneLineProperties(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     BRANDING_OPTIONS = 0x1
     CAN_DIAL = 0x2
     CELLULAR_DETAILS = 0x4

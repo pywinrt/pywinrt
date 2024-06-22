@@ -148,7 +148,7 @@ class BluetoothMinorClass(enum.IntEnum):
     HEALTH_PERSONAL_MOBILITY_DEVICE = 15
 
 class BluetoothServiceCapabilities(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     LIMITED_DISCOVERABLE_MODE = 0x1
     POSITIONING_SERVICE = 0x8
     NETWORKING_SERVICE = 0x10

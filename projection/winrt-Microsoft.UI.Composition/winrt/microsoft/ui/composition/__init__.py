@@ -174,7 +174,7 @@ class CompositionBackfaceVisibility(enum.IntEnum):
     HIDDEN = 2
 
 class CompositionBatchTypes(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     ANIMATION = 0x1
     EFFECT = 0x2
     INFINITE_ANIMATION = 0x4

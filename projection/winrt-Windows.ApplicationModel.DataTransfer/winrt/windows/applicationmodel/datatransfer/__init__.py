@@ -48,7 +48,7 @@ class ClipboardHistoryItemsResultStatus(enum.IntEnum):
     CLIPBOARD_HISTORY_DISABLED = 2
 
 class DataPackageOperation(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     COPY = 0x1
     MOVE = 0x2
     LINK = 0x4

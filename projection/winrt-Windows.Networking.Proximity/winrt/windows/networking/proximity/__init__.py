@@ -26,7 +26,7 @@ __all__ = [
 ]
 
 class PeerDiscoveryTypes(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     BROWSE = 0x1
     TRIGGERED = 0x2
 

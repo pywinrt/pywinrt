@@ -80,7 +80,7 @@ class SecondaryAuthenticationFactorAuthenticationStatus(enum.IntEnum):
     INVALID_AUTHENTICATION_STAGE = 4
 
 class SecondaryAuthenticationFactorDeviceCapabilities(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     SECURE_STORAGE = 0x1
     STORE_KEYS = 0x2
     CONFIRM_USER_INTENT_TO_AUTHENTICATE = 0x4

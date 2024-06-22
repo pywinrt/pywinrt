@@ -32,7 +32,7 @@ class SettingsEdgeLocation(enum.IntEnum):
     LEFT = 1
 
 class SupportedWebAccountActions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     RECONNECT = 0x1
     REMOVE = 0x2
     VIEW_DETAILS = 0x4

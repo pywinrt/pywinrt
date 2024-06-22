@@ -46,7 +46,7 @@ class CaretType(enum.IntEnum):
     NULL = 1
 
 class FindOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     WORD = 0x2
     CASE = 0x4
 
@@ -150,7 +150,7 @@ class ParagraphStyle(enum.IntEnum):
     HEADING9 = 11
 
 class PointOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     INCLUDE_INSET = 0x1
     START = 0x20
     CLIENT_COORDINATES = 0x100
@@ -200,7 +200,7 @@ class TabLeader(enum.IntEnum):
     EQUALS = 5
 
 class TextGetOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     ADJUST_CRLF = 0x1
     USE_CRLF = 0x2
     USE_OBJECT_TEXT = 0x4
@@ -312,7 +312,7 @@ class TextScript(enum.IntEnum):
     TIFINAGH = 63
 
 class TextSetOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     UNICODE_BIDI = 0x1
     UNLINK = 0x8
     UNHIDE = 0x10

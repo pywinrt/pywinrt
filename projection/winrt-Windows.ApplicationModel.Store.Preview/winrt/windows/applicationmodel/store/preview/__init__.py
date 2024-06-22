@@ -34,7 +34,7 @@ class DeliveryOptimizationDownloadModeSource(enum.IntEnum):
     POLICY = 1
 
 class StoreLogOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     TRY_ELEVATE = 0x1
 
 class StorePreviewProductPurchaseStatus(enum.IntEnum):

@@ -56,20 +56,20 @@ class IsolatedWindowsEnvironmentActivator(enum.IntEnum):
     USER = 1
 
 class IsolatedWindowsEnvironmentAllowedClipboardFormats(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     TEXT = 0x1
     IMAGE = 0x2
     RTF = 0x4
 
 class IsolatedWindowsEnvironmentAvailablePrinters(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     LOCAL = 0x1
     NETWORK = 0x2
     SYSTEM_PRINT_TO_PDF = 0x4
     SYSTEM_PRINT_TO_XPS = 0x8
 
 class IsolatedWindowsEnvironmentClipboardCopyPasteDirections(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     HOST_TO_ISOLATED_WINDOWS_ENVIRONMENT = 0x1
     ISOLATED_WINDOWS_ENVIRONMENT_TO_HOST = 0x2
 

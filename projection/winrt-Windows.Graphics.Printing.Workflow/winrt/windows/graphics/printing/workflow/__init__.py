@@ -46,12 +46,12 @@ __all__ = [
 ]
 
 class PdlConversionHostBasedProcessingOperations(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     PAGE_ROTATION = 0x1
     PAGE_ORDERING = 0x2
     COPIES = 0x4
     BLANK_PAGE_INSERTION = 0x8
-    ALL = 0xffffffff
+    ALL = 0xFFFFFFFF
 
 class PrintWorkflowAttributesMergePolicy(enum.IntEnum):
     MERGE_PREFER_PRINT_TICKET_ON_CONFLICT = 0
