@@ -428,7 +428,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { "_assign_array_", _assign_array_ControlChannelTrigger, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ControlChannelTrigger), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ControlChannelTrigger), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ControlChannelTrigger), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ControlChannelTrigger), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1122,7 +1122,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { "_assign_array_", _assign_array_DatagramSocket, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DatagramSocket), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DatagramSocket), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_DatagramSocket), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_DatagramSocket), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2285,7 +2285,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { "_assign_array_", _assign_array_MessageWebSocket, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MessageWebSocket), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MessageWebSocket), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MessageWebSocket), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MessageWebSocket), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3469,7 +3469,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { "_assign_array_", _assign_array_ServerMessageWebSocket, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ServerMessageWebSocket), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ServerMessageWebSocket), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ServerMessageWebSocket), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ServerMessageWebSocket), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3963,7 +3963,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { "_assign_array_", _assign_array_ServerStreamWebSocket, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ServerStreamWebSocket), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ServerStreamWebSocket), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ServerStreamWebSocket), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ServerStreamWebSocket), METH_VARARGS, nullptr },
         { }
     };
 
@@ -5229,7 +5229,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { "_assign_array_", _assign_array_StreamSocket, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StreamSocket), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_StreamSocket), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_StreamSocket), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_StreamSocket), METH_VARARGS, nullptr },
         { }
     };
 
@@ -6555,7 +6555,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { "_assign_array_", _assign_array_StreamSocketListener, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StreamSocketListener), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_StreamSocketListener), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_StreamSocketListener), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_StreamSocketListener), METH_VARARGS, nullptr },
         { }
     };
 
@@ -7441,7 +7441,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { "_assign_array_", _assign_array_StreamWebSocket, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StreamWebSocket), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_StreamWebSocket), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_StreamWebSocket), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_StreamWebSocket), METH_VARARGS, nullptr },
         { }
     };
 
@@ -9096,7 +9096,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { "_assign_array_", _assign_array_IWebSocket, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebSocket), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IWebSocket), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IWebSocket), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IWebSocket), METH_VARARGS, nullptr },
         { }
     };
 

@@ -4242,7 +4242,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { "_assign_array_", _assign_array_GattDeviceService, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GattDeviceService), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_GattDeviceService), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_GattDeviceService), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_GattDeviceService), METH_VARARGS, nullptr },
         { }
     };
 
@@ -9865,7 +9865,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { "_assign_array_", _assign_array_GattSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GattSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_GattSession), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_GattSession), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_GattSession), METH_VARARGS, nullptr },
         { }
     };
 

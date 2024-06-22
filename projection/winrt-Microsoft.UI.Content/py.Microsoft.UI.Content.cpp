@@ -1498,7 +1498,7 @@ namespace py::cpp::Microsoft::UI::Content
         { "_assign_array_", _assign_array_ContentIsland, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentIsland), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ContentIsland), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ContentIsland), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ContentIsland), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2892,7 +2892,7 @@ namespace py::cpp::Microsoft::UI::Content
         { "_assign_array_", _assign_array_ContentSite, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentSite), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ContentSite), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ContentSite), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ContentSite), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4582,7 +4582,7 @@ namespace py::cpp::Microsoft::UI::Content
         { "_assign_array_", _assign_array_DesktopSiteBridge, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DesktopSiteBridge), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DesktopSiteBridge), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_DesktopSiteBridge), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_DesktopSiteBridge), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4849,7 +4849,7 @@ namespace py::cpp::Microsoft::UI::Content
         { "_assign_array_", _assign_array_IContentSiteBridge, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContentSiteBridge), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IContentSiteBridge), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IContentSiteBridge), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IContentSiteBridge), METH_VARARGS, nullptr },
         { }
     };
 

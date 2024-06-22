@@ -832,7 +832,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { "_assign_array_", _assign_array_BarcodeScannerFrameReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScannerFrameReader), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_BarcodeScannerFrameReader), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_BarcodeScannerFrameReader), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_BarcodeScannerFrameReader), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2431,7 +2431,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { "_assign_array_", _assign_array_BarcodeScannerProviderConnection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScannerProviderConnection), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_BarcodeScannerProviderConnection), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_BarcodeScannerProviderConnection), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_BarcodeScannerProviderConnection), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3939,7 +3939,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { "_assign_array_", _assign_array_BarcodeScannerVideoFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BarcodeScannerVideoFrame), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_BarcodeScannerVideoFrame), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_BarcodeScannerVideoFrame), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_BarcodeScannerVideoFrame), METH_VARARGS, nullptr },
         { }
     };
 

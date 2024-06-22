@@ -1878,7 +1878,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { "_assign_array_", _assign_array_PerceptionVideoFrameAllocator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PerceptionVideoFrameAllocator), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PerceptionVideoFrameAllocator), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_PerceptionVideoFrameAllocator), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_PerceptionVideoFrameAllocator), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2151,7 +2151,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { "_assign_array_", _assign_array_IPerceptionFrameProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPerceptionFrameProvider), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IPerceptionFrameProvider), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IPerceptionFrameProvider), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IPerceptionFrameProvider), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2307,7 +2307,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { "_assign_array_", _assign_array_IPerceptionFrameProviderManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPerceptionFrameProviderManager), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IPerceptionFrameProviderManager), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IPerceptionFrameProviderManager), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IPerceptionFrameProviderManager), METH_VARARGS, nullptr },
         { }
     };
 

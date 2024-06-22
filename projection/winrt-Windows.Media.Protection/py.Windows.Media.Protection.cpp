@@ -461,7 +461,7 @@ namespace py::cpp::Windows::Media::Protection
         { "_assign_array_", _assign_array_HdcpSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HdcpSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HdcpSession), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_HdcpSession), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_HdcpSession), METH_VARARGS, nullptr },
         { }
     };
 

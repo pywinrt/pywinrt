@@ -196,7 +196,7 @@ namespace py::cpp::Windows::Media
         { "_assign_array_", _assign_array_AudioBuffer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioBuffer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioBuffer), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_AudioBuffer), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioBuffer), METH_VARARGS, nullptr },
         { }
     };
 
@@ -620,7 +620,7 @@ namespace py::cpp::Windows::Media
         { "_assign_array_", _assign_array_AudioFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioFrame), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioFrame), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_AudioFrame), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioFrame), METH_VARARGS, nullptr },
         { }
     };
 
@@ -6594,7 +6594,7 @@ namespace py::cpp::Windows::Media
         { "_assign_array_", _assign_array_VideoFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoFrame), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_VideoFrame), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_VideoFrame), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_VideoFrame), METH_VARARGS, nullptr },
         { }
     };
 
@@ -7099,7 +7099,7 @@ namespace py::cpp::Windows::Media
         { "_assign_array_", _assign_array_IMediaFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IMediaFrame), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IMediaFrame), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IMediaFrame), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IMediaFrame), METH_VARARGS, nullptr },
         { }
     };
 

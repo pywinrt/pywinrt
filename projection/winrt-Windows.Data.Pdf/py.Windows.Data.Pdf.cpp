@@ -550,7 +550,7 @@ namespace py::cpp::Windows::Data::Pdf
         { "_assign_array_", _assign_array_PdfPage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PdfPage), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PdfPage), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_PdfPage), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_PdfPage), METH_VARARGS, nullptr },
         { }
     };
 

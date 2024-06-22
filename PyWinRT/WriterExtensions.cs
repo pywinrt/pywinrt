@@ -331,9 +331,8 @@ static class WriterExtensions
             w.WriteLine(
                 $"{{ \"__enter__\", reinterpret_cast<PyCFunction>(_enter_{type.Name}), METH_NOARGS, nullptr }},"
             );
-            // FIXME: remove extra space after comma
             w.WriteLine(
-                $"{{ \"__exit__\",  reinterpret_cast<PyCFunction>(_exit_{type.Name}), METH_VARARGS, nullptr }},"
+                $"{{ \"__exit__\", reinterpret_cast<PyCFunction>(_exit_{type.Name}), METH_VARARGS, nullptr }},"
             );
         }
 

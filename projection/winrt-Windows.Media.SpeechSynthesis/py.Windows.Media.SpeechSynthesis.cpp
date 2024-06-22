@@ -484,7 +484,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         { "_assign_array_", _assign_array_SpeechSynthesisStream, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpeechSynthesisStream), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_SpeechSynthesisStream), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_SpeechSynthesisStream), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_SpeechSynthesisStream), METH_VARARGS, nullptr },
         { }
     };
 
@@ -833,7 +833,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         { "_assign_array_", _assign_array_SpeechSynthesizer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpeechSynthesizer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_SpeechSynthesizer), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_SpeechSynthesizer), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_SpeechSynthesizer), METH_VARARGS, nullptr },
         { }
     };
 

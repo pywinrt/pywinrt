@@ -9126,7 +9126,7 @@ namespace py::cpp::Windows::Media::Capture
         { "_assign_array_", _assign_array_AppCaptureMetadataWriter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppCaptureMetadataWriter), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AppCaptureMetadataWriter), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_AppCaptureMetadataWriter), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_AppCaptureMetadataWriter), METH_VARARGS, nullptr },
         { }
     };
 
@@ -12850,7 +12850,7 @@ namespace py::cpp::Windows::Media::Capture
         { "_assign_array_", _assign_array_CapturedFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CapturedFrame), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_CapturedFrame), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_CapturedFrame), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_CapturedFrame), METH_VARARGS, nullptr },
         { }
     };
 
@@ -16822,7 +16822,7 @@ namespace py::cpp::Windows::Media::Capture
         { "_assign_array_", _assign_array_MediaCapture, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaCapture), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MediaCapture), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MediaCapture), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MediaCapture), METH_VARARGS, nullptr },
         { }
     };
 
@@ -18278,7 +18278,7 @@ namespace py::cpp::Windows::Media::Capture
         { "_assign_array_", _assign_array_MediaCapturePauseResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaCapturePauseResult), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MediaCapturePauseResult), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MediaCapturePauseResult), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MediaCapturePauseResult), METH_VARARGS, nullptr },
         { }
     };
 
@@ -18527,7 +18527,7 @@ namespace py::cpp::Windows::Media::Capture
         { "_assign_array_", _assign_array_MediaCaptureRelativePanelWatcher, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaCaptureRelativePanelWatcher), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MediaCaptureRelativePanelWatcher), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MediaCaptureRelativePanelWatcher), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MediaCaptureRelativePanelWatcher), METH_VARARGS, nullptr },
         { }
     };
 
@@ -19036,7 +19036,7 @@ namespace py::cpp::Windows::Media::Capture
         { "_assign_array_", _assign_array_MediaCaptureStopResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaCaptureStopResult), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MediaCaptureStopResult), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MediaCaptureStopResult), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MediaCaptureStopResult), METH_VARARGS, nullptr },
         { }
     };
 

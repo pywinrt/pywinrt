@@ -630,7 +630,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { "_assign_array_", _assign_array_II2cDeviceProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_II2cDeviceProvider), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_II2cDeviceProvider), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_II2cDeviceProvider), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_II2cDeviceProvider), METH_VARARGS, nullptr },
         { }
     };
 

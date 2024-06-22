@@ -780,7 +780,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "_assign_array_", _assign_array_FileLoggingSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FileLoggingSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_FileLoggingSession), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_FileLoggingSession), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_FileLoggingSession), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1439,7 +1439,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "_assign_array_", _assign_array_LoggingActivity, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LoggingActivity), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LoggingActivity), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_LoggingActivity), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_LoggingActivity), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2124,7 +2124,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "_assign_array_", _assign_array_LoggingChannel, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LoggingChannel), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LoggingChannel), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_LoggingChannel), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_LoggingChannel), METH_VARARGS, nullptr },
         { }
     };
 
@@ -6163,7 +6163,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "_assign_array_", _assign_array_LoggingSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LoggingSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LoggingSession), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_LoggingSession), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_LoggingSession), METH_VARARGS, nullptr },
         { }
     };
 
@@ -6862,7 +6862,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "_assign_array_", _assign_array_IFileLoggingSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IFileLoggingSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IFileLoggingSession), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IFileLoggingSession), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IFileLoggingSession), METH_VARARGS, nullptr },
         { }
     };
 
@@ -7198,7 +7198,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "_assign_array_", _assign_array_ILoggingChannel, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILoggingChannel), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ILoggingChannel), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ILoggingChannel), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ILoggingChannel), METH_VARARGS, nullptr },
         { }
     };
 
@@ -7462,7 +7462,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "_assign_array_", _assign_array_ILoggingSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILoggingSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ILoggingSession), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ILoggingSession), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ILoggingSession), METH_VARARGS, nullptr },
         { }
     };
 

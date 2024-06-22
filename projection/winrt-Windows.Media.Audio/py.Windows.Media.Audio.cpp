@@ -536,7 +536,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_assign_array_", _assign_array_AudioDeviceInputNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioDeviceInputNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioDeviceInputNode), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_AudioDeviceInputNode), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioDeviceInputNode), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1021,7 +1021,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_assign_array_", _assign_array_AudioDeviceOutputNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioDeviceOutputNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioDeviceOutputNode), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_AudioDeviceOutputNode), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioDeviceOutputNode), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1888,7 +1888,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_assign_array_", _assign_array_AudioFileInputNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioFileInputNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioFileInputNode), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_AudioFileInputNode), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioFileInputNode), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2381,7 +2381,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_assign_array_", _assign_array_AudioFileOutputNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioFileOutputNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioFileOutputNode), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_AudioFileOutputNode), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioFileOutputNode), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3234,7 +3234,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_assign_array_", _assign_array_AudioFrameInputNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioFrameInputNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioFrameInputNode), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_AudioFrameInputNode), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioFrameInputNode), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3684,7 +3684,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_assign_array_", _assign_array_AudioFrameOutputNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioFrameOutputNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioFrameOutputNode), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_AudioFrameOutputNode), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioFrameOutputNode), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4691,7 +4691,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_assign_array_", _assign_array_AudioGraph, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioGraph), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioGraph), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_AudioGraph), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioGraph), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4844,7 +4844,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_assign_array_", _assign_array_AudioGraphBatchUpdater, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioGraphBatchUpdater), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioGraphBatchUpdater), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_AudioGraphBatchUpdater), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioGraphBatchUpdater), METH_VARARGS, nullptr },
         { }
     };
 
@@ -7349,7 +7349,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_assign_array_", _assign_array_AudioPlaybackConnection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioPlaybackConnection), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioPlaybackConnection), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_AudioPlaybackConnection), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioPlaybackConnection), METH_VARARGS, nullptr },
         { }
     };
 
@@ -8392,7 +8392,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_assign_array_", _assign_array_AudioSubmixNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioSubmixNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_AudioSubmixNode), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_AudioSubmixNode), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_AudioSubmixNode), METH_VARARGS, nullptr },
         { }
     };
 
@@ -10994,7 +10994,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_assign_array_", _assign_array_MediaSourceAudioInputNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaSourceAudioInputNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MediaSourceAudioInputNode), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MediaSourceAudioInputNode), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MediaSourceAudioInputNode), METH_VARARGS, nullptr },
         { }
     };
 
@@ -13602,7 +13602,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_assign_array_", _assign_array_IAudioInputNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAudioInputNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IAudioInputNode), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IAudioInputNode), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IAudioInputNode), METH_VARARGS, nullptr },
         { }
     };
 
@@ -14145,7 +14145,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_assign_array_", _assign_array_IAudioInputNode2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAudioInputNode2), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IAudioInputNode2), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IAudioInputNode2), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IAudioInputNode2), METH_VARARGS, nullptr },
         { }
     };
 
@@ -14563,7 +14563,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_assign_array_", _assign_array_IAudioNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAudioNode), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IAudioNode), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IAudioNode), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IAudioNode), METH_VARARGS, nullptr },
         { }
     };
 
@@ -15026,7 +15026,7 @@ namespace py::cpp::Windows::Media::Audio
         { "_assign_array_", _assign_array_IAudioNodeWithListener, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAudioNodeWithListener), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IAudioNodeWithListener), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IAudioNodeWithListener), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IAudioNodeWithListener), METH_VARARGS, nullptr },
         { }
     };
 

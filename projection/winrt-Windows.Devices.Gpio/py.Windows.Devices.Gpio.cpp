@@ -312,7 +312,7 @@ namespace py::cpp::Windows::Devices::Gpio
         { "_assign_array_", _assign_array_GpioChangeCounter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GpioChangeCounter), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_GpioChangeCounter), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_GpioChangeCounter), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_GpioChangeCounter), METH_VARARGS, nullptr },
         { }
     };
 
@@ -832,7 +832,7 @@ namespace py::cpp::Windows::Devices::Gpio
         { "_assign_array_", _assign_array_GpioChangeReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GpioChangeReader), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_GpioChangeReader), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_GpioChangeReader), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_GpioChangeReader), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1558,7 +1558,7 @@ namespace py::cpp::Windows::Devices::Gpio
         { "_assign_array_", _assign_array_GpioPin, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GpioPin), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_GpioPin), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_GpioPin), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_GpioPin), METH_VARARGS, nullptr },
         { }
     };
 

@@ -155,7 +155,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
         { "_assign_array_", _assign_array_PalmRejectionDelayZonePreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PalmRejectionDelayZonePreview), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PalmRejectionDelayZonePreview), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_PalmRejectionDelayZonePreview), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_PalmRejectionDelayZonePreview), METH_VARARGS, nullptr },
         { }
     };
 

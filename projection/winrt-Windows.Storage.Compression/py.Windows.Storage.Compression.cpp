@@ -263,7 +263,7 @@ namespace py::cpp::Windows::Storage::Compression
         { "_assign_array_", _assign_array_Compressor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Compressor), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_Compressor), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_Compressor), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_Compressor), METH_VARARGS, nullptr },
         { }
     };
 
@@ -472,7 +472,7 @@ namespace py::cpp::Windows::Storage::Compression
         { "_assign_array_", _assign_array_Decompressor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Decompressor), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_Decompressor), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_Decompressor), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_Decompressor), METH_VARARGS, nullptr },
         { }
     };
 

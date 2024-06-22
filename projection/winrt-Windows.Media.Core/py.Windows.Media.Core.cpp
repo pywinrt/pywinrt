@@ -3835,7 +3835,7 @@ namespace py::cpp::Windows::Media::Core
         { "_assign_array_", _assign_array_FaceDetectionEffectFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FaceDetectionEffectFrame), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_FaceDetectionEffectFrame), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_FaceDetectionEffectFrame), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_FaceDetectionEffectFrame), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4858,7 +4858,7 @@ namespace py::cpp::Windows::Media::Core
         { "_assign_array_", _assign_array_LowLightFusionResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LowLightFusionResult), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LowLightFusionResult), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_LowLightFusionResult), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_LowLightFusionResult), METH_VARARGS, nullptr },
         { }
     };
 
@@ -6340,7 +6340,7 @@ namespace py::cpp::Windows::Media::Core
         { "_assign_array_", _assign_array_MediaSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaSource), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MediaSource), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MediaSource), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MediaSource), METH_VARARGS, nullptr },
         { }
     };
 
@@ -12454,7 +12454,7 @@ namespace py::cpp::Windows::Media::Core
         { "_assign_array_", _assign_array_SceneAnalysisEffectFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneAnalysisEffectFrame), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_SceneAnalysisEffectFrame), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_SceneAnalysisEffectFrame), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_SceneAnalysisEffectFrame), METH_VARARGS, nullptr },
         { }
     };
 

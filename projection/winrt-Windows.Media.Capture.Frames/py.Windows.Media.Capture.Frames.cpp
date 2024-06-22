@@ -1228,7 +1228,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "_assign_array_", _assign_array_MediaFrameReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaFrameReader), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MediaFrameReader), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MediaFrameReader), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MediaFrameReader), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1521,7 +1521,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "_assign_array_", _assign_array_MediaFrameReference, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaFrameReference), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MediaFrameReference), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MediaFrameReference), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MediaFrameReference), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3056,7 +3056,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "_assign_array_", _assign_array_MultiSourceMediaFrameReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MultiSourceMediaFrameReader), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MultiSourceMediaFrameReader), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MultiSourceMediaFrameReader), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MultiSourceMediaFrameReader), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3210,7 +3210,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { "_assign_array_", _assign_array_MultiSourceMediaFrameReference, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MultiSourceMediaFrameReference), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_MultiSourceMediaFrameReference), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_MultiSourceMediaFrameReference), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_MultiSourceMediaFrameReference), METH_VARARGS, nullptr },
         { }
     };
 

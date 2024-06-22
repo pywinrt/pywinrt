@@ -1172,7 +1172,7 @@ namespace py::cpp::Windows::Devices::Perception
         { "_assign_array_", _assign_array_PerceptionColorFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PerceptionColorFrame), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PerceptionColorFrame), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_PerceptionColorFrame), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_PerceptionColorFrame), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1554,7 +1554,7 @@ namespace py::cpp::Windows::Devices::Perception
         { "_assign_array_", _assign_array_PerceptionColorFrameReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PerceptionColorFrameReader), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PerceptionColorFrameReader), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_PerceptionColorFrameReader), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_PerceptionColorFrameReader), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3212,7 +3212,7 @@ namespace py::cpp::Windows::Devices::Perception
         { "_assign_array_", _assign_array_PerceptionControlSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PerceptionControlSession), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PerceptionControlSession), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_PerceptionControlSession), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_PerceptionControlSession), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3760,7 +3760,7 @@ namespace py::cpp::Windows::Devices::Perception
         { "_assign_array_", _assign_array_PerceptionDepthFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PerceptionDepthFrame), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PerceptionDepthFrame), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_PerceptionDepthFrame), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_PerceptionDepthFrame), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4142,7 +4142,7 @@ namespace py::cpp::Windows::Devices::Perception
         { "_assign_array_", _assign_array_PerceptionDepthFrameReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PerceptionDepthFrameReader), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PerceptionDepthFrameReader), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_PerceptionDepthFrameReader), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_PerceptionDepthFrameReader), METH_VARARGS, nullptr },
         { }
     };
 
@@ -5959,7 +5959,7 @@ namespace py::cpp::Windows::Devices::Perception
         { "_assign_array_", _assign_array_PerceptionInfraredFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PerceptionInfraredFrame), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PerceptionInfraredFrame), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_PerceptionInfraredFrame), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_PerceptionInfraredFrame), METH_VARARGS, nullptr },
         { }
     };
 
@@ -6341,7 +6341,7 @@ namespace py::cpp::Windows::Devices::Perception
         { "_assign_array_", _assign_array_PerceptionInfraredFrameReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PerceptionInfraredFrameReader), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PerceptionInfraredFrameReader), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_PerceptionInfraredFrameReader), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_PerceptionInfraredFrameReader), METH_VARARGS, nullptr },
         { }
     };
 

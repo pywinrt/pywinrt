@@ -1948,7 +1948,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "_assign_array_", _assign_array_SmartCardChallengeContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardChallengeContext), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_SmartCardChallengeContext), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_SmartCardChallengeContext), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_SmartCardChallengeContext), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2102,7 +2102,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "_assign_array_", _assign_array_SmartCardConnection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardConnection), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_SmartCardConnection), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_SmartCardConnection), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_SmartCardConnection), METH_VARARGS, nullptr },
         { }
     };
 

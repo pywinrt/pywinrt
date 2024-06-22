@@ -740,7 +740,7 @@ namespace py::cpp::Windows::Media::Devices::Core
         { "_assign_array_", _assign_array_DepthCorrelatedCoordinateMapper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DepthCorrelatedCoordinateMapper), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DepthCorrelatedCoordinateMapper), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_DepthCorrelatedCoordinateMapper), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_DepthCorrelatedCoordinateMapper), METH_VARARGS, nullptr },
         { }
     };
 

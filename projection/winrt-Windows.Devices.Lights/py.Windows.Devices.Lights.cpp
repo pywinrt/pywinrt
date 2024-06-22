@@ -413,7 +413,7 @@ namespace py::cpp::Windows::Devices::Lights
         { "_assign_array_", _assign_array_Lamp, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Lamp), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_Lamp), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_Lamp), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_Lamp), METH_VARARGS, nullptr },
         { }
     };
 

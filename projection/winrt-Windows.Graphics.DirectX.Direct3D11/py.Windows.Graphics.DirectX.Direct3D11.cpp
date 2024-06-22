@@ -131,7 +131,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         { "_assign_array_", _assign_array_IDirect3DDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDirect3DDevice), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IDirect3DDevice), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IDirect3DDevice), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IDirect3DDevice), METH_VARARGS, nullptr },
         { }
     };
 
@@ -271,7 +271,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         { "_assign_array_", _assign_array_IDirect3DSurface, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IDirect3DSurface), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_IDirect3DSurface), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_IDirect3DSurface), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_IDirect3DSurface), METH_VARARGS, nullptr },
         { }
     };
 

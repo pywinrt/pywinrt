@@ -1549,7 +1549,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { "_assign_array_", _assign_array_BluetoothDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BluetoothDevice), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_BluetoothDevice), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_BluetoothDevice), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_BluetoothDevice), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4585,7 +4585,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { "_assign_array_", _assign_array_BluetoothLEDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BluetoothLEDevice), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_BluetoothLEDevice), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_BluetoothLEDevice), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_BluetoothLEDevice), METH_VARARGS, nullptr },
         { }
     };
 
@@ -5003,7 +5003,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { "_assign_array_", _assign_array_BluetoothLEPreferredConnectionParametersRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BluetoothLEPreferredConnectionParametersRequest), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_BluetoothLEPreferredConnectionParametersRequest), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_BluetoothLEPreferredConnectionParametersRequest), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_BluetoothLEPreferredConnectionParametersRequest), METH_VARARGS, nullptr },
         { }
     };
 

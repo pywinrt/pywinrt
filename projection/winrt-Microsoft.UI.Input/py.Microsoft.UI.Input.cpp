@@ -3071,7 +3071,7 @@ namespace py::cpp::Microsoft::UI::Input
         { "_assign_array_", _assign_array_InputCursor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InputCursor), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_InputCursor), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_InputCursor), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_InputCursor), METH_VARARGS, nullptr },
         { }
     };
 
@@ -9039,7 +9039,7 @@ namespace py::cpp::Microsoft::UI::Input
         { "_assign_array_", _assign_array_PointerPredictor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointerPredictor), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PointerPredictor), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_PointerPredictor), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_PointerPredictor), METH_VARARGS, nullptr },
         { }
     };
 

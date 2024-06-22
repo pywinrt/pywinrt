@@ -3739,7 +3739,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { "_assign_array_", _assign_array_ThreadNetworkContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ThreadNetworkContext), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ThreadNetworkContext), METH_NOARGS, nullptr },
-        { "__exit__",  reinterpret_cast<PyCFunction>(_exit_ThreadNetworkContext), METH_VARARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ThreadNetworkContext), METH_VARARGS, nullptr },
         { }
     };
 
