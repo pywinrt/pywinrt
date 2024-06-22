@@ -125,7 +125,7 @@ namespace py::cpp::Windows::Security::Cryptography
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
-                winrt::com_array<uint8_t> param1 { };
+                winrt::com_array<uint8_t> param1{};
 
                 winrt::Windows::Security::Cryptography::CryptographicBuffer::CopyToByteArray(param0, param1);
 

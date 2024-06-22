@@ -4679,7 +4679,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<bool> param0 { };
+                winrt::com_array<bool> param0{};
 
                 self->obj.GetBooleanArray(param0);
 
@@ -4746,7 +4746,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<char16_t> param0 { };
+                winrt::com_array<char16_t> param0{};
 
                 self->obj.GetChar16Array(param0);
 
@@ -4813,7 +4813,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<winrt::Windows::Foundation::DateTime> param0 { };
+                winrt::com_array<winrt::Windows::Foundation::DateTime> param0{};
 
                 self->obj.GetDateTimeArray(param0);
 
@@ -4880,7 +4880,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<double> param0 { };
+                winrt::com_array<double> param0{};
 
                 self->obj.GetDoubleArray(param0);
 
@@ -4947,7 +4947,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<winrt::guid> param0 { };
+                winrt::com_array<winrt::guid> param0{};
 
                 self->obj.GetGuidArray(param0);
 
@@ -4985,7 +4985,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<winrt::Windows::Foundation::IInspectable> param0 { };
+                winrt::com_array<winrt::Windows::Foundation::IInspectable> param0{};
 
                 self->obj.GetInspectableArray(param0);
 
@@ -5052,7 +5052,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<int16_t> param0 { };
+                winrt::com_array<int16_t> param0{};
 
                 self->obj.GetInt16Array(param0);
 
@@ -5119,7 +5119,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<int32_t> param0 { };
+                winrt::com_array<int32_t> param0{};
 
                 self->obj.GetInt32Array(param0);
 
@@ -5186,7 +5186,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<int64_t> param0 { };
+                winrt::com_array<int64_t> param0{};
 
                 self->obj.GetInt64Array(param0);
 
@@ -5253,7 +5253,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<winrt::Windows::Foundation::Point> param0 { };
+                winrt::com_array<winrt::Windows::Foundation::Point> param0{};
 
                 self->obj.GetPointArray(param0);
 
@@ -5320,7 +5320,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<winrt::Windows::Foundation::Rect> param0 { };
+                winrt::com_array<winrt::Windows::Foundation::Rect> param0{};
 
                 self->obj.GetRectArray(param0);
 
@@ -5387,7 +5387,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<float> param0 { };
+                winrt::com_array<float> param0{};
 
                 self->obj.GetSingleArray(param0);
 
@@ -5454,7 +5454,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<winrt::Windows::Foundation::Size> param0 { };
+                winrt::com_array<winrt::Windows::Foundation::Size> param0{};
 
                 self->obj.GetSizeArray(param0);
 
@@ -5521,7 +5521,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<winrt::hstring> param0 { };
+                winrt::com_array<winrt::hstring> param0{};
 
                 self->obj.GetStringArray(param0);
 
@@ -5588,7 +5588,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<winrt::Windows::Foundation::TimeSpan> param0 { };
+                winrt::com_array<winrt::Windows::Foundation::TimeSpan> param0{};
 
                 self->obj.GetTimeSpanArray(param0);
 
@@ -5655,7 +5655,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<uint16_t> param0 { };
+                winrt::com_array<uint16_t> param0{};
 
                 self->obj.GetUInt16Array(param0);
 
@@ -5722,7 +5722,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<uint32_t> param0 { };
+                winrt::com_array<uint32_t> param0{};
 
                 self->obj.GetUInt32Array(param0);
 
@@ -5789,7 +5789,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<uint64_t> param0 { };
+                winrt::com_array<uint64_t> param0{};
 
                 self->obj.GetUInt64Array(param0);
 
@@ -5856,7 +5856,7 @@ namespace py::cpp::Windows::Foundation
                     return nullptr;
                 }
 
-                winrt::com_array<uint8_t> param0 { };
+                winrt::com_array<uint8_t> param0{};
 
                 self->obj.GetUInt8Array(param0);
 

@@ -313,7 +313,7 @@ namespace py::cpp::TestComponent
 
                 auto param0 = py::convert_to<py::pybuf_view<bool, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<bool, true>>(args, 1);
-                winrt::com_array<bool> param2 { };
+                winrt::com_array<bool> param2{};
 
                 auto return_value = self->obj.Array1(param0, param1, param2);
 
@@ -358,7 +358,7 @@ namespace py::cpp::TestComponent
 
                 auto param0 = py::convert_to<py::pybuf_view<double, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<double, true>>(args, 1);
-                winrt::com_array<double> param2 { };
+                winrt::com_array<double> param2{};
 
                 auto return_value = self->obj.Array10(param0, param1, param2);
 
@@ -435,7 +435,7 @@ namespace py::cpp::TestComponent
 
                 auto param0 = py::convert_to<py::pybuf_view<char16_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<char16_t, true>>(args, 1);
-                winrt::com_array<char16_t> param2 { };
+                winrt::com_array<char16_t> param2{};
 
                 auto return_value = self->obj.Array11(param0, param1, param2);
 
@@ -512,7 +512,7 @@ namespace py::cpp::TestComponent
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, true>>(args, 1);
-                winrt::com_array<winrt::hstring> param2 { };
+                winrt::com_array<winrt::hstring> param2{};
 
                 auto return_value = self->obj.Array12(param0, param1, param2);
 
@@ -589,7 +589,7 @@ namespace py::cpp::TestComponent
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::TestComponent::Blittable, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::TestComponent::Blittable, true>>(args, 1);
-                winrt::com_array<winrt::TestComponent::Blittable> param2 { };
+                winrt::com_array<winrt::TestComponent::Blittable> param2{};
 
                 auto return_value = self->obj.Array13(param0, param1, param2);
 
@@ -666,7 +666,7 @@ namespace py::cpp::TestComponent
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::TestComponent::NonBlittable, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::TestComponent::NonBlittable, true>>(args, 1);
-                winrt::com_array<winrt::TestComponent::NonBlittable> param2 { };
+                winrt::com_array<winrt::TestComponent::NonBlittable> param2{};
 
                 auto return_value = self->obj.Array14(param0, param1, param2);
 
@@ -743,7 +743,7 @@ namespace py::cpp::TestComponent
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::TestComponent::Nested, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::TestComponent::Nested, true>>(args, 1);
-                winrt::com_array<winrt::TestComponent::Nested> param2 { };
+                winrt::com_array<winrt::TestComponent::Nested> param2{};
 
                 auto return_value = self->obj.Array15(param0, param1, param2);
 
@@ -852,7 +852,7 @@ namespace py::cpp::TestComponent
 
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 1);
-                winrt::com_array<uint8_t> param2 { };
+                winrt::com_array<uint8_t> param2{};
 
                 auto return_value = self->obj.Array2(param0, param1, param2);
 
@@ -929,7 +929,7 @@ namespace py::cpp::TestComponent
 
                 auto param0 = py::convert_to<py::pybuf_view<uint16_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint16_t, true>>(args, 1);
-                winrt::com_array<uint16_t> param2 { };
+                winrt::com_array<uint16_t> param2{};
 
                 auto return_value = self->obj.Array3(param0, param1, param2);
 
@@ -1006,7 +1006,7 @@ namespace py::cpp::TestComponent
 
                 auto param0 = py::convert_to<py::pybuf_view<uint32_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint32_t, true>>(args, 1);
-                winrt::com_array<uint32_t> param2 { };
+                winrt::com_array<uint32_t> param2{};
 
                 auto return_value = self->obj.Array4(param0, param1, param2);
 
@@ -1083,7 +1083,7 @@ namespace py::cpp::TestComponent
 
                 auto param0 = py::convert_to<py::pybuf_view<uint64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint64_t, true>>(args, 1);
-                winrt::com_array<uint64_t> param2 { };
+                winrt::com_array<uint64_t> param2{};
 
                 auto return_value = self->obj.Array5(param0, param1, param2);
 
@@ -1160,7 +1160,7 @@ namespace py::cpp::TestComponent
 
                 auto param0 = py::convert_to<py::pybuf_view<int16_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int16_t, true>>(args, 1);
-                winrt::com_array<int16_t> param2 { };
+                winrt::com_array<int16_t> param2{};
 
                 auto return_value = self->obj.Array6(param0, param1, param2);
 
@@ -1237,7 +1237,7 @@ namespace py::cpp::TestComponent
 
                 auto param0 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, true>>(args, 1);
-                winrt::com_array<int32_t> param2 { };
+                winrt::com_array<int32_t> param2{};
 
                 auto return_value = self->obj.Array7(param0, param1, param2);
 
@@ -1314,7 +1314,7 @@ namespace py::cpp::TestComponent
 
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int64_t, true>>(args, 1);
-                winrt::com_array<int64_t> param2 { };
+                winrt::com_array<int64_t> param2{};
 
                 auto return_value = self->obj.Array8(param0, param1, param2);
 
@@ -1391,7 +1391,7 @@ namespace py::cpp::TestComponent
 
                 auto param0 = py::convert_to<py::pybuf_view<float, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, true>>(args, 1);
-                winrt::com_array<float> param2 { };
+                winrt::com_array<float> param2{};
 
                 auto return_value = self->obj.Array9(param0, param1, param2);
 

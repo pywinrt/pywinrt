@@ -7847,7 +7847,7 @@ namespace py::cpp::Windows::Media::Core
                     return nullptr;
                 }
 
-                winrt::com_array<uint8_t> param0 { };
+                winrt::com_array<uint8_t> param0{};
 
                 self->obj.GetInitializationVector(param0);
 
@@ -7885,7 +7885,7 @@ namespace py::cpp::Windows::Media::Core
                     return nullptr;
                 }
 
-                winrt::com_array<uint8_t> param0 { };
+                winrt::com_array<uint8_t> param0{};
 
                 self->obj.GetKeyIdentifier(param0);
 
@@ -7923,7 +7923,7 @@ namespace py::cpp::Windows::Media::Core
                     return nullptr;
                 }
 
-                winrt::com_array<uint8_t> param0 { };
+                winrt::com_array<uint8_t> param0{};
 
                 self->obj.GetSubSampleMapping(param0);
 
