@@ -40,40 +40,6 @@ sealed class Members
     /// </summary>
     public IReadOnlyCollection<ProjectedType> Contracts { get; }
 
-    sealed class TypeNameComparer : IComparer<TypeDefinition>
-    {
-        /// <summary>
-        /// Compares two type definitions by name.
-        /// </summary>
-        /// <remarks>
-        /// This sorts types the same way the C++ generator did.
-        /// </remarks>
-        public int Compare(TypeDefinition? x, TypeDefinition? y)
-        {
-            if (x is not null && y is not null)
-            {
-                if (x.Name == y.Name)
-                {
-                    return 0;
-                }
-
-                if (x.Name.StartsWith(y.Name))
-                {
-                    return 1;
-                }
-
-                if (y.Name.StartsWith(x.Name))
-                {
-                    return -1;
-                }
-            }
-
-            return string.CompareOrdinal(x?.Name, y?.Name);
-        }
-    }
-
-    private static readonly TypeNameComparer typeNameComparer = new();
-
     /// <summary>
     /// Initializes a new instance of the <see cref="Members"/> class.
     /// </summary>
@@ -88,7 +54,7 @@ sealed class Members
         var attributes = new List<TypeDefinition>();
         var contracts = new List<TypeDefinition>();
 
-        foreach (var type in typeDefinitions.Order(typeNameComparer))
+        foreach (var type in typeDefinitions.OrderBy(t => t.FullName, StringComparer.Ordinal))
         {
             switch (type.GetCategory())
             {
