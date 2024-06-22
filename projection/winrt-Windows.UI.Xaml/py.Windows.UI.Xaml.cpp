@@ -5537,11 +5537,7 @@ namespace py::cpp::Windows::UI::Xaml
 
             if (count != static_cast<uint32_t>(length))
             {
-                PyErr_Format(
-                    PyExc_RuntimeError,
-                    "returned count %d did not match requested length %zd",
-                    count,
-                    length);
+                PyErr_Format(PyExc_RuntimeError, "returned count %d did not match requested length %zd", count, length);
                 return nullptr;
             }
 
@@ -15006,11 +15002,7 @@ namespace py::cpp::Windows::UI::Xaml
 
             if (count != static_cast<uint32_t>(length))
             {
-                PyErr_Format(
-                    PyExc_RuntimeError,
-                    "returned count %d did not match requested length %zd",
-                    count,
-                    length);
+                PyErr_Format(PyExc_RuntimeError, "returned count %d did not match requested length %zd", count, length);
                 return nullptr;
             }
 
@@ -16933,11 +16925,7 @@ namespace py::cpp::Windows::UI::Xaml
 
             if (count != static_cast<uint32_t>(length))
             {
-                PyErr_Format(
-                    PyExc_RuntimeError,
-                    "returned count %d did not match requested length %zd",
-                    count,
-                    length);
+                PyErr_Format(PyExc_RuntimeError, "returned count %d did not match requested length %zd", count, length);
                 return nullptr;
             }
 
@@ -17627,11 +17615,7 @@ namespace py::cpp::Windows::UI::Xaml
 
             if (count != static_cast<uint32_t>(length))
             {
-                PyErr_Format(
-                    PyExc_RuntimeError,
-                    "returned count %d did not match requested length %zd",
-                    count,
-                    length);
+                PyErr_Format(PyExc_RuntimeError, "returned count %d did not match requested length %zd", count, length);
                 return nullptr;
             }
 
@@ -24836,11 +24820,7 @@ namespace py::cpp::Windows::UI::Xaml
 
             if (count != static_cast<uint32_t>(length))
             {
-                PyErr_Format(
-                    PyExc_RuntimeError,
-                    "returned count %d did not match requested length %zd",
-                    count,
-                    length);
+                PyErr_Format(PyExc_RuntimeError, "returned count %d did not match requested length %zd", count, length);
                 return nullptr;
             }
 

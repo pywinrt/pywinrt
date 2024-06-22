@@ -178,14 +178,9 @@ static class SeqWriterExtensions
             w.WriteLine("if (count != static_cast<uint32_t>(length))");
             w.WriteLine("{");
             w.Indent++;
-            // FIXME: put on single line
-            w.WriteLine("PyErr_Format(");
-            w.Indent++;
-            w.WriteLine("PyExc_RuntimeError,");
-            w.WriteLine("\"returned count %d did not match requested length %zd\",");
-            w.WriteLine("count,");
-            w.WriteLine("length);");
-            w.Indent--;
+            w.WriteLine(
+                "PyErr_Format(PyExc_RuntimeError, \"returned count %d did not match requested length %zd\", count, length);"
+            );
             w.WriteLine("return nullptr;");
             w.Indent--;
             w.WriteLine("}");
