@@ -317,18 +317,13 @@ static class FileWriters
                 w.WriteLine("def __len__(self) -> int: ...");
                 w.WriteLine($"def __iter__(self) -> typing.Iterator[{keyType}]: ...");
                 w.WriteLine("def __contains__(self, key: object) -> bool: ...");
-                // FIXME: combine ifs
+                w.WriteLine($"def __getitem__(self, key: {keyType}) -> {valueType}: ...");
+
                 if (type.IsPyMutableMapping)
                 {
                     w.WriteLine(
                         $"def __setitem__(self, key: {keyType}, value: {valueType}) -> None: ..."
                     );
-                }
-
-                w.WriteLine($"def __getitem__(self, key: {keyType}) -> {valueType}: ...");
-
-                if (type.IsPyMutableMapping)
-                {
                     w.WriteLine($"def __delitem__(self, key: {keyType}) -> None: ...");
                 }
             }
