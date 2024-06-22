@@ -29,10 +29,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Web.Syndication.h>
 
 namespace py::proj::Windows::Web::Syndication
-{}
+{
+}
 
 namespace py::impl::Windows::Web::Syndication
-{}
+{
+}
 
 namespace py::wrapper::Windows::Web::Syndication
 {

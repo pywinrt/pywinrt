@@ -19,10 +19,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Graphics.Display.Core.h>
 
 namespace py::proj::Windows::Graphics::Display::Core
-{}
+{
+}
 
 namespace py::impl::Windows::Graphics::Display::Core
-{}
+{
+}
 
 namespace py::wrapper::Windows::Graphics::Display::Core
 {

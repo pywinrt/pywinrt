@@ -34,10 +34,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.UI.Xaml.Core.Direct.h>
 
 namespace py::proj::Windows::UI::Xaml::Core::Direct
-{}
+{
+}
 
 namespace py::impl::Windows::UI::Xaml::Core::Direct
-{}
+{
+}
 
 namespace py::wrapper::Windows::UI::Xaml::Core::Direct
 {

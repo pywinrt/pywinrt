@@ -34,10 +34,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.UI.Composition.Scenes.h>
 
 namespace py::proj::Microsoft::UI::Composition::Scenes
-{}
+{
+}
 
 namespace py::impl::Microsoft::UI::Composition::Scenes
-{}
+{
+}
 
 namespace py::wrapper::Microsoft::UI::Composition::Scenes
 {

@@ -14,10 +14,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.Windows.System.h>
 
 namespace py::proj::Microsoft::Windows::System
-{}
+{
+}
 
 namespace py::impl::Microsoft::Windows::System
-{}
+{
+}
 
 namespace py::wrapper::Microsoft::Windows::System
 {

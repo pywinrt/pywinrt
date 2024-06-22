@@ -14,10 +14,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.UI.Core.Preview.Communications.h>
 
 namespace py::proj::Windows::UI::Core::Preview::Communications
-{}
+{
+}
 
 namespace py::impl::Windows::UI::Core::Preview::Communications
-{}
+{
+}
 
 namespace py::wrapper::Windows::UI::Core::Preview::Communications
 {

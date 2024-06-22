@@ -44,10 +44,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.UI.StartScreen.h>
 
 namespace py::proj::Windows::UI::StartScreen
-{}
+{
+}
 
 namespace py::impl::Windows::UI::StartScreen
-{}
+{
+}
 
 namespace py::wrapper::Windows::UI::StartScreen
 {

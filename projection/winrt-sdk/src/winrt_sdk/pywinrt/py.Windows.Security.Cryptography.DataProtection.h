@@ -19,10 +19,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Security.Cryptography.DataProtection.h>
 
 namespace py::proj::Windows::Security::Cryptography::DataProtection
-{}
+{
+}
 
 namespace py::impl::Windows::Security::Cryptography::DataProtection
-{}
+{
+}
 
 namespace py::wrapper::Windows::Security::Cryptography::DataProtection
 {

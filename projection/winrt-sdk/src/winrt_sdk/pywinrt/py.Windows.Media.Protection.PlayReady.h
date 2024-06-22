@@ -34,10 +34,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Media.Protection.PlayReady.h>
 
 namespace py::proj::Windows::Media::Protection::PlayReady
-{}
+{
+}
 
 namespace py::impl::Windows::Media::Protection::PlayReady
-{}
+{
+}
 
 namespace py::wrapper::Windows::Media::Protection::PlayReady
 {

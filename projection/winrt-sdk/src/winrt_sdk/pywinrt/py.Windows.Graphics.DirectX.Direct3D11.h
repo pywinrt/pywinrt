@@ -14,10 +14,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Graphics.DirectX.Direct3D11.h>
 
 namespace py::proj::Windows::Graphics::DirectX::Direct3D11
-{}
+{
+}
 
 namespace py::impl::Windows::Graphics::DirectX::Direct3D11
-{}
+{
+}
 
 namespace py::wrapper::Windows::Graphics::DirectX::Direct3D11
 {

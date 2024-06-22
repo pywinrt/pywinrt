@@ -39,10 +39,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Media.Miracast.h>
 
 namespace py::proj::Windows::Media::Miracast
-{}
+{
+}
 
 namespace py::impl::Windows::Media::Miracast
-{}
+{
+}
 
 namespace py::wrapper::Windows::Media::Miracast
 {

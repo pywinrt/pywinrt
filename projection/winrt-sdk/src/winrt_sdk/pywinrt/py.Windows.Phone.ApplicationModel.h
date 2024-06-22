@@ -9,10 +9,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Phone.ApplicationModel.h>
 
 namespace py::proj::Windows::Phone::ApplicationModel
-{}
+{
+}
 
 namespace py::impl::Windows::Phone::ApplicationModel
-{}
+{
+}
 
 namespace py::wrapper::Windows::Phone::ApplicationModel
 {

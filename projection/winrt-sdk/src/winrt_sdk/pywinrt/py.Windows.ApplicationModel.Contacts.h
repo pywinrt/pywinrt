@@ -49,10 +49,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.ApplicationModel.Contacts.h>
 
 namespace py::proj::Windows::ApplicationModel::Contacts
-{}
+{
+}
 
 namespace py::impl::Windows::ApplicationModel::Contacts
-{}
+{
+}
 
 namespace py::wrapper::Windows::ApplicationModel::Contacts
 {

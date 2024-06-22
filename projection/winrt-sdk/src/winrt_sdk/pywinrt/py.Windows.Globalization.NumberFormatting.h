@@ -19,10 +19,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Globalization.NumberFormatting.h>
 
 namespace py::proj::Windows::Globalization::NumberFormatting
-{}
+{
+}
 
 namespace py::impl::Windows::Globalization::NumberFormatting
-{}
+{
+}
 
 namespace py::wrapper::Windows::Globalization::NumberFormatting
 {

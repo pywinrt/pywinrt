@@ -24,10 +24,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Media.AppRecording.h>
 
 namespace py::proj::Windows::Media::AppRecording
-{}
+{
+}
 
 namespace py::impl::Windows::Media::AppRecording
-{}
+{
+}
 
 namespace py::wrapper::Windows::Media::AppRecording
 {

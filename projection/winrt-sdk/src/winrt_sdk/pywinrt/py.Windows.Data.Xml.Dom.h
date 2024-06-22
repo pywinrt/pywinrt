@@ -29,10 +29,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Data.Xml.Dom.h>
 
 namespace py::proj::Windows::Data::Xml::Dom
-{}
+{
+}
 
 namespace py::impl::Windows::Data::Xml::Dom
-{}
+{
+}
 
 namespace py::wrapper::Windows::Data::Xml::Dom
 {

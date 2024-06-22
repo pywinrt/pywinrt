@@ -19,10 +19,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.ApplicationModel.UserDataAccounts.Provider.h>
 
 namespace py::proj::Windows::ApplicationModel::UserDataAccounts::Provider
-{}
+{
+}
 
 namespace py::impl::Windows::ApplicationModel::UserDataAccounts::Provider
-{}
+{
+}
 
 namespace py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider
 {

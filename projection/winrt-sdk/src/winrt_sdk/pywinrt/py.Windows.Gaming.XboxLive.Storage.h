@@ -29,10 +29,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Gaming.XboxLive.Storage.h>
 
 namespace py::proj::Windows::Gaming::XboxLive::Storage
-{}
+{
+}
 
 namespace py::impl::Windows::Gaming::XboxLive::Storage
-{}
+{
+}
 
 namespace py::wrapper::Windows::Gaming::XboxLive::Storage
 {

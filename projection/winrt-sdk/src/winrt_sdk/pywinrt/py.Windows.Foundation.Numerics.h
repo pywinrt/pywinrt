@@ -9,10 +9,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Numerics.h>
 
 namespace py::proj::Windows::Foundation::Numerics
-{}
+{
+}
 
 namespace py::impl::Windows::Foundation::Numerics
-{}
+{
+}
 
 namespace py::wrapper::Windows::Foundation::Numerics
 {

@@ -14,10 +14,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Perception.Automation.Core.h>
 
 namespace py::proj::Windows::Perception::Automation::Core
-{}
+{
+}
 
 namespace py::impl::Windows::Perception::Automation::Core
-{}
+{
+}
 
 namespace py::wrapper::Windows::Perception::Automation::Core
 {

@@ -29,10 +29,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Networking.XboxLive.h>
 
 namespace py::proj::Windows::Networking::XboxLive
-{}
+{
+}
 
 namespace py::impl::Windows::Networking::XboxLive
-{}
+{
+}
 
 namespace py::wrapper::Windows::Networking::XboxLive
 {

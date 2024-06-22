@@ -9,10 +9,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Phone.System.Profile.h>
 
 namespace py::proj::Windows::Phone::System::Profile
-{}
+{
+}
 
 namespace py::impl::Windows::Phone::System::Profile
-{}
+{
+}
 
 namespace py::wrapper::Windows::Phone::System::Profile
 {

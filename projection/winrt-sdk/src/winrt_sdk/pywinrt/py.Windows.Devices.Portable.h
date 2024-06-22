@@ -14,10 +14,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Devices.Portable.h>
 
 namespace py::proj::Windows::Devices::Portable
-{}
+{
+}
 
 namespace py::impl::Windows::Devices::Portable
-{}
+{
+}
 
 namespace py::wrapper::Windows::Devices::Portable
 {

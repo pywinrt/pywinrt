@@ -19,10 +19,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.Windows.AppNotifications.h>
 
 namespace py::proj::Microsoft::Windows::AppNotifications
-{}
+{
+}
 
 namespace py::impl::Microsoft::Windows::AppNotifications
-{}
+{
+}
 
 namespace py::wrapper::Microsoft::Windows::AppNotifications
 {

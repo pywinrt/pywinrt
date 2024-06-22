@@ -54,10 +54,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.UI.Composition.h>
 
 namespace py::proj::Microsoft::UI::Composition
-{}
+{
+}
 
 namespace py::impl::Microsoft::UI::Composition
-{}
+{
+}
 
 namespace py::wrapper::Microsoft::UI::Composition
 {

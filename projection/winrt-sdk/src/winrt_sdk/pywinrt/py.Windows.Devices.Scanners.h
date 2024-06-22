@@ -34,10 +34,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Devices.Scanners.h>
 
 namespace py::proj::Windows::Devices::Scanners
-{}
+{
+}
 
 namespace py::impl::Windows::Devices::Scanners
-{}
+{
+}
 
 namespace py::wrapper::Windows::Devices::Scanners
 {

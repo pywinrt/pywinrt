@@ -19,10 +19,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Embedded.DeviceLockdown.h>
 
 namespace py::proj::Windows::Embedded::DeviceLockdown
-{}
+{
+}
 
 namespace py::impl::Windows::Embedded::DeviceLockdown
-{}
+{
+}
 
 namespace py::wrapper::Windows::Embedded::DeviceLockdown
 {

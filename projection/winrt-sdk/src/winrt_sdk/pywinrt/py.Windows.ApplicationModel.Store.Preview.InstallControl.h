@@ -29,10 +29,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.ApplicationModel.Store.Preview.InstallControl.h>
 
 namespace py::proj::Windows::ApplicationModel::Store::Preview::InstallControl
-{}
+{
+}
 
 namespace py::impl::Windows::ApplicationModel::Store::Preview::InstallControl
-{}
+{
+}
 
 namespace py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl
 {

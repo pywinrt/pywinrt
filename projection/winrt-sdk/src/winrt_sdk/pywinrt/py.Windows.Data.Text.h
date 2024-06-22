@@ -24,7 +24,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Data.Text.h>
 
 namespace py::proj::Windows::Data::Text
-{}
+{
+}
 
 namespace py::impl::Windows::Data::Text
 {

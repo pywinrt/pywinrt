@@ -34,10 +34,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Devices.Lights.Effects.h>
 
 namespace py::proj::Windows::Devices::Lights::Effects
-{}
+{
+}
 
 namespace py::impl::Windows::Devices::Lights::Effects
-{}
+{
+}
 
 namespace py::wrapper::Windows::Devices::Lights::Effects
 {

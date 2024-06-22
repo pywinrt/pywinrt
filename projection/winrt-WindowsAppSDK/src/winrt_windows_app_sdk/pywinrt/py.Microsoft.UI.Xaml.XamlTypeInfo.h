@@ -19,10 +19,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.UI.Xaml.XamlTypeInfo.h>
 
 namespace py::proj::Microsoft::UI::Xaml::XamlTypeInfo
-{}
+{
+}
 
 namespace py::impl::Microsoft::UI::Xaml::XamlTypeInfo
-{}
+{
+}
 
 namespace py::wrapper::Microsoft::UI::Xaml::XamlTypeInfo
 {

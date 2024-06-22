@@ -24,10 +24,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Storage.Pickers.Provider.h>
 
 namespace py::proj::Windows::Storage::Pickers::Provider
-{}
+{
+}
 
 namespace py::impl::Windows::Storage::Pickers::Provider
-{}
+{
+}
 
 namespace py::wrapper::Windows::Storage::Pickers::Provider
 {

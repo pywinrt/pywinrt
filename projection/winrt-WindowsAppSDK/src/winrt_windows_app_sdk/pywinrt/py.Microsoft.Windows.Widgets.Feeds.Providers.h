@@ -9,10 +9,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.Windows.Widgets.Feeds.Providers.h>
 
 namespace py::proj::Microsoft::Windows::Widgets::Feeds::Providers
-{}
+{
+}
 
 namespace py::impl::Microsoft::Windows::Widgets::Feeds::Providers
-{}
+{
+}
 
 namespace py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers
 {

@@ -14,10 +14,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.System.Profile.SystemManufacturers.h>
 
 namespace py::proj::Windows::System::Profile::SystemManufacturers
-{}
+{
+}
 
 namespace py::impl::Windows::System::Profile::SystemManufacturers
-{}
+{
+}
 
 namespace py::wrapper::Windows::System::Profile::SystemManufacturers
 {

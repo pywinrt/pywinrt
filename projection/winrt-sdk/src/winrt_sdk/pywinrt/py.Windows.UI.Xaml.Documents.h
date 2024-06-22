@@ -44,10 +44,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.UI.Xaml.Documents.h>
 
 namespace py::proj::Windows::UI::Xaml::Documents
-{}
+{
+}
 
 namespace py::impl::Windows::UI::Xaml::Documents
-{}
+{
+}
 
 namespace py::wrapper::Windows::UI::Xaml::Documents
 {

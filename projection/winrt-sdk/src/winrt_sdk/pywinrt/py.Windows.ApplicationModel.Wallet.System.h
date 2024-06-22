@@ -29,10 +29,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.ApplicationModel.Wallet.System.h>
 
 namespace py::proj::Windows::ApplicationModel::Wallet::System
-{}
+{
+}
 
 namespace py::impl::Windows::ApplicationModel::Wallet::System
-{}
+{
+}
 
 namespace py::wrapper::Windows::ApplicationModel::Wallet::System
 {

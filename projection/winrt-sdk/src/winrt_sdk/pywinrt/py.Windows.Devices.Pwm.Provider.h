@@ -14,10 +14,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Devices.Pwm.Provider.h>
 
 namespace py::proj::Windows::Devices::Pwm::Provider
-{}
+{
+}
 
 namespace py::impl::Windows::Devices::Pwm::Provider
-{}
+{
+}
 
 namespace py::wrapper::Windows::Devices::Pwm::Provider
 {

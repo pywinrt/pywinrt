@@ -19,10 +19,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.UI.Input.Preview.Injection.h>
 
 namespace py::proj::Windows::UI::Input::Preview::Injection
-{}
+{
+}
 
 namespace py::impl::Windows::UI::Input::Preview::Injection
-{}
+{
+}
 
 namespace py::wrapper::Windows::UI::Input::Preview::Injection
 {

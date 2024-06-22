@@ -14,10 +14,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Phone.Media.Devices.h>
 
 namespace py::proj::Windows::Phone::Media::Devices
-{}
+{
+}
 
 namespace py::impl::Windows::Phone::Media::Devices
-{}
+{
+}
 
 namespace py::wrapper::Windows::Phone::Media::Devices
 {

@@ -49,10 +49,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Devices.Bluetooth.Background.h>
 
 namespace py::proj::Windows::Devices::Bluetooth::Background
-{}
+{
+}
 
 namespace py::impl::Windows::Devices::Bluetooth::Background
-{}
+{
+}
 
 namespace py::wrapper::Windows::Devices::Bluetooth::Background
 {

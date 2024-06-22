@@ -24,10 +24,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Devices.Geolocation.Geofencing.h>
 
 namespace py::proj::Windows::Devices::Geolocation::Geofencing
-{}
+{
+}
 
 namespace py::impl::Windows::Devices::Geolocation::Geofencing
-{}
+{
+}
 
 namespace py::wrapper::Windows::Devices::Geolocation::Geofencing
 {

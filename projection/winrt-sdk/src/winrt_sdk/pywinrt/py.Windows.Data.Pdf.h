@@ -29,10 +29,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Data.Pdf.h>
 
 namespace py::proj::Windows::Data::Pdf
-{}
+{
+}
 
 namespace py::impl::Windows::Data::Pdf
-{}
+{
+}
 
 namespace py::wrapper::Windows::Data::Pdf
 {

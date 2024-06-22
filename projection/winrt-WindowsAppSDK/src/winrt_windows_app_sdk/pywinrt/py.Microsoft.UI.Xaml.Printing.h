@@ -24,7 +24,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.UI.Xaml.Printing.h>
 
 namespace py::proj::Microsoft::UI::Xaml::Printing
-{}
+{
+}
 
 namespace py::impl::Microsoft::UI::Xaml::Printing
 {

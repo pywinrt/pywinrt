@@ -34,10 +34,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Storage.FileProperties.h>
 
 namespace py::proj::Windows::Storage::FileProperties
-{}
+{
+}
 
 namespace py::impl::Windows::Storage::FileProperties
-{}
+{
+}
 
 namespace py::wrapper::Windows::Storage::FileProperties
 {

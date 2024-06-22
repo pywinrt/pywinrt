@@ -19,10 +19,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Security.Authentication.Identity.Core.h>
 
 namespace py::proj::Windows::Security::Authentication::Identity::Core
-{}
+{
+}
 
 namespace py::impl::Windows::Security::Authentication::Identity::Core
-{}
+{
+}
 
 namespace py::wrapper::Windows::Security::Authentication::Identity::Core
 {

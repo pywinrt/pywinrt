@@ -34,10 +34,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Devices.PointOfService.h>
 
 namespace py::proj::Windows::Devices::PointOfService
-{}
+{
+}
 
 namespace py::impl::Windows::Devices::PointOfService
-{}
+{
+}
 
 namespace py::wrapper::Windows::Devices::PointOfService
 {

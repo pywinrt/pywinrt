@@ -9,10 +9,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Phone.Speech.Recognition.h>
 
 namespace py::proj::Windows::Phone::Speech::Recognition
-{}
+{
+}
 
 namespace py::impl::Windows::Phone::Speech::Recognition
-{}
+{
+}
 
 namespace py::wrapper::Windows::Phone::Speech::Recognition
 {

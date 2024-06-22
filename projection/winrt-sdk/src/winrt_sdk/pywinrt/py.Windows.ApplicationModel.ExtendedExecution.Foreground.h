@@ -14,10 +14,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.ApplicationModel.ExtendedExecution.Foreground.h>
 
 namespace py::proj::Windows::ApplicationModel::ExtendedExecution::Foreground
-{}
+{
+}
 
 namespace py::impl::Windows::ApplicationModel::ExtendedExecution::Foreground
-{}
+{
+}
 
 namespace py::wrapper::Windows::ApplicationModel::ExtendedExecution::Foreground
 {

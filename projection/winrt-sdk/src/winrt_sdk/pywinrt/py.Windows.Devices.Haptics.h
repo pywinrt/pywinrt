@@ -19,10 +19,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Devices.Haptics.h>
 
 namespace py::proj::Windows::Devices::Haptics
-{}
+{
+}
 
 namespace py::impl::Windows::Devices::Haptics
-{}
+{
+}
 
 namespace py::wrapper::Windows::Devices::Haptics
 {

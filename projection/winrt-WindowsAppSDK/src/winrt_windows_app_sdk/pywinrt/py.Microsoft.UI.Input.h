@@ -49,10 +49,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.UI.Input.h>
 
 namespace py::proj::Microsoft::UI::Input
-{}
+{
+}
 
 namespace py::impl::Microsoft::UI::Input
-{}
+{
+}
 
 namespace py::wrapper::Microsoft::UI::Input
 {

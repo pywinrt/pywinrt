@@ -44,10 +44,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Networking.NetworkOperators.h>
 
 namespace py::proj::Windows::Networking::NetworkOperators
-{}
+{
+}
 
 namespace py::impl::Windows::Networking::NetworkOperators
-{}
+{
+}
 
 namespace py::wrapper::Windows::Networking::NetworkOperators
 {

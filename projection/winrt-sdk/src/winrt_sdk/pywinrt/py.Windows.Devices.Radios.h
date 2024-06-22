@@ -19,10 +19,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Devices.Radios.h>
 
 namespace py::proj::Windows::Devices::Radios
-{}
+{
+}
 
 namespace py::impl::Windows::Devices::Radios
-{}
+{
+}
 
 namespace py::wrapper::Windows::Devices::Radios
 {

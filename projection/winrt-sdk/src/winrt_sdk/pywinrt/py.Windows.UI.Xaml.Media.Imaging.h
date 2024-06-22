@@ -29,7 +29,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.UI.Xaml.Media.Imaging.h>
 
 namespace py::proj::Windows::UI::Xaml::Media::Imaging
-{}
+{
+}
 
 namespace py::impl::Windows::UI::Xaml::Media::Imaging
 {

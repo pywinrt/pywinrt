@@ -39,10 +39,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.ApplicationModel.Email.h>
 
 namespace py::proj::Windows::ApplicationModel::Email
-{}
+{
+}
 
 namespace py::impl::Windows::ApplicationModel::Email
-{}
+{
+}
 
 namespace py::wrapper::Windows::ApplicationModel::Email
 {

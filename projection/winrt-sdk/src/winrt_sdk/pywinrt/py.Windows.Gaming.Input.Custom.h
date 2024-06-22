@@ -24,10 +24,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Gaming.Input.Custom.h>
 
 namespace py::proj::Windows::Gaming::Input::Custom
-{}
+{
+}
 
 namespace py::impl::Windows::Gaming::Input::Custom
-{}
+{
+}
 
 namespace py::wrapper::Windows::Gaming::Input::Custom
 {
