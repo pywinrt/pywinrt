@@ -408,8 +408,7 @@ class AllJoynStatus_Static(type):
 
 @typing.final
 class AllJoynStatus(winrt.system.Object, metaclass=AllJoynStatus_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AllJoynStatus: ...
+    pass
 
 @typing.final
 class AllJoynWatcherStoppedEventArgs(winrt.system.Object):

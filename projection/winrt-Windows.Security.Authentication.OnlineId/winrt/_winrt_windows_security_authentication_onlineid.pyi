@@ -68,8 +68,7 @@ class OnlineIdSystemAuthenticator_Static(type):
 
 @typing.final
 class OnlineIdSystemAuthenticator(winrt.system.Object, metaclass=OnlineIdSystemAuthenticator_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> OnlineIdSystemAuthenticator: ...
+    pass
 
 @typing.final
 class OnlineIdSystemAuthenticatorForUser(winrt.system.Object):

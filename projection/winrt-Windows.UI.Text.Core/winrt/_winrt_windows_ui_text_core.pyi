@@ -196,8 +196,7 @@ class CoreTextServicesConstants_Static(type):
 
 @typing.final
 class CoreTextServicesConstants(winrt.system.Object, metaclass=CoreTextServicesConstants_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CoreTextServicesConstants: ...
+    pass
 
 @typing.final
 class CoreTextServicesManager_Static(type):

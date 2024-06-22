@@ -88,6 +88,5 @@ class SystemUpdateManager_Static(type):
 
 @typing.final
 class SystemUpdateManager(winrt.system.Object, metaclass=SystemUpdateManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SystemUpdateManager: ...
+    pass
 

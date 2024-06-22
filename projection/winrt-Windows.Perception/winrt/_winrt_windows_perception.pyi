@@ -31,6 +31,5 @@ class PerceptionTimestampHelper_Static(type):
 
 @typing.final
 class PerceptionTimestampHelper(winrt.system.Object, metaclass=PerceptionTimestampHelper_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PerceptionTimestampHelper: ...
+    pass
 

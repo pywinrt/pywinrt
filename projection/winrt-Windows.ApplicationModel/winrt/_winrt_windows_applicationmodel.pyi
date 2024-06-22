@@ -132,8 +132,7 @@ class CameraApplicationManager_Static(type):
 
 @typing.final
 class CameraApplicationManager(winrt.system.Object, metaclass=CameraApplicationManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CameraApplicationManager: ...
+    pass
 
 @typing.final
 class DesignMode_Static(type):
@@ -144,8 +143,7 @@ class DesignMode_Static(type):
 
 @typing.final
 class DesignMode(winrt.system.Object, metaclass=DesignMode_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DesignMode: ...
+    pass
 
 @typing.final
 class EnteredBackgroundEventArgs(winrt.system.Object):
@@ -203,8 +201,7 @@ class FullTrustProcessLauncher_Static(type):
 
 @typing.final
 class FullTrustProcessLauncher(winrt.system.Object, metaclass=FullTrustProcessLauncher_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FullTrustProcessLauncher: ...
+    pass
 
 @typing.final
 class LeavingBackgroundEventArgs(winrt.system.Object):
@@ -229,8 +226,7 @@ class LimitedAccessFeatures_Static(type):
 
 @typing.final
 class LimitedAccessFeatures(winrt.system.Object, metaclass=LimitedAccessFeatures_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LimitedAccessFeatures: ...
+    pass
 
 @typing.final
 class Package_Static(type):

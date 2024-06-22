@@ -47,8 +47,7 @@ class EnterpriseEnrollmentManager_Static(type):
 
 @typing.final
 class EnterpriseEnrollmentManager(winrt.system.Object, metaclass=EnterpriseEnrollmentManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EnterpriseEnrollmentManager: ...
+    pass
 
 @typing.final
 class EnterpriseEnrollmentResult(winrt.system.Object):
@@ -76,8 +75,7 @@ class InstallationManager_Static(type):
 
 @typing.final
 class InstallationManager(winrt.system.Object, metaclass=InstallationManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InstallationManager: ...
+    pass
 
 @typing.final
 class PackageInstallResult(winrt.system.Object):

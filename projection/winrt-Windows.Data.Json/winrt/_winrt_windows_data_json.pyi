@@ -75,8 +75,7 @@ class JsonError_Static(type):
 
 @typing.final
 class JsonError(winrt.system.Object, metaclass=JsonError_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> JsonError: ...
+    pass
 
 @typing.final
 class JsonObject_Static(type):

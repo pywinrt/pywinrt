@@ -28,8 +28,7 @@ class PlatformDiagnosticActions_Static(type):
 
 @typing.final
 class PlatformDiagnosticActions(winrt.system.Object, metaclass=PlatformDiagnosticActions_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlatformDiagnosticActions: ...
+    pass
 
 @typing.final
 class PlatformDiagnosticTraceInfo(winrt.system.Object):

@@ -54,8 +54,7 @@ class PrintExtensionContext_Static(type):
 
 @typing.final
 class PrintExtensionContext(winrt.system.Object, metaclass=PrintExtensionContext_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PrintExtensionContext: ...
+    pass
 
 @typing.final
 class PrintNotificationEventDetails(winrt.system.Object):

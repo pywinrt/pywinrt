@@ -73,8 +73,7 @@ class WebAccountManager_Static(type):
 
 @typing.final
 class WebAccountManager(winrt.system.Object, metaclass=WebAccountManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebAccountManager: ...
+    pass
 
 @typing.final
 class WebAccountProviderAddAccountOperation(winrt.system.Object):

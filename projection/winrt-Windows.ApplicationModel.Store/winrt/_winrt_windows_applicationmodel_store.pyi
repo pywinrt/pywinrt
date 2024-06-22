@@ -47,8 +47,7 @@ class CurrentApp_Static(type):
 
 @typing.final
 class CurrentApp(winrt.system.Object, metaclass=CurrentApp_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CurrentApp: ...
+    pass
 
 @typing.final
 class CurrentAppSimulator_Static(type):
@@ -77,8 +76,7 @@ class CurrentAppSimulator_Static(type):
 
 @typing.final
 class CurrentAppSimulator(winrt.system.Object, metaclass=CurrentAppSimulator_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CurrentAppSimulator: ...
+    pass
 
 @typing.final
 class LicenseInformation(winrt.system.Object):

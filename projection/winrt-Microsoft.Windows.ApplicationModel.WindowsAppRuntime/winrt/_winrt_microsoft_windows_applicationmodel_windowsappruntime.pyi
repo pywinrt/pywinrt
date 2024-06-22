@@ -39,8 +39,7 @@ class DeploymentManager_Static(type):
 
 @typing.final
 class DeploymentManager(winrt.system.Object, metaclass=DeploymentManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DeploymentManager: ...
+    pass
 
 @typing.final
 class DeploymentResult(winrt.system.Object):

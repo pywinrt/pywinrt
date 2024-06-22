@@ -194,8 +194,7 @@ class WalletManager_Static(type):
 
 @typing.final
 class WalletManager(winrt.system.Object, metaclass=WalletManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WalletManager: ...
+    pass
 
 @typing.final
 class WalletRelevantLocation(winrt.system.Object):

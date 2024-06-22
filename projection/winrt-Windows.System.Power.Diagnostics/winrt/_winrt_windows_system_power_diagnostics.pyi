@@ -21,8 +21,7 @@ class BackgroundEnergyDiagnostics_Static(type):
 
 @typing.final
 class BackgroundEnergyDiagnostics(winrt.system.Object, metaclass=BackgroundEnergyDiagnostics_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BackgroundEnergyDiagnostics: ...
+    pass
 
 @typing.final
 class ForegroundEnergyDiagnostics_Static(type):
@@ -33,6 +32,5 @@ class ForegroundEnergyDiagnostics_Static(type):
 
 @typing.final
 class ForegroundEnergyDiagnostics(winrt.system.Object, metaclass=ForegroundEnergyDiagnostics_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ForegroundEnergyDiagnostics: ...
+    pass
 

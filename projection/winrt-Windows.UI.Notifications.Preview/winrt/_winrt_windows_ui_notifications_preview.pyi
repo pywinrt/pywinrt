@@ -19,6 +19,5 @@ class ToastOcclusionManagerPreview_Static(type):
 
 @typing.final
 class ToastOcclusionManagerPreview(winrt.system.Object, metaclass=ToastOcclusionManagerPreview_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ToastOcclusionManagerPreview: ...
+    pass
 

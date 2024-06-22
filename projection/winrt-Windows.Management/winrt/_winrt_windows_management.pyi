@@ -77,6 +77,5 @@ class MdmSessionManager_Static(type):
 
 @typing.final
 class MdmSessionManager(winrt.system.Object, metaclass=MdmSessionManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MdmSessionManager: ...
+    pass
 

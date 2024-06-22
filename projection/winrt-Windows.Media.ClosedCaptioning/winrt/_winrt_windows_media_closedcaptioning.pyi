@@ -47,6 +47,5 @@ class ClosedCaptionProperties_Static(type):
 
 @typing.final
 class ClosedCaptionProperties(winrt.system.Object, metaclass=ClosedCaptionProperties_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ClosedCaptionProperties: ...
+    pass
 

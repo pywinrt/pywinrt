@@ -26,8 +26,7 @@ class CommunicationBlockingAccessManager_Static(type):
 
 @typing.final
 class CommunicationBlockingAccessManager(winrt.system.Object, metaclass=CommunicationBlockingAccessManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CommunicationBlockingAccessManager: ...
+    pass
 
 @typing.final
 class CommunicationBlockingAppManager_Static(type):
@@ -38,6 +37,5 @@ class CommunicationBlockingAppManager_Static(type):
 
 @typing.final
 class CommunicationBlockingAppManager(winrt.system.Object, metaclass=CommunicationBlockingAppManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CommunicationBlockingAppManager: ...
+    pass
 

@@ -201,8 +201,7 @@ class CompositionApiInformation_Static(type):
 
 @typing.final
 class CompositionApiInformation(winrt.system.Object, metaclass=CompositionApiInformation_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CompositionApiInformation: ...
+    pass
 
 @typing.final
 class CompositionBackdropBrush(winrt.system.Object):

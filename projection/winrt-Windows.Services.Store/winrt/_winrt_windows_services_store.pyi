@@ -444,8 +444,7 @@ class StoreRequestHelper_Static(type):
 
 @typing.final
 class StoreRequestHelper(winrt.system.Object, metaclass=StoreRequestHelper_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreRequestHelper: ...
+    pass
 
 @typing.final
 class StoreSendRequestResult(winrt.system.Object):

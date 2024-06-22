@@ -21,6 +21,5 @@ class ApplicationProfile_Static(type):
 
 @typing.final
 class ApplicationProfile(winrt.system.Object, metaclass=ApplicationProfile_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ApplicationProfile: ...
+    pass
 

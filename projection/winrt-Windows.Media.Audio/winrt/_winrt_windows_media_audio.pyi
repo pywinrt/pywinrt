@@ -967,8 +967,7 @@ class SpatialAudioFormatSubtype_Static(type):
 
 @typing.final
 class SpatialAudioFormatSubtype(winrt.system.Object, metaclass=SpatialAudioFormatSubtype_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SpatialAudioFormatSubtype: ...
+    pass
 
 @typing.final
 class IAudioInputNode(winrt.system.Object):

@@ -51,8 +51,7 @@ class KnownSimpleHapticsControllerWaveforms_Static(type):
 
 @typing.final
 class KnownSimpleHapticsControllerWaveforms(winrt.system.Object, metaclass=KnownSimpleHapticsControllerWaveforms_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownSimpleHapticsControllerWaveforms: ...
+    pass
 
 @typing.final
 class SimpleHapticsController(winrt.system.Object):

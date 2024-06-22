@@ -25,8 +25,7 @@ class AppServiceCatalog_Static(type):
 
 @typing.final
 class AppServiceCatalog(winrt.system.Object, metaclass=AppServiceCatalog_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppServiceCatalog: ...
+    pass
 
 @typing.final
 class AppServiceClosedEventArgs(winrt.system.Object):

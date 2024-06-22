@@ -26,8 +26,7 @@ class CachedFileUpdater_Static(type):
 
 @typing.final
 class CachedFileUpdater(winrt.system.Object, metaclass=CachedFileUpdater_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CachedFileUpdater: ...
+    pass
 
 @typing.final
 class CachedFileUpdaterUI(winrt.system.Object):
@@ -129,8 +128,7 @@ class StorageProviderItemProperties_Static(type):
 
 @typing.final
 class StorageProviderItemProperties(winrt.system.Object, metaclass=StorageProviderItemProperties_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StorageProviderItemProperties: ...
+    pass
 
 @typing.final
 class StorageProviderItemProperty(winrt.system.Object):
@@ -362,8 +360,7 @@ class StorageProviderSyncRootManager_Static(type):
 
 @typing.final
 class StorageProviderSyncRootManager(winrt.system.Object, metaclass=StorageProviderSyncRootManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StorageProviderSyncRootManager: ...
+    pass
 
 @typing.final
 class IStorageProviderItemPropertySource(winrt.system.Object):

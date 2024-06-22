@@ -314,8 +314,7 @@ class BarcodeSymbologies_Static(type):
 
 @typing.final
 class BarcodeSymbologies(winrt.system.Object, metaclass=BarcodeSymbologies_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BarcodeSymbologies: ...
+    pass
 
 @typing.final
 class BarcodeSymbologyAttributes(winrt.system.Object):
@@ -1319,8 +1318,7 @@ class MagneticStripeReaderCardTypes_Static(type):
 
 @typing.final
 class MagneticStripeReaderCardTypes(winrt.system.Object, metaclass=MagneticStripeReaderCardTypes_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MagneticStripeReaderCardTypes: ...
+    pass
 
 @typing.final
 class MagneticStripeReaderEncryptionAlgorithms_Static(type):
@@ -1333,8 +1331,7 @@ class MagneticStripeReaderEncryptionAlgorithms_Static(type):
 
 @typing.final
 class MagneticStripeReaderEncryptionAlgorithms(winrt.system.Object, metaclass=MagneticStripeReaderEncryptionAlgorithms_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MagneticStripeReaderEncryptionAlgorithms: ...
+    pass
 
 @typing.final
 class MagneticStripeReaderErrorOccurredEventArgs(winrt.system.Object):
@@ -1474,8 +1471,7 @@ class PosPrinterCharacterSetIds_Static(type):
 
 @typing.final
 class PosPrinterCharacterSetIds(winrt.system.Object, metaclass=PosPrinterCharacterSetIds_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PosPrinterCharacterSetIds: ...
+    pass
 
 @typing.final
 class PosPrinterFontProperty(winrt.system.Object):

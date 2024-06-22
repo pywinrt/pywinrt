@@ -59,8 +59,7 @@ class StorageApplicationPermissions_Static(type):
 
 @typing.final
 class StorageApplicationPermissions(winrt.system.Object, metaclass=StorageApplicationPermissions_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StorageApplicationPermissions: ...
+    pass
 
 @typing.final
 class StorageItemAccessList(winrt.system.Object):

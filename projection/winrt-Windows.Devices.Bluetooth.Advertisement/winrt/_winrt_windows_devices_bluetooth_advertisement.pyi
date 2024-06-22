@@ -127,8 +127,7 @@ class BluetoothLEAdvertisementDataTypes_Static(type):
 
 @typing.final
 class BluetoothLEAdvertisementDataTypes(winrt.system.Object, metaclass=BluetoothLEAdvertisementDataTypes_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementDataTypes: ...
+    pass
 
 @typing.final
 class BluetoothLEAdvertisementFilter(winrt.system.Object):

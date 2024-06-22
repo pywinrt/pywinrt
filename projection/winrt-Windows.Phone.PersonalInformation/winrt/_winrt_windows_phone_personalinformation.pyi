@@ -219,8 +219,7 @@ class KnownContactProperties_Static(type):
 
 @typing.final
 class KnownContactProperties(winrt.system.Object, metaclass=KnownContactProperties_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownContactProperties: ...
+    pass
 
 @typing.final
 class StoredContact(winrt.system.Object):

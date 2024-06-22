@@ -20,6 +20,5 @@ class InputActivationListenerPreview_Static(type):
 
 @typing.final
 class InputActivationListenerPreview(winrt.system.Object, metaclass=InputActivationListenerPreview_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InputActivationListenerPreview: ...
+    pass
 

@@ -22,6 +22,7 @@
 - Fixed `TypeError` when passing `None` to APIs that require a `system.Object`.
 - Fixed `ui.xaml.Application.start()` methods not releasing GIL.
 - Fixed some type hints not working when not all depedent packages installed.
+- Fixed type hints should not have `_from()` method in projected static classes.
 
 [#25]: https://github.com/pywinrt/pywinrt/issues/25
 

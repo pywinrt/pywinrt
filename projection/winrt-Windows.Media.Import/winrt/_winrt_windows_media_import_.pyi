@@ -201,8 +201,7 @@ class PhotoImportManager_Static(type):
 
 @typing.final
 class PhotoImportManager(winrt.system.Object, metaclass=PhotoImportManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhotoImportManager: ...
+    pass
 
 @typing.final
 class PhotoImportOperation(winrt.system.Object):

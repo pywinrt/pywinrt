@@ -285,8 +285,7 @@ class RandomAccessStream_Static(type):
 
 @typing.final
 class RandomAccessStream(winrt.system.Object, metaclass=RandomAccessStream_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RandomAccessStream: ...
+    pass
 
 @typing.final
 class RandomAccessStreamOverStream(winrt.system.Object):

@@ -34,8 +34,7 @@ class KnownCameraIntrinsicsProperties_Static(type):
 
 @typing.final
 class KnownCameraIntrinsicsProperties(winrt.system.Object, metaclass=KnownCameraIntrinsicsProperties_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownCameraIntrinsicsProperties: ...
+    pass
 
 @typing.final
 class KnownPerceptionColorFrameSourceProperties_Static(type):
@@ -48,8 +47,7 @@ class KnownPerceptionColorFrameSourceProperties_Static(type):
 
 @typing.final
 class KnownPerceptionColorFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionColorFrameSourceProperties_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownPerceptionColorFrameSourceProperties: ...
+    pass
 
 @typing.final
 class KnownPerceptionDepthFrameSourceProperties_Static(type):
@@ -60,8 +58,7 @@ class KnownPerceptionDepthFrameSourceProperties_Static(type):
 
 @typing.final
 class KnownPerceptionDepthFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionDepthFrameSourceProperties_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownPerceptionDepthFrameSourceProperties: ...
+    pass
 
 @typing.final
 class KnownPerceptionFrameSourceProperties_Static(type):
@@ -80,8 +77,7 @@ class KnownPerceptionFrameSourceProperties_Static(type):
 
 @typing.final
 class KnownPerceptionFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionFrameSourceProperties_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownPerceptionFrameSourceProperties: ...
+    pass
 
 @typing.final
 class KnownPerceptionInfraredFrameSourceProperties_Static(type):
@@ -102,8 +98,7 @@ class KnownPerceptionInfraredFrameSourceProperties_Static(type):
 
 @typing.final
 class KnownPerceptionInfraredFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionInfraredFrameSourceProperties_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownPerceptionInfraredFrameSourceProperties: ...
+    pass
 
 @typing.final
 class KnownPerceptionVideoFrameSourceProperties_Static(type):
@@ -120,8 +115,7 @@ class KnownPerceptionVideoFrameSourceProperties_Static(type):
 
 @typing.final
 class KnownPerceptionVideoFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionVideoFrameSourceProperties_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownPerceptionVideoFrameSourceProperties: ...
+    pass
 
 @typing.final
 class KnownPerceptionVideoProfileProperties_Static(type):
@@ -138,8 +132,7 @@ class KnownPerceptionVideoProfileProperties_Static(type):
 
 @typing.final
 class KnownPerceptionVideoProfileProperties(winrt.system.Object, metaclass=KnownPerceptionVideoProfileProperties_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownPerceptionVideoProfileProperties: ...
+    pass
 
 @typing.final
 class PerceptionColorFrame(winrt.system.Object):

@@ -194,8 +194,7 @@ class TextConstants_Static(type):
 
 @typing.final
 class TextConstants(winrt.system.Object, metaclass=TextConstants_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TextConstants: ...
+    pass
 
 @typing.final
 class ITextCharacterFormat(winrt.system.Object):

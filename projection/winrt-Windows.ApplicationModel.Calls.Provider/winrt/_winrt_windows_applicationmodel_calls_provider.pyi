@@ -52,6 +52,5 @@ class PhoneCallOriginManager_Static(type):
 
 @typing.final
 class PhoneCallOriginManager(winrt.system.Object, metaclass=PhoneCallOriginManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhoneCallOriginManager: ...
+    pass
 

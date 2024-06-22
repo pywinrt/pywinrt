@@ -278,8 +278,7 @@ class StandardPrintTaskOptions_Static(type):
 
 @typing.final
 class StandardPrintTaskOptions(winrt.system.Object, metaclass=StandardPrintTaskOptions_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StandardPrintTaskOptions: ...
+    pass
 
 @typing.final
 class IPrintDocumentSource(winrt.system.Object):

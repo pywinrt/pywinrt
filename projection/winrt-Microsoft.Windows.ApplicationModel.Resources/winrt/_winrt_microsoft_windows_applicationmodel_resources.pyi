@@ -39,8 +39,7 @@ class KnownResourceQualifierName_Static(type):
 
 @typing.final
 class KnownResourceQualifierName(winrt.system.Object, metaclass=KnownResourceQualifierName_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownResourceQualifierName: ...
+    pass
 
 @typing.final
 class ResourceCandidate(winrt.system.Object):

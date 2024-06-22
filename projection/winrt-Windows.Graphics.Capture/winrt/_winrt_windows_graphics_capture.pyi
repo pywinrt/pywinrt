@@ -62,8 +62,7 @@ class GraphicsCaptureAccess_Static(type):
 
 @typing.final
 class GraphicsCaptureAccess(winrt.system.Object, metaclass=GraphicsCaptureAccess_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GraphicsCaptureAccess: ...
+    pass
 
 @typing.final
 class GraphicsCaptureItem_Static(type):

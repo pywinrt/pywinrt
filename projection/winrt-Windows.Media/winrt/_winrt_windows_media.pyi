@@ -142,8 +142,7 @@ class MediaControl_Static(type):
 
 @typing.final
 class MediaControl(winrt.system.Object, metaclass=MediaControl_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MediaControl: ...
+    pass
 
 @typing.final
 class MediaExtensionManager(winrt.system.Object):
@@ -183,8 +182,7 @@ class MediaMarkerTypes_Static(type):
 
 @typing.final
 class MediaMarkerTypes(winrt.system.Object, metaclass=MediaMarkerTypes_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MediaMarkerTypes: ...
+    pass
 
 @typing.final
 class MediaProcessingTriggerDetails(winrt.system.Object):
@@ -461,8 +459,7 @@ class VideoEffects_Static(type):
 
 @typing.final
 class VideoEffects(winrt.system.Object, metaclass=VideoEffects_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VideoEffects: ...
+    pass
 
 @typing.final
 class VideoFrame_Static(type):

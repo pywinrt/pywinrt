@@ -68,8 +68,7 @@ class AudioEffectsManager_Static(type):
 
 @typing.final
 class AudioEffectsManager(winrt.system.Object, metaclass=AudioEffectsManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AudioEffectsManager: ...
+    pass
 
 @typing.final
 class AudioRenderEffectsManager(winrt.system.Object):

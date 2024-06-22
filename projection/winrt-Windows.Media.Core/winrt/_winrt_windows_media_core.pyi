@@ -294,8 +294,7 @@ class CodecSubtypes_Static(type):
 
 @typing.final
 class CodecSubtypes(winrt.system.Object, metaclass=CodecSubtypes_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CodecSubtypes: ...
+    pass
 
 @typing.final
 class DataCue(winrt.system.Object):
@@ -462,8 +461,7 @@ class LowLightFusion_Static(type):
 
 @typing.final
 class LowLightFusion(winrt.system.Object, metaclass=LowLightFusion_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LowLightFusion: ...
+    pass
 
 @typing.final
 class LowLightFusionResult(winrt.system.Object):

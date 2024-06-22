@@ -45,8 +45,7 @@ class Clipboard_Static(type):
 
 @typing.final
 class Clipboard(winrt.system.Object, metaclass=Clipboard_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Clipboard: ...
+    pass
 
 @typing.final
 class ClipboardContentOptions(winrt.system.Object):
@@ -342,8 +341,7 @@ class HtmlFormatHelper_Static(type):
 
 @typing.final
 class HtmlFormatHelper(winrt.system.Object, metaclass=HtmlFormatHelper_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HtmlFormatHelper: ...
+    pass
 
 @typing.final
 class OperationCompletedEventArgs(winrt.system.Object):
@@ -428,8 +426,7 @@ class SharedStorageAccessManager_Static(type):
 
 @typing.final
 class SharedStorageAccessManager(winrt.system.Object, metaclass=SharedStorageAccessManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SharedStorageAccessManager: ...
+    pass
 
 @typing.final
 class StandardDataFormats_Static(type):
@@ -454,8 +451,7 @@ class StandardDataFormats_Static(type):
 
 @typing.final
 class StandardDataFormats(winrt.system.Object, metaclass=StandardDataFormats_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StandardDataFormats: ...
+    pass
 
 @typing.final
 class TargetApplicationChosenEventArgs(winrt.system.Object):

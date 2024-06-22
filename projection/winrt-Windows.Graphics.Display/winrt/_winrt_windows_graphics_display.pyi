@@ -231,8 +231,7 @@ class DisplayProperties_Static(type):
 
 @typing.final
 class DisplayProperties(winrt.system.Object, metaclass=DisplayProperties_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DisplayProperties: ...
+    pass
 
 @typing.final
 class DisplayServices_Static(type):

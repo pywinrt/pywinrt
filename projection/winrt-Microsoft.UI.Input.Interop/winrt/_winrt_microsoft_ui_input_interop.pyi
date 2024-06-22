@@ -20,6 +20,5 @@ class PenDeviceInterop_Static(type):
 
 @typing.final
 class PenDeviceInterop(winrt.system.Object, metaclass=PenDeviceInterop_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PenDeviceInterop: ...
+    pass
 

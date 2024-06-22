@@ -22,8 +22,7 @@ class ServiceDevice_Static(type):
 
 @typing.final
 class ServiceDevice(winrt.system.Object, metaclass=ServiceDevice_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ServiceDevice: ...
+    pass
 
 @typing.final
 class StorageDevice_Static(type):
@@ -32,6 +31,5 @@ class StorageDevice_Static(type):
 
 @typing.final
 class StorageDevice(winrt.system.Object, metaclass=StorageDevice_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StorageDevice: ...
+    pass
 

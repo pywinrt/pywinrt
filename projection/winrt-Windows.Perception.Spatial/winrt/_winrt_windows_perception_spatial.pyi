@@ -106,8 +106,7 @@ class SpatialAnchorManager_Static(type):
 
 @typing.final
 class SpatialAnchorManager(winrt.system.Object, metaclass=SpatialAnchorManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SpatialAnchorManager: ...
+    pass
 
 @typing.final
 class SpatialAnchorRawCoordinateSystemAdjustedEventArgs(winrt.system.Object):
@@ -133,8 +132,7 @@ class SpatialAnchorTransferManager_Static(type):
 
 @typing.final
 class SpatialAnchorTransferManager(winrt.system.Object, metaclass=SpatialAnchorTransferManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SpatialAnchorTransferManager: ...
+    pass
 
 @typing.final
 class SpatialBoundingVolume_Static(type):

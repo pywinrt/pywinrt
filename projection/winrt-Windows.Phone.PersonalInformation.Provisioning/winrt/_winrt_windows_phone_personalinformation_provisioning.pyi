@@ -24,8 +24,7 @@ class ContactPartnerProvisioningManager_Static(type):
 
 @typing.final
 class ContactPartnerProvisioningManager(winrt.system.Object, metaclass=ContactPartnerProvisioningManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ContactPartnerProvisioningManager: ...
+    pass
 
 @typing.final
 class MessagePartnerProvisioningManager_Static(type):
@@ -34,6 +33,5 @@ class MessagePartnerProvisioningManager_Static(type):
 
 @typing.final
 class MessagePartnerProvisioningManager(winrt.system.Object, metaclass=MessagePartnerProvisioningManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MessagePartnerProvisioningManager: ...
+    pass
 

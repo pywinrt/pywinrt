@@ -42,8 +42,7 @@ class AppointmentsProviderLaunchActionVerbs_Static(type):
 
 @typing.final
 class AppointmentsProviderLaunchActionVerbs(winrt.system.Object, metaclass=AppointmentsProviderLaunchActionVerbs_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppointmentsProviderLaunchActionVerbs: ...
+    pass
 
 @typing.final
 class RemoveAppointmentOperation(winrt.system.Object):

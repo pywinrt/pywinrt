@@ -56,8 +56,7 @@ class TestRunner_Static(type):
 
 @typing.final
 class TestRunner(winrt.system.Object, metaclass=TestRunner_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TestRunner: ...
+    pass
 
 @typing.final
 class ITests(winrt.system.Object):

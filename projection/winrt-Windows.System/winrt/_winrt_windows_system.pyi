@@ -253,8 +253,7 @@ class DateTimeSettings_Static(type):
 
 @typing.final
 class DateTimeSettings(winrt.system.Object, metaclass=DateTimeSettings_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DateTimeSettings: ...
+    pass
 
 @typing.final
 class DispatcherQueue_Static(type):
@@ -350,8 +349,7 @@ class KnownUserProperties_Static(type):
 
 @typing.final
 class KnownUserProperties(winrt.system.Object, metaclass=KnownUserProperties_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownUserProperties: ...
+    pass
 
 @typing.final
 class LaunchUriResult(winrt.system.Object):
@@ -421,8 +419,7 @@ class Launcher_Static(type):
 
 @typing.final
 class Launcher(winrt.system.Object, metaclass=Launcher_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Launcher: ...
+    pass
 
 @typing.final
 class LauncherOptions(winrt.system.Object):
@@ -515,8 +512,7 @@ class MemoryManager_Static(type):
 
 @typing.final
 class MemoryManager(winrt.system.Object, metaclass=MemoryManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MemoryManager: ...
+    pass
 
 @typing.final
 class ProcessLauncher_Static(type):
@@ -527,8 +523,7 @@ class ProcessLauncher_Static(type):
 
 @typing.final
 class ProcessLauncher(winrt.system.Object, metaclass=ProcessLauncher_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProcessLauncher: ...
+    pass
 
 @typing.final
 class ProcessLauncherOptions(winrt.system.Object):
@@ -585,8 +580,7 @@ class RemoteLauncher_Static(type):
 
 @typing.final
 class RemoteLauncher(winrt.system.Object, metaclass=RemoteLauncher_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RemoteLauncher: ...
+    pass
 
 @typing.final
 class RemoteLauncherOptions(winrt.system.Object):
@@ -612,8 +606,7 @@ class ShutdownManager_Static(type):
 
 @typing.final
 class ShutdownManager(winrt.system.Object, metaclass=ShutdownManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ShutdownManager: ...
+    pass
 
 @typing.final
 class TimeZoneSettings_Static(type):
@@ -628,8 +621,7 @@ class TimeZoneSettings_Static(type):
 
 @typing.final
 class TimeZoneSettings(winrt.system.Object, metaclass=TimeZoneSettings_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TimeZoneSettings: ...
+    pass
 
 @typing.final
 class User_Static(type):
@@ -693,8 +685,7 @@ class UserDeviceAssociation_Static(type):
 
 @typing.final
 class UserDeviceAssociation(winrt.system.Object, metaclass=UserDeviceAssociation_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UserDeviceAssociation: ...
+    pass
 
 @typing.final
 class UserDeviceAssociationChangedEventArgs(winrt.system.Object):

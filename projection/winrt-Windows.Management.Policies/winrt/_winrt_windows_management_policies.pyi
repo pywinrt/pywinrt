@@ -24,8 +24,7 @@ class NamedPolicy_Static(type):
 
 @typing.final
 class NamedPolicy(winrt.system.Object, metaclass=NamedPolicy_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> NamedPolicy: ...
+    pass
 
 @typing.final
 class NamedPolicyData(winrt.system.Object):

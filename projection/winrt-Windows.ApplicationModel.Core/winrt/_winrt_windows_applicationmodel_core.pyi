@@ -75,8 +75,7 @@ class CoreApplication_Static(type):
 
 @typing.final
 class CoreApplication(winrt.system.Object, metaclass=CoreApplication_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CoreApplication: ...
+    pass
 
 @typing.final
 class CoreApplicationView(winrt.system.Object):

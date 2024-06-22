@@ -114,8 +114,7 @@ class ESimManager_Static(type):
 
 @typing.final
 class ESimManager(winrt.system.Object, metaclass=ESimManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ESimManager: ...
+    pass
 
 @typing.final
 class ESimOperationResult(winrt.system.Object):
@@ -241,8 +240,7 @@ class FdnAccessManager_Static(type):
 
 @typing.final
 class FdnAccessManager(winrt.system.Object, metaclass=FdnAccessManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FdnAccessManager: ...
+    pass
 
 @typing.final
 class HotspotAuthenticationContext_Static(type):
@@ -299,8 +297,7 @@ class KnownCSimFilePaths_Static(type):
 
 @typing.final
 class KnownCSimFilePaths(winrt.system.Object, metaclass=KnownCSimFilePaths_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownCSimFilePaths: ...
+    pass
 
 @typing.final
 class KnownRuimFilePaths_Static(type):
@@ -313,8 +310,7 @@ class KnownRuimFilePaths_Static(type):
 
 @typing.final
 class KnownRuimFilePaths(winrt.system.Object, metaclass=KnownRuimFilePaths_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownRuimFilePaths: ...
+    pass
 
 @typing.final
 class KnownSimFilePaths_Static(type):
@@ -329,8 +325,7 @@ class KnownSimFilePaths_Static(type):
 
 @typing.final
 class KnownSimFilePaths(winrt.system.Object, metaclass=KnownSimFilePaths_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownSimFilePaths: ...
+    pass
 
 @typing.final
 class KnownUSimFilePaths_Static(type):
@@ -347,8 +342,7 @@ class KnownUSimFilePaths_Static(type):
 
 @typing.final
 class KnownUSimFilePaths(winrt.system.Object, metaclass=KnownUSimFilePaths_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownUSimFilePaths: ...
+    pass
 
 @typing.final
 class MobileBroadbandAccount_Static(type):

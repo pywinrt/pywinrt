@@ -40,8 +40,7 @@ class LocalCategories_Static(type):
 
 @typing.final
 class LocalCategories(winrt.system.Object, metaclass=LocalCategories_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LocalCategories: ...
+    pass
 
 @typing.final
 class LocalLocation(winrt.system.Object):
@@ -74,8 +73,7 @@ class LocalLocationFinder_Static(type):
 
 @typing.final
 class LocalLocationFinder(winrt.system.Object, metaclass=LocalLocationFinder_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LocalLocationFinder: ...
+    pass
 
 @typing.final
 class LocalLocationFinderResult(winrt.system.Object):
@@ -114,6 +112,5 @@ class PlaceInfoHelper_Static(type):
 
 @typing.final
 class PlaceInfoHelper(winrt.system.Object, metaclass=PlaceInfoHelper_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlaceInfoHelper: ...
+    pass
 

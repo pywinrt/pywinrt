@@ -21,6 +21,5 @@ class CoreUserActivityManager_Static(type):
 
 @typing.final
 class CoreUserActivityManager(winrt.system.Object, metaclass=CoreUserActivityManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CoreUserActivityManager: ...
+    pass
 

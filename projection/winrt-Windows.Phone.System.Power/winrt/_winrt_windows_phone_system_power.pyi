@@ -26,6 +26,5 @@ class PowerManager_Static(type):
 
 @typing.final
 class PowerManager(winrt.system.Object, metaclass=PowerManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PowerManager: ...
+    pass
 

@@ -33,6 +33,5 @@ class ApiInformation_Static(type):
 
 @typing.final
 class ApiInformation(winrt.system.Object, metaclass=ApiInformation_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ApiInformation: ...
+    pass
 

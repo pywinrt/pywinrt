@@ -46,8 +46,7 @@ class CoreAutomationRegistrar_Static(type):
 
 @typing.final
 class CoreAutomationRegistrar(winrt.system.Object, metaclass=CoreAutomationRegistrar_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CoreAutomationRegistrar: ...
+    pass
 
 @typing.final
 class CoreAutomationRemoteOperation(winrt.system.Object):
@@ -111,8 +110,7 @@ class RemoteAutomationServer_Static(type):
 
 @typing.final
 class RemoteAutomationServer(winrt.system.Object, metaclass=RemoteAutomationServer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RemoteAutomationServer: ...
+    pass
 
 @typing.final
 class RemoteAutomationWindow(winrt.system.Object):

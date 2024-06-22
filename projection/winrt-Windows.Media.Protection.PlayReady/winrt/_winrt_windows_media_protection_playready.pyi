@@ -144,8 +144,7 @@ class PlayReadyContentResolver_Static(type):
 
 @typing.final
 class PlayReadyContentResolver(winrt.system.Object, metaclass=PlayReadyContentResolver_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlayReadyContentResolver: ...
+    pass
 
 @typing.final
 class PlayReadyDomain(winrt.system.Object):
@@ -373,8 +372,7 @@ class PlayReadyLicenseManagement_Static(type):
 
 @typing.final
 class PlayReadyLicenseManagement(winrt.system.Object, metaclass=PlayReadyLicenseManagement_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlayReadyLicenseManagement: ...
+    pass
 
 @typing.final
 class PlayReadyLicenseSession(winrt.system.Object):
@@ -540,8 +538,7 @@ class PlayReadyStatics_Static(type):
 
 @typing.final
 class PlayReadyStatics(winrt.system.Object, metaclass=PlayReadyStatics_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlayReadyStatics: ...
+    pass
 
 @typing.final
 class INDClosedCaptionDataReceivedEventArgs(winrt.system.Object):

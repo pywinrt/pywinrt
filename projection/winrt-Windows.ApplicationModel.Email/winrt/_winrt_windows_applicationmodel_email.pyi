@@ -570,8 +570,7 @@ class EmailManager_Static(type):
 
 @typing.final
 class EmailManager(winrt.system.Object, metaclass=EmailManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EmailManager: ...
+    pass
 
 @typing.final
 class EmailManagerForUser(winrt.system.Object):

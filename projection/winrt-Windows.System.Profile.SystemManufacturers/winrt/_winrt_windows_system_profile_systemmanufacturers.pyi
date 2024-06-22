@@ -31,8 +31,7 @@ class SmbiosInformation_Static(type):
 
 @typing.final
 class SmbiosInformation(winrt.system.Object, metaclass=SmbiosInformation_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SmbiosInformation: ...
+    pass
 
 @typing.final
 class SystemSupportDeviceInfo(winrt.system.Object):
@@ -64,6 +63,5 @@ class SystemSupportInfo_Static(type):
 
 @typing.final
 class SystemSupportInfo(winrt.system.Object, metaclass=SystemSupportInfo_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SystemSupportInfo: ...
+    pass
 

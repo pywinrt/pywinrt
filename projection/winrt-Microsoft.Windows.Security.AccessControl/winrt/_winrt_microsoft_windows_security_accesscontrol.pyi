@@ -25,6 +25,5 @@ class SecurityDescriptorHelpers_Static(type):
 
 @typing.final
 class SecurityDescriptorHelpers(winrt.system.Object, metaclass=SecurityDescriptorHelpers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SecurityDescriptorHelpers: ...
+    pass
 

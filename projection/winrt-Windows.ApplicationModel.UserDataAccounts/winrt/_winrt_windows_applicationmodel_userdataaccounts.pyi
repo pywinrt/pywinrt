@@ -82,8 +82,7 @@ class UserDataAccountManager_Static(type):
 
 @typing.final
 class UserDataAccountManager(winrt.system.Object, metaclass=UserDataAccountManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UserDataAccountManager: ...
+    pass
 
 @typing.final
 class UserDataAccountManagerForUser(winrt.system.Object):

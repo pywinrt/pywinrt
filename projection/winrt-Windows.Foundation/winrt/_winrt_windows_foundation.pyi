@@ -68,8 +68,7 @@ class GuidHelper_Static(type):
 
 @typing.final
 class GuidHelper(winrt.system.Object, metaclass=GuidHelper_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GuidHelper: ...
+    pass
 
 @typing.final
 class MemoryBuffer(winrt.system.Object):
@@ -125,8 +124,7 @@ class PropertyValue_Static(type):
 
 @typing.final
 class PropertyValue(winrt.system.Object, metaclass=PropertyValue_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PropertyValue: ...
+    pass
 
 @typing.final
 class Uri_Static(type):

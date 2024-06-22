@@ -33,8 +33,7 @@ class KnownRemoteSystemCapabilities_Static(type):
 
 @typing.final
 class KnownRemoteSystemCapabilities(winrt.system.Object, metaclass=KnownRemoteSystemCapabilities_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownRemoteSystemCapabilities: ...
+    pass
 
 @typing.final
 class RemoteSystem_Static(type):
@@ -198,8 +197,7 @@ class RemoteSystemKinds_Static(type):
 
 @typing.final
 class RemoteSystemKinds(winrt.system.Object, metaclass=RemoteSystemKinds_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RemoteSystemKinds: ...
+    pass
 
 @typing.final
 class RemoteSystemRemovedEventArgs(winrt.system.Object):

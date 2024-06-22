@@ -199,8 +199,7 @@ class ConnectivityManager_Static(type):
 
 @typing.final
 class ConnectivityManager(winrt.system.Object, metaclass=ConnectivityManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ConnectivityManager: ...
+    pass
 
 @typing.final
 class DataPlanStatus(winrt.system.Object):
@@ -296,8 +295,7 @@ class NetworkInformation_Static(type):
 
 @typing.final
 class NetworkInformation(winrt.system.Object, metaclass=NetworkInformation_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> NetworkInformation: ...
+    pass
 
 @typing.final
 class NetworkItem(winrt.system.Object):

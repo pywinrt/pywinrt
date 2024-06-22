@@ -27,8 +27,7 @@ class AdaptiveCardBuilder_Static(type):
 
 @typing.final
 class AdaptiveCardBuilder(winrt.system.Object, metaclass=AdaptiveCardBuilder_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AdaptiveCardBuilder: ...
+    pass
 
 @typing.final
 class FocusSession(winrt.system.Object):

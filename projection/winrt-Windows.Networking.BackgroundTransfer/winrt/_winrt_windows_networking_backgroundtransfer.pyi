@@ -154,8 +154,7 @@ class BackgroundTransferError_Static(type):
 
 @typing.final
 class BackgroundTransferError(winrt.system.Object, metaclass=BackgroundTransferError_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BackgroundTransferError: ...
+    pass
 
 @typing.final
 class BackgroundTransferGroup_Static(type):
@@ -264,8 +263,7 @@ class ContentPrefetcher_Static(type):
 
 @typing.final
 class ContentPrefetcher(winrt.system.Object, metaclass=ContentPrefetcher_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ContentPrefetcher: ...
+    pass
 
 @typing.final
 class DownloadOperation(winrt.system.Object):

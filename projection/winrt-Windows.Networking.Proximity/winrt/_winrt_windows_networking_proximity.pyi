@@ -72,8 +72,7 @@ class PeerFinder_Static(type):
 
 @typing.final
 class PeerFinder(winrt.system.Object, metaclass=PeerFinder_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PeerFinder: ...
+    pass
 
 @typing.final
 class PeerInformation(winrt.system.Object):

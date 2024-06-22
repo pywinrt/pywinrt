@@ -27,8 +27,7 @@ class ThreadPool_Static(type):
 
 @typing.final
 class ThreadPool(winrt.system.Object, metaclass=ThreadPool_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ThreadPool: ...
+    pass
 
 @typing.final
 class ThreadPoolTimer_Static(type):

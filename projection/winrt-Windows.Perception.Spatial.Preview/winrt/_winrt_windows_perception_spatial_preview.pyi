@@ -43,6 +43,5 @@ class SpatialGraphInteropPreview_Static(type):
 
 @typing.final
 class SpatialGraphInteropPreview(winrt.system.Object, metaclass=SpatialGraphInteropPreview_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SpatialGraphInteropPreview: ...
+    pass
 

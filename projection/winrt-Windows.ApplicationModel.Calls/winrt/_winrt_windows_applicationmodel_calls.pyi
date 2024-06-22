@@ -133,8 +133,7 @@ class PhoneCallBlocking_Static(type):
 
 @typing.final
 class PhoneCallBlocking(winrt.system.Object, metaclass=PhoneCallBlocking_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhoneCallBlocking: ...
+    pass
 
 @typing.final
 class PhoneCallHistoryEntry(winrt.system.Object):
@@ -260,8 +259,7 @@ class PhoneCallHistoryManager_Static(type):
 
 @typing.final
 class PhoneCallHistoryManager(winrt.system.Object, metaclass=PhoneCallHistoryManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhoneCallHistoryManager: ...
+    pass
 
 @typing.final
 class PhoneCallHistoryManagerForUser(winrt.system.Object):
@@ -321,8 +319,7 @@ class PhoneCallManager_Static(type):
 
 @typing.final
 class PhoneCallManager(winrt.system.Object, metaclass=PhoneCallManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhoneCallManager: ...
+    pass
 
 @typing.final
 class PhoneCallStore(winrt.system.Object):
@@ -345,8 +342,7 @@ class PhoneCallVideoCapabilitiesManager_Static(type):
 
 @typing.final
 class PhoneCallVideoCapabilitiesManager(winrt.system.Object, metaclass=PhoneCallVideoCapabilitiesManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PhoneCallVideoCapabilitiesManager: ...
+    pass
 
 @typing.final
 class PhoneCallsResult(winrt.system.Object):

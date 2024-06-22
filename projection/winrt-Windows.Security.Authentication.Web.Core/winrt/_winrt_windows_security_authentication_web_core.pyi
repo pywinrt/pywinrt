@@ -80,8 +80,7 @@ class WebAuthenticationCoreManager_Static(type):
 
 @typing.final
 class WebAuthenticationCoreManager(winrt.system.Object, metaclass=WebAuthenticationCoreManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebAuthenticationCoreManager: ...
+    pass
 
 @typing.final
 class WebProviderError(winrt.system.Object):

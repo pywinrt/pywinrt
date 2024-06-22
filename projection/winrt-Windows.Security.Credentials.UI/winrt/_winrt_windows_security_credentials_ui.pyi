@@ -27,8 +27,7 @@ class CredentialPicker_Static(type):
 
 @typing.final
 class CredentialPicker(winrt.system.Object, metaclass=CredentialPicker_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CredentialPicker: ...
+    pass
 
 @typing.final
 class CredentialPickerOptions(winrt.system.Object):
@@ -102,6 +101,5 @@ class UserConsentVerifier_Static(type):
 
 @typing.final
 class UserConsentVerifier(winrt.system.Object, metaclass=UserConsentVerifier_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UserConsentVerifier: ...
+    pass
 

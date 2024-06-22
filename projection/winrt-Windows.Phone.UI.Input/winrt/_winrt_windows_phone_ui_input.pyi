@@ -40,6 +40,5 @@ class HardwareButtons_Static(type):
 
 @typing.final
 class HardwareButtons(winrt.system.Object, metaclass=HardwareButtons_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HardwareButtons: ...
+    pass
 

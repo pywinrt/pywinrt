@@ -55,8 +55,7 @@ class KnownDeviceTypes_Static(type):
 
 @typing.final
 class KnownDeviceTypes(winrt.system.Object, metaclass=KnownDeviceTypes_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownDeviceTypes: ...
+    pass
 
 @typing.final
 class IIOControlCode(winrt.system.Object):

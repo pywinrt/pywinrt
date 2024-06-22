@@ -65,8 +65,7 @@ class AsymmetricAlgorithmNames_Static(type):
 
 @typing.final
 class AsymmetricAlgorithmNames(winrt.system.Object, metaclass=AsymmetricAlgorithmNames_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AsymmetricAlgorithmNames: ...
+    pass
 
 @typing.final
 class AsymmetricKeyAlgorithmProvider_Static(type):
@@ -107,8 +106,7 @@ class CryptographicEngine_Static(type):
 
 @typing.final
 class CryptographicEngine(winrt.system.Object, metaclass=CryptographicEngine_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CryptographicEngine: ...
+    pass
 
 @typing.final
 class CryptographicHash(winrt.system.Object):
@@ -229,8 +227,7 @@ class EccCurveNames_Static(type):
 
 @typing.final
 class EccCurveNames(winrt.system.Object, metaclass=EccCurveNames_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EccCurveNames: ...
+    pass
 
 @typing.final
 class EncryptedAndAuthenticatedData(winrt.system.Object):
@@ -256,8 +253,7 @@ class HashAlgorithmNames_Static(type):
 
 @typing.final
 class HashAlgorithmNames(winrt.system.Object, metaclass=HashAlgorithmNames_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HashAlgorithmNames: ...
+    pass
 
 @typing.final
 class HashAlgorithmProvider_Static(type):
@@ -319,8 +315,7 @@ class KeyDerivationAlgorithmNames_Static(type):
 
 @typing.final
 class KeyDerivationAlgorithmNames(winrt.system.Object, metaclass=KeyDerivationAlgorithmNames_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KeyDerivationAlgorithmNames: ...
+    pass
 
 @typing.final
 class KeyDerivationAlgorithmProvider_Static(type):
@@ -373,8 +368,7 @@ class MacAlgorithmNames_Static(type):
 
 @typing.final
 class MacAlgorithmNames(winrt.system.Object, metaclass=MacAlgorithmNames_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MacAlgorithmNames: ...
+    pass
 
 @typing.final
 class MacAlgorithmProvider_Static(type):
@@ -398,8 +392,7 @@ class PersistedKeyProvider_Static(type):
 
 @typing.final
 class PersistedKeyProvider(winrt.system.Object, metaclass=PersistedKeyProvider_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PersistedKeyProvider: ...
+    pass
 
 @typing.final
 class SymmetricAlgorithmNames_Static(type):
@@ -444,8 +437,7 @@ class SymmetricAlgorithmNames_Static(type):
 
 @typing.final
 class SymmetricAlgorithmNames(winrt.system.Object, metaclass=SymmetricAlgorithmNames_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SymmetricAlgorithmNames: ...
+    pass
 
 @typing.final
 class SymmetricKeyAlgorithmProvider_Static(type):

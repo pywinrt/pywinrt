@@ -100,8 +100,7 @@ class MapLocationFinder_Static(type):
 
 @typing.final
 class MapLocationFinder(winrt.system.Object, metaclass=MapLocationFinder_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MapLocationFinder: ...
+    pass
 
 @typing.final
 class MapLocationFinderResult(winrt.system.Object):
@@ -119,8 +118,7 @@ class MapManager_Static(type):
 
 @typing.final
 class MapManager(winrt.system.Object, metaclass=MapManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MapManager: ...
+    pass
 
 @typing.final
 class MapRoute(winrt.system.Object):
@@ -202,8 +200,7 @@ class MapRouteFinder_Static(type):
 
 @typing.final
 class MapRouteFinder(winrt.system.Object, metaclass=MapRouteFinder_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MapRouteFinder: ...
+    pass
 
 @typing.final
 class MapRouteFinderResult(winrt.system.Object):
@@ -277,8 +274,7 @@ class MapService_Static(type):
 
 @typing.final
 class MapService(winrt.system.Object, metaclass=MapService_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MapService: ...
+    pass
 
 @typing.final
 class PlaceInfo_Static(type):

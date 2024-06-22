@@ -60,6 +60,5 @@ class SocialInfoProviderManager_Static(type):
 
 @typing.final
 class SocialInfoProviderManager(winrt.system.Object, metaclass=SocialInfoProviderManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SocialInfoProviderManager: ...
+    pass
 

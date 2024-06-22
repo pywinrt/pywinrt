@@ -47,8 +47,7 @@ class ChatCapabilitiesManager_Static(type):
 
 @typing.final
 class ChatCapabilitiesManager(winrt.system.Object, metaclass=ChatCapabilitiesManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ChatCapabilitiesManager: ...
+    pass
 
 @typing.final
 class ChatConversation(winrt.system.Object):
@@ -267,8 +266,7 @@ class ChatMessageBlocking_Static(type):
 
 @typing.final
 class ChatMessageBlocking(winrt.system.Object, metaclass=ChatMessageBlocking_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ChatMessageBlocking: ...
+    pass
 
 @typing.final
 class ChatMessageChange(winrt.system.Object):
@@ -319,8 +317,7 @@ class ChatMessageManager_Static(type):
 
 @typing.final
 class ChatMessageManager(winrt.system.Object, metaclass=ChatMessageManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ChatMessageManager: ...
+    pass
 
 @typing.final
 class ChatMessageNotificationTriggerDetails(winrt.system.Object):
@@ -579,8 +576,7 @@ class RcsManager_Static(type):
 
 @typing.final
 class RcsManager(winrt.system.Object, metaclass=RcsManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RcsManager: ...
+    pass
 
 @typing.final
 class RcsServiceKindSupportedChangedEventArgs(winrt.system.Object):

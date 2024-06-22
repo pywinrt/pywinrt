@@ -305,8 +305,7 @@ class VoiceCommandManager_Static(type):
 
 @typing.final
 class VoiceCommandManager(winrt.system.Object, metaclass=VoiceCommandManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VoiceCommandManager: ...
+    pass
 
 @typing.final
 class VoiceCommandSet(winrt.system.Object):

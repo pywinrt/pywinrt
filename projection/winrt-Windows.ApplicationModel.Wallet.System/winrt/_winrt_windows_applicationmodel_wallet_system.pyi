@@ -36,6 +36,5 @@ class WalletManagerSystem_Static(type):
 
 @typing.final
 class WalletManagerSystem(winrt.system.Object, metaclass=WalletManagerSystem_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WalletManagerSystem: ...
+    pass
 

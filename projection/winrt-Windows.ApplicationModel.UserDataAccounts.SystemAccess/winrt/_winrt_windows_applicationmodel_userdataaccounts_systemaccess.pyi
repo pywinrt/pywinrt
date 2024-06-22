@@ -209,6 +209,5 @@ class UserDataAccountSystemAccessManager_Static(type):
 
 @typing.final
 class UserDataAccountSystemAccessManager(winrt.system.Object, metaclass=UserDataAccountSystemAccessManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UserDataAccountSystemAccessManager: ...
+    pass
 

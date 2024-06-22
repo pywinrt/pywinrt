@@ -33,8 +33,7 @@ class ComponentRenewal_Static(type):
 
 @typing.final
 class ComponentRenewal(winrt.system.Object, metaclass=ComponentRenewal_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ComponentRenewal: ...
+    pass
 
 @typing.final
 class HdcpSession(winrt.system.Object):

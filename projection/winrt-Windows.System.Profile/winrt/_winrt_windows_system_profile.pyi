@@ -28,8 +28,7 @@ class AnalyticsInfo_Static(type):
 
 @typing.final
 class AnalyticsInfo(winrt.system.Object, metaclass=AnalyticsInfo_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AnalyticsInfo: ...
+    pass
 
 @typing.final
 class AnalyticsVersionInfo(winrt.system.Object):
@@ -48,8 +47,7 @@ class AppApplicability_Static(type):
 
 @typing.final
 class AppApplicability(winrt.system.Object, metaclass=AppApplicability_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppApplicability: ...
+    pass
 
 @typing.final
 class EducationSettings_Static(type):
@@ -58,8 +56,7 @@ class EducationSettings_Static(type):
 
 @typing.final
 class EducationSettings(winrt.system.Object, metaclass=EducationSettings_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> EducationSettings: ...
+    pass
 
 @typing.final
 class HardwareIdentification_Static(type):
@@ -67,8 +64,7 @@ class HardwareIdentification_Static(type):
 
 @typing.final
 class HardwareIdentification(winrt.system.Object, metaclass=HardwareIdentification_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HardwareIdentification: ...
+    pass
 
 @typing.final
 class HardwareToken(winrt.system.Object):
@@ -130,8 +126,7 @@ class KnownRetailInfoProperties_Static(type):
 
 @typing.final
 class KnownRetailInfoProperties(winrt.system.Object, metaclass=KnownRetailInfoProperties_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownRetailInfoProperties: ...
+    pass
 
 @typing.final
 class PlatformAutomaticAppSignInManager_Static(type):
@@ -140,8 +135,7 @@ class PlatformAutomaticAppSignInManager_Static(type):
 
 @typing.final
 class PlatformAutomaticAppSignInManager(winrt.system.Object, metaclass=PlatformAutomaticAppSignInManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlatformAutomaticAppSignInManager: ...
+    pass
 
 @typing.final
 class PlatformDiagnosticsAndUsageDataSettings_Static(type):
@@ -153,8 +147,7 @@ class PlatformDiagnosticsAndUsageDataSettings_Static(type):
 
 @typing.final
 class PlatformDiagnosticsAndUsageDataSettings(winrt.system.Object, metaclass=PlatformDiagnosticsAndUsageDataSettings_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlatformDiagnosticsAndUsageDataSettings: ...
+    pass
 
 @typing.final
 class RetailInfo_Static(type):
@@ -165,8 +158,7 @@ class RetailInfo_Static(type):
 
 @typing.final
 class RetailInfo(winrt.system.Object, metaclass=RetailInfo_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RetailInfo: ...
+    pass
 
 @typing.final
 class SharedModeSettings_Static(type):
@@ -177,8 +169,7 @@ class SharedModeSettings_Static(type):
 
 @typing.final
 class SharedModeSettings(winrt.system.Object, metaclass=SharedModeSettings_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SharedModeSettings: ...
+    pass
 
 @typing.final
 class SmartAppControlPolicy_Static(type):
@@ -189,8 +180,7 @@ class SmartAppControlPolicy_Static(type):
 
 @typing.final
 class SmartAppControlPolicy(winrt.system.Object, metaclass=SmartAppControlPolicy_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SmartAppControlPolicy: ...
+    pass
 
 @typing.final
 class SystemIdentification_Static(type):
@@ -199,8 +189,7 @@ class SystemIdentification_Static(type):
 
 @typing.final
 class SystemIdentification(winrt.system.Object, metaclass=SystemIdentification_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SystemIdentification: ...
+    pass
 
 @typing.final
 class SystemIdentificationInfo(winrt.system.Object):
@@ -220,8 +209,7 @@ class SystemSetupInfo_Static(type):
 
 @typing.final
 class SystemSetupInfo(winrt.system.Object, metaclass=SystemSetupInfo_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SystemSetupInfo: ...
+    pass
 
 @typing.final
 class UnsupportedAppRequirement(winrt.system.Object):
@@ -247,6 +235,5 @@ class WindowsIntegrityPolicy_Static(type):
 
 @typing.final
 class WindowsIntegrityPolicy(winrt.system.Object, metaclass=WindowsIntegrityPolicy_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowsIntegrityPolicy: ...
+    pass
 

@@ -383,8 +383,7 @@ class CommandBarFlyoutCommandBarAutomationProperties_Static(type):
 
 @typing.final
 class CommandBarFlyoutCommandBarAutomationProperties(winrt.system.Object, metaclass=CommandBarFlyoutCommandBarAutomationProperties_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CommandBarFlyoutCommandBarAutomationProperties: ...
+    pass
 
 @typing.final
 class CommandBarFlyoutCommandBarTemplateSettings(winrt.system.Object):

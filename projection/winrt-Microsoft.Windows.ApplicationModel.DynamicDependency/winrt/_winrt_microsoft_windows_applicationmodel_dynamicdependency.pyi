@@ -102,6 +102,5 @@ class PackageDependencyRank_Static(type):
 
 @typing.final
 class PackageDependencyRank(winrt.system.Object, metaclass=PackageDependencyRank_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PackageDependencyRank: ...
+    pass
 

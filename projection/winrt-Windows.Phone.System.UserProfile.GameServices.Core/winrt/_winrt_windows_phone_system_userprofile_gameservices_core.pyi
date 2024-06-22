@@ -32,8 +32,7 @@ class GameService_Static(type):
 
 @typing.final
 class GameService(winrt.system.Object, metaclass=GameService_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GameService: ...
+    pass
 
 @typing.final
 class GameServicePropertyCollection(winrt.system.Object):

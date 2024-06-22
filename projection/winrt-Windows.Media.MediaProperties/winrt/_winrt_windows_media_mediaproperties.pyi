@@ -93,8 +93,7 @@ class Av1ProfileIds_Static(type):
 
 @typing.final
 class Av1ProfileIds(winrt.system.Object, metaclass=Av1ProfileIds_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Av1ProfileIds: ...
+    pass
 
 @typing.final
 class ContainerEncodingProperties(winrt.system.Object):
@@ -136,8 +135,7 @@ class H264ProfileIds_Static(type):
 
 @typing.final
 class H264ProfileIds(winrt.system.Object, metaclass=H264ProfileIds_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> H264ProfileIds: ...
+    pass
 
 @typing.final
 class HevcProfileIds_Static(type):
@@ -188,8 +186,7 @@ class HevcProfileIds_Static(type):
 
 @typing.final
 class HevcProfileIds(winrt.system.Object, metaclass=HevcProfileIds_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HevcProfileIds: ...
+    pass
 
 @typing.final
 class ImageEncodingProperties_Static(type):
@@ -375,8 +372,7 @@ class MediaEncodingSubtypes_Static(type):
 
 @typing.final
 class MediaEncodingSubtypes(winrt.system.Object, metaclass=MediaEncodingSubtypes_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MediaEncodingSubtypes: ...
+    pass
 
 @typing.final
 class MediaPropertySet(winrt.system.Object, winrt._winrt.MutableMapping[_uuid.UUID, winrt.system.Object]):
@@ -427,8 +423,7 @@ class Mpeg2ProfileIds_Static(type):
 
 @typing.final
 class Mpeg2ProfileIds(winrt.system.Object, metaclass=Mpeg2ProfileIds_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Mpeg2ProfileIds: ...
+    pass
 
 @typing.final
 class TimedMetadataEncodingProperties_Static(type):
@@ -515,8 +510,7 @@ class Vp9ProfileIds_Static(type):
 
 @typing.final
 class Vp9ProfileIds(winrt.system.Object, metaclass=Vp9ProfileIds_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Vp9ProfileIds: ...
+    pass
 
 @typing.final
 class IMediaEncodingProperties(winrt.system.Object):

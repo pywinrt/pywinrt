@@ -30,8 +30,7 @@ class GameBar_Static(type):
 
 @typing.final
 class GameBar(winrt.system.Object, metaclass=GameBar_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GameBar: ...
+    pass
 
 @typing.final
 class GameChatMessageReceivedEventArgs(winrt.system.Object):

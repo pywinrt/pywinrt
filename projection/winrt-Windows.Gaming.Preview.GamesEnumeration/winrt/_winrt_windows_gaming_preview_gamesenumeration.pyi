@@ -36,8 +36,7 @@ class GameList_Static(type):
 
 @typing.final
 class GameList(winrt.system.Object, metaclass=GameList_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GameList: ...
+    pass
 
 @typing.final
 class GameListEntry(winrt.system.Object):

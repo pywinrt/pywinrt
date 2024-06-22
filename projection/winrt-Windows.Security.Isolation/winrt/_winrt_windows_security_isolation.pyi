@@ -102,8 +102,7 @@ class IsolatedWindowsEnvironmentHost_Static(type):
 
 @typing.final
 class IsolatedWindowsEnvironmentHost(winrt.system.Object, metaclass=IsolatedWindowsEnvironmentHost_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentHost: ...
+    pass
 
 @typing.final
 class IsolatedWindowsEnvironmentLaunchFileResult(winrt.system.Object):
@@ -178,8 +177,7 @@ class IsolatedWindowsEnvironmentOwnerRegistration_Static(type):
 
 @typing.final
 class IsolatedWindowsEnvironmentOwnerRegistration(winrt.system.Object, metaclass=IsolatedWindowsEnvironmentOwnerRegistration_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentOwnerRegistration: ...
+    pass
 
 @typing.final
 class IsolatedWindowsEnvironmentOwnerRegistrationData(winrt.system.Object):
@@ -306,6 +304,5 @@ class IsolatedWindowsHostMessenger_Static(type):
 
 @typing.final
 class IsolatedWindowsHostMessenger(winrt.system.Object, metaclass=IsolatedWindowsHostMessenger_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> IsolatedWindowsHostMessenger: ...
+    pass
 

@@ -24,8 +24,7 @@ class MdmPolicy_Static(type):
 
 @typing.final
 class MdmPolicy(winrt.system.Object, metaclass=MdmPolicy_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MdmPolicy: ...
+    pass
 
 @typing.final
 class WorkplaceSettings_Static(type):
@@ -34,6 +33,5 @@ class WorkplaceSettings_Static(type):
 
 @typing.final
 class WorkplaceSettings(winrt.system.Object, metaclass=WorkplaceSettings_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WorkplaceSettings: ...
+    pass
 

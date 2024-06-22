@@ -144,8 +144,7 @@ class UnicodeCharacters_Static(type):
 
 @typing.final
 class UnicodeCharacters(winrt.system.Object, metaclass=UnicodeCharacters_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UnicodeCharacters: ...
+    pass
 
 @typing.final
 class WordSegment(winrt.system.Object):

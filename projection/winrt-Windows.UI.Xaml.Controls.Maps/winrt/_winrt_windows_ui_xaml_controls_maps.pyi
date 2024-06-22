@@ -1187,8 +1187,7 @@ class MapStyleSheetEntries_Static(type):
 
 @typing.final
 class MapStyleSheetEntries(winrt.system.Object, metaclass=MapStyleSheetEntries_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MapStyleSheetEntries: ...
+    pass
 
 @typing.final
 class MapStyleSheetEntryStates_Static(type):
@@ -1201,8 +1200,7 @@ class MapStyleSheetEntryStates_Static(type):
 
 @typing.final
 class MapStyleSheetEntryStates(winrt.system.Object, metaclass=MapStyleSheetEntryStates_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MapStyleSheetEntryStates: ...
+    pass
 
 @typing.final
 class MapTargetCameraChangedEventArgs(winrt.system.Object):

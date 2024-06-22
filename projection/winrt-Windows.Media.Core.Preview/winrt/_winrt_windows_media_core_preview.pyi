@@ -23,6 +23,5 @@ class SoundLevelBroker_Static(type):
 
 @typing.final
 class SoundLevelBroker(winrt.system.Object, metaclass=SoundLevelBroker_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SoundLevelBroker: ...
+    pass
 

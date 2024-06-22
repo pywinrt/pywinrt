@@ -529,8 +529,7 @@ class ContactLaunchActionVerbs_Static(type):
 
 @typing.final
 class ContactLaunchActionVerbs(winrt.system.Object, metaclass=ContactLaunchActionVerbs_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ContactLaunchActionVerbs: ...
+    pass
 
 @typing.final
 class ContactList(winrt.system.Object):
@@ -803,8 +802,7 @@ class ContactManager_Static(type):
 
 @typing.final
 class ContactManager(winrt.system.Object, metaclass=ContactManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ContactManager: ...
+    pass
 
 @typing.final
 class ContactManagerForUser(winrt.system.Object):
@@ -1063,8 +1061,7 @@ class KnownContactField_Static(type):
 
 @typing.final
 class KnownContactField(winrt.system.Object, metaclass=KnownContactField_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownContactField: ...
+    pass
 
 @typing.final
 class PinnedContactIdsQueryResult(winrt.system.Object):

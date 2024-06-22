@@ -72,6 +72,5 @@ class RemoteDesktopRegistrar_Static(type):
 
 @typing.final
 class RemoteDesktopRegistrar(winrt.system.Object, metaclass=RemoteDesktopRegistrar_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RemoteDesktopRegistrar: ...
+    pass
 

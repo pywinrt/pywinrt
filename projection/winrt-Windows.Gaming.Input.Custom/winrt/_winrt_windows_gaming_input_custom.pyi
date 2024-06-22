@@ -40,8 +40,7 @@ class GameControllerFactoryManager_Static(type):
 
 @typing.final
 class GameControllerFactoryManager(winrt.system.Object, metaclass=GameControllerFactoryManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GameControllerFactoryManager: ...
+    pass
 
 @typing.final
 class GipFirmwareUpdateResult(winrt.system.Object):

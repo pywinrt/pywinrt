@@ -515,8 +515,7 @@ class MediaDevice_Static(type):
 
 @typing.final
 class MediaDevice(winrt.system.Object, metaclass=MediaDevice_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> MediaDevice: ...
+    pass
 
 @typing.final
 class MediaDeviceControl(winrt.system.Object):

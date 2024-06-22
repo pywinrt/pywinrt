@@ -31,8 +31,7 @@ class KnownPerceptionFrameKind_Static(type):
 
 @typing.final
 class KnownPerceptionFrameKind(winrt.system.Object, metaclass=KnownPerceptionFrameKind_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownPerceptionFrameKind: ...
+    pass
 
 @typing.final
 class PerceptionControlGroup(winrt.system.Object):
@@ -124,8 +123,7 @@ class PerceptionFrameProviderManagerService_Static(type):
 
 @typing.final
 class PerceptionFrameProviderManagerService(winrt.system.Object, metaclass=PerceptionFrameProviderManagerService_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PerceptionFrameProviderManagerService: ...
+    pass
 
 @typing.final
 class PerceptionPropertyChangeRequest(winrt.system.Object):

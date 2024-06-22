@@ -53,8 +53,7 @@ class KeyCredentialManager_Static(type):
 
 @typing.final
 class KeyCredentialManager(winrt.system.Object, metaclass=KeyCredentialManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KeyCredentialManager: ...
+    pass
 
 @typing.final
 class KeyCredentialOperationResult(winrt.system.Object):

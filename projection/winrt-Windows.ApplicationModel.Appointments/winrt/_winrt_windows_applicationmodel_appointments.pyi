@@ -311,8 +311,7 @@ class AppointmentManager_Static(type):
 
 @typing.final
 class AppointmentManager(winrt.system.Object, metaclass=AppointmentManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppointmentManager: ...
+    pass
 
 @typing.final
 class AppointmentManagerForUser(winrt.system.Object):
@@ -415,8 +414,7 @@ class AppointmentProperties_Static(type):
 
 @typing.final
 class AppointmentProperties(winrt.system.Object, metaclass=AppointmentProperties_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppointmentProperties: ...
+    pass
 
 @typing.final
 class AppointmentRecurrence(winrt.system.Object):

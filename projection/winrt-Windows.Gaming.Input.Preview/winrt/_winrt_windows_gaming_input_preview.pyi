@@ -34,8 +34,7 @@ class GameControllerProviderInfo_Static(type):
 
 @typing.final
 class GameControllerProviderInfo(winrt.system.Object, metaclass=GameControllerProviderInfo_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GameControllerProviderInfo: ...
+    pass
 
 @typing.final
 class LegacyGipGameControllerProvider_Static(type):

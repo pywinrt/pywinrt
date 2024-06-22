@@ -54,8 +54,7 @@ class AlarmApplicationManager_Static(type):
 
 @typing.final
 class AlarmApplicationManager(winrt.system.Object, metaclass=AlarmApplicationManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AlarmApplicationManager: ...
+    pass
 
 @typing.final
 class AppBroadcastTrigger(winrt.system.Object):
@@ -142,8 +141,7 @@ class BackgroundExecutionManager_Static(type):
 
 @typing.final
 class BackgroundExecutionManager(winrt.system.Object, metaclass=BackgroundExecutionManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BackgroundExecutionManager: ...
+    pass
 
 @typing.final
 class BackgroundTaskBuilder(winrt.system.Object):
@@ -248,8 +246,7 @@ class BackgroundWorkCost_Static(type):
 
 @typing.final
 class BackgroundWorkCost(winrt.system.Object, metaclass=BackgroundWorkCost_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BackgroundWorkCost: ...
+    pass
 
 @typing.final
 class BluetoothLEAdvertisementPublisherTrigger(winrt.system.Object):

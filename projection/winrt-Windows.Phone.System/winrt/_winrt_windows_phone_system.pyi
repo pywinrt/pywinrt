@@ -20,6 +20,5 @@ class SystemProtection_Static(type):
 
 @typing.final
 class SystemProtection(winrt.system.Object, metaclass=SystemProtection_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SystemProtection: ...
+    pass
 

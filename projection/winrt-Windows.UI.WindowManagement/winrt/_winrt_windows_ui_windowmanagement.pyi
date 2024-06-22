@@ -258,8 +258,7 @@ class WindowServices_Static(type):
 
 @typing.final
 class WindowServices(winrt.system.Object, metaclass=WindowServices_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowServices: ...
+    pass
 
 @typing.final
 class WindowingEnvironment_Static(type):

@@ -61,8 +61,7 @@ class BadgeUpdateManager_Static(type):
 
 @typing.final
 class BadgeUpdateManager(winrt.system.Object, metaclass=BadgeUpdateManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BadgeUpdateManager: ...
+    pass
 
 @typing.final
 class BadgeUpdateManagerForUser(winrt.system.Object):
@@ -105,8 +104,7 @@ class KnownAdaptiveNotificationHints_Static(type):
 
 @typing.final
 class KnownAdaptiveNotificationHints(winrt.system.Object, metaclass=KnownAdaptiveNotificationHints_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownAdaptiveNotificationHints: ...
+    pass
 
 @typing.final
 class KnownAdaptiveNotificationTextStyles_Static(type):
@@ -151,8 +149,7 @@ class KnownAdaptiveNotificationTextStyles_Static(type):
 
 @typing.final
 class KnownAdaptiveNotificationTextStyles(winrt.system.Object, metaclass=KnownAdaptiveNotificationTextStyles_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownAdaptiveNotificationTextStyles: ...
+    pass
 
 @typing.final
 class KnownNotificationBindings_Static(type):
@@ -161,8 +158,7 @@ class KnownNotificationBindings_Static(type):
 
 @typing.final
 class KnownNotificationBindings(winrt.system.Object, metaclass=KnownNotificationBindings_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownNotificationBindings: ...
+    pass
 
 @typing.final
 class Notification(winrt.system.Object):
@@ -332,8 +328,7 @@ class TileFlyoutUpdateManager_Static(type):
 
 @typing.final
 class TileFlyoutUpdateManager(winrt.system.Object, metaclass=TileFlyoutUpdateManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TileFlyoutUpdateManager: ...
+    pass
 
 @typing.final
 class TileFlyoutUpdater(winrt.system.Object):
@@ -377,8 +372,7 @@ class TileUpdateManager_Static(type):
 
 @typing.final
 class TileUpdateManager(winrt.system.Object, metaclass=TileUpdateManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TileUpdateManager: ...
+    pass
 
 @typing.final
 class TileUpdateManagerForUser(winrt.system.Object):
@@ -578,8 +572,7 @@ class ToastNotificationManager_Static(type):
 
 @typing.final
 class ToastNotificationManager(winrt.system.Object, metaclass=ToastNotificationManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ToastNotificationManager: ...
+    pass
 
 @typing.final
 class ToastNotificationManagerForUser(winrt.system.Object):

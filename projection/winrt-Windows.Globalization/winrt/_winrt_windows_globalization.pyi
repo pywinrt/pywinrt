@@ -31,8 +31,7 @@ class ApplicationLanguages_Static(type):
 
 @typing.final
 class ApplicationLanguages(winrt.system.Object, metaclass=ApplicationLanguages_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ApplicationLanguages: ...
+    pass
 
 @typing.final
 class Calendar(winrt.system.Object):
@@ -246,8 +245,7 @@ class CalendarIdentifiers_Static(type):
 
 @typing.final
 class CalendarIdentifiers(winrt.system.Object, metaclass=CalendarIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CalendarIdentifiers: ...
+    pass
 
 @typing.final
 class ClockIdentifiers_Static(type):
@@ -258,8 +256,7 @@ class ClockIdentifiers_Static(type):
 
 @typing.final
 class ClockIdentifiers(winrt.system.Object, metaclass=ClockIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ClockIdentifiers: ...
+    pass
 
 @typing.final
 class CurrencyAmount(winrt.system.Object):
@@ -600,8 +597,7 @@ class CurrencyIdentifiers_Static(type):
 
 @typing.final
 class CurrencyIdentifiers(winrt.system.Object, metaclass=CurrencyIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CurrencyIdentifiers: ...
+    pass
 
 @typing.final
 class GeographicRegion_Static(type):
@@ -650,8 +646,7 @@ class JapanesePhoneticAnalyzer_Static(type):
 
 @typing.final
 class JapanesePhoneticAnalyzer(winrt.system.Object, metaclass=JapanesePhoneticAnalyzer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> JapanesePhoneticAnalyzer: ...
+    pass
 
 @typing.final
 class Language_Static(type):
@@ -781,6 +776,5 @@ class NumeralSystemIdentifiers_Static(type):
 
 @typing.final
 class NumeralSystemIdentifiers(winrt.system.Object, metaclass=NumeralSystemIdentifiers_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> NumeralSystemIdentifiers: ...
+    pass
 

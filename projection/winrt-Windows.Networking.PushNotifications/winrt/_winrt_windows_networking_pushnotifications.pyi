@@ -45,8 +45,7 @@ class PushNotificationChannelManager_Static(type):
 
 @typing.final
 class PushNotificationChannelManager(winrt.system.Object, metaclass=PushNotificationChannelManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PushNotificationChannelManager: ...
+    pass
 
 @typing.final
 class PushNotificationChannelManagerForUser(winrt.system.Object):

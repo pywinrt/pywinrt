@@ -23,8 +23,7 @@ class PlatformTelemetryClient_Static(type):
 
 @typing.final
 class PlatformTelemetryClient(winrt.system.Object, metaclass=PlatformTelemetryClient_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PlatformTelemetryClient: ...
+    pass
 
 @typing.final
 class PlatformTelemetryRegistrationResult(winrt.system.Object):

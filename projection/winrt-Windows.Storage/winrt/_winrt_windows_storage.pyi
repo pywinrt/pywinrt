@@ -162,8 +162,7 @@ class CachedFileManager_Static(type):
 
 @typing.final
 class CachedFileManager(winrt.system.Object, metaclass=CachedFileManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CachedFileManager: ...
+    pass
 
 @typing.final
 class DownloadsFolder_Static(type):
@@ -186,8 +185,7 @@ class DownloadsFolder_Static(type):
 
 @typing.final
 class DownloadsFolder(winrt.system.Object, metaclass=DownloadsFolder_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DownloadsFolder: ...
+    pass
 
 @typing.final
 class FileIO_Static(type):
@@ -221,8 +219,7 @@ class FileIO_Static(type):
 
 @typing.final
 class FileIO(winrt.system.Object, metaclass=FileIO_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FileIO: ...
+    pass
 
 @typing.final
 class KnownFolders_Static(type):
@@ -259,8 +256,7 @@ class KnownFolders_Static(type):
 
 @typing.final
 class KnownFolders(winrt.system.Object, metaclass=KnownFolders_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownFolders: ...
+    pass
 
 @typing.final
 class PathIO_Static(type):
@@ -294,8 +290,7 @@ class PathIO_Static(type):
 
 @typing.final
 class PathIO(winrt.system.Object, metaclass=PathIO_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PathIO: ...
+    pass
 
 @typing.final
 class SetVersionDeferral(winrt.system.Object):
@@ -753,8 +748,7 @@ class SystemProperties_Static(type):
 
 @typing.final
 class SystemProperties(winrt.system.Object, metaclass=SystemProperties_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SystemProperties: ...
+    pass
 
 @typing.final
 class SystemVideoProperties(winrt.system.Object):

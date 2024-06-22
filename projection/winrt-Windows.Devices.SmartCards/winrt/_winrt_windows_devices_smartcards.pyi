@@ -42,8 +42,7 @@ class KnownSmartCardAppletIds_Static(type):
 
 @typing.final
 class KnownSmartCardAppletIds(winrt.system.Object, metaclass=KnownSmartCardAppletIds_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownSmartCardAppletIds: ...
+    pass
 
 @typing.final
 class SmartCard(winrt.system.Object):

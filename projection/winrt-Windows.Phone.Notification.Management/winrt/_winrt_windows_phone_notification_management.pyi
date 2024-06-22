@@ -114,8 +114,7 @@ class AccessoryManager_Static(type):
 
 @typing.final
 class AccessoryManager(winrt.system.Object, metaclass=AccessoryManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AccessoryManager: ...
+    pass
 
 @typing.final
 class AlarmNotificationTriggerDetails(winrt.system.Object):

@@ -238,8 +238,7 @@ class GattCharacteristicUuids_Static(type):
 
 @typing.final
 class GattCharacteristicUuids(winrt.system.Object, metaclass=GattCharacteristicUuids_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GattCharacteristicUuids: ...
+    pass
 
 @typing.final
 class GattCharacteristicsResult(winrt.system.Object):
@@ -305,8 +304,7 @@ class GattDescriptorUuids_Static(type):
 
 @typing.final
 class GattDescriptorUuids(winrt.system.Object, metaclass=GattDescriptorUuids_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GattDescriptorUuids: ...
+    pass
 
 @typing.final
 class GattDescriptorsResult(winrt.system.Object):
@@ -599,8 +597,7 @@ class GattPresentationFormatTypes_Static(type):
 
 @typing.final
 class GattPresentationFormatTypes(winrt.system.Object, metaclass=GattPresentationFormatTypes_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GattPresentationFormatTypes: ...
+    pass
 
 @typing.final
 class GattProtocolError_Static(type):
@@ -641,8 +638,7 @@ class GattProtocolError_Static(type):
 
 @typing.final
 class GattProtocolError(winrt.system.Object, metaclass=GattProtocolError_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GattProtocolError: ...
+    pass
 
 @typing.final
 class GattReadClientCharacteristicConfigurationDescriptorResult(winrt.system.Object):
@@ -813,8 +809,7 @@ class GattServiceUuids_Static(type):
 
 @typing.final
 class GattServiceUuids(winrt.system.Object, metaclass=GattServiceUuids_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GattServiceUuids: ...
+    pass
 
 @typing.final
 class GattSession_Static(type):

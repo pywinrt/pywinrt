@@ -43,8 +43,7 @@ class BackgroundMediaPlayer_Static(type):
 
 @typing.final
 class BackgroundMediaPlayer(winrt.system.Object, metaclass=BackgroundMediaPlayer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BackgroundMediaPlayer: ...
+    pass
 
 @typing.final
 class CurrentMediaPlaybackItemChangedEventArgs(winrt.system.Object):

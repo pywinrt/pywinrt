@@ -392,8 +392,7 @@ class SocketError_Static(type):
 
 @typing.final
 class SocketError(winrt.system.Object, metaclass=SocketError_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SocketError: ...
+    pass
 
 @typing.final
 class StreamSocket_Static(type):
@@ -676,8 +675,7 @@ class WebSocketError_Static(type):
 
 @typing.final
 class WebSocketError(winrt.system.Object, metaclass=WebSocketError_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebSocketError: ...
+    pass
 
 @typing.final
 class WebSocketKeepAlive(winrt.system.Object):

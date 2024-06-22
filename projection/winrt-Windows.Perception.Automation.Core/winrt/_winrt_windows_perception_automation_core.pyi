@@ -19,6 +19,5 @@ class CorePerceptionAutomation_Static(type):
 
 @typing.final
 class CorePerceptionAutomation(winrt.system.Object, metaclass=CorePerceptionAutomation_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CorePerceptionAutomation: ...
+    pass
 

@@ -65,8 +65,7 @@ class GeotagHelper_Static(type):
 
 @typing.final
 class GeotagHelper(winrt.system.Object, metaclass=GeotagHelper_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GeotagHelper: ...
+    pass
 
 @typing.final
 class ImageProperties(winrt.system.Object):

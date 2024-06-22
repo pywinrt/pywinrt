@@ -101,8 +101,7 @@ class VoiceCommandDefinitionManager_Static(type):
 
 @typing.final
 class VoiceCommandDefinitionManager(winrt.system.Object, metaclass=VoiceCommandDefinitionManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> VoiceCommandDefinitionManager: ...
+    pass
 
 @typing.final
 class VoiceCommandDisambiguationResult(winrt.system.Object):

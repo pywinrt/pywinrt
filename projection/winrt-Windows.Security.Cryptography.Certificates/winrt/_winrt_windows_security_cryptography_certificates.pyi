@@ -96,8 +96,7 @@ class CertificateEnrollmentManager_Static(type):
 
 @typing.final
 class CertificateEnrollmentManager(winrt.system.Object, metaclass=CertificateEnrollmentManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CertificateEnrollmentManager: ...
+    pass
 
 @typing.final
 class CertificateExtension(winrt.system.Object):
@@ -296,8 +295,7 @@ class CertificateStores_Static(type):
 
 @typing.final
 class CertificateStores(winrt.system.Object, metaclass=CertificateStores_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CertificateStores: ...
+    pass
 
 @typing.final
 class ChainBuildingParameters(winrt.system.Object):
@@ -427,8 +425,7 @@ class KeyAlgorithmNames_Static(type):
 
 @typing.final
 class KeyAlgorithmNames(winrt.system.Object, metaclass=KeyAlgorithmNames_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KeyAlgorithmNames: ...
+    pass
 
 @typing.final
 class KeyAttestationHelper_Static(type):
@@ -440,8 +437,7 @@ class KeyAttestationHelper_Static(type):
 
 @typing.final
 class KeyAttestationHelper(winrt.system.Object, metaclass=KeyAttestationHelper_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KeyAttestationHelper: ...
+    pass
 
 @typing.final
 class KeyStorageProviderNames_Static(type):
@@ -456,8 +452,7 @@ class KeyStorageProviderNames_Static(type):
 
 @typing.final
 class KeyStorageProviderNames(winrt.system.Object, metaclass=KeyStorageProviderNames_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KeyStorageProviderNames: ...
+    pass
 
 @typing.final
 class PfxImportParameters(winrt.system.Object):
@@ -504,8 +499,7 @@ class StandardCertificateStoreNames_Static(type):
 
 @typing.final
 class StandardCertificateStoreNames(winrt.system.Object, metaclass=StandardCertificateStoreNames_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StandardCertificateStoreNames: ...
+    pass
 
 @typing.final
 class SubjectAlternativeNameInfo(winrt.system.Object):

@@ -28,8 +28,7 @@ class AsyncCausalityTracer_Static(type):
 
 @typing.final
 class AsyncCausalityTracer(winrt.system.Object, metaclass=AsyncCausalityTracer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AsyncCausalityTracer: ...
+    pass
 
 @typing.final
 class ErrorDetails_Static(type):

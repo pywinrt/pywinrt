@@ -40,8 +40,7 @@ class BackgroundEnergyManager_Static(type):
 
 @typing.final
 class BackgroundEnergyManager(winrt.system.Object, metaclass=BackgroundEnergyManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BackgroundEnergyManager: ...
+    pass
 
 @typing.final
 class ForegroundEnergyManager_Static(type):
@@ -64,8 +63,7 @@ class ForegroundEnergyManager_Static(type):
 
 @typing.final
 class ForegroundEnergyManager(winrt.system.Object, metaclass=ForegroundEnergyManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ForegroundEnergyManager: ...
+    pass
 
 @typing.final
 class PowerManager_Static(type):
@@ -92,6 +90,5 @@ class PowerManager_Static(type):
 
 @typing.final
 class PowerManager(winrt.system.Object, metaclass=PowerManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> PowerManager: ...
+    pass
 

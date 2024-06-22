@@ -178,8 +178,7 @@ class ApplicationViewSwitcher_Static(type):
 
 @typing.final
 class ApplicationViewSwitcher(winrt.system.Object, metaclass=ApplicationViewSwitcher_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ApplicationViewSwitcher: ...
+    pass
 
 @typing.final
 class ApplicationViewTitleBar(winrt.system.Object):
@@ -302,8 +301,7 @@ class ProjectionManager_Static(type):
 
 @typing.final
 class ProjectionManager(winrt.system.Object, metaclass=ProjectionManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ProjectionManager: ...
+    pass
 
 @typing.final
 class StatusBar_Static(type):

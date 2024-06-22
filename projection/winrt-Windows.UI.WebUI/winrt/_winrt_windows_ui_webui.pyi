@@ -176,8 +176,7 @@ class WebUIApplication_Static(type):
 
 @typing.final
 class WebUIApplication(winrt.system.Object, metaclass=WebUIApplication_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebUIApplication: ...
+    pass
 
 @typing.final
 class WebUIAppointmentsProviderAddAppointmentActivatedEventArgs(winrt.system.Object):
@@ -287,8 +286,7 @@ class WebUIBackgroundTaskInstance_Static(type):
 
 @typing.final
 class WebUIBackgroundTaskInstance(winrt.system.Object, metaclass=WebUIBackgroundTaskInstance_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebUIBackgroundTaskInstance: ...
+    pass
 
 @typing.final
 class WebUIBackgroundTaskInstanceRuntimeClass(winrt.system.Object):

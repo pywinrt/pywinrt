@@ -48,8 +48,7 @@ class DataProtectionManager_Static(type):
 
 @typing.final
 class DataProtectionManager(winrt.system.Object, metaclass=DataProtectionManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DataProtectionManager: ...
+    pass
 
 @typing.final
 class FileProtectionInfo(winrt.system.Object):
@@ -88,8 +87,7 @@ class FileProtectionManager_Static(type):
 
 @typing.final
 class FileProtectionManager(winrt.system.Object, metaclass=FileProtectionManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FileProtectionManager: ...
+    pass
 
 @typing.final
 class FileRevocationManager_Static(type):
@@ -100,8 +98,7 @@ class FileRevocationManager_Static(type):
 
 @typing.final
 class FileRevocationManager(winrt.system.Object, metaclass=FileRevocationManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> FileRevocationManager: ...
+    pass
 
 @typing.final
 class FileUnprotectOptions(winrt.system.Object):

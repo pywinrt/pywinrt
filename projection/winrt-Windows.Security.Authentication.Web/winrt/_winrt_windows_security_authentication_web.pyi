@@ -36,8 +36,7 @@ class WebAuthenticationBroker_Static(type):
 
 @typing.final
 class WebAuthenticationBroker(winrt.system.Object, metaclass=WebAuthenticationBroker_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebAuthenticationBroker: ...
+    pass
 
 @typing.final
 class WebAuthenticationResult(winrt.system.Object):

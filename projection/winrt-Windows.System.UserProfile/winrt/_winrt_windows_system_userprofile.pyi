@@ -28,8 +28,7 @@ class AdvertisingManager_Static(type):
 
 @typing.final
 class AdvertisingManager(winrt.system.Object, metaclass=AdvertisingManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AdvertisingManager: ...
+    pass
 
 @typing.final
 class AdvertisingManagerForUser(winrt.system.Object):
@@ -109,8 +108,7 @@ class GlobalizationPreferences_Static(type):
 
 @typing.final
 class GlobalizationPreferences(winrt.system.Object, metaclass=GlobalizationPreferences_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GlobalizationPreferences: ...
+    pass
 
 @typing.final
 class GlobalizationPreferencesForUser(winrt.system.Object):
@@ -143,8 +141,7 @@ class LockScreen_Static(type):
 
 @typing.final
 class LockScreen(winrt.system.Object, metaclass=LockScreen_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LockScreen: ...
+    pass
 
 @typing.final
 class UserInformation_Static(type):
@@ -168,8 +165,7 @@ class UserInformation_Static(type):
 
 @typing.final
 class UserInformation(winrt.system.Object, metaclass=UserInformation_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> UserInformation: ...
+    pass
 
 @typing.final
 class UserProfilePersonalizationSettings_Static(type):

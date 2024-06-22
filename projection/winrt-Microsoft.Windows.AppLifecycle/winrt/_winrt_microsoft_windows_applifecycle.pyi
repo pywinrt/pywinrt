@@ -28,8 +28,7 @@ class ActivationRegistrationManager_Static(type):
 
 @typing.final
 class ActivationRegistrationManager(winrt.system.Object, metaclass=ActivationRegistrationManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ActivationRegistrationManager: ...
+    pass
 
 @typing.final
 class AppActivationArguments(winrt.system.Object):

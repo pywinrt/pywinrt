@@ -213,8 +213,7 @@ class BluetoothLEAppearanceCategories_Static(type):
 
 @typing.final
 class BluetoothLEAppearanceCategories(winrt.system.Object, metaclass=BluetoothLEAppearanceCategories_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BluetoothLEAppearanceCategories: ...
+    pass
 
 @typing.final
 class BluetoothLEAppearanceSubcategories_Static(type):
@@ -277,8 +276,7 @@ class BluetoothLEAppearanceSubcategories_Static(type):
 
 @typing.final
 class BluetoothLEAppearanceSubcategories(winrt.system.Object, metaclass=BluetoothLEAppearanceSubcategories_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BluetoothLEAppearanceSubcategories: ...
+    pass
 
 @typing.final
 class BluetoothLEConnectionParameters(winrt.system.Object):
@@ -442,6 +440,5 @@ class BluetoothUuidHelper_Static(type):
 
 @typing.final
 class BluetoothUuidHelper(winrt.system.Object, metaclass=BluetoothUuidHelper_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> BluetoothUuidHelper: ...
+    pass
 

@@ -282,6 +282,14 @@ static class FileWriters
             w.WriteLine($"class {type.Name}(winrt.system.Object{collection}{generic}{metaclass}):");
             w.Indent++;
 
+            if (type.IsStatic)
+            {
+                w.WriteLine("pass");
+                w.Indent--;
+                w.WriteBlankLine();
+                continue;
+            }
+
             if (type.IsGeneric)
             {
                 w.WriteLine(
@@ -425,8 +433,7 @@ static class FileWriters
                 );
             }
 
-            // FIXME: static class does not have _from
-            if (!type.IsGeneric || type.IsStatic)
+            if (!type.IsGeneric)
             {
                 w.WriteLine("@staticmethod");
                 w.WriteLine($"def _from(obj: winrt.system.Object, /) -> {type.Name}: ...");

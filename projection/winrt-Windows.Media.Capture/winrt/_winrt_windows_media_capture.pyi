@@ -246,8 +246,7 @@ class AppBroadcastManager_Static(type):
 
 @typing.final
 class AppBroadcastManager(winrt.system.Object, metaclass=AppBroadcastManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppBroadcastManager: ...
+    pass
 
 @typing.final
 class AppBroadcastMicrophoneCaptureStateChangedEventArgs(winrt.system.Object):
@@ -693,8 +692,7 @@ class AppCaptureManager_Static(type):
 
 @typing.final
 class AppCaptureManager(winrt.system.Object, metaclass=AppCaptureManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AppCaptureManager: ...
+    pass
 
 @typing.final
 class AppCaptureMetadataWriter(winrt.system.Object):
@@ -962,8 +960,7 @@ class CameraOptionsUI_Static(type):
 
 @typing.final
 class CameraOptionsUI(winrt.system.Object, metaclass=CameraOptionsUI_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CameraOptionsUI: ...
+    pass
 
 @typing.final
 class CapturedFrame(winrt.system.Object):

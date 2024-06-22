@@ -31,6 +31,5 @@ class CryptographicBuffer_Static(type):
 
 @typing.final
 class CryptographicBuffer(winrt.system.Object, metaclass=CryptographicBuffer_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CryptographicBuffer: ...
+    pass
 

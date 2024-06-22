@@ -19,6 +19,5 @@ class RetailMode_Static(type):
 
 @typing.final
 class RetailMode(winrt.system.Object, metaclass=RetailMode_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RetailMode: ...
+    pass
 

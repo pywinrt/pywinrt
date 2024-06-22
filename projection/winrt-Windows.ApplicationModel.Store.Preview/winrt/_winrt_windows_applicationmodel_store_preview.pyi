@@ -70,8 +70,7 @@ class StoreConfiguration_Static(type):
 
 @typing.final
 class StoreConfiguration(winrt.system.Object, metaclass=StoreConfiguration_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StoreConfiguration: ...
+    pass
 
 @typing.final
 class StoreHardwareManufacturerInfo(winrt.system.Object):
@@ -93,8 +92,7 @@ class StorePreview_Static(type):
 
 @typing.final
 class StorePreview(winrt.system.Object, metaclass=StorePreview_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StorePreview: ...
+    pass
 
 @typing.final
 class StorePreviewProductInfo(winrt.system.Object):
@@ -150,6 +148,5 @@ class WebAuthenticationCoreManagerHelper_Static(type):
 
 @typing.final
 class WebAuthenticationCoreManagerHelper(winrt.system.Object, metaclass=WebAuthenticationCoreManagerHelper_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WebAuthenticationCoreManagerHelper: ...
+    pass
 

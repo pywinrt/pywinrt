@@ -19,6 +19,5 @@ class InteractiveSession_Static(type):
 
 @typing.final
 class InteractiveSession(winrt.system.Object, metaclass=InteractiveSession_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> InteractiveSession: ...
+    pass
 

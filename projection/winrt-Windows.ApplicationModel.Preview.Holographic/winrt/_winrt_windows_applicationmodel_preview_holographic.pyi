@@ -22,8 +22,7 @@ class HolographicApplicationPreview_Static(type):
 
 @typing.final
 class HolographicApplicationPreview(winrt.system.Object, metaclass=HolographicApplicationPreview_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> HolographicApplicationPreview: ...
+    pass
 
 @typing.final
 class HolographicKeyboardPlacementOverridePreview_Static(type):

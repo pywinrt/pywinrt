@@ -190,8 +190,7 @@ class SyndicationError_Static(type):
 
 @typing.final
 class SyndicationError(winrt.system.Object, metaclass=SyndicationError_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SyndicationError: ...
+    pass
 
 @typing.final
 class SyndicationFeed(winrt.system.Object):

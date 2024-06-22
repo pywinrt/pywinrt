@@ -25,8 +25,7 @@ class LicenseManager_Static(type):
 
 @typing.final
 class LicenseManager(winrt.system.Object, metaclass=LicenseManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LicenseManager: ...
+    pass
 
 @typing.final
 class LicenseSatisfactionInfo(winrt.system.Object):

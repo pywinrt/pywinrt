@@ -18,8 +18,7 @@ class ClassicAppManager_Static(type):
 
 @typing.final
 class ClassicAppManager(winrt.system.Object, metaclass=ClassicAppManager_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ClassicAppManager: ...
+    pass
 
 @typing.final
 class InstalledClassicAppInfo(winrt.system.Object):
