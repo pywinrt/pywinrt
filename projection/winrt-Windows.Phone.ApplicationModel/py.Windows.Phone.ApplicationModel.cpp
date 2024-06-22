@@ -49,14 +49,12 @@ namespace py::cpp::Windows::Phone::ApplicationModel
         { },
     };
 
-    static PyType_Spec type_spec_ApplicationProfile =
-    {
+    static PyType_Spec type_spec_ApplicationProfile = {
         "winrt._winrt_windows_phone_applicationmodel.ApplicationProfile",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ApplicationProfile
-    };
+        _type_slots_ApplicationProfile};
 
     static PyGetSetDef getset_ApplicationProfile_Static[] = {
         { "modes", reinterpret_cast<getter>(ApplicationProfile_get_Modes), nullptr, nullptr, nullptr },

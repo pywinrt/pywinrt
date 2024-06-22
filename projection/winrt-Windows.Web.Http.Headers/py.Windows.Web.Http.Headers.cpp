@@ -911,14 +911,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpCacheDirectiveHeaderValueCollection =
-    {
+    static PyType_Spec type_spec_HttpCacheDirectiveHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpCacheDirectiveHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpCacheDirectiveHeaderValueCollection
-    };
+        _type_slots_HttpCacheDirectiveHeaderValueCollection};
 
     // ----- HttpChallengeHeaderValue class --------------------
 
@@ -1199,14 +1197,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpChallengeHeaderValue =
-    {
+    static PyType_Spec type_spec_HttpChallengeHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpChallengeHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpChallengeHeaderValue
-    };
+        _type_slots_HttpChallengeHeaderValue};
 
     static PyGetSetDef getset_HttpChallengeHeaderValue_Static[] = {
         { }
@@ -1949,14 +1945,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpChallengeHeaderValueCollection =
-    {
+    static PyType_Spec type_spec_HttpChallengeHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpChallengeHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpChallengeHeaderValueCollection
-    };
+        _type_slots_HttpChallengeHeaderValueCollection};
 
     // ----- HttpConnectionOptionHeaderValue class --------------------
 
@@ -2181,14 +2175,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpConnectionOptionHeaderValue =
-    {
+    static PyType_Spec type_spec_HttpConnectionOptionHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpConnectionOptionHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpConnectionOptionHeaderValue
-    };
+        _type_slots_HttpConnectionOptionHeaderValue};
 
     static PyGetSetDef getset_HttpConnectionOptionHeaderValue_Static[] = {
         { }
@@ -2931,14 +2923,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpConnectionOptionHeaderValueCollection =
-    {
+    static PyType_Spec type_spec_HttpConnectionOptionHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpConnectionOptionHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpConnectionOptionHeaderValueCollection
-    };
+        _type_slots_HttpConnectionOptionHeaderValueCollection};
 
     // ----- HttpContentCodingHeaderValue class --------------------
 
@@ -3163,14 +3153,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpContentCodingHeaderValue =
-    {
+    static PyType_Spec type_spec_HttpContentCodingHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpContentCodingHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpContentCodingHeaderValue
-    };
+        _type_slots_HttpContentCodingHeaderValue};
 
     static PyGetSetDef getset_HttpContentCodingHeaderValue_Static[] = {
         { }
@@ -3913,14 +3901,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpContentCodingHeaderValueCollection =
-    {
+    static PyType_Spec type_spec_HttpContentCodingHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpContentCodingHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpContentCodingHeaderValueCollection
-    };
+        _type_slots_HttpContentCodingHeaderValueCollection};
 
     // ----- HttpContentCodingWithQualityHeaderValue class --------------------
 
@@ -4181,14 +4167,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpContentCodingWithQualityHeaderValue =
-    {
+    static PyType_Spec type_spec_HttpContentCodingWithQualityHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpContentCodingWithQualityHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpContentCodingWithQualityHeaderValue
-    };
+        _type_slots_HttpContentCodingWithQualityHeaderValue};
 
     static PyGetSetDef getset_HttpContentCodingWithQualityHeaderValue_Static[] = {
         { }
@@ -4931,14 +4915,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpContentCodingWithQualityHeaderValueCollection =
-    {
+    static PyType_Spec type_spec_HttpContentCodingWithQualityHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpContentCodingWithQualityHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpContentCodingWithQualityHeaderValueCollection
-    };
+        _type_slots_HttpContentCodingWithQualityHeaderValueCollection};
 
     // ----- HttpContentDispositionHeaderValue class --------------------
 
@@ -5403,14 +5385,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpContentDispositionHeaderValue =
-    {
+    static PyType_Spec type_spec_HttpContentDispositionHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpContentDispositionHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpContentDispositionHeaderValue
-    };
+        _type_slots_HttpContentDispositionHeaderValue};
 
     static PyGetSetDef getset_HttpContentDispositionHeaderValue_Static[] = {
         { }
@@ -6403,14 +6383,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpContentHeaderCollection =
-    {
+    static PyType_Spec type_spec_HttpContentHeaderCollection = {
         "winrt._winrt_windows_web_http_headers.HttpContentHeaderCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpContentHeaderCollection
-    };
+        _type_slots_HttpContentHeaderCollection};
 
     // ----- HttpContentRangeHeaderValue class --------------------
 
@@ -6756,14 +6734,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpContentRangeHeaderValue =
-    {
+    static PyType_Spec type_spec_HttpContentRangeHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpContentRangeHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpContentRangeHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpContentRangeHeaderValue
-    };
+        _type_slots_HttpContentRangeHeaderValue};
 
     static PyGetSetDef getset_HttpContentRangeHeaderValue_Static[] = {
         { }
@@ -7079,14 +7055,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpCookiePairHeaderValue =
-    {
+    static PyType_Spec type_spec_HttpCookiePairHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpCookiePairHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpCookiePairHeaderValue
-    };
+        _type_slots_HttpCookiePairHeaderValue};
 
     static PyGetSetDef getset_HttpCookiePairHeaderValue_Static[] = {
         { }
@@ -7829,14 +7803,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpCookiePairHeaderValueCollection =
-    {
+    static PyType_Spec type_spec_HttpCookiePairHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpCookiePairHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpCookiePairHeaderValueCollection
-    };
+        _type_slots_HttpCookiePairHeaderValueCollection};
 
     // ----- HttpCredentialsHeaderValue class --------------------
 
@@ -8117,14 +8089,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpCredentialsHeaderValue =
-    {
+    static PyType_Spec type_spec_HttpCredentialsHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpCredentialsHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpCredentialsHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpCredentialsHeaderValue
-    };
+        _type_slots_HttpCredentialsHeaderValue};
 
     static PyGetSetDef getset_HttpCredentialsHeaderValue_Static[] = {
         { }
@@ -8372,14 +8342,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpDateOrDeltaHeaderValue =
-    {
+    static PyType_Spec type_spec_HttpDateOrDeltaHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpDateOrDeltaHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpDateOrDeltaHeaderValue
-    };
+        _type_slots_HttpDateOrDeltaHeaderValue};
 
     static PyGetSetDef getset_HttpDateOrDeltaHeaderValue_Static[] = {
         { }
@@ -8715,14 +8683,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpExpectationHeaderValue =
-    {
+    static PyType_Spec type_spec_HttpExpectationHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpExpectationHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpExpectationHeaderValue
-    };
+        _type_slots_HttpExpectationHeaderValue};
 
     static PyGetSetDef getset_HttpExpectationHeaderValue_Static[] = {
         { }
@@ -9465,14 +9431,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpExpectationHeaderValueCollection =
-    {
+    static PyType_Spec type_spec_HttpExpectationHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpExpectationHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpExpectationHeaderValueCollection
-    };
+        _type_slots_HttpExpectationHeaderValueCollection};
 
     // ----- HttpLanguageHeaderValueCollection class --------------------
 
@@ -10188,14 +10152,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpLanguageHeaderValueCollection =
-    {
+    static PyType_Spec type_spec_HttpLanguageHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpLanguageHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpLanguageHeaderValueCollection
-    };
+        _type_slots_HttpLanguageHeaderValueCollection};
 
     // ----- HttpLanguageRangeWithQualityHeaderValue class --------------------
 
@@ -10456,14 +10418,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpLanguageRangeWithQualityHeaderValue =
-    {
+    static PyType_Spec type_spec_HttpLanguageRangeWithQualityHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpLanguageRangeWithQualityHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpLanguageRangeWithQualityHeaderValue
-    };
+        _type_slots_HttpLanguageRangeWithQualityHeaderValue};
 
     static PyGetSetDef getset_HttpLanguageRangeWithQualityHeaderValue_Static[] = {
         { }
@@ -11206,14 +11166,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpLanguageRangeWithQualityHeaderValueCollection =
-    {
+    static PyType_Spec type_spec_HttpLanguageRangeWithQualityHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpLanguageRangeWithQualityHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpLanguageRangeWithQualityHeaderValueCollection
-    };
+        _type_slots_HttpLanguageRangeWithQualityHeaderValueCollection};
 
     // ----- HttpMediaTypeHeaderValue class --------------------
 
@@ -11534,14 +11492,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpMediaTypeHeaderValue =
-    {
+    static PyType_Spec type_spec_HttpMediaTypeHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpMediaTypeHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpMediaTypeHeaderValue
-    };
+        _type_slots_HttpMediaTypeHeaderValue};
 
     static PyGetSetDef getset_HttpMediaTypeHeaderValue_Static[] = {
         { }
@@ -11953,14 +11909,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpMediaTypeWithQualityHeaderValue =
-    {
+    static PyType_Spec type_spec_HttpMediaTypeWithQualityHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpMediaTypeWithQualityHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpMediaTypeWithQualityHeaderValue
-    };
+        _type_slots_HttpMediaTypeWithQualityHeaderValue};
 
     static PyGetSetDef getset_HttpMediaTypeWithQualityHeaderValue_Static[] = {
         { }
@@ -12703,14 +12657,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpMediaTypeWithQualityHeaderValueCollection =
-    {
+    static PyType_Spec type_spec_HttpMediaTypeWithQualityHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpMediaTypeWithQualityHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpMediaTypeWithQualityHeaderValueCollection
-    };
+        _type_slots_HttpMediaTypeWithQualityHeaderValueCollection};
 
     // ----- HttpMethodHeaderValueCollection class --------------------
 
@@ -13426,14 +13378,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpMethodHeaderValueCollection =
-    {
+    static PyType_Spec type_spec_HttpMethodHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpMethodHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpMethodHeaderValueCollection
-    };
+        _type_slots_HttpMethodHeaderValueCollection};
 
     // ----- HttpNameValueHeaderValue class --------------------
 
@@ -13722,14 +13672,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpNameValueHeaderValue =
-    {
+    static PyType_Spec type_spec_HttpNameValueHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpNameValueHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpNameValueHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpNameValueHeaderValue
-    };
+        _type_slots_HttpNameValueHeaderValue};
 
     static PyGetSetDef getset_HttpNameValueHeaderValue_Static[] = {
         { }
@@ -14017,14 +13965,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpProductHeaderValue =
-    {
+    static PyType_Spec type_spec_HttpProductHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpProductHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpProductHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpProductHeaderValue
-    };
+        _type_slots_HttpProductHeaderValue};
 
     static PyGetSetDef getset_HttpProductHeaderValue_Static[] = {
         { }
@@ -14312,14 +14258,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpProductInfoHeaderValue =
-    {
+    static PyType_Spec type_spec_HttpProductInfoHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpProductInfoHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpProductInfoHeaderValue
-    };
+        _type_slots_HttpProductInfoHeaderValue};
 
     static PyGetSetDef getset_HttpProductInfoHeaderValue_Static[] = {
         { }
@@ -15062,14 +15006,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpProductInfoHeaderValueCollection =
-    {
+    static PyType_Spec type_spec_HttpProductInfoHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpProductInfoHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpProductInfoHeaderValueCollection
-    };
+        _type_slots_HttpProductInfoHeaderValueCollection};
 
     // ----- HttpRequestHeaderCollection class --------------------
 
@@ -16201,14 +16143,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpRequestHeaderCollection =
-    {
+    static PyType_Spec type_spec_HttpRequestHeaderCollection = {
         "winrt._winrt_windows_web_http_headers.HttpRequestHeaderCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpRequestHeaderCollection
-    };
+        _type_slots_HttpRequestHeaderCollection};
 
     // ----- HttpResponseHeaderCollection class --------------------
 
@@ -17040,14 +16980,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpResponseHeaderCollection =
-    {
+    static PyType_Spec type_spec_HttpResponseHeaderCollection = {
         "winrt._winrt_windows_web_http_headers.HttpResponseHeaderCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpResponseHeaderCollection
-    };
+        _type_slots_HttpResponseHeaderCollection};
 
     // ----- HttpTransferCodingHeaderValue class --------------------
 
@@ -17292,14 +17230,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpTransferCodingHeaderValue =
-    {
+    static PyType_Spec type_spec_HttpTransferCodingHeaderValue = {
         "winrt._winrt_windows_web_http_headers.HttpTransferCodingHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpTransferCodingHeaderValue
-    };
+        _type_slots_HttpTransferCodingHeaderValue};
 
     static PyGetSetDef getset_HttpTransferCodingHeaderValue_Static[] = {
         { }
@@ -18042,14 +17978,12 @@ namespace py::cpp::Windows::Web::Http::Headers
         { },
     };
 
-    static PyType_Spec type_spec_HttpTransferCodingHeaderValueCollection =
-    {
+    static PyType_Spec type_spec_HttpTransferCodingHeaderValueCollection = {
         "winrt._winrt_windows_web_http_headers.HttpTransferCodingHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpTransferCodingHeaderValueCollection
-    };
+        _type_slots_HttpTransferCodingHeaderValueCollection};
 
     // ----- Windows.Web.Http.Headers Initialization --------------------
 

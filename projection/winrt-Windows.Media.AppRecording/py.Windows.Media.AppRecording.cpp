@@ -245,14 +245,12 @@ namespace py::cpp::Windows::Media::AppRecording
         { },
     };
 
-    static PyType_Spec type_spec_AppRecordingManager =
-    {
+    static PyType_Spec type_spec_AppRecordingManager = {
         "winrt._winrt_windows_media_apprecording.AppRecordingManager",
         sizeof(py::wrapper::Windows::Media::AppRecording::AppRecordingManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppRecordingManager
-    };
+        _type_slots_AppRecordingManager};
 
     static PyGetSetDef getset_AppRecordingManager_Static[] = {
         { }
@@ -420,14 +418,12 @@ namespace py::cpp::Windows::Media::AppRecording
         { },
     };
 
-    static PyType_Spec type_spec_AppRecordingResult =
-    {
+    static PyType_Spec type_spec_AppRecordingResult = {
         "winrt._winrt_windows_media_apprecording.AppRecordingResult",
         sizeof(py::wrapper::Windows::Media::AppRecording::AppRecordingResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppRecordingResult
-    };
+        _type_slots_AppRecordingResult};
 
     // ----- AppRecordingSaveScreenshotResult class --------------------
 
@@ -549,14 +545,12 @@ namespace py::cpp::Windows::Media::AppRecording
         { },
     };
 
-    static PyType_Spec type_spec_AppRecordingSaveScreenshotResult =
-    {
+    static PyType_Spec type_spec_AppRecordingSaveScreenshotResult = {
         "winrt._winrt_windows_media_apprecording.AppRecordingSaveScreenshotResult",
         sizeof(py::wrapper::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppRecordingSaveScreenshotResult
-    };
+        _type_slots_AppRecordingSaveScreenshotResult};
 
     // ----- AppRecordingSavedScreenshotInfo class --------------------
 
@@ -658,14 +652,12 @@ namespace py::cpp::Windows::Media::AppRecording
         { },
     };
 
-    static PyType_Spec type_spec_AppRecordingSavedScreenshotInfo =
-    {
+    static PyType_Spec type_spec_AppRecordingSavedScreenshotInfo = {
         "winrt._winrt_windows_media_apprecording.AppRecordingSavedScreenshotInfo",
         sizeof(py::wrapper::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppRecordingSavedScreenshotInfo
-    };
+        _type_slots_AppRecordingSavedScreenshotInfo};
 
     // ----- AppRecordingStatus class --------------------
 
@@ -807,14 +799,12 @@ namespace py::cpp::Windows::Media::AppRecording
         { },
     };
 
-    static PyType_Spec type_spec_AppRecordingStatus =
-    {
+    static PyType_Spec type_spec_AppRecordingStatus = {
         "winrt._winrt_windows_media_apprecording.AppRecordingStatus",
         sizeof(py::wrapper::Windows::Media::AppRecording::AppRecordingStatus),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppRecordingStatus
-    };
+        _type_slots_AppRecordingStatus};
 
     // ----- AppRecordingStatusDetails class --------------------
 
@@ -1056,14 +1046,12 @@ namespace py::cpp::Windows::Media::AppRecording
         { },
     };
 
-    static PyType_Spec type_spec_AppRecordingStatusDetails =
-    {
+    static PyType_Spec type_spec_AppRecordingStatusDetails = {
         "winrt._winrt_windows_media_apprecording.AppRecordingStatusDetails",
         sizeof(py::wrapper::Windows::Media::AppRecording::AppRecordingStatusDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppRecordingStatusDetails
-    };
+        _type_slots_AppRecordingStatusDetails};
 
     // ----- Windows.Media.AppRecording Initialization --------------------
 

@@ -85,14 +85,12 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
         { },
     };
 
-    static PyType_Spec type_spec_ExtendedExecutionForegroundRevokedEventArgs =
-    {
+    static PyType_Spec type_spec_ExtendedExecutionForegroundRevokedEventArgs = {
         "winrt._winrt_windows_applicationmodel_extendedexecution_foreground.ExtendedExecutionForegroundRevokedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ExtendedExecutionForegroundRevokedEventArgs
-    };
+        _type_slots_ExtendedExecutionForegroundRevokedEventArgs};
 
     // ----- ExtendedExecutionForegroundSession class --------------------
 
@@ -399,14 +397,12 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
         { },
     };
 
-    static PyType_Spec type_spec_ExtendedExecutionForegroundSession =
-    {
+    static PyType_Spec type_spec_ExtendedExecutionForegroundSession = {
         "winrt._winrt_windows_applicationmodel_extendedexecution_foreground.ExtendedExecutionForegroundSession",
         sizeof(py::wrapper::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ExtendedExecutionForegroundSession
-    };
+        _type_slots_ExtendedExecutionForegroundSession};
 
     // ----- Windows.ApplicationModel.ExtendedExecution.Foreground Initialization --------------------
 

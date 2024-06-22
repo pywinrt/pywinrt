@@ -239,14 +239,12 @@ namespace py::cpp::Windows::Devices::Power
         { },
     };
 
-    static PyType_Spec type_spec_Battery =
-    {
+    static PyType_Spec type_spec_Battery = {
         "winrt._winrt_windows_devices_power.Battery",
         sizeof(py::wrapper::Windows::Devices::Power::Battery),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Battery
-    };
+        _type_slots_Battery};
 
     static PyGetSetDef getset_Battery_Static[] = {
         { "aggregate_battery", reinterpret_cast<getter>(Battery_get_AggregateBattery), nullptr, nullptr, nullptr },
@@ -436,14 +434,12 @@ namespace py::cpp::Windows::Devices::Power
         { },
     };
 
-    static PyType_Spec type_spec_BatteryReport =
-    {
+    static PyType_Spec type_spec_BatteryReport = {
         "winrt._winrt_windows_devices_power.BatteryReport",
         sizeof(py::wrapper::Windows::Devices::Power::BatteryReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BatteryReport
-    };
+        _type_slots_BatteryReport};
 
     // ----- Windows.Devices.Power Initialization --------------------
 

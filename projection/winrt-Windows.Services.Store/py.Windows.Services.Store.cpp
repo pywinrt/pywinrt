@@ -105,14 +105,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreAcquireLicenseResult =
-    {
+    static PyType_Spec type_spec_StoreAcquireLicenseResult = {
         "winrt._winrt_windows_services_store.StoreAcquireLicenseResult",
         sizeof(py::wrapper::Windows::Services::Store::StoreAcquireLicenseResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreAcquireLicenseResult
-    };
+        _type_slots_StoreAcquireLicenseResult};
 
     // ----- StoreAppLicense class --------------------
 
@@ -374,14 +372,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreAppLicense =
-    {
+    static PyType_Spec type_spec_StoreAppLicense = {
         "winrt._winrt_windows_services_store.StoreAppLicense",
         sizeof(py::wrapper::Windows::Services::Store::StoreAppLicense),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreAppLicense
-    };
+        _type_slots_StoreAppLicense};
 
     // ----- StoreAvailability class --------------------
 
@@ -573,14 +569,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreAvailability =
-    {
+    static PyType_Spec type_spec_StoreAvailability = {
         "winrt._winrt_windows_services_store.StoreAvailability",
         sizeof(py::wrapper::Windows::Services::Store::StoreAvailability),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreAvailability
-    };
+        _type_slots_StoreAvailability};
 
     // ----- StoreCanAcquireLicenseResult class --------------------
 
@@ -702,14 +696,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreCanAcquireLicenseResult =
-    {
+    static PyType_Spec type_spec_StoreCanAcquireLicenseResult = {
         "winrt._winrt_windows_services_store.StoreCanAcquireLicenseResult",
         sizeof(py::wrapper::Windows::Services::Store::StoreCanAcquireLicenseResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreCanAcquireLicenseResult
-    };
+        _type_slots_StoreCanAcquireLicenseResult};
 
     // ----- StoreCollectionData class --------------------
 
@@ -931,14 +923,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreCollectionData =
-    {
+    static PyType_Spec type_spec_StoreCollectionData = {
         "winrt._winrt_windows_services_store.StoreCollectionData",
         sizeof(py::wrapper::Windows::Services::Store::StoreCollectionData),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreCollectionData
-    };
+        _type_slots_StoreCollectionData};
 
     // ----- StoreConsumableResult class --------------------
 
@@ -1080,14 +1070,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreConsumableResult =
-    {
+    static PyType_Spec type_spec_StoreConsumableResult = {
         "winrt._winrt_windows_services_store.StoreConsumableResult",
         sizeof(py::wrapper::Windows::Services::Store::StoreConsumableResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreConsumableResult
-    };
+        _type_slots_StoreConsumableResult};
 
     // ----- StoreContext class --------------------
 
@@ -2444,14 +2432,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreContext =
-    {
+    static PyType_Spec type_spec_StoreContext = {
         "winrt._winrt_windows_services_store.StoreContext",
         sizeof(py::wrapper::Windows::Services::Store::StoreContext),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreContext
-    };
+        _type_slots_StoreContext};
 
     static PyGetSetDef getset_StoreContext_Static[] = {
         { }
@@ -2640,14 +2626,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreImage =
-    {
+    static PyType_Spec type_spec_StoreImage = {
         "winrt._winrt_windows_services_store.StoreImage",
         sizeof(py::wrapper::Windows::Services::Store::StoreImage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreImage
-    };
+        _type_slots_StoreImage};
 
     // ----- StoreLicense class --------------------
 
@@ -2809,14 +2793,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreLicense =
-    {
+    static PyType_Spec type_spec_StoreLicense = {
         "winrt._winrt_windows_services_store.StoreLicense",
         sizeof(py::wrapper::Windows::Services::Store::StoreLicense),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreLicense
-    };
+        _type_slots_StoreLicense};
 
     // ----- StorePackageInstallOptions class --------------------
 
@@ -2948,14 +2930,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StorePackageInstallOptions =
-    {
+    static PyType_Spec type_spec_StorePackageInstallOptions = {
         "winrt._winrt_windows_services_store.StorePackageInstallOptions",
         sizeof(py::wrapper::Windows::Services::Store::StorePackageInstallOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorePackageInstallOptions
-    };
+        _type_slots_StorePackageInstallOptions};
 
     // ----- StorePackageLicense class --------------------
 
@@ -3185,14 +3165,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StorePackageLicense =
-    {
+    static PyType_Spec type_spec_StorePackageLicense = {
         "winrt._winrt_windows_services_store.StorePackageLicense",
         sizeof(py::wrapper::Windows::Services::Store::StorePackageLicense),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorePackageLicense
-    };
+        _type_slots_StorePackageLicense};
 
     // ----- StorePackageUpdate class --------------------
 
@@ -3294,14 +3272,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StorePackageUpdate =
-    {
+    static PyType_Spec type_spec_StorePackageUpdate = {
         "winrt._winrt_windows_services_store.StorePackageUpdate",
         sizeof(py::wrapper::Windows::Services::Store::StorePackageUpdate),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorePackageUpdate
-    };
+        _type_slots_StorePackageUpdate};
 
     // ----- StorePackageUpdateResult class --------------------
 
@@ -3423,14 +3399,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StorePackageUpdateResult =
-    {
+    static PyType_Spec type_spec_StorePackageUpdateResult = {
         "winrt._winrt_windows_services_store.StorePackageUpdateResult",
         sizeof(py::wrapper::Windows::Services::Store::StorePackageUpdateResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorePackageUpdateResult
-    };
+        _type_slots_StorePackageUpdateResult};
 
     // ----- StorePrice class --------------------
 
@@ -3672,14 +3646,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StorePrice =
-    {
+    static PyType_Spec type_spec_StorePrice = {
         "winrt._winrt_windows_services_store.StorePrice",
         sizeof(py::wrapper::Windows::Services::Store::StorePrice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorePrice
-    };
+        _type_slots_StorePrice};
 
     // ----- StoreProduct class --------------------
 
@@ -4121,14 +4093,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreProduct =
-    {
+    static PyType_Spec type_spec_StoreProduct = {
         "winrt._winrt_windows_services_store.StoreProduct",
         sizeof(py::wrapper::Windows::Services::Store::StoreProduct),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreProduct
-    };
+        _type_slots_StoreProduct};
 
     // ----- StoreProductOptions class --------------------
 
@@ -4232,14 +4202,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreProductOptions =
-    {
+    static PyType_Spec type_spec_StoreProductOptions = {
         "winrt._winrt_windows_services_store.StoreProductOptions",
         sizeof(py::wrapper::Windows::Services::Store::StoreProductOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreProductOptions
-    };
+        _type_slots_StoreProductOptions};
 
     // ----- StoreProductPagedQueryResult class --------------------
 
@@ -4391,14 +4359,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreProductPagedQueryResult =
-    {
+    static PyType_Spec type_spec_StoreProductPagedQueryResult = {
         "winrt._winrt_windows_services_store.StoreProductPagedQueryResult",
         sizeof(py::wrapper::Windows::Services::Store::StoreProductPagedQueryResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreProductPagedQueryResult
-    };
+        _type_slots_StoreProductPagedQueryResult};
 
     // ----- StoreProductQueryResult class --------------------
 
@@ -4500,14 +4466,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreProductQueryResult =
-    {
+    static PyType_Spec type_spec_StoreProductQueryResult = {
         "winrt._winrt_windows_services_store.StoreProductQueryResult",
         sizeof(py::wrapper::Windows::Services::Store::StoreProductQueryResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreProductQueryResult
-    };
+        _type_slots_StoreProductQueryResult};
 
     // ----- StoreProductResult class --------------------
 
@@ -4609,14 +4573,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreProductResult =
-    {
+    static PyType_Spec type_spec_StoreProductResult = {
         "winrt._winrt_windows_services_store.StoreProductResult",
         sizeof(py::wrapper::Windows::Services::Store::StoreProductResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreProductResult
-    };
+        _type_slots_StoreProductResult};
 
     // ----- StorePurchaseProperties class --------------------
 
@@ -4811,14 +4773,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StorePurchaseProperties =
-    {
+    static PyType_Spec type_spec_StorePurchaseProperties = {
         "winrt._winrt_windows_services_store.StorePurchaseProperties",
         sizeof(py::wrapper::Windows::Services::Store::StorePurchaseProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorePurchaseProperties
-    };
+        _type_slots_StorePurchaseProperties};
 
     // ----- StorePurchaseResult class --------------------
 
@@ -4920,14 +4880,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StorePurchaseResult =
-    {
+    static PyType_Spec type_spec_StorePurchaseResult = {
         "winrt._winrt_windows_services_store.StorePurchaseResult",
         sizeof(py::wrapper::Windows::Services::Store::StorePurchaseResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorePurchaseResult
-    };
+        _type_slots_StorePurchaseResult};
 
     // ----- StoreQueueItem class --------------------
 
@@ -5259,14 +5217,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreQueueItem =
-    {
+    static PyType_Spec type_spec_StoreQueueItem = {
         "winrt._winrt_windows_services_store.StoreQueueItem",
         sizeof(py::wrapper::Windows::Services::Store::StoreQueueItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreQueueItem
-    };
+        _type_slots_StoreQueueItem};
 
     // ----- StoreQueueItemCompletedEventArgs class --------------------
 
@@ -5348,14 +5304,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreQueueItemCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_StoreQueueItemCompletedEventArgs = {
         "winrt._winrt_windows_services_store.StoreQueueItemCompletedEventArgs",
         sizeof(py::wrapper::Windows::Services::Store::StoreQueueItemCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreQueueItemCompletedEventArgs
-    };
+        _type_slots_StoreQueueItemCompletedEventArgs};
 
     // ----- StoreQueueItemStatus class --------------------
 
@@ -5497,14 +5451,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreQueueItemStatus =
-    {
+    static PyType_Spec type_spec_StoreQueueItemStatus = {
         "winrt._winrt_windows_services_store.StoreQueueItemStatus",
         sizeof(py::wrapper::Windows::Services::Store::StoreQueueItemStatus),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreQueueItemStatus
-    };
+        _type_slots_StoreQueueItemStatus};
 
     // ----- StoreRateAndReviewResult class --------------------
 
@@ -5646,14 +5598,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreRateAndReviewResult =
-    {
+    static PyType_Spec type_spec_StoreRateAndReviewResult = {
         "winrt._winrt_windows_services_store.StoreRateAndReviewResult",
         sizeof(py::wrapper::Windows::Services::Store::StoreRateAndReviewResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreRateAndReviewResult
-    };
+        _type_slots_StoreRateAndReviewResult};
 
     // ----- StoreRequestHelper class --------------------
 
@@ -5713,14 +5663,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreRequestHelper =
-    {
+    static PyType_Spec type_spec_StoreRequestHelper = {
         "winrt._winrt_windows_services_store.StoreRequestHelper",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreRequestHelper
-    };
+        _type_slots_StoreRequestHelper};
 
     static PyGetSetDef getset_StoreRequestHelper_Static[] = {
         { }
@@ -5868,14 +5816,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreSendRequestResult =
-    {
+    static PyType_Spec type_spec_StoreSendRequestResult = {
         "winrt._winrt_windows_services_store.StoreSendRequestResult",
         sizeof(py::wrapper::Windows::Services::Store::StoreSendRequestResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreSendRequestResult
-    };
+        _type_slots_StoreSendRequestResult};
 
     // ----- StoreSku class --------------------
 
@@ -6337,14 +6283,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreSku =
-    {
+    static PyType_Spec type_spec_StoreSku = {
         "winrt._winrt_windows_services_store.StoreSku",
         sizeof(py::wrapper::Windows::Services::Store::StoreSku),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreSku
-    };
+        _type_slots_StoreSku};
 
     // ----- StoreSubscriptionInfo class --------------------
 
@@ -6506,14 +6450,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreSubscriptionInfo =
-    {
+    static PyType_Spec type_spec_StoreSubscriptionInfo = {
         "winrt._winrt_windows_services_store.StoreSubscriptionInfo",
         sizeof(py::wrapper::Windows::Services::Store::StoreSubscriptionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreSubscriptionInfo
-    };
+        _type_slots_StoreSubscriptionInfo};
 
     // ----- StoreUninstallStorePackageResult class --------------------
 
@@ -6615,14 +6557,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreUninstallStorePackageResult =
-    {
+    static PyType_Spec type_spec_StoreUninstallStorePackageResult = {
         "winrt._winrt_windows_services_store.StoreUninstallStorePackageResult",
         sizeof(py::wrapper::Windows::Services::Store::StoreUninstallStorePackageResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreUninstallStorePackageResult
-    };
+        _type_slots_StoreUninstallStorePackageResult};
 
     // ----- StoreVideo class --------------------
 
@@ -6804,14 +6744,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StoreVideo =
-    {
+    static PyType_Spec type_spec_StoreVideo = {
         "winrt._winrt_windows_services_store.StoreVideo",
         sizeof(py::wrapper::Windows::Services::Store::StoreVideo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreVideo
-    };
+        _type_slots_StoreVideo};
 
     // ----- StorePackageUpdateStatus struct --------------------
 
@@ -7105,14 +7043,12 @@ namespace py::cpp::Windows::Services::Store
         { },
     };
 
-    static PyType_Spec type_spec_StorePackageUpdateStatus =
-    {
+    static PyType_Spec type_spec_StorePackageUpdateStatus = {
         "winrt._winrt_windows_services_store.StorePackageUpdateStatus",
         sizeof(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorePackageUpdateStatus
-    };
+        _type_slots_StorePackageUpdateStatus};
 
     // ----- Windows.Services.Store Initialization --------------------
 

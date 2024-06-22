@@ -87,14 +87,12 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { },
     };
 
-    static PyType_Spec type_spec_MarkupExtension =
-    {
+    static PyType_Spec type_spec_MarkupExtension = {
         "winrt._winrt_windows_ui_xaml_markup.MarkupExtension",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::MarkupExtension),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MarkupExtension
-    };
+        _type_slots_MarkupExtension};
 
     // ----- XamlBinaryWriter class --------------------
 
@@ -189,14 +187,12 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { },
     };
 
-    static PyType_Spec type_spec_XamlBinaryWriter =
-    {
+    static PyType_Spec type_spec_XamlBinaryWriter = {
         "winrt._winrt_windows_ui_xaml_markup.XamlBinaryWriter",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::XamlBinaryWriter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XamlBinaryWriter
-    };
+        _type_slots_XamlBinaryWriter};
 
     static PyGetSetDef getset_XamlBinaryWriter_Static[] = {
         { }
@@ -1041,14 +1037,12 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { },
     };
 
-    static PyType_Spec type_spec_XamlBindingHelper =
-    {
+    static PyType_Spec type_spec_XamlBindingHelper = {
         "winrt._winrt_windows_ui_xaml_markup.XamlBindingHelper",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::XamlBindingHelper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XamlBindingHelper
-    };
+        _type_slots_XamlBindingHelper};
 
     static PyGetSetDef getset_XamlBindingHelper_Static[] = {
         { "data_template_component_property", reinterpret_cast<getter>(XamlBindingHelper_get_DataTemplateComponentProperty), nullptr, nullptr, nullptr },
@@ -1190,14 +1184,12 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { },
     };
 
-    static PyType_Spec type_spec_XamlMarkupHelper =
-    {
+    static PyType_Spec type_spec_XamlMarkupHelper = {
         "winrt._winrt_windows_ui_xaml_markup.XamlMarkupHelper",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::XamlMarkupHelper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XamlMarkupHelper
-    };
+        _type_slots_XamlMarkupHelper};
 
     static PyGetSetDef getset_XamlMarkupHelper_Static[] = {
         { }
@@ -1347,14 +1339,12 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { },
     };
 
-    static PyType_Spec type_spec_XamlReader =
-    {
+    static PyType_Spec type_spec_XamlReader = {
         "winrt._winrt_windows_ui_xaml_markup.XamlReader",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::XamlReader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XamlReader
-    };
+        _type_slots_XamlReader};
 
     static PyGetSetDef getset_XamlReader_Static[] = {
         { }
@@ -1477,14 +1467,12 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { },
     };
 
-    static PyType_Spec type_spec_IComponentConnector =
-    {
+    static PyType_Spec type_spec_IComponentConnector = {
         "winrt._winrt_windows_ui_xaml_markup.IComponentConnector",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IComponentConnector),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IComponentConnector
-    };
+        _type_slots_IComponentConnector};
 
     // ----- IComponentConnector2 interface --------------------
 
@@ -1579,14 +1567,12 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { },
     };
 
-    static PyType_Spec type_spec_IComponentConnector2 =
-    {
+    static PyType_Spec type_spec_IComponentConnector2 = {
         "winrt._winrt_windows_ui_xaml_markup.IComponentConnector2",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IComponentConnector2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IComponentConnector2
-    };
+        _type_slots_IComponentConnector2};
 
     // ----- IDataTemplateComponent interface --------------------
 
@@ -1721,14 +1707,12 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { },
     };
 
-    static PyType_Spec type_spec_IDataTemplateComponent =
-    {
+    static PyType_Spec type_spec_IDataTemplateComponent = {
         "winrt._winrt_windows_ui_xaml_markup.IDataTemplateComponent",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IDataTemplateComponent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IDataTemplateComponent
-    };
+        _type_slots_IDataTemplateComponent};
 
     // ----- IXamlBindScopeDiagnostics interface --------------------
 
@@ -1824,14 +1808,12 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { },
     };
 
-    static PyType_Spec type_spec_IXamlBindScopeDiagnostics =
-    {
+    static PyType_Spec type_spec_IXamlBindScopeDiagnostics = {
         "winrt._winrt_windows_ui_xaml_markup.IXamlBindScopeDiagnostics",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IXamlBindScopeDiagnostics),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IXamlBindScopeDiagnostics
-    };
+        _type_slots_IXamlBindScopeDiagnostics};
 
     // ----- IXamlMember interface --------------------
 
@@ -2079,14 +2061,12 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { },
     };
 
-    static PyType_Spec type_spec_IXamlMember =
-    {
+    static PyType_Spec type_spec_IXamlMember = {
         "winrt._winrt_windows_ui_xaml_markup.IXamlMember",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IXamlMember),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IXamlMember
-    };
+        _type_slots_IXamlMember};
 
     // ----- IXamlMetadataProvider interface --------------------
 
@@ -2210,14 +2190,12 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { },
     };
 
-    static PyType_Spec type_spec_IXamlMetadataProvider =
-    {
+    static PyType_Spec type_spec_IXamlMetadataProvider = {
         "winrt._winrt_windows_ui_xaml_markup.IXamlMetadataProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IXamlMetadataProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IXamlMetadataProvider
-    };
+        _type_slots_IXamlMetadataProvider};
 
     // ----- IXamlType interface --------------------
 
@@ -2713,14 +2691,12 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { },
     };
 
-    static PyType_Spec type_spec_IXamlType =
-    {
+    static PyType_Spec type_spec_IXamlType = {
         "winrt._winrt_windows_ui_xaml_markup.IXamlType",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IXamlType),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IXamlType
-    };
+        _type_slots_IXamlType};
 
     // ----- IXamlType2 interface --------------------
 
@@ -3236,14 +3212,12 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { },
     };
 
-    static PyType_Spec type_spec_IXamlType2 =
-    {
+    static PyType_Spec type_spec_IXamlType2 = {
         "winrt._winrt_windows_ui_xaml_markup.IXamlType2",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IXamlType2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IXamlType2
-    };
+        _type_slots_IXamlType2};
 
     // ----- XamlBinaryWriterErrorInformation struct --------------------
 
@@ -3432,14 +3406,12 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { },
     };
 
-    static PyType_Spec type_spec_XamlBinaryWriterErrorInformation =
-    {
+    static PyType_Spec type_spec_XamlBinaryWriterErrorInformation = {
         "winrt._winrt_windows_ui_xaml_markup.XamlBinaryWriterErrorInformation",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XamlBinaryWriterErrorInformation
-    };
+        _type_slots_XamlBinaryWriterErrorInformation};
 
     // ----- XmlnsDefinition struct --------------------
 
@@ -3593,14 +3565,12 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { },
     };
 
-    static PyType_Spec type_spec_XmlnsDefinition =
-    {
+    static PyType_Spec type_spec_XmlnsDefinition = {
         "winrt._winrt_windows_ui_xaml_markup.XmlnsDefinition",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::XmlnsDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XmlnsDefinition
-    };
+        _type_slots_XmlnsDefinition};
 
     // ----- Windows.UI.Xaml.Markup Initialization --------------------
 

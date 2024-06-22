@@ -357,14 +357,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources
         { },
     };
 
-    static PyType_Spec type_spec_ResourceLoader =
-    {
+    static PyType_Spec type_spec_ResourceLoader = {
         "winrt._winrt_windows_applicationmodel_resources.ResourceLoader",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::ResourceLoader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResourceLoader
-    };
+        _type_slots_ResourceLoader};
 
     static PyGetSetDef getset_ResourceLoader_Static[] = {
         { }

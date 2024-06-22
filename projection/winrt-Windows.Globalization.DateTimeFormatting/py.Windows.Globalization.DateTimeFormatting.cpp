@@ -683,14 +683,12 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
         { },
     };
 
-    static PyType_Spec type_spec_DateTimeFormatter =
-    {
+    static PyType_Spec type_spec_DateTimeFormatter = {
         "winrt._winrt_windows_globalization_datetimeformatting.DateTimeFormatter",
         sizeof(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DateTimeFormatter
-    };
+        _type_slots_DateTimeFormatter};
 
     static PyGetSetDef getset_DateTimeFormatter_Static[] = {
         { "long_date", reinterpret_cast<getter>(DateTimeFormatter_get_LongDate), nullptr, nullptr, nullptr },

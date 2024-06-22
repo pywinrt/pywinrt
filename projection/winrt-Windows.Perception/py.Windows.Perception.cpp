@@ -125,14 +125,12 @@ namespace py::cpp::Windows::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionTimestamp =
-    {
+    static PyType_Spec type_spec_PerceptionTimestamp = {
         "winrt._winrt_windows_perception.PerceptionTimestamp",
         sizeof(py::wrapper::Windows::Perception::PerceptionTimestamp),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionTimestamp
-    };
+        _type_slots_PerceptionTimestamp};
 
     // ----- PerceptionTimestampHelper class --------------------
 
@@ -221,14 +219,12 @@ namespace py::cpp::Windows::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionTimestampHelper =
-    {
+    static PyType_Spec type_spec_PerceptionTimestampHelper = {
         "winrt._winrt_windows_perception.PerceptionTimestampHelper",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionTimestampHelper
-    };
+        _type_slots_PerceptionTimestampHelper};
 
     static PyGetSetDef getset_PerceptionTimestampHelper_Static[] = {
         { }

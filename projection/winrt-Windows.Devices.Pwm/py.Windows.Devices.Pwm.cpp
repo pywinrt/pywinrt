@@ -349,14 +349,12 @@ namespace py::cpp::Windows::Devices::Pwm
         { },
     };
 
-    static PyType_Spec type_spec_PwmController =
-    {
+    static PyType_Spec type_spec_PwmController = {
         "winrt._winrt_windows_devices_pwm.PwmController",
         sizeof(py::wrapper::Windows::Devices::Pwm::PwmController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PwmController
-    };
+        _type_slots_PwmController};
 
     static PyGetSetDef getset_PwmController_Static[] = {
         { }
@@ -712,14 +710,12 @@ namespace py::cpp::Windows::Devices::Pwm
         { },
     };
 
-    static PyType_Spec type_spec_PwmPin =
-    {
+    static PyType_Spec type_spec_PwmPin = {
         "winrt._winrt_windows_devices_pwm.PwmPin",
         sizeof(py::wrapper::Windows::Devices::Pwm::PwmPin),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PwmPin
-    };
+        _type_slots_PwmPin};
 
     // ----- Windows.Devices.Pwm Initialization --------------------
 

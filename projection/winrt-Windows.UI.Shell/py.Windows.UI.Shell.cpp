@@ -61,14 +61,12 @@ namespace py::cpp::Windows::UI::Shell
         { },
     };
 
-    static PyType_Spec type_spec_AdaptiveCardBuilder =
-    {
+    static PyType_Spec type_spec_AdaptiveCardBuilder = {
         "winrt._winrt_windows_ui_shell.AdaptiveCardBuilder",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdaptiveCardBuilder
-    };
+        _type_slots_AdaptiveCardBuilder};
 
     static PyGetSetDef getset_AdaptiveCardBuilder_Static[] = {
         { }
@@ -207,14 +205,12 @@ namespace py::cpp::Windows::UI::Shell
         { },
     };
 
-    static PyType_Spec type_spec_FocusSession =
-    {
+    static PyType_Spec type_spec_FocusSession = {
         "winrt._winrt_windows_ui_shell.FocusSession",
         sizeof(py::wrapper::Windows::UI::Shell::FocusSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FocusSession
-    };
+        _type_slots_FocusSession};
 
     // ----- FocusSessionManager class --------------------
 
@@ -502,14 +498,12 @@ namespace py::cpp::Windows::UI::Shell
         { },
     };
 
-    static PyType_Spec type_spec_FocusSessionManager =
-    {
+    static PyType_Spec type_spec_FocusSessionManager = {
         "winrt._winrt_windows_ui_shell.FocusSessionManager",
         sizeof(py::wrapper::Windows::UI::Shell::FocusSessionManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FocusSessionManager
-    };
+        _type_slots_FocusSessionManager};
 
     static PyGetSetDef getset_FocusSessionManager_Static[] = {
         { "is_supported", reinterpret_cast<getter>(FocusSessionManager_get_IsSupported), nullptr, nullptr, nullptr },
@@ -726,14 +720,12 @@ namespace py::cpp::Windows::UI::Shell
         { },
     };
 
-    static PyType_Spec type_spec_SecurityAppManager =
-    {
+    static PyType_Spec type_spec_SecurityAppManager = {
         "winrt._winrt_windows_ui_shell.SecurityAppManager",
         sizeof(py::wrapper::Windows::UI::Shell::SecurityAppManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SecurityAppManager
-    };
+        _type_slots_SecurityAppManager};
 
     // ----- ShareWindowCommandEventArgs class --------------------
 
@@ -863,14 +855,12 @@ namespace py::cpp::Windows::UI::Shell
         { },
     };
 
-    static PyType_Spec type_spec_ShareWindowCommandEventArgs =
-    {
+    static PyType_Spec type_spec_ShareWindowCommandEventArgs = {
         "winrt._winrt_windows_ui_shell.ShareWindowCommandEventArgs",
         sizeof(py::wrapper::Windows::UI::Shell::ShareWindowCommandEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ShareWindowCommandEventArgs
-    };
+        _type_slots_ShareWindowCommandEventArgs};
 
     // ----- ShareWindowCommandSource class --------------------
 
@@ -1144,14 +1134,12 @@ namespace py::cpp::Windows::UI::Shell
         { },
     };
 
-    static PyType_Spec type_spec_ShareWindowCommandSource =
-    {
+    static PyType_Spec type_spec_ShareWindowCommandSource = {
         "winrt._winrt_windows_ui_shell.ShareWindowCommandSource",
         sizeof(py::wrapper::Windows::UI::Shell::ShareWindowCommandSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ShareWindowCommandSource
-    };
+        _type_slots_ShareWindowCommandSource};
 
     static PyGetSetDef getset_ShareWindowCommandSource_Static[] = {
         { }
@@ -1528,14 +1516,12 @@ namespace py::cpp::Windows::UI::Shell
         { },
     };
 
-    static PyType_Spec type_spec_TaskbarManager =
-    {
+    static PyType_Spec type_spec_TaskbarManager = {
         "winrt._winrt_windows_ui_shell.TaskbarManager",
         sizeof(py::wrapper::Windows::UI::Shell::TaskbarManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TaskbarManager
-    };
+        _type_slots_TaskbarManager};
 
     static PyGetSetDef getset_TaskbarManager_Static[] = {
         { }
@@ -1916,14 +1902,12 @@ namespace py::cpp::Windows::UI::Shell
         { },
     };
 
-    static PyType_Spec type_spec_WindowTab =
-    {
+    static PyType_Spec type_spec_WindowTab = {
         "winrt._winrt_windows_ui_shell.WindowTab",
         sizeof(py::wrapper::Windows::UI::Shell::WindowTab),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowTab
-    };
+        _type_slots_WindowTab};
 
     // ----- WindowTabCloseRequestedEventArgs class --------------------
 
@@ -2005,14 +1989,12 @@ namespace py::cpp::Windows::UI::Shell
         { },
     };
 
-    static PyType_Spec type_spec_WindowTabCloseRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_WindowTabCloseRequestedEventArgs = {
         "winrt._winrt_windows_ui_shell.WindowTabCloseRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Shell::WindowTabCloseRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowTabCloseRequestedEventArgs
-    };
+        _type_slots_WindowTabCloseRequestedEventArgs};
 
     // ----- WindowTabCollection class --------------------
 
@@ -2653,14 +2635,12 @@ namespace py::cpp::Windows::UI::Shell
         { },
     };
 
-    static PyType_Spec type_spec_WindowTabCollection =
-    {
+    static PyType_Spec type_spec_WindowTabCollection = {
         "winrt._winrt_windows_ui_shell.WindowTabCollection",
         sizeof(py::wrapper::Windows::UI::Shell::WindowTabCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowTabCollection
-    };
+        _type_slots_WindowTabCollection};
 
     // ----- WindowTabGroup class --------------------
 
@@ -2840,14 +2820,12 @@ namespace py::cpp::Windows::UI::Shell
         { },
     };
 
-    static PyType_Spec type_spec_WindowTabGroup =
-    {
+    static PyType_Spec type_spec_WindowTabGroup = {
         "winrt._winrt_windows_ui_shell.WindowTabGroup",
         sizeof(py::wrapper::Windows::UI::Shell::WindowTabGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowTabGroup
-    };
+        _type_slots_WindowTabGroup};
 
     // ----- WindowTabIcon class --------------------
 
@@ -2994,14 +2972,12 @@ namespace py::cpp::Windows::UI::Shell
         { },
     };
 
-    static PyType_Spec type_spec_WindowTabIcon =
-    {
+    static PyType_Spec type_spec_WindowTabIcon = {
         "winrt._winrt_windows_ui_shell.WindowTabIcon",
         sizeof(py::wrapper::Windows::UI::Shell::WindowTabIcon),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowTabIcon
-    };
+        _type_slots_WindowTabIcon};
 
     static PyGetSetDef getset_WindowTabIcon_Static[] = {
         { }
@@ -3412,14 +3388,12 @@ namespace py::cpp::Windows::UI::Shell
         { },
     };
 
-    static PyType_Spec type_spec_WindowTabManager =
-    {
+    static PyType_Spec type_spec_WindowTabManager = {
         "winrt._winrt_windows_ui_shell.WindowTabManager",
         sizeof(py::wrapper::Windows::UI::Shell::WindowTabManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowTabManager
-    };
+        _type_slots_WindowTabManager};
 
     static PyGetSetDef getset_WindowTabManager_Static[] = {
         { }
@@ -3529,14 +3503,12 @@ namespace py::cpp::Windows::UI::Shell
         { },
     };
 
-    static PyType_Spec type_spec_WindowTabSwitchRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_WindowTabSwitchRequestedEventArgs = {
         "winrt._winrt_windows_ui_shell.WindowTabSwitchRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Shell::WindowTabSwitchRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowTabSwitchRequestedEventArgs
-    };
+        _type_slots_WindowTabSwitchRequestedEventArgs};
 
     // ----- WindowTabTearOutRequestedEventArgs class --------------------
 
@@ -3696,14 +3668,12 @@ namespace py::cpp::Windows::UI::Shell
         { },
     };
 
-    static PyType_Spec type_spec_WindowTabTearOutRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_WindowTabTearOutRequestedEventArgs = {
         "winrt._winrt_windows_ui_shell.WindowTabTearOutRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowTabTearOutRequestedEventArgs
-    };
+        _type_slots_WindowTabTearOutRequestedEventArgs};
 
     // ----- WindowTabThumbnailRequestedEventArgs class --------------------
 
@@ -3903,14 +3873,12 @@ namespace py::cpp::Windows::UI::Shell
         { },
     };
 
-    static PyType_Spec type_spec_WindowTabThumbnailRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_WindowTabThumbnailRequestedEventArgs = {
         "winrt._winrt_windows_ui_shell.WindowTabThumbnailRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowTabThumbnailRequestedEventArgs
-    };
+        _type_slots_WindowTabThumbnailRequestedEventArgs};
 
     // ----- IAdaptiveCard interface --------------------
 
@@ -4002,14 +3970,12 @@ namespace py::cpp::Windows::UI::Shell
         { },
     };
 
-    static PyType_Spec type_spec_IAdaptiveCard =
-    {
+    static PyType_Spec type_spec_IAdaptiveCard = {
         "winrt._winrt_windows_ui_shell.IAdaptiveCard",
         sizeof(py::wrapper::Windows::UI::Shell::IAdaptiveCard),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAdaptiveCard
-    };
+        _type_slots_IAdaptiveCard};
 
     // ----- IAdaptiveCardBuilderStatics interface --------------------
 
@@ -4103,14 +4069,12 @@ namespace py::cpp::Windows::UI::Shell
         { },
     };
 
-    static PyType_Spec type_spec_IAdaptiveCardBuilderStatics =
-    {
+    static PyType_Spec type_spec_IAdaptiveCardBuilderStatics = {
         "winrt._winrt_windows_ui_shell.IAdaptiveCardBuilderStatics",
         sizeof(py::wrapper::Windows::UI::Shell::IAdaptiveCardBuilderStatics),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAdaptiveCardBuilderStatics
-    };
+        _type_slots_IAdaptiveCardBuilderStatics};
 
     // ----- Windows.UI.Shell Initialization --------------------
 

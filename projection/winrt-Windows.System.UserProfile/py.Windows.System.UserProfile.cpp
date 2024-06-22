@@ -80,14 +80,12 @@ namespace py::cpp::Windows::System::UserProfile
         { },
     };
 
-    static PyType_Spec type_spec_AdvertisingManager =
-    {
+    static PyType_Spec type_spec_AdvertisingManager = {
         "winrt._winrt_windows_system_userprofile.AdvertisingManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdvertisingManager
-    };
+        _type_slots_AdvertisingManager};
 
     static PyGetSetDef getset_AdvertisingManager_Static[] = {
         { "advertising_id", reinterpret_cast<getter>(AdvertisingManager_get_AdvertisingId), nullptr, nullptr, nullptr },
@@ -216,14 +214,12 @@ namespace py::cpp::Windows::System::UserProfile
         { },
     };
 
-    static PyType_Spec type_spec_AdvertisingManagerForUser =
-    {
+    static PyType_Spec type_spec_AdvertisingManagerForUser = {
         "winrt._winrt_windows_system_userprofile.AdvertisingManagerForUser",
         sizeof(py::wrapper::Windows::System::UserProfile::AdvertisingManagerForUser),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdvertisingManagerForUser
-    };
+        _type_slots_AdvertisingManagerForUser};
 
     // ----- AssignedAccessSettings class --------------------
 
@@ -405,14 +401,12 @@ namespace py::cpp::Windows::System::UserProfile
         { },
     };
 
-    static PyType_Spec type_spec_AssignedAccessSettings =
-    {
+    static PyType_Spec type_spec_AssignedAccessSettings = {
         "winrt._winrt_windows_system_userprofile.AssignedAccessSettings",
         sizeof(py::wrapper::Windows::System::UserProfile::AssignedAccessSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AssignedAccessSettings
-    };
+        _type_slots_AssignedAccessSettings};
 
     static PyGetSetDef getset_AssignedAccessSettings_Static[] = {
         { }
@@ -601,14 +595,12 @@ namespace py::cpp::Windows::System::UserProfile
         { },
     };
 
-    static PyType_Spec type_spec_DiagnosticsSettings =
-    {
+    static PyType_Spec type_spec_DiagnosticsSettings = {
         "winrt._winrt_windows_system_userprofile.DiagnosticsSettings",
         sizeof(py::wrapper::Windows::System::UserProfile::DiagnosticsSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DiagnosticsSettings
-    };
+        _type_slots_DiagnosticsSettings};
 
     static PyGetSetDef getset_DiagnosticsSettings_Static[] = {
         { }
@@ -964,14 +956,12 @@ namespace py::cpp::Windows::System::UserProfile
         { },
     };
 
-    static PyType_Spec type_spec_FirstSignInSettings =
-    {
+    static PyType_Spec type_spec_FirstSignInSettings = {
         "winrt._winrt_windows_system_userprofile.FirstSignInSettings",
         sizeof(py::wrapper::Windows::System::UserProfile::FirstSignInSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FirstSignInSettings
-    };
+        _type_slots_FirstSignInSettings};
 
     static PyGetSetDef getset_FirstSignInSettings_Static[] = {
         { }
@@ -1231,14 +1221,12 @@ namespace py::cpp::Windows::System::UserProfile
         { },
     };
 
-    static PyType_Spec type_spec_GlobalizationPreferences =
-    {
+    static PyType_Spec type_spec_GlobalizationPreferences = {
         "winrt._winrt_windows_system_userprofile.GlobalizationPreferences",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GlobalizationPreferences
-    };
+        _type_slots_GlobalizationPreferences};
 
     static PyGetSetDef getset_GlobalizationPreferences_Static[] = {
         { "calendars", reinterpret_cast<getter>(GlobalizationPreferences_get_Calendars), nullptr, nullptr, nullptr },
@@ -1474,14 +1462,12 @@ namespace py::cpp::Windows::System::UserProfile
         { },
     };
 
-    static PyType_Spec type_spec_GlobalizationPreferencesForUser =
-    {
+    static PyType_Spec type_spec_GlobalizationPreferencesForUser = {
         "winrt._winrt_windows_system_userprofile.GlobalizationPreferencesForUser",
         sizeof(py::wrapper::Windows::System::UserProfile::GlobalizationPreferencesForUser),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GlobalizationPreferencesForUser
-    };
+        _type_slots_GlobalizationPreferencesForUser};
 
     // ----- LockScreen class --------------------
 
@@ -1678,14 +1664,12 @@ namespace py::cpp::Windows::System::UserProfile
         { },
     };
 
-    static PyType_Spec type_spec_LockScreen =
-    {
+    static PyType_Spec type_spec_LockScreen = {
         "winrt._winrt_windows_system_userprofile.LockScreen",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LockScreen
-    };
+        _type_slots_LockScreen};
 
     static PyGetSetDef getset_LockScreen_Static[] = {
         { "original_image_file", reinterpret_cast<getter>(LockScreen_get_OriginalImageFile), nullptr, nullptr, nullptr },
@@ -2159,14 +2143,12 @@ namespace py::cpp::Windows::System::UserProfile
         { },
     };
 
-    static PyType_Spec type_spec_UserInformation =
-    {
+    static PyType_Spec type_spec_UserInformation = {
         "winrt._winrt_windows_system_userprofile.UserInformation",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserInformation
-    };
+        _type_slots_UserInformation};
 
     static PyGetSetDef getset_UserInformation_Static[] = {
         { "account_picture_change_enabled", reinterpret_cast<getter>(UserInformation_get_AccountPictureChangeEnabled), nullptr, nullptr, nullptr },
@@ -2378,14 +2360,12 @@ namespace py::cpp::Windows::System::UserProfile
         { },
     };
 
-    static PyType_Spec type_spec_UserProfilePersonalizationSettings =
-    {
+    static PyType_Spec type_spec_UserProfilePersonalizationSettings = {
         "winrt._winrt_windows_system_userprofile.UserProfilePersonalizationSettings",
         sizeof(py::wrapper::Windows::System::UserProfile::UserProfilePersonalizationSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserProfilePersonalizationSettings
-    };
+        _type_slots_UserProfilePersonalizationSettings};
 
     static PyGetSetDef getset_UserProfilePersonalizationSettings_Static[] = {
         { "current", reinterpret_cast<getter>(UserProfilePersonalizationSettings_get_Current), nullptr, nullptr, nullptr },

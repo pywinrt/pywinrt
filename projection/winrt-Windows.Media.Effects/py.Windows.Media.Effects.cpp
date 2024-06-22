@@ -140,14 +140,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_AudioCaptureEffectsManager =
-    {
+    static PyType_Spec type_spec_AudioCaptureEffectsManager = {
         "winrt._winrt_windows_media_effects.AudioCaptureEffectsManager",
         sizeof(py::wrapper::Windows::Media::Effects::AudioCaptureEffectsManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioCaptureEffectsManager
-    };
+        _type_slots_AudioCaptureEffectsManager};
 
     // ----- AudioEffect class --------------------
 
@@ -229,14 +227,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_AudioEffect =
-    {
+    static PyType_Spec type_spec_AudioEffect = {
         "winrt._winrt_windows_media_effects.AudioEffect",
         sizeof(py::wrapper::Windows::Media::Effects::AudioEffect),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioEffect
-    };
+        _type_slots_AudioEffect};
 
     // ----- AudioEffectDefinition class --------------------
 
@@ -378,14 +374,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_AudioEffectDefinition =
-    {
+    static PyType_Spec type_spec_AudioEffectDefinition = {
         "winrt._winrt_windows_media_effects.AudioEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Effects::AudioEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioEffectDefinition
-    };
+        _type_slots_AudioEffectDefinition};
 
     // ----- AudioEffectsManager class --------------------
 
@@ -520,14 +514,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_AudioEffectsManager =
-    {
+    static PyType_Spec type_spec_AudioEffectsManager = {
         "winrt._winrt_windows_media_effects.AudioEffectsManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioEffectsManager
-    };
+        _type_slots_AudioEffectsManager};
 
     static PyGetSetDef getset_AudioEffectsManager_Static[] = {
         { }
@@ -762,14 +754,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_AudioRenderEffectsManager =
-    {
+    static PyType_Spec type_spec_AudioRenderEffectsManager = {
         "winrt._winrt_windows_media_effects.AudioRenderEffectsManager",
         sizeof(py::wrapper::Windows::Media::Effects::AudioRenderEffectsManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioRenderEffectsManager
-    };
+        _type_slots_AudioRenderEffectsManager};
 
     // ----- CompositeVideoFrameContext class --------------------
 
@@ -923,14 +913,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_CompositeVideoFrameContext =
-    {
+    static PyType_Spec type_spec_CompositeVideoFrameContext = {
         "winrt._winrt_windows_media_effects.CompositeVideoFrameContext",
         sizeof(py::wrapper::Windows::Media::Effects::CompositeVideoFrameContext),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositeVideoFrameContext
-    };
+        _type_slots_CompositeVideoFrameContext};
 
     // ----- ProcessAudioFrameContext class --------------------
 
@@ -1032,14 +1020,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_ProcessAudioFrameContext =
-    {
+    static PyType_Spec type_spec_ProcessAudioFrameContext = {
         "winrt._winrt_windows_media_effects.ProcessAudioFrameContext",
         sizeof(py::wrapper::Windows::Media::Effects::ProcessAudioFrameContext),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProcessAudioFrameContext
-    };
+        _type_slots_ProcessAudioFrameContext};
 
     // ----- ProcessVideoFrameContext class --------------------
 
@@ -1141,14 +1127,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_ProcessVideoFrameContext =
-    {
+    static PyType_Spec type_spec_ProcessVideoFrameContext = {
         "winrt._winrt_windows_media_effects.ProcessVideoFrameContext",
         sizeof(py::wrapper::Windows::Media::Effects::ProcessVideoFrameContext),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProcessVideoFrameContext
-    };
+        _type_slots_ProcessVideoFrameContext};
 
     // ----- SlowMotionEffectDefinition class --------------------
 
@@ -1320,14 +1304,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_SlowMotionEffectDefinition =
-    {
+    static PyType_Spec type_spec_SlowMotionEffectDefinition = {
         "winrt._winrt_windows_media_effects.SlowMotionEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Effects::SlowMotionEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SlowMotionEffectDefinition
-    };
+        _type_slots_SlowMotionEffectDefinition};
 
     // ----- VideoCompositorDefinition class --------------------
 
@@ -1469,14 +1451,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_VideoCompositorDefinition =
-    {
+    static PyType_Spec type_spec_VideoCompositorDefinition = {
         "winrt._winrt_windows_media_effects.VideoCompositorDefinition",
         sizeof(py::wrapper::Windows::Media::Effects::VideoCompositorDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VideoCompositorDefinition
-    };
+        _type_slots_VideoCompositorDefinition};
 
     // ----- VideoEffectDefinition class --------------------
 
@@ -1618,14 +1598,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_VideoEffectDefinition =
-    {
+    static PyType_Spec type_spec_VideoEffectDefinition = {
         "winrt._winrt_windows_media_effects.VideoEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Effects::VideoEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VideoEffectDefinition
-    };
+        _type_slots_VideoEffectDefinition};
 
     // ----- VideoTransformEffectDefinition class --------------------
 
@@ -2057,14 +2035,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_VideoTransformEffectDefinition =
-    {
+    static PyType_Spec type_spec_VideoTransformEffectDefinition = {
         "winrt._winrt_windows_media_effects.VideoTransformEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Effects::VideoTransformEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VideoTransformEffectDefinition
-    };
+        _type_slots_VideoTransformEffectDefinition};
 
     // ----- VideoTransformSphericalProjection class --------------------
 
@@ -2366,14 +2342,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_VideoTransformSphericalProjection =
-    {
+    static PyType_Spec type_spec_VideoTransformSphericalProjection = {
         "winrt._winrt_windows_media_effects.VideoTransformSphericalProjection",
         sizeof(py::wrapper::Windows::Media::Effects::VideoTransformSphericalProjection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VideoTransformSphericalProjection
-    };
+        _type_slots_VideoTransformSphericalProjection};
 
     // ----- IAudioEffectDefinition interface --------------------
 
@@ -2475,14 +2449,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_IAudioEffectDefinition =
-    {
+    static PyType_Spec type_spec_IAudioEffectDefinition = {
         "winrt._winrt_windows_media_effects.IAudioEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Effects::IAudioEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAudioEffectDefinition
-    };
+        _type_slots_IAudioEffectDefinition};
 
     // ----- IBasicAudioEffect interface --------------------
 
@@ -2747,14 +2719,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_IBasicAudioEffect =
-    {
+    static PyType_Spec type_spec_IBasicAudioEffect = {
         "winrt._winrt_windows_media_effects.IBasicAudioEffect",
         sizeof(py::wrapper::Windows::Media::Effects::IBasicAudioEffect),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBasicAudioEffect
-    };
+        _type_slots_IBasicAudioEffect};
 
     // ----- IBasicVideoEffect interface --------------------
 
@@ -3060,14 +3030,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_IBasicVideoEffect =
-    {
+    static PyType_Spec type_spec_IBasicVideoEffect = {
         "winrt._winrt_windows_media_effects.IBasicVideoEffect",
         sizeof(py::wrapper::Windows::Media::Effects::IBasicVideoEffect),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBasicVideoEffect
-    };
+        _type_slots_IBasicVideoEffect};
 
     // ----- IVideoCompositor interface --------------------
 
@@ -3313,14 +3281,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_IVideoCompositor =
-    {
+    static PyType_Spec type_spec_IVideoCompositor = {
         "winrt._winrt_windows_media_effects.IVideoCompositor",
         sizeof(py::wrapper::Windows::Media::Effects::IVideoCompositor),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IVideoCompositor
-    };
+        _type_slots_IVideoCompositor};
 
     // ----- IVideoCompositorDefinition interface --------------------
 
@@ -3422,14 +3388,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_IVideoCompositorDefinition =
-    {
+    static PyType_Spec type_spec_IVideoCompositorDefinition = {
         "winrt._winrt_windows_media_effects.IVideoCompositorDefinition",
         sizeof(py::wrapper::Windows::Media::Effects::IVideoCompositorDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IVideoCompositorDefinition
-    };
+        _type_slots_IVideoCompositorDefinition};
 
     // ----- IVideoEffectDefinition interface --------------------
 
@@ -3531,14 +3495,12 @@ namespace py::cpp::Windows::Media::Effects
         { },
     };
 
-    static PyType_Spec type_spec_IVideoEffectDefinition =
-    {
+    static PyType_Spec type_spec_IVideoEffectDefinition = {
         "winrt._winrt_windows_media_effects.IVideoEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Effects::IVideoEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IVideoEffectDefinition
-    };
+        _type_slots_IVideoEffectDefinition};
 
     // ----- Windows.Media.Effects Initialization --------------------
 

@@ -615,14 +615,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_Binding =
-    {
+    static PyType_Spec type_spec_Binding = {
         "winrt._winrt_microsoft_ui_xaml_data.Binding",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::Binding),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Binding
-    };
+        _type_slots_Binding};
 
     // ----- BindingBase class --------------------
 
@@ -706,14 +704,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_BindingBase =
-    {
+    static PyType_Spec type_spec_BindingBase = {
         "winrt._winrt_microsoft_ui_xaml_data.BindingBase",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::BindingBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BindingBase
-    };
+        _type_slots_BindingBase};
 
     // ----- BindingExpression class --------------------
 
@@ -846,14 +842,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_BindingExpression =
-    {
+    static PyType_Spec type_spec_BindingExpression = {
         "winrt._winrt_microsoft_ui_xaml_data.BindingExpression",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::BindingExpression),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BindingExpression
-    };
+        _type_slots_BindingExpression};
 
     // ----- BindingExpressionBase class --------------------
 
@@ -915,14 +909,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_BindingExpressionBase =
-    {
+    static PyType_Spec type_spec_BindingExpressionBase = {
         "winrt._winrt_microsoft_ui_xaml_data.BindingExpressionBase",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::BindingExpressionBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BindingExpressionBase
-    };
+        _type_slots_BindingExpressionBase};
 
     // ----- BindingOperations class --------------------
 
@@ -1018,14 +1010,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_BindingOperations =
-    {
+    static PyType_Spec type_spec_BindingOperations = {
         "winrt._winrt_microsoft_ui_xaml_data.BindingOperations",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::BindingOperations),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BindingOperations
-    };
+        _type_slots_BindingOperations};
 
     static PyGetSetDef getset_BindingOperations_Static[] = {
         { }
@@ -1375,14 +1365,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_CollectionViewSource =
-    {
+    static PyType_Spec type_spec_CollectionViewSource = {
         "winrt._winrt_microsoft_ui_xaml_data.CollectionViewSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::CollectionViewSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CollectionViewSource
-    };
+        _type_slots_CollectionViewSource};
 
     static PyGetSetDef getset_CollectionViewSource_Static[] = {
         { "is_source_grouped_property", reinterpret_cast<getter>(CollectionViewSource_get_IsSourceGroupedProperty), nullptr, nullptr, nullptr },
@@ -1578,14 +1566,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_CurrentChangingEventArgs =
-    {
+    static PyType_Spec type_spec_CurrentChangingEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_data.CurrentChangingEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::CurrentChangingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CurrentChangingEventArgs
-    };
+        _type_slots_CurrentChangingEventArgs};
 
     // ----- DataErrorsChangedEventArgs class --------------------
 
@@ -1719,14 +1705,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_DataErrorsChangedEventArgs =
-    {
+    static PyType_Spec type_spec_DataErrorsChangedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_data.DataErrorsChangedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::DataErrorsChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DataErrorsChangedEventArgs
-    };
+        _type_slots_DataErrorsChangedEventArgs};
 
     // ----- ItemIndexRange class --------------------
 
@@ -1873,14 +1857,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_ItemIndexRange =
-    {
+    static PyType_Spec type_spec_ItemIndexRange = {
         "winrt._winrt_microsoft_ui_xaml_data.ItemIndexRange",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::ItemIndexRange),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ItemIndexRange
-    };
+        _type_slots_ItemIndexRange};
 
     // ----- PropertyChangedEventArgs class --------------------
 
@@ -1986,14 +1968,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_PropertyChangedEventArgs =
-    {
+    static PyType_Spec type_spec_PropertyChangedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_data.PropertyChangedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::PropertyChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PropertyChangedEventArgs
-    };
+        _type_slots_PropertyChangedEventArgs};
 
     // ----- RelativeSource class --------------------
 
@@ -2125,14 +2105,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_RelativeSource =
-    {
+    static PyType_Spec type_spec_RelativeSource = {
         "winrt._winrt_microsoft_ui_xaml_data.RelativeSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::RelativeSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RelativeSource
-    };
+        _type_slots_RelativeSource};
 
     // ----- ICollectionView interface --------------------
 
@@ -3210,14 +3188,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_ICollectionView =
-    {
+    static PyType_Spec type_spec_ICollectionView = {
         "winrt._winrt_microsoft_ui_xaml_data.ICollectionView",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICollectionView
-    };
+        _type_slots_ICollectionView};
 
     // ----- ICollectionViewFactory interface --------------------
 
@@ -3309,14 +3285,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_ICollectionViewFactory =
-    {
+    static PyType_Spec type_spec_ICollectionViewFactory = {
         "winrt._winrt_microsoft_ui_xaml_data.ICollectionViewFactory",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionViewFactory),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICollectionViewFactory
-    };
+        _type_slots_ICollectionViewFactory};
 
     // ----- ICollectionViewGroup interface --------------------
 
@@ -3418,14 +3392,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_ICollectionViewGroup =
-    {
+    static PyType_Spec type_spec_ICollectionViewGroup = {
         "winrt._winrt_microsoft_ui_xaml_data.ICollectionViewGroup",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionViewGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICollectionViewGroup
-    };
+        _type_slots_ICollectionViewGroup};
 
     // ----- ICustomProperty interface --------------------
 
@@ -3701,14 +3673,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_ICustomProperty =
-    {
+    static PyType_Spec type_spec_ICustomProperty = {
         "winrt._winrt_microsoft_ui_xaml_data.ICustomProperty",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::ICustomProperty),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICustomProperty
-    };
+        _type_slots_ICustomProperty};
 
     // ----- ICustomPropertyProvider interface --------------------
 
@@ -3885,14 +3855,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_ICustomPropertyProvider =
-    {
+    static PyType_Spec type_spec_ICustomPropertyProvider = {
         "winrt._winrt_microsoft_ui_xaml_data.ICustomPropertyProvider",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::ICustomPropertyProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICustomPropertyProvider
-    };
+        _type_slots_ICustomPropertyProvider};
 
     // ----- IItemsRangeInfo interface --------------------
 
@@ -4040,14 +4008,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_IItemsRangeInfo =
-    {
+    static PyType_Spec type_spec_IItemsRangeInfo = {
         "winrt._winrt_microsoft_ui_xaml_data.IItemsRangeInfo",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::IItemsRangeInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IItemsRangeInfo
-    };
+        _type_slots_IItemsRangeInfo};
 
     // ----- INotifyDataErrorInfo interface --------------------
 
@@ -4206,14 +4172,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_INotifyDataErrorInfo =
-    {
+    static PyType_Spec type_spec_INotifyDataErrorInfo = {
         "winrt._winrt_microsoft_ui_xaml_data.INotifyDataErrorInfo",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::INotifyDataErrorInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_INotifyDataErrorInfo
-    };
+        _type_slots_INotifyDataErrorInfo};
 
     // ----- INotifyPropertyChanged interface --------------------
 
@@ -4320,14 +4284,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_INotifyPropertyChanged =
-    {
+    static PyType_Spec type_spec_INotifyPropertyChanged = {
         "winrt._winrt_microsoft_ui_xaml_data.INotifyPropertyChanged",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::INotifyPropertyChanged),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_INotifyPropertyChanged
-    };
+        _type_slots_INotifyPropertyChanged};
 
     // ----- ISelectionInfo interface --------------------
 
@@ -4517,14 +4479,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_ISelectionInfo =
-    {
+    static PyType_Spec type_spec_ISelectionInfo = {
         "winrt._winrt_microsoft_ui_xaml_data.ISelectionInfo",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::ISelectionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISelectionInfo
-    };
+        _type_slots_ISelectionInfo};
 
     // ----- ISupportIncrementalLoading interface --------------------
 
@@ -4638,14 +4598,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_ISupportIncrementalLoading =
-    {
+    static PyType_Spec type_spec_ISupportIncrementalLoading = {
         "winrt._winrt_microsoft_ui_xaml_data.ISupportIncrementalLoading",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::ISupportIncrementalLoading),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISupportIncrementalLoading
-    };
+        _type_slots_ISupportIncrementalLoading};
 
     // ----- IValueConverter interface --------------------
 
@@ -4777,14 +4735,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_IValueConverter =
-    {
+    static PyType_Spec type_spec_IValueConverter = {
         "winrt._winrt_microsoft_ui_xaml_data.IValueConverter",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::IValueConverter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IValueConverter
-    };
+        _type_slots_IValueConverter};
 
     // ----- LoadMoreItemsResult struct --------------------
 
@@ -4903,14 +4859,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { },
     };
 
-    static PyType_Spec type_spec_LoadMoreItemsResult =
-    {
+    static PyType_Spec type_spec_LoadMoreItemsResult = {
         "winrt._winrt_microsoft_ui_xaml_data.LoadMoreItemsResult",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Data::LoadMoreItemsResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LoadMoreItemsResult
-    };
+        _type_slots_LoadMoreItemsResult};
 
     // ----- Microsoft.UI.Xaml.Data Initialization --------------------
 

@@ -435,14 +435,12 @@ namespace py::cpp::Windows::Devices::Lights
         { },
     };
 
-    static PyType_Spec type_spec_Lamp =
-    {
+    static PyType_Spec type_spec_Lamp = {
         "winrt._winrt_windows_devices_lights.Lamp",
         sizeof(py::wrapper::Windows::Devices::Lights::Lamp),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Lamp
-    };
+        _type_slots_Lamp};
 
     static PyGetSetDef getset_Lamp_Static[] = {
         { }
@@ -1351,14 +1349,12 @@ namespace py::cpp::Windows::Devices::Lights
         { },
     };
 
-    static PyType_Spec type_spec_LampArray =
-    {
+    static PyType_Spec type_spec_LampArray = {
         "winrt._winrt_windows_devices_lights.LampArray",
         sizeof(py::wrapper::Windows::Devices::Lights::LampArray),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LampArray
-    };
+        _type_slots_LampArray};
 
     static PyGetSetDef getset_LampArray_Static[] = {
         { }
@@ -1467,14 +1463,12 @@ namespace py::cpp::Windows::Devices::Lights
         { },
     };
 
-    static PyType_Spec type_spec_LampAvailabilityChangedEventArgs =
-    {
+    static PyType_Spec type_spec_LampAvailabilityChangedEventArgs = {
         "winrt._winrt_windows_devices_lights.LampAvailabilityChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Lights::LampAvailabilityChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LampAvailabilityChangedEventArgs
-    };
+        _type_slots_LampAvailabilityChangedEventArgs};
 
     // ----- LampInfo class --------------------
 
@@ -1748,14 +1742,12 @@ namespace py::cpp::Windows::Devices::Lights
         { },
     };
 
-    static PyType_Spec type_spec_LampInfo =
-    {
+    static PyType_Spec type_spec_LampInfo = {
         "winrt._winrt_windows_devices_lights.LampInfo",
         sizeof(py::wrapper::Windows::Devices::Lights::LampInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LampInfo
-    };
+        _type_slots_LampInfo};
 
     // ----- Windows.Devices.Lights Initialization --------------------
 

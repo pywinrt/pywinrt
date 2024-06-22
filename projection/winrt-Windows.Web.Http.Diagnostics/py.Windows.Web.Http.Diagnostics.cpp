@@ -293,14 +293,12 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_HttpDiagnosticProvider =
-    {
+    static PyType_Spec type_spec_HttpDiagnosticProvider = {
         "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticProvider",
         sizeof(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpDiagnosticProvider
-    };
+        _type_slots_HttpDiagnosticProvider};
 
     static PyGetSetDef getset_HttpDiagnosticProvider_Static[] = {
         { }
@@ -528,14 +526,12 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_HttpDiagnosticProviderRequestResponseCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_HttpDiagnosticProviderRequestResponseCompletedEventArgs = {
         "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs",
         sizeof(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpDiagnosticProviderRequestResponseCompletedEventArgs
-    };
+        _type_slots_HttpDiagnosticProviderRequestResponseCompletedEventArgs};
 
     // ----- HttpDiagnosticProviderRequestResponseTimestamps class --------------------
 
@@ -777,14 +773,12 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_HttpDiagnosticProviderRequestResponseTimestamps =
-    {
+    static PyType_Spec type_spec_HttpDiagnosticProviderRequestResponseTimestamps = {
         "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticProviderRequestResponseTimestamps",
         sizeof(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpDiagnosticProviderRequestResponseTimestamps
-    };
+        _type_slots_HttpDiagnosticProviderRequestResponseTimestamps};
 
     // ----- HttpDiagnosticProviderRequestSentEventArgs class --------------------
 
@@ -986,14 +980,12 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_HttpDiagnosticProviderRequestSentEventArgs =
-    {
+    static PyType_Spec type_spec_HttpDiagnosticProviderRequestSentEventArgs = {
         "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticProviderRequestSentEventArgs",
         sizeof(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpDiagnosticProviderRequestSentEventArgs
-    };
+        _type_slots_HttpDiagnosticProviderRequestSentEventArgs};
 
     // ----- HttpDiagnosticProviderResponseReceivedEventArgs class --------------------
 
@@ -1115,14 +1107,12 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_HttpDiagnosticProviderResponseReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_HttpDiagnosticProviderResponseReceivedEventArgs = {
         "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs",
         sizeof(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpDiagnosticProviderResponseReceivedEventArgs
-    };
+        _type_slots_HttpDiagnosticProviderResponseReceivedEventArgs};
 
     // ----- HttpDiagnosticSourceLocation class --------------------
 
@@ -1244,14 +1234,12 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_HttpDiagnosticSourceLocation =
-    {
+    static PyType_Spec type_spec_HttpDiagnosticSourceLocation = {
         "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticSourceLocation",
         sizeof(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpDiagnosticSourceLocation
-    };
+        _type_slots_HttpDiagnosticSourceLocation};
 
     // ----- Windows.Web.Http.Diagnostics Initialization --------------------
 

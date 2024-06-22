@@ -479,14 +479,12 @@ namespace py::cpp::Windows::Phone::StartScreen
         { },
     };
 
-    static PyType_Spec type_spec_DualSimTile =
-    {
+    static PyType_Spec type_spec_DualSimTile = {
         "winrt._winrt_windows_phone_startscreen.DualSimTile",
         sizeof(py::wrapper::Windows::Phone::StartScreen::DualSimTile),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DualSimTile
-    };
+        _type_slots_DualSimTile};
 
     static PyGetSetDef getset_DualSimTile_Static[] = {
         { }
@@ -613,14 +611,12 @@ namespace py::cpp::Windows::Phone::StartScreen
         { },
     };
 
-    static PyType_Spec type_spec_IToastNotificationManagerStatics3 =
-    {
+    static PyType_Spec type_spec_IToastNotificationManagerStatics3 = {
         "winrt._winrt_windows_phone_startscreen.IToastNotificationManagerStatics3",
         sizeof(py::wrapper::Windows::Phone::StartScreen::IToastNotificationManagerStatics3),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IToastNotificationManagerStatics3
-    };
+        _type_slots_IToastNotificationManagerStatics3};
 
     // ----- Windows.Phone.StartScreen Initialization --------------------
 

@@ -327,14 +327,12 @@ namespace py::cpp::Windows::UI::Text
         { },
     };
 
-    static PyType_Spec type_spec_ContentLinkInfo =
-    {
+    static PyType_Spec type_spec_ContentLinkInfo = {
         "winrt._winrt_windows_ui_text.ContentLinkInfo",
         sizeof(py::wrapper::Windows::UI::Text::ContentLinkInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentLinkInfo
-    };
+        _type_slots_ContentLinkInfo};
 
     // ----- FontWeights class --------------------
 
@@ -605,14 +603,12 @@ namespace py::cpp::Windows::UI::Text
         { },
     };
 
-    static PyType_Spec type_spec_FontWeights =
-    {
+    static PyType_Spec type_spec_FontWeights = {
         "winrt._winrt_windows_ui_text.FontWeights",
         sizeof(py::wrapper::Windows::UI::Text::FontWeights),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FontWeights
-    };
+        _type_slots_FontWeights};
 
     static PyGetSetDef getset_FontWeights_Static[] = {
         { "black", reinterpret_cast<getter>(FontWeights_get_Black), nullptr, nullptr, nullptr },
@@ -1744,14 +1740,12 @@ namespace py::cpp::Windows::UI::Text
         { },
     };
 
-    static PyType_Spec type_spec_RichEditTextDocument =
-    {
+    static PyType_Spec type_spec_RichEditTextDocument = {
         "winrt._winrt_windows_ui_text.RichEditTextDocument",
         sizeof(py::wrapper::Windows::UI::Text::RichEditTextDocument),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RichEditTextDocument
-    };
+        _type_slots_RichEditTextDocument};
 
     // ----- RichEditTextRange class --------------------
 
@@ -3424,14 +3418,12 @@ namespace py::cpp::Windows::UI::Text
         { },
     };
 
-    static PyType_Spec type_spec_RichEditTextRange =
-    {
+    static PyType_Spec type_spec_RichEditTextRange = {
         "winrt._winrt_windows_ui_text.RichEditTextRange",
         sizeof(py::wrapper::Windows::UI::Text::RichEditTextRange),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RichEditTextRange
-    };
+        _type_slots_RichEditTextRange};
 
     // ----- TextConstants class --------------------
 
@@ -3610,14 +3602,12 @@ namespace py::cpp::Windows::UI::Text
         { },
     };
 
-    static PyType_Spec type_spec_TextConstants =
-    {
+    static PyType_Spec type_spec_TextConstants = {
         "winrt._winrt_windows_ui_text.TextConstants",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TextConstants
-    };
+        _type_slots_TextConstants};
 
     static PyGetSetDef getset_TextConstants_Static[] = {
         { "auto_color", reinterpret_cast<getter>(TextConstants_get_AutoColor), nullptr, nullptr, nullptr },
@@ -4931,14 +4921,12 @@ namespace py::cpp::Windows::UI::Text
         { },
     };
 
-    static PyType_Spec type_spec_ITextCharacterFormat =
-    {
+    static PyType_Spec type_spec_ITextCharacterFormat = {
         "winrt._winrt_windows_ui_text.ITextCharacterFormat",
         sizeof(py::wrapper::Windows::UI::Text::ITextCharacterFormat),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ITextCharacterFormat
-    };
+        _type_slots_ITextCharacterFormat};
 
     // ----- ITextDocument interface --------------------
 
@@ -5802,14 +5790,12 @@ namespace py::cpp::Windows::UI::Text
         { },
     };
 
-    static PyType_Spec type_spec_ITextDocument =
-    {
+    static PyType_Spec type_spec_ITextDocument = {
         "winrt._winrt_windows_ui_text.ITextDocument",
         sizeof(py::wrapper::Windows::UI::Text::ITextDocument),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ITextDocument
-    };
+        _type_slots_ITextDocument};
 
     // ----- ITextParagraphFormat interface --------------------
 
@@ -7102,14 +7088,12 @@ namespace py::cpp::Windows::UI::Text
         { },
     };
 
-    static PyType_Spec type_spec_ITextParagraphFormat =
-    {
+    static PyType_Spec type_spec_ITextParagraphFormat = {
         "winrt._winrt_windows_ui_text.ITextParagraphFormat",
         sizeof(py::wrapper::Windows::UI::Text::ITextParagraphFormat),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ITextParagraphFormat
-    };
+        _type_slots_ITextParagraphFormat};
 
     // ----- ITextRange interface --------------------
 
@@ -8734,14 +8718,12 @@ namespace py::cpp::Windows::UI::Text
         { },
     };
 
-    static PyType_Spec type_spec_ITextRange =
-    {
+    static PyType_Spec type_spec_ITextRange = {
         "winrt._winrt_windows_ui_text.ITextRange",
         sizeof(py::wrapper::Windows::UI::Text::ITextRange),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ITextRange
-    };
+        _type_slots_ITextRange};
 
     // ----- ITextSelection interface --------------------
 
@@ -10669,14 +10651,12 @@ namespace py::cpp::Windows::UI::Text
         { },
     };
 
-    static PyType_Spec type_spec_ITextSelection =
-    {
+    static PyType_Spec type_spec_ITextSelection = {
         "winrt._winrt_windows_ui_text.ITextSelection",
         sizeof(py::wrapper::Windows::UI::Text::ITextSelection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ITextSelection
-    };
+        _type_slots_ITextSelection};
 
     // ----- FontWeight struct --------------------
 
@@ -10795,14 +10775,12 @@ namespace py::cpp::Windows::UI::Text
         { },
     };
 
-    static PyType_Spec type_spec_FontWeight =
-    {
+    static PyType_Spec type_spec_FontWeight = {
         "winrt._winrt_windows_ui_text.FontWeight",
         sizeof(py::wrapper::Windows::UI::Text::FontWeight),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FontWeight
-    };
+        _type_slots_FontWeight};
 
     // ----- Windows.UI.Text Initialization --------------------
 

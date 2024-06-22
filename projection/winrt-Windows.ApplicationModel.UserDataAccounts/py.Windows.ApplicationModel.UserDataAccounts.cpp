@@ -743,14 +743,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
         { },
     };
 
-    static PyType_Spec type_spec_UserDataAccount =
-    {
+    static PyType_Spec type_spec_UserDataAccount = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts.UserDataAccount",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataAccount
-    };
+        _type_slots_UserDataAccount};
 
     // ----- UserDataAccountManager class --------------------
 
@@ -932,14 +930,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
         { },
     };
 
-    static PyType_Spec type_spec_UserDataAccountManager =
-    {
+    static PyType_Spec type_spec_UserDataAccountManager = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts.UserDataAccountManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataAccountManager
-    };
+        _type_slots_UserDataAccountManager};
 
     static PyGetSetDef getset_UserDataAccountManager_Static[] = {
         { }
@@ -1083,14 +1079,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
         { },
     };
 
-    static PyType_Spec type_spec_UserDataAccountManagerForUser =
-    {
+    static PyType_Spec type_spec_UserDataAccountManagerForUser = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts.UserDataAccountManagerForUser",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataAccountManagerForUser
-    };
+        _type_slots_UserDataAccountManagerForUser};
 
     // ----- UserDataAccountStore class --------------------
 
@@ -1334,14 +1328,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
         { },
     };
 
-    static PyType_Spec type_spec_UserDataAccountStore =
-    {
+    static PyType_Spec type_spec_UserDataAccountStore = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts.UserDataAccountStore",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataAccountStore
-    };
+        _type_slots_UserDataAccountStore};
 
     // ----- UserDataAccountStoreChangedEventArgs class --------------------
 
@@ -1433,14 +1425,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
         { },
     };
 
-    static PyType_Spec type_spec_UserDataAccountStoreChangedEventArgs =
-    {
+    static PyType_Spec type_spec_UserDataAccountStoreChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts.UserDataAccountStoreChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataAccountStoreChangedEventArgs
-    };
+        _type_slots_UserDataAccountStoreChangedEventArgs};
 
     // ----- Windows.ApplicationModel.UserDataAccounts Initialization --------------------
 

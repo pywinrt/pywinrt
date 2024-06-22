@@ -248,14 +248,12 @@ namespace py::cpp::Windows::Web::Syndication
         { },
     };
 
-    static PyType_Spec type_spec_SyndicationAttribute =
-    {
+    static PyType_Spec type_spec_SyndicationAttribute = {
         "winrt._winrt_windows_web_syndication.SyndicationAttribute",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationAttribute),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SyndicationAttribute
-    };
+        _type_slots_SyndicationAttribute};
 
     // ----- SyndicationCategory class --------------------
 
@@ -827,14 +825,12 @@ namespace py::cpp::Windows::Web::Syndication
         { },
     };
 
-    static PyType_Spec type_spec_SyndicationCategory =
-    {
+    static PyType_Spec type_spec_SyndicationCategory = {
         "winrt._winrt_windows_web_syndication.SyndicationCategory",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationCategory),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SyndicationCategory
-    };
+        _type_slots_SyndicationCategory};
 
     // ----- SyndicationClient class --------------------
 
@@ -1239,14 +1235,12 @@ namespace py::cpp::Windows::Web::Syndication
         { },
     };
 
-    static PyType_Spec type_spec_SyndicationClient =
-    {
+    static PyType_Spec type_spec_SyndicationClient = {
         "winrt._winrt_windows_web_syndication.SyndicationClient",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationClient),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SyndicationClient
-    };
+        _type_slots_SyndicationClient};
 
     // ----- SyndicationContent class --------------------
 
@@ -1865,14 +1859,12 @@ namespace py::cpp::Windows::Web::Syndication
         { },
     };
 
-    static PyType_Spec type_spec_SyndicationContent =
-    {
+    static PyType_Spec type_spec_SyndicationContent = {
         "winrt._winrt_windows_web_syndication.SyndicationContent",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationContent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SyndicationContent
-    };
+        _type_slots_SyndicationContent};
 
     // ----- SyndicationError class --------------------
 
@@ -1930,14 +1922,12 @@ namespace py::cpp::Windows::Web::Syndication
         { },
     };
 
-    static PyType_Spec type_spec_SyndicationError =
-    {
+    static PyType_Spec type_spec_SyndicationError = {
         "winrt._winrt_windows_web_syndication.SyndicationError",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SyndicationError
-    };
+        _type_slots_SyndicationError};
 
     static PyGetSetDef getset_SyndicationError_Static[] = {
         { }
@@ -3026,14 +3016,12 @@ namespace py::cpp::Windows::Web::Syndication
         { },
     };
 
-    static PyType_Spec type_spec_SyndicationFeed =
-    {
+    static PyType_Spec type_spec_SyndicationFeed = {
         "winrt._winrt_windows_web_syndication.SyndicationFeed",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationFeed),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SyndicationFeed
-    };
+        _type_slots_SyndicationFeed};
 
     // ----- SyndicationGenerator class --------------------
 
@@ -3588,14 +3576,12 @@ namespace py::cpp::Windows::Web::Syndication
         { },
     };
 
-    static PyType_Spec type_spec_SyndicationGenerator =
-    {
+    static PyType_Spec type_spec_SyndicationGenerator = {
         "winrt._winrt_windows_web_syndication.SyndicationGenerator",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationGenerator),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SyndicationGenerator
-    };
+        _type_slots_SyndicationGenerator};
 
     // ----- SyndicationItem class --------------------
 
@@ -4666,14 +4652,12 @@ namespace py::cpp::Windows::Web::Syndication
         { },
     };
 
-    static PyType_Spec type_spec_SyndicationItem =
-    {
+    static PyType_Spec type_spec_SyndicationItem = {
         "winrt._winrt_windows_web_syndication.SyndicationItem",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SyndicationItem
-    };
+        _type_slots_SyndicationItem};
 
     // ----- SyndicationLink class --------------------
 
@@ -5391,14 +5375,12 @@ namespace py::cpp::Windows::Web::Syndication
         { },
     };
 
-    static PyType_Spec type_spec_SyndicationLink =
-    {
+    static PyType_Spec type_spec_SyndicationLink = {
         "winrt._winrt_windows_web_syndication.SyndicationLink",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationLink),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SyndicationLink
-    };
+        _type_slots_SyndicationLink};
 
     // ----- SyndicationNode class --------------------
 
@@ -5811,14 +5793,12 @@ namespace py::cpp::Windows::Web::Syndication
         { },
     };
 
-    static PyType_Spec type_spec_SyndicationNode =
-    {
+    static PyType_Spec type_spec_SyndicationNode = {
         "winrt._winrt_windows_web_syndication.SyndicationNode",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationNode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SyndicationNode
-    };
+        _type_slots_SyndicationNode};
 
     // ----- SyndicationPerson class --------------------
 
@@ -6390,14 +6370,12 @@ namespace py::cpp::Windows::Web::Syndication
         { },
     };
 
-    static PyType_Spec type_spec_SyndicationPerson =
-    {
+    static PyType_Spec type_spec_SyndicationPerson = {
         "winrt._winrt_windows_web_syndication.SyndicationPerson",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationPerson),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SyndicationPerson
-    };
+        _type_slots_SyndicationPerson};
 
     // ----- SyndicationText class --------------------
 
@@ -6968,14 +6946,12 @@ namespace py::cpp::Windows::Web::Syndication
         { },
     };
 
-    static PyType_Spec type_spec_SyndicationText =
-    {
+    static PyType_Spec type_spec_SyndicationText = {
         "winrt._winrt_windows_web_syndication.SyndicationText",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationText),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SyndicationText
-    };
+        _type_slots_SyndicationText};
 
     // ----- ISyndicationClient interface --------------------
 
@@ -7343,14 +7319,12 @@ namespace py::cpp::Windows::Web::Syndication
         { },
     };
 
-    static PyType_Spec type_spec_ISyndicationClient =
-    {
+    static PyType_Spec type_spec_ISyndicationClient = {
         "winrt._winrt_windows_web_syndication.ISyndicationClient",
         sizeof(py::wrapper::Windows::Web::Syndication::ISyndicationClient),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISyndicationClient
-    };
+        _type_slots_ISyndicationClient};
 
     // ----- ISyndicationNode interface --------------------
 
@@ -7724,14 +7698,12 @@ namespace py::cpp::Windows::Web::Syndication
         { },
     };
 
-    static PyType_Spec type_spec_ISyndicationNode =
-    {
+    static PyType_Spec type_spec_ISyndicationNode = {
         "winrt._winrt_windows_web_syndication.ISyndicationNode",
         sizeof(py::wrapper::Windows::Web::Syndication::ISyndicationNode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISyndicationNode
-    };
+        _type_slots_ISyndicationNode};
 
     // ----- ISyndicationText interface --------------------
 
@@ -8249,14 +8221,12 @@ namespace py::cpp::Windows::Web::Syndication
         { },
     };
 
-    static PyType_Spec type_spec_ISyndicationText =
-    {
+    static PyType_Spec type_spec_ISyndicationText = {
         "winrt._winrt_windows_web_syndication.ISyndicationText",
         sizeof(py::wrapper::Windows::Web::Syndication::ISyndicationText),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISyndicationText
-    };
+        _type_slots_ISyndicationText};
 
     // ----- RetrievalProgress struct --------------------
 
@@ -8410,14 +8380,12 @@ namespace py::cpp::Windows::Web::Syndication
         { },
     };
 
-    static PyType_Spec type_spec_RetrievalProgress =
-    {
+    static PyType_Spec type_spec_RetrievalProgress = {
         "winrt._winrt_windows_web_syndication.RetrievalProgress",
         sizeof(py::wrapper::Windows::Web::Syndication::RetrievalProgress),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RetrievalProgress
-    };
+        _type_slots_RetrievalProgress};
 
     // ----- TransferProgress struct --------------------
 
@@ -8641,14 +8609,12 @@ namespace py::cpp::Windows::Web::Syndication
         { },
     };
 
-    static PyType_Spec type_spec_TransferProgress =
-    {
+    static PyType_Spec type_spec_TransferProgress = {
         "winrt._winrt_windows_web_syndication.TransferProgress",
         sizeof(py::wrapper::Windows::Web::Syndication::TransferProgress),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TransferProgress
-    };
+        _type_slots_TransferProgress};
 
     // ----- Windows.Web.Syndication Initialization --------------------
 

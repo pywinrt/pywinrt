@@ -541,14 +541,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_Clipboard =
-    {
+    static PyType_Spec type_spec_Clipboard = {
         "winrt._winrt_windows_applicationmodel_datatransfer.Clipboard",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Clipboard
-    };
+        _type_slots_Clipboard};
 
     static PyGetSetDef getset_Clipboard_Static[] = {
         { }
@@ -804,14 +802,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_ClipboardContentOptions =
-    {
+    static PyType_Spec type_spec_ClipboardContentOptions = {
         "winrt._winrt_windows_applicationmodel_datatransfer.ClipboardContentOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ClipboardContentOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ClipboardContentOptions
-    };
+        _type_slots_ClipboardContentOptions};
 
     // ----- ClipboardHistoryChangedEventArgs class --------------------
 
@@ -873,14 +869,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_ClipboardHistoryChangedEventArgs =
-    {
+    static PyType_Spec type_spec_ClipboardHistoryChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_datatransfer.ClipboardHistoryChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ClipboardHistoryChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ClipboardHistoryChangedEventArgs
-    };
+        _type_slots_ClipboardHistoryChangedEventArgs};
 
     // ----- ClipboardHistoryItem class --------------------
 
@@ -1002,14 +996,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_ClipboardHistoryItem =
-    {
+    static PyType_Spec type_spec_ClipboardHistoryItem = {
         "winrt._winrt_windows_applicationmodel_datatransfer.ClipboardHistoryItem",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ClipboardHistoryItem
-    };
+        _type_slots_ClipboardHistoryItem};
 
     // ----- ClipboardHistoryItemsResult class --------------------
 
@@ -1111,14 +1103,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_ClipboardHistoryItemsResult =
-    {
+    static PyType_Spec type_spec_ClipboardHistoryItemsResult = {
         "winrt._winrt_windows_applicationmodel_datatransfer.ClipboardHistoryItemsResult",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItemsResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ClipboardHistoryItemsResult
-    };
+        _type_slots_ClipboardHistoryItemsResult};
 
     // ----- DataPackage class --------------------
 
@@ -1854,14 +1844,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_DataPackage =
-    {
+    static PyType_Spec type_spec_DataPackage = {
         "winrt._winrt_windows_applicationmodel_datatransfer.DataPackage",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DataPackage
-    };
+        _type_slots_DataPackage};
 
     // ----- DataPackagePropertySet class --------------------
 
@@ -2866,14 +2854,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_DataPackagePropertySet =
-    {
+    static PyType_Spec type_spec_DataPackagePropertySet = {
         "winrt._winrt_windows_applicationmodel_datatransfer.DataPackagePropertySet",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DataPackagePropertySet
-    };
+        _type_slots_DataPackagePropertySet};
 
     // ----- DataPackagePropertySetView class --------------------
 
@@ -3453,14 +3439,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_DataPackagePropertySetView =
-    {
+    static PyType_Spec type_spec_DataPackagePropertySetView = {
         "winrt._winrt_windows_applicationmodel_datatransfer.DataPackagePropertySetView",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySetView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DataPackagePropertySetView
-    };
+        _type_slots_DataPackagePropertySetView};
 
     // ----- DataPackageView class --------------------
 
@@ -4082,14 +4066,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_DataPackageView =
-    {
+    static PyType_Spec type_spec_DataPackageView = {
         "winrt._winrt_windows_applicationmodel_datatransfer.DataPackageView",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DataPackageView
-    };
+        _type_slots_DataPackageView};
 
     // ----- DataProviderDeferral class --------------------
 
@@ -4182,14 +4164,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_DataProviderDeferral =
-    {
+    static PyType_Spec type_spec_DataProviderDeferral = {
         "winrt._winrt_windows_applicationmodel_datatransfer.DataProviderDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataProviderDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DataProviderDeferral
-    };
+        _type_slots_DataProviderDeferral};
 
     // ----- DataProviderRequest class --------------------
 
@@ -4354,14 +4334,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_DataProviderRequest =
-    {
+    static PyType_Spec type_spec_DataProviderRequest = {
         "winrt._winrt_windows_applicationmodel_datatransfer.DataProviderRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataProviderRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DataProviderRequest
-    };
+        _type_slots_DataProviderRequest};
 
     // ----- DataRequest class --------------------
 
@@ -4554,14 +4532,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_DataRequest =
-    {
+    static PyType_Spec type_spec_DataRequest = {
         "winrt._winrt_windows_applicationmodel_datatransfer.DataRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DataRequest
-    };
+        _type_slots_DataRequest};
 
     // ----- DataRequestDeferral class --------------------
 
@@ -4654,14 +4630,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_DataRequestDeferral =
-    {
+    static PyType_Spec type_spec_DataRequestDeferral = {
         "winrt._winrt_windows_applicationmodel_datatransfer.DataRequestDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataRequestDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DataRequestDeferral
-    };
+        _type_slots_DataRequestDeferral};
 
     // ----- DataRequestedEventArgs class --------------------
 
@@ -4743,14 +4717,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_DataRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_DataRequestedEventArgs = {
         "winrt._winrt_windows_applicationmodel_datatransfer.DataRequestedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DataRequestedEventArgs
-    };
+        _type_slots_DataRequestedEventArgs};
 
     // ----- DataTransferManager class --------------------
 
@@ -5056,14 +5028,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_DataTransferManager =
-    {
+    static PyType_Spec type_spec_DataTransferManager = {
         "winrt._winrt_windows_applicationmodel_datatransfer.DataTransferManager",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataTransferManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DataTransferManager
-    };
+        _type_slots_DataTransferManager};
 
     static PyGetSetDef getset_DataTransferManager_Static[] = {
         { }
@@ -5180,14 +5150,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_HtmlFormatHelper =
-    {
+    static PyType_Spec type_spec_HtmlFormatHelper = {
         "winrt._winrt_windows_applicationmodel_datatransfer.HtmlFormatHelper",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HtmlFormatHelper
-    };
+        _type_slots_HtmlFormatHelper};
 
     static PyGetSetDef getset_HtmlFormatHelper_Static[] = {
         { }
@@ -5316,14 +5284,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_OperationCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_OperationCompletedEventArgs = {
         "winrt._winrt_windows_applicationmodel_datatransfer.OperationCompletedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::OperationCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_OperationCompletedEventArgs
-    };
+        _type_slots_OperationCompletedEventArgs};
 
     // ----- ShareCompletedEventArgs class --------------------
 
@@ -5405,14 +5371,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_ShareCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_ShareCompletedEventArgs = {
         "winrt._winrt_windows_applicationmodel_datatransfer.ShareCompletedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ShareCompletedEventArgs
-    };
+        _type_slots_ShareCompletedEventArgs};
 
     // ----- ShareProvider class --------------------
 
@@ -5609,14 +5573,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_ShareProvider =
-    {
+    static PyType_Spec type_spec_ShareProvider = {
         "winrt._winrt_windows_applicationmodel_datatransfer.ShareProvider",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ShareProvider
-    };
+        _type_slots_ShareProvider};
 
     // ----- ShareProviderOperation class --------------------
 
@@ -5749,14 +5711,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_ShareProviderOperation =
-    {
+    static PyType_Spec type_spec_ShareProviderOperation = {
         "winrt._winrt_windows_applicationmodel_datatransfer.ShareProviderOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareProviderOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ShareProviderOperation
-    };
+        _type_slots_ShareProviderOperation};
 
     // ----- ShareProvidersRequestedEventArgs class --------------------
 
@@ -5888,14 +5848,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_ShareProvidersRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_ShareProvidersRequestedEventArgs = {
         "winrt._winrt_windows_applicationmodel_datatransfer.ShareProvidersRequestedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareProvidersRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ShareProvidersRequestedEventArgs
-    };
+        _type_slots_ShareProvidersRequestedEventArgs};
 
     // ----- ShareTargetInfo class --------------------
 
@@ -5997,14 +5955,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_ShareTargetInfo =
-    {
+    static PyType_Spec type_spec_ShareTargetInfo = {
         "winrt._winrt_windows_applicationmodel_datatransfer.ShareTargetInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTargetInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ShareTargetInfo
-    };
+        _type_slots_ShareTargetInfo};
 
     // ----- ShareUIOptions class --------------------
 
@@ -6184,14 +6140,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_ShareUIOptions =
-    {
+    static PyType_Spec type_spec_ShareUIOptions = {
         "winrt._winrt_windows_applicationmodel_datatransfer.ShareUIOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareUIOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ShareUIOptions
-    };
+        _type_slots_ShareUIOptions};
 
     // ----- SharedStorageAccessManager class --------------------
 
@@ -6312,14 +6266,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_SharedStorageAccessManager =
-    {
+    static PyType_Spec type_spec_SharedStorageAccessManager = {
         "winrt._winrt_windows_applicationmodel_datatransfer.SharedStorageAccessManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SharedStorageAccessManager
-    };
+        _type_slots_SharedStorageAccessManager};
 
     static PyGetSetDef getset_SharedStorageAccessManager_Static[] = {
         { }
@@ -6545,14 +6497,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_StandardDataFormats =
-    {
+    static PyType_Spec type_spec_StandardDataFormats = {
         "winrt._winrt_windows_applicationmodel_datatransfer.StandardDataFormats",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StandardDataFormats
-    };
+        _type_slots_StandardDataFormats};
 
     static PyGetSetDef getset_StandardDataFormats_Static[] = {
         { "bitmap", reinterpret_cast<getter>(StandardDataFormats_get_Bitmap), nullptr, nullptr, nullptr },
@@ -6668,14 +6618,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { },
     };
 
-    static PyType_Spec type_spec_TargetApplicationChosenEventArgs =
-    {
+    static PyType_Spec type_spec_TargetApplicationChosenEventArgs = {
         "winrt._winrt_windows_applicationmodel_datatransfer.TargetApplicationChosenEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::TargetApplicationChosenEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetApplicationChosenEventArgs
-    };
+        _type_slots_TargetApplicationChosenEventArgs};
 
     // ----- Windows.ApplicationModel.DataTransfer Initialization --------------------
 

@@ -85,14 +85,12 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         { },
     };
 
-    static PyType_Spec type_spec_NotePlacementChangedPreviewEventArgs =
-    {
+    static PyType_Spec type_spec_NotePlacementChangedPreviewEventArgs = {
         "winrt._winrt_windows_applicationmodel_preview_notes.NotePlacementChangedPreviewEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotePlacementChangedPreviewEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NotePlacementChangedPreviewEventArgs
-    };
+        _type_slots_NotePlacementChangedPreviewEventArgs};
 
     // ----- NoteVisibilityChangedPreviewEventArgs class --------------------
 
@@ -194,14 +192,12 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         { },
     };
 
-    static PyType_Spec type_spec_NoteVisibilityChangedPreviewEventArgs =
-    {
+    static PyType_Spec type_spec_NoteVisibilityChangedPreviewEventArgs = {
         "winrt._winrt_windows_applicationmodel_preview_notes.NoteVisibilityChangedPreviewEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Preview::Notes::NoteVisibilityChangedPreviewEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NoteVisibilityChangedPreviewEventArgs
-    };
+        _type_slots_NoteVisibilityChangedPreviewEventArgs};
 
     // ----- NotesWindowManagerPreview class --------------------
 
@@ -818,14 +814,12 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         { },
     };
 
-    static PyType_Spec type_spec_NotesWindowManagerPreview =
-    {
+    static PyType_Spec type_spec_NotesWindowManagerPreview = {
         "winrt._winrt_windows_applicationmodel_preview_notes.NotesWindowManagerPreview",
         sizeof(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NotesWindowManagerPreview
-    };
+        _type_slots_NotesWindowManagerPreview};
 
     static PyGetSetDef getset_NotesWindowManagerPreview_Static[] = {
         { }
@@ -983,14 +977,12 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         { },
     };
 
-    static PyType_Spec type_spec_NotesWindowManagerPreviewShowNoteOptions =
-    {
+    static PyType_Spec type_spec_NotesWindowManagerPreviewShowNoteOptions = {
         "winrt._winrt_windows_applicationmodel_preview_notes.NotesWindowManagerPreviewShowNoteOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreviewShowNoteOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NotesWindowManagerPreviewShowNoteOptions
-    };
+        _type_slots_NotesWindowManagerPreviewShowNoteOptions};
 
     // ----- Windows.ApplicationModel.Preview.Notes Initialization --------------------
 

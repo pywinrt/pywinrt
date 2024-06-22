@@ -221,14 +221,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { },
     };
 
-    static PyType_Spec type_spec_JumpList =
-    {
+    static PyType_Spec type_spec_JumpList = {
         "winrt._winrt_windows_ui_startscreen.JumpList",
         sizeof(py::wrapper::Windows::UI::StartScreen::JumpList),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_JumpList
-    };
+        _type_slots_JumpList};
 
     static PyGetSetDef getset_JumpList_Static[] = {
         { }
@@ -630,14 +628,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { },
     };
 
-    static PyType_Spec type_spec_JumpListItem =
-    {
+    static PyType_Spec type_spec_JumpListItem = {
         "winrt._winrt_windows_ui_startscreen.JumpListItem",
         sizeof(py::wrapper::Windows::UI::StartScreen::JumpListItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_JumpListItem
-    };
+        _type_slots_JumpListItem};
 
     static PyGetSetDef getset_JumpListItem_Static[] = {
         { }
@@ -1905,14 +1901,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { },
     };
 
-    static PyType_Spec type_spec_SecondaryTile =
-    {
+    static PyType_Spec type_spec_SecondaryTile = {
         "winrt._winrt_windows_ui_startscreen.SecondaryTile",
         sizeof(py::wrapper::Windows::UI::StartScreen::SecondaryTile),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SecondaryTile
-    };
+        _type_slots_SecondaryTile};
 
     static PyGetSetDef getset_SecondaryTile_Static[] = {
         { }
@@ -2598,14 +2592,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { },
     };
 
-    static PyType_Spec type_spec_SecondaryTileVisualElements =
-    {
+    static PyType_Spec type_spec_SecondaryTileVisualElements = {
         "winrt._winrt_windows_ui_startscreen.SecondaryTileVisualElements",
         sizeof(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SecondaryTileVisualElements
-    };
+        _type_slots_SecondaryTileVisualElements};
 
     // ----- StartScreenManager class --------------------
 
@@ -2907,14 +2899,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { },
     };
 
-    static PyType_Spec type_spec_StartScreenManager =
-    {
+    static PyType_Spec type_spec_StartScreenManager = {
         "winrt._winrt_windows_ui_startscreen.StartScreenManager",
         sizeof(py::wrapper::Windows::UI::StartScreen::StartScreenManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StartScreenManager
-    };
+        _type_slots_StartScreenManager};
 
     static PyGetSetDef getset_StartScreenManager_Static[] = {
         { }
@@ -3147,14 +3137,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { },
     };
 
-    static PyType_Spec type_spec_TileMixedRealityModel =
-    {
+    static PyType_Spec type_spec_TileMixedRealityModel = {
         "winrt._winrt_windows_ui_startscreen.TileMixedRealityModel",
         sizeof(py::wrapper::Windows::UI::StartScreen::TileMixedRealityModel),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TileMixedRealityModel
-    };
+        _type_slots_TileMixedRealityModel};
 
     // ----- VisualElementsRequest class --------------------
 
@@ -3306,14 +3294,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { },
     };
 
-    static PyType_Spec type_spec_VisualElementsRequest =
-    {
+    static PyType_Spec type_spec_VisualElementsRequest = {
         "winrt._winrt_windows_ui_startscreen.VisualElementsRequest",
         sizeof(py::wrapper::Windows::UI::StartScreen::VisualElementsRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VisualElementsRequest
-    };
+        _type_slots_VisualElementsRequest};
 
     // ----- VisualElementsRequestDeferral class --------------------
 
@@ -3406,14 +3392,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { },
     };
 
-    static PyType_Spec type_spec_VisualElementsRequestDeferral =
-    {
+    static PyType_Spec type_spec_VisualElementsRequestDeferral = {
         "winrt._winrt_windows_ui_startscreen.VisualElementsRequestDeferral",
         sizeof(py::wrapper::Windows::UI::StartScreen::VisualElementsRequestDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VisualElementsRequestDeferral
-    };
+        _type_slots_VisualElementsRequestDeferral};
 
     // ----- VisualElementsRequestedEventArgs class --------------------
 
@@ -3495,14 +3479,12 @@ namespace py::cpp::Windows::UI::StartScreen
         { },
     };
 
-    static PyType_Spec type_spec_VisualElementsRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_VisualElementsRequestedEventArgs = {
         "winrt._winrt_windows_ui_startscreen.VisualElementsRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::StartScreen::VisualElementsRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VisualElementsRequestedEventArgs
-    };
+        _type_slots_VisualElementsRequestedEventArgs};
 
     // ----- Windows.UI.StartScreen Initialization --------------------
 

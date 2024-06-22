@@ -61,14 +61,12 @@ namespace py::cpp::Windows::UI::Input::Preview
         { },
     };
 
-    static PyType_Spec type_spec_InputActivationListenerPreview =
-    {
+    static PyType_Spec type_spec_InputActivationListenerPreview = {
         "winrt._winrt_windows_ui_input_preview.InputActivationListenerPreview",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InputActivationListenerPreview
-    };
+        _type_slots_InputActivationListenerPreview};
 
     static PyGetSetDef getset_InputActivationListenerPreview_Static[] = {
         { }

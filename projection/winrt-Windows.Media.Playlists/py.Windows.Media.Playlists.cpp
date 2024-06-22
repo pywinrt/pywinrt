@@ -225,14 +225,12 @@ namespace py::cpp::Windows::Media::Playlists
         { },
     };
 
-    static PyType_Spec type_spec_Playlist =
-    {
+    static PyType_Spec type_spec_Playlist = {
         "winrt._winrt_windows_media_playlists.Playlist",
         sizeof(py::wrapper::Windows::Media::Playlists::Playlist),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Playlist
-    };
+        _type_slots_Playlist};
 
     static PyGetSetDef getset_Playlist_Static[] = {
         { }

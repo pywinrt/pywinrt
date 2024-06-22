@@ -134,14 +134,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { },
     };
 
-    static PyType_Spec type_spec_DeliveryOptimizationSettings =
-    {
+    static PyType_Spec type_spec_DeliveryOptimizationSettings = {
         "winrt._winrt_windows_applicationmodel_store_preview.DeliveryOptimizationSettings",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeliveryOptimizationSettings
-    };
+        _type_slots_DeliveryOptimizationSettings};
 
     static PyGetSetDef getset_DeliveryOptimizationSettings_Static[] = {
         { }
@@ -1040,14 +1038,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { },
     };
 
-    static PyType_Spec type_spec_StoreConfiguration =
-    {
+    static PyType_Spec type_spec_StoreConfiguration = {
         "winrt._winrt_windows_applicationmodel_store_preview.StoreConfiguration",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreConfiguration
-    };
+        _type_slots_StoreConfiguration};
 
     static PyGetSetDef getset_StoreConfiguration_Static[] = {
         { "hardware_manufacturer_info", reinterpret_cast<getter>(StoreConfiguration_get_HardwareManufacturerInfo), nullptr, nullptr, nullptr },
@@ -1241,14 +1237,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { },
     };
 
-    static PyType_Spec type_spec_StoreHardwareManufacturerInfo =
-    {
+    static PyType_Spec type_spec_StoreHardwareManufacturerInfo = {
         "winrt._winrt_windows_applicationmodel_store_preview.StoreHardwareManufacturerInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StoreHardwareManufacturerInfo
-    };
+        _type_slots_StoreHardwareManufacturerInfo};
 
     // ----- StorePreview class --------------------
 
@@ -1336,14 +1330,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { },
     };
 
-    static PyType_Spec type_spec_StorePreview =
-    {
+    static PyType_Spec type_spec_StorePreview = {
         "winrt._winrt_windows_applicationmodel_store_preview.StorePreview",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorePreview
-    };
+        _type_slots_StorePreview};
 
     static PyGetSetDef getset_StorePreview_Static[] = {
         { }
@@ -1532,14 +1524,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { },
     };
 
-    static PyType_Spec type_spec_StorePreviewProductInfo =
-    {
+    static PyType_Spec type_spec_StorePreviewProductInfo = {
         "winrt._winrt_windows_applicationmodel_store_preview.StorePreviewProductInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorePreviewProductInfo
-    };
+        _type_slots_StorePreviewProductInfo};
 
     // ----- StorePreviewPurchaseResults class --------------------
 
@@ -1621,14 +1611,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { },
     };
 
-    static PyType_Spec type_spec_StorePreviewPurchaseResults =
-    {
+    static PyType_Spec type_spec_StorePreviewPurchaseResults = {
         "winrt._winrt_windows_applicationmodel_store_preview.StorePreviewPurchaseResults",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorePreviewPurchaseResults
-    };
+        _type_slots_StorePreviewPurchaseResults};
 
     // ----- StorePreviewSkuInfo class --------------------
 
@@ -1870,14 +1858,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { },
     };
 
-    static PyType_Spec type_spec_StorePreviewSkuInfo =
-    {
+    static PyType_Spec type_spec_StorePreviewSkuInfo = {
         "winrt._winrt_windows_applicationmodel_store_preview.StorePreviewSkuInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorePreviewSkuInfo
-    };
+        _type_slots_StorePreviewSkuInfo};
 
     // ----- WebAuthenticationCoreManagerHelper class --------------------
 
@@ -1958,14 +1944,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { },
     };
 
-    static PyType_Spec type_spec_WebAuthenticationCoreManagerHelper =
-    {
+    static PyType_Spec type_spec_WebAuthenticationCoreManagerHelper = {
         "winrt._winrt_windows_applicationmodel_store_preview.WebAuthenticationCoreManagerHelper",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebAuthenticationCoreManagerHelper
-    };
+        _type_slots_WebAuthenticationCoreManagerHelper};
 
     static PyGetSetDef getset_WebAuthenticationCoreManagerHelper_Static[] = {
         { }

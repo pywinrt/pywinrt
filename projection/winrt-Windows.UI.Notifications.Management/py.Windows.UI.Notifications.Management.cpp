@@ -317,14 +317,12 @@ namespace py::cpp::Windows::UI::Notifications::Management
         { },
     };
 
-    static PyType_Spec type_spec_UserNotificationListener =
-    {
+    static PyType_Spec type_spec_UserNotificationListener = {
         "winrt._winrt_windows_ui_notifications_management.UserNotificationListener",
         sizeof(py::wrapper::Windows::UI::Notifications::Management::UserNotificationListener),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserNotificationListener
-    };
+        _type_slots_UserNotificationListener};
 
     static PyGetSetDef getset_UserNotificationListener_Static[] = {
         { "current", reinterpret_cast<getter>(UserNotificationListener_get_Current), nullptr, nullptr, nullptr },

@@ -474,14 +474,12 @@ namespace py::cpp::Windows::Media::Miracast
         { },
     };
 
-    static PyType_Spec type_spec_MiracastReceiver =
-    {
+    static PyType_Spec type_spec_MiracastReceiver = {
         "winrt._winrt_windows_media_miracast.MiracastReceiver",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiver),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MiracastReceiver
-    };
+        _type_slots_MiracastReceiver};
 
     // ----- MiracastReceiverApplySettingsResult class --------------------
 
@@ -583,14 +581,12 @@ namespace py::cpp::Windows::Media::Miracast
         { },
     };
 
-    static PyType_Spec type_spec_MiracastReceiverApplySettingsResult =
-    {
+    static PyType_Spec type_spec_MiracastReceiverApplySettingsResult = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverApplySettingsResult",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverApplySettingsResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MiracastReceiverApplySettingsResult
-    };
+        _type_slots_MiracastReceiverApplySettingsResult};
 
     // ----- MiracastReceiverConnection class --------------------
 
@@ -961,14 +957,12 @@ namespace py::cpp::Windows::Media::Miracast
         { },
     };
 
-    static PyType_Spec type_spec_MiracastReceiverConnection =
-    {
+    static PyType_Spec type_spec_MiracastReceiverConnection = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverConnection",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MiracastReceiverConnection
-    };
+        _type_slots_MiracastReceiverConnection};
 
     // ----- MiracastReceiverConnectionCreatedEventArgs class --------------------
 
@@ -1100,14 +1094,12 @@ namespace py::cpp::Windows::Media::Miracast
         { },
     };
 
-    static PyType_Spec type_spec_MiracastReceiverConnectionCreatedEventArgs =
-    {
+    static PyType_Spec type_spec_MiracastReceiverConnectionCreatedEventArgs = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverConnectionCreatedEventArgs",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnectionCreatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MiracastReceiverConnectionCreatedEventArgs
-    };
+        _type_slots_MiracastReceiverConnectionCreatedEventArgs};
 
     // ----- MiracastReceiverCursorImageChannel class --------------------
 
@@ -1339,14 +1331,12 @@ namespace py::cpp::Windows::Media::Miracast
         { },
     };
 
-    static PyType_Spec type_spec_MiracastReceiverCursorImageChannel =
-    {
+    static PyType_Spec type_spec_MiracastReceiverCursorImageChannel = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverCursorImageChannel",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannel),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MiracastReceiverCursorImageChannel
-    };
+        _type_slots_MiracastReceiverCursorImageChannel};
 
     // ----- MiracastReceiverCursorImageChannelSettings class --------------------
 
@@ -1504,14 +1494,12 @@ namespace py::cpp::Windows::Media::Miracast
         { },
     };
 
-    static PyType_Spec type_spec_MiracastReceiverCursorImageChannelSettings =
-    {
+    static PyType_Spec type_spec_MiracastReceiverCursorImageChannelSettings = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverCursorImageChannelSettings",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannelSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MiracastReceiverCursorImageChannelSettings
-    };
+        _type_slots_MiracastReceiverCursorImageChannelSettings};
 
     // ----- MiracastReceiverDisconnectedEventArgs class --------------------
 
@@ -1593,14 +1581,12 @@ namespace py::cpp::Windows::Media::Miracast
         { },
     };
 
-    static PyType_Spec type_spec_MiracastReceiverDisconnectedEventArgs =
-    {
+    static PyType_Spec type_spec_MiracastReceiverDisconnectedEventArgs = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverDisconnectedEventArgs",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverDisconnectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MiracastReceiverDisconnectedEventArgs
-    };
+        _type_slots_MiracastReceiverDisconnectedEventArgs};
 
     // ----- MiracastReceiverGameControllerDevice class --------------------
 
@@ -1843,14 +1829,12 @@ namespace py::cpp::Windows::Media::Miracast
         { },
     };
 
-    static PyType_Spec type_spec_MiracastReceiverGameControllerDevice =
-    {
+    static PyType_Spec type_spec_MiracastReceiverGameControllerDevice = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverGameControllerDevice",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverGameControllerDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MiracastReceiverGameControllerDevice
-    };
+        _type_slots_MiracastReceiverGameControllerDevice};
 
     // ----- MiracastReceiverInputDevices class --------------------
 
@@ -1952,14 +1936,12 @@ namespace py::cpp::Windows::Media::Miracast
         { },
     };
 
-    static PyType_Spec type_spec_MiracastReceiverInputDevices =
-    {
+    static PyType_Spec type_spec_MiracastReceiverInputDevices = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverInputDevices",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverInputDevices),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MiracastReceiverInputDevices
-    };
+        _type_slots_MiracastReceiverInputDevices};
 
     // ----- MiracastReceiverKeyboardDevice class --------------------
 
@@ -2154,14 +2136,12 @@ namespace py::cpp::Windows::Media::Miracast
         { },
     };
 
-    static PyType_Spec type_spec_MiracastReceiverKeyboardDevice =
-    {
+    static PyType_Spec type_spec_MiracastReceiverKeyboardDevice = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverKeyboardDevice",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverKeyboardDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MiracastReceiverKeyboardDevice
-    };
+        _type_slots_MiracastReceiverKeyboardDevice};
 
     // ----- MiracastReceiverMediaSourceCreatedEventArgs class --------------------
 
@@ -2313,14 +2293,12 @@ namespace py::cpp::Windows::Media::Miracast
         { },
     };
 
-    static PyType_Spec type_spec_MiracastReceiverMediaSourceCreatedEventArgs =
-    {
+    static PyType_Spec type_spec_MiracastReceiverMediaSourceCreatedEventArgs = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverMediaSourceCreatedEventArgs",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverMediaSourceCreatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MiracastReceiverMediaSourceCreatedEventArgs
-    };
+        _type_slots_MiracastReceiverMediaSourceCreatedEventArgs};
 
     // ----- MiracastReceiverSession class --------------------
 
@@ -2725,14 +2703,12 @@ namespace py::cpp::Windows::Media::Miracast
         { },
     };
 
-    static PyType_Spec type_spec_MiracastReceiverSession =
-    {
+    static PyType_Spec type_spec_MiracastReceiverSession = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverSession",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MiracastReceiverSession
-    };
+        _type_slots_MiracastReceiverSession};
 
     // ----- MiracastReceiverSessionStartResult class --------------------
 
@@ -2834,14 +2810,12 @@ namespace py::cpp::Windows::Media::Miracast
         { },
     };
 
-    static PyType_Spec type_spec_MiracastReceiverSessionStartResult =
-    {
+    static PyType_Spec type_spec_MiracastReceiverSessionStartResult = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverSessionStartResult",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverSessionStartResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MiracastReceiverSessionStartResult
-    };
+        _type_slots_MiracastReceiverSessionStartResult};
 
     // ----- MiracastReceiverSettings class --------------------
 
@@ -3143,14 +3117,12 @@ namespace py::cpp::Windows::Media::Miracast
         { },
     };
 
-    static PyType_Spec type_spec_MiracastReceiverSettings =
-    {
+    static PyType_Spec type_spec_MiracastReceiverSettings = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverSettings",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MiracastReceiverSettings
-    };
+        _type_slots_MiracastReceiverSettings};
 
     // ----- MiracastReceiverStatus class --------------------
 
@@ -3312,14 +3284,12 @@ namespace py::cpp::Windows::Media::Miracast
         { },
     };
 
-    static PyType_Spec type_spec_MiracastReceiverStatus =
-    {
+    static PyType_Spec type_spec_MiracastReceiverStatus = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverStatus",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverStatus),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MiracastReceiverStatus
-    };
+        _type_slots_MiracastReceiverStatus};
 
     // ----- MiracastReceiverStreamControl class --------------------
 
@@ -3554,14 +3524,12 @@ namespace py::cpp::Windows::Media::Miracast
         { },
     };
 
-    static PyType_Spec type_spec_MiracastReceiverStreamControl =
-    {
+    static PyType_Spec type_spec_MiracastReceiverStreamControl = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverStreamControl",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverStreamControl),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MiracastReceiverStreamControl
-    };
+        _type_slots_MiracastReceiverStreamControl};
 
     // ----- MiracastReceiverVideoStreamSettings class --------------------
 
@@ -3719,14 +3687,12 @@ namespace py::cpp::Windows::Media::Miracast
         { },
     };
 
-    static PyType_Spec type_spec_MiracastReceiverVideoStreamSettings =
-    {
+    static PyType_Spec type_spec_MiracastReceiverVideoStreamSettings = {
         "winrt._winrt_windows_media_miracast.MiracastReceiverVideoStreamSettings",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MiracastReceiverVideoStreamSettings
-    };
+        _type_slots_MiracastReceiverVideoStreamSettings};
 
     // ----- MiracastTransmitter class --------------------
 
@@ -3954,14 +3920,12 @@ namespace py::cpp::Windows::Media::Miracast
         { },
     };
 
-    static PyType_Spec type_spec_MiracastTransmitter =
-    {
+    static PyType_Spec type_spec_MiracastTransmitter = {
         "winrt._winrt_windows_media_miracast.MiracastTransmitter",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastTransmitter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MiracastTransmitter
-    };
+        _type_slots_MiracastTransmitter};
 
     // ----- Windows.Media.Miracast Initialization --------------------
 

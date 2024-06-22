@@ -165,14 +165,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity
         { },
     };
 
-    static PyType_Spec type_spec_EnterpriseKeyCredentialRegistrationInfo =
-    {
+    static PyType_Spec type_spec_EnterpriseKeyCredentialRegistrationInfo = {
         "winrt._winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationInfo",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EnterpriseKeyCredentialRegistrationInfo
-    };
+        _type_slots_EnterpriseKeyCredentialRegistrationInfo};
 
     // ----- EnterpriseKeyCredentialRegistrationManager class --------------------
 
@@ -283,14 +281,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity
         { },
     };
 
-    static PyType_Spec type_spec_EnterpriseKeyCredentialRegistrationManager =
-    {
+    static PyType_Spec type_spec_EnterpriseKeyCredentialRegistrationManager = {
         "winrt._winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationManager",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EnterpriseKeyCredentialRegistrationManager
-    };
+        _type_slots_EnterpriseKeyCredentialRegistrationManager};
 
     static PyGetSetDef getset_EnterpriseKeyCredentialRegistrationManager_Static[] = {
         { "current", reinterpret_cast<getter>(EnterpriseKeyCredentialRegistrationManager_get_Current), nullptr, nullptr, nullptr },

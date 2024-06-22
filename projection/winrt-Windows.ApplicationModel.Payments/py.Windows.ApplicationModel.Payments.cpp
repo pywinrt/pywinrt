@@ -635,14 +635,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { },
     };
 
-    static PyType_Spec type_spec_PaymentAddress =
-    {
+    static PyType_Spec type_spec_PaymentAddress = {
         "winrt._winrt_windows_applicationmodel_payments.PaymentAddress",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentAddress
-    };
+        _type_slots_PaymentAddress};
 
     // ----- PaymentCanMakePaymentResult class --------------------
 
@@ -748,14 +746,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { },
     };
 
-    static PyType_Spec type_spec_PaymentCanMakePaymentResult =
-    {
+    static PyType_Spec type_spec_PaymentCanMakePaymentResult = {
         "winrt._winrt_windows_applicationmodel_payments.PaymentCanMakePaymentResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentCanMakePaymentResult
-    };
+        _type_slots_PaymentCanMakePaymentResult};
 
     // ----- PaymentCurrencyAmount class --------------------
 
@@ -1003,14 +999,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { },
     };
 
-    static PyType_Spec type_spec_PaymentCurrencyAmount =
-    {
+    static PyType_Spec type_spec_PaymentCurrencyAmount = {
         "winrt._winrt_windows_applicationmodel_payments.PaymentCurrencyAmount",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentCurrencyAmount),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentCurrencyAmount
-    };
+        _type_slots_PaymentCurrencyAmount};
 
     // ----- PaymentDetails class --------------------
 
@@ -1317,14 +1311,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { },
     };
 
-    static PyType_Spec type_spec_PaymentDetails =
-    {
+    static PyType_Spec type_spec_PaymentDetails = {
         "winrt._winrt_windows_applicationmodel_payments.PaymentDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentDetails
-    };
+        _type_slots_PaymentDetails};
 
     // ----- PaymentDetailsModifier class --------------------
 
@@ -1526,14 +1518,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { },
     };
 
-    static PyType_Spec type_spec_PaymentDetailsModifier =
-    {
+    static PyType_Spec type_spec_PaymentDetailsModifier = {
         "winrt._winrt_windows_applicationmodel_payments.PaymentDetailsModifier",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetailsModifier),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentDetailsModifier
-    };
+        _type_slots_PaymentDetailsModifier};
 
     // ----- PaymentItem class --------------------
 
@@ -1764,14 +1754,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { },
     };
 
-    static PyType_Spec type_spec_PaymentItem =
-    {
+    static PyType_Spec type_spec_PaymentItem = {
         "winrt._winrt_windows_applicationmodel_payments.PaymentItem",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentItem
-    };
+        _type_slots_PaymentItem};
 
     // ----- PaymentMediator class --------------------
 
@@ -1970,14 +1958,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { },
     };
 
-    static PyType_Spec type_spec_PaymentMediator =
-    {
+    static PyType_Spec type_spec_PaymentMediator = {
         "winrt._winrt_windows_applicationmodel_payments.PaymentMediator",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentMediator),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentMediator
-    };
+        _type_slots_PaymentMediator};
 
     // ----- PaymentMerchantInfo class --------------------
 
@@ -2116,14 +2102,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { },
     };
 
-    static PyType_Spec type_spec_PaymentMerchantInfo =
-    {
+    static PyType_Spec type_spec_PaymentMerchantInfo = {
         "winrt._winrt_windows_applicationmodel_payments.PaymentMerchantInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentMerchantInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentMerchantInfo
-    };
+        _type_slots_PaymentMerchantInfo};
 
     // ----- PaymentMethodData class --------------------
 
@@ -2265,14 +2249,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { },
     };
 
-    static PyType_Spec type_spec_PaymentMethodData =
-    {
+    static PyType_Spec type_spec_PaymentMethodData = {
         "winrt._winrt_windows_applicationmodel_payments.PaymentMethodData",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentMethodData),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentMethodData
-    };
+        _type_slots_PaymentMethodData};
 
     // ----- PaymentOptions class --------------------
 
@@ -2596,14 +2578,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { },
     };
 
-    static PyType_Spec type_spec_PaymentOptions =
-    {
+    static PyType_Spec type_spec_PaymentOptions = {
         "winrt._winrt_windows_applicationmodel_payments.PaymentOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentOptions
-    };
+        _type_slots_PaymentOptions};
 
     // ----- PaymentRequest class --------------------
 
@@ -2844,14 +2824,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { },
     };
 
-    static PyType_Spec type_spec_PaymentRequest =
-    {
+    static PyType_Spec type_spec_PaymentRequest = {
         "winrt._winrt_windows_applicationmodel_payments.PaymentRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentRequest
-    };
+        _type_slots_PaymentRequest};
 
     // ----- PaymentRequestChangedArgs class --------------------
 
@@ -3006,14 +2984,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { },
     };
 
-    static PyType_Spec type_spec_PaymentRequestChangedArgs =
-    {
+    static PyType_Spec type_spec_PaymentRequestChangedArgs = {
         "winrt._winrt_windows_applicationmodel_payments.PaymentRequestChangedArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentRequestChangedArgs
-    };
+        _type_slots_PaymentRequestChangedArgs};
 
     // ----- PaymentRequestChangedResult class --------------------
 
@@ -3259,14 +3235,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { },
     };
 
-    static PyType_Spec type_spec_PaymentRequestChangedResult =
-    {
+    static PyType_Spec type_spec_PaymentRequestChangedResult = {
         "winrt._winrt_windows_applicationmodel_payments.PaymentRequestChangedResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentRequestChangedResult
-    };
+        _type_slots_PaymentRequestChangedResult};
 
     // ----- PaymentRequestSubmitResult class --------------------
 
@@ -3368,14 +3342,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { },
     };
 
-    static PyType_Spec type_spec_PaymentRequestSubmitResult =
-    {
+    static PyType_Spec type_spec_PaymentRequestSubmitResult = {
         "winrt._winrt_windows_applicationmodel_payments.PaymentRequestSubmitResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentRequestSubmitResult
-    };
+        _type_slots_PaymentRequestSubmitResult};
 
     // ----- PaymentResponse class --------------------
 
@@ -3589,14 +3561,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { },
     };
 
-    static PyType_Spec type_spec_PaymentResponse =
-    {
+    static PyType_Spec type_spec_PaymentResponse = {
         "winrt._winrt_windows_applicationmodel_payments.PaymentResponse",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentResponse),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentResponse
-    };
+        _type_slots_PaymentResponse};
 
     // ----- PaymentShippingOption class --------------------
 
@@ -3910,14 +3880,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { },
     };
 
-    static PyType_Spec type_spec_PaymentShippingOption =
-    {
+    static PyType_Spec type_spec_PaymentShippingOption = {
         "winrt._winrt_windows_applicationmodel_payments.PaymentShippingOption",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentShippingOption),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentShippingOption
-    };
+        _type_slots_PaymentShippingOption};
 
     // ----- PaymentToken class --------------------
 
@@ -4059,14 +4027,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { },
     };
 
-    static PyType_Spec type_spec_PaymentToken =
-    {
+    static PyType_Spec type_spec_PaymentToken = {
         "winrt._winrt_windows_applicationmodel_payments.PaymentToken",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentToken),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentToken
-    };
+        _type_slots_PaymentToken};
 
     // ----- Windows.ApplicationModel.Payments Initialization --------------------
 

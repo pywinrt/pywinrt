@@ -265,14 +265,12 @@ namespace py::cpp::Windows::UI::Composition::Core
         { },
     };
 
-    static PyType_Spec type_spec_CompositorController =
-    {
+    static PyType_Spec type_spec_CompositorController = {
         "winrt._winrt_windows_ui_composition_core.CompositorController",
         sizeof(py::wrapper::Windows::UI::Composition::Core::CompositorController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositorController
-    };
+        _type_slots_CompositorController};
 
     // ----- Windows.UI.Composition.Core Initialization --------------------
 

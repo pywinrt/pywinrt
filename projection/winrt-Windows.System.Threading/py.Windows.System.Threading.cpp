@@ -104,14 +104,12 @@ namespace py::cpp::Windows::System::Threading
         { },
     };
 
-    static PyType_Spec type_spec_ThreadPool =
-    {
+    static PyType_Spec type_spec_ThreadPool = {
         "winrt._winrt_windows_system_threading.ThreadPool",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ThreadPool
-    };
+        _type_slots_ThreadPool};
 
     static PyGetSetDef getset_ThreadPool_Static[] = {
         { }
@@ -378,14 +376,12 @@ namespace py::cpp::Windows::System::Threading
         { },
     };
 
-    static PyType_Spec type_spec_ThreadPoolTimer =
-    {
+    static PyType_Spec type_spec_ThreadPoolTimer = {
         "winrt._winrt_windows_system_threading.ThreadPoolTimer",
         sizeof(py::wrapper::Windows::System::Threading::ThreadPoolTimer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ThreadPoolTimer
-    };
+        _type_slots_ThreadPoolTimer};
 
     static PyGetSetDef getset_ThreadPoolTimer_Static[] = {
         { }

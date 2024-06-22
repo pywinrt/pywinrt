@@ -253,14 +253,12 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
         { },
     };
 
-    static PyType_Spec type_spec_Print3DWorkflow =
-    {
+    static PyType_Spec type_spec_Print3DWorkflow = {
         "winrt._winrt_windows_devices_printers_extensions.Print3DWorkflow",
         sizeof(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflow),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Print3DWorkflow
-    };
+        _type_slots_Print3DWorkflow};
 
     // ----- Print3DWorkflowPrintRequestedEventArgs class --------------------
 
@@ -441,14 +439,12 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
         { },
     };
 
-    static PyType_Spec type_spec_Print3DWorkflowPrintRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_Print3DWorkflowPrintRequestedEventArgs = {
         "winrt._winrt_windows_devices_printers_extensions.Print3DWorkflowPrintRequestedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Print3DWorkflowPrintRequestedEventArgs
-    };
+        _type_slots_Print3DWorkflowPrintRequestedEventArgs};
 
     // ----- Print3DWorkflowPrinterChangedEventArgs class --------------------
 
@@ -530,14 +526,12 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
         { },
     };
 
-    static PyType_Spec type_spec_Print3DWorkflowPrinterChangedEventArgs =
-    {
+    static PyType_Spec type_spec_Print3DWorkflowPrinterChangedEventArgs = {
         "winrt._winrt_windows_devices_printers_extensions.Print3DWorkflowPrinterChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Print3DWorkflowPrinterChangedEventArgs
-    };
+        _type_slots_Print3DWorkflowPrinterChangedEventArgs};
 
     // ----- PrintExtensionContext class --------------------
 
@@ -595,14 +589,12 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
         { },
     };
 
-    static PyType_Spec type_spec_PrintExtensionContext =
-    {
+    static PyType_Spec type_spec_PrintExtensionContext = {
         "winrt._winrt_windows_devices_printers_extensions.PrintExtensionContext",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintExtensionContext
-    };
+        _type_slots_PrintExtensionContext};
 
     static PyGetSetDef getset_PrintExtensionContext_Static[] = {
         { }
@@ -758,14 +750,12 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
         { },
     };
 
-    static PyType_Spec type_spec_PrintNotificationEventDetails =
-    {
+    static PyType_Spec type_spec_PrintNotificationEventDetails = {
         "winrt._winrt_windows_devices_printers_extensions.PrintNotificationEventDetails",
         sizeof(py::wrapper::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintNotificationEventDetails
-    };
+        _type_slots_PrintNotificationEventDetails};
 
     // ----- PrintTaskConfiguration class --------------------
 
@@ -892,14 +882,12 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
         { },
     };
 
-    static PyType_Spec type_spec_PrintTaskConfiguration =
-    {
+    static PyType_Spec type_spec_PrintTaskConfiguration = {
         "winrt._winrt_windows_devices_printers_extensions.PrintTaskConfiguration",
         sizeof(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintTaskConfiguration
-    };
+        _type_slots_PrintTaskConfiguration};
 
     // ----- PrintTaskConfigurationSaveRequest class --------------------
 
@@ -1075,14 +1063,12 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
         { },
     };
 
-    static PyType_Spec type_spec_PrintTaskConfigurationSaveRequest =
-    {
+    static PyType_Spec type_spec_PrintTaskConfigurationSaveRequest = {
         "winrt._winrt_windows_devices_printers_extensions.PrintTaskConfigurationSaveRequest",
         sizeof(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintTaskConfigurationSaveRequest
-    };
+        _type_slots_PrintTaskConfigurationSaveRequest};
 
     // ----- PrintTaskConfigurationSaveRequestedDeferral class --------------------
 
@@ -1175,14 +1161,12 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
         { },
     };
 
-    static PyType_Spec type_spec_PrintTaskConfigurationSaveRequestedDeferral =
-    {
+    static PyType_Spec type_spec_PrintTaskConfigurationSaveRequestedDeferral = {
         "winrt._winrt_windows_devices_printers_extensions.PrintTaskConfigurationSaveRequestedDeferral",
         sizeof(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintTaskConfigurationSaveRequestedDeferral
-    };
+        _type_slots_PrintTaskConfigurationSaveRequestedDeferral};
 
     // ----- PrintTaskConfigurationSaveRequestedEventArgs class --------------------
 
@@ -1264,14 +1248,12 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
         { },
     };
 
-    static PyType_Spec type_spec_PrintTaskConfigurationSaveRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_PrintTaskConfigurationSaveRequestedEventArgs = {
         "winrt._winrt_windows_devices_printers_extensions.PrintTaskConfigurationSaveRequestedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintTaskConfigurationSaveRequestedEventArgs
-    };
+        _type_slots_PrintTaskConfigurationSaveRequestedEventArgs};
 
     // ----- Windows.Devices.Printers.Extensions Initialization --------------------
 

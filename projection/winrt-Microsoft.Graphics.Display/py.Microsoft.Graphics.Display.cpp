@@ -309,14 +309,12 @@ namespace py::cpp::Microsoft::Graphics::Display
         { },
     };
 
-    static PyType_Spec type_spec_DisplayAdvancedColorInfo =
-    {
+    static PyType_Spec type_spec_DisplayAdvancedColorInfo = {
         "winrt._winrt_microsoft_graphics_display.DisplayAdvancedColorInfo",
         sizeof(py::wrapper::Microsoft::Graphics::Display::DisplayAdvancedColorInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayAdvancedColorInfo
-    };
+        _type_slots_DisplayAdvancedColorInfo};
 
     // ----- DisplayInformation class --------------------
 
@@ -802,14 +800,12 @@ namespace py::cpp::Microsoft::Graphics::Display
         { },
     };
 
-    static PyType_Spec type_spec_DisplayInformation =
-    {
+    static PyType_Spec type_spec_DisplayInformation = {
         "winrt._winrt_microsoft_graphics_display.DisplayInformation",
         sizeof(py::wrapper::Microsoft::Graphics::Display::DisplayInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayInformation
-    };
+        _type_slots_DisplayInformation};
 
     static PyGetSetDef getset_DisplayInformation_Static[] = {
         { }

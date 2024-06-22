@@ -891,14 +891,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
         { },
     };
 
-    static PyType_Spec type_spec_CompositeTransform3D =
-    {
+    static PyType_Spec type_spec_CompositeTransform3D = {
         "winrt._winrt_microsoft_ui_xaml_media_media3d.CompositeTransform3D",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositeTransform3D
-    };
+        _type_slots_CompositeTransform3D};
 
     static PyGetSetDef getset_CompositeTransform3D_Static[] = {
         { "center_x_property", reinterpret_cast<getter>(CompositeTransform3D_get_CenterXProperty), nullptr, nullptr, nullptr },
@@ -1187,14 +1185,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
         { },
     };
 
-    static PyType_Spec type_spec_Matrix3DHelper =
-    {
+    static PyType_Spec type_spec_Matrix3DHelper = {
         "winrt._winrt_microsoft_ui_xaml_media_media3d.Matrix3DHelper",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::Matrix3DHelper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Matrix3DHelper
-    };
+        _type_slots_Matrix3DHelper};
 
     static PyGetSetDef getset_Matrix3DHelper_Static[] = {
         { "identity", reinterpret_cast<getter>(Matrix3DHelper_get_Identity), nullptr, nullptr, nullptr },
@@ -1510,14 +1506,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
         { },
     };
 
-    static PyType_Spec type_spec_PerspectiveTransform3D =
-    {
+    static PyType_Spec type_spec_PerspectiveTransform3D = {
         "winrt._winrt_microsoft_ui_xaml_media_media3d.PerspectiveTransform3D",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::PerspectiveTransform3D),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerspectiveTransform3D
-    };
+        _type_slots_PerspectiveTransform3D};
 
     static PyGetSetDef getset_PerspectiveTransform3D_Static[] = {
         { "depth_property", reinterpret_cast<getter>(PerspectiveTransform3D_get_DepthProperty), nullptr, nullptr, nullptr },
@@ -1607,14 +1601,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
         { },
     };
 
-    static PyType_Spec type_spec_Transform3D =
-    {
+    static PyType_Spec type_spec_Transform3D = {
         "winrt._winrt_microsoft_ui_xaml_media_media3d.Transform3D",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::Transform3D),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Transform3D
-    };
+        _type_slots_Transform3D};
 
     // ----- Matrix3D struct --------------------
 
@@ -2258,14 +2250,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
         { },
     };
 
-    static PyType_Spec type_spec_Matrix3D =
-    {
+    static PyType_Spec type_spec_Matrix3D = {
         "winrt._winrt_microsoft_ui_xaml_media_media3d.Matrix3D",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::Matrix3D),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Matrix3D
-    };
+        _type_slots_Matrix3D};
 
     // ----- Microsoft.UI.Xaml.Media.Media3D Initialization --------------------
 

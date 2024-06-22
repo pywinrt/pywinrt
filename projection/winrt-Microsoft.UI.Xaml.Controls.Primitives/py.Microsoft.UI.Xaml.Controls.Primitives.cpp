@@ -85,14 +85,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_AppBarButtonTemplateSettings =
-    {
+    static PyType_Spec type_spec_AppBarButtonTemplateSettings = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.AppBarButtonTemplateSettings",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::AppBarButtonTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBarButtonTemplateSettings
-    };
+        _type_slots_AppBarButtonTemplateSettings};
 
     // ----- AppBarTemplateSettings class --------------------
 
@@ -354,14 +352,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_AppBarTemplateSettings =
-    {
+    static PyType_Spec type_spec_AppBarTemplateSettings = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.AppBarTemplateSettings",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::AppBarTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBarTemplateSettings
-    };
+        _type_slots_AppBarTemplateSettings};
 
     // ----- AppBarToggleButtonTemplateSettings class --------------------
 
@@ -443,14 +439,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_AppBarToggleButtonTemplateSettings =
-    {
+    static PyType_Spec type_spec_AppBarToggleButtonTemplateSettings = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.AppBarToggleButtonTemplateSettings",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::AppBarToggleButtonTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBarToggleButtonTemplateSettings
-    };
+        _type_slots_AppBarToggleButtonTemplateSettings};
 
     // ----- AutoSuggestBoxHelper class --------------------
 
@@ -595,14 +589,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_AutoSuggestBoxHelper =
-    {
+    static PyType_Spec type_spec_AutoSuggestBoxHelper = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.AutoSuggestBoxHelper",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::AutoSuggestBoxHelper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AutoSuggestBoxHelper
-    };
+        _type_slots_AutoSuggestBoxHelper};
 
     static PyGetSetDef getset_AutoSuggestBoxHelper_Static[] = {
         { "keep_interior_corners_square_property", reinterpret_cast<getter>(AutoSuggestBoxHelper_get_KeepInteriorCornersSquareProperty), nullptr, nullptr, nullptr },
@@ -1016,14 +1008,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ButtonBase =
-    {
+    static PyType_Spec type_spec_ButtonBase = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ButtonBase",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ButtonBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ButtonBase
-    };
+        _type_slots_ButtonBase};
 
     static PyGetSetDef getset_ButtonBase_Static[] = {
         { "click_mode_property", reinterpret_cast<getter>(ButtonBase_get_ClickModeProperty), nullptr, nullptr, nullptr },
@@ -1137,14 +1127,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_CalendarPanel =
-    {
+    static PyType_Spec type_spec_CalendarPanel = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.CalendarPanel",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CalendarPanel),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CalendarPanel
-    };
+        _type_slots_CalendarPanel};
 
     // ----- CalendarViewTemplateSettings class --------------------
 
@@ -1506,14 +1494,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_CalendarViewTemplateSettings =
-    {
+    static PyType_Spec type_spec_CalendarViewTemplateSettings = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.CalendarViewTemplateSettings",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CalendarViewTemplateSettings
-    };
+        _type_slots_CalendarViewTemplateSettings};
 
     // ----- CarouselPanel class --------------------
 
@@ -2541,14 +2527,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_CarouselPanel =
-    {
+    static PyType_Spec type_spec_CarouselPanel = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.CarouselPanel",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CarouselPanel
-    };
+        _type_slots_CarouselPanel};
 
     // ----- ColorPickerSlider class --------------------
 
@@ -2699,14 +2683,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ColorPickerSlider =
-    {
+    static PyType_Spec type_spec_ColorPickerSlider = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ColorPickerSlider",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ColorPickerSlider
-    };
+        _type_slots_ColorPickerSlider};
 
     static PyGetSetDef getset_ColorPickerSlider_Static[] = {
         { "color_channel_property", reinterpret_cast<getter>(ColorPickerSlider_get_ColorChannelProperty), nullptr, nullptr, nullptr },
@@ -3531,14 +3513,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ColorSpectrum =
-    {
+    static PyType_Spec type_spec_ColorSpectrum = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ColorSpectrum",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ColorSpectrum
-    };
+        _type_slots_ColorSpectrum};
 
     static PyGetSetDef getset_ColorSpectrum_Static[] = {
         { "color_property", reinterpret_cast<getter>(ColorSpectrum_get_ColorProperty), nullptr, nullptr, nullptr },
@@ -3858,14 +3838,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ColumnMajorUniformToLargestGridLayout =
-    {
+    static PyType_Spec type_spec_ColumnMajorUniformToLargestGridLayout = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ColumnMajorUniformToLargestGridLayout",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ColumnMajorUniformToLargestGridLayout
-    };
+        _type_slots_ColumnMajorUniformToLargestGridLayout};
 
     static PyGetSetDef getset_ColumnMajorUniformToLargestGridLayout_Static[] = {
         { "column_spacing_property", reinterpret_cast<getter>(ColumnMajorUniformToLargestGridLayout_get_ColumnSpacingProperty), nullptr, nullptr, nullptr },
@@ -4038,14 +4016,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ComboBoxHelper =
-    {
+    static PyType_Spec type_spec_ComboBoxHelper = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ComboBoxHelper",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ComboBoxHelper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ComboBoxHelper
-    };
+        _type_slots_ComboBoxHelper};
 
     static PyGetSetDef getset_ComboBoxHelper_Static[] = {
         { "keep_interior_corners_square_property", reinterpret_cast<getter>(ComboBoxHelper_get_KeepInteriorCornersSquareProperty), nullptr, nullptr, nullptr },
@@ -4235,14 +4211,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ComboBoxTemplateSettings =
-    {
+    static PyType_Spec type_spec_ComboBoxTemplateSettings = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ComboBoxTemplateSettings",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ComboBoxTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ComboBoxTemplateSettings
-    };
+        _type_slots_ComboBoxTemplateSettings};
 
     // ----- CommandBarFlyoutCommandBar class --------------------
 
@@ -4413,14 +4387,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_CommandBarFlyoutCommandBar =
-    {
+    static PyType_Spec type_spec_CommandBarFlyoutCommandBar = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.CommandBarFlyoutCommandBar",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CommandBarFlyoutCommandBar
-    };
+        _type_slots_CommandBarFlyoutCommandBar};
 
     static PyGetSetDef getset_CommandBarFlyoutCommandBar_Static[] = {
         { "system_backdrop_property", reinterpret_cast<getter>(CommandBarFlyoutCommandBar_get_SystemBackdropProperty), nullptr, nullptr, nullptr },
@@ -4556,14 +4528,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_CommandBarFlyoutCommandBarAutomationProperties =
-    {
+    static PyType_Spec type_spec_CommandBarFlyoutCommandBarAutomationProperties = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.CommandBarFlyoutCommandBarAutomationProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CommandBarFlyoutCommandBarAutomationProperties
-    };
+        _type_slots_CommandBarFlyoutCommandBarAutomationProperties};
 
     static PyGetSetDef getset_CommandBarFlyoutCommandBarAutomationProperties_Static[] = {
         { "control_type_property", reinterpret_cast<getter>(CommandBarFlyoutCommandBarAutomationProperties_get_ControlTypeProperty), nullptr, nullptr, nullptr },
@@ -5053,14 +5023,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_CommandBarFlyoutCommandBarTemplateSettings =
-    {
+    static PyType_Spec type_spec_CommandBarFlyoutCommandBarTemplateSettings = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.CommandBarFlyoutCommandBarTemplateSettings",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CommandBarFlyoutCommandBarTemplateSettings
-    };
+        _type_slots_CommandBarFlyoutCommandBarTemplateSettings};
 
     // ----- CommandBarTemplateSettings class --------------------
 
@@ -5362,14 +5330,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_CommandBarTemplateSettings =
-    {
+    static PyType_Spec type_spec_CommandBarTemplateSettings = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.CommandBarTemplateSettings",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CommandBarTemplateSettings
-    };
+        _type_slots_CommandBarTemplateSettings};
 
     // ----- CornerRadiusFilterConverter class --------------------
 
@@ -5657,14 +5623,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_CornerRadiusFilterConverter =
-    {
+    static PyType_Spec type_spec_CornerRadiusFilterConverter = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.CornerRadiusFilterConverter",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusFilterConverter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CornerRadiusFilterConverter
-    };
+        _type_slots_CornerRadiusFilterConverter};
 
     static PyGetSetDef getset_CornerRadiusFilterConverter_Static[] = {
         { "filter_property", reinterpret_cast<getter>(CornerRadiusFilterConverter_get_FilterProperty), nullptr, nullptr, nullptr },
@@ -5979,14 +5943,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_CornerRadiusToThicknessConverter =
-    {
+    static PyType_Spec type_spec_CornerRadiusToThicknessConverter = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.CornerRadiusToThicknessConverter",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusToThicknessConverter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CornerRadiusToThicknessConverter
-    };
+        _type_slots_CornerRadiusToThicknessConverter};
 
     static PyGetSetDef getset_CornerRadiusToThicknessConverter_Static[] = {
         { "conversion_kind_property", reinterpret_cast<getter>(CornerRadiusToThicknessConverter_get_ConversionKindProperty), nullptr, nullptr, nullptr },
@@ -6161,14 +6123,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_DragCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_DragCompletedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.DragCompletedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DragCompletedEventArgs
-    };
+        _type_slots_DragCompletedEventArgs};
 
     // ----- DragDeltaEventArgs class --------------------
 
@@ -6295,14 +6255,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_DragDeltaEventArgs =
-    {
+    static PyType_Spec type_spec_DragDeltaEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.DragDeltaEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragDeltaEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DragDeltaEventArgs
-    };
+        _type_slots_DragDeltaEventArgs};
 
     // ----- DragStartedEventArgs class --------------------
 
@@ -6429,14 +6387,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_DragStartedEventArgs =
-    {
+    static PyType_Spec type_spec_DragStartedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.DragStartedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::DragStartedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DragStartedEventArgs
-    };
+        _type_slots_DragStartedEventArgs};
 
     // ----- FlyoutBase class --------------------
 
@@ -7767,14 +7723,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_FlyoutBase =
-    {
+    static PyType_Spec type_spec_FlyoutBase = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.FlyoutBase",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FlyoutBase
-    };
+        _type_slots_FlyoutBase};
 
     static PyGetSetDef getset_FlyoutBase_Static[] = {
         { "allow_focus_on_interaction_property", reinterpret_cast<getter>(FlyoutBase_get_AllowFocusOnInteractionProperty), nullptr, nullptr, nullptr },
@@ -7926,14 +7880,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_FlyoutBaseClosingEventArgs =
-    {
+    static PyType_Spec type_spec_FlyoutBaseClosingEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.FlyoutBaseClosingEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBaseClosingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FlyoutBaseClosingEventArgs
-    };
+        _type_slots_FlyoutBaseClosingEventArgs};
 
     // ----- FlyoutShowOptions class --------------------
 
@@ -8209,14 +8161,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_FlyoutShowOptions =
-    {
+    static PyType_Spec type_spec_FlyoutShowOptions = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.FlyoutShowOptions",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FlyoutShowOptions
-    };
+        _type_slots_FlyoutShowOptions};
 
     // ----- GeneratorPositionHelper class --------------------
 
@@ -8310,14 +8260,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_GeneratorPositionHelper =
-    {
+    static PyType_Spec type_spec_GeneratorPositionHelper = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.GeneratorPositionHelper",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GeneratorPositionHelper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GeneratorPositionHelper
-    };
+        _type_slots_GeneratorPositionHelper};
 
     static PyGetSetDef getset_GeneratorPositionHelper_Static[] = {
         { }
@@ -9901,14 +9849,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_GridViewItemPresenter =
-    {
+    static PyType_Spec type_spec_GridViewItemPresenter = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.GridViewItemPresenter",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GridViewItemPresenter
-    };
+        _type_slots_GridViewItemPresenter};
 
     static PyGetSetDef getset_GridViewItemPresenter_Static[] = {
         { "check_brush_property", reinterpret_cast<getter>(GridViewItemPresenter_get_CheckBrushProperty), nullptr, nullptr, nullptr },
@@ -10037,14 +9983,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_GridViewItemTemplateSettings =
-    {
+    static PyType_Spec type_spec_GridViewItemTemplateSettings = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.GridViewItemTemplateSettings",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GridViewItemTemplateSettings
-    };
+        _type_slots_GridViewItemTemplateSettings};
 
     // ----- InfoBarPanel class --------------------
 
@@ -10428,14 +10372,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_InfoBarPanel =
-    {
+    static PyType_Spec type_spec_InfoBarPanel = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.InfoBarPanel",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InfoBarPanel
-    };
+        _type_slots_InfoBarPanel};
 
     static PyGetSetDef getset_InfoBarPanel_Static[] = {
         { "horizontal_orientation_margin_property", reinterpret_cast<getter>(InfoBarPanel_get_HorizontalOrientationMarginProperty), nullptr, nullptr, nullptr },
@@ -10630,14 +10572,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ItemsChangedEventArgs =
-    {
+    static PyType_Spec type_spec_ItemsChangedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ItemsChangedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ItemsChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ItemsChangedEventArgs
-    };
+        _type_slots_ItemsChangedEventArgs};
 
     // ----- JumpListItemBackgroundConverter class --------------------
 
@@ -10925,14 +10865,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_JumpListItemBackgroundConverter =
-    {
+    static PyType_Spec type_spec_JumpListItemBackgroundConverter = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.JumpListItemBackgroundConverter",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::JumpListItemBackgroundConverter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_JumpListItemBackgroundConverter
-    };
+        _type_slots_JumpListItemBackgroundConverter};
 
     static PyGetSetDef getset_JumpListItemBackgroundConverter_Static[] = {
         { "disabled_property", reinterpret_cast<getter>(JumpListItemBackgroundConverter_get_DisabledProperty), nullptr, nullptr, nullptr },
@@ -11247,14 +11185,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_JumpListItemForegroundConverter =
-    {
+    static PyType_Spec type_spec_JumpListItemForegroundConverter = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.JumpListItemForegroundConverter",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::JumpListItemForegroundConverter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_JumpListItemForegroundConverter
-    };
+        _type_slots_JumpListItemForegroundConverter};
 
     static PyGetSetDef getset_JumpListItemForegroundConverter_Static[] = {
         { "disabled_property", reinterpret_cast<getter>(JumpListItemForegroundConverter_get_DisabledProperty), nullptr, nullptr, nullptr },
@@ -11436,14 +11372,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_LayoutInformation =
-    {
+    static PyType_Spec type_spec_LayoutInformation = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.LayoutInformation",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::LayoutInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LayoutInformation
-    };
+        _type_slots_LayoutInformation};
 
     static PyGetSetDef getset_LayoutInformation_Static[] = {
         { }
@@ -15508,14 +15442,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ListViewItemPresenter =
-    {
+    static PyType_Spec type_spec_ListViewItemPresenter = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ListViewItemPresenter",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ListViewItemPresenter
-    };
+        _type_slots_ListViewItemPresenter};
 
     static PyGetSetDef getset_ListViewItemPresenter_Static[] = {
         { "check_box_border_brush_property", reinterpret_cast<getter>(ListViewItemPresenter_get_CheckBoxBorderBrushProperty), nullptr, nullptr, nullptr },
@@ -15681,14 +15613,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ListViewItemTemplateSettings =
-    {
+    static PyType_Spec type_spec_ListViewItemTemplateSettings = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ListViewItemTemplateSettings",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ListViewItemTemplateSettings
-    };
+        _type_slots_ListViewItemTemplateSettings};
 
     // ----- LoopingSelector class --------------------
 
@@ -16264,14 +16194,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_LoopingSelector =
-    {
+    static PyType_Spec type_spec_LoopingSelector = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.LoopingSelector",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::LoopingSelector),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LoopingSelector
-    };
+        _type_slots_LoopingSelector};
 
     static PyGetSetDef getset_LoopingSelector_Static[] = {
         { "item_height_property", reinterpret_cast<getter>(LoopingSelector_get_ItemHeightProperty), nullptr, nullptr, nullptr },
@@ -16365,14 +16293,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_LoopingSelectorItem =
-    {
+    static PyType_Spec type_spec_LoopingSelectorItem = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.LoopingSelectorItem",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::LoopingSelectorItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LoopingSelectorItem
-    };
+        _type_slots_LoopingSelectorItem};
 
     // ----- LoopingSelectorPanel class --------------------
 
@@ -16643,14 +16569,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_LoopingSelectorPanel =
-    {
+    static PyType_Spec type_spec_LoopingSelectorPanel = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.LoopingSelectorPanel",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::LoopingSelectorPanel),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LoopingSelectorPanel
-    };
+        _type_slots_LoopingSelectorPanel};
 
     // ----- MenuFlyoutItemTemplateSettings class --------------------
 
@@ -16732,14 +16656,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_MenuFlyoutItemTemplateSettings =
-    {
+    static PyType_Spec type_spec_MenuFlyoutItemTemplateSettings = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.MenuFlyoutItemTemplateSettings",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::MenuFlyoutItemTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MenuFlyoutItemTemplateSettings
-    };
+        _type_slots_MenuFlyoutItemTemplateSettings};
 
     // ----- MenuFlyoutPresenterTemplateSettings class --------------------
 
@@ -16821,14 +16743,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_MenuFlyoutPresenterTemplateSettings =
-    {
+    static PyType_Spec type_spec_MenuFlyoutPresenterTemplateSettings = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.MenuFlyoutPresenterTemplateSettings",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::MenuFlyoutPresenterTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MenuFlyoutPresenterTemplateSettings
-    };
+        _type_slots_MenuFlyoutPresenterTemplateSettings};
 
     // ----- MonochromaticOverlayPresenter class --------------------
 
@@ -17046,14 +16966,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_MonochromaticOverlayPresenter =
-    {
+    static PyType_Spec type_spec_MonochromaticOverlayPresenter = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.MonochromaticOverlayPresenter",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MonochromaticOverlayPresenter
-    };
+        _type_slots_MonochromaticOverlayPresenter};
 
     static PyGetSetDef getset_MonochromaticOverlayPresenter_Static[] = {
         { "replacement_color_property", reinterpret_cast<getter>(MonochromaticOverlayPresenter_get_ReplacementColorProperty), nullptr, nullptr, nullptr },
@@ -17337,14 +17255,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_NavigationViewItemPresenter =
-    {
+    static PyType_Spec type_spec_NavigationViewItemPresenter = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.NavigationViewItemPresenter",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NavigationViewItemPresenter
-    };
+        _type_slots_NavigationViewItemPresenter};
 
     static PyGetSetDef getset_NavigationViewItemPresenter_Static[] = {
         { "icon_property", reinterpret_cast<getter>(NavigationViewItemPresenter_get_IconProperty), nullptr, nullptr, nullptr },
@@ -17534,14 +17450,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_NavigationViewItemPresenterTemplateSettings =
-    {
+    static PyType_Spec type_spec_NavigationViewItemPresenterTemplateSettings = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.NavigationViewItemPresenterTemplateSettings",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NavigationViewItemPresenterTemplateSettings
-    };
+        _type_slots_NavigationViewItemPresenterTemplateSettings};
 
     static PyGetSetDef getset_NavigationViewItemPresenterTemplateSettings_Static[] = {
         { "icon_width_property", reinterpret_cast<getter>(NavigationViewItemPresenterTemplateSettings_get_IconWidthProperty), nullptr, nullptr, nullptr },
@@ -18620,14 +18534,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_OrientedVirtualizingPanel =
-    {
+    static PyType_Spec type_spec_OrientedVirtualizingPanel = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.OrientedVirtualizingPanel",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_OrientedVirtualizingPanel
-    };
+        _type_slots_OrientedVirtualizingPanel};
 
     // ----- PickerFlyoutBase class --------------------
 
@@ -18772,14 +18684,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_PickerFlyoutBase =
-    {
+    static PyType_Spec type_spec_PickerFlyoutBase = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.PickerFlyoutBase",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::PickerFlyoutBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PickerFlyoutBase
-    };
+        _type_slots_PickerFlyoutBase};
 
     static PyGetSetDef getset_PickerFlyoutBase_Static[] = {
         { "title_property", reinterpret_cast<getter>(PickerFlyoutBase_get_TitleProperty), nullptr, nullptr, nullptr },
@@ -18891,14 +18801,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_PivotHeaderItem =
-    {
+    static PyType_Spec type_spec_PivotHeaderItem = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.PivotHeaderItem",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::PivotHeaderItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PivotHeaderItem
-    };
+        _type_slots_PivotHeaderItem};
 
     // ----- PivotHeaderPanel class --------------------
 
@@ -18982,14 +18890,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_PivotHeaderPanel =
-    {
+    static PyType_Spec type_spec_PivotHeaderPanel = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.PivotHeaderPanel",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::PivotHeaderPanel),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PivotHeaderPanel
-    };
+        _type_slots_PivotHeaderPanel};
 
     // ----- PivotPanel class --------------------
 
@@ -19282,14 +19188,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_PivotPanel =
-    {
+    static PyType_Spec type_spec_PivotPanel = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.PivotPanel",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::PivotPanel),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PivotPanel
-    };
+        _type_slots_PivotPanel};
 
     // ----- Popup class --------------------
 
@@ -20285,14 +20189,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_Popup =
-    {
+    static PyType_Spec type_spec_Popup = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.Popup",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Popup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Popup
-    };
+        _type_slots_Popup};
 
     static PyGetSetDef getset_Popup_Static[] = {
         { "child_property", reinterpret_cast<getter>(Popup_get_ChildProperty), nullptr, nullptr, nullptr },
@@ -20770,14 +20672,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_RangeBase =
-    {
+    static PyType_Spec type_spec_RangeBase = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.RangeBase",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RangeBase
-    };
+        _type_slots_RangeBase};
 
     static PyGetSetDef getset_RangeBase_Static[] = {
         { "large_change_property", reinterpret_cast<getter>(RangeBase_get_LargeChangeProperty), nullptr, nullptr, nullptr },
@@ -20909,14 +20809,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_RangeBaseValueChangedEventArgs =
-    {
+    static PyType_Spec type_spec_RangeBaseValueChangedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.RangeBaseValueChangedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RangeBaseValueChangedEventArgs
-    };
+        _type_slots_RangeBaseValueChangedEventArgs};
 
     // ----- RepeatButton class --------------------
 
@@ -21134,14 +21032,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_RepeatButton =
-    {
+    static PyType_Spec type_spec_RepeatButton = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.RepeatButton",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatButton),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RepeatButton
-    };
+        _type_slots_RepeatButton};
 
     static PyGetSetDef getset_RepeatButton_Static[] = {
         { "delay_property", reinterpret_cast<getter>(RepeatButton_get_DelayProperty), nullptr, nullptr, nullptr },
@@ -21338,14 +21234,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_RepeatedScrollSnapPoint =
-    {
+    static PyType_Spec type_spec_RepeatedScrollSnapPoint = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.RepeatedScrollSnapPoint",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPoint),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RepeatedScrollSnapPoint
-    };
+        _type_slots_RepeatedScrollSnapPoint};
 
     // ----- RepeatedZoomSnapPoint class --------------------
 
@@ -21514,14 +21408,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_RepeatedZoomSnapPoint =
-    {
+    static PyType_Spec type_spec_RepeatedZoomSnapPoint = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.RepeatedZoomSnapPoint",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPoint),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RepeatedZoomSnapPoint
-    };
+        _type_slots_RepeatedZoomSnapPoint};
 
     // ----- ScrollBar class --------------------
 
@@ -21851,14 +21743,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ScrollBar =
-    {
+    static PyType_Spec type_spec_ScrollBar = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ScrollBar",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollBar),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScrollBar
-    };
+        _type_slots_ScrollBar};
 
     static PyGetSetDef getset_ScrollBar_Static[] = {
         { "indicator_mode_property", reinterpret_cast<getter>(ScrollBar_get_IndicatorModeProperty), nullptr, nullptr, nullptr },
@@ -22061,14 +21951,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ScrollControllerAddScrollVelocityRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_ScrollControllerAddScrollVelocityRequestedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ScrollControllerAddScrollVelocityRequestedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollControllerAddScrollVelocityRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScrollControllerAddScrollVelocityRequestedEventArgs
-    };
+        _type_slots_ScrollControllerAddScrollVelocityRequestedEventArgs};
 
     // ----- ScrollControllerPanRequestedEventArgs class --------------------
 
@@ -22222,14 +22110,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ScrollControllerPanRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_ScrollControllerPanRequestedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ScrollControllerPanRequestedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollControllerPanRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScrollControllerPanRequestedEventArgs
-    };
+        _type_slots_ScrollControllerPanRequestedEventArgs};
 
     // ----- ScrollControllerScrollByRequestedEventArgs class --------------------
 
@@ -22404,14 +22290,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ScrollControllerScrollByRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_ScrollControllerScrollByRequestedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ScrollControllerScrollByRequestedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollControllerScrollByRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScrollControllerScrollByRequestedEventArgs
-    };
+        _type_slots_ScrollControllerScrollByRequestedEventArgs};
 
     // ----- ScrollControllerScrollToRequestedEventArgs class --------------------
 
@@ -22586,14 +22470,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ScrollControllerScrollToRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_ScrollControllerScrollToRequestedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ScrollControllerScrollToRequestedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollControllerScrollToRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScrollControllerScrollToRequestedEventArgs
-    };
+        _type_slots_ScrollControllerScrollToRequestedEventArgs};
 
     // ----- ScrollEventArgs class --------------------
 
@@ -22717,14 +22599,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ScrollEventArgs =
-    {
+    static PyType_Spec type_spec_ScrollEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ScrollEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScrollEventArgs
-    };
+        _type_slots_ScrollEventArgs};
 
     // ----- ScrollPresenter class --------------------
 
@@ -25112,14 +24992,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ScrollPresenter =
-    {
+    static PyType_Spec type_spec_ScrollPresenter = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ScrollPresenter",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScrollPresenter
-    };
+        _type_slots_ScrollPresenter};
 
     static PyGetSetDef getset_ScrollPresenter_Static[] = {
         { "background_property", reinterpret_cast<getter>(ScrollPresenter_get_BackgroundProperty), nullptr, nullptr, nullptr },
@@ -25269,14 +25147,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ScrollSnapPoint =
-    {
+    static PyType_Spec type_spec_ScrollSnapPoint = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ScrollSnapPoint",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPoint),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScrollSnapPoint
-    };
+        _type_slots_ScrollSnapPoint};
 
     // ----- ScrollSnapPointBase class --------------------
 
@@ -25358,14 +25234,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ScrollSnapPointBase =
-    {
+    static PyType_Spec type_spec_ScrollSnapPointBase = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ScrollSnapPointBase",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPointBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScrollSnapPointBase
-    };
+        _type_slots_ScrollSnapPointBase};
 
     // ----- Selector class --------------------
 
@@ -25838,14 +25712,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_Selector =
-    {
+    static PyType_Spec type_spec_Selector = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.Selector",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Selector),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Selector
-    };
+        _type_slots_Selector};
 
     static PyGetSetDef getset_Selector_Static[] = {
         { "is_synchronized_with_current_item_property", reinterpret_cast<getter>(Selector_get_IsSynchronizedWithCurrentItemProperty), nullptr, nullptr, nullptr },
@@ -26005,14 +25877,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_SelectorItem =
-    {
+    static PyType_Spec type_spec_SelectorItem = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.SelectorItem",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::SelectorItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SelectorItem
-    };
+        _type_slots_SelectorItem};
 
     static PyGetSetDef getset_SelectorItem_Static[] = {
         { "is_selected_property", reinterpret_cast<getter>(SelectorItem_get_IsSelectedProperty), nullptr, nullptr, nullptr },
@@ -26100,14 +25970,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_SnapPointBase =
-    {
+    static PyType_Spec type_spec_SnapPointBase = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.SnapPointBase",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::SnapPointBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SnapPointBase
-    };
+        _type_slots_SnapPointBase};
 
     // ----- SplitViewTemplateSettings class --------------------
 
@@ -26289,14 +26157,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_SplitViewTemplateSettings =
-    {
+    static PyType_Spec type_spec_SplitViewTemplateSettings = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.SplitViewTemplateSettings",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::SplitViewTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SplitViewTemplateSettings
-    };
+        _type_slots_SplitViewTemplateSettings};
 
     // ----- TabViewListView class --------------------
 
@@ -26380,14 +26246,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_TabViewListView =
-    {
+    static PyType_Spec type_spec_TabViewListView = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.TabViewListView",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::TabViewListView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TabViewListView
-    };
+        _type_slots_TabViewListView};
 
     // ----- Thumb class --------------------
 
@@ -26676,14 +26540,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_Thumb =
-    {
+    static PyType_Spec type_spec_Thumb = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.Thumb",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Thumb),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Thumb
-    };
+        _type_slots_Thumb};
 
     static PyGetSetDef getset_Thumb_Static[] = {
         { "is_dragging_property", reinterpret_cast<getter>(Thumb_get_IsDraggingProperty), nullptr, nullptr, nullptr },
@@ -26860,14 +26722,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_TickBar =
-    {
+    static PyType_Spec type_spec_TickBar = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.TickBar",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::TickBar),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TickBar
-    };
+        _type_slots_TickBar};
 
     static PyGetSetDef getset_TickBar_Static[] = {
         { "fill_property", reinterpret_cast<getter>(TickBar_get_FillProperty), nullptr, nullptr, nullptr },
@@ -27246,14 +27106,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ToggleButton =
-    {
+    static PyType_Spec type_spec_ToggleButton = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ToggleButton",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToggleButton
-    };
+        _type_slots_ToggleButton};
 
     static PyGetSetDef getset_ToggleButton_Static[] = {
         { "is_checked_property", reinterpret_cast<getter>(ToggleButton_get_IsCheckedProperty), nullptr, nullptr, nullptr },
@@ -27502,14 +27360,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ToggleSwitchTemplateSettings =
-    {
+    static PyType_Spec type_spec_ToggleSwitchTemplateSettings = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ToggleSwitchTemplateSettings",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleSwitchTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToggleSwitchTemplateSettings
-    };
+        _type_slots_ToggleSwitchTemplateSettings};
 
     // ----- ToolTipTemplateSettings class --------------------
 
@@ -27611,14 +27467,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ToolTipTemplateSettings =
-    {
+    static PyType_Spec type_spec_ToolTipTemplateSettings = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ToolTipTemplateSettings",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToolTipTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToolTipTemplateSettings
-    };
+        _type_slots_ToolTipTemplateSettings};
 
     // ----- ZoomSnapPoint class --------------------
 
@@ -27724,14 +27578,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ZoomSnapPoint =
-    {
+    static PyType_Spec type_spec_ZoomSnapPoint = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ZoomSnapPoint",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ZoomSnapPoint),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ZoomSnapPoint
-    };
+        _type_slots_ZoomSnapPoint};
 
     // ----- ZoomSnapPointBase class --------------------
 
@@ -27793,14 +27645,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_ZoomSnapPointBase =
-    {
+    static PyType_Spec type_spec_ZoomSnapPointBase = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.ZoomSnapPointBase",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ZoomSnapPointBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ZoomSnapPointBase
-    };
+        _type_slots_ZoomSnapPointBase};
 
     // ----- IScrollController interface --------------------
 
@@ -28284,14 +28134,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_IScrollController =
-    {
+    static PyType_Spec type_spec_IScrollController = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.IScrollController",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::IScrollController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IScrollController
-    };
+        _type_slots_IScrollController};
 
     // ----- IScrollControllerPanningInfo interface --------------------
 
@@ -28540,14 +28388,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_IScrollControllerPanningInfo =
-    {
+    static PyType_Spec type_spec_IScrollControllerPanningInfo = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.IScrollControllerPanningInfo",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::IScrollControllerPanningInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IScrollControllerPanningInfo
-    };
+        _type_slots_IScrollControllerPanningInfo};
 
     // ----- IScrollSnapPointsInfo interface --------------------
 
@@ -28818,14 +28664,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_IScrollSnapPointsInfo =
-    {
+    static PyType_Spec type_spec_IScrollSnapPointsInfo = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.IScrollSnapPointsInfo",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IScrollSnapPointsInfo
-    };
+        _type_slots_IScrollSnapPointsInfo};
 
     // ----- GeneratorPosition struct --------------------
 
@@ -28979,14 +28823,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { },
     };
 
-    static PyType_Spec type_spec_GeneratorPosition =
-    {
+    static PyType_Spec type_spec_GeneratorPosition = {
         "winrt._winrt_microsoft_ui_xaml_controls_primitives.GeneratorPosition",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GeneratorPosition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GeneratorPosition
-    };
+        _type_slots_GeneratorPosition};
 
     // ----- Microsoft.UI.Xaml.Controls.Primitives Initialization --------------------
 

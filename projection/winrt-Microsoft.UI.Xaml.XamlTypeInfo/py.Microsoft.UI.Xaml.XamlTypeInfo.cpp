@@ -179,14 +179,12 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
         { },
     };
 
-    static PyType_Spec type_spec_XamlControlsXamlMetaDataProvider =
-    {
+    static PyType_Spec type_spec_XamlControlsXamlMetaDataProvider = {
         "winrt._winrt_microsoft_ui_xaml_xamltypeinfo.XamlControlsXamlMetaDataProvider",
         sizeof(py::wrapper::Microsoft::UI::Xaml::XamlTypeInfo::XamlControlsXamlMetaDataProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XamlControlsXamlMetaDataProvider
-    };
+        _type_slots_XamlControlsXamlMetaDataProvider};
 
     static PyGetSetDef getset_XamlControlsXamlMetaDataProvider_Static[] = {
         { }

@@ -241,14 +241,12 @@ namespace py::cpp::Windows::Data::Pdf
         { },
     };
 
-    static PyType_Spec type_spec_PdfDocument =
-    {
+    static PyType_Spec type_spec_PdfDocument = {
         "winrt._winrt_windows_data_pdf.PdfDocument",
         sizeof(py::wrapper::Windows::Data::Pdf::PdfDocument),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PdfDocument
-    };
+        _type_slots_PdfDocument};
 
     static PyGetSetDef getset_PdfDocument_Static[] = {
         { }
@@ -572,14 +570,12 @@ namespace py::cpp::Windows::Data::Pdf
         { },
     };
 
-    static PyType_Spec type_spec_PdfPage =
-    {
+    static PyType_Spec type_spec_PdfPage = {
         "winrt._winrt_windows_data_pdf.PdfPage",
         sizeof(py::wrapper::Windows::Data::Pdf::PdfPage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PdfPage
-    };
+        _type_slots_PdfPage};
 
     // ----- PdfPageDimensions class --------------------
 
@@ -741,14 +737,12 @@ namespace py::cpp::Windows::Data::Pdf
         { },
     };
 
-    static PyType_Spec type_spec_PdfPageDimensions =
-    {
+    static PyType_Spec type_spec_PdfPageDimensions = {
         "winrt._winrt_windows_data_pdf.PdfPageDimensions",
         sizeof(py::wrapper::Windows::Data::Pdf::PdfPageDimensions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PdfPageDimensions
-    };
+        _type_slots_PdfPageDimensions};
 
     // ----- PdfPageRenderOptions class --------------------
 
@@ -1120,14 +1114,12 @@ namespace py::cpp::Windows::Data::Pdf
         { },
     };
 
-    static PyType_Spec type_spec_PdfPageRenderOptions =
-    {
+    static PyType_Spec type_spec_PdfPageRenderOptions = {
         "winrt._winrt_windows_data_pdf.PdfPageRenderOptions",
         sizeof(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PdfPageRenderOptions
-    };
+        _type_slots_PdfPageRenderOptions};
 
     // ----- Windows.Data.Pdf Initialization --------------------
 

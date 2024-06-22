@@ -99,14 +99,12 @@ namespace py::cpp::Microsoft::UI
         { },
     };
 
-    static PyType_Spec type_spec_ColorHelper =
-    {
+    static PyType_Spec type_spec_ColorHelper = {
         "winrt._winrt_microsoft_ui.ColorHelper",
         sizeof(py::wrapper::Microsoft::UI::ColorHelper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ColorHelper
-    };
+        _type_slots_ColorHelper};
 
     static PyGetSetDef getset_ColorHelper_Static[] = {
         { }
@@ -2873,14 +2871,12 @@ namespace py::cpp::Microsoft::UI
         { },
     };
 
-    static PyType_Spec type_spec_Colors =
-    {
+    static PyType_Spec type_spec_Colors = {
         "winrt._winrt_microsoft_ui.Colors",
         sizeof(py::wrapper::Microsoft::UI::Colors),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Colors
-    };
+        _type_slots_Colors};
 
     static PyGetSetDef getset_Colors_Static[] = {
         { "alice_blue", reinterpret_cast<getter>(Colors_get_AliceBlue), nullptr, nullptr, nullptr },
@@ -3218,14 +3214,12 @@ namespace py::cpp::Microsoft::UI
         { },
     };
 
-    static PyType_Spec type_spec_IClosableNotifier =
-    {
+    static PyType_Spec type_spec_IClosableNotifier = {
         "winrt._winrt_microsoft_ui.IClosableNotifier",
         sizeof(py::wrapper::Microsoft::UI::IClosableNotifier),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IClosableNotifier
-    };
+        _type_slots_IClosableNotifier};
 
     // ----- DisplayId struct --------------------
 
@@ -3344,14 +3338,12 @@ namespace py::cpp::Microsoft::UI
         { },
     };
 
-    static PyType_Spec type_spec_DisplayId =
-    {
+    static PyType_Spec type_spec_DisplayId = {
         "winrt._winrt_microsoft_ui.DisplayId",
         sizeof(py::wrapper::Microsoft::UI::DisplayId),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayId
-    };
+        _type_slots_DisplayId};
 
     // ----- IconId struct --------------------
 
@@ -3470,14 +3462,12 @@ namespace py::cpp::Microsoft::UI
         { },
     };
 
-    static PyType_Spec type_spec_IconId =
-    {
+    static PyType_Spec type_spec_IconId = {
         "winrt._winrt_microsoft_ui.IconId",
         sizeof(py::wrapper::Microsoft::UI::IconId),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IconId
-    };
+        _type_slots_IconId};
 
     // ----- WindowId struct --------------------
 
@@ -3596,14 +3586,12 @@ namespace py::cpp::Microsoft::UI
         { },
     };
 
-    static PyType_Spec type_spec_WindowId =
-    {
+    static PyType_Spec type_spec_WindowId = {
         "winrt._winrt_microsoft_ui.WindowId",
         sizeof(py::wrapper::Microsoft::UI::WindowId),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowId
-    };
+        _type_slots_WindowId};
 
     // ----- Microsoft.UI Initialization --------------------
 

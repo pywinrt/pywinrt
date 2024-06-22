@@ -320,14 +320,12 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
         { },
     };
 
-    static PyType_Spec type_spec_DevicePortalConnection =
-    {
+    static PyType_Spec type_spec_DevicePortalConnection = {
         "winrt._winrt_windows_system_diagnostics_deviceportal.DevicePortalConnection",
         sizeof(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DevicePortalConnection
-    };
+        _type_slots_DevicePortalConnection};
 
     static PyGetSetDef getset_DevicePortalConnection_Static[] = {
         { }
@@ -435,14 +433,12 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
         { },
     };
 
-    static PyType_Spec type_spec_DevicePortalConnectionClosedEventArgs =
-    {
+    static PyType_Spec type_spec_DevicePortalConnectionClosedEventArgs = {
         "winrt._winrt_windows_system_diagnostics_deviceportal.DevicePortalConnectionClosedEventArgs",
         sizeof(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionClosedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DevicePortalConnectionClosedEventArgs
-    };
+        _type_slots_DevicePortalConnectionClosedEventArgs};
 
     // ----- DevicePortalConnectionRequestReceivedEventArgs class --------------------
 
@@ -614,14 +610,12 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
         { },
     };
 
-    static PyType_Spec type_spec_DevicePortalConnectionRequestReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_DevicePortalConnectionRequestReceivedEventArgs = {
         "winrt._winrt_windows_system_diagnostics_deviceportal.DevicePortalConnectionRequestReceivedEventArgs",
         sizeof(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionRequestReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DevicePortalConnectionRequestReceivedEventArgs
-    };
+        _type_slots_DevicePortalConnectionRequestReceivedEventArgs};
 
     // ----- Windows.System.Diagnostics.DevicePortal Initialization --------------------
 

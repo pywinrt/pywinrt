@@ -246,14 +246,12 @@ namespace py::cpp::Windows::Media::Ocr
         { },
     };
 
-    static PyType_Spec type_spec_OcrEngine =
-    {
+    static PyType_Spec type_spec_OcrEngine = {
         "winrt._winrt_windows_media_ocr.OcrEngine",
         sizeof(py::wrapper::Windows::Media::Ocr::OcrEngine),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_OcrEngine
-    };
+        _type_slots_OcrEngine};
 
     static PyGetSetDef getset_OcrEngine_Static[] = {
         { "available_recognizer_languages", reinterpret_cast<getter>(OcrEngine_get_AvailableRecognizerLanguages), nullptr, nullptr, nullptr },
@@ -385,14 +383,12 @@ namespace py::cpp::Windows::Media::Ocr
         { },
     };
 
-    static PyType_Spec type_spec_OcrLine =
-    {
+    static PyType_Spec type_spec_OcrLine = {
         "winrt._winrt_windows_media_ocr.OcrLine",
         sizeof(py::wrapper::Windows::Media::Ocr::OcrLine),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_OcrLine
-    };
+        _type_slots_OcrLine};
 
     // ----- OcrResult class --------------------
 
@@ -514,14 +510,12 @@ namespace py::cpp::Windows::Media::Ocr
         { },
     };
 
-    static PyType_Spec type_spec_OcrResult =
-    {
+    static PyType_Spec type_spec_OcrResult = {
         "winrt._winrt_windows_media_ocr.OcrResult",
         sizeof(py::wrapper::Windows::Media::Ocr::OcrResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_OcrResult
-    };
+        _type_slots_OcrResult};
 
     // ----- OcrWord class --------------------
 
@@ -623,14 +617,12 @@ namespace py::cpp::Windows::Media::Ocr
         { },
     };
 
-    static PyType_Spec type_spec_OcrWord =
-    {
+    static PyType_Spec type_spec_OcrWord = {
         "winrt._winrt_windows_media_ocr.OcrWord",
         sizeof(py::wrapper::Windows::Media::Ocr::OcrWord),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_OcrWord
-    };
+        _type_slots_OcrWord};
 
     // ----- Windows.Media.Ocr Initialization --------------------
 

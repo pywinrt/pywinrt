@@ -198,14 +198,12 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_CompositionDebugHeatMaps =
-    {
+    static PyType_Spec type_spec_CompositionDebugHeatMaps = {
         "winrt._winrt_microsoft_ui_composition_diagnostics.CompositionDebugHeatMaps",
         sizeof(py::wrapper::Microsoft::UI::Composition::Diagnostics::CompositionDebugHeatMaps),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionDebugHeatMaps
-    };
+        _type_slots_CompositionDebugHeatMaps};
 
     // ----- CompositionDebugSettings class --------------------
 
@@ -318,14 +316,12 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_CompositionDebugSettings =
-    {
+    static PyType_Spec type_spec_CompositionDebugSettings = {
         "winrt._winrt_microsoft_ui_composition_diagnostics.CompositionDebugSettings",
         sizeof(py::wrapper::Microsoft::UI::Composition::Diagnostics::CompositionDebugSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionDebugSettings
-    };
+        _type_slots_CompositionDebugSettings};
 
     static PyGetSetDef getset_CompositionDebugSettings_Static[] = {
         { }

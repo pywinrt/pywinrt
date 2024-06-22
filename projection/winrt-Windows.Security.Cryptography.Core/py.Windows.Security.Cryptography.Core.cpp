@@ -429,14 +429,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { },
     };
 
-    static PyType_Spec type_spec_AsymmetricAlgorithmNames =
-    {
+    static PyType_Spec type_spec_AsymmetricAlgorithmNames = {
         "winrt._winrt_windows_security_cryptography_core.AsymmetricAlgorithmNames",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AsymmetricAlgorithmNames
-    };
+        _type_slots_AsymmetricAlgorithmNames};
 
     static PyGetSetDef getset_AsymmetricAlgorithmNames_Static[] = {
         { "ecdsa_p521_sha512", reinterpret_cast<getter>(AsymmetricAlgorithmNames_get_EcdsaP521Sha512), nullptr, nullptr, nullptr },
@@ -797,14 +795,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { },
     };
 
-    static PyType_Spec type_spec_AsymmetricKeyAlgorithmProvider =
-    {
+    static PyType_Spec type_spec_AsymmetricKeyAlgorithmProvider = {
         "winrt._winrt_windows_security_cryptography_core.AsymmetricKeyAlgorithmProvider",
         sizeof(py::wrapper::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AsymmetricKeyAlgorithmProvider
-    };
+        _type_slots_AsymmetricKeyAlgorithmProvider};
 
     static PyGetSetDef getset_AsymmetricKeyAlgorithmProvider_Static[] = {
         { }
@@ -1252,14 +1248,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { },
     };
 
-    static PyType_Spec type_spec_CryptographicEngine =
-    {
+    static PyType_Spec type_spec_CryptographicEngine = {
         "winrt._winrt_windows_security_cryptography_core.CryptographicEngine",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CryptographicEngine
-    };
+        _type_slots_CryptographicEngine};
 
     static PyGetSetDef getset_CryptographicEngine_Static[] = {
         { }
@@ -1421,14 +1415,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { },
     };
 
-    static PyType_Spec type_spec_CryptographicHash =
-    {
+    static PyType_Spec type_spec_CryptographicHash = {
         "winrt._winrt_windows_security_cryptography_core.CryptographicHash",
         sizeof(py::wrapper::Windows::Security::Cryptography::Core::CryptographicHash),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CryptographicHash
-    };
+        _type_slots_CryptographicHash};
 
     // ----- CryptographicKey class --------------------
 
@@ -1610,14 +1602,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { },
     };
 
-    static PyType_Spec type_spec_CryptographicKey =
-    {
+    static PyType_Spec type_spec_CryptographicKey = {
         "winrt._winrt_windows_security_cryptography_core.CryptographicKey",
         sizeof(py::wrapper::Windows::Security::Cryptography::Core::CryptographicKey),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CryptographicKey
-    };
+        _type_slots_CryptographicKey};
 
     // ----- EccCurveNames class --------------------
 
@@ -2518,14 +2508,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { },
     };
 
-    static PyType_Spec type_spec_EccCurveNames =
-    {
+    static PyType_Spec type_spec_EccCurveNames = {
         "winrt._winrt_windows_security_cryptography_core.EccCurveNames",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EccCurveNames
-    };
+        _type_slots_EccCurveNames};
 
     static PyGetSetDef getset_EccCurveNames_Static[] = {
         { "all_ecc_curve_names", reinterpret_cast<getter>(EccCurveNames_get_AllEccCurveNames), nullptr, nullptr, nullptr },
@@ -2698,14 +2686,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { },
     };
 
-    static PyType_Spec type_spec_EncryptedAndAuthenticatedData =
-    {
+    static PyType_Spec type_spec_EncryptedAndAuthenticatedData = {
         "winrt._winrt_windows_security_cryptography_core.EncryptedAndAuthenticatedData",
         sizeof(py::wrapper::Windows::Security::Cryptography::Core::EncryptedAndAuthenticatedData),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EncryptedAndAuthenticatedData
-    };
+        _type_slots_EncryptedAndAuthenticatedData};
 
     // ----- HashAlgorithmNames class --------------------
 
@@ -2827,14 +2813,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { },
     };
 
-    static PyType_Spec type_spec_HashAlgorithmNames =
-    {
+    static PyType_Spec type_spec_HashAlgorithmNames = {
         "winrt._winrt_windows_security_cryptography_core.HashAlgorithmNames",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HashAlgorithmNames
-    };
+        _type_slots_HashAlgorithmNames};
 
     static PyGetSetDef getset_HashAlgorithmNames_Static[] = {
         { "md5", reinterpret_cast<getter>(HashAlgorithmNames_get_Md5), nullptr, nullptr, nullptr },
@@ -3059,14 +3043,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { },
     };
 
-    static PyType_Spec type_spec_HashAlgorithmProvider =
-    {
+    static PyType_Spec type_spec_HashAlgorithmProvider = {
         "winrt._winrt_windows_security_cryptography_core.HashAlgorithmProvider",
         sizeof(py::wrapper::Windows::Security::Cryptography::Core::HashAlgorithmProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HashAlgorithmProvider
-    };
+        _type_slots_HashAlgorithmProvider};
 
     static PyGetSetDef getset_HashAlgorithmProvider_Static[] = {
         { }
@@ -3499,14 +3481,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { },
     };
 
-    static PyType_Spec type_spec_KeyDerivationAlgorithmNames =
-    {
+    static PyType_Spec type_spec_KeyDerivationAlgorithmNames = {
         "winrt._winrt_windows_security_cryptography_core.KeyDerivationAlgorithmNames",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KeyDerivationAlgorithmNames
-    };
+        _type_slots_KeyDerivationAlgorithmNames};
 
     static PyGetSetDef getset_KeyDerivationAlgorithmNames_Static[] = {
         { "pbkdf2_sha256", reinterpret_cast<getter>(KeyDerivationAlgorithmNames_get_Pbkdf2Sha256), nullptr, nullptr, nullptr },
@@ -3696,14 +3676,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { },
     };
 
-    static PyType_Spec type_spec_KeyDerivationAlgorithmProvider =
-    {
+    static PyType_Spec type_spec_KeyDerivationAlgorithmProvider = {
         "winrt._winrt_windows_security_cryptography_core.KeyDerivationAlgorithmProvider",
         sizeof(py::wrapper::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KeyDerivationAlgorithmProvider
-    };
+        _type_slots_KeyDerivationAlgorithmProvider};
 
     static PyGetSetDef getset_KeyDerivationAlgorithmProvider_Static[] = {
         { }
@@ -4037,14 +4015,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { },
     };
 
-    static PyType_Spec type_spec_KeyDerivationParameters =
-    {
+    static PyType_Spec type_spec_KeyDerivationParameters = {
         "winrt._winrt_windows_security_cryptography_core.KeyDerivationParameters",
         sizeof(py::wrapper::Windows::Security::Cryptography::Core::KeyDerivationParameters),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KeyDerivationParameters
-    };
+        _type_slots_KeyDerivationParameters};
 
     static PyGetSetDef getset_KeyDerivationParameters_Static[] = {
         { }
@@ -4214,14 +4190,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { },
     };
 
-    static PyType_Spec type_spec_MacAlgorithmNames =
-    {
+    static PyType_Spec type_spec_MacAlgorithmNames = {
         "winrt._winrt_windows_security_cryptography_core.MacAlgorithmNames",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MacAlgorithmNames
-    };
+        _type_slots_MacAlgorithmNames};
 
     static PyGetSetDef getset_MacAlgorithmNames_Static[] = {
         { "aes_cmac", reinterpret_cast<getter>(MacAlgorithmNames_get_AesCmac), nullptr, nullptr, nullptr },
@@ -4449,14 +4423,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { },
     };
 
-    static PyType_Spec type_spec_MacAlgorithmProvider =
-    {
+    static PyType_Spec type_spec_MacAlgorithmProvider = {
         "winrt._winrt_windows_security_cryptography_core.MacAlgorithmProvider",
         sizeof(py::wrapper::Windows::Security::Cryptography::Core::MacAlgorithmProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MacAlgorithmProvider
-    };
+        _type_slots_MacAlgorithmProvider};
 
     static PyGetSetDef getset_MacAlgorithmProvider_Static[] = {
         { }
@@ -4575,14 +4547,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { },
     };
 
-    static PyType_Spec type_spec_PersistedKeyProvider =
-    {
+    static PyType_Spec type_spec_PersistedKeyProvider = {
         "winrt._winrt_windows_security_cryptography_core.PersistedKeyProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PersistedKeyProvider
-    };
+        _type_slots_PersistedKeyProvider};
 
     static PyGetSetDef getset_PersistedKeyProvider_Static[] = {
         { }
@@ -4997,14 +4967,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { },
     };
 
-    static PyType_Spec type_spec_SymmetricAlgorithmNames =
-    {
+    static PyType_Spec type_spec_SymmetricAlgorithmNames = {
         "winrt._winrt_windows_security_cryptography_core.SymmetricAlgorithmNames",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SymmetricAlgorithmNames
-    };
+        _type_slots_SymmetricAlgorithmNames};
 
     static PyGetSetDef getset_SymmetricAlgorithmNames_Static[] = {
         { "aes_cbc", reinterpret_cast<getter>(SymmetricAlgorithmNames_get_AesCbc), nullptr, nullptr, nullptr },
@@ -5213,14 +5181,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { },
     };
 
-    static PyType_Spec type_spec_SymmetricKeyAlgorithmProvider =
-    {
+    static PyType_Spec type_spec_SymmetricKeyAlgorithmProvider = {
         "winrt._winrt_windows_security_cryptography_core.SymmetricKeyAlgorithmProvider",
         sizeof(py::wrapper::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SymmetricKeyAlgorithmProvider
-    };
+        _type_slots_SymmetricKeyAlgorithmProvider};
 
     static PyGetSetDef getset_SymmetricKeyAlgorithmProvider_Static[] = {
         { }

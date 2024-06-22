@@ -418,14 +418,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpBufferContent =
-    {
+    static PyType_Spec type_spec_HttpBufferContent = {
         "winrt._winrt_windows_web_http.HttpBufferContent",
         sizeof(py::wrapper::Windows::Web::Http::HttpBufferContent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpBufferContent
-    };
+        _type_slots_HttpBufferContent};
 
     // ----- HttpClient class --------------------
 
@@ -1288,14 +1286,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpClient =
-    {
+    static PyType_Spec type_spec_HttpClient = {
         "winrt._winrt_windows_web_http.HttpClient",
         sizeof(py::wrapper::Windows::Web::Http::HttpClient),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpClient
-    };
+        _type_slots_HttpClient};
 
     // ----- HttpCookie class --------------------
 
@@ -1679,14 +1675,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpCookie =
-    {
+    static PyType_Spec type_spec_HttpCookie = {
         "winrt._winrt_windows_web_http.HttpCookie",
         sizeof(py::wrapper::Windows::Web::Http::HttpCookie),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpCookie
-    };
+        _type_slots_HttpCookie};
 
     // ----- HttpCookieCollection class --------------------
 
@@ -2011,14 +2005,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpCookieCollection =
-    {
+    static PyType_Spec type_spec_HttpCookieCollection = {
         "winrt._winrt_windows_web_http.HttpCookieCollection",
         sizeof(py::wrapper::Windows::Web::Http::HttpCookieCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpCookieCollection
-    };
+        _type_slots_HttpCookieCollection};
 
     // ----- HttpCookieManager class --------------------
 
@@ -2198,14 +2190,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpCookieManager =
-    {
+    static PyType_Spec type_spec_HttpCookieManager = {
         "winrt._winrt_windows_web_http.HttpCookieManager",
         sizeof(py::wrapper::Windows::Web::Http::HttpCookieManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpCookieManager
-    };
+        _type_slots_HttpCookieManager};
 
     // ----- HttpFormUrlEncodedContent class --------------------
 
@@ -2603,14 +2593,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpFormUrlEncodedContent =
-    {
+    static PyType_Spec type_spec_HttpFormUrlEncodedContent = {
         "winrt._winrt_windows_web_http.HttpFormUrlEncodedContent",
         sizeof(py::wrapper::Windows::Web::Http::HttpFormUrlEncodedContent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpFormUrlEncodedContent
-    };
+        _type_slots_HttpFormUrlEncodedContent};
 
     // ----- HttpGetBufferResult class --------------------
 
@@ -2868,14 +2856,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpGetBufferResult =
-    {
+    static PyType_Spec type_spec_HttpGetBufferResult = {
         "winrt._winrt_windows_web_http.HttpGetBufferResult",
         sizeof(py::wrapper::Windows::Web::Http::HttpGetBufferResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpGetBufferResult
-    };
+        _type_slots_HttpGetBufferResult};
 
     // ----- HttpGetInputStreamResult class --------------------
 
@@ -3133,14 +3119,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpGetInputStreamResult =
-    {
+    static PyType_Spec type_spec_HttpGetInputStreamResult = {
         "winrt._winrt_windows_web_http.HttpGetInputStreamResult",
         sizeof(py::wrapper::Windows::Web::Http::HttpGetInputStreamResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpGetInputStreamResult
-    };
+        _type_slots_HttpGetInputStreamResult};
 
     // ----- HttpGetStringResult class --------------------
 
@@ -3398,14 +3382,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpGetStringResult =
-    {
+    static PyType_Spec type_spec_HttpGetStringResult = {
         "winrt._winrt_windows_web_http.HttpGetStringResult",
         sizeof(py::wrapper::Windows::Web::Http::HttpGetStringResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpGetStringResult
-    };
+        _type_slots_HttpGetStringResult};
 
     // ----- HttpMethod class --------------------
 
@@ -3688,14 +3670,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpMethod =
-    {
+    static PyType_Spec type_spec_HttpMethod = {
         "winrt._winrt_windows_web_http.HttpMethod",
         sizeof(py::wrapper::Windows::Web::Http::HttpMethod),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpMethod
-    };
+        _type_slots_HttpMethod};
 
     static PyGetSetDef getset_HttpMethod_Static[] = {
         { "delete", reinterpret_cast<getter>(HttpMethod_get_Delete), nullptr, nullptr, nullptr },
@@ -4231,14 +4211,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpMultipartContent =
-    {
+    static PyType_Spec type_spec_HttpMultipartContent = {
         "winrt._winrt_windows_web_http.HttpMultipartContent",
         sizeof(py::wrapper::Windows::Web::Http::HttpMultipartContent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpMultipartContent
-    };
+        _type_slots_HttpMultipartContent};
 
     // ----- HttpMultipartFormDataContent class --------------------
 
@@ -4771,14 +4749,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpMultipartFormDataContent =
-    {
+    static PyType_Spec type_spec_HttpMultipartFormDataContent = {
         "winrt._winrt_windows_web_http.HttpMultipartFormDataContent",
         sizeof(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpMultipartFormDataContent
-    };
+        _type_slots_HttpMultipartFormDataContent};
 
     // ----- HttpRequestMessage class --------------------
 
@@ -5226,14 +5202,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpRequestMessage =
-    {
+    static PyType_Spec type_spec_HttpRequestMessage = {
         "winrt._winrt_windows_web_http.HttpRequestMessage",
         sizeof(py::wrapper::Windows::Web::Http::HttpRequestMessage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpRequestMessage
-    };
+        _type_slots_HttpRequestMessage};
 
     // ----- HttpRequestResult class --------------------
 
@@ -5471,14 +5445,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpRequestResult =
-    {
+    static PyType_Spec type_spec_HttpRequestResult = {
         "winrt._winrt_windows_web_http.HttpRequestResult",
         sizeof(py::wrapper::Windows::Web::Http::HttpRequestResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpRequestResult
-    };
+        _type_slots_HttpRequestResult};
 
     // ----- HttpResponseMessage class --------------------
 
@@ -6031,14 +6003,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpResponseMessage =
-    {
+    static PyType_Spec type_spec_HttpResponseMessage = {
         "winrt._winrt_windows_web_http.HttpResponseMessage",
         sizeof(py::wrapper::Windows::Web::Http::HttpResponseMessage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpResponseMessage
-    };
+        _type_slots_HttpResponseMessage};
 
     // ----- HttpStreamContent class --------------------
 
@@ -6436,14 +6406,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpStreamContent =
-    {
+    static PyType_Spec type_spec_HttpStreamContent = {
         "winrt._winrt_windows_web_http.HttpStreamContent",
         sizeof(py::wrapper::Windows::Web::Http::HttpStreamContent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpStreamContent
-    };
+        _type_slots_HttpStreamContent};
 
     // ----- HttpStringContent class --------------------
 
@@ -6874,14 +6842,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpStringContent =
-    {
+    static PyType_Spec type_spec_HttpStringContent = {
         "winrt._winrt_windows_web_http.HttpStringContent",
         sizeof(py::wrapper::Windows::Web::Http::HttpStringContent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpStringContent
-    };
+        _type_slots_HttpStringContent};
 
     // ----- HttpTransportInformation class --------------------
 
@@ -7067,14 +7033,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpTransportInformation =
-    {
+    static PyType_Spec type_spec_HttpTransportInformation = {
         "winrt._winrt_windows_web_http.HttpTransportInformation",
         sizeof(py::wrapper::Windows::Web::Http::HttpTransportInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpTransportInformation
-    };
+        _type_slots_HttpTransportInformation};
 
     // ----- IHttpContent interface --------------------
 
@@ -7404,14 +7368,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_IHttpContent =
-    {
+    static PyType_Spec type_spec_IHttpContent = {
         "winrt._winrt_windows_web_http.IHttpContent",
         sizeof(py::wrapper::Windows::Web::Http::IHttpContent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IHttpContent
-    };
+        _type_slots_IHttpContent};
 
     // ----- HttpProgress struct --------------------
 
@@ -7705,14 +7667,12 @@ namespace py::cpp::Windows::Web::Http
         { },
     };
 
-    static PyType_Spec type_spec_HttpProgress =
-    {
+    static PyType_Spec type_spec_HttpProgress = {
         "winrt._winrt_windows_web_http.HttpProgress",
         sizeof(py::wrapper::Windows::Web::Http::HttpProgress),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HttpProgress
-    };
+        _type_slots_HttpProgress};
 
     // ----- Windows.Web.Http Initialization --------------------
 

@@ -65,14 +65,12 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
         { },
     };
 
-    static PyType_Spec type_spec_RequestingFocusOnKeyboardInputEventArgs =
-    {
+    static PyType_Spec type_spec_RequestingFocusOnKeyboardInputEventArgs = {
         "winrt._winrt_windows_applicationmodel_search_core.RequestingFocusOnKeyboardInputEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RequestingFocusOnKeyboardInputEventArgs
-    };
+        _type_slots_RequestingFocusOnKeyboardInputEventArgs};
 
     // ----- SearchSuggestion class --------------------
 
@@ -254,14 +252,12 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
         { },
     };
 
-    static PyType_Spec type_spec_SearchSuggestion =
-    {
+    static PyType_Spec type_spec_SearchSuggestion = {
         "winrt._winrt_windows_applicationmodel_search_core.SearchSuggestion",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestion),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SearchSuggestion
-    };
+        _type_slots_SearchSuggestion};
 
     // ----- SearchSuggestionManager class --------------------
 
@@ -748,14 +744,12 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
         { },
     };
 
-    static PyType_Spec type_spec_SearchSuggestionManager =
-    {
+    static PyType_Spec type_spec_SearchSuggestionManager = {
         "winrt._winrt_windows_applicationmodel_search_core.SearchSuggestionManager",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SearchSuggestionManager
-    };
+        _type_slots_SearchSuggestionManager};
 
     // ----- SearchSuggestionsRequestedEventArgs class --------------------
 
@@ -897,14 +891,12 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
         { },
     };
 
-    static PyType_Spec type_spec_SearchSuggestionsRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_SearchSuggestionsRequestedEventArgs = {
         "winrt._winrt_windows_applicationmodel_search_core.SearchSuggestionsRequestedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SearchSuggestionsRequestedEventArgs
-    };
+        _type_slots_SearchSuggestionsRequestedEventArgs};
 
     // ----- Windows.ApplicationModel.Search.Core Initialization --------------------
 

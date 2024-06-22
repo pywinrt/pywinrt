@@ -304,14 +304,12 @@ namespace py::cpp::Windows::Graphics::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_HdmiDisplayInformation =
-    {
+    static PyType_Spec type_spec_HdmiDisplayInformation = {
         "winrt._winrt_windows_graphics_display_core.HdmiDisplayInformation",
         sizeof(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HdmiDisplayInformation
-    };
+        _type_slots_HdmiDisplayInformation};
 
     static PyGetSetDef getset_HdmiDisplayInformation_Static[] = {
         { }
@@ -651,14 +649,12 @@ namespace py::cpp::Windows::Graphics::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_HdmiDisplayMode =
-    {
+    static PyType_Spec type_spec_HdmiDisplayMode = {
         "winrt._winrt_windows_graphics_display_core.HdmiDisplayMode",
         sizeof(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayMode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HdmiDisplayMode
-    };
+        _type_slots_HdmiDisplayMode};
 
     // ----- HdmiDisplayHdr2086Metadata struct --------------------
 
@@ -1162,14 +1158,12 @@ namespace py::cpp::Windows::Graphics::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_HdmiDisplayHdr2086Metadata =
-    {
+    static PyType_Spec type_spec_HdmiDisplayHdr2086Metadata = {
         "winrt._winrt_windows_graphics_display_core.HdmiDisplayHdr2086Metadata",
         sizeof(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HdmiDisplayHdr2086Metadata
-    };
+        _type_slots_HdmiDisplayHdr2086Metadata};
 
     // ----- Windows.Graphics.Display.Core Initialization --------------------
 

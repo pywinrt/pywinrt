@@ -158,14 +158,12 @@ namespace py::cpp::Windows::Phone::Devices::Notification
         { },
     };
 
-    static PyType_Spec type_spec_VibrationDevice =
-    {
+    static PyType_Spec type_spec_VibrationDevice = {
         "winrt._winrt_windows_phone_devices_notification.VibrationDevice",
         sizeof(py::wrapper::Windows::Phone::Devices::Notification::VibrationDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VibrationDevice
-    };
+        _type_slots_VibrationDevice};
 
     static PyGetSetDef getset_VibrationDevice_Static[] = {
         { }

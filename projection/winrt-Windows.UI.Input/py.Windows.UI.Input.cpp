@@ -117,14 +117,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_AttachableInputObject =
-    {
+    static PyType_Spec type_spec_AttachableInputObject = {
         "winrt._winrt_windows_ui_input.AttachableInputObject",
         sizeof(py::wrapper::Windows::UI::Input::AttachableInputObject),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AttachableInputObject
-    };
+        _type_slots_AttachableInputObject};
 
     // ----- CrossSlidingEventArgs class --------------------
 
@@ -266,14 +264,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_CrossSlidingEventArgs =
-    {
+    static PyType_Spec type_spec_CrossSlidingEventArgs = {
         "winrt._winrt_windows_ui_input.CrossSlidingEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::CrossSlidingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CrossSlidingEventArgs
-    };
+        _type_slots_CrossSlidingEventArgs};
 
     // ----- DraggingEventArgs class --------------------
 
@@ -415,14 +411,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_DraggingEventArgs =
-    {
+    static PyType_Spec type_spec_DraggingEventArgs = {
         "winrt._winrt_windows_ui_input.DraggingEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::DraggingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DraggingEventArgs
-    };
+        _type_slots_DraggingEventArgs};
 
     // ----- EdgeGesture class --------------------
 
@@ -648,14 +642,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_EdgeGesture =
-    {
+    static PyType_Spec type_spec_EdgeGesture = {
         "winrt._winrt_windows_ui_input.EdgeGesture",
         sizeof(py::wrapper::Windows::UI::Input::EdgeGesture),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EdgeGesture
-    };
+        _type_slots_EdgeGesture};
 
     static PyGetSetDef getset_EdgeGesture_Static[] = {
         { }
@@ -763,14 +755,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_EdgeGestureEventArgs =
-    {
+    static PyType_Spec type_spec_EdgeGestureEventArgs = {
         "winrt._winrt_windows_ui_input.EdgeGestureEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::EdgeGestureEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EdgeGestureEventArgs
-    };
+        _type_slots_EdgeGestureEventArgs};
 
     // ----- GestureRecognizer class --------------------
 
@@ -2651,14 +2641,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_GestureRecognizer =
-    {
+    static PyType_Spec type_spec_GestureRecognizer = {
         "winrt._winrt_windows_ui_input.GestureRecognizer",
         sizeof(py::wrapper::Windows::UI::Input::GestureRecognizer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GestureRecognizer
-    };
+        _type_slots_GestureRecognizer};
 
     // ----- HoldingEventArgs class --------------------
 
@@ -2820,14 +2808,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_HoldingEventArgs =
-    {
+    static PyType_Spec type_spec_HoldingEventArgs = {
         "winrt._winrt_windows_ui_input.HoldingEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::HoldingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HoldingEventArgs
-    };
+        _type_slots_HoldingEventArgs};
 
     // ----- InputActivationListener class --------------------
 
@@ -2954,14 +2940,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_InputActivationListener =
-    {
+    static PyType_Spec type_spec_InputActivationListener = {
         "winrt._winrt_windows_ui_input.InputActivationListener",
         sizeof(py::wrapper::Windows::UI::Input::InputActivationListener),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InputActivationListener
-    };
+        _type_slots_InputActivationListener};
 
     // ----- InputActivationListenerActivationChangedEventArgs class --------------------
 
@@ -3043,14 +3027,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_InputActivationListenerActivationChangedEventArgs =
-    {
+    static PyType_Spec type_spec_InputActivationListenerActivationChangedEventArgs = {
         "winrt._winrt_windows_ui_input.InputActivationListenerActivationChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InputActivationListenerActivationChangedEventArgs
-    };
+        _type_slots_InputActivationListenerActivationChangedEventArgs};
 
     // ----- KeyboardDeliveryInterceptor class --------------------
 
@@ -3279,14 +3261,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_KeyboardDeliveryInterceptor =
-    {
+    static PyType_Spec type_spec_KeyboardDeliveryInterceptor = {
         "winrt._winrt_windows_ui_input.KeyboardDeliveryInterceptor",
         sizeof(py::wrapper::Windows::UI::Input::KeyboardDeliveryInterceptor),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KeyboardDeliveryInterceptor
-    };
+        _type_slots_KeyboardDeliveryInterceptor};
 
     static PyGetSetDef getset_KeyboardDeliveryInterceptor_Static[] = {
         { }
@@ -3494,14 +3474,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_ManipulationCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_ManipulationCompletedEventArgs = {
         "winrt._winrt_windows_ui_input.ManipulationCompletedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::ManipulationCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ManipulationCompletedEventArgs
-    };
+        _type_slots_ManipulationCompletedEventArgs};
 
     // ----- ManipulationInertiaStartingEventArgs class --------------------
 
@@ -3683,14 +3661,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_ManipulationInertiaStartingEventArgs =
-    {
+    static PyType_Spec type_spec_ManipulationInertiaStartingEventArgs = {
         "winrt._winrt_windows_ui_input.ManipulationInertiaStartingEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::ManipulationInertiaStartingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ManipulationInertiaStartingEventArgs
-    };
+        _type_slots_ManipulationInertiaStartingEventArgs};
 
     // ----- ManipulationStartedEventArgs class --------------------
 
@@ -3832,14 +3808,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_ManipulationStartedEventArgs =
-    {
+    static PyType_Spec type_spec_ManipulationStartedEventArgs = {
         "winrt._winrt_windows_ui_input.ManipulationStartedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::ManipulationStartedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ManipulationStartedEventArgs
-    };
+        _type_slots_ManipulationStartedEventArgs};
 
     // ----- ManipulationUpdatedEventArgs class --------------------
 
@@ -4041,14 +4015,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_ManipulationUpdatedEventArgs =
-    {
+    static PyType_Spec type_spec_ManipulationUpdatedEventArgs = {
         "winrt._winrt_windows_ui_input.ManipulationUpdatedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::ManipulationUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ManipulationUpdatedEventArgs
-    };
+        _type_slots_ManipulationUpdatedEventArgs};
 
     // ----- MouseWheelParameters class --------------------
 
@@ -4302,14 +4274,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_MouseWheelParameters =
-    {
+    static PyType_Spec type_spec_MouseWheelParameters = {
         "winrt._winrt_windows_ui_input.MouseWheelParameters",
         sizeof(py::wrapper::Windows::UI::Input::MouseWheelParameters),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MouseWheelParameters
-    };
+        _type_slots_MouseWheelParameters};
 
     // ----- PointerPoint class --------------------
 
@@ -4635,14 +4605,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_PointerPoint =
-    {
+    static PyType_Spec type_spec_PointerPoint = {
         "winrt._winrt_windows_ui_input.PointerPoint",
         sizeof(py::wrapper::Windows::UI::Input::PointerPoint),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PointerPoint
-    };
+        _type_slots_PointerPoint};
 
     static PyGetSetDef getset_PointerPoint_Static[] = {
         { }
@@ -5257,14 +5225,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_PointerPointProperties =
-    {
+    static PyType_Spec type_spec_PointerPointProperties = {
         "winrt._winrt_windows_ui_input.PointerPointProperties",
         sizeof(py::wrapper::Windows::UI::Input::PointerPointProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PointerPointProperties
-    };
+        _type_slots_PointerPointProperties};
 
     // ----- PointerVisualizationSettings class --------------------
 
@@ -5451,14 +5417,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_PointerVisualizationSettings =
-    {
+    static PyType_Spec type_spec_PointerVisualizationSettings = {
         "winrt._winrt_windows_ui_input.PointerVisualizationSettings",
         sizeof(py::wrapper::Windows::UI::Input::PointerVisualizationSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PointerVisualizationSettings
-    };
+        _type_slots_PointerVisualizationSettings};
 
     static PyGetSetDef getset_PointerVisualizationSettings_Static[] = {
         { }
@@ -6170,14 +6134,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_RadialController =
-    {
+    static PyType_Spec type_spec_RadialController = {
         "winrt._winrt_windows_ui_input.RadialController",
         sizeof(py::wrapper::Windows::UI::Input::RadialController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RadialController
-    };
+        _type_slots_RadialController};
 
     static PyGetSetDef getset_RadialController_Static[] = {
         { }
@@ -6306,14 +6268,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_RadialControllerButtonClickedEventArgs =
-    {
+    static PyType_Spec type_spec_RadialControllerButtonClickedEventArgs = {
         "winrt._winrt_windows_ui_input.RadialControllerButtonClickedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerButtonClickedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RadialControllerButtonClickedEventArgs
-    };
+        _type_slots_RadialControllerButtonClickedEventArgs};
 
     // ----- RadialControllerButtonHoldingEventArgs class --------------------
 
@@ -6415,14 +6375,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_RadialControllerButtonHoldingEventArgs =
-    {
+    static PyType_Spec type_spec_RadialControllerButtonHoldingEventArgs = {
         "winrt._winrt_windows_ui_input.RadialControllerButtonHoldingEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerButtonHoldingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RadialControllerButtonHoldingEventArgs
-    };
+        _type_slots_RadialControllerButtonHoldingEventArgs};
 
     // ----- RadialControllerButtonPressedEventArgs class --------------------
 
@@ -6524,14 +6482,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_RadialControllerButtonPressedEventArgs =
-    {
+    static PyType_Spec type_spec_RadialControllerButtonPressedEventArgs = {
         "winrt._winrt_windows_ui_input.RadialControllerButtonPressedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerButtonPressedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RadialControllerButtonPressedEventArgs
-    };
+        _type_slots_RadialControllerButtonPressedEventArgs};
 
     // ----- RadialControllerButtonReleasedEventArgs class --------------------
 
@@ -6633,14 +6589,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_RadialControllerButtonReleasedEventArgs =
-    {
+    static PyType_Spec type_spec_RadialControllerButtonReleasedEventArgs = {
         "winrt._winrt_windows_ui_input.RadialControllerButtonReleasedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerButtonReleasedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RadialControllerButtonReleasedEventArgs
-    };
+        _type_slots_RadialControllerButtonReleasedEventArgs};
 
     // ----- RadialControllerConfiguration class --------------------
 
@@ -7017,14 +6971,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_RadialControllerConfiguration =
-    {
+    static PyType_Spec type_spec_RadialControllerConfiguration = {
         "winrt._winrt_windows_ui_input.RadialControllerConfiguration",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RadialControllerConfiguration
-    };
+        _type_slots_RadialControllerConfiguration};
 
     static PyGetSetDef getset_RadialControllerConfiguration_Static[] = {
         { "is_app_controller_enabled", reinterpret_cast<getter>(RadialControllerConfiguration_get_IsAppControllerEnabled), reinterpret_cast<setter>(RadialControllerConfiguration_put_IsAppControllerEnabled), nullptr, nullptr },
@@ -7174,14 +7126,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_RadialControllerControlAcquiredEventArgs =
-    {
+    static PyType_Spec type_spec_RadialControllerControlAcquiredEventArgs = {
         "winrt._winrt_windows_ui_input.RadialControllerControlAcquiredEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerControlAcquiredEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RadialControllerControlAcquiredEventArgs
-    };
+        _type_slots_RadialControllerControlAcquiredEventArgs};
 
     // ----- RadialControllerMenu class --------------------
 
@@ -7404,14 +7354,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_RadialControllerMenu =
-    {
+    static PyType_Spec type_spec_RadialControllerMenu = {
         "winrt._winrt_windows_ui_input.RadialControllerMenu",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerMenu),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RadialControllerMenu
-    };
+        _type_slots_RadialControllerMenu};
 
     // ----- RadialControllerMenuItem class --------------------
 
@@ -7706,14 +7654,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_RadialControllerMenuItem =
-    {
+    static PyType_Spec type_spec_RadialControllerMenuItem = {
         "winrt._winrt_windows_ui_input.RadialControllerMenuItem",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerMenuItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RadialControllerMenuItem
-    };
+        _type_slots_RadialControllerMenuItem};
 
     static PyGetSetDef getset_RadialControllerMenuItem_Static[] = {
         { }
@@ -7883,14 +7829,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_RadialControllerRotationChangedEventArgs =
-    {
+    static PyType_Spec type_spec_RadialControllerRotationChangedEventArgs = {
         "winrt._winrt_windows_ui_input.RadialControllerRotationChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerRotationChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RadialControllerRotationChangedEventArgs
-    };
+        _type_slots_RadialControllerRotationChangedEventArgs};
 
     // ----- RadialControllerScreenContact class --------------------
 
@@ -7992,14 +7936,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_RadialControllerScreenContact =
-    {
+    static PyType_Spec type_spec_RadialControllerScreenContact = {
         "winrt._winrt_windows_ui_input.RadialControllerScreenContact",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerScreenContact),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RadialControllerScreenContact
-    };
+        _type_slots_RadialControllerScreenContact};
 
     // ----- RadialControllerScreenContactContinuedEventArgs class --------------------
 
@@ -8121,14 +8063,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_RadialControllerScreenContactContinuedEventArgs =
-    {
+    static PyType_Spec type_spec_RadialControllerScreenContactContinuedEventArgs = {
         "winrt._winrt_windows_ui_input.RadialControllerScreenContactContinuedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RadialControllerScreenContactContinuedEventArgs
-    };
+        _type_slots_RadialControllerScreenContactContinuedEventArgs};
 
     // ----- RadialControllerScreenContactEndedEventArgs class --------------------
 
@@ -8230,14 +8170,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_RadialControllerScreenContactEndedEventArgs =
-    {
+    static PyType_Spec type_spec_RadialControllerScreenContactEndedEventArgs = {
         "winrt._winrt_windows_ui_input.RadialControllerScreenContactEndedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerScreenContactEndedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RadialControllerScreenContactEndedEventArgs
-    };
+        _type_slots_RadialControllerScreenContactEndedEventArgs};
 
     // ----- RadialControllerScreenContactStartedEventArgs class --------------------
 
@@ -8359,14 +8297,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_RadialControllerScreenContactStartedEventArgs =
-    {
+    static PyType_Spec type_spec_RadialControllerScreenContactStartedEventArgs = {
         "winrt._winrt_windows_ui_input.RadialControllerScreenContactStartedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RadialControllerScreenContactStartedEventArgs
-    };
+        _type_slots_RadialControllerScreenContactStartedEventArgs};
 
     // ----- RightTappedEventArgs class --------------------
 
@@ -8488,14 +8424,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_RightTappedEventArgs =
-    {
+    static PyType_Spec type_spec_RightTappedEventArgs = {
         "winrt._winrt_windows_ui_input.RightTappedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RightTappedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RightTappedEventArgs
-    };
+        _type_slots_RightTappedEventArgs};
 
     // ----- SystemButtonEventController class --------------------
 
@@ -8768,14 +8702,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_SystemButtonEventController =
-    {
+    static PyType_Spec type_spec_SystemButtonEventController = {
         "winrt._winrt_windows_ui_input.SystemButtonEventController",
         sizeof(py::wrapper::Windows::UI::Input::SystemButtonEventController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemButtonEventController
-    };
+        _type_slots_SystemButtonEventController};
 
     static PyGetSetDef getset_SystemButtonEventController_Static[] = {
         { }
@@ -8931,14 +8863,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_SystemFunctionButtonEventArgs =
-    {
+    static PyType_Spec type_spec_SystemFunctionButtonEventArgs = {
         "winrt._winrt_windows_ui_input.SystemFunctionButtonEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::SystemFunctionButtonEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemFunctionButtonEventArgs
-    };
+        _type_slots_SystemFunctionButtonEventArgs};
 
     // ----- SystemFunctionLockChangedEventArgs class --------------------
 
@@ -9088,14 +9018,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_SystemFunctionLockChangedEventArgs =
-    {
+    static PyType_Spec type_spec_SystemFunctionLockChangedEventArgs = {
         "winrt._winrt_windows_ui_input.SystemFunctionLockChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::SystemFunctionLockChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemFunctionLockChangedEventArgs
-    };
+        _type_slots_SystemFunctionLockChangedEventArgs};
 
     // ----- SystemFunctionLockIndicatorChangedEventArgs class --------------------
 
@@ -9245,14 +9173,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_SystemFunctionLockIndicatorChangedEventArgs =
-    {
+    static PyType_Spec type_spec_SystemFunctionLockIndicatorChangedEventArgs = {
         "winrt._winrt_windows_ui_input.SystemFunctionLockIndicatorChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemFunctionLockIndicatorChangedEventArgs
-    };
+        _type_slots_SystemFunctionLockIndicatorChangedEventArgs};
 
     // ----- TappedEventArgs class --------------------
 
@@ -9394,14 +9320,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_TappedEventArgs =
-    {
+    static PyType_Spec type_spec_TappedEventArgs = {
         "winrt._winrt_windows_ui_input.TappedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::TappedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TappedEventArgs
-    };
+        _type_slots_TappedEventArgs};
 
     // ----- IPointerPointTransform interface --------------------
 
@@ -9560,14 +9484,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_IPointerPointTransform =
-    {
+    static PyType_Spec type_spec_IPointerPointTransform = {
         "winrt._winrt_windows_ui_input.IPointerPointTransform",
         sizeof(py::wrapper::Windows::UI::Input::IPointerPointTransform),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IPointerPointTransform
-    };
+        _type_slots_IPointerPointTransform};
 
     // ----- CrossSlideThresholds struct --------------------
 
@@ -9791,14 +9713,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_CrossSlideThresholds =
-    {
+    static PyType_Spec type_spec_CrossSlideThresholds = {
         "winrt._winrt_windows_ui_input.CrossSlideThresholds",
         sizeof(py::wrapper::Windows::UI::Input::CrossSlideThresholds),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CrossSlideThresholds
-    };
+        _type_slots_CrossSlideThresholds};
 
     // ----- ManipulationDelta struct --------------------
 
@@ -10022,14 +9942,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_ManipulationDelta =
-    {
+    static PyType_Spec type_spec_ManipulationDelta = {
         "winrt._winrt_windows_ui_input.ManipulationDelta",
         sizeof(py::wrapper::Windows::UI::Input::ManipulationDelta),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ManipulationDelta
-    };
+        _type_slots_ManipulationDelta};
 
     // ----- ManipulationVelocities struct --------------------
 
@@ -10218,14 +10136,12 @@ namespace py::cpp::Windows::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_ManipulationVelocities =
-    {
+    static PyType_Spec type_spec_ManipulationVelocities = {
         "winrt._winrt_windows_ui_input.ManipulationVelocities",
         sizeof(py::wrapper::Windows::UI::Input::ManipulationVelocities),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ManipulationVelocities
-    };
+        _type_slots_ManipulationVelocities};
 
     // ----- Windows.UI.Input Initialization --------------------
 

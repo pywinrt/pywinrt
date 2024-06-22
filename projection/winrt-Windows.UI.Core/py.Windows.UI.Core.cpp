@@ -193,14 +193,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_AcceleratorKeyEventArgs =
-    {
+    static PyType_Spec type_spec_AcceleratorKeyEventArgs = {
         "winrt._winrt_windows_ui_core.AcceleratorKeyEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::AcceleratorKeyEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AcceleratorKeyEventArgs
-    };
+        _type_slots_AcceleratorKeyEventArgs};
 
     // ----- AutomationProviderRequestedEventArgs class --------------------
 
@@ -358,14 +356,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_AutomationProviderRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_AutomationProviderRequestedEventArgs = {
         "winrt._winrt_windows_ui_core.AutomationProviderRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::AutomationProviderRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AutomationProviderRequestedEventArgs
-    };
+        _type_slots_AutomationProviderRequestedEventArgs};
 
     // ----- BackRequestedEventArgs class --------------------
 
@@ -475,14 +471,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_BackRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_BackRequestedEventArgs = {
         "winrt._winrt_windows_ui_core.BackRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::BackRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackRequestedEventArgs
-    };
+        _type_slots_BackRequestedEventArgs};
 
     // ----- CharacterReceivedEventArgs class --------------------
 
@@ -632,14 +626,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_CharacterReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_CharacterReceivedEventArgs = {
         "winrt._winrt_windows_ui_core.CharacterReceivedEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::CharacterReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CharacterReceivedEventArgs
-    };
+        _type_slots_CharacterReceivedEventArgs};
 
     // ----- ClosestInteractiveBoundsRequestedEventArgs class --------------------
 
@@ -789,14 +781,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_ClosestInteractiveBoundsRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_ClosestInteractiveBoundsRequestedEventArgs = {
         "winrt._winrt_windows_ui_core.ClosestInteractiveBoundsRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ClosestInteractiveBoundsRequestedEventArgs
-    };
+        _type_slots_ClosestInteractiveBoundsRequestedEventArgs};
 
     // ----- CoreAcceleratorKeys class --------------------
 
@@ -903,14 +893,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreAcceleratorKeys =
-    {
+    static PyType_Spec type_spec_CoreAcceleratorKeys = {
         "winrt._winrt_windows_ui_core.CoreAcceleratorKeys",
         sizeof(py::wrapper::Windows::UI::Core::CoreAcceleratorKeys),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreAcceleratorKeys
-    };
+        _type_slots_CoreAcceleratorKeys};
 
     // ----- CoreComponentInputSource class --------------------
 
@@ -1967,14 +1955,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreComponentInputSource =
-    {
+    static PyType_Spec type_spec_CoreComponentInputSource = {
         "winrt._winrt_windows_ui_core.CoreComponentInputSource",
         sizeof(py::wrapper::Windows::UI::Core::CoreComponentInputSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreComponentInputSource
-    };
+        _type_slots_CoreComponentInputSource};
 
     // ----- CoreCursor class --------------------
 
@@ -2101,14 +2087,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreCursor =
-    {
+    static PyType_Spec type_spec_CoreCursor = {
         "winrt._winrt_windows_ui_core.CoreCursor",
         sizeof(py::wrapper::Windows::UI::Core::CoreCursor),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreCursor
-    };
+        _type_slots_CoreCursor};
 
     // ----- CoreDispatcher class --------------------
 
@@ -2527,14 +2511,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreDispatcher =
-    {
+    static PyType_Spec type_spec_CoreDispatcher = {
         "winrt._winrt_windows_ui_core.CoreDispatcher",
         sizeof(py::wrapper::Windows::UI::Core::CoreDispatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreDispatcher
-    };
+        _type_slots_CoreDispatcher};
 
     // ----- CoreIndependentInputSource class --------------------
 
@@ -3329,14 +3311,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreIndependentInputSource =
-    {
+    static PyType_Spec type_spec_CoreIndependentInputSource = {
         "winrt._winrt_windows_ui_core.CoreIndependentInputSource",
         sizeof(py::wrapper::Windows::UI::Core::CoreIndependentInputSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreIndependentInputSource
-    };
+        _type_slots_CoreIndependentInputSource};
 
     // ----- CoreIndependentInputSourceController class --------------------
 
@@ -3684,14 +3664,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreIndependentInputSourceController =
-    {
+    static PyType_Spec type_spec_CoreIndependentInputSourceController = {
         "winrt._winrt_windows_ui_core.CoreIndependentInputSourceController",
         sizeof(py::wrapper::Windows::UI::Core::CoreIndependentInputSourceController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreIndependentInputSourceController
-    };
+        _type_slots_CoreIndependentInputSourceController};
 
     static PyGetSetDef getset_CoreIndependentInputSourceController_Static[] = {
         { }
@@ -5414,14 +5392,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWindow =
-    {
+    static PyType_Spec type_spec_CoreWindow = {
         "winrt._winrt_windows_ui_core.CoreWindow",
         sizeof(py::wrapper::Windows::UI::Core::CoreWindow),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWindow
-    };
+        _type_slots_CoreWindow};
 
     static PyGetSetDef getset_CoreWindow_Static[] = {
         { }
@@ -5921,14 +5897,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWindowDialog =
-    {
+    static PyType_Spec type_spec_CoreWindowDialog = {
         "winrt._winrt_windows_ui_core.CoreWindowDialog",
         sizeof(py::wrapper::Windows::UI::Core::CoreWindowDialog),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWindowDialog
-    };
+        _type_slots_CoreWindowDialog};
 
     // ----- CoreWindowEventArgs class --------------------
 
@@ -6038,14 +6012,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWindowEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWindowEventArgs = {
         "winrt._winrt_windows_ui_core.CoreWindowEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::CoreWindowEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWindowEventArgs
-    };
+        _type_slots_CoreWindowEventArgs};
 
     // ----- CoreWindowFlyout class --------------------
 
@@ -6474,14 +6446,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWindowFlyout =
-    {
+    static PyType_Spec type_spec_CoreWindowFlyout = {
         "winrt._winrt_windows_ui_core.CoreWindowFlyout",
         sizeof(py::wrapper::Windows::UI::Core::CoreWindowFlyout),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWindowFlyout
-    };
+        _type_slots_CoreWindowFlyout};
 
     // ----- CoreWindowPopupShowingEventArgs class --------------------
 
@@ -6576,14 +6546,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWindowPopupShowingEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWindowPopupShowingEventArgs = {
         "winrt._winrt_windows_ui_core.CoreWindowPopupShowingEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::CoreWindowPopupShowingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWindowPopupShowingEventArgs
-    };
+        _type_slots_CoreWindowPopupShowingEventArgs};
 
     // ----- CoreWindowResizeManager class --------------------
 
@@ -6753,14 +6721,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWindowResizeManager =
-    {
+    static PyType_Spec type_spec_CoreWindowResizeManager = {
         "winrt._winrt_windows_ui_core.CoreWindowResizeManager",
         sizeof(py::wrapper::Windows::UI::Core::CoreWindowResizeManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWindowResizeManager
-    };
+        _type_slots_CoreWindowResizeManager};
 
     static PyGetSetDef getset_CoreWindowResizeManager_Static[] = {
         { }
@@ -6868,14 +6834,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_IdleDispatchedHandlerArgs =
-    {
+    static PyType_Spec type_spec_IdleDispatchedHandlerArgs = {
         "winrt._winrt_windows_ui_core.IdleDispatchedHandlerArgs",
         sizeof(py::wrapper::Windows::UI::Core::IdleDispatchedHandlerArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IdleDispatchedHandlerArgs
-    };
+        _type_slots_IdleDispatchedHandlerArgs};
 
     // ----- InputEnabledEventArgs class --------------------
 
@@ -7005,14 +6969,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_InputEnabledEventArgs =
-    {
+    static PyType_Spec type_spec_InputEnabledEventArgs = {
         "winrt._winrt_windows_ui_core.InputEnabledEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::InputEnabledEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InputEnabledEventArgs
-    };
+        _type_slots_InputEnabledEventArgs};
 
     // ----- KeyEventArgs class --------------------
 
@@ -7182,14 +7144,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_KeyEventArgs =
-    {
+    static PyType_Spec type_spec_KeyEventArgs = {
         "winrt._winrt_windows_ui_core.KeyEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::KeyEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KeyEventArgs
-    };
+        _type_slots_KeyEventArgs};
 
     // ----- PointerEventArgs class --------------------
 
@@ -7369,14 +7329,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_PointerEventArgs =
-    {
+    static PyType_Spec type_spec_PointerEventArgs = {
         "winrt._winrt_windows_ui_core.PointerEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::PointerEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PointerEventArgs
-    };
+        _type_slots_PointerEventArgs};
 
     // ----- SystemNavigationManager class --------------------
 
@@ -7560,14 +7518,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_SystemNavigationManager =
-    {
+    static PyType_Spec type_spec_SystemNavigationManager = {
         "winrt._winrt_windows_ui_core.SystemNavigationManager",
         sizeof(py::wrapper::Windows::UI::Core::SystemNavigationManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemNavigationManager
-    };
+        _type_slots_SystemNavigationManager};
 
     static PyGetSetDef getset_SystemNavigationManager_Static[] = {
         { }
@@ -7823,14 +7779,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_TouchHitTestingEventArgs =
-    {
+    static PyType_Spec type_spec_TouchHitTestingEventArgs = {
         "winrt._winrt_windows_ui_core.TouchHitTestingEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::TouchHitTestingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TouchHitTestingEventArgs
-    };
+        _type_slots_TouchHitTestingEventArgs};
 
     // ----- VisibilityChangedEventArgs class --------------------
 
@@ -7960,14 +7914,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_VisibilityChangedEventArgs =
-    {
+    static PyType_Spec type_spec_VisibilityChangedEventArgs = {
         "winrt._winrt_windows_ui_core.VisibilityChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::VisibilityChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VisibilityChangedEventArgs
-    };
+        _type_slots_VisibilityChangedEventArgs};
 
     // ----- WindowActivatedEventArgs class --------------------
 
@@ -8097,14 +8049,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_WindowActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_WindowActivatedEventArgs = {
         "winrt._winrt_windows_ui_core.WindowActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::WindowActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowActivatedEventArgs
-    };
+        _type_slots_WindowActivatedEventArgs};
 
     // ----- WindowSizeChangedEventArgs class --------------------
 
@@ -8234,14 +8184,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_WindowSizeChangedEventArgs =
-    {
+    static PyType_Spec type_spec_WindowSizeChangedEventArgs = {
         "winrt._winrt_windows_ui_core.WindowSizeChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::WindowSizeChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowSizeChangedEventArgs
-    };
+        _type_slots_WindowSizeChangedEventArgs};
 
     // ----- ICoreAcceleratorKeys interface --------------------
 
@@ -8348,14 +8296,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_ICoreAcceleratorKeys =
-    {
+    static PyType_Spec type_spec_ICoreAcceleratorKeys = {
         "winrt._winrt_windows_ui_core.ICoreAcceleratorKeys",
         sizeof(py::wrapper::Windows::UI::Core::ICoreAcceleratorKeys),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICoreAcceleratorKeys
-    };
+        _type_slots_ICoreAcceleratorKeys};
 
     // ----- ICoreInputSourceBase interface --------------------
 
@@ -8530,14 +8476,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_ICoreInputSourceBase =
-    {
+    static PyType_Spec type_spec_ICoreInputSourceBase = {
         "winrt._winrt_windows_ui_core.ICoreInputSourceBase",
         sizeof(py::wrapper::Windows::UI::Core::ICoreInputSourceBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICoreInputSourceBase
-    };
+        _type_slots_ICoreInputSourceBase};
 
     // ----- ICorePointerInputSource interface --------------------
 
@@ -9064,14 +9008,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_ICorePointerInputSource =
-    {
+    static PyType_Spec type_spec_ICorePointerInputSource = {
         "winrt._winrt_windows_ui_core.ICorePointerInputSource",
         sizeof(py::wrapper::Windows::UI::Core::ICorePointerInputSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICorePointerInputSource
-    };
+        _type_slots_ICorePointerInputSource};
 
     // ----- ICorePointerInputSource2 interface --------------------
 
@@ -9618,14 +9560,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_ICorePointerInputSource2 =
-    {
+    static PyType_Spec type_spec_ICorePointerInputSource2 = {
         "winrt._winrt_windows_ui_core.ICorePointerInputSource2",
         sizeof(py::wrapper::Windows::UI::Core::ICorePointerInputSource2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICorePointerInputSource2
-    };
+        _type_slots_ICorePointerInputSource2};
 
     // ----- ICorePointerRedirector interface --------------------
 
@@ -9822,14 +9762,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_ICorePointerRedirector =
-    {
+    static PyType_Spec type_spec_ICorePointerRedirector = {
         "winrt._winrt_windows_ui_core.ICorePointerRedirector",
         sizeof(py::wrapper::Windows::UI::Core::ICorePointerRedirector),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICorePointerRedirector
-    };
+        _type_slots_ICorePointerRedirector};
 
     // ----- ICoreWindow interface --------------------
 
@@ -11108,14 +11046,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_ICoreWindow =
-    {
+    static PyType_Spec type_spec_ICoreWindow = {
         "winrt._winrt_windows_ui_core.ICoreWindow",
         sizeof(py::wrapper::Windows::UI::Core::ICoreWindow),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICoreWindow
-    };
+        _type_slots_ICoreWindow};
 
     // ----- ICoreWindowEventArgs interface --------------------
 
@@ -11225,14 +11161,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_ICoreWindowEventArgs =
-    {
+    static PyType_Spec type_spec_ICoreWindowEventArgs = {
         "winrt._winrt_windows_ui_core.ICoreWindowEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::ICoreWindowEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICoreWindowEventArgs
-    };
+        _type_slots_ICoreWindowEventArgs};
 
     // ----- IInitializeWithCoreWindow interface --------------------
 
@@ -11327,14 +11261,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_IInitializeWithCoreWindow =
-    {
+    static PyType_Spec type_spec_IInitializeWithCoreWindow = {
         "winrt._winrt_windows_ui_core.IInitializeWithCoreWindow",
         sizeof(py::wrapper::Windows::UI::Core::IInitializeWithCoreWindow),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IInitializeWithCoreWindow
-    };
+        _type_slots_IInitializeWithCoreWindow};
 
     // ----- CorePhysicalKeyStatus struct --------------------
 
@@ -11628,14 +11560,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_CorePhysicalKeyStatus =
-    {
+    static PyType_Spec type_spec_CorePhysicalKeyStatus = {
         "winrt._winrt_windows_ui_core.CorePhysicalKeyStatus",
         sizeof(py::wrapper::Windows::UI::Core::CorePhysicalKeyStatus),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CorePhysicalKeyStatus
-    };
+        _type_slots_CorePhysicalKeyStatus};
 
     // ----- CoreProximityEvaluation struct --------------------
 
@@ -11789,14 +11719,12 @@ namespace py::cpp::Windows::UI::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreProximityEvaluation =
-    {
+    static PyType_Spec type_spec_CoreProximityEvaluation = {
         "winrt._winrt_windows_ui_core.CoreProximityEvaluation",
         sizeof(py::wrapper::Windows::UI::Core::CoreProximityEvaluation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreProximityEvaluation
-    };
+        _type_slots_CoreProximityEvaluation};
 
     // ----- Windows.UI.Core Initialization --------------------
 

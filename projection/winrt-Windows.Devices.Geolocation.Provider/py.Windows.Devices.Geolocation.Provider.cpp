@@ -217,14 +217,12 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
         { },
     };
 
-    static PyType_Spec type_spec_GeolocationProvider =
-    {
+    static PyType_Spec type_spec_GeolocationProvider = {
         "winrt._winrt_windows_devices_geolocation_provider.GeolocationProvider",
         sizeof(py::wrapper::Windows::Devices::Geolocation::Provider::GeolocationProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GeolocationProvider
-    };
+        _type_slots_GeolocationProvider};
 
     // ----- Windows.Devices.Geolocation.Provider Initialization --------------------
 

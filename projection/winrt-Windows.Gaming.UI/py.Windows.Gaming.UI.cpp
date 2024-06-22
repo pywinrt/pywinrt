@@ -158,14 +158,12 @@ namespace py::cpp::Windows::Gaming::UI
         { },
     };
 
-    static PyType_Spec type_spec_GameBar =
-    {
+    static PyType_Spec type_spec_GameBar = {
         "winrt._winrt_windows_gaming_ui.GameBar",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameBar
-    };
+        _type_slots_GameBar};
 
     static PyGetSetDef getset_GameBar_Static[] = {
         { "is_input_redirected", reinterpret_cast<getter>(GameBar_get_IsInputRedirected), nullptr, nullptr, nullptr },
@@ -354,14 +352,12 @@ namespace py::cpp::Windows::Gaming::UI
         { },
     };
 
-    static PyType_Spec type_spec_GameChatMessageReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_GameChatMessageReceivedEventArgs = {
         "winrt._winrt_windows_gaming_ui.GameChatMessageReceivedEventArgs",
         sizeof(py::wrapper::Windows::Gaming::UI::GameChatMessageReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameChatMessageReceivedEventArgs
-    };
+        _type_slots_GameChatMessageReceivedEventArgs};
 
     // ----- GameChatOverlay class --------------------
 
@@ -535,14 +531,12 @@ namespace py::cpp::Windows::Gaming::UI
         { },
     };
 
-    static PyType_Spec type_spec_GameChatOverlay =
-    {
+    static PyType_Spec type_spec_GameChatOverlay = {
         "winrt._winrt_windows_gaming_ui.GameChatOverlay",
         sizeof(py::wrapper::Windows::Gaming::UI::GameChatOverlay),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameChatOverlay
-    };
+        _type_slots_GameChatOverlay};
 
     static PyGetSetDef getset_GameChatOverlay_Static[] = {
         { }
@@ -730,14 +724,12 @@ namespace py::cpp::Windows::Gaming::UI
         { },
     };
 
-    static PyType_Spec type_spec_GameChatOverlayMessageSource =
-    {
+    static PyType_Spec type_spec_GameChatOverlayMessageSource = {
         "winrt._winrt_windows_gaming_ui.GameChatOverlayMessageSource",
         sizeof(py::wrapper::Windows::Gaming::UI::GameChatOverlayMessageSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameChatOverlayMessageSource
-    };
+        _type_slots_GameChatOverlayMessageSource};
 
     // ----- GameUIProviderActivatedEventArgs class --------------------
 
@@ -912,14 +904,12 @@ namespace py::cpp::Windows::Gaming::UI
         { },
     };
 
-    static PyType_Spec type_spec_GameUIProviderActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_GameUIProviderActivatedEventArgs = {
         "winrt._winrt_windows_gaming_ui.GameUIProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::Gaming::UI::GameUIProviderActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameUIProviderActivatedEventArgs
-    };
+        _type_slots_GameUIProviderActivatedEventArgs};
 
     // ----- Windows.Gaming.UI Initialization --------------------
 

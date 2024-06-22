@@ -145,14 +145,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AdvancedCapturedPhoto =
-    {
+    static PyType_Spec type_spec_AdvancedCapturedPhoto = {
         "winrt._winrt_windows_media_capture.AdvancedCapturedPhoto",
         sizeof(py::wrapper::Windows::Media::Capture::AdvancedCapturedPhoto),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdvancedCapturedPhoto
-    };
+        _type_slots_AdvancedCapturedPhoto};
 
     // ----- AdvancedPhotoCapture class --------------------
 
@@ -384,14 +382,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AdvancedPhotoCapture =
-    {
+    static PyType_Spec type_spec_AdvancedPhotoCapture = {
         "winrt._winrt_windows_media_capture.AdvancedPhotoCapture",
         sizeof(py::wrapper::Windows::Media::Capture::AdvancedPhotoCapture),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdvancedPhotoCapture
-    };
+        _type_slots_AdvancedPhotoCapture};
 
     // ----- AppBroadcastBackgroundService class --------------------
 
@@ -1043,14 +1039,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastBackgroundService =
-    {
+    static PyType_Spec type_spec_AppBroadcastBackgroundService = {
         "winrt._winrt_windows_media_capture.AppBroadcastBackgroundService",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastBackgroundService
-    };
+        _type_slots_AppBroadcastBackgroundService};
 
     // ----- AppBroadcastBackgroundServiceSignInInfo class --------------------
 
@@ -1386,14 +1380,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastBackgroundServiceSignInInfo =
-    {
+    static PyType_Spec type_spec_AppBroadcastBackgroundServiceSignInInfo = {
         "winrt._winrt_windows_media_capture.AppBroadcastBackgroundServiceSignInInfo",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastBackgroundServiceSignInInfo
-    };
+        _type_slots_AppBroadcastBackgroundServiceSignInInfo};
 
     // ----- AppBroadcastBackgroundServiceStreamInfo class --------------------
 
@@ -1805,14 +1797,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastBackgroundServiceStreamInfo =
-    {
+    static PyType_Spec type_spec_AppBroadcastBackgroundServiceStreamInfo = {
         "winrt._winrt_windows_media_capture.AppBroadcastBackgroundServiceStreamInfo",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastBackgroundServiceStreamInfo
-    };
+        _type_slots_AppBroadcastBackgroundServiceStreamInfo};
 
     // ----- AppBroadcastCameraCaptureStateChangedEventArgs class --------------------
 
@@ -1914,14 +1904,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastCameraCaptureStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_AppBroadcastCameraCaptureStateChangedEventArgs = {
         "winrt._winrt_windows_media_capture.AppBroadcastCameraCaptureStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastCameraCaptureStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastCameraCaptureStateChangedEventArgs
-    };
+        _type_slots_AppBroadcastCameraCaptureStateChangedEventArgs};
 
     // ----- AppBroadcastGlobalSettings class --------------------
 
@@ -2543,14 +2531,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastGlobalSettings =
-    {
+    static PyType_Spec type_spec_AppBroadcastGlobalSettings = {
         "winrt._winrt_windows_media_capture.AppBroadcastGlobalSettings",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastGlobalSettings
-    };
+        _type_slots_AppBroadcastGlobalSettings};
 
     // ----- AppBroadcastHeartbeatRequestedEventArgs class --------------------
 
@@ -2660,14 +2646,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastHeartbeatRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_AppBroadcastHeartbeatRequestedEventArgs = {
         "winrt._winrt_windows_media_capture.AppBroadcastHeartbeatRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastHeartbeatRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastHeartbeatRequestedEventArgs
-    };
+        _type_slots_AppBroadcastHeartbeatRequestedEventArgs};
 
     // ----- AppBroadcastManager class --------------------
 
@@ -2816,14 +2800,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastManager =
-    {
+    static PyType_Spec type_spec_AppBroadcastManager = {
         "winrt._winrt_windows_media_capture.AppBroadcastManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastManager
-    };
+        _type_slots_AppBroadcastManager};
 
     static PyGetSetDef getset_AppBroadcastManager_Static[] = {
         { }
@@ -2954,14 +2936,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastMicrophoneCaptureStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_AppBroadcastMicrophoneCaptureStateChangedEventArgs = {
         "winrt._winrt_windows_media_capture.AppBroadcastMicrophoneCaptureStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastMicrophoneCaptureStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastMicrophoneCaptureStateChangedEventArgs
-    };
+        _type_slots_AppBroadcastMicrophoneCaptureStateChangedEventArgs};
 
     // ----- AppBroadcastPlugIn class --------------------
 
@@ -3103,14 +3083,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastPlugIn =
-    {
+    static PyType_Spec type_spec_AppBroadcastPlugIn = {
         "winrt._winrt_windows_media_capture.AppBroadcastPlugIn",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastPlugIn),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastPlugIn
-    };
+        _type_slots_AppBroadcastPlugIn};
 
     // ----- AppBroadcastPlugInManager class --------------------
 
@@ -3320,14 +3298,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastPlugInManager =
-    {
+    static PyType_Spec type_spec_AppBroadcastPlugInManager = {
         "winrt._winrt_windows_media_capture.AppBroadcastPlugInManager",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastPlugInManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastPlugInManager
-    };
+        _type_slots_AppBroadcastPlugInManager};
 
     static PyGetSetDef getset_AppBroadcastPlugInManager_Static[] = {
         { }
@@ -3436,14 +3412,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastPlugInStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_AppBroadcastPlugInStateChangedEventArgs = {
         "winrt._winrt_windows_media_capture.AppBroadcastPlugInStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastPlugInStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastPlugInStateChangedEventArgs
-    };
+        _type_slots_AppBroadcastPlugInStateChangedEventArgs};
 
     // ----- AppBroadcastPreview class --------------------
 
@@ -3641,14 +3615,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastPreview =
-    {
+    static PyType_Spec type_spec_AppBroadcastPreview = {
         "winrt._winrt_windows_media_capture.AppBroadcastPreview",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastPreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastPreview
-    };
+        _type_slots_AppBroadcastPreview};
 
     // ----- AppBroadcastPreviewStateChangedEventArgs class --------------------
 
@@ -3750,14 +3722,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastPreviewStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_AppBroadcastPreviewStateChangedEventArgs = {
         "winrt._winrt_windows_media_capture.AppBroadcastPreviewStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastPreviewStateChangedEventArgs
-    };
+        _type_slots_AppBroadcastPreviewStateChangedEventArgs};
 
     // ----- AppBroadcastPreviewStreamReader class --------------------
 
@@ -3994,14 +3964,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastPreviewStreamReader =
-    {
+    static PyType_Spec type_spec_AppBroadcastPreviewStreamReader = {
         "winrt._winrt_windows_media_capture.AppBroadcastPreviewStreamReader",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamReader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastPreviewStreamReader
-    };
+        _type_slots_AppBroadcastPreviewStreamReader};
 
     // ----- AppBroadcastPreviewStreamVideoFrame class --------------------
 
@@ -4103,14 +4071,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastPreviewStreamVideoFrame =
-    {
+    static PyType_Spec type_spec_AppBroadcastPreviewStreamVideoFrame = {
         "winrt._winrt_windows_media_capture.AppBroadcastPreviewStreamVideoFrame",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamVideoFrame),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastPreviewStreamVideoFrame
-    };
+        _type_slots_AppBroadcastPreviewStreamVideoFrame};
 
     // ----- AppBroadcastPreviewStreamVideoHeader class --------------------
 
@@ -4252,14 +4218,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastPreviewStreamVideoHeader =
-    {
+    static PyType_Spec type_spec_AppBroadcastPreviewStreamVideoHeader = {
         "winrt._winrt_windows_media_capture.AppBroadcastPreviewStreamVideoHeader",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastPreviewStreamVideoHeader
-    };
+        _type_slots_AppBroadcastPreviewStreamVideoHeader};
 
     // ----- AppBroadcastProviderSettings class --------------------
 
@@ -4657,14 +4621,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastProviderSettings =
-    {
+    static PyType_Spec type_spec_AppBroadcastProviderSettings = {
         "winrt._winrt_windows_media_capture.AppBroadcastProviderSettings",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastProviderSettings
-    };
+        _type_slots_AppBroadcastProviderSettings};
 
     // ----- AppBroadcastServices class --------------------
 
@@ -5120,14 +5082,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastServices =
-    {
+    static PyType_Spec type_spec_AppBroadcastServices = {
         "winrt._winrt_windows_media_capture.AppBroadcastServices",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastServices),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastServices
-    };
+        _type_slots_AppBroadcastServices};
 
     // ----- AppBroadcastSignInStateChangedEventArgs class --------------------
 
@@ -5229,14 +5189,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastSignInStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_AppBroadcastSignInStateChangedEventArgs = {
         "winrt._winrt_windows_media_capture.AppBroadcastSignInStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastSignInStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastSignInStateChangedEventArgs
-    };
+        _type_slots_AppBroadcastSignInStateChangedEventArgs};
 
     // ----- AppBroadcastState class --------------------
 
@@ -6082,14 +6040,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastState =
-    {
+    static PyType_Spec type_spec_AppBroadcastState = {
         "winrt._winrt_windows_media_capture.AppBroadcastState",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastState),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastState
-    };
+        _type_slots_AppBroadcastState};
 
     // ----- AppBroadcastStreamAudioFrame class --------------------
 
@@ -6191,14 +6147,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastStreamAudioFrame =
-    {
+    static PyType_Spec type_spec_AppBroadcastStreamAudioFrame = {
         "winrt._winrt_windows_media_capture.AppBroadcastStreamAudioFrame",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastStreamAudioFrame),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastStreamAudioFrame
-    };
+        _type_slots_AppBroadcastStreamAudioFrame};
 
     // ----- AppBroadcastStreamAudioHeader class --------------------
 
@@ -6360,14 +6314,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastStreamAudioHeader =
-    {
+    static PyType_Spec type_spec_AppBroadcastStreamAudioHeader = {
         "winrt._winrt_windows_media_capture.AppBroadcastStreamAudioHeader",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastStreamAudioHeader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastStreamAudioHeader
-    };
+        _type_slots_AppBroadcastStreamAudioHeader};
 
     // ----- AppBroadcastStreamReader class --------------------
 
@@ -6719,14 +6671,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastStreamReader =
-    {
+    static PyType_Spec type_spec_AppBroadcastStreamReader = {
         "winrt._winrt_windows_media_capture.AppBroadcastStreamReader",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastStreamReader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastStreamReader
-    };
+        _type_slots_AppBroadcastStreamReader};
 
     // ----- AppBroadcastStreamStateChangedEventArgs class --------------------
 
@@ -6808,14 +6758,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastStreamStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_AppBroadcastStreamStateChangedEventArgs = {
         "winrt._winrt_windows_media_capture.AppBroadcastStreamStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastStreamStateChangedEventArgs
-    };
+        _type_slots_AppBroadcastStreamStateChangedEventArgs};
 
     // ----- AppBroadcastStreamVideoFrame class --------------------
 
@@ -6917,14 +6865,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastStreamVideoFrame =
-    {
+    static PyType_Spec type_spec_AppBroadcastStreamVideoFrame = {
         "winrt._winrt_windows_media_capture.AppBroadcastStreamVideoFrame",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastStreamVideoFrame),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastStreamVideoFrame
-    };
+        _type_slots_AppBroadcastStreamVideoFrame};
 
     // ----- AppBroadcastStreamVideoHeader class --------------------
 
@@ -7106,14 +7052,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastStreamVideoHeader =
-    {
+    static PyType_Spec type_spec_AppBroadcastStreamVideoHeader = {
         "winrt._winrt_windows_media_capture.AppBroadcastStreamVideoHeader",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastStreamVideoHeader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastStreamVideoHeader
-    };
+        _type_slots_AppBroadcastStreamVideoHeader};
 
     // ----- AppBroadcastTriggerDetails class --------------------
 
@@ -7195,14 +7139,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastTriggerDetails =
-    {
+    static PyType_Spec type_spec_AppBroadcastTriggerDetails = {
         "winrt._winrt_windows_media_capture.AppBroadcastTriggerDetails",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastTriggerDetails
-    };
+        _type_slots_AppBroadcastTriggerDetails};
 
     // ----- AppBroadcastViewerCountChangedEventArgs class --------------------
 
@@ -7284,14 +7226,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastViewerCountChangedEventArgs =
-    {
+    static PyType_Spec type_spec_AppBroadcastViewerCountChangedEventArgs = {
         "winrt._winrt_windows_media_capture.AppBroadcastViewerCountChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastViewerCountChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastViewerCountChangedEventArgs
-    };
+        _type_slots_AppBroadcastViewerCountChangedEventArgs};
 
     // ----- AppCapture class --------------------
 
@@ -7498,14 +7438,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppCapture =
-    {
+    static PyType_Spec type_spec_AppCapture = {
         "winrt._winrt_windows_media_capture.AppCapture",
         sizeof(py::wrapper::Windows::Media::Capture::AppCapture),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppCapture
-    };
+        _type_slots_AppCapture};
 
     static PyGetSetDef getset_AppCapture_Static[] = {
         { }
@@ -8362,14 +8300,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppCaptureAlternateShortcutKeys =
-    {
+    static PyType_Spec type_spec_AppCaptureAlternateShortcutKeys = {
         "winrt._winrt_windows_media_capture.AppCaptureAlternateShortcutKeys",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppCaptureAlternateShortcutKeys
-    };
+        _type_slots_AppCaptureAlternateShortcutKeys};
 
     // ----- AppCaptureDurationGeneratedEventArgs class --------------------
 
@@ -8451,14 +8387,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppCaptureDurationGeneratedEventArgs =
-    {
+    static PyType_Spec type_spec_AppCaptureDurationGeneratedEventArgs = {
         "winrt._winrt_windows_media_capture.AppCaptureDurationGeneratedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureDurationGeneratedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppCaptureDurationGeneratedEventArgs
-    };
+        _type_slots_AppCaptureDurationGeneratedEventArgs};
 
     // ----- AppCaptureFileGeneratedEventArgs class --------------------
 
@@ -8540,14 +8474,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppCaptureFileGeneratedEventArgs =
-    {
+    static PyType_Spec type_spec_AppCaptureFileGeneratedEventArgs = {
         "winrt._winrt_windows_media_capture.AppCaptureFileGeneratedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureFileGeneratedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppCaptureFileGeneratedEventArgs
-    };
+        _type_slots_AppCaptureFileGeneratedEventArgs};
 
     // ----- AppCaptureManager class --------------------
 
@@ -8635,14 +8567,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppCaptureManager =
-    {
+    static PyType_Spec type_spec_AppCaptureManager = {
         "winrt._winrt_windows_media_capture.AppCaptureManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppCaptureManager
-    };
+        _type_slots_AppCaptureManager};
 
     static PyGetSetDef getset_AppCaptureManager_Static[] = {
         { }
@@ -9144,14 +9074,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppCaptureMetadataWriter =
-    {
+    static PyType_Spec type_spec_AppCaptureMetadataWriter = {
         "winrt._winrt_windows_media_capture.AppCaptureMetadataWriter",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureMetadataWriter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppCaptureMetadataWriter
-    };
+        _type_slots_AppCaptureMetadataWriter};
 
     // ----- AppCaptureMicrophoneCaptureStateChangedEventArgs class --------------------
 
@@ -9253,14 +9181,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppCaptureMicrophoneCaptureStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_AppCaptureMicrophoneCaptureStateChangedEventArgs = {
         "winrt._winrt_windows_media_capture.AppCaptureMicrophoneCaptureStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureMicrophoneCaptureStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppCaptureMicrophoneCaptureStateChangedEventArgs
-    };
+        _type_slots_AppCaptureMicrophoneCaptureStateChangedEventArgs};
 
     // ----- AppCaptureRecordOperation class --------------------
 
@@ -9588,14 +9514,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppCaptureRecordOperation =
-    {
+    static PyType_Spec type_spec_AppCaptureRecordOperation = {
         "winrt._winrt_windows_media_capture.AppCaptureRecordOperation",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureRecordOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppCaptureRecordOperation
-    };
+        _type_slots_AppCaptureRecordOperation};
 
     // ----- AppCaptureRecordingStateChangedEventArgs class --------------------
 
@@ -9697,14 +9621,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppCaptureRecordingStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_AppCaptureRecordingStateChangedEventArgs = {
         "winrt._winrt_windows_media_capture.AppCaptureRecordingStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureRecordingStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppCaptureRecordingStateChangedEventArgs
-    };
+        _type_slots_AppCaptureRecordingStateChangedEventArgs};
 
     // ----- AppCaptureServices class --------------------
 
@@ -9869,14 +9791,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppCaptureServices =
-    {
+    static PyType_Spec type_spec_AppCaptureServices = {
         "winrt._winrt_windows_media_capture.AppCaptureServices",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureServices),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppCaptureServices
-    };
+        _type_slots_AppCaptureServices};
 
     // ----- AppCaptureSettings class --------------------
 
@@ -11162,14 +11082,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppCaptureSettings =
-    {
+    static PyType_Spec type_spec_AppCaptureSettings = {
         "winrt._winrt_windows_media_capture.AppCaptureSettings",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppCaptureSettings
-    };
+        _type_slots_AppCaptureSettings};
 
     // ----- AppCaptureState class --------------------
 
@@ -11480,14 +11398,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_AppCaptureState =
-    {
+    static PyType_Spec type_spec_AppCaptureState = {
         "winrt._winrt_windows_media_capture.AppCaptureState",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureState),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppCaptureState
-    };
+        _type_slots_AppCaptureState};
 
     // ----- CameraCaptureUI class --------------------
 
@@ -11643,14 +11559,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_CameraCaptureUI =
-    {
+    static PyType_Spec type_spec_CameraCaptureUI = {
         "winrt._winrt_windows_media_capture.CameraCaptureUI",
         sizeof(py::wrapper::Windows::Media::Capture::CameraCaptureUI),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CameraCaptureUI
-    };
+        _type_slots_CameraCaptureUI};
 
     // ----- CameraCaptureUIPhotoCaptureSettings class --------------------
 
@@ -11952,14 +11866,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_CameraCaptureUIPhotoCaptureSettings =
-    {
+    static PyType_Spec type_spec_CameraCaptureUIPhotoCaptureSettings = {
         "winrt._winrt_windows_media_capture.CameraCaptureUIPhotoCaptureSettings",
         sizeof(py::wrapper::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CameraCaptureUIPhotoCaptureSettings
-    };
+        _type_slots_CameraCaptureUIPhotoCaptureSettings};
 
     // ----- CameraCaptureUIVideoCaptureSettings class --------------------
 
@@ -12213,14 +12125,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_CameraCaptureUIVideoCaptureSettings =
-    {
+    static PyType_Spec type_spec_CameraCaptureUIVideoCaptureSettings = {
         "winrt._winrt_windows_media_capture.CameraCaptureUIVideoCaptureSettings",
         sizeof(py::wrapper::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CameraCaptureUIVideoCaptureSettings
-    };
+        _type_slots_CameraCaptureUIVideoCaptureSettings};
 
     // ----- CameraOptionsUI class --------------------
 
@@ -12279,14 +12189,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_CameraOptionsUI =
-    {
+    static PyType_Spec type_spec_CameraOptionsUI = {
         "winrt._winrt_windows_media_capture.CameraOptionsUI",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CameraOptionsUI
-    };
+        _type_slots_CameraOptionsUI};
 
     static PyGetSetDef getset_CameraOptionsUI_Static[] = {
         { }
@@ -12877,14 +12785,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_CapturedFrame =
-    {
+    static PyType_Spec type_spec_CapturedFrame = {
         "winrt._winrt_windows_media_capture.CapturedFrame",
         sizeof(py::wrapper::Windows::Media::Capture::CapturedFrame),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CapturedFrame
-    };
+        _type_slots_CapturedFrame};
 
     // ----- CapturedFrameControlValues class --------------------
 
@@ -13226,14 +13132,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_CapturedFrameControlValues =
-    {
+    static PyType_Spec type_spec_CapturedFrameControlValues = {
         "winrt._winrt_windows_media_capture.CapturedFrameControlValues",
         sizeof(py::wrapper::Windows::Media::Capture::CapturedFrameControlValues),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CapturedFrameControlValues
-    };
+        _type_slots_CapturedFrameControlValues};
 
     // ----- CapturedPhoto class --------------------
 
@@ -13335,14 +13239,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_CapturedPhoto =
-    {
+    static PyType_Spec type_spec_CapturedPhoto = {
         "winrt._winrt_windows_media_capture.CapturedPhoto",
         sizeof(py::wrapper::Windows::Media::Capture::CapturedPhoto),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CapturedPhoto
-    };
+        _type_slots_CapturedPhoto};
 
     // ----- GameBarServices class --------------------
 
@@ -13611,14 +13513,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_GameBarServices =
-    {
+    static PyType_Spec type_spec_GameBarServices = {
         "winrt._winrt_windows_media_capture.GameBarServices",
         sizeof(py::wrapper::Windows::Media::Capture::GameBarServices),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameBarServices
-    };
+        _type_slots_GameBarServices};
 
     // ----- GameBarServicesCommandEventArgs class --------------------
 
@@ -13720,14 +13620,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_GameBarServicesCommandEventArgs =
-    {
+    static PyType_Spec type_spec_GameBarServicesCommandEventArgs = {
         "winrt._winrt_windows_media_capture.GameBarServicesCommandEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::GameBarServicesCommandEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameBarServicesCommandEventArgs
-    };
+        _type_slots_GameBarServicesCommandEventArgs};
 
     // ----- GameBarServicesManager class --------------------
 
@@ -13863,14 +13761,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_GameBarServicesManager =
-    {
+    static PyType_Spec type_spec_GameBarServicesManager = {
         "winrt._winrt_windows_media_capture.GameBarServicesManager",
         sizeof(py::wrapper::Windows::Media::Capture::GameBarServicesManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameBarServicesManager
-    };
+        _type_slots_GameBarServicesManager};
 
     static PyGetSetDef getset_GameBarServicesManager_Static[] = {
         { }
@@ -13978,14 +13874,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_GameBarServicesManagerGameBarServicesCreatedEventArgs =
-    {
+    static PyType_Spec type_spec_GameBarServicesManagerGameBarServicesCreatedEventArgs = {
         "winrt._winrt_windows_media_capture.GameBarServicesManagerGameBarServicesCreatedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::GameBarServicesManagerGameBarServicesCreatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameBarServicesManagerGameBarServicesCreatedEventArgs
-    };
+        _type_slots_GameBarServicesManagerGameBarServicesCreatedEventArgs};
 
     // ----- GameBarServicesTargetInfo class --------------------
 
@@ -14127,14 +14021,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_GameBarServicesTargetInfo =
-    {
+    static PyType_Spec type_spec_GameBarServicesTargetInfo = {
         "winrt._winrt_windows_media_capture.GameBarServicesTargetInfo",
         sizeof(py::wrapper::Windows::Media::Capture::GameBarServicesTargetInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameBarServicesTargetInfo
-    };
+        _type_slots_GameBarServicesTargetInfo};
 
     // ----- LowLagMediaRecording class --------------------
 
@@ -14410,14 +14302,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_LowLagMediaRecording =
-    {
+    static PyType_Spec type_spec_LowLagMediaRecording = {
         "winrt._winrt_windows_media_capture.LowLagMediaRecording",
         sizeof(py::wrapper::Windows::Media::Capture::LowLagMediaRecording),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LowLagMediaRecording
-    };
+        _type_slots_LowLagMediaRecording};
 
     // ----- LowLagPhotoCapture class --------------------
 
@@ -14539,14 +14429,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_LowLagPhotoCapture =
-    {
+    static PyType_Spec type_spec_LowLagPhotoCapture = {
         "winrt._winrt_windows_media_capture.LowLagPhotoCapture",
         sizeof(py::wrapper::Windows::Media::Capture::LowLagPhotoCapture),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LowLagPhotoCapture
-    };
+        _type_slots_LowLagPhotoCapture};
 
     // ----- LowLagPhotoSequenceCapture class --------------------
 
@@ -14743,14 +14631,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_LowLagPhotoSequenceCapture =
-    {
+    static PyType_Spec type_spec_LowLagPhotoSequenceCapture = {
         "winrt._winrt_windows_media_capture.LowLagPhotoSequenceCapture",
         sizeof(py::wrapper::Windows::Media::Capture::LowLagPhotoSequenceCapture),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LowLagPhotoSequenceCapture
-    };
+        _type_slots_LowLagPhotoSequenceCapture};
 
     // ----- MediaCapture class --------------------
 
@@ -16845,14 +16731,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_MediaCapture =
-    {
+    static PyType_Spec type_spec_MediaCapture = {
         "winrt._winrt_windows_media_capture.MediaCapture",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCapture),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaCapture
-    };
+        _type_slots_MediaCapture};
 
     static PyGetSetDef getset_MediaCapture_Static[] = {
         { }
@@ -16983,14 +16867,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs = {
         "winrt._winrt_windows_media_capture.MediaCaptureDeviceExclusiveControlStatusChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatusChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs
-    };
+        _type_slots_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs};
 
     // ----- MediaCaptureFailedEventArgs class --------------------
 
@@ -17092,14 +16974,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_MediaCaptureFailedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaCaptureFailedEventArgs = {
         "winrt._winrt_windows_media_capture.MediaCaptureFailedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCaptureFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaCaptureFailedEventArgs
-    };
+        _type_slots_MediaCaptureFailedEventArgs};
 
     // ----- MediaCaptureFocusChangedEventArgs class --------------------
 
@@ -17181,14 +17061,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_MediaCaptureFocusChangedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaCaptureFocusChangedEventArgs = {
         "winrt._winrt_windows_media_capture.MediaCaptureFocusChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCaptureFocusChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaCaptureFocusChangedEventArgs
-    };
+        _type_slots_MediaCaptureFocusChangedEventArgs};
 
     // ----- MediaCaptureInitializationSettings class --------------------
 
@@ -18136,14 +18014,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_MediaCaptureInitializationSettings =
-    {
+    static PyType_Spec type_spec_MediaCaptureInitializationSettings = {
         "winrt._winrt_windows_media_capture.MediaCaptureInitializationSettings",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaCaptureInitializationSettings
-    };
+        _type_slots_MediaCaptureInitializationSettings};
 
     // ----- MediaCapturePauseResult class --------------------
 
@@ -18297,14 +18173,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_MediaCapturePauseResult =
-    {
+    static PyType_Spec type_spec_MediaCapturePauseResult = {
         "winrt._winrt_windows_media_capture.MediaCapturePauseResult",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCapturePauseResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaCapturePauseResult
-    };
+        _type_slots_MediaCapturePauseResult};
 
     // ----- MediaCaptureRelativePanelWatcher class --------------------
 
@@ -18545,14 +18419,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_MediaCaptureRelativePanelWatcher =
-    {
+    static PyType_Spec type_spec_MediaCaptureRelativePanelWatcher = {
         "winrt._winrt_windows_media_capture.MediaCaptureRelativePanelWatcher",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCaptureRelativePanelWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaCaptureRelativePanelWatcher
-    };
+        _type_slots_MediaCaptureRelativePanelWatcher};
 
     // ----- MediaCaptureSettings class --------------------
 
@@ -18894,14 +18766,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_MediaCaptureSettings =
-    {
+    static PyType_Spec type_spec_MediaCaptureSettings = {
         "winrt._winrt_windows_media_capture.MediaCaptureSettings",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCaptureSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaCaptureSettings
-    };
+        _type_slots_MediaCaptureSettings};
 
     // ----- MediaCaptureStopResult class --------------------
 
@@ -19055,14 +18925,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_MediaCaptureStopResult =
-    {
+    static PyType_Spec type_spec_MediaCaptureStopResult = {
         "winrt._winrt_windows_media_capture.MediaCaptureStopResult",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCaptureStopResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaCaptureStopResult
-    };
+        _type_slots_MediaCaptureStopResult};
 
     // ----- MediaCaptureVideoProfile class --------------------
 
@@ -19294,14 +19162,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_MediaCaptureVideoProfile =
-    {
+    static PyType_Spec type_spec_MediaCaptureVideoProfile = {
         "winrt._winrt_windows_media_capture.MediaCaptureVideoProfile",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfile),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaCaptureVideoProfile
-    };
+        _type_slots_MediaCaptureVideoProfile};
 
     // ----- MediaCaptureVideoProfileMediaDescription class --------------------
 
@@ -19503,14 +19369,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_MediaCaptureVideoProfileMediaDescription =
-    {
+    static PyType_Spec type_spec_MediaCaptureVideoProfileMediaDescription = {
         "winrt._winrt_windows_media_capture.MediaCaptureVideoProfileMediaDescription",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaCaptureVideoProfileMediaDescription
-    };
+        _type_slots_MediaCaptureVideoProfileMediaDescription};
 
     // ----- OptionalReferencePhotoCapturedEventArgs class --------------------
 
@@ -19612,14 +19476,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_OptionalReferencePhotoCapturedEventArgs =
-    {
+    static PyType_Spec type_spec_OptionalReferencePhotoCapturedEventArgs = {
         "winrt._winrt_windows_media_capture.OptionalReferencePhotoCapturedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::OptionalReferencePhotoCapturedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_OptionalReferencePhotoCapturedEventArgs
-    };
+        _type_slots_OptionalReferencePhotoCapturedEventArgs};
 
     // ----- PhotoCapturedEventArgs class --------------------
 
@@ -19741,14 +19603,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_PhotoCapturedEventArgs =
-    {
+    static PyType_Spec type_spec_PhotoCapturedEventArgs = {
         "winrt._winrt_windows_media_capture.PhotoCapturedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::PhotoCapturedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhotoCapturedEventArgs
-    };
+        _type_slots_PhotoCapturedEventArgs};
 
     // ----- PhotoConfirmationCapturedEventArgs class --------------------
 
@@ -19850,14 +19710,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_PhotoConfirmationCapturedEventArgs =
-    {
+    static PyType_Spec type_spec_PhotoConfirmationCapturedEventArgs = {
         "winrt._winrt_windows_media_capture.PhotoConfirmationCapturedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::PhotoConfirmationCapturedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhotoConfirmationCapturedEventArgs
-    };
+        _type_slots_PhotoConfirmationCapturedEventArgs};
 
     // ----- ScreenCapture class --------------------
 
@@ -20073,14 +19931,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_ScreenCapture =
-    {
+    static PyType_Spec type_spec_ScreenCapture = {
         "winrt._winrt_windows_media_capture.ScreenCapture",
         sizeof(py::wrapper::Windows::Media::Capture::ScreenCapture),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScreenCapture
-    };
+        _type_slots_ScreenCapture};
 
     static PyGetSetDef getset_ScreenCapture_Static[] = {
         { }
@@ -20208,14 +20064,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_SourceSuspensionChangedEventArgs =
-    {
+    static PyType_Spec type_spec_SourceSuspensionChangedEventArgs = {
         "winrt._winrt_windows_media_capture.SourceSuspensionChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::SourceSuspensionChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SourceSuspensionChangedEventArgs
-    };
+        _type_slots_SourceSuspensionChangedEventArgs};
 
     // ----- VideoStreamConfiguration class --------------------
 
@@ -20317,14 +20171,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_VideoStreamConfiguration =
-    {
+    static PyType_Spec type_spec_VideoStreamConfiguration = {
         "winrt._winrt_windows_media_capture.VideoStreamConfiguration",
         sizeof(py::wrapper::Windows::Media::Capture::VideoStreamConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VideoStreamConfiguration
-    };
+        _type_slots_VideoStreamConfiguration};
 
     // ----- WhiteBalanceGain struct --------------------
 
@@ -20513,14 +20365,12 @@ namespace py::cpp::Windows::Media::Capture
         { },
     };
 
-    static PyType_Spec type_spec_WhiteBalanceGain =
-    {
+    static PyType_Spec type_spec_WhiteBalanceGain = {
         "winrt._winrt_windows_media_capture.WhiteBalanceGain",
         sizeof(py::wrapper::Windows::Media::Capture::WhiteBalanceGain),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WhiteBalanceGain
-    };
+        _type_slots_WhiteBalanceGain};
 
     // ----- Windows.Media.Capture Initialization --------------------
 

@@ -572,14 +572,12 @@ namespace py::cpp::Windows::Media::Transcoding
         { },
     };
 
-    static PyType_Spec type_spec_MediaTranscoder =
-    {
+    static PyType_Spec type_spec_MediaTranscoder = {
         "winrt._winrt_windows_media_transcoding.MediaTranscoder",
         sizeof(py::wrapper::Windows::Media::Transcoding::MediaTranscoder),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaTranscoder
-    };
+        _type_slots_MediaTranscoder};
 
     // ----- PrepareTranscodeResult class --------------------
 
@@ -711,14 +709,12 @@ namespace py::cpp::Windows::Media::Transcoding
         { },
     };
 
-    static PyType_Spec type_spec_PrepareTranscodeResult =
-    {
+    static PyType_Spec type_spec_PrepareTranscodeResult = {
         "winrt._winrt_windows_media_transcoding.PrepareTranscodeResult",
         sizeof(py::wrapper::Windows::Media::Transcoding::PrepareTranscodeResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrepareTranscodeResult
-    };
+        _type_slots_PrepareTranscodeResult};
 
     // ----- Windows.Media.Transcoding Initialization --------------------
 

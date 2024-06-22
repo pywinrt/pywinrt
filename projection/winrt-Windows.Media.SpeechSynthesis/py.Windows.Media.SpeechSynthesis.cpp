@@ -508,14 +508,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         { },
     };
 
-    static PyType_Spec type_spec_SpeechSynthesisStream =
-    {
+    static PyType_Spec type_spec_SpeechSynthesisStream = {
         "winrt._winrt_windows_media_speechsynthesis.SpeechSynthesisStream",
         sizeof(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechSynthesisStream
-    };
+        _type_slots_SpeechSynthesisStream};
 
     // ----- SpeechSynthesizer class --------------------
 
@@ -852,14 +850,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         { },
     };
 
-    static PyType_Spec type_spec_SpeechSynthesizer =
-    {
+    static PyType_Spec type_spec_SpeechSynthesizer = {
         "winrt._winrt_windows_media_speechsynthesis.SpeechSynthesizer",
         sizeof(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechSynthesizer
-    };
+        _type_slots_SpeechSynthesizer};
 
     static PyGetSetDef getset_SpeechSynthesizer_Static[] = {
         { "all_voices", reinterpret_cast<getter>(SpeechSynthesizer_get_AllVoices), nullptr, nullptr, nullptr },
@@ -1285,14 +1281,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         { },
     };
 
-    static PyType_Spec type_spec_SpeechSynthesizerOptions =
-    {
+    static PyType_Spec type_spec_SpeechSynthesizerOptions = {
         "winrt._winrt_windows_media_speechsynthesis.SpeechSynthesizerOptions",
         sizeof(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechSynthesizerOptions
-    };
+        _type_slots_SpeechSynthesizerOptions};
 
     // ----- VoiceInformation class --------------------
 
@@ -1454,14 +1448,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         { },
     };
 
-    static PyType_Spec type_spec_VoiceInformation =
-    {
+    static PyType_Spec type_spec_VoiceInformation = {
         "winrt._winrt_windows_media_speechsynthesis.VoiceInformation",
         sizeof(py::wrapper::Windows::Media::SpeechSynthesis::VoiceInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VoiceInformation
-    };
+        _type_slots_VoiceInformation};
 
     // ----- Windows.Media.SpeechSynthesis Initialization --------------------
 

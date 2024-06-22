@@ -105,14 +105,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { },
     };
 
-    static PyType_Spec type_spec_GameSaveBlobGetResult =
-    {
+    static PyType_Spec type_spec_GameSaveBlobGetResult = {
         "winrt._winrt_windows_gaming_xboxlive_storage.GameSaveBlobGetResult",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameSaveBlobGetResult
-    };
+        _type_slots_GameSaveBlobGetResult};
 
     // ----- GameSaveBlobInfo class --------------------
 
@@ -214,14 +212,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { },
     };
 
-    static PyType_Spec type_spec_GameSaveBlobInfo =
-    {
+    static PyType_Spec type_spec_GameSaveBlobInfo = {
         "winrt._winrt_windows_gaming_xboxlive_storage.GameSaveBlobInfo",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameSaveBlobInfo
-    };
+        _type_slots_GameSaveBlobInfo};
 
     // ----- GameSaveBlobInfoGetResult class --------------------
 
@@ -323,14 +319,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { },
     };
 
-    static PyType_Spec type_spec_GameSaveBlobInfoGetResult =
-    {
+    static PyType_Spec type_spec_GameSaveBlobInfoGetResult = {
         "winrt._winrt_windows_gaming_xboxlive_storage.GameSaveBlobInfoGetResult",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoGetResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameSaveBlobInfoGetResult
-    };
+        _type_slots_GameSaveBlobInfoGetResult};
 
     // ----- GameSaveBlobInfoQuery class --------------------
 
@@ -473,14 +467,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { },
     };
 
-    static PyType_Spec type_spec_GameSaveBlobInfoQuery =
-    {
+    static PyType_Spec type_spec_GameSaveBlobInfoQuery = {
         "winrt._winrt_windows_gaming_xboxlive_storage.GameSaveBlobInfoQuery",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoQuery),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameSaveBlobInfoQuery
-    };
+        _type_slots_GameSaveBlobInfoQuery};
 
     // ----- GameSaveContainer class --------------------
 
@@ -746,14 +738,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { },
     };
 
-    static PyType_Spec type_spec_GameSaveContainer =
-    {
+    static PyType_Spec type_spec_GameSaveContainer = {
         "winrt._winrt_windows_gaming_xboxlive_storage.GameSaveContainer",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameSaveContainer
-    };
+        _type_slots_GameSaveContainer};
 
     // ----- GameSaveContainerInfo class --------------------
 
@@ -915,14 +905,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { },
     };
 
-    static PyType_Spec type_spec_GameSaveContainerInfo =
-    {
+    static PyType_Spec type_spec_GameSaveContainerInfo = {
         "winrt._winrt_windows_gaming_xboxlive_storage.GameSaveContainerInfo",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameSaveContainerInfo
-    };
+        _type_slots_GameSaveContainerInfo};
 
     // ----- GameSaveContainerInfoGetResult class --------------------
 
@@ -1024,14 +1012,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { },
     };
 
-    static PyType_Spec type_spec_GameSaveContainerInfoGetResult =
-    {
+    static PyType_Spec type_spec_GameSaveContainerInfoGetResult = {
         "winrt._winrt_windows_gaming_xboxlive_storage.GameSaveContainerInfoGetResult",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoGetResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameSaveContainerInfoGetResult
-    };
+        _type_slots_GameSaveContainerInfoGetResult};
 
     // ----- GameSaveContainerInfoQuery class --------------------
 
@@ -1174,14 +1160,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { },
     };
 
-    static PyType_Spec type_spec_GameSaveContainerInfoQuery =
-    {
+    static PyType_Spec type_spec_GameSaveContainerInfoQuery = {
         "winrt._winrt_windows_gaming_xboxlive_storage.GameSaveContainerInfoQuery",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoQuery),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameSaveContainerInfoQuery
-    };
+        _type_slots_GameSaveContainerInfoQuery};
 
     // ----- GameSaveOperationResult class --------------------
 
@@ -1263,14 +1247,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { },
     };
 
-    static PyType_Spec type_spec_GameSaveOperationResult =
-    {
+    static PyType_Spec type_spec_GameSaveOperationResult = {
         "winrt._winrt_windows_gaming_xboxlive_storage.GameSaveOperationResult",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveOperationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameSaveOperationResult
-    };
+        _type_slots_GameSaveOperationResult};
 
     // ----- GameSaveProvider class --------------------
 
@@ -1580,14 +1562,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { },
     };
 
-    static PyType_Spec type_spec_GameSaveProvider =
-    {
+    static PyType_Spec type_spec_GameSaveProvider = {
         "winrt._winrt_windows_gaming_xboxlive_storage.GameSaveProvider",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameSaveProvider
-    };
+        _type_slots_GameSaveProvider};
 
     static PyGetSetDef getset_GameSaveProvider_Static[] = {
         { }
@@ -1716,14 +1696,12 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { },
     };
 
-    static PyType_Spec type_spec_GameSaveProviderGetResult =
-    {
+    static PyType_Spec type_spec_GameSaveProviderGetResult = {
         "winrt._winrt_windows_gaming_xboxlive_storage.GameSaveProviderGetResult",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveProviderGetResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameSaveProviderGetResult
-    };
+        _type_slots_GameSaveProviderGetResult};
 
     // ----- Windows.Gaming.XboxLive.Storage Initialization --------------------
 

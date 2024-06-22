@@ -175,14 +175,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { },
     };
 
-    static PyType_Spec type_spec_WalletBarcode =
-    {
+    static PyType_Spec type_spec_WalletBarcode = {
         "winrt._winrt_windows_applicationmodel_wallet.WalletBarcode",
         sizeof(py::wrapper::Windows::ApplicationModel::Wallet::WalletBarcode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WalletBarcode
-    };
+        _type_slots_WalletBarcode};
 
     // ----- WalletItem class --------------------
 
@@ -1493,14 +1491,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { },
     };
 
-    static PyType_Spec type_spec_WalletItem =
-    {
+    static PyType_Spec type_spec_WalletItem = {
         "winrt._winrt_windows_applicationmodel_wallet.WalletItem",
         sizeof(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WalletItem
-    };
+        _type_slots_WalletItem};
 
     // ----- WalletItemCustomProperty class --------------------
 
@@ -1827,14 +1823,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { },
     };
 
-    static PyType_Spec type_spec_WalletItemCustomProperty =
-    {
+    static PyType_Spec type_spec_WalletItemCustomProperty = {
         "winrt._winrt_windows_applicationmodel_wallet.WalletItemCustomProperty",
         sizeof(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemCustomProperty),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WalletItemCustomProperty
-    };
+        _type_slots_WalletItemCustomProperty};
 
     // ----- WalletItemStore class --------------------
 
@@ -2187,14 +2181,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { },
     };
 
-    static PyType_Spec type_spec_WalletItemStore =
-    {
+    static PyType_Spec type_spec_WalletItemStore = {
         "winrt._winrt_windows_applicationmodel_wallet.WalletItemStore",
         sizeof(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemStore),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WalletItemStore
-    };
+        _type_slots_WalletItemStore};
 
     // ----- WalletManager class --------------------
 
@@ -2250,14 +2242,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { },
     };
 
-    static PyType_Spec type_spec_WalletManager =
-    {
+    static PyType_Spec type_spec_WalletManager = {
         "winrt._winrt_windows_applicationmodel_wallet.WalletManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WalletManager
-    };
+        _type_slots_WalletManager};
 
     static PyGetSetDef getset_WalletManager_Static[] = {
         { }
@@ -2463,14 +2453,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { },
     };
 
-    static PyType_Spec type_spec_WalletRelevantLocation =
-    {
+    static PyType_Spec type_spec_WalletRelevantLocation = {
         "winrt._winrt_windows_applicationmodel_wallet.WalletRelevantLocation",
         sizeof(py::wrapper::Windows::ApplicationModel::Wallet::WalletRelevantLocation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WalletRelevantLocation
-    };
+        _type_slots_WalletRelevantLocation};
 
     // ----- WalletTransaction class --------------------
 
@@ -2842,14 +2830,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { },
     };
 
-    static PyType_Spec type_spec_WalletTransaction =
-    {
+    static PyType_Spec type_spec_WalletTransaction = {
         "winrt._winrt_windows_applicationmodel_wallet.WalletTransaction",
         sizeof(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WalletTransaction
-    };
+        _type_slots_WalletTransaction};
 
     // ----- WalletVerb class --------------------
 
@@ -2983,14 +2969,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { },
     };
 
-    static PyType_Spec type_spec_WalletVerb =
-    {
+    static PyType_Spec type_spec_WalletVerb = {
         "winrt._winrt_windows_applicationmodel_wallet.WalletVerb",
         sizeof(py::wrapper::Windows::ApplicationModel::Wallet::WalletVerb),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WalletVerb
-    };
+        _type_slots_WalletVerb};
 
     // ----- Windows.ApplicationModel.Wallet Initialization --------------------
 

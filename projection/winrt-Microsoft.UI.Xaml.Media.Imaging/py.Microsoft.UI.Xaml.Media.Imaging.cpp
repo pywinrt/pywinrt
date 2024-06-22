@@ -779,14 +779,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_BitmapImage =
-    {
+    static PyType_Spec type_spec_BitmapImage = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.BitmapImage",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::BitmapImage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BitmapImage
-    };
+        _type_slots_BitmapImage};
 
     static PyGetSetDef getset_BitmapImage_Static[] = {
         { "auto_play_property", reinterpret_cast<getter>(BitmapImage_get_AutoPlayProperty), nullptr, nullptr, nullptr },
@@ -1024,14 +1022,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_BitmapSource =
-    {
+    static PyType_Spec type_spec_BitmapSource = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.BitmapSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::BitmapSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BitmapSource
-    };
+        _type_slots_BitmapSource};
 
     static PyGetSetDef getset_BitmapSource_Static[] = {
         { "pixel_height_property", reinterpret_cast<getter>(BitmapSource_get_PixelHeightProperty), nullptr, nullptr, nullptr },
@@ -1168,14 +1164,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_DownloadProgressEventArgs =
-    {
+    static PyType_Spec type_spec_DownloadProgressEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.DownloadProgressEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::DownloadProgressEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DownloadProgressEventArgs
-    };
+        _type_slots_DownloadProgressEventArgs};
 
     // ----- RenderTargetBitmap class --------------------
 
@@ -1421,14 +1415,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_RenderTargetBitmap =
-    {
+    static PyType_Spec type_spec_RenderTargetBitmap = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.RenderTargetBitmap",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::RenderTargetBitmap),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RenderTargetBitmap
-    };
+        _type_slots_RenderTargetBitmap};
 
     static PyGetSetDef getset_RenderTargetBitmap_Static[] = {
         { "pixel_height_property", reinterpret_cast<getter>(RenderTargetBitmap_get_PixelHeightProperty), nullptr, nullptr, nullptr },
@@ -1623,14 +1615,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_SoftwareBitmapSource =
-    {
+    static PyType_Spec type_spec_SoftwareBitmapSource = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.SoftwareBitmapSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::SoftwareBitmapSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SoftwareBitmapSource
-    };
+        _type_slots_SoftwareBitmapSource};
 
     // ----- SurfaceImageSource class --------------------
 
@@ -1734,14 +1724,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_SurfaceImageSource =
-    {
+    static PyType_Spec type_spec_SurfaceImageSource = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.SurfaceImageSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::SurfaceImageSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SurfaceImageSource
-    };
+        _type_slots_SurfaceImageSource};
 
     // ----- SvgImageSource class --------------------
 
@@ -2163,14 +2151,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_SvgImageSource =
-    {
+    static PyType_Spec type_spec_SvgImageSource = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.SvgImageSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SvgImageSource
-    };
+        _type_slots_SvgImageSource};
 
     static PyGetSetDef getset_SvgImageSource_Static[] = {
         { "rasterize_pixel_height_property", reinterpret_cast<getter>(SvgImageSource_get_RasterizePixelHeightProperty), nullptr, nullptr, nullptr },
@@ -2280,14 +2266,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_SvgImageSourceFailedEventArgs =
-    {
+    static PyType_Spec type_spec_SvgImageSourceFailedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.SvgImageSourceFailedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SvgImageSourceFailedEventArgs
-    };
+        _type_slots_SvgImageSourceFailedEventArgs};
 
     // ----- SvgImageSourceOpenedEventArgs class --------------------
 
@@ -2349,14 +2333,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_SvgImageSourceOpenedEventArgs =
-    {
+    static PyType_Spec type_spec_SvgImageSourceOpenedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.SvgImageSourceOpenedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::SvgImageSourceOpenedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SvgImageSourceOpenedEventArgs
-    };
+        _type_slots_SvgImageSourceOpenedEventArgs};
 
     // ----- VirtualSurfaceImageSource class --------------------
 
@@ -2460,14 +2442,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_VirtualSurfaceImageSource =
-    {
+    static PyType_Spec type_spec_VirtualSurfaceImageSource = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.VirtualSurfaceImageSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VirtualSurfaceImageSource
-    };
+        _type_slots_VirtualSurfaceImageSource};
 
     // ----- WriteableBitmap class --------------------
 
@@ -2605,14 +2585,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_WriteableBitmap =
-    {
+    static PyType_Spec type_spec_WriteableBitmap = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.WriteableBitmap",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::WriteableBitmap),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WriteableBitmap
-    };
+        _type_slots_WriteableBitmap};
 
     // ----- XamlRenderingBackgroundTask class --------------------
 
@@ -2674,14 +2652,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_XamlRenderingBackgroundTask =
-    {
+    static PyType_Spec type_spec_XamlRenderingBackgroundTask = {
         "winrt._winrt_microsoft_ui_xaml_media_imaging.XamlRenderingBackgroundTask",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XamlRenderingBackgroundTask
-    };
+        _type_slots_XamlRenderingBackgroundTask};
 
     // ----- Microsoft.UI.Xaml.Media.Imaging Initialization --------------------
 

@@ -62,14 +62,12 @@ namespace py::cpp::Windows::Perception::Automation::Core
         { },
     };
 
-    static PyType_Spec type_spec_CorePerceptionAutomation =
-    {
+    static PyType_Spec type_spec_CorePerceptionAutomation = {
         "winrt._winrt_windows_perception_automation_core.CorePerceptionAutomation",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CorePerceptionAutomation
-    };
+        _type_slots_CorePerceptionAutomation};
 
     static PyGetSetDef getset_CorePerceptionAutomation_Static[] = {
         { }

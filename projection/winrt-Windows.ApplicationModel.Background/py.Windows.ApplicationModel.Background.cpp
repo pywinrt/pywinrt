@@ -169,14 +169,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_ActivitySensorTrigger =
-    {
+    static PyType_Spec type_spec_ActivitySensorTrigger = {
         "winrt._winrt_windows_applicationmodel_background.ActivitySensorTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ActivitySensorTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ActivitySensorTrigger
-    };
+        _type_slots_ActivitySensorTrigger};
 
     // ----- AlarmApplicationManager class --------------------
 
@@ -261,14 +259,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_AlarmApplicationManager =
-    {
+    static PyType_Spec type_spec_AlarmApplicationManager = {
         "winrt._winrt_windows_applicationmodel_background.AlarmApplicationManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AlarmApplicationManager
-    };
+        _type_slots_AlarmApplicationManager};
 
     static PyGetSetDef getset_AlarmApplicationManager_Static[] = {
         { }
@@ -429,14 +425,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastTrigger =
-    {
+    static PyType_Spec type_spec_AppBroadcastTrigger = {
         "winrt._winrt_windows_applicationmodel_background.AppBroadcastTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::AppBroadcastTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastTrigger
-    };
+        _type_slots_AppBroadcastTrigger};
 
     // ----- AppBroadcastTriggerProviderInfo class --------------------
 
@@ -786,14 +780,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastTriggerProviderInfo =
-    {
+    static PyType_Spec type_spec_AppBroadcastTriggerProviderInfo = {
         "winrt._winrt_windows_applicationmodel_background.AppBroadcastTriggerProviderInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastTriggerProviderInfo
-    };
+        _type_slots_AppBroadcastTriggerProviderInfo};
 
     // ----- ApplicationTrigger class --------------------
 
@@ -927,14 +919,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_ApplicationTrigger =
-    {
+    static PyType_Spec type_spec_ApplicationTrigger = {
         "winrt._winrt_windows_applicationmodel_background.ApplicationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ApplicationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ApplicationTrigger
-    };
+        _type_slots_ApplicationTrigger};
 
     // ----- ApplicationTriggerDetails class --------------------
 
@@ -1016,14 +1006,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_ApplicationTriggerDetails =
-    {
+    static PyType_Spec type_spec_ApplicationTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_background.ApplicationTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ApplicationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ApplicationTriggerDetails
-    };
+        _type_slots_ApplicationTriggerDetails};
 
     // ----- AppointmentStoreNotificationTrigger class --------------------
 
@@ -1107,14 +1095,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentStoreNotificationTrigger =
-    {
+    static PyType_Spec type_spec_AppointmentStoreNotificationTrigger = {
         "winrt._winrt_windows_applicationmodel_background.AppointmentStoreNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::AppointmentStoreNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentStoreNotificationTrigger
-    };
+        _type_slots_AppointmentStoreNotificationTrigger};
 
     // ----- BackgroundExecutionManager class --------------------
 
@@ -1403,14 +1389,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundExecutionManager =
-    {
+    static PyType_Spec type_spec_BackgroundExecutionManager = {
         "winrt._winrt_windows_applicationmodel_background.BackgroundExecutionManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundExecutionManager
-    };
+        _type_slots_BackgroundExecutionManager};
 
     static PyGetSetDef getset_BackgroundExecutionManager_Static[] = {
         { }
@@ -1894,14 +1878,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundTaskBuilder =
-    {
+    static PyType_Spec type_spec_BackgroundTaskBuilder = {
         "winrt._winrt_windows_applicationmodel_background.BackgroundTaskBuilder",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskBuilder),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundTaskBuilder
-    };
+        _type_slots_BackgroundTaskBuilder};
 
     // ----- BackgroundTaskCompletedEventArgs class --------------------
 
@@ -2014,14 +1996,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundTaskCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_BackgroundTaskCompletedEventArgs = {
         "winrt._winrt_windows_applicationmodel_background.BackgroundTaskCompletedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundTaskCompletedEventArgs
-    };
+        _type_slots_BackgroundTaskCompletedEventArgs};
 
     // ----- BackgroundTaskDeferral class --------------------
 
@@ -2114,14 +2094,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundTaskDeferral =
-    {
+    static PyType_Spec type_spec_BackgroundTaskDeferral = {
         "winrt._winrt_windows_applicationmodel_background.BackgroundTaskDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundTaskDeferral
-    };
+        _type_slots_BackgroundTaskDeferral};
 
     // ----- BackgroundTaskProgressEventArgs class --------------------
 
@@ -2223,14 +2201,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundTaskProgressEventArgs =
-    {
+    static PyType_Spec type_spec_BackgroundTaskProgressEventArgs = {
         "winrt._winrt_windows_applicationmodel_background.BackgroundTaskProgressEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskProgressEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundTaskProgressEventArgs
-    };
+        _type_slots_BackgroundTaskProgressEventArgs};
 
     // ----- BackgroundTaskRegistration class --------------------
 
@@ -2564,14 +2540,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundTaskRegistration =
-    {
+    static PyType_Spec type_spec_BackgroundTaskRegistration = {
         "winrt._winrt_windows_applicationmodel_background.BackgroundTaskRegistration",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskRegistration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundTaskRegistration
-    };
+        _type_slots_BackgroundTaskRegistration};
 
     static PyGetSetDef getset_BackgroundTaskRegistration_Static[] = {
         { "all_tasks", reinterpret_cast<getter>(BackgroundTaskRegistration_get_AllTasks), nullptr, nullptr, nullptr },
@@ -2806,14 +2780,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundTaskRegistrationGroup =
-    {
+    static PyType_Spec type_spec_BackgroundTaskRegistrationGroup = {
         "winrt._winrt_windows_applicationmodel_background.BackgroundTaskRegistrationGroup",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundTaskRegistrationGroup
-    };
+        _type_slots_BackgroundTaskRegistrationGroup};
 
     // ----- BackgroundWorkCost class --------------------
 
@@ -2859,14 +2831,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundWorkCost =
-    {
+    static PyType_Spec type_spec_BackgroundWorkCost = {
         "winrt._winrt_windows_applicationmodel_background.BackgroundWorkCost",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundWorkCost
-    };
+        _type_slots_BackgroundWorkCost};
 
     static PyGetSetDef getset_BackgroundWorkCost_Static[] = {
         { "current_background_work_cost", reinterpret_cast<getter>(BackgroundWorkCost_get_CurrentBackgroundWorkCost), nullptr, nullptr, nullptr },
@@ -3188,14 +3158,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothLEAdvertisementPublisherTrigger =
-    {
+    static PyType_Spec type_spec_BluetoothLEAdvertisementPublisherTrigger = {
         "winrt._winrt_windows_applicationmodel_background.BluetoothLEAdvertisementPublisherTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::BluetoothLEAdvertisementPublisherTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothLEAdvertisementPublisherTrigger
-    };
+        _type_slots_BluetoothLEAdvertisementPublisherTrigger};
 
     // ----- BluetoothLEAdvertisementWatcherTrigger class --------------------
 
@@ -3503,14 +3471,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothLEAdvertisementWatcherTrigger =
-    {
+    static PyType_Spec type_spec_BluetoothLEAdvertisementWatcherTrigger = {
         "winrt._winrt_windows_applicationmodel_background.BluetoothLEAdvertisementWatcherTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::BluetoothLEAdvertisementWatcherTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothLEAdvertisementWatcherTrigger
-    };
+        _type_slots_BluetoothLEAdvertisementWatcherTrigger};
 
     // ----- CachedFileUpdaterTrigger class --------------------
 
@@ -3594,14 +3560,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_CachedFileUpdaterTrigger =
-    {
+    static PyType_Spec type_spec_CachedFileUpdaterTrigger = {
         "winrt._winrt_windows_applicationmodel_background.CachedFileUpdaterTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::CachedFileUpdaterTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CachedFileUpdaterTrigger
-    };
+        _type_slots_CachedFileUpdaterTrigger};
 
     // ----- CachedFileUpdaterTriggerDetails class --------------------
 
@@ -3723,14 +3687,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_CachedFileUpdaterTriggerDetails =
-    {
+    static PyType_Spec type_spec_CachedFileUpdaterTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_background.CachedFileUpdaterTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::CachedFileUpdaterTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CachedFileUpdaterTriggerDetails
-    };
+        _type_slots_CachedFileUpdaterTriggerDetails};
 
     // ----- ChatMessageNotificationTrigger class --------------------
 
@@ -3814,14 +3776,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_ChatMessageNotificationTrigger =
-    {
+    static PyType_Spec type_spec_ChatMessageNotificationTrigger = {
         "winrt._winrt_windows_applicationmodel_background.ChatMessageNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ChatMessageNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatMessageNotificationTrigger
-    };
+        _type_slots_ChatMessageNotificationTrigger};
 
     // ----- ChatMessageReceivedNotificationTrigger class --------------------
 
@@ -3905,14 +3865,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_ChatMessageReceivedNotificationTrigger =
-    {
+    static PyType_Spec type_spec_ChatMessageReceivedNotificationTrigger = {
         "winrt._winrt_windows_applicationmodel_background.ChatMessageReceivedNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ChatMessageReceivedNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatMessageReceivedNotificationTrigger
-    };
+        _type_slots_ChatMessageReceivedNotificationTrigger};
 
     // ----- CommunicationBlockingAppSetAsActiveTrigger class --------------------
 
@@ -3996,14 +3954,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_CommunicationBlockingAppSetAsActiveTrigger =
-    {
+    static PyType_Spec type_spec_CommunicationBlockingAppSetAsActiveTrigger = {
         "winrt._winrt_windows_applicationmodel_background.CommunicationBlockingAppSetAsActiveTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::CommunicationBlockingAppSetAsActiveTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CommunicationBlockingAppSetAsActiveTrigger
-    };
+        _type_slots_CommunicationBlockingAppSetAsActiveTrigger};
 
     // ----- ContactStoreNotificationTrigger class --------------------
 
@@ -4087,14 +4043,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_ContactStoreNotificationTrigger =
-    {
+    static PyType_Spec type_spec_ContactStoreNotificationTrigger = {
         "winrt._winrt_windows_applicationmodel_background.ContactStoreNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ContactStoreNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactStoreNotificationTrigger
-    };
+        _type_slots_ContactStoreNotificationTrigger};
 
     // ----- ContentPrefetchTrigger class --------------------
 
@@ -4213,14 +4167,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_ContentPrefetchTrigger =
-    {
+    static PyType_Spec type_spec_ContentPrefetchTrigger = {
         "winrt._winrt_windows_applicationmodel_background.ContentPrefetchTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ContentPrefetchTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentPrefetchTrigger
-    };
+        _type_slots_ContentPrefetchTrigger};
 
     // ----- ConversationalAgentTrigger class --------------------
 
@@ -4304,14 +4256,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_ConversationalAgentTrigger =
-    {
+    static PyType_Spec type_spec_ConversationalAgentTrigger = {
         "winrt._winrt_windows_applicationmodel_background.ConversationalAgentTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ConversationalAgentTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ConversationalAgentTrigger
-    };
+        _type_slots_ConversationalAgentTrigger};
 
     // ----- CustomSystemEventTrigger class --------------------
 
@@ -4438,14 +4388,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_CustomSystemEventTrigger =
-    {
+    static PyType_Spec type_spec_CustomSystemEventTrigger = {
         "winrt._winrt_windows_applicationmodel_background.CustomSystemEventTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::CustomSystemEventTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CustomSystemEventTrigger
-    };
+        _type_slots_CustomSystemEventTrigger};
 
     // ----- DeviceConnectionChangeTrigger class --------------------
 
@@ -4626,14 +4574,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_DeviceConnectionChangeTrigger =
-    {
+    static PyType_Spec type_spec_DeviceConnectionChangeTrigger = {
         "winrt._winrt_windows_applicationmodel_background.DeviceConnectionChangeTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceConnectionChangeTrigger
-    };
+        _type_slots_DeviceConnectionChangeTrigger};
 
     static PyGetSetDef getset_DeviceConnectionChangeTrigger_Static[] = {
         { }
@@ -4786,14 +4732,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_DeviceManufacturerNotificationTrigger =
-    {
+    static PyType_Spec type_spec_DeviceManufacturerNotificationTrigger = {
         "winrt._winrt_windows_applicationmodel_background.DeviceManufacturerNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::DeviceManufacturerNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceManufacturerNotificationTrigger
-    };
+        _type_slots_DeviceManufacturerNotificationTrigger};
 
     // ----- DeviceServicingTrigger class --------------------
 
@@ -4932,14 +4876,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_DeviceServicingTrigger =
-    {
+    static PyType_Spec type_spec_DeviceServicingTrigger = {
         "winrt._winrt_windows_applicationmodel_background.DeviceServicingTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::DeviceServicingTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceServicingTrigger
-    };
+        _type_slots_DeviceServicingTrigger};
 
     // ----- DeviceUseTrigger class --------------------
 
@@ -5076,14 +5018,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_DeviceUseTrigger =
-    {
+    static PyType_Spec type_spec_DeviceUseTrigger = {
         "winrt._winrt_windows_applicationmodel_background.DeviceUseTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::DeviceUseTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceUseTrigger
-    };
+        _type_slots_DeviceUseTrigger};
 
     // ----- DeviceWatcherTrigger class --------------------
 
@@ -5145,14 +5085,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_DeviceWatcherTrigger =
-    {
+    static PyType_Spec type_spec_DeviceWatcherTrigger = {
         "winrt._winrt_windows_applicationmodel_background.DeviceWatcherTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::DeviceWatcherTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceWatcherTrigger
-    };
+        _type_slots_DeviceWatcherTrigger};
 
     // ----- EmailStoreNotificationTrigger class --------------------
 
@@ -5236,14 +5174,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_EmailStoreNotificationTrigger =
-    {
+    static PyType_Spec type_spec_EmailStoreNotificationTrigger = {
         "winrt._winrt_windows_applicationmodel_background.EmailStoreNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::EmailStoreNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EmailStoreNotificationTrigger
-    };
+        _type_slots_EmailStoreNotificationTrigger};
 
     // ----- GattCharacteristicNotificationTrigger class --------------------
 
@@ -5385,14 +5321,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_GattCharacteristicNotificationTrigger =
-    {
+    static PyType_Spec type_spec_GattCharacteristicNotificationTrigger = {
         "winrt._winrt_windows_applicationmodel_background.GattCharacteristicNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::GattCharacteristicNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GattCharacteristicNotificationTrigger
-    };
+        _type_slots_GattCharacteristicNotificationTrigger};
 
     // ----- GattServiceProviderTrigger class --------------------
 
@@ -5574,14 +5508,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_GattServiceProviderTrigger =
-    {
+    static PyType_Spec type_spec_GattServiceProviderTrigger = {
         "winrt._winrt_windows_applicationmodel_background.GattServiceProviderTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::GattServiceProviderTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GattServiceProviderTrigger
-    };
+        _type_slots_GattServiceProviderTrigger};
 
     static PyGetSetDef getset_GattServiceProviderTrigger_Static[] = {
         { }
@@ -5709,14 +5641,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_GattServiceProviderTriggerResult =
-    {
+    static PyType_Spec type_spec_GattServiceProviderTriggerResult = {
         "winrt._winrt_windows_applicationmodel_background.GattServiceProviderTriggerResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::GattServiceProviderTriggerResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GattServiceProviderTriggerResult
-    };
+        _type_slots_GattServiceProviderTriggerResult};
 
     // ----- GeovisitTrigger class --------------------
 
@@ -5848,14 +5778,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_GeovisitTrigger =
-    {
+    static PyType_Spec type_spec_GeovisitTrigger = {
         "winrt._winrt_windows_applicationmodel_background.GeovisitTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::GeovisitTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GeovisitTrigger
-    };
+        _type_slots_GeovisitTrigger};
 
     // ----- LocationTrigger class --------------------
 
@@ -5961,14 +5889,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_LocationTrigger =
-    {
+    static PyType_Spec type_spec_LocationTrigger = {
         "winrt._winrt_windows_applicationmodel_background.LocationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::LocationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LocationTrigger
-    };
+        _type_slots_LocationTrigger};
 
     // ----- MaintenanceTrigger class --------------------
 
@@ -6095,14 +6021,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_MaintenanceTrigger =
-    {
+    static PyType_Spec type_spec_MaintenanceTrigger = {
         "winrt._winrt_windows_applicationmodel_background.MaintenanceTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::MaintenanceTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MaintenanceTrigger
-    };
+        _type_slots_MaintenanceTrigger};
 
     // ----- MediaProcessingTrigger class --------------------
 
@@ -6236,14 +6160,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_MediaProcessingTrigger =
-    {
+    static PyType_Spec type_spec_MediaProcessingTrigger = {
         "winrt._winrt_windows_applicationmodel_background.MediaProcessingTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::MediaProcessingTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaProcessingTrigger
-    };
+        _type_slots_MediaProcessingTrigger};
 
     // ----- MobileBroadbandDeviceServiceNotificationTrigger class --------------------
 
@@ -6327,14 +6249,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandDeviceServiceNotificationTrigger =
-    {
+    static PyType_Spec type_spec_MobileBroadbandDeviceServiceNotificationTrigger = {
         "winrt._winrt_windows_applicationmodel_background.MobileBroadbandDeviceServiceNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::MobileBroadbandDeviceServiceNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandDeviceServiceNotificationTrigger
-    };
+        _type_slots_MobileBroadbandDeviceServiceNotificationTrigger};
 
     // ----- MobileBroadbandPcoDataChangeTrigger class --------------------
 
@@ -6418,14 +6338,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandPcoDataChangeTrigger =
-    {
+    static PyType_Spec type_spec_MobileBroadbandPcoDataChangeTrigger = {
         "winrt._winrt_windows_applicationmodel_background.MobileBroadbandPcoDataChangeTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::MobileBroadbandPcoDataChangeTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandPcoDataChangeTrigger
-    };
+        _type_slots_MobileBroadbandPcoDataChangeTrigger};
 
     // ----- MobileBroadbandPinLockStateChangeTrigger class --------------------
 
@@ -6509,14 +6427,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandPinLockStateChangeTrigger =
-    {
+    static PyType_Spec type_spec_MobileBroadbandPinLockStateChangeTrigger = {
         "winrt._winrt_windows_applicationmodel_background.MobileBroadbandPinLockStateChangeTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::MobileBroadbandPinLockStateChangeTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandPinLockStateChangeTrigger
-    };
+        _type_slots_MobileBroadbandPinLockStateChangeTrigger};
 
     // ----- MobileBroadbandRadioStateChangeTrigger class --------------------
 
@@ -6600,14 +6516,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandRadioStateChangeTrigger =
-    {
+    static PyType_Spec type_spec_MobileBroadbandRadioStateChangeTrigger = {
         "winrt._winrt_windows_applicationmodel_background.MobileBroadbandRadioStateChangeTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::MobileBroadbandRadioStateChangeTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandRadioStateChangeTrigger
-    };
+        _type_slots_MobileBroadbandRadioStateChangeTrigger};
 
     // ----- MobileBroadbandRegistrationStateChangeTrigger class --------------------
 
@@ -6691,14 +6605,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandRegistrationStateChangeTrigger =
-    {
+    static PyType_Spec type_spec_MobileBroadbandRegistrationStateChangeTrigger = {
         "winrt._winrt_windows_applicationmodel_background.MobileBroadbandRegistrationStateChangeTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::MobileBroadbandRegistrationStateChangeTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandRegistrationStateChangeTrigger
-    };
+        _type_slots_MobileBroadbandRegistrationStateChangeTrigger};
 
     // ----- NetworkOperatorDataUsageTrigger class --------------------
 
@@ -6782,14 +6694,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_NetworkOperatorDataUsageTrigger =
-    {
+    static PyType_Spec type_spec_NetworkOperatorDataUsageTrigger = {
         "winrt._winrt_windows_applicationmodel_background.NetworkOperatorDataUsageTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::NetworkOperatorDataUsageTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NetworkOperatorDataUsageTrigger
-    };
+        _type_slots_NetworkOperatorDataUsageTrigger};
 
     // ----- NetworkOperatorHotspotAuthenticationTrigger class --------------------
 
@@ -6873,14 +6783,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_NetworkOperatorHotspotAuthenticationTrigger =
-    {
+    static PyType_Spec type_spec_NetworkOperatorHotspotAuthenticationTrigger = {
         "winrt._winrt_windows_applicationmodel_background.NetworkOperatorHotspotAuthenticationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::NetworkOperatorHotspotAuthenticationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NetworkOperatorHotspotAuthenticationTrigger
-    };
+        _type_slots_NetworkOperatorHotspotAuthenticationTrigger};
 
     // ----- NetworkOperatorNotificationTrigger class --------------------
 
@@ -6986,14 +6894,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_NetworkOperatorNotificationTrigger =
-    {
+    static PyType_Spec type_spec_NetworkOperatorNotificationTrigger = {
         "winrt._winrt_windows_applicationmodel_background.NetworkOperatorNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::NetworkOperatorNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NetworkOperatorNotificationTrigger
-    };
+        _type_slots_NetworkOperatorNotificationTrigger};
 
     // ----- PaymentAppCanMakePaymentTrigger class --------------------
 
@@ -7077,14 +6983,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_PaymentAppCanMakePaymentTrigger =
-    {
+    static PyType_Spec type_spec_PaymentAppCanMakePaymentTrigger = {
         "winrt._winrt_windows_applicationmodel_background.PaymentAppCanMakePaymentTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::PaymentAppCanMakePaymentTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentAppCanMakePaymentTrigger
-    };
+        _type_slots_PaymentAppCanMakePaymentTrigger};
 
     // ----- PhoneTrigger class --------------------
 
@@ -7211,14 +7115,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_PhoneTrigger =
-    {
+    static PyType_Spec type_spec_PhoneTrigger = {
         "winrt._winrt_windows_applicationmodel_background.PhoneTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::PhoneTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneTrigger
-    };
+        _type_slots_PhoneTrigger};
 
     // ----- PushNotificationTrigger class --------------------
 
@@ -7317,14 +7219,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_PushNotificationTrigger =
-    {
+    static PyType_Spec type_spec_PushNotificationTrigger = {
         "winrt._winrt_windows_applicationmodel_background.PushNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::PushNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PushNotificationTrigger
-    };
+        _type_slots_PushNotificationTrigger};
 
     // ----- RcsEndUserMessageAvailableTrigger class --------------------
 
@@ -7408,14 +7308,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_RcsEndUserMessageAvailableTrigger =
-    {
+    static PyType_Spec type_spec_RcsEndUserMessageAvailableTrigger = {
         "winrt._winrt_windows_applicationmodel_background.RcsEndUserMessageAvailableTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::RcsEndUserMessageAvailableTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RcsEndUserMessageAvailableTrigger
-    };
+        _type_slots_RcsEndUserMessageAvailableTrigger};
 
     // ----- RfcommConnectionTrigger class --------------------
 
@@ -7683,14 +7581,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_RfcommConnectionTrigger =
-    {
+    static PyType_Spec type_spec_RfcommConnectionTrigger = {
         "winrt._winrt_windows_applicationmodel_background.RfcommConnectionTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::RfcommConnectionTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RfcommConnectionTrigger
-    };
+        _type_slots_RfcommConnectionTrigger};
 
     // ----- SecondaryAuthenticationFactorAuthenticationTrigger class --------------------
 
@@ -7774,14 +7670,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthenticationTrigger =
-    {
+    static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthenticationTrigger = {
         "winrt._winrt_windows_applicationmodel_background.SecondaryAuthenticationFactorAuthenticationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::SecondaryAuthenticationFactorAuthenticationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SecondaryAuthenticationFactorAuthenticationTrigger
-    };
+        _type_slots_SecondaryAuthenticationFactorAuthenticationTrigger};
 
     // ----- SensorDataThresholdTrigger class --------------------
 
@@ -7867,14 +7761,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_SensorDataThresholdTrigger =
-    {
+    static PyType_Spec type_spec_SensorDataThresholdTrigger = {
         "winrt._winrt_windows_applicationmodel_background.SensorDataThresholdTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::SensorDataThresholdTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SensorDataThresholdTrigger
-    };
+        _type_slots_SensorDataThresholdTrigger};
 
     // ----- SmartCardTrigger class --------------------
 
@@ -7980,14 +7872,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardTrigger =
-    {
+    static PyType_Spec type_spec_SmartCardTrigger = {
         "winrt._winrt_windows_applicationmodel_background.SmartCardTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::SmartCardTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardTrigger
-    };
+        _type_slots_SmartCardTrigger};
 
     // ----- SmsMessageReceivedTrigger class --------------------
 
@@ -8073,14 +7963,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_SmsMessageReceivedTrigger =
-    {
+    static PyType_Spec type_spec_SmsMessageReceivedTrigger = {
         "winrt._winrt_windows_applicationmodel_background.SmsMessageReceivedTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::SmsMessageReceivedTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsMessageReceivedTrigger
-    };
+        _type_slots_SmsMessageReceivedTrigger};
 
     // ----- SocketActivityTrigger class --------------------
 
@@ -8184,14 +8072,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_SocketActivityTrigger =
-    {
+    static PyType_Spec type_spec_SocketActivityTrigger = {
         "winrt._winrt_windows_applicationmodel_background.SocketActivityTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::SocketActivityTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SocketActivityTrigger
-    };
+        _type_slots_SocketActivityTrigger};
 
     // ----- StorageLibraryChangeTrackerTrigger class --------------------
 
@@ -8277,14 +8163,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_StorageLibraryChangeTrackerTrigger =
-    {
+    static PyType_Spec type_spec_StorageLibraryChangeTrackerTrigger = {
         "winrt._winrt_windows_applicationmodel_background.StorageLibraryChangeTrackerTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::StorageLibraryChangeTrackerTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageLibraryChangeTrackerTrigger
-    };
+        _type_slots_StorageLibraryChangeTrackerTrigger};
 
     // ----- StorageLibraryContentChangedTrigger class --------------------
 
@@ -8408,14 +8292,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_StorageLibraryContentChangedTrigger =
-    {
+    static PyType_Spec type_spec_StorageLibraryContentChangedTrigger = {
         "winrt._winrt_windows_applicationmodel_background.StorageLibraryContentChangedTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::StorageLibraryContentChangedTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageLibraryContentChangedTrigger
-    };
+        _type_slots_StorageLibraryContentChangedTrigger};
 
     static PyGetSetDef getset_StorageLibraryContentChangedTrigger_Static[] = {
         { }
@@ -8548,14 +8430,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_SystemCondition =
-    {
+    static PyType_Spec type_spec_SystemCondition = {
         "winrt._winrt_windows_applicationmodel_background.SystemCondition",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::SystemCondition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemCondition
-    };
+        _type_slots_SystemCondition};
 
     // ----- SystemTrigger class --------------------
 
@@ -8682,14 +8562,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_SystemTrigger =
-    {
+    static PyType_Spec type_spec_SystemTrigger = {
         "winrt._winrt_windows_applicationmodel_background.SystemTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::SystemTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemTrigger
-    };
+        _type_slots_SystemTrigger};
 
     // ----- TetheringEntitlementCheckTrigger class --------------------
 
@@ -8773,14 +8651,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_TetheringEntitlementCheckTrigger =
-    {
+    static PyType_Spec type_spec_TetheringEntitlementCheckTrigger = {
         "winrt._winrt_windows_applicationmodel_background.TetheringEntitlementCheckTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::TetheringEntitlementCheckTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TetheringEntitlementCheckTrigger
-    };
+        _type_slots_TetheringEntitlementCheckTrigger};
 
     // ----- TimeTrigger class --------------------
 
@@ -8907,14 +8783,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_TimeTrigger =
-    {
+    static PyType_Spec type_spec_TimeTrigger = {
         "winrt._winrt_windows_applicationmodel_background.TimeTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::TimeTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TimeTrigger
-    };
+        _type_slots_TimeTrigger};
 
     // ----- ToastNotificationActionTrigger class --------------------
 
@@ -9013,14 +8887,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_ToastNotificationActionTrigger =
-    {
+    static PyType_Spec type_spec_ToastNotificationActionTrigger = {
         "winrt._winrt_windows_applicationmodel_background.ToastNotificationActionTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ToastNotificationActionTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToastNotificationActionTrigger
-    };
+        _type_slots_ToastNotificationActionTrigger};
 
     // ----- ToastNotificationHistoryChangedTrigger class --------------------
 
@@ -9119,14 +8991,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_ToastNotificationHistoryChangedTrigger =
-    {
+    static PyType_Spec type_spec_ToastNotificationHistoryChangedTrigger = {
         "winrt._winrt_windows_applicationmodel_background.ToastNotificationHistoryChangedTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ToastNotificationHistoryChangedTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToastNotificationHistoryChangedTrigger
-    };
+        _type_slots_ToastNotificationHistoryChangedTrigger};
 
     // ----- UserNotificationChangedTrigger class --------------------
 
@@ -9212,14 +9082,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_UserNotificationChangedTrigger =
-    {
+    static PyType_Spec type_spec_UserNotificationChangedTrigger = {
         "winrt._winrt_windows_applicationmodel_background.UserNotificationChangedTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::UserNotificationChangedTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserNotificationChangedTrigger
-    };
+        _type_slots_UserNotificationChangedTrigger};
 
     // ----- WiFiOnDemandHotspotConnectTrigger class --------------------
 
@@ -9303,14 +9171,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_WiFiOnDemandHotspotConnectTrigger =
-    {
+    static PyType_Spec type_spec_WiFiOnDemandHotspotConnectTrigger = {
         "winrt._winrt_windows_applicationmodel_background.WiFiOnDemandHotspotConnectTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::WiFiOnDemandHotspotConnectTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiOnDemandHotspotConnectTrigger
-    };
+        _type_slots_WiFiOnDemandHotspotConnectTrigger};
 
     // ----- WiFiOnDemandHotspotUpdateMetadataTrigger class --------------------
 
@@ -9394,14 +9260,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_WiFiOnDemandHotspotUpdateMetadataTrigger =
-    {
+    static PyType_Spec type_spec_WiFiOnDemandHotspotUpdateMetadataTrigger = {
         "winrt._winrt_windows_applicationmodel_background.WiFiOnDemandHotspotUpdateMetadataTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::WiFiOnDemandHotspotUpdateMetadataTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiOnDemandHotspotUpdateMetadataTrigger
-    };
+        _type_slots_WiFiOnDemandHotspotUpdateMetadataTrigger};
 
     // ----- IBackgroundCondition interface --------------------
 
@@ -9463,14 +9327,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_IBackgroundCondition =
-    {
+    static PyType_Spec type_spec_IBackgroundCondition = {
         "winrt._winrt_windows_applicationmodel_background.IBackgroundCondition",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundCondition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBackgroundCondition
-    };
+        _type_slots_IBackgroundCondition};
 
     // ----- IBackgroundTask interface --------------------
 
@@ -9565,14 +9427,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_IBackgroundTask =
-    {
+    static PyType_Spec type_spec_IBackgroundTask = {
         "winrt._winrt_windows_applicationmodel_background.IBackgroundTask",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTask),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBackgroundTask
-    };
+        _type_slots_IBackgroundTask};
 
     // ----- IBackgroundTaskInstance interface --------------------
 
@@ -9837,14 +9697,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_IBackgroundTaskInstance =
-    {
+    static PyType_Spec type_spec_IBackgroundTaskInstance = {
         "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskInstance",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBackgroundTaskInstance
-    };
+        _type_slots_IBackgroundTaskInstance};
 
     // ----- IBackgroundTaskInstance2 interface --------------------
 
@@ -10141,14 +9999,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_IBackgroundTaskInstance2 =
-    {
+    static PyType_Spec type_spec_IBackgroundTaskInstance2 = {
         "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskInstance2",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBackgroundTaskInstance2
-    };
+        _type_slots_IBackgroundTaskInstance2};
 
     // ----- IBackgroundTaskInstance4 interface --------------------
 
@@ -10433,14 +10289,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_IBackgroundTaskInstance4 =
-    {
+    static PyType_Spec type_spec_IBackgroundTaskInstance4 = {
         "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskInstance4",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance4),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBackgroundTaskInstance4
-    };
+        _type_slots_IBackgroundTaskInstance4};
 
     // ----- IBackgroundTaskRegistration interface --------------------
 
@@ -10665,14 +10519,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_IBackgroundTaskRegistration =
-    {
+    static PyType_Spec type_spec_IBackgroundTaskRegistration = {
         "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskRegistration",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBackgroundTaskRegistration
-    };
+        _type_slots_IBackgroundTaskRegistration};
 
     // ----- IBackgroundTaskRegistration2 interface --------------------
 
@@ -10917,14 +10769,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_IBackgroundTaskRegistration2 =
-    {
+    static PyType_Spec type_spec_IBackgroundTaskRegistration2 = {
         "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskRegistration2",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBackgroundTaskRegistration2
-    };
+        _type_slots_IBackgroundTaskRegistration2};
 
     // ----- IBackgroundTaskRegistration3 interface --------------------
 
@@ -11169,14 +11019,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_IBackgroundTaskRegistration3 =
-    {
+    static PyType_Spec type_spec_IBackgroundTaskRegistration3 = {
         "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskRegistration3",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBackgroundTaskRegistration3
-    };
+        _type_slots_IBackgroundTaskRegistration3};
 
     // ----- IBackgroundTrigger interface --------------------
 
@@ -11238,14 +11086,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { },
     };
 
-    static PyType_Spec type_spec_IBackgroundTrigger =
-    {
+    static PyType_Spec type_spec_IBackgroundTrigger = {
         "winrt._winrt_windows_applicationmodel_background.IBackgroundTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBackgroundTrigger
-    };
+        _type_slots_IBackgroundTrigger};
 
     // ----- Windows.ApplicationModel.Background Initialization --------------------
 

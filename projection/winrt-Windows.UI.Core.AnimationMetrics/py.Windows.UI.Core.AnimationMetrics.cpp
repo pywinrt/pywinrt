@@ -190,14 +190,12 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { },
     };
 
-    static PyType_Spec type_spec_AnimationDescription =
-    {
+    static PyType_Spec type_spec_AnimationDescription = {
         "winrt._winrt_windows_ui_core_animationmetrics.AnimationDescription",
         sizeof(py::wrapper::Windows::UI::Core::AnimationMetrics::AnimationDescription),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AnimationDescription
-    };
+        _type_slots_AnimationDescription};
 
     // ----- OpacityAnimation class --------------------
 
@@ -399,14 +397,12 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { },
     };
 
-    static PyType_Spec type_spec_OpacityAnimation =
-    {
+    static PyType_Spec type_spec_OpacityAnimation = {
         "winrt._winrt_windows_ui_core_animationmetrics.OpacityAnimation",
         sizeof(py::wrapper::Windows::UI::Core::AnimationMetrics::OpacityAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_OpacityAnimation
-    };
+        _type_slots_OpacityAnimation};
 
     // ----- PropertyAnimation class --------------------
 
@@ -568,14 +564,12 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { },
     };
 
-    static PyType_Spec type_spec_PropertyAnimation =
-    {
+    static PyType_Spec type_spec_PropertyAnimation = {
         "winrt._winrt_windows_ui_core_animationmetrics.PropertyAnimation",
         sizeof(py::wrapper::Windows::UI::Core::AnimationMetrics::PropertyAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PropertyAnimation
-    };
+        _type_slots_PropertyAnimation};
 
     // ----- ScaleAnimation class --------------------
 
@@ -837,14 +831,12 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { },
     };
 
-    static PyType_Spec type_spec_ScaleAnimation =
-    {
+    static PyType_Spec type_spec_ScaleAnimation = {
         "winrt._winrt_windows_ui_core_animationmetrics.ScaleAnimation",
         sizeof(py::wrapper::Windows::UI::Core::AnimationMetrics::ScaleAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScaleAnimation
-    };
+        _type_slots_ScaleAnimation};
 
     // ----- TranslationAnimation class --------------------
 
@@ -1006,14 +998,12 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { },
     };
 
-    static PyType_Spec type_spec_TranslationAnimation =
-    {
+    static PyType_Spec type_spec_TranslationAnimation = {
         "winrt._winrt_windows_ui_core_animationmetrics.TranslationAnimation",
         sizeof(py::wrapper::Windows::UI::Core::AnimationMetrics::TranslationAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TranslationAnimation
-    };
+        _type_slots_TranslationAnimation};
 
     // ----- IPropertyAnimation interface --------------------
 
@@ -1175,14 +1165,12 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { },
     };
 
-    static PyType_Spec type_spec_IPropertyAnimation =
-    {
+    static PyType_Spec type_spec_IPropertyAnimation = {
         "winrt._winrt_windows_ui_core_animationmetrics.IPropertyAnimation",
         sizeof(py::wrapper::Windows::UI::Core::AnimationMetrics::IPropertyAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IPropertyAnimation
-    };
+        _type_slots_IPropertyAnimation};
 
     // ----- Windows.UI.Core.AnimationMetrics Initialization --------------------
 

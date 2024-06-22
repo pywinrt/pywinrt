@@ -95,14 +95,12 @@ namespace py::cpp::Windows::Security::DataProtection
         { },
     };
 
-    static PyType_Spec type_spec_UserDataAvailabilityStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_UserDataAvailabilityStateChangedEventArgs = {
         "winrt._winrt_windows_security_dataprotection.UserDataAvailabilityStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataAvailabilityStateChangedEventArgs
-    };
+        _type_slots_UserDataAvailabilityStateChangedEventArgs};
 
     // ----- UserDataBufferUnprotectResult class --------------------
 
@@ -204,14 +202,12 @@ namespace py::cpp::Windows::Security::DataProtection
         { },
     };
 
-    static PyType_Spec type_spec_UserDataBufferUnprotectResult =
-    {
+    static PyType_Spec type_spec_UserDataBufferUnprotectResult = {
         "winrt._winrt_windows_security_dataprotection.UserDataBufferUnprotectResult",
         sizeof(py::wrapper::Windows::Security::DataProtection::UserDataBufferUnprotectResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataBufferUnprotectResult
-    };
+        _type_slots_UserDataBufferUnprotectResult};
 
     // ----- UserDataProtectionManager class --------------------
 
@@ -540,14 +536,12 @@ namespace py::cpp::Windows::Security::DataProtection
         { },
     };
 
-    static PyType_Spec type_spec_UserDataProtectionManager =
-    {
+    static PyType_Spec type_spec_UserDataProtectionManager = {
         "winrt._winrt_windows_security_dataprotection.UserDataProtectionManager",
         sizeof(py::wrapper::Windows::Security::DataProtection::UserDataProtectionManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataProtectionManager
-    };
+        _type_slots_UserDataProtectionManager};
 
     static PyGetSetDef getset_UserDataProtectionManager_Static[] = {
         { }
@@ -656,14 +650,12 @@ namespace py::cpp::Windows::Security::DataProtection
         { },
     };
 
-    static PyType_Spec type_spec_UserDataStorageItemProtectionInfo =
-    {
+    static PyType_Spec type_spec_UserDataStorageItemProtectionInfo = {
         "winrt._winrt_windows_security_dataprotection.UserDataStorageItemProtectionInfo",
         sizeof(py::wrapper::Windows::Security::DataProtection::UserDataStorageItemProtectionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataStorageItemProtectionInfo
-    };
+        _type_slots_UserDataStorageItemProtectionInfo};
 
     // ----- Windows.Security.DataProtection Initialization --------------------
 

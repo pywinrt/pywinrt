@@ -95,14 +95,12 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
         { },
     };
 
-    static PyType_Spec type_spec_PreviewTeamCleanupRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_PreviewTeamCleanupRequestedEventArgs = {
         "winrt._winrt_windows_ui_core_preview_communications.PreviewTeamCleanupRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamCleanupRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PreviewTeamCleanupRequestedEventArgs
-    };
+        _type_slots_PreviewTeamCleanupRequestedEventArgs};
 
     // ----- PreviewTeamCommandInvokedEventArgs class --------------------
 
@@ -184,14 +182,12 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
         { },
     };
 
-    static PyType_Spec type_spec_PreviewTeamCommandInvokedEventArgs =
-    {
+    static PyType_Spec type_spec_PreviewTeamCommandInvokedEventArgs = {
         "winrt._winrt_windows_ui_core_preview_communications.PreviewTeamCommandInvokedEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamCommandInvokedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PreviewTeamCommandInvokedEventArgs
-    };
+        _type_slots_PreviewTeamCommandInvokedEventArgs};
 
     // ----- PreviewTeamDeviceCredentials class --------------------
 
@@ -335,14 +331,12 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
         { },
     };
 
-    static PyType_Spec type_spec_PreviewTeamDeviceCredentials =
-    {
+    static PyType_Spec type_spec_PreviewTeamDeviceCredentials = {
         "winrt._winrt_windows_ui_core_preview_communications.PreviewTeamDeviceCredentials",
         sizeof(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamDeviceCredentials),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PreviewTeamDeviceCredentials
-    };
+        _type_slots_PreviewTeamDeviceCredentials};
 
     // ----- PreviewTeamEndMeetingRequestedEventArgs class --------------------
 
@@ -434,14 +428,12 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
         { },
     };
 
-    static PyType_Spec type_spec_PreviewTeamEndMeetingRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_PreviewTeamEndMeetingRequestedEventArgs = {
         "winrt._winrt_windows_ui_core_preview_communications.PreviewTeamEndMeetingRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PreviewTeamEndMeetingRequestedEventArgs
-    };
+        _type_slots_PreviewTeamEndMeetingRequestedEventArgs};
 
     // ----- PreviewTeamJoinMeetingRequestedEventArgs class --------------------
 
@@ -553,14 +545,12 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
         { },
     };
 
-    static PyType_Spec type_spec_PreviewTeamJoinMeetingRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_PreviewTeamJoinMeetingRequestedEventArgs = {
         "winrt._winrt_windows_ui_core_preview_communications.PreviewTeamJoinMeetingRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamJoinMeetingRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PreviewTeamJoinMeetingRequestedEventArgs
-    };
+        _type_slots_PreviewTeamJoinMeetingRequestedEventArgs};
 
     // ----- PreviewTeamView class --------------------
 
@@ -1418,14 +1408,12 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
         { },
     };
 
-    static PyType_Spec type_spec_PreviewTeamView =
-    {
+    static PyType_Spec type_spec_PreviewTeamView = {
         "winrt._winrt_windows_ui_core_preview_communications.PreviewTeamView",
         sizeof(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PreviewTeamView
-    };
+        _type_slots_PreviewTeamView};
 
     static PyGetSetDef getset_PreviewTeamView_Static[] = {
         { }

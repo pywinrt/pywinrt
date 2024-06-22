@@ -222,14 +222,12 @@ namespace py::cpp::Windows::Phone::Media::Devices
         { },
     };
 
-    static PyType_Spec type_spec_AudioRoutingManager =
-    {
+    static PyType_Spec type_spec_AudioRoutingManager = {
         "winrt._winrt_windows_phone_media_devices.AudioRoutingManager",
         sizeof(py::wrapper::Windows::Phone::Media::Devices::AudioRoutingManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioRoutingManager
-    };
+        _type_slots_AudioRoutingManager};
 
     static PyGetSetDef getset_AudioRoutingManager_Static[] = {
         { }

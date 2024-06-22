@@ -160,14 +160,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_AnnotationPatternIdentifiers =
-    {
+    static PyType_Spec type_spec_AnnotationPatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.AnnotationPatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::AnnotationPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AnnotationPatternIdentifiers
-    };
+        _type_slots_AnnotationPatternIdentifiers};
 
     static PyGetSetDef getset_AnnotationPatternIdentifiers_Static[] = {
         { "annotation_type_id_property", reinterpret_cast<getter>(AnnotationPatternIdentifiers_get_AnnotationTypeIdProperty), nullptr, nullptr, nullptr },
@@ -446,14 +444,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_AutomationAnnotation =
-    {
+    static PyType_Spec type_spec_AutomationAnnotation = {
         "winrt._winrt_microsoft_ui_xaml_automation.AutomationAnnotation",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::AutomationAnnotation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AutomationAnnotation
-    };
+        _type_slots_AutomationAnnotation};
 
     static PyGetSetDef getset_AutomationAnnotation_Static[] = {
         { "element_property", reinterpret_cast<getter>(AutomationAnnotation_get_ElementProperty), nullptr, nullptr, nullptr },
@@ -1283,14 +1279,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_AutomationElementIdentifiers =
-    {
+    static PyType_Spec type_spec_AutomationElementIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.AutomationElementIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AutomationElementIdentifiers
-    };
+        _type_slots_AutomationElementIdentifiers};
 
     static PyGetSetDef getset_AutomationElementIdentifiers_Static[] = {
         { "accelerator_key_property", reinterpret_cast<getter>(AutomationElementIdentifiers_get_AcceleratorKeyProperty), nullptr, nullptr, nullptr },
@@ -3658,14 +3652,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_AutomationProperties =
-    {
+    static PyType_Spec type_spec_AutomationProperties = {
         "winrt._winrt_microsoft_ui_xaml_automation.AutomationProperties",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::AutomationProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AutomationProperties
-    };
+        _type_slots_AutomationProperties};
 
     static PyGetSetDef getset_AutomationProperties_Static[] = {
         { "accelerator_key_property", reinterpret_cast<getter>(AutomationProperties_get_AcceleratorKeyProperty), nullptr, nullptr, nullptr },
@@ -3834,14 +3826,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_AutomationProperty =
-    {
+    static PyType_Spec type_spec_AutomationProperty = {
         "winrt._winrt_microsoft_ui_xaml_automation.AutomationProperty",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::AutomationProperty),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AutomationProperty
-    };
+        _type_slots_AutomationProperty};
 
     // ----- DockPatternIdentifiers class --------------------
 
@@ -3922,14 +3912,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_DockPatternIdentifiers =
-    {
+    static PyType_Spec type_spec_DockPatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.DockPatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::DockPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DockPatternIdentifiers
-    };
+        _type_slots_DockPatternIdentifiers};
 
     static PyGetSetDef getset_DockPatternIdentifiers_Static[] = {
         { "dock_position_property", reinterpret_cast<getter>(DockPatternIdentifiers_get_DockPositionProperty), nullptr, nullptr, nullptr },
@@ -4093,14 +4081,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_DragPatternIdentifiers =
-    {
+    static PyType_Spec type_spec_DragPatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.DragPatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::DragPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DragPatternIdentifiers
-    };
+        _type_slots_DragPatternIdentifiers};
 
     static PyGetSetDef getset_DragPatternIdentifiers_Static[] = {
         { "drop_effect_property", reinterpret_cast<getter>(DragPatternIdentifiers_get_DropEffectProperty), nullptr, nullptr, nullptr },
@@ -4229,14 +4215,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_DropTargetPatternIdentifiers =
-    {
+    static PyType_Spec type_spec_DropTargetPatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.DropTargetPatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::DropTargetPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DropTargetPatternIdentifiers
-    };
+        _type_slots_DropTargetPatternIdentifiers};
 
     static PyGetSetDef getset_DropTargetPatternIdentifiers_Static[] = {
         { "drop_target_effect_property", reinterpret_cast<getter>(DropTargetPatternIdentifiers_get_DropTargetEffectProperty), nullptr, nullptr, nullptr },
@@ -4344,14 +4328,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_ExpandCollapsePatternIdentifiers =
-    {
+    static PyType_Spec type_spec_ExpandCollapsePatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.ExpandCollapsePatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::ExpandCollapsePatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ExpandCollapsePatternIdentifiers
-    };
+        _type_slots_ExpandCollapsePatternIdentifiers};
 
     static PyGetSetDef getset_ExpandCollapsePatternIdentifiers_Static[] = {
         { "expand_collapse_state_property", reinterpret_cast<getter>(ExpandCollapsePatternIdentifiers_get_ExpandCollapseStateProperty), nullptr, nullptr, nullptr },
@@ -4534,14 +4516,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_GridItemPatternIdentifiers =
-    {
+    static PyType_Spec type_spec_GridItemPatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.GridItemPatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::GridItemPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GridItemPatternIdentifiers
-    };
+        _type_slots_GridItemPatternIdentifiers};
 
     static PyGetSetDef getset_GridItemPatternIdentifiers_Static[] = {
         { "column_property", reinterpret_cast<getter>(GridItemPatternIdentifiers_get_ColumnProperty), nullptr, nullptr, nullptr },
@@ -4671,14 +4651,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_GridPatternIdentifiers =
-    {
+    static PyType_Spec type_spec_GridPatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.GridPatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::GridPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GridPatternIdentifiers
-    };
+        _type_slots_GridPatternIdentifiers};
 
     static PyGetSetDef getset_GridPatternIdentifiers_Static[] = {
         { "column_count_property", reinterpret_cast<getter>(GridPatternIdentifiers_get_ColumnCountProperty), nullptr, nullptr, nullptr },
@@ -4805,14 +4783,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_MultipleViewPatternIdentifiers =
-    {
+    static PyType_Spec type_spec_MultipleViewPatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.MultipleViewPatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::MultipleViewPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MultipleViewPatternIdentifiers
-    };
+        _type_slots_MultipleViewPatternIdentifiers};
 
     static PyGetSetDef getset_MultipleViewPatternIdentifiers_Static[] = {
         { "current_view_property", reinterpret_cast<getter>(MultipleViewPatternIdentifiers_get_CurrentViewProperty), nullptr, nullptr, nullptr },
@@ -5015,14 +4991,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_RangeValuePatternIdentifiers =
-    {
+    static PyType_Spec type_spec_RangeValuePatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.RangeValuePatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::RangeValuePatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RangeValuePatternIdentifiers
-    };
+        _type_slots_RangeValuePatternIdentifiers};
 
     static PyGetSetDef getset_RangeValuePatternIdentifiers_Static[] = {
         { "is_read_only_property", reinterpret_cast<getter>(RangeValuePatternIdentifiers_get_IsReadOnlyProperty), nullptr, nullptr, nullptr },
@@ -5248,14 +5222,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_ScrollPatternIdentifiers =
-    {
+    static PyType_Spec type_spec_ScrollPatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.ScrollPatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::ScrollPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScrollPatternIdentifiers
-    };
+        _type_slots_ScrollPatternIdentifiers};
 
     static PyGetSetDef getset_ScrollPatternIdentifiers_Static[] = {
         { "horizontal_scroll_percent_property", reinterpret_cast<getter>(ScrollPatternIdentifiers_get_HorizontalScrollPercentProperty), nullptr, nullptr, nullptr },
@@ -5387,14 +5359,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_SelectionItemPatternIdentifiers =
-    {
+    static PyType_Spec type_spec_SelectionItemPatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.SelectionItemPatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::SelectionItemPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SelectionItemPatternIdentifiers
-    };
+        _type_slots_SelectionItemPatternIdentifiers};
 
     static PyGetSetDef getset_SelectionItemPatternIdentifiers_Static[] = {
         { "is_selected_property", reinterpret_cast<getter>(SelectionItemPatternIdentifiers_get_IsSelectedProperty), nullptr, nullptr, nullptr },
@@ -5540,14 +5510,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_SelectionPatternIdentifiers =
-    {
+    static PyType_Spec type_spec_SelectionPatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.SelectionPatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::SelectionPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SelectionPatternIdentifiers
-    };
+        _type_slots_SelectionPatternIdentifiers};
 
     static PyGetSetDef getset_SelectionPatternIdentifiers_Static[] = {
         { "can_select_multiple_property", reinterpret_cast<getter>(SelectionPatternIdentifiers_get_CanSelectMultipleProperty), nullptr, nullptr, nullptr },
@@ -5656,14 +5624,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_SpreadsheetItemPatternIdentifiers =
-    {
+    static PyType_Spec type_spec_SpreadsheetItemPatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.SpreadsheetItemPatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::SpreadsheetItemPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpreadsheetItemPatternIdentifiers
-    };
+        _type_slots_SpreadsheetItemPatternIdentifiers};
 
     static PyGetSetDef getset_SpreadsheetItemPatternIdentifiers_Static[] = {
         { "formula_property", reinterpret_cast<getter>(SpreadsheetItemPatternIdentifiers_get_FormulaProperty), nullptr, nullptr, nullptr },
@@ -5884,14 +5850,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_StylesPatternIdentifiers =
-    {
+    static PyType_Spec type_spec_StylesPatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.StylesPatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::StylesPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StylesPatternIdentifiers
-    };
+        _type_slots_StylesPatternIdentifiers};
 
     static PyGetSetDef getset_StylesPatternIdentifiers_Static[] = {
         { "extended_properties_property", reinterpret_cast<getter>(StylesPatternIdentifiers_get_ExtendedPropertiesProperty), nullptr, nullptr, nullptr },
@@ -6023,14 +5987,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_TableItemPatternIdentifiers =
-    {
+    static PyType_Spec type_spec_TableItemPatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.TableItemPatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::TableItemPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TableItemPatternIdentifiers
-    };
+        _type_slots_TableItemPatternIdentifiers};
 
     static PyGetSetDef getset_TableItemPatternIdentifiers_Static[] = {
         { "column_header_items_property", reinterpret_cast<getter>(TableItemPatternIdentifiers_get_ColumnHeaderItemsProperty), nullptr, nullptr, nullptr },
@@ -6176,14 +6138,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_TablePatternIdentifiers =
-    {
+    static PyType_Spec type_spec_TablePatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.TablePatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::TablePatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TablePatternIdentifiers
-    };
+        _type_slots_TablePatternIdentifiers};
 
     static PyGetSetDef getset_TablePatternIdentifiers_Static[] = {
         { "column_headers_property", reinterpret_cast<getter>(TablePatternIdentifiers_get_ColumnHeadersProperty), nullptr, nullptr, nullptr },
@@ -6292,14 +6252,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_TogglePatternIdentifiers =
-    {
+    static PyType_Spec type_spec_TogglePatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.TogglePatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::TogglePatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TogglePatternIdentifiers
-    };
+        _type_slots_TogglePatternIdentifiers};
 
     static PyGetSetDef getset_TogglePatternIdentifiers_Static[] = {
         { "toggle_state_property", reinterpret_cast<getter>(TogglePatternIdentifiers_get_ToggleStateProperty), nullptr, nullptr, nullptr },
@@ -6463,14 +6421,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_TransformPattern2Identifiers =
-    {
+    static PyType_Spec type_spec_TransformPattern2Identifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.TransformPattern2Identifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::TransformPattern2Identifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TransformPattern2Identifiers
-    };
+        _type_slots_TransformPattern2Identifiers};
 
     static PyGetSetDef getset_TransformPattern2Identifiers_Static[] = {
         { "can_zoom_property", reinterpret_cast<getter>(TransformPattern2Identifiers_get_CanZoomProperty), nullptr, nullptr, nullptr },
@@ -6618,14 +6574,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_TransformPatternIdentifiers =
-    {
+    static PyType_Spec type_spec_TransformPatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.TransformPatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::TransformPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TransformPatternIdentifiers
-    };
+        _type_slots_TransformPatternIdentifiers};
 
     static PyGetSetDef getset_TransformPatternIdentifiers_Static[] = {
         { "can_move_property", reinterpret_cast<getter>(TransformPatternIdentifiers_get_CanMoveProperty), nullptr, nullptr, nullptr },
@@ -6753,14 +6707,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_ValuePatternIdentifiers =
-    {
+    static PyType_Spec type_spec_ValuePatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.ValuePatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::ValuePatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ValuePatternIdentifiers
-    };
+        _type_slots_ValuePatternIdentifiers};
 
     static PyGetSetDef getset_ValuePatternIdentifiers_Static[] = {
         { "is_read_only_property", reinterpret_cast<getter>(ValuePatternIdentifiers_get_IsReadOnlyProperty), nullptr, nullptr, nullptr },
@@ -6963,14 +6915,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { },
     };
 
-    static PyType_Spec type_spec_WindowPatternIdentifiers =
-    {
+    static PyType_Spec type_spec_WindowPatternIdentifiers = {
         "winrt._winrt_microsoft_ui_xaml_automation.WindowPatternIdentifiers",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::WindowPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowPatternIdentifiers
-    };
+        _type_slots_WindowPatternIdentifiers};
 
     static PyGetSetDef getset_WindowPatternIdentifiers_Static[] = {
         { "can_maximize_property", reinterpret_cast<getter>(WindowPatternIdentifiers_get_CanMaximizeProperty), nullptr, nullptr, nullptr },

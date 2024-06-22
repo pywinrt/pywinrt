@@ -61,14 +61,12 @@ namespace py::cpp::Windows::Management::Deployment::Preview
         { },
     };
 
-    static PyType_Spec type_spec_ClassicAppManager =
-    {
+    static PyType_Spec type_spec_ClassicAppManager = {
         "winrt._winrt_windows_management_deployment_preview.ClassicAppManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ClassicAppManager
-    };
+        _type_slots_ClassicAppManager};
 
     static PyGetSetDef getset_ClassicAppManager_Static[] = {
         { }
@@ -196,14 +194,12 @@ namespace py::cpp::Windows::Management::Deployment::Preview
         { },
     };
 
-    static PyType_Spec type_spec_InstalledClassicAppInfo =
-    {
+    static PyType_Spec type_spec_InstalledClassicAppInfo = {
         "winrt._winrt_windows_management_deployment_preview.InstalledClassicAppInfo",
         sizeof(py::wrapper::Windows::Management::Deployment::Preview::InstalledClassicAppInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InstalledClassicAppInfo
-    };
+        _type_slots_InstalledClassicAppInfo};
 
     // ----- Windows.Management.Deployment.Preview Initialization --------------------
 

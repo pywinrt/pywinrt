@@ -859,14 +859,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_AddPackageOptions =
-    {
+    static PyType_Spec type_spec_AddPackageOptions = {
         "winrt._winrt_windows_management_deployment.AddPackageOptions",
         sizeof(py::wrapper::Windows::Management::Deployment::AddPackageOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AddPackageOptions
-    };
+        _type_slots_AddPackageOptions};
 
     // ----- AppInstallerManager class --------------------
 
@@ -1087,14 +1085,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_AppInstallerManager =
-    {
+    static PyType_Spec type_spec_AppInstallerManager = {
         "winrt._winrt_windows_management_deployment.AppInstallerManager",
         sizeof(py::wrapper::Windows::Management::Deployment::AppInstallerManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppInstallerManager
-    };
+        _type_slots_AppInstallerManager};
 
     static PyGetSetDef getset_AppInstallerManager_Static[] = {
         { }
@@ -1748,14 +1744,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_AutoUpdateSettingsOptions =
-    {
+    static PyType_Spec type_spec_AutoUpdateSettingsOptions = {
         "winrt._winrt_windows_management_deployment.AutoUpdateSettingsOptions",
         sizeof(py::wrapper::Windows::Management::Deployment::AutoUpdateSettingsOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AutoUpdateSettingsOptions
-    };
+        _type_slots_AutoUpdateSettingsOptions};
 
     static PyGetSetDef getset_AutoUpdateSettingsOptions_Static[] = {
         { }
@@ -1981,14 +1975,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_CreateSharedPackageContainerOptions =
-    {
+    static PyType_Spec type_spec_CreateSharedPackageContainerOptions = {
         "winrt._winrt_windows_management_deployment.CreateSharedPackageContainerOptions",
         sizeof(py::wrapper::Windows::Management::Deployment::CreateSharedPackageContainerOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CreateSharedPackageContainerOptions
-    };
+        _type_slots_CreateSharedPackageContainerOptions};
 
     // ----- CreateSharedPackageContainerResult class --------------------
 
@@ -2110,14 +2102,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_CreateSharedPackageContainerResult =
-    {
+    static PyType_Spec type_spec_CreateSharedPackageContainerResult = {
         "winrt._winrt_windows_management_deployment.CreateSharedPackageContainerResult",
         sizeof(py::wrapper::Windows::Management::Deployment::CreateSharedPackageContainerResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CreateSharedPackageContainerResult
-    };
+        _type_slots_CreateSharedPackageContainerResult};
 
     // ----- DeleteSharedPackageContainerOptions class --------------------
 
@@ -2297,14 +2287,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_DeleteSharedPackageContainerOptions =
-    {
+    static PyType_Spec type_spec_DeleteSharedPackageContainerOptions = {
         "winrt._winrt_windows_management_deployment.DeleteSharedPackageContainerOptions",
         sizeof(py::wrapper::Windows::Management::Deployment::DeleteSharedPackageContainerOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeleteSharedPackageContainerOptions
-    };
+        _type_slots_DeleteSharedPackageContainerOptions};
 
     // ----- DeleteSharedPackageContainerResult class --------------------
 
@@ -2406,14 +2394,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_DeleteSharedPackageContainerResult =
-    {
+    static PyType_Spec type_spec_DeleteSharedPackageContainerResult = {
         "winrt._winrt_windows_management_deployment.DeleteSharedPackageContainerResult",
         sizeof(py::wrapper::Windows::Management::Deployment::DeleteSharedPackageContainerResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeleteSharedPackageContainerResult
-    };
+        _type_slots_DeleteSharedPackageContainerResult};
 
     // ----- DeploymentResult class --------------------
 
@@ -2555,14 +2541,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_DeploymentResult =
-    {
+    static PyType_Spec type_spec_DeploymentResult = {
         "winrt._winrt_windows_management_deployment.DeploymentResult",
         sizeof(py::wrapper::Windows::Management::Deployment::DeploymentResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeploymentResult
-    };
+        _type_slots_DeploymentResult};
 
     // ----- FindSharedPackageContainerOptions class --------------------
 
@@ -2742,14 +2726,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_FindSharedPackageContainerOptions =
-    {
+    static PyType_Spec type_spec_FindSharedPackageContainerOptions = {
         "winrt._winrt_windows_management_deployment.FindSharedPackageContainerOptions",
         sizeof(py::wrapper::Windows::Management::Deployment::FindSharedPackageContainerOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FindSharedPackageContainerOptions
-    };
+        _type_slots_FindSharedPackageContainerOptions};
 
     // ----- PackageAllUserProvisioningOptions class --------------------
 
@@ -2873,14 +2855,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_PackageAllUserProvisioningOptions =
-    {
+    static PyType_Spec type_spec_PackageAllUserProvisioningOptions = {
         "winrt._winrt_windows_management_deployment.PackageAllUserProvisioningOptions",
         sizeof(py::wrapper::Windows::Management::Deployment::PackageAllUserProvisioningOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PackageAllUserProvisioningOptions
-    };
+        _type_slots_PackageAllUserProvisioningOptions};
 
     // ----- PackageManager class --------------------
 
@@ -4780,14 +4760,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_PackageManager =
-    {
+    static PyType_Spec type_spec_PackageManager = {
         "winrt._winrt_windows_management_deployment.PackageManager",
         sizeof(py::wrapper::Windows::Management::Deployment::PackageManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PackageManager
-    };
+        _type_slots_PackageManager};
 
     // ----- PackageManagerDebugSettings class --------------------
 
@@ -4906,14 +4884,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_PackageManagerDebugSettings =
-    {
+    static PyType_Spec type_spec_PackageManagerDebugSettings = {
         "winrt._winrt_windows_management_deployment.PackageManagerDebugSettings",
         sizeof(py::wrapper::Windows::Management::Deployment::PackageManagerDebugSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PackageManagerDebugSettings
-    };
+        _type_slots_PackageManagerDebugSettings};
 
     // ----- PackageUserInformation class --------------------
 
@@ -5015,14 +4991,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_PackageUserInformation =
-    {
+    static PyType_Spec type_spec_PackageUserInformation = {
         "winrt._winrt_windows_management_deployment.PackageUserInformation",
         sizeof(py::wrapper::Windows::Management::Deployment::PackageUserInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PackageUserInformation
-    };
+        _type_slots_PackageUserInformation};
 
     // ----- PackageVolume class --------------------
 
@@ -5638,14 +5612,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_PackageVolume =
-    {
+    static PyType_Spec type_spec_PackageVolume = {
         "winrt._winrt_windows_management_deployment.PackageVolume",
         sizeof(py::wrapper::Windows::Management::Deployment::PackageVolume),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PackageVolume
-    };
+        _type_slots_PackageVolume};
 
     // ----- RegisterPackageOptions class --------------------
 
@@ -6269,14 +6241,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_RegisterPackageOptions =
-    {
+    static PyType_Spec type_spec_RegisterPackageOptions = {
         "winrt._winrt_windows_management_deployment.RegisterPackageOptions",
         sizeof(py::wrapper::Windows::Management::Deployment::RegisterPackageOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RegisterPackageOptions
-    };
+        _type_slots_RegisterPackageOptions};
 
     // ----- SharedPackageContainer class --------------------
 
@@ -6471,14 +6441,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_SharedPackageContainer =
-    {
+    static PyType_Spec type_spec_SharedPackageContainer = {
         "winrt._winrt_windows_management_deployment.SharedPackageContainer",
         sizeof(py::wrapper::Windows::Management::Deployment::SharedPackageContainer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SharedPackageContainer
-    };
+        _type_slots_SharedPackageContainer};
 
     // ----- SharedPackageContainerManager class --------------------
 
@@ -6777,14 +6745,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_SharedPackageContainerManager =
-    {
+    static PyType_Spec type_spec_SharedPackageContainerManager = {
         "winrt._winrt_windows_management_deployment.SharedPackageContainerManager",
         sizeof(py::wrapper::Windows::Management::Deployment::SharedPackageContainerManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SharedPackageContainerManager
-    };
+        _type_slots_SharedPackageContainerManager};
 
     static PyGetSetDef getset_SharedPackageContainerManager_Static[] = {
         { }
@@ -6918,14 +6884,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_SharedPackageContainerMember =
-    {
+    static PyType_Spec type_spec_SharedPackageContainerMember = {
         "winrt._winrt_windows_management_deployment.SharedPackageContainerMember",
         sizeof(py::wrapper::Windows::Management::Deployment::SharedPackageContainerMember),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SharedPackageContainerMember
-    };
+        _type_slots_SharedPackageContainerMember};
 
     // ----- StagePackageOptions class --------------------
 
@@ -7541,14 +7505,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_StagePackageOptions =
-    {
+    static PyType_Spec type_spec_StagePackageOptions = {
         "winrt._winrt_windows_management_deployment.StagePackageOptions",
         sizeof(py::wrapper::Windows::Management::Deployment::StagePackageOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StagePackageOptions
-    };
+        _type_slots_StagePackageOptions};
 
     // ----- UpdateSharedPackageContainerOptions class --------------------
 
@@ -7728,14 +7690,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_UpdateSharedPackageContainerOptions =
-    {
+    static PyType_Spec type_spec_UpdateSharedPackageContainerOptions = {
         "winrt._winrt_windows_management_deployment.UpdateSharedPackageContainerOptions",
         sizeof(py::wrapper::Windows::Management::Deployment::UpdateSharedPackageContainerOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UpdateSharedPackageContainerOptions
-    };
+        _type_slots_UpdateSharedPackageContainerOptions};
 
     // ----- UpdateSharedPackageContainerResult class --------------------
 
@@ -7837,14 +7797,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_UpdateSharedPackageContainerResult =
-    {
+    static PyType_Spec type_spec_UpdateSharedPackageContainerResult = {
         "winrt._winrt_windows_management_deployment.UpdateSharedPackageContainerResult",
         sizeof(py::wrapper::Windows::Management::Deployment::UpdateSharedPackageContainerResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UpdateSharedPackageContainerResult
-    };
+        _type_slots_UpdateSharedPackageContainerResult};
 
     // ----- DeploymentProgress struct --------------------
 
@@ -7998,14 +7956,12 @@ namespace py::cpp::Windows::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_DeploymentProgress =
-    {
+    static PyType_Spec type_spec_DeploymentProgress = {
         "winrt._winrt_windows_management_deployment.DeploymentProgress",
         sizeof(py::wrapper::Windows::Management::Deployment::DeploymentProgress),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeploymentProgress
-    };
+        _type_slots_DeploymentProgress};
 
     // ----- Windows.Management.Deployment Initialization --------------------
 

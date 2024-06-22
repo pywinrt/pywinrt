@@ -459,14 +459,12 @@ namespace py::cpp::Windows::Media::Editing
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundAudioTrack =
-    {
+    static PyType_Spec type_spec_BackgroundAudioTrack = {
         "winrt._winrt_windows_media_editing.BackgroundAudioTrack",
         sizeof(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundAudioTrack
-    };
+        _type_slots_BackgroundAudioTrack};
 
     static PyGetSetDef getset_BackgroundAudioTrack_Static[] = {
         { }
@@ -585,14 +583,12 @@ namespace py::cpp::Windows::Media::Editing
         { },
     };
 
-    static PyType_Spec type_spec_EmbeddedAudioTrack =
-    {
+    static PyType_Spec type_spec_EmbeddedAudioTrack = {
         "winrt._winrt_windows_media_editing.EmbeddedAudioTrack",
         sizeof(py::wrapper::Windows::Media::Editing::EmbeddedAudioTrack),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EmbeddedAudioTrack
-    };
+        _type_slots_EmbeddedAudioTrack};
 
     // ----- MediaClip class --------------------
 
@@ -1193,14 +1189,12 @@ namespace py::cpp::Windows::Media::Editing
         { },
     };
 
-    static PyType_Spec type_spec_MediaClip =
-    {
+    static PyType_Spec type_spec_MediaClip = {
         "winrt._winrt_windows_media_editing.MediaClip",
         sizeof(py::wrapper::Windows::Media::Editing::MediaClip),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaClip
-    };
+        _type_slots_MediaClip};
 
     static PyGetSetDef getset_MediaClip_Static[] = {
         { }
@@ -1764,14 +1758,12 @@ namespace py::cpp::Windows::Media::Editing
         { },
     };
 
-    static PyType_Spec type_spec_MediaComposition =
-    {
+    static PyType_Spec type_spec_MediaComposition = {
         "winrt._winrt_windows_media_editing.MediaComposition",
         sizeof(py::wrapper::Windows::Media::Editing::MediaComposition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaComposition
-    };
+        _type_slots_MediaComposition};
 
     static PyGetSetDef getset_MediaComposition_Static[] = {
         { }
@@ -2142,14 +2134,12 @@ namespace py::cpp::Windows::Media::Editing
         { },
     };
 
-    static PyType_Spec type_spec_MediaOverlay =
-    {
+    static PyType_Spec type_spec_MediaOverlay = {
         "winrt._winrt_windows_media_editing.MediaOverlay",
         sizeof(py::wrapper::Windows::Media::Editing::MediaOverlay),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaOverlay
-    };
+        _type_slots_MediaOverlay};
 
     // ----- MediaOverlayLayer class --------------------
 
@@ -2318,14 +2308,12 @@ namespace py::cpp::Windows::Media::Editing
         { },
     };
 
-    static PyType_Spec type_spec_MediaOverlayLayer =
-    {
+    static PyType_Spec type_spec_MediaOverlayLayer = {
         "winrt._winrt_windows_media_editing.MediaOverlayLayer",
         sizeof(py::wrapper::Windows::Media::Editing::MediaOverlayLayer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaOverlayLayer
-    };
+        _type_slots_MediaOverlayLayer};
 
     // ----- Windows.Media.Editing Initialization --------------------
 

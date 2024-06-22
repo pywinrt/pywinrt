@@ -262,14 +262,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundMediaPlayer =
-    {
+    static PyType_Spec type_spec_BackgroundMediaPlayer = {
         "winrt._winrt_windows_media_playback.BackgroundMediaPlayer",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundMediaPlayer
-    };
+        _type_slots_BackgroundMediaPlayer};
 
     static PyGetSetDef getset_BackgroundMediaPlayer_Static[] = {
         { "current", reinterpret_cast<getter>(BackgroundMediaPlayer_get_Current), nullptr, nullptr, nullptr },
@@ -421,14 +419,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_CurrentMediaPlaybackItemChangedEventArgs =
-    {
+    static PyType_Spec type_spec_CurrentMediaPlaybackItemChangedEventArgs = {
         "winrt._winrt_windows_media_playback.CurrentMediaPlaybackItemChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::CurrentMediaPlaybackItemChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CurrentMediaPlaybackItemChangedEventArgs
-    };
+        _type_slots_CurrentMediaPlaybackItemChangedEventArgs};
 
     // ----- MediaBreak class --------------------
 
@@ -658,14 +654,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaBreak =
-    {
+    static PyType_Spec type_spec_MediaBreak = {
         "winrt._winrt_windows_media_playback.MediaBreak",
         sizeof(py::wrapper::Windows::Media::Playback::MediaBreak),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaBreak
-    };
+        _type_slots_MediaBreak};
 
     // ----- MediaBreakEndedEventArgs class --------------------
 
@@ -747,14 +741,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaBreakEndedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaBreakEndedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaBreakEndedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaBreakEndedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaBreakEndedEventArgs
-    };
+        _type_slots_MediaBreakEndedEventArgs};
 
     // ----- MediaBreakManager class --------------------
 
@@ -1100,14 +1092,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaBreakManager =
-    {
+    static PyType_Spec type_spec_MediaBreakManager = {
         "winrt._winrt_windows_media_playback.MediaBreakManager",
         sizeof(py::wrapper::Windows::Media::Playback::MediaBreakManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaBreakManager
-    };
+        _type_slots_MediaBreakManager};
 
     // ----- MediaBreakSchedule class --------------------
 
@@ -1416,14 +1406,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaBreakSchedule =
-    {
+    static PyType_Spec type_spec_MediaBreakSchedule = {
         "winrt._winrt_windows_media_playback.MediaBreakSchedule",
         sizeof(py::wrapper::Windows::Media::Playback::MediaBreakSchedule),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaBreakSchedule
-    };
+        _type_slots_MediaBreakSchedule};
 
     // ----- MediaBreakSeekedOverEventArgs class --------------------
 
@@ -1545,14 +1533,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaBreakSeekedOverEventArgs =
-    {
+    static PyType_Spec type_spec_MediaBreakSeekedOverEventArgs = {
         "winrt._winrt_windows_media_playback.MediaBreakSeekedOverEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaBreakSeekedOverEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaBreakSeekedOverEventArgs
-    };
+        _type_slots_MediaBreakSeekedOverEventArgs};
 
     // ----- MediaBreakSkippedEventArgs class --------------------
 
@@ -1634,14 +1620,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaBreakSkippedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaBreakSkippedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaBreakSkippedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaBreakSkippedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaBreakSkippedEventArgs
-    };
+        _type_slots_MediaBreakSkippedEventArgs};
 
     // ----- MediaBreakStartedEventArgs class --------------------
 
@@ -1723,14 +1707,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaBreakStartedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaBreakStartedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaBreakStartedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaBreakStartedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaBreakStartedEventArgs
-    };
+        _type_slots_MediaBreakStartedEventArgs};
 
     // ----- MediaItemDisplayProperties class --------------------
 
@@ -1959,14 +1941,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaItemDisplayProperties =
-    {
+    static PyType_Spec type_spec_MediaItemDisplayProperties = {
         "winrt._winrt_windows_media_playback.MediaItemDisplayProperties",
         sizeof(py::wrapper::Windows::Media::Playback::MediaItemDisplayProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaItemDisplayProperties
-    };
+        _type_slots_MediaItemDisplayProperties};
 
     // ----- MediaPlaybackAudioTrackList class --------------------
 
@@ -2384,14 +2364,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackAudioTrackList =
-    {
+    static PyType_Spec type_spec_MediaPlaybackAudioTrackList = {
         "winrt._winrt_windows_media_playback.MediaPlaybackAudioTrackList",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackAudioTrackList),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackAudioTrackList
-    };
+        _type_slots_MediaPlaybackAudioTrackList};
 
     // ----- MediaPlaybackCommandManager class --------------------
 
@@ -3171,14 +3149,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackCommandManager =
-    {
+    static PyType_Spec type_spec_MediaPlaybackCommandManager = {
         "winrt._winrt_windows_media_playback.MediaPlaybackCommandManager",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackCommandManager
-    };
+        _type_slots_MediaPlaybackCommandManager};
 
     // ----- MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs class --------------------
 
@@ -3338,14 +3314,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs
-    };
+        _type_slots_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs};
 
     // ----- MediaPlaybackCommandManagerCommandBehavior class --------------------
 
@@ -3540,14 +3514,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackCommandManagerCommandBehavior =
-    {
+    static PyType_Spec type_spec_MediaPlaybackCommandManagerCommandBehavior = {
         "winrt._winrt_windows_media_playback.MediaPlaybackCommandManagerCommandBehavior",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerCommandBehavior),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackCommandManagerCommandBehavior
-    };
+        _type_slots_MediaPlaybackCommandManagerCommandBehavior};
 
     // ----- MediaPlaybackCommandManagerFastForwardReceivedEventArgs class --------------------
 
@@ -3687,14 +3659,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackCommandManagerFastForwardReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaPlaybackCommandManagerFastForwardReceivedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerFastForwardReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackCommandManagerFastForwardReceivedEventArgs
-    };
+        _type_slots_MediaPlaybackCommandManagerFastForwardReceivedEventArgs};
 
     // ----- MediaPlaybackCommandManagerNextReceivedEventArgs class --------------------
 
@@ -3834,14 +3804,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackCommandManagerNextReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaPlaybackCommandManagerNextReceivedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaPlaybackCommandManagerNextReceivedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerNextReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackCommandManagerNextReceivedEventArgs
-    };
+        _type_slots_MediaPlaybackCommandManagerNextReceivedEventArgs};
 
     // ----- MediaPlaybackCommandManagerPauseReceivedEventArgs class --------------------
 
@@ -3981,14 +3949,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackCommandManagerPauseReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaPlaybackCommandManagerPauseReceivedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaPlaybackCommandManagerPauseReceivedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerPauseReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackCommandManagerPauseReceivedEventArgs
-    };
+        _type_slots_MediaPlaybackCommandManagerPauseReceivedEventArgs};
 
     // ----- MediaPlaybackCommandManagerPlayReceivedEventArgs class --------------------
 
@@ -4128,14 +4094,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackCommandManagerPlayReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaPlaybackCommandManagerPlayReceivedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaPlaybackCommandManagerPlayReceivedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerPlayReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackCommandManagerPlayReceivedEventArgs
-    };
+        _type_slots_MediaPlaybackCommandManagerPlayReceivedEventArgs};
 
     // ----- MediaPlaybackCommandManagerPositionReceivedEventArgs class --------------------
 
@@ -4295,14 +4259,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackCommandManagerPositionReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaPlaybackCommandManagerPositionReceivedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaPlaybackCommandManagerPositionReceivedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerPositionReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackCommandManagerPositionReceivedEventArgs
-    };
+        _type_slots_MediaPlaybackCommandManagerPositionReceivedEventArgs};
 
     // ----- MediaPlaybackCommandManagerPreviousReceivedEventArgs class --------------------
 
@@ -4442,14 +4404,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackCommandManagerPreviousReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaPlaybackCommandManagerPreviousReceivedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerPreviousReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackCommandManagerPreviousReceivedEventArgs
-    };
+        _type_slots_MediaPlaybackCommandManagerPreviousReceivedEventArgs};
 
     // ----- MediaPlaybackCommandManagerRateReceivedEventArgs class --------------------
 
@@ -4609,14 +4569,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackCommandManagerRateReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaPlaybackCommandManagerRateReceivedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaPlaybackCommandManagerRateReceivedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerRateReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackCommandManagerRateReceivedEventArgs
-    };
+        _type_slots_MediaPlaybackCommandManagerRateReceivedEventArgs};
 
     // ----- MediaPlaybackCommandManagerRewindReceivedEventArgs class --------------------
 
@@ -4756,14 +4714,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackCommandManagerRewindReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaPlaybackCommandManagerRewindReceivedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaPlaybackCommandManagerRewindReceivedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerRewindReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackCommandManagerRewindReceivedEventArgs
-    };
+        _type_slots_MediaPlaybackCommandManagerRewindReceivedEventArgs};
 
     // ----- MediaPlaybackCommandManagerShuffleReceivedEventArgs class --------------------
 
@@ -4923,14 +4879,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackCommandManagerShuffleReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaPlaybackCommandManagerShuffleReceivedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerShuffleReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackCommandManagerShuffleReceivedEventArgs
-    };
+        _type_slots_MediaPlaybackCommandManagerShuffleReceivedEventArgs};
 
     // ----- MediaPlaybackItem class --------------------
 
@@ -5582,14 +5536,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackItem =
-    {
+    static PyType_Spec type_spec_MediaPlaybackItem = {
         "winrt._winrt_windows_media_playback.MediaPlaybackItem",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackItem
-    };
+        _type_slots_MediaPlaybackItem};
 
     static PyGetSetDef getset_MediaPlaybackItem_Static[] = {
         { }
@@ -5717,14 +5669,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackItemError =
-    {
+    static PyType_Spec type_spec_MediaPlaybackItemError = {
         "winrt._winrt_windows_media_playback.MediaPlaybackItemError",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackItemError),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackItemError
-    };
+        _type_slots_MediaPlaybackItemError};
 
     // ----- MediaPlaybackItemFailedEventArgs class --------------------
 
@@ -5826,14 +5776,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackItemFailedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaPlaybackItemFailedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaPlaybackItemFailedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackItemFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackItemFailedEventArgs
-    };
+        _type_slots_MediaPlaybackItemFailedEventArgs};
 
     // ----- MediaPlaybackItemOpenedEventArgs class --------------------
 
@@ -5915,14 +5863,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackItemOpenedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaPlaybackItemOpenedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaPlaybackItemOpenedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackItemOpenedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackItemOpenedEventArgs
-    };
+        _type_slots_MediaPlaybackItemOpenedEventArgs};
 
     // ----- MediaPlaybackList class --------------------
 
@@ -6586,14 +6532,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackList =
-    {
+    static PyType_Spec type_spec_MediaPlaybackList = {
         "winrt._winrt_windows_media_playback.MediaPlaybackList",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackList),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackList
-    };
+        _type_slots_MediaPlaybackList};
 
     // ----- MediaPlaybackSession class --------------------
 
@@ -7946,14 +7890,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackSession =
-    {
+    static PyType_Spec type_spec_MediaPlaybackSession = {
         "winrt._winrt_windows_media_playback.MediaPlaybackSession",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackSession
-    };
+        _type_slots_MediaPlaybackSession};
 
     // ----- MediaPlaybackSessionBufferingStartedEventArgs class --------------------
 
@@ -8035,14 +7977,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackSessionBufferingStartedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaPlaybackSessionBufferingStartedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaPlaybackSessionBufferingStartedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackSessionBufferingStartedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackSessionBufferingStartedEventArgs
-    };
+        _type_slots_MediaPlaybackSessionBufferingStartedEventArgs};
 
     // ----- MediaPlaybackSessionOutputDegradationPolicyState class --------------------
 
@@ -8124,14 +8064,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackSessionOutputDegradationPolicyState =
-    {
+    static PyType_Spec type_spec_MediaPlaybackSessionOutputDegradationPolicyState = {
         "winrt._winrt_windows_media_playback.MediaPlaybackSessionOutputDegradationPolicyState",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackSessionOutputDegradationPolicyState),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackSessionOutputDegradationPolicyState
-    };
+        _type_slots_MediaPlaybackSessionOutputDegradationPolicyState};
 
     // ----- MediaPlaybackSphericalVideoProjection class --------------------
 
@@ -8433,14 +8371,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackSphericalVideoProjection =
-    {
+    static PyType_Spec type_spec_MediaPlaybackSphericalVideoProjection = {
         "winrt._winrt_windows_media_playback.MediaPlaybackSphericalVideoProjection",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackSphericalVideoProjection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackSphericalVideoProjection
-    };
+        _type_slots_MediaPlaybackSphericalVideoProjection};
 
     // ----- MediaPlaybackTimedMetadataTrackList class --------------------
 
@@ -8876,14 +8812,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackTimedMetadataTrackList =
-    {
+    static PyType_Spec type_spec_MediaPlaybackTimedMetadataTrackList = {
         "winrt._winrt_windows_media_playback.MediaPlaybackTimedMetadataTrackList",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackTimedMetadataTrackList),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackTimedMetadataTrackList
-    };
+        _type_slots_MediaPlaybackTimedMetadataTrackList};
 
     // ----- MediaPlaybackVideoTrackList class --------------------
 
@@ -9301,14 +9235,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlaybackVideoTrackList =
-    {
+    static PyType_Spec type_spec_MediaPlaybackVideoTrackList = {
         "winrt._winrt_windows_media_playback.MediaPlaybackVideoTrackList",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlaybackVideoTrackList),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlaybackVideoTrackList
-    };
+        _type_slots_MediaPlaybackVideoTrackList};
 
     // ----- MediaPlayer class --------------------
 
@@ -11724,14 +11656,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlayer =
-    {
+    static PyType_Spec type_spec_MediaPlayer = {
         "winrt._winrt_windows_media_playback.MediaPlayer",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlayer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlayer
-    };
+        _type_slots_MediaPlayer};
 
     // ----- MediaPlayerDataReceivedEventArgs class --------------------
 
@@ -11813,14 +11743,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlayerDataReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaPlayerDataReceivedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaPlayerDataReceivedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlayerDataReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlayerDataReceivedEventArgs
-    };
+        _type_slots_MediaPlayerDataReceivedEventArgs};
 
     // ----- MediaPlayerFailedEventArgs class --------------------
 
@@ -11942,14 +11870,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlayerFailedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaPlayerFailedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaPlayerFailedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlayerFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlayerFailedEventArgs
-    };
+        _type_slots_MediaPlayerFailedEventArgs};
 
     // ----- MediaPlayerRateChangedEventArgs class --------------------
 
@@ -12031,14 +11957,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlayerRateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaPlayerRateChangedEventArgs = {
         "winrt._winrt_windows_media_playback.MediaPlayerRateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlayerRateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlayerRateChangedEventArgs
-    };
+        _type_slots_MediaPlayerRateChangedEventArgs};
 
     // ----- MediaPlayerSurface class --------------------
 
@@ -12212,14 +12136,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlayerSurface =
-    {
+    static PyType_Spec type_spec_MediaPlayerSurface = {
         "winrt._winrt_windows_media_playback.MediaPlayerSurface",
         sizeof(py::wrapper::Windows::Media::Playback::MediaPlayerSurface),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlayerSurface
-    };
+        _type_slots_MediaPlayerSurface};
 
     // ----- PlaybackMediaMarker class --------------------
 
@@ -12382,14 +12304,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_PlaybackMediaMarker =
-    {
+    static PyType_Spec type_spec_PlaybackMediaMarker = {
         "winrt._winrt_windows_media_playback.PlaybackMediaMarker",
         sizeof(py::wrapper::Windows::Media::Playback::PlaybackMediaMarker),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlaybackMediaMarker
-    };
+        _type_slots_PlaybackMediaMarker};
 
     // ----- PlaybackMediaMarkerReachedEventArgs class --------------------
 
@@ -12471,14 +12391,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_PlaybackMediaMarkerReachedEventArgs =
-    {
+    static PyType_Spec type_spec_PlaybackMediaMarkerReachedEventArgs = {
         "winrt._winrt_windows_media_playback.PlaybackMediaMarkerReachedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::PlaybackMediaMarkerReachedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlaybackMediaMarkerReachedEventArgs
-    };
+        _type_slots_PlaybackMediaMarkerReachedEventArgs};
 
     // ----- PlaybackMediaMarkerSequence class --------------------
 
@@ -12668,14 +12586,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_PlaybackMediaMarkerSequence =
-    {
+    static PyType_Spec type_spec_PlaybackMediaMarkerSequence = {
         "winrt._winrt_windows_media_playback.PlaybackMediaMarkerSequence",
         sizeof(py::wrapper::Windows::Media::Playback::PlaybackMediaMarkerSequence),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlaybackMediaMarkerSequence
-    };
+        _type_slots_PlaybackMediaMarkerSequence};
 
     // ----- TimedMetadataPresentationModeChangedEventArgs class --------------------
 
@@ -12797,14 +12713,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_TimedMetadataPresentationModeChangedEventArgs =
-    {
+    static PyType_Spec type_spec_TimedMetadataPresentationModeChangedEventArgs = {
         "winrt._winrt_windows_media_playback.TimedMetadataPresentationModeChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Playback::TimedMetadataPresentationModeChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TimedMetadataPresentationModeChangedEventArgs
-    };
+        _type_slots_TimedMetadataPresentationModeChangedEventArgs};
 
     // ----- IMediaEnginePlaybackSource interface --------------------
 
@@ -12919,14 +12833,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_IMediaEnginePlaybackSource =
-    {
+    static PyType_Spec type_spec_IMediaEnginePlaybackSource = {
         "winrt._winrt_windows_media_playback.IMediaEnginePlaybackSource",
         sizeof(py::wrapper::Windows::Media::Playback::IMediaEnginePlaybackSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IMediaEnginePlaybackSource
-    };
+        _type_slots_IMediaEnginePlaybackSource};
 
     // ----- IMediaPlaybackSource interface --------------------
 
@@ -12988,14 +12900,12 @@ namespace py::cpp::Windows::Media::Playback
         { },
     };
 
-    static PyType_Spec type_spec_IMediaPlaybackSource =
-    {
+    static PyType_Spec type_spec_IMediaPlaybackSource = {
         "winrt._winrt_windows_media_playback.IMediaPlaybackSource",
         sizeof(py::wrapper::Windows::Media::Playback::IMediaPlaybackSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IMediaPlaybackSource
-    };
+        _type_slots_IMediaPlaybackSource};
 
     // ----- Windows.Media.Playback Initialization --------------------
 

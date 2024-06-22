@@ -207,14 +207,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         { },
     };
 
-    static PyType_Spec type_spec_BasicProperties =
-    {
+    static PyType_Spec type_spec_BasicProperties = {
         "winrt._winrt_windows_storage_fileproperties.BasicProperties",
         sizeof(py::wrapper::Windows::Storage::FileProperties::BasicProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BasicProperties
-    };
+        _type_slots_BasicProperties};
 
     // ----- DocumentProperties class --------------------
 
@@ -494,14 +492,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         { },
     };
 
-    static PyType_Spec type_spec_DocumentProperties =
-    {
+    static PyType_Spec type_spec_DocumentProperties = {
         "winrt._winrt_windows_storage_fileproperties.DocumentProperties",
         sizeof(py::wrapper::Windows::Storage::FileProperties::DocumentProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DocumentProperties
-    };
+        _type_slots_DocumentProperties};
 
     // ----- GeotagHelper class --------------------
 
@@ -623,14 +619,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         { },
     };
 
-    static PyType_Spec type_spec_GeotagHelper =
-    {
+    static PyType_Spec type_spec_GeotagHelper = {
         "winrt._winrt_windows_storage_fileproperties.GeotagHelper",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GeotagHelper
-    };
+        _type_slots_GeotagHelper};
 
     static PyGetSetDef getset_GeotagHelper_Static[] = {
         { }
@@ -1182,14 +1176,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         { },
     };
 
-    static PyType_Spec type_spec_ImageProperties =
-    {
+    static PyType_Spec type_spec_ImageProperties = {
         "winrt._winrt_windows_storage_fileproperties.ImageProperties",
         sizeof(py::wrapper::Windows::Storage::FileProperties::ImageProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ImageProperties
-    };
+        _type_slots_ImageProperties};
 
     // ----- MusicProperties class --------------------
 
@@ -1905,14 +1897,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         { },
     };
 
-    static PyType_Spec type_spec_MusicProperties =
-    {
+    static PyType_Spec type_spec_MusicProperties = {
         "winrt._winrt_windows_storage_fileproperties.MusicProperties",
         sizeof(py::wrapper::Windows::Storage::FileProperties::MusicProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MusicProperties
-    };
+        _type_slots_MusicProperties};
 
     // ----- StorageItemContentProperties class --------------------
 
@@ -2176,14 +2166,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         { },
     };
 
-    static PyType_Spec type_spec_StorageItemContentProperties =
-    {
+    static PyType_Spec type_spec_StorageItemContentProperties = {
         "winrt._winrt_windows_storage_fileproperties.StorageItemContentProperties",
         sizeof(py::wrapper::Windows::Storage::FileProperties::StorageItemContentProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageItemContentProperties
-    };
+        _type_slots_StorageItemContentProperties};
 
     // ----- StorageItemThumbnail class --------------------
 
@@ -2728,14 +2716,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         { },
     };
 
-    static PyType_Spec type_spec_StorageItemThumbnail =
-    {
+    static PyType_Spec type_spec_StorageItemThumbnail = {
         "winrt._winrt_windows_storage_fileproperties.StorageItemThumbnail",
         sizeof(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageItemThumbnail
-    };
+        _type_slots_StorageItemThumbnail};
 
     // ----- VideoProperties class --------------------
 
@@ -3339,14 +3325,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         { },
     };
 
-    static PyType_Spec type_spec_VideoProperties =
-    {
+    static PyType_Spec type_spec_VideoProperties = {
         "winrt._winrt_windows_storage_fileproperties.VideoProperties",
         sizeof(py::wrapper::Windows::Storage::FileProperties::VideoProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VideoProperties
-    };
+        _type_slots_VideoProperties};
 
     // ----- IStorageItemExtraProperties interface --------------------
 
@@ -3490,14 +3474,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         { },
     };
 
-    static PyType_Spec type_spec_IStorageItemExtraProperties =
-    {
+    static PyType_Spec type_spec_IStorageItemExtraProperties = {
         "winrt._winrt_windows_storage_fileproperties.IStorageItemExtraProperties",
         sizeof(py::wrapper::Windows::Storage::FileProperties::IStorageItemExtraProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IStorageItemExtraProperties
-    };
+        _type_slots_IStorageItemExtraProperties};
 
     // ----- Windows.Storage.FileProperties Initialization --------------------
 

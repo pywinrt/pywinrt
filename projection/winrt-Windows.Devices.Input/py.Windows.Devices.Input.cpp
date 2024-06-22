@@ -107,14 +107,12 @@ namespace py::cpp::Windows::Devices::Input
         { },
     };
 
-    static PyType_Spec type_spec_KeyboardCapabilities =
-    {
+    static PyType_Spec type_spec_KeyboardCapabilities = {
         "winrt._winrt_windows_devices_input.KeyboardCapabilities",
         sizeof(py::wrapper::Windows::Devices::Input::KeyboardCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KeyboardCapabilities
-    };
+        _type_slots_KeyboardCapabilities};
 
     // ----- MouseCapabilities class --------------------
 
@@ -298,14 +296,12 @@ namespace py::cpp::Windows::Devices::Input
         { },
     };
 
-    static PyType_Spec type_spec_MouseCapabilities =
-    {
+    static PyType_Spec type_spec_MouseCapabilities = {
         "winrt._winrt_windows_devices_input.MouseCapabilities",
         sizeof(py::wrapper::Windows::Devices::Input::MouseCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MouseCapabilities
-    };
+        _type_slots_MouseCapabilities};
 
     // ----- MouseDevice class --------------------
 
@@ -441,14 +437,12 @@ namespace py::cpp::Windows::Devices::Input
         { },
     };
 
-    static PyType_Spec type_spec_MouseDevice =
-    {
+    static PyType_Spec type_spec_MouseDevice = {
         "winrt._winrt_windows_devices_input.MouseDevice",
         sizeof(py::wrapper::Windows::Devices::Input::MouseDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MouseDevice
-    };
+        _type_slots_MouseDevice};
 
     static PyGetSetDef getset_MouseDevice_Static[] = {
         { }
@@ -556,14 +550,12 @@ namespace py::cpp::Windows::Devices::Input
         { },
     };
 
-    static PyType_Spec type_spec_MouseEventArgs =
-    {
+    static PyType_Spec type_spec_MouseEventArgs = {
         "winrt._winrt_windows_devices_input.MouseEventArgs",
         sizeof(py::wrapper::Windows::Devices::Input::MouseEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MouseEventArgs
-    };
+        _type_slots_MouseEventArgs};
 
     // ----- PenButtonListener class --------------------
 
@@ -864,14 +856,12 @@ namespace py::cpp::Windows::Devices::Input
         { },
     };
 
-    static PyType_Spec type_spec_PenButtonListener =
-    {
+    static PyType_Spec type_spec_PenButtonListener = {
         "winrt._winrt_windows_devices_input.PenButtonListener",
         sizeof(py::wrapper::Windows::Devices::Input::PenButtonListener),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PenButtonListener
-    };
+        _type_slots_PenButtonListener};
 
     static PyGetSetDef getset_PenButtonListener_Static[] = {
         { }
@@ -1030,14 +1020,12 @@ namespace py::cpp::Windows::Devices::Input
         { },
     };
 
-    static PyType_Spec type_spec_PenDevice =
-    {
+    static PyType_Spec type_spec_PenDevice = {
         "winrt._winrt_windows_devices_input.PenDevice",
         sizeof(py::wrapper::Windows::Devices::Input::PenDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PenDevice
-    };
+        _type_slots_PenDevice};
 
     static PyGetSetDef getset_PenDevice_Static[] = {
         { }
@@ -1319,14 +1307,12 @@ namespace py::cpp::Windows::Devices::Input
         { },
     };
 
-    static PyType_Spec type_spec_PenDockListener =
-    {
+    static PyType_Spec type_spec_PenDockListener = {
         "winrt._winrt_windows_devices_input.PenDockListener",
         sizeof(py::wrapper::Windows::Devices::Input::PenDockListener),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PenDockListener
-    };
+        _type_slots_PenDockListener};
 
     static PyGetSetDef getset_PenDockListener_Static[] = {
         { }
@@ -1414,14 +1400,12 @@ namespace py::cpp::Windows::Devices::Input
         { },
     };
 
-    static PyType_Spec type_spec_PenDockedEventArgs =
-    {
+    static PyType_Spec type_spec_PenDockedEventArgs = {
         "winrt._winrt_windows_devices_input.PenDockedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Input::PenDockedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PenDockedEventArgs
-    };
+        _type_slots_PenDockedEventArgs};
 
     // ----- PenTailButtonClickedEventArgs class --------------------
 
@@ -1483,14 +1467,12 @@ namespace py::cpp::Windows::Devices::Input
         { },
     };
 
-    static PyType_Spec type_spec_PenTailButtonClickedEventArgs =
-    {
+    static PyType_Spec type_spec_PenTailButtonClickedEventArgs = {
         "winrt._winrt_windows_devices_input.PenTailButtonClickedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Input::PenTailButtonClickedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PenTailButtonClickedEventArgs
-    };
+        _type_slots_PenTailButtonClickedEventArgs};
 
     // ----- PenTailButtonDoubleClickedEventArgs class --------------------
 
@@ -1552,14 +1534,12 @@ namespace py::cpp::Windows::Devices::Input
         { },
     };
 
-    static PyType_Spec type_spec_PenTailButtonDoubleClickedEventArgs =
-    {
+    static PyType_Spec type_spec_PenTailButtonDoubleClickedEventArgs = {
         "winrt._winrt_windows_devices_input.PenTailButtonDoubleClickedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PenTailButtonDoubleClickedEventArgs
-    };
+        _type_slots_PenTailButtonDoubleClickedEventArgs};
 
     // ----- PenTailButtonLongPressedEventArgs class --------------------
 
@@ -1621,14 +1601,12 @@ namespace py::cpp::Windows::Devices::Input
         { },
     };
 
-    static PyType_Spec type_spec_PenTailButtonLongPressedEventArgs =
-    {
+    static PyType_Spec type_spec_PenTailButtonLongPressedEventArgs = {
         "winrt._winrt_windows_devices_input.PenTailButtonLongPressedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Input::PenTailButtonLongPressedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PenTailButtonLongPressedEventArgs
-    };
+        _type_slots_PenTailButtonLongPressedEventArgs};
 
     // ----- PenUndockedEventArgs class --------------------
 
@@ -1690,14 +1668,12 @@ namespace py::cpp::Windows::Devices::Input
         { },
     };
 
-    static PyType_Spec type_spec_PenUndockedEventArgs =
-    {
+    static PyType_Spec type_spec_PenUndockedEventArgs = {
         "winrt._winrt_windows_devices_input.PenUndockedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Input::PenUndockedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PenUndockedEventArgs
-    };
+        _type_slots_PenUndockedEventArgs};
 
     // ----- PointerDevice class --------------------
 
@@ -1959,14 +1935,12 @@ namespace py::cpp::Windows::Devices::Input
         { },
     };
 
-    static PyType_Spec type_spec_PointerDevice =
-    {
+    static PyType_Spec type_spec_PointerDevice = {
         "winrt._winrt_windows_devices_input.PointerDevice",
         sizeof(py::wrapper::Windows::Devices::Input::PointerDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PointerDevice
-    };
+        _type_slots_PointerDevice};
 
     static PyGetSetDef getset_PointerDevice_Static[] = {
         { }
@@ -2117,14 +2091,12 @@ namespace py::cpp::Windows::Devices::Input
         { },
     };
 
-    static PyType_Spec type_spec_TouchCapabilities =
-    {
+    static PyType_Spec type_spec_TouchCapabilities = {
         "winrt._winrt_windows_devices_input.TouchCapabilities",
         sizeof(py::wrapper::Windows::Devices::Input::TouchCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TouchCapabilities
-    };
+        _type_slots_TouchCapabilities};
 
     // ----- MouseDelta struct --------------------
 
@@ -2278,14 +2250,12 @@ namespace py::cpp::Windows::Devices::Input
         { },
     };
 
-    static PyType_Spec type_spec_MouseDelta =
-    {
+    static PyType_Spec type_spec_MouseDelta = {
         "winrt._winrt_windows_devices_input.MouseDelta",
         sizeof(py::wrapper::Windows::Devices::Input::MouseDelta),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MouseDelta
-    };
+        _type_slots_MouseDelta};
 
     // ----- PointerDeviceUsage struct --------------------
 
@@ -2649,14 +2619,12 @@ namespace py::cpp::Windows::Devices::Input
         { },
     };
 
-    static PyType_Spec type_spec_PointerDeviceUsage =
-    {
+    static PyType_Spec type_spec_PointerDeviceUsage = {
         "winrt._winrt_windows_devices_input.PointerDeviceUsage",
         sizeof(py::wrapper::Windows::Devices::Input::PointerDeviceUsage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PointerDeviceUsage
-    };
+        _type_slots_PointerDeviceUsage};
 
     // ----- Windows.Devices.Input Initialization --------------------
 

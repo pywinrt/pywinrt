@@ -767,14 +767,12 @@ namespace py::cpp::Windows::Web::AtomPub
         { },
     };
 
-    static PyType_Spec type_spec_AtomPubClient =
-    {
+    static PyType_Spec type_spec_AtomPubClient = {
         "winrt._winrt_windows_web_atompub.AtomPubClient",
         sizeof(py::wrapper::Windows::Web::AtomPub::AtomPubClient),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AtomPubClient
-    };
+        _type_slots_AtomPubClient};
 
     // ----- ResourceCollection class --------------------
 
@@ -1228,14 +1226,12 @@ namespace py::cpp::Windows::Web::AtomPub
         { },
     };
 
-    static PyType_Spec type_spec_ResourceCollection =
-    {
+    static PyType_Spec type_spec_ResourceCollection = {
         "winrt._winrt_windows_web_atompub.ResourceCollection",
         sizeof(py::wrapper::Windows::Web::AtomPub::ResourceCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResourceCollection
-    };
+        _type_slots_ResourceCollection};
 
     // ----- ServiceDocument class --------------------
 
@@ -1629,14 +1625,12 @@ namespace py::cpp::Windows::Web::AtomPub
         { },
     };
 
-    static PyType_Spec type_spec_ServiceDocument =
-    {
+    static PyType_Spec type_spec_ServiceDocument = {
         "winrt._winrt_windows_web_atompub.ServiceDocument",
         sizeof(py::wrapper::Windows::Web::AtomPub::ServiceDocument),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ServiceDocument
-    };
+        _type_slots_ServiceDocument};
 
     // ----- Workspace class --------------------
 
@@ -2050,14 +2044,12 @@ namespace py::cpp::Windows::Web::AtomPub
         { },
     };
 
-    static PyType_Spec type_spec_Workspace =
-    {
+    static PyType_Spec type_spec_Workspace = {
         "winrt._winrt_windows_web_atompub.Workspace",
         sizeof(py::wrapper::Windows::Web::AtomPub::Workspace),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Workspace
-    };
+        _type_slots_Workspace};
 
     // ----- Windows.Web.AtomPub Initialization --------------------
 

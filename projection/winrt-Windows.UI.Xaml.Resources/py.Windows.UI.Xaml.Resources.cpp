@@ -134,14 +134,12 @@ namespace py::cpp::Windows::UI::Xaml::Resources
         { },
     };
 
-    static PyType_Spec type_spec_CustomXamlResourceLoader =
-    {
+    static PyType_Spec type_spec_CustomXamlResourceLoader = {
         "winrt._winrt_windows_ui_xaml_resources.CustomXamlResourceLoader",
         sizeof(py::wrapper::Windows::UI::Xaml::Resources::CustomXamlResourceLoader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CustomXamlResourceLoader
-    };
+        _type_slots_CustomXamlResourceLoader};
 
     static PyGetSetDef getset_CustomXamlResourceLoader_Static[] = {
         { "current", reinterpret_cast<getter>(CustomXamlResourceLoader_get_Current), reinterpret_cast<setter>(CustomXamlResourceLoader_put_Current), nullptr, nullptr },

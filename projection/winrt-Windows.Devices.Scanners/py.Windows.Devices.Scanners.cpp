@@ -355,14 +355,12 @@ namespace py::cpp::Windows::Devices::Scanners
         { },
     };
 
-    static PyType_Spec type_spec_ImageScanner =
-    {
+    static PyType_Spec type_spec_ImageScanner = {
         "winrt._winrt_windows_devices_scanners.ImageScanner",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScanner),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ImageScanner
-    };
+        _type_slots_ImageScanner};
 
     static PyGetSetDef getset_ImageScanner_Static[] = {
         { }
@@ -551,14 +549,12 @@ namespace py::cpp::Windows::Devices::Scanners
         { },
     };
 
-    static PyType_Spec type_spec_ImageScannerAutoConfiguration =
-    {
+    static PyType_Spec type_spec_ImageScannerAutoConfiguration = {
         "winrt._winrt_windows_devices_scanners.ImageScannerAutoConfiguration",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScannerAutoConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ImageScannerAutoConfiguration
-    };
+        _type_slots_ImageScannerAutoConfiguration};
 
     // ----- ImageScannerFeederConfiguration class --------------------
 
@@ -1773,14 +1769,12 @@ namespace py::cpp::Windows::Devices::Scanners
         { },
     };
 
-    static PyType_Spec type_spec_ImageScannerFeederConfiguration =
-    {
+    static PyType_Spec type_spec_ImageScannerFeederConfiguration = {
         "winrt._winrt_windows_devices_scanners.ImageScannerFeederConfiguration",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ImageScannerFeederConfiguration
-    };
+        _type_slots_ImageScannerFeederConfiguration};
 
     // ----- ImageScannerFlatbedConfiguration class --------------------
 
@@ -2594,14 +2588,12 @@ namespace py::cpp::Windows::Devices::Scanners
         { },
     };
 
-    static PyType_Spec type_spec_ImageScannerFlatbedConfiguration =
-    {
+    static PyType_Spec type_spec_ImageScannerFlatbedConfiguration = {
         "winrt._winrt_windows_devices_scanners.ImageScannerFlatbedConfiguration",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ImageScannerFlatbedConfiguration
-    };
+        _type_slots_ImageScannerFlatbedConfiguration};
 
     // ----- ImageScannerPreviewResult class --------------------
 
@@ -2703,14 +2695,12 @@ namespace py::cpp::Windows::Devices::Scanners
         { },
     };
 
-    static PyType_Spec type_spec_ImageScannerPreviewResult =
-    {
+    static PyType_Spec type_spec_ImageScannerPreviewResult = {
         "winrt._winrt_windows_devices_scanners.ImageScannerPreviewResult",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScannerPreviewResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ImageScannerPreviewResult
-    };
+        _type_slots_ImageScannerPreviewResult};
 
     // ----- ImageScannerScanResult class --------------------
 
@@ -2792,14 +2782,12 @@ namespace py::cpp::Windows::Devices::Scanners
         { },
     };
 
-    static PyType_Spec type_spec_ImageScannerScanResult =
-    {
+    static PyType_Spec type_spec_ImageScannerScanResult = {
         "winrt._winrt_windows_devices_scanners.ImageScannerScanResult",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScannerScanResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ImageScannerScanResult
-    };
+        _type_slots_ImageScannerScanResult};
 
     // ----- IImageScannerFormatConfiguration interface --------------------
 
@@ -2961,14 +2949,12 @@ namespace py::cpp::Windows::Devices::Scanners
         { },
     };
 
-    static PyType_Spec type_spec_IImageScannerFormatConfiguration =
-    {
+    static PyType_Spec type_spec_IImageScannerFormatConfiguration = {
         "winrt._winrt_windows_devices_scanners.IImageScannerFormatConfiguration",
         sizeof(py::wrapper::Windows::Devices::Scanners::IImageScannerFormatConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IImageScannerFormatConfiguration
-    };
+        _type_slots_IImageScannerFormatConfiguration};
 
     // ----- IImageScannerSourceConfiguration interface --------------------
 
@@ -3782,14 +3768,12 @@ namespace py::cpp::Windows::Devices::Scanners
         { },
     };
 
-    static PyType_Spec type_spec_IImageScannerSourceConfiguration =
-    {
+    static PyType_Spec type_spec_IImageScannerSourceConfiguration = {
         "winrt._winrt_windows_devices_scanners.IImageScannerSourceConfiguration",
         sizeof(py::wrapper::Windows::Devices::Scanners::IImageScannerSourceConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IImageScannerSourceConfiguration
-    };
+        _type_slots_IImageScannerSourceConfiguration};
 
     // ----- ImageScannerResolution struct --------------------
 
@@ -3943,14 +3927,12 @@ namespace py::cpp::Windows::Devices::Scanners
         { },
     };
 
-    static PyType_Spec type_spec_ImageScannerResolution =
-    {
+    static PyType_Spec type_spec_ImageScannerResolution = {
         "winrt._winrt_windows_devices_scanners.ImageScannerResolution",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ImageScannerResolution
-    };
+        _type_slots_ImageScannerResolution};
 
     // ----- Windows.Devices.Scanners Initialization --------------------
 

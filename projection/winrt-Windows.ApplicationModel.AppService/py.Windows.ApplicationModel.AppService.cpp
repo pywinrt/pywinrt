@@ -61,14 +61,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { },
     };
 
-    static PyType_Spec type_spec_AppServiceCatalog =
-    {
+    static PyType_Spec type_spec_AppServiceCatalog = {
         "winrt._winrt_windows_applicationmodel_appservice.AppServiceCatalog",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppServiceCatalog
-    };
+        _type_slots_AppServiceCatalog};
 
     static PyGetSetDef getset_AppServiceCatalog_Static[] = {
         { }
@@ -176,14 +174,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { },
     };
 
-    static PyType_Spec type_spec_AppServiceClosedEventArgs =
-    {
+    static PyType_Spec type_spec_AppServiceClosedEventArgs = {
         "winrt._winrt_windows_applicationmodel_appservice.AppServiceClosedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::AppService::AppServiceClosedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppServiceClosedEventArgs
-    };
+        _type_slots_AppServiceClosedEventArgs};
 
     // ----- AppServiceConnection class --------------------
 
@@ -680,14 +676,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { },
     };
 
-    static PyType_Spec type_spec_AppServiceConnection =
-    {
+    static PyType_Spec type_spec_AppServiceConnection = {
         "winrt._winrt_windows_applicationmodel_appservice.AppServiceConnection",
         sizeof(py::wrapper::Windows::ApplicationModel::AppService::AppServiceConnection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppServiceConnection
-    };
+        _type_slots_AppServiceConnection};
 
     static PyGetSetDef getset_AppServiceConnection_Static[] = {
         { }
@@ -806,14 +800,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { },
     };
 
-    static PyType_Spec type_spec_AppServiceDeferral =
-    {
+    static PyType_Spec type_spec_AppServiceDeferral = {
         "winrt._winrt_windows_applicationmodel_appservice.AppServiceDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::AppService::AppServiceDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppServiceDeferral
-    };
+        _type_slots_AppServiceDeferral};
 
     // ----- AppServiceRequest class --------------------
 
@@ -927,14 +919,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { },
     };
 
-    static PyType_Spec type_spec_AppServiceRequest =
-    {
+    static PyType_Spec type_spec_AppServiceRequest = {
         "winrt._winrt_windows_applicationmodel_appservice.AppServiceRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::AppService::AppServiceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppServiceRequest
-    };
+        _type_slots_AppServiceRequest};
 
     // ----- AppServiceRequestReceivedEventArgs class --------------------
 
@@ -1046,14 +1036,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { },
     };
 
-    static PyType_Spec type_spec_AppServiceRequestReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_AppServiceRequestReceivedEventArgs = {
         "winrt._winrt_windows_applicationmodel_appservice.AppServiceRequestReceivedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppServiceRequestReceivedEventArgs
-    };
+        _type_slots_AppServiceRequestReceivedEventArgs};
 
     // ----- AppServiceResponse class --------------------
 
@@ -1155,14 +1143,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { },
     };
 
-    static PyType_Spec type_spec_AppServiceResponse =
-    {
+    static PyType_Spec type_spec_AppServiceResponse = {
         "winrt._winrt_windows_applicationmodel_appservice.AppServiceResponse",
         sizeof(py::wrapper::Windows::ApplicationModel::AppService::AppServiceResponse),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppServiceResponse
-    };
+        _type_slots_AppServiceResponse};
 
     // ----- AppServiceTriggerDetails class --------------------
 
@@ -1356,14 +1342,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { },
     };
 
-    static PyType_Spec type_spec_AppServiceTriggerDetails =
-    {
+    static PyType_Spec type_spec_AppServiceTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_appservice.AppServiceTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::AppService::AppServiceTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppServiceTriggerDetails
-    };
+        _type_slots_AppServiceTriggerDetails};
 
     // ----- StatelessAppServiceResponse class --------------------
 
@@ -1465,14 +1449,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { },
     };
 
-    static PyType_Spec type_spec_StatelessAppServiceResponse =
-    {
+    static PyType_Spec type_spec_StatelessAppServiceResponse = {
         "winrt._winrt_windows_applicationmodel_appservice.StatelessAppServiceResponse",
         sizeof(py::wrapper::Windows::ApplicationModel::AppService::StatelessAppServiceResponse),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StatelessAppServiceResponse
-    };
+        _type_slots_StatelessAppServiceResponse};
 
     // ----- Windows.ApplicationModel.AppService Initialization --------------------
 

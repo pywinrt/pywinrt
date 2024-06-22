@@ -299,14 +299,12 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
         { },
     };
 
-    static PyType_Spec type_spec_PnpObject =
-    {
+    static PyType_Spec type_spec_PnpObject = {
         "winrt._winrt_windows_devices_enumeration_pnp.PnpObject",
         sizeof(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObject),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PnpObject
-    };
+        _type_slots_PnpObject};
 
     static PyGetSetDef getset_PnpObject_Static[] = {
         { }
@@ -659,14 +657,12 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
         { },
     };
 
-    static PyType_Spec type_spec_PnpObjectCollection =
-    {
+    static PyType_Spec type_spec_PnpObjectCollection = {
         "winrt._winrt_windows_devices_enumeration_pnp.PnpObjectCollection",
         sizeof(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObjectCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PnpObjectCollection
-    };
+        _type_slots_PnpObjectCollection};
 
     // ----- PnpObjectUpdate class --------------------
 
@@ -788,14 +784,12 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
         { },
     };
 
-    static PyType_Spec type_spec_PnpObjectUpdate =
-    {
+    static PyType_Spec type_spec_PnpObjectUpdate = {
         "winrt._winrt_windows_devices_enumeration_pnp.PnpObjectUpdate",
         sizeof(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObjectUpdate),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PnpObjectUpdate
-    };
+        _type_slots_PnpObjectUpdate};
 
     // ----- PnpObjectWatcher class --------------------
 
@@ -1164,14 +1158,12 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
         { },
     };
 
-    static PyType_Spec type_spec_PnpObjectWatcher =
-    {
+    static PyType_Spec type_spec_PnpObjectWatcher = {
         "winrt._winrt_windows_devices_enumeration_pnp.PnpObjectWatcher",
         sizeof(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PnpObjectWatcher
-    };
+        _type_slots_PnpObjectWatcher};
 
     // ----- Windows.Devices.Enumeration.Pnp Initialization --------------------
 

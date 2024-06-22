@@ -321,14 +321,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_UserDataTaskDataProviderConnection =
-    {
+    static PyType_Spec type_spec_UserDataTaskDataProviderConnection = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskDataProviderConnection",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderConnection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataTaskDataProviderConnection
-    };
+        _type_slots_UserDataTaskDataProviderConnection};
 
     // ----- UserDataTaskDataProviderTriggerDetails class --------------------
 
@@ -410,14 +408,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_UserDataTaskDataProviderTriggerDetails =
-    {
+    static PyType_Spec type_spec_UserDataTaskDataProviderTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskDataProviderTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataTaskDataProviderTriggerDetails
-    };
+        _type_slots_UserDataTaskDataProviderTriggerDetails};
 
     // ----- UserDataTaskListCompleteTaskRequest class --------------------
 
@@ -581,14 +577,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_UserDataTaskListCompleteTaskRequest =
-    {
+    static PyType_Spec type_spec_UserDataTaskListCompleteTaskRequest = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListCompleteTaskRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataTaskListCompleteTaskRequest
-    };
+        _type_slots_UserDataTaskListCompleteTaskRequest};
 
     // ----- UserDataTaskListCompleteTaskRequestEventArgs class --------------------
 
@@ -700,14 +694,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_UserDataTaskListCompleteTaskRequestEventArgs =
-    {
+    static PyType_Spec type_spec_UserDataTaskListCompleteTaskRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListCompleteTaskRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataTaskListCompleteTaskRequestEventArgs
-    };
+        _type_slots_UserDataTaskListCompleteTaskRequestEventArgs};
 
     // ----- UserDataTaskListCreateOrUpdateTaskRequest class --------------------
 
@@ -871,14 +863,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_UserDataTaskListCreateOrUpdateTaskRequest =
-    {
+    static PyType_Spec type_spec_UserDataTaskListCreateOrUpdateTaskRequest = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListCreateOrUpdateTaskRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataTaskListCreateOrUpdateTaskRequest
-    };
+        _type_slots_UserDataTaskListCreateOrUpdateTaskRequest};
 
     // ----- UserDataTaskListCreateOrUpdateTaskRequestEventArgs class --------------------
 
@@ -990,14 +980,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_UserDataTaskListCreateOrUpdateTaskRequestEventArgs =
-    {
+    static PyType_Spec type_spec_UserDataTaskListCreateOrUpdateTaskRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataTaskListCreateOrUpdateTaskRequestEventArgs
-    };
+        _type_slots_UserDataTaskListCreateOrUpdateTaskRequestEventArgs};
 
     // ----- UserDataTaskListDeleteTaskRequest class --------------------
 
@@ -1159,14 +1147,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_UserDataTaskListDeleteTaskRequest =
-    {
+    static PyType_Spec type_spec_UserDataTaskListDeleteTaskRequest = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListDeleteTaskRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataTaskListDeleteTaskRequest
-    };
+        _type_slots_UserDataTaskListDeleteTaskRequest};
 
     // ----- UserDataTaskListDeleteTaskRequestEventArgs class --------------------
 
@@ -1278,14 +1264,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_UserDataTaskListDeleteTaskRequestEventArgs =
-    {
+    static PyType_Spec type_spec_UserDataTaskListDeleteTaskRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListDeleteTaskRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataTaskListDeleteTaskRequestEventArgs
-    };
+        _type_slots_UserDataTaskListDeleteTaskRequestEventArgs};
 
     // ----- UserDataTaskListSkipOccurrenceRequest class --------------------
 
@@ -1447,14 +1431,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_UserDataTaskListSkipOccurrenceRequest =
-    {
+    static PyType_Spec type_spec_UserDataTaskListSkipOccurrenceRequest = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListSkipOccurrenceRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataTaskListSkipOccurrenceRequest
-    };
+        _type_slots_UserDataTaskListSkipOccurrenceRequest};
 
     // ----- UserDataTaskListSkipOccurrenceRequestEventArgs class --------------------
 
@@ -1566,14 +1548,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_UserDataTaskListSkipOccurrenceRequestEventArgs =
-    {
+    static PyType_Spec type_spec_UserDataTaskListSkipOccurrenceRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListSkipOccurrenceRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataTaskListSkipOccurrenceRequestEventArgs
-    };
+        _type_slots_UserDataTaskListSkipOccurrenceRequestEventArgs};
 
     // ----- UserDataTaskListSyncManagerSyncRequest class --------------------
 
@@ -1715,14 +1695,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_UserDataTaskListSyncManagerSyncRequest =
-    {
+    static PyType_Spec type_spec_UserDataTaskListSyncManagerSyncRequest = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListSyncManagerSyncRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataTaskListSyncManagerSyncRequest
-    };
+        _type_slots_UserDataTaskListSyncManagerSyncRequest};
 
     // ----- UserDataTaskListSyncManagerSyncRequestEventArgs class --------------------
 
@@ -1834,14 +1812,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_UserDataTaskListSyncManagerSyncRequestEventArgs =
-    {
+    static PyType_Spec type_spec_UserDataTaskListSyncManagerSyncRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListSyncManagerSyncRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataTaskListSyncManagerSyncRequestEventArgs
-    };
+        _type_slots_UserDataTaskListSyncManagerSyncRequestEventArgs};
 
     // ----- Windows.ApplicationModel.UserDataTasks.DataProvider Initialization --------------------
 

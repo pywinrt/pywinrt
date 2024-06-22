@@ -127,14 +127,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
         { },
     };
 
-    static PyType_Spec type_spec_ContactPartnerProvisioningManager =
-    {
+    static PyType_Spec type_spec_ContactPartnerProvisioningManager = {
         "winrt._winrt_windows_phone_personalinformation_provisioning.ContactPartnerProvisioningManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactPartnerProvisioningManager
-    };
+        _type_slots_ContactPartnerProvisioningManager};
 
     static PyGetSetDef getset_ContactPartnerProvisioningManager_Static[] = {
         { }
@@ -262,14 +260,12 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
         { },
     };
 
-    static PyType_Spec type_spec_MessagePartnerProvisioningManager =
-    {
+    static PyType_Spec type_spec_MessagePartnerProvisioningManager = {
         "winrt._winrt_windows_phone_personalinformation_provisioning.MessagePartnerProvisioningManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MessagePartnerProvisioningManager
-    };
+        _type_slots_MessagePartnerProvisioningManager};
 
     static PyGetSetDef getset_MessagePartnerProvisioningManager_Static[] = {
         { }

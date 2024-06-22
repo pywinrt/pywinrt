@@ -328,14 +328,12 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
         { },
     };
 
-    static PyType_Spec type_spec_GameService =
-    {
+    static PyType_Spec type_spec_GameService = {
         "winrt._winrt_windows_phone_system_userprofile_gameservices_core.GameService",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameService
-    };
+        _type_slots_GameService};
 
     static PyGetSetDef getset_GameService_Static[] = {
         { "service_uri", reinterpret_cast<getter>(GameService_get_ServiceUri), nullptr, nullptr, nullptr },
@@ -464,14 +462,12 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
         { },
     };
 
-    static PyType_Spec type_spec_GameServicePropertyCollection =
-    {
+    static PyType_Spec type_spec_GameServicePropertyCollection = {
         "winrt._winrt_windows_phone_system_userprofile_gameservices_core.GameServicePropertyCollection",
         sizeof(py::wrapper::Windows::Phone::System::UserProfile::GameServices::Core::GameServicePropertyCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameServicePropertyCollection
-    };
+        _type_slots_GameServicePropertyCollection};
 
     // ----- Windows.Phone.System.UserProfile.GameServices.Core Initialization --------------------
 

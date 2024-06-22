@@ -95,14 +95,12 @@ namespace py::cpp::Windows::Management::Policies
         { },
     };
 
-    static PyType_Spec type_spec_NamedPolicy =
-    {
+    static PyType_Spec type_spec_NamedPolicy = {
         "winrt._winrt_windows_management_policies.NamedPolicy",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NamedPolicy
-    };
+        _type_slots_NamedPolicy};
 
     static PyGetSetDef getset_NamedPolicy_Static[] = {
         { }
@@ -506,14 +504,12 @@ namespace py::cpp::Windows::Management::Policies
         { },
     };
 
-    static PyType_Spec type_spec_NamedPolicyData =
-    {
+    static PyType_Spec type_spec_NamedPolicyData = {
         "winrt._winrt_windows_management_policies.NamedPolicyData",
         sizeof(py::wrapper::Windows::Management::Policies::NamedPolicyData),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NamedPolicyData
-    };
+        _type_slots_NamedPolicyData};
 
     // ----- Windows.Management.Policies Initialization --------------------
 

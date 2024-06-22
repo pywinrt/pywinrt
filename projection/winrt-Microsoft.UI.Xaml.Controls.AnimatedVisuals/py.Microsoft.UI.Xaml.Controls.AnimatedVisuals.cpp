@@ -186,14 +186,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { },
     };
 
-    static PyType_Spec type_spec_AnimatedAcceptVisualSource =
-    {
+    static PyType_Spec type_spec_AnimatedAcceptVisualSource = {
         "winrt._winrt_microsoft_ui_xaml_controls_animatedvisuals.AnimatedAcceptVisualSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedAcceptVisualSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AnimatedAcceptVisualSource
-    };
+        _type_slots_AnimatedAcceptVisualSource};
 
     // ----- AnimatedBackVisualSource class --------------------
 
@@ -376,14 +374,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { },
     };
 
-    static PyType_Spec type_spec_AnimatedBackVisualSource =
-    {
+    static PyType_Spec type_spec_AnimatedBackVisualSource = {
         "winrt._winrt_microsoft_ui_xaml_controls_animatedvisuals.AnimatedBackVisualSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedBackVisualSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AnimatedBackVisualSource
-    };
+        _type_slots_AnimatedBackVisualSource};
 
     // ----- AnimatedChevronDownSmallVisualSource class --------------------
 
@@ -566,14 +562,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { },
     };
 
-    static PyType_Spec type_spec_AnimatedChevronDownSmallVisualSource =
-    {
+    static PyType_Spec type_spec_AnimatedChevronDownSmallVisualSource = {
         "winrt._winrt_microsoft_ui_xaml_controls_animatedvisuals.AnimatedChevronDownSmallVisualSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronDownSmallVisualSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AnimatedChevronDownSmallVisualSource
-    };
+        _type_slots_AnimatedChevronDownSmallVisualSource};
 
     // ----- AnimatedChevronRightDownSmallVisualSource class --------------------
 
@@ -756,14 +750,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { },
     };
 
-    static PyType_Spec type_spec_AnimatedChevronRightDownSmallVisualSource =
-    {
+    static PyType_Spec type_spec_AnimatedChevronRightDownSmallVisualSource = {
         "winrt._winrt_microsoft_ui_xaml_controls_animatedvisuals.AnimatedChevronRightDownSmallVisualSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronRightDownSmallVisualSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AnimatedChevronRightDownSmallVisualSource
-    };
+        _type_slots_AnimatedChevronRightDownSmallVisualSource};
 
     // ----- AnimatedChevronUpDownSmallVisualSource class --------------------
 
@@ -946,14 +938,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { },
     };
 
-    static PyType_Spec type_spec_AnimatedChevronUpDownSmallVisualSource =
-    {
+    static PyType_Spec type_spec_AnimatedChevronUpDownSmallVisualSource = {
         "winrt._winrt_microsoft_ui_xaml_controls_animatedvisuals.AnimatedChevronUpDownSmallVisualSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronUpDownSmallVisualSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AnimatedChevronUpDownSmallVisualSource
-    };
+        _type_slots_AnimatedChevronUpDownSmallVisualSource};
 
     // ----- AnimatedFindVisualSource class --------------------
 
@@ -1136,14 +1126,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { },
     };
 
-    static PyType_Spec type_spec_AnimatedFindVisualSource =
-    {
+    static PyType_Spec type_spec_AnimatedFindVisualSource = {
         "winrt._winrt_microsoft_ui_xaml_controls_animatedvisuals.AnimatedFindVisualSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedFindVisualSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AnimatedFindVisualSource
-    };
+        _type_slots_AnimatedFindVisualSource};
 
     // ----- AnimatedGlobalNavigationButtonVisualSource class --------------------
 
@@ -1326,14 +1314,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { },
     };
 
-    static PyType_Spec type_spec_AnimatedGlobalNavigationButtonVisualSource =
-    {
+    static PyType_Spec type_spec_AnimatedGlobalNavigationButtonVisualSource = {
         "winrt._winrt_microsoft_ui_xaml_controls_animatedvisuals.AnimatedGlobalNavigationButtonVisualSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedGlobalNavigationButtonVisualSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AnimatedGlobalNavigationButtonVisualSource
-    };
+        _type_slots_AnimatedGlobalNavigationButtonVisualSource};
 
     // ----- AnimatedSettingsVisualSource class --------------------
 
@@ -1516,14 +1502,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { },
     };
 
-    static PyType_Spec type_spec_AnimatedSettingsVisualSource =
-    {
+    static PyType_Spec type_spec_AnimatedSettingsVisualSource = {
         "winrt._winrt_microsoft_ui_xaml_controls_animatedvisuals.AnimatedSettingsVisualSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedSettingsVisualSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AnimatedSettingsVisualSource
-    };
+        _type_slots_AnimatedSettingsVisualSource};
 
     // ----- Microsoft.UI.Xaml.Controls.AnimatedVisuals Initialization --------------------
 

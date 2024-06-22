@@ -202,14 +202,12 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
         { },
     };
 
-    static PyType_Spec type_spec_CommunicationBlockingAccessManager =
-    {
+    static PyType_Spec type_spec_CommunicationBlockingAccessManager = {
         "winrt._winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAccessManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CommunicationBlockingAccessManager
-    };
+        _type_slots_CommunicationBlockingAccessManager};
 
     static PyGetSetDef getset_CommunicationBlockingAccessManager_Static[] = {
         { "is_blocking_active", reinterpret_cast<getter>(CommunicationBlockingAccessManager_get_IsBlockingActive), nullptr, nullptr, nullptr },
@@ -345,14 +343,12 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
         { },
     };
 
-    static PyType_Spec type_spec_CommunicationBlockingAppManager =
-    {
+    static PyType_Spec type_spec_CommunicationBlockingAppManager = {
         "winrt._winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAppManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CommunicationBlockingAppManager
-    };
+        _type_slots_CommunicationBlockingAppManager};
 
     static PyGetSetDef getset_CommunicationBlockingAppManager_Static[] = {
         { "is_current_app_active_blocking_app", reinterpret_cast<getter>(CommunicationBlockingAppManager_get_IsCurrentAppActiveBlockingApp), nullptr, nullptr, nullptr },

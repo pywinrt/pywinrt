@@ -560,14 +560,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkDrawingAttributes =
-    {
+    static PyType_Spec type_spec_InkDrawingAttributes = {
         "winrt._winrt_windows_ui_input_inking.InkDrawingAttributes",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkDrawingAttributes
-    };
+        _type_slots_InkDrawingAttributes};
 
     static PyGetSetDef getset_InkDrawingAttributes_Static[] = {
         { }
@@ -703,14 +701,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkDrawingAttributesPencilProperties =
-    {
+    static PyType_Spec type_spec_InkDrawingAttributesPencilProperties = {
         "winrt._winrt_windows_ui_input_inking.InkDrawingAttributesPencilProperties",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributesPencilProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkDrawingAttributesPencilProperties
-    };
+        _type_slots_InkDrawingAttributesPencilProperties};
 
     // ----- InkInputConfiguration class --------------------
 
@@ -916,14 +912,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkInputConfiguration =
-    {
+    static PyType_Spec type_spec_InkInputConfiguration = {
         "winrt._winrt_windows_ui_input_inking.InkInputConfiguration",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkInputConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkInputConfiguration
-    };
+        _type_slots_InkInputConfiguration};
 
     // ----- InkInputProcessingConfiguration class --------------------
 
@@ -1081,14 +1075,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkInputProcessingConfiguration =
-    {
+    static PyType_Spec type_spec_InkInputProcessingConfiguration = {
         "winrt._winrt_windows_ui_input_inking.InkInputProcessingConfiguration",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkInputProcessingConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkInputProcessingConfiguration
-    };
+        _type_slots_InkInputProcessingConfiguration};
 
     // ----- InkManager class --------------------
 
@@ -1896,14 +1888,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkManager =
-    {
+    static PyType_Spec type_spec_InkManager = {
         "winrt._winrt_windows_ui_input_inking.InkManager",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkManager
-    };
+        _type_slots_InkManager};
 
     // ----- InkModelerAttributes class --------------------
 
@@ -2109,14 +2099,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkModelerAttributes =
-    {
+    static PyType_Spec type_spec_InkModelerAttributes = {
         "winrt._winrt_windows_ui_input_inking.InkModelerAttributes",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkModelerAttributes),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkModelerAttributes
-    };
+        _type_slots_InkModelerAttributes};
 
     // ----- InkPoint class --------------------
 
@@ -2322,14 +2310,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkPoint =
-    {
+    static PyType_Spec type_spec_InkPoint = {
         "winrt._winrt_windows_ui_input_inking.InkPoint",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkPoint),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkPoint
-    };
+        _type_slots_InkPoint};
 
     // ----- InkPresenter class --------------------
 
@@ -2879,14 +2865,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkPresenter =
-    {
+    static PyType_Spec type_spec_InkPresenter = {
         "winrt._winrt_windows_ui_input_inking.InkPresenter",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkPresenter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkPresenter
-    };
+        _type_slots_InkPresenter};
 
     // ----- InkPresenterProtractor class --------------------
 
@@ -3520,14 +3504,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkPresenterProtractor =
-    {
+    static PyType_Spec type_spec_InkPresenterProtractor = {
         "winrt._winrt_windows_ui_input_inking.InkPresenterProtractor",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkPresenterProtractor
-    };
+        _type_slots_InkPresenterProtractor};
 
     // ----- InkPresenterRuler class --------------------
 
@@ -4017,14 +3999,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkPresenterRuler =
-    {
+    static PyType_Spec type_spec_InkPresenterRuler = {
         "winrt._winrt_windows_ui_input_inking.InkPresenterRuler",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkPresenterRuler
-    };
+        _type_slots_InkPresenterRuler};
 
     // ----- InkRecognitionResult class --------------------
 
@@ -4166,14 +4146,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkRecognitionResult =
-    {
+    static PyType_Spec type_spec_InkRecognitionResult = {
         "winrt._winrt_windows_ui_input_inking.InkRecognitionResult",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkRecognitionResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkRecognitionResult
-    };
+        _type_slots_InkRecognitionResult};
 
     // ----- InkRecognizer class --------------------
 
@@ -4255,14 +4233,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkRecognizer =
-    {
+    static PyType_Spec type_spec_InkRecognizer = {
         "winrt._winrt_windows_ui_input_inking.InkRecognizer",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkRecognizer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkRecognizer
-    };
+        _type_slots_InkRecognizer};
 
     // ----- InkRecognizerContainer class --------------------
 
@@ -4442,14 +4418,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkRecognizerContainer =
-    {
+    static PyType_Spec type_spec_InkRecognizerContainer = {
         "winrt._winrt_windows_ui_input_inking.InkRecognizerContainer",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkRecognizerContainer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkRecognizerContainer
-    };
+        _type_slots_InkRecognizerContainer};
 
     // ----- InkStroke class --------------------
 
@@ -4921,14 +4895,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkStroke =
-    {
+    static PyType_Spec type_spec_InkStroke = {
         "winrt._winrt_windows_ui_input_inking.InkStroke",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkStroke),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkStroke
-    };
+        _type_slots_InkStroke};
 
     // ----- InkStrokeBuilder class --------------------
 
@@ -5230,14 +5202,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkStrokeBuilder =
-    {
+    static PyType_Spec type_spec_InkStrokeBuilder = {
         "winrt._winrt_windows_ui_input_inking.InkStrokeBuilder",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkStrokeBuilder),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkStrokeBuilder
-    };
+        _type_slots_InkStrokeBuilder};
 
     // ----- InkStrokeContainer class --------------------
 
@@ -5868,14 +5838,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkStrokeContainer =
-    {
+    static PyType_Spec type_spec_InkStrokeContainer = {
         "winrt._winrt_windows_ui_input_inking.InkStrokeContainer",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkStrokeContainer
-    };
+        _type_slots_InkStrokeContainer};
 
     // ----- InkStrokeInput class --------------------
 
@@ -6137,14 +6105,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkStrokeInput =
-    {
+    static PyType_Spec type_spec_InkStrokeInput = {
         "winrt._winrt_windows_ui_input_inking.InkStrokeInput",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkStrokeInput),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkStrokeInput
-    };
+        _type_slots_InkStrokeInput};
 
     // ----- InkStrokeRenderingSegment class --------------------
 
@@ -6346,14 +6312,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkStrokeRenderingSegment =
-    {
+    static PyType_Spec type_spec_InkStrokeRenderingSegment = {
         "winrt._winrt_windows_ui_input_inking.InkStrokeRenderingSegment",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkStrokeRenderingSegment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkStrokeRenderingSegment
-    };
+        _type_slots_InkStrokeRenderingSegment};
 
     // ----- InkStrokesCollectedEventArgs class --------------------
 
@@ -6435,14 +6399,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkStrokesCollectedEventArgs =
-    {
+    static PyType_Spec type_spec_InkStrokesCollectedEventArgs = {
         "winrt._winrt_windows_ui_input_inking.InkStrokesCollectedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkStrokesCollectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkStrokesCollectedEventArgs
-    };
+        _type_slots_InkStrokesCollectedEventArgs};
 
     // ----- InkStrokesErasedEventArgs class --------------------
 
@@ -6524,14 +6486,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkStrokesErasedEventArgs =
-    {
+    static PyType_Spec type_spec_InkStrokesErasedEventArgs = {
         "winrt._winrt_windows_ui_input_inking.InkStrokesErasedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkStrokesErasedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkStrokesErasedEventArgs
-    };
+        _type_slots_InkStrokesErasedEventArgs};
 
     // ----- InkSynchronizer class --------------------
 
@@ -6654,14 +6614,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkSynchronizer =
-    {
+    static PyType_Spec type_spec_InkSynchronizer = {
         "winrt._winrt_windows_ui_input_inking.InkSynchronizer",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkSynchronizer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkSynchronizer
-    };
+        _type_slots_InkSynchronizer};
 
     // ----- InkUnprocessedInput class --------------------
 
@@ -7058,14 +7016,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_InkUnprocessedInput =
-    {
+    static PyType_Spec type_spec_InkUnprocessedInput = {
         "winrt._winrt_windows_ui_input_inking.InkUnprocessedInput",
         sizeof(py::wrapper::Windows::UI::Input::Inking::InkUnprocessedInput),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkUnprocessedInput
-    };
+        _type_slots_InkUnprocessedInput};
 
     // ----- PenAndInkSettings class --------------------
 
@@ -7309,14 +7265,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_PenAndInkSettings =
-    {
+    static PyType_Spec type_spec_PenAndInkSettings = {
         "winrt._winrt_windows_ui_input_inking.PenAndInkSettings",
         sizeof(py::wrapper::Windows::UI::Input::Inking::PenAndInkSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PenAndInkSettings
-    };
+        _type_slots_PenAndInkSettings};
 
     static PyGetSetDef getset_PenAndInkSettings_Static[] = {
         { }
@@ -7437,14 +7391,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_IInkPointFactory =
-    {
+    static PyType_Spec type_spec_IInkPointFactory = {
         "winrt._winrt_windows_ui_input_inking.IInkPointFactory",
         sizeof(py::wrapper::Windows::UI::Input::Inking::IInkPointFactory),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IInkPointFactory
-    };
+        _type_slots_IInkPointFactory};
 
     // ----- IInkPresenterRulerFactory interface --------------------
 
@@ -7538,14 +7490,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_IInkPresenterRulerFactory =
-    {
+    static PyType_Spec type_spec_IInkPresenterRulerFactory = {
         "winrt._winrt_windows_ui_input_inking.IInkPresenterRulerFactory",
         sizeof(py::wrapper::Windows::UI::Input::Inking::IInkPresenterRulerFactory),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IInkPresenterRulerFactory
-    };
+        _type_slots_IInkPresenterRulerFactory};
 
     // ----- IInkPresenterStencil interface --------------------
 
@@ -7819,14 +7769,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_IInkPresenterStencil =
-    {
+    static PyType_Spec type_spec_IInkPresenterStencil = {
         "winrt._winrt_windows_ui_input_inking.IInkPresenterStencil",
         sizeof(py::wrapper::Windows::UI::Input::Inking::IInkPresenterStencil),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IInkPresenterStencil
-    };
+        _type_slots_IInkPresenterStencil};
 
     // ----- IInkRecognizerContainer interface --------------------
 
@@ -7984,14 +7932,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_IInkRecognizerContainer =
-    {
+    static PyType_Spec type_spec_IInkRecognizerContainer = {
         "winrt._winrt_windows_ui_input_inking.IInkRecognizerContainer",
         sizeof(py::wrapper::Windows::UI::Input::Inking::IInkRecognizerContainer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IInkRecognizerContainer
-    };
+        _type_slots_IInkRecognizerContainer};
 
     // ----- IInkStrokeContainer interface --------------------
 
@@ -8483,14 +8429,12 @@ namespace py::cpp::Windows::UI::Input::Inking
         { },
     };
 
-    static PyType_Spec type_spec_IInkStrokeContainer =
-    {
+    static PyType_Spec type_spec_IInkStrokeContainer = {
         "winrt._winrt_windows_ui_input_inking.IInkStrokeContainer",
         sizeof(py::wrapper::Windows::UI::Input::Inking::IInkStrokeContainer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IInkStrokeContainer
-    };
+        _type_slots_IInkStrokeContainer};
 
     // ----- Windows.UI.Input.Inking Initialization --------------------
 

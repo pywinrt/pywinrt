@@ -183,14 +183,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
         { },
     };
 
-    static PyType_Spec type_spec_DeploymentInitializeOptions =
-    {
+    static PyType_Spec type_spec_DeploymentInitializeOptions = {
         "winrt._winrt_microsoft_windows_applicationmodel_windowsappruntime.DeploymentInitializeOptions",
         sizeof(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentInitializeOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeploymentInitializeOptions
-    };
+        _type_slots_DeploymentInitializeOptions};
 
     // ----- DeploymentManager class --------------------
 
@@ -295,14 +293,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
         { },
     };
 
-    static PyType_Spec type_spec_DeploymentManager =
-    {
+    static PyType_Spec type_spec_DeploymentManager = {
         "winrt._winrt_microsoft_windows_applicationmodel_windowsappruntime.DeploymentManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeploymentManager
-    };
+        _type_slots_DeploymentManager};
 
     static PyGetSetDef getset_DeploymentManager_Static[] = {
         { }
@@ -456,14 +452,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
         { },
     };
 
-    static PyType_Spec type_spec_DeploymentResult =
-    {
+    static PyType_Spec type_spec_DeploymentResult = {
         "winrt._winrt_microsoft_windows_applicationmodel_windowsappruntime.DeploymentResult",
         sizeof(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeploymentResult
-    };
+        _type_slots_DeploymentResult};
 
     // ----- Microsoft.Windows.ApplicationModel.WindowsAppRuntime Initialization --------------------
 

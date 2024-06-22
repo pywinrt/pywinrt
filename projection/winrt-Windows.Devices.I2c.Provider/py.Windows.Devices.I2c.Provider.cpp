@@ -209,14 +209,12 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { },
     };
 
-    static PyType_Spec type_spec_ProviderI2cConnectionSettings =
-    {
+    static PyType_Spec type_spec_ProviderI2cConnectionSettings = {
         "winrt._winrt_windows_devices_i2c_provider.ProviderI2cConnectionSettings",
         sizeof(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProviderI2cConnectionSettings
-    };
+        _type_slots_ProviderI2cConnectionSettings};
 
     // ----- II2cControllerProvider interface --------------------
 
@@ -310,14 +308,12 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { },
     };
 
-    static PyType_Spec type_spec_II2cControllerProvider =
-    {
+    static PyType_Spec type_spec_II2cControllerProvider = {
         "winrt._winrt_windows_devices_i2c_provider.II2cControllerProvider",
         sizeof(py::wrapper::Windows::Devices::I2c::Provider::II2cControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_II2cControllerProvider
-    };
+        _type_slots_II2cControllerProvider};
 
     // ----- II2cDeviceProvider interface --------------------
 
@@ -648,14 +644,12 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { },
     };
 
-    static PyType_Spec type_spec_II2cDeviceProvider =
-    {
+    static PyType_Spec type_spec_II2cDeviceProvider = {
         "winrt._winrt_windows_devices_i2c_provider.II2cDeviceProvider",
         sizeof(py::wrapper::Windows::Devices::I2c::Provider::II2cDeviceProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_II2cDeviceProvider
-    };
+        _type_slots_II2cDeviceProvider};
 
     // ----- II2cProvider interface --------------------
 
@@ -747,14 +741,12 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { },
     };
 
-    static PyType_Spec type_spec_II2cProvider =
-    {
+    static PyType_Spec type_spec_II2cProvider = {
         "winrt._winrt_windows_devices_i2c_provider.II2cProvider",
         sizeof(py::wrapper::Windows::Devices::I2c::Provider::II2cProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_II2cProvider
-    };
+        _type_slots_II2cProvider};
 
     // ----- ProviderI2cTransferResult struct --------------------
 
@@ -908,14 +900,12 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { },
     };
 
-    static PyType_Spec type_spec_ProviderI2cTransferResult =
-    {
+    static PyType_Spec type_spec_ProviderI2cTransferResult = {
         "winrt._winrt_windows_devices_i2c_provider.ProviderI2cTransferResult",
         sizeof(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cTransferResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProviderI2cTransferResult
-    };
+        _type_slots_ProviderI2cTransferResult};
 
     // ----- Windows.Devices.I2c.Provider Initialization --------------------
 

@@ -85,14 +85,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_SpeechContinuousRecognitionCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_SpeechContinuousRecognitionCompletedEventArgs = {
         "winrt._winrt_windows_media_speechrecognition.SpeechContinuousRecognitionCompletedEventArgs",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechContinuousRecognitionCompletedEventArgs
-    };
+        _type_slots_SpeechContinuousRecognitionCompletedEventArgs};
 
     // ----- SpeechContinuousRecognitionResultGeneratedEventArgs class --------------------
 
@@ -174,14 +172,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_SpeechContinuousRecognitionResultGeneratedEventArgs =
-    {
+    static PyType_Spec type_spec_SpeechContinuousRecognitionResultGeneratedEventArgs = {
         "winrt._winrt_windows_media_speechrecognition.SpeechContinuousRecognitionResultGeneratedEventArgs",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechContinuousRecognitionResultGeneratedEventArgs
-    };
+        _type_slots_SpeechContinuousRecognitionResultGeneratedEventArgs};
 
     // ----- SpeechContinuousRecognitionSession class --------------------
 
@@ -552,14 +548,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_SpeechContinuousRecognitionSession =
-    {
+    static PyType_Spec type_spec_SpeechContinuousRecognitionSession = {
         "winrt._winrt_windows_media_speechrecognition.SpeechContinuousRecognitionSession",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechContinuousRecognitionSession
-    };
+        _type_slots_SpeechContinuousRecognitionSession};
 
     // ----- SpeechRecognitionCompilationResult class --------------------
 
@@ -641,14 +635,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_SpeechRecognitionCompilationResult =
-    {
+    static PyType_Spec type_spec_SpeechRecognitionCompilationResult = {
         "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionCompilationResult",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechRecognitionCompilationResult
-    };
+        _type_slots_SpeechRecognitionCompilationResult};
 
     // ----- SpeechRecognitionGrammarFileConstraint class --------------------
 
@@ -934,14 +926,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_SpeechRecognitionGrammarFileConstraint =
-    {
+    static PyType_Spec type_spec_SpeechRecognitionGrammarFileConstraint = {
         "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionGrammarFileConstraint",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechRecognitionGrammarFileConstraint
-    };
+        _type_slots_SpeechRecognitionGrammarFileConstraint};
 
     // ----- SpeechRecognitionHypothesis class --------------------
 
@@ -1023,14 +1013,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_SpeechRecognitionHypothesis =
-    {
+    static PyType_Spec type_spec_SpeechRecognitionHypothesis = {
         "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionHypothesis",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesis),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechRecognitionHypothesis
-    };
+        _type_slots_SpeechRecognitionHypothesis};
 
     // ----- SpeechRecognitionHypothesisGeneratedEventArgs class --------------------
 
@@ -1112,14 +1100,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_SpeechRecognitionHypothesisGeneratedEventArgs =
-    {
+    static PyType_Spec type_spec_SpeechRecognitionHypothesisGeneratedEventArgs = {
         "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionHypothesisGeneratedEventArgs",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechRecognitionHypothesisGeneratedEventArgs
-    };
+        _type_slots_SpeechRecognitionHypothesisGeneratedEventArgs};
 
     // ----- SpeechRecognitionListConstraint class --------------------
 
@@ -1405,14 +1391,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_SpeechRecognitionListConstraint =
-    {
+    static PyType_Spec type_spec_SpeechRecognitionListConstraint = {
         "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionListConstraint",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechRecognitionListConstraint
-    };
+        _type_slots_SpeechRecognitionListConstraint};
 
     // ----- SpeechRecognitionQualityDegradingEventArgs class --------------------
 
@@ -1494,14 +1478,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_SpeechRecognitionQualityDegradingEventArgs =
-    {
+    static PyType_Spec type_spec_SpeechRecognitionQualityDegradingEventArgs = {
         "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionQualityDegradingEventArgs",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechRecognitionQualityDegradingEventArgs
-    };
+        _type_slots_SpeechRecognitionQualityDegradingEventArgs};
 
     // ----- SpeechRecognitionResult class --------------------
 
@@ -1775,14 +1757,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_SpeechRecognitionResult =
-    {
+    static PyType_Spec type_spec_SpeechRecognitionResult = {
         "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionResult",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechRecognitionResult
-    };
+        _type_slots_SpeechRecognitionResult};
 
     // ----- SpeechRecognitionSemanticInterpretation class --------------------
 
@@ -1864,14 +1844,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_SpeechRecognitionSemanticInterpretation =
-    {
+    static PyType_Spec type_spec_SpeechRecognitionSemanticInterpretation = {
         "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionSemanticInterpretation",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionSemanticInterpretation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechRecognitionSemanticInterpretation
-    };
+        _type_slots_SpeechRecognitionSemanticInterpretation};
 
     // ----- SpeechRecognitionTopicConstraint class --------------------
 
@@ -2179,14 +2157,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_SpeechRecognitionTopicConstraint =
-    {
+    static PyType_Spec type_spec_SpeechRecognitionTopicConstraint = {
         "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionTopicConstraint",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechRecognitionTopicConstraint
-    };
+        _type_slots_SpeechRecognitionTopicConstraint};
 
     // ----- SpeechRecognitionVoiceCommandDefinitionConstraint class --------------------
 
@@ -2412,14 +2388,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_SpeechRecognitionVoiceCommandDefinitionConstraint =
-    {
+    static PyType_Spec type_spec_SpeechRecognitionVoiceCommandDefinitionConstraint = {
         "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionVoiceCommandDefinitionConstraint",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionVoiceCommandDefinitionConstraint),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechRecognitionVoiceCommandDefinitionConstraint
-    };
+        _type_slots_SpeechRecognitionVoiceCommandDefinitionConstraint};
 
     // ----- SpeechRecognizer class --------------------
 
@@ -3033,14 +3007,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_SpeechRecognizer =
-    {
+    static PyType_Spec type_spec_SpeechRecognizer = {
         "winrt._winrt_windows_media_speechrecognition.SpeechRecognizer",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechRecognizer
-    };
+        _type_slots_SpeechRecognizer};
 
     static PyGetSetDef getset_SpeechRecognizer_Static[] = {
         { "supported_grammar_languages", reinterpret_cast<getter>(SpeechRecognizer_get_SupportedGrammarLanguages), nullptr, nullptr, nullptr },
@@ -3151,14 +3123,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_SpeechRecognizerStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_SpeechRecognizerStateChangedEventArgs = {
         "winrt._winrt_windows_media_speechrecognition.SpeechRecognizerStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechRecognizerStateChangedEventArgs
-    };
+        _type_slots_SpeechRecognizerStateChangedEventArgs};
 
     // ----- SpeechRecognizerTimeouts class --------------------
 
@@ -3364,14 +3334,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_SpeechRecognizerTimeouts =
-    {
+    static PyType_Spec type_spec_SpeechRecognizerTimeouts = {
         "winrt._winrt_windows_media_speechrecognition.SpeechRecognizerTimeouts",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechRecognizerTimeouts
-    };
+        _type_slots_SpeechRecognizerTimeouts};
 
     // ----- SpeechRecognizerUIOptions class --------------------
 
@@ -3625,14 +3593,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_SpeechRecognizerUIOptions =
-    {
+    static PyType_Spec type_spec_SpeechRecognizerUIOptions = {
         "winrt._winrt_windows_media_speechrecognition.SpeechRecognizerUIOptions",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeechRecognizerUIOptions
-    };
+        _type_slots_SpeechRecognizerUIOptions};
 
     // ----- VoiceCommandManager class --------------------
 
@@ -3709,14 +3675,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_VoiceCommandManager =
-    {
+    static PyType_Spec type_spec_VoiceCommandManager = {
         "winrt._winrt_windows_media_speechrecognition.VoiceCommandManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VoiceCommandManager
-    };
+        _type_slots_VoiceCommandManager};
 
     static PyGetSetDef getset_VoiceCommandManager_Static[] = {
         { "installed_command_sets", reinterpret_cast<getter>(VoiceCommandManager_get_InstalledCommandSets), nullptr, nullptr, nullptr },
@@ -3878,14 +3842,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_VoiceCommandSet =
-    {
+    static PyType_Spec type_spec_VoiceCommandSet = {
         "winrt._winrt_windows_media_speechrecognition.VoiceCommandSet",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::VoiceCommandSet),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VoiceCommandSet
-    };
+        _type_slots_VoiceCommandSet};
 
     // ----- ISpeechRecognitionConstraint interface --------------------
 
@@ -4111,14 +4073,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { },
     };
 
-    static PyType_Spec type_spec_ISpeechRecognitionConstraint =
-    {
+    static PyType_Spec type_spec_ISpeechRecognitionConstraint = {
         "winrt._winrt_windows_media_speechrecognition.ISpeechRecognitionConstraint",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISpeechRecognitionConstraint
-    };
+        _type_slots_ISpeechRecognitionConstraint};
 
     // ----- Windows.Media.SpeechRecognition Initialization --------------------
 

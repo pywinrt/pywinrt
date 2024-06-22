@@ -1111,14 +1111,12 @@ namespace py::cpp::Windows::Data::Json
         { },
     };
 
-    static PyType_Spec type_spec_JsonArray =
-    {
+    static PyType_Spec type_spec_JsonArray = {
         "winrt._winrt_windows_data_json.JsonArray",
         sizeof(py::wrapper::Windows::Data::Json::JsonArray),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_JsonArray
-    };
+        _type_slots_JsonArray};
 
     static PyGetSetDef getset_JsonArray_Static[] = {
         { }
@@ -1203,14 +1201,12 @@ namespace py::cpp::Windows::Data::Json
         { },
     };
 
-    static PyType_Spec type_spec_JsonError =
-    {
+    static PyType_Spec type_spec_JsonError = {
         "winrt._winrt_windows_data_json.JsonError",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_JsonError
-    };
+        _type_slots_JsonError};
 
     static PyGetSetDef getset_JsonError_Static[] = {
         { }
@@ -2338,14 +2334,12 @@ namespace py::cpp::Windows::Data::Json
         { },
     };
 
-    static PyType_Spec type_spec_JsonObject =
-    {
+    static PyType_Spec type_spec_JsonObject = {
         "winrt._winrt_windows_data_json.JsonObject",
         sizeof(py::wrapper::Windows::Data::Json::JsonObject),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_JsonObject
-    };
+        _type_slots_JsonObject};
 
     static PyGetSetDef getset_JsonObject_Static[] = {
         { }
@@ -2875,14 +2869,12 @@ namespace py::cpp::Windows::Data::Json
         { },
     };
 
-    static PyType_Spec type_spec_JsonValue =
-    {
+    static PyType_Spec type_spec_JsonValue = {
         "winrt._winrt_windows_data_json.JsonValue",
         sizeof(py::wrapper::Windows::Data::Json::JsonValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_JsonValue
-    };
+        _type_slots_JsonValue};
 
     static PyGetSetDef getset_JsonValue_Static[] = {
         { }
@@ -3175,14 +3167,12 @@ namespace py::cpp::Windows::Data::Json
         { },
     };
 
-    static PyType_Spec type_spec_IJsonValue =
-    {
+    static PyType_Spec type_spec_IJsonValue = {
         "winrt._winrt_windows_data_json.IJsonValue",
         sizeof(py::wrapper::Windows::Data::Json::IJsonValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IJsonValue
-    };
+        _type_slots_IJsonValue};
 
     // ----- Windows.Data.Json Initialization --------------------
 

@@ -85,14 +85,12 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
         { },
     };
 
-    static PyType_Spec type_spec_ExtendedExecutionRevokedEventArgs =
-    {
+    static PyType_Spec type_spec_ExtendedExecutionRevokedEventArgs = {
         "winrt._winrt_windows_applicationmodel_extendedexecution.ExtendedExecutionRevokedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionRevokedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ExtendedExecutionRevokedEventArgs
-    };
+        _type_slots_ExtendedExecutionRevokedEventArgs};
 
     // ----- ExtendedExecutionSession class --------------------
 
@@ -447,14 +445,12 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
         { },
     };
 
-    static PyType_Spec type_spec_ExtendedExecutionSession =
-    {
+    static PyType_Spec type_spec_ExtendedExecutionSession = {
         "winrt._winrt_windows_applicationmodel_extendedexecution.ExtendedExecutionSession",
         sizeof(py::wrapper::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ExtendedExecutionSession
-    };
+        _type_slots_ExtendedExecutionSession};
 
     // ----- Windows.ApplicationModel.ExtendedExecution Initialization --------------------
 

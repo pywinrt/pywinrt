@@ -85,14 +85,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { },
     };
 
-    static PyType_Spec type_spec_CustomQueryParametersRequestedArgs =
-    {
+    static PyType_Spec type_spec_CustomQueryParametersRequestedArgs = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.CustomQueryParametersRequestedArgs",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::CustomQueryParametersRequestedArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CustomQueryParametersRequestedArgs
-    };
+        _type_slots_CustomQueryParametersRequestedArgs};
 
     // ----- CustomQueryParametersUpdateOptions class --------------------
 
@@ -219,14 +217,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { },
     };
 
-    static PyType_Spec type_spec_CustomQueryParametersUpdateOptions =
-    {
+    static PyType_Spec type_spec_CustomQueryParametersUpdateOptions = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.CustomQueryParametersUpdateOptions",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::CustomQueryParametersUpdateOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CustomQueryParametersUpdateOptions
-    };
+        _type_slots_CustomQueryParametersUpdateOptions};
 
     // ----- FeedDisabledArgs class --------------------
 
@@ -328,14 +324,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { },
     };
 
-    static PyType_Spec type_spec_FeedDisabledArgs =
-    {
+    static PyType_Spec type_spec_FeedDisabledArgs = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedDisabledArgs",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedDisabledArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FeedDisabledArgs
-    };
+        _type_slots_FeedDisabledArgs};
 
     // ----- FeedEnabledArgs class --------------------
 
@@ -437,14 +431,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { },
     };
 
-    static PyType_Spec type_spec_FeedEnabledArgs =
-    {
+    static PyType_Spec type_spec_FeedEnabledArgs = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedEnabledArgs",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedEnabledArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FeedEnabledArgs
-    };
+        _type_slots_FeedEnabledArgs};
 
     // ----- FeedManager class --------------------
 
@@ -598,14 +590,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { },
     };
 
-    static PyType_Spec type_spec_FeedManager =
-    {
+    static PyType_Spec type_spec_FeedManager = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedManager",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FeedManager
-    };
+        _type_slots_FeedManager};
 
     static PyGetSetDef getset_FeedManager_Static[] = {
         { }
@@ -713,14 +703,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { },
     };
 
-    static PyType_Spec type_spec_FeedProviderDisabledArgs =
-    {
+    static PyType_Spec type_spec_FeedProviderDisabledArgs = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedProviderDisabledArgs",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedProviderDisabledArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FeedProviderDisabledArgs
-    };
+        _type_slots_FeedProviderDisabledArgs};
 
     // ----- FeedProviderEnabledArgs class --------------------
 
@@ -802,14 +790,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { },
     };
 
-    static PyType_Spec type_spec_FeedProviderEnabledArgs =
-    {
+    static PyType_Spec type_spec_FeedProviderEnabledArgs = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedProviderEnabledArgs",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedProviderEnabledArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FeedProviderEnabledArgs
-    };
+        _type_slots_FeedProviderEnabledArgs};
 
     // ----- FeedProviderInfo class --------------------
 
@@ -911,14 +897,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { },
     };
 
-    static PyType_Spec type_spec_FeedProviderInfo =
-    {
+    static PyType_Spec type_spec_FeedProviderInfo = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedProviderInfo",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedProviderInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FeedProviderInfo
-    };
+        _type_slots_FeedProviderInfo};
 
     // ----- IFeedManager interface --------------------
 
@@ -1043,14 +1027,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { },
     };
 
-    static PyType_Spec type_spec_IFeedManager =
-    {
+    static PyType_Spec type_spec_IFeedManager = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedManager",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IFeedManager
-    };
+        _type_slots_IFeedManager};
 
     // ----- IFeedProvider interface --------------------
 
@@ -1277,14 +1259,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { },
     };
 
-    static PyType_Spec type_spec_IFeedProvider =
-    {
+    static PyType_Spec type_spec_IFeedProvider = {
         "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedProvider",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IFeedProvider
-    };
+        _type_slots_IFeedProvider};
 
     // ----- Microsoft.Windows.Widgets.Feeds.Providers Initialization --------------------
 

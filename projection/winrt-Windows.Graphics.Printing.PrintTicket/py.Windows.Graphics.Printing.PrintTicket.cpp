@@ -491,14 +491,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { },
     };
 
-    static PyType_Spec type_spec_PrintTicketCapabilities =
-    {
+    static PyType_Spec type_spec_PrintTicketCapabilities = {
         "winrt._winrt_windows_graphics_printing_printticket.PrintTicketCapabilities",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintTicketCapabilities
-    };
+        _type_slots_PrintTicketCapabilities};
 
     // ----- PrintTicketFeature class --------------------
 
@@ -776,14 +774,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { },
     };
 
-    static PyType_Spec type_spec_PrintTicketFeature =
-    {
+    static PyType_Spec type_spec_PrintTicketFeature = {
         "winrt._winrt_windows_graphics_printing_printticket.PrintTicketFeature",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintTicketFeature
-    };
+        _type_slots_PrintTicketFeature};
 
     // ----- PrintTicketOption class --------------------
 
@@ -1057,14 +1053,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { },
     };
 
-    static PyType_Spec type_spec_PrintTicketOption =
-    {
+    static PyType_Spec type_spec_PrintTicketOption = {
         "winrt._winrt_windows_graphics_printing_printticket.PrintTicketOption",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketOption),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintTicketOption
-    };
+        _type_slots_PrintTicketOption};
 
     // ----- PrintTicketParameterDefinition class --------------------
 
@@ -1266,14 +1260,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { },
     };
 
-    static PyType_Spec type_spec_PrintTicketParameterDefinition =
-    {
+    static PyType_Spec type_spec_PrintTicketParameterDefinition = {
         "winrt._winrt_windows_graphics_printing_printticket.PrintTicketParameterDefinition",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintTicketParameterDefinition
-    };
+        _type_slots_PrintTicketParameterDefinition};
 
     // ----- PrintTicketParameterInitializer class --------------------
 
@@ -1443,14 +1435,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { },
     };
 
-    static PyType_Spec type_spec_PrintTicketParameterInitializer =
-    {
+    static PyType_Spec type_spec_PrintTicketParameterInitializer = {
         "winrt._winrt_windows_graphics_printing_printticket.PrintTicketParameterInitializer",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintTicketParameterInitializer
-    };
+        _type_slots_PrintTicketParameterInitializer};
 
     // ----- PrintTicketValue class --------------------
 
@@ -1592,14 +1582,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { },
     };
 
-    static PyType_Spec type_spec_PrintTicketValue =
-    {
+    static PyType_Spec type_spec_PrintTicketValue = {
         "winrt._winrt_windows_graphics_printing_printticket.PrintTicketValue",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintTicketValue
-    };
+        _type_slots_PrintTicketValue};
 
     // ----- WorkflowPrintTicket class --------------------
 
@@ -2277,14 +2265,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { },
     };
 
-    static PyType_Spec type_spec_WorkflowPrintTicket =
-    {
+    static PyType_Spec type_spec_WorkflowPrintTicket = {
         "winrt._winrt_windows_graphics_printing_printticket.WorkflowPrintTicket",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WorkflowPrintTicket
-    };
+        _type_slots_WorkflowPrintTicket};
 
     // ----- WorkflowPrintTicketValidationResult class --------------------
 
@@ -2386,14 +2372,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { },
     };
 
-    static PyType_Spec type_spec_WorkflowPrintTicketValidationResult =
-    {
+    static PyType_Spec type_spec_WorkflowPrintTicketValidationResult = {
         "winrt._winrt_windows_graphics_printing_printticket.WorkflowPrintTicketValidationResult",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WorkflowPrintTicketValidationResult
-    };
+        _type_slots_WorkflowPrintTicketValidationResult};
 
     // ----- Windows.Graphics.Printing.PrintTicket Initialization --------------------
 

@@ -152,14 +152,12 @@ namespace py::cpp::Windows::System::Threading::Core
         { },
     };
 
-    static PyType_Spec type_spec_PreallocatedWorkItem =
-    {
+    static PyType_Spec type_spec_PreallocatedWorkItem = {
         "winrt._winrt_windows_system_threading_core.PreallocatedWorkItem",
         sizeof(py::wrapper::Windows::System::Threading::Core::PreallocatedWorkItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PreallocatedWorkItem
-    };
+        _type_slots_PreallocatedWorkItem};
 
     // ----- SignalNotifier class --------------------
 
@@ -391,14 +389,12 @@ namespace py::cpp::Windows::System::Threading::Core
         { },
     };
 
-    static PyType_Spec type_spec_SignalNotifier =
-    {
+    static PyType_Spec type_spec_SignalNotifier = {
         "winrt._winrt_windows_system_threading_core.SignalNotifier",
         sizeof(py::wrapper::Windows::System::Threading::Core::SignalNotifier),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SignalNotifier
-    };
+        _type_slots_SignalNotifier};
 
     static PyGetSetDef getset_SignalNotifier_Static[] = {
         { }

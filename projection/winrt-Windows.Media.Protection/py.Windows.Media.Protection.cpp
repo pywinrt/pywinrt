@@ -105,14 +105,12 @@ namespace py::cpp::Windows::Media::Protection
         { },
     };
 
-    static PyType_Spec type_spec_ComponentLoadFailedEventArgs =
-    {
+    static PyType_Spec type_spec_ComponentLoadFailedEventArgs = {
         "winrt._winrt_windows_media_protection.ComponentLoadFailedEventArgs",
         sizeof(py::wrapper::Windows::Media::Protection::ComponentLoadFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ComponentLoadFailedEventArgs
-    };
+        _type_slots_ComponentLoadFailedEventArgs};
 
     // ----- ComponentRenewal class --------------------
 
@@ -170,14 +168,12 @@ namespace py::cpp::Windows::Media::Protection
         { },
     };
 
-    static PyType_Spec type_spec_ComponentRenewal =
-    {
+    static PyType_Spec type_spec_ComponentRenewal = {
         "winrt._winrt_windows_media_protection.ComponentRenewal",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ComponentRenewal
-    };
+        _type_slots_ComponentRenewal};
 
     static PyGetSetDef getset_ComponentRenewal_Static[] = {
         { }
@@ -478,14 +474,12 @@ namespace py::cpp::Windows::Media::Protection
         { },
     };
 
-    static PyType_Spec type_spec_HdcpSession =
-    {
+    static PyType_Spec type_spec_HdcpSession = {
         "winrt._winrt_windows_media_protection.HdcpSession",
         sizeof(py::wrapper::Windows::Media::Protection::HdcpSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HdcpSession
-    };
+        _type_slots_HdcpSession};
 
     // ----- MediaProtectionManager class --------------------
 
@@ -724,14 +718,12 @@ namespace py::cpp::Windows::Media::Protection
         { },
     };
 
-    static PyType_Spec type_spec_MediaProtectionManager =
-    {
+    static PyType_Spec type_spec_MediaProtectionManager = {
         "winrt._winrt_windows_media_protection.MediaProtectionManager",
         sizeof(py::wrapper::Windows::Media::Protection::MediaProtectionManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaProtectionManager
-    };
+        _type_slots_MediaProtectionManager};
 
     // ----- MediaProtectionPMPServer class --------------------
 
@@ -837,14 +829,12 @@ namespace py::cpp::Windows::Media::Protection
         { },
     };
 
-    static PyType_Spec type_spec_MediaProtectionPMPServer =
-    {
+    static PyType_Spec type_spec_MediaProtectionPMPServer = {
         "winrt._winrt_windows_media_protection.MediaProtectionPMPServer",
         sizeof(py::wrapper::Windows::Media::Protection::MediaProtectionPMPServer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaProtectionPMPServer
-    };
+        _type_slots_MediaProtectionPMPServer};
 
     // ----- MediaProtectionServiceCompletion class --------------------
 
@@ -939,14 +929,12 @@ namespace py::cpp::Windows::Media::Protection
         { },
     };
 
-    static PyType_Spec type_spec_MediaProtectionServiceCompletion =
-    {
+    static PyType_Spec type_spec_MediaProtectionServiceCompletion = {
         "winrt._winrt_windows_media_protection.MediaProtectionServiceCompletion",
         sizeof(py::wrapper::Windows::Media::Protection::MediaProtectionServiceCompletion),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaProtectionServiceCompletion
-    };
+        _type_slots_MediaProtectionServiceCompletion};
 
     // ----- ProtectionCapabilities class --------------------
 
@@ -1063,14 +1051,12 @@ namespace py::cpp::Windows::Media::Protection
         { },
     };
 
-    static PyType_Spec type_spec_ProtectionCapabilities =
-    {
+    static PyType_Spec type_spec_ProtectionCapabilities = {
         "winrt._winrt_windows_media_protection.ProtectionCapabilities",
         sizeof(py::wrapper::Windows::Media::Protection::ProtectionCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProtectionCapabilities
-    };
+        _type_slots_ProtectionCapabilities};
 
     // ----- RevocationAndRenewalInformation class --------------------
 
@@ -1152,14 +1138,12 @@ namespace py::cpp::Windows::Media::Protection
         { },
     };
 
-    static PyType_Spec type_spec_RevocationAndRenewalInformation =
-    {
+    static PyType_Spec type_spec_RevocationAndRenewalInformation = {
         "winrt._winrt_windows_media_protection.RevocationAndRenewalInformation",
         sizeof(py::wrapper::Windows::Media::Protection::RevocationAndRenewalInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RevocationAndRenewalInformation
-    };
+        _type_slots_RevocationAndRenewalInformation};
 
     // ----- RevocationAndRenewalItem class --------------------
 
@@ -1321,14 +1305,12 @@ namespace py::cpp::Windows::Media::Protection
         { },
     };
 
-    static PyType_Spec type_spec_RevocationAndRenewalItem =
-    {
+    static PyType_Spec type_spec_RevocationAndRenewalItem = {
         "winrt._winrt_windows_media_protection.RevocationAndRenewalItem",
         sizeof(py::wrapper::Windows::Media::Protection::RevocationAndRenewalItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RevocationAndRenewalItem
-    };
+        _type_slots_RevocationAndRenewalItem};
 
     // ----- ServiceRequestedEventArgs class --------------------
 
@@ -1450,14 +1432,12 @@ namespace py::cpp::Windows::Media::Protection
         { },
     };
 
-    static PyType_Spec type_spec_ServiceRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_ServiceRequestedEventArgs = {
         "winrt._winrt_windows_media_protection.ServiceRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::Protection::ServiceRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ServiceRequestedEventArgs
-    };
+        _type_slots_ServiceRequestedEventArgs};
 
     // ----- IMediaProtectionServiceRequest interface --------------------
 
@@ -1559,14 +1539,12 @@ namespace py::cpp::Windows::Media::Protection
         { },
     };
 
-    static PyType_Spec type_spec_IMediaProtectionServiceRequest =
-    {
+    static PyType_Spec type_spec_IMediaProtectionServiceRequest = {
         "winrt._winrt_windows_media_protection.IMediaProtectionServiceRequest",
         sizeof(py::wrapper::Windows::Media::Protection::IMediaProtectionServiceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IMediaProtectionServiceRequest
-    };
+        _type_slots_IMediaProtectionServiceRequest};
 
     // ----- Windows.Media.Protection Initialization --------------------
 

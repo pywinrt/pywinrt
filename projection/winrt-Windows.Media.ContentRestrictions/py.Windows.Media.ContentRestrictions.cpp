@@ -125,14 +125,12 @@ namespace py::cpp::Windows::Media::ContentRestrictions
         { },
     };
 
-    static PyType_Spec type_spec_ContentRestrictionsBrowsePolicy =
-    {
+    static PyType_Spec type_spec_ContentRestrictionsBrowsePolicy = {
         "winrt._winrt_windows_media_contentrestrictions.ContentRestrictionsBrowsePolicy",
         sizeof(py::wrapper::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentRestrictionsBrowsePolicy
-    };
+        _type_slots_ContentRestrictionsBrowsePolicy};
 
     // ----- RatedContentDescription class --------------------
 
@@ -460,14 +458,12 @@ namespace py::cpp::Windows::Media::ContentRestrictions
         { },
     };
 
-    static PyType_Spec type_spec_RatedContentDescription =
-    {
+    static PyType_Spec type_spec_RatedContentDescription = {
         "winrt._winrt_windows_media_contentrestrictions.RatedContentDescription",
         sizeof(py::wrapper::Windows::Media::ContentRestrictions::RatedContentDescription),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RatedContentDescription
-    };
+        _type_slots_RatedContentDescription};
 
     // ----- RatedContentRestrictions class --------------------
 
@@ -705,14 +701,12 @@ namespace py::cpp::Windows::Media::ContentRestrictions
         { },
     };
 
-    static PyType_Spec type_spec_RatedContentRestrictions =
-    {
+    static PyType_Spec type_spec_RatedContentRestrictions = {
         "winrt._winrt_windows_media_contentrestrictions.RatedContentRestrictions",
         sizeof(py::wrapper::Windows::Media::ContentRestrictions::RatedContentRestrictions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RatedContentRestrictions
-    };
+        _type_slots_RatedContentRestrictions};
 
     // ----- Windows.Media.ContentRestrictions Initialization --------------------
 

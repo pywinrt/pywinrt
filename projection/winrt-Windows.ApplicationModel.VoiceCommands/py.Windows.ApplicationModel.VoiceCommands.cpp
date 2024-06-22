@@ -125,14 +125,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { },
     };
 
-    static PyType_Spec type_spec_VoiceCommand =
-    {
+    static PyType_Spec type_spec_VoiceCommand = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommand",
         sizeof(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommand),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VoiceCommand
-    };
+        _type_slots_VoiceCommand};
 
     // ----- VoiceCommandCompletedEventArgs class --------------------
 
@@ -214,14 +212,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { },
     };
 
-    static PyType_Spec type_spec_VoiceCommandCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_VoiceCommandCompletedEventArgs = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandCompletedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VoiceCommandCompletedEventArgs
-    };
+        _type_slots_VoiceCommandCompletedEventArgs};
 
     // ----- VoiceCommandConfirmationResult class --------------------
 
@@ -303,14 +299,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { },
     };
 
-    static PyType_Spec type_spec_VoiceCommandConfirmationResult =
-    {
+    static PyType_Spec type_spec_VoiceCommandConfirmationResult = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandConfirmationResult",
         sizeof(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VoiceCommandConfirmationResult
-    };
+        _type_slots_VoiceCommandConfirmationResult};
 
     // ----- VoiceCommandContentTile class --------------------
 
@@ -778,14 +772,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { },
     };
 
-    static PyType_Spec type_spec_VoiceCommandContentTile =
-    {
+    static PyType_Spec type_spec_VoiceCommandContentTile = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandContentTile",
         sizeof(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VoiceCommandContentTile
-    };
+        _type_slots_VoiceCommandContentTile};
 
     // ----- VoiceCommandDefinition class --------------------
 
@@ -920,14 +912,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { },
     };
 
-    static PyType_Spec type_spec_VoiceCommandDefinition =
-    {
+    static PyType_Spec type_spec_VoiceCommandDefinition = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandDefinition",
         sizeof(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VoiceCommandDefinition
-    };
+        _type_slots_VoiceCommandDefinition};
 
     // ----- VoiceCommandDefinitionManager class --------------------
 
@@ -1004,14 +994,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { },
     };
 
-    static PyType_Spec type_spec_VoiceCommandDefinitionManager =
-    {
+    static PyType_Spec type_spec_VoiceCommandDefinitionManager = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandDefinitionManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VoiceCommandDefinitionManager
-    };
+        _type_slots_VoiceCommandDefinitionManager};
 
     static PyGetSetDef getset_VoiceCommandDefinitionManager_Static[] = {
         { "installed_command_definitions", reinterpret_cast<getter>(VoiceCommandDefinitionManager_get_InstalledCommandDefinitions), nullptr, nullptr, nullptr },
@@ -1120,14 +1108,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { },
     };
 
-    static PyType_Spec type_spec_VoiceCommandDisambiguationResult =
-    {
+    static PyType_Spec type_spec_VoiceCommandDisambiguationResult = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandDisambiguationResult",
         sizeof(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VoiceCommandDisambiguationResult
-    };
+        _type_slots_VoiceCommandDisambiguationResult};
 
     // ----- VoiceCommandResponse class --------------------
 
@@ -1478,14 +1464,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { },
     };
 
-    static PyType_Spec type_spec_VoiceCommandResponse =
-    {
+    static PyType_Spec type_spec_VoiceCommandResponse = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandResponse",
         sizeof(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VoiceCommandResponse
-    };
+        _type_slots_VoiceCommandResponse};
 
     static PyGetSetDef getset_VoiceCommandResponse_Static[] = {
         { "max_supported_voice_command_content_tiles", reinterpret_cast<getter>(VoiceCommandResponse_get_MaxSupportedVoiceCommandContentTiles), nullptr, nullptr, nullptr },
@@ -1893,14 +1877,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { },
     };
 
-    static PyType_Spec type_spec_VoiceCommandServiceConnection =
-    {
+    static PyType_Spec type_spec_VoiceCommandServiceConnection = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandServiceConnection",
         sizeof(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VoiceCommandServiceConnection
-    };
+        _type_slots_VoiceCommandServiceConnection};
 
     static PyGetSetDef getset_VoiceCommandServiceConnection_Static[] = {
         { }
@@ -2106,14 +2088,12 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         { },
     };
 
-    static PyType_Spec type_spec_VoiceCommandUserMessage =
-    {
+    static PyType_Spec type_spec_VoiceCommandUserMessage = {
         "winrt._winrt_windows_applicationmodel_voicecommands.VoiceCommandUserMessage",
         sizeof(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VoiceCommandUserMessage
-    };
+        _type_slots_VoiceCommandUserMessage};
 
     // ----- Windows.ApplicationModel.VoiceCommands Initialization --------------------
 

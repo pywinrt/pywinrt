@@ -130,14 +130,12 @@ namespace py::cpp::Windows::UI
         { },
     };
 
-    static PyType_Spec type_spec_ColorHelper =
-    {
+    static PyType_Spec type_spec_ColorHelper = {
         "winrt._winrt_windows_ui.ColorHelper",
         sizeof(py::wrapper::Windows::UI::ColorHelper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ColorHelper
-    };
+        _type_slots_ColorHelper};
 
     static PyGetSetDef getset_ColorHelper_Static[] = {
         { }
@@ -2905,14 +2903,12 @@ namespace py::cpp::Windows::UI
         { },
     };
 
-    static PyType_Spec type_spec_Colors =
-    {
+    static PyType_Spec type_spec_Colors = {
         "winrt._winrt_windows_ui.Colors",
         sizeof(py::wrapper::Windows::UI::Colors),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Colors
-    };
+        _type_slots_Colors};
 
     static PyGetSetDef getset_Colors_Static[] = {
         { "alice_blue", reinterpret_cast<getter>(Colors_get_AliceBlue), nullptr, nullptr, nullptr },
@@ -3160,14 +3156,12 @@ namespace py::cpp::Windows::UI
         { },
     };
 
-    static PyType_Spec type_spec_UIContentRoot =
-    {
+    static PyType_Spec type_spec_UIContentRoot = {
         "winrt._winrt_windows_ui.UIContentRoot",
         sizeof(py::wrapper::Windows::UI::UIContentRoot),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UIContentRoot
-    };
+        _type_slots_UIContentRoot};
 
     // ----- UIContext class --------------------
 
@@ -3229,14 +3223,12 @@ namespace py::cpp::Windows::UI
         { },
     };
 
-    static PyType_Spec type_spec_UIContext =
-    {
+    static PyType_Spec type_spec_UIContext = {
         "winrt._winrt_windows_ui.UIContext",
         sizeof(py::wrapper::Windows::UI::UIContext),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UIContext
-    };
+        _type_slots_UIContext};
 
     // ----- Color struct --------------------
 
@@ -3460,14 +3452,12 @@ namespace py::cpp::Windows::UI
         { },
     };
 
-    static PyType_Spec type_spec_Color =
-    {
+    static PyType_Spec type_spec_Color = {
         "winrt._winrt_windows_ui.Color",
         sizeof(py::wrapper::Windows::UI::Color),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Color
-    };
+        _type_slots_Color};
 
     // ----- WindowId struct --------------------
 
@@ -3586,14 +3576,12 @@ namespace py::cpp::Windows::UI
         { },
     };
 
-    static PyType_Spec type_spec_WindowId =
-    {
+    static PyType_Spec type_spec_WindowId = {
         "winrt._winrt_windows_ui.WindowId",
         sizeof(py::wrapper::Windows::UI::WindowId),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowId
-    };
+        _type_slots_WindowId};
 
     // ----- Windows.UI Initialization --------------------
 

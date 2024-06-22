@@ -212,14 +212,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreIncrementalInkStroke =
-    {
+    static PyType_Spec type_spec_CoreIncrementalInkStroke = {
         "winrt._winrt_windows_ui_input_inking_core.CoreIncrementalInkStroke",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Core::CoreIncrementalInkStroke),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreIncrementalInkStroke
-    };
+        _type_slots_CoreIncrementalInkStroke};
 
     // ----- CoreInkIndependentInputSource class --------------------
 
@@ -695,14 +693,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreInkIndependentInputSource =
-    {
+    static PyType_Spec type_spec_CoreInkIndependentInputSource = {
         "winrt._winrt_windows_ui_input_inking_core.CoreInkIndependentInputSource",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreInkIndependentInputSource
-    };
+        _type_slots_CoreInkIndependentInputSource};
 
     static PyGetSetDef getset_CoreInkIndependentInputSource_Static[] = {
         { }
@@ -880,14 +876,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreInkPresenterHost =
-    {
+    static PyType_Spec type_spec_CoreInkPresenterHost = {
         "winrt._winrt_windows_ui_input_inking_core.CoreInkPresenterHost",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Core::CoreInkPresenterHost),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreInkPresenterHost
-    };
+        _type_slots_CoreInkPresenterHost};
 
     // ----- CoreWetStrokeUpdateEventArgs class --------------------
 
@@ -1037,14 +1031,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWetStrokeUpdateEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWetStrokeUpdateEventArgs = {
         "winrt._winrt_windows_ui_input_inking_core.CoreWetStrokeUpdateEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWetStrokeUpdateEventArgs
-    };
+        _type_slots_CoreWetStrokeUpdateEventArgs};
 
     // ----- CoreWetStrokeUpdateSource class --------------------
 
@@ -1382,14 +1374,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWetStrokeUpdateSource =
-    {
+    static PyType_Spec type_spec_CoreWetStrokeUpdateSource = {
         "winrt._winrt_windows_ui_input_inking_core.CoreWetStrokeUpdateSource",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWetStrokeUpdateSource
-    };
+        _type_slots_CoreWetStrokeUpdateSource};
 
     static PyGetSetDef getset_CoreWetStrokeUpdateSource_Static[] = {
         { }

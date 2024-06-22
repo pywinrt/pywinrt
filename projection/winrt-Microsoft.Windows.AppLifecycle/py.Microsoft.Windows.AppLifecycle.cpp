@@ -232,14 +232,12 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
         { },
     };
 
-    static PyType_Spec type_spec_ActivationRegistrationManager =
-    {
+    static PyType_Spec type_spec_ActivationRegistrationManager = {
         "winrt._winrt_microsoft_windows_applifecycle.ActivationRegistrationManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ActivationRegistrationManager
-    };
+        _type_slots_ActivationRegistrationManager};
 
     static PyGetSetDef getset_ActivationRegistrationManager_Static[] = {
         { }
@@ -372,14 +370,12 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
         { },
     };
 
-    static PyType_Spec type_spec_AppActivationArguments =
-    {
+    static PyType_Spec type_spec_AppActivationArguments = {
         "winrt._winrt_microsoft_windows_applifecycle.AppActivationArguments",
         sizeof(py::wrapper::Microsoft::Windows::AppLifecycle::AppActivationArguments),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppActivationArguments
-    };
+        _type_slots_AppActivationArguments};
 
     // ----- AppInstance class --------------------
 
@@ -759,14 +755,12 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
         { },
     };
 
-    static PyType_Spec type_spec_AppInstance =
-    {
+    static PyType_Spec type_spec_AppInstance = {
         "winrt._winrt_microsoft_windows_applifecycle.AppInstance",
         sizeof(py::wrapper::Microsoft::Windows::AppLifecycle::AppInstance),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppInstance
-    };
+        _type_slots_AppInstance};
 
     static PyGetSetDef getset_AppInstance_Static[] = {
         { }

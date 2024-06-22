@@ -65,14 +65,12 @@ namespace py::cpp::Windows::Graphics
         { },
     };
 
-    static PyType_Spec type_spec_IGeometrySource2D =
-    {
+    static PyType_Spec type_spec_IGeometrySource2D = {
         "winrt._winrt_windows_graphics.IGeometrySource2D",
         sizeof(py::wrapper::Windows::Graphics::IGeometrySource2D),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IGeometrySource2D
-    };
+        _type_slots_IGeometrySource2D};
 
     // ----- DisplayAdapterId struct --------------------
 
@@ -226,14 +224,12 @@ namespace py::cpp::Windows::Graphics
         { },
     };
 
-    static PyType_Spec type_spec_DisplayAdapterId =
-    {
+    static PyType_Spec type_spec_DisplayAdapterId = {
         "winrt._winrt_windows_graphics.DisplayAdapterId",
         sizeof(py::wrapper::Windows::Graphics::DisplayAdapterId),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayAdapterId
-    };
+        _type_slots_DisplayAdapterId};
 
     // ----- DisplayId struct --------------------
 
@@ -352,14 +348,12 @@ namespace py::cpp::Windows::Graphics
         { },
     };
 
-    static PyType_Spec type_spec_DisplayId =
-    {
+    static PyType_Spec type_spec_DisplayId = {
         "winrt._winrt_windows_graphics.DisplayId",
         sizeof(py::wrapper::Windows::Graphics::DisplayId),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayId
-    };
+        _type_slots_DisplayId};
 
     // ----- PointInt32 struct --------------------
 
@@ -513,14 +507,12 @@ namespace py::cpp::Windows::Graphics
         { },
     };
 
-    static PyType_Spec type_spec_PointInt32 =
-    {
+    static PyType_Spec type_spec_PointInt32 = {
         "winrt._winrt_windows_graphics.PointInt32",
         sizeof(py::wrapper::Windows::Graphics::PointInt32),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PointInt32
-    };
+        _type_slots_PointInt32};
 
     // ----- RectInt32 struct --------------------
 
@@ -744,14 +736,12 @@ namespace py::cpp::Windows::Graphics
         { },
     };
 
-    static PyType_Spec type_spec_RectInt32 =
-    {
+    static PyType_Spec type_spec_RectInt32 = {
         "winrt._winrt_windows_graphics.RectInt32",
         sizeof(py::wrapper::Windows::Graphics::RectInt32),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RectInt32
-    };
+        _type_slots_RectInt32};
 
     // ----- SizeInt32 struct --------------------
 
@@ -905,14 +895,12 @@ namespace py::cpp::Windows::Graphics
         { },
     };
 
-    static PyType_Spec type_spec_SizeInt32 =
-    {
+    static PyType_Spec type_spec_SizeInt32 = {
         "winrt._winrt_windows_graphics.SizeInt32",
         sizeof(py::wrapper::Windows::Graphics::SizeInt32),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SizeInt32
-    };
+        _type_slots_SizeInt32};
 
     // ----- Windows.Graphics Initialization --------------------
 

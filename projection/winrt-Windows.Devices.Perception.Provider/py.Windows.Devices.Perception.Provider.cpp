@@ -87,14 +87,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { },
     };
 
-    static PyType_Spec type_spec_KnownPerceptionFrameKind =
-    {
+    static PyType_Spec type_spec_KnownPerceptionFrameKind = {
         "winrt._winrt_windows_devices_perception_provider.KnownPerceptionFrameKind",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownPerceptionFrameKind
-    };
+        _type_slots_KnownPerceptionFrameKind};
 
     static PyGetSetDef getset_KnownPerceptionFrameKind_Static[] = {
         { "color", reinterpret_cast<getter>(KnownPerceptionFrameKind_get_Color), nullptr, nullptr, nullptr },
@@ -228,14 +226,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionControlGroup =
-    {
+    static PyType_Spec type_spec_PerceptionControlGroup = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionControlGroup",
         sizeof(py::wrapper::Windows::Devices::Perception::Provider::PerceptionControlGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionControlGroup
-    };
+        _type_slots_PerceptionControlGroup};
 
     // ----- PerceptionCorrelation class --------------------
 
@@ -383,14 +379,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionCorrelation =
-    {
+    static PyType_Spec type_spec_PerceptionCorrelation = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionCorrelation",
         sizeof(py::wrapper::Windows::Devices::Perception::Provider::PerceptionCorrelation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionCorrelation
-    };
+        _type_slots_PerceptionCorrelation};
 
     // ----- PerceptionCorrelationGroup class --------------------
 
@@ -496,14 +490,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionCorrelationGroup =
-    {
+    static PyType_Spec type_spec_PerceptionCorrelationGroup = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionCorrelationGroup",
         sizeof(py::wrapper::Windows::Devices::Perception::Provider::PerceptionCorrelationGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionCorrelationGroup
-    };
+        _type_slots_PerceptionCorrelationGroup};
 
     // ----- PerceptionFaceAuthenticationGroup class --------------------
 
@@ -611,14 +603,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionFaceAuthenticationGroup =
-    {
+    static PyType_Spec type_spec_PerceptionFaceAuthenticationGroup = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionFaceAuthenticationGroup",
         sizeof(py::wrapper::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionFaceAuthenticationGroup
-    };
+        _type_slots_PerceptionFaceAuthenticationGroup};
 
     // ----- PerceptionFrame class --------------------
 
@@ -768,14 +758,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionFrame =
-    {
+    static PyType_Spec type_spec_PerceptionFrame = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionFrame",
         sizeof(py::wrapper::Windows::Devices::Perception::Provider::PerceptionFrame),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionFrame
-    };
+        _type_slots_PerceptionFrame};
 
     // ----- PerceptionFrameProviderInfo class --------------------
 
@@ -1099,14 +1087,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionFrameProviderInfo =
-    {
+    static PyType_Spec type_spec_PerceptionFrameProviderInfo = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionFrameProviderInfo",
         sizeof(py::wrapper::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionFrameProviderInfo
-    };
+        _type_slots_PerceptionFrameProviderInfo};
 
     // ----- PerceptionFrameProviderManagerService class --------------------
 
@@ -1463,14 +1449,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionFrameProviderManagerService =
-    {
+    static PyType_Spec type_spec_PerceptionFrameProviderManagerService = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionFrameProviderManagerService",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionFrameProviderManagerService
-    };
+        _type_slots_PerceptionFrameProviderManagerService};
 
     static PyGetSetDef getset_PerceptionFrameProviderManagerService_Static[] = {
         { }
@@ -1685,14 +1669,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionPropertyChangeRequest =
-    {
+    static PyType_Spec type_spec_PerceptionPropertyChangeRequest = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionPropertyChangeRequest",
         sizeof(py::wrapper::Windows::Devices::Perception::Provider::PerceptionPropertyChangeRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionPropertyChangeRequest
-    };
+        _type_slots_PerceptionPropertyChangeRequest};
 
     // ----- PerceptionVideoFrameAllocator class --------------------
 
@@ -1895,14 +1877,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionVideoFrameAllocator =
-    {
+    static PyType_Spec type_spec_PerceptionVideoFrameAllocator = {
         "winrt._winrt_windows_devices_perception_provider.PerceptionVideoFrameAllocator",
         sizeof(py::wrapper::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionVideoFrameAllocator
-    };
+        _type_slots_PerceptionVideoFrameAllocator};
 
     // ----- IPerceptionFrameProvider interface --------------------
 
@@ -2171,14 +2151,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { },
     };
 
-    static PyType_Spec type_spec_IPerceptionFrameProvider =
-    {
+    static PyType_Spec type_spec_IPerceptionFrameProvider = {
         "winrt._winrt_windows_devices_perception_provider.IPerceptionFrameProvider",
         sizeof(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IPerceptionFrameProvider
-    };
+        _type_slots_IPerceptionFrameProvider};
 
     // ----- IPerceptionFrameProviderManager interface --------------------
 
@@ -2324,14 +2302,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { },
     };
 
-    static PyType_Spec type_spec_IPerceptionFrameProviderManager =
-    {
+    static PyType_Spec type_spec_IPerceptionFrameProviderManager = {
         "winrt._winrt_windows_devices_perception_provider.IPerceptionFrameProviderManager",
         sizeof(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IPerceptionFrameProviderManager
-    };
+        _type_slots_IPerceptionFrameProviderManager};
 
     // ----- Windows.Devices.Perception.Provider Initialization --------------------
 

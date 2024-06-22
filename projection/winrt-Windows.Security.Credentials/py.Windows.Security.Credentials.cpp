@@ -197,14 +197,12 @@ namespace py::cpp::Windows::Security::Credentials
         { },
     };
 
-    static PyType_Spec type_spec_KeyCredential =
-    {
+    static PyType_Spec type_spec_KeyCredential = {
         "winrt._winrt_windows_security_credentials.KeyCredential",
         sizeof(py::wrapper::Windows::Security::Credentials::KeyCredential),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KeyCredential
-    };
+        _type_slots_KeyCredential};
 
     // ----- KeyCredentialAttestationResult class --------------------
 
@@ -326,14 +324,12 @@ namespace py::cpp::Windows::Security::Credentials
         { },
     };
 
-    static PyType_Spec type_spec_KeyCredentialAttestationResult =
-    {
+    static PyType_Spec type_spec_KeyCredentialAttestationResult = {
         "winrt._winrt_windows_security_credentials.KeyCredentialAttestationResult",
         sizeof(py::wrapper::Windows::Security::Credentials::KeyCredentialAttestationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KeyCredentialAttestationResult
-    };
+        _type_slots_KeyCredentialAttestationResult};
 
     // ----- KeyCredentialManager class --------------------
 
@@ -512,14 +508,12 @@ namespace py::cpp::Windows::Security::Credentials
         { },
     };
 
-    static PyType_Spec type_spec_KeyCredentialManager =
-    {
+    static PyType_Spec type_spec_KeyCredentialManager = {
         "winrt._winrt_windows_security_credentials.KeyCredentialManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KeyCredentialManager
-    };
+        _type_slots_KeyCredentialManager};
 
     static PyGetSetDef getset_KeyCredentialManager_Static[] = {
         { }
@@ -651,14 +645,12 @@ namespace py::cpp::Windows::Security::Credentials
         { },
     };
 
-    static PyType_Spec type_spec_KeyCredentialOperationResult =
-    {
+    static PyType_Spec type_spec_KeyCredentialOperationResult = {
         "winrt._winrt_windows_security_credentials.KeyCredentialOperationResult",
         sizeof(py::wrapper::Windows::Security::Credentials::KeyCredentialOperationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KeyCredentialOperationResult
-    };
+        _type_slots_KeyCredentialOperationResult};
 
     // ----- KeyCredentialRetrievalResult class --------------------
 
@@ -760,14 +752,12 @@ namespace py::cpp::Windows::Security::Credentials
         { },
     };
 
-    static PyType_Spec type_spec_KeyCredentialRetrievalResult =
-    {
+    static PyType_Spec type_spec_KeyCredentialRetrievalResult = {
         "winrt._winrt_windows_security_credentials.KeyCredentialRetrievalResult",
         sizeof(py::wrapper::Windows::Security::Credentials::KeyCredentialRetrievalResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KeyCredentialRetrievalResult
-    };
+        _type_slots_KeyCredentialRetrievalResult};
 
     // ----- PasswordCredential class --------------------
 
@@ -1063,14 +1053,12 @@ namespace py::cpp::Windows::Security::Credentials
         { },
     };
 
-    static PyType_Spec type_spec_PasswordCredential =
-    {
+    static PyType_Spec type_spec_PasswordCredential = {
         "winrt._winrt_windows_security_credentials.PasswordCredential",
         sizeof(py::wrapper::Windows::Security::Credentials::PasswordCredential),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PasswordCredential
-    };
+        _type_slots_PasswordCredential};
 
     // ----- PasswordCredentialPropertyStore class --------------------
 
@@ -1546,14 +1534,12 @@ namespace py::cpp::Windows::Security::Credentials
         { },
     };
 
-    static PyType_Spec type_spec_PasswordCredentialPropertyStore =
-    {
+    static PyType_Spec type_spec_PasswordCredentialPropertyStore = {
         "winrt._winrt_windows_security_credentials.PasswordCredentialPropertyStore",
         sizeof(py::wrapper::Windows::Security::Credentials::PasswordCredentialPropertyStore),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PasswordCredentialPropertyStore
-    };
+        _type_slots_PasswordCredentialPropertyStore};
 
     // ----- PasswordVault class --------------------
 
@@ -1830,14 +1816,12 @@ namespace py::cpp::Windows::Security::Credentials
         { },
     };
 
-    static PyType_Spec type_spec_PasswordVault =
-    {
+    static PyType_Spec type_spec_PasswordVault = {
         "winrt._winrt_windows_security_credentials.PasswordVault",
         sizeof(py::wrapper::Windows::Security::Credentials::PasswordVault),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PasswordVault
-    };
+        _type_slots_PasswordVault};
 
     // ----- WebAccount class --------------------
 
@@ -2107,14 +2091,12 @@ namespace py::cpp::Windows::Security::Credentials
         { },
     };
 
-    static PyType_Spec type_spec_WebAccount =
-    {
+    static PyType_Spec type_spec_WebAccount = {
         "winrt._winrt_windows_security_credentials.WebAccount",
         sizeof(py::wrapper::Windows::Security::Credentials::WebAccount),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebAccount
-    };
+        _type_slots_WebAccount};
 
     // ----- WebAccountProvider class --------------------
 
@@ -2342,14 +2324,12 @@ namespace py::cpp::Windows::Security::Credentials
         { },
     };
 
-    static PyType_Spec type_spec_WebAccountProvider =
-    {
+    static PyType_Spec type_spec_WebAccountProvider = {
         "winrt._winrt_windows_security_credentials.WebAccountProvider",
         sizeof(py::wrapper::Windows::Security::Credentials::WebAccountProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebAccountProvider
-    };
+        _type_slots_WebAccountProvider};
 
     // ----- IWebAccount interface --------------------
 
@@ -2471,14 +2451,12 @@ namespace py::cpp::Windows::Security::Credentials
         { },
     };
 
-    static PyType_Spec type_spec_IWebAccount =
-    {
+    static PyType_Spec type_spec_IWebAccount = {
         "winrt._winrt_windows_security_credentials.IWebAccount",
         sizeof(py::wrapper::Windows::Security::Credentials::IWebAccount),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IWebAccount
-    };
+        _type_slots_IWebAccount};
 
     // ----- Windows.Security.Credentials Initialization --------------------
 

@@ -393,14 +393,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         { },
     };
 
-    static PyType_Spec type_spec_FileOpenPickerUI =
-    {
+    static PyType_Spec type_spec_FileOpenPickerUI = {
         "winrt._winrt_windows_storage_pickers_provider.FileOpenPickerUI",
         sizeof(py::wrapper::Windows::Storage::Pickers::Provider::FileOpenPickerUI),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FileOpenPickerUI
-    };
+        _type_slots_FileOpenPickerUI};
 
     // ----- FileRemovedEventArgs class --------------------
 
@@ -482,14 +480,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         { },
     };
 
-    static PyType_Spec type_spec_FileRemovedEventArgs =
-    {
+    static PyType_Spec type_spec_FileRemovedEventArgs = {
         "winrt._winrt_windows_storage_pickers_provider.FileRemovedEventArgs",
         sizeof(py::wrapper::Windows::Storage::Pickers::Provider::FileRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FileRemovedEventArgs
-    };
+        _type_slots_FileRemovedEventArgs};
 
     // ----- FileSavePickerUI class --------------------
 
@@ -781,14 +777,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         { },
     };
 
-    static PyType_Spec type_spec_FileSavePickerUI =
-    {
+    static PyType_Spec type_spec_FileSavePickerUI = {
         "winrt._winrt_windows_storage_pickers_provider.FileSavePickerUI",
         sizeof(py::wrapper::Windows::Storage::Pickers::Provider::FileSavePickerUI),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FileSavePickerUI
-    };
+        _type_slots_FileSavePickerUI};
 
     // ----- PickerClosingDeferral class --------------------
 
@@ -881,14 +875,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PickerClosingDeferral =
-    {
+    static PyType_Spec type_spec_PickerClosingDeferral = {
         "winrt._winrt_windows_storage_pickers_provider.PickerClosingDeferral",
         sizeof(py::wrapper::Windows::Storage::Pickers::Provider::PickerClosingDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PickerClosingDeferral
-    };
+        _type_slots_PickerClosingDeferral};
 
     // ----- PickerClosingEventArgs class --------------------
 
@@ -990,14 +982,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PickerClosingEventArgs =
-    {
+    static PyType_Spec type_spec_PickerClosingEventArgs = {
         "winrt._winrt_windows_storage_pickers_provider.PickerClosingEventArgs",
         sizeof(py::wrapper::Windows::Storage::Pickers::Provider::PickerClosingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PickerClosingEventArgs
-    };
+        _type_slots_PickerClosingEventArgs};
 
     // ----- PickerClosingOperation class --------------------
 
@@ -1109,14 +1099,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PickerClosingOperation =
-    {
+    static PyType_Spec type_spec_PickerClosingOperation = {
         "winrt._winrt_windows_storage_pickers_provider.PickerClosingOperation",
         sizeof(py::wrapper::Windows::Storage::Pickers::Provider::PickerClosingOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PickerClosingOperation
-    };
+        _type_slots_PickerClosingOperation};
 
     // ----- TargetFileRequest class --------------------
 
@@ -1256,14 +1244,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         { },
     };
 
-    static PyType_Spec type_spec_TargetFileRequest =
-    {
+    static PyType_Spec type_spec_TargetFileRequest = {
         "winrt._winrt_windows_storage_pickers_provider.TargetFileRequest",
         sizeof(py::wrapper::Windows::Storage::Pickers::Provider::TargetFileRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetFileRequest
-    };
+        _type_slots_TargetFileRequest};
 
     // ----- TargetFileRequestDeferral class --------------------
 
@@ -1356,14 +1342,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         { },
     };
 
-    static PyType_Spec type_spec_TargetFileRequestDeferral =
-    {
+    static PyType_Spec type_spec_TargetFileRequestDeferral = {
         "winrt._winrt_windows_storage_pickers_provider.TargetFileRequestDeferral",
         sizeof(py::wrapper::Windows::Storage::Pickers::Provider::TargetFileRequestDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetFileRequestDeferral
-    };
+        _type_slots_TargetFileRequestDeferral};
 
     // ----- TargetFileRequestedEventArgs class --------------------
 
@@ -1445,14 +1429,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         { },
     };
 
-    static PyType_Spec type_spec_TargetFileRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_TargetFileRequestedEventArgs = {
         "winrt._winrt_windows_storage_pickers_provider.TargetFileRequestedEventArgs",
         sizeof(py::wrapper::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetFileRequestedEventArgs
-    };
+        _type_slots_TargetFileRequestedEventArgs};
 
     // ----- Windows.Storage.Pickers.Provider Initialization --------------------
 

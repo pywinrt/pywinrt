@@ -268,14 +268,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
         { },
     };
 
-    static PyType_Spec type_spec_WalletItemSystemStore =
-    {
+    static PyType_Spec type_spec_WalletItemSystemStore = {
         "winrt._winrt_windows_applicationmodel_wallet_system.WalletItemSystemStore",
         sizeof(py::wrapper::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WalletItemSystemStore
-    };
+        _type_slots_WalletItemSystemStore};
 
     // ----- WalletManagerSystem class --------------------
 
@@ -331,14 +329,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
         { },
     };
 
-    static PyType_Spec type_spec_WalletManagerSystem =
-    {
+    static PyType_Spec type_spec_WalletManagerSystem = {
         "winrt._winrt_windows_applicationmodel_wallet_system.WalletManagerSystem",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WalletManagerSystem
-    };
+        _type_slots_WalletManagerSystem};
 
     static PyGetSetDef getset_WalletManagerSystem_Static[] = {
         { }

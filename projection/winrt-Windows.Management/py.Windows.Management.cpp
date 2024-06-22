@@ -395,14 +395,12 @@ namespace py::cpp::Windows::Management
         { },
     };
 
-    static PyType_Spec type_spec_MdmAlert =
-    {
+    static PyType_Spec type_spec_MdmAlert = {
         "winrt._winrt_windows_management.MdmAlert",
         sizeof(py::wrapper::Windows::Management::MdmAlert),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MdmAlert
-    };
+        _type_slots_MdmAlert};
 
     // ----- MdmSession class --------------------
 
@@ -655,14 +653,12 @@ namespace py::cpp::Windows::Management
         { },
     };
 
-    static PyType_Spec type_spec_MdmSession =
-    {
+    static PyType_Spec type_spec_MdmSession = {
         "winrt._winrt_windows_management.MdmSession",
         sizeof(py::wrapper::Windows::Management::MdmSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MdmSession
-    };
+        _type_slots_MdmSession};
 
     // ----- MdmSessionManager class --------------------
 
@@ -800,14 +796,12 @@ namespace py::cpp::Windows::Management
         { },
     };
 
-    static PyType_Spec type_spec_MdmSessionManager =
-    {
+    static PyType_Spec type_spec_MdmSessionManager = {
         "winrt._winrt_windows_management.MdmSessionManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MdmSessionManager
-    };
+        _type_slots_MdmSessionManager};
 
     static PyGetSetDef getset_MdmSessionManager_Static[] = {
         { "session_ids", reinterpret_cast<getter>(MdmSessionManager_get_SessionIds), nullptr, nullptr, nullptr },

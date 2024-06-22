@@ -105,14 +105,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DeviceAccessChangedEventArgs =
-    {
+    static PyType_Spec type_spec_DeviceAccessChangedEventArgs = {
         "winrt._winrt_windows_devices_enumeration.DeviceAccessChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceAccessChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceAccessChangedEventArgs
-    };
+        _type_slots_DeviceAccessChangedEventArgs};
 
     // ----- DeviceAccessInformation class --------------------
 
@@ -332,14 +330,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DeviceAccessInformation =
-    {
+    static PyType_Spec type_spec_DeviceAccessInformation = {
         "winrt._winrt_windows_devices_enumeration.DeviceAccessInformation",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceAccessInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceAccessInformation
-    };
+        _type_slots_DeviceAccessInformation};
 
     static PyGetSetDef getset_DeviceAccessInformation_Static[] = {
         { }
@@ -449,14 +445,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DeviceConnectionChangeTriggerDetails =
-    {
+    static PyType_Spec type_spec_DeviceConnectionChangeTriggerDetails = {
         "winrt._winrt_windows_devices_enumeration.DeviceConnectionChangeTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceConnectionChangeTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceConnectionChangeTriggerDetails
-    };
+        _type_slots_DeviceConnectionChangeTriggerDetails};
 
     // ----- DeviceDisconnectButtonClickedEventArgs class --------------------
 
@@ -538,14 +532,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DeviceDisconnectButtonClickedEventArgs =
-    {
+    static PyType_Spec type_spec_DeviceDisconnectButtonClickedEventArgs = {
         "winrt._winrt_windows_devices_enumeration.DeviceDisconnectButtonClickedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceDisconnectButtonClickedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceDisconnectButtonClickedEventArgs
-    };
+        _type_slots_DeviceDisconnectButtonClickedEventArgs};
 
     // ----- DeviceInformation class --------------------
 
@@ -1149,14 +1141,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DeviceInformation =
-    {
+    static PyType_Spec type_spec_DeviceInformation = {
         "winrt._winrt_windows_devices_enumeration.DeviceInformation",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceInformation
-    };
+        _type_slots_DeviceInformation};
 
     static PyGetSetDef getset_DeviceInformation_Static[] = {
         { }
@@ -1510,14 +1500,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DeviceInformationCollection =
-    {
+    static PyType_Spec type_spec_DeviceInformationCollection = {
         "winrt._winrt_windows_devices_enumeration.DeviceInformationCollection",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceInformationCollection
-    };
+        _type_slots_DeviceInformationCollection};
 
     // ----- DeviceInformationCustomPairing class --------------------
 
@@ -1699,14 +1687,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DeviceInformationCustomPairing =
-    {
+    static PyType_Spec type_spec_DeviceInformationCustomPairing = {
         "winrt._winrt_windows_devices_enumeration.DeviceInformationCustomPairing",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCustomPairing),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceInformationCustomPairing
-    };
+        _type_slots_DeviceInformationCustomPairing};
 
     // ----- DeviceInformationPairing class --------------------
 
@@ -2012,14 +1998,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DeviceInformationPairing =
-    {
+    static PyType_Spec type_spec_DeviceInformationPairing = {
         "winrt._winrt_windows_devices_enumeration.DeviceInformationPairing",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceInformationPairing),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceInformationPairing
-    };
+        _type_slots_DeviceInformationPairing};
 
     static PyGetSetDef getset_DeviceInformationPairing_Static[] = {
         { }
@@ -2168,14 +2152,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DeviceInformationUpdate =
-    {
+    static PyType_Spec type_spec_DeviceInformationUpdate = {
         "winrt._winrt_windows_devices_enumeration.DeviceInformationUpdate",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceInformationUpdate),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceInformationUpdate
-    };
+        _type_slots_DeviceInformationUpdate};
 
     // ----- DevicePairingRequestedEventArgs class --------------------
 
@@ -2412,14 +2394,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DevicePairingRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_DevicePairingRequestedEventArgs = {
         "winrt._winrt_windows_devices_enumeration.DevicePairingRequestedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DevicePairingRequestedEventArgs
-    };
+        _type_slots_DevicePairingRequestedEventArgs};
 
     // ----- DevicePairingResult class --------------------
 
@@ -2521,14 +2501,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DevicePairingResult =
-    {
+    static PyType_Spec type_spec_DevicePairingResult = {
         "winrt._winrt_windows_devices_enumeration.DevicePairingResult",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DevicePairingResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DevicePairingResult
-    };
+        _type_slots_DevicePairingResult};
 
     // ----- DevicePicker class --------------------
 
@@ -2981,14 +2959,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DevicePicker =
-    {
+    static PyType_Spec type_spec_DevicePicker = {
         "winrt._winrt_windows_devices_enumeration.DevicePicker",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DevicePicker),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DevicePicker
-    };
+        _type_slots_DevicePicker};
 
     // ----- DevicePickerAppearance class --------------------
 
@@ -3386,14 +3362,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DevicePickerAppearance =
-    {
+    static PyType_Spec type_spec_DevicePickerAppearance = {
         "winrt._winrt_windows_devices_enumeration.DevicePickerAppearance",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DevicePickerAppearance),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DevicePickerAppearance
-    };
+        _type_slots_DevicePickerAppearance};
 
     // ----- DevicePickerFilter class --------------------
 
@@ -3495,14 +3469,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DevicePickerFilter =
-    {
+    static PyType_Spec type_spec_DevicePickerFilter = {
         "winrt._winrt_windows_devices_enumeration.DevicePickerFilter",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DevicePickerFilter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DevicePickerFilter
-    };
+        _type_slots_DevicePickerFilter};
 
     // ----- DeviceSelectedEventArgs class --------------------
 
@@ -3584,14 +3556,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DeviceSelectedEventArgs =
-    {
+    static PyType_Spec type_spec_DeviceSelectedEventArgs = {
         "winrt._winrt_windows_devices_enumeration.DeviceSelectedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceSelectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceSelectedEventArgs
-    };
+        _type_slots_DeviceSelectedEventArgs};
 
     // ----- DeviceThumbnail class --------------------
 
@@ -4056,14 +4026,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DeviceThumbnail =
-    {
+    static PyType_Spec type_spec_DeviceThumbnail = {
         "winrt._winrt_windows_devices_enumeration.DeviceThumbnail",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceThumbnail),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceThumbnail
-    };
+        _type_slots_DeviceThumbnail};
 
     // ----- DeviceUnpairingResult class --------------------
 
@@ -4145,14 +4113,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DeviceUnpairingResult =
-    {
+    static PyType_Spec type_spec_DeviceUnpairingResult = {
         "winrt._winrt_windows_devices_enumeration.DeviceUnpairingResult",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceUnpairingResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceUnpairingResult
-    };
+        _type_slots_DeviceUnpairingResult};
 
     // ----- DeviceWatcher class --------------------
 
@@ -4553,14 +4519,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DeviceWatcher =
-    {
+    static PyType_Spec type_spec_DeviceWatcher = {
         "winrt._winrt_windows_devices_enumeration.DeviceWatcher",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceWatcher
-    };
+        _type_slots_DeviceWatcher};
 
     // ----- DeviceWatcherEvent class --------------------
 
@@ -4682,14 +4646,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DeviceWatcherEvent =
-    {
+    static PyType_Spec type_spec_DeviceWatcherEvent = {
         "winrt._winrt_windows_devices_enumeration.DeviceWatcherEvent",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceWatcherEvent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceWatcherEvent
-    };
+        _type_slots_DeviceWatcherEvent};
 
     // ----- DeviceWatcherTriggerDetails class --------------------
 
@@ -4771,14 +4733,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_DeviceWatcherTriggerDetails =
-    {
+    static PyType_Spec type_spec_DeviceWatcherTriggerDetails = {
         "winrt._winrt_windows_devices_enumeration.DeviceWatcherTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceWatcherTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceWatcherTriggerDetails
-    };
+        _type_slots_DeviceWatcherTriggerDetails};
 
     // ----- EnclosureLocation class --------------------
 
@@ -4920,14 +4880,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_EnclosureLocation =
-    {
+    static PyType_Spec type_spec_EnclosureLocation = {
         "winrt._winrt_windows_devices_enumeration.EnclosureLocation",
         sizeof(py::wrapper::Windows::Devices::Enumeration::EnclosureLocation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EnclosureLocation
-    };
+        _type_slots_EnclosureLocation};
 
     // ----- IDevicePairingSettings interface --------------------
 
@@ -4989,14 +4947,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { },
     };
 
-    static PyType_Spec type_spec_IDevicePairingSettings =
-    {
+    static PyType_Spec type_spec_IDevicePairingSettings = {
         "winrt._winrt_windows_devices_enumeration.IDevicePairingSettings",
         sizeof(py::wrapper::Windows::Devices::Enumeration::IDevicePairingSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IDevicePairingSettings
-    };
+        _type_slots_IDevicePairingSettings};
 
     // ----- Windows.Devices.Enumeration Initialization --------------------
 

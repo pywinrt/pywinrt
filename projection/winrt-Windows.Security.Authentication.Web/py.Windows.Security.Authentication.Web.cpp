@@ -243,14 +243,12 @@ namespace py::cpp::Windows::Security::Authentication::Web
         { },
     };
 
-    static PyType_Spec type_spec_WebAuthenticationBroker =
-    {
+    static PyType_Spec type_spec_WebAuthenticationBroker = {
         "winrt._winrt_windows_security_authentication_web.WebAuthenticationBroker",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebAuthenticationBroker
-    };
+        _type_slots_WebAuthenticationBroker};
 
     static PyGetSetDef getset_WebAuthenticationBroker_Static[] = {
         { }
@@ -401,14 +399,12 @@ namespace py::cpp::Windows::Security::Authentication::Web
         { },
     };
 
-    static PyType_Spec type_spec_WebAuthenticationResult =
-    {
+    static PyType_Spec type_spec_WebAuthenticationResult = {
         "winrt._winrt_windows_security_authentication_web.WebAuthenticationResult",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::WebAuthenticationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebAuthenticationResult
-    };
+        _type_slots_WebAuthenticationResult};
 
     // ----- Windows.Security.Authentication.Web Initialization --------------------
 

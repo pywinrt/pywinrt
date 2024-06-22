@@ -734,14 +734,12 @@ namespace py::cpp::Microsoft::Windows::System::Power
         { },
     };
 
-    static PyType_Spec type_spec_PowerManager =
-    {
+    static PyType_Spec type_spec_PowerManager = {
         "winrt._winrt_microsoft_windows_system_power.PowerManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PowerManager
-    };
+        _type_slots_PowerManager};
 
     static PyGetSetDef getset_PowerManager_Static[] = {
         { "battery_status", reinterpret_cast<getter>(PowerManager_get_BatteryStatus), nullptr, nullptr, nullptr },

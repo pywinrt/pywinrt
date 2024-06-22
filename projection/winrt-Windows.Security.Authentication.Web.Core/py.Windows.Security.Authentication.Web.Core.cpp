@@ -125,14 +125,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { },
     };
 
-    static PyType_Spec type_spec_FindAllAccountsResult =
-    {
+    static PyType_Spec type_spec_FindAllAccountsResult = {
         "winrt._winrt_windows_security_authentication_web_core.FindAllAccountsResult",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Core::FindAllAccountsResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FindAllAccountsResult
-    };
+        _type_slots_FindAllAccountsResult};
 
     // ----- WebAccountEventArgs class --------------------
 
@@ -214,14 +212,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { },
     };
 
-    static PyType_Spec type_spec_WebAccountEventArgs =
-    {
+    static PyType_Spec type_spec_WebAccountEventArgs = {
         "winrt._winrt_windows_security_authentication_web_core.WebAccountEventArgs",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Core::WebAccountEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebAccountEventArgs
-    };
+        _type_slots_WebAccountEventArgs};
 
     // ----- WebAccountMonitor class --------------------
 
@@ -463,14 +459,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { },
     };
 
-    static PyType_Spec type_spec_WebAccountMonitor =
-    {
+    static PyType_Spec type_spec_WebAccountMonitor = {
         "winrt._winrt_windows_security_authentication_web_core.WebAccountMonitor",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Core::WebAccountMonitor),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebAccountMonitor
-    };
+        _type_slots_WebAccountMonitor};
 
     // ----- WebAuthenticationCoreManager class --------------------
 
@@ -864,14 +858,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { },
     };
 
-    static PyType_Spec type_spec_WebAuthenticationCoreManager =
-    {
+    static PyType_Spec type_spec_WebAuthenticationCoreManager = {
         "winrt._winrt_windows_security_authentication_web_core.WebAuthenticationCoreManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebAuthenticationCoreManager
-    };
+        _type_slots_WebAuthenticationCoreManager};
 
     static PyGetSetDef getset_WebAuthenticationCoreManager_Static[] = {
         { }
@@ -1050,14 +1042,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { },
     };
 
-    static PyType_Spec type_spec_WebProviderError =
-    {
+    static PyType_Spec type_spec_WebProviderError = {
         "winrt._winrt_windows_security_authentication_web_core.WebProviderError",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Core::WebProviderError),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebProviderError
-    };
+        _type_slots_WebProviderError};
 
     // ----- WebTokenRequest class --------------------
 
@@ -1362,14 +1352,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { },
     };
 
-    static PyType_Spec type_spec_WebTokenRequest =
-    {
+    static PyType_Spec type_spec_WebTokenRequest = {
         "winrt._winrt_windows_security_authentication_web_core.WebTokenRequest",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Core::WebTokenRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebTokenRequest
-    };
+        _type_slots_WebTokenRequest};
 
     // ----- WebTokenRequestResult class --------------------
 
@@ -1521,14 +1509,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { },
     };
 
-    static PyType_Spec type_spec_WebTokenRequestResult =
-    {
+    static PyType_Spec type_spec_WebTokenRequestResult = {
         "winrt._winrt_windows_security_authentication_web_core.WebTokenRequestResult",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Core::WebTokenRequestResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebTokenRequestResult
-    };
+        _type_slots_WebTokenRequestResult};
 
     // ----- WebTokenResponse class --------------------
 
@@ -1740,14 +1726,12 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { },
     };
 
-    static PyType_Spec type_spec_WebTokenResponse =
-    {
+    static PyType_Spec type_spec_WebTokenResponse = {
         "winrt._winrt_windows_security_authentication_web_core.WebTokenResponse",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Core::WebTokenResponse),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebTokenResponse
-    };
+        _type_slots_WebTokenResponse};
 
     // ----- Windows.Security.Authentication.Web.Core Initialization --------------------
 

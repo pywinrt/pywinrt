@@ -85,14 +85,12 @@ namespace py::cpp::Windows::Networking::Proximity
         { },
     };
 
-    static PyType_Spec type_spec_ConnectionRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_ConnectionRequestedEventArgs = {
         "winrt._winrt_windows_networking_proximity.ConnectionRequestedEventArgs",
         sizeof(py::wrapper::Windows::Networking::Proximity::ConnectionRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ConnectionRequestedEventArgs
-    };
+        _type_slots_ConnectionRequestedEventArgs};
 
     // ----- PeerFinder class --------------------
 
@@ -699,14 +697,12 @@ namespace py::cpp::Windows::Networking::Proximity
         { },
     };
 
-    static PyType_Spec type_spec_PeerFinder =
-    {
+    static PyType_Spec type_spec_PeerFinder = {
         "winrt._winrt_windows_networking_proximity.PeerFinder",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PeerFinder
-    };
+        _type_slots_PeerFinder};
 
     static PyGetSetDef getset_PeerFinder_Static[] = {
         { "display_name", reinterpret_cast<getter>(PeerFinder_get_DisplayName), reinterpret_cast<setter>(PeerFinder_put_DisplayName), nullptr, nullptr },
@@ -906,14 +902,12 @@ namespace py::cpp::Windows::Networking::Proximity
         { },
     };
 
-    static PyType_Spec type_spec_PeerInformation =
-    {
+    static PyType_Spec type_spec_PeerInformation = {
         "winrt._winrt_windows_networking_proximity.PeerInformation",
         sizeof(py::wrapper::Windows::Networking::Proximity::PeerInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PeerInformation
-    };
+        _type_slots_PeerInformation};
 
     // ----- PeerWatcher class --------------------
 
@@ -1282,14 +1276,12 @@ namespace py::cpp::Windows::Networking::Proximity
         { },
     };
 
-    static PyType_Spec type_spec_PeerWatcher =
-    {
+    static PyType_Spec type_spec_PeerWatcher = {
         "winrt._winrt_windows_networking_proximity.PeerWatcher",
         sizeof(py::wrapper::Windows::Networking::Proximity::PeerWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PeerWatcher
-    };
+        _type_slots_PeerWatcher};
 
     // ----- ProximityDevice class --------------------
 
@@ -1852,14 +1844,12 @@ namespace py::cpp::Windows::Networking::Proximity
         { },
     };
 
-    static PyType_Spec type_spec_ProximityDevice =
-    {
+    static PyType_Spec type_spec_ProximityDevice = {
         "winrt._winrt_windows_networking_proximity.ProximityDevice",
         sizeof(py::wrapper::Windows::Networking::Proximity::ProximityDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProximityDevice
-    };
+        _type_slots_ProximityDevice};
 
     static PyGetSetDef getset_ProximityDevice_Static[] = {
         { }
@@ -2029,14 +2019,12 @@ namespace py::cpp::Windows::Networking::Proximity
         { },
     };
 
-    static PyType_Spec type_spec_ProximityMessage =
-    {
+    static PyType_Spec type_spec_ProximityMessage = {
         "winrt._winrt_windows_networking_proximity.ProximityMessage",
         sizeof(py::wrapper::Windows::Networking::Proximity::ProximityMessage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProximityMessage
-    };
+        _type_slots_ProximityMessage};
 
     // ----- TriggeredConnectionStateChangedEventArgs class --------------------
 
@@ -2158,14 +2146,12 @@ namespace py::cpp::Windows::Networking::Proximity
         { },
     };
 
-    static PyType_Spec type_spec_TriggeredConnectionStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_TriggeredConnectionStateChangedEventArgs = {
         "winrt._winrt_windows_networking_proximity.TriggeredConnectionStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Networking::Proximity::TriggeredConnectionStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TriggeredConnectionStateChangedEventArgs
-    };
+        _type_slots_TriggeredConnectionStateChangedEventArgs};
 
     // ----- Windows.Networking.Proximity Initialization --------------------
 

@@ -165,14 +165,12 @@ namespace py::cpp::Windows::Globalization::Fonts
         { },
     };
 
-    static PyType_Spec type_spec_LanguageFont =
-    {
+    static PyType_Spec type_spec_LanguageFont = {
         "winrt._winrt_windows_globalization_fonts.LanguageFont",
         sizeof(py::wrapper::Windows::Globalization::Fonts::LanguageFont),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LanguageFont
-    };
+        _type_slots_LanguageFont};
 
     // ----- LanguageFontGroup class --------------------
 
@@ -478,14 +476,12 @@ namespace py::cpp::Windows::Globalization::Fonts
         { },
     };
 
-    static PyType_Spec type_spec_LanguageFontGroup =
-    {
+    static PyType_Spec type_spec_LanguageFontGroup = {
         "winrt._winrt_windows_globalization_fonts.LanguageFontGroup",
         sizeof(py::wrapper::Windows::Globalization::Fonts::LanguageFontGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LanguageFontGroup
-    };
+        _type_slots_LanguageFontGroup};
 
     // ----- Windows.Globalization.Fonts Initialization --------------------
 

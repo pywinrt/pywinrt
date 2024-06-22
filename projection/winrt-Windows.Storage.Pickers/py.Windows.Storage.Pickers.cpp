@@ -610,14 +610,12 @@ namespace py::cpp::Windows::Storage::Pickers
         { },
     };
 
-    static PyType_Spec type_spec_FileExtensionVector =
-    {
+    static PyType_Spec type_spec_FileExtensionVector = {
         "winrt._winrt_windows_storage_pickers.FileExtensionVector",
         sizeof(py::wrapper::Windows::Storage::Pickers::FileExtensionVector),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FileExtensionVector
-    };
+        _type_slots_FileExtensionVector};
 
     // ----- FileOpenPicker class --------------------
 
@@ -1155,14 +1153,12 @@ namespace py::cpp::Windows::Storage::Pickers
         { },
     };
 
-    static PyType_Spec type_spec_FileOpenPicker =
-    {
+    static PyType_Spec type_spec_FileOpenPicker = {
         "winrt._winrt_windows_storage_pickers.FileOpenPicker",
         sizeof(py::wrapper::Windows::Storage::Pickers::FileOpenPicker),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FileOpenPicker
-    };
+        _type_slots_FileOpenPicker};
 
     static PyGetSetDef getset_FileOpenPicker_Static[] = {
         { }
@@ -1598,14 +1594,12 @@ namespace py::cpp::Windows::Storage::Pickers
         { },
     };
 
-    static PyType_Spec type_spec_FilePickerFileTypesOrderedMap =
-    {
+    static PyType_Spec type_spec_FilePickerFileTypesOrderedMap = {
         "winrt._winrt_windows_storage_pickers.FilePickerFileTypesOrderedMap",
         sizeof(py::wrapper::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FilePickerFileTypesOrderedMap
-    };
+        _type_slots_FilePickerFileTypesOrderedMap};
 
     // ----- FilePickerSelectedFilesArray class --------------------
 
@@ -1930,14 +1924,12 @@ namespace py::cpp::Windows::Storage::Pickers
         { },
     };
 
-    static PyType_Spec type_spec_FilePickerSelectedFilesArray =
-    {
+    static PyType_Spec type_spec_FilePickerSelectedFilesArray = {
         "winrt._winrt_windows_storage_pickers.FilePickerSelectedFilesArray",
         sizeof(py::wrapper::Windows::Storage::Pickers::FilePickerSelectedFilesArray),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FilePickerSelectedFilesArray
-    };
+        _type_slots_FilePickerSelectedFilesArray};
 
     // ----- FileSavePicker class --------------------
 
@@ -2509,14 +2501,12 @@ namespace py::cpp::Windows::Storage::Pickers
         { },
     };
 
-    static PyType_Spec type_spec_FileSavePicker =
-    {
+    static PyType_Spec type_spec_FileSavePicker = {
         "winrt._winrt_windows_storage_pickers.FileSavePicker",
         sizeof(py::wrapper::Windows::Storage::Pickers::FileSavePicker),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FileSavePicker
-    };
+        _type_slots_FileSavePicker};
 
     static PyGetSetDef getset_FileSavePicker_Static[] = {
         { }
@@ -2970,14 +2960,12 @@ namespace py::cpp::Windows::Storage::Pickers
         { },
     };
 
-    static PyType_Spec type_spec_FolderPicker =
-    {
+    static PyType_Spec type_spec_FolderPicker = {
         "winrt._winrt_windows_storage_pickers.FolderPicker",
         sizeof(py::wrapper::Windows::Storage::Pickers::FolderPicker),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FolderPicker
-    };
+        _type_slots_FolderPicker};
 
     static PyGetSetDef getset_FolderPicker_Static[] = {
         { }

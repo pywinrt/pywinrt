@@ -1844,14 +1844,12 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         { },
     };
 
-    static PyType_Spec type_spec_XamlDirect =
-    {
+    static PyType_Spec type_spec_XamlDirect = {
         "winrt._winrt_windows_ui_xaml_core_direct.XamlDirect",
         sizeof(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XamlDirect
-    };
+        _type_slots_XamlDirect};
 
     static PyGetSetDef getset_XamlDirect_Static[] = {
         { }
@@ -1939,14 +1937,12 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         { },
     };
 
-    static PyType_Spec type_spec_IXamlDirectObject =
-    {
+    static PyType_Spec type_spec_IXamlDirectObject = {
         "winrt._winrt_windows_ui_xaml_core_direct.IXamlDirectObject",
         sizeof(py::wrapper::Windows::UI::Xaml::Core::Direct::IXamlDirectObject),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IXamlDirectObject
-    };
+        _type_slots_IXamlDirectObject};
 
     // ----- Windows.UI.Xaml.Core.Direct Initialization --------------------
 

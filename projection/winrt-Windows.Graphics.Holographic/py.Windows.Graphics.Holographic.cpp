@@ -495,14 +495,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicCamera =
-    {
+    static PyType_Spec type_spec_HolographicCamera = {
         "winrt._winrt_windows_graphics_holographic.HolographicCamera",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicCamera),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicCamera
-    };
+        _type_slots_HolographicCamera};
 
     // ----- HolographicCameraPose class --------------------
 
@@ -861,14 +859,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicCameraPose =
-    {
+    static PyType_Spec type_spec_HolographicCameraPose = {
         "winrt._winrt_windows_graphics_holographic.HolographicCameraPose",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicCameraPose),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicCameraPose
-    };
+        _type_slots_HolographicCameraPose};
 
     // ----- HolographicCameraRenderingParameters class --------------------
 
@@ -1228,14 +1224,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicCameraRenderingParameters =
-    {
+    static PyType_Spec type_spec_HolographicCameraRenderingParameters = {
         "winrt._winrt_windows_graphics_holographic.HolographicCameraRenderingParameters",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicCameraRenderingParameters),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicCameraRenderingParameters
-    };
+        _type_slots_HolographicCameraRenderingParameters};
 
     // ----- HolographicCameraViewportParameters class --------------------
 
@@ -1337,14 +1331,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicCameraViewportParameters =
-    {
+    static PyType_Spec type_spec_HolographicCameraViewportParameters = {
         "winrt._winrt_windows_graphics_holographic.HolographicCameraViewportParameters",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicCameraViewportParameters),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicCameraViewportParameters
-    };
+        _type_slots_HolographicCameraViewportParameters};
 
     // ----- HolographicDisplay class --------------------
 
@@ -1607,14 +1599,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicDisplay =
-    {
+    static PyType_Spec type_spec_HolographicDisplay = {
         "winrt._winrt_windows_graphics_holographic.HolographicDisplay",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicDisplay),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicDisplay
-    };
+        _type_slots_HolographicDisplay};
 
     static PyGetSetDef getset_HolographicDisplay_Static[] = {
         { }
@@ -1978,14 +1968,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicFrame =
-    {
+    static PyType_Spec type_spec_HolographicFrame = {
         "winrt._winrt_windows_graphics_holographic.HolographicFrame",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicFrame),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicFrame
-    };
+        _type_slots_HolographicFrame};
 
     // ----- HolographicFramePrediction class --------------------
 
@@ -2087,14 +2075,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicFramePrediction =
-    {
+    static PyType_Spec type_spec_HolographicFramePrediction = {
         "winrt._winrt_windows_graphics_holographic.HolographicFramePrediction",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicFramePrediction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicFramePrediction
-    };
+        _type_slots_HolographicFramePrediction};
 
     // ----- HolographicFramePresentationMonitor class --------------------
 
@@ -2238,14 +2224,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicFramePresentationMonitor =
-    {
+    static PyType_Spec type_spec_HolographicFramePresentationMonitor = {
         "winrt._winrt_windows_graphics_holographic.HolographicFramePresentationMonitor",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicFramePresentationMonitor),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicFramePresentationMonitor
-    };
+        _type_slots_HolographicFramePresentationMonitor};
 
     // ----- HolographicFramePresentationReport class --------------------
 
@@ -2407,14 +2391,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicFramePresentationReport =
-    {
+    static PyType_Spec type_spec_HolographicFramePresentationReport = {
         "winrt._winrt_windows_graphics_holographic.HolographicFramePresentationReport",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicFramePresentationReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicFramePresentationReport
-    };
+        _type_slots_HolographicFramePresentationReport};
 
     // ----- HolographicFrameRenderingReport class --------------------
 
@@ -2576,14 +2558,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicFrameRenderingReport =
-    {
+    static PyType_Spec type_spec_HolographicFrameRenderingReport = {
         "winrt._winrt_windows_graphics_holographic.HolographicFrameRenderingReport",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicFrameRenderingReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicFrameRenderingReport
-    };
+        _type_slots_HolographicFrameRenderingReport};
 
     // ----- HolographicFrameScanoutMonitor class --------------------
 
@@ -2727,14 +2707,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicFrameScanoutMonitor =
-    {
+    static PyType_Spec type_spec_HolographicFrameScanoutMonitor = {
         "winrt._winrt_windows_graphics_holographic.HolographicFrameScanoutMonitor",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicFrameScanoutMonitor
-    };
+        _type_slots_HolographicFrameScanoutMonitor};
 
     // ----- HolographicFrameScanoutReport class --------------------
 
@@ -2896,14 +2874,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicFrameScanoutReport =
-    {
+    static PyType_Spec type_spec_HolographicFrameScanoutReport = {
         "winrt._winrt_windows_graphics_holographic.HolographicFrameScanoutReport",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicFrameScanoutReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicFrameScanoutReport
-    };
+        _type_slots_HolographicFrameScanoutReport};
 
     // ----- HolographicQuadLayer class --------------------
 
@@ -3097,14 +3073,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicQuadLayer =
-    {
+    static PyType_Spec type_spec_HolographicQuadLayer = {
         "winrt._winrt_windows_graphics_holographic.HolographicQuadLayer",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicQuadLayer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicQuadLayer
-    };
+        _type_slots_HolographicQuadLayer};
 
     // ----- HolographicQuadLayerUpdateParameters class --------------------
 
@@ -3414,14 +3388,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicQuadLayerUpdateParameters =
-    {
+    static PyType_Spec type_spec_HolographicQuadLayerUpdateParameters = {
         "winrt._winrt_windows_graphics_holographic.HolographicQuadLayerUpdateParameters",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicQuadLayerUpdateParameters
-    };
+        _type_slots_HolographicQuadLayerUpdateParameters};
 
     // ----- HolographicSpace class --------------------
 
@@ -3982,14 +3954,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicSpace =
-    {
+    static PyType_Spec type_spec_HolographicSpace = {
         "winrt._winrt_windows_graphics_holographic.HolographicSpace",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicSpace),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicSpace
-    };
+        _type_slots_HolographicSpace};
 
     static PyGetSetDef getset_HolographicSpace_Static[] = {
         { "is_available", reinterpret_cast<getter>(HolographicSpace_get_IsAvailable), nullptr, nullptr, nullptr },
@@ -4130,14 +4100,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicSpaceCameraAddedEventArgs =
-    {
+    static PyType_Spec type_spec_HolographicSpaceCameraAddedEventArgs = {
         "winrt._winrt_windows_graphics_holographic.HolographicSpaceCameraAddedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicSpaceCameraAddedEventArgs
-    };
+        _type_slots_HolographicSpaceCameraAddedEventArgs};
 
     // ----- HolographicSpaceCameraRemovedEventArgs class --------------------
 
@@ -4219,14 +4187,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicSpaceCameraRemovedEventArgs =
-    {
+    static PyType_Spec type_spec_HolographicSpaceCameraRemovedEventArgs = {
         "winrt._winrt_windows_graphics_holographic.HolographicSpaceCameraRemovedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicSpaceCameraRemovedEventArgs
-    };
+        _type_slots_HolographicSpaceCameraRemovedEventArgs};
 
     // ----- HolographicViewConfiguration class --------------------
 
@@ -4576,14 +4542,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicViewConfiguration =
-    {
+    static PyType_Spec type_spec_HolographicViewConfiguration = {
         "winrt._winrt_windows_graphics_holographic.HolographicViewConfiguration",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicViewConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicViewConfiguration
-    };
+        _type_slots_HolographicViewConfiguration};
 
     // ----- HolographicAdapterId struct --------------------
 
@@ -4737,14 +4701,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicAdapterId =
-    {
+    static PyType_Spec type_spec_HolographicAdapterId = {
         "winrt._winrt_windows_graphics_holographic.HolographicAdapterId",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicAdapterId),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicAdapterId
-    };
+        _type_slots_HolographicAdapterId};
 
     // ----- HolographicFrameId struct --------------------
 
@@ -4863,14 +4825,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicFrameId =
-    {
+    static PyType_Spec type_spec_HolographicFrameId = {
         "winrt._winrt_windows_graphics_holographic.HolographicFrameId",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicFrameId),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicFrameId
-    };
+        _type_slots_HolographicFrameId};
 
     // ----- HolographicStereoTransform struct --------------------
 
@@ -5024,14 +4984,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicStereoTransform =
-    {
+    static PyType_Spec type_spec_HolographicStereoTransform = {
         "winrt._winrt_windows_graphics_holographic.HolographicStereoTransform",
         sizeof(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicStereoTransform
-    };
+        _type_slots_HolographicStereoTransform};
 
     // ----- Windows.Graphics.Holographic Initialization --------------------
 

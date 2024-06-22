@@ -85,14 +85,12 @@ namespace py::cpp::Windows::Devices::SerialCommunication
         { },
     };
 
-    static PyType_Spec type_spec_ErrorReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_ErrorReceivedEventArgs = {
         "winrt._winrt_windows_devices_serialcommunication.ErrorReceivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::SerialCommunication::ErrorReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ErrorReceivedEventArgs
-    };
+        _type_slots_ErrorReceivedEventArgs};
 
     // ----- PinChangedEventArgs class --------------------
 
@@ -174,14 +172,12 @@ namespace py::cpp::Windows::Devices::SerialCommunication
         { },
     };
 
-    static PyType_Spec type_spec_PinChangedEventArgs =
-    {
+    static PyType_Spec type_spec_PinChangedEventArgs = {
         "winrt._winrt_windows_devices_serialcommunication.PinChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::SerialCommunication::PinChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PinChangedEventArgs
-    };
+        _type_slots_PinChangedEventArgs};
 
     // ----- SerialDevice class --------------------
 
@@ -1157,14 +1153,12 @@ namespace py::cpp::Windows::Devices::SerialCommunication
         { },
     };
 
-    static PyType_Spec type_spec_SerialDevice =
-    {
+    static PyType_Spec type_spec_SerialDevice = {
         "winrt._winrt_windows_devices_serialcommunication.SerialDevice",
         sizeof(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SerialDevice
-    };
+        _type_slots_SerialDevice};
 
     static PyGetSetDef getset_SerialDevice_Static[] = {
         { }

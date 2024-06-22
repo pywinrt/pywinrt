@@ -231,14 +231,12 @@ namespace py::cpp::Windows::Management::Update
         { },
     };
 
-    static PyType_Spec type_spec_PreviewBuildsManager =
-    {
+    static PyType_Spec type_spec_PreviewBuildsManager = {
         "winrt._winrt_windows_management_update.PreviewBuildsManager",
         sizeof(py::wrapper::Windows::Management::Update::PreviewBuildsManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PreviewBuildsManager
-    };
+        _type_slots_PreviewBuildsManager};
 
     static PyGetSetDef getset_PreviewBuildsManager_Static[] = {
         { }
@@ -347,14 +345,12 @@ namespace py::cpp::Windows::Management::Update
         { },
     };
 
-    static PyType_Spec type_spec_PreviewBuildsState =
-    {
+    static PyType_Spec type_spec_PreviewBuildsState = {
         "winrt._winrt_windows_management_update.PreviewBuildsState",
         sizeof(py::wrapper::Windows::Management::Update::PreviewBuildsState),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PreviewBuildsState
-    };
+        _type_slots_PreviewBuildsState};
 
     // ----- WindowsUpdate class --------------------
 
@@ -919,14 +915,12 @@ namespace py::cpp::Windows::Management::Update
         { },
     };
 
-    static PyType_Spec type_spec_WindowsUpdate =
-    {
+    static PyType_Spec type_spec_WindowsUpdate = {
         "winrt._winrt_windows_management_update.WindowsUpdate",
         sizeof(py::wrapper::Windows::Management::Update::WindowsUpdate),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowsUpdate
-    };
+        _type_slots_WindowsUpdate};
 
     // ----- WindowsUpdateActionCompletedEventArgs class --------------------
 
@@ -1068,14 +1062,12 @@ namespace py::cpp::Windows::Management::Update
         { },
     };
 
-    static PyType_Spec type_spec_WindowsUpdateActionCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_WindowsUpdateActionCompletedEventArgs = {
         "winrt._winrt_windows_management_update.WindowsUpdateActionCompletedEventArgs",
         sizeof(py::wrapper::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowsUpdateActionCompletedEventArgs
-    };
+        _type_slots_WindowsUpdateActionCompletedEventArgs};
 
     // ----- WindowsUpdateActionProgress class --------------------
 
@@ -1177,14 +1169,12 @@ namespace py::cpp::Windows::Management::Update
         { },
     };
 
-    static PyType_Spec type_spec_WindowsUpdateActionProgress =
-    {
+    static PyType_Spec type_spec_WindowsUpdateActionProgress = {
         "winrt._winrt_windows_management_update.WindowsUpdateActionProgress",
         sizeof(py::wrapper::Windows::Management::Update::WindowsUpdateActionProgress),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowsUpdateActionProgress
-    };
+        _type_slots_WindowsUpdateActionProgress};
 
     // ----- WindowsUpdateActionResult class --------------------
 
@@ -1326,14 +1316,12 @@ namespace py::cpp::Windows::Management::Update
         { },
     };
 
-    static PyType_Spec type_spec_WindowsUpdateActionResult =
-    {
+    static PyType_Spec type_spec_WindowsUpdateActionResult = {
         "winrt._winrt_windows_management_update.WindowsUpdateActionResult",
         sizeof(py::wrapper::Windows::Management::Update::WindowsUpdateActionResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowsUpdateActionResult
-    };
+        _type_slots_WindowsUpdateActionResult};
 
     // ----- WindowsUpdateAdministrator class --------------------
 
@@ -1777,14 +1765,12 @@ namespace py::cpp::Windows::Management::Update
         { },
     };
 
-    static PyType_Spec type_spec_WindowsUpdateAdministrator =
-    {
+    static PyType_Spec type_spec_WindowsUpdateAdministrator = {
         "winrt._winrt_windows_management_update.WindowsUpdateAdministrator",
         sizeof(py::wrapper::Windows::Management::Update::WindowsUpdateAdministrator),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowsUpdateAdministrator
-    };
+        _type_slots_WindowsUpdateAdministrator};
 
     static PyGetSetDef getset_WindowsUpdateAdministrator_Static[] = {
         { }
@@ -2139,14 +2125,12 @@ namespace py::cpp::Windows::Management::Update
         { },
     };
 
-    static PyType_Spec type_spec_WindowsUpdateApprovalData =
-    {
+    static PyType_Spec type_spec_WindowsUpdateApprovalData = {
         "winrt._winrt_windows_management_update.WindowsUpdateApprovalData",
         sizeof(py::wrapper::Windows::Management::Update::WindowsUpdateApprovalData),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowsUpdateApprovalData
-    };
+        _type_slots_WindowsUpdateApprovalData};
 
     // ----- WindowsUpdateAttentionRequiredInfo class --------------------
 
@@ -2248,14 +2232,12 @@ namespace py::cpp::Windows::Management::Update
         { },
     };
 
-    static PyType_Spec type_spec_WindowsUpdateAttentionRequiredInfo =
-    {
+    static PyType_Spec type_spec_WindowsUpdateAttentionRequiredInfo = {
         "winrt._winrt_windows_management_update.WindowsUpdateAttentionRequiredInfo",
         sizeof(py::wrapper::Windows::Management::Update::WindowsUpdateAttentionRequiredInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowsUpdateAttentionRequiredInfo
-    };
+        _type_slots_WindowsUpdateAttentionRequiredInfo};
 
     // ----- WindowsUpdateAttentionRequiredReasonChangedEventArgs class --------------------
 
@@ -2357,14 +2339,12 @@ namespace py::cpp::Windows::Management::Update
         { },
     };
 
-    static PyType_Spec type_spec_WindowsUpdateAttentionRequiredReasonChangedEventArgs =
-    {
+    static PyType_Spec type_spec_WindowsUpdateAttentionRequiredReasonChangedEventArgs = {
         "winrt._winrt_windows_management_update.WindowsUpdateAttentionRequiredReasonChangedEventArgs",
         sizeof(py::wrapper::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowsUpdateAttentionRequiredReasonChangedEventArgs
-    };
+        _type_slots_WindowsUpdateAttentionRequiredReasonChangedEventArgs};
 
     // ----- WindowsUpdateGetAdministratorResult class --------------------
 
@@ -2466,14 +2446,12 @@ namespace py::cpp::Windows::Management::Update
         { },
     };
 
-    static PyType_Spec type_spec_WindowsUpdateGetAdministratorResult =
-    {
+    static PyType_Spec type_spec_WindowsUpdateGetAdministratorResult = {
         "winrt._winrt_windows_management_update.WindowsUpdateGetAdministratorResult",
         sizeof(py::wrapper::Windows::Management::Update::WindowsUpdateGetAdministratorResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowsUpdateGetAdministratorResult
-    };
+        _type_slots_WindowsUpdateGetAdministratorResult};
 
     // ----- WindowsUpdateItem class --------------------
 
@@ -2695,14 +2673,12 @@ namespace py::cpp::Windows::Management::Update
         { },
     };
 
-    static PyType_Spec type_spec_WindowsUpdateItem =
-    {
+    static PyType_Spec type_spec_WindowsUpdateItem = {
         "winrt._winrt_windows_management_update.WindowsUpdateItem",
         sizeof(py::wrapper::Windows::Management::Update::WindowsUpdateItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowsUpdateItem
-    };
+        _type_slots_WindowsUpdateItem};
 
     // ----- WindowsUpdateManager class --------------------
 
@@ -3245,14 +3221,12 @@ namespace py::cpp::Windows::Management::Update
         { },
     };
 
-    static PyType_Spec type_spec_WindowsUpdateManager =
-    {
+    static PyType_Spec type_spec_WindowsUpdateManager = {
         "winrt._winrt_windows_management_update.WindowsUpdateManager",
         sizeof(py::wrapper::Windows::Management::Update::WindowsUpdateManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowsUpdateManager
-    };
+        _type_slots_WindowsUpdateManager};
 
     // ----- WindowsUpdateProgressChangedEventArgs class --------------------
 
@@ -3354,14 +3328,12 @@ namespace py::cpp::Windows::Management::Update
         { },
     };
 
-    static PyType_Spec type_spec_WindowsUpdateProgressChangedEventArgs =
-    {
+    static PyType_Spec type_spec_WindowsUpdateProgressChangedEventArgs = {
         "winrt._winrt_windows_management_update.WindowsUpdateProgressChangedEventArgs",
         sizeof(py::wrapper::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowsUpdateProgressChangedEventArgs
-    };
+        _type_slots_WindowsUpdateProgressChangedEventArgs};
 
     // ----- WindowsUpdateRestartRequestOptions class --------------------
 
@@ -3800,14 +3772,12 @@ namespace py::cpp::Windows::Management::Update
         { },
     };
 
-    static PyType_Spec type_spec_WindowsUpdateRestartRequestOptions =
-    {
+    static PyType_Spec type_spec_WindowsUpdateRestartRequestOptions = {
         "winrt._winrt_windows_management_update.WindowsUpdateRestartRequestOptions",
         sizeof(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowsUpdateRestartRequestOptions
-    };
+        _type_slots_WindowsUpdateRestartRequestOptions};
 
     // ----- WindowsUpdateScanCompletedEventArgs class --------------------
 
@@ -3949,14 +3919,12 @@ namespace py::cpp::Windows::Management::Update
         { },
     };
 
-    static PyType_Spec type_spec_WindowsUpdateScanCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_WindowsUpdateScanCompletedEventArgs = {
         "winrt._winrt_windows_management_update.WindowsUpdateScanCompletedEventArgs",
         sizeof(py::wrapper::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowsUpdateScanCompletedEventArgs
-    };
+        _type_slots_WindowsUpdateScanCompletedEventArgs};
 
     // ----- Windows.Management.Update Initialization --------------------
 

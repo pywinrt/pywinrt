@@ -85,14 +85,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_CallAnswerEventArgs =
-    {
+    static PyType_Spec type_spec_CallAnswerEventArgs = {
         "winrt._winrt_windows_applicationmodel_calls.CallAnswerEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::CallAnswerEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CallAnswerEventArgs
-    };
+        _type_slots_CallAnswerEventArgs};
 
     // ----- CallRejectEventArgs class --------------------
 
@@ -174,14 +172,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_CallRejectEventArgs =
-    {
+    static PyType_Spec type_spec_CallRejectEventArgs = {
         "winrt._winrt_windows_applicationmodel_calls.CallRejectEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::CallRejectEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CallRejectEventArgs
-    };
+        _type_slots_CallRejectEventArgs};
 
     // ----- CallStateChangeEventArgs class --------------------
 
@@ -263,14 +259,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_CallStateChangeEventArgs =
-    {
+    static PyType_Spec type_spec_CallStateChangeEventArgs = {
         "winrt._winrt_windows_applicationmodel_calls.CallStateChangeEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::CallStateChangeEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CallStateChangeEventArgs
-    };
+        _type_slots_CallStateChangeEventArgs};
 
     // ----- LockScreenCallEndCallDeferral class --------------------
 
@@ -363,14 +357,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_LockScreenCallEndCallDeferral =
-    {
+    static PyType_Spec type_spec_LockScreenCallEndCallDeferral = {
         "winrt._winrt_windows_applicationmodel_calls.LockScreenCallEndCallDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::LockScreenCallEndCallDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LockScreenCallEndCallDeferral
-    };
+        _type_slots_LockScreenCallEndCallDeferral};
 
     // ----- LockScreenCallEndRequestedEventArgs class --------------------
 
@@ -482,14 +474,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_LockScreenCallEndRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_LockScreenCallEndRequestedEventArgs = {
         "winrt._winrt_windows_applicationmodel_calls.LockScreenCallEndRequestedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::LockScreenCallEndRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LockScreenCallEndRequestedEventArgs
-    };
+        _type_slots_LockScreenCallEndRequestedEventArgs};
 
     // ----- LockScreenCallUI class --------------------
 
@@ -720,14 +710,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_LockScreenCallUI =
-    {
+    static PyType_Spec type_spec_LockScreenCallUI = {
         "winrt._winrt_windows_applicationmodel_calls.LockScreenCallUI",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::LockScreenCallUI),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LockScreenCallUI
-    };
+        _type_slots_LockScreenCallUI};
 
     // ----- MuteChangeEventArgs class --------------------
 
@@ -809,14 +797,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_MuteChangeEventArgs =
-    {
+    static PyType_Spec type_spec_MuteChangeEventArgs = {
         "winrt._winrt_windows_applicationmodel_calls.MuteChangeEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::MuteChangeEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MuteChangeEventArgs
-    };
+        _type_slots_MuteChangeEventArgs};
 
     // ----- PhoneCall class --------------------
 
@@ -1734,14 +1720,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCall =
-    {
+    static PyType_Spec type_spec_PhoneCall = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneCall",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCall
-    };
+        _type_slots_PhoneCall};
 
     static PyGetSetDef getset_PhoneCall_Static[] = {
         { }
@@ -1919,14 +1903,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCallBlocking =
-    {
+    static PyType_Spec type_spec_PhoneCallBlocking = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneCallBlocking",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCallBlocking
-    };
+        _type_slots_PhoneCallBlocking};
 
     static PyGetSetDef getset_PhoneCallBlocking_Static[] = {
         { "block_unknown_numbers", reinterpret_cast<getter>(PhoneCallBlocking_get_BlockUnknownNumbers), reinterpret_cast<setter>(PhoneCallBlocking_put_BlockUnknownNumbers), nullptr, nullptr },
@@ -2846,14 +2828,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCallHistoryEntry =
-    {
+    static PyType_Spec type_spec_PhoneCallHistoryEntry = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneCallHistoryEntry",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCallHistoryEntry
-    };
+        _type_slots_PhoneCallHistoryEntry};
 
     // ----- PhoneCallHistoryEntryAddress class --------------------
 
@@ -3145,14 +3125,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCallHistoryEntryAddress =
-    {
+    static PyType_Spec type_spec_PhoneCallHistoryEntryAddress = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneCallHistoryEntryAddress",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryAddress),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCallHistoryEntryAddress
-    };
+        _type_slots_PhoneCallHistoryEntryAddress};
 
     // ----- PhoneCallHistoryEntryQueryOptions class --------------------
 
@@ -3304,14 +3282,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCallHistoryEntryQueryOptions =
-    {
+    static PyType_Spec type_spec_PhoneCallHistoryEntryQueryOptions = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneCallHistoryEntryQueryOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryQueryOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCallHistoryEntryQueryOptions
-    };
+        _type_slots_PhoneCallHistoryEntryQueryOptions};
 
     // ----- PhoneCallHistoryEntryReader class --------------------
 
@@ -3403,14 +3379,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCallHistoryEntryReader =
-    {
+    static PyType_Spec type_spec_PhoneCallHistoryEntryReader = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneCallHistoryEntryReader",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryReader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCallHistoryEntryReader
-    };
+        _type_slots_PhoneCallHistoryEntryReader};
 
     // ----- PhoneCallHistoryManager class --------------------
 
@@ -3499,14 +3473,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCallHistoryManager =
-    {
+    static PyType_Spec type_spec_PhoneCallHistoryManager = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneCallHistoryManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCallHistoryManager
-    };
+        _type_slots_PhoneCallHistoryManager};
 
     static PyGetSetDef getset_PhoneCallHistoryManager_Static[] = {
         { }
@@ -3647,14 +3619,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCallHistoryManagerForUser =
-    {
+    static PyType_Spec type_spec_PhoneCallHistoryManagerForUser = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneCallHistoryManagerForUser",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryManagerForUser),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCallHistoryManagerForUser
-    };
+        _type_slots_PhoneCallHistoryManagerForUser};
 
     // ----- PhoneCallHistoryStore class --------------------
 
@@ -4082,14 +4052,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCallHistoryStore =
-    {
+    static PyType_Spec type_spec_PhoneCallHistoryStore = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneCallHistoryStore",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryStore),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCallHistoryStore
-    };
+        _type_slots_PhoneCallHistoryStore};
 
     // ----- PhoneCallInfo class --------------------
 
@@ -4271,14 +4239,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCallInfo =
-    {
+    static PyType_Spec type_spec_PhoneCallInfo = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneCallInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCallInfo
-    };
+        _type_slots_PhoneCallInfo};
 
     // ----- PhoneCallManager class --------------------
 
@@ -4480,14 +4446,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCallManager =
-    {
+    static PyType_Spec type_spec_PhoneCallManager = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneCallManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCallManager
-    };
+        _type_slots_PhoneCallManager};
 
     static PyGetSetDef getset_PhoneCallManager_Static[] = {
         { "is_call_active", reinterpret_cast<getter>(PhoneCallManager_get_IsCallActive), nullptr, nullptr, nullptr },
@@ -4671,14 +4635,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCallStore =
-    {
+    static PyType_Spec type_spec_PhoneCallStore = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneCallStore",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallStore),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCallStore
-    };
+        _type_slots_PhoneCallStore};
 
     // ----- PhoneCallVideoCapabilities class --------------------
 
@@ -4760,14 +4722,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCallVideoCapabilities =
-    {
+    static PyType_Spec type_spec_PhoneCallVideoCapabilities = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneCallVideoCapabilities",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCallVideoCapabilities
-    };
+        _type_slots_PhoneCallVideoCapabilities};
 
     // ----- PhoneCallVideoCapabilitiesManager class --------------------
 
@@ -4825,14 +4785,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCallVideoCapabilitiesManager =
-    {
+    static PyType_Spec type_spec_PhoneCallVideoCapabilitiesManager = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneCallVideoCapabilitiesManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCallVideoCapabilitiesManager
-    };
+        _type_slots_PhoneCallVideoCapabilitiesManager};
 
     static PyGetSetDef getset_PhoneCallVideoCapabilitiesManager_Static[] = {
         { }
@@ -4960,14 +4918,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCallsResult =
-    {
+    static PyType_Spec type_spec_PhoneCallsResult = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneCallsResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallsResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCallsResult
-    };
+        _type_slots_PhoneCallsResult};
 
     // ----- PhoneDialOptions class --------------------
 
@@ -5339,14 +5295,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneDialOptions =
-    {
+    static PyType_Spec type_spec_PhoneDialOptions = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneDialOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneDialOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneDialOptions
-    };
+        _type_slots_PhoneDialOptions};
 
     // ----- PhoneLine class --------------------
 
@@ -6002,14 +5956,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneLine =
-    {
+    static PyType_Spec type_spec_PhoneLine = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneLine",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneLine),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneLine
-    };
+        _type_slots_PhoneLine};
 
     static PyGetSetDef getset_PhoneLine_Static[] = {
         { }
@@ -6209,14 +6161,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneLineCellularDetails =
-    {
+    static PyType_Spec type_spec_PhoneLineCellularDetails = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneLineCellularDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineCellularDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneLineCellularDetails
-    };
+        _type_slots_PhoneLineCellularDetails};
 
     // ----- PhoneLineConfiguration class --------------------
 
@@ -6318,14 +6268,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneLineConfiguration =
-    {
+    static PyType_Spec type_spec_PhoneLineConfiguration = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneLineConfiguration",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneLineConfiguration
-    };
+        _type_slots_PhoneLineConfiguration};
 
     // ----- PhoneLineDialResult class --------------------
 
@@ -6427,14 +6375,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneLineDialResult =
-    {
+    static PyType_Spec type_spec_PhoneLineDialResult = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneLineDialResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineDialResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneLineDialResult
-    };
+        _type_slots_PhoneLineDialResult};
 
     // ----- PhoneLineTransportDevice class --------------------
 
@@ -6994,14 +6940,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneLineTransportDevice =
-    {
+    static PyType_Spec type_spec_PhoneLineTransportDevice = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneLineTransportDevice",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineTransportDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneLineTransportDevice
-    };
+        _type_slots_PhoneLineTransportDevice};
 
     static PyGetSetDef getset_PhoneLineTransportDevice_Static[] = {
         { }
@@ -7397,14 +7341,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneLineWatcher =
-    {
+    static PyType_Spec type_spec_PhoneLineWatcher = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneLineWatcher",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneLineWatcher
-    };
+        _type_slots_PhoneLineWatcher};
 
     // ----- PhoneLineWatcherEventArgs class --------------------
 
@@ -7486,14 +7428,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneLineWatcherEventArgs =
-    {
+    static PyType_Spec type_spec_PhoneLineWatcherEventArgs = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneLineWatcherEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneLineWatcherEventArgs
-    };
+        _type_slots_PhoneLineWatcherEventArgs};
 
     // ----- PhoneVoicemail class --------------------
 
@@ -7645,14 +7585,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_PhoneVoicemail =
-    {
+    static PyType_Spec type_spec_PhoneVoicemail = {
         "winrt._winrt_windows_applicationmodel_calls.PhoneVoicemail",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::PhoneVoicemail),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneVoicemail
-    };
+        _type_slots_PhoneVoicemail};
 
     // ----- VoipCallCoordinator class --------------------
 
@@ -8219,14 +8157,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_VoipCallCoordinator =
-    {
+    static PyType_Spec type_spec_VoipCallCoordinator = {
         "winrt._winrt_windows_applicationmodel_calls.VoipCallCoordinator",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VoipCallCoordinator
-    };
+        _type_slots_VoipCallCoordinator};
 
     static PyGetSetDef getset_VoipCallCoordinator_Static[] = {
         { }
@@ -8871,14 +8807,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { },
     };
 
-    static PyType_Spec type_spec_VoipPhoneCall =
-    {
+    static PyType_Spec type_spec_VoipPhoneCall = {
         "winrt._winrt_windows_applicationmodel_calls.VoipPhoneCall",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VoipPhoneCall
-    };
+        _type_slots_VoipPhoneCall};
 
     // ----- Windows.ApplicationModel.Calls Initialization --------------------
 

@@ -505,14 +505,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
         { },
     };
 
-    static PyType_Spec type_spec_RfcommDeviceService =
-    {
+    static PyType_Spec type_spec_RfcommDeviceService = {
         "winrt._winrt_windows_devices_bluetooth_rfcomm.RfcommDeviceService",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RfcommDeviceService
-    };
+        _type_slots_RfcommDeviceService};
 
     static PyGetSetDef getset_RfcommDeviceService_Static[] = {
         { }
@@ -643,14 +641,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
         { },
     };
 
-    static PyType_Spec type_spec_RfcommDeviceServicesResult =
-    {
+    static PyType_Spec type_spec_RfcommDeviceServicesResult = {
         "winrt._winrt_windows_devices_bluetooth_rfcomm.RfcommDeviceServicesResult",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RfcommDeviceServicesResult
-    };
+        _type_slots_RfcommDeviceServicesResult};
 
     // ----- RfcommServiceId class --------------------
 
@@ -968,14 +964,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
         { },
     };
 
-    static PyType_Spec type_spec_RfcommServiceId =
-    {
+    static PyType_Spec type_spec_RfcommServiceId = {
         "winrt._winrt_windows_devices_bluetooth_rfcomm.RfcommServiceId",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RfcommServiceId
-    };
+        _type_slots_RfcommServiceId};
 
     static PyGetSetDef getset_RfcommServiceId_Static[] = {
         { "generic_file_transfer", reinterpret_cast<getter>(RfcommServiceId_get_GenericFileTransfer), nullptr, nullptr, nullptr },
@@ -1227,14 +1221,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
         { },
     };
 
-    static PyType_Spec type_spec_RfcommServiceProvider =
-    {
+    static PyType_Spec type_spec_RfcommServiceProvider = {
         "winrt._winrt_windows_devices_bluetooth_rfcomm.RfcommServiceProvider",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RfcommServiceProvider
-    };
+        _type_slots_RfcommServiceProvider};
 
     static PyGetSetDef getset_RfcommServiceProvider_Static[] = {
         { }

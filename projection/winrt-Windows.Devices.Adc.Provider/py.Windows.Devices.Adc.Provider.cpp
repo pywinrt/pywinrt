@@ -323,14 +323,12 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         { },
     };
 
-    static PyType_Spec type_spec_IAdcControllerProvider =
-    {
+    static PyType_Spec type_spec_IAdcControllerProvider = {
         "winrt._winrt_windows_devices_adc_provider.IAdcControllerProvider",
         sizeof(py::wrapper::Windows::Devices::Adc::Provider::IAdcControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAdcControllerProvider
-    };
+        _type_slots_IAdcControllerProvider};
 
     // ----- IAdcProvider interface --------------------
 
@@ -422,14 +420,12 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         { },
     };
 
-    static PyType_Spec type_spec_IAdcProvider =
-    {
+    static PyType_Spec type_spec_IAdcProvider = {
         "winrt._winrt_windows_devices_adc_provider.IAdcProvider",
         sizeof(py::wrapper::Windows::Devices::Adc::Provider::IAdcProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAdcProvider
-    };
+        _type_slots_IAdcProvider};
 
     // ----- Windows.Devices.Adc.Provider Initialization --------------------
 

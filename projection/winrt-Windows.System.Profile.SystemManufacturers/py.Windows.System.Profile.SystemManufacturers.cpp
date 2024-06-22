@@ -125,14 +125,12 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
         { },
     };
 
-    static PyType_Spec type_spec_OemSupportInfo =
-    {
+    static PyType_Spec type_spec_OemSupportInfo = {
         "winrt._winrt_windows_system_profile_systemmanufacturers.OemSupportInfo",
         sizeof(py::wrapper::Windows::System::Profile::SystemManufacturers::OemSupportInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_OemSupportInfo
-    };
+        _type_slots_OemSupportInfo};
 
     // ----- SmbiosInformation class --------------------
 
@@ -178,14 +176,12 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
         { },
     };
 
-    static PyType_Spec type_spec_SmbiosInformation =
-    {
+    static PyType_Spec type_spec_SmbiosInformation = {
         "winrt._winrt_windows_system_profile_systemmanufacturers.SmbiosInformation",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmbiosInformation
-    };
+        _type_slots_SmbiosInformation};
 
     static PyGetSetDef getset_SmbiosInformation_Static[] = {
         { "serial_number", reinterpret_cast<getter>(SmbiosInformation_get_SerialNumber), nullptr, nullptr, nullptr },
@@ -413,14 +409,12 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
         { },
     };
 
-    static PyType_Spec type_spec_SystemSupportDeviceInfo =
-    {
+    static PyType_Spec type_spec_SystemSupportDeviceInfo = {
         "winrt._winrt_windows_system_profile_systemmanufacturers.SystemSupportDeviceInfo",
         sizeof(py::wrapper::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemSupportDeviceInfo
-    };
+        _type_slots_SystemSupportDeviceInfo};
 
     // ----- SystemSupportInfo class --------------------
 
@@ -504,14 +498,12 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
         { },
     };
 
-    static PyType_Spec type_spec_SystemSupportInfo =
-    {
+    static PyType_Spec type_spec_SystemSupportInfo = {
         "winrt._winrt_windows_system_profile_systemmanufacturers.SystemSupportInfo",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemSupportInfo
-    };
+        _type_slots_SystemSupportInfo};
 
     static PyGetSetDef getset_SystemSupportInfo_Static[] = {
         { "local_system_edition", reinterpret_cast<getter>(SystemSupportInfo_get_LocalSystemEdition), nullptr, nullptr, nullptr },

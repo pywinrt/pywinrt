@@ -476,14 +476,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ESim =
-    {
+    static PyType_Spec type_spec_ESim = {
         "winrt._winrt_windows_networking_networkoperators.ESim",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESim),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ESim
-    };
+        _type_slots_ESim};
 
     // ----- ESimAddedEventArgs class --------------------
 
@@ -565,14 +563,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ESimAddedEventArgs =
-    {
+    static PyType_Spec type_spec_ESimAddedEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.ESimAddedEventArgs",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimAddedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ESimAddedEventArgs
-    };
+        _type_slots_ESimAddedEventArgs};
 
     // ----- ESimDiscoverEvent class --------------------
 
@@ -674,14 +670,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ESimDiscoverEvent =
-    {
+    static PyType_Spec type_spec_ESimDiscoverEvent = {
         "winrt._winrt_windows_networking_networkoperators.ESimDiscoverEvent",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimDiscoverEvent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ESimDiscoverEvent
-    };
+        _type_slots_ESimDiscoverEvent};
 
     // ----- ESimDiscoverResult class --------------------
 
@@ -823,14 +817,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ESimDiscoverResult =
-    {
+    static PyType_Spec type_spec_ESimDiscoverResult = {
         "winrt._winrt_windows_networking_networkoperators.ESimDiscoverResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimDiscoverResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ESimDiscoverResult
-    };
+        _type_slots_ESimDiscoverResult};
 
     // ----- ESimDownloadProfileMetadataResult class --------------------
 
@@ -932,14 +924,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ESimDownloadProfileMetadataResult =
-    {
+    static PyType_Spec type_spec_ESimDownloadProfileMetadataResult = {
         "winrt._winrt_windows_networking_networkoperators.ESimDownloadProfileMetadataResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ESimDownloadProfileMetadataResult
-    };
+        _type_slots_ESimDownloadProfileMetadataResult};
 
     // ----- ESimManager class --------------------
 
@@ -1059,14 +1049,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ESimManager =
-    {
+    static PyType_Spec type_spec_ESimManager = {
         "winrt._winrt_windows_networking_networkoperators.ESimManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ESimManager
-    };
+        _type_slots_ESimManager};
 
     static PyGetSetDef getset_ESimManager_Static[] = {
         { "service_info", reinterpret_cast<getter>(ESimManager_get_ServiceInfo), nullptr, nullptr, nullptr },
@@ -1175,14 +1163,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ESimOperationResult =
-    {
+    static PyType_Spec type_spec_ESimOperationResult = {
         "winrt._winrt_windows_networking_networkoperators.ESimOperationResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimOperationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ESimOperationResult
-    };
+        _type_slots_ESimOperationResult};
 
     // ----- ESimPolicy class --------------------
 
@@ -1264,14 +1250,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ESimPolicy =
-    {
+    static PyType_Spec type_spec_ESimPolicy = {
         "winrt._winrt_windows_networking_networkoperators.ESimPolicy",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimPolicy),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ESimPolicy
-    };
+        _type_slots_ESimPolicy};
 
     // ----- ESimProfile class --------------------
 
@@ -1585,14 +1569,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ESimProfile =
-    {
+    static PyType_Spec type_spec_ESimProfile = {
         "winrt._winrt_windows_networking_networkoperators.ESimProfile",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimProfile),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ESimProfile
-    };
+        _type_slots_ESimProfile};
 
     // ----- ESimProfileMetadata class --------------------
 
@@ -1949,14 +1931,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ESimProfileMetadata =
-    {
+    static PyType_Spec type_spec_ESimProfileMetadata = {
         "winrt._winrt_windows_networking_networkoperators.ESimProfileMetadata",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileMetadata),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ESimProfileMetadata
-    };
+        _type_slots_ESimProfileMetadata};
 
     // ----- ESimProfilePolicy class --------------------
 
@@ -2078,14 +2058,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ESimProfilePolicy =
-    {
+    static PyType_Spec type_spec_ESimProfilePolicy = {
         "winrt._winrt_windows_networking_networkoperators.ESimProfilePolicy",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimProfilePolicy),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ESimProfilePolicy
-    };
+        _type_slots_ESimProfilePolicy};
 
     // ----- ESimRemovedEventArgs class --------------------
 
@@ -2167,14 +2145,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ESimRemovedEventArgs =
-    {
+    static PyType_Spec type_spec_ESimRemovedEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.ESimRemovedEventArgs",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ESimRemovedEventArgs
-    };
+        _type_slots_ESimRemovedEventArgs};
 
     // ----- ESimServiceInfo class --------------------
 
@@ -2276,14 +2252,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ESimServiceInfo =
-    {
+    static PyType_Spec type_spec_ESimServiceInfo = {
         "winrt._winrt_windows_networking_networkoperators.ESimServiceInfo",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimServiceInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ESimServiceInfo
-    };
+        _type_slots_ESimServiceInfo};
 
     // ----- ESimUpdatedEventArgs class --------------------
 
@@ -2365,14 +2339,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ESimUpdatedEventArgs =
-    {
+    static PyType_Spec type_spec_ESimUpdatedEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.ESimUpdatedEventArgs",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ESimUpdatedEventArgs
-    };
+        _type_slots_ESimUpdatedEventArgs};
 
     // ----- ESimWatcher class --------------------
 
@@ -2741,14 +2713,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ESimWatcher =
-    {
+    static PyType_Spec type_spec_ESimWatcher = {
         "winrt._winrt_windows_networking_networkoperators.ESimWatcher",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ESimWatcher
-    };
+        _type_slots_ESimWatcher};
 
     // ----- FdnAccessManager class --------------------
 
@@ -2806,14 +2776,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_FdnAccessManager =
-    {
+    static PyType_Spec type_spec_FdnAccessManager = {
         "winrt._winrt_windows_networking_networkoperators.FdnAccessManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FdnAccessManager
-    };
+        _type_slots_FdnAccessManager};
 
     static PyGetSetDef getset_FdnAccessManager_Static[] = {
         { }
@@ -3214,14 +3182,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_HotspotAuthenticationContext =
-    {
+    static PyType_Spec type_spec_HotspotAuthenticationContext = {
         "winrt._winrt_windows_networking_networkoperators.HotspotAuthenticationContext",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::HotspotAuthenticationContext),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HotspotAuthenticationContext
-    };
+        _type_slots_HotspotAuthenticationContext};
 
     static PyGetSetDef getset_HotspotAuthenticationContext_Static[] = {
         { }
@@ -3329,14 +3295,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_HotspotAuthenticationEventDetails =
-    {
+    static PyType_Spec type_spec_HotspotAuthenticationEventDetails = {
         "winrt._winrt_windows_networking_networkoperators.HotspotAuthenticationEventDetails",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::HotspotAuthenticationEventDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HotspotAuthenticationEventDetails
-    };
+        _type_slots_HotspotAuthenticationEventDetails};
 
     // ----- HotspotCredentialsAuthenticationResult class --------------------
 
@@ -3478,14 +3442,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_HotspotCredentialsAuthenticationResult =
-    {
+    static PyType_Spec type_spec_HotspotCredentialsAuthenticationResult = {
         "winrt._winrt_windows_networking_networkoperators.HotspotCredentialsAuthenticationResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::HotspotCredentialsAuthenticationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HotspotCredentialsAuthenticationResult
-    };
+        _type_slots_HotspotCredentialsAuthenticationResult};
 
     // ----- KnownCSimFilePaths class --------------------
 
@@ -3569,14 +3531,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_KnownCSimFilePaths =
-    {
+    static PyType_Spec type_spec_KnownCSimFilePaths = {
         "winrt._winrt_windows_networking_networkoperators.KnownCSimFilePaths",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownCSimFilePaths
-    };
+        _type_slots_KnownCSimFilePaths};
 
     static PyGetSetDef getset_KnownCSimFilePaths_Static[] = {
         { "e_f_spn", reinterpret_cast<getter>(KnownCSimFilePaths_get_EFSpn), nullptr, nullptr, nullptr },
@@ -3688,14 +3648,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_KnownRuimFilePaths =
-    {
+    static PyType_Spec type_spec_KnownRuimFilePaths = {
         "winrt._winrt_windows_networking_networkoperators.KnownRuimFilePaths",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownRuimFilePaths
-    };
+        _type_slots_KnownRuimFilePaths};
 
     static PyGetSetDef getset_KnownRuimFilePaths_Static[] = {
         { "e_f_spn", reinterpret_cast<getter>(KnownRuimFilePaths_get_EFSpn), nullptr, nullptr, nullptr },
@@ -3826,14 +3784,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_KnownSimFilePaths =
-    {
+    static PyType_Spec type_spec_KnownSimFilePaths = {
         "winrt._winrt_windows_networking_networkoperators.KnownSimFilePaths",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownSimFilePaths
-    };
+        _type_slots_KnownSimFilePaths};
 
     static PyGetSetDef getset_KnownSimFilePaths_Static[] = {
         { "e_f_ons", reinterpret_cast<getter>(KnownSimFilePaths_get_EFOns), nullptr, nullptr, nullptr },
@@ -3984,14 +3940,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_KnownUSimFilePaths =
-    {
+    static PyType_Spec type_spec_KnownUSimFilePaths = {
         "winrt._winrt_windows_networking_networkoperators.KnownUSimFilePaths",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownUSimFilePaths
-    };
+        _type_slots_KnownUSimFilePaths};
 
     static PyGetSetDef getset_KnownUSimFilePaths_Static[] = {
         { "e_f_opl", reinterpret_cast<getter>(KnownUSimFilePaths_get_EFOpl), nullptr, nullptr, nullptr },
@@ -4283,14 +4237,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandAccount =
-    {
+    static PyType_Spec type_spec_MobileBroadbandAccount = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAccount",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccount),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandAccount
-    };
+        _type_slots_MobileBroadbandAccount};
 
     static PyGetSetDef getset_MobileBroadbandAccount_Static[] = {
         { "available_network_account_ids", reinterpret_cast<getter>(MobileBroadbandAccount_get_AvailableNetworkAccountIds), nullptr, nullptr, nullptr },
@@ -4399,14 +4351,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandAccountEventArgs =
-    {
+    static PyType_Spec type_spec_MobileBroadbandAccountEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAccountEventArgs",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandAccountEventArgs
-    };
+        _type_slots_MobileBroadbandAccountEventArgs};
 
     // ----- MobileBroadbandAccountUpdatedEventArgs class --------------------
 
@@ -4528,14 +4478,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandAccountUpdatedEventArgs =
-    {
+    static PyType_Spec type_spec_MobileBroadbandAccountUpdatedEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAccountUpdatedEventArgs",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandAccountUpdatedEventArgs
-    };
+        _type_slots_MobileBroadbandAccountUpdatedEventArgs};
 
     // ----- MobileBroadbandAccountWatcher class --------------------
 
@@ -4926,14 +4874,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandAccountWatcher =
-    {
+    static PyType_Spec type_spec_MobileBroadbandAccountWatcher = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAccountWatcher",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandAccountWatcher
-    };
+        _type_slots_MobileBroadbandAccountWatcher};
 
     // ----- MobileBroadbandAntennaSar class --------------------
 
@@ -5060,14 +5006,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandAntennaSar =
-    {
+    static PyType_Spec type_spec_MobileBroadbandAntennaSar = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAntennaSar",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAntennaSar),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandAntennaSar
-    };
+        _type_slots_MobileBroadbandAntennaSar};
 
     // ----- MobileBroadbandCellCdma class --------------------
 
@@ -5289,14 +5233,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandCellCdma =
-    {
+    static PyType_Spec type_spec_MobileBroadbandCellCdma = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellCdma",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandCellCdma
-    };
+        _type_slots_MobileBroadbandCellCdma};
 
     // ----- MobileBroadbandCellGsm class --------------------
 
@@ -5498,14 +5440,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandCellGsm =
-    {
+    static PyType_Spec type_spec_MobileBroadbandCellGsm = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellGsm",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandCellGsm
-    };
+        _type_slots_MobileBroadbandCellGsm};
 
     // ----- MobileBroadbandCellLte class --------------------
 
@@ -5727,14 +5667,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandCellLte =
-    {
+    static PyType_Spec type_spec_MobileBroadbandCellLte = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellLte",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellLte),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandCellLte
-    };
+        _type_slots_MobileBroadbandCellLte};
 
     // ----- MobileBroadbandCellNR class --------------------
 
@@ -5976,14 +5914,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandCellNR =
-    {
+    static PyType_Spec type_spec_MobileBroadbandCellNR = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellNR",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellNR),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandCellNR
-    };
+        _type_slots_MobileBroadbandCellNR};
 
     // ----- MobileBroadbandCellTdscdma class --------------------
 
@@ -6205,14 +6141,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandCellTdscdma =
-    {
+    static PyType_Spec type_spec_MobileBroadbandCellTdscdma = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellTdscdma",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandCellTdscdma
-    };
+        _type_slots_MobileBroadbandCellTdscdma};
 
     // ----- MobileBroadbandCellUmts class --------------------
 
@@ -6434,14 +6368,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandCellUmts =
-    {
+    static PyType_Spec type_spec_MobileBroadbandCellUmts = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellUmts",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandCellUmts
-    };
+        _type_slots_MobileBroadbandCellUmts};
 
     // ----- MobileBroadbandCellsInfo class --------------------
 
@@ -6743,14 +6675,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandCellsInfo =
-    {
+    static PyType_Spec type_spec_MobileBroadbandCellsInfo = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellsInfo",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandCellsInfo
-    };
+        _type_slots_MobileBroadbandCellsInfo};
 
     // ----- MobileBroadbandCurrentSlotIndexChangedEventArgs class --------------------
 
@@ -6832,14 +6762,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandCurrentSlotIndexChangedEventArgs =
-    {
+    static PyType_Spec type_spec_MobileBroadbandCurrentSlotIndexChangedEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCurrentSlotIndexChangedEventArgs",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandCurrentSlotIndexChangedEventArgs
-    };
+        _type_slots_MobileBroadbandCurrentSlotIndexChangedEventArgs};
 
     // ----- MobileBroadbandDeviceInformation class --------------------
 
@@ -7321,14 +7249,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandDeviceInformation =
-    {
+    static PyType_Spec type_spec_MobileBroadbandDeviceInformation = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceInformation",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandDeviceInformation
-    };
+        _type_slots_MobileBroadbandDeviceInformation};
 
     // ----- MobileBroadbandDeviceService class --------------------
 
@@ -7490,14 +7416,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandDeviceService =
-    {
+    static PyType_Spec type_spec_MobileBroadbandDeviceService = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceService",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandDeviceService
-    };
+        _type_slots_MobileBroadbandDeviceService};
 
     // ----- MobileBroadbandDeviceServiceCommandResult class --------------------
 
@@ -7599,14 +7523,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandDeviceServiceCommandResult =
-    {
+    static PyType_Spec type_spec_MobileBroadbandDeviceServiceCommandResult = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceCommandResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandDeviceServiceCommandResult
-    };
+        _type_slots_MobileBroadbandDeviceServiceCommandResult};
 
     // ----- MobileBroadbandDeviceServiceCommandSession class --------------------
 
@@ -7765,14 +7687,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandDeviceServiceCommandSession =
-    {
+    static PyType_Spec type_spec_MobileBroadbandDeviceServiceCommandSession = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceCommandSession",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandDeviceServiceCommandSession
-    };
+        _type_slots_MobileBroadbandDeviceServiceCommandSession};
 
     // ----- MobileBroadbandDeviceServiceDataReceivedEventArgs class --------------------
 
@@ -7854,14 +7774,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandDeviceServiceDataReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_MobileBroadbandDeviceServiceDataReceivedEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceDataReceivedEventArgs",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandDeviceServiceDataReceivedEventArgs
-    };
+        _type_slots_MobileBroadbandDeviceServiceDataReceivedEventArgs};
 
     // ----- MobileBroadbandDeviceServiceDataSession class --------------------
 
@@ -8031,14 +7949,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandDeviceServiceDataSession =
-    {
+    static PyType_Spec type_spec_MobileBroadbandDeviceServiceDataSession = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceDataSession",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandDeviceServiceDataSession
-    };
+        _type_slots_MobileBroadbandDeviceServiceDataSession};
 
     // ----- MobileBroadbandDeviceServiceInformation class --------------------
 
@@ -8160,14 +8076,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandDeviceServiceInformation =
-    {
+    static PyType_Spec type_spec_MobileBroadbandDeviceServiceInformation = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceInformation",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandDeviceServiceInformation
-    };
+        _type_slots_MobileBroadbandDeviceServiceInformation};
 
     // ----- MobileBroadbandDeviceServiceTriggerDetails class --------------------
 
@@ -8309,14 +8223,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandDeviceServiceTriggerDetails =
-    {
+    static PyType_Spec type_spec_MobileBroadbandDeviceServiceTriggerDetails = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceTriggerDetails",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandDeviceServiceTriggerDetails
-    };
+        _type_slots_MobileBroadbandDeviceServiceTriggerDetails};
 
     // ----- MobileBroadbandModem class --------------------
 
@@ -8962,14 +8874,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandModem =
-    {
+    static PyType_Spec type_spec_MobileBroadbandModem = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandModem",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandModem
-    };
+        _type_slots_MobileBroadbandModem};
 
     static PyGetSetDef getset_MobileBroadbandModem_Static[] = {
         { }
@@ -9139,14 +9049,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandModemConfiguration =
-    {
+    static PyType_Spec type_spec_MobileBroadbandModemConfiguration = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandModemConfiguration",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModemConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandModemConfiguration
-    };
+        _type_slots_MobileBroadbandModemConfiguration};
 
     // ----- MobileBroadbandModemIsolation class --------------------
 
@@ -9360,14 +9268,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandModemIsolation =
-    {
+    static PyType_Spec type_spec_MobileBroadbandModemIsolation = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandModemIsolation",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModemIsolation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandModemIsolation
-    };
+        _type_slots_MobileBroadbandModemIsolation};
 
     // ----- MobileBroadbandNetwork class --------------------
 
@@ -9720,14 +9626,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandNetwork =
-    {
+    static PyType_Spec type_spec_MobileBroadbandNetwork = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandNetwork",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetwork),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandNetwork
-    };
+        _type_slots_MobileBroadbandNetwork};
 
     // ----- MobileBroadbandNetworkRegistrationStateChange class --------------------
 
@@ -9829,14 +9733,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandNetworkRegistrationStateChange =
-    {
+    static PyType_Spec type_spec_MobileBroadbandNetworkRegistrationStateChange = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandNetworkRegistrationStateChange",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChange),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandNetworkRegistrationStateChange
-    };
+        _type_slots_MobileBroadbandNetworkRegistrationStateChange};
 
     // ----- MobileBroadbandNetworkRegistrationStateChangeTriggerDetails class --------------------
 
@@ -9918,14 +9820,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails =
-    {
+    static PyType_Spec type_spec_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandNetworkRegistrationStateChangeTriggerDetails",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChangeTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails
-    };
+        _type_slots_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails};
 
     // ----- MobileBroadbandPco class --------------------
 
@@ -10047,14 +9947,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandPco =
-    {
+    static PyType_Spec type_spec_MobileBroadbandPco = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPco",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPco),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandPco
-    };
+        _type_slots_MobileBroadbandPco};
 
     // ----- MobileBroadbandPcoDataChangeTriggerDetails class --------------------
 
@@ -10136,14 +10034,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandPcoDataChangeTriggerDetails =
-    {
+    static PyType_Spec type_spec_MobileBroadbandPcoDataChangeTriggerDetails = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPcoDataChangeTriggerDetails",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPcoDataChangeTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandPcoDataChangeTriggerDetails
-    };
+        _type_slots_MobileBroadbandPcoDataChangeTriggerDetails};
 
     // ----- MobileBroadbandPin class --------------------
 
@@ -10507,14 +10403,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandPin =
-    {
+    static PyType_Spec type_spec_MobileBroadbandPin = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPin",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPin),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandPin
-    };
+        _type_slots_MobileBroadbandPin};
 
     // ----- MobileBroadbandPinLockStateChange class --------------------
 
@@ -10636,14 +10530,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandPinLockStateChange =
-    {
+    static PyType_Spec type_spec_MobileBroadbandPinLockStateChange = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPinLockStateChange",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChange),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandPinLockStateChange
-    };
+        _type_slots_MobileBroadbandPinLockStateChange};
 
     // ----- MobileBroadbandPinLockStateChangeTriggerDetails class --------------------
 
@@ -10725,14 +10617,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandPinLockStateChangeTriggerDetails =
-    {
+    static PyType_Spec type_spec_MobileBroadbandPinLockStateChangeTriggerDetails = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPinLockStateChangeTriggerDetails",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChangeTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandPinLockStateChangeTriggerDetails
-    };
+        _type_slots_MobileBroadbandPinLockStateChangeTriggerDetails};
 
     // ----- MobileBroadbandPinManager class --------------------
 
@@ -10846,14 +10736,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandPinManager =
-    {
+    static PyType_Spec type_spec_MobileBroadbandPinManager = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPinManager",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandPinManager
-    };
+        _type_slots_MobileBroadbandPinManager};
 
     // ----- MobileBroadbandPinOperationResult class --------------------
 
@@ -10955,14 +10843,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandPinOperationResult =
-    {
+    static PyType_Spec type_spec_MobileBroadbandPinOperationResult = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPinOperationResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinOperationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandPinOperationResult
-    };
+        _type_slots_MobileBroadbandPinOperationResult};
 
     // ----- MobileBroadbandRadioStateChange class --------------------
 
@@ -11064,14 +10950,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandRadioStateChange =
-    {
+    static PyType_Spec type_spec_MobileBroadbandRadioStateChange = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandRadioStateChange",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChange),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandRadioStateChange
-    };
+        _type_slots_MobileBroadbandRadioStateChange};
 
     // ----- MobileBroadbandRadioStateChangeTriggerDetails class --------------------
 
@@ -11153,14 +11037,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandRadioStateChangeTriggerDetails =
-    {
+    static PyType_Spec type_spec_MobileBroadbandRadioStateChangeTriggerDetails = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandRadioStateChangeTriggerDetails",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChangeTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandRadioStateChangeTriggerDetails
-    };
+        _type_slots_MobileBroadbandRadioStateChangeTriggerDetails};
 
     // ----- MobileBroadbandSarManager class --------------------
 
@@ -11613,14 +11495,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandSarManager =
-    {
+    static PyType_Spec type_spec_MobileBroadbandSarManager = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandSarManager",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSarManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandSarManager
-    };
+        _type_slots_MobileBroadbandSarManager};
 
     // ----- MobileBroadbandSlotInfo class --------------------
 
@@ -11742,14 +11622,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandSlotInfo =
-    {
+    static PyType_Spec type_spec_MobileBroadbandSlotInfo = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandSlotInfo",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandSlotInfo
-    };
+        _type_slots_MobileBroadbandSlotInfo};
 
     // ----- MobileBroadbandSlotInfoChangedEventArgs class --------------------
 
@@ -11831,14 +11709,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandSlotInfoChangedEventArgs =
-    {
+    static PyType_Spec type_spec_MobileBroadbandSlotInfoChangedEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandSlotInfoChangedEventArgs",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfoChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandSlotInfoChangedEventArgs
-    };
+        _type_slots_MobileBroadbandSlotInfoChangedEventArgs};
 
     // ----- MobileBroadbandSlotManager class --------------------
 
@@ -12094,14 +11970,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandSlotManager =
-    {
+    static PyType_Spec type_spec_MobileBroadbandSlotManager = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandSlotManager",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandSlotManager
-    };
+        _type_slots_MobileBroadbandSlotManager};
 
     // ----- MobileBroadbandTransmissionStateChangedEventArgs class --------------------
 
@@ -12183,14 +12057,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandTransmissionStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_MobileBroadbandTransmissionStateChangedEventArgs = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandTransmissionStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandTransmissionStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandTransmissionStateChangedEventArgs
-    };
+        _type_slots_MobileBroadbandTransmissionStateChangedEventArgs};
 
     // ----- MobileBroadbandUicc class --------------------
 
@@ -12302,14 +12174,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandUicc =
-    {
+    static PyType_Spec type_spec_MobileBroadbandUicc = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandUicc",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUicc),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandUicc
-    };
+        _type_slots_MobileBroadbandUicc};
 
     // ----- MobileBroadbandUiccApp class --------------------
 
@@ -12476,14 +12346,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandUiccApp =
-    {
+    static PyType_Spec type_spec_MobileBroadbandUiccApp = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandUiccApp",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccApp),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandUiccApp
-    };
+        _type_slots_MobileBroadbandUiccApp};
 
     // ----- MobileBroadbandUiccAppReadRecordResult class --------------------
 
@@ -12585,14 +12453,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandUiccAppReadRecordResult =
-    {
+    static PyType_Spec type_spec_MobileBroadbandUiccAppReadRecordResult = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandUiccAppReadRecordResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppReadRecordResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandUiccAppReadRecordResult
-    };
+        _type_slots_MobileBroadbandUiccAppReadRecordResult};
 
     // ----- MobileBroadbandUiccAppRecordDetailsResult class --------------------
 
@@ -12774,14 +12640,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandUiccAppRecordDetailsResult =
-    {
+    static PyType_Spec type_spec_MobileBroadbandUiccAppRecordDetailsResult = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandUiccAppRecordDetailsResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppRecordDetailsResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandUiccAppRecordDetailsResult
-    };
+        _type_slots_MobileBroadbandUiccAppRecordDetailsResult};
 
     // ----- MobileBroadbandUiccAppsResult class --------------------
 
@@ -12883,14 +12747,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_MobileBroadbandUiccAppsResult =
-    {
+    static PyType_Spec type_spec_MobileBroadbandUiccAppsResult = {
         "winrt._winrt_windows_networking_networkoperators.MobileBroadbandUiccAppsResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppsResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MobileBroadbandUiccAppsResult
-    };
+        _type_slots_MobileBroadbandUiccAppsResult};
 
     // ----- NetworkOperatorDataUsageTriggerDetails class --------------------
 
@@ -12972,14 +12834,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_NetworkOperatorDataUsageTriggerDetails =
-    {
+    static PyType_Spec type_spec_NetworkOperatorDataUsageTriggerDetails = {
         "winrt._winrt_windows_networking_networkoperators.NetworkOperatorDataUsageTriggerDetails",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorDataUsageTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NetworkOperatorDataUsageTriggerDetails
-    };
+        _type_slots_NetworkOperatorDataUsageTriggerDetails};
 
     // ----- NetworkOperatorNotificationEventDetails class --------------------
 
@@ -13195,14 +13055,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_NetworkOperatorNotificationEventDetails =
-    {
+    static PyType_Spec type_spec_NetworkOperatorNotificationEventDetails = {
         "winrt._winrt_windows_networking_networkoperators.NetworkOperatorNotificationEventDetails",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NetworkOperatorNotificationEventDetails
-    };
+        _type_slots_NetworkOperatorNotificationEventDetails};
 
     // ----- NetworkOperatorTetheringAccessPointConfiguration class --------------------
 
@@ -13494,14 +13352,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_NetworkOperatorTetheringAccessPointConfiguration =
-    {
+    static PyType_Spec type_spec_NetworkOperatorTetheringAccessPointConfiguration = {
         "winrt._winrt_windows_networking_networkoperators.NetworkOperatorTetheringAccessPointConfiguration",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NetworkOperatorTetheringAccessPointConfiguration
-    };
+        _type_slots_NetworkOperatorTetheringAccessPointConfiguration};
 
     // ----- NetworkOperatorTetheringClient class --------------------
 
@@ -13603,14 +13459,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_NetworkOperatorTetheringClient =
-    {
+    static PyType_Spec type_spec_NetworkOperatorTetheringClient = {
         "winrt._winrt_windows_networking_networkoperators.NetworkOperatorTetheringClient",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringClient),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NetworkOperatorTetheringClient
-    };
+        _type_slots_NetworkOperatorTetheringClient};
 
     // ----- NetworkOperatorTetheringManager class --------------------
 
@@ -14176,14 +14030,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_NetworkOperatorTetheringManager =
-    {
+    static PyType_Spec type_spec_NetworkOperatorTetheringManager = {
         "winrt._winrt_windows_networking_networkoperators.NetworkOperatorTetheringManager",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NetworkOperatorTetheringManager
-    };
+        _type_slots_NetworkOperatorTetheringManager};
 
     static PyGetSetDef getset_NetworkOperatorTetheringManager_Static[] = {
         { }
@@ -14319,14 +14171,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_NetworkOperatorTetheringOperationResult =
-    {
+    static PyType_Spec type_spec_NetworkOperatorTetheringOperationResult = {
         "winrt._winrt_windows_networking_networkoperators.NetworkOperatorTetheringOperationResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringOperationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NetworkOperatorTetheringOperationResult
-    };
+        _type_slots_NetworkOperatorTetheringOperationResult};
 
     // ----- ProvisionFromXmlDocumentResults class --------------------
 
@@ -14428,14 +14278,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ProvisionFromXmlDocumentResults =
-    {
+    static PyType_Spec type_spec_ProvisionFromXmlDocumentResults = {
         "winrt._winrt_windows_networking_networkoperators.ProvisionFromXmlDocumentResults",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ProvisionFromXmlDocumentResults),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProvisionFromXmlDocumentResults
-    };
+        _type_slots_ProvisionFromXmlDocumentResults};
 
     // ----- ProvisionedProfile class --------------------
 
@@ -14563,14 +14411,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ProvisionedProfile =
-    {
+    static PyType_Spec type_spec_ProvisionedProfile = {
         "winrt._winrt_windows_networking_networkoperators.ProvisionedProfile",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ProvisionedProfile),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProvisionedProfile
-    };
+        _type_slots_ProvisionedProfile};
 
     // ----- ProvisioningAgent class --------------------
 
@@ -14750,14 +14596,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ProvisioningAgent =
-    {
+    static PyType_Spec type_spec_ProvisioningAgent = {
         "winrt._winrt_windows_networking_networkoperators.ProvisioningAgent",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ProvisioningAgent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProvisioningAgent
-    };
+        _type_slots_ProvisioningAgent};
 
     static PyGetSetDef getset_ProvisioningAgent_Static[] = {
         { }
@@ -14929,14 +14773,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_TetheringEntitlementCheckTriggerDetails =
-    {
+    static PyType_Spec type_spec_TetheringEntitlementCheckTriggerDetails = {
         "winrt._winrt_windows_networking_networkoperators.TetheringEntitlementCheckTriggerDetails",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::TetheringEntitlementCheckTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TetheringEntitlementCheckTriggerDetails
-    };
+        _type_slots_TetheringEntitlementCheckTriggerDetails};
 
     // ----- UssdMessage class --------------------
 
@@ -15181,14 +15023,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_UssdMessage =
-    {
+    static PyType_Spec type_spec_UssdMessage = {
         "winrt._winrt_windows_networking_networkoperators.UssdMessage",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::UssdMessage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UssdMessage
-    };
+        _type_slots_UssdMessage};
 
     // ----- UssdReply class --------------------
 
@@ -15290,14 +15130,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_UssdReply =
-    {
+    static PyType_Spec type_spec_UssdReply = {
         "winrt._winrt_windows_networking_networkoperators.UssdReply",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::UssdReply),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UssdReply
-    };
+        _type_slots_UssdReply};
 
     // ----- UssdSession class --------------------
 
@@ -15484,14 +15322,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_UssdSession =
-    {
+    static PyType_Spec type_spec_UssdSession = {
         "winrt._winrt_windows_networking_networkoperators.UssdSession",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::UssdSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UssdSession
-    };
+        _type_slots_UssdSession};
 
     static PyGetSetDef getset_UssdSession_Static[] = {
         { }
@@ -15672,14 +15508,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ESimProfileInstallProgress =
-    {
+    static PyType_Spec type_spec_ESimProfileInstallProgress = {
         "winrt._winrt_windows_networking_networkoperators.ESimProfileInstallProgress",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileInstallProgress),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ESimProfileInstallProgress
-    };
+        _type_slots_ESimProfileInstallProgress};
 
     // ----- ProfileUsage struct --------------------
 
@@ -15833,14 +15667,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { },
     };
 
-    static PyType_Spec type_spec_ProfileUsage =
-    {
+    static PyType_Spec type_spec_ProfileUsage = {
         "winrt._winrt_windows_networking_networkoperators.ProfileUsage",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ProfileUsage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProfileUsage
-    };
+        _type_slots_ProfileUsage};
 
     // ----- Windows.Networking.NetworkOperators Initialization --------------------
 

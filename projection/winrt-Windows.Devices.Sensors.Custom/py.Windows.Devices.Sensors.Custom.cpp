@@ -358,14 +358,12 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
         { },
     };
 
-    static PyType_Spec type_spec_CustomSensor =
-    {
+    static PyType_Spec type_spec_CustomSensor = {
         "winrt._winrt_windows_devices_sensors_custom.CustomSensor",
         sizeof(py::wrapper::Windows::Devices::Sensors::Custom::CustomSensor),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CustomSensor
-    };
+        _type_slots_CustomSensor};
 
     static PyGetSetDef getset_CustomSensor_Static[] = {
         { }
@@ -514,14 +512,12 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
         { },
     };
 
-    static PyType_Spec type_spec_CustomSensorReading =
-    {
+    static PyType_Spec type_spec_CustomSensorReading = {
         "winrt._winrt_windows_devices_sensors_custom.CustomSensorReading",
         sizeof(py::wrapper::Windows::Devices::Sensors::Custom::CustomSensorReading),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CustomSensorReading
-    };
+        _type_slots_CustomSensorReading};
 
     // ----- CustomSensorReadingChangedEventArgs class --------------------
 
@@ -603,14 +599,12 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
         { },
     };
 
-    static PyType_Spec type_spec_CustomSensorReadingChangedEventArgs =
-    {
+    static PyType_Spec type_spec_CustomSensorReadingChangedEventArgs = {
         "winrt._winrt_windows_devices_sensors_custom.CustomSensorReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CustomSensorReadingChangedEventArgs
-    };
+        _type_slots_CustomSensorReadingChangedEventArgs};
 
     // ----- Windows.Devices.Sensors.Custom Initialization --------------------
 

@@ -94,14 +94,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreUserActivityManager =
-    {
+    static PyType_Spec type_spec_CoreUserActivityManager = {
         "winrt._winrt_windows_applicationmodel_useractivities_core.CoreUserActivityManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreUserActivityManager
-    };
+        _type_slots_CoreUserActivityManager};
 
     static PyGetSetDef getset_CoreUserActivityManager_Static[] = {
         { }

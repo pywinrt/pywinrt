@@ -311,14 +311,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         { },
     };
 
-    static PyType_Spec type_spec_SocialFeedChildItem =
-    {
+    static PyType_Spec type_spec_SocialFeedChildItem = {
         "winrt._winrt_windows_applicationmodel_socialinfo.SocialFeedChildItem",
         sizeof(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SocialFeedChildItem
-    };
+        _type_slots_SocialFeedChildItem};
 
     // ----- SocialFeedContent class --------------------
 
@@ -524,14 +522,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         { },
     };
 
-    static PyType_Spec type_spec_SocialFeedContent =
-    {
+    static PyType_Spec type_spec_SocialFeedContent = {
         "winrt._winrt_windows_applicationmodel_socialinfo.SocialFeedContent",
         sizeof(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedContent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SocialFeedContent
-    };
+        _type_slots_SocialFeedContent};
 
     // ----- SocialFeedItem class --------------------
 
@@ -1079,14 +1075,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         { },
     };
 
-    static PyType_Spec type_spec_SocialFeedItem =
-    {
+    static PyType_Spec type_spec_SocialFeedItem = {
         "winrt._winrt_windows_applicationmodel_socialinfo.SocialFeedItem",
         sizeof(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SocialFeedItem
-    };
+        _type_slots_SocialFeedItem};
 
     // ----- SocialFeedSharedItem class --------------------
 
@@ -1382,14 +1376,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         { },
     };
 
-    static PyType_Spec type_spec_SocialFeedSharedItem =
-    {
+    static PyType_Spec type_spec_SocialFeedSharedItem = {
         "winrt._winrt_windows_applicationmodel_socialinfo.SocialFeedSharedItem",
         sizeof(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SocialFeedSharedItem
-    };
+        _type_slots_SocialFeedSharedItem};
 
     // ----- SocialItemThumbnail class --------------------
 
@@ -1649,14 +1641,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         { },
     };
 
-    static PyType_Spec type_spec_SocialItemThumbnail =
-    {
+    static PyType_Spec type_spec_SocialItemThumbnail = {
         "winrt._winrt_windows_applicationmodel_socialinfo.SocialItemThumbnail",
         sizeof(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SocialItemThumbnail
-    };
+        _type_slots_SocialItemThumbnail};
 
     // ----- SocialUserInfo class --------------------
 
@@ -1910,14 +1900,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         { },
     };
 
-    static PyType_Spec type_spec_SocialUserInfo =
-    {
+    static PyType_Spec type_spec_SocialUserInfo = {
         "winrt._winrt_windows_applicationmodel_socialinfo.SocialUserInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialUserInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SocialUserInfo
-    };
+        _type_slots_SocialUserInfo};
 
     // ----- Windows.ApplicationModel.SocialInfo Initialization --------------------
 

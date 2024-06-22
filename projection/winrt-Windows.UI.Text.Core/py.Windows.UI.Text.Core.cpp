@@ -135,14 +135,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreTextCompositionCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreTextCompositionCompletedEventArgs = {
         "winrt._winrt_windows_ui_text_core.CoreTextCompositionCompletedEventArgs",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreTextCompositionCompletedEventArgs
-    };
+        _type_slots_CoreTextCompositionCompletedEventArgs};
 
     // ----- CoreTextCompositionSegment class --------------------
 
@@ -244,14 +242,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreTextCompositionSegment =
-    {
+    static PyType_Spec type_spec_CoreTextCompositionSegment = {
         "winrt._winrt_windows_ui_text_core.CoreTextCompositionSegment",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextCompositionSegment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreTextCompositionSegment
-    };
+        _type_slots_CoreTextCompositionSegment};
 
     // ----- CoreTextCompositionStartedEventArgs class --------------------
 
@@ -363,14 +359,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreTextCompositionStartedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreTextCompositionStartedEventArgs = {
         "winrt._winrt_windows_ui_text_core.CoreTextCompositionStartedEventArgs",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreTextCompositionStartedEventArgs
-    };
+        _type_slots_CoreTextCompositionStartedEventArgs};
 
     // ----- CoreTextEditContext class --------------------
 
@@ -1235,14 +1229,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreTextEditContext =
-    {
+    static PyType_Spec type_spec_CoreTextEditContext = {
         "winrt._winrt_windows_ui_text_core.CoreTextEditContext",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreTextEditContext
-    };
+        _type_slots_CoreTextEditContext};
 
     // ----- CoreTextFormatUpdatingEventArgs class --------------------
 
@@ -1522,14 +1514,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreTextFormatUpdatingEventArgs =
-    {
+    static PyType_Spec type_spec_CoreTextFormatUpdatingEventArgs = {
         "winrt._winrt_windows_ui_text_core.CoreTextFormatUpdatingEventArgs",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreTextFormatUpdatingEventArgs
-    };
+        _type_slots_CoreTextFormatUpdatingEventArgs};
 
     // ----- CoreTextLayoutBounds class --------------------
 
@@ -1687,14 +1677,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreTextLayoutBounds =
-    {
+    static PyType_Spec type_spec_CoreTextLayoutBounds = {
         "winrt._winrt_windows_ui_text_core.CoreTextLayoutBounds",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextLayoutBounds),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreTextLayoutBounds
-    };
+        _type_slots_CoreTextLayoutBounds};
 
     // ----- CoreTextLayoutRequest class --------------------
 
@@ -1866,14 +1854,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreTextLayoutRequest =
-    {
+    static PyType_Spec type_spec_CoreTextLayoutRequest = {
         "winrt._winrt_windows_ui_text_core.CoreTextLayoutRequest",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextLayoutRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreTextLayoutRequest
-    };
+        _type_slots_CoreTextLayoutRequest};
 
     // ----- CoreTextLayoutRequestedEventArgs class --------------------
 
@@ -1955,14 +1941,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreTextLayoutRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreTextLayoutRequestedEventArgs = {
         "winrt._winrt_windows_ui_text_core.CoreTextLayoutRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreTextLayoutRequestedEventArgs
-    };
+        _type_slots_CoreTextLayoutRequestedEventArgs};
 
     // ----- CoreTextSelectionRequest class --------------------
 
@@ -2122,14 +2106,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreTextSelectionRequest =
-    {
+    static PyType_Spec type_spec_CoreTextSelectionRequest = {
         "winrt._winrt_windows_ui_text_core.CoreTextSelectionRequest",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextSelectionRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreTextSelectionRequest
-    };
+        _type_slots_CoreTextSelectionRequest};
 
     // ----- CoreTextSelectionRequestedEventArgs class --------------------
 
@@ -2211,14 +2193,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreTextSelectionRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreTextSelectionRequestedEventArgs = {
         "winrt._winrt_windows_ui_text_core.CoreTextSelectionRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreTextSelectionRequestedEventArgs
-    };
+        _type_slots_CoreTextSelectionRequestedEventArgs};
 
     // ----- CoreTextSelectionUpdatingEventArgs class --------------------
 
@@ -2398,14 +2378,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreTextSelectionUpdatingEventArgs =
-    {
+    static PyType_Spec type_spec_CoreTextSelectionUpdatingEventArgs = {
         "winrt._winrt_windows_ui_text_core.CoreTextSelectionUpdatingEventArgs",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreTextSelectionUpdatingEventArgs
-    };
+        _type_slots_CoreTextSelectionUpdatingEventArgs};
 
     // ----- CoreTextServicesConstants class --------------------
 
@@ -2451,14 +2429,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreTextServicesConstants =
-    {
+    static PyType_Spec type_spec_CoreTextServicesConstants = {
         "winrt._winrt_windows_ui_text_core.CoreTextServicesConstants",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreTextServicesConstants
-    };
+        _type_slots_CoreTextServicesConstants};
 
     static PyGetSetDef getset_CoreTextServicesConstants_Static[] = {
         { "hidden_character", reinterpret_cast<getter>(CoreTextServicesConstants_get_HiddenCharacter), nullptr, nullptr, nullptr },
@@ -2670,14 +2646,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreTextServicesManager =
-    {
+    static PyType_Spec type_spec_CoreTextServicesManager = {
         "winrt._winrt_windows_ui_text_core.CoreTextServicesManager",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextServicesManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreTextServicesManager
-    };
+        _type_slots_CoreTextServicesManager};
 
     static PyGetSetDef getset_CoreTextServicesManager_Static[] = {
         { }
@@ -2883,14 +2857,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreTextTextRequest =
-    {
+    static PyType_Spec type_spec_CoreTextTextRequest = {
         "winrt._winrt_windows_ui_text_core.CoreTextTextRequest",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextTextRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreTextTextRequest
-    };
+        _type_slots_CoreTextTextRequest};
 
     // ----- CoreTextTextRequestedEventArgs class --------------------
 
@@ -2972,14 +2944,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreTextTextRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreTextTextRequestedEventArgs = {
         "winrt._winrt_windows_ui_text_core.CoreTextTextRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreTextTextRequestedEventArgs
-    };
+        _type_slots_CoreTextTextRequestedEventArgs};
 
     // ----- CoreTextTextUpdatingEventArgs class --------------------
 
@@ -3219,14 +3189,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreTextTextUpdatingEventArgs =
-    {
+    static PyType_Spec type_spec_CoreTextTextUpdatingEventArgs = {
         "winrt._winrt_windows_ui_text_core.CoreTextTextUpdatingEventArgs",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreTextTextUpdatingEventArgs
-    };
+        _type_slots_CoreTextTextUpdatingEventArgs};
 
     // ----- CoreTextRange struct --------------------
 
@@ -3380,14 +3348,12 @@ namespace py::cpp::Windows::UI::Text::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreTextRange =
-    {
+    static PyType_Spec type_spec_CoreTextRange = {
         "winrt._winrt_windows_ui_text_core.CoreTextRange",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextRange),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreTextRange
-    };
+        _type_slots_CoreTextRange};
 
     // ----- Windows.UI.Text.Core Initialization --------------------
 

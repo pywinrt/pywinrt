@@ -284,14 +284,12 @@ namespace py::cpp::Windows::Networking
         { },
     };
 
-    static PyType_Spec type_spec_EndpointPair =
-    {
+    static PyType_Spec type_spec_EndpointPair = {
         "winrt._winrt_windows_networking.EndpointPair",
         sizeof(py::wrapper::Windows::Networking::EndpointPair),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EndpointPair
-    };
+        _type_slots_EndpointPair};
 
     // ----- HostName class --------------------
 
@@ -585,14 +583,12 @@ namespace py::cpp::Windows::Networking
         { },
     };
 
-    static PyType_Spec type_spec_HostName =
-    {
+    static PyType_Spec type_spec_HostName = {
         "winrt._winrt_windows_networking.HostName",
         sizeof(py::wrapper::Windows::Networking::HostName),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HostName
-    };
+        _type_slots_HostName};
 
     static PyGetSetDef getset_HostName_Static[] = {
         { }

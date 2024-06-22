@@ -181,14 +181,12 @@ namespace py::cpp::Microsoft::UI::Content
         { },
     };
 
-    static PyType_Spec type_spec_ContentCoordinateConverter =
-    {
+    static PyType_Spec type_spec_ContentCoordinateConverter = {
         "winrt._winrt_microsoft_ui_content.ContentCoordinateConverter",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentCoordinateConverter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentCoordinateConverter
-    };
+        _type_slots_ContentCoordinateConverter};
 
     static PyGetSetDef getset_ContentCoordinateConverter_Static[] = {
         { }
@@ -307,14 +305,12 @@ namespace py::cpp::Microsoft::UI::Content
         { },
     };
 
-    static PyType_Spec type_spec_ContentDeferral =
-    {
+    static PyType_Spec type_spec_ContentDeferral = {
         "winrt._winrt_microsoft_ui_content.ContentDeferral",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentDeferral
-    };
+        _type_slots_ContentDeferral};
 
     // ----- ContentEnvironmentSettingChangedEventArgs class --------------------
 
@@ -396,14 +392,12 @@ namespace py::cpp::Microsoft::UI::Content
         { },
     };
 
-    static PyType_Spec type_spec_ContentEnvironmentSettingChangedEventArgs =
-    {
+    static PyType_Spec type_spec_ContentEnvironmentSettingChangedEventArgs = {
         "winrt._winrt_microsoft_ui_content.ContentEnvironmentSettingChangedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentEnvironmentSettingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentEnvironmentSettingChangedEventArgs
-    };
+        _type_slots_ContentEnvironmentSettingChangedEventArgs};
 
     // ----- ContentEnvironmentStateChangedEventArgs class --------------------
 
@@ -505,14 +499,12 @@ namespace py::cpp::Microsoft::UI::Content
         { },
     };
 
-    static PyType_Spec type_spec_ContentEnvironmentStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_ContentEnvironmentStateChangedEventArgs = {
         "winrt._winrt_microsoft_ui_content.ContentEnvironmentStateChangedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentEnvironmentStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentEnvironmentStateChangedEventArgs
-    };
+        _type_slots_ContentEnvironmentStateChangedEventArgs};
 
     // ----- ContentIsland class --------------------
 
@@ -1532,14 +1524,12 @@ namespace py::cpp::Microsoft::UI::Content
         { },
     };
 
-    static PyType_Spec type_spec_ContentIsland =
-    {
+    static PyType_Spec type_spec_ContentIsland = {
         "winrt._winrt_microsoft_ui_content.ContentIsland",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentIsland),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentIsland
-    };
+        _type_slots_ContentIsland};
 
     static PyGetSetDef getset_ContentIsland_Static[] = {
         { }
@@ -1727,14 +1717,12 @@ namespace py::cpp::Microsoft::UI::Content
         { },
     };
 
-    static PyType_Spec type_spec_ContentIslandAutomationProviderRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_ContentIslandAutomationProviderRequestedEventArgs = {
         "winrt._winrt_microsoft_ui_content.ContentIslandAutomationProviderRequestedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentIslandAutomationProviderRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentIslandAutomationProviderRequestedEventArgs
-    };
+        _type_slots_ContentIslandAutomationProviderRequestedEventArgs};
 
     // ----- ContentIslandEnvironment class --------------------
 
@@ -1926,14 +1914,12 @@ namespace py::cpp::Microsoft::UI::Content
         { },
     };
 
-    static PyType_Spec type_spec_ContentIslandEnvironment =
-    {
+    static PyType_Spec type_spec_ContentIslandEnvironment = {
         "winrt._winrt_microsoft_ui_content.ContentIslandEnvironment",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentIslandEnvironment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentIslandEnvironment
-    };
+        _type_slots_ContentIslandEnvironment};
 
     // ----- ContentIslandStateChangedEventArgs class --------------------
 
@@ -2095,14 +2081,12 @@ namespace py::cpp::Microsoft::UI::Content
         { },
     };
 
-    static PyType_Spec type_spec_ContentIslandStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_ContentIslandStateChangedEventArgs = {
         "winrt._winrt_microsoft_ui_content.ContentIslandStateChangedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentIslandStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentIslandStateChangedEventArgs
-    };
+        _type_slots_ContentIslandStateChangedEventArgs};
 
     // ----- ContentSite class --------------------
 
@@ -2925,14 +2909,12 @@ namespace py::cpp::Microsoft::UI::Content
         { },
     };
 
-    static PyType_Spec type_spec_ContentSite =
-    {
+    static PyType_Spec type_spec_ContentSite = {
         "winrt._winrt_microsoft_ui_content.ContentSite",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentSite),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentSite
-    };
+        _type_slots_ContentSite};
 
     // ----- ContentSiteEnvironment class --------------------
 
@@ -3143,14 +3125,12 @@ namespace py::cpp::Microsoft::UI::Content
         { },
     };
 
-    static PyType_Spec type_spec_ContentSiteEnvironment =
-    {
+    static PyType_Spec type_spec_ContentSiteEnvironment = {
         "winrt._winrt_microsoft_ui_content.ContentSiteEnvironment",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentSiteEnvironment
-    };
+        _type_slots_ContentSiteEnvironment};
 
     // ----- ContentSiteEnvironmentView class --------------------
 
@@ -3252,14 +3232,12 @@ namespace py::cpp::Microsoft::UI::Content
         { },
     };
 
-    static PyType_Spec type_spec_ContentSiteEnvironmentView =
-    {
+    static PyType_Spec type_spec_ContentSiteEnvironmentView = {
         "winrt._winrt_microsoft_ui_content.ContentSiteEnvironmentView",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironmentView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentSiteEnvironmentView
-    };
+        _type_slots_ContentSiteEnvironmentView};
 
     // ----- ContentSiteRequestedStateChangedEventArgs class --------------------
 
@@ -3341,14 +3319,12 @@ namespace py::cpp::Microsoft::UI::Content
         { },
     };
 
-    static PyType_Spec type_spec_ContentSiteRequestedStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_ContentSiteRequestedStateChangedEventArgs = {
         "winrt._winrt_microsoft_ui_content.ContentSiteRequestedStateChangedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentSiteRequestedStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentSiteRequestedStateChangedEventArgs
-    };
+        _type_slots_ContentSiteRequestedStateChangedEventArgs};
 
     // ----- ContentSiteView class --------------------
 
@@ -3690,14 +3666,12 @@ namespace py::cpp::Microsoft::UI::Content
         { },
     };
 
-    static PyType_Spec type_spec_ContentSiteView =
-    {
+    static PyType_Spec type_spec_ContentSiteView = {
         "winrt._winrt_microsoft_ui_content.ContentSiteView",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentSiteView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentSiteView
-    };
+        _type_slots_ContentSiteView};
 
     // ----- DesktopChildSiteBridge class --------------------
 
@@ -3859,14 +3833,12 @@ namespace py::cpp::Microsoft::UI::Content
         { },
     };
 
-    static PyType_Spec type_spec_DesktopChildSiteBridge =
-    {
+    static PyType_Spec type_spec_DesktopChildSiteBridge = {
         "winrt._winrt_microsoft_ui_content.DesktopChildSiteBridge",
         sizeof(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DesktopChildSiteBridge
-    };
+        _type_slots_DesktopChildSiteBridge};
 
     static PyGetSetDef getset_DesktopChildSiteBridge_Static[] = {
         { }
@@ -4606,14 +4578,12 @@ namespace py::cpp::Microsoft::UI::Content
         { },
     };
 
-    static PyType_Spec type_spec_DesktopSiteBridge =
-    {
+    static PyType_Spec type_spec_DesktopSiteBridge = {
         "winrt._winrt_microsoft_ui_content.DesktopSiteBridge",
         sizeof(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DesktopSiteBridge
-    };
+        _type_slots_DesktopSiteBridge};
 
     static PyGetSetDef getset_DesktopSiteBridge_Static[] = {
         { }
@@ -4869,14 +4839,12 @@ namespace py::cpp::Microsoft::UI::Content
         { },
     };
 
-    static PyType_Spec type_spec_IContentSiteBridge =
-    {
+    static PyType_Spec type_spec_IContentSiteBridge = {
         "winrt._winrt_microsoft_ui_content.IContentSiteBridge",
         sizeof(py::wrapper::Microsoft::UI::Content::IContentSiteBridge),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IContentSiteBridge
-    };
+        _type_slots_IContentSiteBridge};
 
     // ----- Microsoft.UI.Content Initialization --------------------
 

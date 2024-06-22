@@ -65,14 +65,12 @@ namespace py::cpp::Windows::Media::Control
         { },
     };
 
-    static PyType_Spec type_spec_CurrentSessionChangedEventArgs =
-    {
+    static PyType_Spec type_spec_CurrentSessionChangedEventArgs = {
         "winrt._winrt_windows_media_control.CurrentSessionChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Control::CurrentSessionChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CurrentSessionChangedEventArgs
-    };
+        _type_slots_CurrentSessionChangedEventArgs};
 
     // ----- GlobalSystemMediaTransportControlsSession class --------------------
 
@@ -837,14 +835,12 @@ namespace py::cpp::Windows::Media::Control
         { },
     };
 
-    static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSession =
-    {
+    static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSession = {
         "winrt._winrt_windows_media_control.GlobalSystemMediaTransportControlsSession",
         sizeof(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GlobalSystemMediaTransportControlsSession
-    };
+        _type_slots_GlobalSystemMediaTransportControlsSession};
 
     // ----- GlobalSystemMediaTransportControlsSessionManager class --------------------
 
@@ -1085,14 +1081,12 @@ namespace py::cpp::Windows::Media::Control
         { },
     };
 
-    static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSessionManager =
-    {
+    static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSessionManager = {
         "winrt._winrt_windows_media_control.GlobalSystemMediaTransportControlsSessionManager",
         sizeof(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GlobalSystemMediaTransportControlsSessionManager
-    };
+        _type_slots_GlobalSystemMediaTransportControlsSessionManager};
 
     static PyGetSetDef getset_GlobalSystemMediaTransportControlsSessionManager_Static[] = {
         { }
@@ -1380,14 +1374,12 @@ namespace py::cpp::Windows::Media::Control
         { },
     };
 
-    static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSessionMediaProperties =
-    {
+    static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSessionMediaProperties = {
         "winrt._winrt_windows_media_control.GlobalSystemMediaTransportControlsSessionMediaProperties",
         sizeof(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GlobalSystemMediaTransportControlsSessionMediaProperties
-    };
+        _type_slots_GlobalSystemMediaTransportControlsSessionMediaProperties};
 
     // ----- GlobalSystemMediaTransportControlsSessionPlaybackControls class --------------------
 
@@ -1749,14 +1741,12 @@ namespace py::cpp::Windows::Media::Control
         { },
     };
 
-    static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSessionPlaybackControls =
-    {
+    static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSessionPlaybackControls = {
         "winrt._winrt_windows_media_control.GlobalSystemMediaTransportControlsSessionPlaybackControls",
         sizeof(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GlobalSystemMediaTransportControlsSessionPlaybackControls
-    };
+        _type_slots_GlobalSystemMediaTransportControlsSessionPlaybackControls};
 
     // ----- GlobalSystemMediaTransportControlsSessionPlaybackInfo class --------------------
 
@@ -1938,14 +1928,12 @@ namespace py::cpp::Windows::Media::Control
         { },
     };
 
-    static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSessionPlaybackInfo =
-    {
+    static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSessionPlaybackInfo = {
         "winrt._winrt_windows_media_control.GlobalSystemMediaTransportControlsSessionPlaybackInfo",
         sizeof(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GlobalSystemMediaTransportControlsSessionPlaybackInfo
-    };
+        _type_slots_GlobalSystemMediaTransportControlsSessionPlaybackInfo};
 
     // ----- GlobalSystemMediaTransportControlsSessionTimelineProperties class --------------------
 
@@ -2127,14 +2115,12 @@ namespace py::cpp::Windows::Media::Control
         { },
     };
 
-    static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSessionTimelineProperties =
-    {
+    static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSessionTimelineProperties = {
         "winrt._winrt_windows_media_control.GlobalSystemMediaTransportControlsSessionTimelineProperties",
         sizeof(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GlobalSystemMediaTransportControlsSessionTimelineProperties
-    };
+        _type_slots_GlobalSystemMediaTransportControlsSessionTimelineProperties};
 
     // ----- MediaPropertiesChangedEventArgs class --------------------
 
@@ -2196,14 +2182,12 @@ namespace py::cpp::Windows::Media::Control
         { },
     };
 
-    static PyType_Spec type_spec_MediaPropertiesChangedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaPropertiesChangedEventArgs = {
         "winrt._winrt_windows_media_control.MediaPropertiesChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Control::MediaPropertiesChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPropertiesChangedEventArgs
-    };
+        _type_slots_MediaPropertiesChangedEventArgs};
 
     // ----- PlaybackInfoChangedEventArgs class --------------------
 
@@ -2265,14 +2249,12 @@ namespace py::cpp::Windows::Media::Control
         { },
     };
 
-    static PyType_Spec type_spec_PlaybackInfoChangedEventArgs =
-    {
+    static PyType_Spec type_spec_PlaybackInfoChangedEventArgs = {
         "winrt._winrt_windows_media_control.PlaybackInfoChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Control::PlaybackInfoChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlaybackInfoChangedEventArgs
-    };
+        _type_slots_PlaybackInfoChangedEventArgs};
 
     // ----- SessionsChangedEventArgs class --------------------
 
@@ -2334,14 +2316,12 @@ namespace py::cpp::Windows::Media::Control
         { },
     };
 
-    static PyType_Spec type_spec_SessionsChangedEventArgs =
-    {
+    static PyType_Spec type_spec_SessionsChangedEventArgs = {
         "winrt._winrt_windows_media_control.SessionsChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Control::SessionsChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SessionsChangedEventArgs
-    };
+        _type_slots_SessionsChangedEventArgs};
 
     // ----- TimelinePropertiesChangedEventArgs class --------------------
 
@@ -2403,14 +2383,12 @@ namespace py::cpp::Windows::Media::Control
         { },
     };
 
-    static PyType_Spec type_spec_TimelinePropertiesChangedEventArgs =
-    {
+    static PyType_Spec type_spec_TimelinePropertiesChangedEventArgs = {
         "winrt._winrt_windows_media_control.TimelinePropertiesChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Control::TimelinePropertiesChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TimelinePropertiesChangedEventArgs
-    };
+        _type_slots_TimelinePropertiesChangedEventArgs};
 
     // ----- Windows.Media.Control Initialization --------------------
 

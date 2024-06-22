@@ -329,14 +329,12 @@ namespace py::cpp::Windows::Foundation::Metadata
         { },
     };
 
-    static PyType_Spec type_spec_ApiInformation =
-    {
+    static PyType_Spec type_spec_ApiInformation = {
         "winrt._winrt_windows_foundation_metadata.ApiInformation",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ApiInformation
-    };
+        _type_slots_ApiInformation};
 
     static PyGetSetDef getset_ApiInformation_Static[] = {
         { }

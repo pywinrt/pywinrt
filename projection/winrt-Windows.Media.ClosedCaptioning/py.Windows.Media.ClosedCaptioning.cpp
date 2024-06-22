@@ -303,14 +303,12 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
         { },
     };
 
-    static PyType_Spec type_spec_ClosedCaptionProperties =
-    {
+    static PyType_Spec type_spec_ClosedCaptionProperties = {
         "winrt._winrt_windows_media_closedcaptioning.ClosedCaptionProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ClosedCaptionProperties
-    };
+        _type_slots_ClosedCaptionProperties};
 
     static PyGetSetDef getset_ClosedCaptionProperties_Static[] = {
         { "background_color", reinterpret_cast<getter>(ClosedCaptionProperties_get_BackgroundColor), nullptr, nullptr, nullptr },

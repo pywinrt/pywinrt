@@ -225,14 +225,12 @@ namespace py::cpp::Windows::System::Update
         { },
     };
 
-    static PyType_Spec type_spec_SystemUpdateItem =
-    {
+    static PyType_Spec type_spec_SystemUpdateItem = {
         "winrt._winrt_windows_system_update.SystemUpdateItem",
         sizeof(py::wrapper::Windows::System::Update::SystemUpdateItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemUpdateItem
-    };
+        _type_slots_SystemUpdateItem};
 
     // ----- SystemUpdateLastErrorInfo class --------------------
 
@@ -354,14 +352,12 @@ namespace py::cpp::Windows::System::Update
         { },
     };
 
-    static PyType_Spec type_spec_SystemUpdateLastErrorInfo =
-    {
+    static PyType_Spec type_spec_SystemUpdateLastErrorInfo = {
         "winrt._winrt_windows_system_update.SystemUpdateLastErrorInfo",
         sizeof(py::wrapper::Windows::System::Update::SystemUpdateLastErrorInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemUpdateLastErrorInfo
-    };
+        _type_slots_SystemUpdateLastErrorInfo};
 
     // ----- SystemUpdateManager class --------------------
 
@@ -975,14 +971,12 @@ namespace py::cpp::Windows::System::Update
         { },
     };
 
-    static PyType_Spec type_spec_SystemUpdateManager =
-    {
+    static PyType_Spec type_spec_SystemUpdateManager = {
         "winrt._winrt_windows_system_update.SystemUpdateManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemUpdateManager
-    };
+        _type_slots_SystemUpdateManager};
 
     static PyGetSetDef getset_SystemUpdateManager_Static[] = {
         { "attention_required_reason", reinterpret_cast<getter>(SystemUpdateManager_get_AttentionRequiredReason), nullptr, nullptr, nullptr },

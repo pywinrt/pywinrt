@@ -106,14 +106,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_KnownRemoteSystemCapabilities =
-    {
+    static PyType_Spec type_spec_KnownRemoteSystemCapabilities = {
         "winrt._winrt_windows_system_remotesystems.KnownRemoteSystemCapabilities",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownRemoteSystemCapabilities
-    };
+        _type_slots_KnownRemoteSystemCapabilities};
 
     static PyGetSetDef getset_KnownRemoteSystemCapabilities_Static[] = {
         { "app_service", reinterpret_cast<getter>(KnownRemoteSystemCapabilities_get_AppService), nullptr, nullptr, nullptr },
@@ -648,14 +646,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystem =
-    {
+    static PyType_Spec type_spec_RemoteSystem = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystem",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystem
-    };
+        _type_slots_RemoteSystem};
 
     static PyGetSetDef getset_RemoteSystem_Static[] = {
         { }
@@ -767,14 +763,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemAddedEventArgs =
-    {
+    static PyType_Spec type_spec_RemoteSystemAddedEventArgs = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemAddedEventArgs",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemAddedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemAddedEventArgs
-    };
+        _type_slots_RemoteSystemAddedEventArgs};
 
     // ----- RemoteSystemApp class --------------------
 
@@ -976,14 +970,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemApp =
-    {
+    static PyType_Spec type_spec_RemoteSystemApp = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemApp",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemApp),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemApp
-    };
+        _type_slots_RemoteSystemApp};
 
     // ----- RemoteSystemAppRegistration class --------------------
 
@@ -1175,14 +1167,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemAppRegistration =
-    {
+    static PyType_Spec type_spec_RemoteSystemAppRegistration = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemAppRegistration",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemAppRegistration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemAppRegistration
-    };
+        _type_slots_RemoteSystemAppRegistration};
 
     static PyGetSetDef getset_RemoteSystemAppRegistration_Static[] = {
         { }
@@ -1315,14 +1305,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemAuthorizationKindFilter =
-    {
+    static PyType_Spec type_spec_RemoteSystemAuthorizationKindFilter = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemAuthorizationKindFilter",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemAuthorizationKindFilter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemAuthorizationKindFilter
-    };
+        _type_slots_RemoteSystemAuthorizationKindFilter};
 
     // ----- RemoteSystemConnectionInfo class --------------------
 
@@ -1435,14 +1423,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemConnectionInfo =
-    {
+    static PyType_Spec type_spec_RemoteSystemConnectionInfo = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemConnectionInfo",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemConnectionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemConnectionInfo
-    };
+        _type_slots_RemoteSystemConnectionInfo};
 
     static PyGetSetDef getset_RemoteSystemConnectionInfo_Static[] = {
         { }
@@ -1708,14 +1694,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemConnectionRequest =
-    {
+    static PyType_Spec type_spec_RemoteSystemConnectionRequest = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemConnectionRequest",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemConnectionRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemConnectionRequest
-    };
+        _type_slots_RemoteSystemConnectionRequest};
 
     static PyGetSetDef getset_RemoteSystemConnectionRequest_Static[] = {
         { }
@@ -1849,14 +1833,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemDiscoveryTypeFilter =
-    {
+    static PyType_Spec type_spec_RemoteSystemDiscoveryTypeFilter = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemDiscoveryTypeFilter",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemDiscoveryTypeFilter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemDiscoveryTypeFilter
-    };
+        _type_slots_RemoteSystemDiscoveryTypeFilter};
 
     // ----- RemoteSystemEnumerationCompletedEventArgs class --------------------
 
@@ -1918,14 +1900,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemEnumerationCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_RemoteSystemEnumerationCompletedEventArgs = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemEnumerationCompletedEventArgs",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemEnumerationCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemEnumerationCompletedEventArgs
-    };
+        _type_slots_RemoteSystemEnumerationCompletedEventArgs};
 
     // ----- RemoteSystemKindFilter class --------------------
 
@@ -2031,14 +2011,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemKindFilter =
-    {
+    static PyType_Spec type_spec_RemoteSystemKindFilter = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemKindFilter",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemKindFilter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemKindFilter
-    };
+        _type_slots_RemoteSystemKindFilter};
 
     // ----- RemoteSystemKinds class --------------------
 
@@ -2217,14 +2195,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemKinds =
-    {
+    static PyType_Spec type_spec_RemoteSystemKinds = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemKinds",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemKinds
-    };
+        _type_slots_RemoteSystemKinds};
 
     static PyGetSetDef getset_RemoteSystemKinds_Static[] = {
         { "desktop", reinterpret_cast<getter>(RemoteSystemKinds_get_Desktop), nullptr, nullptr, nullptr },
@@ -2339,14 +2315,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemRemovedEventArgs =
-    {
+    static PyType_Spec type_spec_RemoteSystemRemovedEventArgs = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemRemovedEventArgs",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemRemovedEventArgs
-    };
+        _type_slots_RemoteSystemRemovedEventArgs};
 
     // ----- RemoteSystemSession class --------------------
 
@@ -2656,14 +2630,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSession =
-    {
+    static PyType_Spec type_spec_RemoteSystemSession = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSession",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSession
-    };
+        _type_slots_RemoteSystemSession};
 
     static PyGetSetDef getset_RemoteSystemSession_Static[] = {
         { }
@@ -2771,14 +2743,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionAddedEventArgs =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionAddedEventArgs = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionAddedEventArgs",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionAddedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionAddedEventArgs
-    };
+        _type_slots_RemoteSystemSessionAddedEventArgs};
 
     // ----- RemoteSystemSessionController class --------------------
 
@@ -2987,14 +2957,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionController =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionController = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionController",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionController
-    };
+        _type_slots_RemoteSystemSessionController};
 
     // ----- RemoteSystemSessionCreationResult class --------------------
 
@@ -3096,14 +3064,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionCreationResult =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionCreationResult = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionCreationResult",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionCreationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionCreationResult
-    };
+        _type_slots_RemoteSystemSessionCreationResult};
 
     // ----- RemoteSystemSessionDisconnectedEventArgs class --------------------
 
@@ -3185,14 +3151,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionDisconnectedEventArgs =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionDisconnectedEventArgs = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionDisconnectedEventArgs",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionDisconnectedEventArgs
-    };
+        _type_slots_RemoteSystemSessionDisconnectedEventArgs};
 
     // ----- RemoteSystemSessionInfo class --------------------
 
@@ -3324,14 +3288,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionInfo =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionInfo = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionInfo",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionInfo
-    };
+        _type_slots_RemoteSystemSessionInfo};
 
     // ----- RemoteSystemSessionInvitation class --------------------
 
@@ -3433,14 +3395,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionInvitation =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionInvitation = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionInvitation",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionInvitation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionInvitation
-    };
+        _type_slots_RemoteSystemSessionInvitation};
 
     // ----- RemoteSystemSessionInvitationListener class --------------------
 
@@ -3569,14 +3529,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionInvitationListener =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionInvitationListener = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionInvitationListener",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionInvitationListener),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionInvitationListener
-    };
+        _type_slots_RemoteSystemSessionInvitationListener};
 
     // ----- RemoteSystemSessionInvitationReceivedEventArgs class --------------------
 
@@ -3658,14 +3616,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionInvitationReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionInvitationReceivedEventArgs = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionInvitationReceivedEventArgs",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionInvitationReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionInvitationReceivedEventArgs
-    };
+        _type_slots_RemoteSystemSessionInvitationReceivedEventArgs};
 
     // ----- RemoteSystemSessionJoinRequest class --------------------
 
@@ -3778,14 +3734,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionJoinRequest =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionJoinRequest = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionJoinRequest",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionJoinRequest
-    };
+        _type_slots_RemoteSystemSessionJoinRequest};
 
     // ----- RemoteSystemSessionJoinRequestedEventArgs class --------------------
 
@@ -3897,14 +3851,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionJoinRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionJoinRequestedEventArgs = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionJoinRequestedEventArgs",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionJoinRequestedEventArgs
-    };
+        _type_slots_RemoteSystemSessionJoinRequestedEventArgs};
 
     // ----- RemoteSystemSessionJoinResult class --------------------
 
@@ -4006,14 +3958,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionJoinResult =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionJoinResult = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionJoinResult",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionJoinResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionJoinResult
-    };
+        _type_slots_RemoteSystemSessionJoinResult};
 
     // ----- RemoteSystemSessionMessageChannel class --------------------
 
@@ -4280,14 +4230,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionMessageChannel =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionMessageChannel = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionMessageChannel",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionMessageChannel
-    };
+        _type_slots_RemoteSystemSessionMessageChannel};
 
     // ----- RemoteSystemSessionOptions class --------------------
 
@@ -4419,14 +4367,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionOptions =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionOptions = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionOptions",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionOptions
-    };
+        _type_slots_RemoteSystemSessionOptions};
 
     // ----- RemoteSystemSessionParticipant class --------------------
 
@@ -4538,14 +4484,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionParticipant =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionParticipant = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionParticipant",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipant),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionParticipant
-    };
+        _type_slots_RemoteSystemSessionParticipant};
 
     // ----- RemoteSystemSessionParticipantAddedEventArgs class --------------------
 
@@ -4627,14 +4571,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionParticipantAddedEventArgs =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionParticipantAddedEventArgs = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionParticipantAddedEventArgs",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipantAddedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionParticipantAddedEventArgs
-    };
+        _type_slots_RemoteSystemSessionParticipantAddedEventArgs};
 
     // ----- RemoteSystemSessionParticipantRemovedEventArgs class --------------------
 
@@ -4716,14 +4658,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionParticipantRemovedEventArgs =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionParticipantRemovedEventArgs = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionParticipantRemovedEventArgs",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipantRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionParticipantRemovedEventArgs
-    };
+        _type_slots_RemoteSystemSessionParticipantRemovedEventArgs};
 
     // ----- RemoteSystemSessionParticipantWatcher class --------------------
 
@@ -5002,14 +4942,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionParticipantWatcher =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionParticipantWatcher = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionParticipantWatcher",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionParticipantWatcher
-    };
+        _type_slots_RemoteSystemSessionParticipantWatcher};
 
     // ----- RemoteSystemSessionRemovedEventArgs class --------------------
 
@@ -5091,14 +5029,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionRemovedEventArgs =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionRemovedEventArgs = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionRemovedEventArgs",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionRemovedEventArgs
-    };
+        _type_slots_RemoteSystemSessionRemovedEventArgs};
 
     // ----- RemoteSystemSessionUpdatedEventArgs class --------------------
 
@@ -5180,14 +5116,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionUpdatedEventArgs =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionUpdatedEventArgs = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionUpdatedEventArgs",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionUpdatedEventArgs
-    };
+        _type_slots_RemoteSystemSessionUpdatedEventArgs};
 
     // ----- RemoteSystemSessionValueSetReceivedEventArgs class --------------------
 
@@ -5289,14 +5223,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionValueSetReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionValueSetReceivedEventArgs = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionValueSetReceivedEventArgs",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionValueSetReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionValueSetReceivedEventArgs
-    };
+        _type_slots_RemoteSystemSessionValueSetReceivedEventArgs};
 
     // ----- RemoteSystemSessionWatcher class --------------------
 
@@ -5575,14 +5507,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemSessionWatcher =
-    {
+    static PyType_Spec type_spec_RemoteSystemSessionWatcher = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemSessionWatcher",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemSessionWatcher
-    };
+        _type_slots_RemoteSystemSessionWatcher};
 
     // ----- RemoteSystemStatusTypeFilter class --------------------
 
@@ -5688,14 +5618,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemStatusTypeFilter =
-    {
+    static PyType_Spec type_spec_RemoteSystemStatusTypeFilter = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemStatusTypeFilter",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemStatusTypeFilter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemStatusTypeFilter
-    };
+        _type_slots_RemoteSystemStatusTypeFilter};
 
     // ----- RemoteSystemUpdatedEventArgs class --------------------
 
@@ -5777,14 +5705,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemUpdatedEventArgs =
-    {
+    static PyType_Spec type_spec_RemoteSystemUpdatedEventArgs = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemUpdatedEventArgs",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemUpdatedEventArgs
-    };
+        _type_slots_RemoteSystemUpdatedEventArgs};
 
     // ----- RemoteSystemWatcher class --------------------
 
@@ -6153,14 +6079,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemWatcher =
-    {
+    static PyType_Spec type_spec_RemoteSystemWatcher = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemWatcher",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemWatcher
-    };
+        _type_slots_RemoteSystemWatcher};
 
     // ----- RemoteSystemWatcherErrorOccurredEventArgs class --------------------
 
@@ -6242,14 +6166,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemWatcherErrorOccurredEventArgs =
-    {
+    static PyType_Spec type_spec_RemoteSystemWatcherErrorOccurredEventArgs = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemWatcherErrorOccurredEventArgs",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemWatcherErrorOccurredEventArgs
-    };
+        _type_slots_RemoteSystemWatcherErrorOccurredEventArgs};
 
     // ----- RemoteSystemWebAccountFilter class --------------------
 
@@ -6355,14 +6277,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_RemoteSystemWebAccountFilter =
-    {
+    static PyType_Spec type_spec_RemoteSystemWebAccountFilter = {
         "winrt._winrt_windows_system_remotesystems.RemoteSystemWebAccountFilter",
         sizeof(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWebAccountFilter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteSystemWebAccountFilter
-    };
+        _type_slots_RemoteSystemWebAccountFilter};
 
     // ----- IRemoteSystemFilter interface --------------------
 
@@ -6424,14 +6344,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { },
     };
 
-    static PyType_Spec type_spec_IRemoteSystemFilter =
-    {
+    static PyType_Spec type_spec_IRemoteSystemFilter = {
         "winrt._winrt_windows_system_remotesystems.IRemoteSystemFilter",
         sizeof(py::wrapper::Windows::System::RemoteSystems::IRemoteSystemFilter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IRemoteSystemFilter
-    };
+        _type_slots_IRemoteSystemFilter};
 
     // ----- Windows.System.RemoteSystems Initialization --------------------
 

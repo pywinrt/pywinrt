@@ -775,14 +775,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { },
     };
 
-    static PyType_Spec type_spec_DesktopAcrylicController =
-    {
+    static PyType_Spec type_spec_DesktopAcrylicController = {
         "winrt._winrt_microsoft_ui_composition_systembackdrops.DesktopAcrylicController",
         sizeof(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DesktopAcrylicController
-    };
+        _type_slots_DesktopAcrylicController};
 
     static PyGetSetDef getset_DesktopAcrylicController_Static[] = {
         { }
@@ -1580,14 +1578,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { },
     };
 
-    static PyType_Spec type_spec_MicaController =
-    {
+    static PyType_Spec type_spec_MicaController = {
         "winrt._winrt_microsoft_ui_composition_systembackdrops.MicaController",
         sizeof(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MicaController
-    };
+        _type_slots_MicaController};
 
     static PyGetSetDef getset_MicaController_Static[] = {
         { }
@@ -1889,14 +1885,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { },
     };
 
-    static PyType_Spec type_spec_SystemBackdropConfiguration =
-    {
+    static PyType_Spec type_spec_SystemBackdropConfiguration = {
         "winrt._winrt_microsoft_ui_composition_systembackdrops.SystemBackdropConfiguration",
         sizeof(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemBackdropConfiguration
-    };
+        _type_slots_SystemBackdropConfiguration};
 
     // ----- ISystemBackdropController interface --------------------
 
@@ -2043,14 +2037,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { },
     };
 
-    static PyType_Spec type_spec_ISystemBackdropController =
-    {
+    static PyType_Spec type_spec_ISystemBackdropController = {
         "winrt._winrt_microsoft_ui_composition_systembackdrops.ISystemBackdropController",
         sizeof(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISystemBackdropController
-    };
+        _type_slots_ISystemBackdropController};
 
     // ----- ISystemBackdropControllerWithTargets interface --------------------
 
@@ -2390,14 +2382,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { },
     };
 
-    static PyType_Spec type_spec_ISystemBackdropControllerWithTargets =
-    {
+    static PyType_Spec type_spec_ISystemBackdropControllerWithTargets = {
         "winrt._winrt_microsoft_ui_composition_systembackdrops.ISystemBackdropControllerWithTargets",
         sizeof(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISystemBackdropControllerWithTargets
-    };
+        _type_slots_ISystemBackdropControllerWithTargets};
 
     // ----- Microsoft.UI.Composition.SystemBackdrops Initialization --------------------
 

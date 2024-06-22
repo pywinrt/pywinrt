@@ -223,14 +223,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { },
     };
 
-    static PyType_Spec type_spec_LocalContentSuggestionSettings =
-    {
+    static PyType_Spec type_spec_LocalContentSuggestionSettings = {
         "winrt._winrt_windows_applicationmodel_search.LocalContentSuggestionSettings",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::LocalContentSuggestionSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LocalContentSuggestionSettings
-    };
+        _type_slots_LocalContentSuggestionSettings};
 
     // ----- SearchPane class --------------------
 
@@ -945,14 +943,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { },
     };
 
-    static PyType_Spec type_spec_SearchPane =
-    {
+    static PyType_Spec type_spec_SearchPane = {
         "winrt._winrt_windows_applicationmodel_search.SearchPane",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchPane),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SearchPane
-    };
+        _type_slots_SearchPane};
 
     static PyGetSetDef getset_SearchPane_Static[] = {
         { }
@@ -1101,14 +1097,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { },
     };
 
-    static PyType_Spec type_spec_SearchPaneQueryChangedEventArgs =
-    {
+    static PyType_Spec type_spec_SearchPaneQueryChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_search.SearchPaneQueryChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SearchPaneQueryChangedEventArgs
-    };
+        _type_slots_SearchPaneQueryChangedEventArgs};
 
     // ----- SearchPaneQueryLinguisticDetails class --------------------
 
@@ -1230,14 +1224,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { },
     };
 
-    static PyType_Spec type_spec_SearchPaneQueryLinguisticDetails =
-    {
+    static PyType_Spec type_spec_SearchPaneQueryLinguisticDetails = {
         "winrt._winrt_windows_applicationmodel_search.SearchPaneQueryLinguisticDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchPaneQueryLinguisticDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SearchPaneQueryLinguisticDetails
-    };
+        _type_slots_SearchPaneQueryLinguisticDetails};
 
     // ----- SearchPaneQuerySubmittedEventArgs class --------------------
 
@@ -1359,14 +1351,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { },
     };
 
-    static PyType_Spec type_spec_SearchPaneQuerySubmittedEventArgs =
-    {
+    static PyType_Spec type_spec_SearchPaneQuerySubmittedEventArgs = {
         "winrt._winrt_windows_applicationmodel_search.SearchPaneQuerySubmittedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SearchPaneQuerySubmittedEventArgs
-    };
+        _type_slots_SearchPaneQuerySubmittedEventArgs};
 
     // ----- SearchPaneResultSuggestionChosenEventArgs class --------------------
 
@@ -1448,14 +1438,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { },
     };
 
-    static PyType_Spec type_spec_SearchPaneResultSuggestionChosenEventArgs =
-    {
+    static PyType_Spec type_spec_SearchPaneResultSuggestionChosenEventArgs = {
         "winrt._winrt_windows_applicationmodel_search.SearchPaneResultSuggestionChosenEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SearchPaneResultSuggestionChosenEventArgs
-    };
+        _type_slots_SearchPaneResultSuggestionChosenEventArgs};
 
     // ----- SearchPaneSuggestionsRequest class --------------------
 
@@ -1587,14 +1575,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { },
     };
 
-    static PyType_Spec type_spec_SearchPaneSuggestionsRequest =
-    {
+    static PyType_Spec type_spec_SearchPaneSuggestionsRequest = {
         "winrt._winrt_windows_applicationmodel_search.SearchPaneSuggestionsRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SearchPaneSuggestionsRequest
-    };
+        _type_slots_SearchPaneSuggestionsRequest};
 
     // ----- SearchPaneSuggestionsRequestDeferral class --------------------
 
@@ -1687,14 +1673,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { },
     };
 
-    static PyType_Spec type_spec_SearchPaneSuggestionsRequestDeferral =
-    {
+    static PyType_Spec type_spec_SearchPaneSuggestionsRequestDeferral = {
         "winrt._winrt_windows_applicationmodel_search.SearchPaneSuggestionsRequestDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SearchPaneSuggestionsRequestDeferral
-    };
+        _type_slots_SearchPaneSuggestionsRequestDeferral};
 
     // ----- SearchPaneSuggestionsRequestedEventArgs class --------------------
 
@@ -1836,14 +1820,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { },
     };
 
-    static PyType_Spec type_spec_SearchPaneSuggestionsRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_SearchPaneSuggestionsRequestedEventArgs = {
         "winrt._winrt_windows_applicationmodel_search.SearchPaneSuggestionsRequestedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SearchPaneSuggestionsRequestedEventArgs
-    };
+        _type_slots_SearchPaneSuggestionsRequestedEventArgs};
 
     // ----- SearchPaneVisibilityChangedEventArgs class --------------------
 
@@ -1925,14 +1907,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { },
     };
 
-    static PyType_Spec type_spec_SearchPaneVisibilityChangedEventArgs =
-    {
+    static PyType_Spec type_spec_SearchPaneVisibilityChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_search.SearchPaneVisibilityChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SearchPaneVisibilityChangedEventArgs
-    };
+        _type_slots_SearchPaneVisibilityChangedEventArgs};
 
     // ----- SearchQueryLinguisticDetails class --------------------
 
@@ -2080,14 +2060,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { },
     };
 
-    static PyType_Spec type_spec_SearchQueryLinguisticDetails =
-    {
+    static PyType_Spec type_spec_SearchQueryLinguisticDetails = {
         "winrt._winrt_windows_applicationmodel_search.SearchQueryLinguisticDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchQueryLinguisticDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SearchQueryLinguisticDetails
-    };
+        _type_slots_SearchQueryLinguisticDetails};
 
     // ----- SearchSuggestionCollection class --------------------
 
@@ -2305,14 +2283,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { },
     };
 
-    static PyType_Spec type_spec_SearchSuggestionCollection =
-    {
+    static PyType_Spec type_spec_SearchSuggestionCollection = {
         "winrt._winrt_windows_applicationmodel_search.SearchSuggestionCollection",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchSuggestionCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SearchSuggestionCollection
-    };
+        _type_slots_SearchSuggestionCollection};
 
     // ----- SearchSuggestionsRequest class --------------------
 
@@ -2444,14 +2420,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { },
     };
 
-    static PyType_Spec type_spec_SearchSuggestionsRequest =
-    {
+    static PyType_Spec type_spec_SearchSuggestionsRequest = {
         "winrt._winrt_windows_applicationmodel_search.SearchSuggestionsRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchSuggestionsRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SearchSuggestionsRequest
-    };
+        _type_slots_SearchSuggestionsRequest};
 
     // ----- SearchSuggestionsRequestDeferral class --------------------
 
@@ -2544,14 +2518,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { },
     };
 
-    static PyType_Spec type_spec_SearchSuggestionsRequestDeferral =
-    {
+    static PyType_Spec type_spec_SearchSuggestionsRequestDeferral = {
         "winrt._winrt_windows_applicationmodel_search.SearchSuggestionsRequestDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchSuggestionsRequestDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SearchSuggestionsRequestDeferral
-    };
+        _type_slots_SearchSuggestionsRequestDeferral};
 
     // ----- ISearchPaneQueryChangedEventArgs interface --------------------
 
@@ -2673,14 +2645,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { },
     };
 
-    static PyType_Spec type_spec_ISearchPaneQueryChangedEventArgs =
-    {
+    static PyType_Spec type_spec_ISearchPaneQueryChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_search.ISearchPaneQueryChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISearchPaneQueryChangedEventArgs
-    };
+        _type_slots_ISearchPaneQueryChangedEventArgs};
 
     // ----- Windows.ApplicationModel.Search Initialization --------------------
 

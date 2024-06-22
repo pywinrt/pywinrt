@@ -1194,14 +1194,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         { },
     };
 
-    static PyType_Spec type_spec_FileInformation =
-    {
+    static PyType_Spec type_spec_FileInformation = {
         "winrt._winrt_windows_storage_bulkaccess.FileInformation",
         sizeof(py::wrapper::Windows::Storage::BulkAccess::FileInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FileInformation
-    };
+        _type_slots_FileInformation};
 
     // ----- FileInformationFactory class --------------------
 
@@ -1585,14 +1583,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         { },
     };
 
-    static PyType_Spec type_spec_FileInformationFactory =
-    {
+    static PyType_Spec type_spec_FileInformationFactory = {
         "winrt._winrt_windows_storage_bulkaccess.FileInformationFactory",
         sizeof(py::wrapper::Windows::Storage::BulkAccess::FileInformationFactory),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FileInformationFactory
-    };
+        _type_slots_FileInformationFactory};
 
     // ----- FolderInformation class --------------------
 
@@ -3127,14 +3123,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         { },
     };
 
-    static PyType_Spec type_spec_FolderInformation =
-    {
+    static PyType_Spec type_spec_FolderInformation = {
         "winrt._winrt_windows_storage_bulkaccess.FolderInformation",
         sizeof(py::wrapper::Windows::Storage::BulkAccess::FolderInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FolderInformation
-    };
+        _type_slots_FolderInformation};
 
     // ----- IStorageItemInformation interface --------------------
 
@@ -3406,14 +3400,12 @@ namespace py::cpp::Windows::Storage::BulkAccess
         { },
     };
 
-    static PyType_Spec type_spec_IStorageItemInformation =
-    {
+    static PyType_Spec type_spec_IStorageItemInformation = {
         "winrt._winrt_windows_storage_bulkaccess.IStorageItemInformation",
         sizeof(py::wrapper::Windows::Storage::BulkAccess::IStorageItemInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IStorageItemInformation
-    };
+        _type_slots_IStorageItemInformation};
 
     // ----- Windows.Storage.BulkAccess Initialization --------------------
 

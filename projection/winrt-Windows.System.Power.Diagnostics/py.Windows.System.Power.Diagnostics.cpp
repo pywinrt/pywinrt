@@ -108,14 +108,12 @@ namespace py::cpp::Windows::System::Power::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundEnergyDiagnostics =
-    {
+    static PyType_Spec type_spec_BackgroundEnergyDiagnostics = {
         "winrt._winrt_windows_system_power_diagnostics.BackgroundEnergyDiagnostics",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundEnergyDiagnostics
-    };
+        _type_slots_BackgroundEnergyDiagnostics};
 
     static PyGetSetDef getset_BackgroundEnergyDiagnostics_Static[] = {
         { "device_specific_conversion_factor", reinterpret_cast<getter>(BackgroundEnergyDiagnostics_get_DeviceSpecificConversionFactor), nullptr, nullptr, nullptr },
@@ -248,14 +246,12 @@ namespace py::cpp::Windows::System::Power::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_ForegroundEnergyDiagnostics =
-    {
+    static PyType_Spec type_spec_ForegroundEnergyDiagnostics = {
         "winrt._winrt_windows_system_power_diagnostics.ForegroundEnergyDiagnostics",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ForegroundEnergyDiagnostics
-    };
+        _type_slots_ForegroundEnergyDiagnostics};
 
     static PyGetSetDef getset_ForegroundEnergyDiagnostics_Static[] = {
         { "device_specific_conversion_factor", reinterpret_cast<getter>(ForegroundEnergyDiagnostics_get_DeviceSpecificConversionFactor), nullptr, nullptr, nullptr },

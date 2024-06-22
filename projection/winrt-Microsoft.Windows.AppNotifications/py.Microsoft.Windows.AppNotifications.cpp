@@ -465,14 +465,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
         { },
     };
 
-    static PyType_Spec type_spec_AppNotification =
-    {
+    static PyType_Spec type_spec_AppNotification = {
         "winrt._winrt_microsoft_windows_appnotifications.AppNotification",
         sizeof(py::wrapper::Microsoft::Windows::AppNotifications::AppNotification),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppNotification
-    };
+        _type_slots_AppNotification};
 
     // ----- AppNotificationActivatedEventArgs class --------------------
 
@@ -594,14 +592,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
         { },
     };
 
-    static PyType_Spec type_spec_AppNotificationActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_AppNotificationActivatedEventArgs = {
         "winrt._winrt_microsoft_windows_appnotifications.AppNotificationActivatedEventArgs",
         sizeof(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppNotificationActivatedEventArgs
-    };
+        _type_slots_AppNotificationActivatedEventArgs};
 
     // ----- AppNotificationManager class --------------------
 
@@ -1168,14 +1164,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
         { },
     };
 
-    static PyType_Spec type_spec_AppNotificationManager =
-    {
+    static PyType_Spec type_spec_AppNotificationManager = {
         "winrt._winrt_microsoft_windows_appnotifications.AppNotificationManager",
         sizeof(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppNotificationManager
-    };
+        _type_slots_AppNotificationManager};
 
     static PyGetSetDef getset_AppNotificationManager_Static[] = {
         { "default", reinterpret_cast<getter>(AppNotificationManager_get_Default), nullptr, nullptr, nullptr },
@@ -1528,14 +1522,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
         { },
     };
 
-    static PyType_Spec type_spec_AppNotificationProgressData =
-    {
+    static PyType_Spec type_spec_AppNotificationProgressData = {
         "winrt._winrt_microsoft_windows_appnotifications.AppNotificationProgressData",
         sizeof(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationProgressData),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppNotificationProgressData
-    };
+        _type_slots_AppNotificationProgressData};
 
     // ----- Microsoft.Windows.AppNotifications Initialization --------------------
 

@@ -175,14 +175,12 @@ namespace py::cpp::Windows::Management::Workplace
         { },
     };
 
-    static PyType_Spec type_spec_MdmPolicy =
-    {
+    static PyType_Spec type_spec_MdmPolicy = {
         "winrt._winrt_windows_management_workplace.MdmPolicy",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MdmPolicy
-    };
+        _type_slots_MdmPolicy};
 
     static PyGetSetDef getset_MdmPolicy_Static[] = {
         { }
@@ -258,14 +256,12 @@ namespace py::cpp::Windows::Management::Workplace
         { },
     };
 
-    static PyType_Spec type_spec_WorkplaceSettings =
-    {
+    static PyType_Spec type_spec_WorkplaceSettings = {
         "winrt._winrt_windows_management_workplace.WorkplaceSettings",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WorkplaceSettings
-    };
+        _type_slots_WorkplaceSettings};
 
     static PyGetSetDef getset_WorkplaceSettings_Static[] = {
         { "is_microsoft_account_optional", reinterpret_cast<getter>(WorkplaceSettings_get_IsMicrosoftAccountOptional), nullptr, nullptr, nullptr },

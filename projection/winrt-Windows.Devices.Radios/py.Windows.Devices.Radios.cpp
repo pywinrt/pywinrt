@@ -320,14 +320,12 @@ namespace py::cpp::Windows::Devices::Radios
         { },
     };
 
-    static PyType_Spec type_spec_Radio =
-    {
+    static PyType_Spec type_spec_Radio = {
         "winrt._winrt_windows_devices_radios.Radio",
         sizeof(py::wrapper::Windows::Devices::Radios::Radio),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Radio
-    };
+        _type_slots_Radio};
 
     static PyGetSetDef getset_Radio_Static[] = {
         { }

@@ -241,14 +241,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { },
     };
 
-    static PyType_Spec type_spec_DragDropManager =
-    {
+    static PyType_Spec type_spec_DragDropManager = {
         "winrt._winrt_microsoft_ui_input_dragdrop.DragDropManager",
         sizeof(py::wrapper::Microsoft::UI::Input::DragDrop::DragDropManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DragDropManager
-    };
+        _type_slots_DragDropManager};
 
     static PyGetSetDef getset_DragDropManager_Static[] = {
         { }
@@ -416,14 +414,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { },
     };
 
-    static PyType_Spec type_spec_DragInfo =
-    {
+    static PyType_Spec type_spec_DragInfo = {
         "winrt._winrt_microsoft_ui_input_dragdrop.DragInfo",
         sizeof(py::wrapper::Microsoft::UI::Input::DragDrop::DragInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DragInfo
-    };
+        _type_slots_DragInfo};
 
     // ----- DragOperation class --------------------
 
@@ -763,14 +759,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { },
     };
 
-    static PyType_Spec type_spec_DragOperation =
-    {
+    static PyType_Spec type_spec_DragOperation = {
         "winrt._winrt_microsoft_ui_input_dragdrop.DragOperation",
         sizeof(py::wrapper::Microsoft::UI::Input::DragDrop::DragOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DragOperation
-    };
+        _type_slots_DragOperation};
 
     // ----- DragUIOverride class --------------------
 
@@ -1110,14 +1104,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { },
     };
 
-    static PyType_Spec type_spec_DragUIOverride =
-    {
+    static PyType_Spec type_spec_DragUIOverride = {
         "winrt._winrt_microsoft_ui_input_dragdrop.DragUIOverride",
         sizeof(py::wrapper::Microsoft::UI::Input::DragDrop::DragUIOverride),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DragUIOverride
-    };
+        _type_slots_DragUIOverride};
 
     // ----- DropOperationTargetRequestedEventArgs class --------------------
 
@@ -1212,14 +1204,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { },
     };
 
-    static PyType_Spec type_spec_DropOperationTargetRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_DropOperationTargetRequestedEventArgs = {
         "winrt._winrt_microsoft_ui_input_dragdrop.DropOperationTargetRequestedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Input::DragDrop::DropOperationTargetRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DropOperationTargetRequestedEventArgs
-    };
+        _type_slots_DropOperationTargetRequestedEventArgs};
 
     // ----- IDropOperationTarget interface --------------------
 
@@ -1411,14 +1401,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { },
     };
 
-    static PyType_Spec type_spec_IDropOperationTarget =
-    {
+    static PyType_Spec type_spec_IDropOperationTarget = {
         "winrt._winrt_microsoft_ui_input_dragdrop.IDropOperationTarget",
         sizeof(py::wrapper::Microsoft::UI::Input::DragDrop::IDropOperationTarget),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IDropOperationTarget
-    };
+        _type_slots_IDropOperationTarget};
 
     // ----- Microsoft.UI.Input.DragDrop Initialization --------------------
 

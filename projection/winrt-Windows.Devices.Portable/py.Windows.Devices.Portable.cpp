@@ -92,14 +92,12 @@ namespace py::cpp::Windows::Devices::Portable
         { },
     };
 
-    static PyType_Spec type_spec_ServiceDevice =
-    {
+    static PyType_Spec type_spec_ServiceDevice = {
         "winrt._winrt_windows_devices_portable.ServiceDevice",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ServiceDevice
-    };
+        _type_slots_ServiceDevice};
 
     static PyGetSetDef getset_ServiceDevice_Static[] = {
         { }
@@ -213,14 +211,12 @@ namespace py::cpp::Windows::Devices::Portable
         { },
     };
 
-    static PyType_Spec type_spec_StorageDevice =
-    {
+    static PyType_Spec type_spec_StorageDevice = {
         "winrt._winrt_windows_devices_portable.StorageDevice",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageDevice
-    };
+        _type_slots_StorageDevice};
 
     static PyGetSetDef getset_StorageDevice_Static[] = {
         { }
