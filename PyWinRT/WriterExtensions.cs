@@ -1065,8 +1065,7 @@ static class WriterExtensions
                 );
                 break;
             case ParamCategory.ReceiveArray:
-                // FIXME: remove extra whitespace
-                w.WriteLine($"winrt::com_array<{typeName}> {paramName} {{ }};");
+                w.WriteLine($"winrt::com_array<{typeName}> {paramName}{{}};");
                 break;
             default:
                 throw new ArgumentException("Invalid param category");

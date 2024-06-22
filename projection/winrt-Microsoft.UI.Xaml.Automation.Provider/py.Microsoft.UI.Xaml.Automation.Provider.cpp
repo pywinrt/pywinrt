@@ -4699,7 +4699,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
                     return nullptr;
                 }
 
-                winrt::com_array<double> param0 { };
+                winrt::com_array<double> param0{};
 
                 self->obj.GetBoundingRectangles(param0);
 
@@ -5356,7 +5356,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
                     return nullptr;
                 }
 
-                winrt::com_array<double> param0 { };
+                winrt::com_array<double> param0{};
 
                 self->obj.GetBoundingRectangles(param0);
 

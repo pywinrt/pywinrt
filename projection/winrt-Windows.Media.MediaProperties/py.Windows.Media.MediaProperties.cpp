@@ -318,7 +318,7 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                winrt::com_array<uint8_t> param0 { };
+                winrt::com_array<uint8_t> param0{};
 
                 self->obj.GetFormatUserData(param0);
 
@@ -5519,7 +5519,7 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                winrt::com_array<uint8_t> param0 { };
+                winrt::com_array<uint8_t> param0{};
 
                 self->obj.GetFormatUserData(param0);
 
@@ -6007,7 +6007,7 @@ namespace py::cpp::Windows::Media::MediaProperties
                     return nullptr;
                 }
 
-                winrt::com_array<uint8_t> param0 { };
+                winrt::com_array<uint8_t> param0{};
 
                 self->obj.GetFormatUserData(param0);
 

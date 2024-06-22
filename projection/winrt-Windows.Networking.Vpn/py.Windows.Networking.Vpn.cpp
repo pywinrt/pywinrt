@@ -5445,7 +5445,7 @@ namespace py::cpp::Windows::Networking::Vpn
                     return nullptr;
                 }
 
-                winrt::com_array<uint8_t> param0 { };
+                winrt::com_array<uint8_t> param0{};
 
                 self->obj.GetAddressInfo(param0);
 
