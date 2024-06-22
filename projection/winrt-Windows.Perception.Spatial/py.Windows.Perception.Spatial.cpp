@@ -235,13 +235,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialAnchor[] = 
-    {
+    static PyType_Slot _type_slots_SpatialAnchor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialAnchor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialAnchor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialAnchor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialAnchor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialAnchor = {
@@ -388,13 +387,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialAnchorExportSufficiency[] = 
-    {
+    static PyType_Slot _type_slots_SpatialAnchorExportSufficiency[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialAnchorExportSufficiency) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialAnchorExportSufficiency) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialAnchorExportSufficiency) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialAnchorExportSufficiency) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialAnchorExportSufficiency = {
@@ -580,13 +578,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialAnchorExporter[] = 
-    {
+    static PyType_Slot _type_slots_SpatialAnchorExporter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialAnchorExporter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialAnchorExporter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialAnchorExporter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialAnchorExporter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialAnchorExporter = {
@@ -669,12 +666,11 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialAnchorManager[] = 
-    {
+    static PyType_Slot _type_slots_SpatialAnchorManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialAnchorManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialAnchorManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialAnchorManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialAnchorManager = {
@@ -781,13 +777,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialAnchorRawCoordinateSystemAdjustedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SpatialAnchorRawCoordinateSystemAdjustedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialAnchorRawCoordinateSystemAdjustedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialAnchorRawCoordinateSystemAdjustedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialAnchorRawCoordinateSystemAdjustedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialAnchorRawCoordinateSystemAdjustedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialAnchorRawCoordinateSystemAdjustedEventArgs = {
@@ -975,13 +970,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialAnchorStore[] = 
-    {
+    static PyType_Slot _type_slots_SpatialAnchorStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialAnchorStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialAnchorStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialAnchorStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialAnchorStore) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialAnchorStore = {
@@ -1100,12 +1094,11 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialAnchorTransferManager[] = 
-    {
+    static PyType_Slot _type_slots_SpatialAnchorTransferManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialAnchorTransferManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialAnchorTransferManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialAnchorTransferManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialAnchorTransferManager = {
@@ -1322,13 +1315,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialBoundingVolume[] = 
-    {
+    static PyType_Slot _type_slots_SpatialBoundingVolume[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingVolume) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialBoundingVolume) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialBoundingVolume) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingVolume) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialBoundingVolume = {
@@ -1450,13 +1442,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialCoordinateSystem[] = 
-    {
+    static PyType_Slot _type_slots_SpatialCoordinateSystem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialCoordinateSystem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialCoordinateSystem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialCoordinateSystem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialCoordinateSystem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialCoordinateSystem = {
@@ -1617,13 +1608,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialEntity[] = 
-    {
+    static PyType_Slot _type_slots_SpatialEntity[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialEntity) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialEntity) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialEntity) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialEntity) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialEntity = {
@@ -1704,13 +1694,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialEntityAddedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SpatialEntityAddedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialEntityAddedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialEntityAddedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialEntityAddedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialEntityAddedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialEntityAddedEventArgs = {
@@ -1791,13 +1780,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialEntityRemovedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SpatialEntityRemovedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialEntityRemovedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialEntityRemovedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialEntityRemovedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialEntityRemovedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialEntityRemovedEventArgs = {
@@ -2002,13 +1990,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialEntityStore[] = 
-    {
+    static PyType_Slot _type_slots_SpatialEntityStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialEntityStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialEntityStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialEntityStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialEntityStore) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialEntityStore = {
@@ -2116,13 +2103,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialEntityUpdatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SpatialEntityUpdatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialEntityUpdatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialEntityUpdatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialEntityUpdatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialEntityUpdatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialEntityUpdatedEventArgs = {
@@ -2445,13 +2431,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialEntityWatcher[] = 
-    {
+    static PyType_Slot _type_slots_SpatialEntityWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialEntityWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialEntityWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialEntityWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialEntityWatcher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialEntityWatcher = {
@@ -2672,13 +2657,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialLocation[] = 
-    {
+    static PyType_Slot _type_slots_SpatialLocation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialLocation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialLocation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialLocation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialLocation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialLocation = {
@@ -3097,13 +3081,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialLocator[] = 
-    {
+    static PyType_Slot _type_slots_SpatialLocator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialLocator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialLocator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialLocator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialLocator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialLocator = {
@@ -3383,13 +3366,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialLocatorAttachedFrameOfReference[] = 
-    {
+    static PyType_Slot _type_slots_SpatialLocatorAttachedFrameOfReference[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialLocatorAttachedFrameOfReference) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialLocatorAttachedFrameOfReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialLocatorAttachedFrameOfReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialLocatorAttachedFrameOfReference) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialLocatorAttachedFrameOfReference = {
@@ -3498,13 +3480,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialLocatorPositionalTrackingDeactivatingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SpatialLocatorPositionalTrackingDeactivatingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialLocatorPositionalTrackingDeactivatingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialLocatorPositionalTrackingDeactivatingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialLocatorPositionalTrackingDeactivatingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialLocatorPositionalTrackingDeactivatingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialLocatorPositionalTrackingDeactivatingEventArgs = {
@@ -3782,13 +3763,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialStageFrameOfReference[] = 
-    {
+    static PyType_Slot _type_slots_SpatialStageFrameOfReference[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialStageFrameOfReference) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialStageFrameOfReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialStageFrameOfReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialStageFrameOfReference) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialStageFrameOfReference = {
@@ -3896,13 +3876,12 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialStationaryFrameOfReference[] = 
-    {
+    static PyType_Slot _type_slots_SpatialStationaryFrameOfReference[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialStationaryFrameOfReference) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialStationaryFrameOfReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialStationaryFrameOfReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialStationaryFrameOfReference) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialStationaryFrameOfReference = {
@@ -4054,14 +4033,13 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialBoundingBox[] = 
-    {
+    static PyType_Slot _type_slots_SpatialBoundingBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingBox) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialBoundingBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialBoundingBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingBox) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialBoundingBox = {
@@ -4353,14 +4331,13 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialBoundingFrustum[] = 
-    {
+    static PyType_Slot _type_slots_SpatialBoundingFrustum[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingFrustum) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingFrustum) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialBoundingFrustum) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialBoundingFrustum) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingFrustum) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialBoundingFrustum = {
@@ -4547,14 +4524,13 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialBoundingOrientedBox[] = 
-    {
+    static PyType_Slot _type_slots_SpatialBoundingOrientedBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingOrientedBox) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingOrientedBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialBoundingOrientedBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialBoundingOrientedBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingOrientedBox) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialBoundingOrientedBox = {
@@ -4706,14 +4682,13 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialBoundingSphere[] = 
-    {
+    static PyType_Slot _type_slots_SpatialBoundingSphere[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingSphere) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingSphere) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialBoundingSphere) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialBoundingSphere) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingSphere) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialBoundingSphere = {
@@ -4865,14 +4840,13 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialRay[] = 
-    {
+    static PyType_Slot _type_slots_SpatialRay[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialRay) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialRay) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialRay) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialRay) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialRay) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialRay = {

@@ -482,13 +482,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { }
     };
 
-    static PyType_Slot _type_slots_PrintTicketCapabilities[] = 
-    {
+    static PyType_Slot _type_slots_PrintTicketCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTicketCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTicketCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTicketCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTicketCapabilities) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintTicketCapabilities = {
@@ -765,13 +764,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { }
     };
 
-    static PyType_Slot _type_slots_PrintTicketFeature[] = 
-    {
+    static PyType_Slot _type_slots_PrintTicketFeature[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTicketFeature) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTicketFeature) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTicketFeature) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTicketFeature) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintTicketFeature = {
@@ -1044,13 +1042,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { }
     };
 
-    static PyType_Slot _type_slots_PrintTicketOption[] = 
-    {
+    static PyType_Slot _type_slots_PrintTicketOption[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTicketOption) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTicketOption) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTicketOption) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTicketOption) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintTicketOption = {
@@ -1251,13 +1248,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { }
     };
 
-    static PyType_Slot _type_slots_PrintTicketParameterDefinition[] = 
-    {
+    static PyType_Slot _type_slots_PrintTicketParameterDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTicketParameterDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTicketParameterDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTicketParameterDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTicketParameterDefinition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintTicketParameterDefinition = {
@@ -1426,13 +1422,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { }
     };
 
-    static PyType_Slot _type_slots_PrintTicketParameterInitializer[] = 
-    {
+    static PyType_Slot _type_slots_PrintTicketParameterInitializer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTicketParameterInitializer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTicketParameterInitializer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTicketParameterInitializer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTicketParameterInitializer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintTicketParameterInitializer = {
@@ -1573,13 +1568,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { }
     };
 
-    static PyType_Slot _type_slots_PrintTicketValue[] = 
-    {
+    static PyType_Slot _type_slots_PrintTicketValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTicketValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTicketValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTicketValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTicketValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintTicketValue = {
@@ -2256,13 +2250,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { }
     };
 
-    static PyType_Slot _type_slots_WorkflowPrintTicket[] = 
-    {
+    static PyType_Slot _type_slots_WorkflowPrintTicket[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WorkflowPrintTicket) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WorkflowPrintTicket) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WorkflowPrintTicket) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WorkflowPrintTicket) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WorkflowPrintTicket = {
@@ -2363,13 +2356,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
         { }
     };
 
-    static PyType_Slot _type_slots_WorkflowPrintTicketValidationResult[] = 
-    {
+    static PyType_Slot _type_slots_WorkflowPrintTicketValidationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WorkflowPrintTicketValidationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WorkflowPrintTicketValidationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WorkflowPrintTicketValidationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WorkflowPrintTicketValidationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WorkflowPrintTicketValidationResult = {

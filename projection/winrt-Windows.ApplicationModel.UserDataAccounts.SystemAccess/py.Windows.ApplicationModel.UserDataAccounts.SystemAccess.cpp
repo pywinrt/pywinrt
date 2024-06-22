@@ -2182,13 +2182,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceAccountConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_DeviceAccountConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceAccountConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceAccountConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceAccountConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceAccountConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceAccountConfiguration = {
@@ -2370,12 +2369,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataAccountSystemAccessManager[] = 
-    {
+    static PyType_Slot _type_slots_UserDataAccountSystemAccessManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataAccountSystemAccessManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataAccountSystemAccessManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataAccountSystemAccessManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataAccountSystemAccessManager = {

@@ -882,13 +882,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
         { }
     };
 
-    static PyType_Slot _type_slots_CompositeTransform3D[] = 
-    {
+    static PyType_Slot _type_slots_CompositeTransform3D[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositeTransform3D) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositeTransform3D) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositeTransform3D) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositeTransform3D) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositeTransform3D = {
@@ -1176,13 +1175,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
         { }
     };
 
-    static PyType_Slot _type_slots_Matrix3DHelper[] = 
-    {
+    static PyType_Slot _type_slots_Matrix3DHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix3DHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix3DHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix3DHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix3DHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Matrix3DHelper = {
@@ -1497,13 +1495,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
         { }
     };
 
-    static PyType_Slot _type_slots_PerspectiveTransform3D[] = 
-    {
+    static PyType_Slot _type_slots_PerspectiveTransform3D[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerspectiveTransform3D) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerspectiveTransform3D) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerspectiveTransform3D) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerspectiveTransform3D) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerspectiveTransform3D = {
@@ -1592,13 +1589,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
         { }
     };
 
-    static PyType_Slot _type_slots_Transform3D[] = 
-    {
+    static PyType_Slot _type_slots_Transform3D[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Transform3D) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Transform3D) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Transform3D) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Transform3D) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Transform3D = {
@@ -2240,14 +2236,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
         { }
     };
 
-    static PyType_Slot _type_slots_Matrix3D[] = 
-    {
+    static PyType_Slot _type_slots_Matrix3D[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix3D) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Matrix3D) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix3D) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix3D) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix3D) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Matrix3D = {

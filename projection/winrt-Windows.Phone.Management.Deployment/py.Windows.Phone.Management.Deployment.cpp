@@ -176,13 +176,12 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_Enterprise[] = 
-    {
+    static PyType_Slot _type_slots_Enterprise[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Enterprise) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Enterprise) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Enterprise) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Enterprise) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Enterprise = {
@@ -338,12 +337,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_EnterpriseEnrollmentManager[] = 
-    {
+    static PyType_Slot _type_slots_EnterpriseEnrollmentManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EnterpriseEnrollmentManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EnterpriseEnrollmentManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EnterpriseEnrollmentManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EnterpriseEnrollmentManager = {
@@ -474,13 +472,12 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_EnterpriseEnrollmentResult[] = 
-    {
+    static PyType_Slot _type_slots_EnterpriseEnrollmentResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EnterpriseEnrollmentResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EnterpriseEnrollmentResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EnterpriseEnrollmentResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EnterpriseEnrollmentResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EnterpriseEnrollmentResult = {
@@ -736,12 +733,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_InstallationManager[] = 
-    {
+    static PyType_Slot _type_slots_InstallationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InstallationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InstallationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InstallationManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InstallationManager = {
@@ -893,13 +889,12 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_PackageInstallResult[] = 
-    {
+    static PyType_Slot _type_slots_PackageInstallResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageInstallResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageInstallResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageInstallResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageInstallResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PackageInstallResult = {

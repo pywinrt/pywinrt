@@ -290,13 +290,12 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
         { }
     };
 
-    static PyType_Slot _type_slots_PnpObject[] = 
-    {
+    static PyType_Slot _type_slots_PnpObject[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PnpObject) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PnpObject) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PnpObject) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PnpObject) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PnpObject = {
@@ -644,8 +643,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
         { }
     };
 
-    static PyType_Slot _type_slots_PnpObjectCollection[] = 
-    {
+    static PyType_Slot _type_slots_PnpObjectCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PnpObjectCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PnpObjectCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PnpObjectCollection) },
@@ -654,7 +652,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_PnpObjectCollection) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_PnpObjectCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_PnpObjectCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PnpObjectCollection = {
@@ -775,13 +773,12 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
         { }
     };
 
-    static PyType_Slot _type_slots_PnpObjectUpdate[] = 
-    {
+    static PyType_Slot _type_slots_PnpObjectUpdate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PnpObjectUpdate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PnpObjectUpdate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PnpObjectUpdate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PnpObjectUpdate) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PnpObjectUpdate = {
@@ -1149,13 +1146,12 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
         { }
     };
 
-    static PyType_Slot _type_slots_PnpObjectWatcher[] = 
-    {
+    static PyType_Slot _type_slots_PnpObjectWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PnpObjectWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PnpObjectWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PnpObjectWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PnpObjectWatcher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PnpObjectWatcher = {

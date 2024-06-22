@@ -232,13 +232,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { }
     };
 
-    static PyType_Slot _type_slots_DragDropManager[] = 
-    {
+    static PyType_Slot _type_slots_DragDropManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DragDropManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DragDropManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DragDropManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DragDropManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DragDropManager = {
@@ -405,13 +404,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { }
     };
 
-    static PyType_Slot _type_slots_DragInfo[] = 
-    {
+    static PyType_Slot _type_slots_DragInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DragInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DragInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DragInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DragInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DragInfo = {
@@ -750,13 +748,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { }
     };
 
-    static PyType_Slot _type_slots_DragOperation[] = 
-    {
+    static PyType_Slot _type_slots_DragOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DragOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DragOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DragOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DragOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DragOperation = {
@@ -1095,13 +1092,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { }
     };
 
-    static PyType_Slot _type_slots_DragUIOverride[] = 
-    {
+    static PyType_Slot _type_slots_DragUIOverride[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DragUIOverride) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DragUIOverride) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DragUIOverride) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DragUIOverride) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DragUIOverride = {
@@ -1195,13 +1191,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { }
     };
 
-    static PyType_Slot _type_slots_DropOperationTargetRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DropOperationTargetRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DropOperationTargetRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DropOperationTargetRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DropOperationTargetRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DropOperationTargetRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DropOperationTargetRequestedEventArgs = {
@@ -1392,13 +1387,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         { }
     };
 
-    static PyType_Slot _type_slots_IDropOperationTarget[] = 
-    {
+    static PyType_Slot _type_slots_IDropOperationTarget[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDropOperationTarget) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDropOperationTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDropOperationTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDropOperationTarget) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IDropOperationTarget = {

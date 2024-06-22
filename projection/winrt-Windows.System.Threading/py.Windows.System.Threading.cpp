@@ -96,12 +96,11 @@ namespace py::cpp::Windows::System::Threading
         { }
     };
 
-    static PyType_Slot _type_slots_ThreadPool[] = 
-    {
+    static PyType_Slot _type_slots_ThreadPool[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ThreadPool) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ThreadPool) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ThreadPool) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ThreadPool = {
@@ -367,13 +366,12 @@ namespace py::cpp::Windows::System::Threading
         { }
     };
 
-    static PyType_Slot _type_slots_ThreadPoolTimer[] = 
-    {
+    static PyType_Slot _type_slots_ThreadPoolTimer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ThreadPoolTimer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ThreadPoolTimer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ThreadPoolTimer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ThreadPoolTimer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ThreadPoolTimer = {

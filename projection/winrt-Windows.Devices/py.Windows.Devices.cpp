@@ -184,13 +184,12 @@ namespace py::cpp::Windows::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_LowLevelDevicesAggregateProvider[] = 
-    {
+    static PyType_Slot _type_slots_LowLevelDevicesAggregateProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LowLevelDevicesAggregateProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LowLevelDevicesAggregateProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LowLevelDevicesAggregateProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LowLevelDevicesAggregateProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LowLevelDevicesAggregateProvider = {
@@ -298,13 +297,12 @@ namespace py::cpp::Windows::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_LowLevelDevicesController[] = 
-    {
+    static PyType_Slot _type_slots_LowLevelDevicesController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LowLevelDevicesController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LowLevelDevicesController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LowLevelDevicesController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LowLevelDevicesController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LowLevelDevicesController = {
@@ -491,13 +489,12 @@ namespace py::cpp::Windows::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_ILowLevelDevicesAggregateProvider[] = 
-    {
+    static PyType_Slot _type_slots_ILowLevelDevicesAggregateProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILowLevelDevicesAggregateProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILowLevelDevicesAggregateProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILowLevelDevicesAggregateProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILowLevelDevicesAggregateProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ILowLevelDevicesAggregateProvider = {

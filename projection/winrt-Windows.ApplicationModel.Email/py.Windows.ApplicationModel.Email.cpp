@@ -535,13 +535,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailAttachment[] = 
-    {
+    static PyType_Slot _type_slots_EmailAttachment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailAttachment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailAttachment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailAttachment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailAttachment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailAttachment = {
@@ -912,13 +911,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailConversation[] = 
-    {
+    static PyType_Slot _type_slots_EmailConversation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailConversation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailConversation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailConversation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailConversation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailConversation = {
@@ -1019,13 +1017,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailConversationBatch[] = 
-    {
+    static PyType_Slot _type_slots_EmailConversationBatch[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailConversationBatch) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailConversationBatch) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailConversationBatch) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailConversationBatch) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailConversationBatch = {
@@ -1116,13 +1113,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailConversationReader[] = 
-    {
+    static PyType_Slot _type_slots_EmailConversationReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailConversationReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailConversationReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailConversationReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailConversationReader) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailConversationReader = {
@@ -1824,13 +1820,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailFolder[] = 
-    {
+    static PyType_Slot _type_slots_EmailFolder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailFolder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailFolder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailFolder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailFolder) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailFolder = {
@@ -2505,13 +2500,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailIrmInfo[] = 
-    {
+    static PyType_Slot _type_slots_EmailIrmInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailIrmInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailIrmInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailIrmInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailIrmInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailIrmInfo = {
@@ -2755,13 +2749,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailIrmTemplate[] = 
-    {
+    static PyType_Slot _type_slots_EmailIrmTemplate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailIrmTemplate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailIrmTemplate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailIrmTemplate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailIrmTemplate) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailIrmTemplate = {
@@ -2902,13 +2895,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailItemCounts[] = 
-    {
+    static PyType_Slot _type_slots_EmailItemCounts[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailItemCounts) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailItemCounts) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailItemCounts) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailItemCounts) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailItemCounts = {
@@ -4618,13 +4610,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailMailbox[] = 
-    {
+    static PyType_Slot _type_slots_EmailMailbox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailbox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailbox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailbox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailbox) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailMailbox = {
@@ -4725,13 +4716,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailMailboxAction[] = 
-    {
+    static PyType_Slot _type_slots_EmailMailboxAction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxAction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxAction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxAction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxAction) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailMailboxAction = {
@@ -4888,13 +4878,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailMailboxAutoReply[] = 
-    {
+    static PyType_Slot _type_slots_EmailMailboxAutoReply[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxAutoReply) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxAutoReply) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxAutoReply) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxAutoReply) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailMailboxAutoReply = {
@@ -5229,13 +5218,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailMailboxAutoReplySettings[] = 
-    {
+    static PyType_Slot _type_slots_EmailMailboxAutoReplySettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxAutoReplySettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxAutoReplySettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxAutoReplySettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxAutoReplySettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailMailboxAutoReplySettings = {
@@ -5968,13 +5956,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailMailboxCapabilities[] = 
-    {
+    static PyType_Slot _type_slots_EmailMailboxCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxCapabilities) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailMailboxCapabilities = {
@@ -6115,13 +6102,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailMailboxChange[] = 
-    {
+    static PyType_Slot _type_slots_EmailMailboxChange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxChange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxChange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxChange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxChange) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailMailboxChange = {
@@ -6276,13 +6262,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailMailboxChangeReader[] = 
-    {
+    static PyType_Slot _type_slots_EmailMailboxChangeReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxChangeReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxChangeReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxChangeReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxChangeReader) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailMailboxChangeReader = {
@@ -6455,13 +6440,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailMailboxChangeTracker[] = 
-    {
+    static PyType_Slot _type_slots_EmailMailboxChangeTracker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxChangeTracker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxChangeTracker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxChangeTracker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxChangeTracker) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailMailboxChangeTracker = {
@@ -6553,13 +6537,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailMailboxChangedDeferral[] = 
-    {
+    static PyType_Slot _type_slots_EmailMailboxChangedDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxChangedDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxChangedDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxChangedDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxChangedDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailMailboxChangedDeferral = {
@@ -6650,13 +6633,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailMailboxChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_EmailMailboxChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailMailboxChangedEventArgs = {
@@ -6757,13 +6739,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailMailboxCreateFolderResult[] = 
-    {
+    static PyType_Slot _type_slots_EmailMailboxCreateFolderResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxCreateFolderResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxCreateFolderResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxCreateFolderResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxCreateFolderResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailMailboxCreateFolderResult = {
@@ -7112,13 +7093,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailMailboxPolicies[] = 
-    {
+    static PyType_Slot _type_slots_EmailMailboxPolicies[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxPolicies) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxPolicies) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxPolicies) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxPolicies) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailMailboxPolicies = {
@@ -7398,13 +7378,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailMailboxSyncManager[] = 
-    {
+    static PyType_Slot _type_slots_EmailMailboxSyncManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMailboxSyncManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMailboxSyncManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMailboxSyncManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMailboxSyncManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailMailboxSyncManager = {
@@ -7524,12 +7503,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailManager[] = 
-    {
+    static PyType_Slot _type_slots_EmailManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailManager = {
@@ -7702,13 +7680,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailManagerForUser[] = 
-    {
+    static PyType_Slot _type_slots_EmailManagerForUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailManagerForUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailManagerForUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailManagerForUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailManagerForUser) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailManagerForUser = {
@@ -8435,13 +8412,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailMeetingInfo[] = 
-    {
+    static PyType_Slot _type_slots_EmailMeetingInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMeetingInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMeetingInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMeetingInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMeetingInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailMeetingInfo = {
@@ -9918,13 +9894,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailMessage[] = 
-    {
+    static PyType_Slot _type_slots_EmailMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailMessage = {
@@ -10025,13 +10000,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailMessageBatch[] = 
-    {
+    static PyType_Slot _type_slots_EmailMessageBatch[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMessageBatch) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMessageBatch) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMessageBatch) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMessageBatch) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailMessageBatch = {
@@ -10122,13 +10096,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailMessageReader[] = 
-    {
+    static PyType_Slot _type_slots_EmailMessageReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailMessageReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailMessageReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailMessageReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailMessageReader) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailMessageReader = {
@@ -10426,13 +10399,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailQueryOptions[] = 
-    {
+    static PyType_Slot _type_slots_EmailQueryOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailQueryOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailQueryOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailQueryOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailQueryOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailQueryOptions = {
@@ -10637,13 +10609,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailQueryTextSearch[] = 
-    {
+    static PyType_Slot _type_slots_EmailQueryTextSearch[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailQueryTextSearch) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailQueryTextSearch) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailQueryTextSearch) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailQueryTextSearch) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailQueryTextSearch = {
@@ -10853,13 +10824,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailRecipient[] = 
-    {
+    static PyType_Slot _type_slots_EmailRecipient[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailRecipient) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailRecipient) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailRecipient) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailRecipient) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailRecipient = {
@@ -11043,13 +11013,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailRecipientResolutionResult[] = 
-    {
+    static PyType_Slot _type_slots_EmailRecipientResolutionResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailRecipientResolutionResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailRecipientResolutionResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailRecipientResolutionResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailRecipientResolutionResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailRecipientResolutionResult = {
@@ -11423,13 +11392,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailStore[] = 
-    {
+    static PyType_Slot _type_slots_EmailStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailStore) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailStore = {
@@ -11490,13 +11458,12 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { }
     };
 
-    static PyType_Slot _type_slots_EmailStoreNotificationTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_EmailStoreNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailStoreNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailStoreNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailStoreNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailStoreNotificationTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailStoreNotificationTriggerDetails = {

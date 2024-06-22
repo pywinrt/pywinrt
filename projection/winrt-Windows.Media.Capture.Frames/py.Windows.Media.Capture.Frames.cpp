@@ -126,13 +126,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_AudioMediaFrame[] = 
-    {
+    static PyType_Slot _type_slots_AudioMediaFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioMediaFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioMediaFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioMediaFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioMediaFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioMediaFrame = {
@@ -233,13 +232,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_BufferMediaFrame[] = 
-    {
+    static PyType_Slot _type_slots_BufferMediaFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BufferMediaFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BufferMediaFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BufferMediaFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BufferMediaFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BufferMediaFrame = {
@@ -433,13 +431,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_DepthMediaFrame[] = 
-    {
+    static PyType_Slot _type_slots_DepthMediaFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DepthMediaFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DepthMediaFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DepthMediaFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DepthMediaFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DepthMediaFrame = {
@@ -540,13 +537,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_DepthMediaFrameFormat[] = 
-    {
+    static PyType_Slot _type_slots_DepthMediaFrameFormat[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DepthMediaFrameFormat) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DepthMediaFrameFormat) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DepthMediaFrameFormat) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DepthMediaFrameFormat) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DepthMediaFrameFormat = {
@@ -667,13 +663,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_InfraredMediaFrame[] = 
-    {
+    static PyType_Slot _type_slots_InfraredMediaFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InfraredMediaFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InfraredMediaFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InfraredMediaFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InfraredMediaFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InfraredMediaFrame = {
@@ -734,13 +729,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_MediaFrameArrivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MediaFrameArrivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaFrameArrivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaFrameArrivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaFrameArrivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaFrameArrivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaFrameArrivedEventArgs = {
@@ -921,13 +915,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_MediaFrameFormat[] = 
-    {
+    static PyType_Slot _type_slots_MediaFrameFormat[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaFrameFormat) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaFrameFormat) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaFrameFormat) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaFrameFormat) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaFrameFormat = {
@@ -1223,13 +1216,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_MediaFrameReader[] = 
-    {
+    static PyType_Slot _type_slots_MediaFrameReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaFrameReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaFrameReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaFrameReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaFrameReader) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaFrameReader = {
@@ -1522,13 +1514,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_MediaFrameReference[] = 
-    {
+    static PyType_Slot _type_slots_MediaFrameReference[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaFrameReference) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaFrameReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaFrameReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaFrameReference) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaFrameReference = {
@@ -1778,13 +1769,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_MediaFrameSource[] = 
-    {
+    static PyType_Slot _type_slots_MediaFrameSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaFrameSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaFrameSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaFrameSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaFrameSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaFrameSource = {
@@ -2016,13 +2006,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_MediaFrameSourceController[] = 
-    {
+    static PyType_Slot _type_slots_MediaFrameSourceController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaFrameSourceController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaFrameSourceController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaFrameSourceController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaFrameSourceController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaFrameSourceController = {
@@ -2123,13 +2112,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_MediaFrameSourceGetPropertyResult[] = 
-    {
+    static PyType_Slot _type_slots_MediaFrameSourceGetPropertyResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaFrameSourceGetPropertyResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaFrameSourceGetPropertyResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaFrameSourceGetPropertyResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaFrameSourceGetPropertyResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaFrameSourceGetPropertyResult = {
@@ -2339,13 +2327,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_MediaFrameSourceGroup[] = 
-    {
+    static PyType_Slot _type_slots_MediaFrameSourceGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaFrameSourceGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaFrameSourceGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaFrameSourceGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaFrameSourceGroup) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaFrameSourceGroup = {
@@ -2666,13 +2653,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_MediaFrameSourceInfo[] = 
-    {
+    static PyType_Slot _type_slots_MediaFrameSourceInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaFrameSourceInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaFrameSourceInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaFrameSourceInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaFrameSourceInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaFrameSourceInfo = {
@@ -2733,13 +2719,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_MultiSourceMediaFrameArrivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MultiSourceMediaFrameArrivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MultiSourceMediaFrameArrivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MultiSourceMediaFrameArrivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MultiSourceMediaFrameArrivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MultiSourceMediaFrameArrivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MultiSourceMediaFrameArrivedEventArgs = {
@@ -3035,13 +3020,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_MultiSourceMediaFrameReader[] = 
-    {
+    static PyType_Slot _type_slots_MultiSourceMediaFrameReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MultiSourceMediaFrameReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MultiSourceMediaFrameReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MultiSourceMediaFrameReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MultiSourceMediaFrameReader) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MultiSourceMediaFrameReader = {
@@ -3186,13 +3170,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_MultiSourceMediaFrameReference[] = 
-    {
+    static PyType_Slot _type_slots_MultiSourceMediaFrameReference[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MultiSourceMediaFrameReference) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MultiSourceMediaFrameReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MultiSourceMediaFrameReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MultiSourceMediaFrameReference) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MultiSourceMediaFrameReference = {
@@ -3423,13 +3406,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_VideoMediaFrame[] = 
-    {
+    static PyType_Slot _type_slots_VideoMediaFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoMediaFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoMediaFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoMediaFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoMediaFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VideoMediaFrame = {
@@ -3570,13 +3552,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         { }
     };
 
-    static PyType_Slot _type_slots_VideoMediaFrameFormat[] = 
-    {
+    static PyType_Slot _type_slots_VideoMediaFrameFormat[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoMediaFrameFormat) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoMediaFrameFormat) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoMediaFrameFormat) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoMediaFrameFormat) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VideoMediaFrameFormat = {

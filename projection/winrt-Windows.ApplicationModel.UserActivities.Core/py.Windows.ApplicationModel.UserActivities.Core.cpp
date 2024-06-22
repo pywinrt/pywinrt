@@ -86,12 +86,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CoreUserActivityManager[] = 
-    {
+    static PyType_Slot _type_slots_CoreUserActivityManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreUserActivityManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreUserActivityManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreUserActivityManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreUserActivityManager = {

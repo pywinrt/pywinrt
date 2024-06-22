@@ -360,13 +360,12 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         { }
     };
 
-    static PyType_Slot _type_slots_PhoneNumberFormatter[] = 
-    {
+    static PyType_Slot _type_slots_PhoneNumberFormatter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneNumberFormatter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneNumberFormatter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneNumberFormatter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneNumberFormatter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhoneNumberFormatter = {
@@ -823,14 +822,13 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         { }
     };
 
-    static PyType_Slot _type_slots_PhoneNumberInfo[] = 
-    {
+    static PyType_Slot _type_slots_PhoneNumberInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneNumberInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneNumberInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneNumberInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneNumberInfo) },
         { Py_tp_str, reinterpret_cast<void*>(_str_PhoneNumberInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhoneNumberInfo = {

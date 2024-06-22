@@ -200,13 +200,12 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ProviderI2cConnectionSettings[] = 
-    {
+    static PyType_Slot _type_slots_ProviderI2cConnectionSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProviderI2cConnectionSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProviderI2cConnectionSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProviderI2cConnectionSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProviderI2cConnectionSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProviderI2cConnectionSettings = {
@@ -299,13 +298,12 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_II2cControllerProvider[] = 
-    {
+    static PyType_Slot _type_slots_II2cControllerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_II2cControllerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_II2cControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_II2cControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_II2cControllerProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_II2cControllerProvider = {
@@ -635,13 +633,12 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_II2cDeviceProvider[] = 
-    {
+    static PyType_Slot _type_slots_II2cDeviceProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_II2cDeviceProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_II2cDeviceProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_II2cDeviceProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_II2cDeviceProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_II2cDeviceProvider = {
@@ -732,13 +729,12 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_II2cProvider[] = 
-    {
+    static PyType_Slot _type_slots_II2cProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_II2cProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_II2cProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_II2cProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_II2cProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_II2cProvider = {
@@ -890,14 +886,13 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ProviderI2cTransferResult[] = 
-    {
+    static PyType_Slot _type_slots_ProviderI2cTransferResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProviderI2cTransferResult) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ProviderI2cTransferResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProviderI2cTransferResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProviderI2cTransferResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProviderI2cTransferResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ProviderI2cTransferResult = {

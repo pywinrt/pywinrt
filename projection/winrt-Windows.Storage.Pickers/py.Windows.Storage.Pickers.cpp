@@ -596,8 +596,7 @@ namespace py::cpp::Windows::Storage::Pickers
         { }
     };
 
-    static PyType_Slot _type_slots_FileExtensionVector[] = 
-    {
+    static PyType_Slot _type_slots_FileExtensionVector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileExtensionVector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileExtensionVector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileExtensionVector) },
@@ -607,7 +606,7 @@ namespace py::cpp::Windows::Storage::Pickers
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_FileExtensionVector) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_FileExtensionVector) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_FileExtensionVector) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileExtensionVector = {
@@ -1144,13 +1143,12 @@ namespace py::cpp::Windows::Storage::Pickers
         { }
     };
 
-    static PyType_Slot _type_slots_FileOpenPicker[] = 
-    {
+    static PyType_Slot _type_slots_FileOpenPicker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileOpenPicker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileOpenPicker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileOpenPicker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileOpenPicker) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileOpenPicker = {
@@ -1580,8 +1578,7 @@ namespace py::cpp::Windows::Storage::Pickers
         { }
     };
 
-    static PyType_Slot _type_slots_FilePickerFileTypesOrderedMap[] = 
-    {
+    static PyType_Slot _type_slots_FilePickerFileTypesOrderedMap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FilePickerFileTypesOrderedMap) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FilePickerFileTypesOrderedMap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FilePickerFileTypesOrderedMap) },
@@ -1591,7 +1588,7 @@ namespace py::cpp::Windows::Storage::Pickers
         { Py_mp_length, reinterpret_cast<void*>(_map_length_FilePickerFileTypesOrderedMap) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_FilePickerFileTypesOrderedMap) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_FilePickerFileTypesOrderedMap) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FilePickerFileTypesOrderedMap = {
@@ -1911,8 +1908,7 @@ namespace py::cpp::Windows::Storage::Pickers
         { }
     };
 
-    static PyType_Slot _type_slots_FilePickerSelectedFilesArray[] = 
-    {
+    static PyType_Slot _type_slots_FilePickerSelectedFilesArray[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FilePickerSelectedFilesArray) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FilePickerSelectedFilesArray) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FilePickerSelectedFilesArray) },
@@ -1921,7 +1917,7 @@ namespace py::cpp::Windows::Storage::Pickers
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_FilePickerSelectedFilesArray) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_FilePickerSelectedFilesArray) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_FilePickerSelectedFilesArray) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FilePickerSelectedFilesArray = {
@@ -2492,13 +2488,12 @@ namespace py::cpp::Windows::Storage::Pickers
         { }
     };
 
-    static PyType_Slot _type_slots_FileSavePicker[] = 
-    {
+    static PyType_Slot _type_slots_FileSavePicker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileSavePicker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileSavePicker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileSavePicker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileSavePicker) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileSavePicker = {
@@ -2951,13 +2946,12 @@ namespace py::cpp::Windows::Storage::Pickers
         { }
     };
 
-    static PyType_Slot _type_slots_FolderPicker[] = 
-    {
+    static PyType_Slot _type_slots_FolderPicker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FolderPicker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FolderPicker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FolderPicker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FolderPicker) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FolderPicker = {

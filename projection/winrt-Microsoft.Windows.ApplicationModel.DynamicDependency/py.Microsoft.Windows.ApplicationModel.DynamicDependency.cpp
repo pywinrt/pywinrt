@@ -174,13 +174,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { }
     };
 
-    static PyType_Slot _type_slots_AddPackageDependencyOptions[] = 
-    {
+    static PyType_Slot _type_slots_AddPackageDependencyOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AddPackageDependencyOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AddPackageDependencyOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AddPackageDependencyOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AddPackageDependencyOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AddPackageDependencyOptions = {
@@ -455,13 +454,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { }
     };
 
-    static PyType_Slot _type_slots_CreatePackageDependencyOptions[] = 
-    {
+    static PyType_Slot _type_slots_CreatePackageDependencyOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CreatePackageDependencyOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CreatePackageDependencyOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CreatePackageDependencyOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CreatePackageDependencyOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CreatePackageDependencyOptions = {
@@ -810,13 +808,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { }
     };
 
-    static PyType_Slot _type_slots_PackageDependency[] = 
-    {
+    static PyType_Slot _type_slots_PackageDependency[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageDependency) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageDependency) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageDependency) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageDependency) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PackageDependency = {
@@ -1023,13 +1020,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { }
     };
 
-    static PyType_Slot _type_slots_PackageDependencyContext[] = 
-    {
+    static PyType_Slot _type_slots_PackageDependencyContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageDependencyContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageDependencyContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageDependencyContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageDependencyContext) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PackageDependencyContext = {
@@ -1075,12 +1071,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { }
     };
 
-    static PyType_Slot _type_slots_PackageDependencyRank[] = 
-    {
+    static PyType_Slot _type_slots_PackageDependencyRank[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageDependencyRank) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageDependencyRank) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageDependencyRank) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PackageDependencyRank = {
@@ -1223,14 +1218,13 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { }
     };
 
-    static PyType_Slot _type_slots_PackageDependencyContextId[] = 
-    {
+    static PyType_Slot _type_slots_PackageDependencyContextId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageDependencyContextId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PackageDependencyContextId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageDependencyContextId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageDependencyContextId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageDependencyContextId) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PackageDependencyContextId = {

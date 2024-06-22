@@ -41,12 +41,11 @@ namespace py::cpp::Windows::System::RemoteDesktop
         { }
     };
 
-    static PyType_Slot _type_slots_InteractiveSession[] = 
-    {
+    static PyType_Slot _type_slots_InteractiveSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InteractiveSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InteractiveSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InteractiveSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InteractiveSession = {

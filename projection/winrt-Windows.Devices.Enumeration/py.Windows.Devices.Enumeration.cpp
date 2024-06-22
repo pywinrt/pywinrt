@@ -96,13 +96,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceAccessChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DeviceAccessChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceAccessChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceAccessChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceAccessChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceAccessChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceAccessChangedEventArgs = {
@@ -321,13 +320,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceAccessInformation[] = 
-    {
+    static PyType_Slot _type_slots_DeviceAccessInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceAccessInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceAccessInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceAccessInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceAccessInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceAccessInformation = {
@@ -436,13 +434,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceConnectionChangeTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_DeviceConnectionChangeTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceConnectionChangeTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceConnectionChangeTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceConnectionChangeTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceConnectionChangeTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceConnectionChangeTriggerDetails = {
@@ -523,13 +520,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceDisconnectButtonClickedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DeviceDisconnectButtonClickedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceDisconnectButtonClickedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceDisconnectButtonClickedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceDisconnectButtonClickedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceDisconnectButtonClickedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceDisconnectButtonClickedEventArgs = {
@@ -1132,13 +1128,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceInformation[] = 
-    {
+    static PyType_Slot _type_slots_DeviceInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceInformation = {
@@ -1487,8 +1482,7 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceInformationCollection[] = 
-    {
+    static PyType_Slot _type_slots_DeviceInformationCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceInformationCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceInformationCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceInformationCollection) },
@@ -1497,7 +1491,7 @@ namespace py::cpp::Windows::Devices::Enumeration
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_DeviceInformationCollection) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_DeviceInformationCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_DeviceInformationCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceInformationCollection = {
@@ -1678,13 +1672,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceInformationCustomPairing[] = 
-    {
+    static PyType_Slot _type_slots_DeviceInformationCustomPairing[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceInformationCustomPairing) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceInformationCustomPairing) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceInformationCustomPairing) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceInformationCustomPairing) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceInformationCustomPairing = {
@@ -1989,13 +1982,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceInformationPairing[] = 
-    {
+    static PyType_Slot _type_slots_DeviceInformationPairing[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceInformationPairing) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceInformationPairing) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceInformationPairing) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceInformationPairing) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceInformationPairing = {
@@ -2143,13 +2135,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceInformationUpdate[] = 
-    {
+    static PyType_Slot _type_slots_DeviceInformationUpdate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceInformationUpdate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceInformationUpdate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceInformationUpdate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceInformationUpdate) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceInformationUpdate = {
@@ -2385,13 +2376,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DevicePairingRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DevicePairingRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePairingRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePairingRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePairingRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePairingRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DevicePairingRequestedEventArgs = {
@@ -2492,13 +2482,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DevicePairingResult[] = 
-    {
+    static PyType_Slot _type_slots_DevicePairingResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePairingResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePairingResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePairingResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePairingResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DevicePairingResult = {
@@ -2950,13 +2939,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DevicePicker[] = 
-    {
+    static PyType_Slot _type_slots_DevicePicker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePicker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePicker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePicker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePicker) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DevicePicker = {
@@ -3353,13 +3341,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DevicePickerAppearance[] = 
-    {
+    static PyType_Slot _type_slots_DevicePickerAppearance[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePickerAppearance) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePickerAppearance) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePickerAppearance) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePickerAppearance) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DevicePickerAppearance = {
@@ -3460,13 +3447,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DevicePickerFilter[] = 
-    {
+    static PyType_Slot _type_slots_DevicePickerFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DevicePickerFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePickerFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePickerFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePickerFilter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DevicePickerFilter = {
@@ -3547,13 +3533,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceSelectedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DeviceSelectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceSelectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceSelectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceSelectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceSelectedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceSelectedEventArgs = {
@@ -4017,13 +4002,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceThumbnail[] = 
-    {
+    static PyType_Slot _type_slots_DeviceThumbnail[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceThumbnail) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceThumbnail) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceThumbnail) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceThumbnail) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceThumbnail = {
@@ -4104,13 +4088,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceUnpairingResult[] = 
-    {
+    static PyType_Slot _type_slots_DeviceUnpairingResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceUnpairingResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceUnpairingResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceUnpairingResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceUnpairingResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceUnpairingResult = {
@@ -4510,13 +4493,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceWatcher[] = 
-    {
+    static PyType_Slot _type_slots_DeviceWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceWatcher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceWatcher = {
@@ -4637,13 +4619,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceWatcherEvent[] = 
-    {
+    static PyType_Slot _type_slots_DeviceWatcherEvent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceWatcherEvent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceWatcherEvent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceWatcherEvent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceWatcherEvent) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceWatcherEvent = {
@@ -4724,13 +4705,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceWatcherTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_DeviceWatcherTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceWatcherTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceWatcherTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceWatcherTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceWatcherTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceWatcherTriggerDetails = {
@@ -4871,13 +4851,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_EnclosureLocation[] = 
-    {
+    static PyType_Slot _type_slots_EnclosureLocation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EnclosureLocation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EnclosureLocation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EnclosureLocation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EnclosureLocation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EnclosureLocation = {
@@ -4938,13 +4917,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }
     };
 
-    static PyType_Slot _type_slots_IDevicePairingSettings[] = 
-    {
+    static PyType_Slot _type_slots_IDevicePairingSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDevicePairingSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDevicePairingSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDevicePairingSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDevicePairingSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IDevicePairingSettings = {

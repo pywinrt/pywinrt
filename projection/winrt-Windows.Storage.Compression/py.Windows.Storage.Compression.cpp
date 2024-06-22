@@ -271,13 +271,12 @@ namespace py::cpp::Windows::Storage::Compression
         { }
     };
 
-    static PyType_Slot _type_slots_Compressor[] = 
-    {
+    static PyType_Slot _type_slots_Compressor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Compressor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Compressor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Compressor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Compressor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Compressor = {
@@ -478,13 +477,12 @@ namespace py::cpp::Windows::Storage::Compression
         { }
     };
 
-    static PyType_Slot _type_slots_Decompressor[] = 
-    {
+    static PyType_Slot _type_slots_Decompressor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Decompressor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Decompressor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Decompressor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Decompressor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Decompressor = {

@@ -395,13 +395,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothAdapter[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothAdapter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothAdapter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothAdapter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothAdapter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothAdapter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothAdapter = {
@@ -634,13 +633,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothClassOfDevice[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothClassOfDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothClassOfDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothClassOfDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothClassOfDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothClassOfDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothClassOfDevice = {
@@ -1565,13 +1563,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothDevice[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothDevice = {
@@ -1757,13 +1754,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothDeviceId[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothDeviceId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothDeviceId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothDeviceId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothDeviceId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothDeviceId) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothDeviceId = {
@@ -1973,13 +1969,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEAppearance[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEAppearance[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAppearance) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAppearance) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAppearance) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAppearance) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEAppearance = {
@@ -2451,12 +2446,11 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEAppearanceCategories[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEAppearanceCategories[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAppearanceCategories) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAppearanceCategories) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAppearanceCategories) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEAppearanceCategories = {
@@ -3062,12 +3056,11 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEAppearanceSubcategories[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEAppearanceSubcategories[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAppearanceSubcategories) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAppearanceSubcategories) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAppearanceSubcategories) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEAppearanceSubcategories = {
@@ -3241,13 +3234,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEConnectionParameters[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEConnectionParameters[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEConnectionParameters) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEConnectionParameters) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEConnectionParameters) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEConnectionParameters) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEConnectionParameters = {
@@ -3348,13 +3340,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEConnectionPhy[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEConnectionPhy[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEConnectionPhy) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEConnectionPhy) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEConnectionPhy) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEConnectionPhy) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEConnectionPhy = {
@@ -3475,13 +3466,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEConnectionPhyInfo[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEConnectionPhyInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEConnectionPhyInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEConnectionPhyInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEConnectionPhyInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEConnectionPhyInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEConnectionPhyInfo = {
@@ -4584,13 +4574,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEDevice[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEDevice = {
@@ -4821,13 +4810,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEPreferredConnectionParameters[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEPreferredConnectionParameters[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEPreferredConnectionParameters) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEPreferredConnectionParameters) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEPreferredConnectionParameters) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEPreferredConnectionParameters) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEPreferredConnectionParameters = {
@@ -4988,13 +4976,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEPreferredConnectionParametersRequest[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEPreferredConnectionParametersRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEPreferredConnectionParametersRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEPreferredConnectionParametersRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEPreferredConnectionParametersRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEPreferredConnectionParametersRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEPreferredConnectionParametersRequest = {
@@ -5269,13 +5256,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothSignalStrengthFilter[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothSignalStrengthFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothSignalStrengthFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothSignalStrengthFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothSignalStrengthFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothSignalStrengthFilter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothSignalStrengthFilter = {
@@ -5364,12 +5350,11 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothUuidHelper[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothUuidHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothUuidHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothUuidHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothUuidHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothUuidHelper = {

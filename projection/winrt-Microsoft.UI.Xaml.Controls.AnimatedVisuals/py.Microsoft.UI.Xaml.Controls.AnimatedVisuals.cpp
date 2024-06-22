@@ -177,13 +177,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { }
     };
 
-    static PyType_Slot _type_slots_AnimatedAcceptVisualSource[] = 
-    {
+    static PyType_Slot _type_slots_AnimatedAcceptVisualSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimatedAcceptVisualSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimatedAcceptVisualSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimatedAcceptVisualSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimatedAcceptVisualSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AnimatedAcceptVisualSource = {
@@ -365,13 +364,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { }
     };
 
-    static PyType_Slot _type_slots_AnimatedBackVisualSource[] = 
-    {
+    static PyType_Slot _type_slots_AnimatedBackVisualSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimatedBackVisualSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimatedBackVisualSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimatedBackVisualSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimatedBackVisualSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AnimatedBackVisualSource = {
@@ -553,13 +551,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { }
     };
 
-    static PyType_Slot _type_slots_AnimatedChevronDownSmallVisualSource[] = 
-    {
+    static PyType_Slot _type_slots_AnimatedChevronDownSmallVisualSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimatedChevronDownSmallVisualSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimatedChevronDownSmallVisualSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimatedChevronDownSmallVisualSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimatedChevronDownSmallVisualSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AnimatedChevronDownSmallVisualSource = {
@@ -741,13 +738,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { }
     };
 
-    static PyType_Slot _type_slots_AnimatedChevronRightDownSmallVisualSource[] = 
-    {
+    static PyType_Slot _type_slots_AnimatedChevronRightDownSmallVisualSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimatedChevronRightDownSmallVisualSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimatedChevronRightDownSmallVisualSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimatedChevronRightDownSmallVisualSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimatedChevronRightDownSmallVisualSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AnimatedChevronRightDownSmallVisualSource = {
@@ -929,13 +925,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { }
     };
 
-    static PyType_Slot _type_slots_AnimatedChevronUpDownSmallVisualSource[] = 
-    {
+    static PyType_Slot _type_slots_AnimatedChevronUpDownSmallVisualSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimatedChevronUpDownSmallVisualSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimatedChevronUpDownSmallVisualSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimatedChevronUpDownSmallVisualSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimatedChevronUpDownSmallVisualSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AnimatedChevronUpDownSmallVisualSource = {
@@ -1117,13 +1112,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { }
     };
 
-    static PyType_Slot _type_slots_AnimatedFindVisualSource[] = 
-    {
+    static PyType_Slot _type_slots_AnimatedFindVisualSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimatedFindVisualSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimatedFindVisualSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimatedFindVisualSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimatedFindVisualSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AnimatedFindVisualSource = {
@@ -1305,13 +1299,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { }
     };
 
-    static PyType_Slot _type_slots_AnimatedGlobalNavigationButtonVisualSource[] = 
-    {
+    static PyType_Slot _type_slots_AnimatedGlobalNavigationButtonVisualSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimatedGlobalNavigationButtonVisualSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimatedGlobalNavigationButtonVisualSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimatedGlobalNavigationButtonVisualSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimatedGlobalNavigationButtonVisualSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AnimatedGlobalNavigationButtonVisualSource = {
@@ -1493,13 +1486,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         { }
     };
 
-    static PyType_Slot _type_slots_AnimatedSettingsVisualSource[] = 
-    {
+    static PyType_Slot _type_slots_AnimatedSettingsVisualSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimatedSettingsVisualSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimatedSettingsVisualSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimatedSettingsVisualSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimatedSettingsVisualSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AnimatedSettingsVisualSource = {

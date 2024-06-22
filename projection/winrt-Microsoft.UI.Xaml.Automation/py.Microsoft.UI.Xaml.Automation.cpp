@@ -151,13 +151,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_AnnotationPatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_AnnotationPatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnnotationPatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnnotationPatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnnotationPatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnnotationPatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AnnotationPatternIdentifiers = {
@@ -435,13 +434,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_AutomationAnnotation[] = 
-    {
+    static PyType_Slot _type_slots_AutomationAnnotation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationAnnotation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationAnnotation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationAnnotation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationAnnotation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AutomationAnnotation = {
@@ -1270,13 +1268,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_AutomationElementIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_AutomationElementIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationElementIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationElementIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationElementIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationElementIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AutomationElementIdentifiers = {
@@ -3643,13 +3640,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_AutomationProperties[] = 
-    {
+    static PyType_Slot _type_slots_AutomationProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AutomationProperties = {
@@ -3817,13 +3813,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_AutomationProperty[] = 
-    {
+    static PyType_Slot _type_slots_AutomationProperty[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationProperty) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationProperty) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationProperty) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationProperty) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AutomationProperty = {
@@ -3903,13 +3898,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_DockPatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_DockPatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DockPatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DockPatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DockPatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DockPatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DockPatternIdentifiers = {
@@ -4072,13 +4066,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_DragPatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_DragPatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DragPatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DragPatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DragPatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DragPatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DragPatternIdentifiers = {
@@ -4206,13 +4199,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_DropTargetPatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_DropTargetPatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DropTargetPatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DropTargetPatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DropTargetPatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DropTargetPatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DropTargetPatternIdentifiers = {
@@ -4319,13 +4311,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_ExpandCollapsePatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_ExpandCollapsePatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExpandCollapsePatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExpandCollapsePatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExpandCollapsePatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExpandCollapsePatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ExpandCollapsePatternIdentifiers = {
@@ -4507,13 +4498,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_GridItemPatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_GridItemPatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GridItemPatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GridItemPatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GridItemPatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GridItemPatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GridItemPatternIdentifiers = {
@@ -4642,13 +4632,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_GridPatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_GridPatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GridPatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GridPatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GridPatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GridPatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GridPatternIdentifiers = {
@@ -4774,13 +4763,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_MultipleViewPatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_MultipleViewPatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MultipleViewPatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MultipleViewPatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MultipleViewPatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MultipleViewPatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MultipleViewPatternIdentifiers = {
@@ -4982,13 +4970,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_RangeValuePatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_RangeValuePatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RangeValuePatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RangeValuePatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RangeValuePatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RangeValuePatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RangeValuePatternIdentifiers = {
@@ -5213,13 +5200,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_ScrollPatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_ScrollPatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScrollPatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScrollPatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScrollPatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScrollPatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ScrollPatternIdentifiers = {
@@ -5350,13 +5336,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_SelectionItemPatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_SelectionItemPatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SelectionItemPatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SelectionItemPatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SelectionItemPatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SelectionItemPatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SelectionItemPatternIdentifiers = {
@@ -5501,13 +5486,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_SelectionPatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_SelectionPatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SelectionPatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SelectionPatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SelectionPatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SelectionPatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SelectionPatternIdentifiers = {
@@ -5615,13 +5599,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_SpreadsheetItemPatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_SpreadsheetItemPatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpreadsheetItemPatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpreadsheetItemPatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpreadsheetItemPatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpreadsheetItemPatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpreadsheetItemPatternIdentifiers = {
@@ -5841,13 +5824,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_StylesPatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_StylesPatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StylesPatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StylesPatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StylesPatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StylesPatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StylesPatternIdentifiers = {
@@ -5978,13 +5960,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_TableItemPatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_TableItemPatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TableItemPatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TableItemPatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TableItemPatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TableItemPatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TableItemPatternIdentifiers = {
@@ -6129,13 +6110,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_TablePatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_TablePatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TablePatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TablePatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TablePatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TablePatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TablePatternIdentifiers = {
@@ -6243,13 +6223,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_TogglePatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_TogglePatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TogglePatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TogglePatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TogglePatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TogglePatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TogglePatternIdentifiers = {
@@ -6412,13 +6391,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_TransformPattern2Identifiers[] = 
-    {
+    static PyType_Slot _type_slots_TransformPattern2Identifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TransformPattern2Identifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TransformPattern2Identifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TransformPattern2Identifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TransformPattern2Identifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TransformPattern2Identifiers = {
@@ -6565,13 +6543,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_TransformPatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_TransformPatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TransformPatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TransformPatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TransformPatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TransformPatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TransformPatternIdentifiers = {
@@ -6698,13 +6675,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_ValuePatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_ValuePatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ValuePatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ValuePatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ValuePatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ValuePatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ValuePatternIdentifiers = {
@@ -6906,13 +6882,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         { }
     };
 
-    static PyType_Slot _type_slots_WindowPatternIdentifiers[] = 
-    {
+    static PyType_Slot _type_slots_WindowPatternIdentifiers[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowPatternIdentifiers) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowPatternIdentifiers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowPatternIdentifiers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowPatternIdentifiers) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WindowPatternIdentifiers = {

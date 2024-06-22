@@ -160,13 +160,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_ActivitySensorTrigger[] = 
-    {
+    static PyType_Slot _type_slots_ActivitySensorTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivitySensorTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActivitySensorTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivitySensorTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivitySensorTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ActivitySensorTrigger = {
@@ -251,12 +250,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_AlarmApplicationManager[] = 
-    {
+    static PyType_Slot _type_slots_AlarmApplicationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AlarmApplicationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AlarmApplicationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AlarmApplicationManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AlarmApplicationManager = {
@@ -416,13 +414,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_AppBroadcastTrigger[] = 
-    {
+    static PyType_Slot _type_slots_AppBroadcastTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppBroadcastTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppBroadcastTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppBroadcastTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppBroadcastTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppBroadcastTrigger = {
@@ -771,13 +768,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_AppBroadcastTriggerProviderInfo[] = 
-    {
+    static PyType_Slot _type_slots_AppBroadcastTriggerProviderInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppBroadcastTriggerProviderInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppBroadcastTriggerProviderInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppBroadcastTriggerProviderInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppBroadcastTriggerProviderInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppBroadcastTriggerProviderInfo = {
@@ -910,13 +906,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_ApplicationTrigger[] = 
-    {
+    static PyType_Slot _type_slots_ApplicationTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ApplicationTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ApplicationTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ApplicationTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ApplicationTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ApplicationTrigger = {
@@ -997,13 +992,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_ApplicationTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_ApplicationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ApplicationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ApplicationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ApplicationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ApplicationTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ApplicationTriggerDetails = {
@@ -1086,13 +1080,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentStoreNotificationTrigger[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentStoreNotificationTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentStoreNotificationTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentStoreNotificationTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentStoreNotificationTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentStoreNotificationTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentStoreNotificationTrigger = {
@@ -1381,12 +1374,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_BackgroundExecutionManager[] = 
-    {
+    static PyType_Slot _type_slots_BackgroundExecutionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundExecutionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundExecutionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundExecutionManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BackgroundExecutionManager = {
@@ -1869,13 +1861,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_BackgroundTaskBuilder[] = 
-    {
+    static PyType_Slot _type_slots_BackgroundTaskBuilder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundTaskBuilder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundTaskBuilder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundTaskBuilder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundTaskBuilder) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BackgroundTaskBuilder = {
@@ -1987,13 +1978,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_BackgroundTaskCompletedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_BackgroundTaskCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundTaskCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundTaskCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundTaskCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundTaskCompletedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BackgroundTaskCompletedEventArgs = {
@@ -2085,13 +2075,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_BackgroundTaskDeferral[] = 
-    {
+    static PyType_Slot _type_slots_BackgroundTaskDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundTaskDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundTaskDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundTaskDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundTaskDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BackgroundTaskDeferral = {
@@ -2192,13 +2181,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_BackgroundTaskProgressEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_BackgroundTaskProgressEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundTaskProgressEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundTaskProgressEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundTaskProgressEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundTaskProgressEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BackgroundTaskProgressEventArgs = {
@@ -2531,13 +2519,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_BackgroundTaskRegistration[] = 
-    {
+    static PyType_Slot _type_slots_BackgroundTaskRegistration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundTaskRegistration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundTaskRegistration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundTaskRegistration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundTaskRegistration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BackgroundTaskRegistration = {
@@ -2771,13 +2758,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_BackgroundTaskRegistrationGroup[] = 
-    {
+    static PyType_Slot _type_slots_BackgroundTaskRegistrationGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundTaskRegistrationGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundTaskRegistrationGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundTaskRegistrationGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundTaskRegistrationGroup) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BackgroundTaskRegistrationGroup = {
@@ -2823,12 +2809,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_BackgroundWorkCost[] = 
-    {
+    static PyType_Slot _type_slots_BackgroundWorkCost[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundWorkCost) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundWorkCost) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundWorkCost) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BackgroundWorkCost = {
@@ -3149,13 +3134,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEAdvertisementPublisherTrigger[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEAdvertisementPublisherTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementPublisherTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementPublisherTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementPublisherTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementPublisherTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementPublisherTrigger = {
@@ -3462,13 +3446,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEAdvertisementWatcherTrigger[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEAdvertisementWatcherTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementWatcherTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementWatcherTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementWatcherTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementWatcherTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementWatcherTrigger = {
@@ -3551,13 +3534,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_CachedFileUpdaterTrigger[] = 
-    {
+    static PyType_Slot _type_slots_CachedFileUpdaterTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CachedFileUpdaterTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CachedFileUpdaterTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CachedFileUpdaterTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CachedFileUpdaterTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CachedFileUpdaterTrigger = {
@@ -3678,13 +3660,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_CachedFileUpdaterTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_CachedFileUpdaterTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CachedFileUpdaterTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CachedFileUpdaterTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CachedFileUpdaterTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CachedFileUpdaterTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CachedFileUpdaterTriggerDetails = {
@@ -3767,13 +3748,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_ChatMessageNotificationTrigger[] = 
-    {
+    static PyType_Slot _type_slots_ChatMessageNotificationTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ChatMessageNotificationTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ChatMessageNotificationTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ChatMessageNotificationTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ChatMessageNotificationTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ChatMessageNotificationTrigger = {
@@ -3856,13 +3836,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_ChatMessageReceivedNotificationTrigger[] = 
-    {
+    static PyType_Slot _type_slots_ChatMessageReceivedNotificationTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ChatMessageReceivedNotificationTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ChatMessageReceivedNotificationTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ChatMessageReceivedNotificationTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ChatMessageReceivedNotificationTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ChatMessageReceivedNotificationTrigger = {
@@ -3945,13 +3924,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_CommunicationBlockingAppSetAsActiveTrigger[] = 
-    {
+    static PyType_Slot _type_slots_CommunicationBlockingAppSetAsActiveTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CommunicationBlockingAppSetAsActiveTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CommunicationBlockingAppSetAsActiveTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CommunicationBlockingAppSetAsActiveTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CommunicationBlockingAppSetAsActiveTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CommunicationBlockingAppSetAsActiveTrigger = {
@@ -4034,13 +4012,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_ContactStoreNotificationTrigger[] = 
-    {
+    static PyType_Slot _type_slots_ContactStoreNotificationTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactStoreNotificationTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactStoreNotificationTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactStoreNotificationTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactStoreNotificationTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContactStoreNotificationTrigger = {
@@ -4158,13 +4135,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_ContentPrefetchTrigger[] = 
-    {
+    static PyType_Slot _type_slots_ContentPrefetchTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentPrefetchTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentPrefetchTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentPrefetchTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentPrefetchTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContentPrefetchTrigger = {
@@ -4247,13 +4223,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_ConversationalAgentTrigger[] = 
-    {
+    static PyType_Slot _type_slots_ConversationalAgentTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ConversationalAgentTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConversationalAgentTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ConversationalAgentTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ConversationalAgentTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ConversationalAgentTrigger = {
@@ -4379,13 +4354,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_CustomSystemEventTrigger[] = 
-    {
+    static PyType_Slot _type_slots_CustomSystemEventTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CustomSystemEventTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CustomSystemEventTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CustomSystemEventTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CustomSystemEventTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CustomSystemEventTrigger = {
@@ -4565,13 +4539,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceConnectionChangeTrigger[] = 
-    {
+    static PyType_Slot _type_slots_DeviceConnectionChangeTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceConnectionChangeTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceConnectionChangeTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceConnectionChangeTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceConnectionChangeTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceConnectionChangeTrigger = {
@@ -4723,13 +4696,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceManufacturerNotificationTrigger[] = 
-    {
+    static PyType_Slot _type_slots_DeviceManufacturerNotificationTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceManufacturerNotificationTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceManufacturerNotificationTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceManufacturerNotificationTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceManufacturerNotificationTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceManufacturerNotificationTrigger = {
@@ -4867,13 +4839,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceServicingTrigger[] = 
-    {
+    static PyType_Slot _type_slots_DeviceServicingTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceServicingTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceServicingTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceServicingTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceServicingTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceServicingTrigger = {
@@ -5009,13 +4980,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceUseTrigger[] = 
-    {
+    static PyType_Slot _type_slots_DeviceUseTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceUseTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceUseTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceUseTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceUseTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceUseTrigger = {
@@ -5076,13 +5046,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_DeviceWatcherTrigger[] = 
-    {
+    static PyType_Slot _type_slots_DeviceWatcherTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeviceWatcherTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeviceWatcherTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeviceWatcherTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeviceWatcherTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeviceWatcherTrigger = {
@@ -5165,13 +5134,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_EmailStoreNotificationTrigger[] = 
-    {
+    static PyType_Slot _type_slots_EmailStoreNotificationTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EmailStoreNotificationTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EmailStoreNotificationTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EmailStoreNotificationTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EmailStoreNotificationTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EmailStoreNotificationTrigger = {
@@ -5312,13 +5280,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_GattCharacteristicNotificationTrigger[] = 
-    {
+    static PyType_Slot _type_slots_GattCharacteristicNotificationTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattCharacteristicNotificationTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattCharacteristicNotificationTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattCharacteristicNotificationTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattCharacteristicNotificationTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattCharacteristicNotificationTrigger = {
@@ -5499,13 +5466,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_GattServiceProviderTrigger[] = 
-    {
+    static PyType_Slot _type_slots_GattServiceProviderTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattServiceProviderTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattServiceProviderTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattServiceProviderTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattServiceProviderTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattServiceProviderTrigger = {
@@ -5632,13 +5598,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_GattServiceProviderTriggerResult[] = 
-    {
+    static PyType_Slot _type_slots_GattServiceProviderTriggerResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattServiceProviderTriggerResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattServiceProviderTriggerResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattServiceProviderTriggerResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattServiceProviderTriggerResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattServiceProviderTriggerResult = {
@@ -5769,13 +5734,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_GeovisitTrigger[] = 
-    {
+    static PyType_Slot _type_slots_GeovisitTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeovisitTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeovisitTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeovisitTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeovisitTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GeovisitTrigger = {
@@ -5880,13 +5844,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_LocationTrigger[] = 
-    {
+    static PyType_Slot _type_slots_LocationTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LocationTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LocationTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LocationTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LocationTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LocationTrigger = {
@@ -6012,13 +5975,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_MaintenanceTrigger[] = 
-    {
+    static PyType_Slot _type_slots_MaintenanceTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MaintenanceTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MaintenanceTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MaintenanceTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MaintenanceTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MaintenanceTrigger = {
@@ -6151,13 +6113,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_MediaProcessingTrigger[] = 
-    {
+    static PyType_Slot _type_slots_MediaProcessingTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaProcessingTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaProcessingTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaProcessingTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaProcessingTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaProcessingTrigger = {
@@ -6240,13 +6201,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_MobileBroadbandDeviceServiceNotificationTrigger[] = 
-    {
+    static PyType_Slot _type_slots_MobileBroadbandDeviceServiceNotificationTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandDeviceServiceNotificationTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandDeviceServiceNotificationTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandDeviceServiceNotificationTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandDeviceServiceNotificationTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MobileBroadbandDeviceServiceNotificationTrigger = {
@@ -6329,13 +6289,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_MobileBroadbandPcoDataChangeTrigger[] = 
-    {
+    static PyType_Slot _type_slots_MobileBroadbandPcoDataChangeTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandPcoDataChangeTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandPcoDataChangeTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandPcoDataChangeTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandPcoDataChangeTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MobileBroadbandPcoDataChangeTrigger = {
@@ -6418,13 +6377,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_MobileBroadbandPinLockStateChangeTrigger[] = 
-    {
+    static PyType_Slot _type_slots_MobileBroadbandPinLockStateChangeTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandPinLockStateChangeTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandPinLockStateChangeTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandPinLockStateChangeTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandPinLockStateChangeTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MobileBroadbandPinLockStateChangeTrigger = {
@@ -6507,13 +6465,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_MobileBroadbandRadioStateChangeTrigger[] = 
-    {
+    static PyType_Slot _type_slots_MobileBroadbandRadioStateChangeTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandRadioStateChangeTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandRadioStateChangeTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandRadioStateChangeTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandRadioStateChangeTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MobileBroadbandRadioStateChangeTrigger = {
@@ -6596,13 +6553,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_MobileBroadbandRegistrationStateChangeTrigger[] = 
-    {
+    static PyType_Slot _type_slots_MobileBroadbandRegistrationStateChangeTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandRegistrationStateChangeTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandRegistrationStateChangeTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandRegistrationStateChangeTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandRegistrationStateChangeTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MobileBroadbandRegistrationStateChangeTrigger = {
@@ -6685,13 +6641,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_NetworkOperatorDataUsageTrigger[] = 
-    {
+    static PyType_Slot _type_slots_NetworkOperatorDataUsageTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkOperatorDataUsageTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkOperatorDataUsageTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkOperatorDataUsageTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkOperatorDataUsageTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NetworkOperatorDataUsageTrigger = {
@@ -6774,13 +6729,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_NetworkOperatorHotspotAuthenticationTrigger[] = 
-    {
+    static PyType_Slot _type_slots_NetworkOperatorHotspotAuthenticationTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkOperatorHotspotAuthenticationTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkOperatorHotspotAuthenticationTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkOperatorHotspotAuthenticationTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkOperatorHotspotAuthenticationTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NetworkOperatorHotspotAuthenticationTrigger = {
@@ -6885,13 +6839,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_NetworkOperatorNotificationTrigger[] = 
-    {
+    static PyType_Slot _type_slots_NetworkOperatorNotificationTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkOperatorNotificationTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkOperatorNotificationTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkOperatorNotificationTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkOperatorNotificationTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NetworkOperatorNotificationTrigger = {
@@ -6974,13 +6927,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_PaymentAppCanMakePaymentTrigger[] = 
-    {
+    static PyType_Slot _type_slots_PaymentAppCanMakePaymentTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PaymentAppCanMakePaymentTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PaymentAppCanMakePaymentTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PaymentAppCanMakePaymentTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PaymentAppCanMakePaymentTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PaymentAppCanMakePaymentTrigger = {
@@ -7106,13 +7058,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_PhoneTrigger[] = 
-    {
+    static PyType_Slot _type_slots_PhoneTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhoneTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhoneTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhoneTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhoneTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhoneTrigger = {
@@ -7210,13 +7161,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_PushNotificationTrigger[] = 
-    {
+    static PyType_Slot _type_slots_PushNotificationTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PushNotificationTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PushNotificationTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PushNotificationTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PushNotificationTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PushNotificationTrigger = {
@@ -7299,13 +7249,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_RcsEndUserMessageAvailableTrigger[] = 
-    {
+    static PyType_Slot _type_slots_RcsEndUserMessageAvailableTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RcsEndUserMessageAvailableTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RcsEndUserMessageAvailableTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RcsEndUserMessageAvailableTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RcsEndUserMessageAvailableTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RcsEndUserMessageAvailableTrigger = {
@@ -7572,13 +7521,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_RfcommConnectionTrigger[] = 
-    {
+    static PyType_Slot _type_slots_RfcommConnectionTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RfcommConnectionTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RfcommConnectionTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RfcommConnectionTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RfcommConnectionTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RfcommConnectionTrigger = {
@@ -7661,13 +7609,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_SecondaryAuthenticationFactorAuthenticationTrigger[] = 
-    {
+    static PyType_Slot _type_slots_SecondaryAuthenticationFactorAuthenticationTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryAuthenticationFactorAuthenticationTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryAuthenticationFactorAuthenticationTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryAuthenticationFactorAuthenticationTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryAuthenticationFactorAuthenticationTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthenticationTrigger = {
@@ -7752,13 +7699,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_SensorDataThresholdTrigger[] = 
-    {
+    static PyType_Slot _type_slots_SensorDataThresholdTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SensorDataThresholdTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SensorDataThresholdTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SensorDataThresholdTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SensorDataThresholdTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SensorDataThresholdTrigger = {
@@ -7863,13 +7809,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_SmartCardTrigger[] = 
-    {
+    static PyType_Slot _type_slots_SmartCardTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmartCardTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmartCardTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmartCardTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmartCardTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmartCardTrigger = {
@@ -7954,13 +7899,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_SmsMessageReceivedTrigger[] = 
-    {
+    static PyType_Slot _type_slots_SmsMessageReceivedTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsMessageReceivedTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsMessageReceivedTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsMessageReceivedTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsMessageReceivedTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsMessageReceivedTrigger = {
@@ -8063,13 +8007,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_SocketActivityTrigger[] = 
-    {
+    static PyType_Slot _type_slots_SocketActivityTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SocketActivityTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SocketActivityTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SocketActivityTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SocketActivityTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SocketActivityTrigger = {
@@ -8154,13 +8097,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_StorageLibraryChangeTrackerTrigger[] = 
-    {
+    static PyType_Slot _type_slots_StorageLibraryChangeTrackerTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageLibraryChangeTrackerTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageLibraryChangeTrackerTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageLibraryChangeTrackerTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageLibraryChangeTrackerTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StorageLibraryChangeTrackerTrigger = {
@@ -8283,13 +8225,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_StorageLibraryContentChangedTrigger[] = 
-    {
+    static PyType_Slot _type_slots_StorageLibraryContentChangedTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageLibraryContentChangedTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageLibraryContentChangedTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageLibraryContentChangedTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageLibraryContentChangedTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StorageLibraryContentChangedTrigger = {
@@ -8421,13 +8362,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_SystemCondition[] = 
-    {
+    static PyType_Slot _type_slots_SystemCondition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemCondition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemCondition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemCondition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemCondition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemCondition = {
@@ -8553,13 +8493,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_SystemTrigger[] = 
-    {
+    static PyType_Slot _type_slots_SystemTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemTrigger = {
@@ -8642,13 +8581,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_TetheringEntitlementCheckTrigger[] = 
-    {
+    static PyType_Slot _type_slots_TetheringEntitlementCheckTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TetheringEntitlementCheckTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TetheringEntitlementCheckTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TetheringEntitlementCheckTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TetheringEntitlementCheckTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TetheringEntitlementCheckTrigger = {
@@ -8774,13 +8712,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_TimeTrigger[] = 
-    {
+    static PyType_Slot _type_slots_TimeTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimeTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimeTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimeTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimeTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TimeTrigger = {
@@ -8878,13 +8815,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_ToastNotificationActionTrigger[] = 
-    {
+    static PyType_Slot _type_slots_ToastNotificationActionTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotificationActionTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastNotificationActionTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotificationActionTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotificationActionTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToastNotificationActionTrigger = {
@@ -8982,13 +8918,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_ToastNotificationHistoryChangedTrigger[] = 
-    {
+    static PyType_Slot _type_slots_ToastNotificationHistoryChangedTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotificationHistoryChangedTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastNotificationHistoryChangedTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotificationHistoryChangedTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotificationHistoryChangedTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToastNotificationHistoryChangedTrigger = {
@@ -9073,13 +9008,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_UserNotificationChangedTrigger[] = 
-    {
+    static PyType_Slot _type_slots_UserNotificationChangedTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserNotificationChangedTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserNotificationChangedTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserNotificationChangedTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserNotificationChangedTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserNotificationChangedTrigger = {
@@ -9162,13 +9096,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_WiFiOnDemandHotspotConnectTrigger[] = 
-    {
+    static PyType_Slot _type_slots_WiFiOnDemandHotspotConnectTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiOnDemandHotspotConnectTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiOnDemandHotspotConnectTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiOnDemandHotspotConnectTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiOnDemandHotspotConnectTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WiFiOnDemandHotspotConnectTrigger = {
@@ -9251,13 +9184,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_WiFiOnDemandHotspotUpdateMetadataTrigger[] = 
-    {
+    static PyType_Slot _type_slots_WiFiOnDemandHotspotUpdateMetadataTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WiFiOnDemandHotspotUpdateMetadataTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WiFiOnDemandHotspotUpdateMetadataTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WiFiOnDemandHotspotUpdateMetadataTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WiFiOnDemandHotspotUpdateMetadataTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WiFiOnDemandHotspotUpdateMetadataTrigger = {
@@ -9318,13 +9250,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_IBackgroundCondition[] = 
-    {
+    static PyType_Slot _type_slots_IBackgroundCondition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundCondition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundCondition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundCondition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundCondition) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBackgroundCondition = {
@@ -9418,13 +9349,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_IBackgroundTask[] = 
-    {
+    static PyType_Slot _type_slots_IBackgroundTask[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTask) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTask) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTask) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTask) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBackgroundTask = {
@@ -9688,13 +9618,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_IBackgroundTaskInstance[] = 
-    {
+    static PyType_Slot _type_slots_IBackgroundTaskInstance[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTaskInstance) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTaskInstance) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTaskInstance) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTaskInstance) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBackgroundTaskInstance = {
@@ -9990,13 +9919,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_IBackgroundTaskInstance2[] = 
-    {
+    static PyType_Slot _type_slots_IBackgroundTaskInstance2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTaskInstance2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTaskInstance2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTaskInstance2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTaskInstance2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBackgroundTaskInstance2 = {
@@ -10280,13 +10208,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_IBackgroundTaskInstance4[] = 
-    {
+    static PyType_Slot _type_slots_IBackgroundTaskInstance4[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTaskInstance4) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTaskInstance4) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTaskInstance4) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTaskInstance4) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBackgroundTaskInstance4 = {
@@ -10510,13 +10437,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_IBackgroundTaskRegistration[] = 
-    {
+    static PyType_Slot _type_slots_IBackgroundTaskRegistration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTaskRegistration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTaskRegistration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTaskRegistration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTaskRegistration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBackgroundTaskRegistration = {
@@ -10760,13 +10686,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_IBackgroundTaskRegistration2[] = 
-    {
+    static PyType_Slot _type_slots_IBackgroundTaskRegistration2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTaskRegistration2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTaskRegistration2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTaskRegistration2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTaskRegistration2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBackgroundTaskRegistration2 = {
@@ -11010,13 +10935,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_IBackgroundTaskRegistration3[] = 
-    {
+    static PyType_Slot _type_slots_IBackgroundTaskRegistration3[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTaskRegistration3) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTaskRegistration3) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTaskRegistration3) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTaskRegistration3) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBackgroundTaskRegistration3 = {
@@ -11077,13 +11001,12 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { }
     };
 
-    static PyType_Slot _type_slots_IBackgroundTrigger[] = 
-    {
+    static PyType_Slot _type_slots_IBackgroundTrigger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTrigger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTrigger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTrigger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTrigger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBackgroundTrigger = {

@@ -239,13 +239,12 @@ namespace py::cpp::Windows::Web::Syndication
         { }
     };
 
-    static PyType_Slot _type_slots_SyndicationAttribute[] = 
-    {
+    static PyType_Slot _type_slots_SyndicationAttribute[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationAttribute) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationAttribute) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationAttribute) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationAttribute) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SyndicationAttribute = {
@@ -816,13 +815,12 @@ namespace py::cpp::Windows::Web::Syndication
         { }
     };
 
-    static PyType_Slot _type_slots_SyndicationCategory[] = 
-    {
+    static PyType_Slot _type_slots_SyndicationCategory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationCategory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationCategory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationCategory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationCategory) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SyndicationCategory = {
@@ -1226,13 +1224,12 @@ namespace py::cpp::Windows::Web::Syndication
         { }
     };
 
-    static PyType_Slot _type_slots_SyndicationClient[] = 
-    {
+    static PyType_Slot _type_slots_SyndicationClient[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationClient) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationClient) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationClient) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationClient) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SyndicationClient = {
@@ -1850,13 +1847,12 @@ namespace py::cpp::Windows::Web::Syndication
         { }
     };
 
-    static PyType_Slot _type_slots_SyndicationContent[] = 
-    {
+    static PyType_Slot _type_slots_SyndicationContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationContent) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SyndicationContent = {
@@ -1914,12 +1910,11 @@ namespace py::cpp::Windows::Web::Syndication
         { }
     };
 
-    static PyType_Slot _type_slots_SyndicationError[] = 
-    {
+    static PyType_Slot _type_slots_SyndicationError[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationError) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SyndicationError = {
@@ -3007,13 +3002,12 @@ namespace py::cpp::Windows::Web::Syndication
         { }
     };
 
-    static PyType_Slot _type_slots_SyndicationFeed[] = 
-    {
+    static PyType_Slot _type_slots_SyndicationFeed[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationFeed) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationFeed) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationFeed) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationFeed) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SyndicationFeed = {
@@ -3567,13 +3561,12 @@ namespace py::cpp::Windows::Web::Syndication
         { }
     };
 
-    static PyType_Slot _type_slots_SyndicationGenerator[] = 
-    {
+    static PyType_Slot _type_slots_SyndicationGenerator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationGenerator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationGenerator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationGenerator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationGenerator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SyndicationGenerator = {
@@ -4643,13 +4636,12 @@ namespace py::cpp::Windows::Web::Syndication
         { }
     };
 
-    static PyType_Slot _type_slots_SyndicationItem[] = 
-    {
+    static PyType_Slot _type_slots_SyndicationItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SyndicationItem = {
@@ -5366,13 +5358,12 @@ namespace py::cpp::Windows::Web::Syndication
         { }
     };
 
-    static PyType_Slot _type_slots_SyndicationLink[] = 
-    {
+    static PyType_Slot _type_slots_SyndicationLink[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationLink) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationLink) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationLink) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationLink) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SyndicationLink = {
@@ -5784,13 +5775,12 @@ namespace py::cpp::Windows::Web::Syndication
         { }
     };
 
-    static PyType_Slot _type_slots_SyndicationNode[] = 
-    {
+    static PyType_Slot _type_slots_SyndicationNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationNode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SyndicationNode = {
@@ -6361,13 +6351,12 @@ namespace py::cpp::Windows::Web::Syndication
         { }
     };
 
-    static PyType_Slot _type_slots_SyndicationPerson[] = 
-    {
+    static PyType_Slot _type_slots_SyndicationPerson[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationPerson) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationPerson) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationPerson) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationPerson) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SyndicationPerson = {
@@ -6937,13 +6926,12 @@ namespace py::cpp::Windows::Web::Syndication
         { }
     };
 
-    static PyType_Slot _type_slots_SyndicationText[] = 
-    {
+    static PyType_Slot _type_slots_SyndicationText[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SyndicationText) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SyndicationText) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SyndicationText) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SyndicationText) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SyndicationText = {
@@ -7310,13 +7298,12 @@ namespace py::cpp::Windows::Web::Syndication
         { }
     };
 
-    static PyType_Slot _type_slots_ISyndicationClient[] = 
-    {
+    static PyType_Slot _type_slots_ISyndicationClient[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISyndicationClient) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISyndicationClient) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISyndicationClient) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISyndicationClient) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISyndicationClient = {
@@ -7689,13 +7676,12 @@ namespace py::cpp::Windows::Web::Syndication
         { }
     };
 
-    static PyType_Slot _type_slots_ISyndicationNode[] = 
-    {
+    static PyType_Slot _type_slots_ISyndicationNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISyndicationNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISyndicationNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISyndicationNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISyndicationNode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISyndicationNode = {
@@ -8212,13 +8198,12 @@ namespace py::cpp::Windows::Web::Syndication
         { }
     };
 
-    static PyType_Slot _type_slots_ISyndicationText[] = 
-    {
+    static PyType_Slot _type_slots_ISyndicationText[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISyndicationText) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISyndicationText) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISyndicationText) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISyndicationText) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISyndicationText = {
@@ -8370,14 +8355,13 @@ namespace py::cpp::Windows::Web::Syndication
         { }
     };
 
-    static PyType_Slot _type_slots_RetrievalProgress[] = 
-    {
+    static PyType_Slot _type_slots_RetrievalProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RetrievalProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RetrievalProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RetrievalProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RetrievalProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RetrievalProgress) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RetrievalProgress = {
@@ -8599,14 +8583,13 @@ namespace py::cpp::Windows::Web::Syndication
         { }
     };
 
-    static PyType_Slot _type_slots_TransferProgress[] = 
-    {
+    static PyType_Slot _type_slots_TransferProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TransferProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TransferProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TransferProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TransferProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TransferProgress) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TransferProgress = {

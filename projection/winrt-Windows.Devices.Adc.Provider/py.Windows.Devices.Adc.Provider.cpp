@@ -314,13 +314,12 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IAdcControllerProvider[] = 
-    {
+    static PyType_Slot _type_slots_IAdcControllerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAdcControllerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAdcControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAdcControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAdcControllerProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAdcControllerProvider = {
@@ -411,13 +410,12 @@ namespace py::cpp::Windows::Devices::Adc::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IAdcProvider[] = 
-    {
+    static PyType_Slot _type_slots_IAdcProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAdcProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAdcProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAdcProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAdcProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAdcProvider = {

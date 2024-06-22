@@ -269,12 +269,11 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         { }
     };
 
-    static PyType_Slot _type_slots_GameList[] = 
-    {
+    static PyType_Slot _type_slots_GameList[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameList) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameList) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameList) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GameList = {
@@ -670,13 +669,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         { }
     };
 
-    static PyType_Slot _type_slots_GameListEntry[] = 
-    {
+    static PyType_Slot _type_slots_GameListEntry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameListEntry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameListEntry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameListEntry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameListEntry) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GameListEntry = {
@@ -1171,13 +1169,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         { }
     };
 
-    static PyType_Slot _type_slots_GameModeConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_GameModeConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameModeConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameModeConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameModeConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameModeConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GameModeConfiguration = {
@@ -1317,13 +1314,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         { }
     };
 
-    static PyType_Slot _type_slots_GameModeUserConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_GameModeUserConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameModeUserConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameModeUserConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameModeUserConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameModeUserConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GameModeUserConfiguration = {
@@ -1532,13 +1528,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         { }
     };
 
-    static PyType_Slot _type_slots_IGameListEntry[] = 
-    {
+    static PyType_Slot _type_slots_IGameListEntry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGameListEntry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGameListEntry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGameListEntry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGameListEntry) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IGameListEntry = {

@@ -287,14 +287,13 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
-    static PyType_Slot _type_slots_Matrix3x2[] = 
-    {
+    static PyType_Slot _type_slots_Matrix3x2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix3x2) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Matrix3x2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix3x2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix3x2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix3x2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Matrix3x2 = {
@@ -936,14 +935,13 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
-    static PyType_Slot _type_slots_Matrix4x4[] = 
-    {
+    static PyType_Slot _type_slots_Matrix4x4[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix4x4) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Matrix4x4) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix4x4) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix4x4) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix4x4) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Matrix4x4 = {
@@ -1095,14 +1093,13 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
-    static PyType_Slot _type_slots_Plane[] = 
-    {
+    static PyType_Slot _type_slots_Plane[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Plane) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Plane) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Plane) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Plane) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Plane) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Plane = {
@@ -1324,14 +1321,13 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
-    static PyType_Slot _type_slots_Quaternion[] = 
-    {
+    static PyType_Slot _type_slots_Quaternion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Quaternion) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Quaternion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Quaternion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Quaternion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Quaternion) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Quaternion = {
@@ -1483,14 +1479,13 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
-    static PyType_Slot _type_slots_Rational[] = 
-    {
+    static PyType_Slot _type_slots_Rational[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Rational) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Rational) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Rational) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Rational) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Rational) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Rational = {
@@ -1642,14 +1637,13 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
-    static PyType_Slot _type_slots_Vector2[] = 
-    {
+    static PyType_Slot _type_slots_Vector2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector2) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Vector2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Vector2 = {
@@ -1836,14 +1830,13 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
-    static PyType_Slot _type_slots_Vector3[] = 
-    {
+    static PyType_Slot _type_slots_Vector3[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector3) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Vector3) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector3) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector3) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector3) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Vector3 = {
@@ -2065,14 +2058,13 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
-    static PyType_Slot _type_slots_Vector4[] = 
-    {
+    static PyType_Slot _type_slots_Vector4[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector4) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Vector4) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector4) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector4) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector4) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Vector4 = {

@@ -300,13 +300,12 @@ namespace py::cpp::Windows::Graphics::Display
         { }
     };
 
-    static PyType_Slot _type_slots_AdvancedColorInfo[] = 
-    {
+    static PyType_Slot _type_slots_AdvancedColorInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdvancedColorInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdvancedColorInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdvancedColorInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdvancedColorInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdvancedColorInfo = {
@@ -813,13 +812,12 @@ namespace py::cpp::Windows::Graphics::Display
         { }
     };
 
-    static PyType_Slot _type_slots_BrightnessOverride[] = 
-    {
+    static PyType_Slot _type_slots_BrightnessOverride[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BrightnessOverride) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BrightnessOverride) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BrightnessOverride) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BrightnessOverride) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BrightnessOverride = {
@@ -1041,13 +1039,12 @@ namespace py::cpp::Windows::Graphics::Display
         { }
     };
 
-    static PyType_Slot _type_slots_BrightnessOverrideSettings[] = 
-    {
+    static PyType_Slot _type_slots_BrightnessOverrideSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BrightnessOverrideSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BrightnessOverrideSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BrightnessOverrideSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BrightnessOverrideSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BrightnessOverrideSettings = {
@@ -1187,13 +1184,12 @@ namespace py::cpp::Windows::Graphics::Display
         { }
     };
 
-    static PyType_Slot _type_slots_ColorOverrideSettings[] = 
-    {
+    static PyType_Slot _type_slots_ColorOverrideSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorOverrideSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorOverrideSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorOverrideSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ColorOverrideSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ColorOverrideSettings = {
@@ -1672,13 +1668,12 @@ namespace py::cpp::Windows::Graphics::Display
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayEnhancementOverride[] = 
-    {
+    static PyType_Slot _type_slots_DisplayEnhancementOverride[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayEnhancementOverride) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayEnhancementOverride) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayEnhancementOverride) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayEnhancementOverride) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayEnhancementOverride = {
@@ -1835,13 +1830,12 @@ namespace py::cpp::Windows::Graphics::Display
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayEnhancementOverrideCapabilities[] = 
-    {
+    static PyType_Slot _type_slots_DisplayEnhancementOverrideCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayEnhancementOverrideCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayEnhancementOverrideCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayEnhancementOverrideCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayEnhancementOverrideCapabilities) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayEnhancementOverrideCapabilities = {
@@ -1922,13 +1916,12 @@ namespace py::cpp::Windows::Graphics::Display
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayEnhancementOverrideCapabilitiesChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DisplayEnhancementOverrideCapabilitiesChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayEnhancementOverrideCapabilitiesChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayEnhancementOverrideCapabilitiesChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayEnhancementOverrideCapabilitiesChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayEnhancementOverrideCapabilitiesChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayEnhancementOverrideCapabilitiesChangedEventArgs = {
@@ -2615,13 +2608,12 @@ namespace py::cpp::Windows::Graphics::Display
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayInformation[] = 
-    {
+    static PyType_Slot _type_slots_DisplayInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayInformation = {
@@ -3071,12 +3063,11 @@ namespace py::cpp::Windows::Graphics::Display
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayProperties[] = 
-    {
+    static PyType_Slot _type_slots_DisplayProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayProperties = {
@@ -3198,13 +3189,12 @@ namespace py::cpp::Windows::Graphics::Display
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayServices[] = 
-    {
+    static PyType_Slot _type_slots_DisplayServices[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayServices) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayServices) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayServices) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayServices) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayServices = {
@@ -3417,14 +3407,13 @@ namespace py::cpp::Windows::Graphics::Display
         { }
     };
 
-    static PyType_Slot _type_slots_NitRange[] = 
-    {
+    static PyType_Slot _type_slots_NitRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NitRange) },
         { Py_tp_init, reinterpret_cast<void*>(_init_NitRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NitRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NitRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NitRange) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NitRange = {

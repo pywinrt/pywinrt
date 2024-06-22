@@ -214,13 +214,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { }
     };
 
-    static PyType_Slot _type_slots_LocalContentSuggestionSettings[] = 
-    {
+    static PyType_Slot _type_slots_LocalContentSuggestionSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LocalContentSuggestionSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LocalContentSuggestionSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LocalContentSuggestionSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LocalContentSuggestionSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LocalContentSuggestionSettings = {
@@ -934,13 +933,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { }
     };
 
-    static PyType_Slot _type_slots_SearchPane[] = 
-    {
+    static PyType_Slot _type_slots_SearchPane[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchPane) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchPane) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchPane) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchPane) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SearchPane = {
@@ -1088,13 +1086,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { }
     };
 
-    static PyType_Slot _type_slots_SearchPaneQueryChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SearchPaneQueryChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchPaneQueryChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchPaneQueryChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchPaneQueryChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchPaneQueryChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SearchPaneQueryChangedEventArgs = {
@@ -1215,13 +1212,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { }
     };
 
-    static PyType_Slot _type_slots_SearchPaneQueryLinguisticDetails[] = 
-    {
+    static PyType_Slot _type_slots_SearchPaneQueryLinguisticDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchPaneQueryLinguisticDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchPaneQueryLinguisticDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchPaneQueryLinguisticDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchPaneQueryLinguisticDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SearchPaneQueryLinguisticDetails = {
@@ -1342,13 +1338,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { }
     };
 
-    static PyType_Slot _type_slots_SearchPaneQuerySubmittedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SearchPaneQuerySubmittedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchPaneQuerySubmittedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchPaneQuerySubmittedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchPaneQuerySubmittedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchPaneQuerySubmittedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SearchPaneQuerySubmittedEventArgs = {
@@ -1429,13 +1424,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { }
     };
 
-    static PyType_Slot _type_slots_SearchPaneResultSuggestionChosenEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SearchPaneResultSuggestionChosenEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchPaneResultSuggestionChosenEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchPaneResultSuggestionChosenEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchPaneResultSuggestionChosenEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchPaneResultSuggestionChosenEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SearchPaneResultSuggestionChosenEventArgs = {
@@ -1566,13 +1560,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { }
     };
 
-    static PyType_Slot _type_slots_SearchPaneSuggestionsRequest[] = 
-    {
+    static PyType_Slot _type_slots_SearchPaneSuggestionsRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchPaneSuggestionsRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchPaneSuggestionsRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchPaneSuggestionsRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchPaneSuggestionsRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SearchPaneSuggestionsRequest = {
@@ -1664,13 +1657,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { }
     };
 
-    static PyType_Slot _type_slots_SearchPaneSuggestionsRequestDeferral[] = 
-    {
+    static PyType_Slot _type_slots_SearchPaneSuggestionsRequestDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchPaneSuggestionsRequestDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchPaneSuggestionsRequestDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchPaneSuggestionsRequestDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchPaneSuggestionsRequestDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SearchPaneSuggestionsRequestDeferral = {
@@ -1811,13 +1803,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { }
     };
 
-    static PyType_Slot _type_slots_SearchPaneSuggestionsRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SearchPaneSuggestionsRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchPaneSuggestionsRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchPaneSuggestionsRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchPaneSuggestionsRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchPaneSuggestionsRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SearchPaneSuggestionsRequestedEventArgs = {
@@ -1898,13 +1889,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { }
     };
 
-    static PyType_Slot _type_slots_SearchPaneVisibilityChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SearchPaneVisibilityChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchPaneVisibilityChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchPaneVisibilityChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchPaneVisibilityChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchPaneVisibilityChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SearchPaneVisibilityChangedEventArgs = {
@@ -2051,13 +2041,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { }
     };
 
-    static PyType_Slot _type_slots_SearchQueryLinguisticDetails[] = 
-    {
+    static PyType_Slot _type_slots_SearchQueryLinguisticDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchQueryLinguisticDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchQueryLinguisticDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchQueryLinguisticDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchQueryLinguisticDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SearchQueryLinguisticDetails = {
@@ -2274,13 +2263,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { }
     };
 
-    static PyType_Slot _type_slots_SearchSuggestionCollection[] = 
-    {
+    static PyType_Slot _type_slots_SearchSuggestionCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchSuggestionCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchSuggestionCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchSuggestionCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchSuggestionCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SearchSuggestionCollection = {
@@ -2411,13 +2399,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { }
     };
 
-    static PyType_Slot _type_slots_SearchSuggestionsRequest[] = 
-    {
+    static PyType_Slot _type_slots_SearchSuggestionsRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchSuggestionsRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchSuggestionsRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchSuggestionsRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchSuggestionsRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SearchSuggestionsRequest = {
@@ -2509,13 +2496,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { }
     };
 
-    static PyType_Slot _type_slots_SearchSuggestionsRequestDeferral[] = 
-    {
+    static PyType_Slot _type_slots_SearchSuggestionsRequestDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchSuggestionsRequestDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchSuggestionsRequestDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchSuggestionsRequestDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchSuggestionsRequestDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SearchSuggestionsRequestDeferral = {
@@ -2636,13 +2622,12 @@ namespace py::cpp::Windows::ApplicationModel::Search
         { }
     };
 
-    static PyType_Slot _type_slots_ISearchPaneQueryChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ISearchPaneQueryChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISearchPaneQueryChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISearchPaneQueryChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISearchPaneQueryChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISearchPaneQueryChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISearchPaneQueryChangedEventArgs = {

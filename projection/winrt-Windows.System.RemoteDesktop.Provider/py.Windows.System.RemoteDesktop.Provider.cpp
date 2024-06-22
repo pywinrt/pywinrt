@@ -76,13 +76,12 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_PerformLocalActionRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PerformLocalActionRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerformLocalActionRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerformLocalActionRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerformLocalActionRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerformLocalActionRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerformLocalActionRequestedEventArgs = {
@@ -272,13 +271,12 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteDesktopConnectionInfo[] = 
-    {
+    static PyType_Slot _type_slots_RemoteDesktopConnectionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteDesktopConnectionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteDesktopConnectionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteDesktopConnectionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteDesktopConnectionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteDesktopConnectionInfo = {
@@ -598,13 +596,12 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteDesktopConnectionRemoteInfo[] = 
-    {
+    static PyType_Slot _type_slots_RemoteDesktopConnectionRemoteInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteDesktopConnectionRemoteInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteDesktopConnectionRemoteInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteDesktopConnectionRemoteInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteDesktopConnectionRemoteInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteDesktopConnectionRemoteInfo = {
@@ -757,13 +754,12 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteDesktopInfo[] = 
-    {
+    static PyType_Slot _type_slots_RemoteDesktopInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteDesktopInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteDesktopInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteDesktopInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteDesktopInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteDesktopInfo = {
@@ -838,12 +834,11 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteDesktopRegistrar[] = 
-    {
+    static PyType_Slot _type_slots_RemoteDesktopRegistrar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteDesktopRegistrar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteDesktopRegistrar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteDesktopRegistrar) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteDesktopRegistrar = {

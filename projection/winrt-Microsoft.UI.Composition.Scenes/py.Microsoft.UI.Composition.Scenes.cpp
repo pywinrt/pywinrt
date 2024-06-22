@@ -156,13 +156,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { }
     };
 
-    static PyType_Slot _type_slots_SceneBoundingBox[] = 
-    {
+    static PyType_Slot _type_slots_SceneBoundingBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneBoundingBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneBoundingBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneBoundingBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneBoundingBox) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SceneBoundingBox = {
@@ -243,13 +242,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { }
     };
 
-    static PyType_Slot _type_slots_SceneComponent[] = 
-    {
+    static PyType_Slot _type_slots_SceneComponent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneComponent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneComponent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneComponent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneComponent) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SceneComponent = {
@@ -850,8 +848,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { }
     };
 
-    static PyType_Slot _type_slots_SceneComponentCollection[] = 
-    {
+    static PyType_Slot _type_slots_SceneComponentCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneComponentCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneComponentCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneComponentCollection) },
@@ -861,7 +858,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_SceneComponentCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_SceneComponentCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_SceneComponentCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SceneComponentCollection = {
@@ -922,13 +919,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { }
     };
 
-    static PyType_Slot _type_slots_SceneMaterial[] = 
-    {
+    static PyType_Slot _type_slots_SceneMaterial[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneMaterial) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneMaterial) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneMaterial) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneMaterial) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SceneMaterial = {
@@ -989,13 +985,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { }
     };
 
-    static PyType_Slot _type_slots_SceneMaterialInput[] = 
-    {
+    static PyType_Slot _type_slots_SceneMaterialInput[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneMaterialInput) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneMaterialInput) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneMaterialInput) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneMaterialInput) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SceneMaterialInput = {
@@ -1190,13 +1185,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { }
     };
 
-    static PyType_Slot _type_slots_SceneMesh[] = 
-    {
+    static PyType_Slot _type_slots_SceneMesh[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneMesh) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneMesh) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneMesh) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneMesh) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SceneMesh = {
@@ -1625,8 +1619,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { }
     };
 
-    static PyType_Slot _type_slots_SceneMeshMaterialAttributeMap[] = 
-    {
+    static PyType_Slot _type_slots_SceneMeshMaterialAttributeMap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneMeshMaterialAttributeMap) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneMeshMaterialAttributeMap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneMeshMaterialAttributeMap) },
@@ -1636,7 +1629,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { Py_mp_length, reinterpret_cast<void*>(_map_length_SceneMeshMaterialAttributeMap) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_SceneMeshMaterialAttributeMap) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_SceneMeshMaterialAttributeMap) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SceneMeshMaterialAttributeMap = {
@@ -1844,13 +1837,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { }
     };
 
-    static PyType_Slot _type_slots_SceneMeshRendererComponent[] = 
-    {
+    static PyType_Slot _type_slots_SceneMeshRendererComponent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneMeshRendererComponent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneMeshRendererComponent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneMeshRendererComponent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneMeshRendererComponent) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SceneMeshRendererComponent = {
@@ -2208,13 +2200,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { }
     };
 
-    static PyType_Slot _type_slots_SceneMetallicRoughnessMaterial[] = 
-    {
+    static PyType_Slot _type_slots_SceneMetallicRoughnessMaterial[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneMetallicRoughnessMaterial) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneMetallicRoughnessMaterial) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneMetallicRoughnessMaterial) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneMetallicRoughnessMaterial) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SceneMetallicRoughnessMaterial = {
@@ -2589,13 +2580,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { }
     };
 
-    static PyType_Slot _type_slots_SceneModelTransform[] = 
-    {
+    static PyType_Slot _type_slots_SceneModelTransform[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneModelTransform) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneModelTransform) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneModelTransform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneModelTransform) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SceneModelTransform = {
@@ -2799,13 +2789,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { }
     };
 
-    static PyType_Slot _type_slots_SceneNode[] = 
-    {
+    static PyType_Slot _type_slots_SceneNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneNode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SceneNode = {
@@ -3432,8 +3421,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { }
     };
 
-    static PyType_Slot _type_slots_SceneNodeCollection[] = 
-    {
+    static PyType_Slot _type_slots_SceneNodeCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneNodeCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneNodeCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneNodeCollection) },
@@ -3443,7 +3431,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_SceneNodeCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_SceneNodeCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_SceneNodeCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SceneNodeCollection = {
@@ -3504,13 +3492,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { }
     };
 
-    static PyType_Slot _type_slots_SceneObject[] = 
-    {
+    static PyType_Slot _type_slots_SceneObject[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneObject) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneObject) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneObject) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneObject) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SceneObject = {
@@ -4003,13 +3990,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { }
     };
 
-    static PyType_Slot _type_slots_ScenePbrMaterial[] = 
-    {
+    static PyType_Slot _type_slots_ScenePbrMaterial[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScenePbrMaterial) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScenePbrMaterial) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScenePbrMaterial) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScenePbrMaterial) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ScenePbrMaterial = {
@@ -4070,13 +4056,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { }
     };
 
-    static PyType_Slot _type_slots_SceneRendererComponent[] = 
-    {
+    static PyType_Slot _type_slots_SceneRendererComponent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneRendererComponent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneRendererComponent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneRendererComponent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneRendererComponent) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SceneRendererComponent = {
@@ -4360,13 +4345,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { }
     };
 
-    static PyType_Slot _type_slots_SceneSurfaceMaterialInput[] = 
-    {
+    static PyType_Slot _type_slots_SceneSurfaceMaterialInput[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneSurfaceMaterialInput) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneSurfaceMaterialInput) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneSurfaceMaterialInput) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneSurfaceMaterialInput) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SceneSurfaceMaterialInput = {
@@ -4532,13 +4516,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { }
     };
 
-    static PyType_Slot _type_slots_SceneVisual[] = 
-    {
+    static PyType_Slot _type_slots_SceneVisual[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneVisual) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneVisual) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneVisual) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneVisual) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SceneVisual = {

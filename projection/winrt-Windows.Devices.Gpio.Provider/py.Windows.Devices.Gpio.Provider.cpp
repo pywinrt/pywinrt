@@ -100,13 +100,12 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_GpioPinProviderValueChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GpioPinProviderValueChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioPinProviderValueChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GpioPinProviderValueChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioPinProviderValueChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioPinProviderValueChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GpioPinProviderValueChangedEventArgs = {
@@ -220,13 +219,12 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IGpioControllerProvider[] = 
-    {
+    static PyType_Slot _type_slots_IGpioControllerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGpioControllerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGpioControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGpioControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGpioControllerProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IGpioControllerProvider = {
@@ -578,13 +576,12 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IGpioPinProvider[] = 
-    {
+    static PyType_Slot _type_slots_IGpioPinProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGpioPinProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGpioPinProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGpioPinProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGpioPinProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IGpioPinProvider = {
@@ -675,13 +672,12 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IGpioProvider[] = 
-    {
+    static PyType_Slot _type_slots_IGpioProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGpioProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGpioProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGpioProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGpioProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IGpioProvider = {

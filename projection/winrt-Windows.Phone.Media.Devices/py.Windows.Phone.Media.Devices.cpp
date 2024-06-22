@@ -213,13 +213,12 @@ namespace py::cpp::Windows::Phone::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_AudioRoutingManager[] = 
-    {
+    static PyType_Slot _type_slots_AudioRoutingManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioRoutingManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioRoutingManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioRoutingManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioRoutingManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioRoutingManager = {

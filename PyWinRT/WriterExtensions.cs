@@ -154,9 +154,7 @@ static class WriterExtensions
         var name = type.Name.ToNonGeneric();
 
         w.WriteBlankLine();
-        w.WriteLine($"static PyType_Slot _type_slots_{name}[] = ");
-        // FIXME: move to previous line
-        w.WriteLine("{");
+        w.WriteLine($"static PyType_Slot _type_slots_{name}[] = {{");
         w.Indent++;
 
         w.WriteLine($"{{ Py_tp_new, reinterpret_cast<void*>(_new_{name}) }},");
@@ -223,8 +221,7 @@ static class WriterExtensions
             }
         }
 
-        // FIXME: remove trailing comma
-        w.WriteLine("{ },");
+        w.WriteLine("{ }");
         w.Indent--;
         w.WriteLine("};");
     }

@@ -426,13 +426,12 @@ namespace py::cpp::Windows::Devices::Lights
         { }
     };
 
-    static PyType_Slot _type_slots_Lamp[] = 
-    {
+    static PyType_Slot _type_slots_Lamp[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Lamp) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Lamp) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Lamp) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Lamp) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Lamp = {
@@ -1340,13 +1339,12 @@ namespace py::cpp::Windows::Devices::Lights
         { }
     };
 
-    static PyType_Slot _type_slots_LampArray[] = 
-    {
+    static PyType_Slot _type_slots_LampArray[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampArray) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampArray) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampArray) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampArray) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LampArray = {
@@ -1454,13 +1452,12 @@ namespace py::cpp::Windows::Devices::Lights
         { }
     };
 
-    static PyType_Slot _type_slots_LampAvailabilityChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_LampAvailabilityChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampAvailabilityChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampAvailabilityChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampAvailabilityChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampAvailabilityChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LampAvailabilityChangedEventArgs = {
@@ -1733,13 +1730,12 @@ namespace py::cpp::Windows::Devices::Lights
         { }
     };
 
-    static PyType_Slot _type_slots_LampInfo[] = 
-    {
+    static PyType_Slot _type_slots_LampInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LampInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LampInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LampInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LampInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LampInfo = {

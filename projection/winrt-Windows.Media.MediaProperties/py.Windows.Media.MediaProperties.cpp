@@ -711,13 +711,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Slot _type_slots_AudioEncodingProperties[] = 
-    {
+    static PyType_Slot _type_slots_AudioEncodingProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioEncodingProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioEncodingProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioEncodingProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioEncodingProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioEncodingProperties = {
@@ -1004,12 +1003,11 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Slot _type_slots_Av1ProfileIds[] = 
-    {
+    static PyType_Slot _type_slots_Av1ProfileIds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Av1ProfileIds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Av1ProfileIds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Av1ProfileIds) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Av1ProfileIds = {
@@ -1247,13 +1245,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Slot _type_slots_ContainerEncodingProperties[] = 
-    {
+    static PyType_Slot _type_slots_ContainerEncodingProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContainerEncodingProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContainerEncodingProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContainerEncodingProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContainerEncodingProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContainerEncodingProperties = {
@@ -1470,12 +1467,11 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Slot _type_slots_H264ProfileIds[] = 
-    {
+    static PyType_Slot _type_slots_H264ProfileIds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_H264ProfileIds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_H264ProfileIds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_H264ProfileIds) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_H264ProfileIds = {
@@ -1955,12 +1951,11 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Slot _type_slots_HevcProfileIds[] = 
-    {
+    static PyType_Slot _type_slots_HevcProfileIds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HevcProfileIds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HevcProfileIds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HevcProfileIds) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HevcProfileIds = {
@@ -2480,13 +2475,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Slot _type_slots_ImageEncodingProperties[] = 
-    {
+    static PyType_Slot _type_slots_ImageEncodingProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageEncodingProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageEncodingProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageEncodingProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageEncodingProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ImageEncodingProperties = {
@@ -3367,13 +3361,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Slot _type_slots_MediaEncodingProfile[] = 
-    {
+    static PyType_Slot _type_slots_MediaEncodingProfile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaEncodingProfile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaEncodingProfile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaEncodingProfile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaEncodingProfile) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaEncodingProfile = {
@@ -4446,12 +4439,11 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Slot _type_slots_MediaEncodingSubtypes[] = 
-    {
+    static PyType_Slot _type_slots_MediaEncodingSubtypes[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaEncodingSubtypes) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaEncodingSubtypes) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaEncodingSubtypes) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaEncodingSubtypes = {
@@ -4954,8 +4946,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Slot _type_slots_MediaPropertySet[] = 
-    {
+    static PyType_Slot _type_slots_MediaPropertySet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaPropertySet) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaPropertySet) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaPropertySet) },
@@ -4965,7 +4956,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         { Py_mp_length, reinterpret_cast<void*>(_map_length_MediaPropertySet) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_MediaPropertySet) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_MediaPropertySet) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaPropertySet = {
@@ -5122,13 +5113,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Slot _type_slots_MediaRatio[] = 
-    {
+    static PyType_Slot _type_slots_MediaRatio[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaRatio) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaRatio) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaRatio) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaRatio) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaRatio = {
@@ -5250,12 +5240,11 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Slot _type_slots_Mpeg2ProfileIds[] = 
-    {
+    static PyType_Slot _type_slots_Mpeg2ProfileIds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Mpeg2ProfileIds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Mpeg2ProfileIds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Mpeg2ProfileIds) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Mpeg2ProfileIds = {
@@ -5678,13 +5667,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Slot _type_slots_TimedMetadataEncodingProperties[] = 
-    {
+    static PyType_Slot _type_slots_TimedMetadataEncodingProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedMetadataEncodingProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedMetadataEncodingProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedMetadataEncodingProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedMetadataEncodingProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TimedMetadataEncodingProperties = {
@@ -6436,13 +6424,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Slot _type_slots_VideoEncodingProperties[] = 
-    {
+    static PyType_Slot _type_slots_VideoEncodingProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoEncodingProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoEncodingProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoEncodingProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoEncodingProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VideoEncodingProperties = {
@@ -6557,12 +6544,11 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Slot _type_slots_Vp9ProfileIds[] = 
-    {
+    static PyType_Slot _type_slots_Vp9ProfileIds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vp9ProfileIds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vp9ProfileIds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vp9ProfileIds) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Vp9ProfileIds = {
@@ -6739,13 +6725,12 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Slot _type_slots_IMediaEncodingProperties[] = 
-    {
+    static PyType_Slot _type_slots_IMediaEncodingProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMediaEncodingProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMediaEncodingProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMediaEncodingProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMediaEncodingProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IMediaEncodingProperties = {

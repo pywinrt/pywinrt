@@ -181,14 +181,13 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         { }
     };
 
-    static PyType_Slot _type_slots_DnssdRegistrationResult[] = 
-    {
+    static PyType_Slot _type_slots_DnssdRegistrationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DnssdRegistrationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DnssdRegistrationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DnssdRegistrationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DnssdRegistrationResult) },
         { Py_tp_str, reinterpret_cast<void*>(_str_DnssdRegistrationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DnssdRegistrationResult = {
@@ -684,14 +683,13 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         { }
     };
 
-    static PyType_Slot _type_slots_DnssdServiceInstance[] = 
-    {
+    static PyType_Slot _type_slots_DnssdServiceInstance[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DnssdServiceInstance) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DnssdServiceInstance) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DnssdServiceInstance) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DnssdServiceInstance) },
         { Py_tp_str, reinterpret_cast<void*>(_str_DnssdServiceInstance) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DnssdServiceInstance = {
@@ -1011,8 +1009,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         { }
     };
 
-    static PyType_Slot _type_slots_DnssdServiceInstanceCollection[] = 
-    {
+    static PyType_Slot _type_slots_DnssdServiceInstanceCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DnssdServiceInstanceCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DnssdServiceInstanceCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DnssdServiceInstanceCollection) },
@@ -1021,7 +1018,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_DnssdServiceInstanceCollection) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_DnssdServiceInstanceCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_DnssdServiceInstanceCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DnssdServiceInstanceCollection = {
@@ -1299,13 +1296,12 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         { }
     };
 
-    static PyType_Slot _type_slots_DnssdServiceWatcher[] = 
-    {
+    static PyType_Slot _type_slots_DnssdServiceWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DnssdServiceWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DnssdServiceWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DnssdServiceWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DnssdServiceWatcher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DnssdServiceWatcher = {

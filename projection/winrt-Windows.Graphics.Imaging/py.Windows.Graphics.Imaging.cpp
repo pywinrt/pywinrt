@@ -200,13 +200,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_BitmapBuffer[] = 
-    {
+    static PyType_Slot _type_slots_BitmapBuffer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapBuffer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapBuffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapBuffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapBuffer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BitmapBuffer = {
@@ -347,13 +346,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_BitmapCodecInformation[] = 
-    {
+    static PyType_Slot _type_slots_BitmapCodecInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapCodecInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapCodecInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapCodecInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapCodecInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BitmapCodecInformation = {
@@ -1127,13 +1125,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_BitmapDecoder[] = 
-    {
+    static PyType_Slot _type_slots_BitmapDecoder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapDecoder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapDecoder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapDecoder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapDecoder) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BitmapDecoder = {
@@ -1885,13 +1882,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_BitmapEncoder[] = 
-    {
+    static PyType_Slot _type_slots_BitmapEncoder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapEncoder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapEncoder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapEncoder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapEncoder) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BitmapEncoder = {
@@ -2327,13 +2323,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_BitmapFrame[] = 
-    {
+    static PyType_Slot _type_slots_BitmapFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BitmapFrame = {
@@ -2458,13 +2453,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_BitmapProperties[] = 
-    {
+    static PyType_Slot _type_slots_BitmapProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BitmapProperties = {
@@ -2557,13 +2551,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_BitmapPropertiesView[] = 
-    {
+    static PyType_Slot _type_slots_BitmapPropertiesView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapPropertiesView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapPropertiesView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapPropertiesView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapPropertiesView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BitmapPropertiesView = {
@@ -2988,8 +2981,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_BitmapPropertySet[] = 
-    {
+    static PyType_Slot _type_slots_BitmapPropertySet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapPropertySet) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapPropertySet) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapPropertySet) },
@@ -2999,7 +2991,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { Py_mp_length, reinterpret_cast<void*>(_map_length_BitmapPropertySet) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_BitmapPropertySet) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_BitmapPropertySet) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BitmapPropertySet = {
@@ -3370,13 +3362,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_BitmapTransform[] = 
-    {
+    static PyType_Slot _type_slots_BitmapTransform[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapTransform) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapTransform) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapTransform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapTransform) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BitmapTransform = {
@@ -3502,13 +3493,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_BitmapTypedValue[] = 
-    {
+    static PyType_Slot _type_slots_BitmapTypedValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapTypedValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapTypedValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapTypedValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapTypedValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BitmapTypedValue = {
@@ -3972,13 +3962,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_ImageStream[] = 
-    {
+    static PyType_Slot _type_slots_ImageStream[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageStream) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageStream) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ImageStream = {
@@ -4069,13 +4058,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_PixelDataProvider[] = 
-    {
+    static PyType_Slot _type_slots_PixelDataProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PixelDataProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PixelDataProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PixelDataProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PixelDataProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PixelDataProvider = {
@@ -4784,13 +4772,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_SoftwareBitmap[] = 
-    {
+    static PyType_Slot _type_slots_SoftwareBitmap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SoftwareBitmap) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SoftwareBitmap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SoftwareBitmap) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SoftwareBitmap) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SoftwareBitmap = {
@@ -5144,13 +5131,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_IBitmapFrame[] = 
-    {
+    static PyType_Slot _type_slots_IBitmapFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBitmapFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBitmapFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBitmapFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBitmapFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBitmapFrame = {
@@ -5550,13 +5536,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_IBitmapFrameWithSoftwareBitmap[] = 
-    {
+    static PyType_Slot _type_slots_IBitmapFrameWithSoftwareBitmap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBitmapFrameWithSoftwareBitmap) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBitmapFrameWithSoftwareBitmap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBitmapFrameWithSoftwareBitmap) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBitmapFrameWithSoftwareBitmap) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBitmapFrameWithSoftwareBitmap = {
@@ -5649,13 +5634,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_IBitmapPropertiesView[] = 
-    {
+    static PyType_Slot _type_slots_IBitmapPropertiesView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBitmapPropertiesView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBitmapPropertiesView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBitmapPropertiesView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBitmapPropertiesView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBitmapPropertiesView = {
@@ -5877,14 +5861,13 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_BitmapBounds[] = 
-    {
+    static PyType_Slot _type_slots_BitmapBounds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapBounds) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BitmapBounds) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapBounds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapBounds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapBounds) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BitmapBounds = {
@@ -6106,14 +6089,13 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_BitmapPlaneDescription[] = 
-    {
+    static PyType_Slot _type_slots_BitmapPlaneDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapPlaneDescription) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BitmapPlaneDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapPlaneDescription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapPlaneDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapPlaneDescription) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BitmapPlaneDescription = {
@@ -6265,14 +6247,13 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot _type_slots_BitmapSize[] = 
-    {
+    static PyType_Slot _type_slots_BitmapSize[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapSize) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BitmapSize) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapSize) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapSize) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapSize) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BitmapSize = {

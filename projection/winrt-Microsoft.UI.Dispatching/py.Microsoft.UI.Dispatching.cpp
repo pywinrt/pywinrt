@@ -109,13 +109,12 @@ namespace py::cpp::Microsoft::UI::Dispatching
         { }
     };
 
-    static PyType_Slot _type_slots_DispatcherExitDeferral[] = 
-    {
+    static PyType_Slot _type_slots_DispatcherExitDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DispatcherExitDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DispatcherExitDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DispatcherExitDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DispatcherExitDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DispatcherExitDeferral = {
@@ -603,13 +602,12 @@ namespace py::cpp::Microsoft::UI::Dispatching
         { }
     };
 
-    static PyType_Slot _type_slots_DispatcherQueue[] = 
-    {
+    static PyType_Slot _type_slots_DispatcherQueue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DispatcherQueue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DispatcherQueue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DispatcherQueue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DispatcherQueue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DispatcherQueue = {
@@ -835,13 +833,12 @@ namespace py::cpp::Microsoft::UI::Dispatching
         { }
     };
 
-    static PyType_Slot _type_slots_DispatcherQueueController[] = 
-    {
+    static PyType_Slot _type_slots_DispatcherQueueController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DispatcherQueueController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DispatcherQueueController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DispatcherQueueController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DispatcherQueueController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DispatcherQueueController = {
@@ -959,13 +956,12 @@ namespace py::cpp::Microsoft::UI::Dispatching
         { }
     };
 
-    static PyType_Slot _type_slots_DispatcherQueueShutdownStartingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DispatcherQueueShutdownStartingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DispatcherQueueShutdownStartingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DispatcherQueueShutdownStartingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DispatcherQueueShutdownStartingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DispatcherQueueShutdownStartingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DispatcherQueueShutdownStartingEventArgs = {
@@ -1249,13 +1245,12 @@ namespace py::cpp::Microsoft::UI::Dispatching
         { }
     };
 
-    static PyType_Slot _type_slots_DispatcherQueueTimer[] = 
-    {
+    static PyType_Slot _type_slots_DispatcherQueueTimer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DispatcherQueueTimer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DispatcherQueueTimer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DispatcherQueueTimer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DispatcherQueueTimer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DispatcherQueueTimer = {

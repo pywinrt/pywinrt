@@ -437,13 +437,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_NDClient[] = 
-    {
+    static PyType_Slot _type_slots_NDClient[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NDClient) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NDClient) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NDClient) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NDClient) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NDClient = {
@@ -569,13 +568,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_NDCustomData[] = 
-    {
+    static PyType_Slot _type_slots_NDCustomData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NDCustomData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NDCustomData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NDCustomData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NDCustomData) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NDCustomData = {
@@ -851,13 +849,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_NDDownloadEngineNotifier[] = 
-    {
+    static PyType_Slot _type_slots_NDDownloadEngineNotifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NDDownloadEngineNotifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NDDownloadEngineNotifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NDDownloadEngineNotifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NDDownloadEngineNotifier) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NDDownloadEngineNotifier = {
@@ -1032,13 +1029,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_NDLicenseFetchDescriptor[] = 
-    {
+    static PyType_Slot _type_slots_NDLicenseFetchDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NDLicenseFetchDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NDLicenseFetchDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NDLicenseFetchDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NDLicenseFetchDescriptor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NDLicenseFetchDescriptor = {
@@ -1153,13 +1149,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_NDStorageFileHelper[] = 
-    {
+    static PyType_Slot _type_slots_NDStorageFileHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NDStorageFileHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NDStorageFileHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NDStorageFileHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NDStorageFileHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NDStorageFileHelper = {
@@ -1382,13 +1377,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_NDStreamParserNotifier[] = 
-    {
+    static PyType_Slot _type_slots_NDStreamParserNotifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NDStreamParserNotifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NDStreamParserNotifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NDStreamParserNotifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NDStreamParserNotifier) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NDStreamParserNotifier = {
@@ -1610,13 +1604,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_NDTCPMessenger[] = 
-    {
+    static PyType_Slot _type_slots_NDTCPMessenger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NDTCPMessenger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NDTCPMessenger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NDTCPMessenger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NDTCPMessenger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NDTCPMessenger = {
@@ -2013,13 +2006,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadyContentHeader[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadyContentHeader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyContentHeader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyContentHeader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyContentHeader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyContentHeader) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadyContentHeader = {
@@ -2077,12 +2069,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadyContentResolver[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadyContentResolver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyContentResolver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyContentResolver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyContentResolver) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadyContentResolver = {
@@ -2269,13 +2260,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadyDomain[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadyDomain[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyDomain) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyDomain) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyDomain) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyDomain) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadyDomain = {
@@ -2403,14 +2393,13 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadyDomainIterable[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadyDomainIterable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyDomainIterable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyDomainIterable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyDomainIterable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyDomainIterable) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_PlayReadyDomainIterable) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadyDomainIterable = {
@@ -2600,15 +2589,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadyDomainIterator[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadyDomainIterator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyDomainIterator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyDomainIterator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyDomainIterator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyDomainIterator) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_PlayReadyDomainIterator) },
         { Py_tp_iternext, reinterpret_cast<void*>(_iterator_next_PlayReadyDomainIterator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadyDomainIterator = {
@@ -3113,13 +3101,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadyDomainJoinServiceRequest[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadyDomainJoinServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyDomainJoinServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyDomainJoinServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyDomainJoinServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyDomainJoinServiceRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadyDomainJoinServiceRequest = {
@@ -3576,13 +3563,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadyDomainLeaveServiceRequest[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadyDomainLeaveServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyDomainLeaveServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyDomainLeaveServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyDomainLeaveServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyDomainLeaveServiceRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadyDomainLeaveServiceRequest = {
@@ -3700,13 +3686,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadyITADataGenerator[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadyITADataGenerator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyITADataGenerator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyITADataGenerator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyITADataGenerator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyITADataGenerator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadyITADataGenerator = {
@@ -4067,13 +4052,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadyIndividualizationServiceRequest[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadyIndividualizationServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyIndividualizationServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyIndividualizationServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyIndividualizationServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyIndividualizationServiceRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadyIndividualizationServiceRequest = {
@@ -4366,13 +4350,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadyLicense[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadyLicense[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyLicense) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyLicense) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyLicense) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyLicense) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadyLicense = {
@@ -4882,13 +4865,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadyLicenseAcquisitionServiceRequest[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadyLicenseAcquisitionServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyLicenseAcquisitionServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyLicenseAcquisitionServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyLicenseAcquisitionServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyLicenseAcquisitionServiceRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadyLicenseAcquisitionServiceRequest = {
@@ -5030,14 +5012,13 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadyLicenseIterable[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadyLicenseIterable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyLicenseIterable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyLicenseIterable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyLicenseIterable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyLicenseIterable) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_PlayReadyLicenseIterable) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadyLicenseIterable = {
@@ -5227,15 +5208,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadyLicenseIterator[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadyLicenseIterator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyLicenseIterator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyLicenseIterator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyLicenseIterator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyLicenseIterator) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_PlayReadyLicenseIterator) },
         { Py_tp_iternext, reinterpret_cast<void*>(_iterator_next_PlayReadyLicenseIterator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadyLicenseIterator = {
@@ -5293,12 +5273,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadyLicenseManagement[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadyLicenseManagement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyLicenseManagement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyLicenseManagement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyLicenseManagement) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadyLicenseManagement = {
@@ -5505,13 +5484,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadyLicenseSession[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadyLicenseSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyLicenseSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyLicenseSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyLicenseSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyLicenseSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadyLicenseSession = {
@@ -5920,13 +5898,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadyMeteringReportServiceRequest[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadyMeteringReportServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyMeteringReportServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyMeteringReportServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyMeteringReportServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyMeteringReportServiceRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadyMeteringReportServiceRequest = {
@@ -6287,13 +6264,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadyRevocationServiceRequest[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadyRevocationServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyRevocationServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadyRevocationServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyRevocationServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyRevocationServiceRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadyRevocationServiceRequest = {
@@ -6421,14 +6397,13 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadySecureStopIterable[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadySecureStopIterable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadySecureStopIterable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadySecureStopIterable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadySecureStopIterable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadySecureStopIterable) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_PlayReadySecureStopIterable) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadySecureStopIterable = {
@@ -6618,15 +6593,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadySecureStopIterator[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadySecureStopIterator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadySecureStopIterator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadySecureStopIterator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadySecureStopIterator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadySecureStopIterator) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_PlayReadySecureStopIterator) },
         { Py_tp_iternext, reinterpret_cast<void*>(_iterator_next_PlayReadySecureStopIterator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadySecureStopIterator = {
@@ -7105,13 +7079,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadySecureStopServiceRequest[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadySecureStopServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadySecureStopServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadySecureStopServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadySecureStopServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadySecureStopServiceRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadySecureStopServiceRequest = {
@@ -7242,13 +7215,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadySoapMessage[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadySoapMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadySoapMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayReadySoapMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadySoapMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadySoapMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadySoapMessage = {
@@ -7602,12 +7574,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_PlayReadyStatics[] = 
-    {
+    static PyType_Slot _type_slots_PlayReadyStatics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayReadyStatics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayReadyStatics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayReadyStatics) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayReadyStatics = {
@@ -7769,13 +7740,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_INDClosedCaptionDataReceivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_INDClosedCaptionDataReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDClosedCaptionDataReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDClosedCaptionDataReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDClosedCaptionDataReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDClosedCaptionDataReceivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INDClosedCaptionDataReceivedEventArgs = {
@@ -7876,13 +7846,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_INDCustomData[] = 
-    {
+    static PyType_Slot _type_slots_INDCustomData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDCustomData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDCustomData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDCustomData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDCustomData) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INDCustomData = {
@@ -8183,13 +8152,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_INDDownloadEngine[] = 
-    {
+    static PyType_Slot _type_slots_INDDownloadEngine[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDDownloadEngine) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDDownloadEngine) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDDownloadEngine) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDDownloadEngine) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INDDownloadEngine = {
@@ -8443,13 +8411,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_INDDownloadEngineNotifier[] = 
-    {
+    static PyType_Slot _type_slots_INDDownloadEngineNotifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDDownloadEngineNotifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDDownloadEngineNotifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDDownloadEngineNotifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDDownloadEngineNotifier) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INDDownloadEngineNotifier = {
@@ -8530,13 +8497,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_INDLicenseFetchCompletedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_INDLicenseFetchCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDLicenseFetchCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDLicenseFetchCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDLicenseFetchCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDLicenseFetchCompletedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INDLicenseFetchCompletedEventArgs = {
@@ -8685,13 +8651,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_INDLicenseFetchDescriptor[] = 
-    {
+    static PyType_Slot _type_slots_INDLicenseFetchDescriptor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDLicenseFetchDescriptor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDLicenseFetchDescriptor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDLicenseFetchDescriptor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDLicenseFetchDescriptor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INDLicenseFetchDescriptor = {
@@ -8772,13 +8737,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_INDLicenseFetchResult[] = 
-    {
+    static PyType_Slot _type_slots_INDLicenseFetchResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDLicenseFetchResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDLicenseFetchResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDLicenseFetchResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDLicenseFetchResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INDLicenseFetchResult = {
@@ -8975,13 +8939,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_INDMessenger[] = 
-    {
+    static PyType_Slot _type_slots_INDMessenger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDMessenger) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDMessenger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDMessenger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDMessenger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INDMessenger = {
@@ -9062,13 +9025,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_INDProximityDetectionCompletedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_INDProximityDetectionCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDProximityDetectionCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDProximityDetectionCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDProximityDetectionCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDProximityDetectionCompletedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INDProximityDetectionCompletedEventArgs = {
@@ -9217,13 +9179,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_INDRegistrationCompletedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_INDRegistrationCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDRegistrationCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDRegistrationCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDRegistrationCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDRegistrationCompletedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INDRegistrationCompletedEventArgs = {
@@ -9304,13 +9265,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_INDSendResult[] = 
-    {
+    static PyType_Slot _type_slots_INDSendResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDSendResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDSendResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDSendResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDSendResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INDSendResult = {
@@ -9391,13 +9351,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_INDStartResult[] = 
-    {
+    static PyType_Slot _type_slots_INDStartResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDStartResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDStartResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDStartResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDStartResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INDStartResult = {
@@ -9490,13 +9449,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_INDStorageFileHelper[] = 
-    {
+    static PyType_Slot _type_slots_INDStorageFileHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDStorageFileHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDStorageFileHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDStorageFileHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDStorageFileHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INDStorageFileHelper = {
@@ -9717,13 +9675,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_INDStreamParser[] = 
-    {
+    static PyType_Slot _type_slots_INDStreamParser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDStreamParser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDStreamParser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDStreamParser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDStreamParser) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INDStreamParser = {
@@ -9924,13 +9881,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_INDStreamParserNotifier[] = 
-    {
+    static PyType_Slot _type_slots_INDStreamParserNotifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDStreamParserNotifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDStreamParserNotifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDStreamParserNotifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDStreamParserNotifier) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INDStreamParserNotifier = {
@@ -10211,13 +10167,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_INDTransmitterProperties[] = 
-    {
+    static PyType_Slot _type_slots_INDTransmitterProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INDTransmitterProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INDTransmitterProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INDTransmitterProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INDTransmitterProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INDTransmitterProperties = {
@@ -10378,13 +10333,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_IPlayReadyDomain[] = 
-    {
+    static PyType_Slot _type_slots_IPlayReadyDomain[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadyDomain) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadyDomain) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadyDomain) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadyDomain) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPlayReadyDomain = {
@@ -10597,13 +10551,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_IPlayReadyLicense[] = 
-    {
+    static PyType_Slot _type_slots_IPlayReadyLicense[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadyLicense) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadyLicense) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadyLicense) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadyLicense) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPlayReadyLicense = {
@@ -11038,13 +10991,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_IPlayReadyLicenseAcquisitionServiceRequest[] = 
-    {
+    static PyType_Slot _type_slots_IPlayReadyLicenseAcquisitionServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadyLicenseAcquisitionServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadyLicenseAcquisitionServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadyLicenseAcquisitionServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadyLicenseAcquisitionServiceRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPlayReadyLicenseAcquisitionServiceRequest = {
@@ -11168,13 +11120,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_IPlayReadyLicenseSession[] = 
-    {
+    static PyType_Slot _type_slots_IPlayReadyLicenseSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadyLicenseSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadyLicenseSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadyLicenseSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadyLicenseSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPlayReadyLicenseSession = {
@@ -11331,13 +11282,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_IPlayReadyLicenseSession2[] = 
-    {
+    static PyType_Slot _type_slots_IPlayReadyLicenseSession2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadyLicenseSession2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadyLicenseSession2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadyLicenseSession2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadyLicenseSession2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPlayReadyLicenseSession2 = {
@@ -11776,13 +11726,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_IPlayReadySecureStopServiceRequest[] = 
-    {
+    static PyType_Slot _type_slots_IPlayReadySecureStopServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadySecureStopServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadySecureStopServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadySecureStopServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadySecureStopServiceRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPlayReadySecureStopServiceRequest = {
@@ -12121,13 +12070,12 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot _type_slots_IPlayReadyServiceRequest[] = 
-    {
+    static PyType_Slot _type_slots_IPlayReadyServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPlayReadyServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPlayReadyServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPlayReadyServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPlayReadyServiceRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPlayReadyServiceRequest = {

@@ -275,13 +275,12 @@ namespace py::cpp::Windows::Networking
         { }
     };
 
-    static PyType_Slot _type_slots_EndpointPair[] = 
-    {
+    static PyType_Slot _type_slots_EndpointPair[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EndpointPair) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EndpointPair) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EndpointPair) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EndpointPair) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EndpointPair = {
@@ -573,14 +572,13 @@ namespace py::cpp::Windows::Networking
         { }
     };
 
-    static PyType_Slot _type_slots_HostName[] = 
-    {
+    static PyType_Slot _type_slots_HostName[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HostName) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HostName) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HostName) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HostName) },
         { Py_tp_str, reinterpret_cast<void*>(_str_HostName) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HostName = {

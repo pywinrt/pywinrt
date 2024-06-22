@@ -224,13 +224,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
         { }
     };
 
-    static PyType_Slot _type_slots_AddAppointmentOperation[] = 
-    {
+    static PyType_Slot _type_slots_AddAppointmentOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AddAppointmentOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AddAppointmentOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AddAppointmentOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AddAppointmentOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AddAppointmentOperation = {
@@ -352,12 +351,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentsProviderLaunchActionVerbs[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentsProviderLaunchActionVerbs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentsProviderLaunchActionVerbs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentsProviderLaunchActionVerbs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentsProviderLaunchActionVerbs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentsProviderLaunchActionVerbs = {
@@ -634,13 +632,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
         { }
     };
 
-    static PyType_Slot _type_slots_RemoveAppointmentOperation[] = 
-    {
+    static PyType_Slot _type_slots_RemoveAppointmentOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoveAppointmentOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoveAppointmentOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoveAppointmentOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoveAppointmentOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoveAppointmentOperation = {
@@ -909,13 +906,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
         { }
     };
 
-    static PyType_Slot _type_slots_ReplaceAppointmentOperation[] = 
-    {
+    static PyType_Slot _type_slots_ReplaceAppointmentOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ReplaceAppointmentOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ReplaceAppointmentOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ReplaceAppointmentOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ReplaceAppointmentOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ReplaceAppointmentOperation = {

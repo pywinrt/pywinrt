@@ -601,13 +601,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_Certificate[] = 
-    {
+    static PyType_Slot _type_slots_Certificate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Certificate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Certificate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Certificate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Certificate) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Certificate = {
@@ -750,13 +749,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_CertificateChain[] = 
-    {
+    static PyType_Slot _type_slots_CertificateChain[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CertificateChain) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CertificateChain) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CertificateChain) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CertificateChain) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CertificateChain = {
@@ -949,12 +947,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_CertificateEnrollmentManager[] = 
-    {
+    static PyType_Slot _type_slots_CertificateEnrollmentManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CertificateEnrollmentManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CertificateEnrollmentManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CertificateEnrollmentManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CertificateEnrollmentManager = {
@@ -1243,13 +1240,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_CertificateExtension[] = 
-    {
+    static PyType_Slot _type_slots_CertificateExtension[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CertificateExtension) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CertificateExtension) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CertificateExtension) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CertificateExtension) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CertificateExtension = {
@@ -1716,13 +1712,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_CertificateKeyUsages[] = 
-    {
+    static PyType_Slot _type_slots_CertificateKeyUsages[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CertificateKeyUsages) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CertificateKeyUsages) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CertificateKeyUsages) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CertificateKeyUsages) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CertificateKeyUsages = {
@@ -2161,13 +2156,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_CertificateQuery[] = 
-    {
+    static PyType_Slot _type_slots_CertificateQuery[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CertificateQuery) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CertificateQuery) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CertificateQuery) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CertificateQuery) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CertificateQuery = {
@@ -3126,13 +3120,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_CertificateRequestProperties[] = 
-    {
+    static PyType_Slot _type_slots_CertificateRequestProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CertificateRequestProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CertificateRequestProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CertificateRequestProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CertificateRequestProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CertificateRequestProperties = {
@@ -3279,13 +3272,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_CertificateStore[] = 
-    {
+    static PyType_Slot _type_slots_CertificateStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CertificateStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CertificateStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CertificateStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CertificateStore) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CertificateStore = {
@@ -3461,12 +3453,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_CertificateStores[] = 
-    {
+    static PyType_Slot _type_slots_CertificateStores[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CertificateStores) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CertificateStores) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CertificateStores) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CertificateStores = {
@@ -3859,13 +3850,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_ChainBuildingParameters[] = 
-    {
+    static PyType_Slot _type_slots_ChainBuildingParameters[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ChainBuildingParameters) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ChainBuildingParameters) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ChainBuildingParameters) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ChainBuildingParameters) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ChainBuildingParameters = {
@@ -4044,13 +4034,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_ChainValidationParameters[] = 
-    {
+    static PyType_Slot _type_slots_ChainValidationParameters[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ChainValidationParameters) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ChainValidationParameters) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ChainValidationParameters) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ChainValidationParameters) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ChainValidationParameters = {
@@ -4258,13 +4247,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_CmsAttachedSignature[] = 
-    {
+    static PyType_Slot _type_slots_CmsAttachedSignature[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CmsAttachedSignature) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CmsAttachedSignature) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CmsAttachedSignature) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CmsAttachedSignature) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CmsAttachedSignature = {
@@ -4480,13 +4468,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_CmsDetachedSignature[] = 
-    {
+    static PyType_Slot _type_slots_CmsDetachedSignature[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CmsDetachedSignature) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CmsDetachedSignature) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CmsDetachedSignature) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CmsDetachedSignature) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CmsDetachedSignature = {
@@ -4711,13 +4698,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_CmsSignerInfo[] = 
-    {
+    static PyType_Slot _type_slots_CmsSignerInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CmsSignerInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CmsSignerInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CmsSignerInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CmsSignerInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CmsSignerInfo = {
@@ -4838,13 +4824,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_CmsTimestampInfo[] = 
-    {
+    static PyType_Slot _type_slots_CmsTimestampInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CmsTimestampInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CmsTimestampInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CmsTimestampInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CmsTimestampInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CmsTimestampInfo = {
@@ -5061,12 +5046,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_KeyAlgorithmNames[] = 
-    {
+    static PyType_Slot _type_slots_KeyAlgorithmNames[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyAlgorithmNames) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyAlgorithmNames) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyAlgorithmNames) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KeyAlgorithmNames = {
@@ -5211,12 +5195,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_KeyAttestationHelper[] = 
-    {
+    static PyType_Slot _type_slots_KeyAttestationHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyAttestationHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyAttestationHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyAttestationHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KeyAttestationHelper = {
@@ -5346,12 +5329,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_KeyStorageProviderNames[] = 
-    {
+    static PyType_Slot _type_slots_KeyStorageProviderNames[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyStorageProviderNames) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyStorageProviderNames) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyStorageProviderNames) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KeyStorageProviderNames = {
@@ -5799,13 +5781,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_PfxImportParameters[] = 
-    {
+    static PyType_Slot _type_slots_PfxImportParameters[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PfxImportParameters) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PfxImportParameters) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PfxImportParameters) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PfxImportParameters) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PfxImportParameters = {
@@ -5889,12 +5870,11 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_StandardCertificateStoreNames[] = 
-    {
+    static PyType_Slot _type_slots_StandardCertificateStoreNames[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StandardCertificateStoreNames) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StandardCertificateStoreNames) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StandardCertificateStoreNames) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StandardCertificateStoreNames = {
@@ -6265,13 +6245,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_SubjectAlternativeNameInfo[] = 
-    {
+    static PyType_Slot _type_slots_SubjectAlternativeNameInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SubjectAlternativeNameInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SubjectAlternativeNameInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SubjectAlternativeNameInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SubjectAlternativeNameInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SubjectAlternativeNameInfo = {
@@ -6482,13 +6461,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_UserCertificateEnrollmentManager[] = 
-    {
+    static PyType_Slot _type_slots_UserCertificateEnrollmentManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserCertificateEnrollmentManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserCertificateEnrollmentManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserCertificateEnrollmentManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserCertificateEnrollmentManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserCertificateEnrollmentManager = {
@@ -6633,13 +6611,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot _type_slots_UserCertificateStore[] = 
-    {
+    static PyType_Slot _type_slots_UserCertificateStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserCertificateStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserCertificateStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserCertificateStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserCertificateStore) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserCertificateStore = {

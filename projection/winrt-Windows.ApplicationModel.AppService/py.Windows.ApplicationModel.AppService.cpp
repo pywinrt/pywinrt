@@ -53,12 +53,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { }
     };
 
-    static PyType_Slot _type_slots_AppServiceCatalog[] = 
-    {
+    static PyType_Slot _type_slots_AppServiceCatalog[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppServiceCatalog) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppServiceCatalog) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppServiceCatalog) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppServiceCatalog = {
@@ -165,13 +164,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { }
     };
 
-    static PyType_Slot _type_slots_AppServiceClosedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppServiceClosedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppServiceClosedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppServiceClosedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppServiceClosedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppServiceClosedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppServiceClosedEventArgs = {
@@ -667,13 +665,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { }
     };
 
-    static PyType_Slot _type_slots_AppServiceConnection[] = 
-    {
+    static PyType_Slot _type_slots_AppServiceConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppServiceConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppServiceConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppServiceConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppServiceConnection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppServiceConnection = {
@@ -791,13 +788,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { }
     };
 
-    static PyType_Slot _type_slots_AppServiceDeferral[] = 
-    {
+    static PyType_Slot _type_slots_AppServiceDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppServiceDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppServiceDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppServiceDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppServiceDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppServiceDeferral = {
@@ -910,13 +906,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { }
     };
 
-    static PyType_Slot _type_slots_AppServiceRequest[] = 
-    {
+    static PyType_Slot _type_slots_AppServiceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppServiceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppServiceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppServiceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppServiceRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppServiceRequest = {
@@ -1027,13 +1022,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { }
     };
 
-    static PyType_Slot _type_slots_AppServiceRequestReceivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppServiceRequestReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppServiceRequestReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppServiceRequestReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppServiceRequestReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppServiceRequestReceivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppServiceRequestReceivedEventArgs = {
@@ -1134,13 +1128,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { }
     };
 
-    static PyType_Slot _type_slots_AppServiceResponse[] = 
-    {
+    static PyType_Slot _type_slots_AppServiceResponse[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppServiceResponse) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppServiceResponse) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppServiceResponse) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppServiceResponse) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppServiceResponse = {
@@ -1333,13 +1326,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { }
     };
 
-    static PyType_Slot _type_slots_AppServiceTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_AppServiceTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppServiceTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppServiceTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppServiceTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppServiceTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppServiceTriggerDetails = {
@@ -1440,13 +1432,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { }
     };
 
-    static PyType_Slot _type_slots_StatelessAppServiceResponse[] = 
-    {
+    static PyType_Slot _type_slots_StatelessAppServiceResponse[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StatelessAppServiceResponse) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StatelessAppServiceResponse) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StatelessAppServiceResponse) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StatelessAppServiceResponse) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StatelessAppServiceResponse = {

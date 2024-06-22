@@ -76,13 +76,12 @@ namespace py::cpp::Windows::Media::FaceAnalysis
         { }
     };
 
-    static PyType_Slot _type_slots_DetectedFace[] = 
-    {
+    static PyType_Slot _type_slots_DetectedFace[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DetectedFace) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DetectedFace) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DetectedFace) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DetectedFace) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DetectedFace = {
@@ -400,13 +399,12 @@ namespace py::cpp::Windows::Media::FaceAnalysis
         { }
     };
 
-    static PyType_Slot _type_slots_FaceDetector[] = 
-    {
+    static PyType_Slot _type_slots_FaceDetector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FaceDetector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FaceDetector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FaceDetector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FaceDetector) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FaceDetector = {
@@ -732,13 +730,12 @@ namespace py::cpp::Windows::Media::FaceAnalysis
         { }
     };
 
-    static PyType_Slot _type_slots_FaceTracker[] = 
-    {
+    static PyType_Slot _type_slots_FaceTracker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FaceTracker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FaceTracker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FaceTracker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FaceTracker) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FaceTracker = {

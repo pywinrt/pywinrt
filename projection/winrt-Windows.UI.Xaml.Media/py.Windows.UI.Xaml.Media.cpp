@@ -480,13 +480,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_AcrylicBrush[] = 
-    {
+    static PyType_Slot _type_slots_AcrylicBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AcrylicBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AcrylicBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AcrylicBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AcrylicBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AcrylicBrush = {
@@ -935,13 +934,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_ArcSegment[] = 
-    {
+    static PyType_Slot _type_slots_ArcSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ArcSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ArcSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ArcSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ArcSegment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ArcSegment = {
@@ -1255,13 +1253,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_BezierSegment[] = 
-    {
+    static PyType_Slot _type_slots_BezierSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BezierSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BezierSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BezierSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BezierSegment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BezierSegment = {
@@ -1372,13 +1369,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_BitmapCache[] = 
-    {
+    static PyType_Slot _type_slots_BitmapCache[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapCache) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapCache) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapCache) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapCache) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BitmapCache = {
@@ -1674,13 +1670,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_Brush[] = 
-    {
+    static PyType_Slot _type_slots_Brush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Brush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Brush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Brush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Brush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Brush = {
@@ -2331,8 +2326,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_BrushCollection[] = 
-    {
+    static PyType_Slot _type_slots_BrushCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BrushCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BrushCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BrushCollection) },
@@ -2342,7 +2336,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_BrushCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_BrushCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_BrushCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BrushCollection = {
@@ -2403,13 +2397,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_CacheMode[] = 
-    {
+    static PyType_Slot _type_slots_CacheMode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CacheMode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CacheMode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CacheMode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CacheMode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CacheMode = {
@@ -3095,13 +3088,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_CompositeTransform[] = 
-    {
+    static PyType_Slot _type_slots_CompositeTransform[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositeTransform) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositeTransform) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositeTransform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositeTransform) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositeTransform = {
@@ -3331,13 +3323,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionTarget[] = 
-    {
+    static PyType_Slot _type_slots_CompositionTarget[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionTarget) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionTarget) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionTarget = {
@@ -3985,8 +3976,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_DoubleCollection[] = 
-    {
+    static PyType_Slot _type_slots_DoubleCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DoubleCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DoubleCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DoubleCollection) },
@@ -3996,7 +3986,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_DoubleCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_DoubleCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_DoubleCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DoubleCollection = {
@@ -4280,13 +4270,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_EllipseGeometry[] = 
-    {
+    static PyType_Slot _type_slots_EllipseGeometry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EllipseGeometry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EllipseGeometry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EllipseGeometry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EllipseGeometry) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EllipseGeometry = {
@@ -4438,13 +4427,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_FontFamily[] = 
-    {
+    static PyType_Slot _type_slots_FontFamily[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FontFamily) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FontFamily) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FontFamily) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FontFamily) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FontFamily = {
@@ -4660,13 +4648,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_GeneralTransform[] = 
-    {
+    static PyType_Slot _type_slots_GeneralTransform[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeneralTransform) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeneralTransform) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeneralTransform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeneralTransform) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GeneralTransform = {
@@ -4852,13 +4839,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_Geometry[] = 
-    {
+    static PyType_Slot _type_slots_Geometry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Geometry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Geometry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Geometry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Geometry) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Geometry = {
@@ -5509,8 +5495,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_GeometryCollection[] = 
-    {
+    static PyType_Slot _type_slots_GeometryCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeometryCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeometryCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeometryCollection) },
@@ -5520,7 +5505,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_GeometryCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_GeometryCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_GeometryCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GeometryCollection = {
@@ -5737,13 +5722,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_GeometryGroup[] = 
-    {
+    static PyType_Slot _type_slots_GeometryGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeometryGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeometryGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GeometryGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeometryGroup) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GeometryGroup = {
@@ -6099,13 +6083,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_GradientBrush[] = 
-    {
+    static PyType_Slot _type_slots_GradientBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GradientBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GradientBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GradientBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GradientBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GradientBrush = {
@@ -6351,13 +6334,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_GradientStop[] = 
-    {
+    static PyType_Slot _type_slots_GradientStop[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GradientStop) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GradientStop) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GradientStop) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GradientStop) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GradientStop = {
@@ -7007,8 +6989,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_GradientStopCollection[] = 
-    {
+    static PyType_Slot _type_slots_GradientStopCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GradientStopCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GradientStopCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GradientStopCollection) },
@@ -7018,7 +6999,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_GradientStopCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_GradientStopCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_GradientStopCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GradientStopCollection = {
@@ -7258,13 +7239,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_ImageBrush[] = 
-    {
+    static PyType_Slot _type_slots_ImageBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ImageBrush = {
@@ -7351,13 +7331,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_ImageSource[] = 
-    {
+    static PyType_Slot _type_slots_ImageSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ImageSource = {
@@ -7574,13 +7553,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_LineGeometry[] = 
-    {
+    static PyType_Slot _type_slots_LineGeometry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LineGeometry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LineGeometry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LineGeometry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LineGeometry) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LineGeometry = {
@@ -7757,13 +7735,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_LineSegment[] = 
-    {
+    static PyType_Slot _type_slots_LineSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LineSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LineSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LineSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LineSegment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LineSegment = {
@@ -8022,13 +7999,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_LinearGradientBrush[] = 
-    {
+    static PyType_Slot _type_slots_LinearGradientBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LinearGradientBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LinearGradientBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LinearGradientBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LinearGradientBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LinearGradientBrush = {
@@ -8136,13 +8112,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_LoadedImageSourceLoadCompletedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_LoadedImageSourceLoadCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoadedImageSourceLoadCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoadedImageSourceLoadCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoadedImageSourceLoadCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoadedImageSourceLoadCompletedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LoadedImageSourceLoadCompletedEventArgs = {
@@ -8464,13 +8439,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_LoadedImageSurface[] = 
-    {
+    static PyType_Slot _type_slots_LoadedImageSurface[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoadedImageSurface) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoadedImageSurface) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoadedImageSurface) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoadedImageSurface) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LoadedImageSurface = {
@@ -8647,13 +8621,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_Matrix3DProjection[] = 
-    {
+    static PyType_Slot _type_slots_Matrix3DProjection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix3DProjection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix3DProjection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix3DProjection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix3DProjection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Matrix3DProjection = {
@@ -8858,13 +8831,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_MatrixHelper[] = 
-    {
+    static PyType_Slot _type_slots_MatrixHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MatrixHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MatrixHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MatrixHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MatrixHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MatrixHelper = {
@@ -9043,13 +9015,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_MatrixTransform[] = 
-    {
+    static PyType_Slot _type_slots_MatrixTransform[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MatrixTransform) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MatrixTransform) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MatrixTransform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MatrixTransform) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MatrixTransform = {
@@ -9199,13 +9170,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_MediaTransportControlsThumbnailRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MediaTransportControlsThumbnailRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaTransportControlsThumbnailRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaTransportControlsThumbnailRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaTransportControlsThumbnailRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaTransportControlsThumbnailRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaTransportControlsThumbnailRequestedEventArgs = {
@@ -9328,13 +9298,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_PartialMediaFailureDetectedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PartialMediaFailureDetectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PartialMediaFailureDetectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PartialMediaFailureDetectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PartialMediaFailureDetectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PartialMediaFailureDetectedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PartialMediaFailureDetectedEventArgs = {
@@ -9685,13 +9654,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_PathFigure[] = 
-    {
+    static PyType_Slot _type_slots_PathFigure[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PathFigure) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PathFigure) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PathFigure) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PathFigure) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PathFigure = {
@@ -10343,8 +10311,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_PathFigureCollection[] = 
-    {
+    static PyType_Slot _type_slots_PathFigureCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PathFigureCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PathFigureCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PathFigureCollection) },
@@ -10354,7 +10321,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_PathFigureCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_PathFigureCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_PathFigureCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PathFigureCollection = {
@@ -10571,13 +10538,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_PathGeometry[] = 
-    {
+    static PyType_Slot _type_slots_PathGeometry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PathGeometry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PathGeometry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PathGeometry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PathGeometry) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PathGeometry = {
@@ -10665,13 +10631,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_PathSegment[] = 
-    {
+    static PyType_Slot _type_slots_PathSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PathSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PathSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PathSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PathSegment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PathSegment = {
@@ -11294,8 +11259,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_PathSegmentCollection[] = 
-    {
+    static PyType_Slot _type_slots_PathSegmentCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PathSegmentCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PathSegmentCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PathSegmentCollection) },
@@ -11305,7 +11269,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_PathSegmentCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_PathSegmentCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_PathSegmentCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PathSegmentCollection = {
@@ -12231,13 +12195,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_PlaneProjection[] = 
-    {
+    static PyType_Slot _type_slots_PlaneProjection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlaneProjection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlaneProjection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlaneProjection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlaneProjection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlaneProjection = {
@@ -12898,8 +12861,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_PointCollection[] = 
-    {
+    static PyType_Slot _type_slots_PointCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointCollection) },
@@ -12909,7 +12871,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_PointCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_PointCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_PointCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PointCollection = {
@@ -13059,13 +13021,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_PolyBezierSegment[] = 
-    {
+    static PyType_Slot _type_slots_PolyBezierSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PolyBezierSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PolyBezierSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PolyBezierSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PolyBezierSegment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PolyBezierSegment = {
@@ -13241,13 +13202,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_PolyLineSegment[] = 
-    {
+    static PyType_Slot _type_slots_PolyLineSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PolyLineSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PolyLineSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PolyLineSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PolyLineSegment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PolyLineSegment = {
@@ -13423,13 +13383,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_PolyQuadraticBezierSegment[] = 
-    {
+    static PyType_Slot _type_slots_PolyQuadraticBezierSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PolyQuadraticBezierSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PolyQuadraticBezierSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PolyQuadraticBezierSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PolyQuadraticBezierSegment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PolyQuadraticBezierSegment = {
@@ -13516,13 +13475,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_Projection[] = 
-    {
+    static PyType_Slot _type_slots_Projection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Projection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Projection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Projection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Projection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Projection = {
@@ -13739,13 +13697,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_QuadraticBezierSegment[] = 
-    {
+    static PyType_Slot _type_slots_QuadraticBezierSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_QuadraticBezierSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_QuadraticBezierSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_QuadraticBezierSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_QuadraticBezierSegment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_QuadraticBezierSegment = {
@@ -13855,13 +13812,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_RateChangedRoutedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RateChangedRoutedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RateChangedRoutedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RateChangedRoutedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RateChangedRoutedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RateChangedRoutedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RateChangedRoutedEventArgs = {
@@ -14011,13 +13967,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_RectangleGeometry[] = 
-    {
+    static PyType_Slot _type_slots_RectangleGeometry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RectangleGeometry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RectangleGeometry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RectangleGeometry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RectangleGeometry) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RectangleGeometry = {
@@ -14124,13 +14079,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_RenderedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RenderedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RenderedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RenderedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RenderedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RenderedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RenderedEventArgs = {
@@ -14211,13 +14165,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_RenderingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RenderingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RenderingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RenderingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RenderingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RenderingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RenderingEventArgs = {
@@ -14300,13 +14253,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_RevealBackgroundBrush[] = 
-    {
+    static PyType_Slot _type_slots_RevealBackgroundBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RevealBackgroundBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RevealBackgroundBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RevealBackgroundBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RevealBackgroundBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RevealBackgroundBrush = {
@@ -14389,13 +14341,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_RevealBorderBrush[] = 
-    {
+    static PyType_Slot _type_slots_RevealBorderBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RevealBorderBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RevealBorderBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RevealBorderBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RevealBorderBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RevealBorderBrush = {
@@ -14740,13 +14691,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_RevealBrush[] = 
-    {
+    static PyType_Slot _type_slots_RevealBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RevealBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RevealBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RevealBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RevealBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RevealBrush = {
@@ -15061,13 +15011,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_RotateTransform[] = 
-    {
+    static PyType_Slot _type_slots_RotateTransform[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RotateTransform) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RotateTransform) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RotateTransform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RotateTransform) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RotateTransform = {
@@ -15446,13 +15395,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_ScaleTransform[] = 
-    {
+    static PyType_Slot _type_slots_ScaleTransform[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScaleTransform) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScaleTransform) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScaleTransform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScaleTransform) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ScaleTransform = {
@@ -15542,13 +15490,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_Shadow[] = 
-    {
+    static PyType_Slot _type_slots_Shadow[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Shadow) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Shadow) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Shadow) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Shadow) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Shadow = {
@@ -15899,13 +15846,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_SkewTransform[] = 
-    {
+    static PyType_Slot _type_slots_SkewTransform[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SkewTransform) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SkewTransform) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SkewTransform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SkewTransform) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SkewTransform = {
@@ -16099,13 +16045,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_SolidColorBrush[] = 
-    {
+    static PyType_Slot _type_slots_SolidColorBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SolidColorBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SolidColorBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SolidColorBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SolidColorBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SolidColorBrush = {
@@ -16234,13 +16179,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_ThemeShadow[] = 
-    {
+    static PyType_Slot _type_slots_ThemeShadow[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ThemeShadow) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ThemeShadow) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ThemeShadow) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ThemeShadow) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ThemeShadow = {
@@ -16502,13 +16446,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_TileBrush[] = 
-    {
+    static PyType_Slot _type_slots_TileBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TileBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TileBrush = {
@@ -16820,13 +16763,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_TimelineMarker[] = 
-    {
+    static PyType_Slot _type_slots_TimelineMarker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimelineMarker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimelineMarker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimelineMarker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimelineMarker) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TimelineMarker = {
@@ -17477,8 +17419,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_TimelineMarkerCollection[] = 
-    {
+    static PyType_Slot _type_slots_TimelineMarkerCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimelineMarkerCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimelineMarkerCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimelineMarkerCollection) },
@@ -17488,7 +17429,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_TimelineMarkerCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_TimelineMarkerCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_TimelineMarkerCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TimelineMarkerCollection = {
@@ -17619,13 +17560,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_TimelineMarkerRoutedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_TimelineMarkerRoutedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimelineMarkerRoutedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimelineMarkerRoutedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimelineMarkerRoutedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimelineMarkerRoutedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TimelineMarkerRoutedEventArgs = {
@@ -17686,13 +17626,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_Transform[] = 
-    {
+    static PyType_Slot _type_slots_Transform[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Transform) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Transform) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Transform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Transform) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Transform = {
@@ -18315,8 +18254,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_TransformCollection[] = 
-    {
+    static PyType_Slot _type_slots_TransformCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TransformCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TransformCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TransformCollection) },
@@ -18326,7 +18264,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_TransformCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_TransformCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_TransformCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TransformCollection = {
@@ -18496,13 +18434,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_TransformGroup[] = 
-    {
+    static PyType_Slot _type_slots_TransformGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TransformGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TransformGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TransformGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TransformGroup) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TransformGroup = {
@@ -18745,13 +18682,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_TranslateTransform[] = 
-    {
+    static PyType_Slot _type_slots_TranslateTransform[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TranslateTransform) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TranslateTransform) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TranslateTransform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TranslateTransform) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TranslateTransform = {
@@ -19081,13 +19017,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_VisualTreeHelper[] = 
-    {
+    static PyType_Slot _type_slots_VisualTreeHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VisualTreeHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VisualTreeHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VisualTreeHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VisualTreeHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VisualTreeHelper = {
@@ -19247,13 +19182,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_XamlCompositionBrushBase[] = 
-    {
+    static PyType_Slot _type_slots_XamlCompositionBrushBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlCompositionBrushBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlCompositionBrushBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlCompositionBrushBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlCompositionBrushBase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XamlCompositionBrushBase = {
@@ -19494,13 +19428,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_XamlLight[] = 
-    {
+    static PyType_Slot _type_slots_XamlLight[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlLight) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlLight) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlLight) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlLight) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XamlLight = {
@@ -19821,14 +19754,13 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot _type_slots_Matrix[] = 
-    {
+    static PyType_Slot _type_slots_Matrix[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Matrix) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Matrix = {

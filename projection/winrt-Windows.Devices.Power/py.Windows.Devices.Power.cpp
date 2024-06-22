@@ -230,13 +230,12 @@ namespace py::cpp::Windows::Devices::Power
         { }
     };
 
-    static PyType_Slot _type_slots_Battery[] = 
-    {
+    static PyType_Slot _type_slots_Battery[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Battery) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Battery) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Battery) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Battery) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Battery = {
@@ -425,13 +424,12 @@ namespace py::cpp::Windows::Devices::Power
         { }
     };
 
-    static PyType_Slot _type_slots_BatteryReport[] = 
-    {
+    static PyType_Slot _type_slots_BatteryReport[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BatteryReport) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BatteryReport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BatteryReport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BatteryReport) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BatteryReport = {

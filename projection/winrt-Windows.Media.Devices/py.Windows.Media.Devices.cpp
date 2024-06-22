@@ -126,13 +126,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_AdvancedPhotoCaptureSettings[] = 
-    {
+    static PyType_Slot _type_slots_AdvancedPhotoCaptureSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdvancedPhotoCaptureSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdvancedPhotoCaptureSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdvancedPhotoCaptureSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdvancedPhotoCaptureSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdvancedPhotoCaptureSettings = {
@@ -286,13 +285,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_AdvancedPhotoControl[] = 
-    {
+    static PyType_Slot _type_slots_AdvancedPhotoControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdvancedPhotoControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdvancedPhotoControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdvancedPhotoControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdvancedPhotoControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdvancedPhotoControl = {
@@ -546,13 +544,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_AudioDeviceController[] = 
-    {
+    static PyType_Slot _type_slots_AudioDeviceController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioDeviceController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioDeviceController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioDeviceController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioDeviceController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioDeviceController = {
@@ -745,13 +742,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_AudioDeviceModule[] = 
-    {
+    static PyType_Slot _type_slots_AudioDeviceModule[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioDeviceModule) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioDeviceModule) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioDeviceModule) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioDeviceModule) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioDeviceModule = {
@@ -852,13 +848,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_AudioDeviceModuleNotificationEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AudioDeviceModuleNotificationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioDeviceModuleNotificationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioDeviceModuleNotificationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioDeviceModuleNotificationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioDeviceModuleNotificationEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioDeviceModuleNotificationEventArgs = {
@@ -1050,13 +1045,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_AudioDeviceModulesManager[] = 
-    {
+    static PyType_Slot _type_slots_AudioDeviceModulesManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AudioDeviceModulesManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioDeviceModulesManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioDeviceModulesManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioDeviceModulesManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AudioDeviceModulesManager = {
@@ -1596,13 +1590,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_CallControl[] = 
-    {
+    static PyType_Slot _type_slots_CallControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CallControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CallControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CallControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CallControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CallControl = {
@@ -1797,13 +1790,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_CameraOcclusionInfo[] = 
-    {
+    static PyType_Slot _type_slots_CameraOcclusionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CameraOcclusionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CameraOcclusionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CameraOcclusionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CameraOcclusionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CameraOcclusionInfo = {
@@ -1916,13 +1908,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_CameraOcclusionState[] = 
-    {
+    static PyType_Slot _type_slots_CameraOcclusionState[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CameraOcclusionState) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CameraOcclusionState) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CameraOcclusionState) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CameraOcclusionState) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CameraOcclusionState = {
@@ -2003,13 +1994,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_CameraOcclusionStateChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CameraOcclusionStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CameraOcclusionStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CameraOcclusionStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CameraOcclusionStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CameraOcclusionStateChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CameraOcclusionStateChangedEventArgs = {
@@ -2110,13 +2100,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_DefaultAudioCaptureDeviceChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DefaultAudioCaptureDeviceChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DefaultAudioCaptureDeviceChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DefaultAudioCaptureDeviceChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DefaultAudioCaptureDeviceChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DefaultAudioCaptureDeviceChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DefaultAudioCaptureDeviceChangedEventArgs = {
@@ -2217,13 +2206,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_DefaultAudioRenderDeviceChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DefaultAudioRenderDeviceChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DefaultAudioRenderDeviceChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DefaultAudioRenderDeviceChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DefaultAudioRenderDeviceChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DefaultAudioRenderDeviceChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DefaultAudioRenderDeviceChangedEventArgs = {
@@ -2335,13 +2323,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_DialRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DialRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DialRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DialRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DialRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DialRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DialRequestedEventArgs = {
@@ -2568,13 +2555,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_DigitalWindowBounds[] = 
-    {
+    static PyType_Slot _type_slots_DigitalWindowBounds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DigitalWindowBounds) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DigitalWindowBounds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DigitalWindowBounds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DigitalWindowBounds) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DigitalWindowBounds = {
@@ -2755,13 +2741,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_DigitalWindowCapability[] = 
-    {
+    static PyType_Slot _type_slots_DigitalWindowCapability[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DigitalWindowCapability) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DigitalWindowCapability) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DigitalWindowCapability) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DigitalWindowCapability) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DigitalWindowCapability = {
@@ -3020,13 +3005,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_DigitalWindowControl[] = 
-    {
+    static PyType_Slot _type_slots_DigitalWindowControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DigitalWindowControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DigitalWindowControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DigitalWindowControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DigitalWindowControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DigitalWindowControl = {
@@ -3219,13 +3203,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_ExposureCompensationControl[] = 
-    {
+    static PyType_Slot _type_slots_ExposureCompensationControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExposureCompensationControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExposureCompensationControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExposureCompensationControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExposureCompensationControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ExposureCompensationControl = {
@@ -3470,13 +3453,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_ExposureControl[] = 
-    {
+    static PyType_Slot _type_slots_ExposureControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExposureControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExposureControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExposureControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExposureControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ExposureControl = {
@@ -3605,13 +3587,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_ExposurePriorityVideoControl[] = 
-    {
+    static PyType_Slot _type_slots_ExposurePriorityVideoControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExposurePriorityVideoControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExposurePriorityVideoControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExposurePriorityVideoControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExposurePriorityVideoControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ExposurePriorityVideoControl = {
@@ -3992,13 +3973,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_FlashControl[] = 
-    {
+    static PyType_Slot _type_slots_FlashControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FlashControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FlashControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FlashControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FlashControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FlashControl = {
@@ -4547,13 +4527,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_FocusControl[] = 
-    {
+    static PyType_Slot _type_slots_FocusControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FocusControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FocusControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FocusControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FocusControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FocusControl = {
@@ -4924,13 +4903,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_FocusSettings[] = 
-    {
+    static PyType_Slot _type_slots_FocusSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FocusSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FocusSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FocusSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FocusSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FocusSettings = {
@@ -5079,13 +5057,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_HdrVideoControl[] = 
-    {
+    static PyType_Slot _type_slots_HdrVideoControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HdrVideoControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HdrVideoControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HdrVideoControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HdrVideoControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HdrVideoControl = {
@@ -5342,13 +5319,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_InfraredTorchControl[] = 
-    {
+    static PyType_Slot _type_slots_InfraredTorchControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InfraredTorchControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InfraredTorchControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InfraredTorchControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InfraredTorchControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InfraredTorchControl = {
@@ -5663,13 +5639,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_IsoSpeedControl[] = 
-    {
+    static PyType_Slot _type_slots_IsoSpeedControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsoSpeedControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsoSpeedControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsoSpeedControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsoSpeedControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsoSpeedControl = {
@@ -5750,13 +5725,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_KeypadPressedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_KeypadPressedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeypadPressedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeypadPressedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeypadPressedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeypadPressedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KeypadPressedEventArgs = {
@@ -6043,13 +6017,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_LowLagPhotoControl[] = 
-    {
+    static PyType_Slot _type_slots_LowLagPhotoControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LowLagPhotoControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LowLagPhotoControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LowLagPhotoControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LowLagPhotoControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LowLagPhotoControl = {
@@ -6492,13 +6465,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_LowLagPhotoSequenceControl[] = 
-    {
+    static PyType_Slot _type_slots_LowLagPhotoSequenceControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LowLagPhotoSequenceControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LowLagPhotoSequenceControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LowLagPhotoSequenceControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LowLagPhotoSequenceControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LowLagPhotoSequenceControl = {
@@ -6764,12 +6736,11 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_MediaDevice[] = 
-    {
+    static PyType_Slot _type_slots_MediaDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaDevice = {
@@ -7032,13 +7003,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_MediaDeviceControl[] = 
-    {
+    static PyType_Slot _type_slots_MediaDeviceControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaDeviceControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaDeviceControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaDeviceControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaDeviceControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaDeviceControl = {
@@ -7219,13 +7189,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_MediaDeviceControlCapabilities[] = 
-    {
+    static PyType_Slot _type_slots_MediaDeviceControlCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaDeviceControlCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaDeviceControlCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaDeviceControlCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaDeviceControlCapabilities) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaDeviceControlCapabilities = {
@@ -7326,13 +7295,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_ModuleCommandResult[] = 
-    {
+    static PyType_Slot _type_slots_ModuleCommandResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ModuleCommandResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ModuleCommandResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ModuleCommandResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ModuleCommandResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ModuleCommandResult = {
@@ -7481,13 +7449,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_OpticalImageStabilizationControl[] = 
-    {
+    static PyType_Slot _type_slots_OpticalImageStabilizationControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_OpticalImageStabilizationControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OpticalImageStabilizationControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_OpticalImageStabilizationControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_OpticalImageStabilizationControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_OpticalImageStabilizationControl = {
@@ -7616,13 +7583,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_PanelBasedOptimizationControl[] = 
-    {
+    static PyType_Slot _type_slots_PanelBasedOptimizationControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PanelBasedOptimizationControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PanelBasedOptimizationControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PanelBasedOptimizationControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PanelBasedOptimizationControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PanelBasedOptimizationControl = {
@@ -7799,13 +7765,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_PhotoConfirmationControl[] = 
-    {
+    static PyType_Slot _type_slots_PhotoConfirmationControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoConfirmationControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoConfirmationControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoConfirmationControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoConfirmationControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PhotoConfirmationControl = {
@@ -7897,13 +7862,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_RedialRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RedialRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RedialRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RedialRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RedialRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RedialRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RedialRequestedEventArgs = {
@@ -8322,13 +8286,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_RegionOfInterest[] = 
-    {
+    static PyType_Slot _type_slots_RegionOfInterest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RegionOfInterest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RegionOfInterest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RegionOfInterest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RegionOfInterest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RegionOfInterest = {
@@ -8552,13 +8515,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_RegionsOfInterestControl[] = 
-    {
+    static PyType_Slot _type_slots_RegionsOfInterestControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RegionsOfInterestControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RegionsOfInterestControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RegionsOfInterestControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RegionsOfInterestControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RegionsOfInterestControl = {
@@ -8691,13 +8653,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_SceneModeControl[] = 
-    {
+    static PyType_Slot _type_slots_SceneModeControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneModeControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneModeControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneModeControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneModeControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SceneModeControl = {
@@ -8894,13 +8855,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_TorchControl[] = 
-    {
+    static PyType_Slot _type_slots_TorchControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TorchControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TorchControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TorchControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TorchControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TorchControl = {
@@ -10161,13 +10121,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_VideoDeviceController[] = 
-    {
+    static PyType_Slot _type_slots_VideoDeviceController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoDeviceController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoDeviceController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoDeviceController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoDeviceController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VideoDeviceController = {
@@ -10268,13 +10227,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_VideoDeviceControllerGetDevicePropertyResult[] = 
-    {
+    static PyType_Slot _type_slots_VideoDeviceControllerGetDevicePropertyResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoDeviceControllerGetDevicePropertyResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoDeviceControllerGetDevicePropertyResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoDeviceControllerGetDevicePropertyResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoDeviceControllerGetDevicePropertyResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VideoDeviceControllerGetDevicePropertyResult = {
@@ -10423,13 +10381,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_VideoTemporalDenoisingControl[] = 
-    {
+    static PyType_Slot _type_slots_VideoTemporalDenoisingControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VideoTemporalDenoisingControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VideoTemporalDenoisingControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VideoTemporalDenoisingControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VideoTemporalDenoisingControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VideoTemporalDenoisingControl = {
@@ -10674,13 +10631,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_WhiteBalanceControl[] = 
-    {
+    static PyType_Slot _type_slots_WhiteBalanceControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WhiteBalanceControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WhiteBalanceControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WhiteBalanceControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WhiteBalanceControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WhiteBalanceControl = {
@@ -10942,13 +10898,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_ZoomControl[] = 
-    {
+    static PyType_Slot _type_slots_ZoomControl[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ZoomControl) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ZoomControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ZoomControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ZoomControl) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ZoomControl = {
@@ -11127,13 +11082,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_ZoomSettings[] = 
-    {
+    static PyType_Slot _type_slots_ZoomSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ZoomSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ZoomSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ZoomSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ZoomSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ZoomSettings = {
@@ -11234,13 +11188,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_IDefaultAudioDeviceChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IDefaultAudioDeviceChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDefaultAudioDeviceChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDefaultAudioDeviceChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDefaultAudioDeviceChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDefaultAudioDeviceChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IDefaultAudioDeviceChangedEventArgs = {
@@ -11398,13 +11351,12 @@ namespace py::cpp::Windows::Media::Devices
         { }
     };
 
-    static PyType_Slot _type_slots_IMediaDeviceController[] = 
-    {
+    static PyType_Slot _type_slots_IMediaDeviceController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMediaDeviceController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMediaDeviceController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMediaDeviceController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMediaDeviceController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IMediaDeviceController = {

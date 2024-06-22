@@ -156,13 +156,12 @@ namespace py::cpp::Windows::Globalization::Fonts
         { }
     };
 
-    static PyType_Slot _type_slots_LanguageFont[] = 
-    {
+    static PyType_Slot _type_slots_LanguageFont[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LanguageFont) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LanguageFont) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LanguageFont) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LanguageFont) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LanguageFont = {
@@ -467,13 +466,12 @@ namespace py::cpp::Windows::Globalization::Fonts
         { }
     };
 
-    static PyType_Slot _type_slots_LanguageFontGroup[] = 
-    {
+    static PyType_Slot _type_slots_LanguageFontGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LanguageFontGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LanguageFontGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LanguageFontGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LanguageFontGroup) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LanguageFontGroup = {

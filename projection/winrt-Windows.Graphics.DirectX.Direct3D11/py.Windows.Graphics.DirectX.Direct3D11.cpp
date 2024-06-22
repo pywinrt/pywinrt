@@ -139,13 +139,12 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         { }
     };
 
-    static PyType_Slot _type_slots_IDirect3DDevice[] = 
-    {
+    static PyType_Slot _type_slots_IDirect3DDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDirect3DDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDirect3DDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDirect3DDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDirect3DDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IDirect3DDevice = {
@@ -278,13 +277,12 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         { }
     };
 
-    static PyType_Slot _type_slots_IDirect3DSurface[] = 
-    {
+    static PyType_Slot _type_slots_IDirect3DSurface[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IDirect3DSurface) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDirect3DSurface) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDirect3DSurface) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDirect3DSurface) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IDirect3DSurface = {
@@ -436,14 +434,13 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         { }
     };
 
-    static PyType_Slot _type_slots_Direct3DMultisampleDescription[] = 
-    {
+    static PyType_Slot _type_slots_Direct3DMultisampleDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Direct3DMultisampleDescription) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Direct3DMultisampleDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Direct3DMultisampleDescription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Direct3DMultisampleDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Direct3DMultisampleDescription) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Direct3DMultisampleDescription = {
@@ -665,14 +662,13 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         { }
     };
 
-    static PyType_Slot _type_slots_Direct3DSurfaceDescription[] = 
-    {
+    static PyType_Slot _type_slots_Direct3DSurfaceDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Direct3DSurfaceDescription) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Direct3DSurfaceDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Direct3DSurfaceDescription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Direct3DSurfaceDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Direct3DSurfaceDescription) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Direct3DSurfaceDescription = {

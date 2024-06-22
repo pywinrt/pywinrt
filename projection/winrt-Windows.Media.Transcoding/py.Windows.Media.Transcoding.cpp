@@ -563,13 +563,12 @@ namespace py::cpp::Windows::Media::Transcoding
         { }
     };
 
-    static PyType_Slot _type_slots_MediaTranscoder[] = 
-    {
+    static PyType_Slot _type_slots_MediaTranscoder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaTranscoder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaTranscoder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaTranscoder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaTranscoder) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MediaTranscoder = {
@@ -700,13 +699,12 @@ namespace py::cpp::Windows::Media::Transcoding
         { }
     };
 
-    static PyType_Slot _type_slots_PrepareTranscodeResult[] = 
-    {
+    static PyType_Slot _type_slots_PrepareTranscodeResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrepareTranscodeResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrepareTranscodeResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrepareTranscodeResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrepareTranscodeResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrepareTranscodeResult = {

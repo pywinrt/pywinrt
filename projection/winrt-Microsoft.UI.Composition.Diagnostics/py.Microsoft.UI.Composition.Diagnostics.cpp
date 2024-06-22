@@ -189,13 +189,12 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionDebugHeatMaps[] = 
-    {
+    static PyType_Slot _type_slots_CompositionDebugHeatMaps[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionDebugHeatMaps) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionDebugHeatMaps) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionDebugHeatMaps) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionDebugHeatMaps) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionDebugHeatMaps = {
@@ -307,13 +306,12 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionDebugSettings[] = 
-    {
+    static PyType_Slot _type_slots_CompositionDebugSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionDebugSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionDebugSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionDebugSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionDebugSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionDebugSettings = {

@@ -152,13 +152,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_AmbientLight[] = 
-    {
+    static PyType_Slot _type_slots_AmbientLight[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AmbientLight) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AmbientLight) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AmbientLight) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AmbientLight) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AmbientLight = {
@@ -463,13 +462,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_AnimationController[] = 
-    {
+    static PyType_Slot _type_slots_AnimationController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimationController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimationController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimationController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimationController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AnimationController = {
@@ -665,13 +663,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_AnimationPropertyInfo[] = 
-    {
+    static PyType_Slot _type_slots_AnimationPropertyInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AnimationPropertyInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AnimationPropertyInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AnimationPropertyInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AnimationPropertyInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AnimationPropertyInfo = {
@@ -772,13 +769,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_BackEasingFunction[] = 
-    {
+    static PyType_Slot _type_slots_BackEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackEasingFunction) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BackEasingFunction = {
@@ -873,13 +869,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_BooleanKeyFrameAnimation[] = 
-    {
+    static PyType_Slot _type_slots_BooleanKeyFrameAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BooleanKeyFrameAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BooleanKeyFrameAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BooleanKeyFrameAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BooleanKeyFrameAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BooleanKeyFrameAnimation = {
@@ -1000,13 +995,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_BounceEasingFunction[] = 
-    {
+    static PyType_Slot _type_slots_BounceEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BounceEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BounceEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BounceEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BounceEasingFunction) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BounceEasingFunction = {
@@ -1163,13 +1157,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_BounceScalarNaturalMotionAnimation[] = 
-    {
+    static PyType_Slot _type_slots_BounceScalarNaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BounceScalarNaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BounceScalarNaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BounceScalarNaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BounceScalarNaturalMotionAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BounceScalarNaturalMotionAnimation = {
@@ -1326,13 +1319,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_BounceVector2NaturalMotionAnimation[] = 
-    {
+    static PyType_Slot _type_slots_BounceVector2NaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BounceVector2NaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BounceVector2NaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BounceVector2NaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BounceVector2NaturalMotionAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BounceVector2NaturalMotionAnimation = {
@@ -1489,13 +1481,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_BounceVector3NaturalMotionAnimation[] = 
-    {
+    static PyType_Slot _type_slots_BounceVector3NaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BounceVector3NaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BounceVector3NaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BounceVector3NaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BounceVector3NaturalMotionAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BounceVector3NaturalMotionAnimation = {
@@ -1576,13 +1567,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CircleEasingFunction[] = 
-    {
+    static PyType_Slot _type_slots_CircleEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CircleEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CircleEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CircleEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CircleEasingFunction) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CircleEasingFunction = {
@@ -1748,13 +1738,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_ColorKeyFrameAnimation[] = 
-    {
+    static PyType_Slot _type_slots_ColorKeyFrameAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorKeyFrameAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorKeyFrameAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorKeyFrameAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ColorKeyFrameAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ColorKeyFrameAnimation = {
@@ -2321,13 +2310,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionAnimation[] = 
-    {
+    static PyType_Slot _type_slots_CompositionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionAnimation = {
@@ -2548,14 +2536,13 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionAnimationGroup[] = 
-    {
+    static PyType_Slot _type_slots_CompositionAnimationGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionAnimationGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionAnimationGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionAnimationGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionAnimationGroup) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_CompositionAnimationGroup) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionAnimationGroup = {
@@ -2616,13 +2603,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionBackdropBrush[] = 
-    {
+    static PyType_Slot _type_slots_CompositionBackdropBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionBackdropBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionBackdropBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionBackdropBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionBackdropBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionBackdropBrush = {
@@ -2683,13 +2669,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionBatchCompletedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CompositionBatchCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionBatchCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionBatchCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionBatchCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionBatchCompletedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionBatchCompletedEventArgs = {
@@ -2750,13 +2735,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionBrush[] = 
-    {
+    static PyType_Slot _type_slots_CompositionBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionBrush = {
@@ -2951,13 +2935,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionCapabilities[] = 
-    {
+    static PyType_Slot _type_slots_CompositionCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionCapabilities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionCapabilities) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionCapabilities = {
@@ -3380,13 +3363,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionClip[] = 
-    {
+    static PyType_Slot _type_slots_CompositionClip[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionClip) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionClip) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionClip) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionClip) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionClip = {
@@ -3495,13 +3477,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionColorBrush[] = 
-    {
+    static PyType_Slot _type_slots_CompositionColorBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionColorBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionColorBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionColorBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionColorBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionColorBrush = {
@@ -3658,13 +3639,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionColorGradientStop[] = 
-    {
+    static PyType_Slot _type_slots_CompositionColorGradientStop[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionColorGradientStop) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionColorGradientStop) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionColorGradientStop) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionColorGradientStop) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionColorGradientStop = {
@@ -4265,8 +4245,7 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionColorGradientStopCollection[] = 
-    {
+    static PyType_Slot _type_slots_CompositionColorGradientStopCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionColorGradientStopCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionColorGradientStopCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionColorGradientStopCollection) },
@@ -4276,7 +4255,7 @@ namespace py::cpp::Windows::UI::Composition
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_CompositionColorGradientStopCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_CompositionColorGradientStopCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_CompositionColorGradientStopCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionColorGradientStopCollection = {
@@ -4422,13 +4401,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionCommitBatch[] = 
-    {
+    static PyType_Slot _type_slots_CompositionCommitBatch[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionCommitBatch) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionCommitBatch) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionCommitBatch) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionCommitBatch) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionCommitBatch = {
@@ -4509,13 +4487,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionContainerShape[] = 
-    {
+    static PyType_Slot _type_slots_CompositionContainerShape[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionContainerShape) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionContainerShape) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionContainerShape) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionContainerShape) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionContainerShape = {
@@ -4801,13 +4778,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionDrawingSurface[] = 
-    {
+    static PyType_Slot _type_slots_CompositionDrawingSurface[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionDrawingSurface) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionDrawingSurface) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionDrawingSurface) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionDrawingSurface) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionDrawingSurface = {
@@ -5215,13 +5191,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionEasingFunction[] = 
-    {
+    static PyType_Slot _type_slots_CompositionEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionEasingFunction) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionEasingFunction = {
@@ -5383,13 +5358,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionEffectBrush[] = 
-    {
+    static PyType_Slot _type_slots_CompositionEffectBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionEffectBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionEffectBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionEffectBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionEffectBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionEffectBrush = {
@@ -5520,13 +5494,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionEffectFactory[] = 
-    {
+    static PyType_Slot _type_slots_CompositionEffectFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionEffectFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionEffectFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionEffectFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionEffectFactory) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionEffectFactory = {
@@ -5631,13 +5604,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionEffectSourceParameter[] = 
-    {
+    static PyType_Slot _type_slots_CompositionEffectSourceParameter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionEffectSourceParameter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionEffectSourceParameter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionEffectSourceParameter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionEffectSourceParameter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionEffectSourceParameter = {
@@ -5794,13 +5766,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionEllipseGeometry[] = 
-    {
+    static PyType_Slot _type_slots_CompositionEllipseGeometry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionEllipseGeometry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionEllipseGeometry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionEllipseGeometry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionEllipseGeometry) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionEllipseGeometry = {
@@ -5957,13 +5928,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionGeometricClip[] = 
-    {
+    static PyType_Slot _type_slots_CompositionGeometricClip[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionGeometricClip) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionGeometricClip) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionGeometricClip) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionGeometricClip) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionGeometricClip = {
@@ -6168,13 +6138,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionGeometry[] = 
-    {
+    static PyType_Slot _type_slots_CompositionGeometry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionGeometry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionGeometry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionGeometry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionGeometry) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionGeometry = {
@@ -6735,13 +6704,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionGradientBrush[] = 
-    {
+    static PyType_Slot _type_slots_CompositionGradientBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionGradientBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionGradientBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionGradientBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionGradientBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionGradientBrush = {
@@ -7050,13 +7018,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionGraphicsDevice[] = 
-    {
+    static PyType_Slot _type_slots_CompositionGraphicsDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionGraphicsDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionGraphicsDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionGraphicsDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionGraphicsDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionGraphicsDevice = {
@@ -7205,13 +7172,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionLight[] = 
-    {
+    static PyType_Slot _type_slots_CompositionLight[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionLight) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionLight) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionLight) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionLight) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionLight = {
@@ -7368,13 +7334,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionLineGeometry[] = 
-    {
+    static PyType_Slot _type_slots_CompositionLineGeometry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionLineGeometry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionLineGeometry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionLineGeometry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionLineGeometry) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionLineGeometry = {
@@ -7531,13 +7496,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionLinearGradientBrush[] = 
-    {
+    static PyType_Slot _type_slots_CompositionLinearGradientBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionLinearGradientBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionLinearGradientBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionLinearGradientBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionLinearGradientBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionLinearGradientBrush = {
@@ -7694,13 +7658,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionMaskBrush[] = 
-    {
+    static PyType_Slot _type_slots_CompositionMaskBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionMaskBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionMaskBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionMaskBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionMaskBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionMaskBrush = {
@@ -7873,13 +7836,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionMipmapSurface[] = 
-    {
+    static PyType_Slot _type_slots_CompositionMipmapSurface[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionMipmapSurface) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionMipmapSurface) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionMipmapSurface) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionMipmapSurface) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionMipmapSurface = {
@@ -8534,13 +8496,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionNineGridBrush[] = 
-    {
+    static PyType_Slot _type_slots_CompositionNineGridBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionNineGridBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionNineGridBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionNineGridBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionNineGridBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionNineGridBrush = {
@@ -9118,13 +9079,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionObject[] = 
-    {
+    static PyType_Slot _type_slots_CompositionObject[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionObject) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionObject) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionObject) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionObject) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionObject = {
@@ -9236,13 +9196,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionPath[] = 
-    {
+    static PyType_Slot _type_slots_CompositionPath[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionPath) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionPath) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionPath) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionPath) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionPath = {
@@ -9351,13 +9310,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionPathGeometry[] = 
-    {
+    static PyType_Slot _type_slots_CompositionPathGeometry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionPathGeometry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionPathGeometry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionPathGeometry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionPathGeometry) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionPathGeometry = {
@@ -9650,13 +9608,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionProjectedShadow[] = 
-    {
+    static PyType_Slot _type_slots_CompositionProjectedShadow[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionProjectedShadow) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionProjectedShadow) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionProjectedShadow) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionProjectedShadow) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionProjectedShadow = {
@@ -9813,13 +9770,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionProjectedShadowCaster[] = 
-    {
+    static PyType_Slot _type_slots_CompositionProjectedShadowCaster[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionProjectedShadowCaster) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionProjectedShadowCaster) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionProjectedShadowCaster) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionProjectedShadowCaster) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionProjectedShadowCaster = {
@@ -10160,14 +10116,13 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionProjectedShadowCasterCollection[] = 
-    {
+    static PyType_Slot _type_slots_CompositionProjectedShadowCasterCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionProjectedShadowCasterCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionProjectedShadowCasterCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionProjectedShadowCasterCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionProjectedShadowCasterCollection) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_CompositionProjectedShadowCasterCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionProjectedShadowCasterCollection = {
@@ -10302,13 +10257,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionProjectedShadowReceiver[] = 
-    {
+    static PyType_Slot _type_slots_CompositionProjectedShadowReceiver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionProjectedShadowReceiver) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionProjectedShadowReceiver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionProjectedShadowReceiver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionProjectedShadowReceiver) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionProjectedShadowReceiver = {
@@ -10529,14 +10483,13 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionProjectedShadowReceiverUnorderedCollection[] = 
-    {
+    static PyType_Slot _type_slots_CompositionProjectedShadowReceiverUnorderedCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionProjectedShadowReceiverUnorderedCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionProjectedShadowReceiverUnorderedCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionProjectedShadowReceiverUnorderedCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionProjectedShadowReceiverUnorderedCollection) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_CompositionProjectedShadowReceiverUnorderedCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionProjectedShadowReceiverUnorderedCollection = {
@@ -11308,13 +11261,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionPropertySet[] = 
-    {
+    static PyType_Slot _type_slots_CompositionPropertySet[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionPropertySet) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionPropertySet) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionPropertySet) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionPropertySet) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionPropertySet = {
@@ -11519,13 +11471,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionRadialGradientBrush[] = 
-    {
+    static PyType_Slot _type_slots_CompositionRadialGradientBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionRadialGradientBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionRadialGradientBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionRadialGradientBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionRadialGradientBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionRadialGradientBrush = {
@@ -11682,13 +11633,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionRectangleGeometry[] = 
-    {
+    static PyType_Slot _type_slots_CompositionRectangleGeometry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionRectangleGeometry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionRectangleGeometry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionRectangleGeometry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionRectangleGeometry) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionRectangleGeometry = {
@@ -11893,13 +11843,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionRoundedRectangleGeometry[] = 
-    {
+    static PyType_Slot _type_slots_CompositionRoundedRectangleGeometry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionRoundedRectangleGeometry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionRoundedRectangleGeometry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionRoundedRectangleGeometry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionRoundedRectangleGeometry) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionRoundedRectangleGeometry = {
@@ -12138,13 +12087,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionScopedBatch[] = 
-    {
+    static PyType_Slot _type_slots_CompositionScopedBatch[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionScopedBatch) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionScopedBatch) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionScopedBatch) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionScopedBatch) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionScopedBatch = {
@@ -12205,13 +12153,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionShadow[] = 
-    {
+    static PyType_Slot _type_slots_CompositionShadow[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionShadow) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionShadow) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionShadow) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionShadow) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionShadow = {
@@ -12560,13 +12507,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionShape[] = 
-    {
+    static PyType_Slot _type_slots_CompositionShape[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionShape) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionShape) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionShape) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionShape) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionShape = {
@@ -13167,8 +13113,7 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionShapeCollection[] = 
-    {
+    static PyType_Slot _type_slots_CompositionShapeCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionShapeCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionShapeCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionShapeCollection) },
@@ -13178,7 +13123,7 @@ namespace py::cpp::Windows::UI::Composition
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_CompositionShapeCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_CompositionShapeCollection) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_CompositionShapeCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionShapeCollection = {
@@ -13787,13 +13732,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionSpriteShape[] = 
-    {
+    static PyType_Slot _type_slots_CompositionSpriteShape[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionSpriteShape) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionSpriteShape) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionSpriteShape) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionSpriteShape) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionSpriteShape = {
@@ -14394,8 +14338,7 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionStrokeDashArray[] = 
-    {
+    static PyType_Slot _type_slots_CompositionStrokeDashArray[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionStrokeDashArray) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionStrokeDashArray) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionStrokeDashArray) },
@@ -14405,7 +14348,7 @@ namespace py::cpp::Windows::UI::Composition
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_CompositionStrokeDashArray) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_CompositionStrokeDashArray) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_CompositionStrokeDashArray) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionStrokeDashArray = {
@@ -15090,13 +15033,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionSurfaceBrush[] = 
-    {
+    static PyType_Slot _type_slots_CompositionSurfaceBrush[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionSurfaceBrush) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionSurfaceBrush) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionSurfaceBrush) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionSurfaceBrush) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionSurfaceBrush = {
@@ -15205,13 +15147,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionTarget[] = 
-    {
+    static PyType_Slot _type_slots_CompositionTarget[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionTarget) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionTarget) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionTarget = {
@@ -15416,13 +15357,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionTexture[] = 
-    {
+    static PyType_Slot _type_slots_CompositionTexture[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionTexture) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionTexture) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionTexture) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionTexture) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionTexture = {
@@ -15483,13 +15423,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionTransform[] = 
-    {
+    static PyType_Slot _type_slots_CompositionTransform[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionTransform) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionTransform) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionTransform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionTransform) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionTransform = {
@@ -15790,13 +15729,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionViewBox[] = 
-    {
+    static PyType_Slot _type_slots_CompositionViewBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionViewBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionViewBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionViewBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionViewBox) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionViewBox = {
@@ -15890,13 +15828,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionVirtualDrawingSurface[] = 
-    {
+    static PyType_Slot _type_slots_CompositionVirtualDrawingSurface[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionVirtualDrawingSurface) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionVirtualDrawingSurface) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionVirtualDrawingSurface) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionVirtualDrawingSurface) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionVirtualDrawingSurface = {
@@ -16101,13 +16038,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CompositionVisualSurface[] = 
-    {
+    static PyType_Slot _type_slots_CompositionVisualSurface[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CompositionVisualSurface) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionVisualSurface) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionVisualSurface) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionVisualSurface) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CompositionVisualSurface = {
@@ -18570,13 +18506,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_Compositor[] = 
-    {
+    static PyType_Slot _type_slots_Compositor[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Compositor) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Compositor) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Compositor) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Compositor) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Compositor = {
@@ -18684,13 +18619,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_ContainerVisual[] = 
-    {
+    static PyType_Slot _type_slots_ContainerVisual[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContainerVisual) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContainerVisual) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContainerVisual) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContainerVisual) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContainerVisual = {
@@ -18791,13 +18725,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_CubicBezierEasingFunction[] = 
-    {
+    static PyType_Slot _type_slots_CubicBezierEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CubicBezierEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CubicBezierEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CubicBezierEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CubicBezierEasingFunction) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CubicBezierEasingFunction = {
@@ -19052,13 +18985,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_DelegatedInkTrailVisual[] = 
-    {
+    static PyType_Slot _type_slots_DelegatedInkTrailVisual[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DelegatedInkTrailVisual) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DelegatedInkTrailVisual) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DelegatedInkTrailVisual) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DelegatedInkTrailVisual) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DelegatedInkTrailVisual = {
@@ -19338,13 +19270,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_DistantLight[] = 
-    {
+    static PyType_Slot _type_slots_DistantLight[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DistantLight) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DistantLight) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DistantLight) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DistantLight) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DistantLight = {
@@ -19693,13 +19624,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_DropShadow[] = 
-    {
+    static PyType_Slot _type_slots_DropShadow[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DropShadow) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DropShadow) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DropShadow) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DropShadow) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DropShadow = {
@@ -19820,13 +19750,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_ElasticEasingFunction[] = 
-    {
+    static PyType_Slot _type_slots_ElasticEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ElasticEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ElasticEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ElasticEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ElasticEasingFunction) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ElasticEasingFunction = {
@@ -19927,13 +19856,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_ExponentialEasingFunction[] = 
-    {
+    static PyType_Slot _type_slots_ExponentialEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExponentialEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExponentialEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExponentialEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExponentialEasingFunction) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ExponentialEasingFunction = {
@@ -20042,13 +19970,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_ExpressionAnimation[] = 
-    {
+    static PyType_Slot _type_slots_ExpressionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ExpressionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExpressionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ExpressionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ExpressionAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ExpressionAnimation = {
@@ -20451,8 +20378,7 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_ImplicitAnimationCollection[] = 
-    {
+    static PyType_Slot _type_slots_ImplicitAnimationCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImplicitAnimationCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImplicitAnimationCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImplicitAnimationCollection) },
@@ -20462,7 +20388,7 @@ namespace py::cpp::Windows::UI::Composition
         { Py_mp_length, reinterpret_cast<void*>(_map_length_ImplicitAnimationCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_ImplicitAnimationCollection) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_ImplicitAnimationCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ImplicitAnimationCollection = {
@@ -20865,8 +20791,7 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_InitialValueExpressionCollection[] = 
-    {
+    static PyType_Slot _type_slots_InitialValueExpressionCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InitialValueExpressionCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InitialValueExpressionCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InitialValueExpressionCollection) },
@@ -20876,7 +20801,7 @@ namespace py::cpp::Windows::UI::Composition
         { Py_mp_length, reinterpret_cast<void*>(_map_length_InitialValueExpressionCollection) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_InitialValueExpressionCollection) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_InitialValueExpressionCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InitialValueExpressionCollection = {
@@ -21129,13 +21054,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_InsetClip[] = 
-    {
+    static PyType_Slot _type_slots_InsetClip[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InsetClip) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InsetClip) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InsetClip) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InsetClip) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InsetClip = {
@@ -21609,13 +21533,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_KeyFrameAnimation[] = 
-    {
+    static PyType_Slot _type_slots_KeyFrameAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyFrameAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyFrameAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyFrameAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyFrameAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KeyFrameAnimation = {
@@ -21772,13 +21695,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_LayerVisual[] = 
-    {
+    static PyType_Slot _type_slots_LayerVisual[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LayerVisual) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LayerVisual) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LayerVisual) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LayerVisual) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LayerVisual = {
@@ -21839,13 +21761,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_LinearEasingFunction[] = 
-    {
+    static PyType_Slot _type_slots_LinearEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LinearEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LinearEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LinearEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LinearEasingFunction) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LinearEasingFunction = {
@@ -22050,13 +21971,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_NaturalMotionAnimation[] = 
-    {
+    static PyType_Slot _type_slots_NaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NaturalMotionAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NaturalMotionAnimation = {
@@ -22174,13 +22094,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_PathKeyFrameAnimation[] = 
-    {
+    static PyType_Slot _type_slots_PathKeyFrameAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PathKeyFrameAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PathKeyFrameAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PathKeyFrameAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PathKeyFrameAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PathKeyFrameAnimation = {
@@ -22673,13 +22592,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_PointLight[] = 
-    {
+    static PyType_Slot _type_slots_PointLight[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointLight) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointLight) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointLight) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointLight) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PointLight = {
@@ -22780,13 +22698,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_PowerEasingFunction[] = 
-    {
+    static PyType_Slot _type_slots_PowerEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PowerEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PowerEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PowerEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PowerEasingFunction) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PowerEasingFunction = {
@@ -22904,13 +22821,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_QuaternionKeyFrameAnimation[] = 
-    {
+    static PyType_Slot _type_slots_QuaternionKeyFrameAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_QuaternionKeyFrameAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_QuaternionKeyFrameAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_QuaternionKeyFrameAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_QuaternionKeyFrameAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_QuaternionKeyFrameAnimation = {
@@ -23355,13 +23271,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_RectangleClip[] = 
-    {
+    static PyType_Slot _type_slots_RectangleClip[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RectangleClip) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RectangleClip) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RectangleClip) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RectangleClip) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RectangleClip = {
@@ -23470,13 +23385,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_RedirectVisual[] = 
-    {
+    static PyType_Slot _type_slots_RedirectVisual[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RedirectVisual) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RedirectVisual) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RedirectVisual) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RedirectVisual) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RedirectVisual = {
@@ -23557,13 +23471,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_RenderingDeviceReplacedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RenderingDeviceReplacedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RenderingDeviceReplacedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RenderingDeviceReplacedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RenderingDeviceReplacedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RenderingDeviceReplacedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RenderingDeviceReplacedEventArgs = {
@@ -23681,13 +23594,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_ScalarKeyFrameAnimation[] = 
-    {
+    static PyType_Slot _type_slots_ScalarKeyFrameAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScalarKeyFrameAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScalarKeyFrameAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScalarKeyFrameAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScalarKeyFrameAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ScalarKeyFrameAnimation = {
@@ -23892,13 +23804,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_ScalarNaturalMotionAnimation[] = 
-    {
+    static PyType_Slot _type_slots_ScalarNaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScalarNaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScalarNaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScalarNaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScalarNaturalMotionAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ScalarNaturalMotionAnimation = {
@@ -24027,13 +23938,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_ShapeVisual[] = 
-    {
+    static PyType_Slot _type_slots_ShapeVisual[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ShapeVisual) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ShapeVisual) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ShapeVisual) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ShapeVisual) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ShapeVisual = {
@@ -24114,13 +24024,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_SineEasingFunction[] = 
-    {
+    static PyType_Slot _type_slots_SineEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SineEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SineEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SineEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SineEasingFunction) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SineEasingFunction = {
@@ -24949,13 +24858,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_SpotLight[] = 
-    {
+    static PyType_Slot _type_slots_SpotLight[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpotLight) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpotLight) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpotLight) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpotLight) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpotLight = {
@@ -25112,13 +25020,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_SpringScalarNaturalMotionAnimation[] = 
-    {
+    static PyType_Slot _type_slots_SpringScalarNaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpringScalarNaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpringScalarNaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpringScalarNaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpringScalarNaturalMotionAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpringScalarNaturalMotionAnimation = {
@@ -25275,13 +25182,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_SpringVector2NaturalMotionAnimation[] = 
-    {
+    static PyType_Slot _type_slots_SpringVector2NaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpringVector2NaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpringVector2NaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpringVector2NaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpringVector2NaturalMotionAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpringVector2NaturalMotionAnimation = {
@@ -25438,13 +25344,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_SpringVector3NaturalMotionAnimation[] = 
-    {
+    static PyType_Slot _type_slots_SpringVector3NaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpringVector3NaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpringVector3NaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpringVector3NaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpringVector3NaturalMotionAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpringVector3NaturalMotionAnimation = {
@@ -25601,13 +25506,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_SpriteVisual[] = 
-    {
+    static PyType_Slot _type_slots_SpriteVisual[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpriteVisual) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpriteVisual) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpriteVisual) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpriteVisual) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpriteVisual = {
@@ -25908,13 +25812,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_StepEasingFunction[] = 
-    {
+    static PyType_Slot _type_slots_StepEasingFunction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StepEasingFunction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StepEasingFunction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StepEasingFunction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StepEasingFunction) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StepEasingFunction = {
@@ -26032,13 +25935,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_Vector2KeyFrameAnimation[] = 
-    {
+    static PyType_Slot _type_slots_Vector2KeyFrameAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector2KeyFrameAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector2KeyFrameAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector2KeyFrameAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector2KeyFrameAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Vector2KeyFrameAnimation = {
@@ -26243,13 +26145,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_Vector2NaturalMotionAnimation[] = 
-    {
+    static PyType_Slot _type_slots_Vector2NaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector2NaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector2NaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector2NaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector2NaturalMotionAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Vector2NaturalMotionAnimation = {
@@ -26367,13 +26268,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_Vector3KeyFrameAnimation[] = 
-    {
+    static PyType_Slot _type_slots_Vector3KeyFrameAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector3KeyFrameAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector3KeyFrameAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector3KeyFrameAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector3KeyFrameAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Vector3KeyFrameAnimation = {
@@ -26578,13 +26478,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_Vector3NaturalMotionAnimation[] = 
-    {
+    static PyType_Slot _type_slots_Vector3NaturalMotionAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector3NaturalMotionAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector3NaturalMotionAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector3NaturalMotionAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector3NaturalMotionAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Vector3NaturalMotionAnimation = {
@@ -26702,13 +26601,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_Vector4KeyFrameAnimation[] = 
-    {
+    static PyType_Slot _type_slots_Vector4KeyFrameAnimation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector4KeyFrameAnimation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector4KeyFrameAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector4KeyFrameAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector4KeyFrameAnimation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Vector4KeyFrameAnimation = {
@@ -27797,13 +27695,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_Visual[] = 
-    {
+    static PyType_Slot _type_slots_Visual[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Visual) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Visual) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Visual) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Visual) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Visual = {
@@ -28125,14 +28022,13 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_VisualCollection[] = 
-    {
+    static PyType_Slot _type_slots_VisualCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VisualCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VisualCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VisualCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VisualCollection) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_VisualCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VisualCollection = {
@@ -28353,14 +28249,13 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_VisualUnorderedCollection[] = 
-    {
+    static PyType_Slot _type_slots_VisualUnorderedCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VisualUnorderedCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VisualUnorderedCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VisualUnorderedCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VisualUnorderedCollection) },
         { Py_tp_iter, reinterpret_cast<void*>(_iterator_VisualUnorderedCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VisualUnorderedCollection = {
@@ -28455,13 +28350,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_IAnimationObject[] = 
-    {
+    static PyType_Slot _type_slots_IAnimationObject[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAnimationObject) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAnimationObject) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAnimationObject) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAnimationObject) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAnimationObject = {
@@ -28522,13 +28416,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_ICompositionAnimationBase[] = 
-    {
+    static PyType_Slot _type_slots_ICompositionAnimationBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICompositionAnimationBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICompositionAnimationBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICompositionAnimationBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICompositionAnimationBase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ICompositionAnimationBase = {
@@ -28637,13 +28530,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_ICompositionSupportsSystemBackdrop[] = 
-    {
+    static PyType_Slot _type_slots_ICompositionSupportsSystemBackdrop[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICompositionSupportsSystemBackdrop) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICompositionSupportsSystemBackdrop) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICompositionSupportsSystemBackdrop) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICompositionSupportsSystemBackdrop) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ICompositionSupportsSystemBackdrop = {
@@ -28704,13 +28596,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_ICompositionSurface[] = 
-    {
+    static PyType_Slot _type_slots_ICompositionSurface[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICompositionSurface) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICompositionSurface) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICompositionSurface) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICompositionSurface) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ICompositionSurface = {
@@ -28801,13 +28692,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_ICompositionSurfaceFacade[] = 
-    {
+    static PyType_Slot _type_slots_ICompositionSurfaceFacade[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICompositionSurfaceFacade) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICompositionSurfaceFacade) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICompositionSurfaceFacade) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICompositionSurfaceFacade) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ICompositionSurfaceFacade = {
@@ -28868,13 +28758,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_IVisualElement[] = 
-    {
+    static PyType_Slot _type_slots_IVisualElement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVisualElement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVisualElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVisualElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVisualElement) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVisualElement = {
@@ -28965,13 +28854,12 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_IVisualElement2[] = 
-    {
+    static PyType_Slot _type_slots_IVisualElement2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IVisualElement2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVisualElement2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVisualElement2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVisualElement2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IVisualElement2 = {
@@ -29123,14 +29011,13 @@ namespace py::cpp::Windows::UI::Composition
         { }
     };
 
-    static PyType_Slot _type_slots_InkTrailPoint[] = 
-    {
+    static PyType_Slot _type_slots_InkTrailPoint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkTrailPoint) },
         { Py_tp_init, reinterpret_cast<void*>(_init_InkTrailPoint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkTrailPoint) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkTrailPoint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkTrailPoint) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InkTrailPoint = {

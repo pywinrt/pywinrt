@@ -119,12 +119,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
         { }
     };
 
-    static PyType_Slot _type_slots_ContactPartnerProvisioningManager[] = 
-    {
+    static PyType_Slot _type_slots_ContactPartnerProvisioningManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactPartnerProvisioningManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactPartnerProvisioningManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactPartnerProvisioningManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContactPartnerProvisioningManager = {
@@ -252,12 +251,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
         { }
     };
 
-    static PyType_Slot _type_slots_MessagePartnerProvisioningManager[] = 
-    {
+    static PyType_Slot _type_slots_MessagePartnerProvisioningManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MessagePartnerProvisioningManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MessagePartnerProvisioningManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MessagePartnerProvisioningManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MessagePartnerProvisioningManager = {

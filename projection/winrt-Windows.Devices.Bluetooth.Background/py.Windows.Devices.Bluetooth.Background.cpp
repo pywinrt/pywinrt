@@ -116,13 +116,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEAdvertisementPublisherTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEAdvertisementPublisherTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementPublisherTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementPublisherTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementPublisherTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementPublisherTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementPublisherTriggerDetails = {
@@ -243,13 +242,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEAdvertisementWatcherTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEAdvertisementWatcherTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementWatcherTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementWatcherTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementWatcherTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementWatcherTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementWatcherTriggerDetails = {
@@ -410,13 +408,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { }
     };
 
-    static PyType_Slot _type_slots_GattCharacteristicNotificationTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_GattCharacteristicNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattCharacteristicNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattCharacteristicNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattCharacteristicNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattCharacteristicNotificationTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattCharacteristicNotificationTriggerDetails = {
@@ -567,13 +564,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { }
     };
 
-    static PyType_Slot _type_slots_GattServiceProviderConnection[] = 
-    {
+    static PyType_Slot _type_slots_GattServiceProviderConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattServiceProviderConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattServiceProviderConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattServiceProviderConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattServiceProviderConnection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattServiceProviderConnection = {
@@ -680,13 +676,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { }
     };
 
-    static PyType_Slot _type_slots_GattServiceProviderTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_GattServiceProviderTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GattServiceProviderTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GattServiceProviderTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GattServiceProviderTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GattServiceProviderTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GattServiceProviderTriggerDetails = {
@@ -807,13 +802,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { }
     };
 
-    static PyType_Slot _type_slots_RfcommConnectionTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_RfcommConnectionTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RfcommConnectionTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RfcommConnectionTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RfcommConnectionTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RfcommConnectionTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RfcommConnectionTriggerDetails = {
@@ -1018,13 +1012,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { }
     };
 
-    static PyType_Slot _type_slots_RfcommInboundConnectionInformation[] = 
-    {
+    static PyType_Slot _type_slots_RfcommInboundConnectionInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RfcommInboundConnectionInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RfcommInboundConnectionInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RfcommInboundConnectionInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RfcommInboundConnectionInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RfcommInboundConnectionInformation = {
@@ -1133,13 +1126,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { }
     };
 
-    static PyType_Slot _type_slots_RfcommOutboundConnectionInformation[] = 
-    {
+    static PyType_Slot _type_slots_RfcommOutboundConnectionInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RfcommOutboundConnectionInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RfcommOutboundConnectionInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RfcommOutboundConnectionInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RfcommOutboundConnectionInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RfcommOutboundConnectionInformation = {

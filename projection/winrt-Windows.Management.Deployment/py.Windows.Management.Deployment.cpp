@@ -850,13 +850,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_AddPackageOptions[] = 
-    {
+    static PyType_Slot _type_slots_AddPackageOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AddPackageOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AddPackageOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AddPackageOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AddPackageOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AddPackageOptions = {
@@ -1076,13 +1075,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_AppInstallerManager[] = 
-    {
+    static PyType_Slot _type_slots_AppInstallerManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppInstallerManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppInstallerManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppInstallerManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppInstallerManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppInstallerManager = {
@@ -1735,13 +1733,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_AutoUpdateSettingsOptions[] = 
-    {
+    static PyType_Slot _type_slots_AutoUpdateSettingsOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutoUpdateSettingsOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutoUpdateSettingsOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutoUpdateSettingsOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutoUpdateSettingsOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AutoUpdateSettingsOptions = {
@@ -1966,13 +1963,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_CreateSharedPackageContainerOptions[] = 
-    {
+    static PyType_Slot _type_slots_CreateSharedPackageContainerOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CreateSharedPackageContainerOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CreateSharedPackageContainerOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CreateSharedPackageContainerOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CreateSharedPackageContainerOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CreateSharedPackageContainerOptions = {
@@ -2093,13 +2089,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_CreateSharedPackageContainerResult[] = 
-    {
+    static PyType_Slot _type_slots_CreateSharedPackageContainerResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CreateSharedPackageContainerResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CreateSharedPackageContainerResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CreateSharedPackageContainerResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CreateSharedPackageContainerResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CreateSharedPackageContainerResult = {
@@ -2278,13 +2273,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_DeleteSharedPackageContainerOptions[] = 
-    {
+    static PyType_Slot _type_slots_DeleteSharedPackageContainerOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeleteSharedPackageContainerOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeleteSharedPackageContainerOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeleteSharedPackageContainerOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeleteSharedPackageContainerOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeleteSharedPackageContainerOptions = {
@@ -2385,13 +2379,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_DeleteSharedPackageContainerResult[] = 
-    {
+    static PyType_Slot _type_slots_DeleteSharedPackageContainerResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeleteSharedPackageContainerResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeleteSharedPackageContainerResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeleteSharedPackageContainerResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeleteSharedPackageContainerResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeleteSharedPackageContainerResult = {
@@ -2532,13 +2525,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_DeploymentResult[] = 
-    {
+    static PyType_Slot _type_slots_DeploymentResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeploymentResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeploymentResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeploymentResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeploymentResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeploymentResult = {
@@ -2717,13 +2709,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_FindSharedPackageContainerOptions[] = 
-    {
+    static PyType_Slot _type_slots_FindSharedPackageContainerOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FindSharedPackageContainerOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FindSharedPackageContainerOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FindSharedPackageContainerOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FindSharedPackageContainerOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FindSharedPackageContainerOptions = {
@@ -2846,13 +2837,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_PackageAllUserProvisioningOptions[] = 
-    {
+    static PyType_Slot _type_slots_PackageAllUserProvisioningOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageAllUserProvisioningOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageAllUserProvisioningOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageAllUserProvisioningOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageAllUserProvisioningOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PackageAllUserProvisioningOptions = {
@@ -4751,13 +4741,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_PackageManager[] = 
-    {
+    static PyType_Slot _type_slots_PackageManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PackageManager = {
@@ -4875,13 +4864,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_PackageManagerDebugSettings[] = 
-    {
+    static PyType_Slot _type_slots_PackageManagerDebugSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageManagerDebugSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageManagerDebugSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageManagerDebugSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageManagerDebugSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PackageManagerDebugSettings = {
@@ -4982,13 +4970,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_PackageUserInformation[] = 
-    {
+    static PyType_Slot _type_slots_PackageUserInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageUserInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageUserInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageUserInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageUserInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PackageUserInformation = {
@@ -5603,13 +5590,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_PackageVolume[] = 
-    {
+    static PyType_Slot _type_slots_PackageVolume[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageVolume) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageVolume) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageVolume) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageVolume) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PackageVolume = {
@@ -6232,13 +6218,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_RegisterPackageOptions[] = 
-    {
+    static PyType_Slot _type_slots_RegisterPackageOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RegisterPackageOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RegisterPackageOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RegisterPackageOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RegisterPackageOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RegisterPackageOptions = {
@@ -6432,13 +6417,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_SharedPackageContainer[] = 
-    {
+    static PyType_Slot _type_slots_SharedPackageContainer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SharedPackageContainer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SharedPackageContainer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SharedPackageContainer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SharedPackageContainer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SharedPackageContainer = {
@@ -6736,13 +6720,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_SharedPackageContainerManager[] = 
-    {
+    static PyType_Slot _type_slots_SharedPackageContainerManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SharedPackageContainerManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SharedPackageContainerManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SharedPackageContainerManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SharedPackageContainerManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SharedPackageContainerManager = {
@@ -6875,13 +6858,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_SharedPackageContainerMember[] = 
-    {
+    static PyType_Slot _type_slots_SharedPackageContainerMember[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SharedPackageContainerMember) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SharedPackageContainerMember) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SharedPackageContainerMember) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SharedPackageContainerMember) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SharedPackageContainerMember = {
@@ -7496,13 +7478,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_StagePackageOptions[] = 
-    {
+    static PyType_Slot _type_slots_StagePackageOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StagePackageOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StagePackageOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StagePackageOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StagePackageOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StagePackageOptions = {
@@ -7681,13 +7662,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_UpdateSharedPackageContainerOptions[] = 
-    {
+    static PyType_Slot _type_slots_UpdateSharedPackageContainerOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UpdateSharedPackageContainerOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UpdateSharedPackageContainerOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UpdateSharedPackageContainerOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UpdateSharedPackageContainerOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UpdateSharedPackageContainerOptions = {
@@ -7788,13 +7768,12 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_UpdateSharedPackageContainerResult[] = 
-    {
+    static PyType_Slot _type_slots_UpdateSharedPackageContainerResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UpdateSharedPackageContainerResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UpdateSharedPackageContainerResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UpdateSharedPackageContainerResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UpdateSharedPackageContainerResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UpdateSharedPackageContainerResult = {
@@ -7946,14 +7925,13 @@ namespace py::cpp::Windows::Management::Deployment
         { }
     };
 
-    static PyType_Slot _type_slots_DeploymentProgress[] = 
-    {
+    static PyType_Slot _type_slots_DeploymentProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeploymentProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_DeploymentProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeploymentProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeploymentProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeploymentProgress) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeploymentProgress = {

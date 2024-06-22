@@ -307,12 +307,11 @@ namespace py::cpp::Windows::Devices::Haptics
         { }
     };
 
-    static PyType_Slot _type_slots_KnownSimpleHapticsControllerWaveforms[] = 
-    {
+    static PyType_Slot _type_slots_KnownSimpleHapticsControllerWaveforms[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownSimpleHapticsControllerWaveforms) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownSimpleHapticsControllerWaveforms) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownSimpleHapticsControllerWaveforms) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KnownSimpleHapticsControllerWaveforms = {
@@ -690,13 +689,12 @@ namespace py::cpp::Windows::Devices::Haptics
         { }
     };
 
-    static PyType_Slot _type_slots_SimpleHapticsController[] = 
-    {
+    static PyType_Slot _type_slots_SimpleHapticsController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SimpleHapticsController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SimpleHapticsController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SimpleHapticsController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SimpleHapticsController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SimpleHapticsController = {
@@ -797,13 +795,12 @@ namespace py::cpp::Windows::Devices::Haptics
         { }
     };
 
-    static PyType_Slot _type_slots_SimpleHapticsControllerFeedback[] = 
-    {
+    static PyType_Slot _type_slots_SimpleHapticsControllerFeedback[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SimpleHapticsControllerFeedback) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SimpleHapticsControllerFeedback) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SimpleHapticsControllerFeedback) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SimpleHapticsControllerFeedback) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SimpleHapticsControllerFeedback = {
@@ -1051,13 +1048,12 @@ namespace py::cpp::Windows::Devices::Haptics
         { }
     };
 
-    static PyType_Slot _type_slots_VibrationDevice[] = 
-    {
+    static PyType_Slot _type_slots_VibrationDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VibrationDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VibrationDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VibrationDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VibrationDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VibrationDevice = {

@@ -167,12 +167,11 @@ namespace py::cpp::Windows::Management::Workplace
         { }
     };
 
-    static PyType_Slot _type_slots_MdmPolicy[] = 
-    {
+    static PyType_Slot _type_slots_MdmPolicy[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MdmPolicy) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MdmPolicy) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MdmPolicy) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MdmPolicy = {
@@ -248,12 +247,11 @@ namespace py::cpp::Windows::Management::Workplace
         { }
     };
 
-    static PyType_Slot _type_slots_WorkplaceSettings[] = 
-    {
+    static PyType_Slot _type_slots_WorkplaceSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WorkplaceSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WorkplaceSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WorkplaceSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WorkplaceSettings = {

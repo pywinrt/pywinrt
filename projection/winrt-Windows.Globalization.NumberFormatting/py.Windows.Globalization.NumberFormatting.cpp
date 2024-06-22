@@ -914,13 +914,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }
     };
 
-    static PyType_Slot _type_slots_CurrencyFormatter[] = 
-    {
+    static PyType_Slot _type_slots_CurrencyFormatter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CurrencyFormatter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CurrencyFormatter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CurrencyFormatter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CurrencyFormatter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CurrencyFormatter = {
@@ -1707,13 +1706,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }
     };
 
-    static PyType_Slot _type_slots_DecimalFormatter[] = 
-    {
+    static PyType_Slot _type_slots_DecimalFormatter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DecimalFormatter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DecimalFormatter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DecimalFormatter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DecimalFormatter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DecimalFormatter = {
@@ -2084,13 +2082,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }
     };
 
-    static PyType_Slot _type_slots_IncrementNumberRounder[] = 
-    {
+    static PyType_Slot _type_slots_IncrementNumberRounder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IncrementNumberRounder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IncrementNumberRounder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IncrementNumberRounder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IncrementNumberRounder) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IncrementNumberRounder = {
@@ -2308,13 +2305,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }
     };
 
-    static PyType_Slot _type_slots_NumeralSystemTranslator[] = 
-    {
+    static PyType_Slot _type_slots_NumeralSystemTranslator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NumeralSystemTranslator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NumeralSystemTranslator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NumeralSystemTranslator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NumeralSystemTranslator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NumeralSystemTranslator = {
@@ -3101,13 +3097,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }
     };
 
-    static PyType_Slot _type_slots_PercentFormatter[] = 
-    {
+    static PyType_Slot _type_slots_PercentFormatter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PercentFormatter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PercentFormatter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PercentFormatter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PercentFormatter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PercentFormatter = {
@@ -3894,13 +3889,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }
     };
 
-    static PyType_Slot _type_slots_PermilleFormatter[] = 
-    {
+    static PyType_Slot _type_slots_PermilleFormatter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PermilleFormatter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PermilleFormatter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PermilleFormatter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PermilleFormatter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PermilleFormatter = {
@@ -4271,13 +4265,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }
     };
 
-    static PyType_Slot _type_slots_SignificantDigitsNumberRounder[] = 
-    {
+    static PyType_Slot _type_slots_SignificantDigitsNumberRounder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SignificantDigitsNumberRounder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SignificantDigitsNumberRounder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SignificantDigitsNumberRounder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SignificantDigitsNumberRounder) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SignificantDigitsNumberRounder = {
@@ -4370,13 +4363,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }
     };
 
-    static PyType_Slot _type_slots_INumberFormatter[] = 
-    {
+    static PyType_Slot _type_slots_INumberFormatter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INumberFormatter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INumberFormatter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INumberFormatter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INumberFormatter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INumberFormatter = {
@@ -4533,13 +4525,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }
     };
 
-    static PyType_Slot _type_slots_INumberFormatter2[] = 
-    {
+    static PyType_Slot _type_slots_INumberFormatter2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INumberFormatter2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INumberFormatter2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INumberFormatter2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INumberFormatter2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INumberFormatter2 = {
@@ -4920,13 +4911,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }
     };
 
-    static PyType_Slot _type_slots_INumberFormatterOptions[] = 
-    {
+    static PyType_Slot _type_slots_INumberFormatterOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INumberFormatterOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INumberFormatterOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INumberFormatterOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INumberFormatterOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INumberFormatterOptions = {
@@ -5083,13 +5073,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }
     };
 
-    static PyType_Slot _type_slots_INumberParser[] = 
-    {
+    static PyType_Slot _type_slots_INumberParser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INumberParser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INumberParser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INumberParser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INumberParser) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INumberParser = {
@@ -5342,13 +5331,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }
     };
 
-    static PyType_Slot _type_slots_INumberRounder[] = 
-    {
+    static PyType_Slot _type_slots_INumberRounder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INumberRounder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INumberRounder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INumberRounder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INumberRounder) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INumberRounder = {
@@ -5457,13 +5445,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }
     };
 
-    static PyType_Slot _type_slots_INumberRounderOption[] = 
-    {
+    static PyType_Slot _type_slots_INumberRounderOption[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INumberRounderOption) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INumberRounderOption) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INumberRounderOption) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INumberRounderOption) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INumberRounderOption = {
@@ -5572,13 +5559,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }
     };
 
-    static PyType_Slot _type_slots_ISignedZeroOption[] = 
-    {
+    static PyType_Slot _type_slots_ISignedZeroOption[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISignedZeroOption) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISignedZeroOption) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISignedZeroOption) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISignedZeroOption) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISignedZeroOption = {
@@ -5687,13 +5673,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }
     };
 
-    static PyType_Slot _type_slots_ISignificantDigitsOption[] = 
-    {
+    static PyType_Slot _type_slots_ISignificantDigitsOption[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISignificantDigitsOption) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISignificantDigitsOption) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISignificantDigitsOption) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISignificantDigitsOption) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISignificantDigitsOption = {

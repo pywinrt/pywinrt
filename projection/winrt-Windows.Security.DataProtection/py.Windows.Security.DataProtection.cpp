@@ -86,13 +86,12 @@ namespace py::cpp::Windows::Security::DataProtection
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataAvailabilityStateChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_UserDataAvailabilityStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataAvailabilityStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataAvailabilityStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataAvailabilityStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataAvailabilityStateChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataAvailabilityStateChangedEventArgs = {
@@ -193,13 +192,12 @@ namespace py::cpp::Windows::Security::DataProtection
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataBufferUnprotectResult[] = 
-    {
+    static PyType_Slot _type_slots_UserDataBufferUnprotectResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataBufferUnprotectResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataBufferUnprotectResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataBufferUnprotectResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataBufferUnprotectResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataBufferUnprotectResult = {
@@ -527,13 +525,12 @@ namespace py::cpp::Windows::Security::DataProtection
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataProtectionManager[] = 
-    {
+    static PyType_Slot _type_slots_UserDataProtectionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataProtectionManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataProtectionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataProtectionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataProtectionManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataProtectionManager = {
@@ -641,13 +638,12 @@ namespace py::cpp::Windows::Security::DataProtection
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataStorageItemProtectionInfo[] = 
-    {
+    static PyType_Slot _type_slots_UserDataStorageItemProtectionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataStorageItemProtectionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataStorageItemProtectionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataStorageItemProtectionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataStorageItemProtectionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataStorageItemProtectionInfo = {

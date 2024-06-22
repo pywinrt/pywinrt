@@ -384,13 +384,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_FileOpenPickerUI[] = 
-    {
+    static PyType_Slot _type_slots_FileOpenPickerUI[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileOpenPickerUI) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileOpenPickerUI) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileOpenPickerUI) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileOpenPickerUI) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileOpenPickerUI = {
@@ -471,13 +470,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_FileRemovedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_FileRemovedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileRemovedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileRemovedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileRemovedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileRemovedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileRemovedEventArgs = {
@@ -768,13 +766,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_FileSavePickerUI[] = 
-    {
+    static PyType_Slot _type_slots_FileSavePickerUI[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileSavePickerUI) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileSavePickerUI) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileSavePickerUI) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileSavePickerUI) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileSavePickerUI = {
@@ -866,13 +863,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_PickerClosingDeferral[] = 
-    {
+    static PyType_Slot _type_slots_PickerClosingDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PickerClosingDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PickerClosingDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PickerClosingDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PickerClosingDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PickerClosingDeferral = {
@@ -973,13 +969,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_PickerClosingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PickerClosingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PickerClosingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PickerClosingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PickerClosingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PickerClosingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PickerClosingEventArgs = {
@@ -1090,13 +1085,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_PickerClosingOperation[] = 
-    {
+    static PyType_Slot _type_slots_PickerClosingOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PickerClosingOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PickerClosingOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PickerClosingOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PickerClosingOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PickerClosingOperation = {
@@ -1235,13 +1229,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_TargetFileRequest[] = 
-    {
+    static PyType_Slot _type_slots_TargetFileRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetFileRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetFileRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetFileRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetFileRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TargetFileRequest = {
@@ -1333,13 +1326,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_TargetFileRequestDeferral[] = 
-    {
+    static PyType_Slot _type_slots_TargetFileRequestDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetFileRequestDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetFileRequestDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetFileRequestDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetFileRequestDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TargetFileRequestDeferral = {
@@ -1420,13 +1412,12 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_TargetFileRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_TargetFileRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TargetFileRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TargetFileRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TargetFileRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TargetFileRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TargetFileRequestedEventArgs = {

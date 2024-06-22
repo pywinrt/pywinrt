@@ -155,12 +155,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }
     };
 
-    static PyType_Slot _type_slots_GameControllerFactoryManager[] = 
-    {
+    static PyType_Slot _type_slots_GameControllerFactoryManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameControllerFactoryManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameControllerFactoryManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameControllerFactoryManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GameControllerFactoryManager = {
@@ -310,13 +309,12 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }
     };
 
-    static PyType_Slot _type_slots_GipFirmwareUpdateResult[] = 
-    {
+    static PyType_Slot _type_slots_GipFirmwareUpdateResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GipFirmwareUpdateResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GipFirmwareUpdateResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GipFirmwareUpdateResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GipFirmwareUpdateResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GipFirmwareUpdateResult = {
@@ -580,13 +578,12 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }
     };
 
-    static PyType_Slot _type_slots_GipGameControllerProvider[] = 
-    {
+    static PyType_Slot _type_slots_GipGameControllerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GipGameControllerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GipGameControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GipGameControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GipGameControllerProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GipGameControllerProvider = {
@@ -889,13 +886,12 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }
     };
 
-    static PyType_Slot _type_slots_HidGameControllerProvider[] = 
-    {
+    static PyType_Slot _type_slots_HidGameControllerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HidGameControllerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HidGameControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HidGameControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HidGameControllerProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HidGameControllerProvider = {
@@ -1090,13 +1086,12 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }
     };
 
-    static PyType_Slot _type_slots_XusbGameControllerProvider[] = 
-    {
+    static PyType_Slot _type_slots_XusbGameControllerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XusbGameControllerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XusbGameControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XusbGameControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XusbGameControllerProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XusbGameControllerProvider = {
@@ -1255,13 +1250,12 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }
     };
 
-    static PyType_Slot _type_slots_ICustomGameControllerFactory[] = 
-    {
+    static PyType_Slot _type_slots_ICustomGameControllerFactory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ICustomGameControllerFactory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICustomGameControllerFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICustomGameControllerFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICustomGameControllerFactory) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ICustomGameControllerFactory = {
@@ -1388,13 +1382,12 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }
     };
 
-    static PyType_Slot _type_slots_IGameControllerInputSink[] = 
-    {
+    static PyType_Slot _type_slots_IGameControllerInputSink[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGameControllerInputSink) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGameControllerInputSink) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGameControllerInputSink) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGameControllerInputSink) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IGameControllerInputSink = {
@@ -1555,13 +1548,12 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }
     };
 
-    static PyType_Slot _type_slots_IGameControllerProvider[] = 
-    {
+    static PyType_Slot _type_slots_IGameControllerProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGameControllerProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGameControllerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGameControllerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGameControllerProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IGameControllerProvider = {
@@ -1760,13 +1752,12 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }
     };
 
-    static PyType_Slot _type_slots_IGipGameControllerInputSink[] = 
-    {
+    static PyType_Slot _type_slots_IGipGameControllerInputSink[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IGipGameControllerInputSink) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGipGameControllerInputSink) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGipGameControllerInputSink) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGipGameControllerInputSink) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IGipGameControllerInputSink = {
@@ -1928,13 +1919,12 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }
     };
 
-    static PyType_Slot _type_slots_IHidGameControllerInputSink[] = 
-    {
+    static PyType_Slot _type_slots_IHidGameControllerInputSink[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IHidGameControllerInputSink) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IHidGameControllerInputSink) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IHidGameControllerInputSink) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IHidGameControllerInputSink) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IHidGameControllerInputSink = {
@@ -2096,13 +2086,12 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }
     };
 
-    static PyType_Slot _type_slots_IXusbGameControllerInputSink[] = 
-    {
+    static PyType_Slot _type_slots_IXusbGameControllerInputSink[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXusbGameControllerInputSink) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXusbGameControllerInputSink) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXusbGameControllerInputSink) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXusbGameControllerInputSink) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IXusbGameControllerInputSink = {
@@ -2324,14 +2313,13 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }
     };
 
-    static PyType_Slot _type_slots_GameControllerVersionInfo[] = 
-    {
+    static PyType_Slot _type_slots_GameControllerVersionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameControllerVersionInfo) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GameControllerVersionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameControllerVersionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameControllerVersionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameControllerVersionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GameControllerVersionInfo = {
@@ -2483,14 +2471,13 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }
     };
 
-    static PyType_Slot _type_slots_GipFirmwareUpdateProgress[] = 
-    {
+    static PyType_Slot _type_slots_GipFirmwareUpdateProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GipFirmwareUpdateProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GipFirmwareUpdateProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GipFirmwareUpdateProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GipFirmwareUpdateProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GipFirmwareUpdateProgress) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GipFirmwareUpdateProgress = {

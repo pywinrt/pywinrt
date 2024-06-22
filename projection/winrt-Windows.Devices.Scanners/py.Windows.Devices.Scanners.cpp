@@ -346,13 +346,12 @@ namespace py::cpp::Windows::Devices::Scanners
         { }
     };
 
-    static PyType_Slot _type_slots_ImageScanner[] = 
-    {
+    static PyType_Slot _type_slots_ImageScanner[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageScanner) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageScanner) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageScanner) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageScanner) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ImageScanner = {
@@ -540,13 +539,12 @@ namespace py::cpp::Windows::Devices::Scanners
         { }
     };
 
-    static PyType_Slot _type_slots_ImageScannerAutoConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_ImageScannerAutoConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageScannerAutoConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageScannerAutoConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageScannerAutoConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageScannerAutoConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ImageScannerAutoConfiguration = {
@@ -1760,13 +1758,12 @@ namespace py::cpp::Windows::Devices::Scanners
         { }
     };
 
-    static PyType_Slot _type_slots_ImageScannerFeederConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_ImageScannerFeederConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageScannerFeederConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageScannerFeederConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageScannerFeederConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageScannerFeederConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ImageScannerFeederConfiguration = {
@@ -2579,13 +2576,12 @@ namespace py::cpp::Windows::Devices::Scanners
         { }
     };
 
-    static PyType_Slot _type_slots_ImageScannerFlatbedConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_ImageScannerFlatbedConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageScannerFlatbedConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageScannerFlatbedConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageScannerFlatbedConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageScannerFlatbedConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ImageScannerFlatbedConfiguration = {
@@ -2686,13 +2682,12 @@ namespace py::cpp::Windows::Devices::Scanners
         { }
     };
 
-    static PyType_Slot _type_slots_ImageScannerPreviewResult[] = 
-    {
+    static PyType_Slot _type_slots_ImageScannerPreviewResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageScannerPreviewResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageScannerPreviewResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageScannerPreviewResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageScannerPreviewResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ImageScannerPreviewResult = {
@@ -2773,13 +2768,12 @@ namespace py::cpp::Windows::Devices::Scanners
         { }
     };
 
-    static PyType_Slot _type_slots_ImageScannerScanResult[] = 
-    {
+    static PyType_Slot _type_slots_ImageScannerScanResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageScannerScanResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageScannerScanResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageScannerScanResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageScannerScanResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ImageScannerScanResult = {
@@ -2940,13 +2934,12 @@ namespace py::cpp::Windows::Devices::Scanners
         { }
     };
 
-    static PyType_Slot _type_slots_IImageScannerFormatConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_IImageScannerFormatConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IImageScannerFormatConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IImageScannerFormatConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IImageScannerFormatConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IImageScannerFormatConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IImageScannerFormatConfiguration = {
@@ -3759,13 +3752,12 @@ namespace py::cpp::Windows::Devices::Scanners
         { }
     };
 
-    static PyType_Slot _type_slots_IImageScannerSourceConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_IImageScannerSourceConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IImageScannerSourceConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IImageScannerSourceConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IImageScannerSourceConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IImageScannerSourceConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IImageScannerSourceConfiguration = {
@@ -3917,14 +3909,13 @@ namespace py::cpp::Windows::Devices::Scanners
         { }
     };
 
-    static PyType_Slot _type_slots_ImageScannerResolution[] = 
-    {
+    static PyType_Slot _type_slots_ImageScannerResolution[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageScannerResolution) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ImageScannerResolution) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageScannerResolution) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageScannerResolution) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageScannerResolution) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ImageScannerResolution = {

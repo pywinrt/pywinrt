@@ -188,13 +188,12 @@ namespace py::cpp::Windows::Devices::Adc
         { }
     };
 
-    static PyType_Slot _type_slots_AdcChannel[] = 
-    {
+    static PyType_Slot _type_slots_AdcChannel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdcChannel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdcChannel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdcChannel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdcChannel) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdcChannel = {
@@ -507,13 +506,12 @@ namespace py::cpp::Windows::Devices::Adc
         { }
     };
 
-    static PyType_Slot _type_slots_AdcController[] = 
-    {
+    static PyType_Slot _type_slots_AdcController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdcController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdcController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdcController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdcController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdcController = {

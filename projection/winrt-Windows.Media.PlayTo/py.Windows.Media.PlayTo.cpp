@@ -76,13 +76,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { }
     };
 
-    static PyType_Slot _type_slots_CurrentTimeChangeRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CurrentTimeChangeRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CurrentTimeChangeRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CurrentTimeChangeRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CurrentTimeChangeRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CurrentTimeChangeRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CurrentTimeChangeRequestedEventArgs = {
@@ -163,13 +162,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { }
     };
 
-    static PyType_Slot _type_slots_MuteChangeRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MuteChangeRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MuteChangeRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MuteChangeRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MuteChangeRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MuteChangeRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MuteChangeRequestedEventArgs = {
@@ -385,13 +383,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { }
     };
 
-    static PyType_Slot _type_slots_PlayToConnection[] = 
-    {
+    static PyType_Slot _type_slots_PlayToConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToConnection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayToConnection = {
@@ -492,13 +489,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { }
     };
 
-    static PyType_Slot _type_slots_PlayToConnectionErrorEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PlayToConnectionErrorEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToConnectionErrorEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToConnectionErrorEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToConnectionErrorEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToConnectionErrorEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayToConnectionErrorEventArgs = {
@@ -599,13 +595,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { }
     };
 
-    static PyType_Slot _type_slots_PlayToConnectionStateChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PlayToConnectionStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToConnectionStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToConnectionStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToConnectionStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToConnectionStateChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayToConnectionStateChangedEventArgs = {
@@ -706,13 +701,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { }
     };
 
-    static PyType_Slot _type_slots_PlayToConnectionTransferredEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PlayToConnectionTransferredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToConnectionTransferredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToConnectionTransferredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToConnectionTransferredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToConnectionTransferredEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayToConnectionTransferredEventArgs = {
@@ -970,13 +964,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { }
     };
 
-    static PyType_Slot _type_slots_PlayToManager[] = 
-    {
+    static PyType_Slot _type_slots_PlayToManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayToManager = {
@@ -2144,13 +2137,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { }
     };
 
-    static PyType_Slot _type_slots_PlayToReceiver[] = 
-    {
+    static PyType_Slot _type_slots_PlayToReceiver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToReceiver) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToReceiver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToReceiver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToReceiver) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayToReceiver = {
@@ -2358,13 +2350,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { }
     };
 
-    static PyType_Slot _type_slots_PlayToSource[] = 
-    {
+    static PyType_Slot _type_slots_PlayToSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayToSource = {
@@ -2456,13 +2447,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { }
     };
 
-    static PyType_Slot _type_slots_PlayToSourceDeferral[] = 
-    {
+    static PyType_Slot _type_slots_PlayToSourceDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToSourceDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToSourceDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToSourceDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToSourceDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayToSourceDeferral = {
@@ -2639,13 +2629,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { }
     };
 
-    static PyType_Slot _type_slots_PlayToSourceRequest[] = 
-    {
+    static PyType_Slot _type_slots_PlayToSourceRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToSourceRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToSourceRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToSourceRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToSourceRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayToSourceRequest = {
@@ -2726,13 +2715,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { }
     };
 
-    static PyType_Slot _type_slots_PlayToSourceRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PlayToSourceRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToSourceRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToSourceRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToSourceRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToSourceRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayToSourceRequestedEventArgs = {
@@ -2893,13 +2881,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { }
     };
 
-    static PyType_Slot _type_slots_PlayToSourceSelectedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PlayToSourceSelectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlayToSourceSelectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlayToSourceSelectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlayToSourceSelectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlayToSourceSelectedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlayToSourceSelectedEventArgs = {
@@ -2980,13 +2967,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { }
     };
 
-    static PyType_Slot _type_slots_PlaybackRateChangeRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PlaybackRateChangeRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PlaybackRateChangeRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PlaybackRateChangeRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PlaybackRateChangeRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PlaybackRateChangeRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PlaybackRateChangeRequestedEventArgs = {
@@ -3247,13 +3233,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { }
     };
 
-    static PyType_Slot _type_slots_SourceChangeRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SourceChangeRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SourceChangeRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SourceChangeRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SourceChangeRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SourceChangeRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SourceChangeRequestedEventArgs = {
@@ -3334,13 +3319,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { }
     };
 
-    static PyType_Slot _type_slots_VolumeChangeRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_VolumeChangeRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VolumeChangeRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VolumeChangeRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VolumeChangeRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VolumeChangeRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VolumeChangeRequestedEventArgs = {

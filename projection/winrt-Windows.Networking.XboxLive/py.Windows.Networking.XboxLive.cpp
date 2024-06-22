@@ -434,13 +434,12 @@ namespace py::cpp::Windows::Networking::XboxLive
         { }
     };
 
-    static PyType_Slot _type_slots_XboxLiveDeviceAddress[] = 
-    {
+    static PyType_Slot _type_slots_XboxLiveDeviceAddress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XboxLiveDeviceAddress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XboxLiveDeviceAddress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XboxLiveDeviceAddress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XboxLiveDeviceAddress) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XboxLiveDeviceAddress = {
@@ -878,13 +877,12 @@ namespace py::cpp::Windows::Networking::XboxLive
         { }
     };
 
-    static PyType_Slot _type_slots_XboxLiveEndpointPair[] = 
-    {
+    static PyType_Slot _type_slots_XboxLiveEndpointPair[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XboxLiveEndpointPair) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XboxLiveEndpointPair) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XboxLiveEndpointPair) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XboxLiveEndpointPair) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XboxLiveEndpointPair = {
@@ -1052,13 +1050,12 @@ namespace py::cpp::Windows::Networking::XboxLive
         { }
     };
 
-    static PyType_Slot _type_slots_XboxLiveEndpointPairCreationResult[] = 
-    {
+    static PyType_Slot _type_slots_XboxLiveEndpointPairCreationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XboxLiveEndpointPairCreationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XboxLiveEndpointPairCreationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XboxLiveEndpointPairCreationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XboxLiveEndpointPairCreationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XboxLiveEndpointPairCreationResult = {
@@ -1159,13 +1156,12 @@ namespace py::cpp::Windows::Networking::XboxLive
         { }
     };
 
-    static PyType_Slot _type_slots_XboxLiveEndpointPairStateChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_XboxLiveEndpointPairStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XboxLiveEndpointPairStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XboxLiveEndpointPairStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XboxLiveEndpointPairStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XboxLiveEndpointPairStateChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XboxLiveEndpointPairStateChangedEventArgs = {
@@ -1571,13 +1567,12 @@ namespace py::cpp::Windows::Networking::XboxLive
         { }
     };
 
-    static PyType_Slot _type_slots_XboxLiveEndpointPairTemplate[] = 
-    {
+    static PyType_Slot _type_slots_XboxLiveEndpointPairTemplate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XboxLiveEndpointPairTemplate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XboxLiveEndpointPairTemplate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XboxLiveEndpointPairTemplate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XboxLiveEndpointPairTemplate) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XboxLiveEndpointPairTemplate = {
@@ -1685,13 +1680,12 @@ namespace py::cpp::Windows::Networking::XboxLive
         { }
     };
 
-    static PyType_Slot _type_slots_XboxLiveInboundEndpointPairCreatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_XboxLiveInboundEndpointPairCreatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XboxLiveInboundEndpointPairCreatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XboxLiveInboundEndpointPairCreatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XboxLiveInboundEndpointPairCreatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XboxLiveInboundEndpointPairCreatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XboxLiveInboundEndpointPairCreatedEventArgs = {
@@ -2446,13 +2440,12 @@ namespace py::cpp::Windows::Networking::XboxLive
         { }
     };
 
-    static PyType_Slot _type_slots_XboxLiveQualityOfServiceMeasurement[] = 
-    {
+    static PyType_Slot _type_slots_XboxLiveQualityOfServiceMeasurement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XboxLiveQualityOfServiceMeasurement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XboxLiveQualityOfServiceMeasurement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XboxLiveQualityOfServiceMeasurement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XboxLiveQualityOfServiceMeasurement) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XboxLiveQualityOfServiceMeasurement = {
@@ -2625,13 +2618,12 @@ namespace py::cpp::Windows::Networking::XboxLive
         { }
     };
 
-    static PyType_Slot _type_slots_XboxLiveQualityOfServiceMetricResult[] = 
-    {
+    static PyType_Slot _type_slots_XboxLiveQualityOfServiceMetricResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XboxLiveQualityOfServiceMetricResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XboxLiveQualityOfServiceMetricResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XboxLiveQualityOfServiceMetricResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XboxLiveQualityOfServiceMetricResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XboxLiveQualityOfServiceMetricResult = {
@@ -2752,13 +2744,12 @@ namespace py::cpp::Windows::Networking::XboxLive
         { }
     };
 
-    static PyType_Slot _type_slots_XboxLiveQualityOfServicePrivatePayloadResult[] = 
-    {
+    static PyType_Slot _type_slots_XboxLiveQualityOfServicePrivatePayloadResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XboxLiveQualityOfServicePrivatePayloadResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XboxLiveQualityOfServicePrivatePayloadResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XboxLiveQualityOfServicePrivatePayloadResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XboxLiveQualityOfServicePrivatePayloadResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XboxLiveQualityOfServicePrivatePayloadResult = {

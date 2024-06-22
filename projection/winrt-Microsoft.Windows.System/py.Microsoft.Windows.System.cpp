@@ -410,13 +410,12 @@ namespace py::cpp::Microsoft::Windows::System
         { }
     };
 
-    static PyType_Slot _type_slots_EnvironmentManager[] = 
-    {
+    static PyType_Slot _type_slots_EnvironmentManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EnvironmentManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EnvironmentManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EnvironmentManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EnvironmentManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EnvironmentManager = {

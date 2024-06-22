@@ -339,13 +339,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_SecondaryAuthenticationFactorAuthentication[] = 
-    {
+    static PyType_Slot _type_slots_SecondaryAuthenticationFactorAuthentication[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryAuthenticationFactorAuthentication) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryAuthenticationFactorAuthentication) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryAuthenticationFactorAuthentication) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryAuthenticationFactorAuthentication) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthentication = {
@@ -474,13 +473,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_SecondaryAuthenticationFactorAuthenticationResult[] = 
-    {
+    static PyType_Slot _type_slots_SecondaryAuthenticationFactorAuthenticationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryAuthenticationFactorAuthenticationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryAuthenticationFactorAuthenticationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryAuthenticationFactorAuthenticationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryAuthenticationFactorAuthenticationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthenticationResult = {
@@ -561,13 +559,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs = {
@@ -688,13 +685,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_SecondaryAuthenticationFactorAuthenticationStageInfo[] = 
-    {
+    static PyType_Slot _type_slots_SecondaryAuthenticationFactorAuthenticationStageInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryAuthenticationFactorAuthenticationStageInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryAuthenticationFactorAuthenticationStageInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryAuthenticationFactorAuthenticationStageInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryAuthenticationFactorAuthenticationStageInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthenticationStageInfo = {
@@ -907,13 +903,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_SecondaryAuthenticationFactorInfo[] = 
-    {
+    static PyType_Slot _type_slots_SecondaryAuthenticationFactorInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryAuthenticationFactorInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryAuthenticationFactorInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryAuthenticationFactorInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryAuthenticationFactorInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SecondaryAuthenticationFactorInfo = {
@@ -1286,13 +1281,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_SecondaryAuthenticationFactorRegistration[] = 
-    {
+    static PyType_Slot _type_slots_SecondaryAuthenticationFactorRegistration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryAuthenticationFactorRegistration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryAuthenticationFactorRegistration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryAuthenticationFactorRegistration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryAuthenticationFactorRegistration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SecondaryAuthenticationFactorRegistration = {
@@ -1425,13 +1419,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_SecondaryAuthenticationFactorRegistrationResult[] = 
-    {
+    static PyType_Slot _type_slots_SecondaryAuthenticationFactorRegistrationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SecondaryAuthenticationFactorRegistrationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SecondaryAuthenticationFactorRegistrationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SecondaryAuthenticationFactorRegistrationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SecondaryAuthenticationFactorRegistrationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SecondaryAuthenticationFactorRegistrationResult = {

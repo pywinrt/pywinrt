@@ -298,13 +298,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEAdvertisement[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEAdvertisement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisement) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEAdvertisement = {
@@ -548,13 +547,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEAdvertisementBytePattern[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEAdvertisementBytePattern[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementBytePattern) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementBytePattern) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementBytePattern) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementBytePattern) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementBytePattern = {
@@ -749,13 +747,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEAdvertisementDataSection[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEAdvertisementDataSection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementDataSection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementDataSection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementDataSection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementDataSection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementDataSection = {
@@ -1200,12 +1197,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEAdvertisementDataTypes[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEAdvertisementDataTypes[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementDataTypes) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementDataTypes) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementDataTypes) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementDataTypes = {
@@ -1403,13 +1399,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEAdvertisementFilter[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEAdvertisementFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementFilter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementFilter = {
@@ -1846,13 +1841,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEAdvertisementPublisher[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEAdvertisementPublisher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementPublisher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementPublisher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementPublisher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementPublisher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementPublisher = {
@@ -1973,13 +1967,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEAdvertisementPublisherStatusChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEAdvertisementPublisherStatusChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementPublisherStatusChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementPublisherStatusChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementPublisherStatusChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementPublisherStatusChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementPublisherStatusChangedEventArgs = {
@@ -2280,13 +2273,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEAdvertisementReceivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEAdvertisementReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementReceivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementReceivedEventArgs = {
@@ -2828,13 +2820,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEAdvertisementWatcher[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEAdvertisementWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementWatcher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementWatcher = {
@@ -2915,13 +2906,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEAdvertisementWatcherStoppedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEAdvertisementWatcherStoppedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEAdvertisementWatcherStoppedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEAdvertisementWatcherStoppedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEAdvertisementWatcherStoppedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEAdvertisementWatcherStoppedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementWatcherStoppedEventArgs = {
@@ -3116,13 +3106,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { }
     };
 
-    static PyType_Slot _type_slots_BluetoothLEManufacturerData[] = 
-    {
+    static PyType_Slot _type_slots_BluetoothLEManufacturerData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BluetoothLEManufacturerData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BluetoothLEManufacturerData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BluetoothLEManufacturerData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BluetoothLEManufacturerData) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BluetoothLEManufacturerData = {

@@ -76,13 +76,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }
     };
 
-    static PyType_Slot _type_slots_DesignerAppExitedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DesignerAppExitedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesignerAppExitedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesignerAppExitedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesignerAppExitedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesignerAppExitedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DesignerAppExitedEventArgs = {
@@ -351,13 +350,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }
     };
 
-    static PyType_Slot _type_slots_DesignerAppManager[] = 
-    {
+    static PyType_Slot _type_slots_DesignerAppManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesignerAppManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesignerAppManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesignerAppManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesignerAppManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DesignerAppManager = {
@@ -583,13 +581,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }
     };
 
-    static PyType_Slot _type_slots_DesignerAppView[] = 
-    {
+    static PyType_Slot _type_slots_DesignerAppView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesignerAppView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesignerAppView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesignerAppView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesignerAppView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DesignerAppView = {
@@ -914,13 +911,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }
     };
 
-    static PyType_Slot _type_slots_DesktopWindowXamlSource[] = 
-    {
+    static PyType_Slot _type_slots_DesktopWindowXamlSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesktopWindowXamlSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesktopWindowXamlSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesktopWindowXamlSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesktopWindowXamlSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DesktopWindowXamlSource = {
@@ -1001,13 +997,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }
     };
 
-    static PyType_Slot _type_slots_DesktopWindowXamlSourceGotFocusEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DesktopWindowXamlSourceGotFocusEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesktopWindowXamlSourceGotFocusEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesktopWindowXamlSourceGotFocusEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesktopWindowXamlSourceGotFocusEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesktopWindowXamlSourceGotFocusEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DesktopWindowXamlSourceGotFocusEventArgs = {
@@ -1088,13 +1083,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }
     };
 
-    static PyType_Slot _type_slots_DesktopWindowXamlSourceTakeFocusRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DesktopWindowXamlSourceTakeFocusRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesktopWindowXamlSourceTakeFocusRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesktopWindowXamlSourceTakeFocusRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesktopWindowXamlSourceTakeFocusRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesktopWindowXamlSourceTakeFocusRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DesktopWindowXamlSourceTakeFocusRequestedEventArgs = {
@@ -1475,13 +1469,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }
     };
 
-    static PyType_Slot _type_slots_ElementCompositionPreview[] = 
-    {
+    static PyType_Slot _type_slots_ElementCompositionPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ElementCompositionPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ElementCompositionPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ElementCompositionPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ElementCompositionPreview) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ElementCompositionPreview = {
@@ -1658,13 +1651,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }
     };
 
-    static PyType_Slot _type_slots_WindowsXamlManager[] = 
-    {
+    static PyType_Slot _type_slots_WindowsXamlManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowsXamlManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowsXamlManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowsXamlManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowsXamlManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WindowsXamlManager = {
@@ -1868,13 +1860,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }
     };
 
-    static PyType_Slot _type_slots_XamlSourceFocusNavigationRequest[] = 
-    {
+    static PyType_Slot _type_slots_XamlSourceFocusNavigationRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlSourceFocusNavigationRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlSourceFocusNavigationRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlSourceFocusNavigationRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlSourceFocusNavigationRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XamlSourceFocusNavigationRequest = {
@@ -1979,13 +1970,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }
     };
 
-    static PyType_Slot _type_slots_XamlSourceFocusNavigationResult[] = 
-    {
+    static PyType_Slot _type_slots_XamlSourceFocusNavigationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlSourceFocusNavigationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlSourceFocusNavigationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlSourceFocusNavigationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlSourceFocusNavigationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XamlSourceFocusNavigationResult = {
@@ -2495,13 +2485,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }
     };
 
-    static PyType_Slot _type_slots_XamlUIPresenter[] = 
-    {
+    static PyType_Slot _type_slots_XamlUIPresenter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlUIPresenter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlUIPresenter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlUIPresenter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlUIPresenter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XamlUIPresenter = {
@@ -2624,13 +2613,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }
     };
 
-    static PyType_Slot _type_slots_IXamlUIPresenterHost[] = 
-    {
+    static PyType_Slot _type_slots_IXamlUIPresenterHost[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXamlUIPresenterHost) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlUIPresenterHost) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlUIPresenterHost) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlUIPresenterHost) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IXamlUIPresenterHost = {
@@ -2721,13 +2709,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }
     };
 
-    static PyType_Slot _type_slots_IXamlUIPresenterHost2[] = 
-    {
+    static PyType_Slot _type_slots_IXamlUIPresenterHost2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXamlUIPresenterHost2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlUIPresenterHost2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlUIPresenterHost2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlUIPresenterHost2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IXamlUIPresenterHost2 = {
@@ -2822,13 +2809,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         { }
     };
 
-    static PyType_Slot _type_slots_IXamlUIPresenterHost3[] = 
-    {
+    static PyType_Slot _type_slots_IXamlUIPresenterHost3[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXamlUIPresenterHost3) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlUIPresenterHost3) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlUIPresenterHost3) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlUIPresenterHost3) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IXamlUIPresenterHost3 = {

@@ -414,13 +414,12 @@ namespace py::cpp::Windows::UI::Composition::Effects
         { }
     };
 
-    static PyType_Slot _type_slots_SceneLightingEffect[] = 
-    {
+    static PyType_Slot _type_slots_SceneLightingEffect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SceneLightingEffect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SceneLightingEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SceneLightingEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SceneLightingEffect) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SceneLightingEffect = {

@@ -174,13 +174,12 @@ namespace py::cpp::Windows::Perception::People
         { }
     };
 
-    static PyType_Slot _type_slots_EyesPose[] = 
-    {
+    static PyType_Slot _type_slots_EyesPose[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EyesPose) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EyesPose) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EyesPose) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EyesPose) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EyesPose = {
@@ -453,13 +452,12 @@ namespace py::cpp::Windows::Perception::People
         { }
     };
 
-    static PyType_Slot _type_slots_HandMeshObserver[] = 
-    {
+    static PyType_Slot _type_slots_HandMeshObserver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HandMeshObserver) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HandMeshObserver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HandMeshObserver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HandMeshObserver) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HandMeshObserver = {
@@ -593,13 +591,12 @@ namespace py::cpp::Windows::Perception::People
         { }
     };
 
-    static PyType_Slot _type_slots_HandMeshVertexState[] = 
-    {
+    static PyType_Slot _type_slots_HandMeshVertexState[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HandMeshVertexState) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HandMeshVertexState) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HandMeshVertexState) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HandMeshVertexState) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HandMeshVertexState = {
@@ -808,13 +805,12 @@ namespace py::cpp::Windows::Perception::People
         { }
     };
 
-    static PyType_Slot _type_slots_HandPose[] = 
-    {
+    static PyType_Slot _type_slots_HandPose[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HandPose) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HandPose) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HandPose) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HandPose) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HandPose = {
@@ -935,13 +931,12 @@ namespace py::cpp::Windows::Perception::People
         { }
     };
 
-    static PyType_Slot _type_slots_HeadPose[] = 
-    {
+    static PyType_Slot _type_slots_HeadPose[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HeadPose) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HeadPose) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HeadPose) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HeadPose) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HeadPose = {
@@ -1093,14 +1088,13 @@ namespace py::cpp::Windows::Perception::People
         { }
     };
 
-    static PyType_Slot _type_slots_HandMeshVertex[] = 
-    {
+    static PyType_Slot _type_slots_HandMeshVertex[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HandMeshVertex) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HandMeshVertex) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HandMeshVertex) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HandMeshVertex) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HandMeshVertex) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HandMeshVertex = {
@@ -1322,14 +1316,13 @@ namespace py::cpp::Windows::Perception::People
         { }
     };
 
-    static PyType_Slot _type_slots_JointPose[] = 
-    {
+    static PyType_Slot _type_slots_JointPose[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JointPose) },
         { Py_tp_init, reinterpret_cast<void*>(_init_JointPose) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_JointPose) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JointPose) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JointPose) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_JointPose = {

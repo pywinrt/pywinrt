@@ -76,13 +76,12 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         { }
     };
 
-    static PyType_Slot _type_slots_NotePlacementChangedPreviewEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_NotePlacementChangedPreviewEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NotePlacementChangedPreviewEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NotePlacementChangedPreviewEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NotePlacementChangedPreviewEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NotePlacementChangedPreviewEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NotePlacementChangedPreviewEventArgs = {
@@ -183,13 +182,12 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         { }
     };
 
-    static PyType_Slot _type_slots_NoteVisibilityChangedPreviewEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_NoteVisibilityChangedPreviewEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NoteVisibilityChangedPreviewEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NoteVisibilityChangedPreviewEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NoteVisibilityChangedPreviewEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NoteVisibilityChangedPreviewEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NoteVisibilityChangedPreviewEventArgs = {
@@ -805,13 +803,12 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         { }
     };
 
-    static PyType_Slot _type_slots_NotesWindowManagerPreview[] = 
-    {
+    static PyType_Slot _type_slots_NotesWindowManagerPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NotesWindowManagerPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NotesWindowManagerPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NotesWindowManagerPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NotesWindowManagerPreview) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NotesWindowManagerPreview = {
@@ -968,13 +965,12 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         { }
     };
 
-    static PyType_Slot _type_slots_NotesWindowManagerPreviewShowNoteOptions[] = 
-    {
+    static PyType_Slot _type_slots_NotesWindowManagerPreviewShowNoteOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NotesWindowManagerPreviewShowNoteOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NotesWindowManagerPreviewShowNoteOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NotesWindowManagerPreviewShowNoteOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NotesWindowManagerPreviewShowNoteOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NotesWindowManagerPreviewShowNoteOptions = {

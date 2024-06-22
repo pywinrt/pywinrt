@@ -499,13 +499,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechSynthesisStream[] = 
-    {
+    static PyType_Slot _type_slots_SpeechSynthesisStream[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechSynthesisStream) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechSynthesisStream) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechSynthesisStream) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechSynthesisStream) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechSynthesisStream = {
@@ -841,13 +840,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechSynthesizer[] = 
-    {
+    static PyType_Slot _type_slots_SpeechSynthesizer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechSynthesizer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechSynthesizer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechSynthesizer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechSynthesizer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechSynthesizer = {
@@ -1272,13 +1270,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         { }
     };
 
-    static PyType_Slot _type_slots_SpeechSynthesizerOptions[] = 
-    {
+    static PyType_Slot _type_slots_SpeechSynthesizerOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpeechSynthesizerOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpeechSynthesizerOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpeechSynthesizerOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpeechSynthesizerOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpeechSynthesizerOptions = {
@@ -1439,13 +1436,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         { }
     };
 
-    static PyType_Slot _type_slots_VoiceInformation[] = 
-    {
+    static PyType_Slot _type_slots_VoiceInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VoiceInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VoiceInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VoiceInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VoiceInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VoiceInformation = {

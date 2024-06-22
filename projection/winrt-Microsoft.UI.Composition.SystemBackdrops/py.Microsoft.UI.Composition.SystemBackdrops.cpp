@@ -766,13 +766,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { }
     };
 
-    static PyType_Slot _type_slots_DesktopAcrylicController[] = 
-    {
+    static PyType_Slot _type_slots_DesktopAcrylicController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesktopAcrylicController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesktopAcrylicController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesktopAcrylicController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesktopAcrylicController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DesktopAcrylicController = {
@@ -1569,13 +1568,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { }
     };
 
-    static PyType_Slot _type_slots_MicaController[] = 
-    {
+    static PyType_Slot _type_slots_MicaController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MicaController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MicaController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MicaController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MicaController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MicaController = {
@@ -1876,13 +1874,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { }
     };
 
-    static PyType_Slot _type_slots_SystemBackdropConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_SystemBackdropConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemBackdropConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemBackdropConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemBackdropConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemBackdropConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemBackdropConfiguration = {
@@ -2028,13 +2025,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { }
     };
 
-    static PyType_Slot _type_slots_ISystemBackdropController[] = 
-    {
+    static PyType_Slot _type_slots_ISystemBackdropController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISystemBackdropController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISystemBackdropController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISystemBackdropController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISystemBackdropController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISystemBackdropController = {
@@ -2373,13 +2369,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { }
     };
 
-    static PyType_Slot _type_slots_ISystemBackdropControllerWithTargets[] = 
-    {
+    static PyType_Slot _type_slots_ISystemBackdropControllerWithTargets[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISystemBackdropControllerWithTargets) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISystemBackdropControllerWithTargets) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISystemBackdropControllerWithTargets) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISystemBackdropControllerWithTargets) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISystemBackdropControllerWithTargets = {

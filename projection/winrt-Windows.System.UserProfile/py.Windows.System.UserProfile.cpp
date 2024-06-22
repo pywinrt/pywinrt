@@ -72,12 +72,11 @@ namespace py::cpp::Windows::System::UserProfile
         { }
     };
 
-    static PyType_Slot _type_slots_AdvertisingManager[] = 
-    {
+    static PyType_Slot _type_slots_AdvertisingManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdvertisingManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdvertisingManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdvertisingManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdvertisingManager = {
@@ -205,13 +204,12 @@ namespace py::cpp::Windows::System::UserProfile
         { }
     };
 
-    static PyType_Slot _type_slots_AdvertisingManagerForUser[] = 
-    {
+    static PyType_Slot _type_slots_AdvertisingManagerForUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdvertisingManagerForUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdvertisingManagerForUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdvertisingManagerForUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdvertisingManagerForUser) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdvertisingManagerForUser = {
@@ -392,13 +390,12 @@ namespace py::cpp::Windows::System::UserProfile
         { }
     };
 
-    static PyType_Slot _type_slots_AssignedAccessSettings[] = 
-    {
+    static PyType_Slot _type_slots_AssignedAccessSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AssignedAccessSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AssignedAccessSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AssignedAccessSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AssignedAccessSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AssignedAccessSettings = {
@@ -586,13 +583,12 @@ namespace py::cpp::Windows::System::UserProfile
         { }
     };
 
-    static PyType_Slot _type_slots_DiagnosticsSettings[] = 
-    {
+    static PyType_Slot _type_slots_DiagnosticsSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DiagnosticsSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DiagnosticsSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DiagnosticsSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DiagnosticsSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DiagnosticsSettings = {
@@ -943,8 +939,7 @@ namespace py::cpp::Windows::System::UserProfile
         { }
     };
 
-    static PyType_Slot _type_slots_FirstSignInSettings[] = 
-    {
+    static PyType_Slot _type_slots_FirstSignInSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FirstSignInSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FirstSignInSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FirstSignInSettings) },
@@ -953,7 +948,7 @@ namespace py::cpp::Windows::System::UserProfile
         { Py_sq_contains, reinterpret_cast<void*>(_map_contains_FirstSignInSettings) },
         { Py_mp_length, reinterpret_cast<void*>(_map_length_FirstSignInSettings) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_FirstSignInSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FirstSignInSettings = {
@@ -1213,12 +1208,11 @@ namespace py::cpp::Windows::System::UserProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GlobalizationPreferences[] = 
-    {
+    static PyType_Slot _type_slots_GlobalizationPreferences[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GlobalizationPreferences) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GlobalizationPreferences) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GlobalizationPreferences) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GlobalizationPreferences = {
@@ -1453,13 +1447,12 @@ namespace py::cpp::Windows::System::UserProfile
         { }
     };
 
-    static PyType_Slot _type_slots_GlobalizationPreferencesForUser[] = 
-    {
+    static PyType_Slot _type_slots_GlobalizationPreferencesForUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GlobalizationPreferencesForUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GlobalizationPreferencesForUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GlobalizationPreferencesForUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GlobalizationPreferencesForUser) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GlobalizationPreferencesForUser = {
@@ -1656,12 +1649,11 @@ namespace py::cpp::Windows::System::UserProfile
         { }
     };
 
-    static PyType_Slot _type_slots_LockScreen[] = 
-    {
+    static PyType_Slot _type_slots_LockScreen[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LockScreen) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LockScreen) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LockScreen) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LockScreen = {
@@ -2135,12 +2127,11 @@ namespace py::cpp::Windows::System::UserProfile
         { }
     };
 
-    static PyType_Slot _type_slots_UserInformation[] = 
-    {
+    static PyType_Slot _type_slots_UserInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserInformation = {
@@ -2351,13 +2342,12 @@ namespace py::cpp::Windows::System::UserProfile
         { }
     };
 
-    static PyType_Slot _type_slots_UserProfilePersonalizationSettings[] = 
-    {
+    static PyType_Slot _type_slots_UserProfilePersonalizationSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserProfilePersonalizationSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserProfilePersonalizationSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserProfilePersonalizationSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserProfilePersonalizationSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserProfilePersonalizationSettings = {

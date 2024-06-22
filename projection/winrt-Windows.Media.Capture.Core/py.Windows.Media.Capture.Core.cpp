@@ -136,13 +136,12 @@ namespace py::cpp::Windows::Media::Capture::Core
         { }
     };
 
-    static PyType_Slot _type_slots_VariablePhotoCapturedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_VariablePhotoCapturedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VariablePhotoCapturedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VariablePhotoCapturedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VariablePhotoCapturedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VariablePhotoCapturedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VariablePhotoCapturedEventArgs = {
@@ -413,13 +412,12 @@ namespace py::cpp::Windows::Media::Capture::Core
         { }
     };
 
-    static PyType_Slot _type_slots_VariablePhotoSequenceCapture[] = 
-    {
+    static PyType_Slot _type_slots_VariablePhotoSequenceCapture[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_VariablePhotoSequenceCapture) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VariablePhotoSequenceCapture) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_VariablePhotoSequenceCapture) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_VariablePhotoSequenceCapture) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_VariablePhotoSequenceCapture = {

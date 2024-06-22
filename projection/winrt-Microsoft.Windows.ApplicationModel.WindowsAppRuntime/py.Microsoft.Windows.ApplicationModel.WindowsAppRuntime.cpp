@@ -174,13 +174,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
         { }
     };
 
-    static PyType_Slot _type_slots_DeploymentInitializeOptions[] = 
-    {
+    static PyType_Slot _type_slots_DeploymentInitializeOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeploymentInitializeOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeploymentInitializeOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeploymentInitializeOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeploymentInitializeOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeploymentInitializeOptions = {
@@ -285,12 +284,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
         { }
     };
 
-    static PyType_Slot _type_slots_DeploymentManager[] = 
-    {
+    static PyType_Slot _type_slots_DeploymentManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeploymentManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeploymentManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeploymentManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeploymentManager = {
@@ -443,13 +441,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
         { }
     };
 
-    static PyType_Slot _type_slots_DeploymentResult[] = 
-    {
+    static PyType_Slot _type_slots_DeploymentResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeploymentResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeploymentResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeploymentResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeploymentResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeploymentResult = {

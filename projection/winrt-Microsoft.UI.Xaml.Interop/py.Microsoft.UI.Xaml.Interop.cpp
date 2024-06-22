@@ -184,13 +184,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         { }
     };
 
-    static PyType_Slot _type_slots_NotifyCollectionChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_NotifyCollectionChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NotifyCollectionChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NotifyCollectionChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NotifyCollectionChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NotifyCollectionChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NotifyCollectionChangedEventArgs = {
@@ -281,13 +280,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         { }
     };
 
-    static PyType_Slot _type_slots_IBindableIterable[] = 
-    {
+    static PyType_Slot _type_slots_IBindableIterable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBindableIterable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBindableIterable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBindableIterable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBindableIterable) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBindableIterable = {
@@ -418,13 +416,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         { }
     };
 
-    static PyType_Slot _type_slots_IBindableIterator[] = 
-    {
+    static PyType_Slot _type_slots_IBindableIterator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBindableIterator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBindableIterator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBindableIterator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBindableIterator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBindableIterator = {
@@ -883,13 +880,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         { }
     };
 
-    static PyType_Slot _type_slots_IBindableObservableVector[] = 
-    {
+    static PyType_Slot _type_slots_IBindableObservableVector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBindableObservableVector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBindableObservableVector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBindableObservableVector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBindableObservableVector) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBindableObservableVector = {
@@ -1303,13 +1299,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         { }
     };
 
-    static PyType_Slot _type_slots_IBindableVector[] = 
-    {
+    static PyType_Slot _type_slots_IBindableVector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBindableVector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBindableVector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBindableVector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBindableVector) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBindableVector = {
@@ -1497,13 +1492,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         { }
     };
 
-    static PyType_Slot _type_slots_IBindableVectorView[] = 
-    {
+    static PyType_Slot _type_slots_IBindableVectorView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IBindableVectorView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBindableVectorView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBindableVectorView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBindableVectorView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IBindableVectorView = {
@@ -1609,13 +1603,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
         { }
     };
 
-    static PyType_Slot _type_slots_INotifyCollectionChanged[] = 
-    {
+    static PyType_Slot _type_slots_INotifyCollectionChanged[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_INotifyCollectionChanged) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INotifyCollectionChanged) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INotifyCollectionChanged) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INotifyCollectionChanged) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_INotifyCollectionChanged = {

@@ -259,13 +259,12 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
         { }
     };
 
-    static PyType_Slot _type_slots_WalletItemSystemStore[] = 
-    {
+    static PyType_Slot _type_slots_WalletItemSystemStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletItemSystemStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WalletItemSystemStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletItemSystemStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletItemSystemStore) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WalletItemSystemStore = {
@@ -321,12 +320,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
         { }
     };
 
-    static PyType_Slot _type_slots_WalletManagerSystem[] = 
-    {
+    static PyType_Slot _type_slots_WalletManagerSystem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WalletManagerSystem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WalletManagerSystem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WalletManagerSystem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WalletManagerSystem = {

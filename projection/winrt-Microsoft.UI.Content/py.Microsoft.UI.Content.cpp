@@ -172,13 +172,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Slot _type_slots_ContentCoordinateConverter[] = 
-    {
+    static PyType_Slot _type_slots_ContentCoordinateConverter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentCoordinateConverter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentCoordinateConverter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentCoordinateConverter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentCoordinateConverter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContentCoordinateConverter = {
@@ -296,13 +295,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Slot _type_slots_ContentDeferral[] = 
-    {
+    static PyType_Slot _type_slots_ContentDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContentDeferral = {
@@ -383,13 +381,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Slot _type_slots_ContentEnvironmentSettingChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ContentEnvironmentSettingChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentEnvironmentSettingChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentEnvironmentSettingChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentEnvironmentSettingChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentEnvironmentSettingChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContentEnvironmentSettingChangedEventArgs = {
@@ -490,13 +487,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Slot _type_slots_ContentEnvironmentStateChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ContentEnvironmentStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentEnvironmentStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentEnvironmentStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentEnvironmentStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentEnvironmentStateChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContentEnvironmentStateChangedEventArgs = {
@@ -1515,13 +1511,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Slot _type_slots_ContentIsland[] = 
-    {
+    static PyType_Slot _type_slots_ContentIsland[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentIsland) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentIsland) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentIsland) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentIsland) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContentIsland = {
@@ -1708,13 +1703,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Slot _type_slots_ContentIslandAutomationProviderRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ContentIslandAutomationProviderRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentIslandAutomationProviderRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentIslandAutomationProviderRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentIslandAutomationProviderRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentIslandAutomationProviderRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContentIslandAutomationProviderRequestedEventArgs = {
@@ -1905,13 +1899,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Slot _type_slots_ContentIslandEnvironment[] = 
-    {
+    static PyType_Slot _type_slots_ContentIslandEnvironment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentIslandEnvironment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentIslandEnvironment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentIslandEnvironment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentIslandEnvironment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContentIslandEnvironment = {
@@ -2072,13 +2065,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Slot _type_slots_ContentIslandStateChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ContentIslandStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentIslandStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentIslandStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentIslandStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentIslandStateChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContentIslandStateChangedEventArgs = {
@@ -2900,13 +2892,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Slot _type_slots_ContentSite[] = 
-    {
+    static PyType_Slot _type_slots_ContentSite[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentSite) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentSite) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentSite) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentSite) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContentSite = {
@@ -3116,13 +3107,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Slot _type_slots_ContentSiteEnvironment[] = 
-    {
+    static PyType_Slot _type_slots_ContentSiteEnvironment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentSiteEnvironment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentSiteEnvironment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentSiteEnvironment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentSiteEnvironment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContentSiteEnvironment = {
@@ -3223,13 +3213,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Slot _type_slots_ContentSiteEnvironmentView[] = 
-    {
+    static PyType_Slot _type_slots_ContentSiteEnvironmentView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentSiteEnvironmentView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentSiteEnvironmentView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentSiteEnvironmentView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentSiteEnvironmentView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContentSiteEnvironmentView = {
@@ -3310,13 +3299,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Slot _type_slots_ContentSiteRequestedStateChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ContentSiteRequestedStateChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentSiteRequestedStateChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentSiteRequestedStateChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentSiteRequestedStateChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentSiteRequestedStateChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContentSiteRequestedStateChangedEventArgs = {
@@ -3657,13 +3645,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Slot _type_slots_ContentSiteView[] = 
-    {
+    static PyType_Slot _type_slots_ContentSiteView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentSiteView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentSiteView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentSiteView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentSiteView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContentSiteView = {
@@ -3824,13 +3811,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Slot _type_slots_DesktopChildSiteBridge[] = 
-    {
+    static PyType_Slot _type_slots_DesktopChildSiteBridge[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesktopChildSiteBridge) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesktopChildSiteBridge) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesktopChildSiteBridge) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesktopChildSiteBridge) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DesktopChildSiteBridge = {
@@ -4569,13 +4555,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Slot _type_slots_DesktopSiteBridge[] = 
-    {
+    static PyType_Slot _type_slots_DesktopSiteBridge[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DesktopSiteBridge) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DesktopSiteBridge) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DesktopSiteBridge) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DesktopSiteBridge) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DesktopSiteBridge = {
@@ -4830,13 +4815,12 @@ namespace py::cpp::Microsoft::UI::Content
         { }
     };
 
-    static PyType_Slot _type_slots_IContentSiteBridge[] = 
-    {
+    static PyType_Slot _type_slots_IContentSiteBridge[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IContentSiteBridge) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContentSiteBridge) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContentSiteBridge) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContentSiteBridge) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IContentSiteBridge = {

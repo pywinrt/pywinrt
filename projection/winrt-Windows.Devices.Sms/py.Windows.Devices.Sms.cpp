@@ -262,14 +262,13 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_DeleteSmsMessageOperation[] = 
-    {
+    static PyType_Slot _type_slots_DeleteSmsMessageOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeleteSmsMessageOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeleteSmsMessageOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeleteSmsMessageOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeleteSmsMessageOperation) },
         { Py_am_await, reinterpret_cast<void*>(_await_DeleteSmsMessageOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeleteSmsMessageOperation = {
@@ -536,14 +535,13 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_DeleteSmsMessagesOperation[] = 
-    {
+    static PyType_Slot _type_slots_DeleteSmsMessagesOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeleteSmsMessagesOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeleteSmsMessagesOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeleteSmsMessagesOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeleteSmsMessagesOperation) },
         { Py_am_await, reinterpret_cast<void*>(_await_DeleteSmsMessagesOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DeleteSmsMessagesOperation = {
@@ -809,14 +807,13 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_GetSmsDeviceOperation[] = 
-    {
+    static PyType_Slot _type_slots_GetSmsDeviceOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GetSmsDeviceOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GetSmsDeviceOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GetSmsDeviceOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GetSmsDeviceOperation) },
         { Py_am_await, reinterpret_cast<void*>(_await_GetSmsDeviceOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GetSmsDeviceOperation = {
@@ -1082,14 +1079,13 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_GetSmsMessageOperation[] = 
-    {
+    static PyType_Slot _type_slots_GetSmsMessageOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GetSmsMessageOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GetSmsMessageOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GetSmsMessageOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GetSmsMessageOperation) },
         { Py_am_await, reinterpret_cast<void*>(_await_GetSmsMessageOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GetSmsMessageOperation = {
@@ -1403,14 +1399,13 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_GetSmsMessagesOperation[] = 
-    {
+    static PyType_Slot _type_slots_GetSmsMessagesOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GetSmsMessagesOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GetSmsMessagesOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GetSmsMessagesOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GetSmsMessagesOperation) },
         { Py_am_await, reinterpret_cast<void*>(_await_GetSmsMessagesOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GetSmsMessagesOperation = {
@@ -1677,14 +1672,13 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SendSmsMessageOperation[] = 
-    {
+    static PyType_Slot _type_slots_SendSmsMessageOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SendSmsMessageOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SendSmsMessageOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SendSmsMessageOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SendSmsMessageOperation) },
         { Py_am_await, reinterpret_cast<void*>(_await_SendSmsMessageOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SendSmsMessageOperation = {
@@ -2387,13 +2381,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsAppMessage[] = 
-    {
+    static PyType_Slot _type_slots_SmsAppMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsAppMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsAppMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsAppMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsAppMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsAppMessage = {
@@ -2627,13 +2620,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsBinaryMessage[] = 
-    {
+    static PyType_Slot _type_slots_SmsBinaryMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsBinaryMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsBinaryMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsBinaryMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsBinaryMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsBinaryMessage = {
@@ -2994,13 +2986,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsBroadcastMessage[] = 
-    {
+    static PyType_Slot _type_slots_SmsBroadcastMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsBroadcastMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsBroadcastMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsBroadcastMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsBroadcastMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsBroadcastMessage = {
@@ -3415,13 +3406,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsDevice[] = 
-    {
+    static PyType_Slot _type_slots_SmsDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsDevice = {
@@ -3888,13 +3878,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsDevice2[] = 
-    {
+    static PyType_Slot _type_slots_SmsDevice2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsDevice2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsDevice2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsDevice2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsDevice2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsDevice2 = {
@@ -4132,13 +4121,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsDeviceMessageStore[] = 
-    {
+    static PyType_Slot _type_slots_SmsDeviceMessageStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsDeviceMessageStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsDeviceMessageStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsDeviceMessageStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsDeviceMessageStore) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsDeviceMessageStore = {
@@ -4511,13 +4499,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsFilterRule[] = 
-    {
+    static PyType_Slot _type_slots_SmsFilterRule[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsFilterRule) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsFilterRule) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsFilterRule) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsFilterRule) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsFilterRule = {
@@ -4642,13 +4629,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsFilterRules[] = 
-    {
+    static PyType_Slot _type_slots_SmsFilterRules[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsFilterRules) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsFilterRules) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsFilterRules) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsFilterRules) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsFilterRules = {
@@ -4749,13 +4735,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsMessageReceivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SmsMessageReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsMessageReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsMessageReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsMessageReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsMessageReceivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsMessageReceivedEventArgs = {
@@ -5018,13 +5003,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsMessageReceivedTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_SmsMessageReceivedTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsMessageReceivedTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsMessageReceivedTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsMessageReceivedTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsMessageReceivedTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsMessageReceivedTriggerDetails = {
@@ -5232,13 +5216,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsMessageRegistration[] = 
-    {
+    static PyType_Slot _type_slots_SmsMessageRegistration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsMessageRegistration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsMessageRegistration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsMessageRegistration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsMessageRegistration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsMessageRegistration = {
@@ -5406,13 +5389,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsReceivedEventDetails[] = 
-    {
+    static PyType_Slot _type_slots_SmsReceivedEventDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsReceivedEventDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsReceivedEventDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsReceivedEventDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsReceivedEventDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsReceivedEventDetails = {
@@ -5613,13 +5595,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsSendMessageResult[] = 
-    {
+    static PyType_Slot _type_slots_SmsSendMessageResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsSendMessageResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsSendMessageResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsSendMessageResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsSendMessageResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsSendMessageResult = {
@@ -5920,13 +5901,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsStatusMessage[] = 
-    {
+    static PyType_Slot _type_slots_SmsStatusMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsStatusMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsStatusMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsStatusMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsStatusMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsStatusMessage = {
@@ -6416,13 +6396,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsTextMessage[] = 
-    {
+    static PyType_Slot _type_slots_SmsTextMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsTextMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsTextMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsTextMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsTextMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsTextMessage = {
@@ -7000,13 +6979,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsTextMessage2[] = 
-    {
+    static PyType_Slot _type_slots_SmsTextMessage2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsTextMessage2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsTextMessage2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsTextMessage2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsTextMessage2) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsTextMessage2 = {
@@ -7247,13 +7225,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsVoicemailMessage[] = 
-    {
+    static PyType_Slot _type_slots_SmsVoicemailMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsVoicemailMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsVoicemailMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsVoicemailMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsVoicemailMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsVoicemailMessage = {
@@ -7554,13 +7531,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsWapMessage[] = 
-    {
+    static PyType_Slot _type_slots_SmsWapMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsWapMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsWapMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsWapMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsWapMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsWapMessage = {
@@ -7772,13 +7748,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_ISmsBinaryMessage[] = 
-    {
+    static PyType_Slot _type_slots_ISmsBinaryMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISmsBinaryMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISmsBinaryMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISmsBinaryMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISmsBinaryMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISmsBinaryMessage = {
@@ -8073,13 +8048,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_ISmsDevice[] = 
-    {
+    static PyType_Slot _type_slots_ISmsDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISmsDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISmsDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISmsDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISmsDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISmsDevice = {
@@ -8180,13 +8154,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_ISmsMessage[] = 
-    {
+    static PyType_Slot _type_slots_ISmsMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISmsMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISmsMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISmsMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISmsMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISmsMessage = {
@@ -8347,13 +8320,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_ISmsMessageBase[] = 
-    {
+    static PyType_Slot _type_slots_ISmsMessageBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISmsMessageBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISmsMessageBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISmsMessageBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISmsMessageBase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISmsMessageBase = {
@@ -8758,13 +8730,12 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_ISmsTextMessage[] = 
-    {
+    static PyType_Slot _type_slots_ISmsTextMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISmsTextMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISmsTextMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISmsTextMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISmsTextMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISmsTextMessage = {
@@ -9021,14 +8992,13 @@ namespace py::cpp::Windows::Devices::Sms
         { }
     };
 
-    static PyType_Slot _type_slots_SmsEncodedLength[] = 
-    {
+    static PyType_Slot _type_slots_SmsEncodedLength[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsEncodedLength) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SmsEncodedLength) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsEncodedLength) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsEncodedLength) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsEncodedLength) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SmsEncodedLength = {

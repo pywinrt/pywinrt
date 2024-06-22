@@ -53,12 +53,11 @@ namespace py::cpp::Microsoft::UI::Input::Interop
         { }
     };
 
-    static PyType_Slot _type_slots_PenDeviceInterop[] = 
-    {
+    static PyType_Slot _type_slots_PenDeviceInterop[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PenDeviceInterop) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PenDeviceInterop) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PenDeviceInterop) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PenDeviceInterop = {

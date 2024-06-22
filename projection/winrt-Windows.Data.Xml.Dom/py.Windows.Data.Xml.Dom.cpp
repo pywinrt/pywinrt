@@ -883,13 +883,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_DtdEntity[] = 
-    {
+    static PyType_Slot _type_slots_DtdEntity[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DtdEntity) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DtdEntity) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DtdEntity) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DtdEntity) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DtdEntity = {
@@ -1757,13 +1756,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_DtdNotation[] = 
-    {
+    static PyType_Slot _type_slots_DtdNotation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DtdNotation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DtdNotation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DtdNotation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DtdNotation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DtdNotation = {
@@ -2679,13 +2677,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_XmlAttribute[] = 
-    {
+    static PyType_Slot _type_slots_XmlAttribute[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlAttribute) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlAttribute) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlAttribute) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlAttribute) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XmlAttribute = {
@@ -3782,13 +3779,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_XmlCDataSection[] = 
-    {
+    static PyType_Slot _type_slots_XmlCDataSection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlCDataSection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlCDataSection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlCDataSection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlCDataSection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XmlCDataSection = {
@@ -4853,13 +4849,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_XmlComment[] = 
-    {
+    static PyType_Slot _type_slots_XmlComment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlComment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlComment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlComment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlComment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XmlComment = {
@@ -6453,13 +6448,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_XmlDocument[] = 
-    {
+    static PyType_Slot _type_slots_XmlDocument[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlDocument) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlDocument) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlDocument) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlDocument) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XmlDocument = {
@@ -7314,13 +7308,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_XmlDocumentFragment[] = 
-    {
+    static PyType_Slot _type_slots_XmlDocumentFragment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlDocumentFragment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlDocumentFragment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlDocumentFragment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlDocumentFragment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XmlDocumentFragment = {
@@ -8208,13 +8201,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_XmlDocumentType[] = 
-    {
+    static PyType_Slot _type_slots_XmlDocumentType[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlDocumentType) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlDocumentType) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlDocumentType) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlDocumentType) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XmlDocumentType = {
@@ -8308,13 +8300,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_XmlDomImplementation[] = 
-    {
+    static PyType_Slot _type_slots_XmlDomImplementation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlDomImplementation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlDomImplementation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlDomImplementation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlDomImplementation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XmlDomImplementation = {
@@ -9556,13 +9547,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_XmlElement[] = 
-    {
+    static PyType_Slot _type_slots_XmlElement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlElement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlElement) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XmlElement = {
@@ -10390,13 +10380,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_XmlEntityReference[] = 
-    {
+    static PyType_Slot _type_slots_XmlEntityReference[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlEntityReference) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlEntityReference) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlEntityReference) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlEntityReference) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XmlEntityReference = {
@@ -10719,13 +10708,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_XmlLoadSettings[] = 
-    {
+    static PyType_Slot _type_slots_XmlLoadSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlLoadSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlLoadSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlLoadSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlLoadSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XmlLoadSettings = {
@@ -11291,8 +11279,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_XmlNamedNodeMap[] = 
-    {
+    static PyType_Slot _type_slots_XmlNamedNodeMap[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlNamedNodeMap) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlNamedNodeMap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlNamedNodeMap) },
@@ -11301,7 +11288,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_XmlNamedNodeMap) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_XmlNamedNodeMap) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_XmlNamedNodeMap) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XmlNamedNodeMap = {
@@ -11673,8 +11660,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_XmlNodeList[] = 
-    {
+    static PyType_Slot _type_slots_XmlNodeList[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlNodeList) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlNodeList) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlNodeList) },
@@ -11683,7 +11669,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_XmlNodeList) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_XmlNodeList) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_XmlNodeList) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XmlNodeList = {
@@ -12579,13 +12565,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_XmlProcessingInstruction[] = 
-    {
+    static PyType_Slot _type_slots_XmlProcessingInstruction[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlProcessingInstruction) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlProcessingInstruction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlProcessingInstruction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlProcessingInstruction) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XmlProcessingInstruction = {
@@ -13682,13 +13667,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_XmlText[] = 
-    {
+    static PyType_Slot _type_slots_XmlText[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlText) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlText) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlText) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlText) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_XmlText = {
@@ -14753,13 +14737,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_IXmlCharacterData[] = 
-    {
+    static PyType_Slot _type_slots_IXmlCharacterData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXmlCharacterData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXmlCharacterData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXmlCharacterData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXmlCharacterData) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IXmlCharacterData = {
@@ -15587,13 +15570,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_IXmlNode[] = 
-    {
+    static PyType_Slot _type_slots_IXmlNode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXmlNode) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXmlNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXmlNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXmlNode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IXmlNode = {
@@ -15784,13 +15766,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_IXmlNodeSelector[] = 
-    {
+    static PyType_Slot _type_slots_IXmlNodeSelector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXmlNodeSelector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXmlNodeSelector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXmlNodeSelector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXmlNodeSelector) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IXmlNodeSelector = {
@@ -15929,13 +15910,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_IXmlNodeSerializer[] = 
-    {
+    static PyType_Slot _type_slots_IXmlNodeSerializer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXmlNodeSerializer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXmlNodeSerializer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXmlNodeSerializer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXmlNodeSerializer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IXmlNodeSerializer = {
@@ -17032,13 +17012,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }
     };
 
-    static PyType_Slot _type_slots_IXmlText[] = 
-    {
+    static PyType_Slot _type_slots_IXmlText[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IXmlText) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXmlText) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXmlText) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXmlText) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IXmlText = {

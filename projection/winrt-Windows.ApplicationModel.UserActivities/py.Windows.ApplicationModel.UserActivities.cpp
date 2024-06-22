@@ -611,13 +611,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { }
     };
 
-    static PyType_Slot _type_slots_UserActivity[] = 
-    {
+    static PyType_Slot _type_slots_UserActivity[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivity) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivity) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivity) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivity) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserActivity = {
@@ -887,13 +886,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { }
     };
 
-    static PyType_Slot _type_slots_UserActivityAttribution[] = 
-    {
+    static PyType_Slot _type_slots_UserActivityAttribution[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivityAttribution) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivityAttribution) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivityAttribution) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivityAttribution) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserActivityAttribution = {
@@ -1234,13 +1232,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { }
     };
 
-    static PyType_Slot _type_slots_UserActivityChannel[] = 
-    {
+    static PyType_Slot _type_slots_UserActivityChannel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivityChannel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivityChannel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivityChannel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivityChannel) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserActivityChannel = {
@@ -1391,13 +1388,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { }
     };
 
-    static PyType_Slot _type_slots_UserActivityContentInfo[] = 
-    {
+    static PyType_Slot _type_slots_UserActivityContentInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivityContentInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivityContentInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivityContentInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivityContentInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserActivityContentInfo = {
@@ -1517,13 +1513,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { }
     };
 
-    static PyType_Slot _type_slots_UserActivityRequest[] = 
-    {
+    static PyType_Slot _type_slots_UserActivityRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivityRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivityRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivityRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivityRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserActivityRequest = {
@@ -1658,13 +1653,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { }
     };
 
-    static PyType_Slot _type_slots_UserActivityRequestManager[] = 
-    {
+    static PyType_Slot _type_slots_UserActivityRequestManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivityRequestManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivityRequestManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivityRequestManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivityRequestManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserActivityRequestManager = {
@@ -1801,13 +1795,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { }
     };
 
-    static PyType_Slot _type_slots_UserActivityRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_UserActivityRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivityRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivityRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivityRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivityRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserActivityRequestedEventArgs = {
@@ -1940,13 +1933,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { }
     };
 
-    static PyType_Slot _type_slots_UserActivitySession[] = 
-    {
+    static PyType_Slot _type_slots_UserActivitySession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivitySession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivitySession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivitySession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivitySession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserActivitySession = {
@@ -2067,13 +2059,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { }
     };
 
-    static PyType_Slot _type_slots_UserActivitySessionHistoryItem[] = 
-    {
+    static PyType_Slot _type_slots_UserActivitySessionHistoryItem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivitySessionHistoryItem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivitySessionHistoryItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivitySessionHistoryItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivitySessionHistoryItem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserActivitySessionHistoryItem = {
@@ -2422,13 +2413,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { }
     };
 
-    static PyType_Slot _type_slots_UserActivityVisualElements[] = 
-    {
+    static PyType_Slot _type_slots_UserActivityVisualElements[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserActivityVisualElements) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserActivityVisualElements) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserActivityVisualElements) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserActivityVisualElements) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserActivityVisualElements = {
@@ -2519,13 +2509,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { }
     };
 
-    static PyType_Slot _type_slots_IUserActivityContentInfo[] = 
-    {
+    static PyType_Slot _type_slots_IUserActivityContentInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IUserActivityContentInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IUserActivityContentInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IUserActivityContentInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IUserActivityContentInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IUserActivityContentInfo = {

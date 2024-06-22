@@ -386,13 +386,12 @@ namespace py::cpp::Windows::UI::Popups
         { }
     };
 
-    static PyType_Slot _type_slots_MessageDialog[] = 
-    {
+    static PyType_Slot _type_slots_MessageDialog[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MessageDialog) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MessageDialog) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MessageDialog) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MessageDialog) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MessageDialog = {
@@ -580,13 +579,12 @@ namespace py::cpp::Windows::UI::Popups
         { }
     };
 
-    static PyType_Slot _type_slots_PopupMenu[] = 
-    {
+    static PyType_Slot _type_slots_PopupMenu[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PopupMenu) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PopupMenu) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PopupMenu) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PopupMenu) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PopupMenu = {
@@ -861,13 +859,12 @@ namespace py::cpp::Windows::UI::Popups
         { }
     };
 
-    static PyType_Slot _type_slots_UICommand[] = 
-    {
+    static PyType_Slot _type_slots_UICommand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UICommand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UICommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UICommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UICommand) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UICommand = {
@@ -1094,13 +1091,12 @@ namespace py::cpp::Windows::UI::Popups
         { }
     };
 
-    static PyType_Slot _type_slots_UICommandSeparator[] = 
-    {
+    static PyType_Slot _type_slots_UICommandSeparator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UICommandSeparator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UICommandSeparator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UICommandSeparator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UICommandSeparator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UICommandSeparator = {
@@ -1305,13 +1301,12 @@ namespace py::cpp::Windows::UI::Popups
         { }
     };
 
-    static PyType_Slot _type_slots_IUICommand[] = 
-    {
+    static PyType_Slot _type_slots_IUICommand[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IUICommand) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IUICommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IUICommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IUICommand) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IUICommand = {

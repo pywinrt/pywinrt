@@ -96,13 +96,12 @@ namespace py::cpp::Windows::Globalization::Collation
         { }
     };
 
-    static PyType_Slot _type_slots_CharacterGrouping[] = 
-    {
+    static PyType_Slot _type_slots_CharacterGrouping[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CharacterGrouping) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CharacterGrouping) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CharacterGrouping) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CharacterGrouping) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CharacterGrouping = {
@@ -491,8 +490,7 @@ namespace py::cpp::Windows::Globalization::Collation
         { }
     };
 
-    static PyType_Slot _type_slots_CharacterGroupings[] = 
-    {
+    static PyType_Slot _type_slots_CharacterGroupings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CharacterGroupings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CharacterGroupings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CharacterGroupings) },
@@ -501,7 +499,7 @@ namespace py::cpp::Windows::Globalization::Collation
         { Py_sq_length, reinterpret_cast<void*>(_seq_length_CharacterGroupings) },
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_CharacterGroupings) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_CharacterGroupings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CharacterGroupings = {

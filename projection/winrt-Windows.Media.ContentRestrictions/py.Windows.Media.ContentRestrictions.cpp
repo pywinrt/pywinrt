@@ -116,13 +116,12 @@ namespace py::cpp::Windows::Media::ContentRestrictions
         { }
     };
 
-    static PyType_Slot _type_slots_ContentRestrictionsBrowsePolicy[] = 
-    {
+    static PyType_Slot _type_slots_ContentRestrictionsBrowsePolicy[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentRestrictionsBrowsePolicy) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentRestrictionsBrowsePolicy) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentRestrictionsBrowsePolicy) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentRestrictionsBrowsePolicy) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContentRestrictionsBrowsePolicy = {
@@ -449,13 +448,12 @@ namespace py::cpp::Windows::Media::ContentRestrictions
         { }
     };
 
-    static PyType_Slot _type_slots_RatedContentDescription[] = 
-    {
+    static PyType_Slot _type_slots_RatedContentDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RatedContentDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RatedContentDescription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RatedContentDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RatedContentDescription) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RatedContentDescription = {
@@ -692,13 +690,12 @@ namespace py::cpp::Windows::Media::ContentRestrictions
         { }
     };
 
-    static PyType_Slot _type_slots_RatedContentRestrictions[] = 
-    {
+    static PyType_Slot _type_slots_RatedContentRestrictions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RatedContentRestrictions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RatedContentRestrictions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RatedContentRestrictions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RatedContentRestrictions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RatedContentRestrictions = {

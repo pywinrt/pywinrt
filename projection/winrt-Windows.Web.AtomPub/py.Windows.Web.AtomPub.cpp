@@ -758,13 +758,12 @@ namespace py::cpp::Windows::Web::AtomPub
         { }
     };
 
-    static PyType_Slot _type_slots_AtomPubClient[] = 
-    {
+    static PyType_Slot _type_slots_AtomPubClient[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AtomPubClient) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AtomPubClient) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AtomPubClient) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AtomPubClient) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AtomPubClient = {
@@ -1217,13 +1216,12 @@ namespace py::cpp::Windows::Web::AtomPub
         { }
     };
 
-    static PyType_Slot _type_slots_ResourceCollection[] = 
-    {
+    static PyType_Slot _type_slots_ResourceCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ResourceCollection = {
@@ -1616,13 +1614,12 @@ namespace py::cpp::Windows::Web::AtomPub
         { }
     };
 
-    static PyType_Slot _type_slots_ServiceDocument[] = 
-    {
+    static PyType_Slot _type_slots_ServiceDocument[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ServiceDocument) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ServiceDocument) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ServiceDocument) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ServiceDocument) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ServiceDocument = {
@@ -2035,13 +2032,12 @@ namespace py::cpp::Windows::Web::AtomPub
         { }
     };
 
-    static PyType_Slot _type_slots_Workspace[] = 
-    {
+    static PyType_Slot _type_slots_Workspace[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Workspace) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Workspace) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Workspace) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Workspace) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Workspace = {

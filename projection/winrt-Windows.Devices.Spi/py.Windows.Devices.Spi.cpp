@@ -136,13 +136,12 @@ namespace py::cpp::Windows::Devices::Spi
         { }
     };
 
-    static PyType_Slot _type_slots_SpiBusInfo[] = 
-    {
+    static PyType_Slot _type_slots_SpiBusInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpiBusInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpiBusInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpiBusInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpiBusInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpiBusInfo = {
@@ -467,13 +466,12 @@ namespace py::cpp::Windows::Devices::Spi
         { }
     };
 
-    static PyType_Slot _type_slots_SpiConnectionSettings[] = 
-    {
+    static PyType_Slot _type_slots_SpiConnectionSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpiConnectionSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpiConnectionSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpiConnectionSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpiConnectionSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpiConnectionSettings = {
@@ -626,13 +624,12 @@ namespace py::cpp::Windows::Devices::Spi
         { }
     };
 
-    static PyType_Slot _type_slots_SpiController[] = 
-    {
+    static PyType_Slot _type_slots_SpiController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpiController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpiController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpiController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpiController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpiController = {
@@ -1058,13 +1055,12 @@ namespace py::cpp::Windows::Devices::Spi
         { }
     };
 
-    static PyType_Slot _type_slots_SpiDevice[] = 
-    {
+    static PyType_Slot _type_slots_SpiDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpiDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpiDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpiDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpiDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpiDevice = {
@@ -1268,13 +1264,12 @@ namespace py::cpp::Windows::Devices::Spi
         { }
     };
 
-    static PyType_Slot _type_slots_ISpiDeviceStatics[] = 
-    {
+    static PyType_Slot _type_slots_ISpiDeviceStatics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ISpiDeviceStatics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISpiDeviceStatics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISpiDeviceStatics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISpiDeviceStatics) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ISpiDeviceStatics = {

@@ -649,13 +649,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironment[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironment = {
@@ -837,13 +836,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentCreateResult[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentCreateResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentCreateResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentCreateResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentCreateResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentCreateResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentCreateResult = {
@@ -1015,13 +1013,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentFile[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentFile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentFile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentFile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentFile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentFile) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentFile = {
@@ -1086,12 +1083,11 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentHost[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentHost[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentHost) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentHost) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentHost) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentHost = {
@@ -1239,13 +1235,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentLaunchFileResult[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentLaunchFileResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentLaunchFileResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentLaunchFileResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentLaunchFileResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentLaunchFileResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentLaunchFileResult = {
@@ -1930,13 +1925,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentOptions[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentOptions = {
@@ -2027,12 +2021,11 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentOwnerRegistration[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentOwnerRegistration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentOwnerRegistration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentOwnerRegistration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentOwnerRegistration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentOwnerRegistration = {
@@ -2222,13 +2215,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentOwnerRegistrationData[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentOwnerRegistrationData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentOwnerRegistrationData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentOwnerRegistrationData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentOwnerRegistrationData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentOwnerRegistrationData) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentOwnerRegistrationData = {
@@ -2329,13 +2321,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentOwnerRegistrationResult[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentOwnerRegistrationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentOwnerRegistrationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentOwnerRegistrationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentOwnerRegistrationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentOwnerRegistrationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentOwnerRegistrationResult = {
@@ -2436,13 +2427,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentPostMessageResult[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentPostMessageResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentPostMessageResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentPostMessageResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentPostMessageResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentPostMessageResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentPostMessageResult = {
@@ -2637,13 +2627,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentProcess[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentProcess[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentProcess) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentProcess) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentProcess) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentProcess) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentProcess = {
@@ -2774,13 +2763,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentShareFileRequestOptions[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentShareFileRequestOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentShareFileRequestOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentShareFileRequestOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentShareFileRequestOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentShareFileRequestOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFileRequestOptions = {
@@ -2901,13 +2889,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentShareFileResult[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentShareFileResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentShareFileResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentShareFileResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentShareFileResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentShareFileResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFileResult = {
@@ -3038,13 +3025,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentShareFolderRequestOptions[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentShareFolderRequestOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentShareFolderRequestOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentShareFolderRequestOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentShareFolderRequestOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentShareFolderRequestOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFolderRequestOptions = {
@@ -3145,13 +3131,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentShareFolderResult[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentShareFolderResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentShareFolderResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentShareFolderResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentShareFolderResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentShareFolderResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFolderResult = {
@@ -3272,13 +3257,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentStartProcessResult[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentStartProcessResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentStartProcessResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentStartProcessResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentStartProcessResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentStartProcessResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentStartProcessResult = {
@@ -3409,13 +3393,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentTelemetryParameters[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentTelemetryParameters[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentTelemetryParameters) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentTelemetryParameters) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentTelemetryParameters) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentTelemetryParameters) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentTelemetryParameters = {
@@ -3576,13 +3559,12 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentUserInfo[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentUserInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentUserInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentUserInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentUserInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentUserInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentUserInfo = {
@@ -3738,12 +3720,11 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsHostMessenger[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsHostMessenger[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsHostMessenger) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsHostMessenger) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsHostMessenger) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsHostMessenger = {
@@ -3924,14 +3905,13 @@ namespace py::cpp::Windows::Security::Isolation
         { }
     };
 
-    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentCreateProgress[] = 
-    {
+    static PyType_Slot _type_slots_IsolatedWindowsEnvironmentCreateProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentCreateProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_IsolatedWindowsEnvironmentCreateProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentCreateProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentCreateProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentCreateProgress) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentCreateProgress = {

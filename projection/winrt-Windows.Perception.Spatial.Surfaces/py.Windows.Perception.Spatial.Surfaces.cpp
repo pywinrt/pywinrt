@@ -181,13 +181,12 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialSurfaceInfo[] = 
-    {
+    static PyType_Slot _type_slots_SpatialSurfaceInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialSurfaceInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialSurfaceInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialSurfaceInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialSurfaceInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialSurfaceInfo = {
@@ -368,13 +367,12 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialSurfaceMesh[] = 
-    {
+    static PyType_Slot _type_slots_SpatialSurfaceMesh[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialSurfaceMesh) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialSurfaceMesh) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialSurfaceMesh) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialSurfaceMesh) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialSurfaceMesh = {
@@ -515,13 +513,12 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialSurfaceMeshBuffer[] = 
-    {
+    static PyType_Slot _type_slots_SpatialSurfaceMeshBuffer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialSurfaceMeshBuffer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialSurfaceMeshBuffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialSurfaceMeshBuffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialSurfaceMeshBuffer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialSurfaceMeshBuffer = {
@@ -853,13 +850,12 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialSurfaceMeshOptions[] = 
-    {
+    static PyType_Slot _type_slots_SpatialSurfaceMeshOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialSurfaceMeshOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialSurfaceMeshOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialSurfaceMeshOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialSurfaceMeshOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialSurfaceMeshOptions = {
@@ -1169,13 +1165,12 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         { }
     };
 
-    static PyType_Slot _type_slots_SpatialSurfaceObserver[] = 
-    {
+    static PyType_Slot _type_slots_SpatialSurfaceObserver[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialSurfaceObserver) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialSurfaceObserver) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialSurfaceObserver) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialSurfaceObserver) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SpatialSurfaceObserver = {

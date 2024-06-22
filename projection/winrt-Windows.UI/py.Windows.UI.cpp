@@ -121,13 +121,12 @@ namespace py::cpp::Windows::UI
         { }
     };
 
-    static PyType_Slot _type_slots_ColorHelper[] = 
-    {
+    static PyType_Slot _type_slots_ColorHelper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ColorHelper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ColorHelper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ColorHelper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ColorHelper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ColorHelper = {
@@ -2894,13 +2893,12 @@ namespace py::cpp::Windows::UI
         { }
     };
 
-    static PyType_Slot _type_slots_Colors[] = 
-    {
+    static PyType_Slot _type_slots_Colors[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Colors) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Colors) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Colors) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Colors) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Colors = {
@@ -3147,13 +3145,12 @@ namespace py::cpp::Windows::UI
         { }
     };
 
-    static PyType_Slot _type_slots_UIContentRoot[] = 
-    {
+    static PyType_Slot _type_slots_UIContentRoot[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UIContentRoot) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UIContentRoot) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UIContentRoot) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UIContentRoot) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UIContentRoot = {
@@ -3214,13 +3211,12 @@ namespace py::cpp::Windows::UI
         { }
     };
 
-    static PyType_Slot _type_slots_UIContext[] = 
-    {
+    static PyType_Slot _type_slots_UIContext[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UIContext) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UIContext) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UIContext) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UIContext) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UIContext = {
@@ -3442,14 +3438,13 @@ namespace py::cpp::Windows::UI
         { }
     };
 
-    static PyType_Slot _type_slots_Color[] = 
-    {
+    static PyType_Slot _type_slots_Color[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Color) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Color) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Color) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Color) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Color) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Color = {
@@ -3566,14 +3561,13 @@ namespace py::cpp::Windows::UI
         { }
     };
 
-    static PyType_Slot _type_slots_WindowId[] = 
-    {
+    static PyType_Slot _type_slots_WindowId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_WindowId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowId) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WindowId = {

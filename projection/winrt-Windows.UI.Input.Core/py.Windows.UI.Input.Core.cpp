@@ -147,13 +147,12 @@ namespace py::cpp::Windows::UI::Input::Core
         { }
     };
 
-    static PyType_Slot _type_slots_RadialControllerIndependentInputSource[] = 
-    {
+    static PyType_Slot _type_slots_RadialControllerIndependentInputSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RadialControllerIndependentInputSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RadialControllerIndependentInputSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RadialControllerIndependentInputSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RadialControllerIndependentInputSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RadialControllerIndependentInputSource = {

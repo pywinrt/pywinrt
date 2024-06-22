@@ -87,13 +87,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_ActivatedDeferral[] = 
-    {
+    static PyType_Slot _type_slots_ActivatedDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivatedDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActivatedDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivatedDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivatedDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ActivatedDeferral = {
@@ -184,13 +183,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_ActivatedOperation[] = 
-    {
+    static PyType_Slot _type_slots_ActivatedOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ActivatedOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActivatedOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ActivatedOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ActivatedOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ActivatedOperation = {
@@ -271,13 +269,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_BackgroundActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_BackgroundActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BackgroundActivatedEventArgs = {
@@ -368,13 +365,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_EnteredBackgroundEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_EnteredBackgroundEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EnteredBackgroundEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EnteredBackgroundEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EnteredBackgroundEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EnteredBackgroundEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EnteredBackgroundEventArgs = {
@@ -923,13 +919,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_HtmlPrintDocumentSource[] = 
-    {
+    static PyType_Slot _type_slots_HtmlPrintDocumentSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HtmlPrintDocumentSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HtmlPrintDocumentSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HtmlPrintDocumentSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HtmlPrintDocumentSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_HtmlPrintDocumentSource = {
@@ -1020,13 +1015,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_LeavingBackgroundEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_LeavingBackgroundEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LeavingBackgroundEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LeavingBackgroundEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LeavingBackgroundEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LeavingBackgroundEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LeavingBackgroundEventArgs = {
@@ -1177,13 +1171,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_NewWebUIViewCreatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_NewWebUIViewCreatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NewWebUIViewCreatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NewWebUIViewCreatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NewWebUIViewCreatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NewWebUIViewCreatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NewWebUIViewCreatedEventArgs = {
@@ -1275,13 +1268,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_SuspendingDeferral[] = 
-    {
+    static PyType_Slot _type_slots_SuspendingDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SuspendingDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SuspendingDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SuspendingDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SuspendingDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SuspendingDeferral = {
@@ -1362,13 +1354,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_SuspendingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SuspendingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SuspendingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SuspendingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SuspendingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SuspendingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SuspendingEventArgs = {
@@ -1479,13 +1470,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_SuspendingOperation[] = 
-    {
+    static PyType_Slot _type_slots_SuspendingOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SuspendingOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SuspendingOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SuspendingOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SuspendingOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SuspendingOperation = {
@@ -1967,12 +1957,11 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIApplication[] = 
-    {
+    static PyType_Slot _type_slots_WebUIApplication[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIApplication) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIApplication) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIApplication) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIApplication = {
@@ -2201,13 +2190,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs = {
@@ -2408,13 +2396,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs = {
@@ -2615,13 +2602,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs = {
@@ -2862,13 +2848,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs = {
@@ -3089,13 +3074,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs = {
@@ -3141,12 +3125,11 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIBackgroundTaskInstance[] = 
-    {
+    static PyType_Slot _type_slots_WebUIBackgroundTaskInstance[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIBackgroundTaskInstance) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIBackgroundTaskInstance) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIBackgroundTaskInstance) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIBackgroundTaskInstance = {
@@ -3484,13 +3467,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIBackgroundTaskInstanceRuntimeClass[] = 
-    {
+    static PyType_Slot _type_slots_WebUIBackgroundTaskInstanceRuntimeClass[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIBackgroundTaskInstanceRuntimeClass) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIBackgroundTaskInstanceRuntimeClass) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIBackgroundTaskInstanceRuntimeClass) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIBackgroundTaskInstanceRuntimeClass) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIBackgroundTaskInstanceRuntimeClass = {
@@ -3671,13 +3653,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIBarcodeScannerPreviewActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIBarcodeScannerPreviewActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIBarcodeScannerPreviewActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIBarcodeScannerPreviewActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIBarcodeScannerPreviewActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIBarcodeScannerPreviewActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIBarcodeScannerPreviewActivatedEventArgs = {
@@ -3858,13 +3839,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUICachedFileUpdaterActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUICachedFileUpdaterActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUICachedFileUpdaterActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUICachedFileUpdaterActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUICachedFileUpdaterActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUICachedFileUpdaterActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUICachedFileUpdaterActivatedEventArgs = {
@@ -4045,13 +4025,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUICameraSettingsActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUICameraSettingsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUICameraSettingsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUICameraSettingsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUICameraSettingsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUICameraSettingsActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUICameraSettingsActivatedEventArgs = {
@@ -4232,13 +4211,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUICommandLineActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUICommandLineActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUICommandLineActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUICommandLineActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUICommandLineActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUICommandLineActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUICommandLineActivatedEventArgs = {
@@ -4459,13 +4437,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIContactCallActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIContactCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIContactCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIContactCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIContactCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIContactCallActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIContactCallActivatedEventArgs = {
@@ -4666,13 +4643,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIContactMapActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIContactMapActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIContactMapActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIContactMapActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIContactMapActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIContactMapActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIContactMapActivatedEventArgs = {
@@ -4893,13 +4869,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIContactMessageActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIContactMessageActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIContactMessageActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIContactMessageActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIContactMessageActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIContactMessageActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIContactMessageActivatedEventArgs = {
@@ -5100,13 +5075,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIContactPanelActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIContactPanelActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIContactPanelActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIContactPanelActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIContactPanelActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIContactPanelActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIContactPanelActivatedEventArgs = {
@@ -5267,13 +5241,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIContactPickerActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIContactPickerActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIContactPickerActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIContactPickerActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIContactPickerActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIContactPickerActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIContactPickerActivatedEventArgs = {
@@ -5494,13 +5467,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIContactPostActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIContactPostActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIContactPostActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIContactPostActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIContactPostActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIContactPostActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIContactPostActivatedEventArgs = {
@@ -5721,13 +5693,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIContactVideoCallActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIContactVideoCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIContactVideoCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIContactVideoCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIContactVideoCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIContactVideoCallActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIContactVideoCallActivatedEventArgs = {
@@ -5948,13 +5919,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIDeviceActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIDeviceActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIDeviceActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIDeviceActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIDeviceActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIDeviceActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIDeviceActivatedEventArgs = {
@@ -6135,13 +6105,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIDevicePairingActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIDevicePairingActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIDevicePairingActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIDevicePairingActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIDevicePairingActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIDevicePairingActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIDevicePairingActivatedEventArgs = {
@@ -6382,13 +6351,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIDialReceiverActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIDialReceiverActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIDialReceiverActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIDialReceiverActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIDialReceiverActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIDialReceiverActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIDialReceiverActivatedEventArgs = {
@@ -6629,13 +6597,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIFileActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIFileActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIFileActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIFileActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIFileActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIFileActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIFileActivatedEventArgs = {
@@ -6836,13 +6803,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIFileOpenPickerActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIFileOpenPickerActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIFileOpenPickerActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIFileOpenPickerActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIFileOpenPickerActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIFileOpenPickerActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIFileOpenPickerActivatedEventArgs = {
@@ -7043,13 +7009,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIFileOpenPickerContinuationEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIFileOpenPickerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIFileOpenPickerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIFileOpenPickerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIFileOpenPickerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIFileOpenPickerContinuationEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIFileOpenPickerContinuationEventArgs = {
@@ -7270,13 +7235,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIFileSavePickerActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIFileSavePickerActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIFileSavePickerActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIFileSavePickerActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIFileSavePickerActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIFileSavePickerActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIFileSavePickerActivatedEventArgs = {
@@ -7477,13 +7441,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIFileSavePickerContinuationEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIFileSavePickerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIFileSavePickerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIFileSavePickerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIFileSavePickerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIFileSavePickerContinuationEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIFileSavePickerContinuationEventArgs = {
@@ -7684,13 +7647,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIFolderPickerContinuationEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIFolderPickerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIFolderPickerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIFolderPickerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIFolderPickerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIFolderPickerContinuationEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIFolderPickerContinuationEventArgs = {
@@ -7951,13 +7913,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUILaunchActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUILaunchActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUILaunchActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUILaunchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUILaunchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUILaunchActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUILaunchActivatedEventArgs = {
@@ -8158,13 +8119,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUILockScreenActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUILockScreenActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUILockScreenActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUILockScreenActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUILockScreenActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUILockScreenActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUILockScreenActivatedEventArgs = {
@@ -8385,13 +8345,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUILockScreenCallActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUILockScreenCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUILockScreenCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUILockScreenCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUILockScreenCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUILockScreenCallActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUILockScreenCallActivatedEventArgs = {
@@ -8532,13 +8491,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUILockScreenComponentActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUILockScreenComponentActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUILockScreenComponentActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUILockScreenComponentActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUILockScreenComponentActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUILockScreenComponentActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUILockScreenComponentActivatedEventArgs = {
@@ -8630,13 +8588,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUINavigatedDeferral[] = 
-    {
+    static PyType_Slot _type_slots_WebUINavigatedDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUINavigatedDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUINavigatedDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUINavigatedDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUINavigatedDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUINavigatedDeferral = {
@@ -8717,13 +8674,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUINavigatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUINavigatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUINavigatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUINavigatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUINavigatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUINavigatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUINavigatedEventArgs = {
@@ -8814,13 +8770,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUINavigatedOperation[] = 
-    {
+    static PyType_Slot _type_slots_WebUINavigatedOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUINavigatedOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUINavigatedOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUINavigatedOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUINavigatedOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUINavigatedOperation = {
@@ -9001,13 +8956,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIPhoneCallActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIPhoneCallActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIPhoneCallActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIPhoneCallActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIPhoneCallActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIPhoneCallActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIPhoneCallActivatedEventArgs = {
@@ -9168,13 +9122,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIPrint3DWorkflowActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIPrint3DWorkflowActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIPrint3DWorkflowActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIPrint3DWorkflowActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIPrint3DWorkflowActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIPrint3DWorkflowActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIPrint3DWorkflowActivatedEventArgs = {
@@ -9335,13 +9288,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIPrintTaskSettingsActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIPrintTaskSettingsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIPrintTaskSettingsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIPrintTaskSettingsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIPrintTaskSettingsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIPrintTaskSettingsActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIPrintTaskSettingsActivatedEventArgs = {
@@ -9482,13 +9434,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIPrintWorkflowForegroundTaskActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIPrintWorkflowForegroundTaskActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIPrintWorkflowForegroundTaskActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIPrintWorkflowForegroundTaskActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIPrintWorkflowForegroundTaskActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIPrintWorkflowForegroundTaskActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIPrintWorkflowForegroundTaskActivatedEventArgs = {
@@ -9729,13 +9680,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIProtocolActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIProtocolActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIProtocolActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIProtocolActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIProtocolActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIProtocolActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIProtocolActivatedEventArgs = {
@@ -9996,13 +9946,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIProtocolForResultsActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIProtocolForResultsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIProtocolForResultsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIProtocolForResultsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIProtocolForResultsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIProtocolForResultsActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIProtocolForResultsActivatedEventArgs = {
@@ -10183,13 +10132,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIRestrictedLaunchActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIRestrictedLaunchActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIRestrictedLaunchActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIRestrictedLaunchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIRestrictedLaunchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIRestrictedLaunchActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIRestrictedLaunchActivatedEventArgs = {
@@ -10410,13 +10358,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUISearchActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUISearchActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUISearchActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUISearchActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUISearchActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUISearchActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUISearchActivatedEventArgs = {
@@ -10597,13 +10544,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIShareTargetActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIShareTargetActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIShareTargetActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIShareTargetActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIShareTargetActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIShareTargetActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIShareTargetActivatedEventArgs = {
@@ -10784,13 +10730,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIStartupTaskActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIStartupTaskActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIStartupTaskActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIStartupTaskActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIStartupTaskActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIStartupTaskActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIStartupTaskActivatedEventArgs = {
@@ -10991,13 +10936,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIToastNotificationActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIToastNotificationActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIToastNotificationActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIToastNotificationActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIToastNotificationActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIToastNotificationActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIToastNotificationActivatedEventArgs = {
@@ -11158,13 +11102,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIUserDataAccountProviderActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIUserDataAccountProviderActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIUserDataAccountProviderActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIUserDataAccountProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIUserDataAccountProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIUserDataAccountProviderActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIUserDataAccountProviderActivatedEventArgs = {
@@ -12871,13 +12814,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIView[] = 
-    {
+    static PyType_Slot _type_slots_WebUIView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIView = {
@@ -13084,13 +13026,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIVoiceCommandActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIVoiceCommandActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIVoiceCommandActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIVoiceCommandActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIVoiceCommandActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIVoiceCommandActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIVoiceCommandActivatedEventArgs = {
@@ -13291,13 +13232,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIWalletActionActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIWalletActionActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIWalletActionActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIWalletActionActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIWalletActionActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIWalletActionActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIWalletActionActivatedEventArgs = {
@@ -13478,13 +13418,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIWebAccountProviderActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIWebAccountProviderActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIWebAccountProviderActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIWebAccountProviderActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIWebAccountProviderActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIWebAccountProviderActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIWebAccountProviderActivatedEventArgs = {
@@ -13665,13 +13604,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_WebUIWebAuthenticationBrokerContinuationEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_WebUIWebAuthenticationBrokerContinuationEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WebUIWebAuthenticationBrokerContinuationEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebUIWebAuthenticationBrokerContinuationEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WebUIWebAuthenticationBrokerContinuationEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WebUIWebAuthenticationBrokerContinuationEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_WebUIWebAuthenticationBrokerContinuationEventArgs = {
@@ -13752,13 +13690,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_IActivatedEventArgsDeferral[] = 
-    {
+    static PyType_Slot _type_slots_IActivatedEventArgsDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IActivatedEventArgsDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IActivatedEventArgsDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IActivatedEventArgsDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IActivatedEventArgsDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IActivatedEventArgsDeferral = {
@@ -13867,13 +13804,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_IWebUIBackgroundTaskInstance[] = 
-    {
+    static PyType_Slot _type_slots_IWebUIBackgroundTaskInstance[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebUIBackgroundTaskInstance) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebUIBackgroundTaskInstance) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebUIBackgroundTaskInstance) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebUIBackgroundTaskInstance) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IWebUIBackgroundTaskInstance = {
@@ -13954,13 +13890,12 @@ namespace py::cpp::Windows::UI::WebUI
         { }
     };
 
-    static PyType_Slot _type_slots_IWebUINavigatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_IWebUINavigatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebUINavigatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebUINavigatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebUINavigatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebUINavigatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IWebUINavigatedEventArgs = {

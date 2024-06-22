@@ -116,13 +116,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataAccountPartnerAccountInfo[] = 
-    {
+    static PyType_Slot _type_slots_UserDataAccountPartnerAccountInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataAccountPartnerAccountInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataAccountPartnerAccountInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataAccountPartnerAccountInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataAccountPartnerAccountInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataAccountPartnerAccountInfo = {
@@ -276,13 +275,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataAccountProviderAddAccountOperation[] = 
-    {
+    static PyType_Slot _type_slots_UserDataAccountProviderAddAccountOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataAccountProviderAddAccountOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataAccountProviderAddAccountOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataAccountProviderAddAccountOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataAccountProviderAddAccountOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataAccountProviderAddAccountOperation = {
@@ -414,13 +412,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataAccountProviderResolveErrorsOperation[] = 
-    {
+    static PyType_Slot _type_slots_UserDataAccountProviderResolveErrorsOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataAccountProviderResolveErrorsOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataAccountProviderResolveErrorsOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataAccountProviderResolveErrorsOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataAccountProviderResolveErrorsOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataAccountProviderResolveErrorsOperation = {
@@ -552,13 +549,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_UserDataAccountProviderSettingsOperation[] = 
-    {
+    static PyType_Slot _type_slots_UserDataAccountProviderSettingsOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserDataAccountProviderSettingsOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserDataAccountProviderSettingsOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserDataAccountProviderSettingsOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserDataAccountProviderSettingsOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserDataAccountProviderSettingsOperation = {
@@ -639,13 +635,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IUserDataAccountProviderOperation[] = 
-    {
+    static PyType_Slot _type_slots_IUserDataAccountProviderOperation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IUserDataAccountProviderOperation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IUserDataAccountProviderOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IUserDataAccountProviderOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IUserDataAccountProviderOperation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IUserDataAccountProviderOperation = {

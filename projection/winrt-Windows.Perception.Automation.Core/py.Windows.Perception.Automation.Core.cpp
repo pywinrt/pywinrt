@@ -54,12 +54,11 @@ namespace py::cpp::Windows::Perception::Automation::Core
         { }
     };
 
-    static PyType_Slot _type_slots_CorePerceptionAutomation[] = 
-    {
+    static PyType_Slot _type_slots_CorePerceptionAutomation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CorePerceptionAutomation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CorePerceptionAutomation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CorePerceptionAutomation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CorePerceptionAutomation = {

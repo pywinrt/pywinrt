@@ -56,13 +56,12 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
         { }
     };
 
-    static PyType_Slot _type_slots_RequestingFocusOnKeyboardInputEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RequestingFocusOnKeyboardInputEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RequestingFocusOnKeyboardInputEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RequestingFocusOnKeyboardInputEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RequestingFocusOnKeyboardInputEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RequestingFocusOnKeyboardInputEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RequestingFocusOnKeyboardInputEventArgs = {
@@ -243,13 +242,12 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
         { }
     };
 
-    static PyType_Slot _type_slots_SearchSuggestion[] = 
-    {
+    static PyType_Slot _type_slots_SearchSuggestion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchSuggestion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchSuggestion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchSuggestion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchSuggestion) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SearchSuggestion = {
@@ -735,13 +733,12 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
         { }
     };
 
-    static PyType_Slot _type_slots_SearchSuggestionManager[] = 
-    {
+    static PyType_Slot _type_slots_SearchSuggestionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchSuggestionManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchSuggestionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchSuggestionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchSuggestionManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SearchSuggestionManager = {
@@ -882,13 +879,12 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
         { }
     };
 
-    static PyType_Slot _type_slots_SearchSuggestionsRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SearchSuggestionsRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SearchSuggestionsRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SearchSuggestionsRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SearchSuggestionsRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SearchSuggestionsRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SearchSuggestionsRequestedEventArgs = {

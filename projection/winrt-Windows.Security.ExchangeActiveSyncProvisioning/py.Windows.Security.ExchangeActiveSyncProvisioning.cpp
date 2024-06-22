@@ -238,13 +238,12 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
         { }
     };
 
-    static PyType_Slot _type_slots_EasClientDeviceInformation[] = 
-    {
+    static PyType_Slot _type_slots_EasClientDeviceInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EasClientDeviceInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EasClientDeviceInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EasClientDeviceInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EasClientDeviceInformation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EasClientDeviceInformation = {
@@ -771,13 +770,12 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
         { }
     };
 
-    static PyType_Slot _type_slots_EasClientSecurityPolicy[] = 
-    {
+    static PyType_Slot _type_slots_EasClientSecurityPolicy[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EasClientSecurityPolicy) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EasClientSecurityPolicy) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EasClientSecurityPolicy) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EasClientSecurityPolicy) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EasClientSecurityPolicy = {
@@ -1038,13 +1036,12 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
         { }
     };
 
-    static PyType_Slot _type_slots_EasComplianceResults[] = 
-    {
+    static PyType_Slot _type_slots_EasComplianceResults[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EasComplianceResults) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EasComplianceResults) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EasComplianceResults) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EasComplianceResults) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_EasComplianceResults = {

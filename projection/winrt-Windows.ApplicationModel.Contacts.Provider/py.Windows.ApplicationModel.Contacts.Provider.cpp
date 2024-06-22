@@ -279,13 +279,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ContactPickerUI[] = 
-    {
+    static PyType_Slot _type_slots_ContactPickerUI[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactPickerUI) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactPickerUI) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactPickerUI) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactPickerUI) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContactPickerUI = {
@@ -366,13 +365,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_ContactRemovedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ContactRemovedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContactRemovedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContactRemovedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContactRemovedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContactRemovedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContactRemovedEventArgs = {

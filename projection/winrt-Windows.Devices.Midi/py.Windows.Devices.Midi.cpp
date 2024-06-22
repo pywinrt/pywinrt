@@ -138,13 +138,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiActiveSensingMessage[] = 
-    {
+    static PyType_Slot _type_slots_MidiActiveSensingMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiActiveSensingMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiActiveSensingMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiActiveSensingMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiActiveSensingMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiActiveSensingMessage = {
@@ -330,13 +329,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiChannelPressureMessage[] = 
-    {
+    static PyType_Slot _type_slots_MidiChannelPressureMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiChannelPressureMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiChannelPressureMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiChannelPressureMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiChannelPressureMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiChannelPressureMessage = {
@@ -479,13 +477,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiContinueMessage[] = 
-    {
+    static PyType_Slot _type_slots_MidiContinueMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiContinueMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiContinueMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiContinueMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiContinueMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiContinueMessage = {
@@ -692,13 +689,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiControlChangeMessage[] = 
-    {
+    static PyType_Slot _type_slots_MidiControlChangeMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiControlChangeMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiControlChangeMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiControlChangeMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiControlChangeMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiControlChangeMessage = {
@@ -936,13 +932,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiInPort[] = 
-    {
+    static PyType_Slot _type_slots_MidiInPort[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiInPort) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiInPort) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiInPort) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiInPort) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiInPort = {
@@ -1050,13 +1045,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiMessageReceivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_MidiMessageReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiMessageReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiMessageReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiMessageReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiMessageReceivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiMessageReceivedEventArgs = {
@@ -1263,13 +1257,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiNoteOffMessage[] = 
-    {
+    static PyType_Slot _type_slots_MidiNoteOffMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiNoteOffMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiNoteOffMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiNoteOffMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiNoteOffMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiNoteOffMessage = {
@@ -1476,13 +1469,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiNoteOnMessage[] = 
-    {
+    static PyType_Slot _type_slots_MidiNoteOnMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiNoteOnMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiNoteOnMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiNoteOnMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiNoteOnMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiNoteOnMessage = {
@@ -1741,13 +1733,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiOutPort[] = 
-    {
+    static PyType_Slot _type_slots_MidiOutPort[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiOutPort) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiOutPort) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiOutPort) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiOutPort) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiOutPort = {
@@ -1960,13 +1951,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiPitchBendChangeMessage[] = 
-    {
+    static PyType_Slot _type_slots_MidiPitchBendChangeMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiPitchBendChangeMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiPitchBendChangeMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiPitchBendChangeMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiPitchBendChangeMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiPitchBendChangeMessage = {
@@ -2173,13 +2163,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiPolyphonicKeyPressureMessage[] = 
-    {
+    static PyType_Slot _type_slots_MidiPolyphonicKeyPressureMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiPolyphonicKeyPressureMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiPolyphonicKeyPressureMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiPolyphonicKeyPressureMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiPolyphonicKeyPressureMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiPolyphonicKeyPressureMessage = {
@@ -2365,13 +2354,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiProgramChangeMessage[] = 
-    {
+    static PyType_Slot _type_slots_MidiProgramChangeMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiProgramChangeMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiProgramChangeMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiProgramChangeMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiProgramChangeMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiProgramChangeMessage = {
@@ -2536,13 +2524,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiSongPositionPointerMessage[] = 
-    {
+    static PyType_Slot _type_slots_MidiSongPositionPointerMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiSongPositionPointerMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiSongPositionPointerMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiSongPositionPointerMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiSongPositionPointerMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiSongPositionPointerMessage = {
@@ -2707,13 +2694,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiSongSelectMessage[] = 
-    {
+    static PyType_Slot _type_slots_MidiSongSelectMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiSongSelectMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiSongSelectMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiSongSelectMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiSongSelectMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiSongSelectMessage = {
@@ -2856,13 +2842,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiStartMessage[] = 
-    {
+    static PyType_Slot _type_slots_MidiStartMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiStartMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiStartMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiStartMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiStartMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiStartMessage = {
@@ -3005,13 +2990,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiStopMessage[] = 
-    {
+    static PyType_Slot _type_slots_MidiStopMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiStopMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiStopMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiStopMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiStopMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiStopMessage = {
@@ -3358,13 +3342,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiSynthesizer[] = 
-    {
+    static PyType_Slot _type_slots_MidiSynthesizer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiSynthesizer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiSynthesizer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiSynthesizer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiSynthesizer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiSynthesizer = {
@@ -3536,13 +3519,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiSystemExclusiveMessage[] = 
-    {
+    static PyType_Slot _type_slots_MidiSystemExclusiveMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiSystemExclusiveMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiSystemExclusiveMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiSystemExclusiveMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiSystemExclusiveMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiSystemExclusiveMessage = {
@@ -3685,13 +3667,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiSystemResetMessage[] = 
-    {
+    static PyType_Slot _type_slots_MidiSystemResetMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiSystemResetMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiSystemResetMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiSystemResetMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiSystemResetMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiSystemResetMessage = {
@@ -3877,13 +3858,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiTimeCodeMessage[] = 
-    {
+    static PyType_Slot _type_slots_MidiTimeCodeMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiTimeCodeMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiTimeCodeMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiTimeCodeMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiTimeCodeMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiTimeCodeMessage = {
@@ -4026,13 +4006,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiTimingClockMessage[] = 
-    {
+    static PyType_Slot _type_slots_MidiTimingClockMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiTimingClockMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiTimingClockMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiTimingClockMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiTimingClockMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiTimingClockMessage = {
@@ -4175,13 +4154,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_MidiTuneRequestMessage[] = 
-    {
+    static PyType_Slot _type_slots_MidiTuneRequestMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MidiTuneRequestMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MidiTuneRequestMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MidiTuneRequestMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MidiTuneRequestMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_MidiTuneRequestMessage = {
@@ -4302,13 +4280,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_IMidiMessage[] = 
-    {
+    static PyType_Slot _type_slots_IMidiMessage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMidiMessage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMidiMessage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMidiMessage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMidiMessage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IMidiMessage = {
@@ -4507,13 +4484,12 @@ namespace py::cpp::Windows::Devices::Midi
         { }
     };
 
-    static PyType_Slot _type_slots_IMidiOutPort[] = 
-    {
+    static PyType_Slot _type_slots_IMidiOutPort[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IMidiOutPort) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMidiOutPort) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMidiOutPort) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMidiOutPort) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IMidiOutPort = {

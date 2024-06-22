@@ -348,13 +348,12 @@ namespace py::cpp::Windows::Media::Casting
         { }
     };
 
-    static PyType_Slot _type_slots_CastingConnection[] = 
-    {
+    static PyType_Slot _type_slots_CastingConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CastingConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CastingConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CastingConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CastingConnection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CastingConnection = {
@@ -455,13 +454,12 @@ namespace py::cpp::Windows::Media::Casting
         { }
     };
 
-    static PyType_Slot _type_slots_CastingConnectionErrorOccurredEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CastingConnectionErrorOccurredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CastingConnectionErrorOccurredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CastingConnectionErrorOccurredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CastingConnectionErrorOccurredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CastingConnectionErrorOccurredEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CastingConnectionErrorOccurredEventArgs = {
@@ -766,13 +764,12 @@ namespace py::cpp::Windows::Media::Casting
         { }
     };
 
-    static PyType_Slot _type_slots_CastingDevice[] = 
-    {
+    static PyType_Slot _type_slots_CastingDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CastingDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CastingDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CastingDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CastingDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CastingDevice = {
@@ -1100,13 +1097,12 @@ namespace py::cpp::Windows::Media::Casting
         { }
     };
 
-    static PyType_Slot _type_slots_CastingDevicePicker[] = 
-    {
+    static PyType_Slot _type_slots_CastingDevicePicker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CastingDevicePicker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CastingDevicePicker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CastingDevicePicker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CastingDevicePicker) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CastingDevicePicker = {
@@ -1331,13 +1327,12 @@ namespace py::cpp::Windows::Media::Casting
         { }
     };
 
-    static PyType_Slot _type_slots_CastingDevicePickerFilter[] = 
-    {
+    static PyType_Slot _type_slots_CastingDevicePickerFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CastingDevicePickerFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CastingDevicePickerFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CastingDevicePickerFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CastingDevicePickerFilter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CastingDevicePickerFilter = {
@@ -1418,13 +1413,12 @@ namespace py::cpp::Windows::Media::Casting
         { }
     };
 
-    static PyType_Slot _type_slots_CastingDeviceSelectedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_CastingDeviceSelectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CastingDeviceSelectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CastingDeviceSelectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CastingDeviceSelectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CastingDeviceSelectedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CastingDeviceSelectedEventArgs = {
@@ -1533,13 +1527,12 @@ namespace py::cpp::Windows::Media::Casting
         { }
     };
 
-    static PyType_Slot _type_slots_CastingSource[] = 
-    {
+    static PyType_Slot _type_slots_CastingSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CastingSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CastingSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CastingSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CastingSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CastingSource = {

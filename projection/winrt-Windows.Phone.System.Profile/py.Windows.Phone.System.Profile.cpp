@@ -41,12 +41,11 @@ namespace py::cpp::Windows::Phone::System::Profile
         { }
     };
 
-    static PyType_Slot _type_slots_RetailMode[] = 
-    {
+    static PyType_Slot _type_slots_RetailMode[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RetailMode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RetailMode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RetailMode) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RetailMode = {

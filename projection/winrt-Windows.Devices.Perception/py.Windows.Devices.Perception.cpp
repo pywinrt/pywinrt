@@ -98,12 +98,11 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_KnownCameraIntrinsicsProperties[] = 
-    {
+    static PyType_Slot _type_slots_KnownCameraIntrinsicsProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownCameraIntrinsicsProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownCameraIntrinsicsProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownCameraIntrinsicsProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KnownCameraIntrinsicsProperties = {
@@ -216,12 +215,11 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_KnownPerceptionColorFrameSourceProperties[] = 
-    {
+    static PyType_Slot _type_slots_KnownPerceptionColorFrameSourceProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownPerceptionColorFrameSourceProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownPerceptionColorFrameSourceProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownPerceptionColorFrameSourceProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KnownPerceptionColorFrameSourceProperties = {
@@ -314,12 +312,11 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_KnownPerceptionDepthFrameSourceProperties[] = 
-    {
+    static PyType_Slot _type_slots_KnownPerceptionDepthFrameSourceProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownPerceptionDepthFrameSourceProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownPerceptionDepthFrameSourceProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownPerceptionDepthFrameSourceProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KnownPerceptionDepthFrameSourceProperties = {
@@ -487,12 +484,11 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_KnownPerceptionFrameSourceProperties[] = 
-    {
+    static PyType_Slot _type_slots_KnownPerceptionFrameSourceProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownPerceptionFrameSourceProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownPerceptionFrameSourceProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownPerceptionFrameSourceProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KnownPerceptionFrameSourceProperties = {
@@ -683,12 +679,11 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_KnownPerceptionInfraredFrameSourceProperties[] = 
-    {
+    static PyType_Slot _type_slots_KnownPerceptionInfraredFrameSourceProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownPerceptionInfraredFrameSourceProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownPerceptionInfraredFrameSourceProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownPerceptionInfraredFrameSourceProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KnownPerceptionInfraredFrameSourceProperties = {
@@ -842,12 +837,11 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_KnownPerceptionVideoFrameSourceProperties[] = 
-    {
+    static PyType_Slot _type_slots_KnownPerceptionVideoFrameSourceProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownPerceptionVideoFrameSourceProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownPerceptionVideoFrameSourceProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownPerceptionVideoFrameSourceProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KnownPerceptionVideoFrameSourceProperties = {
@@ -999,12 +993,11 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_KnownPerceptionVideoProfileProperties[] = 
-    {
+    static PyType_Slot _type_slots_KnownPerceptionVideoProfileProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownPerceptionVideoProfileProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownPerceptionVideoProfileProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownPerceptionVideoProfileProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KnownPerceptionVideoProfileProperties = {
@@ -1167,13 +1160,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionColorFrame[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionColorFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionColorFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionColorFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionColorFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionColorFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionColorFrame = {
@@ -1284,13 +1276,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionColorFrameArrivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionColorFrameArrivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionColorFrameArrivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionColorFrameArrivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionColorFrameArrivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionColorFrameArrivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionColorFrameArrivedEventArgs = {
@@ -1546,13 +1537,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionColorFrameReader[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionColorFrameReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionColorFrameReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionColorFrameReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionColorFrameReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionColorFrameReader) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionColorFrameReader = {
@@ -2463,13 +2453,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionColorFrameSource[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionColorFrameSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionColorFrameSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionColorFrameSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionColorFrameSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionColorFrameSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionColorFrameSource = {
@@ -2579,13 +2568,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionColorFrameSourceAddedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionColorFrameSourceAddedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionColorFrameSourceAddedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionColorFrameSourceAddedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionColorFrameSourceAddedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionColorFrameSourceAddedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionColorFrameSourceAddedEventArgs = {
@@ -2666,13 +2654,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionColorFrameSourceRemovedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionColorFrameSourceRemovedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionColorFrameSourceRemovedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionColorFrameSourceRemovedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionColorFrameSourceRemovedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionColorFrameSourceRemovedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionColorFrameSourceRemovedEventArgs = {
@@ -2995,13 +2982,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionColorFrameSourceWatcher[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionColorFrameSourceWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionColorFrameSourceWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionColorFrameSourceWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionColorFrameSourceWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionColorFrameSourceWatcher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionColorFrameSourceWatcher = {
@@ -3192,13 +3178,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionControlSession[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionControlSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionControlSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionControlSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionControlSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionControlSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionControlSession = {
@@ -3394,13 +3379,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionDepthCorrelatedCameraIntrinsics[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionDepthCorrelatedCameraIntrinsics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionDepthCorrelatedCameraIntrinsics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionDepthCorrelatedCameraIntrinsics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionDepthCorrelatedCameraIntrinsics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionDepthCorrelatedCameraIntrinsics) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionDepthCorrelatedCameraIntrinsics = {
@@ -3596,13 +3580,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionDepthCorrelatedCoordinateMapper[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionDepthCorrelatedCoordinateMapper[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionDepthCorrelatedCoordinateMapper) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionDepthCorrelatedCoordinateMapper) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionDepthCorrelatedCoordinateMapper) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionDepthCorrelatedCoordinateMapper) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionDepthCorrelatedCoordinateMapper = {
@@ -3735,13 +3718,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionDepthFrame[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionDepthFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionDepthFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionDepthFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionDepthFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionDepthFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionDepthFrame = {
@@ -3852,13 +3834,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionDepthFrameArrivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionDepthFrameArrivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionDepthFrameArrivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionDepthFrameArrivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionDepthFrameArrivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionDepthFrameArrivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionDepthFrameArrivedEventArgs = {
@@ -4114,13 +4095,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionDepthFrameReader[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionDepthFrameReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionDepthFrameReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionDepthFrameReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionDepthFrameReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionDepthFrameReader) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionDepthFrameReader = {
@@ -5031,13 +5011,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionDepthFrameSource[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionDepthFrameSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionDepthFrameSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionDepthFrameSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionDepthFrameSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionDepthFrameSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionDepthFrameSource = {
@@ -5147,13 +5126,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionDepthFrameSourceAddedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionDepthFrameSourceAddedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionDepthFrameSourceAddedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionDepthFrameSourceAddedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionDepthFrameSourceAddedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionDepthFrameSourceAddedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionDepthFrameSourceAddedEventArgs = {
@@ -5234,13 +5212,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionDepthFrameSourceRemovedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionDepthFrameSourceRemovedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionDepthFrameSourceRemovedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionDepthFrameSourceRemovedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionDepthFrameSourceRemovedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionDepthFrameSourceRemovedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionDepthFrameSourceRemovedEventArgs = {
@@ -5563,13 +5540,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionDepthFrameSourceWatcher[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionDepthFrameSourceWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionDepthFrameSourceWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionDepthFrameSourceWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionDepthFrameSourceWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionDepthFrameSourceWatcher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionDepthFrameSourceWatcher = {
@@ -5670,13 +5646,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionFrameSourcePropertiesChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionFrameSourcePropertiesChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionFrameSourcePropertiesChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionFrameSourcePropertiesChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionFrameSourcePropertiesChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionFrameSourcePropertiesChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionFrameSourcePropertiesChangedEventArgs = {
@@ -5777,13 +5752,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionFrameSourcePropertyChangeResult[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionFrameSourcePropertyChangeResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionFrameSourcePropertyChangeResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionFrameSourcePropertyChangeResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionFrameSourcePropertyChangeResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionFrameSourcePropertyChangeResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionFrameSourcePropertyChangeResult = {
@@ -5916,13 +5890,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionInfraredFrame[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionInfraredFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionInfraredFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionInfraredFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionInfraredFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionInfraredFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionInfraredFrame = {
@@ -6033,13 +6006,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionInfraredFrameArrivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionInfraredFrameArrivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionInfraredFrameArrivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionInfraredFrameArrivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionInfraredFrameArrivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionInfraredFrameArrivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionInfraredFrameArrivedEventArgs = {
@@ -6295,13 +6267,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionInfraredFrameReader[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionInfraredFrameReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionInfraredFrameReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionInfraredFrameReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionInfraredFrameReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionInfraredFrameReader) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionInfraredFrameReader = {
@@ -7212,13 +7183,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionInfraredFrameSource[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionInfraredFrameSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionInfraredFrameSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionInfraredFrameSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionInfraredFrameSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionInfraredFrameSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionInfraredFrameSource = {
@@ -7328,13 +7298,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionInfraredFrameSourceAddedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionInfraredFrameSourceAddedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionInfraredFrameSourceAddedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionInfraredFrameSourceAddedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionInfraredFrameSourceAddedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionInfraredFrameSourceAddedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionInfraredFrameSourceAddedEventArgs = {
@@ -7415,13 +7384,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionInfraredFrameSourceRemovedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionInfraredFrameSourceRemovedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionInfraredFrameSourceRemovedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionInfraredFrameSourceRemovedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionInfraredFrameSourceRemovedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionInfraredFrameSourceRemovedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionInfraredFrameSourceRemovedEventArgs = {
@@ -7744,13 +7712,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionInfraredFrameSourceWatcher[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionInfraredFrameSourceWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionInfraredFrameSourceWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionInfraredFrameSourceWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionInfraredFrameSourceWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionInfraredFrameSourceWatcher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionInfraredFrameSourceWatcher = {
@@ -7943,13 +7910,12 @@ namespace py::cpp::Windows::Devices::Perception
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionVideoProfile[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionVideoProfile[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionVideoProfile) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionVideoProfile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionVideoProfile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionVideoProfile) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionVideoProfile = {

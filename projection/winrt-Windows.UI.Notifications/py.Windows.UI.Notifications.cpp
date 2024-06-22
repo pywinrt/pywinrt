@@ -214,13 +214,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_AdaptiveNotificationText[] = 
-    {
+    static PyType_Slot _type_slots_AdaptiveNotificationText[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AdaptiveNotificationText) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AdaptiveNotificationText) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AdaptiveNotificationText) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AdaptiveNotificationText) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AdaptiveNotificationText = {
@@ -373,13 +372,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_BadgeNotification[] = 
-    {
+    static PyType_Slot _type_slots_BadgeNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BadgeNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BadgeNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BadgeNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BadgeNotification) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BadgeNotification = {
@@ -548,12 +546,11 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_BadgeUpdateManager[] = 
-    {
+    static PyType_Slot _type_slots_BadgeUpdateManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BadgeUpdateManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BadgeUpdateManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BadgeUpdateManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BadgeUpdateManager = {
@@ -745,13 +742,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_BadgeUpdateManagerForUser[] = 
-    {
+    static PyType_Slot _type_slots_BadgeUpdateManagerForUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BadgeUpdateManagerForUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BadgeUpdateManagerForUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BadgeUpdateManagerForUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BadgeUpdateManagerForUser) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BadgeUpdateManagerForUser = {
@@ -964,13 +960,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_BadgeUpdater[] = 
-    {
+    static PyType_Slot _type_slots_BadgeUpdater[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BadgeUpdater) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BadgeUpdater) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BadgeUpdater) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BadgeUpdater) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BadgeUpdater = {
@@ -1111,12 +1106,11 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_KnownAdaptiveNotificationHints[] = 
-    {
+    static PyType_Slot _type_slots_KnownAdaptiveNotificationHints[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownAdaptiveNotificationHints) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownAdaptiveNotificationHints) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownAdaptiveNotificationHints) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KnownAdaptiveNotificationHints = {
@@ -1535,12 +1529,11 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_KnownAdaptiveNotificationTextStyles[] = 
-    {
+    static PyType_Slot _type_slots_KnownAdaptiveNotificationTextStyles[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownAdaptiveNotificationTextStyles) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownAdaptiveNotificationTextStyles) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownAdaptiveNotificationTextStyles) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KnownAdaptiveNotificationTextStyles = {
@@ -1630,12 +1623,11 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_KnownNotificationBindings[] = 
-    {
+    static PyType_Slot _type_slots_KnownNotificationBindings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownNotificationBindings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownNotificationBindings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownNotificationBindings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KnownNotificationBindings = {
@@ -1840,13 +1832,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_Notification[] = 
-    {
+    static PyType_Slot _type_slots_Notification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Notification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Notification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Notification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Notification) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Notification = {
@@ -2053,13 +2044,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_NotificationBinding[] = 
-    {
+    static PyType_Slot _type_slots_NotificationBinding[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NotificationBinding) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NotificationBinding) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NotificationBinding) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NotificationBinding) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NotificationBinding = {
@@ -2241,13 +2231,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_NotificationData[] = 
-    {
+    static PyType_Slot _type_slots_NotificationData[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NotificationData) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NotificationData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NotificationData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NotificationData) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NotificationData = {
@@ -2408,13 +2397,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_NotificationVisual[] = 
-    {
+    static PyType_Slot _type_slots_NotificationVisual[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NotificationVisual) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NotificationVisual) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NotificationVisual) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NotificationVisual) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_NotificationVisual = {
@@ -2684,13 +2672,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_ScheduledTileNotification[] = 
-    {
+    static PyType_Slot _type_slots_ScheduledTileNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScheduledTileNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScheduledTileNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScheduledTileNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScheduledTileNotification) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ScheduledTileNotification = {
@@ -3210,13 +3197,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_ScheduledToastNotification[] = 
-    {
+    static PyType_Slot _type_slots_ScheduledToastNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScheduledToastNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScheduledToastNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScheduledToastNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScheduledToastNotification) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ScheduledToastNotification = {
@@ -3375,13 +3361,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_ScheduledToastNotificationShowingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ScheduledToastNotificationShowingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ScheduledToastNotificationShowingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ScheduledToastNotificationShowingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ScheduledToastNotificationShowingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ScheduledToastNotificationShowingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ScheduledToastNotificationShowingEventArgs = {
@@ -3462,13 +3447,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_ShownTileNotification[] = 
-    {
+    static PyType_Slot _type_slots_ShownTileNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ShownTileNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ShownTileNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ShownTileNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ShownTileNotification) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ShownTileNotification = {
@@ -3621,13 +3605,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_TileFlyoutNotification[] = 
-    {
+    static PyType_Slot _type_slots_TileFlyoutNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileFlyoutNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TileFlyoutNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileFlyoutNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileFlyoutNotification) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TileFlyoutNotification = {
@@ -3765,12 +3748,11 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_TileFlyoutUpdateManager[] = 
-    {
+    static PyType_Slot _type_slots_TileFlyoutUpdateManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileFlyoutUpdateManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileFlyoutUpdateManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileFlyoutUpdateManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TileFlyoutUpdateManager = {
@@ -4031,13 +4013,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_TileFlyoutUpdater[] = 
-    {
+    static PyType_Slot _type_slots_TileFlyoutUpdater[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileFlyoutUpdater) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TileFlyoutUpdater) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileFlyoutUpdater) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileFlyoutUpdater) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TileFlyoutUpdater = {
@@ -4238,13 +4219,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_TileNotification[] = 
-    {
+    static PyType_Slot _type_slots_TileNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TileNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileNotification) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TileNotification = {
@@ -4413,12 +4393,11 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_TileUpdateManager[] = 
-    {
+    static PyType_Slot _type_slots_TileUpdateManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileUpdateManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileUpdateManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileUpdateManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TileUpdateManager = {
@@ -4622,13 +4601,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_TileUpdateManagerForUser[] = 
-    {
+    static PyType_Slot _type_slots_TileUpdateManagerForUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileUpdateManagerForUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TileUpdateManagerForUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileUpdateManagerForUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileUpdateManagerForUser) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TileUpdateManagerForUser = {
@@ -5146,13 +5124,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_TileUpdater[] = 
-    {
+    static PyType_Slot _type_slots_TileUpdater[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TileUpdater) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TileUpdater) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TileUpdater) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TileUpdater) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TileUpdater = {
@@ -5253,13 +5230,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_ToastActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ToastActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToastActivatedEventArgs = {
@@ -5511,13 +5487,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_ToastCollection[] = 
-    {
+    static PyType_Slot _type_slots_ToastCollection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastCollection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastCollection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastCollection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastCollection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToastCollection = {
@@ -5774,13 +5749,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_ToastCollectionManager[] = 
-    {
+    static PyType_Slot _type_slots_ToastCollectionManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastCollectionManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastCollectionManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastCollectionManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastCollectionManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToastCollectionManager = {
@@ -5861,13 +5835,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_ToastDismissedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ToastDismissedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastDismissedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastDismissedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastDismissedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastDismissedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToastDismissedEventArgs = {
@@ -5948,13 +5921,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_ToastFailedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_ToastFailedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastFailedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastFailedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastFailedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastFailedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToastFailedEventArgs = {
@@ -6626,13 +6598,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_ToastNotification[] = 
-    {
+    static PyType_Slot _type_slots_ToastNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotification) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToastNotification = {
@@ -6733,13 +6704,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_ToastNotificationActionTriggerDetail[] = 
-    {
+    static PyType_Slot _type_slots_ToastNotificationActionTriggerDetail[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotificationActionTriggerDetail) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastNotificationActionTriggerDetail) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotificationActionTriggerDetail) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotificationActionTriggerDetail) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToastNotificationActionTriggerDetail = {
@@ -7035,13 +7005,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_ToastNotificationHistory[] = 
-    {
+    static PyType_Slot _type_slots_ToastNotificationHistory[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotificationHistory) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastNotificationHistory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotificationHistory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotificationHistory) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToastNotificationHistory = {
@@ -7142,13 +7111,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_ToastNotificationHistoryChangedTriggerDetail[] = 
-    {
+    static PyType_Slot _type_slots_ToastNotificationHistoryChangedTriggerDetail[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotificationHistoryChangedTriggerDetail) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastNotificationHistoryChangedTriggerDetail) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotificationHistoryChangedTriggerDetail) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotificationHistoryChangedTriggerDetail) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToastNotificationHistoryChangedTriggerDetail = {
@@ -7366,12 +7334,11 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_ToastNotificationManager[] = 
-    {
+    static PyType_Slot _type_slots_ToastNotificationManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotificationManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotificationManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotificationManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToastNotificationManager = {
@@ -7732,13 +7699,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_ToastNotificationManagerForUser[] = 
-    {
+    static PyType_Slot _type_slots_ToastNotificationManagerForUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotificationManagerForUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastNotificationManagerForUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotificationManagerForUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotificationManagerForUser) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToastNotificationManagerForUser = {
@@ -8081,13 +8047,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_ToastNotifier[] = 
-    {
+    static PyType_Slot _type_slots_ToastNotifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ToastNotifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ToastNotifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ToastNotifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ToastNotifier) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ToastNotifier = {
@@ -8228,13 +8193,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_UserNotification[] = 
-    {
+    static PyType_Slot _type_slots_UserNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserNotification) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserNotification = {
@@ -8335,13 +8299,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_UserNotificationChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_UserNotificationChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UserNotificationChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserNotificationChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserNotificationChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserNotificationChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_UserNotificationChangedEventArgs = {
@@ -8442,13 +8405,12 @@ namespace py::cpp::Windows::UI::Notifications
         { }
     };
 
-    static PyType_Slot _type_slots_IAdaptiveNotificationContent[] = 
-    {
+    static PyType_Slot _type_slots_IAdaptiveNotificationContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAdaptiveNotificationContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAdaptiveNotificationContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAdaptiveNotificationContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAdaptiveNotificationContent) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAdaptiveNotificationContent = {

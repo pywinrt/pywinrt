@@ -116,12 +116,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
         { }
     };
 
-    static PyType_Slot _type_slots_LicenseManager[] = 
-    {
+    static PyType_Slot _type_slots_LicenseManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LicenseManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LicenseManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LicenseManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LicenseManager = {
@@ -350,13 +349,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
         { }
     };
 
-    static PyType_Slot _type_slots_LicenseSatisfactionInfo[] = 
-    {
+    static PyType_Slot _type_slots_LicenseSatisfactionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LicenseSatisfactionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LicenseSatisfactionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LicenseSatisfactionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LicenseSatisfactionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LicenseSatisfactionInfo = {
@@ -457,13 +455,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
         { }
     };
 
-    static PyType_Slot _type_slots_LicenseSatisfactionResult[] = 
-    {
+    static PyType_Slot _type_slots_LicenseSatisfactionResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LicenseSatisfactionResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LicenseSatisfactionResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LicenseSatisfactionResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LicenseSatisfactionResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LicenseSatisfactionResult = {

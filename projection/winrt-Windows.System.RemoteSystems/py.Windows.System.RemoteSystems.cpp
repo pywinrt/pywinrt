@@ -98,12 +98,11 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_KnownRemoteSystemCapabilities[] = 
-    {
+    static PyType_Slot _type_slots_KnownRemoteSystemCapabilities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownRemoteSystemCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownRemoteSystemCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownRemoteSystemCapabilities) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KnownRemoteSystemCapabilities = {
@@ -637,13 +636,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystem[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystem[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystem) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystem) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystem = {
@@ -754,13 +752,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemAddedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemAddedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemAddedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemAddedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemAddedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemAddedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemAddedEventArgs = {
@@ -961,13 +958,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemApp[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemApp[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemApp) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemApp) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemApp) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemApp) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemApp = {
@@ -1158,13 +1154,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemAppRegistration[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemAppRegistration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemAppRegistration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemAppRegistration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemAppRegistration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemAppRegistration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemAppRegistration = {
@@ -1296,13 +1291,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemAuthorizationKindFilter[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemAuthorizationKindFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemAuthorizationKindFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemAuthorizationKindFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemAuthorizationKindFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemAuthorizationKindFilter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemAuthorizationKindFilter = {
@@ -1414,13 +1408,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemConnectionInfo[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemConnectionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemConnectionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemConnectionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemConnectionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemConnectionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemConnectionInfo = {
@@ -1685,13 +1678,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemConnectionRequest[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemConnectionRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemConnectionRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemConnectionRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemConnectionRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemConnectionRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemConnectionRequest = {
@@ -1824,13 +1816,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemDiscoveryTypeFilter[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemDiscoveryTypeFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemDiscoveryTypeFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemDiscoveryTypeFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemDiscoveryTypeFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemDiscoveryTypeFilter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemDiscoveryTypeFilter = {
@@ -1891,13 +1882,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemEnumerationCompletedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemEnumerationCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemEnumerationCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemEnumerationCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemEnumerationCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemEnumerationCompletedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemEnumerationCompletedEventArgs = {
@@ -2002,13 +1992,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemKindFilter[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemKindFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemKindFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemKindFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemKindFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemKindFilter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemKindFilter = {
@@ -2187,12 +2176,11 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemKinds[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemKinds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemKinds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemKinds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemKinds) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemKinds = {
@@ -2306,13 +2294,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemRemovedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemRemovedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemRemovedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemRemovedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemRemovedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemRemovedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemRemovedEventArgs = {
@@ -2621,13 +2608,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSession[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSession = {
@@ -2734,13 +2720,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionAddedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionAddedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionAddedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionAddedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionAddedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionAddedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionAddedEventArgs = {
@@ -2948,13 +2933,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionController[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionController[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionController) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionController) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionController = {
@@ -3055,13 +3039,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionCreationResult[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionCreationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionCreationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionCreationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionCreationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionCreationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionCreationResult = {
@@ -3142,13 +3125,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionDisconnectedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionDisconnectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionDisconnectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionDisconnectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionDisconnectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionDisconnectedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionDisconnectedEventArgs = {
@@ -3279,13 +3261,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionInfo[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionInfo = {
@@ -3386,13 +3367,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionInvitation[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionInvitation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionInvitation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionInvitation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionInvitation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionInvitation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionInvitation = {
@@ -3520,13 +3500,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionInvitationListener[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionInvitationListener[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionInvitationListener) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionInvitationListener) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionInvitationListener) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionInvitationListener) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionInvitationListener = {
@@ -3607,13 +3586,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionInvitationReceivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionInvitationReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionInvitationReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionInvitationReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionInvitationReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionInvitationReceivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionInvitationReceivedEventArgs = {
@@ -3725,13 +3703,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionJoinRequest[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionJoinRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionJoinRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionJoinRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionJoinRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionJoinRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionJoinRequest = {
@@ -3842,13 +3819,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionJoinRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionJoinRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionJoinRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionJoinRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionJoinRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionJoinRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionJoinRequestedEventArgs = {
@@ -3949,13 +3925,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionJoinResult[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionJoinResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionJoinResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionJoinResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionJoinResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionJoinResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionJoinResult = {
@@ -4221,13 +4196,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionMessageChannel[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionMessageChannel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionMessageChannel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionMessageChannel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionMessageChannel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionMessageChannel) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionMessageChannel = {
@@ -4358,13 +4332,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionOptions[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionOptions = {
@@ -4475,13 +4448,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionParticipant[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionParticipant[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionParticipant) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionParticipant) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionParticipant) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionParticipant) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionParticipant = {
@@ -4562,13 +4534,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionParticipantAddedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionParticipantAddedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionParticipantAddedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionParticipantAddedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionParticipantAddedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionParticipantAddedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionParticipantAddedEventArgs = {
@@ -4649,13 +4620,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionParticipantRemovedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionParticipantRemovedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionParticipantRemovedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionParticipantRemovedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionParticipantRemovedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionParticipantRemovedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionParticipantRemovedEventArgs = {
@@ -4933,13 +4903,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionParticipantWatcher[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionParticipantWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionParticipantWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionParticipantWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionParticipantWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionParticipantWatcher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionParticipantWatcher = {
@@ -5020,13 +4989,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionRemovedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionRemovedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionRemovedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionRemovedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionRemovedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionRemovedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionRemovedEventArgs = {
@@ -5107,13 +5075,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionUpdatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionUpdatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionUpdatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionUpdatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionUpdatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionUpdatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionUpdatedEventArgs = {
@@ -5214,13 +5181,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionValueSetReceivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionValueSetReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionValueSetReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionValueSetReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionValueSetReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionValueSetReceivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionValueSetReceivedEventArgs = {
@@ -5498,13 +5464,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemSessionWatcher[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemSessionWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemSessionWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemSessionWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemSessionWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemSessionWatcher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemSessionWatcher = {
@@ -5609,13 +5574,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemStatusTypeFilter[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemStatusTypeFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemStatusTypeFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemStatusTypeFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemStatusTypeFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemStatusTypeFilter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemStatusTypeFilter = {
@@ -5696,13 +5660,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemUpdatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemUpdatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemUpdatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemUpdatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemUpdatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemUpdatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemUpdatedEventArgs = {
@@ -6070,13 +6033,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemWatcher[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemWatcher[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemWatcher) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemWatcher) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemWatcher) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemWatcher) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemWatcher = {
@@ -6157,13 +6119,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemWatcherErrorOccurredEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemWatcherErrorOccurredEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemWatcherErrorOccurredEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemWatcherErrorOccurredEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemWatcherErrorOccurredEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemWatcherErrorOccurredEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemWatcherErrorOccurredEventArgs = {
@@ -6268,13 +6229,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_RemoteSystemWebAccountFilter[] = 
-    {
+    static PyType_Slot _type_slots_RemoteSystemWebAccountFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RemoteSystemWebAccountFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemoteSystemWebAccountFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RemoteSystemWebAccountFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RemoteSystemWebAccountFilter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RemoteSystemWebAccountFilter = {
@@ -6335,13 +6295,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot _type_slots_IRemoteSystemFilter[] = 
-    {
+    static PyType_Slot _type_slots_IRemoteSystemFilter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IRemoteSystemFilter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRemoteSystemFilter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRemoteSystemFilter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRemoteSystemFilter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IRemoteSystemFilter = {

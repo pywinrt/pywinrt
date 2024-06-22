@@ -247,13 +247,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayAdapter[] = 
-    {
+    static PyType_Slot _type_slots_DisplayAdapter[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayAdapter) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayAdapter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayAdapter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayAdapter) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayAdapter = {
@@ -605,13 +604,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayDevice[] = 
-    {
+    static PyType_Slot _type_slots_DisplayDevice[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayDevice) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayDevice) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayDevice = {
@@ -672,13 +670,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayFence[] = 
-    {
+    static PyType_Slot _type_slots_DisplayFence[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayFence) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayFence) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayFence) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayFence) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayFence = {
@@ -1348,13 +1345,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayManager[] = 
-    {
+    static PyType_Slot _type_slots_DisplayManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayManager = {
@@ -1519,13 +1515,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayManagerChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DisplayManagerChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayManagerChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayManagerChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayManagerChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayManagerChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayManagerChangedEventArgs = {
@@ -1664,13 +1659,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayManagerDisabledEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DisplayManagerDisabledEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayManagerDisabledEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayManagerDisabledEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayManagerDisabledEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayManagerDisabledEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayManagerDisabledEventArgs = {
@@ -1809,13 +1803,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayManagerEnabledEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DisplayManagerEnabledEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayManagerEnabledEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayManagerEnabledEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayManagerEnabledEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayManagerEnabledEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayManagerEnabledEventArgs = {
@@ -1954,13 +1947,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayManagerPathsFailedOrInvalidatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_DisplayManagerPathsFailedOrInvalidatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayManagerPathsFailedOrInvalidatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayManagerPathsFailedOrInvalidatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayManagerPathsFailedOrInvalidatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayManagerPathsFailedOrInvalidatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayManagerPathsFailedOrInvalidatedEventArgs = {
@@ -2081,13 +2073,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayManagerResultWithState[] = 
-    {
+    static PyType_Slot _type_slots_DisplayManagerResultWithState[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayManagerResultWithState) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayManagerResultWithState) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayManagerResultWithState) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayManagerResultWithState) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayManagerResultWithState = {
@@ -2372,13 +2363,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayModeInfo[] = 
-    {
+    static PyType_Slot _type_slots_DisplayModeInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayModeInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayModeInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayModeInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayModeInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayModeInfo = {
@@ -3064,13 +3054,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayPath[] = 
-    {
+    static PyType_Slot _type_slots_DisplayPath[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayPath) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayPath) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayPath) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayPath) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayPath = {
@@ -3337,13 +3326,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayPrimaryDescription[] = 
-    {
+    static PyType_Slot _type_slots_DisplayPrimaryDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayPrimaryDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayPrimaryDescription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayPrimaryDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayPrimaryDescription) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayPrimaryDescription = {
@@ -3430,13 +3418,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayScanout[] = 
-    {
+    static PyType_Slot _type_slots_DisplayScanout[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayScanout) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayScanout) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayScanout) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayScanout) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayScanout = {
@@ -3634,13 +3621,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplaySource[] = 
-    {
+    static PyType_Slot _type_slots_DisplaySource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplaySource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplaySource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplaySource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplaySource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplaySource = {
@@ -4078,13 +4064,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayState[] = 
-    {
+    static PyType_Slot _type_slots_DisplayState[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayState) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayState) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayState) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayState) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayState = {
@@ -4185,13 +4170,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayStateOperationResult[] = 
-    {
+    static PyType_Slot _type_slots_DisplayStateOperationResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayStateOperationResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayStateOperationResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayStateOperationResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayStateOperationResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayStateOperationResult = {
@@ -4252,13 +4236,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplaySurface[] = 
-    {
+    static PyType_Slot _type_slots_DisplaySurface[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplaySurface) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplaySurface) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplaySurface) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplaySurface) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplaySurface = {
@@ -4633,13 +4616,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayTarget[] = 
-    {
+    static PyType_Slot _type_slots_DisplayTarget[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayTarget) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayTarget) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayTarget = {
@@ -4801,13 +4783,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayTask[] = 
-    {
+    static PyType_Slot _type_slots_DisplayTask[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayTask) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayTask) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayTask) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayTask) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayTask = {
@@ -4963,13 +4944,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayTaskPool[] = 
-    {
+    static PyType_Slot _type_slots_DisplayTaskPool[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayTaskPool) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayTaskPool) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayTaskPool) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayTaskPool) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayTaskPool = {
@@ -5090,13 +5070,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayTaskResult[] = 
-    {
+    static PyType_Slot _type_slots_DisplayTaskResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayTaskResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayTaskResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayTaskResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayTaskResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayTaskResult = {
@@ -5278,13 +5257,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayView[] = 
-    {
+    static PyType_Slot _type_slots_DisplayView[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayView) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayView) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayView = {
@@ -5529,13 +5507,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayWireFormat[] = 
-    {
+    static PyType_Slot _type_slots_DisplayWireFormat[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayWireFormat) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayWireFormat) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayWireFormat) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayWireFormat) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayWireFormat = {
@@ -5713,14 +5690,13 @@ namespace py::cpp::Windows::Devices::Display::Core
         { }
     };
 
-    static PyType_Slot _type_slots_DisplayPresentationRate[] = 
-    {
+    static PyType_Slot _type_slots_DisplayPresentationRate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayPresentationRate) },
         { Py_tp_init, reinterpret_cast<void*>(_init_DisplayPresentationRate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayPresentationRate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayPresentationRate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayPresentationRate) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_DisplayPresentationRate = {

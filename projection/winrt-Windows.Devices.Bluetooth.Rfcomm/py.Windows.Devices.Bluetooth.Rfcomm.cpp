@@ -496,13 +496,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
         { }
     };
 
-    static PyType_Slot _type_slots_RfcommDeviceService[] = 
-    {
+    static PyType_Slot _type_slots_RfcommDeviceService[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RfcommDeviceService) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RfcommDeviceService) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RfcommDeviceService) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RfcommDeviceService) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RfcommDeviceService = {
@@ -632,13 +631,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
         { }
     };
 
-    static PyType_Slot _type_slots_RfcommDeviceServicesResult[] = 
-    {
+    static PyType_Slot _type_slots_RfcommDeviceServicesResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RfcommDeviceServicesResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RfcommDeviceServicesResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RfcommDeviceServicesResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RfcommDeviceServicesResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RfcommDeviceServicesResult = {
@@ -955,13 +953,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
         { }
     };
 
-    static PyType_Slot _type_slots_RfcommServiceId[] = 
-    {
+    static PyType_Slot _type_slots_RfcommServiceId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RfcommServiceId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RfcommServiceId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RfcommServiceId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RfcommServiceId) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RfcommServiceId = {
@@ -1212,13 +1209,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
         { }
     };
 
-    static PyType_Slot _type_slots_RfcommServiceProvider[] = 
-    {
+    static PyType_Slot _type_slots_RfcommServiceProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RfcommServiceProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RfcommServiceProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RfcommServiceProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RfcommServiceProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RfcommServiceProvider = {

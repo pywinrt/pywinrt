@@ -1254,13 +1254,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_Appointment[] = 
-    {
+    static PyType_Slot _type_slots_Appointment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Appointment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Appointment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Appointment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Appointment) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Appointment = {
@@ -2695,13 +2694,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentCalendar[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentCalendar[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendar) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendar) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendar) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendar) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentCalendar = {
@@ -2981,13 +2979,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentCalendarSyncManager[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentCalendarSyncManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarSyncManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarSyncManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarSyncManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarSyncManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentCalendarSyncManager = {
@@ -3088,13 +3085,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentConflictResult[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentConflictResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentConflictResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentConflictResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentConflictResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentConflictResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentConflictResult = {
@@ -3215,13 +3211,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentException[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentException[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentException) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentException) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentException) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentException) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentException = {
@@ -3496,13 +3491,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentInvitee[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentInvitee[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentInvitee) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentInvitee) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentInvitee) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentInvitee) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentInvitee = {
@@ -3917,12 +3911,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentManager[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentManager = {
@@ -4400,13 +4393,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentManagerForUser[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentManagerForUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentManagerForUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentManagerForUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentManagerForUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentManagerForUser) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentManagerForUser = {
@@ -4585,13 +4577,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentOrganizer[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentOrganizer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentOrganizer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentOrganizer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentOrganizer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentOrganizer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentOrganizer = {
@@ -5112,12 +5103,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentProperties[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentProperties = {
@@ -5723,13 +5713,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentRecurrence[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentRecurrence[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentRecurrence) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentRecurrence) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentRecurrence) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentRecurrence) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentRecurrence = {
@@ -6492,13 +6481,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentStore[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentStore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentStore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentStore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentStore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentStore) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentStore = {
@@ -6619,13 +6607,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentStoreChange[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentStoreChange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentStoreChange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentStoreChange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentStoreChange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentStoreChange) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentStoreChange = {
@@ -6780,13 +6767,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentStoreChangeReader[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentStoreChangeReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentStoreChangeReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentStoreChangeReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentStoreChangeReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentStoreChangeReader) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentStoreChangeReader = {
@@ -6959,13 +6945,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentStoreChangeTracker[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentStoreChangeTracker[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentStoreChangeTracker) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentStoreChangeTracker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentStoreChangeTracker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentStoreChangeTracker) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentStoreChangeTracker = {
@@ -7057,13 +7042,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentStoreChangedDeferral[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentStoreChangedDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentStoreChangedDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentStoreChangedDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentStoreChangedDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentStoreChangedDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentStoreChangedDeferral = {
@@ -7154,13 +7138,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentStoreChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentStoreChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentStoreChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentStoreChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentStoreChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentStoreChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentStoreChangedEventArgs = {
@@ -7221,13 +7204,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentStoreNotificationTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentStoreNotificationTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentStoreNotificationTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentStoreNotificationTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentStoreNotificationTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentStoreNotificationTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentStoreNotificationTriggerDetails = {
@@ -7446,13 +7428,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_FindAppointmentsOptions[] = 
-    {
+    static PyType_Slot _type_slots_FindAppointmentsOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FindAppointmentsOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FindAppointmentsOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FindAppointmentsOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FindAppointmentsOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FindAppointmentsOptions = {
@@ -7609,13 +7590,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot _type_slots_IAppointmentParticipant[] = 
-    {
+    static PyType_Slot _type_slots_IAppointmentParticipant[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentParticipant) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentParticipant) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentParticipant) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentParticipant) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IAppointmentParticipant = {

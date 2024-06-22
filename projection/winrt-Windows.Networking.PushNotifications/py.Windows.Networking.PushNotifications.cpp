@@ -172,13 +172,12 @@ namespace py::cpp::Windows::Networking::PushNotifications
         { }
     };
 
-    static PyType_Slot _type_slots_PushNotificationChannel[] = 
-    {
+    static PyType_Slot _type_slots_PushNotificationChannel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PushNotificationChannel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PushNotificationChannel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PushNotificationChannel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PushNotificationChannel) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PushNotificationChannel = {
@@ -390,12 +389,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
         { }
     };
 
-    static PyType_Slot _type_slots_PushNotificationChannelManager[] = 
-    {
+    static PyType_Slot _type_slots_PushNotificationChannelManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PushNotificationChannelManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PushNotificationChannelManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PushNotificationChannelManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PushNotificationChannelManager = {
@@ -642,13 +640,12 @@ namespace py::cpp::Windows::Networking::PushNotifications
         { }
     };
 
-    static PyType_Slot _type_slots_PushNotificationChannelManagerForUser[] = 
-    {
+    static PyType_Slot _type_slots_PushNotificationChannelManagerForUser[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PushNotificationChannelManagerForUser) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PushNotificationChannelManagerForUser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PushNotificationChannelManagerForUser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PushNotificationChannelManagerForUser) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PushNotificationChannelManagerForUser = {
@@ -709,13 +706,12 @@ namespace py::cpp::Windows::Networking::PushNotifications
         { }
     };
 
-    static PyType_Slot _type_slots_PushNotificationChannelsRevokedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PushNotificationChannelsRevokedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PushNotificationChannelsRevokedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PushNotificationChannelsRevokedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PushNotificationChannelsRevokedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PushNotificationChannelsRevokedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PushNotificationChannelsRevokedEventArgs = {
@@ -924,13 +920,12 @@ namespace py::cpp::Windows::Networking::PushNotifications
         { }
     };
 
-    static PyType_Slot _type_slots_PushNotificationReceivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PushNotificationReceivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PushNotificationReceivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PushNotificationReceivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PushNotificationReceivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PushNotificationReceivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PushNotificationReceivedEventArgs = {
@@ -1071,13 +1066,12 @@ namespace py::cpp::Windows::Networking::PushNotifications
         { }
     };
 
-    static PyType_Slot _type_slots_RawNotification[] = 
-    {
+    static PyType_Slot _type_slots_RawNotification[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RawNotification) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RawNotification) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RawNotification) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RawNotification) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RawNotification = {

@@ -87,13 +87,12 @@ namespace py::cpp::Windows::UI::Core::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_CoreAppWindowPreview[] = 
-    {
+    static PyType_Slot _type_slots_CoreAppWindowPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreAppWindowPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreAppWindowPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreAppWindowPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreAppWindowPreview) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_CoreAppWindowPreview = {
@@ -258,13 +257,12 @@ namespace py::cpp::Windows::UI::Core::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_SystemNavigationCloseRequestedPreviewEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_SystemNavigationCloseRequestedPreviewEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemNavigationCloseRequestedPreviewEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemNavigationCloseRequestedPreviewEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemNavigationCloseRequestedPreviewEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemNavigationCloseRequestedPreviewEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemNavigationCloseRequestedPreviewEventArgs = {
@@ -399,13 +397,12 @@ namespace py::cpp::Windows::UI::Core::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_SystemNavigationManagerPreview[] = 
-    {
+    static PyType_Slot _type_slots_SystemNavigationManagerPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SystemNavigationManagerPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemNavigationManagerPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemNavigationManagerPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemNavigationManagerPreview) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SystemNavigationManagerPreview = {

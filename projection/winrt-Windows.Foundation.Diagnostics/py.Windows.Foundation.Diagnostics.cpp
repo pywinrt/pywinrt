@@ -246,12 +246,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_AsyncCausalityTracer[] = 
-    {
+    static PyType_Slot _type_slots_AsyncCausalityTracer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AsyncCausalityTracer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AsyncCausalityTracer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AsyncCausalityTracer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AsyncCausalityTracer = {
@@ -433,13 +432,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_ErrorDetails[] = 
-    {
+    static PyType_Slot _type_slots_ErrorDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ErrorDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ErrorDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ErrorDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ErrorDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ErrorDetails = {
@@ -785,13 +783,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_FileLoggingSession[] = 
-    {
+    static PyType_Slot _type_slots_FileLoggingSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FileLoggingSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FileLoggingSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FileLoggingSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FileLoggingSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_FileLoggingSession = {
@@ -872,13 +869,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_LogFileGeneratedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_LogFileGeneratedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LogFileGeneratedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LogFileGeneratedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LogFileGeneratedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LogFileGeneratedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LogFileGeneratedEventArgs = {
@@ -1442,13 +1438,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_LoggingActivity[] = 
-    {
+    static PyType_Slot _type_slots_LoggingActivity[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoggingActivity) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoggingActivity) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoggingActivity) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoggingActivity) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LoggingActivity = {
@@ -2126,13 +2121,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_LoggingChannel[] = 
-    {
+    static PyType_Slot _type_slots_LoggingChannel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoggingChannel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoggingChannel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoggingChannel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoggingChannel) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LoggingChannel = {
@@ -2278,13 +2272,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_LoggingChannelOptions[] = 
-    {
+    static PyType_Slot _type_slots_LoggingChannelOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoggingChannelOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoggingChannelOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoggingChannelOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoggingChannelOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LoggingChannelOptions = {
@@ -5478,13 +5471,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_LoggingFields[] = 
-    {
+    static PyType_Slot _type_slots_LoggingFields[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoggingFields) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoggingFields) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoggingFields) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoggingFields) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LoggingFields = {
@@ -5870,13 +5862,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_LoggingOptions[] = 
-    {
+    static PyType_Slot _type_slots_LoggingOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoggingOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoggingOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoggingOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoggingOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LoggingOptions = {
@@ -6154,13 +6145,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_LoggingSession[] = 
-    {
+    static PyType_Slot _type_slots_LoggingSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoggingSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoggingSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoggingSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoggingSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_LoggingSession = {
@@ -6306,13 +6296,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_RuntimeBrokerErrorSettings[] = 
-    {
+    static PyType_Slot _type_slots_RuntimeBrokerErrorSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RuntimeBrokerErrorSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RuntimeBrokerErrorSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RuntimeBrokerErrorSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RuntimeBrokerErrorSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_RuntimeBrokerErrorSettings = {
@@ -6413,13 +6402,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_TracingStatusChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_TracingStatusChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TracingStatusChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TracingStatusChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TracingStatusChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TracingStatusChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_TracingStatusChangedEventArgs = {
@@ -6543,13 +6531,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_IErrorReportingSettings[] = 
-    {
+    static PyType_Slot _type_slots_IErrorReportingSettings[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IErrorReportingSettings) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IErrorReportingSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IErrorReportingSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IErrorReportingSettings) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IErrorReportingSettings = {
@@ -6845,13 +6832,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_IFileLoggingSession[] = 
-    {
+    static PyType_Slot _type_slots_IFileLoggingSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IFileLoggingSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFileLoggingSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFileLoggingSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFileLoggingSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IFileLoggingSession = {
@@ -7181,13 +7167,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_ILoggingChannel[] = 
-    {
+    static PyType_Slot _type_slots_ILoggingChannel[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILoggingChannel) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILoggingChannel) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILoggingChannel) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILoggingChannel) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ILoggingChannel = {
@@ -7441,13 +7426,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_ILoggingSession[] = 
-    {
+    static PyType_Slot _type_slots_ILoggingSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILoggingSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILoggingSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILoggingSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILoggingSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ILoggingSession = {
@@ -7779,13 +7763,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { }
     };
 
-    static PyType_Slot _type_slots_ILoggingTarget[] = 
-    {
+    static PyType_Slot _type_slots_ILoggingTarget[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ILoggingTarget) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILoggingTarget) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILoggingTarget) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILoggingTarget) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ILoggingTarget = {

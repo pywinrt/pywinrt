@@ -242,13 +242,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { }
     };
 
-    static PyType_Slot _type_slots_PrintSupportExtensionSession[] = 
-    {
+    static PyType_Slot _type_slots_PrintSupportExtensionSession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintSupportExtensionSession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintSupportExtensionSession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintSupportExtensionSession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintSupportExtensionSession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintSupportExtensionSession = {
@@ -329,13 +328,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { }
     };
 
-    static PyType_Slot _type_slots_PrintSupportExtensionTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_PrintSupportExtensionTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintSupportExtensionTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintSupportExtensionTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintSupportExtensionTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintSupportExtensionTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintSupportExtensionTriggerDetails = {
@@ -638,13 +636,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { }
     };
 
-    static PyType_Slot _type_slots_PrintSupportPrintDeviceCapabilitiesChangedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PrintSupportPrintDeviceCapabilitiesChangedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintSupportPrintDeviceCapabilitiesChangedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintSupportPrintDeviceCapabilitiesChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintSupportPrintDeviceCapabilitiesChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintSupportPrintDeviceCapabilitiesChangedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintSupportPrintDeviceCapabilitiesChangedEventArgs = {
@@ -767,13 +764,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { }
     };
 
-    static PyType_Slot _type_slots_PrintSupportPrintDeviceCapabilitiesUpdatePolicy[] = 
-    {
+    static PyType_Slot _type_slots_PrintSupportPrintDeviceCapabilitiesUpdatePolicy[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintSupportPrintDeviceCapabilitiesUpdatePolicy) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintSupportPrintDeviceCapabilitiesUpdatePolicy) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintSupportPrintDeviceCapabilitiesUpdatePolicy) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintSupportPrintDeviceCapabilitiesUpdatePolicy) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintSupportPrintDeviceCapabilitiesUpdatePolicy = {
@@ -979,13 +975,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { }
     };
 
-    static PyType_Slot _type_slots_PrintSupportPrintTicketElement[] = 
-    {
+    static PyType_Slot _type_slots_PrintSupportPrintTicketElement[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintSupportPrintTicketElement) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintSupportPrintTicketElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintSupportPrintTicketElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintSupportPrintTicketElement) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintSupportPrintTicketElement = {
@@ -1129,13 +1124,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { }
     };
 
-    static PyType_Slot _type_slots_PrintSupportPrintTicketValidationRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PrintSupportPrintTicketValidationRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintSupportPrintTicketValidationRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintSupportPrintTicketValidationRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintSupportPrintTicketValidationRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintSupportPrintTicketValidationRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintSupportPrintTicketValidationRequestedEventArgs = {
@@ -1413,13 +1407,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { }
     };
 
-    static PyType_Slot _type_slots_PrintSupportPrinterSelectedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PrintSupportPrinterSelectedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintSupportPrinterSelectedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintSupportPrinterSelectedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintSupportPrinterSelectedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintSupportPrinterSelectedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintSupportPrinterSelectedEventArgs = {
@@ -1520,13 +1513,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { }
     };
 
-    static PyType_Slot _type_slots_PrintSupportSessionInfo[] = 
-    {
+    static PyType_Slot _type_slots_PrintSupportSessionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintSupportSessionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintSupportSessionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintSupportSessionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintSupportSessionInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintSupportSessionInfo = {
@@ -1717,13 +1709,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { }
     };
 
-    static PyType_Slot _type_slots_PrintSupportSettingsActivatedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PrintSupportSettingsActivatedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintSupportSettingsActivatedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintSupportSettingsActivatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintSupportSettingsActivatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintSupportSettingsActivatedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintSupportSettingsActivatedEventArgs = {
@@ -1897,13 +1888,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { }
     };
 
-    static PyType_Slot _type_slots_PrintSupportSettingsUISession[] = 
-    {
+    static PyType_Slot _type_slots_PrintSupportSettingsUISession[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintSupportSettingsUISession) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintSupportSettingsUISession) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintSupportSettingsUISession) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintSupportSettingsUISession) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintSupportSettingsUISession = {

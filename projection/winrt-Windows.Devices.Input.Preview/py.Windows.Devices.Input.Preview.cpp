@@ -232,13 +232,12 @@ namespace py::cpp::Windows::Devices::Input::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_GazeDevicePreview[] = 
-    {
+    static PyType_Slot _type_slots_GazeDevicePreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazeDevicePreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazeDevicePreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazeDevicePreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazeDevicePreview) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GazeDevicePreview = {
@@ -319,13 +318,12 @@ namespace py::cpp::Windows::Devices::Input::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_GazeDeviceWatcherAddedPreviewEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GazeDeviceWatcherAddedPreviewEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazeDeviceWatcherAddedPreviewEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazeDeviceWatcherAddedPreviewEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazeDeviceWatcherAddedPreviewEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazeDeviceWatcherAddedPreviewEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GazeDeviceWatcherAddedPreviewEventArgs = {
@@ -628,13 +626,12 @@ namespace py::cpp::Windows::Devices::Input::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_GazeDeviceWatcherPreview[] = 
-    {
+    static PyType_Slot _type_slots_GazeDeviceWatcherPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazeDeviceWatcherPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazeDeviceWatcherPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazeDeviceWatcherPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazeDeviceWatcherPreview) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GazeDeviceWatcherPreview = {
@@ -715,13 +712,12 @@ namespace py::cpp::Windows::Devices::Input::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_GazeDeviceWatcherRemovedPreviewEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GazeDeviceWatcherRemovedPreviewEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazeDeviceWatcherRemovedPreviewEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazeDeviceWatcherRemovedPreviewEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazeDeviceWatcherRemovedPreviewEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazeDeviceWatcherRemovedPreviewEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GazeDeviceWatcherRemovedPreviewEventArgs = {
@@ -802,13 +798,12 @@ namespace py::cpp::Windows::Devices::Input::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_GazeDeviceWatcherUpdatedPreviewEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GazeDeviceWatcherUpdatedPreviewEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazeDeviceWatcherUpdatedPreviewEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazeDeviceWatcherUpdatedPreviewEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazeDeviceWatcherUpdatedPreviewEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazeDeviceWatcherUpdatedPreviewEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GazeDeviceWatcherUpdatedPreviewEventArgs = {
@@ -937,13 +932,12 @@ namespace py::cpp::Windows::Devices::Input::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_GazeEnteredPreviewEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GazeEnteredPreviewEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazeEnteredPreviewEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazeEnteredPreviewEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazeEnteredPreviewEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazeEnteredPreviewEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GazeEnteredPreviewEventArgs = {
@@ -1072,13 +1066,12 @@ namespace py::cpp::Windows::Devices::Input::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_GazeExitedPreviewEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GazeExitedPreviewEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazeExitedPreviewEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazeExitedPreviewEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazeExitedPreviewEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazeExitedPreviewEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GazeExitedPreviewEventArgs = {
@@ -1332,13 +1325,12 @@ namespace py::cpp::Windows::Devices::Input::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_GazeInputSourcePreview[] = 
-    {
+    static PyType_Slot _type_slots_GazeInputSourcePreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazeInputSourcePreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazeInputSourcePreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazeInputSourcePreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazeInputSourcePreview) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GazeInputSourcePreview = {
@@ -1524,13 +1516,12 @@ namespace py::cpp::Windows::Devices::Input::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_GazeMovedPreviewEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_GazeMovedPreviewEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazeMovedPreviewEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazeMovedPreviewEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazeMovedPreviewEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazeMovedPreviewEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GazeMovedPreviewEventArgs = {
@@ -1691,13 +1682,12 @@ namespace py::cpp::Windows::Devices::Input::Preview
         { }
     };
 
-    static PyType_Slot _type_slots_GazePointPreview[] = 
-    {
+    static PyType_Slot _type_slots_GazePointPreview[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GazePointPreview) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GazePointPreview) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GazePointPreview) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GazePointPreview) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_GazePointPreview = {

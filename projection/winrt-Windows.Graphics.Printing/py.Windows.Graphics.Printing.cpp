@@ -188,13 +188,12 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_PrintManager[] = 
-    {
+    static PyType_Slot _type_slots_PrintManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintManager = {
@@ -545,13 +544,12 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_PrintPageInfo[] = 
-    {
+    static PyType_Slot _type_slots_PrintPageInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintPageInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintPageInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintPageInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintPageInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintPageInfo = {
@@ -692,13 +690,12 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_PrintPageRange[] = 
-    {
+    static PyType_Slot _type_slots_PrintPageRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintPageRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintPageRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintPageRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintPageRange) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintPageRange = {
@@ -903,13 +900,12 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_PrintPageRangeOptions[] = 
-    {
+    static PyType_Slot _type_slots_PrintPageRangeOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintPageRangeOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintPageRangeOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintPageRangeOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintPageRangeOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintPageRangeOptions = {
@@ -1354,13 +1350,12 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_PrintTask[] = 
-    {
+    static PyType_Slot _type_slots_PrintTask[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTask) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTask) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTask) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTask) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintTask = {
@@ -1441,13 +1436,12 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_PrintTaskCompletedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PrintTaskCompletedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTaskCompletedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTaskCompletedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTaskCompletedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTaskCompletedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintTaskCompletedEventArgs = {
@@ -2248,13 +2242,12 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_PrintTaskOptions[] = 
-    {
+    static PyType_Slot _type_slots_PrintTaskOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTaskOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTaskOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTaskOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTaskOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintTaskOptions = {
@@ -2335,13 +2328,12 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_PrintTaskProgressingEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PrintTaskProgressingEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTaskProgressingEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTaskProgressingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTaskProgressingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTaskProgressingEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintTaskProgressingEventArgs = {
@@ -2485,13 +2477,12 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_PrintTaskRequest[] = 
-    {
+    static PyType_Slot _type_slots_PrintTaskRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTaskRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTaskRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTaskRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTaskRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintTaskRequest = {
@@ -2583,13 +2574,12 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_PrintTaskRequestedDeferral[] = 
-    {
+    static PyType_Slot _type_slots_PrintTaskRequestedDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTaskRequestedDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTaskRequestedDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTaskRequestedDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTaskRequestedDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintTaskRequestedDeferral = {
@@ -2670,13 +2660,12 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_PrintTaskRequestedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_PrintTaskRequestedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTaskRequestedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTaskRequestedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTaskRequestedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTaskRequestedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintTaskRequestedEventArgs = {
@@ -2820,13 +2809,12 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_PrintTaskSourceRequestedArgs[] = 
-    {
+    static PyType_Slot _type_slots_PrintTaskSourceRequestedArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTaskSourceRequestedArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTaskSourceRequestedArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTaskSourceRequestedArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTaskSourceRequestedArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintTaskSourceRequestedArgs = {
@@ -2918,13 +2906,12 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_PrintTaskSourceRequestedDeferral[] = 
-    {
+    static PyType_Slot _type_slots_PrintTaskSourceRequestedDeferral[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintTaskSourceRequestedDeferral) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintTaskSourceRequestedDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintTaskSourceRequestedDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintTaskSourceRequestedDeferral) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintTaskSourceRequestedDeferral = {
@@ -3236,12 +3223,11 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_StandardPrintTaskOptions[] = 
-    {
+    static PyType_Slot _type_slots_StandardPrintTaskOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StandardPrintTaskOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StandardPrintTaskOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StandardPrintTaskOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StandardPrintTaskOptions = {
@@ -3342,13 +3328,12 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_IPrintDocumentSource[] = 
-    {
+    static PyType_Slot _type_slots_IPrintDocumentSource[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPrintDocumentSource) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrintDocumentSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrintDocumentSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrintDocumentSource) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPrintDocumentSource = {
@@ -3441,13 +3426,12 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_IPrintTaskOptionsCore[] = 
-    {
+    static PyType_Slot _type_slots_IPrintTaskOptionsCore[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPrintTaskOptionsCore) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrintTaskOptionsCore) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrintTaskOptionsCore) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrintTaskOptionsCore) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPrintTaskOptionsCore = {
@@ -4076,13 +4060,12 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_IPrintTaskOptionsCoreProperties[] = 
-    {
+    static PyType_Slot _type_slots_IPrintTaskOptionsCoreProperties[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPrintTaskOptionsCoreProperties) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrintTaskOptionsCoreProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrintTaskOptionsCoreProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrintTaskOptionsCoreProperties) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPrintTaskOptionsCoreProperties = {
@@ -4163,13 +4146,12 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_IPrintTaskOptionsCoreUIConfiguration[] = 
-    {
+    static PyType_Slot _type_slots_IPrintTaskOptionsCoreUIConfiguration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPrintTaskOptionsCoreUIConfiguration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPrintTaskOptionsCoreUIConfiguration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPrintTaskOptionsCoreUIConfiguration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPrintTaskOptionsCoreUIConfiguration) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPrintTaskOptionsCoreUIConfiguration = {
@@ -4391,14 +4373,13 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot _type_slots_PrintPageDescription[] = 
-    {
+    static PyType_Slot _type_slots_PrintPageDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintPageDescription) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PrintPageDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintPageDescription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintPageDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintPageDescription) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PrintPageDescription = {

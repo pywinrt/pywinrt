@@ -79,12 +79,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_KnownPerceptionFrameKind[] = 
-    {
+    static PyType_Slot _type_slots_KnownPerceptionFrameKind[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KnownPerceptionFrameKind) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KnownPerceptionFrameKind) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KnownPerceptionFrameKind) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_KnownPerceptionFrameKind = {
@@ -217,13 +216,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionControlGroup[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionControlGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionControlGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionControlGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionControlGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionControlGroup) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionControlGroup = {
@@ -370,13 +368,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionCorrelation[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionCorrelation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionCorrelation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionCorrelation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionCorrelation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionCorrelation) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionCorrelation = {
@@ -481,13 +478,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionCorrelationGroup[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionCorrelationGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionCorrelationGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionCorrelationGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionCorrelationGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionCorrelationGroup) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionCorrelationGroup = {
@@ -594,13 +590,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionFaceAuthenticationGroup[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionFaceAuthenticationGroup[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionFaceAuthenticationGroup) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionFaceAuthenticationGroup) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionFaceAuthenticationGroup) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionFaceAuthenticationGroup) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionFaceAuthenticationGroup = {
@@ -749,13 +744,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionFrame[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionFrame = {
@@ -1078,13 +1072,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionFrameProviderInfo[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionFrameProviderInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionFrameProviderInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionFrameProviderInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionFrameProviderInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionFrameProviderInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionFrameProviderInfo = {
@@ -1441,12 +1434,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionFrameProviderManagerService[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionFrameProviderManagerService[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionFrameProviderManagerService) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionFrameProviderManagerService) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionFrameProviderManagerService) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionFrameProviderManagerService = {
@@ -1660,13 +1652,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionPropertyChangeRequest[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionPropertyChangeRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionPropertyChangeRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionPropertyChangeRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionPropertyChangeRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionPropertyChangeRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionPropertyChangeRequest = {
@@ -1868,13 +1859,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_PerceptionVideoFrameAllocator[] = 
-    {
+    static PyType_Slot _type_slots_PerceptionVideoFrameAllocator[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PerceptionVideoFrameAllocator) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PerceptionVideoFrameAllocator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PerceptionVideoFrameAllocator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PerceptionVideoFrameAllocator) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_PerceptionVideoFrameAllocator = {
@@ -2142,13 +2132,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IPerceptionFrameProvider[] = 
-    {
+    static PyType_Slot _type_slots_IPerceptionFrameProvider[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPerceptionFrameProvider) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPerceptionFrameProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPerceptionFrameProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPerceptionFrameProvider) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPerceptionFrameProvider = {
@@ -2293,13 +2282,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_IPerceptionFrameProviderManager[] = 
-    {
+    static PyType_Slot _type_slots_IPerceptionFrameProviderManager[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IPerceptionFrameProviderManager) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPerceptionFrameProviderManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPerceptionFrameProviderManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPerceptionFrameProviderManager) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IPerceptionFrameProviderManager = {

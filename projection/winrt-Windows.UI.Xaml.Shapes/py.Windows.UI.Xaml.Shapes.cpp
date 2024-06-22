@@ -78,13 +78,12 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         { }
     };
 
-    static PyType_Slot _type_slots_Ellipse[] = 
-    {
+    static PyType_Slot _type_slots_Ellipse[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Ellipse) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Ellipse) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Ellipse) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Ellipse) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Ellipse = {
@@ -435,13 +434,12 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         { }
     };
 
-    static PyType_Slot _type_slots_Line[] = 
-    {
+    static PyType_Slot _type_slots_Line[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Line) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Line) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Line) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Line) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Line = {
@@ -620,13 +618,12 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         { }
     };
 
-    static PyType_Slot _type_slots_Path[] = 
-    {
+    static PyType_Slot _type_slots_Path[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Path) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Path) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Path) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Path) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Path = {
@@ -869,13 +866,12 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         { }
     };
 
-    static PyType_Slot _type_slots_Polygon[] = 
-    {
+    static PyType_Slot _type_slots_Polygon[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Polygon) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Polygon) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Polygon) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Polygon) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Polygon = {
@@ -1119,13 +1115,12 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         { }
     };
 
-    static PyType_Slot _type_slots_Polyline[] = 
-    {
+    static PyType_Slot _type_slots_Polyline[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Polyline) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Polyline) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Polyline) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Polyline) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Polyline = {
@@ -1369,13 +1364,12 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         { }
     };
 
-    static PyType_Slot _type_slots_Rectangle[] = 
-    {
+    static PyType_Slot _type_slots_Rectangle[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Rectangle) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Rectangle) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Rectangle) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Rectangle) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Rectangle = {
@@ -2250,13 +2244,12 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         { }
     };
 
-    static PyType_Slot _type_slots_Shape[] = 
-    {
+    static PyType_Slot _type_slots_Shape[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Shape) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Shape) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Shape) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Shape) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_Shape = {

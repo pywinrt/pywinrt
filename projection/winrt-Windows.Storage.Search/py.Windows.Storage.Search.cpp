@@ -394,13 +394,12 @@ namespace py::cpp::Windows::Storage::Search
         { }
     };
 
-    static PyType_Slot _type_slots_ContentIndexer[] = 
-    {
+    static PyType_Slot _type_slots_ContentIndexer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentIndexer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentIndexer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentIndexer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentIndexer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContentIndexer = {
@@ -639,13 +638,12 @@ namespace py::cpp::Windows::Storage::Search
         { }
     };
 
-    static PyType_Slot _type_slots_ContentIndexerQuery[] = 
-    {
+    static PyType_Slot _type_slots_ContentIndexerQuery[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ContentIndexerQuery) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentIndexerQuery) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentIndexerQuery) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentIndexerQuery) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ContentIndexerQuery = {
@@ -892,13 +890,12 @@ namespace py::cpp::Windows::Storage::Search
         { }
     };
 
-    static PyType_Slot _type_slots_IndexableContent[] = 
-    {
+    static PyType_Slot _type_slots_IndexableContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IndexableContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IndexableContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IndexableContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IndexableContent) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IndexableContent = {
@@ -1484,13 +1481,12 @@ namespace py::cpp::Windows::Storage::Search
         { }
     };
 
-    static PyType_Slot _type_slots_QueryOptions[] = 
-    {
+    static PyType_Slot _type_slots_QueryOptions[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_QueryOptions) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_QueryOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_QueryOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_QueryOptions) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_QueryOptions = {
@@ -2091,8 +2087,7 @@ namespace py::cpp::Windows::Storage::Search
         { }
     };
 
-    static PyType_Slot _type_slots_SortEntryVector[] = 
-    {
+    static PyType_Slot _type_slots_SortEntryVector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SortEntryVector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SortEntryVector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SortEntryVector) },
@@ -2102,7 +2097,7 @@ namespace py::cpp::Windows::Storage::Search
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_SortEntryVector) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_SortEntryVector) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_SortEntryVector) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SortEntryVector = {
@@ -2481,13 +2476,12 @@ namespace py::cpp::Windows::Storage::Search
         { }
     };
 
-    static PyType_Slot _type_slots_StorageFileQueryResult[] = 
-    {
+    static PyType_Slot _type_slots_StorageFileQueryResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageFileQueryResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageFileQueryResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageFileQueryResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageFileQueryResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StorageFileQueryResult = {
@@ -2834,13 +2828,12 @@ namespace py::cpp::Windows::Storage::Search
         { }
     };
 
-    static PyType_Slot _type_slots_StorageFolderQueryResult[] = 
-    {
+    static PyType_Slot _type_slots_StorageFolderQueryResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageFolderQueryResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageFolderQueryResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageFolderQueryResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageFolderQueryResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StorageFolderQueryResult = {
@@ -3187,13 +3180,12 @@ namespace py::cpp::Windows::Storage::Search
         { }
     };
 
-    static PyType_Slot _type_slots_StorageItemQueryResult[] = 
-    {
+    static PyType_Slot _type_slots_StorageItemQueryResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageItemQueryResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageItemQueryResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageItemQueryResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageItemQueryResult) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StorageItemQueryResult = {
@@ -3294,13 +3286,12 @@ namespace py::cpp::Windows::Storage::Search
         { }
     };
 
-    static PyType_Slot _type_slots_StorageLibraryChangeTrackerTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_StorageLibraryChangeTrackerTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageLibraryChangeTrackerTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageLibraryChangeTrackerTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageLibraryChangeTrackerTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageLibraryChangeTrackerTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StorageLibraryChangeTrackerTriggerDetails = {
@@ -3413,13 +3404,12 @@ namespace py::cpp::Windows::Storage::Search
         { }
     };
 
-    static PyType_Slot _type_slots_StorageLibraryContentChangedTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_StorageLibraryContentChangedTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorageLibraryContentChangedTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageLibraryContentChangedTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageLibraryContentChangedTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageLibraryContentChangedTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_StorageLibraryContentChangedTriggerDetails = {
@@ -3598,13 +3588,12 @@ namespace py::cpp::Windows::Storage::Search
         { }
     };
 
-    static PyType_Slot _type_slots_ValueAndLanguage[] = 
-    {
+    static PyType_Slot _type_slots_ValueAndLanguage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ValueAndLanguage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ValueAndLanguage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ValueAndLanguage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ValueAndLanguage) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ValueAndLanguage = {
@@ -3829,13 +3818,12 @@ namespace py::cpp::Windows::Storage::Search
         { }
     };
 
-    static PyType_Slot _type_slots_IIndexableContent[] = 
-    {
+    static PyType_Slot _type_slots_IIndexableContent[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IIndexableContent) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IIndexableContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IIndexableContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IIndexableContent) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IIndexableContent = {
@@ -4389,13 +4377,12 @@ namespace py::cpp::Windows::Storage::Search
         { }
     };
 
-    static PyType_Slot _type_slots_IStorageFolderQueryOperations[] = 
-    {
+    static PyType_Slot _type_slots_IStorageFolderQueryOperations[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageFolderQueryOperations) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageFolderQueryOperations) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageFolderQueryOperations) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageFolderQueryOperations) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IStorageFolderQueryOperations = {
@@ -4691,13 +4678,12 @@ namespace py::cpp::Windows::Storage::Search
         { }
     };
 
-    static PyType_Slot _type_slots_IStorageQueryResultBase[] = 
-    {
+    static PyType_Slot _type_slots_IStorageQueryResultBase[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageQueryResultBase) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageQueryResultBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageQueryResultBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageQueryResultBase) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IStorageQueryResultBase = {
@@ -4849,14 +4835,13 @@ namespace py::cpp::Windows::Storage::Search
         { }
     };
 
-    static PyType_Slot _type_slots_SortEntry[] = 
-    {
+    static PyType_Slot _type_slots_SortEntry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SortEntry) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SortEntry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SortEntry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SortEntry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SortEntry) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_SortEntry = {

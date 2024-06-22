@@ -429,13 +429,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { }
     };
 
-    static PyType_Slot _type_slots_InjectedInputGamepadInfo[] = 
-    {
+    static PyType_Slot _type_slots_InjectedInputGamepadInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputGamepadInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputGamepadInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputGamepadInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputGamepadInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InjectedInputGamepadInfo = {
@@ -662,13 +661,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { }
     };
 
-    static PyType_Slot _type_slots_InjectedInputKeyboardInfo[] = 
-    {
+    static PyType_Slot _type_slots_InjectedInputKeyboardInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputKeyboardInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputKeyboardInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputKeyboardInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputKeyboardInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InjectedInputKeyboardInfo = {
@@ -991,13 +989,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { }
     };
 
-    static PyType_Slot _type_slots_InjectedInputMouseInfo[] = 
-    {
+    static PyType_Slot _type_slots_InjectedInputMouseInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputMouseInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputMouseInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputMouseInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputMouseInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InjectedInputMouseInfo = {
@@ -1416,13 +1413,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { }
     };
 
-    static PyType_Slot _type_slots_InjectedInputPenInfo[] = 
-    {
+    static PyType_Slot _type_slots_InjectedInputPenInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputPenInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputPenInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputPenInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputPenInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InjectedInputPenInfo = {
@@ -1745,13 +1741,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { }
     };
 
-    static PyType_Slot _type_slots_InjectedInputTouchInfo[] = 
-    {
+    static PyType_Slot _type_slots_InjectedInputTouchInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputTouchInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputTouchInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputTouchInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputTouchInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InjectedInputTouchInfo = {
@@ -2258,13 +2253,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { }
     };
 
-    static PyType_Slot _type_slots_InputInjector[] = 
-    {
+    static PyType_Slot _type_slots_InputInjector[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InputInjector) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InputInjector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InputInjector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InputInjector) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InputInjector = {
@@ -2443,14 +2437,13 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { }
     };
 
-    static PyType_Slot _type_slots_InjectedInputPoint[] = 
-    {
+    static PyType_Slot _type_slots_InjectedInputPoint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputPoint) },
         { Py_tp_init, reinterpret_cast<void*>(_init_InjectedInputPoint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputPoint) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputPoint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputPoint) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InjectedInputPoint = {
@@ -2707,14 +2700,13 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { }
     };
 
-    static PyType_Slot _type_slots_InjectedInputPointerInfo[] = 
-    {
+    static PyType_Slot _type_slots_InjectedInputPointerInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputPointerInfo) },
         { Py_tp_init, reinterpret_cast<void*>(_init_InjectedInputPointerInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputPointerInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputPointerInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputPointerInfo) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InjectedInputPointerInfo = {
@@ -2936,14 +2928,13 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { }
     };
 
-    static PyType_Slot _type_slots_InjectedInputRectangle[] = 
-    {
+    static PyType_Slot _type_slots_InjectedInputRectangle[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputRectangle) },
         { Py_tp_init, reinterpret_cast<void*>(_init_InjectedInputRectangle) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputRectangle) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputRectangle) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputRectangle) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_InjectedInputRectangle = {

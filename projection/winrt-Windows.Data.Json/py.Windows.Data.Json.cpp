@@ -1096,8 +1096,7 @@ namespace py::cpp::Windows::Data::Json
         { }
     };
 
-    static PyType_Slot _type_slots_JsonArray[] = 
-    {
+    static PyType_Slot _type_slots_JsonArray[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JsonArray) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_JsonArray) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JsonArray) },
@@ -1108,7 +1107,7 @@ namespace py::cpp::Windows::Data::Json
         { Py_sq_item, reinterpret_cast<void*>(_seq_item_JsonArray) },
         { Py_mp_subscript, reinterpret_cast<void*>(_seq_subscript_JsonArray) },
         { Py_sq_ass_item, reinterpret_cast<void*>(_seq_assign_JsonArray) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_JsonArray = {
@@ -1193,12 +1192,11 @@ namespace py::cpp::Windows::Data::Json
         { }
     };
 
-    static PyType_Slot _type_slots_JsonError[] = 
-    {
+    static PyType_Slot _type_slots_JsonError[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JsonError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JsonError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JsonError) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_JsonError = {
@@ -2319,8 +2317,7 @@ namespace py::cpp::Windows::Data::Json
         { }
     };
 
-    static PyType_Slot _type_slots_JsonObject[] = 
-    {
+    static PyType_Slot _type_slots_JsonObject[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JsonObject) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_JsonObject) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JsonObject) },
@@ -2331,7 +2328,7 @@ namespace py::cpp::Windows::Data::Json
         { Py_mp_length, reinterpret_cast<void*>(_map_length_JsonObject) },
         { Py_mp_subscript, reinterpret_cast<void*>(_map_subscript_JsonObject) },
         { Py_mp_ass_subscript, reinterpret_cast<void*>(_map_assign_JsonObject) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_JsonObject = {
@@ -2859,14 +2856,13 @@ namespace py::cpp::Windows::Data::Json
         { }
     };
 
-    static PyType_Slot _type_slots_JsonValue[] = 
-    {
+    static PyType_Slot _type_slots_JsonValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JsonValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_JsonValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JsonValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JsonValue) },
         { Py_tp_str, reinterpret_cast<void*>(_str_JsonValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_JsonValue = {
@@ -3158,13 +3154,12 @@ namespace py::cpp::Windows::Data::Json
         { }
     };
 
-    static PyType_Slot _type_slots_IJsonValue[] = 
-    {
+    static PyType_Slot _type_slots_IJsonValue[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IJsonValue) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IJsonValue) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IJsonValue) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IJsonValue) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IJsonValue = {

@@ -236,13 +236,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentCalendarCancelMeetingRequest[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentCalendarCancelMeetingRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarCancelMeetingRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarCancelMeetingRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarCancelMeetingRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarCancelMeetingRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentCalendarCancelMeetingRequest = {
@@ -353,13 +352,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentCalendarCancelMeetingRequestEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentCalendarCancelMeetingRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarCancelMeetingRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarCancelMeetingRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarCancelMeetingRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarCancelMeetingRequestEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentCalendarCancelMeetingRequestEventArgs = {
@@ -562,13 +560,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentCalendarCreateOrUpdateAppointmentRequest[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentCalendarCreateOrUpdateAppointmentRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarCreateOrUpdateAppointmentRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarCreateOrUpdateAppointmentRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarCreateOrUpdateAppointmentRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarCreateOrUpdateAppointmentRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentCalendarCreateOrUpdateAppointmentRequest = {
@@ -679,13 +676,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs = {
@@ -946,13 +942,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentCalendarForwardMeetingRequest[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentCalendarForwardMeetingRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarForwardMeetingRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarForwardMeetingRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarForwardMeetingRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarForwardMeetingRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentCalendarForwardMeetingRequest = {
@@ -1063,13 +1058,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentCalendarForwardMeetingRequestEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentCalendarForwardMeetingRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarForwardMeetingRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarForwardMeetingRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarForwardMeetingRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarForwardMeetingRequestEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentCalendarForwardMeetingRequestEventArgs = {
@@ -1330,13 +1324,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentCalendarProposeNewTimeForMeetingRequest[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentCalendarProposeNewTimeForMeetingRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarProposeNewTimeForMeetingRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarProposeNewTimeForMeetingRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarProposeNewTimeForMeetingRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarProposeNewTimeForMeetingRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentCalendarProposeNewTimeForMeetingRequest = {
@@ -1447,13 +1440,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs = {
@@ -1594,13 +1586,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentCalendarSyncManagerSyncRequest[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentCalendarSyncManagerSyncRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarSyncManagerSyncRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarSyncManagerSyncRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarSyncManagerSyncRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarSyncManagerSyncRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentCalendarSyncManagerSyncRequest = {
@@ -1711,13 +1702,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentCalendarSyncManagerSyncRequestEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentCalendarSyncManagerSyncRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarSyncManagerSyncRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarSyncManagerSyncRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarSyncManagerSyncRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarSyncManagerSyncRequestEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentCalendarSyncManagerSyncRequestEventArgs = {
@@ -1978,13 +1968,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentCalendarUpdateMeetingResponseRequest[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentCalendarUpdateMeetingResponseRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarUpdateMeetingResponseRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarUpdateMeetingResponseRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarUpdateMeetingResponseRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarUpdateMeetingResponseRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentCalendarUpdateMeetingResponseRequest = {
@@ -2095,13 +2084,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentCalendarUpdateMeetingResponseRequestEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentCalendarUpdateMeetingResponseRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentCalendarUpdateMeetingResponseRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentCalendarUpdateMeetingResponseRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentCalendarUpdateMeetingResponseRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentCalendarUpdateMeetingResponseRequestEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentCalendarUpdateMeetingResponseRequestEventArgs = {
@@ -2463,13 +2451,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentDataProviderConnection[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentDataProviderConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentDataProviderConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentDataProviderConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentDataProviderConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentDataProviderConnection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentDataProviderConnection = {
@@ -2550,13 +2537,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { }
     };
 
-    static PyType_Slot _type_slots_AppointmentDataProviderTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_AppointmentDataProviderTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppointmentDataProviderTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppointmentDataProviderTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppointmentDataProviderTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppointmentDataProviderTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_AppointmentDataProviderTriggerDetails = {

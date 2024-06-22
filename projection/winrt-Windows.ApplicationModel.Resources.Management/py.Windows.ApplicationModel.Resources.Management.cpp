@@ -188,13 +188,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
         { }
     };
 
-    static PyType_Slot _type_slots_IndexedResourceCandidate[] = 
-    {
+    static PyType_Slot _type_slots_IndexedResourceCandidate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IndexedResourceCandidate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IndexedResourceCandidate) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IndexedResourceCandidate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IndexedResourceCandidate) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IndexedResourceCandidate = {
@@ -295,13 +294,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
         { }
     };
 
-    static PyType_Slot _type_slots_IndexedResourceQualifier[] = 
-    {
+    static PyType_Slot _type_slots_IndexedResourceQualifier[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IndexedResourceQualifier) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IndexedResourceQualifier) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IndexedResourceQualifier) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IndexedResourceQualifier) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_IndexedResourceQualifier = {
@@ -466,13 +464,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
         { }
     };
 
-    static PyType_Slot _type_slots_ResourceIndexer[] = 
-    {
+    static PyType_Slot _type_slots_ResourceIndexer[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceIndexer) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceIndexer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceIndexer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceIndexer) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_ResourceIndexer = {

@@ -157,13 +157,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerDisableScannerRequest[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerDisableScannerRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerDisableScannerRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerDisableScannerRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerDisableScannerRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerDisableScannerRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerDisableScannerRequest = {
@@ -274,13 +273,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerDisableScannerRequestEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerDisableScannerRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerDisableScannerRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerDisableScannerRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerDisableScannerRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerDisableScannerRequestEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerDisableScannerRequestEventArgs = {
@@ -442,13 +440,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerEnableScannerRequest[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerEnableScannerRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerEnableScannerRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerEnableScannerRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerEnableScannerRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerEnableScannerRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerEnableScannerRequest = {
@@ -559,13 +556,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerEnableScannerRequestEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerEnableScannerRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerEnableScannerRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerEnableScannerRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerEnableScannerRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerEnableScannerRequestEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerEnableScannerRequestEventArgs = {
@@ -833,13 +829,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerFrameReader[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerFrameReader[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerFrameReader) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerFrameReader) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerFrameReader) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerFrameReader) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerFrameReader = {
@@ -930,13 +925,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerFrameReaderFrameArrivedEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerFrameReaderFrameArrivedEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerFrameReaderFrameArrivedEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerFrameReaderFrameArrivedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerFrameReaderFrameArrivedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerFrameReaderFrameArrivedEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerFrameReaderFrameArrivedEventArgs = {
@@ -1120,13 +1114,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerGetSymbologyAttributesRequest[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerGetSymbologyAttributesRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerGetSymbologyAttributesRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerGetSymbologyAttributesRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerGetSymbologyAttributesRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerGetSymbologyAttributesRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerGetSymbologyAttributesRequest = {
@@ -1237,13 +1230,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerGetSymbologyAttributesRequestEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerGetSymbologyAttributesRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerGetSymbologyAttributesRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerGetSymbologyAttributesRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerGetSymbologyAttributesRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerGetSymbologyAttributesRequestEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerGetSymbologyAttributesRequestEventArgs = {
@@ -1405,13 +1397,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerHideVideoPreviewRequest[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerHideVideoPreviewRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerHideVideoPreviewRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerHideVideoPreviewRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerHideVideoPreviewRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerHideVideoPreviewRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerHideVideoPreviewRequest = {
@@ -1522,13 +1513,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerHideVideoPreviewRequestEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerHideVideoPreviewRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerHideVideoPreviewRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerHideVideoPreviewRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerHideVideoPreviewRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerHideVideoPreviewRequestEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerHideVideoPreviewRequestEventArgs = {
@@ -2425,13 +2415,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerProviderConnection[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerProviderConnection[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerProviderConnection) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerProviderConnection) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerProviderConnection) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerProviderConnection) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerProviderConnection = {
@@ -2512,13 +2501,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerProviderTriggerDetails[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerProviderTriggerDetails[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerProviderTriggerDetails) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerProviderTriggerDetails) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerProviderTriggerDetails) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerProviderTriggerDetails) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerProviderTriggerDetails = {
@@ -2700,13 +2688,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerSetActiveSymbologiesRequest[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerSetActiveSymbologiesRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerSetActiveSymbologiesRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerSetActiveSymbologiesRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerSetActiveSymbologiesRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerSetActiveSymbologiesRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerSetActiveSymbologiesRequest = {
@@ -2817,13 +2804,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerSetActiveSymbologiesRequestEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerSetActiveSymbologiesRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerSetActiveSymbologiesRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerSetActiveSymbologiesRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerSetActiveSymbologiesRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerSetActiveSymbologiesRequestEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerSetActiveSymbologiesRequestEventArgs = {
@@ -3025,13 +3011,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerSetSymbologyAttributesRequest[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerSetSymbologyAttributesRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerSetSymbologyAttributesRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerSetSymbologyAttributesRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerSetSymbologyAttributesRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerSetSymbologyAttributesRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerSetSymbologyAttributesRequest = {
@@ -3142,13 +3127,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerSetSymbologyAttributesRequestEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerSetSymbologyAttributesRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerSetSymbologyAttributesRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerSetSymbologyAttributesRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerSetSymbologyAttributesRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerSetSymbologyAttributesRequestEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerSetSymbologyAttributesRequestEventArgs = {
@@ -3310,13 +3294,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerStartSoftwareTriggerRequest[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerStartSoftwareTriggerRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerStartSoftwareTriggerRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerStartSoftwareTriggerRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerStartSoftwareTriggerRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerStartSoftwareTriggerRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerStartSoftwareTriggerRequest = {
@@ -3427,13 +3410,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerStartSoftwareTriggerRequestEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerStartSoftwareTriggerRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerStartSoftwareTriggerRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerStartSoftwareTriggerRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerStartSoftwareTriggerRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerStartSoftwareTriggerRequestEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerStartSoftwareTriggerRequestEventArgs = {
@@ -3595,13 +3577,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerStopSoftwareTriggerRequest[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerStopSoftwareTriggerRequest[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerStopSoftwareTriggerRequest) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerStopSoftwareTriggerRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerStopSoftwareTriggerRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerStopSoftwareTriggerRequest) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerStopSoftwareTriggerRequest = {
@@ -3712,13 +3693,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerStopSoftwareTriggerRequestEventArgs[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerStopSoftwareTriggerRequestEventArgs[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerStopSoftwareTriggerRequestEventArgs) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerStopSoftwareTriggerRequestEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerStopSoftwareTriggerRequestEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerStopSoftwareTriggerRequestEventArgs) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerStopSoftwareTriggerRequestEventArgs = {
@@ -3911,13 +3891,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeScannerVideoFrame[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeScannerVideoFrame[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeScannerVideoFrame) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeScannerVideoFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeScannerVideoFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeScannerVideoFrame) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeScannerVideoFrame = {
@@ -4174,13 +4153,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         { }
     };
 
-    static PyType_Slot _type_slots_BarcodeSymbologyAttributesBuilder[] = 
-    {
+    static PyType_Slot _type_slots_BarcodeSymbologyAttributesBuilder[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BarcodeSymbologyAttributesBuilder) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BarcodeSymbologyAttributesBuilder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BarcodeSymbologyAttributesBuilder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BarcodeSymbologyAttributesBuilder) },
-        { },
+        { }
     };
 
     static PyType_Spec type_spec_BarcodeSymbologyAttributesBuilder = {
