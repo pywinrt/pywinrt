@@ -2068,8 +2068,15 @@ namespace py::cpp::Windows::Storage::Search
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Storage::Search::SortEntry>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Storage::Search::SortEntry>(value));
+            }
+
             return 0;
         }
         catch (...)

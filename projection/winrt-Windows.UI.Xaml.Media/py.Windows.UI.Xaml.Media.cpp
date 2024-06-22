@@ -2310,8 +2310,15 @@ namespace py::cpp::Windows::UI::Xaml::Media
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -3975,8 +3982,15 @@ namespace py::cpp::Windows::UI::Xaml::Media
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<double>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<double>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -5512,8 +5526,15 @@ namespace py::cpp::Windows::UI::Xaml::Media
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::Geometry>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::Geometry>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -7021,8 +7042,15 @@ namespace py::cpp::Windows::UI::Xaml::Media
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::GradientStop>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::GradientStop>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -10388,8 +10416,15 @@ namespace py::cpp::Windows::UI::Xaml::Media
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::PathFigure>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::PathFigure>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -11348,8 +11383,15 @@ namespace py::cpp::Windows::UI::Xaml::Media
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::PathSegment>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::PathSegment>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -12959,8 +13001,15 @@ namespace py::cpp::Windows::UI::Xaml::Media
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Foundation::Point>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Foundation::Point>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -17583,8 +17632,15 @@ namespace py::cpp::Windows::UI::Xaml::Media
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::TimelineMarker>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::TimelineMarker>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -18430,8 +18486,15 @@ namespace py::cpp::Windows::UI::Xaml::Media
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::Transform>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::Transform>(value));
+            }
+
             return 0;
         }
         catch (...)

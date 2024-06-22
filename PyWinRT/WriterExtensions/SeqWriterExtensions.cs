@@ -207,13 +207,21 @@ static class SeqWriterExtensions
         w.WriteTryCatch(
             () =>
             {
-                // FIXME: split this into multiple lines
+                w.WriteLine($"if (!value)");
+                w.WriteLine("{");
+                w.Indent++;
+                w.WriteLine($"{self}.RemoveAt(static_cast<uint32_t>(i));");
+                w.Indent--;
+                w.WriteLine("}");
+                w.WriteLine("else");
+                w.WriteLine("{");
+                w.Indent++;
                 w.WriteLine(
-                    $"if (value == nullptr) {{ {self}.RemoveAt(static_cast<uint32_t>(i)); }}"
+                    $"{self}.SetAt(static_cast<uint32_t>(i), py::convert_to<{collectionType}>(value));"
                 );
-                w.WriteLine(
-                    $"else {{ {self}.SetAt(static_cast<uint32_t>(i), py::convert_to<{collectionType}>(value)); }}"
-                );
+                w.Indent--;
+                w.WriteLine("}");
+                w.WriteBlankLine();
                 w.WriteLine("return 0;");
             },
             catchReturn: "-1"

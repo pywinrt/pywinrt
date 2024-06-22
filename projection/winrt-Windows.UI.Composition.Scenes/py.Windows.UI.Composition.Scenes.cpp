@@ -823,8 +823,15 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneComponent>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneComponent>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -3426,8 +3433,15 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneNode>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneNode>(value));
+            }
+
             return 0;
         }
         catch (...)

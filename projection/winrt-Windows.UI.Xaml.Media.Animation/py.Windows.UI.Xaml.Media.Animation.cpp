@@ -2370,8 +2370,15 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -6091,8 +6098,15 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -11953,8 +11967,15 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -13666,8 +13687,15 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -21260,8 +21288,15 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Timeline>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Timeline>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -21968,8 +22003,15 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Transition>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Transition>(value));
+            }
+
             return 0;
         }
         catch (...)
