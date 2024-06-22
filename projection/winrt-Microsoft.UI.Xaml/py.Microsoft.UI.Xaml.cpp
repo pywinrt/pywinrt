@@ -5503,9 +5503,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 
@@ -15194,9 +15192,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 
@@ -17117,9 +17113,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 
@@ -17807,9 +17801,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 
@@ -25618,9 +25610,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 

@@ -826,9 +826,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 
@@ -1875,9 +1873,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 
@@ -2864,9 +2860,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 
@@ -3853,9 +3847,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 
@@ -4878,9 +4870,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 
@@ -7783,9 +7773,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 
@@ -9426,9 +9414,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 
@@ -10156,9 +10142,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 
@@ -11181,9 +11165,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 
@@ -12685,9 +12667,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 
@@ -13415,9 +13395,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 
@@ -15058,9 +15036,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 
@@ -18045,9 +18021,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 

@@ -2575,9 +2575,7 @@ namespace py::cpp::Windows::UI::Shell
 
             if (step != 1)
             {
-                PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "slices with step other than 1 are not implemented");
+                PyErr_SetString(PyExc_NotImplementedError, "slices with step other than 1 are not implemented");
                 return nullptr;
             }
 
