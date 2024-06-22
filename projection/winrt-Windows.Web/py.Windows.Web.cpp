@@ -61,14 +61,12 @@ namespace py::cpp::Windows::Web
         { },
     };
 
-    static PyType_Spec type_spec_WebError =
-    {
+    static PyType_Spec type_spec_WebError = {
         "winrt._winrt_windows_web.WebError",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebError
-    };
+        _type_slots_WebError};
 
     static PyGetSetDef getset_WebError_Static[] = {
         { }
@@ -188,14 +186,12 @@ namespace py::cpp::Windows::Web
         { },
     };
 
-    static PyType_Spec type_spec_IUriToStreamResolver =
-    {
+    static PyType_Spec type_spec_IUriToStreamResolver = {
         "winrt._winrt_windows_web.IUriToStreamResolver",
         sizeof(py::wrapper::Windows::Web::IUriToStreamResolver),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IUriToStreamResolver
-    };
+        _type_slots_IUriToStreamResolver};
 
     // ----- Windows.Web Initialization --------------------
 

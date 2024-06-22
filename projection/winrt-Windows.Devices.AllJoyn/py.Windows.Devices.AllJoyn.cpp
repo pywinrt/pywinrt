@@ -557,14 +557,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynAboutData =
-    {
+    static PyType_Spec type_spec_AllJoynAboutData = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynAboutData",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynAboutData
-    };
+        _type_slots_AllJoynAboutData};
 
     // ----- AllJoynAboutDataView class --------------------
 
@@ -1002,14 +1000,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynAboutDataView =
-    {
+    static PyType_Spec type_spec_AllJoynAboutDataView = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynAboutDataView",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutDataView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynAboutDataView
-    };
+        _type_slots_AllJoynAboutDataView};
 
     static PyGetSetDef getset_AllJoynAboutDataView_Static[] = {
         { }
@@ -1256,14 +1252,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynAcceptSessionJoinerEventArgs =
-    {
+    static PyType_Spec type_spec_AllJoynAcceptSessionJoinerEventArgs = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynAcceptSessionJoinerEventArgs",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynAcceptSessionJoinerEventArgs
-    };
+        _type_slots_AllJoynAcceptSessionJoinerEventArgs};
 
     // ----- AllJoynAuthenticationCompleteEventArgs class --------------------
 
@@ -1385,14 +1379,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynAuthenticationCompleteEventArgs =
-    {
+    static PyType_Spec type_spec_AllJoynAuthenticationCompleteEventArgs = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynAuthenticationCompleteEventArgs",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynAuthenticationCompleteEventArgs
-    };
+        _type_slots_AllJoynAuthenticationCompleteEventArgs};
 
     // ----- AllJoynBusAttachment class --------------------
 
@@ -2068,14 +2060,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynBusAttachment =
-    {
+    static PyType_Spec type_spec_AllJoynBusAttachment = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynBusAttachment",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynBusAttachment
-    };
+        _type_slots_AllJoynBusAttachment};
 
     static PyGetSetDef getset_AllJoynBusAttachment_Static[] = {
         { }
@@ -2204,14 +2194,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynBusAttachmentStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_AllJoynBusAttachmentStateChangedEventArgs = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynBusAttachmentStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynBusAttachmentStateChangedEventArgs
-    };
+        _type_slots_AllJoynBusAttachmentStateChangedEventArgs};
 
     // ----- AllJoynBusObject class --------------------
 
@@ -2506,14 +2494,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynBusObject =
-    {
+    static PyType_Spec type_spec_AllJoynBusObject = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynBusObject",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusObject),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynBusObject
-    };
+        _type_slots_AllJoynBusObject};
 
     // ----- AllJoynBusObjectStoppedEventArgs class --------------------
 
@@ -2619,14 +2605,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynBusObjectStoppedEventArgs =
-    {
+    static PyType_Spec type_spec_AllJoynBusObjectStoppedEventArgs = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynBusObjectStoppedEventArgs",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynBusObjectStoppedEventArgs
-    };
+        _type_slots_AllJoynBusObjectStoppedEventArgs};
 
     // ----- AllJoynCredentials class --------------------
 
@@ -2852,14 +2836,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynCredentials =
-    {
+    static PyType_Spec type_spec_AllJoynCredentials = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynCredentials",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentials),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynCredentials
-    };
+        _type_slots_AllJoynCredentials};
 
     // ----- AllJoynCredentialsRequestedEventArgs class --------------------
 
@@ -3031,14 +3013,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynCredentialsRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_AllJoynCredentialsRequestedEventArgs = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynCredentialsRequestedEventArgs",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynCredentialsRequestedEventArgs
-    };
+        _type_slots_AllJoynCredentialsRequestedEventArgs};
 
     // ----- AllJoynCredentialsVerificationRequestedEventArgs class --------------------
 
@@ -3281,14 +3261,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynCredentialsVerificationRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_AllJoynCredentialsVerificationRequestedEventArgs = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynCredentialsVerificationRequestedEventArgs",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynCredentialsVerificationRequestedEventArgs
-    };
+        _type_slots_AllJoynCredentialsVerificationRequestedEventArgs};
 
     // ----- AllJoynMessageInfo class --------------------
 
@@ -3394,14 +3372,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynMessageInfo =
-    {
+    static PyType_Spec type_spec_AllJoynMessageInfo = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynMessageInfo",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynMessageInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynMessageInfo
-    };
+        _type_slots_AllJoynMessageInfo};
 
     // ----- AllJoynProducerStoppedEventArgs class --------------------
 
@@ -3507,14 +3483,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynProducerStoppedEventArgs =
-    {
+    static PyType_Spec type_spec_AllJoynProducerStoppedEventArgs = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynProducerStoppedEventArgs",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynProducerStoppedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynProducerStoppedEventArgs
-    };
+        _type_slots_AllJoynProducerStoppedEventArgs};
 
     // ----- AllJoynServiceInfo class --------------------
 
@@ -3693,14 +3667,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynServiceInfo =
-    {
+    static PyType_Spec type_spec_AllJoynServiceInfo = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynServiceInfo",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynServiceInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynServiceInfo
-    };
+        _type_slots_AllJoynServiceInfo};
 
     static PyGetSetDef getset_AllJoynServiceInfo_Static[] = {
         { }
@@ -3832,14 +3804,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynServiceInfoRemovedEventArgs =
-    {
+    static PyType_Spec type_spec_AllJoynServiceInfoRemovedEventArgs = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynServiceInfoRemovedEventArgs",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynServiceInfoRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynServiceInfoRemovedEventArgs
-    };
+        _type_slots_AllJoynServiceInfoRemovedEventArgs};
 
     // ----- AllJoynSession class --------------------
 
@@ -4160,14 +4130,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynSession =
-    {
+    static PyType_Spec type_spec_AllJoynSession = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynSession",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynSession
-    };
+        _type_slots_AllJoynSession};
 
     static PyGetSetDef getset_AllJoynSession_Static[] = {
         { }
@@ -4299,14 +4267,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynSessionJoinedEventArgs =
-    {
+    static PyType_Spec type_spec_AllJoynSessionJoinedEventArgs = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynSessionJoinedEventArgs",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynSessionJoinedEventArgs
-    };
+        _type_slots_AllJoynSessionJoinedEventArgs};
 
     // ----- AllJoynSessionLostEventArgs class --------------------
 
@@ -4412,14 +4378,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynSessionLostEventArgs =
-    {
+    static PyType_Spec type_spec_AllJoynSessionLostEventArgs = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynSessionLostEventArgs",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynSessionLostEventArgs
-    };
+        _type_slots_AllJoynSessionLostEventArgs};
 
     // ----- AllJoynSessionMemberAddedEventArgs class --------------------
 
@@ -4525,14 +4489,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynSessionMemberAddedEventArgs =
-    {
+    static PyType_Spec type_spec_AllJoynSessionMemberAddedEventArgs = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynSessionMemberAddedEventArgs",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynSessionMemberAddedEventArgs
-    };
+        _type_slots_AllJoynSessionMemberAddedEventArgs};
 
     // ----- AllJoynSessionMemberRemovedEventArgs class --------------------
 
@@ -4638,14 +4600,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynSessionMemberRemovedEventArgs =
-    {
+    static PyType_Spec type_spec_AllJoynSessionMemberRemovedEventArgs = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynSessionMemberRemovedEventArgs",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynSessionMemberRemovedEventArgs
-    };
+        _type_slots_AllJoynSessionMemberRemovedEventArgs};
 
     // ----- AllJoynStatus class --------------------
 
@@ -5014,14 +4974,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynStatus =
-    {
+    static PyType_Spec type_spec_AllJoynStatus = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynStatus",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynStatus
-    };
+        _type_slots_AllJoynStatus};
 
     static PyGetSetDef getset_AllJoynStatus_Static[] = {
         { "authentication_failed", reinterpret_cast<getter>(AllJoynStatus_get_AuthenticationFailed), nullptr, nullptr, nullptr },
@@ -5170,14 +5128,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_AllJoynWatcherStoppedEventArgs =
-    {
+    static PyType_Spec type_spec_AllJoynWatcherStoppedEventArgs = {
         "winrt._winrt_windows_devices_alljoyn.AllJoynWatcherStoppedEventArgs",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::AllJoynWatcherStoppedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AllJoynWatcherStoppedEventArgs
-    };
+        _type_slots_AllJoynWatcherStoppedEventArgs};
 
     // ----- IAllJoynAcceptSessionJoiner interface --------------------
 
@@ -5270,14 +5226,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_IAllJoynAcceptSessionJoiner =
-    {
+    static PyType_Spec type_spec_IAllJoynAcceptSessionJoiner = {
         "winrt._winrt_windows_devices_alljoyn.IAllJoynAcceptSessionJoiner",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAllJoynAcceptSessionJoiner
-    };
+        _type_slots_IAllJoynAcceptSessionJoiner};
 
     // ----- IAllJoynProducer interface --------------------
 
@@ -5372,14 +5326,12 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { },
     };
 
-    static PyType_Spec type_spec_IAllJoynProducer =
-    {
+    static PyType_Spec type_spec_IAllJoynProducer = {
         "winrt._winrt_windows_devices_alljoyn.IAllJoynProducer",
         sizeof(py::wrapper::Windows::Devices::AllJoyn::IAllJoynProducer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAllJoynProducer
-    };
+        _type_slots_IAllJoynProducer};
 
     // ----- Windows.Devices.AllJoyn Initialization --------------------
 

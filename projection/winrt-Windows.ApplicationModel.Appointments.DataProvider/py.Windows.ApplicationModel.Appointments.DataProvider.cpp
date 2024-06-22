@@ -245,14 +245,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentCalendarCancelMeetingRequest =
-    {
+    static PyType_Spec type_spec_AppointmentCalendarCancelMeetingRequest = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarCancelMeetingRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCancelMeetingRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentCalendarCancelMeetingRequest
-    };
+        _type_slots_AppointmentCalendarCancelMeetingRequest};
 
     // ----- AppointmentCalendarCancelMeetingRequestEventArgs class --------------------
 
@@ -364,14 +362,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentCalendarCancelMeetingRequestEventArgs =
-    {
+    static PyType_Spec type_spec_AppointmentCalendarCancelMeetingRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarCancelMeetingRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCancelMeetingRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentCalendarCancelMeetingRequestEventArgs
-    };
+        _type_slots_AppointmentCalendarCancelMeetingRequestEventArgs};
 
     // ----- AppointmentCalendarCreateOrUpdateAppointmentRequest class --------------------
 
@@ -575,14 +571,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentCalendarCreateOrUpdateAppointmentRequest =
-    {
+    static PyType_Spec type_spec_AppointmentCalendarCreateOrUpdateAppointmentRequest = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarCreateOrUpdateAppointmentRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCreateOrUpdateAppointmentRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentCalendarCreateOrUpdateAppointmentRequest
-    };
+        _type_slots_AppointmentCalendarCreateOrUpdateAppointmentRequest};
 
     // ----- AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs class --------------------
 
@@ -694,14 +688,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs =
-    {
+    static PyType_Spec type_spec_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs
-    };
+        _type_slots_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs};
 
     // ----- AppointmentCalendarForwardMeetingRequest class --------------------
 
@@ -963,14 +955,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentCalendarForwardMeetingRequest =
-    {
+    static PyType_Spec type_spec_AppointmentCalendarForwardMeetingRequest = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarForwardMeetingRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarForwardMeetingRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentCalendarForwardMeetingRequest
-    };
+        _type_slots_AppointmentCalendarForwardMeetingRequest};
 
     // ----- AppointmentCalendarForwardMeetingRequestEventArgs class --------------------
 
@@ -1082,14 +1072,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentCalendarForwardMeetingRequestEventArgs =
-    {
+    static PyType_Spec type_spec_AppointmentCalendarForwardMeetingRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarForwardMeetingRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarForwardMeetingRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentCalendarForwardMeetingRequestEventArgs
-    };
+        _type_slots_AppointmentCalendarForwardMeetingRequestEventArgs};
 
     // ----- AppointmentCalendarProposeNewTimeForMeetingRequest class --------------------
 
@@ -1351,14 +1339,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentCalendarProposeNewTimeForMeetingRequest =
-    {
+    static PyType_Spec type_spec_AppointmentCalendarProposeNewTimeForMeetingRequest = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarProposeNewTimeForMeetingRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarProposeNewTimeForMeetingRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentCalendarProposeNewTimeForMeetingRequest
-    };
+        _type_slots_AppointmentCalendarProposeNewTimeForMeetingRequest};
 
     // ----- AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs class --------------------
 
@@ -1470,14 +1456,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs =
-    {
+    static PyType_Spec type_spec_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs
-    };
+        _type_slots_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs};
 
     // ----- AppointmentCalendarSyncManagerSyncRequest class --------------------
 
@@ -1619,14 +1603,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentCalendarSyncManagerSyncRequest =
-    {
+    static PyType_Spec type_spec_AppointmentCalendarSyncManagerSyncRequest = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarSyncManagerSyncRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarSyncManagerSyncRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentCalendarSyncManagerSyncRequest
-    };
+        _type_slots_AppointmentCalendarSyncManagerSyncRequest};
 
     // ----- AppointmentCalendarSyncManagerSyncRequestEventArgs class --------------------
 
@@ -1738,14 +1720,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentCalendarSyncManagerSyncRequestEventArgs =
-    {
+    static PyType_Spec type_spec_AppointmentCalendarSyncManagerSyncRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarSyncManagerSyncRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarSyncManagerSyncRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentCalendarSyncManagerSyncRequestEventArgs
-    };
+        _type_slots_AppointmentCalendarSyncManagerSyncRequestEventArgs};
 
     // ----- AppointmentCalendarUpdateMeetingResponseRequest class --------------------
 
@@ -2007,14 +1987,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentCalendarUpdateMeetingResponseRequest =
-    {
+    static PyType_Spec type_spec_AppointmentCalendarUpdateMeetingResponseRequest = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarUpdateMeetingResponseRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarUpdateMeetingResponseRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentCalendarUpdateMeetingResponseRequest
-    };
+        _type_slots_AppointmentCalendarUpdateMeetingResponseRequest};
 
     // ----- AppointmentCalendarUpdateMeetingResponseRequestEventArgs class --------------------
 
@@ -2126,14 +2104,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentCalendarUpdateMeetingResponseRequestEventArgs =
-    {
+    static PyType_Spec type_spec_AppointmentCalendarUpdateMeetingResponseRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarUpdateMeetingResponseRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarUpdateMeetingResponseRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentCalendarUpdateMeetingResponseRequestEventArgs
-    };
+        _type_slots_AppointmentCalendarUpdateMeetingResponseRequestEventArgs};
 
     // ----- AppointmentDataProviderConnection class --------------------
 
@@ -2496,14 +2472,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentDataProviderConnection =
-    {
+    static PyType_Spec type_spec_AppointmentDataProviderConnection = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentDataProviderConnection",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderConnection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentDataProviderConnection
-    };
+        _type_slots_AppointmentDataProviderConnection};
 
     // ----- AppointmentDataProviderTriggerDetails class --------------------
 
@@ -2585,14 +2559,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentDataProviderTriggerDetails =
-    {
+    static PyType_Spec type_spec_AppointmentDataProviderTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_appointments_dataprovider.AppointmentDataProviderTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentDataProviderTriggerDetails
-    };
+        _type_slots_AppointmentDataProviderTriggerDetails};
 
     // ----- Windows.ApplicationModel.Appointments.DataProvider Initialization --------------------
 

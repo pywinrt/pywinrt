@@ -357,14 +357,12 @@ namespace py::cpp::Windows::Media::Casting
         { },
     };
 
-    static PyType_Spec type_spec_CastingConnection =
-    {
+    static PyType_Spec type_spec_CastingConnection = {
         "winrt._winrt_windows_media_casting.CastingConnection",
         sizeof(py::wrapper::Windows::Media::Casting::CastingConnection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CastingConnection
-    };
+        _type_slots_CastingConnection};
 
     // ----- CastingConnectionErrorOccurredEventArgs class --------------------
 
@@ -466,14 +464,12 @@ namespace py::cpp::Windows::Media::Casting
         { },
     };
 
-    static PyType_Spec type_spec_CastingConnectionErrorOccurredEventArgs =
-    {
+    static PyType_Spec type_spec_CastingConnectionErrorOccurredEventArgs = {
         "winrt._winrt_windows_media_casting.CastingConnectionErrorOccurredEventArgs",
         sizeof(py::wrapper::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CastingConnectionErrorOccurredEventArgs
-    };
+        _type_slots_CastingConnectionErrorOccurredEventArgs};
 
     // ----- CastingDevice class --------------------
 
@@ -779,14 +775,12 @@ namespace py::cpp::Windows::Media::Casting
         { },
     };
 
-    static PyType_Spec type_spec_CastingDevice =
-    {
+    static PyType_Spec type_spec_CastingDevice = {
         "winrt._winrt_windows_media_casting.CastingDevice",
         sizeof(py::wrapper::Windows::Media::Casting::CastingDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CastingDevice
-    };
+        _type_slots_CastingDevice};
 
     static PyGetSetDef getset_CastingDevice_Static[] = {
         { }
@@ -1115,14 +1109,12 @@ namespace py::cpp::Windows::Media::Casting
         { },
     };
 
-    static PyType_Spec type_spec_CastingDevicePicker =
-    {
+    static PyType_Spec type_spec_CastingDevicePicker = {
         "winrt._winrt_windows_media_casting.CastingDevicePicker",
         sizeof(py::wrapper::Windows::Media::Casting::CastingDevicePicker),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CastingDevicePicker
-    };
+        _type_slots_CastingDevicePicker};
 
     // ----- CastingDevicePickerFilter class --------------------
 
@@ -1348,14 +1340,12 @@ namespace py::cpp::Windows::Media::Casting
         { },
     };
 
-    static PyType_Spec type_spec_CastingDevicePickerFilter =
-    {
+    static PyType_Spec type_spec_CastingDevicePickerFilter = {
         "winrt._winrt_windows_media_casting.CastingDevicePickerFilter",
         sizeof(py::wrapper::Windows::Media::Casting::CastingDevicePickerFilter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CastingDevicePickerFilter
-    };
+        _type_slots_CastingDevicePickerFilter};
 
     // ----- CastingDeviceSelectedEventArgs class --------------------
 
@@ -1437,14 +1427,12 @@ namespace py::cpp::Windows::Media::Casting
         { },
     };
 
-    static PyType_Spec type_spec_CastingDeviceSelectedEventArgs =
-    {
+    static PyType_Spec type_spec_CastingDeviceSelectedEventArgs = {
         "winrt._winrt_windows_media_casting.CastingDeviceSelectedEventArgs",
         sizeof(py::wrapper::Windows::Media::Casting::CastingDeviceSelectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CastingDeviceSelectedEventArgs
-    };
+        _type_slots_CastingDeviceSelectedEventArgs};
 
     // ----- CastingSource class --------------------
 
@@ -1554,14 +1542,12 @@ namespace py::cpp::Windows::Media::Casting
         { },
     };
 
-    static PyType_Spec type_spec_CastingSource =
-    {
+    static PyType_Spec type_spec_CastingSource = {
         "winrt._winrt_windows_media_casting.CastingSource",
         sizeof(py::wrapper::Windows::Media::Casting::CastingSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CastingSource
-    };
+        _type_slots_CastingSource};
 
     // ----- Windows.Media.Casting Initialization --------------------
 

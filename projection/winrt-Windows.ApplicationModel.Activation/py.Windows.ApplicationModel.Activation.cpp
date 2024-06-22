@@ -185,14 +185,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentsProviderAddAppointmentActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_AppointmentsProviderAddAppointmentActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.AppointmentsProviderAddAppointmentActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderAddAppointmentActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentsProviderAddAppointmentActivatedEventArgs
-    };
+        _type_slots_AppointmentsProviderAddAppointmentActivatedEventArgs};
 
     // ----- AppointmentsProviderRemoveAppointmentActivatedEventArgs class --------------------
 
@@ -374,14 +372,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentsProviderRemoveAppointmentActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_AppointmentsProviderRemoveAppointmentActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderRemoveAppointmentActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentsProviderRemoveAppointmentActivatedEventArgs
-    };
+        _type_slots_AppointmentsProviderRemoveAppointmentActivatedEventArgs};
 
     // ----- AppointmentsProviderReplaceAppointmentActivatedEventArgs class --------------------
 
@@ -563,14 +559,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentsProviderReplaceAppointmentActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_AppointmentsProviderReplaceAppointmentActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderReplaceAppointmentActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentsProviderReplaceAppointmentActivatedEventArgs
-    };
+        _type_slots_AppointmentsProviderReplaceAppointmentActivatedEventArgs};
 
     // ----- AppointmentsProviderShowAppointmentDetailsActivatedEventArgs class --------------------
 
@@ -792,14 +786,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowAppointmentDetailsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs
-    };
+        _type_slots_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs};
 
     // ----- AppointmentsProviderShowTimeFrameActivatedEventArgs class --------------------
 
@@ -1001,14 +993,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentsProviderShowTimeFrameActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_AppointmentsProviderShowTimeFrameActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.AppointmentsProviderShowTimeFrameActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowTimeFrameActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentsProviderShowTimeFrameActivatedEventArgs
-    };
+        _type_slots_AppointmentsProviderShowTimeFrameActivatedEventArgs};
 
     // ----- BackgroundActivatedEventArgs class --------------------
 
@@ -1090,14 +1080,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_BackgroundActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.BackgroundActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundActivatedEventArgs
-    };
+        _type_slots_BackgroundActivatedEventArgs};
 
     // ----- BarcodeScannerPreviewActivatedEventArgs class --------------------
 
@@ -1259,14 +1247,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_BarcodeScannerPreviewActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_BarcodeScannerPreviewActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.BarcodeScannerPreviewActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::BarcodeScannerPreviewActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BarcodeScannerPreviewActivatedEventArgs
-    };
+        _type_slots_BarcodeScannerPreviewActivatedEventArgs};
 
     // ----- CachedFileUpdaterActivatedEventArgs class --------------------
 
@@ -1428,14 +1414,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_CachedFileUpdaterActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_CachedFileUpdaterActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.CachedFileUpdaterActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CachedFileUpdaterActivatedEventArgs
-    };
+        _type_slots_CachedFileUpdaterActivatedEventArgs};
 
     // ----- CameraSettingsActivatedEventArgs class --------------------
 
@@ -1597,14 +1581,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_CameraSettingsActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_CameraSettingsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.CameraSettingsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::CameraSettingsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CameraSettingsActivatedEventArgs
-    };
+        _type_slots_CameraSettingsActivatedEventArgs};
 
     // ----- CommandLineActivatedEventArgs class --------------------
 
@@ -1766,14 +1748,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_CommandLineActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_CommandLineActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.CommandLineActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::CommandLineActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CommandLineActivatedEventArgs
-    };
+        _type_slots_CommandLineActivatedEventArgs};
 
     // ----- CommandLineActivationOperation class --------------------
 
@@ -1953,14 +1933,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_CommandLineActivationOperation =
-    {
+    static PyType_Spec type_spec_CommandLineActivationOperation = {
         "winrt._winrt_windows_applicationmodel_activation.CommandLineActivationOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::CommandLineActivationOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CommandLineActivationOperation
-    };
+        _type_slots_CommandLineActivationOperation};
 
     // ----- ContactCallActivatedEventArgs class --------------------
 
@@ -2162,14 +2140,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ContactCallActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ContactCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ContactCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ContactCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactCallActivatedEventArgs
-    };
+        _type_slots_ContactCallActivatedEventArgs};
 
     // ----- ContactMapActivatedEventArgs class --------------------
 
@@ -2351,14 +2327,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ContactMapActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ContactMapActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ContactMapActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ContactMapActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactMapActivatedEventArgs
-    };
+        _type_slots_ContactMapActivatedEventArgs};
 
     // ----- ContactMessageActivatedEventArgs class --------------------
 
@@ -2560,14 +2534,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ContactMessageActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ContactMessageActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ContactMessageActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ContactMessageActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactMessageActivatedEventArgs
-    };
+        _type_slots_ContactMessageActivatedEventArgs};
 
     // ----- ContactPanelActivatedEventArgs class --------------------
 
@@ -2749,14 +2721,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ContactPanelActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ContactPanelActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ContactPanelActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ContactPanelActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactPanelActivatedEventArgs
-    };
+        _type_slots_ContactPanelActivatedEventArgs};
 
     // ----- ContactPickerActivatedEventArgs class --------------------
 
@@ -2898,14 +2868,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ContactPickerActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ContactPickerActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ContactPickerActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ContactPickerActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactPickerActivatedEventArgs
-    };
+        _type_slots_ContactPickerActivatedEventArgs};
 
     // ----- ContactPostActivatedEventArgs class --------------------
 
@@ -3107,14 +3075,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ContactPostActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ContactPostActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ContactPostActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ContactPostActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactPostActivatedEventArgs
-    };
+        _type_slots_ContactPostActivatedEventArgs};
 
     // ----- ContactVideoCallActivatedEventArgs class --------------------
 
@@ -3316,14 +3282,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ContactVideoCallActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ContactVideoCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ContactVideoCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ContactVideoCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactVideoCallActivatedEventArgs
-    };
+        _type_slots_ContactVideoCallActivatedEventArgs};
 
     // ----- DeviceActivatedEventArgs class --------------------
 
@@ -3545,14 +3509,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_DeviceActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_DeviceActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.DeviceActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::DeviceActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceActivatedEventArgs
-    };
+        _type_slots_DeviceActivatedEventArgs};
 
     // ----- DevicePairingActivatedEventArgs class --------------------
 
@@ -3714,14 +3676,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_DevicePairingActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_DevicePairingActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.DevicePairingActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::DevicePairingActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DevicePairingActivatedEventArgs
-    };
+        _type_slots_DevicePairingActivatedEventArgs};
 
     // ----- DialReceiverActivatedEventArgs class --------------------
 
@@ -3963,14 +3923,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_DialReceiverActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_DialReceiverActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.DialReceiverActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::DialReceiverActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DialReceiverActivatedEventArgs
-    };
+        _type_slots_DialReceiverActivatedEventArgs};
 
     // ----- FileActivatedEventArgs class --------------------
 
@@ -4232,14 +4190,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_FileActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_FileActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.FileActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::FileActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FileActivatedEventArgs
-    };
+        _type_slots_FileActivatedEventArgs};
 
     // ----- FileOpenPickerActivatedEventArgs class --------------------
 
@@ -4421,14 +4377,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_FileOpenPickerActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_FileOpenPickerActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.FileOpenPickerActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FileOpenPickerActivatedEventArgs
-    };
+        _type_slots_FileOpenPickerActivatedEventArgs};
 
     // ----- FileOpenPickerContinuationEventArgs class --------------------
 
@@ -4610,14 +4564,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_FileOpenPickerContinuationEventArgs =
-    {
+    static PyType_Spec type_spec_FileOpenPickerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.FileOpenPickerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::FileOpenPickerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FileOpenPickerContinuationEventArgs
-    };
+        _type_slots_FileOpenPickerContinuationEventArgs};
 
     // ----- FileSavePickerActivatedEventArgs class --------------------
 
@@ -4819,14 +4771,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_FileSavePickerActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_FileSavePickerActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.FileSavePickerActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FileSavePickerActivatedEventArgs
-    };
+        _type_slots_FileSavePickerActivatedEventArgs};
 
     // ----- FileSavePickerContinuationEventArgs class --------------------
 
@@ -5008,14 +4958,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_FileSavePickerContinuationEventArgs =
-    {
+    static PyType_Spec type_spec_FileSavePickerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.FileSavePickerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FileSavePickerContinuationEventArgs
-    };
+        _type_slots_FileSavePickerContinuationEventArgs};
 
     // ----- FolderPickerContinuationEventArgs class --------------------
 
@@ -5197,14 +5145,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_FolderPickerContinuationEventArgs =
-    {
+    static PyType_Spec type_spec_FolderPickerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.FolderPickerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::FolderPickerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FolderPickerContinuationEventArgs
-    };
+        _type_slots_FolderPickerContinuationEventArgs};
 
     // ----- LaunchActivatedEventArgs class --------------------
 
@@ -5466,14 +5412,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_LaunchActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_LaunchActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.LaunchActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LaunchActivatedEventArgs
-    };
+        _type_slots_LaunchActivatedEventArgs};
 
     // ----- LockScreenActivatedEventArgs class --------------------
 
@@ -5635,14 +5579,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_LockScreenActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_LockScreenActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.LockScreenActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::LockScreenActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LockScreenActivatedEventArgs
-    };
+        _type_slots_LockScreenActivatedEventArgs};
 
     // ----- LockScreenCallActivatedEventArgs class --------------------
 
@@ -5864,14 +5806,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_LockScreenCallActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_LockScreenCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.LockScreenCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::LockScreenCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LockScreenCallActivatedEventArgs
-    };
+        _type_slots_LockScreenCallActivatedEventArgs};
 
     // ----- LockScreenComponentActivatedEventArgs class --------------------
 
@@ -5993,14 +5933,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_LockScreenComponentActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_LockScreenComponentActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.LockScreenComponentActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::LockScreenComponentActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LockScreenComponentActivatedEventArgs
-    };
+        _type_slots_LockScreenComponentActivatedEventArgs};
 
     // ----- PhoneCallActivatedEventArgs class --------------------
 
@@ -6162,14 +6100,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCallActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_PhoneCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.PhoneCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::PhoneCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCallActivatedEventArgs
-    };
+        _type_slots_PhoneCallActivatedEventArgs};
 
     // ----- PickerReturnedActivatedEventArgs class --------------------
 
@@ -6311,14 +6247,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_PickerReturnedActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_PickerReturnedActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.PickerReturnedActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::PickerReturnedActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PickerReturnedActivatedEventArgs
-    };
+        _type_slots_PickerReturnedActivatedEventArgs};
 
     // ----- Print3DWorkflowActivatedEventArgs class --------------------
 
@@ -6460,14 +6394,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_Print3DWorkflowActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_Print3DWorkflowActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.Print3DWorkflowActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::Print3DWorkflowActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Print3DWorkflowActivatedEventArgs
-    };
+        _type_slots_Print3DWorkflowActivatedEventArgs};
 
     // ----- PrintTaskSettingsActivatedEventArgs class --------------------
 
@@ -6609,14 +6541,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_PrintTaskSettingsActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_PrintTaskSettingsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.PrintTaskSettingsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::PrintTaskSettingsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintTaskSettingsActivatedEventArgs
-    };
+        _type_slots_PrintTaskSettingsActivatedEventArgs};
 
     // ----- ProtocolActivatedEventArgs class --------------------
 
@@ -6858,14 +6788,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ProtocolActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ProtocolActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ProtocolActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProtocolActivatedEventArgs
-    };
+        _type_slots_ProtocolActivatedEventArgs};
 
     // ----- ProtocolForResultsActivatedEventArgs class --------------------
 
@@ -7127,14 +7055,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ProtocolForResultsActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ProtocolForResultsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ProtocolForResultsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ProtocolForResultsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProtocolForResultsActivatedEventArgs
-    };
+        _type_slots_ProtocolForResultsActivatedEventArgs};
 
     // ----- RestrictedLaunchActivatedEventArgs class --------------------
 
@@ -7296,14 +7222,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_RestrictedLaunchActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_RestrictedLaunchActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.RestrictedLaunchActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::RestrictedLaunchActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RestrictedLaunchActivatedEventArgs
-    };
+        _type_slots_RestrictedLaunchActivatedEventArgs};
 
     // ----- SearchActivatedEventArgs class --------------------
 
@@ -7545,14 +7469,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_SearchActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_SearchActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.SearchActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::SearchActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SearchActivatedEventArgs
-    };
+        _type_slots_SearchActivatedEventArgs};
 
     // ----- ShareTargetActivatedEventArgs class --------------------
 
@@ -7714,14 +7636,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ShareTargetActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ShareTargetActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ShareTargetActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ShareTargetActivatedEventArgs
-    };
+        _type_slots_ShareTargetActivatedEventArgs};
 
     // ----- SplashScreen class --------------------
 
@@ -7848,14 +7768,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_SplashScreen =
-    {
+    static PyType_Spec type_spec_SplashScreen = {
         "winrt._winrt_windows_applicationmodel_activation.SplashScreen",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::SplashScreen),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SplashScreen
-    };
+        _type_slots_SplashScreen};
 
     // ----- StartupTaskActivatedEventArgs class --------------------
 
@@ -8017,14 +7935,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_StartupTaskActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_StartupTaskActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.StartupTaskActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::StartupTaskActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StartupTaskActivatedEventArgs
-    };
+        _type_slots_StartupTaskActivatedEventArgs};
 
     // ----- TileActivatedInfo class --------------------
 
@@ -8106,14 +8022,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_TileActivatedInfo =
-    {
+    static PyType_Spec type_spec_TileActivatedInfo = {
         "winrt._winrt_windows_applicationmodel_activation.TileActivatedInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::TileActivatedInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TileActivatedInfo
-    };
+        _type_slots_TileActivatedInfo};
 
     // ----- ToastNotificationActivatedEventArgs class --------------------
 
@@ -8315,14 +8229,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ToastNotificationActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ToastNotificationActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ToastNotificationActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ToastNotificationActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToastNotificationActivatedEventArgs
-    };
+        _type_slots_ToastNotificationActivatedEventArgs};
 
     // ----- UserDataAccountProviderActivatedEventArgs class --------------------
 
@@ -8464,14 +8376,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_UserDataAccountProviderActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_UserDataAccountProviderActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.UserDataAccountProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::UserDataAccountProviderActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataAccountProviderActivatedEventArgs
-    };
+        _type_slots_UserDataAccountProviderActivatedEventArgs};
 
     // ----- VoiceCommandActivatedEventArgs class --------------------
 
@@ -8633,14 +8543,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_VoiceCommandActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_VoiceCommandActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.VoiceCommandActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::VoiceCommandActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VoiceCommandActivatedEventArgs
-    };
+        _type_slots_VoiceCommandActivatedEventArgs};
 
     // ----- WalletActionActivatedEventArgs class --------------------
 
@@ -8822,14 +8730,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_WalletActionActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_WalletActionActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.WalletActionActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::WalletActionActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WalletActionActivatedEventArgs
-    };
+        _type_slots_WalletActionActivatedEventArgs};
 
     // ----- WebAccountProviderActivatedEventArgs class --------------------
 
@@ -8991,14 +8897,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_WebAccountProviderActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_WebAccountProviderActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.WebAccountProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::WebAccountProviderActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebAccountProviderActivatedEventArgs
-    };
+        _type_slots_WebAccountProviderActivatedEventArgs};
 
     // ----- WebAuthenticationBrokerContinuationEventArgs class --------------------
 
@@ -9160,14 +9064,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_WebAuthenticationBrokerContinuationEventArgs =
-    {
+    static PyType_Spec type_spec_WebAuthenticationBrokerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.WebAuthenticationBrokerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::WebAuthenticationBrokerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebAuthenticationBrokerContinuationEventArgs
-    };
+        _type_slots_WebAuthenticationBrokerContinuationEventArgs};
 
     // ----- IActivatedEventArgs interface --------------------
 
@@ -9289,14 +9191,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IActivatedEventArgs
-    };
+        _type_slots_IActivatedEventArgs};
 
     // ----- IActivatedEventArgsWithUser interface --------------------
 
@@ -9438,14 +9338,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IActivatedEventArgsWithUser =
-    {
+    static PyType_Spec type_spec_IActivatedEventArgsWithUser = {
         "winrt._winrt_windows_applicationmodel_activation.IActivatedEventArgsWithUser",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IActivatedEventArgsWithUser
-    };
+        _type_slots_IActivatedEventArgsWithUser};
 
     // ----- IApplicationViewActivatedEventArgs interface --------------------
 
@@ -9587,14 +9485,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IApplicationViewActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IApplicationViewActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IApplicationViewActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IApplicationViewActivatedEventArgs
-    };
+        _type_slots_IApplicationViewActivatedEventArgs};
 
     // ----- IAppointmentsProviderActivatedEventArgs interface --------------------
 
@@ -9736,14 +9632,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IAppointmentsProviderActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IAppointmentsProviderActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IAppointmentsProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAppointmentsProviderActivatedEventArgs
-    };
+        _type_slots_IAppointmentsProviderActivatedEventArgs};
 
     // ----- IAppointmentsProviderAddAppointmentActivatedEventArgs interface --------------------
 
@@ -9905,14 +9799,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IAppointmentsProviderAddAppointmentActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IAppointmentsProviderAddAppointmentActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IAppointmentsProviderAddAppointmentActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAppointmentsProviderAddAppointmentActivatedEventArgs
-    };
+        _type_slots_IAppointmentsProviderAddAppointmentActivatedEventArgs};
 
     // ----- IAppointmentsProviderRemoveAppointmentActivatedEventArgs interface --------------------
 
@@ -10074,14 +9966,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IAppointmentsProviderRemoveAppointmentActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IAppointmentsProviderRemoveAppointmentActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAppointmentsProviderRemoveAppointmentActivatedEventArgs
-    };
+        _type_slots_IAppointmentsProviderRemoveAppointmentActivatedEventArgs};
 
     // ----- IAppointmentsProviderReplaceAppointmentActivatedEventArgs interface --------------------
 
@@ -10243,14 +10133,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IAppointmentsProviderReplaceAppointmentActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IAppointmentsProviderReplaceAppointmentActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAppointmentsProviderReplaceAppointmentActivatedEventArgs
-    };
+        _type_slots_IAppointmentsProviderReplaceAppointmentActivatedEventArgs};
 
     // ----- IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs interface --------------------
 
@@ -10452,14 +10340,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs
-    };
+        _type_slots_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs};
 
     // ----- IAppointmentsProviderShowTimeFrameActivatedEventArgs interface --------------------
 
@@ -10641,14 +10527,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IAppointmentsProviderShowTimeFrameActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IAppointmentsProviderShowTimeFrameActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAppointmentsProviderShowTimeFrameActivatedEventArgs
-    };
+        _type_slots_IAppointmentsProviderShowTimeFrameActivatedEventArgs};
 
     // ----- IBackgroundActivatedEventArgs interface --------------------
 
@@ -10730,14 +10614,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IBackgroundActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IBackgroundActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IBackgroundActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBackgroundActivatedEventArgs
-    };
+        _type_slots_IBackgroundActivatedEventArgs};
 
     // ----- IBarcodeScannerPreviewActivatedEventArgs interface --------------------
 
@@ -10879,14 +10761,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IBarcodeScannerPreviewActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IBarcodeScannerPreviewActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IBarcodeScannerPreviewActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBarcodeScannerPreviewActivatedEventArgs
-    };
+        _type_slots_IBarcodeScannerPreviewActivatedEventArgs};
 
     // ----- ICachedFileUpdaterActivatedEventArgs interface --------------------
 
@@ -11028,14 +10908,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ICachedFileUpdaterActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ICachedFileUpdaterActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ICachedFileUpdaterActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICachedFileUpdaterActivatedEventArgs
-    };
+        _type_slots_ICachedFileUpdaterActivatedEventArgs};
 
     // ----- ICameraSettingsActivatedEventArgs interface --------------------
 
@@ -11197,14 +11075,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ICameraSettingsActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ICameraSettingsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ICameraSettingsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICameraSettingsActivatedEventArgs
-    };
+        _type_slots_ICameraSettingsActivatedEventArgs};
 
     // ----- ICommandLineActivatedEventArgs interface --------------------
 
@@ -11346,14 +11222,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ICommandLineActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ICommandLineActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ICommandLineActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICommandLineActivatedEventArgs
-    };
+        _type_slots_ICommandLineActivatedEventArgs};
 
     // ----- IContactActivatedEventArgs interface --------------------
 
@@ -11495,14 +11369,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IContactActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IContactActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContactActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IContactActivatedEventArgs
-    };
+        _type_slots_IContactActivatedEventArgs};
 
     // ----- IContactCallActivatedEventArgs interface --------------------
 
@@ -11704,14 +11576,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IContactCallActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IContactCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContactCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IContactCallActivatedEventArgs
-    };
+        _type_slots_IContactCallActivatedEventArgs};
 
     // ----- IContactMapActivatedEventArgs interface --------------------
 
@@ -11893,14 +11763,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IContactMapActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IContactMapActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContactMapActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IContactMapActivatedEventArgs
-    };
+        _type_slots_IContactMapActivatedEventArgs};
 
     // ----- IContactMessageActivatedEventArgs interface --------------------
 
@@ -12102,14 +11970,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IContactMessageActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IContactMessageActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContactMessageActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IContactMessageActivatedEventArgs
-    };
+        _type_slots_IContactMessageActivatedEventArgs};
 
     // ----- IContactPanelActivatedEventArgs interface --------------------
 
@@ -12211,14 +12077,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IContactPanelActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IContactPanelActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContactPanelActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IContactPanelActivatedEventArgs
-    };
+        _type_slots_IContactPanelActivatedEventArgs};
 
     // ----- IContactPickerActivatedEventArgs interface --------------------
 
@@ -12360,14 +12224,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IContactPickerActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IContactPickerActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContactPickerActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IContactPickerActivatedEventArgs
-    };
+        _type_slots_IContactPickerActivatedEventArgs};
 
     // ----- IContactPostActivatedEventArgs interface --------------------
 
@@ -12569,14 +12431,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IContactPostActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IContactPostActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContactPostActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IContactPostActivatedEventArgs
-    };
+        _type_slots_IContactPostActivatedEventArgs};
 
     // ----- IContactVideoCallActivatedEventArgs interface --------------------
 
@@ -12778,14 +12638,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IContactVideoCallActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IContactVideoCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContactVideoCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IContactVideoCallActivatedEventArgs
-    };
+        _type_slots_IContactVideoCallActivatedEventArgs};
 
     // ----- IContactsProviderActivatedEventArgs interface --------------------
 
@@ -12927,14 +12785,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IContactsProviderActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IContactsProviderActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContactsProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IContactsProviderActivatedEventArgs
-    };
+        _type_slots_IContactsProviderActivatedEventArgs};
 
     // ----- IContinuationActivatedEventArgs interface --------------------
 
@@ -13076,14 +12932,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IContinuationActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IContinuationActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IContinuationActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IContinuationActivatedEventArgs
-    };
+        _type_slots_IContinuationActivatedEventArgs};
 
     // ----- IDeviceActivatedEventArgs interface --------------------
 
@@ -13245,14 +13099,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IDeviceActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IDeviceActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IDeviceActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IDeviceActivatedEventArgs
-    };
+        _type_slots_IDeviceActivatedEventArgs};
 
     // ----- IDevicePairingActivatedEventArgs interface --------------------
 
@@ -13394,14 +13246,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IDevicePairingActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IDevicePairingActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IDevicePairingActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IDevicePairingActivatedEventArgs
-    };
+        _type_slots_IDevicePairingActivatedEventArgs};
 
     // ----- IDialReceiverActivatedEventArgs interface --------------------
 
@@ -13583,14 +13433,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IDialReceiverActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IDialReceiverActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IDialReceiverActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IDialReceiverActivatedEventArgs
-    };
+        _type_slots_IDialReceiverActivatedEventArgs};
 
     // ----- IFileActivatedEventArgs interface --------------------
 
@@ -13752,14 +13600,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IFileActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IFileActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IFileActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IFileActivatedEventArgs
-    };
+        _type_slots_IFileActivatedEventArgs};
 
     // ----- IFileActivatedEventArgsWithCallerPackageFamilyName interface --------------------
 
@@ -13901,14 +13747,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IFileActivatedEventArgsWithCallerPackageFamilyName =
-    {
+    static PyType_Spec type_spec_IFileActivatedEventArgsWithCallerPackageFamilyName = {
         "winrt._winrt_windows_applicationmodel_activation.IFileActivatedEventArgsWithCallerPackageFamilyName",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IFileActivatedEventArgsWithCallerPackageFamilyName
-    };
+        _type_slots_IFileActivatedEventArgsWithCallerPackageFamilyName};
 
     // ----- IFileActivatedEventArgsWithNeighboringFiles interface --------------------
 
@@ -14090,14 +13934,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IFileActivatedEventArgsWithNeighboringFiles =
-    {
+    static PyType_Spec type_spec_IFileActivatedEventArgsWithNeighboringFiles = {
         "winrt._winrt_windows_applicationmodel_activation.IFileActivatedEventArgsWithNeighboringFiles",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IFileActivatedEventArgsWithNeighboringFiles
-    };
+        _type_slots_IFileActivatedEventArgsWithNeighboringFiles};
 
     // ----- IFileOpenPickerActivatedEventArgs interface --------------------
 
@@ -14239,14 +14081,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IFileOpenPickerActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IFileOpenPickerActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IFileOpenPickerActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IFileOpenPickerActivatedEventArgs
-    };
+        _type_slots_IFileOpenPickerActivatedEventArgs};
 
     // ----- IFileOpenPickerActivatedEventArgs2 interface --------------------
 
@@ -14328,14 +14168,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IFileOpenPickerActivatedEventArgs2 =
-    {
+    static PyType_Spec type_spec_IFileOpenPickerActivatedEventArgs2 = {
         "winrt._winrt_windows_applicationmodel_activation.IFileOpenPickerActivatedEventArgs2",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IFileOpenPickerActivatedEventArgs2
-    };
+        _type_slots_IFileOpenPickerActivatedEventArgs2};
 
     // ----- IFileOpenPickerContinuationEventArgs interface --------------------
 
@@ -14497,14 +14335,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IFileOpenPickerContinuationEventArgs =
-    {
+    static PyType_Spec type_spec_IFileOpenPickerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IFileOpenPickerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IFileOpenPickerContinuationEventArgs
-    };
+        _type_slots_IFileOpenPickerContinuationEventArgs};
 
     // ----- IFileSavePickerActivatedEventArgs interface --------------------
 
@@ -14646,14 +14482,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IFileSavePickerActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IFileSavePickerActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IFileSavePickerActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IFileSavePickerActivatedEventArgs
-    };
+        _type_slots_IFileSavePickerActivatedEventArgs};
 
     // ----- IFileSavePickerActivatedEventArgs2 interface --------------------
 
@@ -14755,14 +14589,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IFileSavePickerActivatedEventArgs2 =
-    {
+    static PyType_Spec type_spec_IFileSavePickerActivatedEventArgs2 = {
         "winrt._winrt_windows_applicationmodel_activation.IFileSavePickerActivatedEventArgs2",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IFileSavePickerActivatedEventArgs2
-    };
+        _type_slots_IFileSavePickerActivatedEventArgs2};
 
     // ----- IFileSavePickerContinuationEventArgs interface --------------------
 
@@ -14924,14 +14756,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IFileSavePickerContinuationEventArgs =
-    {
+    static PyType_Spec type_spec_IFileSavePickerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IFileSavePickerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IFileSavePickerContinuationEventArgs
-    };
+        _type_slots_IFileSavePickerContinuationEventArgs};
 
     // ----- IFolderPickerContinuationEventArgs interface --------------------
 
@@ -15093,14 +14923,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IFolderPickerContinuationEventArgs =
-    {
+    static PyType_Spec type_spec_IFolderPickerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IFolderPickerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IFolderPickerContinuationEventArgs
-    };
+        _type_slots_IFolderPickerContinuationEventArgs};
 
     // ----- ILaunchActivatedEventArgs interface --------------------
 
@@ -15262,14 +15090,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ILaunchActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ILaunchActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ILaunchActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ILaunchActivatedEventArgs
-    };
+        _type_slots_ILaunchActivatedEventArgs};
 
     // ----- ILaunchActivatedEventArgs2 interface --------------------
 
@@ -15451,14 +15277,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ILaunchActivatedEventArgs2 =
-    {
+    static PyType_Spec type_spec_ILaunchActivatedEventArgs2 = {
         "winrt._winrt_windows_applicationmodel_activation.ILaunchActivatedEventArgs2",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ILaunchActivatedEventArgs2
-    };
+        _type_slots_ILaunchActivatedEventArgs2};
 
     // ----- ILockScreenActivatedEventArgs interface --------------------
 
@@ -15600,14 +15424,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ILockScreenActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ILockScreenActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ILockScreenActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ILockScreenActivatedEventArgs
-    };
+        _type_slots_ILockScreenActivatedEventArgs};
 
     // ----- ILockScreenCallActivatedEventArgs interface --------------------
 
@@ -15789,14 +15611,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ILockScreenCallActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ILockScreenCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ILockScreenCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ILockScreenCallActivatedEventArgs
-    };
+        _type_slots_ILockScreenCallActivatedEventArgs};
 
     // ----- IPhoneCallActivatedEventArgs interface --------------------
 
@@ -15938,14 +15758,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IPhoneCallActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IPhoneCallActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IPhoneCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IPhoneCallActivatedEventArgs
-    };
+        _type_slots_IPhoneCallActivatedEventArgs};
 
     // ----- IPickerReturnedActivatedEventArgs interface --------------------
 
@@ -16087,14 +15905,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IPickerReturnedActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IPickerReturnedActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IPickerReturnedActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IPickerReturnedActivatedEventArgs
-    };
+        _type_slots_IPickerReturnedActivatedEventArgs};
 
     // ----- IPrelaunchActivatedEventArgs interface --------------------
 
@@ -16236,14 +16052,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IPrelaunchActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IPrelaunchActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IPrelaunchActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IPrelaunchActivatedEventArgs
-    };
+        _type_slots_IPrelaunchActivatedEventArgs};
 
     // ----- IPrint3DWorkflowActivatedEventArgs interface --------------------
 
@@ -16385,14 +16199,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IPrint3DWorkflowActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IPrint3DWorkflowActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IPrint3DWorkflowActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IPrint3DWorkflowActivatedEventArgs
-    };
+        _type_slots_IPrint3DWorkflowActivatedEventArgs};
 
     // ----- IPrintTaskSettingsActivatedEventArgs interface --------------------
 
@@ -16534,14 +16346,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IPrintTaskSettingsActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IPrintTaskSettingsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IPrintTaskSettingsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IPrintTaskSettingsActivatedEventArgs
-    };
+        _type_slots_IPrintTaskSettingsActivatedEventArgs};
 
     // ----- IProtocolActivatedEventArgs interface --------------------
 
@@ -16683,14 +16493,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IProtocolActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IProtocolActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IProtocolActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IProtocolActivatedEventArgs
-    };
+        _type_slots_IProtocolActivatedEventArgs};
 
     // ----- IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData interface --------------------
 
@@ -16852,14 +16660,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData =
-    {
+    static PyType_Spec type_spec_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData = {
         "winrt._winrt_windows_applicationmodel_activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData
-    };
+        _type_slots_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData};
 
     // ----- IProtocolForResultsActivatedEventArgs interface --------------------
 
@@ -17001,14 +16807,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IProtocolForResultsActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IProtocolForResultsActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IProtocolForResultsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IProtocolForResultsActivatedEventArgs
-    };
+        _type_slots_IProtocolForResultsActivatedEventArgs};
 
     // ----- IRestrictedLaunchActivatedEventArgs interface --------------------
 
@@ -17150,14 +16954,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IRestrictedLaunchActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IRestrictedLaunchActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IRestrictedLaunchActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IRestrictedLaunchActivatedEventArgs
-    };
+        _type_slots_IRestrictedLaunchActivatedEventArgs};
 
     // ----- ISearchActivatedEventArgs interface --------------------
 
@@ -17319,14 +17121,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ISearchActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ISearchActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.ISearchActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISearchActivatedEventArgs
-    };
+        _type_slots_ISearchActivatedEventArgs};
 
     // ----- ISearchActivatedEventArgsWithLinguisticDetails interface --------------------
 
@@ -17408,14 +17208,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_ISearchActivatedEventArgsWithLinguisticDetails =
-    {
+    static PyType_Spec type_spec_ISearchActivatedEventArgsWithLinguisticDetails = {
         "winrt._winrt_windows_applicationmodel_activation.ISearchActivatedEventArgsWithLinguisticDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISearchActivatedEventArgsWithLinguisticDetails
-    };
+        _type_slots_ISearchActivatedEventArgsWithLinguisticDetails};
 
     // ----- IShareTargetActivatedEventArgs interface --------------------
 
@@ -17557,14 +17355,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IShareTargetActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IShareTargetActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IShareTargetActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IShareTargetActivatedEventArgs
-    };
+        _type_slots_IShareTargetActivatedEventArgs};
 
     // ----- IStartupTaskActivatedEventArgs interface --------------------
 
@@ -17706,14 +17502,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IStartupTaskActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IStartupTaskActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IStartupTaskActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IStartupTaskActivatedEventArgs
-    };
+        _type_slots_IStartupTaskActivatedEventArgs};
 
     // ----- IToastNotificationActivatedEventArgs interface --------------------
 
@@ -17875,14 +17669,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IToastNotificationActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IToastNotificationActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IToastNotificationActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IToastNotificationActivatedEventArgs
-    };
+        _type_slots_IToastNotificationActivatedEventArgs};
 
     // ----- IUserDataAccountProviderActivatedEventArgs interface --------------------
 
@@ -18024,14 +17816,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IUserDataAccountProviderActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IUserDataAccountProviderActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IUserDataAccountProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IUserDataAccountProviderActivatedEventArgs
-    };
+        _type_slots_IUserDataAccountProviderActivatedEventArgs};
 
     // ----- IViewSwitcherProvider interface --------------------
 
@@ -18173,14 +17963,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IViewSwitcherProvider =
-    {
+    static PyType_Spec type_spec_IViewSwitcherProvider = {
         "winrt._winrt_windows_applicationmodel_activation.IViewSwitcherProvider",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IViewSwitcherProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IViewSwitcherProvider
-    };
+        _type_slots_IViewSwitcherProvider};
 
     // ----- IVoiceCommandActivatedEventArgs interface --------------------
 
@@ -18322,14 +18110,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IVoiceCommandActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IVoiceCommandActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IVoiceCommandActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IVoiceCommandActivatedEventArgs
-    };
+        _type_slots_IVoiceCommandActivatedEventArgs};
 
     // ----- IWalletActionActivatedEventArgs interface --------------------
 
@@ -18511,14 +18297,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IWalletActionActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IWalletActionActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IWalletActionActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IWalletActionActivatedEventArgs
-    };
+        _type_slots_IWalletActionActivatedEventArgs};
 
     // ----- IWebAccountProviderActivatedEventArgs interface --------------------
 
@@ -18660,14 +18444,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IWebAccountProviderActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_IWebAccountProviderActivatedEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IWebAccountProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IWebAccountProviderActivatedEventArgs
-    };
+        _type_slots_IWebAccountProviderActivatedEventArgs};
 
     // ----- IWebAuthenticationBrokerContinuationEventArgs interface --------------------
 
@@ -18829,14 +18611,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { },
     };
 
-    static PyType_Spec type_spec_IWebAuthenticationBrokerContinuationEventArgs =
-    {
+    static PyType_Spec type_spec_IWebAuthenticationBrokerContinuationEventArgs = {
         "winrt._winrt_windows_applicationmodel_activation.IWebAuthenticationBrokerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IWebAuthenticationBrokerContinuationEventArgs
-    };
+        _type_slots_IWebAuthenticationBrokerContinuationEventArgs};
 
     // ----- Windows.ApplicationModel.Activation Initialization --------------------
 

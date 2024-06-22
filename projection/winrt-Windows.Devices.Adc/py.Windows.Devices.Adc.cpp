@@ -197,14 +197,12 @@ namespace py::cpp::Windows::Devices::Adc
         { },
     };
 
-    static PyType_Spec type_spec_AdcChannel =
-    {
+    static PyType_Spec type_spec_AdcChannel = {
         "winrt._winrt_windows_devices_adc.AdcChannel",
         sizeof(py::wrapper::Windows::Devices::Adc::AdcChannel),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdcChannel
-    };
+        _type_slots_AdcChannel};
 
     // ----- AdcController class --------------------
 
@@ -518,14 +516,12 @@ namespace py::cpp::Windows::Devices::Adc
         { },
     };
 
-    static PyType_Spec type_spec_AdcController =
-    {
+    static PyType_Spec type_spec_AdcController = {
         "winrt._winrt_windows_devices_adc.AdcController",
         sizeof(py::wrapper::Windows::Devices::Adc::AdcController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdcController
-    };
+        _type_slots_AdcController};
 
     static PyGetSetDef getset_AdcController_Static[] = {
         { }

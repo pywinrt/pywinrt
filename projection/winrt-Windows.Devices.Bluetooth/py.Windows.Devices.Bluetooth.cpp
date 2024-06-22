@@ -404,14 +404,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothAdapter =
-    {
+    static PyType_Spec type_spec_BluetoothAdapter = {
         "winrt._winrt_windows_devices_bluetooth.BluetoothAdapter",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::BluetoothAdapter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothAdapter
-    };
+        _type_slots_BluetoothAdapter};
 
     static PyGetSetDef getset_BluetoothAdapter_Static[] = {
         { }
@@ -645,14 +643,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothClassOfDevice =
-    {
+    static PyType_Spec type_spec_BluetoothClassOfDevice = {
         "winrt._winrt_windows_devices_bluetooth.BluetoothClassOfDevice",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::BluetoothClassOfDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothClassOfDevice
-    };
+        _type_slots_BluetoothClassOfDevice};
 
     static PyGetSetDef getset_BluetoothClassOfDevice_Static[] = {
         { }
@@ -1578,14 +1574,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothDevice =
-    {
+    static PyType_Spec type_spec_BluetoothDevice = {
         "winrt._winrt_windows_devices_bluetooth.BluetoothDevice",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothDevice
-    };
+        _type_slots_BluetoothDevice};
 
     static PyGetSetDef getset_BluetoothDevice_Static[] = {
         { }
@@ -1772,14 +1766,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothDeviceId =
-    {
+    static PyType_Spec type_spec_BluetoothDeviceId = {
         "winrt._winrt_windows_devices_bluetooth.BluetoothDeviceId",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::BluetoothDeviceId),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothDeviceId
-    };
+        _type_slots_BluetoothDeviceId};
 
     static PyGetSetDef getset_BluetoothDeviceId_Static[] = {
         { }
@@ -1990,14 +1982,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothLEAppearance =
-    {
+    static PyType_Spec type_spec_BluetoothLEAppearance = {
         "winrt._winrt_windows_devices_bluetooth.BluetoothLEAppearance",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEAppearance),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothLEAppearance
-    };
+        _type_slots_BluetoothLEAppearance};
 
     static PyGetSetDef getset_BluetoothLEAppearance_Static[] = {
         { }
@@ -2469,14 +2459,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothLEAppearanceCategories =
-    {
+    static PyType_Spec type_spec_BluetoothLEAppearanceCategories = {
         "winrt._winrt_windows_devices_bluetooth.BluetoothLEAppearanceCategories",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothLEAppearanceCategories
-    };
+        _type_slots_BluetoothLEAppearanceCategories};
 
     static PyGetSetDef getset_BluetoothLEAppearanceCategories_Static[] = {
         { "barcode_scanner", reinterpret_cast<getter>(BluetoothLEAppearanceCategories_get_BarcodeScanner), nullptr, nullptr, nullptr },
@@ -3082,14 +3070,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothLEAppearanceSubcategories =
-    {
+    static PyType_Spec type_spec_BluetoothLEAppearanceSubcategories = {
         "winrt._winrt_windows_devices_bluetooth.BluetoothLEAppearanceSubcategories",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothLEAppearanceSubcategories
-    };
+        _type_slots_BluetoothLEAppearanceSubcategories};
 
     static PyGetSetDef getset_BluetoothLEAppearanceSubcategories_Static[] = {
         { "barcode_scanner", reinterpret_cast<getter>(BluetoothLEAppearanceSubcategories_get_BarcodeScanner), nullptr, nullptr, nullptr },
@@ -3264,14 +3250,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothLEConnectionParameters =
-    {
+    static PyType_Spec type_spec_BluetoothLEConnectionParameters = {
         "winrt._winrt_windows_devices_bluetooth.BluetoothLEConnectionParameters",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEConnectionParameters),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothLEConnectionParameters
-    };
+        _type_slots_BluetoothLEConnectionParameters};
 
     // ----- BluetoothLEConnectionPhy class --------------------
 
@@ -3373,14 +3357,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothLEConnectionPhy =
-    {
+    static PyType_Spec type_spec_BluetoothLEConnectionPhy = {
         "winrt._winrt_windows_devices_bluetooth.BluetoothLEConnectionPhy",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEConnectionPhy),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothLEConnectionPhy
-    };
+        _type_slots_BluetoothLEConnectionPhy};
 
     // ----- BluetoothLEConnectionPhyInfo class --------------------
 
@@ -3502,14 +3484,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothLEConnectionPhyInfo =
-    {
+    static PyType_Spec type_spec_BluetoothLEConnectionPhyInfo = {
         "winrt._winrt_windows_devices_bluetooth.BluetoothLEConnectionPhyInfo",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEConnectionPhyInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothLEConnectionPhyInfo
-    };
+        _type_slots_BluetoothLEConnectionPhyInfo};
 
     // ----- BluetoothLEDevice class --------------------
 
@@ -4613,14 +4593,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothLEDevice =
-    {
+    static PyType_Spec type_spec_BluetoothLEDevice = {
         "winrt._winrt_windows_devices_bluetooth.BluetoothLEDevice",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothLEDevice
-    };
+        _type_slots_BluetoothLEDevice};
 
     static PyGetSetDef getset_BluetoothLEDevice_Static[] = {
         { }
@@ -4852,14 +4830,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothLEPreferredConnectionParameters =
-    {
+    static PyType_Spec type_spec_BluetoothLEPreferredConnectionParameters = {
         "winrt._winrt_windows_devices_bluetooth.BluetoothLEPreferredConnectionParameters",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothLEPreferredConnectionParameters
-    };
+        _type_slots_BluetoothLEPreferredConnectionParameters};
 
     static PyGetSetDef getset_BluetoothLEPreferredConnectionParameters_Static[] = {
         { "balanced", reinterpret_cast<getter>(BluetoothLEPreferredConnectionParameters_get_Balanced), nullptr, nullptr, nullptr },
@@ -5021,14 +4997,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothLEPreferredConnectionParametersRequest =
-    {
+    static PyType_Spec type_spec_BluetoothLEPreferredConnectionParametersRequest = {
         "winrt._winrt_windows_devices_bluetooth.BluetoothLEPreferredConnectionParametersRequest",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothLEPreferredConnectionParametersRequest
-    };
+        _type_slots_BluetoothLEPreferredConnectionParametersRequest};
 
     // ----- BluetoothSignalStrengthFilter class --------------------
 
@@ -5304,14 +5278,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothSignalStrengthFilter =
-    {
+    static PyType_Spec type_spec_BluetoothSignalStrengthFilter = {
         "winrt._winrt_windows_devices_bluetooth.BluetoothSignalStrengthFilter",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothSignalStrengthFilter
-    };
+        _type_slots_BluetoothSignalStrengthFilter};
 
     // ----- BluetoothUuidHelper class --------------------
 
@@ -5400,14 +5372,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothUuidHelper =
-    {
+    static PyType_Spec type_spec_BluetoothUuidHelper = {
         "winrt._winrt_windows_devices_bluetooth.BluetoothUuidHelper",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothUuidHelper
-    };
+        _type_slots_BluetoothUuidHelper};
 
     static PyGetSetDef getset_BluetoothUuidHelper_Static[] = {
         { }

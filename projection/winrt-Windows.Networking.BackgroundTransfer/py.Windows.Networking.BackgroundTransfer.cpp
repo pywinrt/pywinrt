@@ -836,14 +836,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundDownloader =
-    {
+    static PyType_Spec type_spec_BackgroundDownloader = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundDownloader",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundDownloader
-    };
+        _type_slots_BackgroundDownloader};
 
     static PyGetSetDef getset_BackgroundDownloader_Static[] = {
         { }
@@ -1026,14 +1024,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundTransferCompletionGroup =
-    {
+    static PyType_Spec type_spec_BackgroundTransferCompletionGroup = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundTransferCompletionGroup",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundTransferCompletionGroup
-    };
+        _type_slots_BackgroundTransferCompletionGroup};
 
     // ----- BackgroundTransferCompletionGroupTriggerDetails class --------------------
 
@@ -1135,14 +1131,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundTransferCompletionGroupTriggerDetails =
-    {
+    static PyType_Spec type_spec_BackgroundTransferCompletionGroupTriggerDetails = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundTransferCompletionGroupTriggerDetails",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroupTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundTransferCompletionGroupTriggerDetails
-    };
+        _type_slots_BackgroundTransferCompletionGroupTriggerDetails};
 
     // ----- BackgroundTransferContentPart class --------------------
 
@@ -1357,14 +1351,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundTransferContentPart =
-    {
+    static PyType_Spec type_spec_BackgroundTransferContentPart = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundTransferContentPart",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundTransferContentPart
-    };
+        _type_slots_BackgroundTransferContentPart};
 
     // ----- BackgroundTransferError class --------------------
 
@@ -1422,14 +1414,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundTransferError =
-    {
+    static PyType_Spec type_spec_BackgroundTransferError = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundTransferError",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundTransferError
-    };
+        _type_slots_BackgroundTransferError};
 
     static PyGetSetDef getset_BackgroundTransferError_Static[] = {
         { }
@@ -1616,14 +1606,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundTransferGroup =
-    {
+    static PyType_Spec type_spec_BackgroundTransferGroup = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundTransferGroup",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundTransferGroup
-    };
+        _type_slots_BackgroundTransferGroup};
 
     static PyGetSetDef getset_BackgroundTransferGroup_Static[] = {
         { }
@@ -1781,14 +1769,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundTransferRangesDownloadedEventArgs =
-    {
+    static PyType_Spec type_spec_BackgroundTransferRangesDownloadedEventArgs = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundTransferRangesDownloadedEventArgs",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundTransferRangesDownloadedEventArgs
-    };
+        _type_slots_BackgroundTransferRangesDownloadedEventArgs};
 
     // ----- BackgroundUploader class --------------------
 
@@ -2676,14 +2662,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundUploader =
-    {
+    static PyType_Spec type_spec_BackgroundUploader = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundUploader",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundUploader
-    };
+        _type_slots_BackgroundUploader};
 
     static PyGetSetDef getset_BackgroundUploader_Static[] = {
         { }
@@ -2823,14 +2807,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_ContentPrefetcher =
-    {
+    static PyType_Spec type_spec_ContentPrefetcher = {
         "winrt._winrt_windows_networking_backgroundtransfer.ContentPrefetcher",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentPrefetcher
-    };
+        _type_slots_ContentPrefetcher};
 
     static PyGetSetDef getset_ContentPrefetcher_Static[] = {
         { "indirect_content_uri", reinterpret_cast<getter>(ContentPrefetcher_get_IndirectContentUri), reinterpret_cast<setter>(ContentPrefetcher_put_IndirectContentUri), nullptr, nullptr },
@@ -3659,14 +3641,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_DownloadOperation =
-    {
+    static PyType_Spec type_spec_DownloadOperation = {
         "winrt._winrt_windows_networking_backgroundtransfer.DownloadOperation",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DownloadOperation
-    };
+        _type_slots_DownloadOperation};
 
     // ----- ResponseInformation class --------------------
 
@@ -3808,14 +3788,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_ResponseInformation =
-    {
+    static PyType_Spec type_spec_ResponseInformation = {
         "winrt._winrt_windows_networking_backgroundtransfer.ResponseInformation",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::ResponseInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResponseInformation
-    };
+        _type_slots_ResponseInformation};
 
     // ----- UnconstrainedTransferRequestResult class --------------------
 
@@ -3897,14 +3875,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_UnconstrainedTransferRequestResult =
-    {
+    static PyType_Spec type_spec_UnconstrainedTransferRequestResult = {
         "winrt._winrt_windows_networking_backgroundtransfer.UnconstrainedTransferRequestResult",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UnconstrainedTransferRequestResult
-    };
+        _type_slots_UnconstrainedTransferRequestResult};
 
     // ----- UploadOperation class --------------------
 
@@ -4422,14 +4398,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_UploadOperation =
-    {
+    static PyType_Spec type_spec_UploadOperation = {
         "winrt._winrt_windows_networking_backgroundtransfer.UploadOperation",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UploadOperation
-    };
+        _type_slots_UploadOperation};
 
     // ----- IBackgroundTransferBase interface --------------------
 
@@ -4765,14 +4739,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_IBackgroundTransferBase =
-    {
+    static PyType_Spec type_spec_IBackgroundTransferBase = {
         "winrt._winrt_windows_networking_backgroundtransfer.IBackgroundTransferBase",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBackgroundTransferBase
-    };
+        _type_slots_IBackgroundTransferBase};
 
     // ----- IBackgroundTransferContentPartFactory interface --------------------
 
@@ -4899,14 +4871,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_IBackgroundTransferContentPartFactory =
-    {
+    static PyType_Spec type_spec_IBackgroundTransferContentPartFactory = {
         "winrt._winrt_windows_networking_backgroundtransfer.IBackgroundTransferContentPartFactory",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBackgroundTransferContentPartFactory
-    };
+        _type_slots_IBackgroundTransferContentPartFactory};
 
     // ----- IBackgroundTransferOperation interface --------------------
 
@@ -5158,14 +5128,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_IBackgroundTransferOperation =
-    {
+    static PyType_Spec type_spec_IBackgroundTransferOperation = {
         "winrt._winrt_windows_networking_backgroundtransfer.IBackgroundTransferOperation",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBackgroundTransferOperation
-    };
+        _type_slots_IBackgroundTransferOperation};
 
     // ----- IBackgroundTransferOperationPriority interface --------------------
 
@@ -5275,14 +5243,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_IBackgroundTransferOperationPriority =
-    {
+    static PyType_Spec type_spec_IBackgroundTransferOperationPriority = {
         "winrt._winrt_windows_networking_backgroundtransfer.IBackgroundTransferOperationPriority",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBackgroundTransferOperationPriority
-    };
+        _type_slots_IBackgroundTransferOperationPriority};
 
     // ----- BackgroundDownloadProgress struct --------------------
 
@@ -5541,14 +5507,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundDownloadProgress =
-    {
+    static PyType_Spec type_spec_BackgroundDownloadProgress = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundDownloadProgress",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundDownloadProgress
-    };
+        _type_slots_BackgroundDownloadProgress};
 
     // ----- BackgroundTransferFileRange struct --------------------
 
@@ -5702,14 +5666,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundTransferFileRange =
-    {
+    static PyType_Spec type_spec_BackgroundTransferFileRange = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundTransferFileRange",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundTransferFileRange
-    };
+        _type_slots_BackgroundTransferFileRange};
 
     // ----- BackgroundUploadProgress struct --------------------
 
@@ -6038,14 +6000,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundUploadProgress =
-    {
+    static PyType_Spec type_spec_BackgroundUploadProgress = {
         "winrt._winrt_windows_networking_backgroundtransfer.BackgroundUploadProgress",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundUploadProgress
-    };
+        _type_slots_BackgroundUploadProgress};
 
     // ----- Windows.Networking.BackgroundTransfer Initialization --------------------
 

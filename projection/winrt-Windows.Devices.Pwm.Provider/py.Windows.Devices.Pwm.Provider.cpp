@@ -344,14 +344,12 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
         { },
     };
 
-    static PyType_Spec type_spec_IPwmControllerProvider =
-    {
+    static PyType_Spec type_spec_IPwmControllerProvider = {
         "winrt._winrt_windows_devices_pwm_provider.IPwmControllerProvider",
         sizeof(py::wrapper::Windows::Devices::Pwm::Provider::IPwmControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IPwmControllerProvider
-    };
+        _type_slots_IPwmControllerProvider};
 
     // ----- IPwmProvider interface --------------------
 
@@ -443,14 +441,12 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
         { },
     };
 
-    static PyType_Spec type_spec_IPwmProvider =
-    {
+    static PyType_Spec type_spec_IPwmProvider = {
         "winrt._winrt_windows_devices_pwm_provider.IPwmProvider",
         sizeof(py::wrapper::Windows::Devices::Pwm::Provider::IPwmProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IPwmProvider
-    };
+        _type_slots_IPwmProvider};
 
     // ----- Windows.Devices.Pwm.Provider Initialization --------------------
 

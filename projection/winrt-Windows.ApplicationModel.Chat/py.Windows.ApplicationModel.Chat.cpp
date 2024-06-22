@@ -165,14 +165,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatCapabilities =
-    {
+    static PyType_Spec type_spec_ChatCapabilities = {
         "winrt._winrt_windows_applicationmodel_chat.ChatCapabilities",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatCapabilities
-    };
+        _type_slots_ChatCapabilities};
 
     // ----- ChatCapabilitiesManager class --------------------
 
@@ -303,14 +301,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatCapabilitiesManager =
-    {
+    static PyType_Spec type_spec_ChatCapabilitiesManager = {
         "winrt._winrt_windows_applicationmodel_chat.ChatCapabilitiesManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatCapabilitiesManager
-    };
+        _type_slots_ChatCapabilitiesManager};
 
     static PyGetSetDef getset_ChatCapabilitiesManager_Static[] = {
         { }
@@ -918,14 +914,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatConversation =
-    {
+    static PyType_Spec type_spec_ChatConversation = {
         "winrt._winrt_windows_applicationmodel_chat.ChatConversation",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatConversation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatConversation
-    };
+        _type_slots_ChatConversation};
 
     // ----- ChatConversationReader class --------------------
 
@@ -1037,14 +1031,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatConversationReader =
-    {
+    static PyType_Spec type_spec_ChatConversationReader = {
         "winrt._winrt_windows_applicationmodel_chat.ChatConversationReader",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatConversationReader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatConversationReader
-    };
+        _type_slots_ChatConversationReader};
 
     // ----- ChatConversationThreadingInfo class --------------------
 
@@ -1340,14 +1332,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatConversationThreadingInfo =
-    {
+    static PyType_Spec type_spec_ChatConversationThreadingInfo = {
         "winrt._winrt_windows_applicationmodel_chat.ChatConversationThreadingInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatConversationThreadingInfo
-    };
+        _type_slots_ChatConversationThreadingInfo};
 
     // ----- ChatMessage class --------------------
 
@@ -2571,14 +2561,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatMessage =
-    {
+    static PyType_Spec type_spec_ChatMessage = {
         "winrt._winrt_windows_applicationmodel_chat.ChatMessage",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatMessage
-    };
+        _type_slots_ChatMessage};
 
     // ----- ChatMessageAttachment class --------------------
 
@@ -3001,14 +2989,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatMessageAttachment =
-    {
+    static PyType_Spec type_spec_ChatMessageAttachment = {
         "winrt._winrt_windows_applicationmodel_chat.ChatMessageAttachment",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageAttachment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatMessageAttachment
-    };
+        _type_slots_ChatMessageAttachment};
 
     // ----- ChatMessageBlocking class --------------------
 
@@ -3067,14 +3053,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatMessageBlocking =
-    {
+    static PyType_Spec type_spec_ChatMessageBlocking = {
         "winrt._winrt_windows_applicationmodel_chat.ChatMessageBlocking",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatMessageBlocking
-    };
+        _type_slots_ChatMessageBlocking};
 
     static PyGetSetDef getset_ChatMessageBlocking_Static[] = {
         { }
@@ -3202,14 +3186,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatMessageChange =
-    {
+    static PyType_Spec type_spec_ChatMessageChange = {
         "winrt._winrt_windows_applicationmodel_chat.ChatMessageChange",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChange),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatMessageChange
-    };
+        _type_slots_ChatMessageChange};
 
     // ----- ChatMessageChangeReader class --------------------
 
@@ -3365,14 +3347,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatMessageChangeReader =
-    {
+    static PyType_Spec type_spec_ChatMessageChangeReader = {
         "winrt._winrt_windows_applicationmodel_chat.ChatMessageChangeReader",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangeReader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatMessageChangeReader
-    };
+        _type_slots_ChatMessageChangeReader};
 
     // ----- ChatMessageChangeTracker class --------------------
 
@@ -3526,14 +3506,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatMessageChangeTracker =
-    {
+    static PyType_Spec type_spec_ChatMessageChangeTracker = {
         "winrt._winrt_windows_applicationmodel_chat.ChatMessageChangeTracker",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangeTracker),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatMessageChangeTracker
-    };
+        _type_slots_ChatMessageChangeTracker};
 
     // ----- ChatMessageChangedDeferral class --------------------
 
@@ -3626,14 +3604,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatMessageChangedDeferral =
-    {
+    static PyType_Spec type_spec_ChatMessageChangedDeferral = {
         "winrt._winrt_windows_applicationmodel_chat.ChatMessageChangedDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangedDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatMessageChangedDeferral
-    };
+        _type_slots_ChatMessageChangedDeferral};
 
     // ----- ChatMessageChangedEventArgs class --------------------
 
@@ -3725,14 +3701,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatMessageChangedEventArgs =
-    {
+    static PyType_Spec type_spec_ChatMessageChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_chat.ChatMessageChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatMessageChangedEventArgs
-    };
+        _type_slots_ChatMessageChangedEventArgs};
 
     // ----- ChatMessageManager class --------------------
 
@@ -3967,14 +3941,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatMessageManager =
-    {
+    static PyType_Spec type_spec_ChatMessageManager = {
         "winrt._winrt_windows_applicationmodel_chat.ChatMessageManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatMessageManager
-    };
+        _type_slots_ChatMessageManager};
 
     static PyGetSetDef getset_ChatMessageManager_Static[] = {
         { }
@@ -4168,14 +4140,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatMessageNotificationTriggerDetails =
-    {
+    static PyType_Spec type_spec_ChatMessageNotificationTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_chat.ChatMessageNotificationTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageNotificationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatMessageNotificationTriggerDetails
-    };
+        _type_slots_ChatMessageNotificationTriggerDetails};
 
     // ----- ChatMessageReader class --------------------
 
@@ -4287,14 +4257,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatMessageReader =
-    {
+    static PyType_Spec type_spec_ChatMessageReader = {
         "winrt._winrt_windows_applicationmodel_chat.ChatMessageReader",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageReader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatMessageReader
-    };
+        _type_slots_ChatMessageReader};
 
     // ----- ChatMessageStore class --------------------
 
@@ -5201,14 +5169,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatMessageStore =
-    {
+    static PyType_Spec type_spec_ChatMessageStore = {
         "winrt._winrt_windows_applicationmodel_chat.ChatMessageStore",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatMessageStore
-    };
+        _type_slots_ChatMessageStore};
 
     // ----- ChatMessageStoreChangedEventArgs class --------------------
 
@@ -5310,14 +5276,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatMessageStoreChangedEventArgs =
-    {
+    static PyType_Spec type_spec_ChatMessageStoreChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_chat.ChatMessageStoreChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStoreChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatMessageStoreChangedEventArgs
-    };
+        _type_slots_ChatMessageStoreChangedEventArgs};
 
     // ----- ChatMessageTransport class --------------------
 
@@ -5529,14 +5493,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatMessageTransport =
-    {
+    static PyType_Spec type_spec_ChatMessageTransport = {
         "winrt._winrt_windows_applicationmodel_chat.ChatMessageTransport",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageTransport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatMessageTransport
-    };
+        _type_slots_ChatMessageTransport};
 
     // ----- ChatMessageTransportConfiguration class --------------------
 
@@ -5698,14 +5660,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatMessageTransportConfiguration =
-    {
+    static PyType_Spec type_spec_ChatMessageTransportConfiguration = {
         "winrt._winrt_windows_applicationmodel_chat.ChatMessageTransportConfiguration",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageTransportConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatMessageTransportConfiguration
-    };
+        _type_slots_ChatMessageTransportConfiguration};
 
     // ----- ChatMessageValidationResult class --------------------
 
@@ -5847,14 +5807,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatMessageValidationResult =
-    {
+    static PyType_Spec type_spec_ChatMessageValidationResult = {
         "winrt._winrt_windows_applicationmodel_chat.ChatMessageValidationResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageValidationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatMessageValidationResult
-    };
+        _type_slots_ChatMessageValidationResult};
 
     // ----- ChatQueryOptions class --------------------
 
@@ -5986,14 +5944,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatQueryOptions =
-    {
+    static PyType_Spec type_spec_ChatQueryOptions = {
         "winrt._winrt_windows_applicationmodel_chat.ChatQueryOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatQueryOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatQueryOptions
-    };
+        _type_slots_ChatQueryOptions};
 
     // ----- ChatRecipientDeliveryInfo class --------------------
 
@@ -6321,14 +6277,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatRecipientDeliveryInfo =
-    {
+    static PyType_Spec type_spec_ChatRecipientDeliveryInfo = {
         "winrt._winrt_windows_applicationmodel_chat.ChatRecipientDeliveryInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatRecipientDeliveryInfo
-    };
+        _type_slots_ChatRecipientDeliveryInfo};
 
     // ----- ChatSearchReader class --------------------
 
@@ -6440,14 +6394,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatSearchReader =
-    {
+    static PyType_Spec type_spec_ChatSearchReader = {
         "winrt._winrt_windows_applicationmodel_chat.ChatSearchReader",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatSearchReader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatSearchReader
-    };
+        _type_slots_ChatSearchReader};
 
     // ----- ChatSyncConfiguration class --------------------
 
@@ -6605,14 +6557,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatSyncConfiguration =
-    {
+    static PyType_Spec type_spec_ChatSyncConfiguration = {
         "winrt._winrt_windows_applicationmodel_chat.ChatSyncConfiguration",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatSyncConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatSyncConfiguration
-    };
+        _type_slots_ChatSyncConfiguration};
 
     // ----- ChatSyncManager class --------------------
 
@@ -6851,14 +6801,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_ChatSyncManager =
-    {
+    static PyType_Spec type_spec_ChatSyncManager = {
         "winrt._winrt_windows_applicationmodel_chat.ChatSyncManager",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatSyncManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ChatSyncManager
-    };
+        _type_slots_ChatSyncManager};
 
     // ----- RcsEndUserMessage class --------------------
 
@@ -7085,14 +7033,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_RcsEndUserMessage =
-    {
+    static PyType_Spec type_spec_RcsEndUserMessage = {
         "winrt._winrt_windows_applicationmodel_chat.RcsEndUserMessage",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::RcsEndUserMessage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RcsEndUserMessage
-    };
+        _type_slots_RcsEndUserMessage};
 
     // ----- RcsEndUserMessageAction class --------------------
 
@@ -7174,14 +7120,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_RcsEndUserMessageAction =
-    {
+    static PyType_Spec type_spec_RcsEndUserMessageAction = {
         "winrt._winrt_windows_applicationmodel_chat.RcsEndUserMessageAction",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::RcsEndUserMessageAction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RcsEndUserMessageAction
-    };
+        _type_slots_RcsEndUserMessageAction};
 
     // ----- RcsEndUserMessageAvailableEventArgs class --------------------
 
@@ -7283,14 +7227,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_RcsEndUserMessageAvailableEventArgs =
-    {
+    static PyType_Spec type_spec_RcsEndUserMessageAvailableEventArgs = {
         "winrt._winrt_windows_applicationmodel_chat.RcsEndUserMessageAvailableEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RcsEndUserMessageAvailableEventArgs
-    };
+        _type_slots_RcsEndUserMessageAvailableEventArgs};
 
     // ----- RcsEndUserMessageAvailableTriggerDetails class --------------------
 
@@ -7392,14 +7334,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_RcsEndUserMessageAvailableTriggerDetails =
-    {
+    static PyType_Spec type_spec_RcsEndUserMessageAvailableTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_chat.RcsEndUserMessageAvailableTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RcsEndUserMessageAvailableTriggerDetails
-    };
+        _type_slots_RcsEndUserMessageAvailableTriggerDetails};
 
     // ----- RcsEndUserMessageManager class --------------------
 
@@ -7506,14 +7446,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_RcsEndUserMessageManager =
-    {
+    static PyType_Spec type_spec_RcsEndUserMessageManager = {
         "winrt._winrt_windows_applicationmodel_chat.RcsEndUserMessageManager",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::RcsEndUserMessageManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RcsEndUserMessageManager
-    };
+        _type_slots_RcsEndUserMessageManager};
 
     // ----- RcsManager class --------------------
 
@@ -7705,14 +7643,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_RcsManager =
-    {
+    static PyType_Spec type_spec_RcsManager = {
         "winrt._winrt_windows_applicationmodel_chat.RcsManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RcsManager
-    };
+        _type_slots_RcsManager};
 
     static PyGetSetDef getset_RcsManager_Static[] = {
         { }
@@ -7823,14 +7759,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_RcsServiceKindSupportedChangedEventArgs =
-    {
+    static PyType_Spec type_spec_RcsServiceKindSupportedChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_chat.RcsServiceKindSupportedChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::RcsServiceKindSupportedChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RcsServiceKindSupportedChangedEventArgs
-    };
+        _type_slots_RcsServiceKindSupportedChangedEventArgs};
 
     // ----- RcsTransport class --------------------
 
@@ -8101,14 +8035,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_RcsTransport =
-    {
+    static PyType_Spec type_spec_RcsTransport = {
         "winrt._winrt_windows_applicationmodel_chat.RcsTransport",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::RcsTransport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RcsTransport
-    };
+        _type_slots_RcsTransport};
 
     // ----- RcsTransportConfiguration class --------------------
 
@@ -8290,14 +8222,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_RcsTransportConfiguration =
-    {
+    static PyType_Spec type_spec_RcsTransportConfiguration = {
         "winrt._winrt_windows_applicationmodel_chat.RcsTransportConfiguration",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::RcsTransportConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RcsTransportConfiguration
-    };
+        _type_slots_RcsTransportConfiguration};
 
     // ----- RemoteParticipantComposingChangedEventArgs class --------------------
 
@@ -8419,14 +8349,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_RemoteParticipantComposingChangedEventArgs =
-    {
+    static PyType_Spec type_spec_RemoteParticipantComposingChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_chat.RemoteParticipantComposingChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::RemoteParticipantComposingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteParticipantComposingChangedEventArgs
-    };
+        _type_slots_RemoteParticipantComposingChangedEventArgs};
 
     // ----- IChatItem interface --------------------
 
@@ -8508,14 +8436,12 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { },
     };
 
-    static PyType_Spec type_spec_IChatItem =
-    {
+    static PyType_Spec type_spec_IChatItem = {
         "winrt._winrt_windows_applicationmodel_chat.IChatItem",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::IChatItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IChatItem
-    };
+        _type_slots_IChatItem};
 
     // ----- Windows.ApplicationModel.Chat Initialization --------------------
 

@@ -90,14 +90,12 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicApplicationPreview =
-    {
+    static PyType_Spec type_spec_HolographicApplicationPreview = {
         "winrt._winrt_windows_applicationmodel_preview_holographic.HolographicApplicationPreview",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicApplicationPreview
-    };
+        _type_slots_HolographicApplicationPreview};
 
     static PyGetSetDef getset_HolographicApplicationPreview_Static[] = {
         { }
@@ -305,14 +303,12 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
         { },
     };
 
-    static PyType_Spec type_spec_HolographicKeyboardPlacementOverridePreview =
-    {
+    static PyType_Spec type_spec_HolographicKeyboardPlacementOverridePreview = {
         "winrt._winrt_windows_applicationmodel_preview_holographic.HolographicKeyboardPlacementOverridePreview",
         sizeof(py::wrapper::Windows::ApplicationModel::Preview::Holographic::HolographicKeyboardPlacementOverridePreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HolographicKeyboardPlacementOverridePreview
-    };
+        _type_slots_HolographicKeyboardPlacementOverridePreview};
 
     static PyGetSetDef getset_HolographicKeyboardPlacementOverridePreview_Static[] = {
         { }

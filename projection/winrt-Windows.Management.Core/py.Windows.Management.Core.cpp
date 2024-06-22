@@ -96,14 +96,12 @@ namespace py::cpp::Windows::Management::Core
         { },
     };
 
-    static PyType_Spec type_spec_ApplicationDataManager =
-    {
+    static PyType_Spec type_spec_ApplicationDataManager = {
         "winrt._winrt_windows_management_core.ApplicationDataManager",
         sizeof(py::wrapper::Windows::Management::Core::ApplicationDataManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ApplicationDataManager
-    };
+        _type_slots_ApplicationDataManager};
 
     static PyGetSetDef getset_ApplicationDataManager_Static[] = {
         { }

@@ -104,14 +104,12 @@ namespace py::cpp::Windows::Security::Credentials::UI
         { },
     };
 
-    static PyType_Spec type_spec_CredentialPicker =
-    {
+    static PyType_Spec type_spec_CredentialPicker = {
         "winrt._winrt_windows_security_credentials_ui.CredentialPicker",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CredentialPicker
-    };
+        _type_slots_CredentialPicker};
 
     static PyGetSetDef getset_CredentialPicker_Static[] = {
         { }
@@ -701,14 +699,12 @@ namespace py::cpp::Windows::Security::Credentials::UI
         { },
     };
 
-    static PyType_Spec type_spec_CredentialPickerOptions =
-    {
+    static PyType_Spec type_spec_CredentialPickerOptions = {
         "winrt._winrt_windows_security_credentials_ui.CredentialPickerOptions",
         sizeof(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CredentialPickerOptions
-    };
+        _type_slots_CredentialPickerOptions};
 
     // ----- CredentialPickerResults class --------------------
 
@@ -910,14 +906,12 @@ namespace py::cpp::Windows::Security::Credentials::UI
         { },
     };
 
-    static PyType_Spec type_spec_CredentialPickerResults =
-    {
+    static PyType_Spec type_spec_CredentialPickerResults = {
         "winrt._winrt_windows_security_credentials_ui.CredentialPickerResults",
         sizeof(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerResults),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CredentialPickerResults
-    };
+        _type_slots_CredentialPickerResults};
 
     // ----- UserConsentVerifier class --------------------
 
@@ -1004,14 +998,12 @@ namespace py::cpp::Windows::Security::Credentials::UI
         { },
     };
 
-    static PyType_Spec type_spec_UserConsentVerifier =
-    {
+    static PyType_Spec type_spec_UserConsentVerifier = {
         "winrt._winrt_windows_security_credentials_ui.UserConsentVerifier",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserConsentVerifier
-    };
+        _type_slots_UserConsentVerifier};
 
     static PyGetSetDef getset_UserConsentVerifier_Static[] = {
         { }

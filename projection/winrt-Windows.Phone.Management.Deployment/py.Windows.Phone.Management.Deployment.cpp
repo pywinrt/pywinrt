@@ -185,14 +185,12 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_Enterprise =
-    {
+    static PyType_Spec type_spec_Enterprise = {
         "winrt._winrt_windows_phone_management_deployment.Enterprise",
         sizeof(py::wrapper::Windows::Phone::Management::Deployment::Enterprise),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Enterprise
-    };
+        _type_slots_Enterprise};
 
     // ----- EnterpriseEnrollmentManager class --------------------
 
@@ -348,14 +346,12 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_EnterpriseEnrollmentManager =
-    {
+    static PyType_Spec type_spec_EnterpriseEnrollmentManager = {
         "winrt._winrt_windows_phone_management_deployment.EnterpriseEnrollmentManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EnterpriseEnrollmentManager
-    };
+        _type_slots_EnterpriseEnrollmentManager};
 
     static PyGetSetDef getset_EnterpriseEnrollmentManager_Static[] = {
         { "current_enterprise", reinterpret_cast<getter>(EnterpriseEnrollmentManager_get_CurrentEnterprise), nullptr, nullptr, nullptr },
@@ -487,14 +483,12 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_EnterpriseEnrollmentResult =
-    {
+    static PyType_Spec type_spec_EnterpriseEnrollmentResult = {
         "winrt._winrt_windows_phone_management_deployment.EnterpriseEnrollmentResult",
         sizeof(py::wrapper::Windows::Phone::Management::Deployment::EnterpriseEnrollmentResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EnterpriseEnrollmentResult
-    };
+        _type_slots_EnterpriseEnrollmentResult};
 
     // ----- InstallationManager class --------------------
 
@@ -750,14 +744,12 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_InstallationManager =
-    {
+    static PyType_Spec type_spec_InstallationManager = {
         "winrt._winrt_windows_phone_management_deployment.InstallationManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InstallationManager
-    };
+        _type_slots_InstallationManager};
 
     static PyGetSetDef getset_InstallationManager_Static[] = {
         { }
@@ -910,14 +902,12 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         { },
     };
 
-    static PyType_Spec type_spec_PackageInstallResult =
-    {
+    static PyType_Spec type_spec_PackageInstallResult = {
         "winrt._winrt_windows_phone_management_deployment.PackageInstallResult",
         sizeof(py::wrapper::Windows::Phone::Management::Deployment::PackageInstallResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PackageInstallResult
-    };
+        _type_slots_PackageInstallResult};
 
     // ----- Windows.Phone.Management.Deployment Initialization --------------------
 

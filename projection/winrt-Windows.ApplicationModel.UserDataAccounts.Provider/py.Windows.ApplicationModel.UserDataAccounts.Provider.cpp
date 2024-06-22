@@ -125,14 +125,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         { },
     };
 
-    static PyType_Spec type_spec_UserDataAccountPartnerAccountInfo =
-    {
+    static PyType_Spec type_spec_UserDataAccountPartnerAccountInfo = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts_provider.UserDataAccountPartnerAccountInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataAccountPartnerAccountInfo
-    };
+        _type_slots_UserDataAccountPartnerAccountInfo};
 
     // ----- UserDataAccountProviderAddAccountOperation class --------------------
 
@@ -287,14 +285,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         { },
     };
 
-    static PyType_Spec type_spec_UserDataAccountProviderAddAccountOperation =
-    {
+    static PyType_Spec type_spec_UserDataAccountProviderAddAccountOperation = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts_provider.UserDataAccountProviderAddAccountOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataAccountProviderAddAccountOperation
-    };
+        _type_slots_UserDataAccountProviderAddAccountOperation};
 
     // ----- UserDataAccountProviderResolveErrorsOperation class --------------------
 
@@ -427,14 +423,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         { },
     };
 
-    static PyType_Spec type_spec_UserDataAccountProviderResolveErrorsOperation =
-    {
+    static PyType_Spec type_spec_UserDataAccountProviderResolveErrorsOperation = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts_provider.UserDataAccountProviderResolveErrorsOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderResolveErrorsOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataAccountProviderResolveErrorsOperation
-    };
+        _type_slots_UserDataAccountProviderResolveErrorsOperation};
 
     // ----- UserDataAccountProviderSettingsOperation class --------------------
 
@@ -567,14 +561,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         { },
     };
 
-    static PyType_Spec type_spec_UserDataAccountProviderSettingsOperation =
-    {
+    static PyType_Spec type_spec_UserDataAccountProviderSettingsOperation = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts_provider.UserDataAccountProviderSettingsOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderSettingsOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataAccountProviderSettingsOperation
-    };
+        _type_slots_UserDataAccountProviderSettingsOperation};
 
     // ----- IUserDataAccountProviderOperation interface --------------------
 
@@ -656,14 +648,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         { },
     };
 
-    static PyType_Spec type_spec_IUserDataAccountProviderOperation =
-    {
+    static PyType_Spec type_spec_IUserDataAccountProviderOperation = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts_provider.IUserDataAccountProviderOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IUserDataAccountProviderOperation
-    };
+        _type_slots_IUserDataAccountProviderOperation};
 
     // ----- Windows.ApplicationModel.UserDataAccounts.Provider Initialization --------------------
 

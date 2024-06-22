@@ -109,14 +109,12 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { },
     };
 
-    static PyType_Spec type_spec_GpioPinProviderValueChangedEventArgs =
-    {
+    static PyType_Spec type_spec_GpioPinProviderValueChangedEventArgs = {
         "winrt._winrt_windows_devices_gpio_provider.GpioPinProviderValueChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Gpio::Provider::GpioPinProviderValueChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GpioPinProviderValueChangedEventArgs
-    };
+        _type_slots_GpioPinProviderValueChangedEventArgs};
 
     // ----- IGpioControllerProvider interface --------------------
 
@@ -231,14 +229,12 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { },
     };
 
-    static PyType_Spec type_spec_IGpioControllerProvider =
-    {
+    static PyType_Spec type_spec_IGpioControllerProvider = {
         "winrt._winrt_windows_devices_gpio_provider.IGpioControllerProvider",
         sizeof(py::wrapper::Windows::Devices::Gpio::Provider::IGpioControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IGpioControllerProvider
-    };
+        _type_slots_IGpioControllerProvider};
 
     // ----- IGpioPinProvider interface --------------------
 
@@ -591,14 +587,12 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { },
     };
 
-    static PyType_Spec type_spec_IGpioPinProvider =
-    {
+    static PyType_Spec type_spec_IGpioPinProvider = {
         "winrt._winrt_windows_devices_gpio_provider.IGpioPinProvider",
         sizeof(py::wrapper::Windows::Devices::Gpio::Provider::IGpioPinProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IGpioPinProvider
-    };
+        _type_slots_IGpioPinProvider};
 
     // ----- IGpioProvider interface --------------------
 
@@ -690,14 +684,12 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
         { },
     };
 
-    static PyType_Spec type_spec_IGpioProvider =
-    {
+    static PyType_Spec type_spec_IGpioProvider = {
         "winrt._winrt_windows_devices_gpio_provider.IGpioProvider",
         sizeof(py::wrapper::Windows::Devices::Gpio::Provider::IGpioProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IGpioProvider
-    };
+        _type_slots_IGpioProvider};
 
     // ----- Windows.Devices.Gpio.Provider Initialization --------------------
 

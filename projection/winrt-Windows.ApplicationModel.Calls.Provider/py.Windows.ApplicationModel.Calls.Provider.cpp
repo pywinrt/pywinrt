@@ -327,14 +327,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCallOrigin =
-    {
+    static PyType_Spec type_spec_PhoneCallOrigin = {
         "winrt._winrt_windows_applicationmodel_calls_provider.PhoneCallOrigin",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCallOrigin
-    };
+        _type_slots_PhoneCallOrigin};
 
     // ----- PhoneCallOriginManager class --------------------
 
@@ -491,14 +489,12 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCallOriginManager =
-    {
+    static PyType_Spec type_spec_PhoneCallOriginManager = {
         "winrt._winrt_windows_applicationmodel_calls_provider.PhoneCallOriginManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCallOriginManager
-    };
+        _type_slots_PhoneCallOriginManager};
 
     static PyGetSetDef getset_PhoneCallOriginManager_Static[] = {
         { "is_current_app_active_call_origin_app", reinterpret_cast<getter>(PhoneCallOriginManager_get_IsCurrentAppActiveCallOriginApp), nullptr, nullptr, nullptr },

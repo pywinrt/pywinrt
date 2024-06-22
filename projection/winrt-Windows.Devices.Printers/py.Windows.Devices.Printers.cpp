@@ -135,14 +135,12 @@ namespace py::cpp::Windows::Devices::Printers
         { },
     };
 
-    static PyType_Spec type_spec_IppAttributeError =
-    {
+    static PyType_Spec type_spec_IppAttributeError = {
         "winrt._winrt_windows_devices_printers.IppAttributeError",
         sizeof(py::wrapper::Windows::Devices::Printers::IppAttributeError),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IppAttributeError
-    };
+        _type_slots_IppAttributeError};
 
     // ----- IppAttributeValue class --------------------
 
@@ -1967,14 +1965,12 @@ namespace py::cpp::Windows::Devices::Printers
         { },
     };
 
-    static PyType_Spec type_spec_IppAttributeValue =
-    {
+    static PyType_Spec type_spec_IppAttributeValue = {
         "winrt._winrt_windows_devices_printers.IppAttributeValue",
         sizeof(py::wrapper::Windows::Devices::Printers::IppAttributeValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IppAttributeValue
-    };
+        _type_slots_IppAttributeValue};
 
     static PyGetSetDef getset_IppAttributeValue_Static[] = {
         { }
@@ -2165,14 +2161,12 @@ namespace py::cpp::Windows::Devices::Printers
         { },
     };
 
-    static PyType_Spec type_spec_IppIntegerRange =
-    {
+    static PyType_Spec type_spec_IppIntegerRange = {
         "winrt._winrt_windows_devices_printers.IppIntegerRange",
         sizeof(py::wrapper::Windows::Devices::Printers::IppIntegerRange),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IppIntegerRange
-    };
+        _type_slots_IppIntegerRange};
 
     // ----- IppPrintDevice class --------------------
 
@@ -2646,14 +2640,12 @@ namespace py::cpp::Windows::Devices::Printers
         { },
     };
 
-    static PyType_Spec type_spec_IppPrintDevice =
-    {
+    static PyType_Spec type_spec_IppPrintDevice = {
         "winrt._winrt_windows_devices_printers.IppPrintDevice",
         sizeof(py::wrapper::Windows::Devices::Printers::IppPrintDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IppPrintDevice
-    };
+        _type_slots_IppPrintDevice};
 
     static PyGetSetDef getset_IppPrintDevice_Static[] = {
         { }
@@ -2830,14 +2822,12 @@ namespace py::cpp::Windows::Devices::Printers
         { },
     };
 
-    static PyType_Spec type_spec_IppResolution =
-    {
+    static PyType_Spec type_spec_IppResolution = {
         "winrt._winrt_windows_devices_printers.IppResolution",
         sizeof(py::wrapper::Windows::Devices::Printers::IppResolution),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IppResolution
-    };
+        _type_slots_IppResolution};
 
     // ----- IppSetAttributesResult class --------------------
 
@@ -2939,14 +2929,12 @@ namespace py::cpp::Windows::Devices::Printers
         { },
     };
 
-    static PyType_Spec type_spec_IppSetAttributesResult =
-    {
+    static PyType_Spec type_spec_IppSetAttributesResult = {
         "winrt._winrt_windows_devices_printers.IppSetAttributesResult",
         sizeof(py::wrapper::Windows::Devices::Printers::IppSetAttributesResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IppSetAttributesResult
-    };
+        _type_slots_IppSetAttributesResult};
 
     // ----- IppTextWithLanguage class --------------------
 
@@ -3073,14 +3061,12 @@ namespace py::cpp::Windows::Devices::Printers
         { },
     };
 
-    static PyType_Spec type_spec_IppTextWithLanguage =
-    {
+    static PyType_Spec type_spec_IppTextWithLanguage = {
         "winrt._winrt_windows_devices_printers.IppTextWithLanguage",
         sizeof(py::wrapper::Windows::Devices::Printers::IppTextWithLanguage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IppTextWithLanguage
-    };
+        _type_slots_IppTextWithLanguage};
 
     // ----- PageConfigurationSettings class --------------------
 
@@ -3260,14 +3246,12 @@ namespace py::cpp::Windows::Devices::Printers
         { },
     };
 
-    static PyType_Spec type_spec_PageConfigurationSettings =
-    {
+    static PyType_Spec type_spec_PageConfigurationSettings = {
         "winrt._winrt_windows_devices_printers.PageConfigurationSettings",
         sizeof(py::wrapper::Windows::Devices::Printers::PageConfigurationSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PageConfigurationSettings
-    };
+        _type_slots_PageConfigurationSettings};
 
     // ----- PdlPassthroughProvider class --------------------
 
@@ -3419,14 +3403,12 @@ namespace py::cpp::Windows::Devices::Printers
         { },
     };
 
-    static PyType_Spec type_spec_PdlPassthroughProvider =
-    {
+    static PyType_Spec type_spec_PdlPassthroughProvider = {
         "winrt._winrt_windows_devices_printers.PdlPassthroughProvider",
         sizeof(py::wrapper::Windows::Devices::Printers::PdlPassthroughProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PdlPassthroughProvider
-    };
+        _type_slots_PdlPassthroughProvider};
 
     // ----- PdlPassthroughTarget class --------------------
 
@@ -3621,14 +3603,12 @@ namespace py::cpp::Windows::Devices::Printers
         { },
     };
 
-    static PyType_Spec type_spec_PdlPassthroughTarget =
-    {
+    static PyType_Spec type_spec_PdlPassthroughTarget = {
         "winrt._winrt_windows_devices_printers.PdlPassthroughTarget",
         sizeof(py::wrapper::Windows::Devices::Printers::PdlPassthroughTarget),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PdlPassthroughTarget
-    };
+        _type_slots_PdlPassthroughTarget};
 
     // ----- Print3DDevice class --------------------
 
@@ -3770,14 +3750,12 @@ namespace py::cpp::Windows::Devices::Printers
         { },
     };
 
-    static PyType_Spec type_spec_Print3DDevice =
-    {
+    static PyType_Spec type_spec_Print3DDevice = {
         "winrt._winrt_windows_devices_printers.Print3DDevice",
         sizeof(py::wrapper::Windows::Devices::Printers::Print3DDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Print3DDevice
-    };
+        _type_slots_Print3DDevice};
 
     static PyGetSetDef getset_Print3DDevice_Static[] = {
         { }
@@ -3960,14 +3938,12 @@ namespace py::cpp::Windows::Devices::Printers
         { },
     };
 
-    static PyType_Spec type_spec_PrintSchema =
-    {
+    static PyType_Spec type_spec_PrintSchema = {
         "winrt._winrt_windows_devices_printers.PrintSchema",
         sizeof(py::wrapper::Windows::Devices::Printers::PrintSchema),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintSchema
-    };
+        _type_slots_PrintSchema};
 
     // ----- Windows.Devices.Printers Initialization --------------------
 

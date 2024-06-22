@@ -61,14 +61,12 @@ namespace py::cpp::Windows::Data::Html
         { },
     };
 
-    static PyType_Spec type_spec_HtmlUtilities =
-    {
+    static PyType_Spec type_spec_HtmlUtilities = {
         "winrt._winrt_windows_data_html.HtmlUtilities",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HtmlUtilities
-    };
+        _type_slots_HtmlUtilities};
 
     static PyGetSetDef getset_HtmlUtilities_Static[] = {
         { }

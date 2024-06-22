@@ -835,14 +835,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialGestureRecognizer =
-    {
+    static PyType_Spec type_spec_SpatialGestureRecognizer = {
         "winrt._winrt_windows_ui_input_spatial.SpatialGestureRecognizer",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialGestureRecognizer
-    };
+        _type_slots_SpatialGestureRecognizer};
 
     // ----- SpatialHoldCanceledEventArgs class --------------------
 
@@ -924,14 +922,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialHoldCanceledEventArgs =
-    {
+    static PyType_Spec type_spec_SpatialHoldCanceledEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialHoldCanceledEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialHoldCanceledEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialHoldCanceledEventArgs
-    };
+        _type_slots_SpatialHoldCanceledEventArgs};
 
     // ----- SpatialHoldCompletedEventArgs class --------------------
 
@@ -1013,14 +1009,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialHoldCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_SpatialHoldCompletedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialHoldCompletedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialHoldCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialHoldCompletedEventArgs
-    };
+        _type_slots_SpatialHoldCompletedEventArgs};
 
     // ----- SpatialHoldStartedEventArgs class --------------------
 
@@ -1134,14 +1128,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialHoldStartedEventArgs =
-    {
+    static PyType_Spec type_spec_SpatialHoldStartedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialHoldStartedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialHoldStartedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialHoldStartedEventArgs
-    };
+        _type_slots_SpatialHoldStartedEventArgs};
 
     // ----- SpatialInteraction class --------------------
 
@@ -1223,14 +1215,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialInteraction =
-    {
+    static PyType_Spec type_spec_SpatialInteraction = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteraction",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialInteraction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialInteraction
-    };
+        _type_slots_SpatialInteraction};
 
     // ----- SpatialInteractionController class --------------------
 
@@ -1472,14 +1462,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialInteractionController =
-    {
+    static PyType_Spec type_spec_SpatialInteractionController = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionController",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialInteractionController
-    };
+        _type_slots_SpatialInteractionController};
 
     // ----- SpatialInteractionControllerProperties class --------------------
 
@@ -1681,14 +1669,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialInteractionControllerProperties =
-    {
+    static PyType_Spec type_spec_SpatialInteractionControllerProperties = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionControllerProperties",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionControllerProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialInteractionControllerProperties
-    };
+        _type_slots_SpatialInteractionControllerProperties};
 
     // ----- SpatialInteractionDetectedEventArgs class --------------------
 
@@ -1842,14 +1828,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialInteractionDetectedEventArgs =
-    {
+    static PyType_Spec type_spec_SpatialInteractionDetectedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionDetectedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionDetectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialInteractionDetectedEventArgs
-    };
+        _type_slots_SpatialInteractionDetectedEventArgs};
 
     // ----- SpatialInteractionManager class --------------------
 
@@ -2273,14 +2257,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialInteractionManager =
-    {
+    static PyType_Spec type_spec_SpatialInteractionManager = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionManager",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialInteractionManager
-    };
+        _type_slots_SpatialInteractionManager};
 
     static PyGetSetDef getset_SpatialInteractionManager_Static[] = {
         { }
@@ -2601,14 +2583,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialInteractionSource =
-    {
+    static PyType_Spec type_spec_SpatialInteractionSource = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionSource",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialInteractionSource
-    };
+        _type_slots_SpatialInteractionSource};
 
     // ----- SpatialInteractionSourceEventArgs class --------------------
 
@@ -2710,14 +2690,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialInteractionSourceEventArgs =
-    {
+    static PyType_Spec type_spec_SpatialInteractionSourceEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionSourceEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialInteractionSourceEventArgs
-    };
+        _type_slots_SpatialInteractionSourceEventArgs};
 
     // ----- SpatialInteractionSourceLocation class --------------------
 
@@ -2899,14 +2877,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialInteractionSourceLocation =
-    {
+    static PyType_Spec type_spec_SpatialInteractionSourceLocation = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionSourceLocation",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceLocation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialInteractionSourceLocation
-    };
+        _type_slots_SpatialInteractionSourceLocation};
 
     // ----- SpatialInteractionSourceProperties class --------------------
 
@@ -3052,14 +3028,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialInteractionSourceProperties =
-    {
+    static PyType_Spec type_spec_SpatialInteractionSourceProperties = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionSourceProperties",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialInteractionSourceProperties
-    };
+        _type_slots_SpatialInteractionSourceProperties};
 
     // ----- SpatialInteractionSourceState class --------------------
 
@@ -3363,14 +3337,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialInteractionSourceState =
-    {
+    static PyType_Spec type_spec_SpatialInteractionSourceState = {
         "winrt._winrt_windows_ui_input_spatial.SpatialInteractionSourceState",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceState),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialInteractionSourceState
-    };
+        _type_slots_SpatialInteractionSourceState};
 
     // ----- SpatialManipulationCanceledEventArgs class --------------------
 
@@ -3452,14 +3424,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialManipulationCanceledEventArgs =
-    {
+    static PyType_Spec type_spec_SpatialManipulationCanceledEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialManipulationCanceledEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialManipulationCanceledEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialManipulationCanceledEventArgs
-    };
+        _type_slots_SpatialManipulationCanceledEventArgs};
 
     // ----- SpatialManipulationCompletedEventArgs class --------------------
 
@@ -3573,14 +3543,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialManipulationCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_SpatialManipulationCompletedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialManipulationCompletedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialManipulationCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialManipulationCompletedEventArgs
-    };
+        _type_slots_SpatialManipulationCompletedEventArgs};
 
     // ----- SpatialManipulationDelta class --------------------
 
@@ -3662,14 +3630,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialManipulationDelta =
-    {
+    static PyType_Spec type_spec_SpatialManipulationDelta = {
         "winrt._winrt_windows_ui_input_spatial.SpatialManipulationDelta",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialManipulationDelta),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialManipulationDelta
-    };
+        _type_slots_SpatialManipulationDelta};
 
     // ----- SpatialManipulationStartedEventArgs class --------------------
 
@@ -3783,14 +3749,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialManipulationStartedEventArgs =
-    {
+    static PyType_Spec type_spec_SpatialManipulationStartedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialManipulationStartedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialManipulationStartedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialManipulationStartedEventArgs
-    };
+        _type_slots_SpatialManipulationStartedEventArgs};
 
     // ----- SpatialManipulationUpdatedEventArgs class --------------------
 
@@ -3904,14 +3868,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialManipulationUpdatedEventArgs =
-    {
+    static PyType_Spec type_spec_SpatialManipulationUpdatedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialManipulationUpdatedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialManipulationUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialManipulationUpdatedEventArgs
-    };
+        _type_slots_SpatialManipulationUpdatedEventArgs};
 
     // ----- SpatialNavigationCanceledEventArgs class --------------------
 
@@ -3993,14 +3955,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialNavigationCanceledEventArgs =
-    {
+    static PyType_Spec type_spec_SpatialNavigationCanceledEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialNavigationCanceledEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialNavigationCanceledEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialNavigationCanceledEventArgs
-    };
+        _type_slots_SpatialNavigationCanceledEventArgs};
 
     // ----- SpatialNavigationCompletedEventArgs class --------------------
 
@@ -4102,14 +4062,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialNavigationCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_SpatialNavigationCompletedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialNavigationCompletedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialNavigationCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialNavigationCompletedEventArgs
-    };
+        _type_slots_SpatialNavigationCompletedEventArgs};
 
     // ----- SpatialNavigationStartedEventArgs class --------------------
 
@@ -4283,14 +4241,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialNavigationStartedEventArgs =
-    {
+    static PyType_Spec type_spec_SpatialNavigationStartedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialNavigationStartedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialNavigationStartedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialNavigationStartedEventArgs
-    };
+        _type_slots_SpatialNavigationStartedEventArgs};
 
     // ----- SpatialNavigationUpdatedEventArgs class --------------------
 
@@ -4392,14 +4348,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialNavigationUpdatedEventArgs =
-    {
+    static PyType_Spec type_spec_SpatialNavigationUpdatedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialNavigationUpdatedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialNavigationUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialNavigationUpdatedEventArgs
-    };
+        _type_slots_SpatialNavigationUpdatedEventArgs};
 
     // ----- SpatialPointerInteractionSourcePose class --------------------
 
@@ -4561,14 +4515,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialPointerInteractionSourcePose =
-    {
+    static PyType_Spec type_spec_SpatialPointerInteractionSourcePose = {
         "winrt._winrt_windows_ui_input_spatial.SpatialPointerInteractionSourcePose",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialPointerInteractionSourcePose),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialPointerInteractionSourcePose
-    };
+        _type_slots_SpatialPointerInteractionSourcePose};
 
     // ----- SpatialPointerPose class --------------------
 
@@ -4774,14 +4726,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialPointerPose =
-    {
+    static PyType_Spec type_spec_SpatialPointerPose = {
         "winrt._winrt_windows_ui_input_spatial.SpatialPointerPose",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialPointerPose),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialPointerPose
-    };
+        _type_slots_SpatialPointerPose};
 
     static PyGetSetDef getset_SpatialPointerPose_Static[] = {
         { }
@@ -4889,14 +4839,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialRecognitionEndedEventArgs =
-    {
+    static PyType_Spec type_spec_SpatialRecognitionEndedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialRecognitionEndedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialRecognitionEndedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialRecognitionEndedEventArgs
-    };
+        _type_slots_SpatialRecognitionEndedEventArgs};
 
     // ----- SpatialRecognitionStartedEventArgs class --------------------
 
@@ -5042,14 +4990,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialRecognitionStartedEventArgs =
-    {
+    static PyType_Spec type_spec_SpatialRecognitionStartedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialRecognitionStartedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialRecognitionStartedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialRecognitionStartedEventArgs
-    };
+        _type_slots_SpatialRecognitionStartedEventArgs};
 
     // ----- SpatialTappedEventArgs class --------------------
 
@@ -5183,14 +5129,12 @@ namespace py::cpp::Windows::UI::Input::Spatial
         { },
     };
 
-    static PyType_Spec type_spec_SpatialTappedEventArgs =
-    {
+    static PyType_Spec type_spec_SpatialTappedEventArgs = {
         "winrt._winrt_windows_ui_input_spatial.SpatialTappedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Spatial::SpatialTappedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialTappedEventArgs
-    };
+        _type_slots_SpatialTappedEventArgs};
 
     // ----- Windows.UI.Input.Spatial Initialization --------------------
 

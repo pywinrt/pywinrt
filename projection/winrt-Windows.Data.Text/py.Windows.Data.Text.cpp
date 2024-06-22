@@ -125,14 +125,12 @@ namespace py::cpp::Windows::Data::Text
         { },
     };
 
-    static PyType_Spec type_spec_AlternateWordForm =
-    {
+    static PyType_Spec type_spec_AlternateWordForm = {
         "winrt._winrt_windows_data_text.AlternateWordForm",
         sizeof(py::wrapper::Windows::Data::Text::AlternateWordForm),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AlternateWordForm
-    };
+        _type_slots_AlternateWordForm};
 
     // ----- SelectableWordSegment class --------------------
 
@@ -234,14 +232,12 @@ namespace py::cpp::Windows::Data::Text
         { },
     };
 
-    static PyType_Spec type_spec_SelectableWordSegment =
-    {
+    static PyType_Spec type_spec_SelectableWordSegment = {
         "winrt._winrt_windows_data_text.SelectableWordSegment",
         sizeof(py::wrapper::Windows::Data::Text::SelectableWordSegment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SelectableWordSegment
-    };
+        _type_slots_SelectableWordSegment};
 
     // ----- SelectableWordsSegmenter class --------------------
 
@@ -447,14 +443,12 @@ namespace py::cpp::Windows::Data::Text
         { },
     };
 
-    static PyType_Spec type_spec_SelectableWordsSegmenter =
-    {
+    static PyType_Spec type_spec_SelectableWordsSegmenter = {
         "winrt._winrt_windows_data_text.SelectableWordsSegmenter",
         sizeof(py::wrapper::Windows::Data::Text::SelectableWordsSegmenter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SelectableWordsSegmenter
-    };
+        _type_slots_SelectableWordsSegmenter};
 
     // ----- SemanticTextQuery class --------------------
 
@@ -621,14 +615,12 @@ namespace py::cpp::Windows::Data::Text
         { },
     };
 
-    static PyType_Spec type_spec_SemanticTextQuery =
-    {
+    static PyType_Spec type_spec_SemanticTextQuery = {
         "winrt._winrt_windows_data_text.SemanticTextQuery",
         sizeof(py::wrapper::Windows::Data::Text::SemanticTextQuery),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SemanticTextQuery
-    };
+        _type_slots_SemanticTextQuery};
 
     // ----- TextConversionGenerator class --------------------
 
@@ -807,14 +799,12 @@ namespace py::cpp::Windows::Data::Text
         { },
     };
 
-    static PyType_Spec type_spec_TextConversionGenerator =
-    {
+    static PyType_Spec type_spec_TextConversionGenerator = {
         "winrt._winrt_windows_data_text.TextConversionGenerator",
         sizeof(py::wrapper::Windows::Data::Text::TextConversionGenerator),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TextConversionGenerator
-    };
+        _type_slots_TextConversionGenerator};
 
     // ----- TextPhoneme class --------------------
 
@@ -916,14 +906,12 @@ namespace py::cpp::Windows::Data::Text
         { },
     };
 
-    static PyType_Spec type_spec_TextPhoneme =
-    {
+    static PyType_Spec type_spec_TextPhoneme = {
         "winrt._winrt_windows_data_text.TextPhoneme",
         sizeof(py::wrapper::Windows::Data::Text::TextPhoneme),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TextPhoneme
-    };
+        _type_slots_TextPhoneme};
 
     // ----- TextPredictionGenerator class --------------------
 
@@ -1206,14 +1194,12 @@ namespace py::cpp::Windows::Data::Text
         { },
     };
 
-    static PyType_Spec type_spec_TextPredictionGenerator =
-    {
+    static PyType_Spec type_spec_TextPredictionGenerator = {
         "winrt._winrt_windows_data_text.TextPredictionGenerator",
         sizeof(py::wrapper::Windows::Data::Text::TextPredictionGenerator),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TextPredictionGenerator
-    };
+        _type_slots_TextPredictionGenerator};
 
     // ----- TextReverseConversionGenerator class --------------------
 
@@ -1403,14 +1389,12 @@ namespace py::cpp::Windows::Data::Text
         { },
     };
 
-    static PyType_Spec type_spec_TextReverseConversionGenerator =
-    {
+    static PyType_Spec type_spec_TextReverseConversionGenerator = {
         "winrt._winrt_windows_data_text.TextReverseConversionGenerator",
         sizeof(py::wrapper::Windows::Data::Text::TextReverseConversionGenerator),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TextReverseConversionGenerator
-    };
+        _type_slots_TextReverseConversionGenerator};
 
     // ----- UnicodeCharacters class --------------------
 
@@ -1979,14 +1963,12 @@ namespace py::cpp::Windows::Data::Text
         { },
     };
 
-    static PyType_Spec type_spec_UnicodeCharacters =
-    {
+    static PyType_Spec type_spec_UnicodeCharacters = {
         "winrt._winrt_windows_data_text.UnicodeCharacters",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UnicodeCharacters
-    };
+        _type_slots_UnicodeCharacters};
 
     static PyGetSetDef getset_UnicodeCharacters_Static[] = {
         { }
@@ -2150,14 +2132,12 @@ namespace py::cpp::Windows::Data::Text
         { },
     };
 
-    static PyType_Spec type_spec_WordSegment =
-    {
+    static PyType_Spec type_spec_WordSegment = {
         "winrt._winrt_windows_data_text.WordSegment",
         sizeof(py::wrapper::Windows::Data::Text::WordSegment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WordSegment
-    };
+        _type_slots_WordSegment};
 
     // ----- WordsSegmenter class --------------------
 
@@ -2363,14 +2343,12 @@ namespace py::cpp::Windows::Data::Text
         { },
     };
 
-    static PyType_Spec type_spec_WordsSegmenter =
-    {
+    static PyType_Spec type_spec_WordsSegmenter = {
         "winrt._winrt_windows_data_text.WordsSegmenter",
         sizeof(py::wrapper::Windows::Data::Text::WordsSegmenter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WordsSegmenter
-    };
+        _type_slots_WordsSegmenter};
 
     // ----- TextSegment struct --------------------
 
@@ -2524,14 +2502,12 @@ namespace py::cpp::Windows::Data::Text
         { },
     };
 
-    static PyType_Spec type_spec_TextSegment =
-    {
+    static PyType_Spec type_spec_TextSegment = {
         "winrt._winrt_windows_data_text.TextSegment",
         sizeof(py::wrapper::Windows::Data::Text::TextSegment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TextSegment
-    };
+        _type_slots_TextSegment};
 
     // ----- Windows.Data.Text Initialization --------------------
 

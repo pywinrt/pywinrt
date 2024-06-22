@@ -912,14 +912,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { },
     };
 
-    static PyType_Spec type_spec_ActivationSignalDetectionConfiguration =
-    {
+    static PyType_Spec type_spec_ActivationSignalDetectionConfiguration = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ActivationSignalDetectionConfiguration",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ActivationSignalDetectionConfiguration
-    };
+        _type_slots_ActivationSignalDetectionConfiguration};
 
     // ----- ActivationSignalDetectionConfigurationCreationResult class --------------------
 
@@ -1021,14 +1019,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { },
     };
 
-    static PyType_Spec type_spec_ActivationSignalDetectionConfigurationCreationResult =
-    {
+    static PyType_Spec type_spec_ActivationSignalDetectionConfigurationCreationResult = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ActivationSignalDetectionConfigurationCreationResult",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ActivationSignalDetectionConfigurationCreationResult
-    };
+        _type_slots_ActivationSignalDetectionConfigurationCreationResult};
 
     // ----- ActivationSignalDetector class --------------------
 
@@ -1754,14 +1750,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { },
     };
 
-    static PyType_Spec type_spec_ActivationSignalDetector =
-    {
+    static PyType_Spec type_spec_ActivationSignalDetector = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ActivationSignalDetector",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ActivationSignalDetector
-    };
+        _type_slots_ActivationSignalDetector};
 
     // ----- ConversationalAgentDetectorManager class --------------------
 
@@ -2030,14 +2024,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { },
     };
 
-    static PyType_Spec type_spec_ConversationalAgentDetectorManager =
-    {
+    static PyType_Spec type_spec_ConversationalAgentDetectorManager = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentDetectorManager",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ConversationalAgentDetectorManager
-    };
+        _type_slots_ConversationalAgentDetectorManager};
 
     static PyGetSetDef getset_ConversationalAgentDetectorManager_Static[] = {
         { "default", reinterpret_cast<getter>(ConversationalAgentDetectorManager_get_Default), nullptr, nullptr, nullptr },
@@ -3335,14 +3327,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { },
     };
 
-    static PyType_Spec type_spec_ConversationalAgentSession =
-    {
+    static PyType_Spec type_spec_ConversationalAgentSession = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSession",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ConversationalAgentSession
-    };
+        _type_slots_ConversationalAgentSession};
 
     static PyGetSetDef getset_ConversationalAgentSession_Static[] = {
         { }
@@ -3431,14 +3421,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { },
     };
 
-    static PyType_Spec type_spec_ConversationalAgentSessionInterruptedEventArgs =
-    {
+    static PyType_Spec type_spec_ConversationalAgentSessionInterruptedEventArgs = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSessionInterruptedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ConversationalAgentSessionInterruptedEventArgs
-    };
+        _type_slots_ConversationalAgentSessionInterruptedEventArgs};
 
     // ----- ConversationalAgentSignal class --------------------
 
@@ -3828,14 +3816,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { },
     };
 
-    static PyType_Spec type_spec_ConversationalAgentSignal =
-    {
+    static PyType_Spec type_spec_ConversationalAgentSignal = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSignal",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ConversationalAgentSignal
-    };
+        _type_slots_ConversationalAgentSignal};
 
     // ----- ConversationalAgentSignalDetectedEventArgs class --------------------
 
@@ -3897,14 +3883,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { },
     };
 
-    static PyType_Spec type_spec_ConversationalAgentSignalDetectedEventArgs =
-    {
+    static PyType_Spec type_spec_ConversationalAgentSignalDetectedEventArgs = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSignalDetectedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ConversationalAgentSignalDetectedEventArgs
-    };
+        _type_slots_ConversationalAgentSignalDetectedEventArgs};
 
     // ----- ConversationalAgentSystemStateChangedEventArgs class --------------------
 
@@ -3986,14 +3970,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { },
     };
 
-    static PyType_Spec type_spec_ConversationalAgentSystemStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_ConversationalAgentSystemStateChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSystemStateChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ConversationalAgentSystemStateChangedEventArgs
-    };
+        _type_slots_ConversationalAgentSystemStateChangedEventArgs};
 
     // ----- DetectionConfigurationAvailabilityChangedEventArgs class --------------------
 
@@ -4075,14 +4057,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { },
     };
 
-    static PyType_Spec type_spec_DetectionConfigurationAvailabilityChangedEventArgs =
-    {
+    static PyType_Spec type_spec_DetectionConfigurationAvailabilityChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.DetectionConfigurationAvailabilityChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DetectionConfigurationAvailabilityChangedEventArgs
-    };
+        _type_slots_DetectionConfigurationAvailabilityChangedEventArgs};
 
     // ----- DetectionConfigurationAvailabilityInfo class --------------------
 
@@ -4244,14 +4224,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { },
     };
 
-    static PyType_Spec type_spec_DetectionConfigurationAvailabilityInfo =
-    {
+    static PyType_Spec type_spec_DetectionConfigurationAvailabilityInfo = {
         "winrt._winrt_windows_applicationmodel_conversationalagent.DetectionConfigurationAvailabilityInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DetectionConfigurationAvailabilityInfo
-    };
+        _type_slots_DetectionConfigurationAvailabilityInfo};
 
     // ----- Windows.ApplicationModel.ConversationalAgent Initialization --------------------
 

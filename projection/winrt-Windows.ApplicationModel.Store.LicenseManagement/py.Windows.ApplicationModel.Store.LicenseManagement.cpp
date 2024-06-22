@@ -124,14 +124,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
         { },
     };
 
-    static PyType_Spec type_spec_LicenseManager =
-    {
+    static PyType_Spec type_spec_LicenseManager = {
         "winrt._winrt_windows_applicationmodel_store_licensemanagement.LicenseManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LicenseManager
-    };
+        _type_slots_LicenseManager};
 
     static PyGetSetDef getset_LicenseManager_Static[] = {
         { }
@@ -361,14 +359,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
         { },
     };
 
-    static PyType_Spec type_spec_LicenseSatisfactionInfo =
-    {
+    static PyType_Spec type_spec_LicenseSatisfactionInfo = {
         "winrt._winrt_windows_applicationmodel_store_licensemanagement.LicenseSatisfactionInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LicenseSatisfactionInfo
-    };
+        _type_slots_LicenseSatisfactionInfo};
 
     // ----- LicenseSatisfactionResult class --------------------
 
@@ -470,14 +466,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
         { },
     };
 
-    static PyType_Spec type_spec_LicenseSatisfactionResult =
-    {
+    static PyType_Spec type_spec_LicenseSatisfactionResult = {
         "winrt._winrt_windows_applicationmodel_store_licensemanagement.LicenseSatisfactionResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LicenseSatisfactionResult
-    };
+        _type_slots_LicenseSatisfactionResult};
 
     // ----- Windows.ApplicationModel.Store.LicenseManagement Initialization --------------------
 

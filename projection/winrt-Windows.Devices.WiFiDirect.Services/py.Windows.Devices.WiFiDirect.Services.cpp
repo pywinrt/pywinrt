@@ -431,14 +431,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectService =
-    {
+    static PyType_Spec type_spec_WiFiDirectService = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectService",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::Services::WiFiDirectService),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectService
-    };
+        _type_slots_WiFiDirectService};
 
     static PyGetSetDef getset_WiFiDirectService_Static[] = {
         { }
@@ -1189,14 +1187,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectServiceAdvertiser =
-    {
+    static PyType_Spec type_spec_WiFiDirectServiceAdvertiser = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectServiceAdvertiser",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAdvertiser),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectServiceAdvertiser
-    };
+        _type_slots_WiFiDirectServiceAdvertiser};
 
     // ----- WiFiDirectServiceAutoAcceptSessionConnectedEventArgs class --------------------
 
@@ -1298,14 +1294,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs =
-    {
+    static PyType_Spec type_spec_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectServiceAutoAcceptSessionConnectedEventArgs",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAutoAcceptSessionConnectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs
-    };
+        _type_slots_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs};
 
     // ----- WiFiDirectServiceProvisioningInfo class --------------------
 
@@ -1407,14 +1401,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectServiceProvisioningInfo =
-    {
+    static PyType_Spec type_spec_WiFiDirectServiceProvisioningInfo = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectServiceProvisioningInfo",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceProvisioningInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectServiceProvisioningInfo
-    };
+        _type_slots_WiFiDirectServiceProvisioningInfo};
 
     // ----- WiFiDirectServiceRemotePortAddedEventArgs class --------------------
 
@@ -1516,14 +1508,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectServiceRemotePortAddedEventArgs =
-    {
+    static PyType_Spec type_spec_WiFiDirectServiceRemotePortAddedEventArgs = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectServiceRemotePortAddedEventArgs",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceRemotePortAddedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectServiceRemotePortAddedEventArgs
-    };
+        _type_slots_WiFiDirectServiceRemotePortAddedEventArgs};
 
     // ----- WiFiDirectServiceSession class --------------------
 
@@ -1961,14 +1951,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectServiceSession =
-    {
+    static PyType_Spec type_spec_WiFiDirectServiceSession = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectServiceSession",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectServiceSession
-    };
+        _type_slots_WiFiDirectServiceSession};
 
     // ----- WiFiDirectServiceSessionDeferredEventArgs class --------------------
 
@@ -2050,14 +2038,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectServiceSessionDeferredEventArgs =
-    {
+    static PyType_Spec type_spec_WiFiDirectServiceSessionDeferredEventArgs = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectServiceSessionDeferredEventArgs",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionDeferredEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectServiceSessionDeferredEventArgs
-    };
+        _type_slots_WiFiDirectServiceSessionDeferredEventArgs};
 
     // ----- WiFiDirectServiceSessionRequest class --------------------
 
@@ -2231,14 +2217,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectServiceSessionRequest =
-    {
+    static PyType_Spec type_spec_WiFiDirectServiceSessionRequest = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectServiceSessionRequest",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectServiceSessionRequest
-    };
+        _type_slots_WiFiDirectServiceSessionRequest};
 
     // ----- WiFiDirectServiceSessionRequestedEventArgs class --------------------
 
@@ -2330,14 +2314,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectServiceSessionRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_WiFiDirectServiceSessionRequestedEventArgs = {
         "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectServiceSessionRequestedEventArgs",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectServiceSessionRequestedEventArgs
-    };
+        _type_slots_WiFiDirectServiceSessionRequestedEventArgs};
 
     // ----- Windows.Devices.WiFiDirect.Services Initialization --------------------
 

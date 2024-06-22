@@ -165,14 +165,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { },
     };
 
-    static PyType_Spec type_spec_CivicAddress =
-    {
+    static PyType_Spec type_spec_CivicAddress = {
         "winrt._winrt_windows_devices_geolocation.CivicAddress",
         sizeof(py::wrapper::Windows::Devices::Geolocation::CivicAddress),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CivicAddress
-    };
+        _type_slots_CivicAddress};
 
     // ----- GeoboundingBox class --------------------
 
@@ -528,14 +526,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { },
     };
 
-    static PyType_Spec type_spec_GeoboundingBox =
-    {
+    static PyType_Spec type_spec_GeoboundingBox = {
         "winrt._winrt_windows_devices_geolocation.GeoboundingBox",
         sizeof(py::wrapper::Windows::Devices::Geolocation::GeoboundingBox),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GeoboundingBox
-    };
+        _type_slots_GeoboundingBox};
 
     static PyGetSetDef getset_GeoboundingBox_Static[] = {
         { }
@@ -783,14 +779,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { },
     };
 
-    static PyType_Spec type_spec_Geocircle =
-    {
+    static PyType_Spec type_spec_Geocircle = {
         "winrt._winrt_windows_devices_geolocation.Geocircle",
         sizeof(py::wrapper::Windows::Devices::Geolocation::Geocircle),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Geocircle
-    };
+        _type_slots_Geocircle};
 
     // ----- Geocoordinate class --------------------
 
@@ -1112,14 +1106,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { },
     };
 
-    static PyType_Spec type_spec_Geocoordinate =
-    {
+    static PyType_Spec type_spec_Geocoordinate = {
         "winrt._winrt_windows_devices_geolocation.Geocoordinate",
         sizeof(py::wrapper::Windows::Devices::Geolocation::Geocoordinate),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Geocoordinate
-    };
+        _type_slots_Geocoordinate};
 
     // ----- GeocoordinateSatelliteData class --------------------
 
@@ -1281,14 +1273,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { },
     };
 
-    static PyType_Spec type_spec_GeocoordinateSatelliteData =
-    {
+    static PyType_Spec type_spec_GeocoordinateSatelliteData = {
         "winrt._winrt_windows_devices_geolocation.GeocoordinateSatelliteData",
         sizeof(py::wrapper::Windows::Devices::Geolocation::GeocoordinateSatelliteData),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GeocoordinateSatelliteData
-    };
+        _type_slots_GeocoordinateSatelliteData};
 
     // ----- Geolocator class --------------------
 
@@ -1903,14 +1893,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { },
     };
 
-    static PyType_Spec type_spec_Geolocator =
-    {
+    static PyType_Spec type_spec_Geolocator = {
         "winrt._winrt_windows_devices_geolocation.Geolocator",
         sizeof(py::wrapper::Windows::Devices::Geolocation::Geolocator),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Geolocator
-    };
+        _type_slots_Geolocator};
 
     static PyGetSetDef getset_Geolocator_Static[] = {
         { "default_geoposition", reinterpret_cast<getter>(Geolocator_get_DefaultGeoposition), reinterpret_cast<setter>(Geolocator_put_DefaultGeoposition), nullptr, nullptr },
@@ -2138,14 +2126,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { },
     };
 
-    static PyType_Spec type_spec_Geopath =
-    {
+    static PyType_Spec type_spec_Geopath = {
         "winrt._winrt_windows_devices_geolocation.Geopath",
         sizeof(py::wrapper::Windows::Devices::Geolocation::Geopath),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Geopath
-    };
+        _type_slots_Geopath};
 
     // ----- Geopoint class --------------------
 
@@ -2344,14 +2330,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { },
     };
 
-    static PyType_Spec type_spec_Geopoint =
-    {
+    static PyType_Spec type_spec_Geopoint = {
         "winrt._winrt_windows_devices_geolocation.Geopoint",
         sizeof(py::wrapper::Windows::Devices::Geolocation::Geopoint),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Geopoint
-    };
+        _type_slots_Geopoint};
 
     // ----- Geoposition class --------------------
 
@@ -2473,14 +2457,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { },
     };
 
-    static PyType_Spec type_spec_Geoposition =
-    {
+    static PyType_Spec type_spec_Geoposition = {
         "winrt._winrt_windows_devices_geolocation.Geoposition",
         sizeof(py::wrapper::Windows::Devices::Geolocation::Geoposition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Geoposition
-    };
+        _type_slots_Geoposition};
 
     // ----- Geovisit class --------------------
 
@@ -2602,14 +2584,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { },
     };
 
-    static PyType_Spec type_spec_Geovisit =
-    {
+    static PyType_Spec type_spec_Geovisit = {
         "winrt._winrt_windows_devices_geolocation.Geovisit",
         sizeof(py::wrapper::Windows::Devices::Geolocation::Geovisit),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Geovisit
-    };
+        _type_slots_Geovisit};
 
     // ----- GeovisitMonitor class --------------------
 
@@ -2851,14 +2831,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { },
     };
 
-    static PyType_Spec type_spec_GeovisitMonitor =
-    {
+    static PyType_Spec type_spec_GeovisitMonitor = {
         "winrt._winrt_windows_devices_geolocation.GeovisitMonitor",
         sizeof(py::wrapper::Windows::Devices::Geolocation::GeovisitMonitor),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GeovisitMonitor
-    };
+        _type_slots_GeovisitMonitor};
 
     static PyGetSetDef getset_GeovisitMonitor_Static[] = {
         { }
@@ -2966,14 +2944,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { },
     };
 
-    static PyType_Spec type_spec_GeovisitStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_GeovisitStateChangedEventArgs = {
         "winrt._winrt_windows_devices_geolocation.GeovisitStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Geolocation::GeovisitStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GeovisitStateChangedEventArgs
-    };
+        _type_slots_GeovisitStateChangedEventArgs};
 
     // ----- GeovisitTriggerDetails class --------------------
 
@@ -3065,14 +3041,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { },
     };
 
-    static PyType_Spec type_spec_GeovisitTriggerDetails =
-    {
+    static PyType_Spec type_spec_GeovisitTriggerDetails = {
         "winrt._winrt_windows_devices_geolocation.GeovisitTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::Geolocation::GeovisitTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GeovisitTriggerDetails
-    };
+        _type_slots_GeovisitTriggerDetails};
 
     // ----- PositionChangedEventArgs class --------------------
 
@@ -3154,14 +3128,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { },
     };
 
-    static PyType_Spec type_spec_PositionChangedEventArgs =
-    {
+    static PyType_Spec type_spec_PositionChangedEventArgs = {
         "winrt._winrt_windows_devices_geolocation.PositionChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Geolocation::PositionChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PositionChangedEventArgs
-    };
+        _type_slots_PositionChangedEventArgs};
 
     // ----- StatusChangedEventArgs class --------------------
 
@@ -3243,14 +3215,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { },
     };
 
-    static PyType_Spec type_spec_StatusChangedEventArgs =
-    {
+    static PyType_Spec type_spec_StatusChangedEventArgs = {
         "winrt._winrt_windows_devices_geolocation.StatusChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Geolocation::StatusChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StatusChangedEventArgs
-    };
+        _type_slots_StatusChangedEventArgs};
 
     // ----- VenueData class --------------------
 
@@ -3352,14 +3322,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { },
     };
 
-    static PyType_Spec type_spec_VenueData =
-    {
+    static PyType_Spec type_spec_VenueData = {
         "winrt._winrt_windows_devices_geolocation.VenueData",
         sizeof(py::wrapper::Windows::Devices::Geolocation::VenueData),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VenueData
-    };
+        _type_slots_VenueData};
 
     // ----- IGeoshape interface --------------------
 
@@ -3481,14 +3449,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { },
     };
 
-    static PyType_Spec type_spec_IGeoshape =
-    {
+    static PyType_Spec type_spec_IGeoshape = {
         "winrt._winrt_windows_devices_geolocation.IGeoshape",
         sizeof(py::wrapper::Windows::Devices::Geolocation::IGeoshape),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IGeoshape
-    };
+        _type_slots_IGeoshape};
 
     // ----- BasicGeoposition struct --------------------
 
@@ -3677,14 +3643,12 @@ namespace py::cpp::Windows::Devices::Geolocation
         { },
     };
 
-    static PyType_Spec type_spec_BasicGeoposition =
-    {
+    static PyType_Spec type_spec_BasicGeoposition = {
         "winrt._winrt_windows_devices_geolocation.BasicGeoposition",
         sizeof(py::wrapper::Windows::Devices::Geolocation::BasicGeoposition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BasicGeoposition
-    };
+        _type_slots_BasicGeoposition};
 
     // ----- Windows.Devices.Geolocation Initialization --------------------
 

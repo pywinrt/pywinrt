@@ -189,14 +189,12 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { },
     };
 
-    static PyType_Spec type_spec_AutomationRemoteOperationResult =
-    {
+    static PyType_Spec type_spec_AutomationRemoteOperationResult = {
         "winrt._winrt_windows_ui_uiautomation_core.AutomationRemoteOperationResult",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AutomationRemoteOperationResult
-    };
+        _type_slots_AutomationRemoteOperationResult};
 
     // ----- CoreAutomationRegistrar class --------------------
 
@@ -286,14 +284,12 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreAutomationRegistrar =
-    {
+    static PyType_Spec type_spec_CoreAutomationRegistrar = {
         "winrt._winrt_windows_ui_uiautomation_core.CoreAutomationRegistrar",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreAutomationRegistrar
-    };
+        _type_slots_CoreAutomationRegistrar};
 
     static PyGetSetDef getset_CoreAutomationRegistrar_Static[] = {
         { }
@@ -603,14 +599,12 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreAutomationRemoteOperation =
-    {
+    static PyType_Spec type_spec_CoreAutomationRemoteOperation = {
         "winrt._winrt_windows_ui_uiautomation_core.CoreAutomationRemoteOperation",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreAutomationRemoteOperation
-    };
+        _type_slots_CoreAutomationRemoteOperation};
 
     // ----- CoreAutomationRemoteOperationContext class --------------------
 
@@ -761,14 +755,12 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreAutomationRemoteOperationContext =
-    {
+    static PyType_Spec type_spec_CoreAutomationRemoteOperationContext = {
         "winrt._winrt_windows_ui_uiautomation_core.CoreAutomationRemoteOperationContext",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreAutomationRemoteOperationContext
-    };
+        _type_slots_CoreAutomationRemoteOperationContext};
 
     // ----- RemoteAutomationClientSession class --------------------
 
@@ -1076,14 +1068,12 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { },
     };
 
-    static PyType_Spec type_spec_RemoteAutomationClientSession =
-    {
+    static PyType_Spec type_spec_RemoteAutomationClientSession = {
         "winrt._winrt_windows_ui_uiautomation_core.RemoteAutomationClientSession",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteAutomationClientSession
-    };
+        _type_slots_RemoteAutomationClientSession};
 
     // ----- RemoteAutomationConnectionRequestedEventArgs class --------------------
 
@@ -1185,14 +1175,12 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { },
     };
 
-    static PyType_Spec type_spec_RemoteAutomationConnectionRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_RemoteAutomationConnectionRequestedEventArgs = {
         "winrt._winrt_windows_ui_uiautomation_core.RemoteAutomationConnectionRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteAutomationConnectionRequestedEventArgs
-    };
+        _type_slots_RemoteAutomationConnectionRequestedEventArgs};
 
     // ----- RemoteAutomationDisconnectedEventArgs class --------------------
 
@@ -1274,14 +1262,12 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { },
     };
 
-    static PyType_Spec type_spec_RemoteAutomationDisconnectedEventArgs =
-    {
+    static PyType_Spec type_spec_RemoteAutomationDisconnectedEventArgs = {
         "winrt._winrt_windows_ui_uiautomation_core.RemoteAutomationDisconnectedEventArgs",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteAutomationDisconnectedEventArgs
-    };
+        _type_slots_RemoteAutomationDisconnectedEventArgs};
 
     // ----- RemoteAutomationServer class --------------------
 
@@ -1340,14 +1326,12 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { },
     };
 
-    static PyType_Spec type_spec_RemoteAutomationServer =
-    {
+    static PyType_Spec type_spec_RemoteAutomationServer = {
         "winrt._winrt_windows_ui_uiautomation_core.RemoteAutomationServer",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteAutomationServer
-    };
+        _type_slots_RemoteAutomationServer};
 
     static PyGetSetDef getset_RemoteAutomationServer_Static[] = {
         { }
@@ -1485,14 +1469,12 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { },
     };
 
-    static PyType_Spec type_spec_RemoteAutomationWindow =
-    {
+    static PyType_Spec type_spec_RemoteAutomationWindow = {
         "winrt._winrt_windows_ui_uiautomation_core.RemoteAutomationWindow",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationWindow),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteAutomationWindow
-    };
+        _type_slots_RemoteAutomationWindow};
 
     // ----- ICoreAutomationConnectionBoundObjectProvider interface --------------------
 
@@ -1574,14 +1556,12 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { },
     };
 
-    static PyType_Spec type_spec_ICoreAutomationConnectionBoundObjectProvider =
-    {
+    static PyType_Spec type_spec_ICoreAutomationConnectionBoundObjectProvider = {
         "winrt._winrt_windows_ui_uiautomation_core.ICoreAutomationConnectionBoundObjectProvider",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICoreAutomationConnectionBoundObjectProvider
-    };
+        _type_slots_ICoreAutomationConnectionBoundObjectProvider};
 
     // ----- ICoreAutomationRemoteOperationExtensionProvider interface --------------------
 
@@ -1710,14 +1690,12 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { },
     };
 
-    static PyType_Spec type_spec_ICoreAutomationRemoteOperationExtensionProvider =
-    {
+    static PyType_Spec type_spec_ICoreAutomationRemoteOperationExtensionProvider = {
         "winrt._winrt_windows_ui_uiautomation_core.ICoreAutomationRemoteOperationExtensionProvider",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICoreAutomationRemoteOperationExtensionProvider
-    };
+        _type_slots_ICoreAutomationRemoteOperationExtensionProvider};
 
     // ----- AutomationAnnotationTypeRegistration struct --------------------
 
@@ -1836,14 +1814,12 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { },
     };
 
-    static PyType_Spec type_spec_AutomationAnnotationTypeRegistration =
-    {
+    static PyType_Spec type_spec_AutomationAnnotationTypeRegistration = {
         "winrt._winrt_windows_ui_uiautomation_core.AutomationAnnotationTypeRegistration",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AutomationAnnotationTypeRegistration
-    };
+        _type_slots_AutomationAnnotationTypeRegistration};
 
     // ----- AutomationRemoteOperationOperandId struct --------------------
 
@@ -1962,14 +1938,12 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { },
     };
 
-    static PyType_Spec type_spec_AutomationRemoteOperationOperandId =
-    {
+    static PyType_Spec type_spec_AutomationRemoteOperationOperandId = {
         "winrt._winrt_windows_ui_uiautomation_core.AutomationRemoteOperationOperandId",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AutomationRemoteOperationOperandId
-    };
+        _type_slots_AutomationRemoteOperationOperandId};
 
     // ----- Windows.UI.UIAutomation.Core Initialization --------------------
 

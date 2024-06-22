@@ -183,14 +183,12 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
         { },
     };
 
-    static PyType_Spec type_spec_FrameNavigationOptions =
-    {
+    static PyType_Spec type_spec_FrameNavigationOptions = {
         "winrt._winrt_windows_ui_xaml_navigation.FrameNavigationOptions",
         sizeof(py::wrapper::Windows::UI::Xaml::Navigation::FrameNavigationOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameNavigationOptions
-    };
+        _type_slots_FrameNavigationOptions};
 
     // ----- NavigatingCancelEventArgs class --------------------
 
@@ -380,14 +378,12 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
         { },
     };
 
-    static PyType_Spec type_spec_NavigatingCancelEventArgs =
-    {
+    static PyType_Spec type_spec_NavigatingCancelEventArgs = {
         "winrt._winrt_windows_ui_xaml_navigation.NavigatingCancelEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Navigation::NavigatingCancelEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NavigatingCancelEventArgs
-    };
+        _type_slots_NavigatingCancelEventArgs};
 
     // ----- NavigationEventArgs class --------------------
 
@@ -597,14 +593,12 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
         { },
     };
 
-    static PyType_Spec type_spec_NavigationEventArgs =
-    {
+    static PyType_Spec type_spec_NavigationEventArgs = {
         "winrt._winrt_windows_ui_xaml_navigation.NavigationEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Navigation::NavigationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NavigationEventArgs
-    };
+        _type_slots_NavigationEventArgs};
 
     // ----- NavigationFailedEventArgs class --------------------
 
@@ -754,14 +748,12 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
         { },
     };
 
-    static PyType_Spec type_spec_NavigationFailedEventArgs =
-    {
+    static PyType_Spec type_spec_NavigationFailedEventArgs = {
         "winrt._winrt_windows_ui_xaml_navigation.NavigationFailedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Navigation::NavigationFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NavigationFailedEventArgs
-    };
+        _type_slots_NavigationFailedEventArgs};
 
     // ----- PageStackEntry class --------------------
 
@@ -928,14 +920,12 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
         { },
     };
 
-    static PyType_Spec type_spec_PageStackEntry =
-    {
+    static PyType_Spec type_spec_PageStackEntry = {
         "winrt._winrt_windows_ui_xaml_navigation.PageStackEntry",
         sizeof(py::wrapper::Windows::UI::Xaml::Navigation::PageStackEntry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PageStackEntry
-    };
+        _type_slots_PageStackEntry};
 
     static PyGetSetDef getset_PageStackEntry_Static[] = {
         { "source_page_type_property", reinterpret_cast<getter>(PageStackEntry_get_SourcePageTypeProperty), nullptr, nullptr, nullptr },

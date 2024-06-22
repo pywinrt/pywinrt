@@ -999,14 +999,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { },
     };
 
-    static PyType_Spec type_spec_AdaptiveMediaSource =
-    {
+    static PyType_Spec type_spec_AdaptiveMediaSource = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSource",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdaptiveMediaSource
-    };
+        _type_slots_AdaptiveMediaSource};
 
     static PyGetSetDef getset_AdaptiveMediaSource_Static[] = {
         { }
@@ -1240,14 +1238,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { },
     };
 
-    static PyType_Spec type_spec_AdaptiveMediaSourceAdvancedSettings =
-    {
+    static PyType_Spec type_spec_AdaptiveMediaSourceAdvancedSettings = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceAdvancedSettings",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdaptiveMediaSourceAdvancedSettings
-    };
+        _type_slots_AdaptiveMediaSourceAdvancedSettings};
 
     // ----- AdaptiveMediaSourceCorrelatedTimes class --------------------
 
@@ -1369,14 +1365,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { },
     };
 
-    static PyType_Spec type_spec_AdaptiveMediaSourceCorrelatedTimes =
-    {
+    static PyType_Spec type_spec_AdaptiveMediaSourceCorrelatedTimes = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceCorrelatedTimes",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCorrelatedTimes),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdaptiveMediaSourceCorrelatedTimes
-    };
+        _type_slots_AdaptiveMediaSourceCorrelatedTimes};
 
     // ----- AdaptiveMediaSourceCreationResult class --------------------
 
@@ -1518,14 +1512,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { },
     };
 
-    static PyType_Spec type_spec_AdaptiveMediaSourceCreationResult =
-    {
+    static PyType_Spec type_spec_AdaptiveMediaSourceCreationResult = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceCreationResult",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdaptiveMediaSourceCreationResult
-    };
+        _type_slots_AdaptiveMediaSourceCreationResult};
 
     // ----- AdaptiveMediaSourceDiagnosticAvailableEventArgs class --------------------
 
@@ -1827,14 +1819,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { },
     };
 
-    static PyType_Spec type_spec_AdaptiveMediaSourceDiagnosticAvailableEventArgs =
-    {
+    static PyType_Spec type_spec_AdaptiveMediaSourceDiagnosticAvailableEventArgs = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdaptiveMediaSourceDiagnosticAvailableEventArgs
-    };
+        _type_slots_AdaptiveMediaSourceDiagnosticAvailableEventArgs};
 
     // ----- AdaptiveMediaSourceDiagnostics class --------------------
 
@@ -1941,14 +1931,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { },
     };
 
-    static PyType_Spec type_spec_AdaptiveMediaSourceDiagnostics =
-    {
+    static PyType_Spec type_spec_AdaptiveMediaSourceDiagnostics = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDiagnostics",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdaptiveMediaSourceDiagnostics
-    };
+        _type_slots_AdaptiveMediaSourceDiagnostics};
 
     // ----- AdaptiveMediaSourceDownloadBitrateChangedEventArgs class --------------------
 
@@ -2070,14 +2058,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { },
     };
 
-    static PyType_Spec type_spec_AdaptiveMediaSourceDownloadBitrateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_AdaptiveMediaSourceDownloadBitrateChangedEventArgs = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdaptiveMediaSourceDownloadBitrateChangedEventArgs
-    };
+        _type_slots_AdaptiveMediaSourceDownloadBitrateChangedEventArgs};
 
     // ----- AdaptiveMediaSourceDownloadCompletedEventArgs class --------------------
 
@@ -2339,14 +2325,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { },
     };
 
-    static PyType_Spec type_spec_AdaptiveMediaSourceDownloadCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_AdaptiveMediaSourceDownloadCompletedEventArgs = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdaptiveMediaSourceDownloadCompletedEventArgs
-    };
+        _type_slots_AdaptiveMediaSourceDownloadCompletedEventArgs};
 
     // ----- AdaptiveMediaSourceDownloadFailedEventArgs class --------------------
 
@@ -2628,14 +2612,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { },
     };
 
-    static PyType_Spec type_spec_AdaptiveMediaSourceDownloadFailedEventArgs =
-    {
+    static PyType_Spec type_spec_AdaptiveMediaSourceDownloadFailedEventArgs = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadFailedEventArgs",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdaptiveMediaSourceDownloadFailedEventArgs
-    };
+        _type_slots_AdaptiveMediaSourceDownloadFailedEventArgs};
 
     // ----- AdaptiveMediaSourceDownloadRequestedDeferral class --------------------
 
@@ -2728,14 +2710,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { },
     };
 
-    static PyType_Spec type_spec_AdaptiveMediaSourceDownloadRequestedDeferral =
-    {
+    static PyType_Spec type_spec_AdaptiveMediaSourceDownloadRequestedDeferral = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadRequestedDeferral",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdaptiveMediaSourceDownloadRequestedDeferral
-    };
+        _type_slots_AdaptiveMediaSourceDownloadRequestedDeferral};
 
     // ----- AdaptiveMediaSourceDownloadRequestedEventArgs class --------------------
 
@@ -3007,14 +2987,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { },
     };
 
-    static PyType_Spec type_spec_AdaptiveMediaSourceDownloadRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_AdaptiveMediaSourceDownloadRequestedEventArgs = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdaptiveMediaSourceDownloadRequestedEventArgs
-    };
+        _type_slots_AdaptiveMediaSourceDownloadRequestedEventArgs};
 
     // ----- AdaptiveMediaSourceDownloadResult class --------------------
 
@@ -3412,14 +3390,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { },
     };
 
-    static PyType_Spec type_spec_AdaptiveMediaSourceDownloadResult =
-    {
+    static PyType_Spec type_spec_AdaptiveMediaSourceDownloadResult = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadResult",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdaptiveMediaSourceDownloadResult
-    };
+        _type_slots_AdaptiveMediaSourceDownloadResult};
 
     // ----- AdaptiveMediaSourceDownloadStatistics class --------------------
 
@@ -3561,14 +3537,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { },
     };
 
-    static PyType_Spec type_spec_AdaptiveMediaSourceDownloadStatistics =
-    {
+    static PyType_Spec type_spec_AdaptiveMediaSourceDownloadStatistics = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadStatistics",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadStatistics),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdaptiveMediaSourceDownloadStatistics
-    };
+        _type_slots_AdaptiveMediaSourceDownloadStatistics};
 
     // ----- AdaptiveMediaSourcePlaybackBitrateChangedEventArgs class --------------------
 
@@ -3690,14 +3664,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         { },
     };
 
-    static PyType_Spec type_spec_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs = {
         "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs
-    };
+        _type_slots_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs};
 
     // ----- Windows.Media.Streaming.Adaptive Initialization --------------------
 

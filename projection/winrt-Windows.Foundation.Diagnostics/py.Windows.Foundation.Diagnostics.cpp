@@ -254,14 +254,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_AsyncCausalityTracer =
-    {
+    static PyType_Spec type_spec_AsyncCausalityTracer = {
         "winrt._winrt_windows_foundation_diagnostics.AsyncCausalityTracer",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AsyncCausalityTracer
-    };
+        _type_slots_AsyncCausalityTracer};
 
     static PyGetSetDef getset_AsyncCausalityTracer_Static[] = {
         { }
@@ -444,14 +442,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_ErrorDetails =
-    {
+    static PyType_Spec type_spec_ErrorDetails = {
         "winrt._winrt_windows_foundation_diagnostics.ErrorDetails",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::ErrorDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ErrorDetails
-    };
+        _type_slots_ErrorDetails};
 
     static PyGetSetDef getset_ErrorDetails_Static[] = {
         { }
@@ -798,14 +794,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_FileLoggingSession =
-    {
+    static PyType_Spec type_spec_FileLoggingSession = {
         "winrt._winrt_windows_foundation_diagnostics.FileLoggingSession",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::FileLoggingSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FileLoggingSession
-    };
+        _type_slots_FileLoggingSession};
 
     // ----- LogFileGeneratedEventArgs class --------------------
 
@@ -887,14 +881,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_LogFileGeneratedEventArgs =
-    {
+    static PyType_Spec type_spec_LogFileGeneratedEventArgs = {
         "winrt._winrt_windows_foundation_diagnostics.LogFileGeneratedEventArgs",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LogFileGeneratedEventArgs
-    };
+        _type_slots_LogFileGeneratedEventArgs};
 
     // ----- LoggingActivity class --------------------
 
@@ -1459,14 +1451,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_LoggingActivity =
-    {
+    static PyType_Spec type_spec_LoggingActivity = {
         "winrt._winrt_windows_foundation_diagnostics.LoggingActivity",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LoggingActivity
-    };
+        _type_slots_LoggingActivity};
 
     // ----- LoggingChannel class --------------------
 
@@ -2145,14 +2135,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_LoggingChannel =
-    {
+    static PyType_Spec type_spec_LoggingChannel = {
         "winrt._winrt_windows_foundation_diagnostics.LoggingChannel",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LoggingChannel
-    };
+        _type_slots_LoggingChannel};
 
     // ----- LoggingChannelOptions class --------------------
 
@@ -2299,14 +2287,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_LoggingChannelOptions =
-    {
+    static PyType_Spec type_spec_LoggingChannelOptions = {
         "winrt._winrt_windows_foundation_diagnostics.LoggingChannelOptions",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannelOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LoggingChannelOptions
-    };
+        _type_slots_LoggingChannelOptions};
 
     // ----- LoggingFields class --------------------
 
@@ -5501,14 +5487,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_LoggingFields =
-    {
+    static PyType_Spec type_spec_LoggingFields = {
         "winrt._winrt_windows_foundation_diagnostics.LoggingFields",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LoggingFields
-    };
+        _type_slots_LoggingFields};
 
     // ----- LoggingOptions class --------------------
 
@@ -5895,14 +5879,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_LoggingOptions =
-    {
+    static PyType_Spec type_spec_LoggingOptions = {
         "winrt._winrt_windows_foundation_diagnostics.LoggingOptions",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LoggingOptions
-    };
+        _type_slots_LoggingOptions};
 
     // ----- LoggingSession class --------------------
 
@@ -6181,14 +6163,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_LoggingSession =
-    {
+    static PyType_Spec type_spec_LoggingSession = {
         "winrt._winrt_windows_foundation_diagnostics.LoggingSession",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::LoggingSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LoggingSession
-    };
+        _type_slots_LoggingSession};
 
     // ----- RuntimeBrokerErrorSettings class --------------------
 
@@ -6335,14 +6315,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_RuntimeBrokerErrorSettings =
-    {
+    static PyType_Spec type_spec_RuntimeBrokerErrorSettings = {
         "winrt._winrt_windows_foundation_diagnostics.RuntimeBrokerErrorSettings",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::RuntimeBrokerErrorSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RuntimeBrokerErrorSettings
-    };
+        _type_slots_RuntimeBrokerErrorSettings};
 
     // ----- TracingStatusChangedEventArgs class --------------------
 
@@ -6444,14 +6422,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_TracingStatusChangedEventArgs =
-    {
+    static PyType_Spec type_spec_TracingStatusChangedEventArgs = {
         "winrt._winrt_windows_foundation_diagnostics.TracingStatusChangedEventArgs",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::TracingStatusChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TracingStatusChangedEventArgs
-    };
+        _type_slots_TracingStatusChangedEventArgs};
 
     // ----- IErrorReportingSettings interface --------------------
 
@@ -6576,14 +6552,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_IErrorReportingSettings =
-    {
+    static PyType_Spec type_spec_IErrorReportingSettings = {
         "winrt._winrt_windows_foundation_diagnostics.IErrorReportingSettings",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::IErrorReportingSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IErrorReportingSettings
-    };
+        _type_slots_IErrorReportingSettings};
 
     // ----- IFileLoggingSession interface --------------------
 
@@ -6880,14 +6854,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_IFileLoggingSession =
-    {
+    static PyType_Spec type_spec_IFileLoggingSession = {
         "winrt._winrt_windows_foundation_diagnostics.IFileLoggingSession",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::IFileLoggingSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IFileLoggingSession
-    };
+        _type_slots_IFileLoggingSession};
 
     // ----- ILoggingChannel interface --------------------
 
@@ -7218,14 +7190,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_ILoggingChannel =
-    {
+    static PyType_Spec type_spec_ILoggingChannel = {
         "winrt._winrt_windows_foundation_diagnostics.ILoggingChannel",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ILoggingChannel
-    };
+        _type_slots_ILoggingChannel};
 
     // ----- ILoggingSession interface --------------------
 
@@ -7480,14 +7450,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_ILoggingSession =
-    {
+    static PyType_Spec type_spec_ILoggingSession = {
         "winrt._winrt_windows_foundation_diagnostics.ILoggingSession",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::ILoggingSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ILoggingSession
-    };
+        _type_slots_ILoggingSession};
 
     // ----- ILoggingTarget interface --------------------
 
@@ -7820,14 +7788,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_ILoggingTarget =
-    {
+    static PyType_Spec type_spec_ILoggingTarget = {
         "winrt._winrt_windows_foundation_diagnostics.ILoggingTarget",
         sizeof(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ILoggingTarget
-    };
+        _type_slots_ILoggingTarget};
 
     // ----- Windows.Foundation.Diagnostics Initialization --------------------
 

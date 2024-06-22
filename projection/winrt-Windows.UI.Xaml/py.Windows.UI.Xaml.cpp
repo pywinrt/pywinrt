@@ -221,14 +221,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_AdaptiveTrigger =
-    {
+    static PyType_Spec type_spec_AdaptiveTrigger = {
         "winrt._winrt_windows_ui_xaml.AdaptiveTrigger",
         sizeof(py::wrapper::Windows::UI::Xaml::AdaptiveTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdaptiveTrigger
-    };
+        _type_slots_AdaptiveTrigger};
 
     static PyGetSetDef getset_AdaptiveTrigger_Static[] = {
         { "min_window_height_property", reinterpret_cast<getter>(AdaptiveTrigger_get_MinWindowHeightProperty), nullptr, nullptr, nullptr },
@@ -965,14 +963,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_Application =
-    {
+    static PyType_Spec type_spec_Application = {
         "winrt._winrt_windows_ui_xaml.Application",
         sizeof(py::wrapper::Windows::UI::Xaml::Application),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Application
-    };
+        _type_slots_Application};
 
     static PyGetSetDef getset_Application_Static[] = {
         { "current", reinterpret_cast<getter>(Application_get_Current), nullptr, nullptr, nullptr },
@@ -1062,14 +1058,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_ApplicationInitializationCallbackParams =
-    {
+    static PyType_Spec type_spec_ApplicationInitializationCallbackParams = {
         "winrt._winrt_windows_ui_xaml.ApplicationInitializationCallbackParams",
         sizeof(py::wrapper::Windows::UI::Xaml::ApplicationInitializationCallbackParams),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ApplicationInitializationCallbackParams
-    };
+        _type_slots_ApplicationInitializationCallbackParams};
 
     // ----- BindingFailedEventArgs class --------------------
 
@@ -1151,14 +1145,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_BindingFailedEventArgs =
-    {
+    static PyType_Spec type_spec_BindingFailedEventArgs = {
         "winrt._winrt_windows_ui_xaml.BindingFailedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::BindingFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BindingFailedEventArgs
-    };
+        _type_slots_BindingFailedEventArgs};
 
     // ----- BringIntoViewOptions class --------------------
 
@@ -1530,14 +1522,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_BringIntoViewOptions =
-    {
+    static PyType_Spec type_spec_BringIntoViewOptions = {
         "winrt._winrt_windows_ui_xaml.BringIntoViewOptions",
         sizeof(py::wrapper::Windows::UI::Xaml::BringIntoViewOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BringIntoViewOptions
-    };
+        _type_slots_BringIntoViewOptions};
 
     // ----- BringIntoViewRequestedEventArgs class --------------------
 
@@ -1927,14 +1917,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_BringIntoViewRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_BringIntoViewRequestedEventArgs = {
         "winrt._winrt_windows_ui_xaml.BringIntoViewRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::BringIntoViewRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BringIntoViewRequestedEventArgs
-    };
+        _type_slots_BringIntoViewRequestedEventArgs};
 
     // ----- BrushTransition class --------------------
 
@@ -2066,14 +2054,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_BrushTransition =
-    {
+    static PyType_Spec type_spec_BrushTransition = {
         "winrt._winrt_windows_ui_xaml.BrushTransition",
         sizeof(py::wrapper::Windows::UI::Xaml::BrushTransition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BrushTransition
-    };
+        _type_slots_BrushTransition};
 
     // ----- ColorPaletteResources class --------------------
 
@@ -3453,14 +3439,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_ColorPaletteResources =
-    {
+    static PyType_Spec type_spec_ColorPaletteResources = {
         "winrt._winrt_windows_ui_xaml.ColorPaletteResources",
         sizeof(py::wrapper::Windows::UI::Xaml::ColorPaletteResources),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ColorPaletteResources
-    };
+        _type_slots_ColorPaletteResources};
 
     // ----- CornerRadiusHelper class --------------------
 
@@ -3587,14 +3571,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_CornerRadiusHelper =
-    {
+    static PyType_Spec type_spec_CornerRadiusHelper = {
         "winrt._winrt_windows_ui_xaml.CornerRadiusHelper",
         sizeof(py::wrapper::Windows::UI::Xaml::CornerRadiusHelper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CornerRadiusHelper
-    };
+        _type_slots_CornerRadiusHelper};
 
     static PyGetSetDef getset_CornerRadiusHelper_Static[] = {
         { }
@@ -3751,14 +3733,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_DataContextChangedEventArgs =
-    {
+    static PyType_Spec type_spec_DataContextChangedEventArgs = {
         "winrt._winrt_windows_ui_xaml.DataContextChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::DataContextChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DataContextChangedEventArgs
-    };
+        _type_slots_DataContextChangedEventArgs};
 
     // ----- DataTemplate class --------------------
 
@@ -4020,14 +4000,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_DataTemplate =
-    {
+    static PyType_Spec type_spec_DataTemplate = {
         "winrt._winrt_windows_ui_xaml.DataTemplate",
         sizeof(py::wrapper::Windows::UI::Xaml::DataTemplate),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DataTemplate
-    };
+        _type_slots_DataTemplate};
 
     static PyGetSetDef getset_DataTemplate_Static[] = {
         { "extension_instance_property", reinterpret_cast<getter>(DataTemplate_get_ExtensionInstanceProperty), nullptr, nullptr, nullptr },
@@ -4202,14 +4180,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_DataTemplateKey =
-    {
+    static PyType_Spec type_spec_DataTemplateKey = {
         "winrt._winrt_windows_ui_xaml.DataTemplateKey",
         sizeof(py::wrapper::Windows::UI::Xaml::DataTemplateKey),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DataTemplateKey
-    };
+        _type_slots_DataTemplateKey};
 
     // ----- DebugSettings class --------------------
 
@@ -4604,14 +4580,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_DebugSettings =
-    {
+    static PyType_Spec type_spec_DebugSettings = {
         "winrt._winrt_windows_ui_xaml.DebugSettings",
         sizeof(py::wrapper::Windows::UI::Xaml::DebugSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DebugSettings
-    };
+        _type_slots_DebugSettings};
 
     // ----- DependencyObject class --------------------
 
@@ -4923,14 +4897,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_DependencyObject =
-    {
+    static PyType_Spec type_spec_DependencyObject = {
         "winrt._winrt_windows_ui_xaml.DependencyObject",
         sizeof(py::wrapper::Windows::UI::Xaml::DependencyObject),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DependencyObject
-    };
+        _type_slots_DependencyObject};
 
     // ----- DependencyObjectCollection class --------------------
 
@@ -5604,14 +5576,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_DependencyObjectCollection =
-    {
+    static PyType_Spec type_spec_DependencyObjectCollection = {
         "winrt._winrt_windows_ui_xaml.DependencyObjectCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::DependencyObjectCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DependencyObjectCollection
-    };
+        _type_slots_DependencyObjectCollection};
 
     // ----- DependencyProperty class --------------------
 
@@ -5792,14 +5762,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_DependencyProperty =
-    {
+    static PyType_Spec type_spec_DependencyProperty = {
         "winrt._winrt_windows_ui_xaml.DependencyProperty",
         sizeof(py::wrapper::Windows::UI::Xaml::DependencyProperty),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DependencyProperty
-    };
+        _type_slots_DependencyProperty};
 
     static PyGetSetDef getset_DependencyProperty_Static[] = {
         { "unset_value", reinterpret_cast<getter>(DependencyProperty_get_UnsetValue), nullptr, nullptr, nullptr },
@@ -5949,14 +5917,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_DependencyPropertyChangedEventArgs =
-    {
+    static PyType_Spec type_spec_DependencyPropertyChangedEventArgs = {
         "winrt._winrt_windows_ui_xaml.DependencyPropertyChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::DependencyPropertyChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DependencyPropertyChangedEventArgs
-    };
+        _type_slots_DependencyPropertyChangedEventArgs};
 
     // ----- DispatcherTimer class --------------------
 
@@ -6215,14 +6181,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_DispatcherTimer =
-    {
+    static PyType_Spec type_spec_DispatcherTimer = {
         "winrt._winrt_windows_ui_xaml.DispatcherTimer",
         sizeof(py::wrapper::Windows::UI::Xaml::DispatcherTimer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DispatcherTimer
-    };
+        _type_slots_DispatcherTimer};
 
     // ----- DragEventArgs class --------------------
 
@@ -6570,14 +6534,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_DragEventArgs =
-    {
+    static PyType_Spec type_spec_DragEventArgs = {
         "winrt._winrt_windows_ui_xaml.DragEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::DragEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DragEventArgs
-    };
+        _type_slots_DragEventArgs};
 
     // ----- DragOperationDeferral class --------------------
 
@@ -6670,14 +6632,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_DragOperationDeferral =
-    {
+    static PyType_Spec type_spec_DragOperationDeferral = {
         "winrt._winrt_windows_ui_xaml.DragOperationDeferral",
         sizeof(py::wrapper::Windows::UI::Xaml::DragOperationDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DragOperationDeferral
-    };
+        _type_slots_DragOperationDeferral};
 
     // ----- DragStartingEventArgs class --------------------
 
@@ -6937,14 +6897,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_DragStartingEventArgs =
-    {
+    static PyType_Spec type_spec_DragStartingEventArgs = {
         "winrt._winrt_windows_ui_xaml.DragStartingEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::DragStartingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DragStartingEventArgs
-    };
+        _type_slots_DragStartingEventArgs};
 
     // ----- DragUI class --------------------
 
@@ -7147,14 +7105,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_DragUI =
-    {
+    static PyType_Spec type_spec_DragUI = {
         "winrt._winrt_windows_ui_xaml.DragUI",
         sizeof(py::wrapper::Windows::UI::Xaml::DragUI),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DragUI
-    };
+        _type_slots_DragUI};
 
     // ----- DragUIOverride class --------------------
 
@@ -7549,14 +7505,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_DragUIOverride =
-    {
+    static PyType_Spec type_spec_DragUIOverride = {
         "winrt._winrt_windows_ui_xaml.DragUIOverride",
         sizeof(py::wrapper::Windows::UI::Xaml::DragUIOverride),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DragUIOverride
-    };
+        _type_slots_DragUIOverride};
 
     // ----- DropCompletedEventArgs class --------------------
 
@@ -7638,14 +7592,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_DropCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_DropCompletedEventArgs = {
         "winrt._winrt_windows_ui_xaml.DropCompletedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::DropCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DropCompletedEventArgs
-    };
+        _type_slots_DropCompletedEventArgs};
 
     // ----- DurationHelper class --------------------
 
@@ -7935,14 +7887,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_DurationHelper =
-    {
+    static PyType_Spec type_spec_DurationHelper = {
         "winrt._winrt_windows_ui_xaml.DurationHelper",
         sizeof(py::wrapper::Windows::UI::Xaml::DurationHelper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DurationHelper
-    };
+        _type_slots_DurationHelper};
 
     static PyGetSetDef getset_DurationHelper_Static[] = {
         { "automatic", reinterpret_cast<getter>(DurationHelper_get_Automatic), nullptr, nullptr, nullptr },
@@ -8117,14 +8067,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_EffectiveViewportChangedEventArgs =
-    {
+    static PyType_Spec type_spec_EffectiveViewportChangedEventArgs = {
         "winrt._winrt_windows_ui_xaml.EffectiveViewportChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::EffectiveViewportChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EffectiveViewportChangedEventArgs
-    };
+        _type_slots_EffectiveViewportChangedEventArgs};
 
     // ----- ElementFactoryGetArgs class --------------------
 
@@ -8304,14 +8252,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_ElementFactoryGetArgs =
-    {
+    static PyType_Spec type_spec_ElementFactoryGetArgs = {
         "winrt._winrt_windows_ui_xaml.ElementFactoryGetArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::ElementFactoryGetArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ElementFactoryGetArgs
-    };
+        _type_slots_ElementFactoryGetArgs};
 
     // ----- ElementFactoryRecycleArgs class --------------------
 
@@ -8491,14 +8437,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_ElementFactoryRecycleArgs =
-    {
+    static PyType_Spec type_spec_ElementFactoryRecycleArgs = {
         "winrt._winrt_windows_ui_xaml.ElementFactoryRecycleArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::ElementFactoryRecycleArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ElementFactoryRecycleArgs
-    };
+        _type_slots_ElementFactoryRecycleArgs};
 
     // ----- ElementSoundPlayer class --------------------
 
@@ -8733,14 +8677,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_ElementSoundPlayer =
-    {
+    static PyType_Spec type_spec_ElementSoundPlayer = {
         "winrt._winrt_windows_ui_xaml.ElementSoundPlayer",
         sizeof(py::wrapper::Windows::UI::Xaml::ElementSoundPlayer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ElementSoundPlayer
-    };
+        _type_slots_ElementSoundPlayer};
 
     static PyGetSetDef getset_ElementSoundPlayer_Static[] = {
         { "volume", reinterpret_cast<getter>(ElementSoundPlayer_get_Volume), reinterpret_cast<setter>(ElementSoundPlayer_put_Volume), nullptr, nullptr },
@@ -8921,14 +8863,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_EventTrigger =
-    {
+    static PyType_Spec type_spec_EventTrigger = {
         "winrt._winrt_windows_ui_xaml.EventTrigger",
         sizeof(py::wrapper::Windows::UI::Xaml::EventTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EventTrigger
-    };
+        _type_slots_EventTrigger};
 
     // ----- ExceptionRoutedEventArgs class --------------------
 
@@ -9010,14 +8950,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_ExceptionRoutedEventArgs =
-    {
+    static PyType_Spec type_spec_ExceptionRoutedEventArgs = {
         "winrt._winrt_windows_ui_xaml.ExceptionRoutedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::ExceptionRoutedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ExceptionRoutedEventArgs
-    };
+        _type_slots_ExceptionRoutedEventArgs};
 
     // ----- FrameworkElement class --------------------
 
@@ -11355,14 +11293,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_FrameworkElement =
-    {
+    static PyType_Spec type_spec_FrameworkElement = {
         "winrt._winrt_windows_ui_xaml.FrameworkElement",
         sizeof(py::wrapper::Windows::UI::Xaml::FrameworkElement),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameworkElement
-    };
+        _type_slots_FrameworkElement};
 
     static PyGetSetDef getset_FrameworkElement_Static[] = {
         { "actual_height_property", reinterpret_cast<getter>(FrameworkElement_get_ActualHeightProperty), nullptr, nullptr, nullptr },
@@ -11476,14 +11412,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_FrameworkTemplate =
-    {
+    static PyType_Spec type_spec_FrameworkTemplate = {
         "winrt._winrt_windows_ui_xaml.FrameworkTemplate",
         sizeof(py::wrapper::Windows::UI::Xaml::FrameworkTemplate),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameworkTemplate
-    };
+        _type_slots_FrameworkTemplate};
 
     // ----- FrameworkView class --------------------
 
@@ -11728,14 +11662,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_FrameworkView =
-    {
+    static PyType_Spec type_spec_FrameworkView = {
         "winrt._winrt_windows_ui_xaml.FrameworkView",
         sizeof(py::wrapper::Windows::UI::Xaml::FrameworkView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameworkView
-    };
+        _type_slots_FrameworkView};
 
     // ----- FrameworkViewSource class --------------------
 
@@ -11849,14 +11781,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_FrameworkViewSource =
-    {
+    static PyType_Spec type_spec_FrameworkViewSource = {
         "winrt._winrt_windows_ui_xaml.FrameworkViewSource",
         sizeof(py::wrapper::Windows::UI::Xaml::FrameworkViewSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameworkViewSource
-    };
+        _type_slots_FrameworkViewSource};
 
     // ----- GridLengthHelper class --------------------
 
@@ -12125,14 +12055,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_GridLengthHelper =
-    {
+    static PyType_Spec type_spec_GridLengthHelper = {
         "winrt._winrt_windows_ui_xaml.GridLengthHelper",
         sizeof(py::wrapper::Windows::UI::Xaml::GridLengthHelper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GridLengthHelper
-    };
+        _type_slots_GridLengthHelper};
 
     static PyGetSetDef getset_GridLengthHelper_Static[] = {
         { "auto", reinterpret_cast<getter>(GridLengthHelper_get_Auto), nullptr, nullptr, nullptr },
@@ -12246,14 +12174,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_MediaFailedRoutedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaFailedRoutedEventArgs = {
         "winrt._winrt_windows_ui_xaml.MediaFailedRoutedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::MediaFailedRoutedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaFailedRoutedEventArgs
-    };
+        _type_slots_MediaFailedRoutedEventArgs};
 
     // ----- PointHelper class --------------------
 
@@ -12347,14 +12273,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_PointHelper =
-    {
+    static PyType_Spec type_spec_PointHelper = {
         "winrt._winrt_windows_ui_xaml.PointHelper",
         sizeof(py::wrapper::Windows::UI::Xaml::PointHelper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PointHelper
-    };
+        _type_slots_PointHelper};
 
     static PyGetSetDef getset_PointHelper_Static[] = {
         { }
@@ -12574,14 +12498,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_PropertyMetadata =
-    {
+    static PyType_Spec type_spec_PropertyMetadata = {
         "winrt._winrt_windows_ui_xaml.PropertyMetadata",
         sizeof(py::wrapper::Windows::UI::Xaml::PropertyMetadata),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PropertyMetadata
-    };
+        _type_slots_PropertyMetadata};
 
     static PyGetSetDef getset_PropertyMetadata_Static[] = {
         { }
@@ -12713,14 +12635,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_PropertyPath =
-    {
+    static PyType_Spec type_spec_PropertyPath = {
         "winrt._winrt_windows_ui_xaml.PropertyPath",
         sizeof(py::wrapper::Windows::UI::Xaml::PropertyPath),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PropertyPath
-    };
+        _type_slots_PropertyPath};
 
     // ----- RectHelper class --------------------
 
@@ -13182,14 +13102,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_RectHelper =
-    {
+    static PyType_Spec type_spec_RectHelper = {
         "winrt._winrt_windows_ui_xaml.RectHelper",
         sizeof(py::wrapper::Windows::UI::Xaml::RectHelper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RectHelper
-    };
+        _type_slots_RectHelper};
 
     static PyGetSetDef getset_RectHelper_Static[] = {
         { "empty", reinterpret_cast<getter>(RectHelper_get_Empty), nullptr, nullptr, nullptr },
@@ -13746,14 +13664,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_ResourceDictionary =
-    {
+    static PyType_Spec type_spec_ResourceDictionary = {
         "winrt._winrt_windows_ui_xaml.ResourceDictionary",
         sizeof(py::wrapper::Windows::UI::Xaml::ResourceDictionary),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResourceDictionary
-    };
+        _type_slots_ResourceDictionary};
 
     // ----- RoutedEvent class --------------------
 
@@ -13815,14 +13731,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_RoutedEvent =
-    {
+    static PyType_Spec type_spec_RoutedEvent = {
         "winrt._winrt_windows_ui_xaml.RoutedEvent",
         sizeof(py::wrapper::Windows::UI::Xaml::RoutedEvent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RoutedEvent
-    };
+        _type_slots_RoutedEvent};
 
     // ----- RoutedEventArgs class --------------------
 
@@ -13926,14 +13840,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_RoutedEventArgs =
-    {
+    static PyType_Spec type_spec_RoutedEventArgs = {
         "winrt._winrt_windows_ui_xaml.RoutedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::RoutedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RoutedEventArgs
-    };
+        _type_slots_RoutedEventArgs};
 
     // ----- ScalarTransition class --------------------
 
@@ -14065,14 +13977,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_ScalarTransition =
-    {
+    static PyType_Spec type_spec_ScalarTransition = {
         "winrt._winrt_windows_ui_xaml.ScalarTransition",
         sizeof(py::wrapper::Windows::UI::Xaml::ScalarTransition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScalarTransition
-    };
+        _type_slots_ScalarTransition};
 
     // ----- Setter class --------------------
 
@@ -14316,14 +14226,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_Setter =
-    {
+    static PyType_Spec type_spec_Setter = {
         "winrt._winrt_windows_ui_xaml.Setter",
         sizeof(py::wrapper::Windows::UI::Xaml::Setter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Setter
-    };
+        _type_slots_Setter};
 
     // ----- SetterBase class --------------------
 
@@ -14405,14 +14313,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_SetterBase =
-    {
+    static PyType_Spec type_spec_SetterBase = {
         "winrt._winrt_windows_ui_xaml.SetterBase",
         sizeof(py::wrapper::Windows::UI::Xaml::SetterBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SetterBase
-    };
+        _type_slots_SetterBase};
 
     // ----- SetterBaseCollection class --------------------
 
@@ -15061,14 +14967,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_SetterBaseCollection =
-    {
+    static PyType_Spec type_spec_SetterBaseCollection = {
         "winrt._winrt_windows_ui_xaml.SetterBaseCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::SetterBaseCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SetterBaseCollection
-    };
+        _type_slots_SetterBaseCollection};
 
     // ----- SizeChangedEventArgs class --------------------
 
@@ -15170,14 +15074,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_SizeChangedEventArgs =
-    {
+    static PyType_Spec type_spec_SizeChangedEventArgs = {
         "winrt._winrt_windows_ui_xaml.SizeChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::SizeChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SizeChangedEventArgs
-    };
+        _type_slots_SizeChangedEventArgs};
 
     // ----- SizeHelper class --------------------
 
@@ -15353,14 +15255,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_SizeHelper =
-    {
+    static PyType_Spec type_spec_SizeHelper = {
         "winrt._winrt_windows_ui_xaml.SizeHelper",
         sizeof(py::wrapper::Windows::UI::Xaml::SizeHelper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SizeHelper
-    };
+        _type_slots_SizeHelper};
 
     static PyGetSetDef getset_SizeHelper_Static[] = {
         { "empty", reinterpret_cast<getter>(SizeHelper_get_Empty), nullptr, nullptr, nullptr },
@@ -15540,14 +15440,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_StateTrigger =
-    {
+    static PyType_Spec type_spec_StateTrigger = {
         "winrt._winrt_windows_ui_xaml.StateTrigger",
         sizeof(py::wrapper::Windows::UI::Xaml::StateTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StateTrigger
-    };
+        _type_slots_StateTrigger};
 
     static PyGetSetDef getset_StateTrigger_Static[] = {
         { "is_active_property", reinterpret_cast<getter>(StateTrigger_get_IsActiveProperty), nullptr, nullptr, nullptr },
@@ -15635,14 +15533,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_StateTriggerBase =
-    {
+    static PyType_Spec type_spec_StateTriggerBase = {
         "winrt._winrt_windows_ui_xaml.StateTriggerBase",
         sizeof(py::wrapper::Windows::UI::Xaml::StateTriggerBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StateTriggerBase
-    };
+        _type_slots_StateTriggerBase};
 
     // ----- Style class --------------------
 
@@ -15908,14 +15804,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_Style =
-    {
+    static PyType_Spec type_spec_Style = {
         "winrt._winrt_windows_ui_xaml.Style",
         sizeof(py::wrapper::Windows::UI::Xaml::Style),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Style
-    };
+        _type_slots_Style};
 
     // ----- TargetPropertyPath class --------------------
 
@@ -16110,14 +16004,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_TargetPropertyPath =
-    {
+    static PyType_Spec type_spec_TargetPropertyPath = {
         "winrt._winrt_windows_ui_xaml.TargetPropertyPath",
         sizeof(py::wrapper::Windows::UI::Xaml::TargetPropertyPath),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetPropertyPath
-    };
+        _type_slots_TargetPropertyPath};
 
     // ----- ThicknessHelper class --------------------
 
@@ -16244,14 +16136,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_ThicknessHelper =
-    {
+    static PyType_Spec type_spec_ThicknessHelper = {
         "winrt._winrt_windows_ui_xaml.ThicknessHelper",
         sizeof(py::wrapper::Windows::UI::Xaml::ThicknessHelper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ThicknessHelper
-    };
+        _type_slots_ThicknessHelper};
 
     static PyGetSetDef getset_ThicknessHelper_Static[] = {
         { }
@@ -16340,14 +16230,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_TriggerAction =
-    {
+    static PyType_Spec type_spec_TriggerAction = {
         "winrt._winrt_windows_ui_xaml.TriggerAction",
         sizeof(py::wrapper::Windows::UI::Xaml::TriggerAction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TriggerAction
-    };
+        _type_slots_TriggerAction};
 
     // ----- TriggerActionCollection class --------------------
 
@@ -16976,14 +16864,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_TriggerActionCollection =
-    {
+    static PyType_Spec type_spec_TriggerActionCollection = {
         "winrt._winrt_windows_ui_xaml.TriggerActionCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::TriggerActionCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TriggerActionCollection
-    };
+        _type_slots_TriggerActionCollection};
 
     // ----- TriggerBase class --------------------
 
@@ -17045,14 +16931,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_TriggerBase =
-    {
+    static PyType_Spec type_spec_TriggerBase = {
         "winrt._winrt_windows_ui_xaml.TriggerBase",
         sizeof(py::wrapper::Windows::UI::Xaml::TriggerBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TriggerBase
-    };
+        _type_slots_TriggerBase};
 
     // ----- TriggerCollection class --------------------
 
@@ -17659,14 +17543,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_TriggerCollection =
-    {
+    static PyType_Spec type_spec_TriggerCollection = {
         "winrt._winrt_windows_ui_xaml.TriggerCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::TriggerCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TriggerCollection
-    };
+        _type_slots_TriggerCollection};
 
     // ----- UIElement class --------------------
 
@@ -24122,14 +24004,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_UIElement =
-    {
+    static PyType_Spec type_spec_UIElement = {
         "winrt._winrt_windows_ui_xaml.UIElement",
         sizeof(py::wrapper::Windows::UI::Xaml::UIElement),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UIElement
-    };
+        _type_slots_UIElement};
 
     static PyGetSetDef getset_UIElement_Static[] = {
         { "holding_event", reinterpret_cast<getter>(UIElement_get_HoldingEvent), nullptr, nullptr, nullptr },
@@ -24857,14 +24737,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_UIElementWeakCollection =
-    {
+    static PyType_Spec type_spec_UIElementWeakCollection = {
         "winrt._winrt_windows_ui_xaml.UIElementWeakCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::UIElementWeakCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UIElementWeakCollection
-    };
+        _type_slots_UIElementWeakCollection};
 
     // ----- UnhandledExceptionEventArgs class --------------------
 
@@ -25014,14 +24892,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_UnhandledExceptionEventArgs =
-    {
+    static PyType_Spec type_spec_UnhandledExceptionEventArgs = {
         "winrt._winrt_windows_ui_xaml.UnhandledExceptionEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::UnhandledExceptionEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UnhandledExceptionEventArgs
-    };
+        _type_slots_UnhandledExceptionEventArgs};
 
     // ----- Vector3Transition class --------------------
 
@@ -25201,14 +25077,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_Vector3Transition =
-    {
+    static PyType_Spec type_spec_Vector3Transition = {
         "winrt._winrt_windows_ui_xaml.Vector3Transition",
         sizeof(py::wrapper::Windows::UI::Xaml::Vector3Transition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Vector3Transition
-    };
+        _type_slots_Vector3Transition};
 
     // ----- VisualState class --------------------
 
@@ -25400,14 +25274,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_VisualState =
-    {
+    static PyType_Spec type_spec_VisualState = {
         "winrt._winrt_windows_ui_xaml.VisualState",
         sizeof(py::wrapper::Windows::UI::Xaml::VisualState),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VisualState
-    };
+        _type_slots_VisualState};
 
     // ----- VisualStateChangedEventArgs class --------------------
 
@@ -25635,14 +25507,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_VisualStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_VisualStateChangedEventArgs = {
         "winrt._winrt_windows_ui_xaml.VisualStateChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::VisualStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VisualStateChangedEventArgs
-    };
+        _type_slots_VisualStateChangedEventArgs};
 
     // ----- VisualStateGroup class --------------------
 
@@ -25896,14 +25766,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_VisualStateGroup =
-    {
+    static PyType_Spec type_spec_VisualStateGroup = {
         "winrt._winrt_windows_ui_xaml.VisualStateGroup",
         sizeof(py::wrapper::Windows::UI::Xaml::VisualStateGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VisualStateGroup
-    };
+        _type_slots_VisualStateGroup};
 
     // ----- VisualStateManager class --------------------
 
@@ -26134,14 +26002,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_VisualStateManager =
-    {
+    static PyType_Spec type_spec_VisualStateManager = {
         "winrt._winrt_windows_ui_xaml.VisualStateManager",
         sizeof(py::wrapper::Windows::UI::Xaml::VisualStateManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VisualStateManager
-    };
+        _type_slots_VisualStateManager};
 
     static PyGetSetDef getset_VisualStateManager_Static[] = {
         { "custom_visual_state_manager_property", reinterpret_cast<getter>(VisualStateManager_get_CustomVisualStateManagerProperty), nullptr, nullptr, nullptr },
@@ -26495,14 +26361,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_VisualTransition =
-    {
+    static PyType_Spec type_spec_VisualTransition = {
         "winrt._winrt_windows_ui_xaml.VisualTransition",
         sizeof(py::wrapper::Windows::UI::Xaml::VisualTransition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VisualTransition
-    };
+        _type_slots_VisualTransition};
 
     // ----- Window class --------------------
 
@@ -27026,14 +26890,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_Window =
-    {
+    static PyType_Spec type_spec_Window = {
         "winrt._winrt_windows_ui_xaml.Window",
         sizeof(py::wrapper::Windows::UI::Xaml::Window),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Window
-    };
+        _type_slots_Window};
 
     static PyGetSetDef getset_Window_Static[] = {
         { "current", reinterpret_cast<getter>(Window_get_Current), nullptr, nullptr, nullptr },
@@ -27141,14 +27003,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_WindowCreatedEventArgs =
-    {
+    static PyType_Spec type_spec_WindowCreatedEventArgs = {
         "winrt._winrt_windows_ui_xaml.WindowCreatedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::WindowCreatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowCreatedEventArgs
-    };
+        _type_slots_WindowCreatedEventArgs};
 
     // ----- XamlRoot class --------------------
 
@@ -27355,14 +27215,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_XamlRoot =
-    {
+    static PyType_Spec type_spec_XamlRoot = {
         "winrt._winrt_windows_ui_xaml.XamlRoot",
         sizeof(py::wrapper::Windows::UI::Xaml::XamlRoot),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XamlRoot
-    };
+        _type_slots_XamlRoot};
 
     // ----- XamlRootChangedEventArgs class --------------------
 
@@ -27424,14 +27282,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_XamlRootChangedEventArgs =
-    {
+    static PyType_Spec type_spec_XamlRootChangedEventArgs = {
         "winrt._winrt_windows_ui_xaml.XamlRootChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::XamlRootChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XamlRootChangedEventArgs
-    };
+        _type_slots_XamlRootChangedEventArgs};
 
     // ----- IDataTemplateExtension interface --------------------
 
@@ -27588,14 +27444,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_IDataTemplateExtension =
-    {
+    static PyType_Spec type_spec_IDataTemplateExtension = {
         "winrt._winrt_windows_ui_xaml.IDataTemplateExtension",
         sizeof(py::wrapper::Windows::UI::Xaml::IDataTemplateExtension),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IDataTemplateExtension
-    };
+        _type_slots_IDataTemplateExtension};
 
     // ----- IElementFactory interface --------------------
 
@@ -27722,14 +27576,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_IElementFactory =
-    {
+    static PyType_Spec type_spec_IElementFactory = {
         "winrt._winrt_windows_ui_xaml.IElementFactory",
         sizeof(py::wrapper::Windows::UI::Xaml::IElementFactory),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IElementFactory
-    };
+        _type_slots_IElementFactory};
 
     // ----- CornerRadius struct --------------------
 
@@ -27953,14 +27805,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_CornerRadius =
-    {
+    static PyType_Spec type_spec_CornerRadius = {
         "winrt._winrt_windows_ui_xaml.CornerRadius",
         sizeof(py::wrapper::Windows::UI::Xaml::CornerRadius),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CornerRadius
-    };
+        _type_slots_CornerRadius};
 
     // ----- Duration struct --------------------
 
@@ -28114,14 +27964,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_Duration =
-    {
+    static PyType_Spec type_spec_Duration = {
         "winrt._winrt_windows_ui_xaml.Duration",
         sizeof(py::wrapper::Windows::UI::Xaml::Duration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Duration
-    };
+        _type_slots_Duration};
 
     // ----- GridLength struct --------------------
 
@@ -28275,14 +28123,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_GridLength =
-    {
+    static PyType_Spec type_spec_GridLength = {
         "winrt._winrt_windows_ui_xaml.GridLength",
         sizeof(py::wrapper::Windows::UI::Xaml::GridLength),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GridLength
-    };
+        _type_slots_GridLength};
 
     // ----- Thickness struct --------------------
 
@@ -28506,14 +28352,12 @@ namespace py::cpp::Windows::UI::Xaml
         { },
     };
 
-    static PyType_Spec type_spec_Thickness =
-    {
+    static PyType_Spec type_spec_Thickness = {
         "winrt._winrt_windows_ui_xaml.Thickness",
         sizeof(py::wrapper::Windows::UI::Xaml::Thickness),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Thickness
-    };
+        _type_slots_Thickness};
 
     // ----- Windows.UI.Xaml Initialization --------------------
 

@@ -438,14 +438,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { },
     };
 
-    static PyType_Spec type_spec_InjectedInputGamepadInfo =
-    {
+    static PyType_Spec type_spec_InjectedInputGamepadInfo = {
         "winrt._winrt_windows_ui_input_preview_injection.InjectedInputGamepadInfo",
         sizeof(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InjectedInputGamepadInfo
-    };
+        _type_slots_InjectedInputGamepadInfo};
 
     // ----- InjectedInputKeyboardInfo class --------------------
 
@@ -673,14 +671,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { },
     };
 
-    static PyType_Spec type_spec_InjectedInputKeyboardInfo =
-    {
+    static PyType_Spec type_spec_InjectedInputKeyboardInfo = {
         "winrt._winrt_windows_ui_input_preview_injection.InjectedInputKeyboardInfo",
         sizeof(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InjectedInputKeyboardInfo
-    };
+        _type_slots_InjectedInputKeyboardInfo};
 
     // ----- InjectedInputMouseInfo class --------------------
 
@@ -1004,14 +1000,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { },
     };
 
-    static PyType_Spec type_spec_InjectedInputMouseInfo =
-    {
+    static PyType_Spec type_spec_InjectedInputMouseInfo = {
         "winrt._winrt_windows_ui_input_preview_injection.InjectedInputMouseInfo",
         sizeof(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InjectedInputMouseInfo
-    };
+        _type_slots_InjectedInputMouseInfo};
 
     // ----- InjectedInputPenInfo class --------------------
 
@@ -1431,14 +1425,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { },
     };
 
-    static PyType_Spec type_spec_InjectedInputPenInfo =
-    {
+    static PyType_Spec type_spec_InjectedInputPenInfo = {
         "winrt._winrt_windows_ui_input_preview_injection.InjectedInputPenInfo",
         sizeof(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InjectedInputPenInfo
-    };
+        _type_slots_InjectedInputPenInfo};
 
     // ----- InjectedInputTouchInfo class --------------------
 
@@ -1762,14 +1754,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { },
     };
 
-    static PyType_Spec type_spec_InjectedInputTouchInfo =
-    {
+    static PyType_Spec type_spec_InjectedInputTouchInfo = {
         "winrt._winrt_windows_ui_input_preview_injection.InjectedInputTouchInfo",
         sizeof(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InjectedInputTouchInfo
-    };
+        _type_slots_InjectedInputTouchInfo};
 
     // ----- InputInjector class --------------------
 
@@ -2277,14 +2267,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { },
     };
 
-    static PyType_Spec type_spec_InputInjector =
-    {
+    static PyType_Spec type_spec_InputInjector = {
         "winrt._winrt_windows_ui_input_preview_injection.InputInjector",
         sizeof(py::wrapper::Windows::UI::Input::Preview::Injection::InputInjector),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InputInjector
-    };
+        _type_slots_InputInjector};
 
     static PyGetSetDef getset_InputInjector_Static[] = {
         { }
@@ -2465,14 +2453,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { },
     };
 
-    static PyType_Spec type_spec_InjectedInputPoint =
-    {
+    static PyType_Spec type_spec_InjectedInputPoint = {
         "winrt._winrt_windows_ui_input_preview_injection.InjectedInputPoint",
         sizeof(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPoint),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InjectedInputPoint
-    };
+        _type_slots_InjectedInputPoint};
 
     // ----- InjectedInputPointerInfo struct --------------------
 
@@ -2731,14 +2717,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { },
     };
 
-    static PyType_Spec type_spec_InjectedInputPointerInfo =
-    {
+    static PyType_Spec type_spec_InjectedInputPointerInfo = {
         "winrt._winrt_windows_ui_input_preview_injection.InjectedInputPointerInfo",
         sizeof(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InjectedInputPointerInfo
-    };
+        _type_slots_InjectedInputPointerInfo};
 
     // ----- InjectedInputRectangle struct --------------------
 
@@ -2962,14 +2946,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { },
     };
 
-    static PyType_Spec type_spec_InjectedInputRectangle =
-    {
+    static PyType_Spec type_spec_InjectedInputRectangle = {
         "winrt._winrt_windows_ui_input_preview_injection.InjectedInputRectangle",
         sizeof(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InjectedInputRectangle
-    };
+        _type_slots_InjectedInputRectangle};
 
     // ----- Windows.UI.Input.Preview.Injection Initialization --------------------
 

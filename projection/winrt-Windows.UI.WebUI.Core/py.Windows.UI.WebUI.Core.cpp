@@ -577,14 +577,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { },
     };
 
-    static PyType_Spec type_spec_WebUICommandBar =
-    {
+    static PyType_Spec type_spec_WebUICommandBar = {
         "winrt._winrt_windows_ui_webui_core.WebUICommandBar",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebUICommandBar
-    };
+        _type_slots_WebUICommandBar};
 
     static PyGetSetDef getset_WebUICommandBar_Static[] = {
         { }
@@ -757,14 +755,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { },
     };
 
-    static PyType_Spec type_spec_WebUICommandBarBitmapIcon =
-    {
+    static PyType_Spec type_spec_WebUICommandBarBitmapIcon = {
         "winrt._winrt_windows_ui_webui_core.WebUICommandBarBitmapIcon",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebUICommandBarBitmapIcon
-    };
+        _type_slots_WebUICommandBarBitmapIcon};
 
     // ----- WebUICommandBarConfirmationButton class --------------------
 
@@ -941,14 +937,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { },
     };
 
-    static PyType_Spec type_spec_WebUICommandBarConfirmationButton =
-    {
+    static PyType_Spec type_spec_WebUICommandBarConfirmationButton = {
         "winrt._winrt_windows_ui_webui_core.WebUICommandBarConfirmationButton",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebUICommandBarConfirmationButton
-    };
+        _type_slots_WebUICommandBarConfirmationButton};
 
     // ----- WebUICommandBarIconButton class --------------------
 
@@ -1317,14 +1311,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { },
     };
 
-    static PyType_Spec type_spec_WebUICommandBarIconButton =
-    {
+    static PyType_Spec type_spec_WebUICommandBarIconButton = {
         "winrt._winrt_windows_ui_webui_core.WebUICommandBarIconButton",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebUICommandBarIconButton
-    };
+        _type_slots_WebUICommandBarIconButton};
 
     // ----- WebUICommandBarItemInvokedEventArgs class --------------------
 
@@ -1406,14 +1398,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { },
     };
 
-    static PyType_Spec type_spec_WebUICommandBarItemInvokedEventArgs =
-    {
+    static PyType_Spec type_spec_WebUICommandBarItemInvokedEventArgs = {
         "winrt._winrt_windows_ui_webui_core.WebUICommandBarItemInvokedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebUICommandBarItemInvokedEventArgs
-    };
+        _type_slots_WebUICommandBarItemInvokedEventArgs};
 
     // ----- WebUICommandBarSizeChangedEventArgs class --------------------
 
@@ -1495,14 +1485,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { },
     };
 
-    static PyType_Spec type_spec_WebUICommandBarSizeChangedEventArgs =
-    {
+    static PyType_Spec type_spec_WebUICommandBarSizeChangedEventArgs = {
         "winrt._winrt_windows_ui_webui_core.WebUICommandBarSizeChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebUICommandBarSizeChangedEventArgs
-    };
+        _type_slots_WebUICommandBarSizeChangedEventArgs};
 
     // ----- WebUICommandBarSymbolIcon class --------------------
 
@@ -1649,14 +1637,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { },
     };
 
-    static PyType_Spec type_spec_WebUICommandBarSymbolIcon =
-    {
+    static PyType_Spec type_spec_WebUICommandBarSymbolIcon = {
         "winrt._winrt_windows_ui_webui_core.WebUICommandBarSymbolIcon",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebUICommandBarSymbolIcon
-    };
+        _type_slots_WebUICommandBarSymbolIcon};
 
     // ----- IWebUICommandBarElement interface --------------------
 
@@ -1718,14 +1704,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { },
     };
 
-    static PyType_Spec type_spec_IWebUICommandBarElement =
-    {
+    static PyType_Spec type_spec_IWebUICommandBarElement = {
         "winrt._winrt_windows_ui_webui_core.IWebUICommandBarElement",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::IWebUICommandBarElement),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IWebUICommandBarElement
-    };
+        _type_slots_IWebUICommandBarElement};
 
     // ----- IWebUICommandBarIcon interface --------------------
 
@@ -1787,14 +1771,12 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { },
     };
 
-    static PyType_Spec type_spec_IWebUICommandBarIcon =
-    {
+    static PyType_Spec type_spec_IWebUICommandBarIcon = {
         "winrt._winrt_windows_ui_webui_core.IWebUICommandBarIcon",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::IWebUICommandBarIcon),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IWebUICommandBarIcon
-    };
+        _type_slots_IWebUICommandBarIcon};
 
     // ----- Windows.UI.WebUI.Core Initialization --------------------
 

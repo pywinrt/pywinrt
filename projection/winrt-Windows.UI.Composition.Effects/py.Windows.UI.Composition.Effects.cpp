@@ -423,14 +423,12 @@ namespace py::cpp::Windows::UI::Composition::Effects
         { },
     };
 
-    static PyType_Spec type_spec_SceneLightingEffect =
-    {
+    static PyType_Spec type_spec_SceneLightingEffect = {
         "winrt._winrt_windows_ui_composition_effects.SceneLightingEffect",
         sizeof(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SceneLightingEffect
-    };
+        _type_slots_SceneLightingEffect};
 
     // ----- Windows.UI.Composition.Effects Initialization --------------------
 

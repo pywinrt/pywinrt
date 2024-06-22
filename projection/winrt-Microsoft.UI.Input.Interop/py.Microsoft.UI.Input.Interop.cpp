@@ -61,14 +61,12 @@ namespace py::cpp::Microsoft::UI::Input::Interop
         { },
     };
 
-    static PyType_Spec type_spec_PenDeviceInterop =
-    {
+    static PyType_Spec type_spec_PenDeviceInterop = {
         "winrt._winrt_microsoft_ui_input_interop.PenDeviceInterop",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PenDeviceInterop
-    };
+        _type_slots_PenDeviceInterop};
 
     static PyGetSetDef getset_PenDeviceInterop_Static[] = {
         { }

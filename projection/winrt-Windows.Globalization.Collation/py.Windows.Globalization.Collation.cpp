@@ -105,14 +105,12 @@ namespace py::cpp::Windows::Globalization::Collation
         { },
     };
 
-    static PyType_Spec type_spec_CharacterGrouping =
-    {
+    static PyType_Spec type_spec_CharacterGrouping = {
         "winrt._winrt_windows_globalization_collation.CharacterGrouping",
         sizeof(py::wrapper::Windows::Globalization::Collation::CharacterGrouping),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CharacterGrouping
-    };
+        _type_slots_CharacterGrouping};
 
     // ----- CharacterGroupings class --------------------
 
@@ -506,14 +504,12 @@ namespace py::cpp::Windows::Globalization::Collation
         { },
     };
 
-    static PyType_Spec type_spec_CharacterGroupings =
-    {
+    static PyType_Spec type_spec_CharacterGroupings = {
         "winrt._winrt_windows_globalization_collation.CharacterGroupings",
         sizeof(py::wrapper::Windows::Globalization::Collation::CharacterGroupings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CharacterGroupings
-    };
+        _type_slots_CharacterGroupings};
 
     // ----- Windows.Globalization.Collation Initialization --------------------
 

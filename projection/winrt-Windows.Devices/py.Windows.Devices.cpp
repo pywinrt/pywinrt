@@ -193,14 +193,12 @@ namespace py::cpp::Windows::Devices
         { },
     };
 
-    static PyType_Spec type_spec_LowLevelDevicesAggregateProvider =
-    {
+    static PyType_Spec type_spec_LowLevelDevicesAggregateProvider = {
         "winrt._winrt_windows_devices.LowLevelDevicesAggregateProvider",
         sizeof(py::wrapper::Windows::Devices::LowLevelDevicesAggregateProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LowLevelDevicesAggregateProvider
-    };
+        _type_slots_LowLevelDevicesAggregateProvider};
 
     // ----- LowLevelDevicesController class --------------------
 
@@ -309,14 +307,12 @@ namespace py::cpp::Windows::Devices
         { },
     };
 
-    static PyType_Spec type_spec_LowLevelDevicesController =
-    {
+    static PyType_Spec type_spec_LowLevelDevicesController = {
         "winrt._winrt_windows_devices.LowLevelDevicesController",
         sizeof(py::wrapper::Windows::Devices::LowLevelDevicesController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LowLevelDevicesController
-    };
+        _type_slots_LowLevelDevicesController};
 
     static PyGetSetDef getset_LowLevelDevicesController_Static[] = {
         { "default_provider", reinterpret_cast<getter>(LowLevelDevicesController_get_DefaultProvider), reinterpret_cast<setter>(LowLevelDevicesController_put_DefaultProvider), nullptr, nullptr },
@@ -504,14 +500,12 @@ namespace py::cpp::Windows::Devices
         { },
     };
 
-    static PyType_Spec type_spec_ILowLevelDevicesAggregateProvider =
-    {
+    static PyType_Spec type_spec_ILowLevelDevicesAggregateProvider = {
         "winrt._winrt_windows_devices.ILowLevelDevicesAggregateProvider",
         sizeof(py::wrapper::Windows::Devices::ILowLevelDevicesAggregateProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ILowLevelDevicesAggregateProvider
-    };
+        _type_slots_ILowLevelDevicesAggregateProvider};
 
     // ----- Windows.Devices Initialization --------------------
 

@@ -658,14 +658,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironment =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironment = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironment",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironment
-    };
+        _type_slots_IsolatedWindowsEnvironment};
 
     static PyGetSetDef getset_IsolatedWindowsEnvironment_Static[] = {
         { }
@@ -848,14 +846,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentCreateResult =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentCreateResult = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentCreateResult",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironmentCreateResult
-    };
+        _type_slots_IsolatedWindowsEnvironmentCreateResult};
 
     // ----- IsolatedWindowsEnvironmentFile class --------------------
 
@@ -1028,14 +1024,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentFile =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentFile = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentFile",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentFile),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironmentFile
-    };
+        _type_slots_IsolatedWindowsEnvironmentFile};
 
     // ----- IsolatedWindowsEnvironmentHost class --------------------
 
@@ -1100,14 +1094,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentHost =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentHost = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentHost",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironmentHost
-    };
+        _type_slots_IsolatedWindowsEnvironmentHost};
 
     static PyGetSetDef getset_IsolatedWindowsEnvironmentHost_Static[] = {
         { "host_errors", reinterpret_cast<getter>(IsolatedWindowsEnvironmentHost_get_HostErrors), nullptr, nullptr, nullptr },
@@ -1256,14 +1248,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentLaunchFileResult =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentLaunchFileResult = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentLaunchFileResult",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironmentLaunchFileResult
-    };
+        _type_slots_IsolatedWindowsEnvironmentLaunchFileResult};
 
     // ----- IsolatedWindowsEnvironmentOptions class --------------------
 
@@ -1949,14 +1939,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentOptions =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentOptions = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentOptions",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironmentOptions
-    };
+        _type_slots_IsolatedWindowsEnvironmentOptions};
 
     // ----- IsolatedWindowsEnvironmentOwnerRegistration class --------------------
 
@@ -2047,14 +2035,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentOwnerRegistration =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentOwnerRegistration = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentOwnerRegistration",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironmentOwnerRegistration
-    };
+        _type_slots_IsolatedWindowsEnvironmentOwnerRegistration};
 
     static PyGetSetDef getset_IsolatedWindowsEnvironmentOwnerRegistration_Static[] = {
         { }
@@ -2245,14 +2231,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentOwnerRegistrationData =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentOwnerRegistrationData = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentOwnerRegistrationData",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironmentOwnerRegistrationData
-    };
+        _type_slots_IsolatedWindowsEnvironmentOwnerRegistrationData};
 
     // ----- IsolatedWindowsEnvironmentOwnerRegistrationResult class --------------------
 
@@ -2354,14 +2338,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentOwnerRegistrationResult =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentOwnerRegistrationResult = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironmentOwnerRegistrationResult
-    };
+        _type_slots_IsolatedWindowsEnvironmentOwnerRegistrationResult};
 
     // ----- IsolatedWindowsEnvironmentPostMessageResult class --------------------
 
@@ -2463,14 +2445,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentPostMessageResult =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentPostMessageResult = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentPostMessageResult",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentPostMessageResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironmentPostMessageResult
-    };
+        _type_slots_IsolatedWindowsEnvironmentPostMessageResult};
 
     // ----- IsolatedWindowsEnvironmentProcess class --------------------
 
@@ -2666,14 +2646,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentProcess =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentProcess = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentProcess",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcess),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironmentProcess
-    };
+        _type_slots_IsolatedWindowsEnvironmentProcess};
 
     // ----- IsolatedWindowsEnvironmentShareFileRequestOptions class --------------------
 
@@ -2805,14 +2783,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFileRequestOptions =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFileRequestOptions = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentShareFileRequestOptions",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironmentShareFileRequestOptions
-    };
+        _type_slots_IsolatedWindowsEnvironmentShareFileRequestOptions};
 
     // ----- IsolatedWindowsEnvironmentShareFileResult class --------------------
 
@@ -2934,14 +2910,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFileResult =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFileResult = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentShareFileResult",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironmentShareFileResult
-    };
+        _type_slots_IsolatedWindowsEnvironmentShareFileResult};
 
     // ----- IsolatedWindowsEnvironmentShareFolderRequestOptions class --------------------
 
@@ -3073,14 +3047,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFolderRequestOptions =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFolderRequestOptions = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironmentShareFolderRequestOptions
-    };
+        _type_slots_IsolatedWindowsEnvironmentShareFolderRequestOptions};
 
     // ----- IsolatedWindowsEnvironmentShareFolderResult class --------------------
 
@@ -3182,14 +3154,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFolderResult =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFolderResult = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentShareFolderResult",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironmentShareFolderResult
-    };
+        _type_slots_IsolatedWindowsEnvironmentShareFolderResult};
 
     // ----- IsolatedWindowsEnvironmentStartProcessResult class --------------------
 
@@ -3311,14 +3281,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentStartProcessResult =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentStartProcessResult = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentStartProcessResult",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentStartProcessResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironmentStartProcessResult
-    };
+        _type_slots_IsolatedWindowsEnvironmentStartProcessResult};
 
     // ----- IsolatedWindowsEnvironmentTelemetryParameters class --------------------
 
@@ -3450,14 +3418,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentTelemetryParameters =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentTelemetryParameters = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentTelemetryParameters",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironmentTelemetryParameters
-    };
+        _type_slots_IsolatedWindowsEnvironmentTelemetryParameters};
 
     // ----- IsolatedWindowsEnvironmentUserInfo class --------------------
 
@@ -3619,14 +3585,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentUserInfo =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentUserInfo = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentUserInfo",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentUserInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironmentUserInfo
-    };
+        _type_slots_IsolatedWindowsEnvironmentUserInfo};
 
     // ----- IsolatedWindowsHostMessenger class --------------------
 
@@ -3782,14 +3746,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsHostMessenger =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsHostMessenger = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsHostMessenger",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsHostMessenger
-    };
+        _type_slots_IsolatedWindowsHostMessenger};
 
     static PyGetSetDef getset_IsolatedWindowsHostMessenger_Static[] = {
         { }
@@ -3972,14 +3934,12 @@ namespace py::cpp::Windows::Security::Isolation
         { },
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentCreateProgress =
-    {
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentCreateProgress = {
         "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentCreateProgress",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IsolatedWindowsEnvironmentCreateProgress
-    };
+        _type_slots_IsolatedWindowsEnvironmentCreateProgress};
 
     // ----- Windows.Security.Isolation Initialization --------------------
 

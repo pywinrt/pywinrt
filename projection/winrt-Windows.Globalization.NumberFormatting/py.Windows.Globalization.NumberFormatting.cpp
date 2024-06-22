@@ -923,14 +923,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { },
     };
 
-    static PyType_Spec type_spec_CurrencyFormatter =
-    {
+    static PyType_Spec type_spec_CurrencyFormatter = {
         "winrt._winrt_windows_globalization_numberformatting.CurrencyFormatter",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CurrencyFormatter
-    };
+        _type_slots_CurrencyFormatter};
 
     // ----- DecimalFormatter class --------------------
 
@@ -1718,14 +1716,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { },
     };
 
-    static PyType_Spec type_spec_DecimalFormatter =
-    {
+    static PyType_Spec type_spec_DecimalFormatter = {
         "winrt._winrt_windows_globalization_numberformatting.DecimalFormatter",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DecimalFormatter
-    };
+        _type_slots_DecimalFormatter};
 
     // ----- IncrementNumberRounder class --------------------
 
@@ -2097,14 +2093,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { },
     };
 
-    static PyType_Spec type_spec_IncrementNumberRounder =
-    {
+    static PyType_Spec type_spec_IncrementNumberRounder = {
         "winrt._winrt_windows_globalization_numberformatting.IncrementNumberRounder",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::IncrementNumberRounder),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IncrementNumberRounder
-    };
+        _type_slots_IncrementNumberRounder};
 
     // ----- NumeralSystemTranslator class --------------------
 
@@ -2323,14 +2317,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { },
     };
 
-    static PyType_Spec type_spec_NumeralSystemTranslator =
-    {
+    static PyType_Spec type_spec_NumeralSystemTranslator = {
         "winrt._winrt_windows_globalization_numberformatting.NumeralSystemTranslator",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::NumeralSystemTranslator),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NumeralSystemTranslator
-    };
+        _type_slots_NumeralSystemTranslator};
 
     // ----- PercentFormatter class --------------------
 
@@ -3118,14 +3110,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { },
     };
 
-    static PyType_Spec type_spec_PercentFormatter =
-    {
+    static PyType_Spec type_spec_PercentFormatter = {
         "winrt._winrt_windows_globalization_numberformatting.PercentFormatter",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PercentFormatter
-    };
+        _type_slots_PercentFormatter};
 
     // ----- PermilleFormatter class --------------------
 
@@ -3913,14 +3903,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { },
     };
 
-    static PyType_Spec type_spec_PermilleFormatter =
-    {
+    static PyType_Spec type_spec_PermilleFormatter = {
         "winrt._winrt_windows_globalization_numberformatting.PermilleFormatter",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PermilleFormatter
-    };
+        _type_slots_PermilleFormatter};
 
     // ----- SignificantDigitsNumberRounder class --------------------
 
@@ -4292,14 +4280,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { },
     };
 
-    static PyType_Spec type_spec_SignificantDigitsNumberRounder =
-    {
+    static PyType_Spec type_spec_SignificantDigitsNumberRounder = {
         "winrt._winrt_windows_globalization_numberformatting.SignificantDigitsNumberRounder",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SignificantDigitsNumberRounder
-    };
+        _type_slots_SignificantDigitsNumberRounder};
 
     // ----- INumberFormatter interface --------------------
 
@@ -4393,14 +4379,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { },
     };
 
-    static PyType_Spec type_spec_INumberFormatter =
-    {
+    static PyType_Spec type_spec_INumberFormatter = {
         "winrt._winrt_windows_globalization_numberformatting.INumberFormatter",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_INumberFormatter
-    };
+        _type_slots_INumberFormatter};
 
     // ----- INumberFormatter2 interface --------------------
 
@@ -4558,14 +4542,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { },
     };
 
-    static PyType_Spec type_spec_INumberFormatter2 =
-    {
+    static PyType_Spec type_spec_INumberFormatter2 = {
         "winrt._winrt_windows_globalization_numberformatting.INumberFormatter2",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_INumberFormatter2
-    };
+        _type_slots_INumberFormatter2};
 
     // ----- INumberFormatterOptions interface --------------------
 
@@ -4947,14 +4929,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { },
     };
 
-    static PyType_Spec type_spec_INumberFormatterOptions =
-    {
+    static PyType_Spec type_spec_INumberFormatterOptions = {
         "winrt._winrt_windows_globalization_numberformatting.INumberFormatterOptions",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_INumberFormatterOptions
-    };
+        _type_slots_INumberFormatterOptions};
 
     // ----- INumberParser interface --------------------
 
@@ -5112,14 +5092,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { },
     };
 
-    static PyType_Spec type_spec_INumberParser =
-    {
+    static PyType_Spec type_spec_INumberParser = {
         "winrt._winrt_windows_globalization_numberformatting.INumberParser",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::INumberParser),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_INumberParser
-    };
+        _type_slots_INumberParser};
 
     // ----- INumberRounder interface --------------------
 
@@ -5373,14 +5351,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { },
     };
 
-    static PyType_Spec type_spec_INumberRounder =
-    {
+    static PyType_Spec type_spec_INumberRounder = {
         "winrt._winrt_windows_globalization_numberformatting.INumberRounder",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounder),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_INumberRounder
-    };
+        _type_slots_INumberRounder};
 
     // ----- INumberRounderOption interface --------------------
 
@@ -5490,14 +5466,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { },
     };
 
-    static PyType_Spec type_spec_INumberRounderOption =
-    {
+    static PyType_Spec type_spec_INumberRounderOption = {
         "winrt._winrt_windows_globalization_numberformatting.INumberRounderOption",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounderOption),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_INumberRounderOption
-    };
+        _type_slots_INumberRounderOption};
 
     // ----- ISignedZeroOption interface --------------------
 
@@ -5607,14 +5581,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { },
     };
 
-    static PyType_Spec type_spec_ISignedZeroOption =
-    {
+    static PyType_Spec type_spec_ISignedZeroOption = {
         "winrt._winrt_windows_globalization_numberformatting.ISignedZeroOption",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::ISignedZeroOption),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISignedZeroOption
-    };
+        _type_slots_ISignedZeroOption};
 
     // ----- ISignificantDigitsOption interface --------------------
 
@@ -5724,14 +5696,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { },
     };
 
-    static PyType_Spec type_spec_ISignificantDigitsOption =
-    {
+    static PyType_Spec type_spec_ISignificantDigitsOption = {
         "winrt._winrt_windows_globalization_numberformatting.ISignificantDigitsOption",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::ISignificantDigitsOption),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISignificantDigitsOption
-    };
+        _type_slots_ISignificantDigitsOption};
 
     // ----- Windows.Globalization.NumberFormatting Initialization --------------------
 

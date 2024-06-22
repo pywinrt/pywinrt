@@ -247,14 +247,12 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
         { },
     };
 
-    static PyType_Spec type_spec_EasClientDeviceInformation =
-    {
+    static PyType_Spec type_spec_EasClientDeviceInformation = {
         "winrt._winrt_windows_security_exchangeactivesyncprovisioning.EasClientDeviceInformation",
         sizeof(py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning::EasClientDeviceInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EasClientDeviceInformation
-    };
+        _type_slots_EasClientDeviceInformation};
 
     // ----- EasClientSecurityPolicy class --------------------
 
@@ -782,14 +780,12 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
         { },
     };
 
-    static PyType_Spec type_spec_EasClientSecurityPolicy =
-    {
+    static PyType_Spec type_spec_EasClientSecurityPolicy = {
         "winrt._winrt_windows_security_exchangeactivesyncprovisioning.EasClientSecurityPolicy",
         sizeof(py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EasClientSecurityPolicy
-    };
+        _type_slots_EasClientSecurityPolicy};
 
     // ----- EasComplianceResults class --------------------
 
@@ -1051,14 +1047,12 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
         { },
     };
 
-    static PyType_Spec type_spec_EasComplianceResults =
-    {
+    static PyType_Spec type_spec_EasComplianceResults = {
         "winrt._winrt_windows_security_exchangeactivesyncprovisioning.EasComplianceResults",
         sizeof(py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning::EasComplianceResults),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EasComplianceResults
-    };
+        _type_slots_EasComplianceResults};
 
     // ----- Windows.Security.ExchangeActiveSyncProvisioning Initialization --------------------
 

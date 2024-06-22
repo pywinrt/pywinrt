@@ -130,9 +130,7 @@ static class WriterExtensions
     static void WriteTypeSpec(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteBlankLine();
-        w.WriteLine($"static PyType_Spec type_spec_{type.Name} =");
-        // FIXME: move to previous line
-        w.WriteLine("{");
+        w.WriteLine($"static PyType_Spec type_spec_{type.Name} = {{");
         w.Indent++;
         w.WriteLine($"\"winrt.{type.Namespace.ToNsModuleName()}.{type.Name}\",");
 
@@ -147,9 +145,8 @@ static class WriterExtensions
 
         w.WriteLine("0,");
         w.WriteLine("Py_TPFLAGS_DEFAULT,");
-        w.WriteLine($"_type_slots_{type.Name}");
+        w.WriteLine($"_type_slots_{type.Name}}};");
         w.Indent--;
-        w.WriteLine("};");
     }
 
     static void WriteTypeSlotTable(this IndentedTextWriter w, ProjectedType type)

@@ -380,14 +380,12 @@ namespace py::cpp::Windows::Security::Cryptography
         { },
     };
 
-    static PyType_Spec type_spec_CryptographicBuffer =
-    {
+    static PyType_Spec type_spec_CryptographicBuffer = {
         "winrt._winrt_windows_security_cryptography.CryptographicBuffer",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CryptographicBuffer
-    };
+        _type_slots_CryptographicBuffer};
 
     static PyGetSetDef getset_CryptographicBuffer_Static[] = {
         { }

@@ -87,14 +87,12 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         { },
     };
 
-    static PyType_Spec type_spec_Ellipse =
-    {
+    static PyType_Spec type_spec_Ellipse = {
         "winrt._winrt_windows_ui_xaml_shapes.Ellipse",
         sizeof(py::wrapper::Windows::UI::Xaml::Shapes::Ellipse),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Ellipse
-    };
+        _type_slots_Ellipse};
 
     // ----- Line class --------------------
 
@@ -446,14 +444,12 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         { },
     };
 
-    static PyType_Spec type_spec_Line =
-    {
+    static PyType_Spec type_spec_Line = {
         "winrt._winrt_windows_ui_xaml_shapes.Line",
         sizeof(py::wrapper::Windows::UI::Xaml::Shapes::Line),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Line
-    };
+        _type_slots_Line};
 
     static PyGetSetDef getset_Line_Static[] = {
         { "x1_property", reinterpret_cast<getter>(Line_get_X1Property), nullptr, nullptr, nullptr },
@@ -633,14 +629,12 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         { },
     };
 
-    static PyType_Spec type_spec_Path =
-    {
+    static PyType_Spec type_spec_Path = {
         "winrt._winrt_windows_ui_xaml_shapes.Path",
         sizeof(py::wrapper::Windows::UI::Xaml::Shapes::Path),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Path
-    };
+        _type_slots_Path};
 
     static PyGetSetDef getset_Path_Static[] = {
         { "data_property", reinterpret_cast<getter>(Path_get_DataProperty), nullptr, nullptr, nullptr },
@@ -884,14 +878,12 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         { },
     };
 
-    static PyType_Spec type_spec_Polygon =
-    {
+    static PyType_Spec type_spec_Polygon = {
         "winrt._winrt_windows_ui_xaml_shapes.Polygon",
         sizeof(py::wrapper::Windows::UI::Xaml::Shapes::Polygon),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Polygon
-    };
+        _type_slots_Polygon};
 
     static PyGetSetDef getset_Polygon_Static[] = {
         { "fill_rule_property", reinterpret_cast<getter>(Polygon_get_FillRuleProperty), nullptr, nullptr, nullptr },
@@ -1136,14 +1128,12 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         { },
     };
 
-    static PyType_Spec type_spec_Polyline =
-    {
+    static PyType_Spec type_spec_Polyline = {
         "winrt._winrt_windows_ui_xaml_shapes.Polyline",
         sizeof(py::wrapper::Windows::UI::Xaml::Shapes::Polyline),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Polyline
-    };
+        _type_slots_Polyline};
 
     static PyGetSetDef getset_Polyline_Static[] = {
         { "fill_rule_property", reinterpret_cast<getter>(Polyline_get_FillRuleProperty), nullptr, nullptr, nullptr },
@@ -1388,14 +1378,12 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         { },
     };
 
-    static PyType_Spec type_spec_Rectangle =
-    {
+    static PyType_Spec type_spec_Rectangle = {
         "winrt._winrt_windows_ui_xaml_shapes.Rectangle",
         sizeof(py::wrapper::Windows::UI::Xaml::Shapes::Rectangle),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Rectangle
-    };
+        _type_slots_Rectangle};
 
     static PyGetSetDef getset_Rectangle_Static[] = {
         { "radius_x_property", reinterpret_cast<getter>(Rectangle_get_RadiusXProperty), nullptr, nullptr, nullptr },
@@ -2271,14 +2259,12 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         { },
     };
 
-    static PyType_Spec type_spec_Shape =
-    {
+    static PyType_Spec type_spec_Shape = {
         "winrt._winrt_windows_ui_xaml_shapes.Shape",
         sizeof(py::wrapper::Windows::UI::Xaml::Shapes::Shape),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Shape
-    };
+        _type_slots_Shape};
 
     static PyGetSetDef getset_Shape_Static[] = {
         { "fill_property", reinterpret_cast<getter>(Shape_get_FillProperty), nullptr, nullptr, nullptr },

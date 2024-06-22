@@ -113,14 +113,12 @@ namespace py::cpp::Windows::Phone::System::Power
         { },
     };
 
-    static PyType_Spec type_spec_PowerManager =
-    {
+    static PyType_Spec type_spec_PowerManager = {
         "winrt._winrt_windows_phone_system_power.PowerManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PowerManager
-    };
+        _type_slots_PowerManager};
 
     static PyGetSetDef getset_PowerManager_Static[] = {
         { "power_saving_mode", reinterpret_cast<getter>(PowerManager_get_PowerSavingMode), nullptr, nullptr, nullptr },

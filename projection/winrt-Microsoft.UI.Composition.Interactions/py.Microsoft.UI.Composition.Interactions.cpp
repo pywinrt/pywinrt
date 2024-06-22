@@ -192,14 +192,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_CompositionConditionalValue =
-    {
+    static PyType_Spec type_spec_CompositionConditionalValue = {
         "winrt._winrt_microsoft_ui_composition_interactions.CompositionConditionalValue",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::CompositionConditionalValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionConditionalValue
-    };
+        _type_slots_CompositionConditionalValue};
 
     static PyGetSetDef getset_CompositionConditionalValue_Static[] = {
         { }
@@ -448,14 +446,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_CompositionInteractionSourceCollection =
-    {
+    static PyType_Spec type_spec_CompositionInteractionSourceCollection = {
         "winrt._winrt_microsoft_ui_composition_interactions.CompositionInteractionSourceCollection",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::CompositionInteractionSourceCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionInteractionSourceCollection
-    };
+        _type_slots_CompositionInteractionSourceCollection};
 
     // ----- InteractionSourceConfiguration class --------------------
 
@@ -661,14 +657,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_InteractionSourceConfiguration =
-    {
+    static PyType_Spec type_spec_InteractionSourceConfiguration = {
         "winrt._winrt_microsoft_ui_composition_interactions.InteractionSourceConfiguration",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::InteractionSourceConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InteractionSourceConfiguration
-    };
+        _type_slots_InteractionSourceConfiguration};
 
     // ----- InteractionTracker class --------------------
 
@@ -1904,14 +1898,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_InteractionTracker =
-    {
+    static PyType_Spec type_spec_InteractionTracker = {
         "winrt._winrt_microsoft_ui_composition_interactions.InteractionTracker",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::InteractionTracker),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InteractionTracker
-    };
+        _type_slots_InteractionTracker};
 
     static PyGetSetDef getset_InteractionTracker_Static[] = {
         { }
@@ -2042,14 +2034,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_InteractionTrackerCustomAnimationStateEnteredArgs =
-    {
+    static PyType_Spec type_spec_InteractionTrackerCustomAnimationStateEnteredArgs = {
         "winrt._winrt_microsoft_ui_composition_interactions.InteractionTrackerCustomAnimationStateEnteredArgs",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::InteractionTrackerCustomAnimationStateEnteredArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InteractionTrackerCustomAnimationStateEnteredArgs
-    };
+        _type_slots_InteractionTrackerCustomAnimationStateEnteredArgs};
 
     // ----- InteractionTrackerIdleStateEnteredArgs class --------------------
 
@@ -2151,14 +2141,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_InteractionTrackerIdleStateEnteredArgs =
-    {
+    static PyType_Spec type_spec_InteractionTrackerIdleStateEnteredArgs = {
         "winrt._winrt_microsoft_ui_composition_interactions.InteractionTrackerIdleStateEnteredArgs",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::InteractionTrackerIdleStateEnteredArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InteractionTrackerIdleStateEnteredArgs
-    };
+        _type_slots_InteractionTrackerIdleStateEnteredArgs};
 
     // ----- InteractionTrackerInertiaModifier class --------------------
 
@@ -2220,14 +2208,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_InteractionTrackerInertiaModifier =
-    {
+    static PyType_Spec type_spec_InteractionTrackerInertiaModifier = {
         "winrt._winrt_microsoft_ui_composition_interactions.InteractionTrackerInertiaModifier",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaModifier),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InteractionTrackerInertiaModifier
-    };
+        _type_slots_InteractionTrackerInertiaModifier};
 
     // ----- InteractionTrackerInertiaMotion class --------------------
 
@@ -2416,14 +2402,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_InteractionTrackerInertiaMotion =
-    {
+    static PyType_Spec type_spec_InteractionTrackerInertiaMotion = {
         "winrt._winrt_microsoft_ui_composition_interactions.InteractionTrackerInertiaMotion",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaMotion),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InteractionTrackerInertiaMotion
-    };
+        _type_slots_InteractionTrackerInertiaMotion};
 
     static PyGetSetDef getset_InteractionTrackerInertiaMotion_Static[] = {
         { }
@@ -2638,14 +2622,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_InteractionTrackerInertiaNaturalMotion =
-    {
+    static PyType_Spec type_spec_InteractionTrackerInertiaNaturalMotion = {
         "winrt._winrt_microsoft_ui_composition_interactions.InteractionTrackerInertiaNaturalMotion",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InteractionTrackerInertiaNaturalMotion
-    };
+        _type_slots_InteractionTrackerInertiaNaturalMotion};
 
     static PyGetSetDef getset_InteractionTrackerInertiaNaturalMotion_Static[] = {
         { }
@@ -2860,14 +2842,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_InteractionTrackerInertiaRestingValue =
-    {
+    static PyType_Spec type_spec_InteractionTrackerInertiaRestingValue = {
         "winrt._winrt_microsoft_ui_composition_interactions.InteractionTrackerInertiaRestingValue",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InteractionTrackerInertiaRestingValue
-    };
+        _type_slots_InteractionTrackerInertiaRestingValue};
 
     static PyGetSetDef getset_InteractionTrackerInertiaRestingValue_Static[] = {
         { }
@@ -3135,14 +3115,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_InteractionTrackerInertiaStateEnteredArgs =
-    {
+    static PyType_Spec type_spec_InteractionTrackerInertiaStateEnteredArgs = {
         "winrt._winrt_microsoft_ui_composition_interactions.InteractionTrackerInertiaStateEnteredArgs",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaStateEnteredArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InteractionTrackerInertiaStateEnteredArgs
-    };
+        _type_slots_InteractionTrackerInertiaStateEnteredArgs};
 
     // ----- InteractionTrackerInteractingStateEnteredArgs class --------------------
 
@@ -3244,14 +3222,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_InteractionTrackerInteractingStateEnteredArgs =
-    {
+    static PyType_Spec type_spec_InteractionTrackerInteractingStateEnteredArgs = {
         "winrt._winrt_microsoft_ui_composition_interactions.InteractionTrackerInteractingStateEnteredArgs",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::InteractionTrackerInteractingStateEnteredArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InteractionTrackerInteractingStateEnteredArgs
-    };
+        _type_slots_InteractionTrackerInteractingStateEnteredArgs};
 
     // ----- InteractionTrackerRequestIgnoredArgs class --------------------
 
@@ -3333,14 +3309,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_InteractionTrackerRequestIgnoredArgs =
-    {
+    static PyType_Spec type_spec_InteractionTrackerRequestIgnoredArgs = {
         "winrt._winrt_microsoft_ui_composition_interactions.InteractionTrackerRequestIgnoredArgs",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::InteractionTrackerRequestIgnoredArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InteractionTrackerRequestIgnoredArgs
-    };
+        _type_slots_InteractionTrackerRequestIgnoredArgs};
 
     // ----- InteractionTrackerValuesChangedArgs class --------------------
 
@@ -3462,14 +3436,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_InteractionTrackerValuesChangedArgs =
-    {
+    static PyType_Spec type_spec_InteractionTrackerValuesChangedArgs = {
         "winrt._winrt_microsoft_ui_composition_interactions.InteractionTrackerValuesChangedArgs",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::InteractionTrackerValuesChangedArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InteractionTrackerValuesChangedArgs
-    };
+        _type_slots_InteractionTrackerValuesChangedArgs};
 
     // ----- InteractionTrackerVector2InertiaModifier class --------------------
 
@@ -3531,14 +3503,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_InteractionTrackerVector2InertiaModifier =
-    {
+    static PyType_Spec type_spec_InteractionTrackerVector2InertiaModifier = {
         "winrt._winrt_microsoft_ui_composition_interactions.InteractionTrackerVector2InertiaModifier",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InteractionTrackerVector2InertiaModifier
-    };
+        _type_slots_InteractionTrackerVector2InertiaModifier};
 
     // ----- InteractionTrackerVector2InertiaNaturalMotion class --------------------
 
@@ -3727,14 +3697,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_InteractionTrackerVector2InertiaNaturalMotion =
-    {
+    static PyType_Spec type_spec_InteractionTrackerVector2InertiaNaturalMotion = {
         "winrt._winrt_microsoft_ui_composition_interactions.InteractionTrackerVector2InertiaNaturalMotion",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InteractionTrackerVector2InertiaNaturalMotion
-    };
+        _type_slots_InteractionTrackerVector2InertiaNaturalMotion};
 
     static PyGetSetDef getset_InteractionTrackerVector2InertiaNaturalMotion_Static[] = {
         { }
@@ -4674,14 +4642,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_VisualInteractionSource =
-    {
+    static PyType_Spec type_spec_VisualInteractionSource = {
         "winrt._winrt_microsoft_ui_composition_interactions.VisualInteractionSource",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::VisualInteractionSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VisualInteractionSource
-    };
+        _type_slots_VisualInteractionSource};
 
     static PyGetSetDef getset_VisualInteractionSource_Static[] = {
         { }
@@ -4770,14 +4736,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_ICompositionInteractionSource =
-    {
+    static PyType_Spec type_spec_ICompositionInteractionSource = {
         "winrt._winrt_microsoft_ui_composition_interactions.ICompositionInteractionSource",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::ICompositionInteractionSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICompositionInteractionSource
-    };
+        _type_slots_ICompositionInteractionSource};
 
     // ----- IInteractionTrackerOwner interface --------------------
 
@@ -5043,14 +5007,12 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { },
     };
 
-    static PyType_Spec type_spec_IInteractionTrackerOwner =
-    {
+    static PyType_Spec type_spec_IInteractionTrackerOwner = {
         "winrt._winrt_microsoft_ui_composition_interactions.IInteractionTrackerOwner",
         sizeof(py::wrapper::Microsoft::UI::Composition::Interactions::IInteractionTrackerOwner),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IInteractionTrackerOwner
-    };
+        _type_slots_IInteractionTrackerOwner};
 
     // ----- Microsoft.UI.Composition.Interactions Initialization --------------------
 

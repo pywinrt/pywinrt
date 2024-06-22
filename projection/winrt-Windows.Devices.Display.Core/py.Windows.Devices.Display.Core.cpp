@@ -256,14 +256,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayAdapter =
-    {
+    static PyType_Spec type_spec_DisplayAdapter = {
         "winrt._winrt_windows_devices_display_core.DisplayAdapter",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayAdapter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayAdapter
-    };
+        _type_slots_DisplayAdapter};
 
     static PyGetSetDef getset_DisplayAdapter_Static[] = {
         { }
@@ -616,14 +614,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayDevice =
-    {
+    static PyType_Spec type_spec_DisplayDevice = {
         "winrt._winrt_windows_devices_display_core.DisplayDevice",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayDevice
-    };
+        _type_slots_DisplayDevice};
 
     // ----- DisplayFence class --------------------
 
@@ -685,14 +681,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayFence =
-    {
+    static PyType_Spec type_spec_DisplayFence = {
         "winrt._winrt_windows_devices_display_core.DisplayFence",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayFence),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayFence
-    };
+        _type_slots_DisplayFence};
 
     // ----- DisplayManager class --------------------
 
@@ -1363,14 +1357,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayManager =
-    {
+    static PyType_Spec type_spec_DisplayManager = {
         "winrt._winrt_windows_devices_display_core.DisplayManager",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayManager
-    };
+        _type_slots_DisplayManager};
 
     static PyGetSetDef getset_DisplayManager_Static[] = {
         { }
@@ -1536,14 +1528,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayManagerChangedEventArgs =
-    {
+    static PyType_Spec type_spec_DisplayManagerChangedEventArgs = {
         "winrt._winrt_windows_devices_display_core.DisplayManagerChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayManagerChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayManagerChangedEventArgs
-    };
+        _type_slots_DisplayManagerChangedEventArgs};
 
     // ----- DisplayManagerDisabledEventArgs class --------------------
 
@@ -1683,14 +1673,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayManagerDisabledEventArgs =
-    {
+    static PyType_Spec type_spec_DisplayManagerDisabledEventArgs = {
         "winrt._winrt_windows_devices_display_core.DisplayManagerDisabledEventArgs",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayManagerDisabledEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayManagerDisabledEventArgs
-    };
+        _type_slots_DisplayManagerDisabledEventArgs};
 
     // ----- DisplayManagerEnabledEventArgs class --------------------
 
@@ -1830,14 +1818,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayManagerEnabledEventArgs =
-    {
+    static PyType_Spec type_spec_DisplayManagerEnabledEventArgs = {
         "winrt._winrt_windows_devices_display_core.DisplayManagerEnabledEventArgs",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayManagerEnabledEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayManagerEnabledEventArgs
-    };
+        _type_slots_DisplayManagerEnabledEventArgs};
 
     // ----- DisplayManagerPathsFailedOrInvalidatedEventArgs class --------------------
 
@@ -1977,14 +1963,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayManagerPathsFailedOrInvalidatedEventArgs =
-    {
+    static PyType_Spec type_spec_DisplayManagerPathsFailedOrInvalidatedEventArgs = {
         "winrt._winrt_windows_devices_display_core.DisplayManagerPathsFailedOrInvalidatedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayManagerPathsFailedOrInvalidatedEventArgs
-    };
+        _type_slots_DisplayManagerPathsFailedOrInvalidatedEventArgs};
 
     // ----- DisplayManagerResultWithState class --------------------
 
@@ -2106,14 +2090,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayManagerResultWithState =
-    {
+    static PyType_Spec type_spec_DisplayManagerResultWithState = {
         "winrt._winrt_windows_devices_display_core.DisplayManagerResultWithState",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayManagerResultWithState),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayManagerResultWithState
-    };
+        _type_slots_DisplayManagerResultWithState};
 
     // ----- DisplayModeInfo class --------------------
 
@@ -2399,14 +2381,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayModeInfo =
-    {
+    static PyType_Spec type_spec_DisplayModeInfo = {
         "winrt._winrt_windows_devices_display_core.DisplayModeInfo",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayModeInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayModeInfo
-    };
+        _type_slots_DisplayModeInfo};
 
     // ----- DisplayPath class --------------------
 
@@ -3093,14 +3073,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayPath =
-    {
+    static PyType_Spec type_spec_DisplayPath = {
         "winrt._winrt_windows_devices_display_core.DisplayPath",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayPath),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayPath
-    };
+        _type_slots_DisplayPath};
 
     // ----- DisplayPrimaryDescription class --------------------
 
@@ -3368,14 +3346,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayPrimaryDescription =
-    {
+    static PyType_Spec type_spec_DisplayPrimaryDescription = {
         "winrt._winrt_windows_devices_display_core.DisplayPrimaryDescription",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayPrimaryDescription),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayPrimaryDescription
-    };
+        _type_slots_DisplayPrimaryDescription};
 
     static PyGetSetDef getset_DisplayPrimaryDescription_Static[] = {
         { }
@@ -3463,14 +3439,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayScanout =
-    {
+    static PyType_Spec type_spec_DisplayScanout = {
         "winrt._winrt_windows_devices_display_core.DisplayScanout",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayScanout),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayScanout
-    };
+        _type_slots_DisplayScanout};
 
     // ----- DisplaySource class --------------------
 
@@ -3669,14 +3643,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplaySource =
-    {
+    static PyType_Spec type_spec_DisplaySource = {
         "winrt._winrt_windows_devices_display_core.DisplaySource",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplaySource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplaySource
-    };
+        _type_slots_DisplaySource};
 
     // ----- DisplayState class --------------------
 
@@ -4115,14 +4087,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayState =
-    {
+    static PyType_Spec type_spec_DisplayState = {
         "winrt._winrt_windows_devices_display_core.DisplayState",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayState),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayState
-    };
+        _type_slots_DisplayState};
 
     // ----- DisplayStateOperationResult class --------------------
 
@@ -4224,14 +4194,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayStateOperationResult =
-    {
+    static PyType_Spec type_spec_DisplayStateOperationResult = {
         "winrt._winrt_windows_devices_display_core.DisplayStateOperationResult",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayStateOperationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayStateOperationResult
-    };
+        _type_slots_DisplayStateOperationResult};
 
     // ----- DisplaySurface class --------------------
 
@@ -4293,14 +4261,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplaySurface =
-    {
+    static PyType_Spec type_spec_DisplaySurface = {
         "winrt._winrt_windows_devices_display_core.DisplaySurface",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplaySurface),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplaySurface
-    };
+        _type_slots_DisplaySurface};
 
     // ----- DisplayTarget class --------------------
 
@@ -4676,14 +4642,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayTarget =
-    {
+    static PyType_Spec type_spec_DisplayTarget = {
         "winrt._winrt_windows_devices_display_core.DisplayTarget",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayTarget),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayTarget
-    };
+        _type_slots_DisplayTarget};
 
     // ----- DisplayTask class --------------------
 
@@ -4846,14 +4810,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayTask =
-    {
+    static PyType_Spec type_spec_DisplayTask = {
         "winrt._winrt_windows_devices_display_core.DisplayTask",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayTask),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayTask
-    };
+        _type_slots_DisplayTask};
 
     // ----- DisplayTaskPool class --------------------
 
@@ -5010,14 +4972,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayTaskPool =
-    {
+    static PyType_Spec type_spec_DisplayTaskPool = {
         "winrt._winrt_windows_devices_display_core.DisplayTaskPool",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayTaskPool),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayTaskPool
-    };
+        _type_slots_DisplayTaskPool};
 
     // ----- DisplayTaskResult class --------------------
 
@@ -5139,14 +5099,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayTaskResult =
-    {
+    static PyType_Spec type_spec_DisplayTaskResult = {
         "winrt._winrt_windows_devices_display_core.DisplayTaskResult",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayTaskResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayTaskResult
-    };
+        _type_slots_DisplayTaskResult};
 
     // ----- DisplayView class --------------------
 
@@ -5329,14 +5287,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayView =
-    {
+    static PyType_Spec type_spec_DisplayView = {
         "winrt._winrt_windows_devices_display_core.DisplayView",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayView
-    };
+        _type_slots_DisplayView};
 
     // ----- DisplayWireFormat class --------------------
 
@@ -5582,14 +5538,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayWireFormat =
-    {
+    static PyType_Spec type_spec_DisplayWireFormat = {
         "winrt._winrt_windows_devices_display_core.DisplayWireFormat",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayWireFormat),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayWireFormat
-    };
+        _type_slots_DisplayWireFormat};
 
     static PyGetSetDef getset_DisplayWireFormat_Static[] = {
         { }
@@ -5769,14 +5723,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         { },
     };
 
-    static PyType_Spec type_spec_DisplayPresentationRate =
-    {
+    static PyType_Spec type_spec_DisplayPresentationRate = {
         "winrt._winrt_windows_devices_display_core.DisplayPresentationRate",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayPresentationRate),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayPresentationRate
-    };
+        _type_slots_DisplayPresentationRate};
 
     // ----- Windows.Devices.Display.Core Initialization --------------------
 

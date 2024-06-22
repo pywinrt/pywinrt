@@ -170,14 +170,12 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
         { },
     };
 
-    static PyType_Spec type_spec_LockApplicationHost =
-    {
+    static PyType_Spec type_spec_LockApplicationHost = {
         "winrt._winrt_windows_applicationmodel_lockscreen.LockApplicationHost",
         sizeof(py::wrapper::Windows::ApplicationModel::LockScreen::LockApplicationHost),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LockApplicationHost
-    };
+        _type_slots_LockApplicationHost};
 
     static PyGetSetDef getset_LockApplicationHost_Static[] = {
         { }
@@ -376,14 +374,12 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
         { },
     };
 
-    static PyType_Spec type_spec_LockScreenBadge =
-    {
+    static PyType_Spec type_spec_LockScreenBadge = {
         "winrt._winrt_windows_applicationmodel_lockscreen.LockScreenBadge",
         sizeof(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenBadge),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LockScreenBadge
-    };
+        _type_slots_LockScreenBadge};
 
     // ----- LockScreenInfo class --------------------
 
@@ -705,14 +701,12 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
         { },
     };
 
-    static PyType_Spec type_spec_LockScreenInfo =
-    {
+    static PyType_Spec type_spec_LockScreenInfo = {
         "winrt._winrt_windows_applicationmodel_lockscreen.LockScreenInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LockScreenInfo
-    };
+        _type_slots_LockScreenInfo};
 
     // ----- LockScreenUnlockingDeferral class --------------------
 
@@ -805,14 +799,12 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
         { },
     };
 
-    static PyType_Spec type_spec_LockScreenUnlockingDeferral =
-    {
+    static PyType_Spec type_spec_LockScreenUnlockingDeferral = {
         "winrt._winrt_windows_applicationmodel_lockscreen.LockScreenUnlockingDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenUnlockingDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LockScreenUnlockingDeferral
-    };
+        _type_slots_LockScreenUnlockingDeferral};
 
     // ----- LockScreenUnlockingEventArgs class --------------------
 
@@ -924,14 +916,12 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
         { },
     };
 
-    static PyType_Spec type_spec_LockScreenUnlockingEventArgs =
-    {
+    static PyType_Spec type_spec_LockScreenUnlockingEventArgs = {
         "winrt._winrt_windows_applicationmodel_lockscreen.LockScreenUnlockingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LockScreenUnlockingEventArgs
-    };
+        _type_slots_LockScreenUnlockingEventArgs};
 
     // ----- Windows.ApplicationModel.LockScreen Initialization --------------------
 

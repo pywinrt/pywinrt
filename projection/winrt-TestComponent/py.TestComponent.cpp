@@ -239,14 +239,12 @@ namespace py::cpp::TestComponent
         { },
     };
 
-    static PyType_Spec type_spec_TestRunner =
-    {
+    static PyType_Spec type_spec_TestRunner = {
         "winrt._winrt_testcomponent.TestRunner",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TestRunner
-    };
+        _type_slots_TestRunner};
 
     static PyGetSetDef getset_TestRunner_Static[] = {
         { }
@@ -3641,14 +3639,12 @@ namespace py::cpp::TestComponent
         { },
     };
 
-    static PyType_Spec type_spec_ITests =
-    {
+    static PyType_Spec type_spec_ITests = {
         "winrt._winrt_testcomponent.ITests",
         sizeof(py::wrapper::TestComponent::ITests),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ITests
-    };
+        _type_slots_ITests};
 
     // ----- Blittable struct --------------------
 
@@ -4082,14 +4078,12 @@ namespace py::cpp::TestComponent
         { },
     };
 
-    static PyType_Spec type_spec_Blittable =
-    {
+    static PyType_Spec type_spec_Blittable = {
         "winrt._winrt_testcomponent.Blittable",
         sizeof(py::wrapper::TestComponent::Blittable),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Blittable
-    };
+        _type_slots_Blittable};
 
     // ----- Nested struct --------------------
 
@@ -4243,14 +4237,12 @@ namespace py::cpp::TestComponent
         { },
     };
 
-    static PyType_Spec type_spec_Nested =
-    {
+    static PyType_Spec type_spec_Nested = {
         "winrt._winrt_testcomponent.Nested",
         sizeof(py::wrapper::TestComponent::Nested),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Nested
-    };
+        _type_slots_Nested};
 
     // ----- NonBlittable struct --------------------
 
@@ -4474,14 +4466,12 @@ namespace py::cpp::TestComponent
         { },
     };
 
-    static PyType_Spec type_spec_NonBlittable =
-    {
+    static PyType_Spec type_spec_NonBlittable = {
         "winrt._winrt_testcomponent.NonBlittable",
         sizeof(py::wrapper::TestComponent::NonBlittable),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NonBlittable
-    };
+        _type_slots_NonBlittable};
 
     // ----- TestComponent Initialization --------------------
 

@@ -309,14 +309,12 @@ namespace py::cpp::Windows::Graphics::Display
         { },
     };
 
-    static PyType_Spec type_spec_AdvancedColorInfo =
-    {
+    static PyType_Spec type_spec_AdvancedColorInfo = {
         "winrt._winrt_windows_graphics_display.AdvancedColorInfo",
         sizeof(py::wrapper::Windows::Graphics::Display::AdvancedColorInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdvancedColorInfo
-    };
+        _type_slots_AdvancedColorInfo};
 
     // ----- BrightnessOverride class --------------------
 
@@ -824,14 +822,12 @@ namespace py::cpp::Windows::Graphics::Display
         { },
     };
 
-    static PyType_Spec type_spec_BrightnessOverride =
-    {
+    static PyType_Spec type_spec_BrightnessOverride = {
         "winrt._winrt_windows_graphics_display.BrightnessOverride",
         sizeof(py::wrapper::Windows::Graphics::Display::BrightnessOverride),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BrightnessOverride
-    };
+        _type_slots_BrightnessOverride};
 
     static PyGetSetDef getset_BrightnessOverride_Static[] = {
         { }
@@ -1054,14 +1050,12 @@ namespace py::cpp::Windows::Graphics::Display
         { },
     };
 
-    static PyType_Spec type_spec_BrightnessOverrideSettings =
-    {
+    static PyType_Spec type_spec_BrightnessOverrideSettings = {
         "winrt._winrt_windows_graphics_display.BrightnessOverrideSettings",
         sizeof(py::wrapper::Windows::Graphics::Display::BrightnessOverrideSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BrightnessOverrideSettings
-    };
+        _type_slots_BrightnessOverrideSettings};
 
     static PyGetSetDef getset_BrightnessOverrideSettings_Static[] = {
         { }
@@ -1202,14 +1196,12 @@ namespace py::cpp::Windows::Graphics::Display
         { },
     };
 
-    static PyType_Spec type_spec_ColorOverrideSettings =
-    {
+    static PyType_Spec type_spec_ColorOverrideSettings = {
         "winrt._winrt_windows_graphics_display.ColorOverrideSettings",
         sizeof(py::wrapper::Windows::Graphics::Display::ColorOverrideSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ColorOverrideSettings
-    };
+        _type_slots_ColorOverrideSettings};
 
     static PyGetSetDef getset_ColorOverrideSettings_Static[] = {
         { }
@@ -1689,14 +1681,12 @@ namespace py::cpp::Windows::Graphics::Display
         { },
     };
 
-    static PyType_Spec type_spec_DisplayEnhancementOverride =
-    {
+    static PyType_Spec type_spec_DisplayEnhancementOverride = {
         "winrt._winrt_windows_graphics_display.DisplayEnhancementOverride",
         sizeof(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayEnhancementOverride
-    };
+        _type_slots_DisplayEnhancementOverride};
 
     static PyGetSetDef getset_DisplayEnhancementOverride_Static[] = {
         { }
@@ -1854,14 +1844,12 @@ namespace py::cpp::Windows::Graphics::Display
         { },
     };
 
-    static PyType_Spec type_spec_DisplayEnhancementOverrideCapabilities =
-    {
+    static PyType_Spec type_spec_DisplayEnhancementOverrideCapabilities = {
         "winrt._winrt_windows_graphics_display.DisplayEnhancementOverrideCapabilities",
         sizeof(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayEnhancementOverrideCapabilities
-    };
+        _type_slots_DisplayEnhancementOverrideCapabilities};
 
     // ----- DisplayEnhancementOverrideCapabilitiesChangedEventArgs class --------------------
 
@@ -1943,14 +1931,12 @@ namespace py::cpp::Windows::Graphics::Display
         { },
     };
 
-    static PyType_Spec type_spec_DisplayEnhancementOverrideCapabilitiesChangedEventArgs =
-    {
+    static PyType_Spec type_spec_DisplayEnhancementOverrideCapabilitiesChangedEventArgs = {
         "winrt._winrt_windows_graphics_display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayEnhancementOverrideCapabilitiesChangedEventArgs
-    };
+        _type_slots_DisplayEnhancementOverrideCapabilitiesChangedEventArgs};
 
     // ----- DisplayInformation class --------------------
 
@@ -2638,14 +2624,12 @@ namespace py::cpp::Windows::Graphics::Display
         { },
     };
 
-    static PyType_Spec type_spec_DisplayInformation =
-    {
+    static PyType_Spec type_spec_DisplayInformation = {
         "winrt._winrt_windows_graphics_display.DisplayInformation",
         sizeof(py::wrapper::Windows::Graphics::Display::DisplayInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayInformation
-    };
+        _type_slots_DisplayInformation};
 
     static PyGetSetDef getset_DisplayInformation_Static[] = {
         { "auto_rotation_preferences", reinterpret_cast<getter>(DisplayInformation_get_AutoRotationPreferences), reinterpret_cast<setter>(DisplayInformation_put_AutoRotationPreferences), nullptr, nullptr },
@@ -3095,14 +3079,12 @@ namespace py::cpp::Windows::Graphics::Display
         { },
     };
 
-    static PyType_Spec type_spec_DisplayProperties =
-    {
+    static PyType_Spec type_spec_DisplayProperties = {
         "winrt._winrt_windows_graphics_display.DisplayProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayProperties
-    };
+        _type_slots_DisplayProperties};
 
     static PyGetSetDef getset_DisplayProperties_Static[] = {
         { "auto_rotation_preferences", reinterpret_cast<getter>(DisplayProperties_get_AutoRotationPreferences), reinterpret_cast<setter>(DisplayProperties_put_AutoRotationPreferences), nullptr, nullptr },
@@ -3225,14 +3207,12 @@ namespace py::cpp::Windows::Graphics::Display
         { },
     };
 
-    static PyType_Spec type_spec_DisplayServices =
-    {
+    static PyType_Spec type_spec_DisplayServices = {
         "winrt._winrt_windows_graphics_display.DisplayServices",
         sizeof(py::wrapper::Windows::Graphics::Display::DisplayServices),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayServices
-    };
+        _type_slots_DisplayServices};
 
     static PyGetSetDef getset_DisplayServices_Static[] = {
         { }
@@ -3447,14 +3427,12 @@ namespace py::cpp::Windows::Graphics::Display
         { },
     };
 
-    static PyType_Spec type_spec_NitRange =
-    {
+    static PyType_Spec type_spec_NitRange = {
         "winrt._winrt_windows_graphics_display.NitRange",
         sizeof(py::wrapper::Windows::Graphics::Display::NitRange),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NitRange
-    };
+        _type_slots_NitRange};
 
     // ----- Windows.Graphics.Display Initialization --------------------
 

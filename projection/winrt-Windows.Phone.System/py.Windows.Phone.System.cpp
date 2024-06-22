@@ -79,14 +79,12 @@ namespace py::cpp::Windows::Phone::System
         { },
     };
 
-    static PyType_Spec type_spec_SystemProtection =
-    {
+    static PyType_Spec type_spec_SystemProtection = {
         "winrt._winrt_windows_phone_system.SystemProtection",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemProtection
-    };
+        _type_slots_SystemProtection};
 
     static PyGetSetDef getset_SystemProtection_Static[] = {
         { "screen_locked", reinterpret_cast<getter>(SystemProtection_get_ScreenLocked), nullptr, nullptr, nullptr },

@@ -63,14 +63,12 @@ namespace py::cpp::Windows::UI::Notifications::Preview
         { },
     };
 
-    static PyType_Spec type_spec_ToastOcclusionManagerPreview =
-    {
+    static PyType_Spec type_spec_ToastOcclusionManagerPreview = {
         "winrt._winrt_windows_ui_notifications_preview.ToastOcclusionManagerPreview",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToastOcclusionManagerPreview
-    };
+        _type_slots_ToastOcclusionManagerPreview};
 
     static PyGetSetDef getset_ToastOcclusionManagerPreview_Static[] = {
         { }

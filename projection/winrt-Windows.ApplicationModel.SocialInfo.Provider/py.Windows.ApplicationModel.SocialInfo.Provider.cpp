@@ -279,14 +279,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
         { },
     };
 
-    static PyType_Spec type_spec_SocialDashboardItemUpdater =
-    {
+    static PyType_Spec type_spec_SocialDashboardItemUpdater = {
         "winrt._winrt_windows_applicationmodel_socialinfo_provider.SocialDashboardItemUpdater",
         sizeof(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SocialDashboardItemUpdater
-    };
+        _type_slots_SocialDashboardItemUpdater};
 
     // ----- SocialFeedUpdater class --------------------
 
@@ -438,14 +436,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
         { },
     };
 
-    static PyType_Spec type_spec_SocialFeedUpdater =
-    {
+    static PyType_Spec type_spec_SocialFeedUpdater = {
         "winrt._winrt_windows_applicationmodel_socialinfo_provider.SocialFeedUpdater",
         sizeof(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialFeedUpdater),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SocialFeedUpdater
-    };
+        _type_slots_SocialFeedUpdater};
 
     // ----- SocialInfoProviderManager class --------------------
 
@@ -660,14 +656,12 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
         { },
     };
 
-    static PyType_Spec type_spec_SocialInfoProviderManager =
-    {
+    static PyType_Spec type_spec_SocialInfoProviderManager = {
         "winrt._winrt_windows_applicationmodel_socialinfo_provider.SocialInfoProviderManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SocialInfoProviderManager
-    };
+        _type_slots_SocialInfoProviderManager};
 
     static PyGetSetDef getset_SocialInfoProviderManager_Static[] = {
         { }

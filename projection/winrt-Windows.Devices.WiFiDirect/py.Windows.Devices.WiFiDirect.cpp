@@ -249,14 +249,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectAdvertisement =
-    {
+    static PyType_Spec type_spec_WiFiDirectAdvertisement = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectAdvertisement",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectAdvertisement
-    };
+        _type_slots_WiFiDirectAdvertisement};
 
     // ----- WiFiDirectAdvertisementPublisher class --------------------
 
@@ -487,14 +485,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectAdvertisementPublisher =
-    {
+    static PyType_Spec type_spec_WiFiDirectAdvertisementPublisher = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectAdvertisementPublisher",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectAdvertisementPublisher
-    };
+        _type_slots_WiFiDirectAdvertisementPublisher};
 
     // ----- WiFiDirectAdvertisementPublisherStatusChangedEventArgs class --------------------
 
@@ -596,14 +592,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectAdvertisementPublisherStatusChangedEventArgs =
-    {
+    static PyType_Spec type_spec_WiFiDirectAdvertisementPublisherStatusChangedEventArgs = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectAdvertisementPublisherStatusChangedEventArgs
-    };
+        _type_slots_WiFiDirectAdvertisementPublisherStatusChangedEventArgs};
 
     // ----- WiFiDirectConnectionListener class --------------------
 
@@ -732,14 +726,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectConnectionListener =
-    {
+    static PyType_Spec type_spec_WiFiDirectConnectionListener = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectConnectionListener",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionListener),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectConnectionListener
-    };
+        _type_slots_WiFiDirectConnectionListener};
 
     // ----- WiFiDirectConnectionParameters class --------------------
 
@@ -970,14 +962,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectConnectionParameters =
-    {
+    static PyType_Spec type_spec_WiFiDirectConnectionParameters = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectConnectionParameters",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectConnectionParameters
-    };
+        _type_slots_WiFiDirectConnectionParameters};
 
     static PyGetSetDef getset_WiFiDirectConnectionParameters_Static[] = {
         { }
@@ -1137,14 +1127,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectConnectionRequest =
-    {
+    static PyType_Spec type_spec_WiFiDirectConnectionRequest = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectConnectionRequest",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectConnectionRequest
-    };
+        _type_slots_WiFiDirectConnectionRequest};
 
     // ----- WiFiDirectConnectionRequestedEventArgs class --------------------
 
@@ -1236,14 +1224,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectConnectionRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_WiFiDirectConnectionRequestedEventArgs = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectConnectionRequestedEventArgs",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectConnectionRequestedEventArgs
-    };
+        _type_slots_WiFiDirectConnectionRequestedEventArgs};
 
     // ----- WiFiDirectDevice class --------------------
 
@@ -1573,14 +1559,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectDevice =
-    {
+    static PyType_Spec type_spec_WiFiDirectDevice = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectDevice",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectDevice
-    };
+        _type_slots_WiFiDirectDevice};
 
     static PyGetSetDef getset_WiFiDirectDevice_Static[] = {
         { }
@@ -1897,14 +1881,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectInformationElement =
-    {
+    static PyType_Spec type_spec_WiFiDirectInformationElement = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectInformationElement",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectInformationElement),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectInformationElement
-    };
+        _type_slots_WiFiDirectInformationElement};
 
     static PyGetSetDef getset_WiFiDirectInformationElement_Static[] = {
         { }
@@ -2137,14 +2119,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         { },
     };
 
-    static PyType_Spec type_spec_WiFiDirectLegacySettings =
-    {
+    static PyType_Spec type_spec_WiFiDirectLegacySettings = {
         "winrt._winrt_windows_devices_wifidirect.WiFiDirectLegacySettings",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiDirectLegacySettings
-    };
+        _type_slots_WiFiDirectLegacySettings};
 
     // ----- Windows.Devices.WiFiDirect Initialization --------------------
 

@@ -98,14 +98,12 @@ namespace py::cpp::Windows::UI::WindowManagement::Preview
         { },
     };
 
-    static PyType_Spec type_spec_WindowManagementPreview =
-    {
+    static PyType_Spec type_spec_WindowManagementPreview = {
         "winrt._winrt_windows_ui_windowmanagement_preview.WindowManagementPreview",
         sizeof(py::wrapper::Windows::UI::WindowManagement::Preview::WindowManagementPreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowManagementPreview
-    };
+        _type_slots_WindowManagementPreview};
 
     static PyGetSetDef getset_WindowManagementPreview_Static[] = {
         { }

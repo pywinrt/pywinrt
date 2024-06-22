@@ -172,14 +172,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
         { },
     };
 
-    static PyType_Spec type_spec_PalmRejectionDelayZonePreview =
-    {
+    static PyType_Spec type_spec_PalmRejectionDelayZonePreview = {
         "winrt._winrt_windows_ui_input_inking_preview.PalmRejectionDelayZonePreview",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Preview::PalmRejectionDelayZonePreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PalmRejectionDelayZonePreview
-    };
+        _type_slots_PalmRejectionDelayZonePreview};
 
     static PyGetSetDef getset_PalmRejectionDelayZonePreview_Static[] = {
         { }

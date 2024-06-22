@@ -223,14 +223,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_AdaptiveNotificationText =
-    {
+    static PyType_Spec type_spec_AdaptiveNotificationText = {
         "winrt._winrt_windows_ui_notifications.AdaptiveNotificationText",
         sizeof(py::wrapper::Windows::UI::Notifications::AdaptiveNotificationText),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AdaptiveNotificationText
-    };
+        _type_slots_AdaptiveNotificationText};
 
     // ----- BadgeNotification class --------------------
 
@@ -384,14 +382,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_BadgeNotification =
-    {
+    static PyType_Spec type_spec_BadgeNotification = {
         "winrt._winrt_windows_ui_notifications.BadgeNotification",
         sizeof(py::wrapper::Windows::UI::Notifications::BadgeNotification),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BadgeNotification
-    };
+        _type_slots_BadgeNotification};
 
     // ----- BadgeUpdateManager class --------------------
 
@@ -560,14 +556,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_BadgeUpdateManager =
-    {
+    static PyType_Spec type_spec_BadgeUpdateManager = {
         "winrt._winrt_windows_ui_notifications.BadgeUpdateManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BadgeUpdateManager
-    };
+        _type_slots_BadgeUpdateManager};
 
     static PyGetSetDef getset_BadgeUpdateManager_Static[] = {
         { }
@@ -760,14 +754,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_BadgeUpdateManagerForUser =
-    {
+    static PyType_Spec type_spec_BadgeUpdateManagerForUser = {
         "winrt._winrt_windows_ui_notifications.BadgeUpdateManagerForUser",
         sizeof(py::wrapper::Windows::UI::Notifications::BadgeUpdateManagerForUser),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BadgeUpdateManagerForUser
-    };
+        _type_slots_BadgeUpdateManagerForUser};
 
     // ----- BadgeUpdater class --------------------
 
@@ -981,14 +973,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_BadgeUpdater =
-    {
+    static PyType_Spec type_spec_BadgeUpdater = {
         "winrt._winrt_windows_ui_notifications.BadgeUpdater",
         sizeof(py::wrapper::Windows::UI::Notifications::BadgeUpdater),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BadgeUpdater
-    };
+        _type_slots_BadgeUpdater};
 
     // ----- KnownAdaptiveNotificationHints class --------------------
 
@@ -1129,14 +1119,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_KnownAdaptiveNotificationHints =
-    {
+    static PyType_Spec type_spec_KnownAdaptiveNotificationHints = {
         "winrt._winrt_windows_ui_notifications.KnownAdaptiveNotificationHints",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownAdaptiveNotificationHints
-    };
+        _type_slots_KnownAdaptiveNotificationHints};
 
     static PyGetSetDef getset_KnownAdaptiveNotificationHints_Static[] = {
         { "align", reinterpret_cast<getter>(KnownAdaptiveNotificationHints_get_Align), nullptr, nullptr, nullptr },
@@ -1555,14 +1543,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_KnownAdaptiveNotificationTextStyles =
-    {
+    static PyType_Spec type_spec_KnownAdaptiveNotificationTextStyles = {
         "winrt._winrt_windows_ui_notifications.KnownAdaptiveNotificationTextStyles",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownAdaptiveNotificationTextStyles
-    };
+        _type_slots_KnownAdaptiveNotificationTextStyles};
 
     static PyGetSetDef getset_KnownAdaptiveNotificationTextStyles_Static[] = {
         { "base", reinterpret_cast<getter>(KnownAdaptiveNotificationTextStyles_get_Base), nullptr, nullptr, nullptr },
@@ -1652,14 +1638,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_KnownNotificationBindings =
-    {
+    static PyType_Spec type_spec_KnownNotificationBindings = {
         "winrt._winrt_windows_ui_notifications.KnownNotificationBindings",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownNotificationBindings
-    };
+        _type_slots_KnownNotificationBindings};
 
     static PyGetSetDef getset_KnownNotificationBindings_Static[] = {
         { "toast_generic", reinterpret_cast<getter>(KnownNotificationBindings_get_ToastGeneric), nullptr, nullptr, nullptr },
@@ -1865,14 +1849,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_Notification =
-    {
+    static PyType_Spec type_spec_Notification = {
         "winrt._winrt_windows_ui_notifications.Notification",
         sizeof(py::wrapper::Windows::UI::Notifications::Notification),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Notification
-    };
+        _type_slots_Notification};
 
     // ----- NotificationBinding class --------------------
 
@@ -2080,14 +2062,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_NotificationBinding =
-    {
+    static PyType_Spec type_spec_NotificationBinding = {
         "winrt._winrt_windows_ui_notifications.NotificationBinding",
         sizeof(py::wrapper::Windows::UI::Notifications::NotificationBinding),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NotificationBinding
-    };
+        _type_slots_NotificationBinding};
 
     // ----- NotificationData class --------------------
 
@@ -2270,14 +2250,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_NotificationData =
-    {
+    static PyType_Spec type_spec_NotificationData = {
         "winrt._winrt_windows_ui_notifications.NotificationData",
         sizeof(py::wrapper::Windows::UI::Notifications::NotificationData),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NotificationData
-    };
+        _type_slots_NotificationData};
 
     // ----- NotificationVisual class --------------------
 
@@ -2439,14 +2417,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_NotificationVisual =
-    {
+    static PyType_Spec type_spec_NotificationVisual = {
         "winrt._winrt_windows_ui_notifications.NotificationVisual",
         sizeof(py::wrapper::Windows::UI::Notifications::NotificationVisual),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NotificationVisual
-    };
+        _type_slots_NotificationVisual};
 
     // ----- ScheduledTileNotification class --------------------
 
@@ -2717,14 +2693,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_ScheduledTileNotification =
-    {
+    static PyType_Spec type_spec_ScheduledTileNotification = {
         "winrt._winrt_windows_ui_notifications.ScheduledTileNotification",
         sizeof(py::wrapper::Windows::UI::Notifications::ScheduledTileNotification),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScheduledTileNotification
-    };
+        _type_slots_ScheduledTileNotification};
 
     // ----- ScheduledToastNotification class --------------------
 
@@ -3245,14 +3219,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_ScheduledToastNotification =
-    {
+    static PyType_Spec type_spec_ScheduledToastNotification = {
         "winrt._winrt_windows_ui_notifications.ScheduledToastNotification",
         sizeof(py::wrapper::Windows::UI::Notifications::ScheduledToastNotification),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScheduledToastNotification
-    };
+        _type_slots_ScheduledToastNotification};
 
     // ----- ScheduledToastNotificationShowingEventArgs class --------------------
 
@@ -3412,14 +3384,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_ScheduledToastNotificationShowingEventArgs =
-    {
+    static PyType_Spec type_spec_ScheduledToastNotificationShowingEventArgs = {
         "winrt._winrt_windows_ui_notifications.ScheduledToastNotificationShowingEventArgs",
         sizeof(py::wrapper::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScheduledToastNotificationShowingEventArgs
-    };
+        _type_slots_ScheduledToastNotificationShowingEventArgs};
 
     // ----- ShownTileNotification class --------------------
 
@@ -3501,14 +3471,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_ShownTileNotification =
-    {
+    static PyType_Spec type_spec_ShownTileNotification = {
         "winrt._winrt_windows_ui_notifications.ShownTileNotification",
         sizeof(py::wrapper::Windows::UI::Notifications::ShownTileNotification),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ShownTileNotification
-    };
+        _type_slots_ShownTileNotification};
 
     // ----- TileFlyoutNotification class --------------------
 
@@ -3662,14 +3630,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_TileFlyoutNotification =
-    {
+    static PyType_Spec type_spec_TileFlyoutNotification = {
         "winrt._winrt_windows_ui_notifications.TileFlyoutNotification",
         sizeof(py::wrapper::Windows::UI::Notifications::TileFlyoutNotification),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TileFlyoutNotification
-    };
+        _type_slots_TileFlyoutNotification};
 
     // ----- TileFlyoutUpdateManager class --------------------
 
@@ -3807,14 +3773,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_TileFlyoutUpdateManager =
-    {
+    static PyType_Spec type_spec_TileFlyoutUpdateManager = {
         "winrt._winrt_windows_ui_notifications.TileFlyoutUpdateManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TileFlyoutUpdateManager
-    };
+        _type_slots_TileFlyoutUpdateManager};
 
     static PyGetSetDef getset_TileFlyoutUpdateManager_Static[] = {
         { }
@@ -4076,14 +4040,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_TileFlyoutUpdater =
-    {
+    static PyType_Spec type_spec_TileFlyoutUpdater = {
         "winrt._winrt_windows_ui_notifications.TileFlyoutUpdater",
         sizeof(py::wrapper::Windows::UI::Notifications::TileFlyoutUpdater),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TileFlyoutUpdater
-    };
+        _type_slots_TileFlyoutUpdater};
 
     // ----- TileNotification class --------------------
 
@@ -4285,14 +4247,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_TileNotification =
-    {
+    static PyType_Spec type_spec_TileNotification = {
         "winrt._winrt_windows_ui_notifications.TileNotification",
         sizeof(py::wrapper::Windows::UI::Notifications::TileNotification),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TileNotification
-    };
+        _type_slots_TileNotification};
 
     // ----- TileUpdateManager class --------------------
 
@@ -4461,14 +4421,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_TileUpdateManager =
-    {
+    static PyType_Spec type_spec_TileUpdateManager = {
         "winrt._winrt_windows_ui_notifications.TileUpdateManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TileUpdateManager
-    };
+        _type_slots_TileUpdateManager};
 
     static PyGetSetDef getset_TileUpdateManager_Static[] = {
         { }
@@ -4673,14 +4631,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_TileUpdateManagerForUser =
-    {
+    static PyType_Spec type_spec_TileUpdateManagerForUser = {
         "winrt._winrt_windows_ui_notifications.TileUpdateManagerForUser",
         sizeof(py::wrapper::Windows::UI::Notifications::TileUpdateManagerForUser),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TileUpdateManagerForUser
-    };
+        _type_slots_TileUpdateManagerForUser};
 
     // ----- TileUpdater class --------------------
 
@@ -5199,14 +5155,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_TileUpdater =
-    {
+    static PyType_Spec type_spec_TileUpdater = {
         "winrt._winrt_windows_ui_notifications.TileUpdater",
         sizeof(py::wrapper::Windows::UI::Notifications::TileUpdater),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TileUpdater
-    };
+        _type_slots_TileUpdater};
 
     // ----- ToastActivatedEventArgs class --------------------
 
@@ -5308,14 +5262,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_ToastActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_ToastActivatedEventArgs = {
         "winrt._winrt_windows_ui_notifications.ToastActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToastActivatedEventArgs
-    };
+        _type_slots_ToastActivatedEventArgs};
 
     // ----- ToastCollection class --------------------
 
@@ -5568,14 +5520,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_ToastCollection =
-    {
+    static PyType_Spec type_spec_ToastCollection = {
         "winrt._winrt_windows_ui_notifications.ToastCollection",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToastCollection
-    };
+        _type_slots_ToastCollection};
 
     // ----- ToastCollectionManager class --------------------
 
@@ -5833,14 +5783,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_ToastCollectionManager =
-    {
+    static PyType_Spec type_spec_ToastCollectionManager = {
         "winrt._winrt_windows_ui_notifications.ToastCollectionManager",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastCollectionManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToastCollectionManager
-    };
+        _type_slots_ToastCollectionManager};
 
     // ----- ToastDismissedEventArgs class --------------------
 
@@ -5922,14 +5870,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_ToastDismissedEventArgs =
-    {
+    static PyType_Spec type_spec_ToastDismissedEventArgs = {
         "winrt._winrt_windows_ui_notifications.ToastDismissedEventArgs",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastDismissedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToastDismissedEventArgs
-    };
+        _type_slots_ToastDismissedEventArgs};
 
     // ----- ToastFailedEventArgs class --------------------
 
@@ -6011,14 +5957,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_ToastFailedEventArgs =
-    {
+    static PyType_Spec type_spec_ToastFailedEventArgs = {
         "winrt._winrt_windows_ui_notifications.ToastFailedEventArgs",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToastFailedEventArgs
-    };
+        _type_slots_ToastFailedEventArgs};
 
     // ----- ToastNotification class --------------------
 
@@ -6691,14 +6635,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_ToastNotification =
-    {
+    static PyType_Spec type_spec_ToastNotification = {
         "winrt._winrt_windows_ui_notifications.ToastNotification",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastNotification),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToastNotification
-    };
+        _type_slots_ToastNotification};
 
     // ----- ToastNotificationActionTriggerDetail class --------------------
 
@@ -6800,14 +6742,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_ToastNotificationActionTriggerDetail =
-    {
+    static PyType_Spec type_spec_ToastNotificationActionTriggerDetail = {
         "winrt._winrt_windows_ui_notifications.ToastNotificationActionTriggerDetail",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastNotificationActionTriggerDetail),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToastNotificationActionTriggerDetail
-    };
+        _type_slots_ToastNotificationActionTriggerDetail};
 
     // ----- ToastNotificationHistory class --------------------
 
@@ -7104,14 +7044,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_ToastNotificationHistory =
-    {
+    static PyType_Spec type_spec_ToastNotificationHistory = {
         "winrt._winrt_windows_ui_notifications.ToastNotificationHistory",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastNotificationHistory),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToastNotificationHistory
-    };
+        _type_slots_ToastNotificationHistory};
 
     // ----- ToastNotificationHistoryChangedTriggerDetail class --------------------
 
@@ -7213,14 +7151,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_ToastNotificationHistoryChangedTriggerDetail =
-    {
+    static PyType_Spec type_spec_ToastNotificationHistoryChangedTriggerDetail = {
         "winrt._winrt_windows_ui_notifications.ToastNotificationHistoryChangedTriggerDetail",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastNotificationHistoryChangedTriggerDetail),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToastNotificationHistoryChangedTriggerDetail
-    };
+        _type_slots_ToastNotificationHistoryChangedTriggerDetail};
 
     // ----- ToastNotificationManager class --------------------
 
@@ -7438,14 +7374,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_ToastNotificationManager =
-    {
+    static PyType_Spec type_spec_ToastNotificationManager = {
         "winrt._winrt_windows_ui_notifications.ToastNotificationManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToastNotificationManager
-    };
+        _type_slots_ToastNotificationManager};
 
     static PyGetSetDef getset_ToastNotificationManager_Static[] = {
         { "history", reinterpret_cast<getter>(ToastNotificationManager_get_History), nullptr, nullptr, nullptr },
@@ -7807,14 +7741,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_ToastNotificationManagerForUser =
-    {
+    static PyType_Spec type_spec_ToastNotificationManagerForUser = {
         "winrt._winrt_windows_ui_notifications.ToastNotificationManagerForUser",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastNotificationManagerForUser),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToastNotificationManagerForUser
-    };
+        _type_slots_ToastNotificationManagerForUser};
 
     // ----- ToastNotifier class --------------------
 
@@ -8158,14 +8090,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_ToastNotifier =
-    {
+    static PyType_Spec type_spec_ToastNotifier = {
         "winrt._winrt_windows_ui_notifications.ToastNotifier",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastNotifier),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToastNotifier
-    };
+        _type_slots_ToastNotifier};
 
     // ----- UserNotification class --------------------
 
@@ -8307,14 +8237,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_UserNotification =
-    {
+    static PyType_Spec type_spec_UserNotification = {
         "winrt._winrt_windows_ui_notifications.UserNotification",
         sizeof(py::wrapper::Windows::UI::Notifications::UserNotification),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserNotification
-    };
+        _type_slots_UserNotification};
 
     // ----- UserNotificationChangedEventArgs class --------------------
 
@@ -8416,14 +8344,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_UserNotificationChangedEventArgs =
-    {
+    static PyType_Spec type_spec_UserNotificationChangedEventArgs = {
         "winrt._winrt_windows_ui_notifications.UserNotificationChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Notifications::UserNotificationChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserNotificationChangedEventArgs
-    };
+        _type_slots_UserNotificationChangedEventArgs};
 
     // ----- IAdaptiveNotificationContent interface --------------------
 
@@ -8525,14 +8451,12 @@ namespace py::cpp::Windows::UI::Notifications
         { },
     };
 
-    static PyType_Spec type_spec_IAdaptiveNotificationContent =
-    {
+    static PyType_Spec type_spec_IAdaptiveNotificationContent = {
         "winrt._winrt_windows_ui_notifications.IAdaptiveNotificationContent",
         sizeof(py::wrapper::Windows::UI::Notifications::IAdaptiveNotificationContent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAdaptiveNotificationContent
-    };
+        _type_slots_IAdaptiveNotificationContent};
 
     // ----- Windows.UI.Notifications Initialization --------------------
 

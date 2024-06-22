@@ -278,14 +278,12 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { },
     };
 
-    static PyType_Spec type_spec_ConditionForceEffect =
-    {
+    static PyType_Spec type_spec_ConditionForceEffect = {
         "winrt._winrt_windows_gaming_input_forcefeedback.ConditionForceEffect",
         sizeof(py::wrapper::Windows::Gaming::Input::ForceFeedback::ConditionForceEffect),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ConditionForceEffect
-    };
+        _type_slots_ConditionForceEffect};
 
     // ----- ConstantForceEffect class --------------------
 
@@ -574,14 +572,12 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { },
     };
 
-    static PyType_Spec type_spec_ConstantForceEffect =
-    {
+    static PyType_Spec type_spec_ConstantForceEffect = {
         "winrt._winrt_windows_gaming_input_forcefeedback.ConstantForceEffect",
         sizeof(py::wrapper::Windows::Gaming::Input::ForceFeedback::ConstantForceEffect),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ConstantForceEffect
-    };
+        _type_slots_ConstantForceEffect};
 
     // ----- ForceFeedbackMotor class --------------------
 
@@ -998,14 +994,12 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { },
     };
 
-    static PyType_Spec type_spec_ForceFeedbackMotor =
-    {
+    static PyType_Spec type_spec_ForceFeedbackMotor = {
         "winrt._winrt_windows_gaming_input_forcefeedback.ForceFeedbackMotor",
         sizeof(py::wrapper::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ForceFeedbackMotor
-    };
+        _type_slots_ForceFeedbackMotor};
 
     // ----- PeriodicForceEffect class --------------------
 
@@ -1322,14 +1316,12 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { },
     };
 
-    static PyType_Spec type_spec_PeriodicForceEffect =
-    {
+    static PyType_Spec type_spec_PeriodicForceEffect = {
         "winrt._winrt_windows_gaming_input_forcefeedback.PeriodicForceEffect",
         sizeof(py::wrapper::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffect),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PeriodicForceEffect
-    };
+        _type_slots_PeriodicForceEffect};
 
     // ----- RampForceEffect class --------------------
 
@@ -1620,14 +1612,12 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { },
     };
 
-    static PyType_Spec type_spec_RampForceEffect =
-    {
+    static PyType_Spec type_spec_RampForceEffect = {
         "winrt._winrt_windows_gaming_input_forcefeedback.RampForceEffect",
         sizeof(py::wrapper::Windows::Gaming::Input::ForceFeedback::RampForceEffect),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RampForceEffect
-    };
+        _type_slots_RampForceEffect};
 
     // ----- IForceFeedbackEffect interface --------------------
 
@@ -1819,14 +1809,12 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         { },
     };
 
-    static PyType_Spec type_spec_IForceFeedbackEffect =
-    {
+    static PyType_Spec type_spec_IForceFeedbackEffect = {
         "winrt._winrt_windows_gaming_input_forcefeedback.IForceFeedbackEffect",
         sizeof(py::wrapper::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IForceFeedbackEffect
-    };
+        _type_slots_IForceFeedbackEffect};
 
     // ----- Windows.Gaming.Input.ForceFeedback Initialization --------------------
 

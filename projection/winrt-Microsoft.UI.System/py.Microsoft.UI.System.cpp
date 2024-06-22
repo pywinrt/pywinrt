@@ -181,14 +181,12 @@ namespace py::cpp::Microsoft::UI::System
         { },
     };
 
-    static PyType_Spec type_spec_ThemeSettings =
-    {
+    static PyType_Spec type_spec_ThemeSettings = {
         "winrt._winrt_microsoft_ui_system.ThemeSettings",
         sizeof(py::wrapper::Microsoft::UI::System::ThemeSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ThemeSettings
-    };
+        _type_slots_ThemeSettings};
 
     static PyGetSetDef getset_ThemeSettings_Static[] = {
         { }

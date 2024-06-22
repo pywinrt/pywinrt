@@ -193,14 +193,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { },
     };
 
-    static PyType_Spec type_spec_HidBooleanControl =
-    {
+    static PyType_Spec type_spec_HidBooleanControl = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidBooleanControl",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControl),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HidBooleanControl
-    };
+        _type_slots_HidBooleanControl};
 
     // ----- HidBooleanControlDescription class --------------------
 
@@ -402,14 +400,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { },
     };
 
-    static PyType_Spec type_spec_HidBooleanControlDescription =
-    {
+    static PyType_Spec type_spec_HidBooleanControlDescription = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidBooleanControlDescription",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HidBooleanControlDescription
-    };
+        _type_slots_HidBooleanControlDescription};
 
     // ----- HidCollection class --------------------
 
@@ -551,14 +547,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { },
     };
 
-    static PyType_Spec type_spec_HidCollection =
-    {
+    static PyType_Spec type_spec_HidCollection = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidCollection",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HidCollection
-    };
+        _type_slots_HidCollection};
 
     // ----- HidDevice class --------------------
 
@@ -1236,14 +1230,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { },
     };
 
-    static PyType_Spec type_spec_HidDevice =
-    {
+    static PyType_Spec type_spec_HidDevice = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidDevice",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HidDevice
-    };
+        _type_slots_HidDevice};
 
     static PyGetSetDef getset_HidDevice_Static[] = {
         { }
@@ -1530,14 +1522,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { },
     };
 
-    static PyType_Spec type_spec_HidFeatureReport =
-    {
+    static PyType_Spec type_spec_HidFeatureReport = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidFeatureReport",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidFeatureReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HidFeatureReport
-    };
+        _type_slots_HidFeatureReport};
 
     // ----- HidInputReport class --------------------
 
@@ -1809,14 +1799,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { },
     };
 
-    static PyType_Spec type_spec_HidInputReport =
-    {
+    static PyType_Spec type_spec_HidInputReport = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidInputReport",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidInputReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HidInputReport
-    };
+        _type_slots_HidInputReport};
 
     // ----- HidInputReportReceivedEventArgs class --------------------
 
@@ -1898,14 +1886,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { },
     };
 
-    static PyType_Spec type_spec_HidInputReportReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_HidInputReportReceivedEventArgs = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidInputReportReceivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HidInputReportReceivedEventArgs
-    };
+        _type_slots_HidInputReportReceivedEventArgs};
 
     // ----- HidNumericControl class --------------------
 
@@ -2163,14 +2149,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { },
     };
 
-    static PyType_Spec type_spec_HidNumericControl =
-    {
+    static PyType_Spec type_spec_HidNumericControl = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidNumericControl",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControl),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HidNumericControl
-    };
+        _type_slots_HidNumericControl};
 
     // ----- HidNumericControlDescription class --------------------
 
@@ -2552,14 +2536,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { },
     };
 
-    static PyType_Spec type_spec_HidNumericControlDescription =
-    {
+    static PyType_Spec type_spec_HidNumericControlDescription = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidNumericControlDescription",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HidNumericControlDescription
-    };
+        _type_slots_HidNumericControlDescription};
 
     // ----- HidOutputReport class --------------------
 
@@ -2819,14 +2801,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { },
     };
 
-    static PyType_Spec type_spec_HidOutputReport =
-    {
+    static PyType_Spec type_spec_HidOutputReport = {
         "winrt._winrt_windows_devices_humaninterfacedevice.HidOutputReport",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidOutputReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HidOutputReport
-    };
+        _type_slots_HidOutputReport};
 
     // ----- Windows.Devices.HumanInterfaceDevice Initialization --------------------
 

@@ -2191,14 +2191,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
         { },
     };
 
-    static PyType_Spec type_spec_DeviceAccountConfiguration =
-    {
+    static PyType_Spec type_spec_DeviceAccountConfiguration = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts_systemaccess.DeviceAccountConfiguration",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceAccountConfiguration
-    };
+        _type_slots_DeviceAccountConfiguration};
 
     // ----- UserDataAccountSystemAccessManager class --------------------
 
@@ -2380,14 +2378,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
         { },
     };
 
-    static PyType_Spec type_spec_UserDataAccountSystemAccessManager =
-    {
+    static PyType_Spec type_spec_UserDataAccountSystemAccessManager = {
         "winrt._winrt_windows_applicationmodel_userdataaccounts_systemaccess.UserDataAccountSystemAccessManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataAccountSystemAccessManager
-    };
+        _type_slots_UserDataAccountSystemAccessManager};
 
     static PyGetSetDef getset_UserDataAccountSystemAccessManager_Static[] = {
         { }

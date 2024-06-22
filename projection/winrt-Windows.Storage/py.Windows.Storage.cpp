@@ -305,14 +305,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_AppDataPaths =
-    {
+    static PyType_Spec type_spec_AppDataPaths = {
         "winrt._winrt_windows_storage.AppDataPaths",
         sizeof(py::wrapper::Windows::Storage::AppDataPaths),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppDataPaths
-    };
+        _type_slots_AppDataPaths};
 
     static PyGetSetDef getset_AppDataPaths_Static[] = {
         { }
@@ -906,14 +904,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_ApplicationData =
-    {
+    static PyType_Spec type_spec_ApplicationData = {
         "winrt._winrt_windows_storage.ApplicationData",
         sizeof(py::wrapper::Windows::Storage::ApplicationData),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ApplicationData
-    };
+        _type_slots_ApplicationData};
 
     static PyGetSetDef getset_ApplicationData_Static[] = {
         { "current", reinterpret_cast<getter>(ApplicationData_get_Current), nullptr, nullptr, nullptr },
@@ -1416,14 +1412,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_ApplicationDataCompositeValue =
-    {
+    static PyType_Spec type_spec_ApplicationDataCompositeValue = {
         "winrt._winrt_windows_storage.ApplicationDataCompositeValue",
         sizeof(py::wrapper::Windows::Storage::ApplicationDataCompositeValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ApplicationDataCompositeValue
-    };
+        _type_slots_ApplicationDataCompositeValue};
 
     // ----- ApplicationDataContainer class --------------------
 
@@ -1683,14 +1677,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_ApplicationDataContainer =
-    {
+    static PyType_Spec type_spec_ApplicationDataContainer = {
         "winrt._winrt_windows_storage.ApplicationDataContainer",
         sizeof(py::wrapper::Windows::Storage::ApplicationDataContainer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ApplicationDataContainer
-    };
+        _type_slots_ApplicationDataContainer};
 
     // ----- ApplicationDataContainerSettings class --------------------
 
@@ -2144,14 +2136,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_ApplicationDataContainerSettings =
-    {
+    static PyType_Spec type_spec_ApplicationDataContainerSettings = {
         "winrt._winrt_windows_storage.ApplicationDataContainerSettings",
         sizeof(py::wrapper::Windows::Storage::ApplicationDataContainerSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ApplicationDataContainerSettings
-    };
+        _type_slots_ApplicationDataContainerSettings};
 
     // ----- CachedFileManager class --------------------
 
@@ -2241,14 +2231,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_CachedFileManager =
-    {
+    static PyType_Spec type_spec_CachedFileManager = {
         "winrt._winrt_windows_storage.CachedFileManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CachedFileManager
-    };
+        _type_slots_CachedFileManager};
 
     static PyGetSetDef getset_CachedFileManager_Static[] = {
         { }
@@ -2514,14 +2502,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_DownloadsFolder =
-    {
+    static PyType_Spec type_spec_DownloadsFolder = {
         "winrt._winrt_windows_storage.DownloadsFolder",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DownloadsFolder
-    };
+        _type_slots_DownloadsFolder};
 
     static PyGetSetDef getset_DownloadsFolder_Static[] = {
         { }
@@ -2992,14 +2978,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_FileIO =
-    {
+    static PyType_Spec type_spec_FileIO = {
         "winrt._winrt_windows_storage.FileIO",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FileIO
-    };
+        _type_slots_FileIO};
 
     static PyGetSetDef getset_FileIO_Static[] = {
         { }
@@ -3433,14 +3417,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_KnownFolders =
-    {
+    static PyType_Spec type_spec_KnownFolders = {
         "winrt._winrt_windows_storage.KnownFolders",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownFolders
-    };
+        _type_slots_KnownFolders};
 
     static PyGetSetDef getset_KnownFolders_Static[] = {
         { "camera_roll", reinterpret_cast<getter>(KnownFolders_get_CameraRoll), nullptr, nullptr, nullptr },
@@ -3924,14 +3906,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_PathIO =
-    {
+    static PyType_Spec type_spec_PathIO = {
         "winrt._winrt_windows_storage.PathIO",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PathIO
-    };
+        _type_slots_PathIO};
 
     static PyGetSetDef getset_PathIO_Static[] = {
         { }
@@ -4058,14 +4038,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_SetVersionDeferral =
-    {
+    static PyType_Spec type_spec_SetVersionDeferral = {
         "winrt._winrt_windows_storage.SetVersionDeferral",
         sizeof(py::wrapper::Windows::Storage::SetVersionDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SetVersionDeferral
-    };
+        _type_slots_SetVersionDeferral};
 
     // ----- SetVersionRequest class --------------------
 
@@ -4197,14 +4175,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_SetVersionRequest =
-    {
+    static PyType_Spec type_spec_SetVersionRequest = {
         "winrt._winrt_windows_storage.SetVersionRequest",
         sizeof(py::wrapper::Windows::Storage::SetVersionRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SetVersionRequest
-    };
+        _type_slots_SetVersionRequest};
 
     // ----- StorageFile class --------------------
 
@@ -5486,14 +5462,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_StorageFile =
-    {
+    static PyType_Spec type_spec_StorageFile = {
         "winrt._winrt_windows_storage.StorageFile",
         sizeof(py::wrapper::Windows::Storage::StorageFile),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageFile
-    };
+        _type_slots_StorageFile};
 
     static PyGetSetDef getset_StorageFile_Static[] = {
         { }
@@ -7018,14 +6992,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_StorageFolder =
-    {
+    static PyType_Spec type_spec_StorageFolder = {
         "winrt._winrt_windows_storage.StorageFolder",
         sizeof(py::wrapper::Windows::Storage::StorageFolder),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageFolder
-    };
+        _type_slots_StorageFolder};
 
     static PyGetSetDef getset_StorageFolder_Static[] = {
         { }
@@ -7374,14 +7346,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_StorageLibrary =
-    {
+    static PyType_Spec type_spec_StorageLibrary = {
         "winrt._winrt_windows_storage.StorageLibrary",
         sizeof(py::wrapper::Windows::Storage::StorageLibrary),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageLibrary
-    };
+        _type_slots_StorageLibrary};
 
     static PyGetSetDef getset_StorageLibrary_Static[] = {
         { }
@@ -7592,14 +7562,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_StorageLibraryChange =
-    {
+    static PyType_Spec type_spec_StorageLibraryChange = {
         "winrt._winrt_windows_storage.StorageLibraryChange",
         sizeof(py::wrapper::Windows::Storage::StorageLibraryChange),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageLibraryChange
-    };
+        _type_slots_StorageLibraryChange};
 
     // ----- StorageLibraryChangeReader class --------------------
 
@@ -7751,14 +7719,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_StorageLibraryChangeReader =
-    {
+    static PyType_Spec type_spec_StorageLibraryChangeReader = {
         "winrt._winrt_windows_storage.StorageLibraryChangeReader",
         sizeof(py::wrapper::Windows::Storage::StorageLibraryChangeReader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageLibraryChangeReader
-    };
+        _type_slots_StorageLibraryChangeReader};
 
     // ----- StorageLibraryChangeTracker class --------------------
 
@@ -7964,14 +7930,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_StorageLibraryChangeTracker =
-    {
+    static PyType_Spec type_spec_StorageLibraryChangeTracker = {
         "winrt._winrt_windows_storage.StorageLibraryChangeTracker",
         sizeof(py::wrapper::Windows::Storage::StorageLibraryChangeTracker),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageLibraryChangeTracker
-    };
+        _type_slots_StorageLibraryChangeTracker};
 
     // ----- StorageLibraryChangeTrackerOptions class --------------------
 
@@ -8103,14 +8067,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_StorageLibraryChangeTrackerOptions =
-    {
+    static PyType_Spec type_spec_StorageLibraryChangeTrackerOptions = {
         "winrt._winrt_windows_storage.StorageLibraryChangeTrackerOptions",
         sizeof(py::wrapper::Windows::Storage::StorageLibraryChangeTrackerOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageLibraryChangeTrackerOptions
-    };
+        _type_slots_StorageLibraryChangeTrackerOptions};
 
     // ----- StorageLibraryLastChangeId class --------------------
 
@@ -8191,14 +8153,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_StorageLibraryLastChangeId =
-    {
+    static PyType_Spec type_spec_StorageLibraryLastChangeId = {
         "winrt._winrt_windows_storage.StorageLibraryLastChangeId",
         sizeof(py::wrapper::Windows::Storage::StorageLibraryLastChangeId),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageLibraryLastChangeId
-    };
+        _type_slots_StorageLibraryLastChangeId};
 
     static PyGetSetDef getset_StorageLibraryLastChangeId_Static[] = {
         { "unknown", reinterpret_cast<getter>(StorageLibraryLastChangeId_get_Unknown), nullptr, nullptr, nullptr },
@@ -8358,14 +8318,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_StorageProvider =
-    {
+    static PyType_Spec type_spec_StorageProvider = {
         "winrt._winrt_windows_storage.StorageProvider",
         sizeof(py::wrapper::Windows::Storage::StorageProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageProvider
-    };
+        _type_slots_StorageProvider};
 
     // ----- StorageStreamTransaction class --------------------
 
@@ -8529,14 +8487,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_StorageStreamTransaction =
-    {
+    static PyType_Spec type_spec_StorageStreamTransaction = {
         "winrt._winrt_windows_storage.StorageStreamTransaction",
         sizeof(py::wrapper::Windows::Storage::StorageStreamTransaction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageStreamTransaction
-    };
+        _type_slots_StorageStreamTransaction};
 
     // ----- StreamedFileDataRequest class --------------------
 
@@ -8745,14 +8701,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_StreamedFileDataRequest =
-    {
+    static PyType_Spec type_spec_StreamedFileDataRequest = {
         "winrt._winrt_windows_storage.StreamedFileDataRequest",
         sizeof(py::wrapper::Windows::Storage::StreamedFileDataRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StreamedFileDataRequest
-    };
+        _type_slots_StreamedFileDataRequest};
 
     // ----- SystemAudioProperties class --------------------
 
@@ -8834,14 +8788,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_SystemAudioProperties =
-    {
+    static PyType_Spec type_spec_SystemAudioProperties = {
         "winrt._winrt_windows_storage.SystemAudioProperties",
         sizeof(py::wrapper::Windows::Storage::SystemAudioProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemAudioProperties
-    };
+        _type_slots_SystemAudioProperties};
 
     // ----- SystemDataPaths class --------------------
 
@@ -9252,14 +9204,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_SystemDataPaths =
-    {
+    static PyType_Spec type_spec_SystemDataPaths = {
         "winrt._winrt_windows_storage.SystemDataPaths",
         sizeof(py::wrapper::Windows::Storage::SystemDataPaths),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemDataPaths
-    };
+        _type_slots_SystemDataPaths};
 
     static PyGetSetDef getset_SystemDataPaths_Static[] = {
         { }
@@ -9387,14 +9337,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_SystemGPSProperties =
-    {
+    static PyType_Spec type_spec_SystemGPSProperties = {
         "winrt._winrt_windows_storage.SystemGPSProperties",
         sizeof(py::wrapper::Windows::Storage::SystemGPSProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemGPSProperties
-    };
+        _type_slots_SystemGPSProperties};
 
     // ----- SystemImageProperties class --------------------
 
@@ -9496,14 +9444,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_SystemImageProperties =
-    {
+    static PyType_Spec type_spec_SystemImageProperties = {
         "winrt._winrt_windows_storage.SystemImageProperties",
         sizeof(py::wrapper::Windows::Storage::SystemImageProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemImageProperties
-    };
+        _type_slots_SystemImageProperties};
 
     // ----- SystemMediaProperties class --------------------
 
@@ -9685,14 +9631,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_SystemMediaProperties =
-    {
+    static PyType_Spec type_spec_SystemMediaProperties = {
         "winrt._winrt_windows_storage.SystemMediaProperties",
         sizeof(py::wrapper::Windows::Storage::SystemMediaProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemMediaProperties
-    };
+        _type_slots_SystemMediaProperties};
 
     // ----- SystemMusicProperties class --------------------
 
@@ -9914,14 +9858,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_SystemMusicProperties =
-    {
+    static PyType_Spec type_spec_SystemMusicProperties = {
         "winrt._winrt_windows_storage.SystemMusicProperties",
         sizeof(py::wrapper::Windows::Storage::SystemMusicProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemMusicProperties
-    };
+        _type_slots_SystemMusicProperties};
 
     // ----- SystemPhotoProperties class --------------------
 
@@ -10083,14 +10025,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_SystemPhotoProperties =
-    {
+    static PyType_Spec type_spec_SystemPhotoProperties = {
         "winrt._winrt_windows_storage.SystemPhotoProperties",
         sizeof(py::wrapper::Windows::Storage::SystemPhotoProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemPhotoProperties
-    };
+        _type_slots_SystemPhotoProperties};
 
     // ----- SystemProperties class --------------------
 
@@ -10364,14 +10304,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_SystemProperties =
-    {
+    static PyType_Spec type_spec_SystemProperties = {
         "winrt._winrt_windows_storage.SystemProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemProperties
-    };
+        _type_slots_SystemProperties};
 
     static PyGetSetDef getset_SystemProperties_Static[] = {
         { "audio", reinterpret_cast<getter>(SystemProperties_get_Audio), nullptr, nullptr, nullptr },
@@ -10571,14 +10509,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_SystemVideoProperties =
-    {
+    static PyType_Spec type_spec_SystemVideoProperties = {
         "winrt._winrt_windows_storage.SystemVideoProperties",
         sizeof(py::wrapper::Windows::Storage::SystemVideoProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemVideoProperties
-    };
+        _type_slots_SystemVideoProperties};
 
     // ----- UserDataPaths class --------------------
 
@@ -11080,14 +11016,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_UserDataPaths =
-    {
+    static PyType_Spec type_spec_UserDataPaths = {
         "winrt._winrt_windows_storage.UserDataPaths",
         sizeof(py::wrapper::Windows::Storage::UserDataPaths),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDataPaths
-    };
+        _type_slots_UserDataPaths};
 
     static PyGetSetDef getset_UserDataPaths_Static[] = {
         { }
@@ -11797,14 +11731,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_IStorageFile =
-    {
+    static PyType_Spec type_spec_IStorageFile = {
         "winrt._winrt_windows_storage.IStorageFile",
         sizeof(py::wrapper::Windows::Storage::IStorageFile),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IStorageFile
-    };
+        _type_slots_IStorageFile};
 
     // ----- IStorageFile2 interface --------------------
 
@@ -11931,14 +11863,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_IStorageFile2 =
-    {
+    static PyType_Spec type_spec_IStorageFile2 = {
         "winrt._winrt_windows_storage.IStorageFile2",
         sizeof(py::wrapper::Windows::Storage::IStorageFile2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IStorageFile2
-    };
+        _type_slots_IStorageFile2};
 
     // ----- IStorageFilePropertiesWithAvailability interface --------------------
 
@@ -12020,14 +11950,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_IStorageFilePropertiesWithAvailability =
-    {
+    static PyType_Spec type_spec_IStorageFilePropertiesWithAvailability = {
         "winrt._winrt_windows_storage.IStorageFilePropertiesWithAvailability",
         sizeof(py::wrapper::Windows::Storage::IStorageFilePropertiesWithAvailability),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IStorageFilePropertiesWithAvailability
-    };
+        _type_slots_IStorageFilePropertiesWithAvailability};
 
     // ----- IStorageFolder interface --------------------
 
@@ -12626,14 +12554,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_IStorageFolder =
-    {
+    static PyType_Spec type_spec_IStorageFolder = {
         "winrt._winrt_windows_storage.IStorageFolder",
         sizeof(py::wrapper::Windows::Storage::IStorageFolder),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IStorageFolder
-    };
+        _type_slots_IStorageFolder};
 
     // ----- IStorageFolder2 interface --------------------
 
@@ -12727,14 +12653,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_IStorageFolder2 =
-    {
+    static PyType_Spec type_spec_IStorageFolder2 = {
         "winrt._winrt_windows_storage.IStorageFolder2",
         sizeof(py::wrapper::Windows::Storage::IStorageFolder2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IStorageFolder2
-    };
+        _type_slots_IStorageFolder2};
 
     // ----- IStorageItem interface --------------------
 
@@ -13041,14 +12965,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_IStorageItem =
-    {
+    static PyType_Spec type_spec_IStorageItem = {
         "winrt._winrt_windows_storage.IStorageItem",
         sizeof(py::wrapper::Windows::Storage::IStorageItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IStorageItem
-    };
+        _type_slots_IStorageItem};
 
     // ----- IStorageItem2 interface --------------------
 
@@ -13417,14 +13339,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_IStorageItem2 =
-    {
+    static PyType_Spec type_spec_IStorageItem2 = {
         "winrt._winrt_windows_storage.IStorageItem2",
         sizeof(py::wrapper::Windows::Storage::IStorageItem2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IStorageItem2
-    };
+        _type_slots_IStorageItem2};
 
     // ----- IStorageItemProperties interface --------------------
 
@@ -13641,14 +13561,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_IStorageItemProperties =
-    {
+    static PyType_Spec type_spec_IStorageItemProperties = {
         "winrt._winrt_windows_storage.IStorageItemProperties",
         sizeof(py::wrapper::Windows::Storage::IStorageItemProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IStorageItemProperties
-    };
+        _type_slots_IStorageItemProperties};
 
     // ----- IStorageItemProperties2 interface --------------------
 
@@ -13940,14 +13858,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_IStorageItemProperties2 =
-    {
+    static PyType_Spec type_spec_IStorageItemProperties2 = {
         "winrt._winrt_windows_storage.IStorageItemProperties2",
         sizeof(py::wrapper::Windows::Storage::IStorageItemProperties2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IStorageItemProperties2
-    };
+        _type_slots_IStorageItemProperties2};
 
     // ----- IStorageItemPropertiesWithProvider interface --------------------
 
@@ -14184,14 +14100,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_IStorageItemPropertiesWithProvider =
-    {
+    static PyType_Spec type_spec_IStorageItemPropertiesWithProvider = {
         "winrt._winrt_windows_storage.IStorageItemPropertiesWithProvider",
         sizeof(py::wrapper::Windows::Storage::IStorageItemPropertiesWithProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IStorageItemPropertiesWithProvider
-    };
+        _type_slots_IStorageItemPropertiesWithProvider};
 
     // ----- IStreamedFileDataRequest interface --------------------
 
@@ -14286,14 +14200,12 @@ namespace py::cpp::Windows::Storage
         { },
     };
 
-    static PyType_Spec type_spec_IStreamedFileDataRequest =
-    {
+    static PyType_Spec type_spec_IStreamedFileDataRequest = {
         "winrt._winrt_windows_storage.IStreamedFileDataRequest",
         sizeof(py::wrapper::Windows::Storage::IStreamedFileDataRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IStreamedFileDataRequest
-    };
+        _type_slots_IStreamedFileDataRequest};
 
     // ----- Windows.Storage Initialization --------------------
 

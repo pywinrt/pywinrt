@@ -105,14 +105,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_DiagnosticActionResult =
-    {
+    static PyType_Spec type_spec_DiagnosticActionResult = {
         "winrt._winrt_windows_system_diagnostics.DiagnosticActionResult",
         sizeof(py::wrapper::Windows::System::Diagnostics::DiagnosticActionResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DiagnosticActionResult
-    };
+        _type_slots_DiagnosticActionResult};
 
     // ----- DiagnosticInvoker class --------------------
 
@@ -317,14 +315,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_DiagnosticInvoker =
-    {
+    static PyType_Spec type_spec_DiagnosticInvoker = {
         "winrt._winrt_windows_system_diagnostics.DiagnosticInvoker",
         sizeof(py::wrapper::Windows::System::Diagnostics::DiagnosticInvoker),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DiagnosticInvoker
-    };
+        _type_slots_DiagnosticInvoker};
 
     static PyGetSetDef getset_DiagnosticInvoker_Static[] = {
         { "is_supported", reinterpret_cast<getter>(DiagnosticInvoker_get_IsSupported), nullptr, nullptr, nullptr },
@@ -444,14 +440,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_ProcessCpuUsage =
-    {
+    static PyType_Spec type_spec_ProcessCpuUsage = {
         "winrt._winrt_windows_system_diagnostics.ProcessCpuUsage",
         sizeof(py::wrapper::Windows::System::Diagnostics::ProcessCpuUsage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProcessCpuUsage
-    };
+        _type_slots_ProcessCpuUsage};
 
     // ----- ProcessCpuUsageReport class --------------------
 
@@ -553,14 +547,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_ProcessCpuUsageReport =
-    {
+    static PyType_Spec type_spec_ProcessCpuUsageReport = {
         "winrt._winrt_windows_system_diagnostics.ProcessCpuUsageReport",
         sizeof(py::wrapper::Windows::System::Diagnostics::ProcessCpuUsageReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProcessCpuUsageReport
-    };
+        _type_slots_ProcessCpuUsageReport};
 
     // ----- ProcessDiagnosticInfo class --------------------
 
@@ -901,14 +893,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_ProcessDiagnosticInfo =
-    {
+    static PyType_Spec type_spec_ProcessDiagnosticInfo = {
         "winrt._winrt_windows_system_diagnostics.ProcessDiagnosticInfo",
         sizeof(py::wrapper::Windows::System::Diagnostics::ProcessDiagnosticInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProcessDiagnosticInfo
-    };
+        _type_slots_ProcessDiagnosticInfo};
 
     static PyGetSetDef getset_ProcessDiagnosticInfo_Static[] = {
         { }
@@ -1028,14 +1018,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_ProcessDiskUsage =
-    {
+    static PyType_Spec type_spec_ProcessDiskUsage = {
         "winrt._winrt_windows_system_diagnostics.ProcessDiskUsage",
         sizeof(py::wrapper::Windows::System::Diagnostics::ProcessDiskUsage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProcessDiskUsage
-    };
+        _type_slots_ProcessDiskUsage};
 
     // ----- ProcessDiskUsageReport class --------------------
 
@@ -1217,14 +1205,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_ProcessDiskUsageReport =
-    {
+    static PyType_Spec type_spec_ProcessDiskUsageReport = {
         "winrt._winrt_windows_system_diagnostics.ProcessDiskUsageReport",
         sizeof(py::wrapper::Windows::System::Diagnostics::ProcessDiskUsageReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProcessDiskUsageReport
-    };
+        _type_slots_ProcessDiskUsageReport};
 
     // ----- ProcessMemoryUsage class --------------------
 
@@ -1316,14 +1302,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_ProcessMemoryUsage =
-    {
+    static PyType_Spec type_spec_ProcessMemoryUsage = {
         "winrt._winrt_windows_system_diagnostics.ProcessMemoryUsage",
         sizeof(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProcessMemoryUsage
-    };
+        _type_slots_ProcessMemoryUsage};
 
     // ----- ProcessMemoryUsageReport class --------------------
 
@@ -1625,14 +1609,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_ProcessMemoryUsageReport =
-    {
+    static PyType_Spec type_spec_ProcessMemoryUsageReport = {
         "winrt._winrt_windows_system_diagnostics.ProcessMemoryUsageReport",
         sizeof(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsageReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProcessMemoryUsageReport
-    };
+        _type_slots_ProcessMemoryUsageReport};
 
     // ----- SystemCpuUsage class --------------------
 
@@ -1724,14 +1706,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_SystemCpuUsage =
-    {
+    static PyType_Spec type_spec_SystemCpuUsage = {
         "winrt._winrt_windows_system_diagnostics.SystemCpuUsage",
         sizeof(py::wrapper::Windows::System::Diagnostics::SystemCpuUsage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemCpuUsage
-    };
+        _type_slots_SystemCpuUsage};
 
     // ----- SystemCpuUsageReport class --------------------
 
@@ -1853,14 +1833,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_SystemCpuUsageReport =
-    {
+    static PyType_Spec type_spec_SystemCpuUsageReport = {
         "winrt._winrt_windows_system_diagnostics.SystemCpuUsageReport",
         sizeof(py::wrapper::Windows::System::Diagnostics::SystemCpuUsageReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemCpuUsageReport
-    };
+        _type_slots_SystemCpuUsageReport};
 
     // ----- SystemDiagnosticInfo class --------------------
 
@@ -2041,14 +2019,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_SystemDiagnosticInfo =
-    {
+    static PyType_Spec type_spec_SystemDiagnosticInfo = {
         "winrt._winrt_windows_system_diagnostics.SystemDiagnosticInfo",
         sizeof(py::wrapper::Windows::System::Diagnostics::SystemDiagnosticInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemDiagnosticInfo
-    };
+        _type_slots_SystemDiagnosticInfo};
 
     static PyGetSetDef getset_SystemDiagnosticInfo_Static[] = {
         { "preferred_architecture", reinterpret_cast<getter>(SystemDiagnosticInfo_get_PreferredArchitecture), nullptr, nullptr, nullptr },
@@ -2168,14 +2144,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_SystemMemoryUsage =
-    {
+    static PyType_Spec type_spec_SystemMemoryUsage = {
         "winrt._winrt_windows_system_diagnostics.SystemMemoryUsage",
         sizeof(py::wrapper::Windows::System::Diagnostics::SystemMemoryUsage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemMemoryUsage
-    };
+        _type_slots_SystemMemoryUsage};
 
     // ----- SystemMemoryUsageReport class --------------------
 
@@ -2297,14 +2271,12 @@ namespace py::cpp::Windows::System::Diagnostics
         { },
     };
 
-    static PyType_Spec type_spec_SystemMemoryUsageReport =
-    {
+    static PyType_Spec type_spec_SystemMemoryUsageReport = {
         "winrt._winrt_windows_system_diagnostics.SystemMemoryUsageReport",
         sizeof(py::wrapper::Windows::System::Diagnostics::SystemMemoryUsageReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemMemoryUsageReport
-    };
+        _type_slots_SystemMemoryUsageReport};
 
     // ----- Windows.System.Diagnostics Initialization --------------------
 

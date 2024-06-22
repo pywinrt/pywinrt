@@ -892,14 +892,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_DtdEntity =
-    {
+    static PyType_Spec type_spec_DtdEntity = {
         "winrt._winrt_windows_data_xml_dom.DtdEntity",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::DtdEntity),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DtdEntity
-    };
+        _type_slots_DtdEntity};
 
     // ----- DtdNotation class --------------------
 
@@ -1768,14 +1766,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_DtdNotation =
-    {
+    static PyType_Spec type_spec_DtdNotation = {
         "winrt._winrt_windows_data_xml_dom.DtdNotation",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::DtdNotation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DtdNotation
-    };
+        _type_slots_DtdNotation};
 
     // ----- XmlAttribute class --------------------
 
@@ -2692,14 +2688,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_XmlAttribute =
-    {
+    static PyType_Spec type_spec_XmlAttribute = {
         "winrt._winrt_windows_data_xml_dom.XmlAttribute",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XmlAttribute
-    };
+        _type_slots_XmlAttribute};
 
     // ----- XmlCDataSection class --------------------
 
@@ -3797,14 +3791,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_XmlCDataSection =
-    {
+    static PyType_Spec type_spec_XmlCDataSection = {
         "winrt._winrt_windows_data_xml_dom.XmlCDataSection",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XmlCDataSection
-    };
+        _type_slots_XmlCDataSection};
 
     // ----- XmlComment class --------------------
 
@@ -4870,14 +4862,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_XmlComment =
-    {
+    static PyType_Spec type_spec_XmlComment = {
         "winrt._winrt_windows_data_xml_dom.XmlComment",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlComment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XmlComment
-    };
+        _type_slots_XmlComment};
 
     // ----- XmlDocument class --------------------
 
@@ -6472,14 +6462,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_XmlDocument =
-    {
+    static PyType_Spec type_spec_XmlDocument = {
         "winrt._winrt_windows_data_xml_dom.XmlDocument",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlDocument),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XmlDocument
-    };
+        _type_slots_XmlDocument};
 
     static PyGetSetDef getset_XmlDocument_Static[] = {
         { }
@@ -7335,14 +7323,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_XmlDocumentFragment =
-    {
+    static PyType_Spec type_spec_XmlDocumentFragment = {
         "winrt._winrt_windows_data_xml_dom.XmlDocumentFragment",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XmlDocumentFragment
-    };
+        _type_slots_XmlDocumentFragment};
 
     // ----- XmlDocumentType class --------------------
 
@@ -8231,14 +8217,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_XmlDocumentType =
-    {
+    static PyType_Spec type_spec_XmlDocumentType = {
         "winrt._winrt_windows_data_xml_dom.XmlDocumentType",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XmlDocumentType
-    };
+        _type_slots_XmlDocumentType};
 
     // ----- XmlDomImplementation class --------------------
 
@@ -8333,14 +8317,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_XmlDomImplementation =
-    {
+    static PyType_Spec type_spec_XmlDomImplementation = {
         "winrt._winrt_windows_data_xml_dom.XmlDomImplementation",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlDomImplementation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XmlDomImplementation
-    };
+        _type_slots_XmlDomImplementation};
 
     // ----- XmlElement class --------------------
 
@@ -9583,14 +9565,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_XmlElement =
-    {
+    static PyType_Spec type_spec_XmlElement = {
         "winrt._winrt_windows_data_xml_dom.XmlElement",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlElement),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XmlElement
-    };
+        _type_slots_XmlElement};
 
     // ----- XmlEntityReference class --------------------
 
@@ -10419,14 +10399,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_XmlEntityReference =
-    {
+    static PyType_Spec type_spec_XmlEntityReference = {
         "winrt._winrt_windows_data_xml_dom.XmlEntityReference",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XmlEntityReference
-    };
+        _type_slots_XmlEntityReference};
 
     // ----- XmlLoadSettings class --------------------
 
@@ -10750,14 +10728,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_XmlLoadSettings =
-    {
+    static PyType_Spec type_spec_XmlLoadSettings = {
         "winrt._winrt_windows_data_xml_dom.XmlLoadSettings",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlLoadSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XmlLoadSettings
-    };
+        _type_slots_XmlLoadSettings};
 
     // ----- XmlNamedNodeMap class --------------------
 
@@ -11328,14 +11304,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_XmlNamedNodeMap =
-    {
+    static PyType_Spec type_spec_XmlNamedNodeMap = {
         "winrt._winrt_windows_data_xml_dom.XmlNamedNodeMap",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlNamedNodeMap),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XmlNamedNodeMap
-    };
+        _type_slots_XmlNamedNodeMap};
 
     // ----- XmlNodeList class --------------------
 
@@ -11712,14 +11686,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_XmlNodeList =
-    {
+    static PyType_Spec type_spec_XmlNodeList = {
         "winrt._winrt_windows_data_xml_dom.XmlNodeList",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlNodeList),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XmlNodeList
-    };
+        _type_slots_XmlNodeList};
 
     // ----- XmlProcessingInstruction class --------------------
 
@@ -12616,14 +12588,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_XmlProcessingInstruction =
-    {
+    static PyType_Spec type_spec_XmlProcessingInstruction = {
         "winrt._winrt_windows_data_xml_dom.XmlProcessingInstruction",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XmlProcessingInstruction
-    };
+        _type_slots_XmlProcessingInstruction};
 
     // ----- XmlText class --------------------
 
@@ -13721,14 +13691,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_XmlText =
-    {
+    static PyType_Spec type_spec_XmlText = {
         "winrt._winrt_windows_data_xml_dom.XmlText",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlText),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XmlText
-    };
+        _type_slots_XmlText};
 
     // ----- IXmlCharacterData interface --------------------
 
@@ -14794,14 +14762,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_IXmlCharacterData =
-    {
+    static PyType_Spec type_spec_IXmlCharacterData = {
         "winrt._winrt_windows_data_xml_dom.IXmlCharacterData",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IXmlCharacterData
-    };
+        _type_slots_IXmlCharacterData};
 
     // ----- IXmlNode interface --------------------
 
@@ -15630,14 +15596,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_IXmlNode =
-    {
+    static PyType_Spec type_spec_IXmlNode = {
         "winrt._winrt_windows_data_xml_dom.IXmlNode",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlNode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IXmlNode
-    };
+        _type_slots_IXmlNode};
 
     // ----- IXmlNodeSelector interface --------------------
 
@@ -15829,14 +15793,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_IXmlNodeSelector =
-    {
+    static PyType_Spec type_spec_IXmlNodeSelector = {
         "winrt._winrt_windows_data_xml_dom.IXmlNodeSelector",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSelector),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IXmlNodeSelector
-    };
+        _type_slots_IXmlNodeSelector};
 
     // ----- IXmlNodeSerializer interface --------------------
 
@@ -15976,14 +15938,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_IXmlNodeSerializer =
-    {
+    static PyType_Spec type_spec_IXmlNodeSerializer = {
         "winrt._winrt_windows_data_xml_dom.IXmlNodeSerializer",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSerializer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IXmlNodeSerializer
-    };
+        _type_slots_IXmlNodeSerializer};
 
     // ----- IXmlText interface --------------------
 
@@ -17081,14 +17041,12 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { },
     };
 
-    static PyType_Spec type_spec_IXmlText =
-    {
+    static PyType_Spec type_spec_IXmlText = {
         "winrt._winrt_windows_data_xml_dom.IXmlText",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlText),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IXmlText
-    };
+        _type_slots_IXmlText};
 
     // ----- Windows.Data.Xml.Dom Initialization --------------------
 

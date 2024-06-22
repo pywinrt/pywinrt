@@ -182,14 +182,12 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { },
     };
 
-    static PyType_Spec type_spec_LocalCategories =
-    {
+    static PyType_Spec type_spec_LocalCategories = {
         "winrt._winrt_windows_services_maps_localsearch.LocalCategories",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LocalCategories
-    };
+        _type_slots_LocalCategories};
 
     static PyGetSetDef getset_LocalCategories_Static[] = {
         { "all", reinterpret_cast<getter>(LocalCategories_get_All), nullptr, nullptr, nullptr },
@@ -484,14 +482,12 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { },
     };
 
-    static PyType_Spec type_spec_LocalLocation =
-    {
+    static PyType_Spec type_spec_LocalLocation = {
         "winrt._winrt_windows_services_maps_localsearch.LocalLocation",
         sizeof(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LocalLocation
-    };
+        _type_slots_LocalLocation};
 
     // ----- LocalLocationFinder class --------------------
 
@@ -552,14 +548,12 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { },
     };
 
-    static PyType_Spec type_spec_LocalLocationFinder =
-    {
+    static PyType_Spec type_spec_LocalLocationFinder = {
         "winrt._winrt_windows_services_maps_localsearch.LocalLocationFinder",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LocalLocationFinder
-    };
+        _type_slots_LocalLocationFinder};
 
     static PyGetSetDef getset_LocalLocationFinder_Static[] = {
         { }
@@ -687,14 +681,12 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { },
     };
 
-    static PyType_Spec type_spec_LocalLocationFinderResult =
-    {
+    static PyType_Spec type_spec_LocalLocationFinderResult = {
         "winrt._winrt_windows_services_maps_localsearch.LocalLocationFinderResult",
         sizeof(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LocalLocationFinderResult
-    };
+        _type_slots_LocalLocationFinderResult};
 
     // ----- LocalLocationHoursOfOperationItem class --------------------
 
@@ -816,14 +808,12 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { },
     };
 
-    static PyType_Spec type_spec_LocalLocationHoursOfOperationItem =
-    {
+    static PyType_Spec type_spec_LocalLocationHoursOfOperationItem = {
         "winrt._winrt_windows_services_maps_localsearch.LocalLocationHoursOfOperationItem",
         sizeof(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LocalLocationHoursOfOperationItem
-    };
+        _type_slots_LocalLocationHoursOfOperationItem};
 
     // ----- LocalLocationRatingInfo class --------------------
 
@@ -945,14 +935,12 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { },
     };
 
-    static PyType_Spec type_spec_LocalLocationRatingInfo =
-    {
+    static PyType_Spec type_spec_LocalLocationRatingInfo = {
         "winrt._winrt_windows_services_maps_localsearch.LocalLocationRatingInfo",
         sizeof(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocationRatingInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LocalLocationRatingInfo
-    };
+        _type_slots_LocalLocationRatingInfo};
 
     // ----- PlaceInfoHelper class --------------------
 
@@ -1010,14 +998,12 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { },
     };
 
-    static PyType_Spec type_spec_PlaceInfoHelper =
-    {
+    static PyType_Spec type_spec_PlaceInfoHelper = {
         "winrt._winrt_windows_services_maps_localsearch.PlaceInfoHelper",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlaceInfoHelper
-    };
+        _type_slots_PlaceInfoHelper};
 
     static PyGetSetDef getset_PlaceInfoHelper_Static[] = {
         { }

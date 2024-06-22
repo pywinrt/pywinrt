@@ -297,14 +297,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { },
     };
 
-    static PyType_Spec type_spec_Matrix3x2 =
-    {
+    static PyType_Spec type_spec_Matrix3x2 = {
         "winrt._winrt_windows_foundation_numerics.Matrix3x2",
         sizeof(py::wrapper::Windows::Foundation::Numerics::Matrix3x2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Matrix3x2
-    };
+        _type_slots_Matrix3x2};
 
     // ----- Matrix4x4 struct --------------------
 
@@ -948,14 +946,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { },
     };
 
-    static PyType_Spec type_spec_Matrix4x4 =
-    {
+    static PyType_Spec type_spec_Matrix4x4 = {
         "winrt._winrt_windows_foundation_numerics.Matrix4x4",
         sizeof(py::wrapper::Windows::Foundation::Numerics::Matrix4x4),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Matrix4x4
-    };
+        _type_slots_Matrix4x4};
 
     // ----- Plane struct --------------------
 
@@ -1109,14 +1105,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { },
     };
 
-    static PyType_Spec type_spec_Plane =
-    {
+    static PyType_Spec type_spec_Plane = {
         "winrt._winrt_windows_foundation_numerics.Plane",
         sizeof(py::wrapper::Windows::Foundation::Numerics::Plane),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Plane
-    };
+        _type_slots_Plane};
 
     // ----- Quaternion struct --------------------
 
@@ -1340,14 +1334,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { },
     };
 
-    static PyType_Spec type_spec_Quaternion =
-    {
+    static PyType_Spec type_spec_Quaternion = {
         "winrt._winrt_windows_foundation_numerics.Quaternion",
         sizeof(py::wrapper::Windows::Foundation::Numerics::Quaternion),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Quaternion
-    };
+        _type_slots_Quaternion};
 
     // ----- Rational struct --------------------
 
@@ -1501,14 +1493,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { },
     };
 
-    static PyType_Spec type_spec_Rational =
-    {
+    static PyType_Spec type_spec_Rational = {
         "winrt._winrt_windows_foundation_numerics.Rational",
         sizeof(py::wrapper::Windows::Foundation::Numerics::Rational),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Rational
-    };
+        _type_slots_Rational};
 
     // ----- Vector2 struct --------------------
 
@@ -1662,14 +1652,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { },
     };
 
-    static PyType_Spec type_spec_Vector2 =
-    {
+    static PyType_Spec type_spec_Vector2 = {
         "winrt._winrt_windows_foundation_numerics.Vector2",
         sizeof(py::wrapper::Windows::Foundation::Numerics::Vector2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Vector2
-    };
+        _type_slots_Vector2};
 
     // ----- Vector3 struct --------------------
 
@@ -1858,14 +1846,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { },
     };
 
-    static PyType_Spec type_spec_Vector3 =
-    {
+    static PyType_Spec type_spec_Vector3 = {
         "winrt._winrt_windows_foundation_numerics.Vector3",
         sizeof(py::wrapper::Windows::Foundation::Numerics::Vector3),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Vector3
-    };
+        _type_slots_Vector3};
 
     // ----- Vector4 struct --------------------
 
@@ -2089,14 +2075,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { },
     };
 
-    static PyType_Spec type_spec_Vector4 =
-    {
+    static PyType_Spec type_spec_Vector4 = {
         "winrt._winrt_windows_foundation_numerics.Vector4",
         sizeof(py::wrapper::Windows::Foundation::Numerics::Vector4),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Vector4
-    };
+        _type_slots_Vector4};
 
     // ----- Windows.Foundation.Numerics Initialization --------------------
 

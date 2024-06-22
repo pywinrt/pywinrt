@@ -177,14 +177,12 @@ namespace py::cpp::Windows::Graphics::Capture
         { },
     };
 
-    static PyType_Spec type_spec_Direct3D11CaptureFrame =
-    {
+    static PyType_Spec type_spec_Direct3D11CaptureFrame = {
         "winrt._winrt_windows_graphics_capture.Direct3D11CaptureFrame",
         sizeof(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFrame),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Direct3D11CaptureFrame
-    };
+        _type_slots_Direct3D11CaptureFrame};
 
     // ----- Direct3D11CaptureFramePool class --------------------
 
@@ -529,14 +527,12 @@ namespace py::cpp::Windows::Graphics::Capture
         { },
     };
 
-    static PyType_Spec type_spec_Direct3D11CaptureFramePool =
-    {
+    static PyType_Spec type_spec_Direct3D11CaptureFramePool = {
         "winrt._winrt_windows_graphics_capture.Direct3D11CaptureFramePool",
         sizeof(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFramePool),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Direct3D11CaptureFramePool
-    };
+        _type_slots_Direct3D11CaptureFramePool};
 
     static PyGetSetDef getset_Direct3D11CaptureFramePool_Static[] = {
         { }
@@ -621,14 +617,12 @@ namespace py::cpp::Windows::Graphics::Capture
         { },
     };
 
-    static PyType_Spec type_spec_GraphicsCaptureAccess =
-    {
+    static PyType_Spec type_spec_GraphicsCaptureAccess = {
         "winrt._winrt_windows_graphics_capture.GraphicsCaptureAccess",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GraphicsCaptureAccess
-    };
+        _type_slots_GraphicsCaptureAccess};
 
     static PyGetSetDef getset_GraphicsCaptureAccess_Static[] = {
         { }
@@ -894,14 +888,12 @@ namespace py::cpp::Windows::Graphics::Capture
         { },
     };
 
-    static PyType_Spec type_spec_GraphicsCaptureItem =
-    {
+    static PyType_Spec type_spec_GraphicsCaptureItem = {
         "winrt._winrt_windows_graphics_capture.GraphicsCaptureItem",
         sizeof(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GraphicsCaptureItem
-    };
+        _type_slots_GraphicsCaptureItem};
 
     static PyGetSetDef getset_GraphicsCaptureItem_Static[] = {
         { }
@@ -1043,14 +1035,12 @@ namespace py::cpp::Windows::Graphics::Capture
         { },
     };
 
-    static PyType_Spec type_spec_GraphicsCapturePicker =
-    {
+    static PyType_Spec type_spec_GraphicsCapturePicker = {
         "winrt._winrt_windows_graphics_capture.GraphicsCapturePicker",
         sizeof(py::wrapper::Windows::Graphics::Capture::GraphicsCapturePicker),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GraphicsCapturePicker
-    };
+        _type_slots_GraphicsCapturePicker};
 
     // ----- GraphicsCaptureSession class --------------------
 
@@ -1320,14 +1310,12 @@ namespace py::cpp::Windows::Graphics::Capture
         { },
     };
 
-    static PyType_Spec type_spec_GraphicsCaptureSession =
-    {
+    static PyType_Spec type_spec_GraphicsCaptureSession = {
         "winrt._winrt_windows_graphics_capture.GraphicsCaptureSession",
         sizeof(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GraphicsCaptureSession
-    };
+        _type_slots_GraphicsCaptureSession};
 
     static PyGetSetDef getset_GraphicsCaptureSession_Static[] = {
         { }

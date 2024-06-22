@@ -328,14 +328,12 @@ namespace py::cpp::Windows::Storage::AccessCache
         { },
     };
 
-    static PyType_Spec type_spec_AccessListEntryView =
-    {
+    static PyType_Spec type_spec_AccessListEntryView = {
         "winrt._winrt_windows_storage_accesscache.AccessListEntryView",
         sizeof(py::wrapper::Windows::Storage::AccessCache::AccessListEntryView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AccessListEntryView
-    };
+        _type_slots_AccessListEntryView};
 
     // ----- ItemRemovedEventArgs class --------------------
 
@@ -417,14 +415,12 @@ namespace py::cpp::Windows::Storage::AccessCache
         { },
     };
 
-    static PyType_Spec type_spec_ItemRemovedEventArgs =
-    {
+    static PyType_Spec type_spec_ItemRemovedEventArgs = {
         "winrt._winrt_windows_storage_accesscache.ItemRemovedEventArgs",
         sizeof(py::wrapper::Windows::Storage::AccessCache::ItemRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ItemRemovedEventArgs
-    };
+        _type_slots_ItemRemovedEventArgs};
 
     // ----- StorageApplicationPermissions class --------------------
 
@@ -551,14 +547,12 @@ namespace py::cpp::Windows::Storage::AccessCache
         { },
     };
 
-    static PyType_Spec type_spec_StorageApplicationPermissions =
-    {
+    static PyType_Spec type_spec_StorageApplicationPermissions = {
         "winrt._winrt_windows_storage_accesscache.StorageApplicationPermissions",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageApplicationPermissions
-    };
+        _type_slots_StorageApplicationPermissions};
 
     static PyGetSetDef getset_StorageApplicationPermissions_Static[] = {
         { "future_access_list", reinterpret_cast<getter>(StorageApplicationPermissions_get_FutureAccessList), nullptr, nullptr, nullptr },
@@ -1086,14 +1080,12 @@ namespace py::cpp::Windows::Storage::AccessCache
         { },
     };
 
-    static PyType_Spec type_spec_StorageItemAccessList =
-    {
+    static PyType_Spec type_spec_StorageItemAccessList = {
         "winrt._winrt_windows_storage_accesscache.StorageItemAccessList",
         sizeof(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageItemAccessList
-    };
+        _type_slots_StorageItemAccessList};
 
     // ----- StorageItemMostRecentlyUsedList class --------------------
 
@@ -1683,14 +1675,12 @@ namespace py::cpp::Windows::Storage::AccessCache
         { },
     };
 
-    static PyType_Spec type_spec_StorageItemMostRecentlyUsedList =
-    {
+    static PyType_Spec type_spec_StorageItemMostRecentlyUsedList = {
         "winrt._winrt_windows_storage_accesscache.StorageItemMostRecentlyUsedList",
         sizeof(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageItemMostRecentlyUsedList
-    };
+        _type_slots_StorageItemMostRecentlyUsedList};
 
     // ----- IStorageItemAccessList interface --------------------
 
@@ -2189,14 +2179,12 @@ namespace py::cpp::Windows::Storage::AccessCache
         { },
     };
 
-    static PyType_Spec type_spec_IStorageItemAccessList =
-    {
+    static PyType_Spec type_spec_IStorageItemAccessList = {
         "winrt._winrt_windows_storage_accesscache.IStorageItemAccessList",
         sizeof(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IStorageItemAccessList
-    };
+        _type_slots_IStorageItemAccessList};
 
     // ----- AccessListEntry struct --------------------
 
@@ -2350,14 +2338,12 @@ namespace py::cpp::Windows::Storage::AccessCache
         { },
     };
 
-    static PyType_Spec type_spec_AccessListEntry =
-    {
+    static PyType_Spec type_spec_AccessListEntry = {
         "winrt._winrt_windows_storage_accesscache.AccessListEntry",
         sizeof(py::wrapper::Windows::Storage::AccessCache::AccessListEntry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AccessListEntry
-    };
+        _type_slots_AccessListEntry};
 
     // ----- Windows.Storage.AccessCache Initialization --------------------
 

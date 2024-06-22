@@ -113,14 +113,12 @@ namespace py::cpp::Windows::Phone::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_BackPressedEventArgs =
-    {
+    static PyType_Spec type_spec_BackPressedEventArgs = {
         "winrt._winrt_windows_phone_ui_input.BackPressedEventArgs",
         sizeof(py::wrapper::Windows::Phone::UI::Input::BackPressedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackPressedEventArgs
-    };
+        _type_slots_BackPressedEventArgs};
 
     // ----- CameraEventArgs class --------------------
 
@@ -182,14 +180,12 @@ namespace py::cpp::Windows::Phone::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_CameraEventArgs =
-    {
+    static PyType_Spec type_spec_CameraEventArgs = {
         "winrt._winrt_windows_phone_ui_input.CameraEventArgs",
         sizeof(py::wrapper::Windows::Phone::UI::Input::CameraEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CameraEventArgs
-    };
+        _type_slots_CameraEventArgs};
 
     // ----- HardwareButtons class --------------------
 
@@ -396,14 +392,12 @@ namespace py::cpp::Windows::Phone::UI::Input
         { },
     };
 
-    static PyType_Spec type_spec_HardwareButtons =
-    {
+    static PyType_Spec type_spec_HardwareButtons = {
         "winrt._winrt_windows_phone_ui_input.HardwareButtons",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HardwareButtons
-    };
+        _type_slots_HardwareButtons};
 
     static PyGetSetDef getset_HardwareButtons_Static[] = {
         { }

@@ -288,14 +288,12 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
         { },
     };
 
-    static PyType_Spec type_spec_Geofence =
-    {
+    static PyType_Spec type_spec_Geofence = {
         "winrt._winrt_windows_devices_geolocation_geofencing.Geofence",
         sizeof(py::wrapper::Windows::Devices::Geolocation::Geofencing::Geofence),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Geofence
-    };
+        _type_slots_Geofence};
 
     // ----- GeofenceMonitor class --------------------
 
@@ -556,14 +554,12 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
         { },
     };
 
-    static PyType_Spec type_spec_GeofenceMonitor =
-    {
+    static PyType_Spec type_spec_GeofenceMonitor = {
         "winrt._winrt_windows_devices_geolocation_geofencing.GeofenceMonitor",
         sizeof(py::wrapper::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GeofenceMonitor
-    };
+        _type_slots_GeofenceMonitor};
 
     static PyGetSetDef getset_GeofenceMonitor_Static[] = {
         { "current", reinterpret_cast<getter>(GeofenceMonitor_get_Current), nullptr, nullptr, nullptr },
@@ -731,14 +727,12 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
         { },
     };
 
-    static PyType_Spec type_spec_GeofenceStateChangeReport =
-    {
+    static PyType_Spec type_spec_GeofenceStateChangeReport = {
         "winrt._winrt_windows_devices_geolocation_geofencing.GeofenceStateChangeReport",
         sizeof(py::wrapper::Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GeofenceStateChangeReport
-    };
+        _type_slots_GeofenceStateChangeReport};
 
     // ----- Windows.Devices.Geolocation.Geofencing Initialization --------------------
 

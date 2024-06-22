@@ -369,14 +369,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintBindingOptionDetails =
-    {
+    static PyType_Spec type_spec_PrintBindingOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintBindingOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintBindingOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintBindingOptionDetails
-    };
+        _type_slots_PrintBindingOptionDetails};
 
     // ----- PrintBorderingOptionDetails class --------------------
 
@@ -742,14 +740,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintBorderingOptionDetails =
-    {
+    static PyType_Spec type_spec_PrintBorderingOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintBorderingOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintBorderingOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintBorderingOptionDetails
-    };
+        _type_slots_PrintBorderingOptionDetails};
 
     // ----- PrintCollationOptionDetails class --------------------
 
@@ -1115,14 +1111,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintCollationOptionDetails =
-    {
+    static PyType_Spec type_spec_PrintCollationOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintCollationOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCollationOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintCollationOptionDetails
-    };
+        _type_slots_PrintCollationOptionDetails};
 
     // ----- PrintColorModeOptionDetails class --------------------
 
@@ -1488,14 +1482,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintColorModeOptionDetails =
-    {
+    static PyType_Spec type_spec_PrintColorModeOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintColorModeOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintColorModeOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintColorModeOptionDetails
-    };
+        _type_slots_PrintColorModeOptionDetails};
 
     // ----- PrintCopiesOptionDetails class --------------------
 
@@ -1881,14 +1873,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintCopiesOptionDetails =
-    {
+    static PyType_Spec type_spec_PrintCopiesOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintCopiesOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCopiesOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintCopiesOptionDetails
-    };
+        _type_slots_PrintCopiesOptionDetails};
 
     // ----- PrintCustomItemDetails class --------------------
 
@@ -2018,14 +2008,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintCustomItemDetails =
-    {
+    static PyType_Spec type_spec_PrintCustomItemDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintCustomItemDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomItemDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintCustomItemDetails
-    };
+        _type_slots_PrintCustomItemDetails};
 
     // ----- PrintCustomItemListOptionDetails class --------------------
 
@@ -2497,14 +2485,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintCustomItemListOptionDetails =
-    {
+    static PyType_Spec type_spec_PrintCustomItemListOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintCustomItemListOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintCustomItemListOptionDetails
-    };
+        _type_slots_PrintCustomItemListOptionDetails};
 
     // ----- PrintCustomTextOptionDetails class --------------------
 
@@ -2946,14 +2932,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintCustomTextOptionDetails =
-    {
+    static PyType_Spec type_spec_PrintCustomTextOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintCustomTextOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintCustomTextOptionDetails
-    };
+        _type_slots_PrintCustomTextOptionDetails};
 
     // ----- PrintCustomToggleOptionDetails class --------------------
 
@@ -3347,14 +3331,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintCustomToggleOptionDetails =
-    {
+    static PyType_Spec type_spec_PrintCustomToggleOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintCustomToggleOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintCustomToggleOptionDetails
-    };
+        _type_slots_PrintCustomToggleOptionDetails};
 
     // ----- PrintDuplexOptionDetails class --------------------
 
@@ -3720,14 +3702,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintDuplexOptionDetails =
-    {
+    static PyType_Spec type_spec_PrintDuplexOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintDuplexOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintDuplexOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintDuplexOptionDetails
-    };
+        _type_slots_PrintDuplexOptionDetails};
 
     // ----- PrintHolePunchOptionDetails class --------------------
 
@@ -4093,14 +4073,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintHolePunchOptionDetails =
-    {
+    static PyType_Spec type_spec_PrintHolePunchOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintHolePunchOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintHolePunchOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintHolePunchOptionDetails
-    };
+        _type_slots_PrintHolePunchOptionDetails};
 
     // ----- PrintMediaSizeOptionDetails class --------------------
 
@@ -4466,14 +4444,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintMediaSizeOptionDetails =
-    {
+    static PyType_Spec type_spec_PrintMediaSizeOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintMediaSizeOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintMediaSizeOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintMediaSizeOptionDetails
-    };
+        _type_slots_PrintMediaSizeOptionDetails};
 
     // ----- PrintMediaTypeOptionDetails class --------------------
 
@@ -4839,14 +4815,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintMediaTypeOptionDetails =
-    {
+    static PyType_Spec type_spec_PrintMediaTypeOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintMediaTypeOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintMediaTypeOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintMediaTypeOptionDetails
-    };
+        _type_slots_PrintMediaTypeOptionDetails};
 
     // ----- PrintOrientationOptionDetails class --------------------
 
@@ -5212,14 +5186,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintOrientationOptionDetails =
-    {
+    static PyType_Spec type_spec_PrintOrientationOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintOrientationOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintOrientationOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintOrientationOptionDetails
-    };
+        _type_slots_PrintOrientationOptionDetails};
 
     // ----- PrintPageRangeOptionDetails class --------------------
 
@@ -5565,14 +5537,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintPageRangeOptionDetails =
-    {
+    static PyType_Spec type_spec_PrintPageRangeOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintPageRangeOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintPageRangeOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintPageRangeOptionDetails
-    };
+        _type_slots_PrintPageRangeOptionDetails};
 
     // ----- PrintQualityOptionDetails class --------------------
 
@@ -5938,14 +5908,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintQualityOptionDetails =
-    {
+    static PyType_Spec type_spec_PrintQualityOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintQualityOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintQualityOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintQualityOptionDetails
-    };
+        _type_slots_PrintQualityOptionDetails};
 
     // ----- PrintStapleOptionDetails class --------------------
 
@@ -6311,14 +6279,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintStapleOptionDetails =
-    {
+    static PyType_Spec type_spec_PrintStapleOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintStapleOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintStapleOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintStapleOptionDetails
-    };
+        _type_slots_PrintStapleOptionDetails};
 
     // ----- PrintTaskOptionChangedEventArgs class --------------------
 
@@ -6400,14 +6366,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintTaskOptionChangedEventArgs =
-    {
+    static PyType_Spec type_spec_PrintTaskOptionChangedEventArgs = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintTaskOptionChangedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintTaskOptionChangedEventArgs
-    };
+        _type_slots_PrintTaskOptionChangedEventArgs};
 
     // ----- PrintTaskOptionDetails class --------------------
 
@@ -6761,14 +6725,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_PrintTaskOptionDetails =
-    {
+    static PyType_Spec type_spec_PrintTaskOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.PrintTaskOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintTaskOptionDetails
-    };
+        _type_slots_PrintTaskOptionDetails};
 
     static PyGetSetDef getset_PrintTaskOptionDetails_Static[] = {
         { }
@@ -7092,14 +7054,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_IPrintCustomOptionDetails =
-    {
+    static PyType_Spec type_spec_IPrintCustomOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.IPrintCustomOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IPrintCustomOptionDetails
-    };
+        _type_slots_IPrintCustomOptionDetails};
 
     // ----- IPrintItemListOptionDetails interface --------------------
 
@@ -7369,14 +7329,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_IPrintItemListOptionDetails =
-    {
+    static PyType_Spec type_spec_IPrintItemListOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.IPrintItemListOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IPrintItemListOptionDetails
-    };
+        _type_slots_IPrintItemListOptionDetails};
 
     // ----- IPrintNumberOptionDetails interface --------------------
 
@@ -7666,14 +7624,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_IPrintNumberOptionDetails =
-    {
+    static PyType_Spec type_spec_IPrintNumberOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.IPrintNumberOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IPrintNumberOptionDetails
-    };
+        _type_slots_IPrintNumberOptionDetails};
 
     // ----- IPrintOptionDetails interface --------------------
 
@@ -7923,14 +7879,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_IPrintOptionDetails =
-    {
+    static PyType_Spec type_spec_IPrintOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.IPrintOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IPrintOptionDetails
-    };
+        _type_slots_IPrintOptionDetails};
 
     // ----- IPrintTextOptionDetails interface --------------------
 
@@ -8200,14 +8154,12 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
         { },
     };
 
-    static PyType_Spec type_spec_IPrintTextOptionDetails =
-    {
+    static PyType_Spec type_spec_IPrintTextOptionDetails = {
         "winrt._winrt_windows_graphics_printing_optiondetails.IPrintTextOptionDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IPrintTextOptionDetails
-    };
+        _type_slots_IPrintTextOptionDetails};
 
     // ----- Windows.Graphics.Printing.OptionDetails Initialization --------------------
 

@@ -197,14 +197,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
         { },
     };
 
-    static PyType_Spec type_spec_IndexedResourceCandidate =
-    {
+    static PyType_Spec type_spec_IndexedResourceCandidate = {
         "winrt._winrt_windows_applicationmodel_resources_management.IndexedResourceCandidate",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IndexedResourceCandidate
-    };
+        _type_slots_IndexedResourceCandidate};
 
     // ----- IndexedResourceQualifier class --------------------
 
@@ -306,14 +304,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
         { },
     };
 
-    static PyType_Spec type_spec_IndexedResourceQualifier =
-    {
+    static PyType_Spec type_spec_IndexedResourceQualifier = {
         "winrt._winrt_windows_applicationmodel_resources_management.IndexedResourceQualifier",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Management::IndexedResourceQualifier),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IndexedResourceQualifier
-    };
+        _type_slots_IndexedResourceQualifier};
 
     // ----- ResourceIndexer class --------------------
 
@@ -479,14 +475,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
         { },
     };
 
-    static PyType_Spec type_spec_ResourceIndexer =
-    {
+    static PyType_Spec type_spec_ResourceIndexer = {
         "winrt._winrt_windows_applicationmodel_resources_management.ResourceIndexer",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Management::ResourceIndexer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResourceIndexer
-    };
+        _type_slots_ResourceIndexer};
 
     // ----- Windows.ApplicationModel.Resources.Management Initialization --------------------
 

@@ -209,14 +209,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_BitmapBuffer =
-    {
+    static PyType_Spec type_spec_BitmapBuffer = {
         "winrt._winrt_windows_graphics_imaging.BitmapBuffer",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapBuffer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BitmapBuffer
-    };
+        _type_slots_BitmapBuffer};
 
     // ----- BitmapCodecInformation class --------------------
 
@@ -358,14 +356,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_BitmapCodecInformation =
-    {
+    static PyType_Spec type_spec_BitmapCodecInformation = {
         "winrt._winrt_windows_graphics_imaging.BitmapCodecInformation",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapCodecInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BitmapCodecInformation
-    };
+        _type_slots_BitmapCodecInformation};
 
     // ----- BitmapDecoder class --------------------
 
@@ -1140,14 +1136,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_BitmapDecoder =
-    {
+    static PyType_Spec type_spec_BitmapDecoder = {
         "winrt._winrt_windows_graphics_imaging.BitmapDecoder",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BitmapDecoder
-    };
+        _type_slots_BitmapDecoder};
 
     static PyGetSetDef getset_BitmapDecoder_Static[] = {
         { "bmp_decoder_id", reinterpret_cast<getter>(BitmapDecoder_get_BmpDecoderId), nullptr, nullptr, nullptr },
@@ -1900,14 +1894,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_BitmapEncoder =
-    {
+    static PyType_Spec type_spec_BitmapEncoder = {
         "winrt._winrt_windows_graphics_imaging.BitmapEncoder",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BitmapEncoder
-    };
+        _type_slots_BitmapEncoder};
 
     static PyGetSetDef getset_BitmapEncoder_Static[] = {
         { "bmp_encoder_id", reinterpret_cast<getter>(BitmapEncoder_get_BmpEncoderId), nullptr, nullptr, nullptr },
@@ -2344,14 +2336,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_BitmapFrame =
-    {
+    static PyType_Spec type_spec_BitmapFrame = {
         "winrt._winrt_windows_graphics_imaging.BitmapFrame",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapFrame),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BitmapFrame
-    };
+        _type_slots_BitmapFrame};
 
     // ----- BitmapProperties class --------------------
 
@@ -2477,14 +2467,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_BitmapProperties =
-    {
+    static PyType_Spec type_spec_BitmapProperties = {
         "winrt._winrt_windows_graphics_imaging.BitmapProperties",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BitmapProperties
-    };
+        _type_slots_BitmapProperties};
 
     // ----- BitmapPropertiesView class --------------------
 
@@ -2578,14 +2566,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_BitmapPropertiesView =
-    {
+    static PyType_Spec type_spec_BitmapPropertiesView = {
         "winrt._winrt_windows_graphics_imaging.BitmapPropertiesView",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapPropertiesView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BitmapPropertiesView
-    };
+        _type_slots_BitmapPropertiesView};
 
     // ----- BitmapPropertySet class --------------------
 
@@ -3016,14 +3002,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_BitmapPropertySet =
-    {
+    static PyType_Spec type_spec_BitmapPropertySet = {
         "winrt._winrt_windows_graphics_imaging.BitmapPropertySet",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapPropertySet),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BitmapPropertySet
-    };
+        _type_slots_BitmapPropertySet};
 
     // ----- BitmapTransform class --------------------
 
@@ -3395,14 +3379,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_BitmapTransform =
-    {
+    static PyType_Spec type_spec_BitmapTransform = {
         "winrt._winrt_windows_graphics_imaging.BitmapTransform",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapTransform),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BitmapTransform
-    };
+        _type_slots_BitmapTransform};
 
     // ----- BitmapTypedValue class --------------------
 
@@ -3529,14 +3511,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_BitmapTypedValue =
-    {
+    static PyType_Spec type_spec_BitmapTypedValue = {
         "winrt._winrt_windows_graphics_imaging.BitmapTypedValue",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapTypedValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BitmapTypedValue
-    };
+        _type_slots_BitmapTypedValue};
 
     // ----- ImageStream class --------------------
 
@@ -4001,14 +3981,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_ImageStream =
-    {
+    static PyType_Spec type_spec_ImageStream = {
         "winrt._winrt_windows_graphics_imaging.ImageStream",
         sizeof(py::wrapper::Windows::Graphics::Imaging::ImageStream),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ImageStream
-    };
+        _type_slots_ImageStream};
 
     // ----- PixelDataProvider class --------------------
 
@@ -4100,14 +4078,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_PixelDataProvider =
-    {
+    static PyType_Spec type_spec_PixelDataProvider = {
         "winrt._winrt_windows_graphics_imaging.PixelDataProvider",
         sizeof(py::wrapper::Windows::Graphics::Imaging::PixelDataProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PixelDataProvider
-    };
+        _type_slots_PixelDataProvider};
 
     // ----- SoftwareBitmap class --------------------
 
@@ -4817,14 +4793,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_SoftwareBitmap =
-    {
+    static PyType_Spec type_spec_SoftwareBitmap = {
         "winrt._winrt_windows_graphics_imaging.SoftwareBitmap",
         sizeof(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SoftwareBitmap
-    };
+        _type_slots_SoftwareBitmap};
 
     static PyGetSetDef getset_SoftwareBitmap_Static[] = {
         { }
@@ -5179,14 +5153,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_IBitmapFrame =
-    {
+    static PyType_Spec type_spec_IBitmapFrame = {
         "winrt._winrt_windows_graphics_imaging.IBitmapFrame",
         sizeof(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBitmapFrame
-    };
+        _type_slots_IBitmapFrame};
 
     // ----- IBitmapFrameWithSoftwareBitmap interface --------------------
 
@@ -5587,14 +5559,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_IBitmapFrameWithSoftwareBitmap =
-    {
+    static PyType_Spec type_spec_IBitmapFrameWithSoftwareBitmap = {
         "winrt._winrt_windows_graphics_imaging.IBitmapFrameWithSoftwareBitmap",
         sizeof(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBitmapFrameWithSoftwareBitmap
-    };
+        _type_slots_IBitmapFrameWithSoftwareBitmap};
 
     // ----- IBitmapPropertiesView interface --------------------
 
@@ -5688,14 +5658,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_IBitmapPropertiesView =
-    {
+    static PyType_Spec type_spec_IBitmapPropertiesView = {
         "winrt._winrt_windows_graphics_imaging.IBitmapPropertiesView",
         sizeof(py::wrapper::Windows::Graphics::Imaging::IBitmapPropertiesView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBitmapPropertiesView
-    };
+        _type_slots_IBitmapPropertiesView};
 
     // ----- BitmapBounds struct --------------------
 
@@ -5919,14 +5887,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_BitmapBounds =
-    {
+    static PyType_Spec type_spec_BitmapBounds = {
         "winrt._winrt_windows_graphics_imaging.BitmapBounds",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapBounds),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BitmapBounds
-    };
+        _type_slots_BitmapBounds};
 
     // ----- BitmapPlaneDescription struct --------------------
 
@@ -6150,14 +6116,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_BitmapPlaneDescription =
-    {
+    static PyType_Spec type_spec_BitmapPlaneDescription = {
         "winrt._winrt_windows_graphics_imaging.BitmapPlaneDescription",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BitmapPlaneDescription
-    };
+        _type_slots_BitmapPlaneDescription};
 
     // ----- BitmapSize struct --------------------
 
@@ -6311,14 +6275,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         { },
     };
 
-    static PyType_Spec type_spec_BitmapSize =
-    {
+    static PyType_Spec type_spec_BitmapSize = {
         "winrt._winrt_windows_graphics_imaging.BitmapSize",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapSize),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BitmapSize
-    };
+        _type_slots_BitmapSize};
 
     // ----- Windows.Graphics.Imaging Initialization --------------------
 

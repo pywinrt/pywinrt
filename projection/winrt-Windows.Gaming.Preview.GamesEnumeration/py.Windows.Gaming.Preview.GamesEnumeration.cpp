@@ -277,14 +277,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         { },
     };
 
-    static PyType_Spec type_spec_GameList =
-    {
+    static PyType_Spec type_spec_GameList = {
         "winrt._winrt_windows_gaming_preview_gamesenumeration.GameList",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameList
-    };
+        _type_slots_GameList};
 
     static PyGetSetDef getset_GameList_Static[] = {
         { }
@@ -681,14 +679,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         { },
     };
 
-    static PyType_Spec type_spec_GameListEntry =
-    {
+    static PyType_Spec type_spec_GameListEntry = {
         "winrt._winrt_windows_gaming_preview_gamesenumeration.GameListEntry",
         sizeof(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameListEntry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameListEntry
-    };
+        _type_slots_GameListEntry};
 
     // ----- GameModeConfiguration class --------------------
 
@@ -1184,14 +1180,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         { },
     };
 
-    static PyType_Spec type_spec_GameModeConfiguration =
-    {
+    static PyType_Spec type_spec_GameModeConfiguration = {
         "winrt._winrt_windows_gaming_preview_gamesenumeration.GameModeConfiguration",
         sizeof(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameModeConfiguration
-    };
+        _type_slots_GameModeConfiguration};
 
     // ----- GameModeUserConfiguration class --------------------
 
@@ -1332,14 +1326,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         { },
     };
 
-    static PyType_Spec type_spec_GameModeUserConfiguration =
-    {
+    static PyType_Spec type_spec_GameModeUserConfiguration = {
         "winrt._winrt_windows_gaming_preview_gamesenumeration.GameModeUserConfiguration",
         sizeof(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeUserConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameModeUserConfiguration
-    };
+        _type_slots_GameModeUserConfiguration};
 
     static PyGetSetDef getset_GameModeUserConfiguration_Static[] = {
         { }
@@ -1549,14 +1541,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         { },
     };
 
-    static PyType_Spec type_spec_IGameListEntry =
-    {
+    static PyType_Spec type_spec_IGameListEntry = {
         "winrt._winrt_windows_gaming_preview_gamesenumeration.IGameListEntry",
         sizeof(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IGameListEntry
-    };
+        _type_slots_IGameListEntry};
 
     // ----- Windows.Gaming.Preview.GamesEnumeration Initialization --------------------
 

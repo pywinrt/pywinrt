@@ -422,14 +422,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_AcrylicBrush =
-    {
+    static PyType_Spec type_spec_AcrylicBrush = {
         "winrt._winrt_microsoft_ui_xaml_media.AcrylicBrush",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::AcrylicBrush),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AcrylicBrush
-    };
+        _type_slots_AcrylicBrush};
 
     static PyGetSetDef getset_AcrylicBrush_Static[] = {
         { "always_use_fallback_property", reinterpret_cast<getter>(AcrylicBrush_get_AlwaysUseFallbackProperty), nullptr, nullptr, nullptr },
@@ -878,14 +876,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_ArcSegment =
-    {
+    static PyType_Spec type_spec_ArcSegment = {
         "winrt._winrt_microsoft_ui_xaml_media.ArcSegment",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::ArcSegment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ArcSegment
-    };
+        _type_slots_ArcSegment};
 
     static PyGetSetDef getset_ArcSegment_Static[] = {
         { "is_large_arc_property", reinterpret_cast<getter>(ArcSegment_get_IsLargeArcProperty), nullptr, nullptr, nullptr },
@@ -1200,14 +1196,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_BezierSegment =
-    {
+    static PyType_Spec type_spec_BezierSegment = {
         "winrt._winrt_microsoft_ui_xaml_media.BezierSegment",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::BezierSegment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BezierSegment
-    };
+        _type_slots_BezierSegment};
 
     static PyGetSetDef getset_BezierSegment_Static[] = {
         { "point1_property", reinterpret_cast<getter>(BezierSegment_get_Point1Property), nullptr, nullptr, nullptr },
@@ -1319,14 +1313,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_BitmapCache =
-    {
+    static PyType_Spec type_spec_BitmapCache = {
         "winrt._winrt_microsoft_ui_xaml_media.BitmapCache",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::BitmapCache),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BitmapCache
-    };
+        _type_slots_BitmapCache};
 
     // ----- Brush class --------------------
 
@@ -1623,14 +1615,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_Brush =
-    {
+    static PyType_Spec type_spec_Brush = {
         "winrt._winrt_microsoft_ui_xaml_media.Brush",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Brush),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Brush
-    };
+        _type_slots_Brush};
 
     static PyGetSetDef getset_Brush_Static[] = {
         { "opacity_property", reinterpret_cast<getter>(Brush_get_OpacityProperty), nullptr, nullptr, nullptr },
@@ -2287,14 +2277,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_BrushCollection =
-    {
+    static PyType_Spec type_spec_BrushCollection = {
         "winrt._winrt_microsoft_ui_xaml_media.BrushCollection",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::BrushCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BrushCollection
-    };
+        _type_slots_BrushCollection};
 
     // ----- CacheMode class --------------------
 
@@ -2356,14 +2344,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_CacheMode =
-    {
+    static PyType_Spec type_spec_CacheMode = {
         "winrt._winrt_microsoft_ui_xaml_media.CacheMode",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::CacheMode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CacheMode
-    };
+        _type_slots_CacheMode};
 
     // ----- CompositeTransform class --------------------
 
@@ -3050,14 +3036,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_CompositeTransform =
-    {
+    static PyType_Spec type_spec_CompositeTransform = {
         "winrt._winrt_microsoft_ui_xaml_media.CompositeTransform",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::CompositeTransform),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositeTransform
-    };
+        _type_slots_CompositeTransform};
 
     static PyGetSetDef getset_CompositeTransform_Static[] = {
         { "center_x_property", reinterpret_cast<getter>(CompositeTransform_get_CenterXProperty), nullptr, nullptr, nullptr },
@@ -3317,14 +3301,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_CompositionTarget =
-    {
+    static PyType_Spec type_spec_CompositionTarget = {
         "winrt._winrt_microsoft_ui_xaml_media.CompositionTarget",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::CompositionTarget),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionTarget
-    };
+        _type_slots_CompositionTarget};
 
     static PyGetSetDef getset_CompositionTarget_Static[] = {
         { }
@@ -3434,14 +3416,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_DesktopAcrylicBackdrop =
-    {
+    static PyType_Spec type_spec_DesktopAcrylicBackdrop = {
         "winrt._winrt_microsoft_ui_xaml_media.DesktopAcrylicBackdrop",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::DesktopAcrylicBackdrop),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DesktopAcrylicBackdrop
-    };
+        _type_slots_DesktopAcrylicBackdrop};
 
     // ----- DoubleCollection class --------------------
 
@@ -4070,14 +4050,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_DoubleCollection =
-    {
+    static PyType_Spec type_spec_DoubleCollection = {
         "winrt._winrt_microsoft_ui_xaml_media.DoubleCollection",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::DoubleCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DoubleCollection
-    };
+        _type_slots_DoubleCollection};
 
     // ----- EllipseGeometry class --------------------
 
@@ -4362,14 +4340,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_EllipseGeometry =
-    {
+    static PyType_Spec type_spec_EllipseGeometry = {
         "winrt._winrt_microsoft_ui_xaml_media.EllipseGeometry",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::EllipseGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EllipseGeometry
-    };
+        _type_slots_EllipseGeometry};
 
     static PyGetSetDef getset_EllipseGeometry_Static[] = {
         { "center_property", reinterpret_cast<getter>(EllipseGeometry_get_CenterProperty), nullptr, nullptr, nullptr },
@@ -4522,14 +4498,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_FontFamily =
-    {
+    static PyType_Spec type_spec_FontFamily = {
         "winrt._winrt_microsoft_ui_xaml_media.FontFamily",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::FontFamily),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FontFamily
-    };
+        _type_slots_FontFamily};
 
     static PyGetSetDef getset_FontFamily_Static[] = {
         { "xaml_auto_font_family", reinterpret_cast<getter>(FontFamily_get_XamlAutoFontFamily), nullptr, nullptr, nullptr },
@@ -4746,14 +4720,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_GeneralTransform =
-    {
+    static PyType_Spec type_spec_GeneralTransform = {
         "winrt._winrt_microsoft_ui_xaml_media.GeneralTransform",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::GeneralTransform),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GeneralTransform
-    };
+        _type_slots_GeneralTransform};
 
     // ----- Geometry class --------------------
 
@@ -4940,14 +4912,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_Geometry =
-    {
+    static PyType_Spec type_spec_Geometry = {
         "winrt._winrt_microsoft_ui_xaml_media.Geometry",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Geometry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Geometry
-    };
+        _type_slots_Geometry};
 
     static PyGetSetDef getset_Geometry_Static[] = {
         { "empty", reinterpret_cast<getter>(Geometry_get_Empty), nullptr, nullptr, nullptr },
@@ -5604,14 +5574,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_GeometryCollection =
-    {
+    static PyType_Spec type_spec_GeometryCollection = {
         "winrt._winrt_microsoft_ui_xaml_media.GeometryCollection",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::GeometryCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GeometryCollection
-    };
+        _type_slots_GeometryCollection};
 
     // ----- GeometryGroup class --------------------
 
@@ -5829,14 +5797,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_GeometryGroup =
-    {
+    static PyType_Spec type_spec_GeometryGroup = {
         "winrt._winrt_microsoft_ui_xaml_media.GeometryGroup",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::GeometryGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GeometryGroup
-    };
+        _type_slots_GeometryGroup};
 
     static PyGetSetDef getset_GeometryGroup_Static[] = {
         { "children_property", reinterpret_cast<getter>(GeometryGroup_get_ChildrenProperty), nullptr, nullptr, nullptr },
@@ -6193,14 +6159,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_GradientBrush =
-    {
+    static PyType_Spec type_spec_GradientBrush = {
         "winrt._winrt_microsoft_ui_xaml_media.GradientBrush",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::GradientBrush),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GradientBrush
-    };
+        _type_slots_GradientBrush};
 
     static PyGetSetDef getset_GradientBrush_Static[] = {
         { "color_interpolation_mode_property", reinterpret_cast<getter>(GradientBrush_get_ColorInterpolationModeProperty), nullptr, nullptr, nullptr },
@@ -6447,14 +6411,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_GradientStop =
-    {
+    static PyType_Spec type_spec_GradientStop = {
         "winrt._winrt_microsoft_ui_xaml_media.GradientStop",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::GradientStop),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GradientStop
-    };
+        _type_slots_GradientStop};
 
     static PyGetSetDef getset_GradientStop_Static[] = {
         { "color_property", reinterpret_cast<getter>(GradientStop_get_ColorProperty), nullptr, nullptr, nullptr },
@@ -7110,14 +7072,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_GradientStopCollection =
-    {
+    static PyType_Spec type_spec_GradientStopCollection = {
         "winrt._winrt_microsoft_ui_xaml_media.GradientStopCollection",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::GradientStopCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GradientStopCollection
-    };
+        _type_slots_GradientStopCollection};
 
     // ----- ImageBrush class --------------------
 
@@ -7358,14 +7318,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_ImageBrush =
-    {
+    static PyType_Spec type_spec_ImageBrush = {
         "winrt._winrt_microsoft_ui_xaml_media.ImageBrush",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::ImageBrush),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ImageBrush
-    };
+        _type_slots_ImageBrush};
 
     static PyGetSetDef getset_ImageBrush_Static[] = {
         { "image_source_property", reinterpret_cast<getter>(ImageBrush_get_ImageSourceProperty), nullptr, nullptr, nullptr },
@@ -7453,14 +7411,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_ImageSource =
-    {
+    static PyType_Spec type_spec_ImageSource = {
         "winrt._winrt_microsoft_ui_xaml_media.ImageSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::ImageSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ImageSource
-    };
+        _type_slots_ImageSource};
 
     // ----- LineGeometry class --------------------
 
@@ -7678,14 +7634,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_LineGeometry =
-    {
+    static PyType_Spec type_spec_LineGeometry = {
         "winrt._winrt_microsoft_ui_xaml_media.LineGeometry",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::LineGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LineGeometry
-    };
+        _type_slots_LineGeometry};
 
     static PyGetSetDef getset_LineGeometry_Static[] = {
         { "end_point_property", reinterpret_cast<getter>(LineGeometry_get_EndPointProperty), nullptr, nullptr, nullptr },
@@ -7863,14 +7817,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_LineSegment =
-    {
+    static PyType_Spec type_spec_LineSegment = {
         "winrt._winrt_microsoft_ui_xaml_media.LineSegment",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::LineSegment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LineSegment
-    };
+        _type_slots_LineSegment};
 
     static PyGetSetDef getset_LineSegment_Static[] = {
         { "point_property", reinterpret_cast<getter>(LineSegment_get_PointProperty), nullptr, nullptr, nullptr },
@@ -8130,14 +8082,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_LinearGradientBrush =
-    {
+    static PyType_Spec type_spec_LinearGradientBrush = {
         "winrt._winrt_microsoft_ui_xaml_media.LinearGradientBrush",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::LinearGradientBrush),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LinearGradientBrush
-    };
+        _type_slots_LinearGradientBrush};
 
     static PyGetSetDef getset_LinearGradientBrush_Static[] = {
         { "end_point_property", reinterpret_cast<getter>(LinearGradientBrush_get_EndPointProperty), nullptr, nullptr, nullptr },
@@ -8246,14 +8196,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_LoadedImageSourceLoadCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_LoadedImageSourceLoadCompletedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_media.LoadedImageSourceLoadCompletedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LoadedImageSourceLoadCompletedEventArgs
-    };
+        _type_slots_LoadedImageSourceLoadCompletedEventArgs};
 
     // ----- LoadedImageSurface class --------------------
 
@@ -8576,14 +8524,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_LoadedImageSurface =
-    {
+    static PyType_Spec type_spec_LoadedImageSurface = {
         "winrt._winrt_microsoft_ui_xaml_media.LoadedImageSurface",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::LoadedImageSurface),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LoadedImageSurface
-    };
+        _type_slots_LoadedImageSurface};
 
     static PyGetSetDef getset_LoadedImageSurface_Static[] = {
         { }
@@ -8761,14 +8707,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_Matrix3DProjection =
-    {
+    static PyType_Spec type_spec_Matrix3DProjection = {
         "winrt._winrt_microsoft_ui_xaml_media.Matrix3DProjection",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Matrix3DProjection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Matrix3DProjection
-    };
+        _type_slots_Matrix3DProjection};
 
     static PyGetSetDef getset_Matrix3DProjection_Static[] = {
         { "projection_matrix_property", reinterpret_cast<getter>(Matrix3DProjection_get_ProjectionMatrixProperty), nullptr, nullptr, nullptr },
@@ -8974,14 +8918,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_MatrixHelper =
-    {
+    static PyType_Spec type_spec_MatrixHelper = {
         "winrt._winrt_microsoft_ui_xaml_media.MatrixHelper",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::MatrixHelper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MatrixHelper
-    };
+        _type_slots_MatrixHelper};
 
     static PyGetSetDef getset_MatrixHelper_Static[] = {
         { "identity", reinterpret_cast<getter>(MatrixHelper_get_Identity), nullptr, nullptr, nullptr },
@@ -9161,14 +9103,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_MatrixTransform =
-    {
+    static PyType_Spec type_spec_MatrixTransform = {
         "winrt._winrt_microsoft_ui_xaml_media.MatrixTransform",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::MatrixTransform),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MatrixTransform
-    };
+        _type_slots_MatrixTransform};
 
     static PyGetSetDef getset_MatrixTransform_Static[] = {
         { "matrix_property", reinterpret_cast<getter>(MatrixTransform_get_MatrixProperty), nullptr, nullptr, nullptr },
@@ -9319,14 +9259,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_MediaTransportControlsThumbnailRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_MediaTransportControlsThumbnailRequestedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_media.MediaTransportControlsThumbnailRequestedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::MediaTransportControlsThumbnailRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaTransportControlsThumbnailRequestedEventArgs
-    };
+        _type_slots_MediaTransportControlsThumbnailRequestedEventArgs};
 
     // ----- MicaBackdrop class --------------------
 
@@ -9477,14 +9415,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_MicaBackdrop =
-    {
+    static PyType_Spec type_spec_MicaBackdrop = {
         "winrt._winrt_microsoft_ui_xaml_media.MicaBackdrop",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::MicaBackdrop),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MicaBackdrop
-    };
+        _type_slots_MicaBackdrop};
 
     static PyGetSetDef getset_MicaBackdrop_Static[] = {
         { "kind_property", reinterpret_cast<getter>(MicaBackdrop_get_KindProperty), nullptr, nullptr, nullptr },
@@ -9862,14 +9798,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_PathFigure =
-    {
+    static PyType_Spec type_spec_PathFigure = {
         "winrt._winrt_microsoft_ui_xaml_media.PathFigure",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::PathFigure),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PathFigure
-    };
+        _type_slots_PathFigure};
 
     static PyGetSetDef getset_PathFigure_Static[] = {
         { "is_closed_property", reinterpret_cast<getter>(PathFigure_get_IsClosedProperty), nullptr, nullptr, nullptr },
@@ -10527,14 +10461,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_PathFigureCollection =
-    {
+    static PyType_Spec type_spec_PathFigureCollection = {
         "winrt._winrt_microsoft_ui_xaml_media.PathFigureCollection",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::PathFigureCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PathFigureCollection
-    };
+        _type_slots_PathFigureCollection};
 
     // ----- PathGeometry class --------------------
 
@@ -10752,14 +10684,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_PathGeometry =
-    {
+    static PyType_Spec type_spec_PathGeometry = {
         "winrt._winrt_microsoft_ui_xaml_media.PathGeometry",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::PathGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PathGeometry
-    };
+        _type_slots_PathGeometry};
 
     static PyGetSetDef getset_PathGeometry_Static[] = {
         { "figures_property", reinterpret_cast<getter>(PathGeometry_get_FiguresProperty), nullptr, nullptr, nullptr },
@@ -10848,14 +10778,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_PathSegment =
-    {
+    static PyType_Spec type_spec_PathSegment = {
         "winrt._winrt_microsoft_ui_xaml_media.PathSegment",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::PathSegment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PathSegment
-    };
+        _type_slots_PathSegment};
 
     // ----- PathSegmentCollection class --------------------
 
@@ -11484,14 +11412,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_PathSegmentCollection =
-    {
+    static PyType_Spec type_spec_PathSegmentCollection = {
         "winrt._winrt_microsoft_ui_xaml_media.PathSegmentCollection",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::PathSegmentCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PathSegmentCollection
-    };
+        _type_slots_PathSegmentCollection};
 
     // ----- PlaneProjection class --------------------
 
@@ -12418,14 +12344,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_PlaneProjection =
-    {
+    static PyType_Spec type_spec_PlaneProjection = {
         "winrt._winrt_microsoft_ui_xaml_media.PlaneProjection",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::PlaneProjection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlaneProjection
-    };
+        _type_slots_PlaneProjection};
 
     static PyGetSetDef getset_PlaneProjection_Static[] = {
         { "center_of_rotation_x_property", reinterpret_cast<getter>(PlaneProjection_get_CenterOfRotationXProperty), nullptr, nullptr, nullptr },
@@ -13092,14 +13016,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_PointCollection =
-    {
+    static PyType_Spec type_spec_PointCollection = {
         "winrt._winrt_microsoft_ui_xaml_media.PointCollection",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::PointCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PointCollection
-    };
+        _type_slots_PointCollection};
 
     // ----- PolyBezierSegment class --------------------
 
@@ -13250,14 +13172,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_PolyBezierSegment =
-    {
+    static PyType_Spec type_spec_PolyBezierSegment = {
         "winrt._winrt_microsoft_ui_xaml_media.PolyBezierSegment",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::PolyBezierSegment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PolyBezierSegment
-    };
+        _type_slots_PolyBezierSegment};
 
     static PyGetSetDef getset_PolyBezierSegment_Static[] = {
         { "points_property", reinterpret_cast<getter>(PolyBezierSegment_get_PointsProperty), nullptr, nullptr, nullptr },
@@ -13434,14 +13354,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_PolyLineSegment =
-    {
+    static PyType_Spec type_spec_PolyLineSegment = {
         "winrt._winrt_microsoft_ui_xaml_media.PolyLineSegment",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::PolyLineSegment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PolyLineSegment
-    };
+        _type_slots_PolyLineSegment};
 
     static PyGetSetDef getset_PolyLineSegment_Static[] = {
         { "points_property", reinterpret_cast<getter>(PolyLineSegment_get_PointsProperty), nullptr, nullptr, nullptr },
@@ -13618,14 +13536,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_PolyQuadraticBezierSegment =
-    {
+    static PyType_Spec type_spec_PolyQuadraticBezierSegment = {
         "winrt._winrt_microsoft_ui_xaml_media.PolyQuadraticBezierSegment",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::PolyQuadraticBezierSegment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PolyQuadraticBezierSegment
-    };
+        _type_slots_PolyQuadraticBezierSegment};
 
     static PyGetSetDef getset_PolyQuadraticBezierSegment_Static[] = {
         { "points_property", reinterpret_cast<getter>(PolyQuadraticBezierSegment_get_PointsProperty), nullptr, nullptr, nullptr },
@@ -13713,14 +13629,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_Projection =
-    {
+    static PyType_Spec type_spec_Projection = {
         "winrt._winrt_microsoft_ui_xaml_media.Projection",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Projection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Projection
-    };
+        _type_slots_Projection};
 
     // ----- QuadraticBezierSegment class --------------------
 
@@ -13938,14 +13852,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_QuadraticBezierSegment =
-    {
+    static PyType_Spec type_spec_QuadraticBezierSegment = {
         "winrt._winrt_microsoft_ui_xaml_media.QuadraticBezierSegment",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::QuadraticBezierSegment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_QuadraticBezierSegment
-    };
+        _type_slots_QuadraticBezierSegment};
 
     static PyGetSetDef getset_QuadraticBezierSegment_Static[] = {
         { "point1_property", reinterpret_cast<getter>(QuadraticBezierSegment_get_Point1Property), nullptr, nullptr, nullptr },
@@ -14545,14 +14457,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_RadialGradientBrush =
-    {
+    static PyType_Spec type_spec_RadialGradientBrush = {
         "winrt._winrt_microsoft_ui_xaml_media.RadialGradientBrush",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::RadialGradientBrush),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RadialGradientBrush
-    };
+        _type_slots_RadialGradientBrush};
 
     static PyGetSetDef getset_RadialGradientBrush_Static[] = {
         { "center_property", reinterpret_cast<getter>(RadialGradientBrush_get_CenterProperty), nullptr, nullptr, nullptr },
@@ -14735,14 +14645,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_RectangleGeometry =
-    {
+    static PyType_Spec type_spec_RectangleGeometry = {
         "winrt._winrt_microsoft_ui_xaml_media.RectangleGeometry",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::RectangleGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RectangleGeometry
-    };
+        _type_slots_RectangleGeometry};
 
     static PyGetSetDef getset_RectangleGeometry_Static[] = {
         { "rect_property", reinterpret_cast<getter>(RectangleGeometry_get_RectProperty), nullptr, nullptr, nullptr },
@@ -14850,14 +14758,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_RenderedEventArgs =
-    {
+    static PyType_Spec type_spec_RenderedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_media.RenderedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::RenderedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RenderedEventArgs
-    };
+        _type_slots_RenderedEventArgs};
 
     // ----- RenderingEventArgs class --------------------
 
@@ -14939,14 +14845,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_RenderingEventArgs =
-    {
+    static PyType_Spec type_spec_RenderingEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_media.RenderingEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::RenderingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RenderingEventArgs
-    };
+        _type_slots_RenderingEventArgs};
 
     // ----- RotateTransform class --------------------
 
@@ -15231,14 +15135,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_RotateTransform =
-    {
+    static PyType_Spec type_spec_RotateTransform = {
         "winrt._winrt_microsoft_ui_xaml_media.RotateTransform",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::RotateTransform),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RotateTransform
-    };
+        _type_slots_RotateTransform};
 
     static PyGetSetDef getset_RotateTransform_Static[] = {
         { "angle_property", reinterpret_cast<getter>(RotateTransform_get_AngleProperty), nullptr, nullptr, nullptr },
@@ -15618,14 +15520,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_ScaleTransform =
-    {
+    static PyType_Spec type_spec_ScaleTransform = {
         "winrt._winrt_microsoft_ui_xaml_media.ScaleTransform",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::ScaleTransform),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScaleTransform
-    };
+        _type_slots_ScaleTransform};
 
     static PyGetSetDef getset_ScaleTransform_Static[] = {
         { "center_x_property", reinterpret_cast<getter>(ScaleTransform_get_CenterXProperty), nullptr, nullptr, nullptr },
@@ -15716,14 +15616,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_Shadow =
-    {
+    static PyType_Spec type_spec_Shadow = {
         "winrt._winrt_microsoft_ui_xaml_media.Shadow",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Shadow),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Shadow
-    };
+        _type_slots_Shadow};
 
     // ----- SkewTransform class --------------------
 
@@ -16075,14 +15973,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_SkewTransform =
-    {
+    static PyType_Spec type_spec_SkewTransform = {
         "winrt._winrt_microsoft_ui_xaml_media.SkewTransform",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::SkewTransform),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SkewTransform
-    };
+        _type_slots_SkewTransform};
 
     static PyGetSetDef getset_SkewTransform_Static[] = {
         { "angle_x_property", reinterpret_cast<getter>(SkewTransform_get_AngleXProperty), nullptr, nullptr, nullptr },
@@ -16277,14 +16173,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_SolidColorBrush =
-    {
+    static PyType_Spec type_spec_SolidColorBrush = {
         "winrt._winrt_microsoft_ui_xaml_media.SolidColorBrush",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::SolidColorBrush),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SolidColorBrush
-    };
+        _type_slots_SolidColorBrush};
 
     static PyGetSetDef getset_SolidColorBrush_Static[] = {
         { "color_property", reinterpret_cast<getter>(SolidColorBrush_get_ColorProperty), nullptr, nullptr, nullptr },
@@ -16405,14 +16299,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_SystemBackdrop =
-    {
+    static PyType_Spec type_spec_SystemBackdrop = {
         "winrt._winrt_microsoft_ui_xaml_media.SystemBackdrop",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::SystemBackdrop),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SystemBackdrop
-    };
+        _type_slots_SystemBackdrop};
 
     // ----- ThemeShadow class --------------------
 
@@ -16516,14 +16408,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_ThemeShadow =
-    {
+    static PyType_Spec type_spec_ThemeShadow = {
         "winrt._winrt_microsoft_ui_xaml_media.ThemeShadow",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::ThemeShadow),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ThemeShadow
-    };
+        _type_slots_ThemeShadow};
 
     // ----- TileBrush class --------------------
 
@@ -16786,14 +16676,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_TileBrush =
-    {
+    static PyType_Spec type_spec_TileBrush = {
         "winrt._winrt_microsoft_ui_xaml_media.TileBrush",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::TileBrush),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TileBrush
-    };
+        _type_slots_TileBrush};
 
     static PyGetSetDef getset_TileBrush_Static[] = {
         { "alignment_x_property", reinterpret_cast<getter>(TileBrush_get_AlignmentXProperty), nullptr, nullptr, nullptr },
@@ -16883,14 +16771,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_Transform =
-    {
+    static PyType_Spec type_spec_Transform = {
         "winrt._winrt_microsoft_ui_xaml_media.Transform",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Transform),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Transform
-    };
+        _type_slots_Transform};
 
     // ----- TransformCollection class --------------------
 
@@ -17519,14 +17405,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_TransformCollection =
-    {
+    static PyType_Spec type_spec_TransformCollection = {
         "winrt._winrt_microsoft_ui_xaml_media.TransformCollection",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::TransformCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TransformCollection
-    };
+        _type_slots_TransformCollection};
 
     // ----- TransformGroup class --------------------
 
@@ -17697,14 +17581,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_TransformGroup =
-    {
+    static PyType_Spec type_spec_TransformGroup = {
         "winrt._winrt_microsoft_ui_xaml_media.TransformGroup",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::TransformGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TransformGroup
-    };
+        _type_slots_TransformGroup};
 
     static PyGetSetDef getset_TransformGroup_Static[] = {
         { "children_property", reinterpret_cast<getter>(TransformGroup_get_ChildrenProperty), nullptr, nullptr, nullptr },
@@ -17948,14 +17830,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_TranslateTransform =
-    {
+    static PyType_Spec type_spec_TranslateTransform = {
         "winrt._winrt_microsoft_ui_xaml_media.TranslateTransform",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::TranslateTransform),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TranslateTransform
-    };
+        _type_slots_TranslateTransform};
 
     static PyGetSetDef getset_TranslateTransform_Static[] = {
         { "x_property", reinterpret_cast<getter>(TranslateTransform_get_XProperty), nullptr, nullptr, nullptr },
@@ -18286,14 +18166,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_VisualTreeHelper =
-    {
+    static PyType_Spec type_spec_VisualTreeHelper = {
         "winrt._winrt_microsoft_ui_xaml_media.VisualTreeHelper",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::VisualTreeHelper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VisualTreeHelper
-    };
+        _type_slots_VisualTreeHelper};
 
     static PyGetSetDef getset_VisualTreeHelper_Static[] = {
         { }
@@ -18454,14 +18332,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_XamlCompositionBrushBase =
-    {
+    static PyType_Spec type_spec_XamlCompositionBrushBase = {
         "winrt._winrt_microsoft_ui_xaml_media.XamlCompositionBrushBase",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XamlCompositionBrushBase
-    };
+        _type_slots_XamlCompositionBrushBase};
 
     static PyGetSetDef getset_XamlCompositionBrushBase_Static[] = {
         { "fallback_color_property", reinterpret_cast<getter>(XamlCompositionBrushBase_get_FallbackColorProperty), nullptr, nullptr, nullptr },
@@ -18703,14 +18579,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_XamlLight =
-    {
+    static PyType_Spec type_spec_XamlLight = {
         "winrt._winrt_microsoft_ui_xaml_media.XamlLight",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::XamlLight),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XamlLight
-    };
+        _type_slots_XamlLight};
 
     static PyGetSetDef getset_XamlLight_Static[] = {
         { }
@@ -19033,14 +18907,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { },
     };
 
-    static PyType_Spec type_spec_Matrix =
-    {
+    static PyType_Spec type_spec_Matrix = {
         "winrt._winrt_microsoft_ui_xaml_media.Matrix",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Matrix),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Matrix
-    };
+        _type_slots_Matrix};
 
     // ----- Microsoft.UI.Xaml.Media Initialization --------------------
 

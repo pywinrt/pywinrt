@@ -94,14 +94,12 @@ namespace py::cpp::Windows::Media::Core::Preview
         { },
     };
 
-    static PyType_Spec type_spec_SoundLevelBroker =
-    {
+    static PyType_Spec type_spec_SoundLevelBroker = {
         "winrt._winrt_windows_media_core_preview.SoundLevelBroker",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SoundLevelBroker
-    };
+        _type_slots_SoundLevelBroker};
 
     static PyGetSetDef getset_SoundLevelBroker_Static[] = {
         { "sound_level", reinterpret_cast<getter>(SoundLevelBroker_get_SoundLevel), nullptr, nullptr, nullptr },

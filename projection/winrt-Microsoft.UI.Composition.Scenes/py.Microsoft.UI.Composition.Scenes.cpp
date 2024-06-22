@@ -165,14 +165,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { },
     };
 
-    static PyType_Spec type_spec_SceneBoundingBox =
-    {
+    static PyType_Spec type_spec_SceneBoundingBox = {
         "winrt._winrt_microsoft_ui_composition_scenes.SceneBoundingBox",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneBoundingBox),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SceneBoundingBox
-    };
+        _type_slots_SceneBoundingBox};
 
     // ----- SceneComponent class --------------------
 
@@ -254,14 +252,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { },
     };
 
-    static PyType_Spec type_spec_SceneComponent =
-    {
+    static PyType_Spec type_spec_SceneComponent = {
         "winrt._winrt_microsoft_ui_composition_scenes.SceneComponent",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneComponent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SceneComponent
-    };
+        _type_slots_SceneComponent};
 
     // ----- SceneComponentCollection class --------------------
 
@@ -868,14 +864,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { },
     };
 
-    static PyType_Spec type_spec_SceneComponentCollection =
-    {
+    static PyType_Spec type_spec_SceneComponentCollection = {
         "winrt._winrt_microsoft_ui_composition_scenes.SceneComponentCollection",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneComponentCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SceneComponentCollection
-    };
+        _type_slots_SceneComponentCollection};
 
     // ----- SceneMaterial class --------------------
 
@@ -937,14 +931,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { },
     };
 
-    static PyType_Spec type_spec_SceneMaterial =
-    {
+    static PyType_Spec type_spec_SceneMaterial = {
         "winrt._winrt_microsoft_ui_composition_scenes.SceneMaterial",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMaterial),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SceneMaterial
-    };
+        _type_slots_SceneMaterial};
 
     // ----- SceneMaterialInput class --------------------
 
@@ -1006,14 +998,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { },
     };
 
-    static PyType_Spec type_spec_SceneMaterialInput =
-    {
+    static PyType_Spec type_spec_SceneMaterialInput = {
         "winrt._winrt_microsoft_ui_composition_scenes.SceneMaterialInput",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMaterialInput),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SceneMaterialInput
-    };
+        _type_slots_SceneMaterialInput};
 
     // ----- SceneMesh class --------------------
 
@@ -1209,14 +1199,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { },
     };
 
-    static PyType_Spec type_spec_SceneMesh =
-    {
+    static PyType_Spec type_spec_SceneMesh = {
         "winrt._winrt_microsoft_ui_composition_scenes.SceneMesh",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMesh),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SceneMesh
-    };
+        _type_slots_SceneMesh};
 
     static PyGetSetDef getset_SceneMesh_Static[] = {
         { }
@@ -1651,14 +1639,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { },
     };
 
-    static PyType_Spec type_spec_SceneMeshMaterialAttributeMap =
-    {
+    static PyType_Spec type_spec_SceneMeshMaterialAttributeMap = {
         "winrt._winrt_microsoft_ui_composition_scenes.SceneMeshMaterialAttributeMap",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMeshMaterialAttributeMap),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SceneMeshMaterialAttributeMap
-    };
+        _type_slots_SceneMeshMaterialAttributeMap};
 
     // ----- SceneMeshRendererComponent class --------------------
 
@@ -1867,14 +1853,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { },
     };
 
-    static PyType_Spec type_spec_SceneMeshRendererComponent =
-    {
+    static PyType_Spec type_spec_SceneMeshRendererComponent = {
         "winrt._winrt_microsoft_ui_composition_scenes.SceneMeshRendererComponent",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMeshRendererComponent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SceneMeshRendererComponent
-    };
+        _type_slots_SceneMeshRendererComponent};
 
     static PyGetSetDef getset_SceneMeshRendererComponent_Static[] = {
         { }
@@ -2233,14 +2217,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { },
     };
 
-    static PyType_Spec type_spec_SceneMetallicRoughnessMaterial =
-    {
+    static PyType_Spec type_spec_SceneMetallicRoughnessMaterial = {
         "winrt._winrt_microsoft_ui_composition_scenes.SceneMetallicRoughnessMaterial",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMetallicRoughnessMaterial),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SceneMetallicRoughnessMaterial
-    };
+        _type_slots_SceneMetallicRoughnessMaterial};
 
     static PyGetSetDef getset_SceneMetallicRoughnessMaterial_Static[] = {
         { }
@@ -2616,14 +2598,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { },
     };
 
-    static PyType_Spec type_spec_SceneModelTransform =
-    {
+    static PyType_Spec type_spec_SceneModelTransform = {
         "winrt._winrt_microsoft_ui_composition_scenes.SceneModelTransform",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneModelTransform),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SceneModelTransform
-    };
+        _type_slots_SceneModelTransform};
 
     // ----- SceneNode class --------------------
 
@@ -2828,14 +2808,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { },
     };
 
-    static PyType_Spec type_spec_SceneNode =
-    {
+    static PyType_Spec type_spec_SceneNode = {
         "winrt._winrt_microsoft_ui_composition_scenes.SceneNode",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SceneNode
-    };
+        _type_slots_SceneNode};
 
     static PyGetSetDef getset_SceneNode_Static[] = {
         { }
@@ -3468,14 +3446,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { },
     };
 
-    static PyType_Spec type_spec_SceneNodeCollection =
-    {
+    static PyType_Spec type_spec_SceneNodeCollection = {
         "winrt._winrt_microsoft_ui_composition_scenes.SceneNodeCollection",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNodeCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SceneNodeCollection
-    };
+        _type_slots_SceneNodeCollection};
 
     // ----- SceneObject class --------------------
 
@@ -3537,14 +3513,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { },
     };
 
-    static PyType_Spec type_spec_SceneObject =
-    {
+    static PyType_Spec type_spec_SceneObject = {
         "winrt._winrt_microsoft_ui_composition_scenes.SceneObject",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneObject),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SceneObject
-    };
+        _type_slots_SceneObject};
 
     // ----- ScenePbrMaterial class --------------------
 
@@ -4038,14 +4012,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { },
     };
 
-    static PyType_Spec type_spec_ScenePbrMaterial =
-    {
+    static PyType_Spec type_spec_ScenePbrMaterial = {
         "winrt._winrt_microsoft_ui_composition_scenes.ScenePbrMaterial",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScenePbrMaterial
-    };
+        _type_slots_ScenePbrMaterial};
 
     // ----- SceneRendererComponent class --------------------
 
@@ -4107,14 +4079,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { },
     };
 
-    static PyType_Spec type_spec_SceneRendererComponent =
-    {
+    static PyType_Spec type_spec_SceneRendererComponent = {
         "winrt._winrt_microsoft_ui_composition_scenes.SceneRendererComponent",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneRendererComponent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SceneRendererComponent
-    };
+        _type_slots_SceneRendererComponent};
 
     // ----- SceneSurfaceMaterialInput class --------------------
 
@@ -4399,14 +4369,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { },
     };
 
-    static PyType_Spec type_spec_SceneSurfaceMaterialInput =
-    {
+    static PyType_Spec type_spec_SceneSurfaceMaterialInput = {
         "winrt._winrt_microsoft_ui_composition_scenes.SceneSurfaceMaterialInput",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneSurfaceMaterialInput),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SceneSurfaceMaterialInput
-    };
+        _type_slots_SceneSurfaceMaterialInput};
 
     static PyGetSetDef getset_SceneSurfaceMaterialInput_Static[] = {
         { }
@@ -4573,14 +4541,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         { },
     };
 
-    static PyType_Spec type_spec_SceneVisual =
-    {
+    static PyType_Spec type_spec_SceneVisual = {
         "winrt._winrt_microsoft_ui_composition_scenes.SceneVisual",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneVisual),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SceneVisual
-    };
+        _type_slots_SceneVisual};
 
     static PyGetSetDef getset_SceneVisual_Static[] = {
         { }

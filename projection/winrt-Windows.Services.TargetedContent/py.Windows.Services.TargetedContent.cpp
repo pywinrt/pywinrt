@@ -95,14 +95,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { },
     };
 
-    static PyType_Spec type_spec_TargetedContentAction =
-    {
+    static PyType_Spec type_spec_TargetedContentAction = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentAction",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentAction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetedContentAction
-    };
+        _type_slots_TargetedContentAction};
 
     // ----- TargetedContentAvailabilityChangedEventArgs class --------------------
 
@@ -194,14 +192,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { },
     };
 
-    static PyType_Spec type_spec_TargetedContentAvailabilityChangedEventArgs =
-    {
+    static PyType_Spec type_spec_TargetedContentAvailabilityChangedEventArgs = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentAvailabilityChangedEventArgs",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetedContentAvailabilityChangedEventArgs
-    };
+        _type_slots_TargetedContentAvailabilityChangedEventArgs};
 
     // ----- TargetedContentChangedEventArgs class --------------------
 
@@ -313,14 +309,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { },
     };
 
-    static PyType_Spec type_spec_TargetedContentChangedEventArgs =
-    {
+    static PyType_Spec type_spec_TargetedContentChangedEventArgs = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentChangedEventArgs",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetedContentChangedEventArgs
-    };
+        _type_slots_TargetedContentChangedEventArgs};
 
     // ----- TargetedContentCollection class --------------------
 
@@ -548,14 +542,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { },
     };
 
-    static PyType_Spec type_spec_TargetedContentCollection =
-    {
+    static PyType_Spec type_spec_TargetedContentCollection = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentCollection",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetedContentCollection
-    };
+        _type_slots_TargetedContentCollection};
 
     // ----- TargetedContentContainer class --------------------
 
@@ -760,14 +752,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { },
     };
 
-    static PyType_Spec type_spec_TargetedContentContainer =
-    {
+    static PyType_Spec type_spec_TargetedContentContainer = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentContainer",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentContainer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetedContentContainer
-    };
+        _type_slots_TargetedContentContainer};
 
     static PyGetSetDef getset_TargetedContentContainer_Static[] = {
         { }
@@ -885,14 +875,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { },
     };
 
-    static PyType_Spec type_spec_TargetedContentFile =
-    {
+    static PyType_Spec type_spec_TargetedContentFile = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentFile",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentFile),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetedContentFile
-    };
+        _type_slots_TargetedContentFile};
 
     // ----- TargetedContentImage class --------------------
 
@@ -1024,14 +1012,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { },
     };
 
-    static PyType_Spec type_spec_TargetedContentImage =
-    {
+    static PyType_Spec type_spec_TargetedContentImage = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentImage",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentImage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetedContentImage
-    };
+        _type_slots_TargetedContentImage};
 
     // ----- TargetedContentItem class --------------------
 
@@ -1239,14 +1225,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { },
     };
 
-    static PyType_Spec type_spec_TargetedContentItem =
-    {
+    static PyType_Spec type_spec_TargetedContentItem = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentItem",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetedContentItem
-    };
+        _type_slots_TargetedContentItem};
 
     // ----- TargetedContentItemState class --------------------
 
@@ -1348,14 +1332,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { },
     };
 
-    static PyType_Spec type_spec_TargetedContentItemState =
-    {
+    static PyType_Spec type_spec_TargetedContentItemState = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentItemState",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentItemState),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetedContentItemState
-    };
+        _type_slots_TargetedContentItemState};
 
     // ----- TargetedContentObject class --------------------
 
@@ -1497,14 +1479,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { },
     };
 
-    static PyType_Spec type_spec_TargetedContentObject =
-    {
+    static PyType_Spec type_spec_TargetedContentObject = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentObject",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentObject),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetedContentObject
-    };
+        _type_slots_TargetedContentObject};
 
     // ----- TargetedContentStateChangedEventArgs class --------------------
 
@@ -1596,14 +1576,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { },
     };
 
-    static PyType_Spec type_spec_TargetedContentStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_TargetedContentStateChangedEventArgs = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetedContentStateChangedEventArgs
-    };
+        _type_slots_TargetedContentStateChangedEventArgs};
 
     // ----- TargetedContentSubscription class --------------------
 
@@ -1912,14 +1890,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { },
     };
 
-    static PyType_Spec type_spec_TargetedContentSubscription =
-    {
+    static PyType_Spec type_spec_TargetedContentSubscription = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentSubscription",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscription),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetedContentSubscription
-    };
+        _type_slots_TargetedContentSubscription};
 
     static PyGetSetDef getset_TargetedContentSubscription_Static[] = {
         { }
@@ -2147,14 +2123,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { },
     };
 
-    static PyType_Spec type_spec_TargetedContentSubscriptionOptions =
-    {
+    static PyType_Spec type_spec_TargetedContentSubscriptionOptions = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentSubscriptionOptions",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetedContentSubscriptionOptions
-    };
+        _type_slots_TargetedContentSubscriptionOptions};
 
     // ----- TargetedContentValue class --------------------
 
@@ -2536,14 +2510,12 @@ namespace py::cpp::Windows::Services::TargetedContent
         { },
     };
 
-    static PyType_Spec type_spec_TargetedContentValue =
-    {
+    static PyType_Spec type_spec_TargetedContentValue = {
         "winrt._winrt_windows_services_targetedcontent.TargetedContentValue",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TargetedContentValue
-    };
+        _type_slots_TargetedContentValue};
 
     // ----- Windows.Services.TargetedContent Initialization --------------------
 

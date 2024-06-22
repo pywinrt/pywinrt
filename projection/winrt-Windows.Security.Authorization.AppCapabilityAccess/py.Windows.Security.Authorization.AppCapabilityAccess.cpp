@@ -385,14 +385,12 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
         { },
     };
 
-    static PyType_Spec type_spec_AppCapability =
-    {
+    static PyType_Spec type_spec_AppCapability = {
         "winrt._winrt_windows_security_authorization_appcapabilityaccess.AppCapability",
         sizeof(py::wrapper::Windows::Security::Authorization::AppCapabilityAccess::AppCapability),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppCapability
-    };
+        _type_slots_AppCapability};
 
     static PyGetSetDef getset_AppCapability_Static[] = {
         { }
@@ -483,14 +481,12 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
         { },
     };
 
-    static PyType_Spec type_spec_AppCapabilityAccessChangedEventArgs =
-    {
+    static PyType_Spec type_spec_AppCapabilityAccessChangedEventArgs = {
         "winrt._winrt_windows_security_authorization_appcapabilityaccess.AppCapabilityAccessChangedEventArgs",
         sizeof(py::wrapper::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppCapabilityAccessChangedEventArgs
-    };
+        _type_slots_AppCapabilityAccessChangedEventArgs};
 
     // ----- Windows.Security.Authorization.AppCapabilityAccess Initialization --------------------
 

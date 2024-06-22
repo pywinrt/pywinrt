@@ -233,14 +233,12 @@ namespace py::cpp::Windows::Devices::I2c
         { },
     };
 
-    static PyType_Spec type_spec_I2cConnectionSettings =
-    {
+    static PyType_Spec type_spec_I2cConnectionSettings = {
         "winrt._winrt_windows_devices_i2c.I2cConnectionSettings",
         sizeof(py::wrapper::Windows::Devices::I2c::I2cConnectionSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_I2cConnectionSettings
-    };
+        _type_slots_I2cConnectionSettings};
 
     // ----- I2cController class --------------------
 
@@ -394,14 +392,12 @@ namespace py::cpp::Windows::Devices::I2c
         { },
     };
 
-    static PyType_Spec type_spec_I2cController =
-    {
+    static PyType_Spec type_spec_I2cController = {
         "winrt._winrt_windows_devices_i2c.I2cController",
         sizeof(py::wrapper::Windows::Devices::I2c::I2cController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_I2cController
-    };
+        _type_slots_I2cController};
 
     static PyGetSetDef getset_I2cController_Static[] = {
         { }
@@ -860,14 +856,12 @@ namespace py::cpp::Windows::Devices::I2c
         { },
     };
 
-    static PyType_Spec type_spec_I2cDevice =
-    {
+    static PyType_Spec type_spec_I2cDevice = {
         "winrt._winrt_windows_devices_i2c.I2cDevice",
         sizeof(py::wrapper::Windows::Devices::I2c::I2cDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_I2cDevice
-    };
+        _type_slots_I2cDevice};
 
     static PyGetSetDef getset_I2cDevice_Static[] = {
         { }
@@ -1039,14 +1033,12 @@ namespace py::cpp::Windows::Devices::I2c
         { },
     };
 
-    static PyType_Spec type_spec_II2cDeviceStatics =
-    {
+    static PyType_Spec type_spec_II2cDeviceStatics = {
         "winrt._winrt_windows_devices_i2c.II2cDeviceStatics",
         sizeof(py::wrapper::Windows::Devices::I2c::II2cDeviceStatics),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_II2cDeviceStatics
-    };
+        _type_slots_II2cDeviceStatics};
 
     // ----- I2cTransferResult struct --------------------
 
@@ -1200,14 +1192,12 @@ namespace py::cpp::Windows::Devices::I2c
         { },
     };
 
-    static PyType_Spec type_spec_I2cTransferResult =
-    {
+    static PyType_Spec type_spec_I2cTransferResult = {
         "winrt._winrt_windows_devices_i2c.I2cTransferResult",
         sizeof(py::wrapper::Windows::Devices::I2c::I2cTransferResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_I2cTransferResult
-    };
+        _type_slots_I2cTransferResult};
 
     // ----- Windows.Devices.I2c Initialization --------------------
 

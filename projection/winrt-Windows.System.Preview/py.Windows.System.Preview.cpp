@@ -169,14 +169,12 @@ namespace py::cpp::Windows::System::Preview
         { },
     };
 
-    static PyType_Spec type_spec_TwoPanelHingedDevicePosturePreview =
-    {
+    static PyType_Spec type_spec_TwoPanelHingedDevicePosturePreview = {
         "winrt._winrt_windows_system_preview.TwoPanelHingedDevicePosturePreview",
         sizeof(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TwoPanelHingedDevicePosturePreview
-    };
+        _type_slots_TwoPanelHingedDevicePosturePreview};
 
     static PyGetSetDef getset_TwoPanelHingedDevicePosturePreview_Static[] = {
         { }
@@ -384,14 +382,12 @@ namespace py::cpp::Windows::System::Preview
         { },
     };
 
-    static PyType_Spec type_spec_TwoPanelHingedDevicePosturePreviewReading =
-    {
+    static PyType_Spec type_spec_TwoPanelHingedDevicePosturePreviewReading = {
         "winrt._winrt_windows_system_preview.TwoPanelHingedDevicePosturePreviewReading",
         sizeof(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TwoPanelHingedDevicePosturePreviewReading
-    };
+        _type_slots_TwoPanelHingedDevicePosturePreviewReading};
 
     // ----- TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs class --------------------
 
@@ -473,14 +469,12 @@ namespace py::cpp::Windows::System::Preview
         { },
     };
 
-    static PyType_Spec type_spec_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs =
-    {
+    static PyType_Spec type_spec_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs = {
         "winrt._winrt_windows_system_preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs
-    };
+        _type_slots_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs};
 
     // ----- Windows.System.Preview Initialization --------------------
 

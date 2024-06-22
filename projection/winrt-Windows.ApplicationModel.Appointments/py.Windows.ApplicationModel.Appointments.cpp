@@ -1263,14 +1263,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_Appointment =
-    {
+    static PyType_Spec type_spec_Appointment = {
         "winrt._winrt_windows_applicationmodel_appointments.Appointment",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::Appointment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Appointment
-    };
+        _type_slots_Appointment};
 
     // ----- AppointmentCalendar class --------------------
 
@@ -2706,14 +2704,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentCalendar =
-    {
+    static PyType_Spec type_spec_AppointmentCalendar = {
         "winrt._winrt_windows_applicationmodel_appointments.AppointmentCalendar",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentCalendar
-    };
+        _type_slots_AppointmentCalendar};
 
     // ----- AppointmentCalendarSyncManager class --------------------
 
@@ -2994,14 +2990,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentCalendarSyncManager =
-    {
+    static PyType_Spec type_spec_AppointmentCalendarSyncManager = {
         "winrt._winrt_windows_applicationmodel_appointments.AppointmentCalendarSyncManager",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentCalendarSyncManager
-    };
+        _type_slots_AppointmentCalendarSyncManager};
 
     // ----- AppointmentConflictResult class --------------------
 
@@ -3103,14 +3097,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentConflictResult =
-    {
+    static PyType_Spec type_spec_AppointmentConflictResult = {
         "winrt._winrt_windows_applicationmodel_appointments.AppointmentConflictResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentConflictResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentConflictResult
-    };
+        _type_slots_AppointmentConflictResult};
 
     // ----- AppointmentException class --------------------
 
@@ -3232,14 +3224,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentException =
-    {
+    static PyType_Spec type_spec_AppointmentException = {
         "winrt._winrt_windows_applicationmodel_appointments.AppointmentException",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentException),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentException
-    };
+        _type_slots_AppointmentException};
 
     // ----- AppointmentInvitee class --------------------
 
@@ -3515,14 +3505,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentInvitee =
-    {
+    static PyType_Spec type_spec_AppointmentInvitee = {
         "winrt._winrt_windows_applicationmodel_appointments.AppointmentInvitee",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentInvitee),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentInvitee
-    };
+        _type_slots_AppointmentInvitee};
 
     // ----- AppointmentManager class --------------------
 
@@ -3937,14 +3925,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentManager =
-    {
+    static PyType_Spec type_spec_AppointmentManager = {
         "winrt._winrt_windows_applicationmodel_appointments.AppointmentManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentManager
-    };
+        _type_slots_AppointmentManager};
 
     static PyGetSetDef getset_AppointmentManager_Static[] = {
         { }
@@ -4423,14 +4409,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentManagerForUser =
-    {
+    static PyType_Spec type_spec_AppointmentManagerForUser = {
         "winrt._winrt_windows_applicationmodel_appointments.AppointmentManagerForUser",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentManagerForUser
-    };
+        _type_slots_AppointmentManagerForUser};
 
     // ----- AppointmentOrganizer class --------------------
 
@@ -4610,14 +4594,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentOrganizer =
-    {
+    static PyType_Spec type_spec_AppointmentOrganizer = {
         "winrt._winrt_windows_applicationmodel_appointments.AppointmentOrganizer",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentOrganizer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentOrganizer
-    };
+        _type_slots_AppointmentOrganizer};
 
     // ----- AppointmentProperties class --------------------
 
@@ -5138,14 +5120,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentProperties =
-    {
+    static PyType_Spec type_spec_AppointmentProperties = {
         "winrt._winrt_windows_applicationmodel_appointments.AppointmentProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentProperties
-    };
+        _type_slots_AppointmentProperties};
 
     static PyGetSetDef getset_AppointmentProperties_Static[] = {
         { "has_invitees", reinterpret_cast<getter>(AppointmentProperties_get_HasInvitees), nullptr, nullptr, nullptr },
@@ -5752,14 +5732,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentRecurrence =
-    {
+    static PyType_Spec type_spec_AppointmentRecurrence = {
         "winrt._winrt_windows_applicationmodel_appointments.AppointmentRecurrence",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentRecurrence),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentRecurrence
-    };
+        _type_slots_AppointmentRecurrence};
 
     // ----- AppointmentStore class --------------------
 
@@ -6523,14 +6501,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentStore =
-    {
+    static PyType_Spec type_spec_AppointmentStore = {
         "winrt._winrt_windows_applicationmodel_appointments.AppointmentStore",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentStore
-    };
+        _type_slots_AppointmentStore};
 
     // ----- AppointmentStoreChange class --------------------
 
@@ -6652,14 +6628,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentStoreChange =
-    {
+    static PyType_Spec type_spec_AppointmentStoreChange = {
         "winrt._winrt_windows_applicationmodel_appointments.AppointmentStoreChange",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStoreChange),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentStoreChange
-    };
+        _type_slots_AppointmentStoreChange};
 
     // ----- AppointmentStoreChangeReader class --------------------
 
@@ -6815,14 +6789,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentStoreChangeReader =
-    {
+    static PyType_Spec type_spec_AppointmentStoreChangeReader = {
         "winrt._winrt_windows_applicationmodel_appointments.AppointmentStoreChangeReader",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStoreChangeReader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentStoreChangeReader
-    };
+        _type_slots_AppointmentStoreChangeReader};
 
     // ----- AppointmentStoreChangeTracker class --------------------
 
@@ -6996,14 +6968,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentStoreChangeTracker =
-    {
+    static PyType_Spec type_spec_AppointmentStoreChangeTracker = {
         "winrt._winrt_windows_applicationmodel_appointments.AppointmentStoreChangeTracker",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStoreChangeTracker),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentStoreChangeTracker
-    };
+        _type_slots_AppointmentStoreChangeTracker};
 
     // ----- AppointmentStoreChangedDeferral class --------------------
 
@@ -7096,14 +7066,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentStoreChangedDeferral =
-    {
+    static PyType_Spec type_spec_AppointmentStoreChangedDeferral = {
         "winrt._winrt_windows_applicationmodel_appointments.AppointmentStoreChangedDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStoreChangedDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentStoreChangedDeferral
-    };
+        _type_slots_AppointmentStoreChangedDeferral};
 
     // ----- AppointmentStoreChangedEventArgs class --------------------
 
@@ -7195,14 +7163,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentStoreChangedEventArgs =
-    {
+    static PyType_Spec type_spec_AppointmentStoreChangedEventArgs = {
         "winrt._winrt_windows_applicationmodel_appointments.AppointmentStoreChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStoreChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentStoreChangedEventArgs
-    };
+        _type_slots_AppointmentStoreChangedEventArgs};
 
     // ----- AppointmentStoreNotificationTriggerDetails class --------------------
 
@@ -7264,14 +7230,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentStoreNotificationTriggerDetails =
-    {
+    static PyType_Spec type_spec_AppointmentStoreNotificationTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_appointments.AppointmentStoreNotificationTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStoreNotificationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentStoreNotificationTriggerDetails
-    };
+        _type_slots_AppointmentStoreNotificationTriggerDetails};
 
     // ----- FindAppointmentsOptions class --------------------
 
@@ -7491,14 +7455,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_FindAppointmentsOptions =
-    {
+    static PyType_Spec type_spec_FindAppointmentsOptions = {
         "winrt._winrt_windows_applicationmodel_appointments.FindAppointmentsOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::FindAppointmentsOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FindAppointmentsOptions
-    };
+        _type_slots_FindAppointmentsOptions};
 
     // ----- IAppointmentParticipant interface --------------------
 
@@ -7656,14 +7618,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { },
     };
 
-    static PyType_Spec type_spec_IAppointmentParticipant =
-    {
+    static PyType_Spec type_spec_IAppointmentParticipant = {
         "winrt._winrt_windows_applicationmodel_appointments.IAppointmentParticipant",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::IAppointmentParticipant),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAppointmentParticipant
-    };
+        _type_slots_IAppointmentParticipant};
 
     // ----- Windows.ApplicationModel.Appointments Initialization --------------------
 

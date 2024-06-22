@@ -280,14 +280,12 @@ namespace py::cpp::Windows::Storage::Compression
         { },
     };
 
-    static PyType_Spec type_spec_Compressor =
-    {
+    static PyType_Spec type_spec_Compressor = {
         "winrt._winrt_windows_storage_compression.Compressor",
         sizeof(py::wrapper::Windows::Storage::Compression::Compressor),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Compressor
-    };
+        _type_slots_Compressor};
 
     // ----- Decompressor class --------------------
 
@@ -489,14 +487,12 @@ namespace py::cpp::Windows::Storage::Compression
         { },
     };
 
-    static PyType_Spec type_spec_Decompressor =
-    {
+    static PyType_Spec type_spec_Decompressor = {
         "winrt._winrt_windows_storage_compression.Decompressor",
         sizeof(py::wrapper::Windows::Storage::Compression::Decompressor),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Decompressor
-    };
+        _type_slots_Decompressor};
 
     // ----- Windows.Storage.Compression Initialization --------------------
 

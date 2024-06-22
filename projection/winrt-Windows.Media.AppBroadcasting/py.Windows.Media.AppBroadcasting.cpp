@@ -152,14 +152,12 @@ namespace py::cpp::Windows::Media::AppBroadcasting
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastingMonitor =
-    {
+    static PyType_Spec type_spec_AppBroadcastingMonitor = {
         "winrt._winrt_windows_media_appbroadcasting.AppBroadcastingMonitor",
         sizeof(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingMonitor),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastingMonitor
-    };
+        _type_slots_AppBroadcastingMonitor};
 
     // ----- AppBroadcastingStatus class --------------------
 
@@ -261,14 +259,12 @@ namespace py::cpp::Windows::Media::AppBroadcasting
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastingStatus =
-    {
+    static PyType_Spec type_spec_AppBroadcastingStatus = {
         "winrt._winrt_windows_media_appbroadcasting.AppBroadcastingStatus",
         sizeof(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingStatus),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastingStatus
-    };
+        _type_slots_AppBroadcastingStatus};
 
     // ----- AppBroadcastingStatusDetails class --------------------
 
@@ -490,14 +486,12 @@ namespace py::cpp::Windows::Media::AppBroadcasting
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastingStatusDetails =
-    {
+    static PyType_Spec type_spec_AppBroadcastingStatusDetails = {
         "winrt._winrt_windows_media_appbroadcasting.AppBroadcastingStatusDetails",
         sizeof(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastingStatusDetails
-    };
+        _type_slots_AppBroadcastingStatusDetails};
 
     // ----- AppBroadcastingUI class --------------------
 
@@ -680,14 +674,12 @@ namespace py::cpp::Windows::Media::AppBroadcasting
         { },
     };
 
-    static PyType_Spec type_spec_AppBroadcastingUI =
-    {
+    static PyType_Spec type_spec_AppBroadcastingUI = {
         "winrt._winrt_windows_media_appbroadcasting.AppBroadcastingUI",
         sizeof(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingUI),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBroadcastingUI
-    };
+        _type_slots_AppBroadcastingUI};
 
     static PyGetSetDef getset_AppBroadcastingUI_Static[] = {
         { }

@@ -156,14 +156,12 @@ namespace py::cpp::Windows::UI::Input::Core
         { },
     };
 
-    static PyType_Spec type_spec_RadialControllerIndependentInputSource =
-    {
+    static PyType_Spec type_spec_RadialControllerIndependentInputSource = {
         "winrt._winrt_windows_ui_input_core.RadialControllerIndependentInputSource",
         sizeof(py::wrapper::Windows::UI::Input::Core::RadialControllerIndependentInputSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RadialControllerIndependentInputSource
-    };
+        _type_slots_RadialControllerIndependentInputSource};
 
     static PyGetSetDef getset_RadialControllerIndependentInputSource_Static[] = {
         { }

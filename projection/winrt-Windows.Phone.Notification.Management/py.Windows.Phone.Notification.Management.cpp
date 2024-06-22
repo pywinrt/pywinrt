@@ -1805,14 +1805,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_AccessoryManager =
-    {
+    static PyType_Spec type_spec_AccessoryManager = {
         "winrt._winrt_windows_phone_notification_management.AccessoryManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AccessoryManager
-    };
+        _type_slots_AccessoryManager};
 
     static PyGetSetDef getset_AccessoryManager_Static[] = {
         { "phone_mute", reinterpret_cast<getter>(AccessoryManager_get_PhoneMute), reinterpret_cast<setter>(AccessoryManager_put_PhoneMute), nullptr, nullptr },
@@ -2181,14 +2179,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_AlarmNotificationTriggerDetails =
-    {
+    static PyType_Spec type_spec_AlarmNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.AlarmNotificationTriggerDetails",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AlarmNotificationTriggerDetails
-    };
+        _type_slots_AlarmNotificationTriggerDetails};
 
     // ----- AppNotificationInfo class --------------------
 
@@ -2290,14 +2286,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_AppNotificationInfo =
-    {
+    static PyType_Spec type_spec_AppNotificationInfo = {
         "winrt._winrt_windows_phone_notification_management.AppNotificationInfo",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::AppNotificationInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppNotificationInfo
-    };
+        _type_slots_AppNotificationInfo};
 
     // ----- BinaryId class --------------------
 
@@ -2399,14 +2393,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_BinaryId =
-    {
+    static PyType_Spec type_spec_BinaryId = {
         "winrt._winrt_windows_phone_notification_management.BinaryId",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::BinaryId),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BinaryId
-    };
+        _type_slots_BinaryId};
 
     // ----- CalendarChangedNotificationTriggerDetails class --------------------
 
@@ -2636,14 +2628,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_CalendarChangedNotificationTriggerDetails =
-    {
+    static PyType_Spec type_spec_CalendarChangedNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.CalendarChangedNotificationTriggerDetails",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::CalendarChangedNotificationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CalendarChangedNotificationTriggerDetails
-    };
+        _type_slots_CalendarChangedNotificationTriggerDetails};
 
     // ----- CortanaTileNotificationTriggerDetails class --------------------
 
@@ -3033,14 +3023,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_CortanaTileNotificationTriggerDetails =
-    {
+    static PyType_Spec type_spec_CortanaTileNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.CortanaTileNotificationTriggerDetails",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CortanaTileNotificationTriggerDetails
-    };
+        _type_slots_CortanaTileNotificationTriggerDetails};
 
     // ----- EmailAccountInfo class --------------------
 
@@ -3142,14 +3130,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_EmailAccountInfo =
-    {
+    static PyType_Spec type_spec_EmailAccountInfo = {
         "winrt._winrt_windows_phone_notification_management.EmailAccountInfo",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::EmailAccountInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EmailAccountInfo
-    };
+        _type_slots_EmailAccountInfo};
 
     // ----- EmailFolderInfo class --------------------
 
@@ -3251,14 +3237,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_EmailFolderInfo =
-    {
+    static PyType_Spec type_spec_EmailFolderInfo = {
         "winrt._winrt_windows_phone_notification_management.EmailFolderInfo",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::EmailFolderInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EmailFolderInfo
-    };
+        _type_slots_EmailFolderInfo};
 
     // ----- EmailNotificationTriggerDetails class --------------------
 
@@ -3588,14 +3572,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_EmailNotificationTriggerDetails =
-    {
+    static PyType_Spec type_spec_EmailNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.EmailNotificationTriggerDetails",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EmailNotificationTriggerDetails
-    };
+        _type_slots_EmailNotificationTriggerDetails};
 
     // ----- EmailReadNotificationTriggerDetails class --------------------
 
@@ -3865,14 +3847,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_EmailReadNotificationTriggerDetails =
-    {
+    static PyType_Spec type_spec_EmailReadNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.EmailReadNotificationTriggerDetails",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EmailReadNotificationTriggerDetails
-    };
+        _type_slots_EmailReadNotificationTriggerDetails};
 
     // ----- MediaControlsTriggerDetails class --------------------
 
@@ -4102,14 +4082,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_MediaControlsTriggerDetails =
-    {
+    static PyType_Spec type_spec_MediaControlsTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.MediaControlsTriggerDetails",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::MediaControlsTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaControlsTriggerDetails
-    };
+        _type_slots_MediaControlsTriggerDetails};
 
     // ----- MediaMetadata class --------------------
 
@@ -4311,14 +4289,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_MediaMetadata =
-    {
+    static PyType_Spec type_spec_MediaMetadata = {
         "winrt._winrt_windows_phone_notification_management.MediaMetadata",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::MediaMetadata),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaMetadata
-    };
+        _type_slots_MediaMetadata};
 
     // ----- PhoneCallDetails class --------------------
 
@@ -4620,14 +4596,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_PhoneCallDetails =
-    {
+    static PyType_Spec type_spec_PhoneCallDetails = {
         "winrt._winrt_windows_phone_notification_management.PhoneCallDetails",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::PhoneCallDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneCallDetails
-    };
+        _type_slots_PhoneCallDetails};
 
     // ----- PhoneLineDetails class --------------------
 
@@ -4829,14 +4803,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_PhoneLineDetails =
-    {
+    static PyType_Spec type_spec_PhoneLineDetails = {
         "winrt._winrt_windows_phone_notification_management.PhoneLineDetails",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::PhoneLineDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneLineDetails
-    };
+        _type_slots_PhoneLineDetails};
 
     // ----- PhoneNotificationTriggerDetails class --------------------
 
@@ -5086,14 +5058,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_PhoneNotificationTriggerDetails =
-    {
+    static PyType_Spec type_spec_PhoneNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.PhoneNotificationTriggerDetails",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PhoneNotificationTriggerDetails
-    };
+        _type_slots_PhoneNotificationTriggerDetails};
 
     // ----- ReminderNotificationTriggerDetails class --------------------
 
@@ -5443,14 +5413,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_ReminderNotificationTriggerDetails =
-    {
+    static PyType_Spec type_spec_ReminderNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.ReminderNotificationTriggerDetails",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ReminderNotificationTriggerDetails
-    };
+        _type_slots_ReminderNotificationTriggerDetails};
 
     // ----- SpeedDialEntry class --------------------
 
@@ -5572,14 +5540,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_SpeedDialEntry =
-    {
+    static PyType_Spec type_spec_SpeedDialEntry = {
         "winrt._winrt_windows_phone_notification_management.SpeedDialEntry",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::SpeedDialEntry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpeedDialEntry
-    };
+        _type_slots_SpeedDialEntry};
 
     // ----- TextResponse class --------------------
 
@@ -5681,14 +5647,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_TextResponse =
-    {
+    static PyType_Spec type_spec_TextResponse = {
         "winrt._winrt_windows_phone_notification_management.TextResponse",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::TextResponse),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TextResponse
-    };
+        _type_slots_TextResponse};
 
     // ----- ToastNotificationTriggerDetails class --------------------
 
@@ -5998,14 +5962,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_ToastNotificationTriggerDetails =
-    {
+    static PyType_Spec type_spec_ToastNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.ToastNotificationTriggerDetails",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToastNotificationTriggerDetails
-    };
+        _type_slots_ToastNotificationTriggerDetails};
 
     // ----- VolumeInfo class --------------------
 
@@ -6167,14 +6129,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_VolumeInfo =
-    {
+    static PyType_Spec type_spec_VolumeInfo = {
         "winrt._winrt_windows_phone_notification_management.VolumeInfo",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::VolumeInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VolumeInfo
-    };
+        _type_slots_VolumeInfo};
 
     // ----- IAccessoryNotificationTriggerDetails interface --------------------
 
@@ -6364,14 +6324,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { },
     };
 
-    static PyType_Spec type_spec_IAccessoryNotificationTriggerDetails =
-    {
+    static PyType_Spec type_spec_IAccessoryNotificationTriggerDetails = {
         "winrt._winrt_windows_phone_notification_management.IAccessoryNotificationTriggerDetails",
         sizeof(py::wrapper::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAccessoryNotificationTriggerDetails
-    };
+        _type_slots_IAccessoryNotificationTriggerDetails};
 
     // ----- Windows.Phone.Notification.Management Initialization --------------------
 

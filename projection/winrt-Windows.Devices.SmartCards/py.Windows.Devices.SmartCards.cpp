@@ -85,14 +85,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_CardAddedEventArgs =
-    {
+    static PyType_Spec type_spec_CardAddedEventArgs = {
         "winrt._winrt_windows_devices_smartcards.CardAddedEventArgs",
         sizeof(py::wrapper::Windows::Devices::SmartCards::CardAddedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CardAddedEventArgs
-    };
+        _type_slots_CardAddedEventArgs};
 
     // ----- CardRemovedEventArgs class --------------------
 
@@ -174,14 +172,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_CardRemovedEventArgs =
-    {
+    static PyType_Spec type_spec_CardRemovedEventArgs = {
         "winrt._winrt_windows_devices_smartcards.CardRemovedEventArgs",
         sizeof(py::wrapper::Windows::Devices::SmartCards::CardRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CardRemovedEventArgs
-    };
+        _type_slots_CardRemovedEventArgs};
 
     // ----- KnownSmartCardAppletIds class --------------------
 
@@ -246,14 +242,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_KnownSmartCardAppletIds =
-    {
+    static PyType_Spec type_spec_KnownSmartCardAppletIds = {
         "winrt._winrt_windows_devices_smartcards.KnownSmartCardAppletIds",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownSmartCardAppletIds
-    };
+        _type_slots_KnownSmartCardAppletIds};
 
     static PyGetSetDef getset_KnownSmartCardAppletIds_Static[] = {
         { "payment_system_environment", reinterpret_cast<getter>(KnownSmartCardAppletIds_get_PaymentSystemEnvironment), nullptr, nullptr, nullptr },
@@ -452,14 +446,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCard =
-    {
+    static PyType_Spec type_spec_SmartCard = {
         "winrt._winrt_windows_devices_smartcards.SmartCard",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCard),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCard
-    };
+        _type_slots_SmartCard};
 
     // ----- SmartCardAppletIdGroup class --------------------
 
@@ -956,14 +948,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardAppletIdGroup =
-    {
+    static PyType_Spec type_spec_SmartCardAppletIdGroup = {
         "winrt._winrt_windows_devices_smartcards.SmartCardAppletIdGroup",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardAppletIdGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardAppletIdGroup
-    };
+        _type_slots_SmartCardAppletIdGroup};
 
     static PyGetSetDef getset_SmartCardAppletIdGroup_Static[] = {
         { "max_applet_ids", reinterpret_cast<getter>(SmartCardAppletIdGroup_get_MaxAppletIds), nullptr, nullptr, nullptr },
@@ -1227,14 +1217,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardAppletIdGroupRegistration =
-    {
+    static PyType_Spec type_spec_SmartCardAppletIdGroupRegistration = {
         "winrt._winrt_windows_devices_smartcards.SmartCardAppletIdGroupRegistration",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardAppletIdGroupRegistration
-    };
+        _type_slots_SmartCardAppletIdGroupRegistration};
 
     // ----- SmartCardAutomaticResponseApdu class --------------------
 
@@ -1705,14 +1693,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardAutomaticResponseApdu =
-    {
+    static PyType_Spec type_spec_SmartCardAutomaticResponseApdu = {
         "winrt._winrt_windows_devices_smartcards.SmartCardAutomaticResponseApdu",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardAutomaticResponseApdu
-    };
+        _type_slots_SmartCardAutomaticResponseApdu};
 
     // ----- SmartCardChallengeContext class --------------------
 
@@ -1966,14 +1952,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardChallengeContext =
-    {
+    static PyType_Spec type_spec_SmartCardChallengeContext = {
         "winrt._winrt_windows_devices_smartcards.SmartCardChallengeContext",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardChallengeContext),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardChallengeContext
-    };
+        _type_slots_SmartCardChallengeContext};
 
     // ----- SmartCardConnection class --------------------
 
@@ -2119,14 +2103,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardConnection =
-    {
+    static PyType_Spec type_spec_SmartCardConnection = {
         "winrt._winrt_windows_devices_smartcards.SmartCardConnection",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardConnection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardConnection
-    };
+        _type_slots_SmartCardConnection};
 
     // ----- SmartCardCryptogramGenerator class --------------------
 
@@ -2729,14 +2711,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardCryptogramGenerator =
-    {
+    static PyType_Spec type_spec_SmartCardCryptogramGenerator = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramGenerator",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGenerator),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardCryptogramGenerator
-    };
+        _type_slots_SmartCardCryptogramGenerator};
 
     static PyGetSetDef getset_SmartCardCryptogramGenerator_Static[] = {
         { }
@@ -2887,14 +2867,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult =
-    {
+    static PyType_Spec type_spec_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult
-    };
+        _type_slots_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult};
 
     // ----- SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult class --------------------
 
@@ -3018,14 +2996,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult =
-    {
+    static PyType_Spec type_spec_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult
-    };
+        _type_slots_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult};
 
     // ----- SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult class --------------------
 
@@ -3149,14 +3125,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult =
-    {
+    static PyType_Spec type_spec_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult
-    };
+        _type_slots_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult};
 
     // ----- SmartCardCryptogramMaterialCharacteristics class --------------------
 
@@ -3400,14 +3374,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardCryptogramMaterialCharacteristics =
-    {
+    static PyType_Spec type_spec_SmartCardCryptogramMaterialCharacteristics = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramMaterialCharacteristics",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacteristics),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardCryptogramMaterialCharacteristics
-    };
+        _type_slots_SmartCardCryptogramMaterialCharacteristics};
 
     // ----- SmartCardCryptogramMaterialPackageCharacteristics class --------------------
 
@@ -3571,14 +3543,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardCryptogramMaterialPackageCharacteristics =
-    {
+    static PyType_Spec type_spec_SmartCardCryptogramMaterialPackageCharacteristics = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramMaterialPackageCharacteristics",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageCharacteristics),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardCryptogramMaterialPackageCharacteristics
-    };
+        _type_slots_SmartCardCryptogramMaterialPackageCharacteristics};
 
     // ----- SmartCardCryptogramMaterialPossessionProof class --------------------
 
@@ -3680,14 +3650,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardCryptogramMaterialPossessionProof =
-    {
+    static PyType_Spec type_spec_SmartCardCryptogramMaterialPossessionProof = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramMaterialPossessionProof",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPossessionProof),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardCryptogramMaterialPossessionProof
-    };
+        _type_slots_SmartCardCryptogramMaterialPossessionProof};
 
     // ----- SmartCardCryptogramPlacementStep class --------------------
 
@@ -4203,14 +4171,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardCryptogramPlacementStep =
-    {
+    static PyType_Spec type_spec_SmartCardCryptogramPlacementStep = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramPlacementStep",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardCryptogramPlacementStep
-    };
+        _type_slots_SmartCardCryptogramPlacementStep};
 
     // ----- SmartCardCryptogramStorageKeyCharacteristics class --------------------
 
@@ -4374,14 +4340,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardCryptogramStorageKeyCharacteristics =
-    {
+    static PyType_Spec type_spec_SmartCardCryptogramStorageKeyCharacteristics = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramStorageKeyCharacteristics",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharacteristics),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardCryptogramStorageKeyCharacteristics
-    };
+        _type_slots_SmartCardCryptogramStorageKeyCharacteristics};
 
     // ----- SmartCardCryptogramStorageKeyInfo class --------------------
 
@@ -4603,14 +4567,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardCryptogramStorageKeyInfo =
-    {
+    static PyType_Spec type_spec_SmartCardCryptogramStorageKeyInfo = {
         "winrt._winrt_windows_devices_smartcards.SmartCardCryptogramStorageKeyInfo",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardCryptogramStorageKeyInfo
-    };
+        _type_slots_SmartCardCryptogramStorageKeyInfo};
 
     // ----- SmartCardEmulator class --------------------
 
@@ -5011,14 +4973,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardEmulator =
-    {
+    static PyType_Spec type_spec_SmartCardEmulator = {
         "winrt._winrt_windows_devices_smartcards.SmartCardEmulator",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardEmulator),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardEmulator
-    };
+        _type_slots_SmartCardEmulator};
 
     static PyGetSetDef getset_SmartCardEmulator_Static[] = {
         { "max_applet_id_group_registrations", reinterpret_cast<getter>(SmartCardEmulator_get_MaxAppletIdGroupRegistrations), nullptr, nullptr, nullptr },
@@ -5299,14 +5259,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardEmulatorApduReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_SmartCardEmulatorApduReceivedEventArgs = {
         "winrt._winrt_windows_devices_smartcards.SmartCardEmulatorApduReceivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardEmulatorApduReceivedEventArgs
-    };
+        _type_slots_SmartCardEmulatorApduReceivedEventArgs};
 
     // ----- SmartCardEmulatorConnectionDeactivatedEventArgs class --------------------
 
@@ -5408,14 +5366,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardEmulatorConnectionDeactivatedEventArgs =
-    {
+    static PyType_Spec type_spec_SmartCardEmulatorConnectionDeactivatedEventArgs = {
         "winrt._winrt_windows_devices_smartcards.SmartCardEmulatorConnectionDeactivatedEventArgs",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardEmulatorConnectionDeactivatedEventArgs
-    };
+        _type_slots_SmartCardEmulatorConnectionDeactivatedEventArgs};
 
     // ----- SmartCardEmulatorConnectionProperties class --------------------
 
@@ -5517,14 +5473,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardEmulatorConnectionProperties =
-    {
+    static PyType_Spec type_spec_SmartCardEmulatorConnectionProperties = {
         "winrt._winrt_windows_devices_smartcards.SmartCardEmulatorConnectionProperties",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardEmulatorConnectionProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardEmulatorConnectionProperties
-    };
+        _type_slots_SmartCardEmulatorConnectionProperties};
 
     // ----- SmartCardPinPolicy class --------------------
 
@@ -5896,14 +5850,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardPinPolicy =
-    {
+    static PyType_Spec type_spec_SmartCardPinPolicy = {
         "winrt._winrt_windows_devices_smartcards.SmartCardPinPolicy",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardPinPolicy),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardPinPolicy
-    };
+        _type_slots_SmartCardPinPolicy};
 
     // ----- SmartCardPinResetDeferral class --------------------
 
@@ -5996,14 +5948,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardPinResetDeferral =
-    {
+    static PyType_Spec type_spec_SmartCardPinResetDeferral = {
         "winrt._winrt_windows_devices_smartcards.SmartCardPinResetDeferral",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardPinResetDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardPinResetDeferral
-    };
+        _type_slots_SmartCardPinResetDeferral};
 
     // ----- SmartCardPinResetRequest class --------------------
 
@@ -6168,14 +6118,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardPinResetRequest =
-    {
+    static PyType_Spec type_spec_SmartCardPinResetRequest = {
         "winrt._winrt_windows_devices_smartcards.SmartCardPinResetRequest",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardPinResetRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardPinResetRequest
-    };
+        _type_slots_SmartCardPinResetRequest};
 
     // ----- SmartCardProvisioning class --------------------
 
@@ -6613,14 +6561,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardProvisioning =
-    {
+    static PyType_Spec type_spec_SmartCardProvisioning = {
         "winrt._winrt_windows_devices_smartcards.SmartCardProvisioning",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardProvisioning),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardProvisioning
-    };
+        _type_slots_SmartCardProvisioning};
 
     static PyGetSetDef getset_SmartCardProvisioning_Static[] = {
         { }
@@ -7001,14 +6947,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardReader =
-    {
+    static PyType_Spec type_spec_SmartCardReader = {
         "winrt._winrt_windows_devices_smartcards.SmartCardReader",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardReader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardReader
-    };
+        _type_slots_SmartCardReader};
 
     static PyGetSetDef getset_SmartCardReader_Static[] = {
         { }
@@ -7250,14 +7194,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         { },
     };
 
-    static PyType_Spec type_spec_SmartCardTriggerDetails =
-    {
+    static PyType_Spec type_spec_SmartCardTriggerDetails = {
         "winrt._winrt_windows_devices_smartcards.SmartCardTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::SmartCards::SmartCardTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmartCardTriggerDetails
-    };
+        _type_slots_SmartCardTriggerDetails};
 
     // ----- Windows.Devices.SmartCards Initialization --------------------
 

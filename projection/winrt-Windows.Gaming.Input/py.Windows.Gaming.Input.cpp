@@ -492,14 +492,12 @@ namespace py::cpp::Windows::Gaming::Input
         { },
     };
 
-    static PyType_Spec type_spec_ArcadeStick =
-    {
+    static PyType_Spec type_spec_ArcadeStick = {
         "winrt._winrt_windows_gaming_input.ArcadeStick",
         sizeof(py::wrapper::Windows::Gaming::Input::ArcadeStick),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ArcadeStick
-    };
+        _type_slots_ArcadeStick};
 
     static PyGetSetDef getset_ArcadeStick_Static[] = {
         { "arcade_sticks", reinterpret_cast<getter>(ArcadeStick_get_ArcadeSticks), nullptr, nullptr, nullptr },
@@ -1035,14 +1033,12 @@ namespace py::cpp::Windows::Gaming::Input
         { },
     };
 
-    static PyType_Spec type_spec_FlightStick =
-    {
+    static PyType_Spec type_spec_FlightStick = {
         "winrt._winrt_windows_gaming_input.FlightStick",
         sizeof(py::wrapper::Windows::Gaming::Input::FlightStick),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FlightStick
-    };
+        _type_slots_FlightStick};
 
     static PyGetSetDef getset_FlightStick_Static[] = {
         { "flight_sticks", reinterpret_cast<getter>(FlightStick_get_FlightSticks), nullptr, nullptr, nullptr },
@@ -1606,14 +1602,12 @@ namespace py::cpp::Windows::Gaming::Input
         { },
     };
 
-    static PyType_Spec type_spec_Gamepad =
-    {
+    static PyType_Spec type_spec_Gamepad = {
         "winrt._winrt_windows_gaming_input.Gamepad",
         sizeof(py::wrapper::Windows::Gaming::Input::Gamepad),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Gamepad
-    };
+        _type_slots_Gamepad};
 
     static PyGetSetDef getset_Gamepad_Static[] = {
         { "gamepads", reinterpret_cast<getter>(Gamepad_get_Gamepads), nullptr, nullptr, nullptr },
@@ -1772,14 +1766,12 @@ namespace py::cpp::Windows::Gaming::Input
         { },
     };
 
-    static PyType_Spec type_spec_Headset =
-    {
+    static PyType_Spec type_spec_Headset = {
         "winrt._winrt_windows_gaming_input.Headset",
         sizeof(py::wrapper::Windows::Gaming::Input::Headset),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Headset
-    };
+        _type_slots_Headset};
 
     // ----- RacingWheel class --------------------
 
@@ -2388,14 +2380,12 @@ namespace py::cpp::Windows::Gaming::Input
         { },
     };
 
-    static PyType_Spec type_spec_RacingWheel =
-    {
+    static PyType_Spec type_spec_RacingWheel = {
         "winrt._winrt_windows_gaming_input.RacingWheel",
         sizeof(py::wrapper::Windows::Gaming::Input::RacingWheel),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RacingWheel
-    };
+        _type_slots_RacingWheel};
 
     static PyGetSetDef getset_RacingWheel_Static[] = {
         { "racing_wheels", reinterpret_cast<getter>(RacingWheel_get_RacingWheels), nullptr, nullptr, nullptr },
@@ -3127,14 +3117,12 @@ namespace py::cpp::Windows::Gaming::Input
         { },
     };
 
-    static PyType_Spec type_spec_RawGameController =
-    {
+    static PyType_Spec type_spec_RawGameController = {
         "winrt._winrt_windows_gaming_input.RawGameController",
         sizeof(py::wrapper::Windows::Gaming::Input::RawGameController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RawGameController
-    };
+        _type_slots_RawGameController};
 
     static PyGetSetDef getset_RawGameController_Static[] = {
         { "raw_game_controllers", reinterpret_cast<getter>(RawGameController_get_RawGameControllers), nullptr, nullptr, nullptr },
@@ -3682,14 +3670,12 @@ namespace py::cpp::Windows::Gaming::Input
         { },
     };
 
-    static PyType_Spec type_spec_UINavigationController =
-    {
+    static PyType_Spec type_spec_UINavigationController = {
         "winrt._winrt_windows_gaming_input.UINavigationController",
         sizeof(py::wrapper::Windows::Gaming::Input::UINavigationController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UINavigationController
-    };
+        _type_slots_UINavigationController};
 
     static PyGetSetDef getset_UINavigationController_Static[] = {
         { "u_i_navigation_controllers", reinterpret_cast<getter>(UINavigationController_get_UINavigationControllers), nullptr, nullptr, nullptr },
@@ -3973,14 +3959,12 @@ namespace py::cpp::Windows::Gaming::Input
         { },
     };
 
-    static PyType_Spec type_spec_IGameController =
-    {
+    static PyType_Spec type_spec_IGameController = {
         "winrt._winrt_windows_gaming_input.IGameController",
         sizeof(py::wrapper::Windows::Gaming::Input::IGameController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IGameController
-    };
+        _type_slots_IGameController};
 
     // ----- IGameControllerBatteryInfo interface --------------------
 
@@ -4072,14 +4056,12 @@ namespace py::cpp::Windows::Gaming::Input
         { },
     };
 
-    static PyType_Spec type_spec_IGameControllerBatteryInfo =
-    {
+    static PyType_Spec type_spec_IGameControllerBatteryInfo = {
         "winrt._winrt_windows_gaming_input.IGameControllerBatteryInfo",
         sizeof(py::wrapper::Windows::Gaming::Input::IGameControllerBatteryInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IGameControllerBatteryInfo
-    };
+        _type_slots_IGameControllerBatteryInfo};
 
     // ----- ArcadeStickReading struct --------------------
 
@@ -4233,14 +4215,12 @@ namespace py::cpp::Windows::Gaming::Input
         { },
     };
 
-    static PyType_Spec type_spec_ArcadeStickReading =
-    {
+    static PyType_Spec type_spec_ArcadeStickReading = {
         "winrt._winrt_windows_gaming_input.ArcadeStickReading",
         sizeof(py::wrapper::Windows::Gaming::Input::ArcadeStickReading),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ArcadeStickReading
-    };
+        _type_slots_ArcadeStickReading};
 
     // ----- FlightStickReading struct --------------------
 
@@ -4569,14 +4549,12 @@ namespace py::cpp::Windows::Gaming::Input
         { },
     };
 
-    static PyType_Spec type_spec_FlightStickReading =
-    {
+    static PyType_Spec type_spec_FlightStickReading = {
         "winrt._winrt_windows_gaming_input.FlightStickReading",
         sizeof(py::wrapper::Windows::Gaming::Input::FlightStickReading),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FlightStickReading
-    };
+        _type_slots_FlightStickReading};
 
     // ----- GamepadReading struct --------------------
 
@@ -4940,14 +4918,12 @@ namespace py::cpp::Windows::Gaming::Input
         { },
     };
 
-    static PyType_Spec type_spec_GamepadReading =
-    {
+    static PyType_Spec type_spec_GamepadReading = {
         "winrt._winrt_windows_gaming_input.GamepadReading",
         sizeof(py::wrapper::Windows::Gaming::Input::GamepadReading),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GamepadReading
-    };
+        _type_slots_GamepadReading};
 
     // ----- GamepadVibration struct --------------------
 
@@ -5171,14 +5147,12 @@ namespace py::cpp::Windows::Gaming::Input
         { },
     };
 
-    static PyType_Spec type_spec_GamepadVibration =
-    {
+    static PyType_Spec type_spec_GamepadVibration = {
         "winrt._winrt_windows_gaming_input.GamepadVibration",
         sizeof(py::wrapper::Windows::Gaming::Input::GamepadVibration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GamepadVibration
-    };
+        _type_slots_GamepadVibration};
 
     // ----- RacingWheelReading struct --------------------
 
@@ -5542,14 +5516,12 @@ namespace py::cpp::Windows::Gaming::Input
         { },
     };
 
-    static PyType_Spec type_spec_RacingWheelReading =
-    {
+    static PyType_Spec type_spec_RacingWheelReading = {
         "winrt._winrt_windows_gaming_input.RacingWheelReading",
         sizeof(py::wrapper::Windows::Gaming::Input::RacingWheelReading),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RacingWheelReading
-    };
+        _type_slots_RacingWheelReading};
 
     // ----- UINavigationReading struct --------------------
 
@@ -5738,14 +5710,12 @@ namespace py::cpp::Windows::Gaming::Input
         { },
     };
 
-    static PyType_Spec type_spec_UINavigationReading =
-    {
+    static PyType_Spec type_spec_UINavigationReading = {
         "winrt._winrt_windows_gaming_input.UINavigationReading",
         sizeof(py::wrapper::Windows::Gaming::Input::UINavigationReading),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UINavigationReading
-    };
+        _type_slots_UINavigationReading};
 
     // ----- Windows.Gaming.Input Initialization --------------------
 

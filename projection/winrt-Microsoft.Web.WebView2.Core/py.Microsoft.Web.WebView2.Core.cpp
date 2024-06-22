@@ -3060,14 +3060,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2 =
-    {
+    static PyType_Spec type_spec_CoreWebView2 = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2
-    };
+        _type_slots_CoreWebView2};
 
     // ----- CoreWebView2AcceleratorKeyPressedEventArgs class --------------------
 
@@ -3305,14 +3303,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2AcceleratorKeyPressedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2AcceleratorKeyPressedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2AcceleratorKeyPressedEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2AcceleratorKeyPressedEventArgs
-    };
+        _type_slots_CoreWebView2AcceleratorKeyPressedEventArgs};
 
     // ----- CoreWebView2BasicAuthenticationRequestedEventArgs class --------------------
 
@@ -3512,14 +3508,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2BasicAuthenticationRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2BasicAuthenticationRequestedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2BasicAuthenticationRequestedEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2BasicAuthenticationRequestedEventArgs
-    };
+        _type_slots_CoreWebView2BasicAuthenticationRequestedEventArgs};
 
     // ----- CoreWebView2BasicAuthenticationResponse class --------------------
 
@@ -3677,14 +3671,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2BasicAuthenticationResponse =
-    {
+    static PyType_Spec type_spec_CoreWebView2BasicAuthenticationResponse = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2BasicAuthenticationResponse",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationResponse),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2BasicAuthenticationResponse
-    };
+        _type_slots_CoreWebView2BasicAuthenticationResponse};
 
     // ----- CoreWebView2BrowserExtension class --------------------
 
@@ -3868,14 +3860,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2BrowserExtension =
-    {
+    static PyType_Spec type_spec_CoreWebView2BrowserExtension = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2BrowserExtension",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2BrowserExtension
-    };
+        _type_slots_CoreWebView2BrowserExtension};
 
     // ----- CoreWebView2BrowserProcessExitedEventArgs class --------------------
 
@@ -3977,14 +3967,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2BrowserProcessExitedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2BrowserProcessExitedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2BrowserProcessExitedEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BrowserProcessExitedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2BrowserProcessExitedEventArgs
-    };
+        _type_slots_CoreWebView2BrowserProcessExitedEventArgs};
 
     // ----- CoreWebView2Certificate class --------------------
 
@@ -4246,14 +4234,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2Certificate =
-    {
+    static PyType_Spec type_spec_CoreWebView2Certificate = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Certificate",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Certificate),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2Certificate
-    };
+        _type_slots_CoreWebView2Certificate};
 
     // ----- CoreWebView2ClientCertificate class --------------------
 
@@ -4535,14 +4521,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2ClientCertificate =
-    {
+    static PyType_Spec type_spec_CoreWebView2ClientCertificate = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ClientCertificate",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificate),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2ClientCertificate
-    };
+        _type_slots_CoreWebView2ClientCertificate};
 
     // ----- CoreWebView2ClientCertificateRequestedEventArgs class --------------------
 
@@ -4878,14 +4862,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2ClientCertificateRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2ClientCertificateRequestedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ClientCertificateRequestedEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2ClientCertificateRequestedEventArgs
-    };
+        _type_slots_CoreWebView2ClientCertificateRequestedEventArgs};
 
     // ----- CoreWebView2CompositionController class --------------------
 
@@ -5259,14 +5241,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2CompositionController =
-    {
+    static PyType_Spec type_spec_CoreWebView2CompositionController = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2CompositionController",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2CompositionController
-    };
+        _type_slots_CoreWebView2CompositionController};
 
     // ----- CoreWebView2ContentLoadingEventArgs class --------------------
 
@@ -5368,14 +5348,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2ContentLoadingEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2ContentLoadingEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ContentLoadingEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContentLoadingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2ContentLoadingEventArgs
-    };
+        _type_slots_CoreWebView2ContentLoadingEventArgs};
 
     // ----- CoreWebView2ContextMenuItem class --------------------
 
@@ -5718,14 +5696,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2ContextMenuItem =
-    {
+    static PyType_Spec type_spec_CoreWebView2ContextMenuItem = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ContextMenuItem",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2ContextMenuItem
-    };
+        _type_slots_CoreWebView2ContextMenuItem};
 
     // ----- CoreWebView2ContextMenuRequestedEventArgs class --------------------
 
@@ -5973,14 +5949,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2ContextMenuRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2ContextMenuRequestedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ContextMenuRequestedEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2ContextMenuRequestedEventArgs
-    };
+        _type_slots_CoreWebView2ContextMenuRequestedEventArgs};
 
     // ----- CoreWebView2ContextMenuTarget class --------------------
 
@@ -6302,14 +6276,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2ContextMenuTarget =
-    {
+    static PyType_Spec type_spec_CoreWebView2ContextMenuTarget = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ContextMenuTarget",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTarget),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2ContextMenuTarget
-    };
+        _type_slots_CoreWebView2ContextMenuTarget};
 
     // ----- CoreWebView2Controller class --------------------
 
@@ -7242,14 +7214,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2Controller =
-    {
+    static PyType_Spec type_spec_CoreWebView2Controller = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Controller",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2Controller
-    };
+        _type_slots_CoreWebView2Controller};
 
     // ----- CoreWebView2ControllerOptions class --------------------
 
@@ -7455,14 +7425,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2ControllerOptions =
-    {
+    static PyType_Spec type_spec_CoreWebView2ControllerOptions = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ControllerOptions",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ControllerOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2ControllerOptions
-    };
+        _type_slots_CoreWebView2ControllerOptions};
 
     // ----- CoreWebView2ControllerWindowReference class --------------------
 
@@ -7626,14 +7594,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2ControllerWindowReference =
-    {
+    static PyType_Spec type_spec_CoreWebView2ControllerWindowReference = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ControllerWindowReference",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2ControllerWindowReference
-    };
+        _type_slots_CoreWebView2ControllerWindowReference};
 
     static PyGetSetDef getset_CoreWebView2ControllerWindowReference_Static[] = {
         { }
@@ -8042,14 +8008,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2Cookie =
-    {
+    static PyType_Spec type_spec_CoreWebView2Cookie = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Cookie",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Cookie),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2Cookie
-    };
+        _type_slots_CoreWebView2Cookie};
 
     // ----- CoreWebView2CookieManager class --------------------
 
@@ -8376,14 +8340,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2CookieManager =
-    {
+    static PyType_Spec type_spec_CoreWebView2CookieManager = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2CookieManager",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CookieManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2CookieManager
-    };
+        _type_slots_CoreWebView2CookieManager};
 
     // ----- CoreWebView2CustomSchemeRegistration class --------------------
 
@@ -8605,14 +8567,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2CustomSchemeRegistration =
-    {
+    static PyType_Spec type_spec_CoreWebView2CustomSchemeRegistration = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2CustomSchemeRegistration",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2CustomSchemeRegistration
-    };
+        _type_slots_CoreWebView2CustomSchemeRegistration};
 
     // ----- CoreWebView2DOMContentLoadedEventArgs class --------------------
 
@@ -8694,14 +8654,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2DOMContentLoadedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2DOMContentLoadedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2DOMContentLoadedEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DOMContentLoadedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2DOMContentLoadedEventArgs
-    };
+        _type_slots_CoreWebView2DOMContentLoadedEventArgs};
 
     // ----- CoreWebView2DevToolsProtocolEventReceivedEventArgs class --------------------
 
@@ -8803,14 +8761,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2DevToolsProtocolEventReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2DevToolsProtocolEventReceivedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2DevToolsProtocolEventReceivedEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DevToolsProtocolEventReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2DevToolsProtocolEventReceivedEventArgs
-    };
+        _type_slots_CoreWebView2DevToolsProtocolEventReceivedEventArgs};
 
     // ----- CoreWebView2DevToolsProtocolEventReceiver class --------------------
 
@@ -8917,14 +8873,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2DevToolsProtocolEventReceiver =
-    {
+    static PyType_Spec type_spec_CoreWebView2DevToolsProtocolEventReceiver = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2DevToolsProtocolEventReceiver",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DevToolsProtocolEventReceiver),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2DevToolsProtocolEventReceiver
-    };
+        _type_slots_CoreWebView2DevToolsProtocolEventReceiver};
 
     // ----- CoreWebView2DownloadOperation class --------------------
 
@@ -9414,14 +9368,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2DownloadOperation =
-    {
+    static PyType_Spec type_spec_CoreWebView2DownloadOperation = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2DownloadOperation",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2DownloadOperation
-    };
+        _type_slots_CoreWebView2DownloadOperation};
 
     // ----- CoreWebView2DownloadStartingEventArgs class --------------------
 
@@ -9677,14 +9629,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2DownloadStartingEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2DownloadStartingEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2DownloadStartingEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadStartingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2DownloadStartingEventArgs
-    };
+        _type_slots_CoreWebView2DownloadStartingEventArgs};
 
     // ----- CoreWebView2Environment class --------------------
 
@@ -10476,14 +10426,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2Environment =
-    {
+    static PyType_Spec type_spec_CoreWebView2Environment = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Environment",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2Environment
-    };
+        _type_slots_CoreWebView2Environment};
 
     static PyGetSetDef getset_CoreWebView2Environment_Static[] = {
         { }
@@ -11028,14 +10976,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2EnvironmentOptions =
-    {
+    static PyType_Spec type_spec_CoreWebView2EnvironmentOptions = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2EnvironmentOptions",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2EnvironmentOptions
-    };
+        _type_slots_CoreWebView2EnvironmentOptions};
 
     // ----- CoreWebView2File class --------------------
 
@@ -11117,14 +11063,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2File =
-    {
+    static PyType_Spec type_spec_CoreWebView2File = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2File",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2File),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2File
-    };
+        _type_slots_CoreWebView2File};
 
     // ----- CoreWebView2Frame class --------------------
 
@@ -11782,14 +11726,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2Frame =
-    {
+    static PyType_Spec type_spec_CoreWebView2Frame = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Frame",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2Frame
-    };
+        _type_slots_CoreWebView2Frame};
 
     // ----- CoreWebView2FrameCreatedEventArgs class --------------------
 
@@ -11871,14 +11813,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2FrameCreatedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2FrameCreatedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2FrameCreatedEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2FrameCreatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2FrameCreatedEventArgs
-    };
+        _type_slots_CoreWebView2FrameCreatedEventArgs};
 
     // ----- CoreWebView2FrameInfo class --------------------
 
@@ -12040,14 +11980,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2FrameInfo =
-    {
+    static PyType_Spec type_spec_CoreWebView2FrameInfo = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2FrameInfo",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2FrameInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2FrameInfo
-    };
+        _type_slots_CoreWebView2FrameInfo};
 
     // ----- CoreWebView2HttpHeadersCollectionIterator class --------------------
 
@@ -12240,14 +12178,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2HttpHeadersCollectionIterator =
-    {
+    static PyType_Spec type_spec_CoreWebView2HttpHeadersCollectionIterator = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2HttpHeadersCollectionIterator",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpHeadersCollectionIterator),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2HttpHeadersCollectionIterator
-    };
+        _type_slots_CoreWebView2HttpHeadersCollectionIterator};
 
     // ----- CoreWebView2HttpRequestHeaders class --------------------
 
@@ -12516,14 +12452,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2HttpRequestHeaders =
-    {
+    static PyType_Spec type_spec_CoreWebView2HttpRequestHeaders = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2HttpRequestHeaders",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpRequestHeaders),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2HttpRequestHeaders
-    };
+        _type_slots_CoreWebView2HttpRequestHeaders};
 
     // ----- CoreWebView2HttpResponseHeaders class --------------------
 
@@ -12759,14 +12693,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2HttpResponseHeaders =
-    {
+    static PyType_Spec type_spec_CoreWebView2HttpResponseHeaders = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2HttpResponseHeaders",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpResponseHeaders),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2HttpResponseHeaders
-    };
+        _type_slots_CoreWebView2HttpResponseHeaders};
 
     // ----- CoreWebView2LaunchingExternalUriSchemeEventArgs class --------------------
 
@@ -12966,14 +12898,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2LaunchingExternalUriSchemeEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2LaunchingExternalUriSchemeEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2LaunchingExternalUriSchemeEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2LaunchingExternalUriSchemeEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2LaunchingExternalUriSchemeEventArgs
-    };
+        _type_slots_CoreWebView2LaunchingExternalUriSchemeEventArgs};
 
     // ----- CoreWebView2MoveFocusRequestedEventArgs class --------------------
 
@@ -13103,14 +13033,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2MoveFocusRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2MoveFocusRequestedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2MoveFocusRequestedEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2MoveFocusRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2MoveFocusRequestedEventArgs
-    };
+        _type_slots_CoreWebView2MoveFocusRequestedEventArgs};
 
     // ----- CoreWebView2NavigationCompletedEventArgs class --------------------
 
@@ -13252,14 +13180,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2NavigationCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2NavigationCompletedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2NavigationCompletedEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2NavigationCompletedEventArgs
-    };
+        _type_slots_CoreWebView2NavigationCompletedEventArgs};
 
     // ----- CoreWebView2NavigationStartingEventArgs class --------------------
 
@@ -13537,14 +13463,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2NavigationStartingEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2NavigationStartingEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2NavigationStartingEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2NavigationStartingEventArgs
-    };
+        _type_slots_CoreWebView2NavigationStartingEventArgs};
 
     // ----- CoreWebView2NewWindowRequestedEventArgs class --------------------
 
@@ -13832,14 +13756,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2NewWindowRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2NewWindowRequestedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2NewWindowRequestedEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2NewWindowRequestedEventArgs
-    };
+        _type_slots_CoreWebView2NewWindowRequestedEventArgs};
 
     // ----- CoreWebView2PermissionRequestedEventArgs class --------------------
 
@@ -14135,14 +14057,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2PermissionRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2PermissionRequestedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2PermissionRequestedEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2PermissionRequestedEventArgs
-    };
+        _type_slots_CoreWebView2PermissionRequestedEventArgs};
 
     // ----- CoreWebView2PermissionSetting class --------------------
 
@@ -14264,14 +14184,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2PermissionSetting =
-    {
+    static PyType_Spec type_spec_CoreWebView2PermissionSetting = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2PermissionSetting",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PermissionSetting),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2PermissionSetting
-    };
+        _type_slots_CoreWebView2PermissionSetting};
 
     // ----- CoreWebView2PointerInfo class --------------------
 
@@ -15677,14 +15595,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2PointerInfo =
-    {
+    static PyType_Spec type_spec_CoreWebView2PointerInfo = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2PointerInfo",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2PointerInfo
-    };
+        _type_slots_CoreWebView2PointerInfo};
 
     // ----- CoreWebView2PrintSettings class --------------------
 
@@ -16754,14 +16670,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2PrintSettings =
-    {
+    static PyType_Spec type_spec_CoreWebView2PrintSettings = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2PrintSettings",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2PrintSettings
-    };
+        _type_slots_CoreWebView2PrintSettings};
 
     // ----- CoreWebView2ProcessExtendedInfo class --------------------
 
@@ -16863,14 +16777,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2ProcessExtendedInfo =
-    {
+    static PyType_Spec type_spec_CoreWebView2ProcessExtendedInfo = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ProcessExtendedInfo",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ProcessExtendedInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2ProcessExtendedInfo
-    };
+        _type_slots_CoreWebView2ProcessExtendedInfo};
 
     // ----- CoreWebView2ProcessFailedEventArgs class --------------------
 
@@ -17032,14 +16944,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2ProcessFailedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2ProcessFailedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ProcessFailedEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ProcessFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2ProcessFailedEventArgs
-    };
+        _type_slots_CoreWebView2ProcessFailedEventArgs};
 
     // ----- CoreWebView2ProcessInfo class --------------------
 
@@ -17141,14 +17051,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2ProcessInfo =
-    {
+    static PyType_Spec type_spec_CoreWebView2ProcessInfo = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ProcessInfo",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ProcessInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2ProcessInfo
-    };
+        _type_slots_CoreWebView2ProcessInfo};
 
     // ----- CoreWebView2Profile class --------------------
 
@@ -17774,14 +17682,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2Profile =
-    {
+    static PyType_Spec type_spec_CoreWebView2Profile = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Profile",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2Profile
-    };
+        _type_slots_CoreWebView2Profile};
 
     // ----- CoreWebView2ScriptDialogOpeningEventArgs class --------------------
 
@@ -18032,14 +17938,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2ScriptDialogOpeningEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2ScriptDialogOpeningEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ScriptDialogOpeningEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2ScriptDialogOpeningEventArgs
-    };
+        _type_slots_CoreWebView2ScriptDialogOpeningEventArgs};
 
     // ----- CoreWebView2ServerCertificateErrorDetectedEventArgs class --------------------
 
@@ -18239,14 +18143,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2ServerCertificateErrorDetectedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2ServerCertificateErrorDetectedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ServerCertificateErrorDetectedEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorDetectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2ServerCertificateErrorDetectedEventArgs
-    };
+        _type_slots_CoreWebView2ServerCertificateErrorDetectedEventArgs};
 
     // ----- CoreWebView2Settings class --------------------
 
@@ -19172,14 +19074,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2Settings =
-    {
+    static PyType_Spec type_spec_CoreWebView2Settings = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Settings",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Settings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2Settings
-    };
+        _type_slots_CoreWebView2Settings};
 
     // ----- CoreWebView2SharedBuffer class --------------------
 
@@ -19363,14 +19263,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2SharedBuffer =
-    {
+    static PyType_Spec type_spec_CoreWebView2SharedBuffer = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2SharedBuffer",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SharedBuffer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2SharedBuffer
-    };
+        _type_slots_CoreWebView2SharedBuffer};
 
     // ----- CoreWebView2SourceChangedEventArgs class --------------------
 
@@ -19452,14 +19350,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2SourceChangedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2SourceChangedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2SourceChangedEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SourceChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2SourceChangedEventArgs
-    };
+        _type_slots_CoreWebView2SourceChangedEventArgs};
 
     // ----- CoreWebView2WebMessageReceivedEventArgs class --------------------
 
@@ -19611,14 +19507,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2WebMessageReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2WebMessageReceivedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2WebMessageReceivedEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebMessageReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2WebMessageReceivedEventArgs
-    };
+        _type_slots_CoreWebView2WebMessageReceivedEventArgs};
 
     // ----- CoreWebView2WebResourceRequest class --------------------
 
@@ -19844,14 +19738,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2WebResourceRequest =
-    {
+    static PyType_Spec type_spec_CoreWebView2WebResourceRequest = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2WebResourceRequest",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2WebResourceRequest
-    };
+        _type_slots_CoreWebView2WebResourceRequest};
 
     // ----- CoreWebView2WebResourceRequestedEventArgs class --------------------
 
@@ -20031,14 +19923,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2WebResourceRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2WebResourceRequestedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2WebResourceRequestedEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2WebResourceRequestedEventArgs
-    };
+        _type_slots_CoreWebView2WebResourceRequestedEventArgs};
 
     // ----- CoreWebView2WebResourceResponse class --------------------
 
@@ -20264,14 +20154,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2WebResourceResponse =
-    {
+    static PyType_Spec type_spec_CoreWebView2WebResourceResponse = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2WebResourceResponse",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponse),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2WebResourceResponse
-    };
+        _type_slots_CoreWebView2WebResourceResponse};
 
     // ----- CoreWebView2WebResourceResponseReceivedEventArgs class --------------------
 
@@ -20373,14 +20261,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2WebResourceResponseReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreWebView2WebResourceResponseReceivedEventArgs = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2WebResourceResponseReceivedEventArgs",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponseReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2WebResourceResponseReceivedEventArgs
-    };
+        _type_slots_CoreWebView2WebResourceResponseReceivedEventArgs};
 
     // ----- CoreWebView2WebResourceResponseView class --------------------
 
@@ -20532,14 +20418,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2WebResourceResponseView =
-    {
+    static PyType_Spec type_spec_CoreWebView2WebResourceResponseView = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2WebResourceResponseView",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponseView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2WebResourceResponseView
-    };
+        _type_slots_CoreWebView2WebResourceResponseView};
 
     // ----- CoreWebView2WindowFeatures class --------------------
 
@@ -20801,14 +20685,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2WindowFeatures =
-    {
+    static PyType_Spec type_spec_CoreWebView2WindowFeatures = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2WindowFeatures",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WindowFeatures),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2WindowFeatures
-    };
+        _type_slots_CoreWebView2WindowFeatures};
 
     // ----- ICoreWebView2DispatchAdapter interface --------------------
 
@@ -20999,14 +20881,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_ICoreWebView2DispatchAdapter =
-    {
+    static PyType_Spec type_spec_ICoreWebView2DispatchAdapter = {
         "winrt._winrt_microsoft_web_webview2_core.ICoreWebView2DispatchAdapter",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::ICoreWebView2DispatchAdapter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICoreWebView2DispatchAdapter
-    };
+        _type_slots_ICoreWebView2DispatchAdapter};
 
     // ----- CoreWebView2PhysicalKeyStatus struct --------------------
 
@@ -21300,14 +21180,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreWebView2PhysicalKeyStatus =
-    {
+    static PyType_Spec type_spec_CoreWebView2PhysicalKeyStatus = {
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2PhysicalKeyStatus",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreWebView2PhysicalKeyStatus
-    };
+        _type_slots_CoreWebView2PhysicalKeyStatus};
 
     // ----- Microsoft.Web.WebView2.Core Initialization --------------------
 

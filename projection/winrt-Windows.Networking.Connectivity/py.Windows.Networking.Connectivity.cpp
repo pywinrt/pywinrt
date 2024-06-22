@@ -165,14 +165,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_AttributedNetworkUsage =
-    {
+    static PyType_Spec type_spec_AttributedNetworkUsage = {
         "winrt._winrt_windows_networking_connectivity.AttributedNetworkUsage",
         sizeof(py::wrapper::Windows::Networking::Connectivity::AttributedNetworkUsage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AttributedNetworkUsage
-    };
+        _type_slots_AttributedNetworkUsage};
 
     // ----- CellularApnContext class --------------------
 
@@ -592,14 +590,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_CellularApnContext =
-    {
+    static PyType_Spec type_spec_CellularApnContext = {
         "winrt._winrt_windows_networking_connectivity.CellularApnContext",
         sizeof(py::wrapper::Windows::Networking::Connectivity::CellularApnContext),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CellularApnContext
-    };
+        _type_slots_CellularApnContext};
 
     // ----- ConnectionCost class --------------------
 
@@ -761,14 +757,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_ConnectionCost =
-    {
+    static PyType_Spec type_spec_ConnectionCost = {
         "winrt._winrt_windows_networking_connectivity.ConnectionCost",
         sizeof(py::wrapper::Windows::Networking::Connectivity::ConnectionCost),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ConnectionCost
-    };
+        _type_slots_ConnectionCost};
 
     // ----- ConnectionProfile class --------------------
 
@@ -1444,14 +1438,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_ConnectionProfile =
-    {
+    static PyType_Spec type_spec_ConnectionProfile = {
         "winrt._winrt_windows_networking_connectivity.ConnectionProfile",
         sizeof(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ConnectionProfile
-    };
+        _type_slots_ConnectionProfile};
 
     // ----- ConnectionProfileFilter class --------------------
 
@@ -1987,14 +1979,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_ConnectionProfileFilter =
-    {
+    static PyType_Spec type_spec_ConnectionProfileFilter = {
         "winrt._winrt_windows_networking_connectivity.ConnectionProfileFilter",
         sizeof(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ConnectionProfileFilter
-    };
+        _type_slots_ConnectionProfileFilter};
 
     // ----- ConnectionSession class --------------------
 
@@ -2128,14 +2118,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_ConnectionSession =
-    {
+    static PyType_Spec type_spec_ConnectionSession = {
         "winrt._winrt_windows_networking_connectivity.ConnectionSession",
         sizeof(py::wrapper::Windows::Networking::Connectivity::ConnectionSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ConnectionSession
-    };
+        _type_slots_ConnectionSession};
 
     // ----- ConnectivityInterval class --------------------
 
@@ -2237,14 +2225,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_ConnectivityInterval =
-    {
+    static PyType_Spec type_spec_ConnectivityInterval = {
         "winrt._winrt_windows_networking_connectivity.ConnectivityInterval",
         sizeof(py::wrapper::Windows::Networking::Connectivity::ConnectivityInterval),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ConnectivityInterval
-    };
+        _type_slots_ConnectivityInterval};
 
     // ----- ConnectivityManager class --------------------
 
@@ -2366,14 +2352,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_ConnectivityManager =
-    {
+    static PyType_Spec type_spec_ConnectivityManager = {
         "winrt._winrt_windows_networking_connectivity.ConnectivityManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ConnectivityManager
-    };
+        _type_slots_ConnectivityManager};
 
     static PyGetSetDef getset_ConnectivityManager_Static[] = {
         { }
@@ -2583,14 +2567,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_DataPlanStatus =
-    {
+    static PyType_Spec type_spec_DataPlanStatus = {
         "winrt._winrt_windows_networking_connectivity.DataPlanStatus",
         sizeof(py::wrapper::Windows::Networking::Connectivity::DataPlanStatus),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DataPlanStatus
-    };
+        _type_slots_DataPlanStatus};
 
     // ----- DataPlanUsage class --------------------
 
@@ -2692,14 +2674,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_DataPlanUsage =
-    {
+    static PyType_Spec type_spec_DataPlanUsage = {
         "winrt._winrt_windows_networking_connectivity.DataPlanUsage",
         sizeof(py::wrapper::Windows::Networking::Connectivity::DataPlanUsage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DataPlanUsage
-    };
+        _type_slots_DataPlanUsage};
 
     // ----- DataUsage class --------------------
 
@@ -2801,14 +2781,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_DataUsage =
-    {
+    static PyType_Spec type_spec_DataUsage = {
         "winrt._winrt_windows_networking_connectivity.DataUsage",
         sizeof(py::wrapper::Windows::Networking::Connectivity::DataUsage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DataUsage
-    };
+        _type_slots_DataUsage};
 
     // ----- IPInformation class --------------------
 
@@ -2910,14 +2888,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_IPInformation =
-    {
+    static PyType_Spec type_spec_IPInformation = {
         "winrt._winrt_windows_networking_connectivity.IPInformation",
         sizeof(py::wrapper::Windows::Networking::Connectivity::IPInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IPInformation
-    };
+        _type_slots_IPInformation};
 
     // ----- LanIdentifier class --------------------
 
@@ -3039,14 +3015,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_LanIdentifier =
-    {
+    static PyType_Spec type_spec_LanIdentifier = {
         "winrt._winrt_windows_networking_connectivity.LanIdentifier",
         sizeof(py::wrapper::Windows::Networking::Connectivity::LanIdentifier),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LanIdentifier
-    };
+        _type_slots_LanIdentifier};
 
     // ----- LanIdentifierData class --------------------
 
@@ -3148,14 +3122,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_LanIdentifierData =
-    {
+    static PyType_Spec type_spec_LanIdentifierData = {
         "winrt._winrt_windows_networking_connectivity.LanIdentifierData",
         sizeof(py::wrapper::Windows::Networking::Connectivity::LanIdentifierData),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LanIdentifierData
-    };
+        _type_slots_LanIdentifierData};
 
     // ----- NetworkAdapter class --------------------
 
@@ -3347,14 +3319,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_NetworkAdapter =
-    {
+    static PyType_Spec type_spec_NetworkAdapter = {
         "winrt._winrt_windows_networking_connectivity.NetworkAdapter",
         sizeof(py::wrapper::Windows::Networking::Connectivity::NetworkAdapter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NetworkAdapter
-    };
+        _type_slots_NetworkAdapter};
 
     // ----- NetworkInformation class --------------------
 
@@ -3636,14 +3606,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_NetworkInformation =
-    {
+    static PyType_Spec type_spec_NetworkInformation = {
         "winrt._winrt_windows_networking_connectivity.NetworkInformation",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NetworkInformation
-    };
+        _type_slots_NetworkInformation};
 
     static PyGetSetDef getset_NetworkInformation_Static[] = {
         { }
@@ -3787,14 +3755,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_NetworkItem =
-    {
+    static PyType_Spec type_spec_NetworkItem = {
         "winrt._winrt_windows_networking_connectivity.NetworkItem",
         sizeof(py::wrapper::Windows::Networking::Connectivity::NetworkItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NetworkItem
-    };
+        _type_slots_NetworkItem};
 
     // ----- NetworkSecuritySettings class --------------------
 
@@ -3896,14 +3862,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_NetworkSecuritySettings =
-    {
+    static PyType_Spec type_spec_NetworkSecuritySettings = {
         "winrt._winrt_windows_networking_connectivity.NetworkSecuritySettings",
         sizeof(py::wrapper::Windows::Networking::Connectivity::NetworkSecuritySettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NetworkSecuritySettings
-    };
+        _type_slots_NetworkSecuritySettings};
 
     // ----- NetworkStateChangeEventDetails class --------------------
 
@@ -4125,14 +4089,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_NetworkStateChangeEventDetails =
-    {
+    static PyType_Spec type_spec_NetworkStateChangeEventDetails = {
         "winrt._winrt_windows_networking_connectivity.NetworkStateChangeEventDetails",
         sizeof(py::wrapper::Windows::Networking::Connectivity::NetworkStateChangeEventDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NetworkStateChangeEventDetails
-    };
+        _type_slots_NetworkStateChangeEventDetails};
 
     // ----- NetworkUsage class --------------------
 
@@ -4254,14 +4216,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_NetworkUsage =
-    {
+    static PyType_Spec type_spec_NetworkUsage = {
         "winrt._winrt_windows_networking_connectivity.NetworkUsage",
         sizeof(py::wrapper::Windows::Networking::Connectivity::NetworkUsage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NetworkUsage
-    };
+        _type_slots_NetworkUsage};
 
     // ----- ProviderNetworkUsage class --------------------
 
@@ -4383,14 +4343,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_ProviderNetworkUsage =
-    {
+    static PyType_Spec type_spec_ProviderNetworkUsage = {
         "winrt._winrt_windows_networking_connectivity.ProviderNetworkUsage",
         sizeof(py::wrapper::Windows::Networking::Connectivity::ProviderNetworkUsage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProviderNetworkUsage
-    };
+        _type_slots_ProviderNetworkUsage};
 
     // ----- ProxyConfiguration class --------------------
 
@@ -4492,14 +4450,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_ProxyConfiguration =
-    {
+    static PyType_Spec type_spec_ProxyConfiguration = {
         "winrt._winrt_windows_networking_connectivity.ProxyConfiguration",
         sizeof(py::wrapper::Windows::Networking::Connectivity::ProxyConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProxyConfiguration
-    };
+        _type_slots_ProxyConfiguration};
 
     // ----- RoutePolicy class --------------------
 
@@ -4647,14 +4603,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_RoutePolicy =
-    {
+    static PyType_Spec type_spec_RoutePolicy = {
         "winrt._winrt_windows_networking_connectivity.RoutePolicy",
         sizeof(py::wrapper::Windows::Networking::Connectivity::RoutePolicy),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RoutePolicy
-    };
+        _type_slots_RoutePolicy};
 
     // ----- WlanConnectionProfileDetails class --------------------
 
@@ -4746,14 +4700,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_WlanConnectionProfileDetails =
-    {
+    static PyType_Spec type_spec_WlanConnectionProfileDetails = {
         "winrt._winrt_windows_networking_connectivity.WlanConnectionProfileDetails",
         sizeof(py::wrapper::Windows::Networking::Connectivity::WlanConnectionProfileDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WlanConnectionProfileDetails
-    };
+        _type_slots_WlanConnectionProfileDetails};
 
     // ----- WwanConnectionProfileDetails class --------------------
 
@@ -4955,14 +4907,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_WwanConnectionProfileDetails =
-    {
+    static PyType_Spec type_spec_WwanConnectionProfileDetails = {
         "winrt._winrt_windows_networking_connectivity.WwanConnectionProfileDetails",
         sizeof(py::wrapper::Windows::Networking::Connectivity::WwanConnectionProfileDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WwanConnectionProfileDetails
-    };
+        _type_slots_WwanConnectionProfileDetails};
 
     // ----- NetworkUsageStates struct --------------------
 
@@ -5116,14 +5066,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         { },
     };
 
-    static PyType_Spec type_spec_NetworkUsageStates =
-    {
+    static PyType_Spec type_spec_NetworkUsageStates = {
         "winrt._winrt_windows_networking_connectivity.NetworkUsageStates",
         sizeof(py::wrapper::Windows::Networking::Connectivity::NetworkUsageStates),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NetworkUsageStates
-    };
+        _type_slots_NetworkUsageStates};
 
     // ----- Windows.Networking.Connectivity Initialization --------------------
 

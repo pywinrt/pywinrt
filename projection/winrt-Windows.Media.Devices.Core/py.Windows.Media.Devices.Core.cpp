@@ -498,14 +498,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { },
     };
 
-    static PyType_Spec type_spec_CameraIntrinsics =
-    {
+    static PyType_Spec type_spec_CameraIntrinsics = {
         "winrt._winrt_windows_media_devices_core.CameraIntrinsics",
         sizeof(py::wrapper::Windows::Media::Devices::Core::CameraIntrinsics),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CameraIntrinsics
-    };
+        _type_slots_CameraIntrinsics};
 
     // ----- DepthCorrelatedCoordinateMapper class --------------------
 
@@ -757,14 +755,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { },
     };
 
-    static PyType_Spec type_spec_DepthCorrelatedCoordinateMapper =
-    {
+    static PyType_Spec type_spec_DepthCorrelatedCoordinateMapper = {
         "winrt._winrt_windows_media_devices_core.DepthCorrelatedCoordinateMapper",
         sizeof(py::wrapper::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DepthCorrelatedCoordinateMapper
-    };
+        _type_slots_DepthCorrelatedCoordinateMapper};
 
     // ----- FrameControlCapabilities class --------------------
 
@@ -946,14 +942,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { },
     };
 
-    static PyType_Spec type_spec_FrameControlCapabilities =
-    {
+    static PyType_Spec type_spec_FrameControlCapabilities = {
         "winrt._winrt_windows_media_devices_core.FrameControlCapabilities",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameControlCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameControlCapabilities
-    };
+        _type_slots_FrameControlCapabilities};
 
     // ----- FrameController class --------------------
 
@@ -1185,14 +1179,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { },
     };
 
-    static PyType_Spec type_spec_FrameController =
-    {
+    static PyType_Spec type_spec_FrameController = {
         "winrt._winrt_windows_media_devices_core.FrameController",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameController
-    };
+        _type_slots_FrameController};
 
     // ----- FrameExposureCapabilities class --------------------
 
@@ -1334,14 +1326,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { },
     };
 
-    static PyType_Spec type_spec_FrameExposureCapabilities =
-    {
+    static PyType_Spec type_spec_FrameExposureCapabilities = {
         "winrt._winrt_windows_media_devices_core.FrameExposureCapabilities",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameExposureCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameExposureCapabilities
-    };
+        _type_slots_FrameExposureCapabilities};
 
     // ----- FrameExposureCompensationCapabilities class --------------------
 
@@ -1483,14 +1473,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { },
     };
 
-    static PyType_Spec type_spec_FrameExposureCompensationCapabilities =
-    {
+    static PyType_Spec type_spec_FrameExposureCompensationCapabilities = {
         "winrt._winrt_windows_media_devices_core.FrameExposureCompensationCapabilities",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameExposureCompensationCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameExposureCompensationCapabilities
-    };
+        _type_slots_FrameExposureCompensationCapabilities};
 
     // ----- FrameExposureCompensationControl class --------------------
 
@@ -1600,14 +1588,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { },
     };
 
-    static PyType_Spec type_spec_FrameExposureCompensationControl =
-    {
+    static PyType_Spec type_spec_FrameExposureCompensationControl = {
         "winrt._winrt_windows_media_devices_core.FrameExposureCompensationControl",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameExposureCompensationControl),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameExposureCompensationControl
-    };
+        _type_slots_FrameExposureCompensationControl};
 
     // ----- FrameExposureControl class --------------------
 
@@ -1765,14 +1751,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { },
     };
 
-    static PyType_Spec type_spec_FrameExposureControl =
-    {
+    static PyType_Spec type_spec_FrameExposureControl = {
         "winrt._winrt_windows_media_devices_core.FrameExposureControl",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameExposureControl),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameExposureControl
-    };
+        _type_slots_FrameExposureControl};
 
     // ----- FrameFlashCapabilities class --------------------
 
@@ -1894,14 +1878,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { },
     };
 
-    static PyType_Spec type_spec_FrameFlashCapabilities =
-    {
+    static PyType_Spec type_spec_FrameFlashCapabilities = {
         "winrt._winrt_windows_media_devices_core.FrameFlashCapabilities",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameFlashCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameFlashCapabilities
-    };
+        _type_slots_FrameFlashCapabilities};
 
     // ----- FrameFlashControl class --------------------
 
@@ -2155,14 +2137,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { },
     };
 
-    static PyType_Spec type_spec_FrameFlashControl =
-    {
+    static PyType_Spec type_spec_FrameFlashControl = {
         "winrt._winrt_windows_media_devices_core.FrameFlashControl",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameFlashControl),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameFlashControl
-    };
+        _type_slots_FrameFlashControl};
 
     // ----- FrameFocusCapabilities class --------------------
 
@@ -2304,14 +2284,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { },
     };
 
-    static PyType_Spec type_spec_FrameFocusCapabilities =
-    {
+    static PyType_Spec type_spec_FrameFocusCapabilities = {
         "winrt._winrt_windows_media_devices_core.FrameFocusCapabilities",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameFocusCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameFocusCapabilities
-    };
+        _type_slots_FrameFocusCapabilities};
 
     // ----- FrameFocusControl class --------------------
 
@@ -2421,14 +2399,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { },
     };
 
-    static PyType_Spec type_spec_FrameFocusControl =
-    {
+    static PyType_Spec type_spec_FrameFocusControl = {
         "winrt._winrt_windows_media_devices_core.FrameFocusControl",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameFocusControl),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameFocusControl
-    };
+        _type_slots_FrameFocusControl};
 
     // ----- FrameIsoSpeedCapabilities class --------------------
 
@@ -2570,14 +2546,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { },
     };
 
-    static PyType_Spec type_spec_FrameIsoSpeedCapabilities =
-    {
+    static PyType_Spec type_spec_FrameIsoSpeedCapabilities = {
         "winrt._winrt_windows_media_devices_core.FrameIsoSpeedCapabilities",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameIsoSpeedCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameIsoSpeedCapabilities
-    };
+        _type_slots_FrameIsoSpeedCapabilities};
 
     // ----- FrameIsoSpeedControl class --------------------
 
@@ -2735,14 +2709,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { },
     };
 
-    static PyType_Spec type_spec_FrameIsoSpeedControl =
-    {
+    static PyType_Spec type_spec_FrameIsoSpeedControl = {
         "winrt._winrt_windows_media_devices_core.FrameIsoSpeedControl",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameIsoSpeedControl),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameIsoSpeedControl
-    };
+        _type_slots_FrameIsoSpeedControl};
 
     // ----- VariablePhotoSequenceController class --------------------
 
@@ -2994,14 +2966,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         { },
     };
 
-    static PyType_Spec type_spec_VariablePhotoSequenceController =
-    {
+    static PyType_Spec type_spec_VariablePhotoSequenceController = {
         "winrt._winrt_windows_media_devices_core.VariablePhotoSequenceController",
         sizeof(py::wrapper::Windows::Media::Devices::Core::VariablePhotoSequenceController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VariablePhotoSequenceController
-    };
+        _type_slots_VariablePhotoSequenceController};
 
     // ----- Windows.Media.Devices.Core Initialization --------------------
 

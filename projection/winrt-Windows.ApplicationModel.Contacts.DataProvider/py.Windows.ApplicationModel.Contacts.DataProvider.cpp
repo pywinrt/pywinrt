@@ -276,14 +276,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_ContactDataProviderConnection =
-    {
+    static PyType_Spec type_spec_ContactDataProviderConnection = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactDataProviderConnection",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactDataProviderConnection
-    };
+        _type_slots_ContactDataProviderConnection};
 
     // ----- ContactDataProviderTriggerDetails class --------------------
 
@@ -365,14 +363,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_ContactDataProviderTriggerDetails =
-    {
+    static PyType_Spec type_spec_ContactDataProviderTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactDataProviderTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactDataProviderTriggerDetails
-    };
+        _type_slots_ContactDataProviderTriggerDetails};
 
     // ----- ContactListCreateOrUpdateContactRequest class --------------------
 
@@ -536,14 +532,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_ContactListCreateOrUpdateContactRequest =
-    {
+    static PyType_Spec type_spec_ContactListCreateOrUpdateContactRequest = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListCreateOrUpdateContactRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactListCreateOrUpdateContactRequest
-    };
+        _type_slots_ContactListCreateOrUpdateContactRequest};
 
     // ----- ContactListCreateOrUpdateContactRequestEventArgs class --------------------
 
@@ -655,14 +649,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_ContactListCreateOrUpdateContactRequestEventArgs =
-    {
+    static PyType_Spec type_spec_ContactListCreateOrUpdateContactRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListCreateOrUpdateContactRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactListCreateOrUpdateContactRequestEventArgs
-    };
+        _type_slots_ContactListCreateOrUpdateContactRequestEventArgs};
 
     // ----- ContactListDeleteContactRequest class --------------------
 
@@ -824,14 +816,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_ContactListDeleteContactRequest =
-    {
+    static PyType_Spec type_spec_ContactListDeleteContactRequest = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListDeleteContactRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactListDeleteContactRequest
-    };
+        _type_slots_ContactListDeleteContactRequest};
 
     // ----- ContactListDeleteContactRequestEventArgs class --------------------
 
@@ -943,14 +933,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_ContactListDeleteContactRequestEventArgs =
-    {
+    static PyType_Spec type_spec_ContactListDeleteContactRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListDeleteContactRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactListDeleteContactRequestEventArgs
-    };
+        _type_slots_ContactListDeleteContactRequestEventArgs};
 
     // ----- ContactListServerSearchReadBatchRequest class --------------------
 
@@ -1186,14 +1174,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_ContactListServerSearchReadBatchRequest =
-    {
+    static PyType_Spec type_spec_ContactListServerSearchReadBatchRequest = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListServerSearchReadBatchRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactListServerSearchReadBatchRequest
-    };
+        _type_slots_ContactListServerSearchReadBatchRequest};
 
     // ----- ContactListServerSearchReadBatchRequestEventArgs class --------------------
 
@@ -1305,14 +1291,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_ContactListServerSearchReadBatchRequestEventArgs =
-    {
+    static PyType_Spec type_spec_ContactListServerSearchReadBatchRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListServerSearchReadBatchRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactListServerSearchReadBatchRequestEventArgs
-    };
+        _type_slots_ContactListServerSearchReadBatchRequestEventArgs};
 
     // ----- ContactListSyncManagerSyncRequest class --------------------
 
@@ -1454,14 +1438,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_ContactListSyncManagerSyncRequest =
-    {
+    static PyType_Spec type_spec_ContactListSyncManagerSyncRequest = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListSyncManagerSyncRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactListSyncManagerSyncRequest
-    };
+        _type_slots_ContactListSyncManagerSyncRequest};
 
     // ----- ContactListSyncManagerSyncRequestEventArgs class --------------------
 
@@ -1573,14 +1555,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
         { },
     };
 
-    static PyType_Spec type_spec_ContactListSyncManagerSyncRequestEventArgs =
-    {
+    static PyType_Spec type_spec_ContactListSyncManagerSyncRequestEventArgs = {
         "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListSyncManagerSyncRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContactListSyncManagerSyncRequestEventArgs
-    };
+        _type_slots_ContactListSyncManagerSyncRequestEventArgs};
 
     // ----- Windows.ApplicationModel.Contacts.DataProvider Initialization --------------------
 

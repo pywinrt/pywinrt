@@ -92,14 +92,12 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         { },
     };
 
-    static PyType_Spec type_spec_GameControllerProviderInfo =
-    {
+    static PyType_Spec type_spec_GameControllerProviderInfo = {
         "winrt._winrt_windows_gaming_input_preview.GameControllerProviderInfo",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GameControllerProviderInfo
-    };
+        _type_slots_GameControllerProviderInfo};
 
     static PyGetSetDef getset_GameControllerProviderInfo_Static[] = {
         { }
@@ -813,14 +811,12 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         { },
     };
 
-    static PyType_Spec type_spec_LegacyGipGameControllerProvider =
-    {
+    static PyType_Spec type_spec_LegacyGipGameControllerProvider = {
         "winrt._winrt_windows_gaming_input_preview.LegacyGipGameControllerProvider",
         sizeof(py::wrapper::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LegacyGipGameControllerProvider
-    };
+        _type_slots_LegacyGipGameControllerProvider};
 
     static PyGetSetDef getset_LegacyGipGameControllerProvider_Static[] = {
         { }
@@ -1110,14 +1106,12 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         { },
     };
 
-    static PyType_Spec type_spec_HeadsetGeqGains =
-    {
+    static PyType_Spec type_spec_HeadsetGeqGains = {
         "winrt._winrt_windows_gaming_input_preview.HeadsetGeqGains",
         sizeof(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HeadsetGeqGains
-    };
+        _type_slots_HeadsetGeqGains};
 
     // ----- Windows.Gaming.Input.Preview Initialization --------------------
 

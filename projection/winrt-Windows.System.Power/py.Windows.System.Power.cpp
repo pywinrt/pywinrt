@@ -272,14 +272,12 @@ namespace py::cpp::Windows::System::Power
         { },
     };
 
-    static PyType_Spec type_spec_BackgroundEnergyManager =
-    {
+    static PyType_Spec type_spec_BackgroundEnergyManager = {
         "winrt._winrt_windows_system_power.BackgroundEnergyManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackgroundEnergyManager
-    };
+        _type_slots_BackgroundEnergyManager};
 
     static PyGetSetDef getset_BackgroundEnergyManager_Static[] = {
         { "excessive_usage_level", reinterpret_cast<getter>(BackgroundEnergyManager_get_ExcessiveUsageLevel), nullptr, nullptr, nullptr },
@@ -543,14 +541,12 @@ namespace py::cpp::Windows::System::Power
         { },
     };
 
-    static PyType_Spec type_spec_ForegroundEnergyManager =
-    {
+    static PyType_Spec type_spec_ForegroundEnergyManager = {
         "winrt._winrt_windows_system_power.ForegroundEnergyManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ForegroundEnergyManager
-    };
+        _type_slots_ForegroundEnergyManager};
 
     static PyGetSetDef getset_ForegroundEnergyManager_Static[] = {
         { "excessive_usage_level", reinterpret_cast<getter>(ForegroundEnergyManager_get_ExcessiveUsageLevel), nullptr, nullptr, nullptr },
@@ -928,14 +924,12 @@ namespace py::cpp::Windows::System::Power
         { },
     };
 
-    static PyType_Spec type_spec_PowerManager =
-    {
+    static PyType_Spec type_spec_PowerManager = {
         "winrt._winrt_windows_system_power.PowerManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PowerManager
-    };
+        _type_slots_PowerManager};
 
     static PyGetSetDef getset_PowerManager_Static[] = {
         { "battery_status", reinterpret_cast<getter>(PowerManager_get_BatteryStatus), nullptr, nullptr, nullptr },

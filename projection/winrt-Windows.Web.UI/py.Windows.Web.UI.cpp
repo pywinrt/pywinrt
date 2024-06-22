@@ -85,14 +85,12 @@ namespace py::cpp::Windows::Web::UI
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControlContentLoadingEventArgs =
-    {
+    static PyType_Spec type_spec_WebViewControlContentLoadingEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlContentLoadingEventArgs",
         sizeof(py::wrapper::Windows::Web::UI::WebViewControlContentLoadingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControlContentLoadingEventArgs
-    };
+        _type_slots_WebViewControlContentLoadingEventArgs};
 
     // ----- WebViewControlDOMContentLoadedEventArgs class --------------------
 
@@ -174,14 +172,12 @@ namespace py::cpp::Windows::Web::UI
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControlDOMContentLoadedEventArgs =
-    {
+    static PyType_Spec type_spec_WebViewControlDOMContentLoadedEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlDOMContentLoadedEventArgs",
         sizeof(py::wrapper::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControlDOMContentLoadedEventArgs
-    };
+        _type_slots_WebViewControlDOMContentLoadedEventArgs};
 
     // ----- WebViewControlDeferredPermissionRequest class --------------------
 
@@ -365,14 +361,12 @@ namespace py::cpp::Windows::Web::UI
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControlDeferredPermissionRequest =
-    {
+    static PyType_Spec type_spec_WebViewControlDeferredPermissionRequest = {
         "winrt._winrt_windows_web_ui.WebViewControlDeferredPermissionRequest",
         sizeof(py::wrapper::Windows::Web::UI::WebViewControlDeferredPermissionRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControlDeferredPermissionRequest
-    };
+        _type_slots_WebViewControlDeferredPermissionRequest};
 
     // ----- WebViewControlLongRunningScriptDetectedEventArgs class --------------------
 
@@ -502,14 +496,12 @@ namespace py::cpp::Windows::Web::UI
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControlLongRunningScriptDetectedEventArgs =
-    {
+    static PyType_Spec type_spec_WebViewControlLongRunningScriptDetectedEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlLongRunningScriptDetectedEventArgs",
         sizeof(py::wrapper::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControlLongRunningScriptDetectedEventArgs
-    };
+        _type_slots_WebViewControlLongRunningScriptDetectedEventArgs};
 
     // ----- WebViewControlNavigationCompletedEventArgs class --------------------
 
@@ -631,14 +623,12 @@ namespace py::cpp::Windows::Web::UI
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControlNavigationCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_WebViewControlNavigationCompletedEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlNavigationCompletedEventArgs",
         sizeof(py::wrapper::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControlNavigationCompletedEventArgs
-    };
+        _type_slots_WebViewControlNavigationCompletedEventArgs};
 
     // ----- WebViewControlNavigationStartingEventArgs class --------------------
 
@@ -768,14 +758,12 @@ namespace py::cpp::Windows::Web::UI
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControlNavigationStartingEventArgs =
-    {
+    static PyType_Spec type_spec_WebViewControlNavigationStartingEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlNavigationStartingEventArgs",
         sizeof(py::wrapper::Windows::Web::UI::WebViewControlNavigationStartingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControlNavigationStartingEventArgs
-    };
+        _type_slots_WebViewControlNavigationStartingEventArgs};
 
     // ----- WebViewControlNewWindowRequestedEventArgs class --------------------
 
@@ -1003,14 +991,12 @@ namespace py::cpp::Windows::Web::UI
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControlNewWindowRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_WebViewControlNewWindowRequestedEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlNewWindowRequestedEventArgs",
         sizeof(py::wrapper::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControlNewWindowRequestedEventArgs
-    };
+        _type_slots_WebViewControlNewWindowRequestedEventArgs};
 
     // ----- WebViewControlPermissionRequest class --------------------
 
@@ -1245,14 +1231,12 @@ namespace py::cpp::Windows::Web::UI
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControlPermissionRequest =
-    {
+    static PyType_Spec type_spec_WebViewControlPermissionRequest = {
         "winrt._winrt_windows_web_ui.WebViewControlPermissionRequest",
         sizeof(py::wrapper::Windows::Web::UI::WebViewControlPermissionRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControlPermissionRequest
-    };
+        _type_slots_WebViewControlPermissionRequest};
 
     // ----- WebViewControlPermissionRequestedEventArgs class --------------------
 
@@ -1334,14 +1318,12 @@ namespace py::cpp::Windows::Web::UI
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControlPermissionRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_WebViewControlPermissionRequestedEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlPermissionRequestedEventArgs",
         sizeof(py::wrapper::Windows::Web::UI::WebViewControlPermissionRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControlPermissionRequestedEventArgs
-    };
+        _type_slots_WebViewControlPermissionRequestedEventArgs};
 
     // ----- WebViewControlScriptNotifyEventArgs class --------------------
 
@@ -1443,14 +1425,12 @@ namespace py::cpp::Windows::Web::UI
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControlScriptNotifyEventArgs =
-    {
+    static PyType_Spec type_spec_WebViewControlScriptNotifyEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlScriptNotifyEventArgs",
         sizeof(py::wrapper::Windows::Web::UI::WebViewControlScriptNotifyEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControlScriptNotifyEventArgs
-    };
+        _type_slots_WebViewControlScriptNotifyEventArgs};
 
     // ----- WebViewControlSettings class --------------------
 
@@ -1656,14 +1636,12 @@ namespace py::cpp::Windows::Web::UI
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControlSettings =
-    {
+    static PyType_Spec type_spec_WebViewControlSettings = {
         "winrt._winrt_windows_web_ui.WebViewControlSettings",
         sizeof(py::wrapper::Windows::Web::UI::WebViewControlSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControlSettings
-    };
+        _type_slots_WebViewControlSettings};
 
     // ----- WebViewControlUnsupportedUriSchemeIdentifiedEventArgs class --------------------
 
@@ -1793,14 +1771,12 @@ namespace py::cpp::Windows::Web::UI
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs =
-    {
+    static PyType_Spec type_spec_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs",
         sizeof(py::wrapper::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs
-    };
+        _type_slots_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs};
 
     // ----- WebViewControlUnviewableContentIdentifiedEventArgs class --------------------
 
@@ -1922,14 +1898,12 @@ namespace py::cpp::Windows::Web::UI
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControlUnviewableContentIdentifiedEventArgs =
-    {
+    static PyType_Spec type_spec_WebViewControlUnviewableContentIdentifiedEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlUnviewableContentIdentifiedEventArgs",
         sizeof(py::wrapper::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControlUnviewableContentIdentifiedEventArgs
-    };
+        _type_slots_WebViewControlUnviewableContentIdentifiedEventArgs};
 
     // ----- WebViewControlWebResourceRequestedEventArgs class --------------------
 
@@ -2089,14 +2063,12 @@ namespace py::cpp::Windows::Web::UI
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControlWebResourceRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_WebViewControlWebResourceRequestedEventArgs = {
         "winrt._winrt_windows_web_ui.WebViewControlWebResourceRequestedEventArgs",
         sizeof(py::wrapper::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControlWebResourceRequestedEventArgs
-    };
+        _type_slots_WebViewControlWebResourceRequestedEventArgs};
 
     // ----- IWebViewControl interface --------------------
 
@@ -3564,14 +3536,12 @@ namespace py::cpp::Windows::Web::UI
         { },
     };
 
-    static PyType_Spec type_spec_IWebViewControl =
-    {
+    static PyType_Spec type_spec_IWebViewControl = {
         "winrt._winrt_windows_web_ui.IWebViewControl",
         sizeof(py::wrapper::Windows::Web::UI::IWebViewControl),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IWebViewControl
-    };
+        _type_slots_IWebViewControl};
 
     // ----- IWebViewControl2 interface --------------------
 
@@ -3666,14 +3636,12 @@ namespace py::cpp::Windows::Web::UI
         { },
     };
 
-    static PyType_Spec type_spec_IWebViewControl2 =
-    {
+    static PyType_Spec type_spec_IWebViewControl2 = {
         "winrt._winrt_windows_web_ui.IWebViewControl2",
         sizeof(py::wrapper::Windows::Web::UI::IWebViewControl2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IWebViewControl2
-    };
+        _type_slots_IWebViewControl2};
 
     // ----- Windows.Web.UI Initialization --------------------
 

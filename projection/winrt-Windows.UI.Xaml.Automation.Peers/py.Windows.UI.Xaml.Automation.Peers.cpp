@@ -438,14 +438,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_AppBarAutomationPeer =
-    {
+    static PyType_Spec type_spec_AppBarAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.AppBarAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBarAutomationPeer
-    };
+        _type_slots_AppBarAutomationPeer};
 
     // ----- AppBarButtonAutomationPeer class --------------------
 
@@ -613,14 +611,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_AppBarButtonAutomationPeer =
-    {
+    static PyType_Spec type_spec_AppBarButtonAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.AppBarButtonAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBarButtonAutomationPeer
-    };
+        _type_slots_AppBarButtonAutomationPeer};
 
     // ----- AppBarToggleButtonAutomationPeer class --------------------
 
@@ -706,14 +702,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_AppBarToggleButtonAutomationPeer =
-    {
+    static PyType_Spec type_spec_AppBarToggleButtonAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.AppBarToggleButtonAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppBarToggleButtonAutomationPeer
-    };
+        _type_slots_AppBarToggleButtonAutomationPeer};
 
     // ----- AutoSuggestBoxAutomationPeer class --------------------
 
@@ -830,14 +824,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_AutoSuggestBoxAutomationPeer =
-    {
+    static PyType_Spec type_spec_AutoSuggestBoxAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.AutoSuggestBoxAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutoSuggestBoxAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AutoSuggestBoxAutomationPeer
-    };
+        _type_slots_AutoSuggestBoxAutomationPeer};
 
     // ----- AutomationPeer class --------------------
 
@@ -2603,14 +2595,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_AutomationPeer =
-    {
+    static PyType_Spec type_spec_AutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.AutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AutomationPeer
-    };
+        _type_slots_AutomationPeer};
 
     static PyGetSetDef getset_AutomationPeer_Static[] = {
         { }
@@ -2886,14 +2876,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_AutomationPeerAnnotation =
-    {
+    static PyType_Spec type_spec_AutomationPeerAnnotation = {
         "winrt._winrt_windows_ui_xaml_automation_peers.AutomationPeerAnnotation",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeerAnnotation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AutomationPeerAnnotation
-    };
+        _type_slots_AutomationPeerAnnotation};
 
     static PyGetSetDef getset_AutomationPeerAnnotation_Static[] = {
         { "peer_property", reinterpret_cast<getter>(AutomationPeerAnnotation_get_PeerProperty), nullptr, nullptr, nullptr },
@@ -3037,14 +3025,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ButtonAutomationPeer =
-    {
+    static PyType_Spec type_spec_ButtonAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ButtonAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ButtonAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ButtonAutomationPeer
-    };
+        _type_slots_ButtonAutomationPeer};
 
     // ----- ButtonBaseAutomationPeer class --------------------
 
@@ -3106,14 +3092,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ButtonBaseAutomationPeer =
-    {
+    static PyType_Spec type_spec_ButtonBaseAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ButtonBaseAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ButtonBaseAutomationPeer
-    };
+        _type_slots_ButtonBaseAutomationPeer};
 
     // ----- CalendarDatePickerAutomationPeer class --------------------
 
@@ -3303,14 +3287,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_CalendarDatePickerAutomationPeer =
-    {
+    static PyType_Spec type_spec_CalendarDatePickerAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.CalendarDatePickerAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CalendarDatePickerAutomationPeer
-    };
+        _type_slots_CalendarDatePickerAutomationPeer};
 
     // ----- CaptureElementAutomationPeer class --------------------
 
@@ -3396,14 +3378,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_CaptureElementAutomationPeer =
-    {
+    static PyType_Spec type_spec_CaptureElementAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.CaptureElementAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::CaptureElementAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CaptureElementAutomationPeer
-    };
+        _type_slots_CaptureElementAutomationPeer};
 
     // ----- CheckBoxAutomationPeer class --------------------
 
@@ -3489,14 +3469,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_CheckBoxAutomationPeer =
-    {
+    static PyType_Spec type_spec_CheckBoxAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.CheckBoxAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CheckBoxAutomationPeer
-    };
+        _type_slots_CheckBoxAutomationPeer};
 
     // ----- ColorPickerSliderAutomationPeer class --------------------
 
@@ -3582,14 +3560,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ColorPickerSliderAutomationPeer =
-    {
+    static PyType_Spec type_spec_ColorPickerSliderAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ColorPickerSliderAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ColorPickerSliderAutomationPeer
-    };
+        _type_slots_ColorPickerSliderAutomationPeer};
 
     // ----- ColorSpectrumAutomationPeer class --------------------
 
@@ -3675,14 +3651,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ColorSpectrumAutomationPeer =
-    {
+    static PyType_Spec type_spec_ColorSpectrumAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ColorSpectrumAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ColorSpectrumAutomationPeer
-    };
+        _type_slots_ColorSpectrumAutomationPeer};
 
     // ----- ComboBoxAutomationPeer class --------------------
 
@@ -4139,14 +4113,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ComboBoxAutomationPeer =
-    {
+    static PyType_Spec type_spec_ComboBoxAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ComboBoxAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ComboBoxAutomationPeer
-    };
+        _type_slots_ComboBoxAutomationPeer};
 
     // ----- ComboBoxItemAutomationPeer class --------------------
 
@@ -4232,14 +4204,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ComboBoxItemAutomationPeer =
-    {
+    static PyType_Spec type_spec_ComboBoxItemAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ComboBoxItemAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ComboBoxItemAutomationPeer
-    };
+        _type_slots_ComboBoxItemAutomationPeer};
 
     // ----- ComboBoxItemDataAutomationPeer class --------------------
 
@@ -4357,14 +4327,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ComboBoxItemDataAutomationPeer =
-    {
+    static PyType_Spec type_spec_ComboBoxItemDataAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ComboBoxItemDataAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ComboBoxItemDataAutomationPeer
-    };
+        _type_slots_ComboBoxItemDataAutomationPeer};
 
     // ----- DatePickerAutomationPeer class --------------------
 
@@ -4450,14 +4418,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_DatePickerAutomationPeer =
-    {
+    static PyType_Spec type_spec_DatePickerAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.DatePickerAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::DatePickerAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DatePickerAutomationPeer
-    };
+        _type_slots_DatePickerAutomationPeer};
 
     // ----- DatePickerFlyoutPresenterAutomationPeer class --------------------
 
@@ -4519,14 +4485,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_DatePickerFlyoutPresenterAutomationPeer =
-    {
+    static PyType_Spec type_spec_DatePickerFlyoutPresenterAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.DatePickerFlyoutPresenterAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::DatePickerFlyoutPresenterAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DatePickerFlyoutPresenterAutomationPeer
-    };
+        _type_slots_DatePickerFlyoutPresenterAutomationPeer};
 
     // ----- FlipViewAutomationPeer class --------------------
 
@@ -4612,14 +4576,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_FlipViewAutomationPeer =
-    {
+    static PyType_Spec type_spec_FlipViewAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.FlipViewAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::FlipViewAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FlipViewAutomationPeer
-    };
+        _type_slots_FlipViewAutomationPeer};
 
     // ----- FlipViewItemAutomationPeer class --------------------
 
@@ -4705,14 +4667,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_FlipViewItemAutomationPeer =
-    {
+    static PyType_Spec type_spec_FlipViewItemAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.FlipViewItemAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FlipViewItemAutomationPeer
-    };
+        _type_slots_FlipViewItemAutomationPeer};
 
     // ----- FlipViewItemDataAutomationPeer class --------------------
 
@@ -4830,14 +4790,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_FlipViewItemDataAutomationPeer =
-    {
+    static PyType_Spec type_spec_FlipViewItemDataAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.FlipViewItemDataAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FlipViewItemDataAutomationPeer
-    };
+        _type_slots_FlipViewItemDataAutomationPeer};
 
     // ----- FlyoutPresenterAutomationPeer class --------------------
 
@@ -4923,14 +4881,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_FlyoutPresenterAutomationPeer =
-    {
+    static PyType_Spec type_spec_FlyoutPresenterAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.FlyoutPresenterAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FlyoutPresenterAutomationPeer
-    };
+        _type_slots_FlyoutPresenterAutomationPeer};
 
     // ----- FrameworkElementAutomationPeer class --------------------
 
@@ -5098,14 +5054,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_FrameworkElementAutomationPeer =
-    {
+    static PyType_Spec type_spec_FrameworkElementAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.FrameworkElementAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameworkElementAutomationPeer
-    };
+        _type_slots_FrameworkElementAutomationPeer};
 
     static PyGetSetDef getset_FrameworkElementAutomationPeer_Static[] = {
         { }
@@ -5218,14 +5172,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_GridViewAutomationPeer =
-    {
+    static PyType_Spec type_spec_GridViewAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.GridViewAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::GridViewAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GridViewAutomationPeer
-    };
+        _type_slots_GridViewAutomationPeer};
 
     // ----- GridViewHeaderItemAutomationPeer class --------------------
 
@@ -5311,14 +5263,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_GridViewHeaderItemAutomationPeer =
-    {
+    static PyType_Spec type_spec_GridViewHeaderItemAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.GridViewHeaderItemAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GridViewHeaderItemAutomationPeer
-    };
+        _type_slots_GridViewHeaderItemAutomationPeer};
 
     // ----- GridViewItemAutomationPeer class --------------------
 
@@ -5404,14 +5354,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_GridViewItemAutomationPeer =
-    {
+    static PyType_Spec type_spec_GridViewItemAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.GridViewItemAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GridViewItemAutomationPeer
-    };
+        _type_slots_GridViewItemAutomationPeer};
 
     // ----- GridViewItemDataAutomationPeer class --------------------
 
@@ -5529,14 +5477,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_GridViewItemDataAutomationPeer =
-    {
+    static PyType_Spec type_spec_GridViewItemDataAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.GridViewItemDataAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GridViewItemDataAutomationPeer
-    };
+        _type_slots_GridViewItemDataAutomationPeer};
 
     // ----- GroupItemAutomationPeer class --------------------
 
@@ -5622,14 +5568,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_GroupItemAutomationPeer =
-    {
+    static PyType_Spec type_spec_GroupItemAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.GroupItemAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::GroupItemAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GroupItemAutomationPeer
-    };
+        _type_slots_GroupItemAutomationPeer};
 
     // ----- HubAutomationPeer class --------------------
 
@@ -5715,14 +5659,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_HubAutomationPeer =
-    {
+    static PyType_Spec type_spec_HubAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.HubAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::HubAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HubAutomationPeer
-    };
+        _type_slots_HubAutomationPeer};
 
     // ----- HubSectionAutomationPeer class --------------------
 
@@ -5839,14 +5781,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_HubSectionAutomationPeer =
-    {
+    static PyType_Spec type_spec_HubSectionAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.HubSectionAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::HubSectionAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HubSectionAutomationPeer
-    };
+        _type_slots_HubSectionAutomationPeer};
 
     // ----- HyperlinkButtonAutomationPeer class --------------------
 
@@ -5963,14 +5903,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_HyperlinkButtonAutomationPeer =
-    {
+    static PyType_Spec type_spec_HyperlinkButtonAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.HyperlinkButtonAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HyperlinkButtonAutomationPeer
-    };
+        _type_slots_HyperlinkButtonAutomationPeer};
 
     // ----- ImageAutomationPeer class --------------------
 
@@ -6056,14 +5994,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ImageAutomationPeer =
-    {
+    static PyType_Spec type_spec_ImageAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ImageAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ImageAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ImageAutomationPeer
-    };
+        _type_slots_ImageAutomationPeer};
 
     // ----- InkToolbarAutomationPeer class --------------------
 
@@ -6125,14 +6061,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_InkToolbarAutomationPeer =
-    {
+    static PyType_Spec type_spec_InkToolbarAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.InkToolbarAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::InkToolbarAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkToolbarAutomationPeer
-    };
+        _type_slots_InkToolbarAutomationPeer};
 
     // ----- ItemAutomationPeer class --------------------
 
@@ -6290,14 +6224,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ItemAutomationPeer =
-    {
+    static PyType_Spec type_spec_ItemAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ItemAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ItemAutomationPeer
-    };
+        _type_slots_ItemAutomationPeer};
 
     // ----- ItemsControlAutomationPeer class --------------------
 
@@ -6449,14 +6381,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ItemsControlAutomationPeer =
-    {
+    static PyType_Spec type_spec_ItemsControlAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ItemsControlAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ItemsControlAutomationPeer
-    };
+        _type_slots_ItemsControlAutomationPeer};
 
     // ----- ListBoxAutomationPeer class --------------------
 
@@ -6542,14 +6472,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ListBoxAutomationPeer =
-    {
+    static PyType_Spec type_spec_ListBoxAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ListBoxAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListBoxAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ListBoxAutomationPeer
-    };
+        _type_slots_ListBoxAutomationPeer};
 
     // ----- ListBoxItemAutomationPeer class --------------------
 
@@ -6635,14 +6563,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ListBoxItemAutomationPeer =
-    {
+    static PyType_Spec type_spec_ListBoxItemAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ListBoxItemAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ListBoxItemAutomationPeer
-    };
+        _type_slots_ListBoxItemAutomationPeer};
 
     // ----- ListBoxItemDataAutomationPeer class --------------------
 
@@ -6760,14 +6686,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ListBoxItemDataAutomationPeer =
-    {
+    static PyType_Spec type_spec_ListBoxItemDataAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ListBoxItemDataAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ListBoxItemDataAutomationPeer
-    };
+        _type_slots_ListBoxItemDataAutomationPeer};
 
     // ----- ListPickerFlyoutPresenterAutomationPeer class --------------------
 
@@ -6829,14 +6753,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ListPickerFlyoutPresenterAutomationPeer =
-    {
+    static PyType_Spec type_spec_ListPickerFlyoutPresenterAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ListPickerFlyoutPresenterAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListPickerFlyoutPresenterAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ListPickerFlyoutPresenterAutomationPeer
-    };
+        _type_slots_ListPickerFlyoutPresenterAutomationPeer};
 
     // ----- ListViewAutomationPeer class --------------------
 
@@ -6922,14 +6844,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ListViewAutomationPeer =
-    {
+    static PyType_Spec type_spec_ListViewAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ListViewAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListViewAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ListViewAutomationPeer
-    };
+        _type_slots_ListViewAutomationPeer};
 
     // ----- ListViewBaseAutomationPeer class --------------------
 
@@ -7055,14 +6975,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ListViewBaseAutomationPeer =
-    {
+    static PyType_Spec type_spec_ListViewBaseAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ListViewBaseAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ListViewBaseAutomationPeer
-    };
+        _type_slots_ListViewBaseAutomationPeer};
 
     // ----- ListViewBaseHeaderItemAutomationPeer class --------------------
 
@@ -7124,14 +7042,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ListViewBaseHeaderItemAutomationPeer =
-    {
+    static PyType_Spec type_spec_ListViewBaseHeaderItemAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ListViewBaseHeaderItemAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ListViewBaseHeaderItemAutomationPeer
-    };
+        _type_slots_ListViewBaseHeaderItemAutomationPeer};
 
     // ----- ListViewHeaderItemAutomationPeer class --------------------
 
@@ -7217,14 +7133,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ListViewHeaderItemAutomationPeer =
-    {
+    static PyType_Spec type_spec_ListViewHeaderItemAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ListViewHeaderItemAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ListViewHeaderItemAutomationPeer
-    };
+        _type_slots_ListViewHeaderItemAutomationPeer};
 
     // ----- ListViewItemAutomationPeer class --------------------
 
@@ -7310,14 +7224,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ListViewItemAutomationPeer =
-    {
+    static PyType_Spec type_spec_ListViewItemAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ListViewItemAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ListViewItemAutomationPeer
-    };
+        _type_slots_ListViewItemAutomationPeer};
 
     // ----- ListViewItemDataAutomationPeer class --------------------
 
@@ -7435,14 +7347,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ListViewItemDataAutomationPeer =
-    {
+    static PyType_Spec type_spec_ListViewItemDataAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ListViewItemDataAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ListViewItemDataAutomationPeer
-    };
+        _type_slots_ListViewItemDataAutomationPeer};
 
     // ----- LoopingSelectorAutomationPeer class --------------------
 
@@ -7878,14 +7788,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_LoopingSelectorAutomationPeer =
-    {
+    static PyType_Spec type_spec_LoopingSelectorAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.LoopingSelectorAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::LoopingSelectorAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LoopingSelectorAutomationPeer
-    };
+        _type_slots_LoopingSelectorAutomationPeer};
 
     // ----- LoopingSelectorItemAutomationPeer class --------------------
 
@@ -8111,14 +8019,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_LoopingSelectorItemAutomationPeer =
-    {
+    static PyType_Spec type_spec_LoopingSelectorItemAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.LoopingSelectorItemAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LoopingSelectorItemAutomationPeer
-    };
+        _type_slots_LoopingSelectorItemAutomationPeer};
 
     // ----- LoopingSelectorItemDataAutomationPeer class --------------------
 
@@ -8211,14 +8117,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_LoopingSelectorItemDataAutomationPeer =
-    {
+    static PyType_Spec type_spec_LoopingSelectorItemDataAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.LoopingSelectorItemDataAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemDataAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LoopingSelectorItemDataAutomationPeer
-    };
+        _type_slots_LoopingSelectorItemDataAutomationPeer};
 
     // ----- MapControlAutomationPeer class --------------------
 
@@ -8775,14 +8679,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_MapControlAutomationPeer =
-    {
+    static PyType_Spec type_spec_MapControlAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.MapControlAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::MapControlAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MapControlAutomationPeer
-    };
+        _type_slots_MapControlAutomationPeer};
 
     // ----- MediaElementAutomationPeer class --------------------
 
@@ -8868,14 +8770,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_MediaElementAutomationPeer =
-    {
+    static PyType_Spec type_spec_MediaElementAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.MediaElementAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::MediaElementAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaElementAutomationPeer
-    };
+        _type_slots_MediaElementAutomationPeer};
 
     // ----- MediaPlayerElementAutomationPeer class --------------------
 
@@ -8961,14 +8861,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_MediaPlayerElementAutomationPeer =
-    {
+    static PyType_Spec type_spec_MediaPlayerElementAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.MediaPlayerElementAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaPlayerElementAutomationPeer
-    };
+        _type_slots_MediaPlayerElementAutomationPeer};
 
     // ----- MediaTransportControlsAutomationPeer class --------------------
 
@@ -9054,14 +8952,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_MediaTransportControlsAutomationPeer =
-    {
+    static PyType_Spec type_spec_MediaTransportControlsAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.MediaTransportControlsAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaTransportControlsAutomationPeer
-    };
+        _type_slots_MediaTransportControlsAutomationPeer};
 
     // ----- MenuBarAutomationPeer class --------------------
 
@@ -9147,14 +9043,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_MenuBarAutomationPeer =
-    {
+    static PyType_Spec type_spec_MenuBarAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.MenuBarAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::MenuBarAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MenuBarAutomationPeer
-    };
+        _type_slots_MenuBarAutomationPeer};
 
     // ----- MenuBarItemAutomationPeer class --------------------
 
@@ -9353,14 +9247,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_MenuBarItemAutomationPeer =
-    {
+    static PyType_Spec type_spec_MenuBarItemAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.MenuBarItemAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MenuBarItemAutomationPeer
-    };
+        _type_slots_MenuBarItemAutomationPeer};
 
     // ----- MenuFlyoutItemAutomationPeer class --------------------
 
@@ -9477,14 +9369,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_MenuFlyoutItemAutomationPeer =
-    {
+    static PyType_Spec type_spec_MenuFlyoutItemAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.MenuFlyoutItemAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MenuFlyoutItemAutomationPeer
-    };
+        _type_slots_MenuFlyoutItemAutomationPeer};
 
     // ----- MenuFlyoutPresenterAutomationPeer class --------------------
 
@@ -9570,14 +9460,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_MenuFlyoutPresenterAutomationPeer =
-    {
+    static PyType_Spec type_spec_MenuFlyoutPresenterAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.MenuFlyoutPresenterAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MenuFlyoutPresenterAutomationPeer
-    };
+        _type_slots_MenuFlyoutPresenterAutomationPeer};
 
     // ----- NavigationViewItemAutomationPeer class --------------------
 
@@ -9663,14 +9551,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_NavigationViewItemAutomationPeer =
-    {
+    static PyType_Spec type_spec_NavigationViewItemAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.NavigationViewItemAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NavigationViewItemAutomationPeer
-    };
+        _type_slots_NavigationViewItemAutomationPeer};
 
     // ----- PasswordBoxAutomationPeer class --------------------
 
@@ -9756,14 +9642,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_PasswordBoxAutomationPeer =
-    {
+    static PyType_Spec type_spec_PasswordBoxAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.PasswordBoxAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PasswordBoxAutomationPeer
-    };
+        _type_slots_PasswordBoxAutomationPeer};
 
     // ----- PersonPictureAutomationPeer class --------------------
 
@@ -9849,14 +9733,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_PersonPictureAutomationPeer =
-    {
+    static PyType_Spec type_spec_PersonPictureAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.PersonPictureAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PersonPictureAutomationPeer
-    };
+        _type_slots_PersonPictureAutomationPeer};
 
     // ----- PickerFlyoutPresenterAutomationPeer class --------------------
 
@@ -9918,14 +9800,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_PickerFlyoutPresenterAutomationPeer =
-    {
+    static PyType_Spec type_spec_PickerFlyoutPresenterAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.PickerFlyoutPresenterAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::PickerFlyoutPresenterAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PickerFlyoutPresenterAutomationPeer
-    };
+        _type_slots_PickerFlyoutPresenterAutomationPeer};
 
     // ----- PivotAutomationPeer class --------------------
 
@@ -10269,14 +10149,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_PivotAutomationPeer =
-    {
+    static PyType_Spec type_spec_PivotAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.PivotAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::PivotAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PivotAutomationPeer
-    };
+        _type_slots_PivotAutomationPeer};
 
     // ----- PivotItemAutomationPeer class --------------------
 
@@ -10362,14 +10240,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_PivotItemAutomationPeer =
-    {
+    static PyType_Spec type_spec_PivotItemAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.PivotItemAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::PivotItemAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PivotItemAutomationPeer
-    };
+        _type_slots_PivotItemAutomationPeer};
 
     // ----- PivotItemDataAutomationPeer class --------------------
 
@@ -10651,14 +10527,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_PivotItemDataAutomationPeer =
-    {
+    static PyType_Spec type_spec_PivotItemDataAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.PivotItemDataAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::PivotItemDataAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PivotItemDataAutomationPeer
-    };
+        _type_slots_PivotItemDataAutomationPeer};
 
     // ----- ProgressBarAutomationPeer class --------------------
 
@@ -10744,14 +10618,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ProgressBarAutomationPeer =
-    {
+    static PyType_Spec type_spec_ProgressBarAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ProgressBarAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProgressBarAutomationPeer
-    };
+        _type_slots_ProgressBarAutomationPeer};
 
     // ----- ProgressRingAutomationPeer class --------------------
 
@@ -10837,14 +10709,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ProgressRingAutomationPeer =
-    {
+    static PyType_Spec type_spec_ProgressRingAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ProgressRingAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProgressRingAutomationPeer
-    };
+        _type_slots_ProgressRingAutomationPeer};
 
     // ----- RadioButtonAutomationPeer class --------------------
 
@@ -11063,14 +10933,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_RadioButtonAutomationPeer =
-    {
+    static PyType_Spec type_spec_RadioButtonAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.RadioButtonAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RadioButtonAutomationPeer
-    };
+        _type_slots_RadioButtonAutomationPeer};
 
     // ----- RangeBaseAutomationPeer class --------------------
 
@@ -11309,14 +11177,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_RangeBaseAutomationPeer =
-    {
+    static PyType_Spec type_spec_RangeBaseAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.RangeBaseAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RangeBaseAutomationPeer
-    };
+        _type_slots_RangeBaseAutomationPeer};
 
     // ----- RatingControlAutomationPeer class --------------------
 
@@ -11402,14 +11268,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_RatingControlAutomationPeer =
-    {
+    static PyType_Spec type_spec_RatingControlAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.RatingControlAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::RatingControlAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RatingControlAutomationPeer
-    };
+        _type_slots_RatingControlAutomationPeer};
 
     // ----- RepeatButtonAutomationPeer class --------------------
 
@@ -11526,14 +11390,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_RepeatButtonAutomationPeer =
-    {
+    static PyType_Spec type_spec_RepeatButtonAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.RepeatButtonAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RepeatButtonAutomationPeer
-    };
+        _type_slots_RepeatButtonAutomationPeer};
 
     // ----- RichEditBoxAutomationPeer class --------------------
 
@@ -11619,14 +11481,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_RichEditBoxAutomationPeer =
-    {
+    static PyType_Spec type_spec_RichEditBoxAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.RichEditBoxAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RichEditBoxAutomationPeer
-    };
+        _type_slots_RichEditBoxAutomationPeer};
 
     // ----- RichTextBlockAutomationPeer class --------------------
 
@@ -11712,14 +11572,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_RichTextBlockAutomationPeer =
-    {
+    static PyType_Spec type_spec_RichTextBlockAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.RichTextBlockAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RichTextBlockAutomationPeer
-    };
+        _type_slots_RichTextBlockAutomationPeer};
 
     // ----- RichTextBlockOverflowAutomationPeer class --------------------
 
@@ -11805,14 +11663,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_RichTextBlockOverflowAutomationPeer =
-    {
+    static PyType_Spec type_spec_RichTextBlockOverflowAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.RichTextBlockOverflowAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RichTextBlockOverflowAutomationPeer
-    };
+        _type_slots_RichTextBlockOverflowAutomationPeer};
 
     // ----- ScrollBarAutomationPeer class --------------------
 
@@ -11898,14 +11754,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ScrollBarAutomationPeer =
-    {
+    static PyType_Spec type_spec_ScrollBarAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ScrollBarAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScrollBarAutomationPeer
-    };
+        _type_slots_ScrollBarAutomationPeer};
 
     // ----- ScrollViewerAutomationPeer class --------------------
 
@@ -12179,14 +12033,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ScrollViewerAutomationPeer =
-    {
+    static PyType_Spec type_spec_ScrollViewerAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ScrollViewerAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScrollViewerAutomationPeer
-    };
+        _type_slots_ScrollViewerAutomationPeer};
 
     // ----- SearchBoxAutomationPeer class --------------------
 
@@ -12272,14 +12124,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_SearchBoxAutomationPeer =
-    {
+    static PyType_Spec type_spec_SearchBoxAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.SearchBoxAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::SearchBoxAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SearchBoxAutomationPeer
-    };
+        _type_slots_SearchBoxAutomationPeer};
 
     // ----- SelectorAutomationPeer class --------------------
 
@@ -12435,14 +12285,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_SelectorAutomationPeer =
-    {
+    static PyType_Spec type_spec_SelectorAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.SelectorAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SelectorAutomationPeer
-    };
+        _type_slots_SelectorAutomationPeer};
 
     // ----- SelectorItemAutomationPeer class --------------------
 
@@ -12662,14 +12510,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_SelectorItemAutomationPeer =
-    {
+    static PyType_Spec type_spec_SelectorItemAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.SelectorItemAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SelectorItemAutomationPeer
-    };
+        _type_slots_SelectorItemAutomationPeer};
 
     // ----- SemanticZoomAutomationPeer class --------------------
 
@@ -12806,14 +12652,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_SemanticZoomAutomationPeer =
-    {
+    static PyType_Spec type_spec_SemanticZoomAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.SemanticZoomAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SemanticZoomAutomationPeer
-    };
+        _type_slots_SemanticZoomAutomationPeer};
 
     // ----- SettingsFlyoutAutomationPeer class --------------------
 
@@ -12899,14 +12743,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_SettingsFlyoutAutomationPeer =
-    {
+    static PyType_Spec type_spec_SettingsFlyoutAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.SettingsFlyoutAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::SettingsFlyoutAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SettingsFlyoutAutomationPeer
-    };
+        _type_slots_SettingsFlyoutAutomationPeer};
 
     // ----- SliderAutomationPeer class --------------------
 
@@ -12992,14 +12834,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_SliderAutomationPeer =
-    {
+    static PyType_Spec type_spec_SliderAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.SliderAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::SliderAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SliderAutomationPeer
-    };
+        _type_slots_SliderAutomationPeer};
 
     // ----- TextBlockAutomationPeer class --------------------
 
@@ -13085,14 +12925,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_TextBlockAutomationPeer =
-    {
+    static PyType_Spec type_spec_TextBlockAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.TextBlockAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::TextBlockAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TextBlockAutomationPeer
-    };
+        _type_slots_TextBlockAutomationPeer};
 
     // ----- TextBoxAutomationPeer class --------------------
 
@@ -13178,14 +13016,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_TextBoxAutomationPeer =
-    {
+    static PyType_Spec type_spec_TextBoxAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.TextBoxAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::TextBoxAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TextBoxAutomationPeer
-    };
+        _type_slots_TextBoxAutomationPeer};
 
     // ----- ThumbAutomationPeer class --------------------
 
@@ -13271,14 +13107,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ThumbAutomationPeer =
-    {
+    static PyType_Spec type_spec_ThumbAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ThumbAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ThumbAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ThumbAutomationPeer
-    };
+        _type_slots_ThumbAutomationPeer};
 
     // ----- TimePickerAutomationPeer class --------------------
 
@@ -13364,14 +13198,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_TimePickerAutomationPeer =
-    {
+    static PyType_Spec type_spec_TimePickerAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.TimePickerAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::TimePickerAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TimePickerAutomationPeer
-    };
+        _type_slots_TimePickerAutomationPeer};
 
     // ----- TimePickerFlyoutPresenterAutomationPeer class --------------------
 
@@ -13433,14 +13265,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_TimePickerFlyoutPresenterAutomationPeer =
-    {
+    static PyType_Spec type_spec_TimePickerFlyoutPresenterAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.TimePickerFlyoutPresenterAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::TimePickerFlyoutPresenterAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TimePickerFlyoutPresenterAutomationPeer
-    };
+        _type_slots_TimePickerFlyoutPresenterAutomationPeer};
 
     // ----- ToggleButtonAutomationPeer class --------------------
 
@@ -13577,14 +13407,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ToggleButtonAutomationPeer =
-    {
+    static PyType_Spec type_spec_ToggleButtonAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ToggleButtonAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToggleButtonAutomationPeer
-    };
+        _type_slots_ToggleButtonAutomationPeer};
 
     // ----- ToggleMenuFlyoutItemAutomationPeer class --------------------
 
@@ -13721,14 +13549,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ToggleMenuFlyoutItemAutomationPeer =
-    {
+    static PyType_Spec type_spec_ToggleMenuFlyoutItemAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ToggleMenuFlyoutItemAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToggleMenuFlyoutItemAutomationPeer
-    };
+        _type_slots_ToggleMenuFlyoutItemAutomationPeer};
 
     // ----- ToggleSwitchAutomationPeer class --------------------
 
@@ -13865,14 +13691,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_ToggleSwitchAutomationPeer =
-    {
+    static PyType_Spec type_spec_ToggleSwitchAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.ToggleSwitchAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ToggleSwitchAutomationPeer
-    };
+        _type_slots_ToggleSwitchAutomationPeer};
 
     // ----- TreeViewItemAutomationPeer class --------------------
 
@@ -14040,14 +13864,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_TreeViewItemAutomationPeer =
-    {
+    static PyType_Spec type_spec_TreeViewItemAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.TreeViewItemAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TreeViewItemAutomationPeer
-    };
+        _type_slots_TreeViewItemAutomationPeer};
 
     // ----- TreeViewListAutomationPeer class --------------------
 
@@ -14133,14 +13955,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_TreeViewListAutomationPeer =
-    {
+    static PyType_Spec type_spec_TreeViewListAutomationPeer = {
         "winrt._winrt_windows_ui_xaml_automation_peers.TreeViewListAutomationPeer",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TreeViewListAutomationPeer
-    };
+        _type_slots_TreeViewListAutomationPeer};
 
     // ----- RawElementProviderRuntimeId struct --------------------
 
@@ -14294,14 +14114,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { },
     };
 
-    static PyType_Spec type_spec_RawElementProviderRuntimeId =
-    {
+    static PyType_Spec type_spec_RawElementProviderRuntimeId = {
         "winrt._winrt_windows_ui_xaml_automation_peers.RawElementProviderRuntimeId",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RawElementProviderRuntimeId
-    };
+        _type_slots_RawElementProviderRuntimeId};
 
     // ----- Windows.UI.Xaml.Automation.Peers Initialization --------------------
 

@@ -145,14 +145,12 @@ namespace py::cpp::Windows::Devices::Spi
         { },
     };
 
-    static PyType_Spec type_spec_SpiBusInfo =
-    {
+    static PyType_Spec type_spec_SpiBusInfo = {
         "winrt._winrt_windows_devices_spi.SpiBusInfo",
         sizeof(py::wrapper::Windows::Devices::Spi::SpiBusInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpiBusInfo
-    };
+        _type_slots_SpiBusInfo};
 
     // ----- SpiConnectionSettings class --------------------
 
@@ -478,14 +476,12 @@ namespace py::cpp::Windows::Devices::Spi
         { },
     };
 
-    static PyType_Spec type_spec_SpiConnectionSettings =
-    {
+    static PyType_Spec type_spec_SpiConnectionSettings = {
         "winrt._winrt_windows_devices_spi.SpiConnectionSettings",
         sizeof(py::wrapper::Windows::Devices::Spi::SpiConnectionSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpiConnectionSettings
-    };
+        _type_slots_SpiConnectionSettings};
 
     // ----- SpiController class --------------------
 
@@ -639,14 +635,12 @@ namespace py::cpp::Windows::Devices::Spi
         { },
     };
 
-    static PyType_Spec type_spec_SpiController =
-    {
+    static PyType_Spec type_spec_SpiController = {
         "winrt._winrt_windows_devices_spi.SpiController",
         sizeof(py::wrapper::Windows::Devices::Spi::SpiController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpiController
-    };
+        _type_slots_SpiController};
 
     static PyGetSetDef getset_SpiController_Static[] = {
         { }
@@ -1073,14 +1067,12 @@ namespace py::cpp::Windows::Devices::Spi
         { },
     };
 
-    static PyType_Spec type_spec_SpiDevice =
-    {
+    static PyType_Spec type_spec_SpiDevice = {
         "winrt._winrt_windows_devices_spi.SpiDevice",
         sizeof(py::wrapper::Windows::Devices::Spi::SpiDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpiDevice
-    };
+        _type_slots_SpiDevice};
 
     static PyGetSetDef getset_SpiDevice_Static[] = {
         { }
@@ -1285,14 +1277,12 @@ namespace py::cpp::Windows::Devices::Spi
         { },
     };
 
-    static PyType_Spec type_spec_ISpiDeviceStatics =
-    {
+    static PyType_Spec type_spec_ISpiDeviceStatics = {
         "winrt._winrt_windows_devices_spi.ISpiDeviceStatics",
         sizeof(py::wrapper::Windows::Devices::Spi::ISpiDeviceStatics),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISpiDeviceStatics
-    };
+        _type_slots_ISpiDeviceStatics};
 
     // ----- Windows.Devices.Spi Initialization --------------------
 

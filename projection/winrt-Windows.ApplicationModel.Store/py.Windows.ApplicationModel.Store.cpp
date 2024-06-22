@@ -529,14 +529,12 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { },
     };
 
-    static PyType_Spec type_spec_CurrentApp =
-    {
+    static PyType_Spec type_spec_CurrentApp = {
         "winrt._winrt_windows_applicationmodel_store.CurrentApp",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CurrentApp
-    };
+        _type_slots_CurrentApp};
 
     static PyGetSetDef getset_CurrentApp_Static[] = {
         { "app_id", reinterpret_cast<getter>(CurrentApp_get_AppId), nullptr, nullptr, nullptr },
@@ -1038,14 +1036,12 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { },
     };
 
-    static PyType_Spec type_spec_CurrentAppSimulator =
-    {
+    static PyType_Spec type_spec_CurrentAppSimulator = {
         "winrt._winrt_windows_applicationmodel_store.CurrentAppSimulator",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CurrentAppSimulator
-    };
+        _type_slots_CurrentAppSimulator};
 
     static PyGetSetDef getset_CurrentAppSimulator_Static[] = {
         { "app_id", reinterpret_cast<getter>(CurrentAppSimulator_get_AppId), nullptr, nullptr, nullptr },
@@ -1271,14 +1267,12 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { },
     };
 
-    static PyType_Spec type_spec_LicenseInformation =
-    {
+    static PyType_Spec type_spec_LicenseInformation = {
         "winrt._winrt_windows_applicationmodel_store.LicenseInformation",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::LicenseInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LicenseInformation
-    };
+        _type_slots_LicenseInformation};
 
     // ----- ListingInformation class --------------------
 
@@ -1540,14 +1534,12 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { },
     };
 
-    static PyType_Spec type_spec_ListingInformation =
-    {
+    static PyType_Spec type_spec_ListingInformation = {
         "winrt._winrt_windows_applicationmodel_store.ListingInformation",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::ListingInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ListingInformation
-    };
+        _type_slots_ListingInformation};
 
     // ----- ProductLicense class --------------------
 
@@ -1689,14 +1681,12 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { },
     };
 
-    static PyType_Spec type_spec_ProductLicense =
-    {
+    static PyType_Spec type_spec_ProductLicense = {
         "winrt._winrt_windows_applicationmodel_store.ProductLicense",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::ProductLicense),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProductLicense
-    };
+        _type_slots_ProductLicense};
 
     // ----- ProductListing class --------------------
 
@@ -1998,14 +1988,12 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { },
     };
 
-    static PyType_Spec type_spec_ProductListing =
-    {
+    static PyType_Spec type_spec_ProductListing = {
         "winrt._winrt_windows_applicationmodel_store.ProductListing",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::ProductListing),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProductListing
-    };
+        _type_slots_ProductListing};
 
     // ----- ProductPurchaseDisplayProperties class --------------------
 
@@ -2248,14 +2236,12 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { },
     };
 
-    static PyType_Spec type_spec_ProductPurchaseDisplayProperties =
-    {
+    static PyType_Spec type_spec_ProductPurchaseDisplayProperties = {
         "winrt._winrt_windows_applicationmodel_store.ProductPurchaseDisplayProperties",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProductPurchaseDisplayProperties
-    };
+        _type_slots_ProductPurchaseDisplayProperties};
 
     // ----- PurchaseResults class --------------------
 
@@ -2397,14 +2383,12 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { },
     };
 
-    static PyType_Spec type_spec_PurchaseResults =
-    {
+    static PyType_Spec type_spec_PurchaseResults = {
         "winrt._winrt_windows_applicationmodel_store.PurchaseResults",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::PurchaseResults),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PurchaseResults
-    };
+        _type_slots_PurchaseResults};
 
     // ----- UnfulfilledConsumable class --------------------
 
@@ -2526,14 +2510,12 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { },
     };
 
-    static PyType_Spec type_spec_UnfulfilledConsumable =
-    {
+    static PyType_Spec type_spec_UnfulfilledConsumable = {
         "winrt._winrt_windows_applicationmodel_store.UnfulfilledConsumable",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::UnfulfilledConsumable),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UnfulfilledConsumable
-    };
+        _type_slots_UnfulfilledConsumable};
 
     // ----- Windows.ApplicationModel.Store Initialization --------------------
 

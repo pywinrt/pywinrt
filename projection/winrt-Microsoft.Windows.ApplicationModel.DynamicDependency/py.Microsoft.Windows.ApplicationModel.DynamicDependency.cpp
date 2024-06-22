@@ -183,14 +183,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { },
     };
 
-    static PyType_Spec type_spec_AddPackageDependencyOptions =
-    {
+    static PyType_Spec type_spec_AddPackageDependencyOptions = {
         "winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency.AddPackageDependencyOptions",
         sizeof(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::AddPackageDependencyOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AddPackageDependencyOptions
-    };
+        _type_slots_AddPackageDependencyOptions};
 
     // ----- CreatePackageDependencyOptions class --------------------
 
@@ -466,14 +464,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { },
     };
 
-    static PyType_Spec type_spec_CreatePackageDependencyOptions =
-    {
+    static PyType_Spec type_spec_CreatePackageDependencyOptions = {
         "winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency.CreatePackageDependencyOptions",
         sizeof(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CreatePackageDependencyOptions
-    };
+        _type_slots_CreatePackageDependencyOptions};
 
     // ----- PackageDependency class --------------------
 
@@ -823,14 +819,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { },
     };
 
-    static PyType_Spec type_spec_PackageDependency =
-    {
+    static PyType_Spec type_spec_PackageDependency = {
         "winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency.PackageDependency",
         sizeof(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PackageDependency
-    };
+        _type_slots_PackageDependency};
 
     static PyGetSetDef getset_PackageDependency_Static[] = {
         { "generation_id", reinterpret_cast<getter>(PackageDependency_get_GenerationId), nullptr, nullptr, nullptr },
@@ -1038,14 +1032,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { },
     };
 
-    static PyType_Spec type_spec_PackageDependencyContext =
-    {
+    static PyType_Spec type_spec_PackageDependencyContext = {
         "winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency.PackageDependencyContext",
         sizeof(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContext),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PackageDependencyContext
-    };
+        _type_slots_PackageDependencyContext};
 
     // ----- PackageDependencyRank class --------------------
 
@@ -1091,14 +1083,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { },
     };
 
-    static PyType_Spec type_spec_PackageDependencyRank =
-    {
+    static PyType_Spec type_spec_PackageDependencyRank = {
         "winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency.PackageDependencyRank",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PackageDependencyRank
-    };
+        _type_slots_PackageDependencyRank};
 
     static PyGetSetDef getset_PackageDependencyRank_Static[] = {
         { "default", reinterpret_cast<getter>(PackageDependencyRank_get_Default), nullptr, nullptr, nullptr },
@@ -1243,14 +1233,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { },
     };
 
-    static PyType_Spec type_spec_PackageDependencyContextId =
-    {
+    static PyType_Spec type_spec_PackageDependencyContextId = {
         "winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency.PackageDependencyContextId",
         sizeof(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PackageDependencyContextId
-    };
+        _type_slots_PackageDependencyContextId};
 
     // ----- Microsoft.Windows.ApplicationModel.DynamicDependency Initialization --------------------
 

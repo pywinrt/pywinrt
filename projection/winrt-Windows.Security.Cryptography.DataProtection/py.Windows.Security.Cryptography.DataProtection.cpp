@@ -232,14 +232,12 @@ namespace py::cpp::Windows::Security::Cryptography::DataProtection
         { },
     };
 
-    static PyType_Spec type_spec_DataProtectionProvider =
-    {
+    static PyType_Spec type_spec_DataProtectionProvider = {
         "winrt._winrt_windows_security_cryptography_dataprotection.DataProtectionProvider",
         sizeof(py::wrapper::Windows::Security::Cryptography::DataProtection::DataProtectionProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DataProtectionProvider
-    };
+        _type_slots_DataProtectionProvider};
 
     // ----- Windows.Security.Cryptography.DataProtection Initialization --------------------
 

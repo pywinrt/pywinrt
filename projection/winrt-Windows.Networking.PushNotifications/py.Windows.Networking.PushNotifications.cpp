@@ -181,14 +181,12 @@ namespace py::cpp::Windows::Networking::PushNotifications
         { },
     };
 
-    static PyType_Spec type_spec_PushNotificationChannel =
-    {
+    static PyType_Spec type_spec_PushNotificationChannel = {
         "winrt._winrt_windows_networking_pushnotifications.PushNotificationChannel",
         sizeof(py::wrapper::Windows::Networking::PushNotifications::PushNotificationChannel),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PushNotificationChannel
-    };
+        _type_slots_PushNotificationChannel};
 
     // ----- PushNotificationChannelManager class --------------------
 
@@ -400,14 +398,12 @@ namespace py::cpp::Windows::Networking::PushNotifications
         { },
     };
 
-    static PyType_Spec type_spec_PushNotificationChannelManager =
-    {
+    static PyType_Spec type_spec_PushNotificationChannelManager = {
         "winrt._winrt_windows_networking_pushnotifications.PushNotificationChannelManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PushNotificationChannelManager
-    };
+        _type_slots_PushNotificationChannelManager};
 
     static PyGetSetDef getset_PushNotificationChannelManager_Static[] = {
         { }
@@ -655,14 +651,12 @@ namespace py::cpp::Windows::Networking::PushNotifications
         { },
     };
 
-    static PyType_Spec type_spec_PushNotificationChannelManagerForUser =
-    {
+    static PyType_Spec type_spec_PushNotificationChannelManagerForUser = {
         "winrt._winrt_windows_networking_pushnotifications.PushNotificationChannelManagerForUser",
         sizeof(py::wrapper::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PushNotificationChannelManagerForUser
-    };
+        _type_slots_PushNotificationChannelManagerForUser};
 
     // ----- PushNotificationChannelsRevokedEventArgs class --------------------
 
@@ -724,14 +718,12 @@ namespace py::cpp::Windows::Networking::PushNotifications
         { },
     };
 
-    static PyType_Spec type_spec_PushNotificationChannelsRevokedEventArgs =
-    {
+    static PyType_Spec type_spec_PushNotificationChannelsRevokedEventArgs = {
         "winrt._winrt_windows_networking_pushnotifications.PushNotificationChannelsRevokedEventArgs",
         sizeof(py::wrapper::Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PushNotificationChannelsRevokedEventArgs
-    };
+        _type_slots_PushNotificationChannelsRevokedEventArgs};
 
     // ----- PushNotificationReceivedEventArgs class --------------------
 
@@ -941,14 +933,12 @@ namespace py::cpp::Windows::Networking::PushNotifications
         { },
     };
 
-    static PyType_Spec type_spec_PushNotificationReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_PushNotificationReceivedEventArgs = {
         "winrt._winrt_windows_networking_pushnotifications.PushNotificationReceivedEventArgs",
         sizeof(py::wrapper::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PushNotificationReceivedEventArgs
-    };
+        _type_slots_PushNotificationReceivedEventArgs};
 
     // ----- RawNotification class --------------------
 
@@ -1090,14 +1080,12 @@ namespace py::cpp::Windows::Networking::PushNotifications
         { },
     };
 
-    static PyType_Spec type_spec_RawNotification =
-    {
+    static PyType_Spec type_spec_RawNotification = {
         "winrt._winrt_windows_networking_pushnotifications.RawNotification",
         sizeof(py::wrapper::Windows::Networking::PushNotifications::RawNotification),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RawNotification
-    };
+        _type_slots_RawNotification};
 
     // ----- Windows.Networking.PushNotifications Initialization --------------------
 

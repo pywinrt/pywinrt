@@ -96,14 +96,12 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
         { },
     };
 
-    static PyType_Spec type_spec_SecurityDescriptorHelpers =
-    {
+    static PyType_Spec type_spec_SecurityDescriptorHelpers = {
         "winrt._winrt_microsoft_windows_security_accesscontrol.SecurityDescriptorHelpers",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SecurityDescriptorHelpers
-    };
+        _type_slots_SecurityDescriptorHelpers};
 
     static PyGetSetDef getset_SecurityDescriptorHelpers_Static[] = {
         { }
@@ -284,14 +282,12 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
         { },
     };
 
-    static PyType_Spec type_spec_AppContainerNameAndAccess =
-    {
+    static PyType_Spec type_spec_AppContainerNameAndAccess = {
         "winrt._winrt_microsoft_windows_security_accesscontrol.AppContainerNameAndAccess",
         sizeof(py::wrapper::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppContainerNameAndAccess
-    };
+        _type_slots_AppContainerNameAndAccess};
 
     // ----- Microsoft.Windows.Security.AccessControl Initialization --------------------
 

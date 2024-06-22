@@ -235,14 +235,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { },
     };
 
-    static PyType_Spec type_spec_InkAnalysisInkBullet =
-    {
+    static PyType_Spec type_spec_InkAnalysisInkBullet = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisInkBullet",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkAnalysisInkBullet
-    };
+        _type_slots_InkAnalysisInkBullet};
 
     // ----- InkAnalysisInkDrawing class --------------------
 
@@ -514,14 +512,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { },
     };
 
-    static PyType_Spec type_spec_InkAnalysisInkDrawing =
-    {
+    static PyType_Spec type_spec_InkAnalysisInkDrawing = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisInkDrawing",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkAnalysisInkDrawing
-    };
+        _type_slots_InkAnalysisInkDrawing};
 
     // ----- InkAnalysisInkWord class --------------------
 
@@ -773,14 +769,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { },
     };
 
-    static PyType_Spec type_spec_InkAnalysisInkWord =
-    {
+    static PyType_Spec type_spec_InkAnalysisInkWord = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisInkWord",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkAnalysisInkWord
-    };
+        _type_slots_InkAnalysisInkWord};
 
     // ----- InkAnalysisLine class --------------------
 
@@ -1032,14 +1026,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { },
     };
 
-    static PyType_Spec type_spec_InkAnalysisLine =
-    {
+    static PyType_Spec type_spec_InkAnalysisLine = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisLine",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisLine),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkAnalysisLine
-    };
+        _type_slots_InkAnalysisLine};
 
     // ----- InkAnalysisListItem class --------------------
 
@@ -1271,14 +1263,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { },
     };
 
-    static PyType_Spec type_spec_InkAnalysisListItem =
-    {
+    static PyType_Spec type_spec_InkAnalysisListItem = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisListItem",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisListItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkAnalysisListItem
-    };
+        _type_slots_InkAnalysisListItem};
 
     // ----- InkAnalysisNode class --------------------
 
@@ -1490,14 +1480,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { },
     };
 
-    static PyType_Spec type_spec_InkAnalysisNode =
-    {
+    static PyType_Spec type_spec_InkAnalysisNode = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisNode",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisNode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkAnalysisNode
-    };
+        _type_slots_InkAnalysisNode};
 
     // ----- InkAnalysisParagraph class --------------------
 
@@ -1729,14 +1717,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { },
     };
 
-    static PyType_Spec type_spec_InkAnalysisParagraph =
-    {
+    static PyType_Spec type_spec_InkAnalysisParagraph = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisParagraph",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisParagraph),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkAnalysisParagraph
-    };
+        _type_slots_InkAnalysisParagraph};
 
     // ----- InkAnalysisResult class --------------------
 
@@ -1818,14 +1804,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { },
     };
 
-    static PyType_Spec type_spec_InkAnalysisResult =
-    {
+    static PyType_Spec type_spec_InkAnalysisResult = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisResult",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkAnalysisResult
-    };
+        _type_slots_InkAnalysisResult};
 
     // ----- InkAnalysisRoot class --------------------
 
@@ -2089,14 +2073,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { },
     };
 
-    static PyType_Spec type_spec_InkAnalysisRoot =
-    {
+    static PyType_Spec type_spec_InkAnalysisRoot = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisRoot",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkAnalysisRoot
-    };
+        _type_slots_InkAnalysisRoot};
 
     // ----- InkAnalysisWritingRegion class --------------------
 
@@ -2328,14 +2310,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { },
     };
 
-    static PyType_Spec type_spec_InkAnalysisWritingRegion =
-    {
+    static PyType_Spec type_spec_InkAnalysisWritingRegion = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalysisWritingRegion",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisWritingRegion),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkAnalysisWritingRegion
-    };
+        _type_slots_InkAnalysisWritingRegion};
 
     // ----- InkAnalyzer class --------------------
 
@@ -2719,14 +2699,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { },
     };
 
-    static PyType_Spec type_spec_InkAnalyzer =
-    {
+    static PyType_Spec type_spec_InkAnalyzer = {
         "winrt._winrt_windows_ui_input_inking_analysis.InkAnalyzer",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalyzer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkAnalyzer
-    };
+        _type_slots_InkAnalyzer};
 
     // ----- IInkAnalysisNode interface --------------------
 
@@ -2938,14 +2916,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { },
     };
 
-    static PyType_Spec type_spec_IInkAnalysisNode =
-    {
+    static PyType_Spec type_spec_IInkAnalysisNode = {
         "winrt._winrt_windows_ui_input_inking_analysis.IInkAnalysisNode",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IInkAnalysisNode
-    };
+        _type_slots_IInkAnalysisNode};
 
     // ----- IInkAnalyzerFactory interface --------------------
 
@@ -3037,14 +3013,12 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         { },
     };
 
-    static PyType_Spec type_spec_IInkAnalyzerFactory =
-    {
+    static PyType_Spec type_spec_IInkAnalyzerFactory = {
         "winrt._winrt_windows_ui_input_inking_analysis.IInkAnalyzerFactory",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IInkAnalyzerFactory
-    };
+        _type_slots_IInkAnalyzerFactory};
 
     // ----- Windows.UI.Input.Inking.Analysis Initialization --------------------
 

@@ -105,14 +105,12 @@ namespace py::cpp::Windows::UI::Accessibility
         { },
     };
 
-    static PyType_Spec type_spec_ScreenReaderPositionChangedEventArgs =
-    {
+    static PyType_Spec type_spec_ScreenReaderPositionChangedEventArgs = {
         "winrt._winrt_windows_ui_accessibility.ScreenReaderPositionChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScreenReaderPositionChangedEventArgs
-    };
+        _type_slots_ScreenReaderPositionChangedEventArgs};
 
     // ----- ScreenReaderService class --------------------
 
@@ -261,14 +259,12 @@ namespace py::cpp::Windows::UI::Accessibility
         { },
     };
 
-    static PyType_Spec type_spec_ScreenReaderService =
-    {
+    static PyType_Spec type_spec_ScreenReaderService = {
         "winrt._winrt_windows_ui_accessibility.ScreenReaderService",
         sizeof(py::wrapper::Windows::UI::Accessibility::ScreenReaderService),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScreenReaderService
-    };
+        _type_slots_ScreenReaderService};
 
     // ----- Windows.UI.Accessibility Initialization --------------------
 

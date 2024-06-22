@@ -179,14 +179,12 @@ namespace py::cpp::Windows::Phone::Devices::Power
         { },
     };
 
-    static PyType_Spec type_spec_Battery =
-    {
+    static PyType_Spec type_spec_Battery = {
         "winrt._winrt_windows_phone_devices_power.Battery",
         sizeof(py::wrapper::Windows::Phone::Devices::Power::Battery),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Battery
-    };
+        _type_slots_Battery};
 
     static PyGetSetDef getset_Battery_Static[] = {
         { }

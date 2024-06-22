@@ -107,14 +107,12 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         { },
     };
 
-    static PyType_Spec type_spec_AddPagesEventArgs =
-    {
+    static PyType_Spec type_spec_AddPagesEventArgs = {
         "winrt._winrt_windows_ui_xaml_printing.AddPagesEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Printing::AddPagesEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AddPagesEventArgs
-    };
+        _type_slots_AddPagesEventArgs};
 
     // ----- GetPreviewPageEventArgs class --------------------
 
@@ -218,14 +216,12 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         { },
     };
 
-    static PyType_Spec type_spec_GetPreviewPageEventArgs =
-    {
+    static PyType_Spec type_spec_GetPreviewPageEventArgs = {
         "winrt._winrt_windows_ui_xaml_printing.GetPreviewPageEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Printing::GetPreviewPageEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GetPreviewPageEventArgs
-    };
+        _type_slots_GetPreviewPageEventArgs};
 
     // ----- PaginateEventArgs class --------------------
 
@@ -349,14 +345,12 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         { },
     };
 
-    static PyType_Spec type_spec_PaginateEventArgs =
-    {
+    static PyType_Spec type_spec_PaginateEventArgs = {
         "winrt._winrt_windows_ui_xaml_printing.PaginateEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Printing::PaginateEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaginateEventArgs
-    };
+        _type_slots_PaginateEventArgs};
 
     // ----- PrintDocument class --------------------
 
@@ -777,14 +771,12 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         { },
     };
 
-    static PyType_Spec type_spec_PrintDocument =
-    {
+    static PyType_Spec type_spec_PrintDocument = {
         "winrt._winrt_windows_ui_xaml_printing.PrintDocument",
         sizeof(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintDocument
-    };
+        _type_slots_PrintDocument};
 
     static PyGetSetDef getset_PrintDocument_Static[] = {
         { "document_source_property", reinterpret_cast<getter>(PrintDocument_get_DocumentSourceProperty), nullptr, nullptr, nullptr },

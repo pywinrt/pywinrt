@@ -145,14 +145,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { },
     };
 
-    static PyType_Spec type_spec_WidgetActionInvokedArgs =
-    {
+    static PyType_Spec type_spec_WidgetActionInvokedArgs = {
         "winrt._winrt_microsoft_windows_widgets_providers.WidgetActionInvokedArgs",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetActionInvokedArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WidgetActionInvokedArgs
-    };
+        _type_slots_WidgetActionInvokedArgs};
 
     // ----- WidgetAnalyticsInfoReportedArgs class --------------------
 
@@ -254,14 +252,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { },
     };
 
-    static PyType_Spec type_spec_WidgetAnalyticsInfoReportedArgs =
-    {
+    static PyType_Spec type_spec_WidgetAnalyticsInfoReportedArgs = {
         "winrt._winrt_microsoft_windows_widgets_providers.WidgetAnalyticsInfoReportedArgs",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetAnalyticsInfoReportedArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WidgetAnalyticsInfoReportedArgs
-    };
+        _type_slots_WidgetAnalyticsInfoReportedArgs};
 
     // ----- WidgetContext class --------------------
 
@@ -403,14 +399,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { },
     };
 
-    static PyType_Spec type_spec_WidgetContext =
-    {
+    static PyType_Spec type_spec_WidgetContext = {
         "winrt._winrt_microsoft_windows_widgets_providers.WidgetContext",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetContext),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WidgetContext
-    };
+        _type_slots_WidgetContext};
 
     // ----- WidgetContextChangedArgs class --------------------
 
@@ -492,14 +486,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { },
     };
 
-    static PyType_Spec type_spec_WidgetContextChangedArgs =
-    {
+    static PyType_Spec type_spec_WidgetContextChangedArgs = {
         "winrt._winrt_microsoft_windows_widgets_providers.WidgetContextChangedArgs",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetContextChangedArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WidgetContextChangedArgs
-    };
+        _type_slots_WidgetContextChangedArgs};
 
     // ----- WidgetCustomizationRequestedArgs class --------------------
 
@@ -601,14 +593,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { },
     };
 
-    static PyType_Spec type_spec_WidgetCustomizationRequestedArgs =
-    {
+    static PyType_Spec type_spec_WidgetCustomizationRequestedArgs = {
         "winrt._winrt_microsoft_windows_widgets_providers.WidgetCustomizationRequestedArgs",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetCustomizationRequestedArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WidgetCustomizationRequestedArgs
-    };
+        _type_slots_WidgetCustomizationRequestedArgs};
 
     // ----- WidgetErrorInfoReportedArgs class --------------------
 
@@ -710,14 +700,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { },
     };
 
-    static PyType_Spec type_spec_WidgetErrorInfoReportedArgs =
-    {
+    static PyType_Spec type_spec_WidgetErrorInfoReportedArgs = {
         "winrt._winrt_microsoft_windows_widgets_providers.WidgetErrorInfoReportedArgs",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetErrorInfoReportedArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WidgetErrorInfoReportedArgs
-    };
+        _type_slots_WidgetErrorInfoReportedArgs};
 
     // ----- WidgetInfo class --------------------
 
@@ -879,14 +867,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { },
     };
 
-    static PyType_Spec type_spec_WidgetInfo =
-    {
+    static PyType_Spec type_spec_WidgetInfo = {
         "winrt._winrt_microsoft_windows_widgets_providers.WidgetInfo",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WidgetInfo
-    };
+        _type_slots_WidgetInfo};
 
     // ----- WidgetManager class --------------------
 
@@ -1135,14 +1121,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { },
     };
 
-    static PyType_Spec type_spec_WidgetManager =
-    {
+    static PyType_Spec type_spec_WidgetManager = {
         "winrt._winrt_microsoft_windows_widgets_providers.WidgetManager",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WidgetManager
-    };
+        _type_slots_WidgetManager};
 
     static PyGetSetDef getset_WidgetManager_Static[] = {
         { }
@@ -1437,14 +1421,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { },
     };
 
-    static PyType_Spec type_spec_WidgetUpdateRequestOptions =
-    {
+    static PyType_Spec type_spec_WidgetUpdateRequestOptions = {
         "winrt._winrt_microsoft_windows_widgets_providers.WidgetUpdateRequestOptions",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WidgetUpdateRequestOptions
-    };
+        _type_slots_WidgetUpdateRequestOptions};
 
     static PyGetSetDef getset_WidgetUpdateRequestOptions_Static[] = {
         { "unset_value", reinterpret_cast<getter>(WidgetUpdateRequestOptions_get_UnsetValue), nullptr, nullptr, nullptr },
@@ -1690,14 +1672,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { },
     };
 
-    static PyType_Spec type_spec_IWidgetManager =
-    {
+    static PyType_Spec type_spec_IWidgetManager = {
         "winrt._winrt_microsoft_windows_widgets_providers.IWidgetManager",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IWidgetManager
-    };
+        _type_slots_IWidgetManager};
 
     // ----- IWidgetProvider interface --------------------
 
@@ -1958,14 +1938,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { },
     };
 
-    static PyType_Spec type_spec_IWidgetProvider =
-    {
+    static PyType_Spec type_spec_IWidgetProvider = {
         "winrt._winrt_microsoft_windows_widgets_providers.IWidgetProvider",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProvider),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IWidgetProvider
-    };
+        _type_slots_IWidgetProvider};
 
     // ----- IWidgetProvider2 interface --------------------
 
@@ -2060,14 +2038,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { },
     };
 
-    static PyType_Spec type_spec_IWidgetProvider2 =
-    {
+    static PyType_Spec type_spec_IWidgetProvider2 = {
         "winrt._winrt_microsoft_windows_widgets_providers.IWidgetProvider2",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProvider2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IWidgetProvider2
-    };
+        _type_slots_IWidgetProvider2};
 
     // ----- IWidgetProviderAnalytics interface --------------------
 
@@ -2162,14 +2138,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { },
     };
 
-    static PyType_Spec type_spec_IWidgetProviderAnalytics =
-    {
+    static PyType_Spec type_spec_IWidgetProviderAnalytics = {
         "winrt._winrt_microsoft_windows_widgets_providers.IWidgetProviderAnalytics",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProviderAnalytics),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IWidgetProviderAnalytics
-    };
+        _type_slots_IWidgetProviderAnalytics};
 
     // ----- IWidgetProviderErrors interface --------------------
 
@@ -2264,14 +2238,12 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { },
     };
 
-    static PyType_Spec type_spec_IWidgetProviderErrors =
-    {
+    static PyType_Spec type_spec_IWidgetProviderErrors = {
         "winrt._winrt_microsoft_windows_widgets_providers.IWidgetProviderErrors",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProviderErrors),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IWidgetProviderErrors
-    };
+        _type_slots_IWidgetProviderErrors};
 
     // ----- Microsoft.Windows.Widgets.Providers Initialization --------------------
 

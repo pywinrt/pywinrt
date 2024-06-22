@@ -463,14 +463,12 @@ namespace py::cpp::Windows::Devices::WiFi
         { },
     };
 
-    static PyType_Spec type_spec_WiFiAdapter =
-    {
+    static PyType_Spec type_spec_WiFiAdapter = {
         "winrt._winrt_windows_devices_wifi.WiFiAdapter",
         sizeof(py::wrapper::Windows::Devices::WiFi::WiFiAdapter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiAdapter
-    };
+        _type_slots_WiFiAdapter};
 
     static PyGetSetDef getset_WiFiAdapter_Static[] = {
         { }
@@ -781,14 +779,12 @@ namespace py::cpp::Windows::Devices::WiFi
         { },
     };
 
-    static PyType_Spec type_spec_WiFiAvailableNetwork =
-    {
+    static PyType_Spec type_spec_WiFiAvailableNetwork = {
         "winrt._winrt_windows_devices_wifi.WiFiAvailableNetwork",
         sizeof(py::wrapper::Windows::Devices::WiFi::WiFiAvailableNetwork),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiAvailableNetwork
-    };
+        _type_slots_WiFiAvailableNetwork};
 
     // ----- WiFiConnectionResult class --------------------
 
@@ -870,14 +866,12 @@ namespace py::cpp::Windows::Devices::WiFi
         { },
     };
 
-    static PyType_Spec type_spec_WiFiConnectionResult =
-    {
+    static PyType_Spec type_spec_WiFiConnectionResult = {
         "winrt._winrt_windows_devices_wifi.WiFiConnectionResult",
         sizeof(py::wrapper::Windows::Devices::WiFi::WiFiConnectionResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiConnectionResult
-    };
+        _type_slots_WiFiConnectionResult};
 
     // ----- WiFiNetworkReport class --------------------
 
@@ -979,14 +973,12 @@ namespace py::cpp::Windows::Devices::WiFi
         { },
     };
 
-    static PyType_Spec type_spec_WiFiNetworkReport =
-    {
+    static PyType_Spec type_spec_WiFiNetworkReport = {
         "winrt._winrt_windows_devices_wifi.WiFiNetworkReport",
         sizeof(py::wrapper::Windows::Devices::WiFi::WiFiNetworkReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiNetworkReport
-    };
+        _type_slots_WiFiNetworkReport};
 
     // ----- WiFiOnDemandHotspotConnectTriggerDetails class --------------------
 
@@ -1161,14 +1153,12 @@ namespace py::cpp::Windows::Devices::WiFi
         { },
     };
 
-    static PyType_Spec type_spec_WiFiOnDemandHotspotConnectTriggerDetails =
-    {
+    static PyType_Spec type_spec_WiFiOnDemandHotspotConnectTriggerDetails = {
         "winrt._winrt_windows_devices_wifi.WiFiOnDemandHotspotConnectTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiOnDemandHotspotConnectTriggerDetails
-    };
+        _type_slots_WiFiOnDemandHotspotConnectTriggerDetails};
 
     // ----- WiFiOnDemandHotspotConnectionResult class --------------------
 
@@ -1250,14 +1240,12 @@ namespace py::cpp::Windows::Devices::WiFi
         { },
     };
 
-    static PyType_Spec type_spec_WiFiOnDemandHotspotConnectionResult =
-    {
+    static PyType_Spec type_spec_WiFiOnDemandHotspotConnectionResult = {
         "winrt._winrt_windows_devices_wifi.WiFiOnDemandHotspotConnectionResult",
         sizeof(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectionResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiOnDemandHotspotConnectionResult
-    };
+        _type_slots_WiFiOnDemandHotspotConnectionResult};
 
     // ----- WiFiOnDemandHotspotNetwork class --------------------
 
@@ -1433,14 +1421,12 @@ namespace py::cpp::Windows::Devices::WiFi
         { },
     };
 
-    static PyType_Spec type_spec_WiFiOnDemandHotspotNetwork =
-    {
+    static PyType_Spec type_spec_WiFiOnDemandHotspotNetwork = {
         "winrt._winrt_windows_devices_wifi.WiFiOnDemandHotspotNetwork",
         sizeof(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetwork),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiOnDemandHotspotNetwork
-    };
+        _type_slots_WiFiOnDemandHotspotNetwork};
 
     static PyGetSetDef getset_WiFiOnDemandHotspotNetwork_Static[] = {
         { }
@@ -1864,14 +1850,12 @@ namespace py::cpp::Windows::Devices::WiFi
         { },
     };
 
-    static PyType_Spec type_spec_WiFiOnDemandHotspotNetworkProperties =
-    {
+    static PyType_Spec type_spec_WiFiOnDemandHotspotNetworkProperties = {
         "winrt._winrt_windows_devices_wifi.WiFiOnDemandHotspotNetworkProperties",
         sizeof(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiOnDemandHotspotNetworkProperties
-    };
+        _type_slots_WiFiOnDemandHotspotNetworkProperties};
 
     // ----- WiFiWpsConfigurationResult class --------------------
 
@@ -1973,14 +1957,12 @@ namespace py::cpp::Windows::Devices::WiFi
         { },
     };
 
-    static PyType_Spec type_spec_WiFiWpsConfigurationResult =
-    {
+    static PyType_Spec type_spec_WiFiWpsConfigurationResult = {
         "winrt._winrt_windows_devices_wifi.WiFiWpsConfigurationResult",
         sizeof(py::wrapper::Windows::Devices::WiFi::WiFiWpsConfigurationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WiFiWpsConfigurationResult
-    };
+        _type_slots_WiFiWpsConfigurationResult};
 
     // ----- Windows.Devices.WiFi Initialization --------------------
 

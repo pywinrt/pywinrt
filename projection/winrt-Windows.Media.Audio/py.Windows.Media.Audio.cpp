@@ -560,14 +560,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioDeviceInputNode =
-    {
+    static PyType_Spec type_spec_AudioDeviceInputNode = {
         "winrt._winrt_windows_media_audio.AudioDeviceInputNode",
         sizeof(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioDeviceInputNode
-    };
+        _type_slots_AudioDeviceInputNode};
 
     // ----- AudioDeviceOutputNode class --------------------
 
@@ -1044,14 +1042,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioDeviceOutputNode =
-    {
+    static PyType_Spec type_spec_AudioDeviceOutputNode = {
         "winrt._winrt_windows_media_audio.AudioDeviceOutputNode",
         sizeof(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioDeviceOutputNode
-    };
+        _type_slots_AudioDeviceOutputNode};
 
     // ----- AudioFileInputNode class --------------------
 
@@ -1918,14 +1914,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioFileInputNode =
-    {
+    static PyType_Spec type_spec_AudioFileInputNode = {
         "winrt._winrt_windows_media_audio.AudioFileInputNode",
         sizeof(py::wrapper::Windows::Media::Audio::AudioFileInputNode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioFileInputNode
-    };
+        _type_slots_AudioFileInputNode};
 
     // ----- AudioFileOutputNode class --------------------
 
@@ -2404,14 +2398,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioFileOutputNode =
-    {
+    static PyType_Spec type_spec_AudioFileOutputNode = {
         "winrt._winrt_windows_media_audio.AudioFileOutputNode",
         sizeof(py::wrapper::Windows::Media::Audio::AudioFileOutputNode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioFileOutputNode
-    };
+        _type_slots_AudioFileOutputNode};
 
     // ----- AudioFrameCompletedEventArgs class --------------------
 
@@ -2493,14 +2485,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioFrameCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_AudioFrameCompletedEventArgs = {
         "winrt._winrt_windows_media_audio.AudioFrameCompletedEventArgs",
         sizeof(py::wrapper::Windows::Media::Audio::AudioFrameCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioFrameCompletedEventArgs
-    };
+        _type_slots_AudioFrameCompletedEventArgs};
 
     // ----- AudioFrameInputNode class --------------------
 
@@ -3259,14 +3249,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioFrameInputNode =
-    {
+    static PyType_Spec type_spec_AudioFrameInputNode = {
         "winrt._winrt_windows_media_audio.AudioFrameInputNode",
         sizeof(py::wrapper::Windows::Media::Audio::AudioFrameInputNode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioFrameInputNode
-    };
+        _type_slots_AudioFrameInputNode};
 
     // ----- AudioFrameOutputNode class --------------------
 
@@ -3705,14 +3693,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioFrameOutputNode =
-    {
+    static PyType_Spec type_spec_AudioFrameOutputNode = {
         "winrt._winrt_windows_media_audio.AudioFrameOutputNode",
         sizeof(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioFrameOutputNode
-    };
+        _type_slots_AudioFrameOutputNode};
 
     // ----- AudioGraph class --------------------
 
@@ -4714,14 +4700,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioGraph =
-    {
+    static PyType_Spec type_spec_AudioGraph = {
         "winrt._winrt_windows_media_audio.AudioGraph",
         sizeof(py::wrapper::Windows::Media::Audio::AudioGraph),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioGraph
-    };
+        _type_slots_AudioGraph};
 
     static PyGetSetDef getset_AudioGraph_Static[] = {
         { }
@@ -4861,14 +4845,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioGraphBatchUpdater =
-    {
+    static PyType_Spec type_spec_AudioGraphBatchUpdater = {
         "winrt._winrt_windows_media_audio.AudioGraphBatchUpdater",
         sizeof(py::wrapper::Windows::Media::Audio::AudioGraphBatchUpdater),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioGraphBatchUpdater
-    };
+        _type_slots_AudioGraphBatchUpdater};
 
     // ----- AudioGraphConnection class --------------------
 
@@ -4998,14 +4980,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioGraphConnection =
-    {
+    static PyType_Spec type_spec_AudioGraphConnection = {
         "winrt._winrt_windows_media_audio.AudioGraphConnection",
         sizeof(py::wrapper::Windows::Media::Audio::AudioGraphConnection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioGraphConnection
-    };
+        _type_slots_AudioGraphConnection};
 
     // ----- AudioGraphSettings class --------------------
 
@@ -5427,14 +5407,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioGraphSettings =
-    {
+    static PyType_Spec type_spec_AudioGraphSettings = {
         "winrt._winrt_windows_media_audio.AudioGraphSettings",
         sizeof(py::wrapper::Windows::Media::Audio::AudioGraphSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioGraphSettings
-    };
+        _type_slots_AudioGraphSettings};
 
     // ----- AudioGraphUnrecoverableErrorOccurredEventArgs class --------------------
 
@@ -5516,14 +5494,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioGraphUnrecoverableErrorOccurredEventArgs =
-    {
+    static PyType_Spec type_spec_AudioGraphUnrecoverableErrorOccurredEventArgs = {
         "winrt._winrt_windows_media_audio.AudioGraphUnrecoverableErrorOccurredEventArgs",
         sizeof(py::wrapper::Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioGraphUnrecoverableErrorOccurredEventArgs
-    };
+        _type_slots_AudioGraphUnrecoverableErrorOccurredEventArgs};
 
     // ----- AudioNodeEmitter class --------------------
 
@@ -6020,14 +5996,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioNodeEmitter =
-    {
+    static PyType_Spec type_spec_AudioNodeEmitter = {
         "winrt._winrt_windows_media_audio.AudioNodeEmitter",
         sizeof(py::wrapper::Windows::Media::Audio::AudioNodeEmitter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioNodeEmitter
-    };
+        _type_slots_AudioNodeEmitter};
 
     // ----- AudioNodeEmitterConeProperties class --------------------
 
@@ -6149,14 +6123,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioNodeEmitterConeProperties =
-    {
+    static PyType_Spec type_spec_AudioNodeEmitterConeProperties = {
         "winrt._winrt_windows_media_audio.AudioNodeEmitterConeProperties",
         sizeof(py::wrapper::Windows::Media::Audio::AudioNodeEmitterConeProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioNodeEmitterConeProperties
-    };
+        _type_slots_AudioNodeEmitterConeProperties};
 
     // ----- AudioNodeEmitterDecayModel class --------------------
 
@@ -6364,14 +6336,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioNodeEmitterDecayModel =
-    {
+    static PyType_Spec type_spec_AudioNodeEmitterDecayModel = {
         "winrt._winrt_windows_media_audio.AudioNodeEmitterDecayModel",
         sizeof(py::wrapper::Windows::Media::Audio::AudioNodeEmitterDecayModel),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioNodeEmitterDecayModel
-    };
+        _type_slots_AudioNodeEmitterDecayModel};
 
     static PyGetSetDef getset_AudioNodeEmitterDecayModel_Static[] = {
         { }
@@ -6500,14 +6470,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioNodeEmitterNaturalDecayModelProperties =
-    {
+    static PyType_Spec type_spec_AudioNodeEmitterNaturalDecayModelProperties = {
         "winrt._winrt_windows_media_audio.AudioNodeEmitterNaturalDecayModelProperties",
         sizeof(py::wrapper::Windows::Media::Audio::AudioNodeEmitterNaturalDecayModelProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioNodeEmitterNaturalDecayModelProperties
-    };
+        _type_slots_AudioNodeEmitterNaturalDecayModelProperties};
 
     // ----- AudioNodeEmitterShape class --------------------
 
@@ -6671,14 +6639,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioNodeEmitterShape =
-    {
+    static PyType_Spec type_spec_AudioNodeEmitterShape = {
         "winrt._winrt_windows_media_audio.AudioNodeEmitterShape",
         sizeof(py::wrapper::Windows::Media::Audio::AudioNodeEmitterShape),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioNodeEmitterShape
-    };
+        _type_slots_AudioNodeEmitterShape};
 
     static PyGetSetDef getset_AudioNodeEmitterShape_Static[] = {
         { }
@@ -6981,14 +6947,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioNodeListener =
-    {
+    static PyType_Spec type_spec_AudioNodeListener = {
         "winrt._winrt_windows_media_audio.AudioNodeListener",
         sizeof(py::wrapper::Windows::Media::Audio::AudioNodeListener),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioNodeListener
-    };
+        _type_slots_AudioNodeListener};
 
     // ----- AudioPlaybackConnection class --------------------
 
@@ -7368,14 +7332,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioPlaybackConnection =
-    {
+    static PyType_Spec type_spec_AudioPlaybackConnection = {
         "winrt._winrt_windows_media_audio.AudioPlaybackConnection",
         sizeof(py::wrapper::Windows::Media::Audio::AudioPlaybackConnection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioPlaybackConnection
-    };
+        _type_slots_AudioPlaybackConnection};
 
     static PyGetSetDef getset_AudioPlaybackConnection_Static[] = {
         { }
@@ -7504,14 +7466,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioPlaybackConnectionOpenResult =
-    {
+    static PyType_Spec type_spec_AudioPlaybackConnectionOpenResult = {
         "winrt._winrt_windows_media_audio.AudioPlaybackConnectionOpenResult",
         sizeof(py::wrapper::Windows::Media::Audio::AudioPlaybackConnectionOpenResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioPlaybackConnectionOpenResult
-    };
+        _type_slots_AudioPlaybackConnectionOpenResult};
 
     // ----- AudioStateMonitor class --------------------
 
@@ -7842,14 +7802,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioStateMonitor =
-    {
+    static PyType_Spec type_spec_AudioStateMonitor = {
         "winrt._winrt_windows_media_audio.AudioStateMonitor",
         sizeof(py::wrapper::Windows::Media::Audio::AudioStateMonitor),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioStateMonitor
-    };
+        _type_slots_AudioStateMonitor};
 
     static PyGetSetDef getset_AudioStateMonitor_Static[] = {
         { }
@@ -8415,14 +8373,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_AudioSubmixNode =
-    {
+    static PyType_Spec type_spec_AudioSubmixNode = {
         "winrt._winrt_windows_media_audio.AudioSubmixNode",
         sizeof(py::wrapper::Windows::Media::Audio::AudioSubmixNode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AudioSubmixNode
-    };
+        _type_slots_AudioSubmixNode};
 
     // ----- CreateAudioDeviceInputNodeResult class --------------------
 
@@ -8544,14 +8500,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_CreateAudioDeviceInputNodeResult =
-    {
+    static PyType_Spec type_spec_CreateAudioDeviceInputNodeResult = {
         "winrt._winrt_windows_media_audio.CreateAudioDeviceInputNodeResult",
         sizeof(py::wrapper::Windows::Media::Audio::CreateAudioDeviceInputNodeResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CreateAudioDeviceInputNodeResult
-    };
+        _type_slots_CreateAudioDeviceInputNodeResult};
 
     // ----- CreateAudioDeviceOutputNodeResult class --------------------
 
@@ -8673,14 +8627,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_CreateAudioDeviceOutputNodeResult =
-    {
+    static PyType_Spec type_spec_CreateAudioDeviceOutputNodeResult = {
         "winrt._winrt_windows_media_audio.CreateAudioDeviceOutputNodeResult",
         sizeof(py::wrapper::Windows::Media::Audio::CreateAudioDeviceOutputNodeResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CreateAudioDeviceOutputNodeResult
-    };
+        _type_slots_CreateAudioDeviceOutputNodeResult};
 
     // ----- CreateAudioFileInputNodeResult class --------------------
 
@@ -8802,14 +8754,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_CreateAudioFileInputNodeResult =
-    {
+    static PyType_Spec type_spec_CreateAudioFileInputNodeResult = {
         "winrt._winrt_windows_media_audio.CreateAudioFileInputNodeResult",
         sizeof(py::wrapper::Windows::Media::Audio::CreateAudioFileInputNodeResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CreateAudioFileInputNodeResult
-    };
+        _type_slots_CreateAudioFileInputNodeResult};
 
     // ----- CreateAudioFileOutputNodeResult class --------------------
 
@@ -8931,14 +8881,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_CreateAudioFileOutputNodeResult =
-    {
+    static PyType_Spec type_spec_CreateAudioFileOutputNodeResult = {
         "winrt._winrt_windows_media_audio.CreateAudioFileOutputNodeResult",
         sizeof(py::wrapper::Windows::Media::Audio::CreateAudioFileOutputNodeResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CreateAudioFileOutputNodeResult
-    };
+        _type_slots_CreateAudioFileOutputNodeResult};
 
     // ----- CreateAudioGraphResult class --------------------
 
@@ -9060,14 +9008,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_CreateAudioGraphResult =
-    {
+    static PyType_Spec type_spec_CreateAudioGraphResult = {
         "winrt._winrt_windows_media_audio.CreateAudioGraphResult",
         sizeof(py::wrapper::Windows::Media::Audio::CreateAudioGraphResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CreateAudioGraphResult
-    };
+        _type_slots_CreateAudioGraphResult};
 
     // ----- CreateMediaSourceAudioInputNodeResult class --------------------
 
@@ -9189,14 +9135,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_CreateMediaSourceAudioInputNodeResult =
-    {
+    static PyType_Spec type_spec_CreateMediaSourceAudioInputNodeResult = {
         "winrt._winrt_windows_media_audio.CreateMediaSourceAudioInputNodeResult",
         sizeof(py::wrapper::Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CreateMediaSourceAudioInputNodeResult
-    };
+        _type_slots_CreateMediaSourceAudioInputNodeResult};
 
     // ----- EchoEffectDefinition class --------------------
 
@@ -9466,14 +9410,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_EchoEffectDefinition =
-    {
+    static PyType_Spec type_spec_EchoEffectDefinition = {
         "winrt._winrt_windows_media_audio.EchoEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Audio::EchoEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EchoEffectDefinition
-    };
+        _type_slots_EchoEffectDefinition};
 
     // ----- EqualizerBand class --------------------
 
@@ -9679,14 +9621,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_EqualizerBand =
-    {
+    static PyType_Spec type_spec_EqualizerBand = {
         "winrt._winrt_windows_media_audio.EqualizerBand",
         sizeof(py::wrapper::Windows::Media::Audio::EqualizerBand),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EqualizerBand
-    };
+        _type_slots_EqualizerBand};
 
     // ----- EqualizerEffectDefinition class --------------------
 
@@ -9832,14 +9772,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_EqualizerEffectDefinition =
-    {
+    static PyType_Spec type_spec_EqualizerEffectDefinition = {
         "winrt._winrt_windows_media_audio.EqualizerEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Audio::EqualizerEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EqualizerEffectDefinition
-    };
+        _type_slots_EqualizerEffectDefinition};
 
     // ----- FrameInputNodeQuantumStartedEventArgs class --------------------
 
@@ -9921,14 +9859,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_FrameInputNodeQuantumStartedEventArgs =
-    {
+    static PyType_Spec type_spec_FrameInputNodeQuantumStartedEventArgs = {
         "winrt._winrt_windows_media_audio.FrameInputNodeQuantumStartedEventArgs",
         sizeof(py::wrapper::Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FrameInputNodeQuantumStartedEventArgs
-    };
+        _type_slots_FrameInputNodeQuantumStartedEventArgs};
 
     // ----- LimiterEffectDefinition class --------------------
 
@@ -10150,14 +10086,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_LimiterEffectDefinition =
-    {
+    static PyType_Spec type_spec_LimiterEffectDefinition = {
         "winrt._winrt_windows_media_audio.LimiterEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Audio::LimiterEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LimiterEffectDefinition
-    };
+        _type_slots_LimiterEffectDefinition};
 
     // ----- MediaSourceAudioInputNode class --------------------
 
@@ -11024,14 +10958,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_MediaSourceAudioInputNode =
-    {
+    static PyType_Spec type_spec_MediaSourceAudioInputNode = {
         "winrt._winrt_windows_media_audio.MediaSourceAudioInputNode",
         sizeof(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MediaSourceAudioInputNode
-    };
+        _type_slots_MediaSourceAudioInputNode};
 
     // ----- ReverbEffectDefinition class --------------------
 
@@ -12261,14 +12193,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_ReverbEffectDefinition =
-    {
+    static PyType_Spec type_spec_ReverbEffectDefinition = {
         "winrt._winrt_windows_media_audio.ReverbEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ReverbEffectDefinition
-    };
+        _type_slots_ReverbEffectDefinition};
 
     // ----- SetDefaultSpatialAudioFormatResult class --------------------
 
@@ -12350,14 +12280,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_SetDefaultSpatialAudioFormatResult =
-    {
+    static PyType_Spec type_spec_SetDefaultSpatialAudioFormatResult = {
         "winrt._winrt_windows_media_audio.SetDefaultSpatialAudioFormatResult",
         sizeof(py::wrapper::Windows::Media::Audio::SetDefaultSpatialAudioFormatResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SetDefaultSpatialAudioFormatResult
-    };
+        _type_slots_SetDefaultSpatialAudioFormatResult};
 
     // ----- SpatialAudioDeviceConfiguration class --------------------
 
@@ -12639,14 +12567,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_SpatialAudioDeviceConfiguration =
-    {
+    static PyType_Spec type_spec_SpatialAudioDeviceConfiguration = {
         "winrt._winrt_windows_media_audio.SpatialAudioDeviceConfiguration",
         sizeof(py::wrapper::Windows::Media::Audio::SpatialAudioDeviceConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialAudioDeviceConfiguration
-    };
+        _type_slots_SpatialAudioDeviceConfiguration};
 
     static PyGetSetDef getset_SpatialAudioDeviceConfiguration_Static[] = {
         { }
@@ -12875,14 +12801,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_SpatialAudioFormatConfiguration =
-    {
+    static PyType_Spec type_spec_SpatialAudioFormatConfiguration = {
         "winrt._winrt_windows_media_audio.SpatialAudioFormatConfiguration",
         sizeof(py::wrapper::Windows::Media::Audio::SpatialAudioFormatConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialAudioFormatConfiguration
-    };
+        _type_slots_SpatialAudioFormatConfiguration};
 
     static PyGetSetDef getset_SpatialAudioFormatConfiguration_Static[] = {
         { }
@@ -13068,14 +12992,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_SpatialAudioFormatSubtype =
-    {
+    static PyType_Spec type_spec_SpatialAudioFormatSubtype = {
         "winrt._winrt_windows_media_audio.SpatialAudioFormatSubtype",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialAudioFormatSubtype
-    };
+        _type_slots_SpatialAudioFormatSubtype};
 
     static PyGetSetDef getset_SpatialAudioFormatSubtype_Static[] = {
         { "d_t_s_headphone_x", reinterpret_cast<getter>(SpatialAudioFormatSubtype_get_DTSHeadphoneX), nullptr, nullptr, nullptr },
@@ -13624,14 +13546,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_IAudioInputNode =
-    {
+    static PyType_Spec type_spec_IAudioInputNode = {
         "winrt._winrt_windows_media_audio.IAudioInputNode",
         sizeof(py::wrapper::Windows::Media::Audio::IAudioInputNode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAudioInputNode
-    };
+        _type_slots_IAudioInputNode};
 
     // ----- IAudioInputNode2 interface --------------------
 
@@ -14168,14 +14088,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_IAudioInputNode2 =
-    {
+    static PyType_Spec type_spec_IAudioInputNode2 = {
         "winrt._winrt_windows_media_audio.IAudioInputNode2",
         sizeof(py::wrapper::Windows::Media::Audio::IAudioInputNode2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAudioInputNode2
-    };
+        _type_slots_IAudioInputNode2};
 
     // ----- IAudioNode interface --------------------
 
@@ -14584,14 +14502,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_IAudioNode =
-    {
+    static PyType_Spec type_spec_IAudioNode = {
         "winrt._winrt_windows_media_audio.IAudioNode",
         sizeof(py::wrapper::Windows::Media::Audio::IAudioNode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAudioNode
-    };
+        _type_slots_IAudioNode};
 
     // ----- IAudioNodeWithListener interface --------------------
 
@@ -15048,14 +14964,12 @@ namespace py::cpp::Windows::Media::Audio
         { },
     };
 
-    static PyType_Spec type_spec_IAudioNodeWithListener =
-    {
+    static PyType_Spec type_spec_IAudioNodeWithListener = {
         "winrt._winrt_windows_media_audio.IAudioNodeWithListener",
         sizeof(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAudioNodeWithListener
-    };
+        _type_slots_IAudioNodeWithListener};
 
     // ----- Windows.Media.Audio Initialization --------------------
 

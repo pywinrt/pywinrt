@@ -452,14 +452,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_ControlChannelTrigger =
-    {
+    static PyType_Spec type_spec_ControlChannelTrigger = {
         "winrt._winrt_windows_networking_sockets.ControlChannelTrigger",
         sizeof(py::wrapper::Windows::Networking::Sockets::ControlChannelTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ControlChannelTrigger
-    };
+        _type_slots_ControlChannelTrigger};
 
     // ----- DatagramSocket class --------------------
 
@@ -1142,14 +1140,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_DatagramSocket =
-    {
+    static PyType_Spec type_spec_DatagramSocket = {
         "winrt._winrt_windows_networking_sockets.DatagramSocket",
         sizeof(py::wrapper::Windows::Networking::Sockets::DatagramSocket),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DatagramSocket
-    };
+        _type_slots_DatagramSocket};
 
     static PyGetSetDef getset_DatagramSocket_Static[] = {
         { }
@@ -1477,14 +1473,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_DatagramSocketControl =
-    {
+    static PyType_Spec type_spec_DatagramSocketControl = {
         "winrt._winrt_windows_networking_sockets.DatagramSocketControl",
         sizeof(py::wrapper::Windows::Networking::Sockets::DatagramSocketControl),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DatagramSocketControl
-    };
+        _type_slots_DatagramSocketControl};
 
     // ----- DatagramSocketInformation class --------------------
 
@@ -1626,14 +1620,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_DatagramSocketInformation =
-    {
+    static PyType_Spec type_spec_DatagramSocketInformation = {
         "winrt._winrt_windows_networking_sockets.DatagramSocketInformation",
         sizeof(py::wrapper::Windows::Networking::Sockets::DatagramSocketInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DatagramSocketInformation
-    };
+        _type_slots_DatagramSocketInformation};
 
     // ----- DatagramSocketMessageReceivedEventArgs class --------------------
 
@@ -1815,14 +1807,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_DatagramSocketMessageReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_DatagramSocketMessageReceivedEventArgs = {
         "winrt._winrt_windows_networking_sockets.DatagramSocketMessageReceivedEventArgs",
         sizeof(py::wrapper::Windows::Networking::Sockets::DatagramSocketMessageReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DatagramSocketMessageReceivedEventArgs
-    };
+        _type_slots_DatagramSocketMessageReceivedEventArgs};
 
     // ----- MessageWebSocket class --------------------
 
@@ -2305,14 +2295,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_MessageWebSocket =
-    {
+    static PyType_Spec type_spec_MessageWebSocket = {
         "winrt._winrt_windows_networking_sockets.MessageWebSocket",
         sizeof(py::wrapper::Windows::Networking::Sockets::MessageWebSocket),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MessageWebSocket
-    };
+        _type_slots_MessageWebSocket};
 
     // ----- MessageWebSocketControl class --------------------
 
@@ -2818,14 +2806,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_MessageWebSocketControl =
-    {
+    static PyType_Spec type_spec_MessageWebSocketControl = {
         "winrt._winrt_windows_networking_sockets.MessageWebSocketControl",
         sizeof(py::wrapper::Windows::Networking::Sockets::MessageWebSocketControl),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MessageWebSocketControl
-    };
+        _type_slots_MessageWebSocketControl};
 
     // ----- MessageWebSocketInformation class --------------------
 
@@ -3027,14 +3013,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_MessageWebSocketInformation =
-    {
+    static PyType_Spec type_spec_MessageWebSocketInformation = {
         "winrt._winrt_windows_networking_sockets.MessageWebSocketInformation",
         sizeof(py::wrapper::Windows::Networking::Sockets::MessageWebSocketInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MessageWebSocketInformation
-    };
+        _type_slots_MessageWebSocketInformation};
 
     // ----- MessageWebSocketMessageReceivedEventArgs class --------------------
 
@@ -3196,14 +3180,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_MessageWebSocketMessageReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_MessageWebSocketMessageReceivedEventArgs = {
         "winrt._winrt_windows_networking_sockets.MessageWebSocketMessageReceivedEventArgs",
         sizeof(py::wrapper::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MessageWebSocketMessageReceivedEventArgs
-    };
+        _type_slots_MessageWebSocketMessageReceivedEventArgs};
 
     // ----- ServerMessageWebSocket class --------------------
 
@@ -3489,14 +3471,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_ServerMessageWebSocket =
-    {
+    static PyType_Spec type_spec_ServerMessageWebSocket = {
         "winrt._winrt_windows_networking_sockets.ServerMessageWebSocket",
         sizeof(py::wrapper::Windows::Networking::Sockets::ServerMessageWebSocket),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ServerMessageWebSocket
-    };
+        _type_slots_ServerMessageWebSocket};
 
     // ----- ServerMessageWebSocketControl class --------------------
 
@@ -3606,14 +3586,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_ServerMessageWebSocketControl =
-    {
+    static PyType_Spec type_spec_ServerMessageWebSocketControl = {
         "winrt._winrt_windows_networking_sockets.ServerMessageWebSocketControl",
         sizeof(py::wrapper::Windows::Networking::Sockets::ServerMessageWebSocketControl),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ServerMessageWebSocketControl
-    };
+        _type_slots_ServerMessageWebSocketControl};
 
     // ----- ServerMessageWebSocketInformation class --------------------
 
@@ -3735,14 +3713,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_ServerMessageWebSocketInformation =
-    {
+    static PyType_Spec type_spec_ServerMessageWebSocketInformation = {
         "winrt._winrt_windows_networking_sockets.ServerMessageWebSocketInformation",
         sizeof(py::wrapper::Windows::Networking::Sockets::ServerMessageWebSocketInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ServerMessageWebSocketInformation
-    };
+        _type_slots_ServerMessageWebSocketInformation};
 
     // ----- ServerStreamWebSocket class --------------------
 
@@ -3983,14 +3959,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_ServerStreamWebSocket =
-    {
+    static PyType_Spec type_spec_ServerStreamWebSocket = {
         "winrt._winrt_windows_networking_sockets.ServerStreamWebSocket",
         sizeof(py::wrapper::Windows::Networking::Sockets::ServerStreamWebSocket),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ServerStreamWebSocket
-    };
+        _type_slots_ServerStreamWebSocket};
 
     // ----- ServerStreamWebSocketInformation class --------------------
 
@@ -4112,14 +4086,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_ServerStreamWebSocketInformation =
-    {
+    static PyType_Spec type_spec_ServerStreamWebSocketInformation = {
         "winrt._winrt_windows_networking_sockets.ServerStreamWebSocketInformation",
         sizeof(py::wrapper::Windows::Networking::Sockets::ServerStreamWebSocketInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ServerStreamWebSocketInformation
-    };
+        _type_slots_ServerStreamWebSocketInformation};
 
     // ----- SocketActivityContext class --------------------
 
@@ -4225,14 +4197,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_SocketActivityContext =
-    {
+    static PyType_Spec type_spec_SocketActivityContext = {
         "winrt._winrt_windows_networking_sockets.SocketActivityContext",
         sizeof(py::wrapper::Windows::Networking::Sockets::SocketActivityContext),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SocketActivityContext
-    };
+        _type_slots_SocketActivityContext};
 
     // ----- SocketActivityInformation class --------------------
 
@@ -4453,14 +4423,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_SocketActivityInformation =
-    {
+    static PyType_Spec type_spec_SocketActivityInformation = {
         "winrt._winrt_windows_networking_sockets.SocketActivityInformation",
         sizeof(py::wrapper::Windows::Networking::Sockets::SocketActivityInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SocketActivityInformation
-    };
+        _type_slots_SocketActivityInformation};
 
     static PyGetSetDef getset_SocketActivityInformation_Static[] = {
         { "all_sockets", reinterpret_cast<getter>(SocketActivityInformation_get_AllSockets), nullptr, nullptr, nullptr },
@@ -4588,14 +4556,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_SocketActivityTriggerDetails =
-    {
+    static PyType_Spec type_spec_SocketActivityTriggerDetails = {
         "winrt._winrt_windows_networking_sockets.SocketActivityTriggerDetails",
         sizeof(py::wrapper::Windows::Networking::Sockets::SocketActivityTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SocketActivityTriggerDetails
-    };
+        _type_slots_SocketActivityTriggerDetails};
 
     // ----- SocketError class --------------------
 
@@ -4653,14 +4619,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_SocketError =
-    {
+    static PyType_Spec type_spec_SocketError = {
         "winrt._winrt_windows_networking_sockets.SocketError",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SocketError
-    };
+        _type_slots_SocketError};
 
     static PyGetSetDef getset_SocketError_Static[] = {
         { }
@@ -5250,14 +5214,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_StreamSocket =
-    {
+    static PyType_Spec type_spec_StreamSocket = {
         "winrt._winrt_windows_networking_sockets.StreamSocket",
         sizeof(py::wrapper::Windows::Networking::Sockets::StreamSocket),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StreamSocket
-    };
+        _type_slots_StreamSocket};
 
     static PyGetSetDef getset_StreamSocket_Static[] = {
         { }
@@ -5749,14 +5711,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_StreamSocketControl =
-    {
+    static PyType_Spec type_spec_StreamSocketControl = {
         "winrt._winrt_windows_networking_sockets.StreamSocketControl",
         sizeof(py::wrapper::Windows::Networking::Sockets::StreamSocketControl),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StreamSocketControl
-    };
+        _type_slots_StreamSocketControl};
 
     // ----- StreamSocketInformation class --------------------
 
@@ -6098,14 +6058,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_StreamSocketInformation =
-    {
+    static PyType_Spec type_spec_StreamSocketInformation = {
         "winrt._winrt_windows_networking_sockets.StreamSocketInformation",
         sizeof(py::wrapper::Windows::Networking::Sockets::StreamSocketInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StreamSocketInformation
-    };
+        _type_slots_StreamSocketInformation};
 
     // ----- StreamSocketListener class --------------------
 
@@ -6574,14 +6532,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_StreamSocketListener =
-    {
+    static PyType_Spec type_spec_StreamSocketListener = {
         "winrt._winrt_windows_networking_sockets.StreamSocketListener",
         sizeof(py::wrapper::Windows::Networking::Sockets::StreamSocketListener),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StreamSocketListener
-    };
+        _type_slots_StreamSocketListener};
 
     // ----- StreamSocketListenerConnectionReceivedEventArgs class --------------------
 
@@ -6663,14 +6619,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_StreamSocketListenerConnectionReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_StreamSocketListenerConnectionReceivedEventArgs = {
         "winrt._winrt_windows_networking_sockets.StreamSocketListenerConnectionReceivedEventArgs",
         sizeof(py::wrapper::Windows::Networking::Sockets::StreamSocketListenerConnectionReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StreamSocketListenerConnectionReceivedEventArgs
-    };
+        _type_slots_StreamSocketListenerConnectionReceivedEventArgs};
 
     // ----- StreamSocketListenerControl class --------------------
 
@@ -6972,14 +6926,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_StreamSocketListenerControl =
-    {
+    static PyType_Spec type_spec_StreamSocketListenerControl = {
         "winrt._winrt_windows_networking_sockets.StreamSocketListenerControl",
         sizeof(py::wrapper::Windows::Networking::Sockets::StreamSocketListenerControl),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StreamSocketListenerControl
-    };
+        _type_slots_StreamSocketListenerControl};
 
     // ----- StreamSocketListenerInformation class --------------------
 
@@ -7061,14 +7013,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_StreamSocketListenerInformation =
-    {
+    static PyType_Spec type_spec_StreamSocketListenerInformation = {
         "winrt._winrt_windows_networking_sockets.StreamSocketListenerInformation",
         sizeof(py::wrapper::Windows::Networking::Sockets::StreamSocketListenerInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StreamSocketListenerInformation
-    };
+        _type_slots_StreamSocketListenerInformation};
 
     // ----- StreamWebSocket class --------------------
 
@@ -7462,14 +7412,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_StreamWebSocket =
-    {
+    static PyType_Spec type_spec_StreamWebSocket = {
         "winrt._winrt_windows_networking_sockets.StreamWebSocket",
         sizeof(py::wrapper::Windows::Networking::Sockets::StreamWebSocket),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StreamWebSocket
-    };
+        _type_slots_StreamWebSocket};
 
     // ----- StreamWebSocketControl class --------------------
 
@@ -7879,14 +7827,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_StreamWebSocketControl =
-    {
+    static PyType_Spec type_spec_StreamWebSocketControl = {
         "winrt._winrt_windows_networking_sockets.StreamWebSocketControl",
         sizeof(py::wrapper::Windows::Networking::Sockets::StreamWebSocketControl),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StreamWebSocketControl
-    };
+        _type_slots_StreamWebSocketControl};
 
     // ----- StreamWebSocketInformation class --------------------
 
@@ -8088,14 +8034,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_StreamWebSocketInformation =
-    {
+    static PyType_Spec type_spec_StreamWebSocketInformation = {
         "winrt._winrt_windows_networking_sockets.StreamWebSocketInformation",
         sizeof(py::wrapper::Windows::Networking::Sockets::StreamWebSocketInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StreamWebSocketInformation
-    };
+        _type_slots_StreamWebSocketInformation};
 
     // ----- WebSocketClosedEventArgs class --------------------
 
@@ -8197,14 +8141,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_WebSocketClosedEventArgs =
-    {
+    static PyType_Spec type_spec_WebSocketClosedEventArgs = {
         "winrt._winrt_windows_networking_sockets.WebSocketClosedEventArgs",
         sizeof(py::wrapper::Windows::Networking::Sockets::WebSocketClosedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebSocketClosedEventArgs
-    };
+        _type_slots_WebSocketClosedEventArgs};
 
     // ----- WebSocketError class --------------------
 
@@ -8262,14 +8204,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_WebSocketError =
-    {
+    static PyType_Spec type_spec_WebSocketError = {
         "winrt._winrt_windows_networking_sockets.WebSocketError",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebSocketError
-    };
+        _type_slots_WebSocketError};
 
     static PyGetSetDef getset_WebSocketError_Static[] = {
         { }
@@ -8412,14 +8352,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_WebSocketKeepAlive =
-    {
+    static PyType_Spec type_spec_WebSocketKeepAlive = {
         "winrt._winrt_windows_networking_sockets.WebSocketKeepAlive",
         sizeof(py::wrapper::Windows::Networking::Sockets::WebSocketKeepAlive),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebSocketKeepAlive
-    };
+        _type_slots_WebSocketKeepAlive};
 
     // ----- WebSocketServerCustomValidationRequestedEventArgs class --------------------
 
@@ -8622,14 +8560,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_WebSocketServerCustomValidationRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_WebSocketServerCustomValidationRequestedEventArgs = {
         "winrt._winrt_windows_networking_sockets.WebSocketServerCustomValidationRequestedEventArgs",
         sizeof(py::wrapper::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebSocketServerCustomValidationRequestedEventArgs
-    };
+        _type_slots_WebSocketServerCustomValidationRequestedEventArgs};
 
     // ----- IControlChannelTriggerEventDetails interface --------------------
 
@@ -8711,14 +8647,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_IControlChannelTriggerEventDetails =
-    {
+    static PyType_Spec type_spec_IControlChannelTriggerEventDetails = {
         "winrt._winrt_windows_networking_sockets.IControlChannelTriggerEventDetails",
         sizeof(py::wrapper::Windows::Networking::Sockets::IControlChannelTriggerEventDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IControlChannelTriggerEventDetails
-    };
+        _type_slots_IControlChannelTriggerEventDetails};
 
     // ----- IControlChannelTriggerResetEventDetails interface --------------------
 
@@ -8840,14 +8774,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_IControlChannelTriggerResetEventDetails =
-    {
+    static PyType_Spec type_spec_IControlChannelTriggerResetEventDetails = {
         "winrt._winrt_windows_networking_sockets.IControlChannelTriggerResetEventDetails",
         sizeof(py::wrapper::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IControlChannelTriggerResetEventDetails
-    };
+        _type_slots_IControlChannelTriggerResetEventDetails};
 
     // ----- IWebSocket interface --------------------
 
@@ -9114,14 +9046,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_IWebSocket =
-    {
+    static PyType_Spec type_spec_IWebSocket = {
         "winrt._winrt_windows_networking_sockets.IWebSocket",
         sizeof(py::wrapper::Windows::Networking::Sockets::IWebSocket),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IWebSocket
-    };
+        _type_slots_IWebSocket};
 
     // ----- IWebSocketControl interface --------------------
 
@@ -9347,14 +9277,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_IWebSocketControl =
-    {
+    static PyType_Spec type_spec_IWebSocketControl = {
         "winrt._winrt_windows_networking_sockets.IWebSocketControl",
         sizeof(py::wrapper::Windows::Networking::Sockets::IWebSocketControl),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IWebSocketControl
-    };
+        _type_slots_IWebSocketControl};
 
     // ----- IWebSocketControl2 interface --------------------
 
@@ -9600,14 +9528,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_IWebSocketControl2 =
-    {
+    static PyType_Spec type_spec_IWebSocketControl2 = {
         "winrt._winrt_windows_networking_sockets.IWebSocketControl2",
         sizeof(py::wrapper::Windows::Networking::Sockets::IWebSocketControl2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IWebSocketControl2
-    };
+        _type_slots_IWebSocketControl2};
 
     // ----- IWebSocketInformation interface --------------------
 
@@ -9729,14 +9655,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_IWebSocketInformation =
-    {
+    static PyType_Spec type_spec_IWebSocketInformation = {
         "winrt._winrt_windows_networking_sockets.IWebSocketInformation",
         sizeof(py::wrapper::Windows::Networking::Sockets::IWebSocketInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IWebSocketInformation
-    };
+        _type_slots_IWebSocketInformation};
 
     // ----- IWebSocketInformation2 interface --------------------
 
@@ -9938,14 +9862,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_IWebSocketInformation2 =
-    {
+    static PyType_Spec type_spec_IWebSocketInformation2 = {
         "winrt._winrt_windows_networking_sockets.IWebSocketInformation2",
         sizeof(py::wrapper::Windows::Networking::Sockets::IWebSocketInformation2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IWebSocketInformation2
-    };
+        _type_slots_IWebSocketInformation2};
 
     // ----- BandwidthStatistics struct --------------------
 
@@ -10239,14 +10161,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_BandwidthStatistics =
-    {
+    static PyType_Spec type_spec_BandwidthStatistics = {
         "winrt._winrt_windows_networking_sockets.BandwidthStatistics",
         sizeof(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BandwidthStatistics
-    };
+        _type_slots_BandwidthStatistics};
 
     // ----- RoundTripTimeStatistics struct --------------------
 
@@ -10470,14 +10390,12 @@ namespace py::cpp::Windows::Networking::Sockets
         { },
     };
 
-    static PyType_Spec type_spec_RoundTripTimeStatistics =
-    {
+    static PyType_Spec type_spec_RoundTripTimeStatistics = {
         "winrt._winrt_windows_networking_sockets.RoundTripTimeStatistics",
         sizeof(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RoundTripTimeStatistics
-    };
+        _type_slots_RoundTripTimeStatistics};
 
     // ----- Windows.Networking.Sockets Initialization --------------------
 

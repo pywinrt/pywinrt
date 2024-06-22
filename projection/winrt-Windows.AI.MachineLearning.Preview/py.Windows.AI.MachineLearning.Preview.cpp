@@ -205,14 +205,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { },
     };
 
-    static PyType_Spec type_spec_ImageVariableDescriptorPreview =
-    {
+    static PyType_Spec type_spec_ImageVariableDescriptorPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.ImageVariableDescriptorPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ImageVariableDescriptorPreview
-    };
+        _type_slots_ImageVariableDescriptorPreview};
 
     // ----- InferencingOptionsPreview class --------------------
 
@@ -514,14 +512,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { },
     };
 
-    static PyType_Spec type_spec_InferencingOptionsPreview =
-    {
+    static PyType_Spec type_spec_InferencingOptionsPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.InferencingOptionsPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InferencingOptionsPreview
-    };
+        _type_slots_InferencingOptionsPreview};
 
     // ----- LearningModelBindingPreview class --------------------
 
@@ -933,14 +929,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { },
     };
 
-    static PyType_Spec type_spec_LearningModelBindingPreview =
-    {
+    static PyType_Spec type_spec_LearningModelBindingPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.LearningModelBindingPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LearningModelBindingPreview
-    };
+        _type_slots_LearningModelBindingPreview};
 
     // ----- LearningModelDescriptionPreview class --------------------
 
@@ -1162,14 +1156,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { },
     };
 
-    static PyType_Spec type_spec_LearningModelDescriptionPreview =
-    {
+    static PyType_Spec type_spec_LearningModelDescriptionPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.LearningModelDescriptionPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LearningModelDescriptionPreview
-    };
+        _type_slots_LearningModelDescriptionPreview};
 
     // ----- LearningModelEvaluationResultPreview class --------------------
 
@@ -1271,14 +1263,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { },
     };
 
-    static PyType_Spec type_spec_LearningModelEvaluationResultPreview =
-    {
+    static PyType_Spec type_spec_LearningModelEvaluationResultPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.LearningModelEvaluationResultPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelEvaluationResultPreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LearningModelEvaluationResultPreview
-    };
+        _type_slots_LearningModelEvaluationResultPreview};
 
     // ----- LearningModelPreview class --------------------
 
@@ -1536,14 +1526,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { },
     };
 
-    static PyType_Spec type_spec_LearningModelPreview =
-    {
+    static PyType_Spec type_spec_LearningModelPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.LearningModelPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelPreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LearningModelPreview
-    };
+        _type_slots_LearningModelPreview};
 
     static PyGetSetDef getset_LearningModelPreview_Static[] = {
         { }
@@ -1712,14 +1700,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { },
     };
 
-    static PyType_Spec type_spec_LearningModelVariableDescriptorPreview =
-    {
+    static PyType_Spec type_spec_LearningModelVariableDescriptorPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.LearningModelVariableDescriptorPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelVariableDescriptorPreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LearningModelVariableDescriptorPreview
-    };
+        _type_slots_LearningModelVariableDescriptorPreview};
 
     // ----- MapVariableDescriptorPreview class --------------------
 
@@ -1941,14 +1927,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { },
     };
 
-    static PyType_Spec type_spec_MapVariableDescriptorPreview =
-    {
+    static PyType_Spec type_spec_MapVariableDescriptorPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.MapVariableDescriptorPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MapVariableDescriptorPreview
-    };
+        _type_slots_MapVariableDescriptorPreview};
 
     // ----- SequenceVariableDescriptorPreview class --------------------
 
@@ -2110,14 +2094,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { },
     };
 
-    static PyType_Spec type_spec_SequenceVariableDescriptorPreview =
-    {
+    static PyType_Spec type_spec_SequenceVariableDescriptorPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.SequenceVariableDescriptorPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SequenceVariableDescriptorPreview
-    };
+        _type_slots_SequenceVariableDescriptorPreview};
 
     // ----- TensorVariableDescriptorPreview class --------------------
 
@@ -2299,14 +2281,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { },
     };
 
-    static PyType_Spec type_spec_TensorVariableDescriptorPreview =
-    {
+    static PyType_Spec type_spec_TensorVariableDescriptorPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.TensorVariableDescriptorPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TensorVariableDescriptorPreview
-    };
+        _type_slots_TensorVariableDescriptorPreview};
 
     // ----- ILearningModelVariableDescriptorPreview interface --------------------
 
@@ -2448,14 +2428,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         { },
     };
 
-    static PyType_Spec type_spec_ILearningModelVariableDescriptorPreview =
-    {
+    static PyType_Spec type_spec_ILearningModelVariableDescriptorPreview = {
         "winrt._winrt_windows_ai_machinelearning_preview.ILearningModelVariableDescriptorPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ILearningModelVariableDescriptorPreview
-    };
+        _type_slots_ILearningModelVariableDescriptorPreview};
 
     // ----- Windows.AI.MachineLearning.Preview Initialization --------------------
 

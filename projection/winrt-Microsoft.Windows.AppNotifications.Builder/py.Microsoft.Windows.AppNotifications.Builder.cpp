@@ -934,14 +934,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         { },
     };
 
-    static PyType_Spec type_spec_AppNotificationBuilder =
-    {
+    static PyType_Spec type_spec_AppNotificationBuilder = {
         "winrt._winrt_microsoft_windows_appnotifications_builder.AppNotificationBuilder",
         sizeof(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppNotificationBuilder
-    };
+        _type_slots_AppNotificationBuilder};
 
     static PyGetSetDef getset_AppNotificationBuilder_Static[] = {
         { }
@@ -1800,14 +1798,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         { },
     };
 
-    static PyType_Spec type_spec_AppNotificationButton =
-    {
+    static PyType_Spec type_spec_AppNotificationButton = {
         "winrt._winrt_microsoft_windows_appnotifications_builder.AppNotificationButton",
         sizeof(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppNotificationButton
-    };
+        _type_slots_AppNotificationButton};
 
     static PyGetSetDef getset_AppNotificationButton_Static[] = {
         { }
@@ -2161,14 +2157,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         { },
     };
 
-    static PyType_Spec type_spec_AppNotificationComboBox =
-    {
+    static PyType_Spec type_spec_AppNotificationComboBox = {
         "winrt._winrt_microsoft_windows_appnotifications_builder.AppNotificationComboBox",
         sizeof(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppNotificationComboBox
-    };
+        _type_slots_AppNotificationComboBox};
 
     // ----- AppNotificationProgressBar class --------------------
 
@@ -2692,14 +2686,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         { },
     };
 
-    static PyType_Spec type_spec_AppNotificationProgressBar =
-    {
+    static PyType_Spec type_spec_AppNotificationProgressBar = {
         "winrt._winrt_microsoft_windows_appnotifications_builder.AppNotificationProgressBar",
         sizeof(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppNotificationProgressBar
-    };
+        _type_slots_AppNotificationProgressBar};
 
     // ----- AppNotificationTextProperties class --------------------
 
@@ -3021,14 +3013,12 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         { },
     };
 
-    static PyType_Spec type_spec_AppNotificationTextProperties =
-    {
+    static PyType_Spec type_spec_AppNotificationTextProperties = {
         "winrt._winrt_microsoft_windows_appnotifications_builder.AppNotificationTextProperties",
         sizeof(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppNotificationTextProperties
-    };
+        _type_slots_AppNotificationTextProperties};
 
     // ----- Microsoft.Windows.AppNotifications.Builder Initialization --------------------
 

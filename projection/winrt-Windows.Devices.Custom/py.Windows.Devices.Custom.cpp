@@ -237,14 +237,12 @@ namespace py::cpp::Windows::Devices::Custom
         { },
     };
 
-    static PyType_Spec type_spec_CustomDevice =
-    {
+    static PyType_Spec type_spec_CustomDevice = {
         "winrt._winrt_windows_devices_custom.CustomDevice",
         sizeof(py::wrapper::Windows::Devices::Custom::CustomDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CustomDevice
-    };
+        _type_slots_CustomDevice};
 
     static PyGetSetDef getset_CustomDevice_Static[] = {
         { }
@@ -460,14 +458,12 @@ namespace py::cpp::Windows::Devices::Custom
         { },
     };
 
-    static PyType_Spec type_spec_IOControlCode =
-    {
+    static PyType_Spec type_spec_IOControlCode = {
         "winrt._winrt_windows_devices_custom.IOControlCode",
         sizeof(py::wrapper::Windows::Devices::Custom::IOControlCode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IOControlCode
-    };
+        _type_slots_IOControlCode};
 
     // ----- KnownDeviceTypes class --------------------
 
@@ -513,14 +509,12 @@ namespace py::cpp::Windows::Devices::Custom
         { },
     };
 
-    static PyType_Spec type_spec_KnownDeviceTypes =
-    {
+    static PyType_Spec type_spec_KnownDeviceTypes = {
         "winrt._winrt_windows_devices_custom.KnownDeviceTypes",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownDeviceTypes
-    };
+        _type_slots_KnownDeviceTypes};
 
     static PyGetSetDef getset_KnownDeviceTypes_Static[] = {
         { "unknown", reinterpret_cast<getter>(KnownDeviceTypes_get_Unknown), nullptr, nullptr, nullptr },
@@ -708,14 +702,12 @@ namespace py::cpp::Windows::Devices::Custom
         { },
     };
 
-    static PyType_Spec type_spec_IIOControlCode =
-    {
+    static PyType_Spec type_spec_IIOControlCode = {
         "winrt._winrt_windows_devices_custom.IIOControlCode",
         sizeof(py::wrapper::Windows::Devices::Custom::IIOControlCode),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IIOControlCode
-    };
+        _type_slots_IIOControlCode};
 
     // ----- Windows.Devices.Custom Initialization --------------------
 

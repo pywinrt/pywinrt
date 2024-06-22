@@ -400,14 +400,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_Block =
-    {
+    static PyType_Spec type_spec_Block = {
         "winrt._winrt_microsoft_ui_xaml_documents.Block",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::Block),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Block
-    };
+        _type_slots_Block};
 
     static PyGetSetDef getset_Block_Static[] = {
         { "horizontal_text_alignment_property", reinterpret_cast<getter>(Block_get_HorizontalTextAlignmentProperty), nullptr, nullptr, nullptr },
@@ -1044,14 +1042,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_BlockCollection =
-    {
+    static PyType_Spec type_spec_BlockCollection = {
         "winrt._winrt_microsoft_ui_xaml_documents.BlockCollection",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::BlockCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BlockCollection
-    };
+        _type_slots_BlockCollection};
 
     // ----- Bold class --------------------
 
@@ -1135,14 +1131,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_Bold =
-    {
+    static PyType_Spec type_spec_Bold = {
         "winrt._winrt_microsoft_ui_xaml_documents.Bold",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::Bold),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Bold
-    };
+        _type_slots_Bold};
 
     // ----- Glyphs class --------------------
 
@@ -1896,14 +1890,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_Glyphs =
-    {
+    static PyType_Spec type_spec_Glyphs = {
         "winrt._winrt_microsoft_ui_xaml_documents.Glyphs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::Glyphs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Glyphs
-    };
+        _type_slots_Glyphs};
 
     static PyGetSetDef getset_Glyphs_Static[] = {
         { "color_font_palette_index_property", reinterpret_cast<getter>(Glyphs_get_ColorFontPaletteIndexProperty), nullptr, nullptr, nullptr },
@@ -3099,14 +3091,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_Hyperlink =
-    {
+    static PyType_Spec type_spec_Hyperlink = {
         "winrt._winrt_microsoft_ui_xaml_documents.Hyperlink",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::Hyperlink),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Hyperlink
-    };
+        _type_slots_Hyperlink};
 
     static PyGetSetDef getset_Hyperlink_Static[] = {
         { "element_sound_mode_property", reinterpret_cast<getter>(Hyperlink_get_ElementSoundModeProperty), nullptr, nullptr, nullptr },
@@ -3207,14 +3197,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_HyperlinkClickEventArgs =
-    {
+    static PyType_Spec type_spec_HyperlinkClickEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_documents.HyperlinkClickEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::HyperlinkClickEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HyperlinkClickEventArgs
-    };
+        _type_slots_HyperlinkClickEventArgs};
 
     // ----- Inline class --------------------
 
@@ -3276,14 +3264,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_Inline =
-    {
+    static PyType_Spec type_spec_Inline = {
         "winrt._winrt_microsoft_ui_xaml_documents.Inline",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::Inline),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Inline
-    };
+        _type_slots_Inline};
 
     // ----- InlineCollection class --------------------
 
@@ -3890,14 +3876,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_InlineCollection =
-    {
+    static PyType_Spec type_spec_InlineCollection = {
         "winrt._winrt_microsoft_ui_xaml_documents.InlineCollection",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::InlineCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InlineCollection
-    };
+        _type_slots_InlineCollection};
 
     // ----- InlineUIContainer class --------------------
 
@@ -4029,14 +4013,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_InlineUIContainer =
-    {
+    static PyType_Spec type_spec_InlineUIContainer = {
         "winrt._winrt_microsoft_ui_xaml_documents.InlineUIContainer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::InlineUIContainer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InlineUIContainer
-    };
+        _type_slots_InlineUIContainer};
 
     // ----- Italic class --------------------
 
@@ -4120,14 +4102,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_Italic =
-    {
+    static PyType_Spec type_spec_Italic = {
         "winrt._winrt_microsoft_ui_xaml_documents.Italic",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::Italic),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Italic
-    };
+        _type_slots_Italic};
 
     // ----- LineBreak class --------------------
 
@@ -4211,14 +4191,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_LineBreak =
-    {
+    static PyType_Spec type_spec_LineBreak = {
         "winrt._winrt_microsoft_ui_xaml_documents.LineBreak",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::LineBreak),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LineBreak
-    };
+        _type_slots_LineBreak};
 
     // ----- Paragraph class --------------------
 
@@ -4389,14 +4367,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_Paragraph =
-    {
+    static PyType_Spec type_spec_Paragraph = {
         "winrt._winrt_microsoft_ui_xaml_documents.Paragraph",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::Paragraph),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Paragraph
-    };
+        _type_slots_Paragraph};
 
     static PyGetSetDef getset_Paragraph_Static[] = {
         { "text_indent_property", reinterpret_cast<getter>(Paragraph_get_TextIndentProperty), nullptr, nullptr, nullptr },
@@ -4621,14 +4597,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_Run =
-    {
+    static PyType_Spec type_spec_Run = {
         "winrt._winrt_microsoft_ui_xaml_documents.Run",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::Run),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Run
-    };
+        _type_slots_Run};
 
     static PyGetSetDef getset_Run_Static[] = {
         { "flow_direction_property", reinterpret_cast<getter>(Run_get_FlowDirectionProperty), nullptr, nullptr, nullptr },
@@ -4786,14 +4760,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_Span =
-    {
+    static PyType_Spec type_spec_Span = {
         "winrt._winrt_microsoft_ui_xaml_documents.Span",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::Span),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Span
-    };
+        _type_slots_Span};
 
     // ----- TextElement class --------------------
 
@@ -6376,14 +6348,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_TextElement =
-    {
+    static PyType_Spec type_spec_TextElement = {
         "winrt._winrt_microsoft_ui_xaml_documents.TextElement",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TextElement
-    };
+        _type_slots_TextElement};
 
     static PyGetSetDef getset_TextElement_Static[] = {
         { "access_key_property", reinterpret_cast<getter>(TextElement_get_AccessKeyProperty), nullptr, nullptr, nullptr },
@@ -6664,14 +6634,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_TextHighlighter =
-    {
+    static PyType_Spec type_spec_TextHighlighter = {
         "winrt._winrt_microsoft_ui_xaml_documents.TextHighlighter",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::TextHighlighter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TextHighlighter
-    };
+        _type_slots_TextHighlighter};
 
     static PyGetSetDef getset_TextHighlighter_Static[] = {
         { "background_property", reinterpret_cast<getter>(TextHighlighter_get_BackgroundProperty), nullptr, nullptr, nullptr },
@@ -6760,14 +6728,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_TextHighlighterBase =
-    {
+    static PyType_Spec type_spec_TextHighlighterBase = {
         "winrt._winrt_microsoft_ui_xaml_documents.TextHighlighterBase",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::TextHighlighterBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TextHighlighterBase
-    };
+        _type_slots_TextHighlighterBase};
 
     // ----- TextPointer class --------------------
 
@@ -6974,14 +6940,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_TextPointer =
-    {
+    static PyType_Spec type_spec_TextPointer = {
         "winrt._winrt_microsoft_ui_xaml_documents.TextPointer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::TextPointer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TextPointer
-    };
+        _type_slots_TextPointer};
 
     // ----- Typography class --------------------
 
@@ -10612,14 +10576,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_Typography =
-    {
+    static PyType_Spec type_spec_Typography = {
         "winrt._winrt_microsoft_ui_xaml_documents.Typography",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::Typography),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Typography
-    };
+        _type_slots_Typography};
 
     static PyGetSetDef getset_Typography_Static[] = {
         { "annotation_alternates_property", reinterpret_cast<getter>(Typography_get_AnnotationAlternatesProperty), nullptr, nullptr, nullptr },
@@ -10857,14 +10819,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_Underline =
-    {
+    static PyType_Spec type_spec_Underline = {
         "winrt._winrt_microsoft_ui_xaml_documents.Underline",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::Underline),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Underline
-    };
+        _type_slots_Underline};
 
     // ----- TextRange struct --------------------
 
@@ -11018,14 +10978,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { },
     };
 
-    static PyType_Spec type_spec_TextRange =
-    {
+    static PyType_Spec type_spec_TextRange = {
         "winrt._winrt_microsoft_ui_xaml_documents.TextRange",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Documents::TextRange),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TextRange
-    };
+        _type_slots_TextRange};
 
     // ----- Microsoft.UI.Xaml.Documents Initialization --------------------
 

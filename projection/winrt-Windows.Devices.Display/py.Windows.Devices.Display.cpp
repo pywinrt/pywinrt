@@ -588,14 +588,12 @@ namespace py::cpp::Windows::Devices::Display
         { },
     };
 
-    static PyType_Spec type_spec_DisplayMonitor =
-    {
+    static PyType_Spec type_spec_DisplayMonitor = {
         "winrt._winrt_windows_devices_display.DisplayMonitor",
         sizeof(py::wrapper::Windows::Devices::Display::DisplayMonitor),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayMonitor
-    };
+        _type_slots_DisplayMonitor};
 
     static PyGetSetDef getset_DisplayMonitor_Static[] = {
         { }

@@ -1092,14 +1092,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { },
     };
 
-    static PyType_Spec type_spec_AppWindow =
-    {
+    static PyType_Spec type_spec_AppWindow = {
         "winrt._winrt_microsoft_ui_windowing.AppWindow",
         sizeof(py::wrapper::Microsoft::UI::Windowing::AppWindow),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppWindow
-    };
+        _type_slots_AppWindow};
 
     static PyGetSetDef getset_AppWindow_Static[] = {
         { }
@@ -1348,14 +1346,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { },
     };
 
-    static PyType_Spec type_spec_AppWindowChangedEventArgs =
-    {
+    static PyType_Spec type_spec_AppWindowChangedEventArgs = {
         "winrt._winrt_microsoft_ui_windowing.AppWindowChangedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Windowing::AppWindowChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppWindowChangedEventArgs
-    };
+        _type_slots_AppWindowChangedEventArgs};
 
     // ----- AppWindowClosingEventArgs class --------------------
 
@@ -1465,14 +1461,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { },
     };
 
-    static PyType_Spec type_spec_AppWindowClosingEventArgs =
-    {
+    static PyType_Spec type_spec_AppWindowClosingEventArgs = {
         "winrt._winrt_microsoft_ui_windowing.AppWindowClosingEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Windowing::AppWindowClosingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppWindowClosingEventArgs
-    };
+        _type_slots_AppWindowClosingEventArgs};
 
     // ----- AppWindowPresenter class --------------------
 
@@ -1554,14 +1548,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { },
     };
 
-    static PyType_Spec type_spec_AppWindowPresenter =
-    {
+    static PyType_Spec type_spec_AppWindowPresenter = {
         "winrt._winrt_microsoft_ui_windowing.AppWindowPresenter",
         sizeof(py::wrapper::Microsoft::UI::Windowing::AppWindowPresenter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppWindowPresenter
-    };
+        _type_slots_AppWindowPresenter};
 
     // ----- AppWindowTitleBar class --------------------
 
@@ -2496,14 +2488,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { },
     };
 
-    static PyType_Spec type_spec_AppWindowTitleBar =
-    {
+    static PyType_Spec type_spec_AppWindowTitleBar = {
         "winrt._winrt_microsoft_ui_windowing.AppWindowTitleBar",
         sizeof(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppWindowTitleBar
-    };
+        _type_slots_AppWindowTitleBar};
 
     static PyGetSetDef getset_AppWindowTitleBar_Static[] = {
         { }
@@ -2668,14 +2658,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { },
     };
 
-    static PyType_Spec type_spec_CompactOverlayPresenter =
-    {
+    static PyType_Spec type_spec_CompactOverlayPresenter = {
         "winrt._winrt_microsoft_ui_windowing.CompactOverlayPresenter",
         sizeof(py::wrapper::Microsoft::UI::Windowing::CompactOverlayPresenter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompactOverlayPresenter
-    };
+        _type_slots_CompactOverlayPresenter};
 
     static PyGetSetDef getset_CompactOverlayPresenter_Static[] = {
         { }
@@ -3047,14 +3035,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { },
     };
 
-    static PyType_Spec type_spec_DisplayArea =
-    {
+    static PyType_Spec type_spec_DisplayArea = {
         "winrt._winrt_microsoft_ui_windowing.DisplayArea",
         sizeof(py::wrapper::Microsoft::UI::Windowing::DisplayArea),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayArea
-    };
+        _type_slots_DisplayArea};
 
     static PyGetSetDef getset_DisplayArea_Static[] = {
         { "primary", reinterpret_cast<getter>(DisplayArea_get_Primary), nullptr, nullptr, nullptr },
@@ -3455,14 +3441,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { },
     };
 
-    static PyType_Spec type_spec_DisplayAreaWatcher =
-    {
+    static PyType_Spec type_spec_DisplayAreaWatcher = {
         "winrt._winrt_microsoft_ui_windowing.DisplayAreaWatcher",
         sizeof(py::wrapper::Microsoft::UI::Windowing::DisplayAreaWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DisplayAreaWatcher
-    };
+        _type_slots_DisplayAreaWatcher};
 
     // ----- FullScreenPresenter class --------------------
 
@@ -3553,14 +3537,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { },
     };
 
-    static PyType_Spec type_spec_FullScreenPresenter =
-    {
+    static PyType_Spec type_spec_FullScreenPresenter = {
         "winrt._winrt_microsoft_ui_windowing.FullScreenPresenter",
         sizeof(py::wrapper::Microsoft::UI::Windowing::FullScreenPresenter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FullScreenPresenter
-    };
+        _type_slots_FullScreenPresenter};
 
     static PyGetSetDef getset_FullScreenPresenter_Static[] = {
         { }
@@ -4252,14 +4234,12 @@ namespace py::cpp::Microsoft::UI::Windowing
         { },
     };
 
-    static PyType_Spec type_spec_OverlappedPresenter =
-    {
+    static PyType_Spec type_spec_OverlappedPresenter = {
         "winrt._winrt_microsoft_ui_windowing.OverlappedPresenter",
         sizeof(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_OverlappedPresenter
-    };
+        _type_slots_OverlappedPresenter};
 
     static PyGetSetDef getset_OverlappedPresenter_Static[] = {
         { "requested_startup_state", reinterpret_cast<getter>(OverlappedPresenter_get_RequestedStartupState), nullptr, nullptr, nullptr },

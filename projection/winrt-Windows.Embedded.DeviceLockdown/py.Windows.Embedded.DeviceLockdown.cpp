@@ -150,14 +150,12 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
         { },
     };
 
-    static PyType_Spec type_spec_DeviceLockdownProfile =
-    {
+    static PyType_Spec type_spec_DeviceLockdownProfile = {
         "winrt._winrt_windows_embedded_devicelockdown.DeviceLockdownProfile",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceLockdownProfile
-    };
+        _type_slots_DeviceLockdownProfile};
 
     static PyGetSetDef getset_DeviceLockdownProfile_Static[] = {
         { }
@@ -268,14 +266,12 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
         { },
     };
 
-    static PyType_Spec type_spec_DeviceLockdownProfileInformation =
-    {
+    static PyType_Spec type_spec_DeviceLockdownProfileInformation = {
         "winrt._winrt_windows_embedded_devicelockdown.DeviceLockdownProfileInformation",
         sizeof(py::wrapper::Windows::Embedded::DeviceLockdown::DeviceLockdownProfileInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceLockdownProfileInformation
-    };
+        _type_slots_DeviceLockdownProfileInformation};
 
     // ----- Windows.Embedded.DeviceLockdown Initialization --------------------
 

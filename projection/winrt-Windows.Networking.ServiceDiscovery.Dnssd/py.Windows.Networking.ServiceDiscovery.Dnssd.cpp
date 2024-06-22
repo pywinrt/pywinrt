@@ -191,14 +191,12 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         { },
     };
 
-    static PyType_Spec type_spec_DnssdRegistrationResult =
-    {
+    static PyType_Spec type_spec_DnssdRegistrationResult = {
         "winrt._winrt_windows_networking_servicediscovery_dnssd.DnssdRegistrationResult",
         sizeof(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DnssdRegistrationResult
-    };
+        _type_slots_DnssdRegistrationResult};
 
     // ----- DnssdServiceInstance class --------------------
 
@@ -696,14 +694,12 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         { },
     };
 
-    static PyType_Spec type_spec_DnssdServiceInstance =
-    {
+    static PyType_Spec type_spec_DnssdServiceInstance = {
         "winrt._winrt_windows_networking_servicediscovery_dnssd.DnssdServiceInstance",
         sizeof(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DnssdServiceInstance
-    };
+        _type_slots_DnssdServiceInstance};
 
     // ----- DnssdServiceInstanceCollection class --------------------
 
@@ -1028,14 +1024,12 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         { },
     };
 
-    static PyType_Spec type_spec_DnssdServiceInstanceCollection =
-    {
+    static PyType_Spec type_spec_DnssdServiceInstanceCollection = {
         "winrt._winrt_windows_networking_servicediscovery_dnssd.DnssdServiceInstanceCollection",
         sizeof(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanceCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DnssdServiceInstanceCollection
-    };
+        _type_slots_DnssdServiceInstanceCollection};
 
     // ----- DnssdServiceWatcher class --------------------
 
@@ -1314,14 +1308,12 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         { },
     };
 
-    static PyType_Spec type_spec_DnssdServiceWatcher =
-    {
+    static PyType_Spec type_spec_DnssdServiceWatcher = {
         "winrt._winrt_windows_networking_servicediscovery_dnssd.DnssdServiceWatcher",
         sizeof(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DnssdServiceWatcher
-    };
+        _type_slots_DnssdServiceWatcher};
 
     // ----- Windows.Networking.ServiceDiscovery.Dnssd Initialization --------------------
 

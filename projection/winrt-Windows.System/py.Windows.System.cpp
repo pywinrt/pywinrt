@@ -105,14 +105,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_AppActivationResult =
-    {
+    static PyType_Spec type_spec_AppActivationResult = {
         "winrt._winrt_windows_system.AppActivationResult",
         sizeof(py::wrapper::Windows::System::AppActivationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppActivationResult
-    };
+        _type_slots_AppActivationResult};
 
     // ----- AppDiagnosticInfo class --------------------
 
@@ -451,14 +449,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_AppDiagnosticInfo =
-    {
+    static PyType_Spec type_spec_AppDiagnosticInfo = {
         "winrt._winrt_windows_system.AppDiagnosticInfo",
         sizeof(py::wrapper::Windows::System::AppDiagnosticInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppDiagnosticInfo
-    };
+        _type_slots_AppDiagnosticInfo};
 
     static PyGetSetDef getset_AppDiagnosticInfo_Static[] = {
         { }
@@ -812,14 +808,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_AppDiagnosticInfoWatcher =
-    {
+    static PyType_Spec type_spec_AppDiagnosticInfoWatcher = {
         "winrt._winrt_windows_system.AppDiagnosticInfoWatcher",
         sizeof(py::wrapper::Windows::System::AppDiagnosticInfoWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppDiagnosticInfoWatcher
-    };
+        _type_slots_AppDiagnosticInfoWatcher};
 
     // ----- AppDiagnosticInfoWatcherEventArgs class --------------------
 
@@ -901,14 +895,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_AppDiagnosticInfoWatcherEventArgs =
-    {
+    static PyType_Spec type_spec_AppDiagnosticInfoWatcherEventArgs = {
         "winrt._winrt_windows_system.AppDiagnosticInfoWatcherEventArgs",
         sizeof(py::wrapper::Windows::System::AppDiagnosticInfoWatcherEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppDiagnosticInfoWatcherEventArgs
-    };
+        _type_slots_AppDiagnosticInfoWatcherEventArgs};
 
     // ----- AppExecutionStateChangeResult class --------------------
 
@@ -990,14 +982,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_AppExecutionStateChangeResult =
-    {
+    static PyType_Spec type_spec_AppExecutionStateChangeResult = {
         "winrt._winrt_windows_system.AppExecutionStateChangeResult",
         sizeof(py::wrapper::Windows::System::AppExecutionStateChangeResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppExecutionStateChangeResult
-    };
+        _type_slots_AppExecutionStateChangeResult};
 
     // ----- AppMemoryReport class --------------------
 
@@ -1159,14 +1149,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_AppMemoryReport =
-    {
+    static PyType_Spec type_spec_AppMemoryReport = {
         "winrt._winrt_windows_system.AppMemoryReport",
         sizeof(py::wrapper::Windows::System::AppMemoryReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppMemoryReport
-    };
+        _type_slots_AppMemoryReport};
 
     // ----- AppMemoryUsageLimitChangingEventArgs class --------------------
 
@@ -1268,14 +1256,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_AppMemoryUsageLimitChangingEventArgs =
-    {
+    static PyType_Spec type_spec_AppMemoryUsageLimitChangingEventArgs = {
         "winrt._winrt_windows_system.AppMemoryUsageLimitChangingEventArgs",
         sizeof(py::wrapper::Windows::System::AppMemoryUsageLimitChangingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppMemoryUsageLimitChangingEventArgs
-    };
+        _type_slots_AppMemoryUsageLimitChangingEventArgs};
 
     // ----- AppResourceGroupBackgroundTaskReport class --------------------
 
@@ -1417,14 +1403,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_AppResourceGroupBackgroundTaskReport =
-    {
+    static PyType_Spec type_spec_AppResourceGroupBackgroundTaskReport = {
         "winrt._winrt_windows_system.AppResourceGroupBackgroundTaskReport",
         sizeof(py::wrapper::Windows::System::AppResourceGroupBackgroundTaskReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppResourceGroupBackgroundTaskReport
-    };
+        _type_slots_AppResourceGroupBackgroundTaskReport};
 
     // ----- AppResourceGroupInfo class --------------------
 
@@ -1736,14 +1720,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_AppResourceGroupInfo =
-    {
+    static PyType_Spec type_spec_AppResourceGroupInfo = {
         "winrt._winrt_windows_system.AppResourceGroupInfo",
         sizeof(py::wrapper::Windows::System::AppResourceGroupInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppResourceGroupInfo
-    };
+        _type_slots_AppResourceGroupInfo};
 
     // ----- AppResourceGroupInfoWatcher class --------------------
 
@@ -2112,14 +2094,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_AppResourceGroupInfoWatcher =
-    {
+    static PyType_Spec type_spec_AppResourceGroupInfoWatcher = {
         "winrt._winrt_windows_system.AppResourceGroupInfoWatcher",
         sizeof(py::wrapper::Windows::System::AppResourceGroupInfoWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppResourceGroupInfoWatcher
-    };
+        _type_slots_AppResourceGroupInfoWatcher};
 
     // ----- AppResourceGroupInfoWatcherEventArgs class --------------------
 
@@ -2221,14 +2201,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_AppResourceGroupInfoWatcherEventArgs =
-    {
+    static PyType_Spec type_spec_AppResourceGroupInfoWatcherEventArgs = {
         "winrt._winrt_windows_system.AppResourceGroupInfoWatcherEventArgs",
         sizeof(py::wrapper::Windows::System::AppResourceGroupInfoWatcherEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppResourceGroupInfoWatcherEventArgs
-    };
+        _type_slots_AppResourceGroupInfoWatcherEventArgs};
 
     // ----- AppResourceGroupInfoWatcherExecutionStateChangedEventArgs class --------------------
 
@@ -2330,14 +2308,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs = {
         "winrt._winrt_windows_system.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs",
         sizeof(py::wrapper::Windows::System::AppResourceGroupInfoWatcherExecutionStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs
-    };
+        _type_slots_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs};
 
     // ----- AppResourceGroupMemoryReport class --------------------
 
@@ -2479,14 +2455,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_AppResourceGroupMemoryReport =
-    {
+    static PyType_Spec type_spec_AppResourceGroupMemoryReport = {
         "winrt._winrt_windows_system.AppResourceGroupMemoryReport",
         sizeof(py::wrapper::Windows::System::AppResourceGroupMemoryReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppResourceGroupMemoryReport
-    };
+        _type_slots_AppResourceGroupMemoryReport};
 
     // ----- AppResourceGroupStateReport class --------------------
 
@@ -2588,14 +2562,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_AppResourceGroupStateReport =
-    {
+    static PyType_Spec type_spec_AppResourceGroupStateReport = {
         "winrt._winrt_windows_system.AppResourceGroupStateReport",
         sizeof(py::wrapper::Windows::System::AppResourceGroupStateReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppResourceGroupStateReport
-    };
+        _type_slots_AppResourceGroupStateReport};
 
     // ----- AppUriHandlerHost class --------------------
 
@@ -2790,14 +2762,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_AppUriHandlerHost =
-    {
+    static PyType_Spec type_spec_AppUriHandlerHost = {
         "winrt._winrt_windows_system.AppUriHandlerHost",
         sizeof(py::wrapper::Windows::System::AppUriHandlerHost),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppUriHandlerHost
-    };
+        _type_slots_AppUriHandlerHost};
 
     // ----- AppUriHandlerRegistration class --------------------
 
@@ -3044,14 +3014,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_AppUriHandlerRegistration =
-    {
+    static PyType_Spec type_spec_AppUriHandlerRegistration = {
         "winrt._winrt_windows_system.AppUriHandlerRegistration",
         sizeof(py::wrapper::Windows::System::AppUriHandlerRegistration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppUriHandlerRegistration
-    };
+        _type_slots_AppUriHandlerRegistration};
 
     // ----- AppUriHandlerRegistrationManager class --------------------
 
@@ -3308,14 +3276,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_AppUriHandlerRegistrationManager =
-    {
+    static PyType_Spec type_spec_AppUriHandlerRegistrationManager = {
         "winrt._winrt_windows_system.AppUriHandlerRegistrationManager",
         sizeof(py::wrapper::Windows::System::AppUriHandlerRegistrationManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppUriHandlerRegistrationManager
-    };
+        _type_slots_AppUriHandlerRegistrationManager};
 
     static PyGetSetDef getset_AppUriHandlerRegistrationManager_Static[] = {
         { }
@@ -3403,14 +3369,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_DateTimeSettings =
-    {
+    static PyType_Spec type_spec_DateTimeSettings = {
         "winrt._winrt_windows_system.DateTimeSettings",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DateTimeSettings
-    };
+        _type_slots_DateTimeSettings};
 
     static PyGetSetDef getset_DateTimeSettings_Static[] = {
         { }
@@ -3720,14 +3684,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_DispatcherQueue =
-    {
+    static PyType_Spec type_spec_DispatcherQueue = {
         "winrt._winrt_windows_system.DispatcherQueue",
         sizeof(py::wrapper::Windows::System::DispatcherQueue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DispatcherQueue
-    };
+        _type_slots_DispatcherQueue};
 
     static PyGetSetDef getset_DispatcherQueue_Static[] = {
         { }
@@ -3894,14 +3856,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_DispatcherQueueController =
-    {
+    static PyType_Spec type_spec_DispatcherQueueController = {
         "winrt._winrt_windows_system.DispatcherQueueController",
         sizeof(py::wrapper::Windows::System::DispatcherQueueController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DispatcherQueueController
-    };
+        _type_slots_DispatcherQueueController};
 
     static PyGetSetDef getset_DispatcherQueueController_Static[] = {
         { }
@@ -4019,14 +3979,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_DispatcherQueueShutdownStartingEventArgs =
-    {
+    static PyType_Spec type_spec_DispatcherQueueShutdownStartingEventArgs = {
         "winrt._winrt_windows_system.DispatcherQueueShutdownStartingEventArgs",
         sizeof(py::wrapper::Windows::System::DispatcherQueueShutdownStartingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DispatcherQueueShutdownStartingEventArgs
-    };
+        _type_slots_DispatcherQueueShutdownStartingEventArgs};
 
     // ----- DispatcherQueueTimer class --------------------
 
@@ -4311,14 +4269,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_DispatcherQueueTimer =
-    {
+    static PyType_Spec type_spec_DispatcherQueueTimer = {
         "winrt._winrt_windows_system.DispatcherQueueTimer",
         sizeof(py::wrapper::Windows::System::DispatcherQueueTimer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DispatcherQueueTimer
-    };
+        _type_slots_DispatcherQueueTimer};
 
     // ----- FolderLauncherOptions class --------------------
 
@@ -4470,14 +4426,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_FolderLauncherOptions =
-    {
+    static PyType_Spec type_spec_FolderLauncherOptions = {
         "winrt._winrt_windows_system.FolderLauncherOptions",
         sizeof(py::wrapper::Windows::System::FolderLauncherOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_FolderLauncherOptions
-    };
+        _type_slots_FolderLauncherOptions};
 
     // ----- KnownUserProperties class --------------------
 
@@ -4694,14 +4648,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_KnownUserProperties =
-    {
+    static PyType_Spec type_spec_KnownUserProperties = {
         "winrt._winrt_windows_system.KnownUserProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownUserProperties
-    };
+        _type_slots_KnownUserProperties};
 
     static PyGetSetDef getset_KnownUserProperties_Static[] = {
         { "account_name", reinterpret_cast<getter>(KnownUserProperties_get_AccountName), nullptr, nullptr, nullptr },
@@ -4838,14 +4790,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_LaunchUriResult =
-    {
+    static PyType_Spec type_spec_LaunchUriResult = {
         "winrt._winrt_windows_system.LaunchUriResult",
         sizeof(py::wrapper::Windows::System::LaunchUriResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LaunchUriResult
-    };
+        _type_slots_LaunchUriResult};
 
     // ----- Launcher class --------------------
 
@@ -5615,14 +5565,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_Launcher =
-    {
+    static PyType_Spec type_spec_Launcher = {
         "winrt._winrt_windows_system.Launcher",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Launcher
-    };
+        _type_slots_Launcher};
 
     static PyGetSetDef getset_Launcher_Static[] = {
         { }
@@ -6293,14 +6241,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_LauncherOptions =
-    {
+    static PyType_Spec type_spec_LauncherOptions = {
         "winrt._winrt_windows_system.LauncherOptions",
         sizeof(py::wrapper::Windows::System::LauncherOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LauncherOptions
-    };
+        _type_slots_LauncherOptions};
 
     // ----- LauncherUIOptions class --------------------
 
@@ -6506,14 +6452,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_LauncherUIOptions =
-    {
+    static PyType_Spec type_spec_LauncherUIOptions = {
         "winrt._winrt_windows_system.LauncherUIOptions",
         sizeof(py::wrapper::Windows::System::LauncherUIOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LauncherUIOptions
-    };
+        _type_slots_LauncherUIOptions};
 
     // ----- MemoryManager class --------------------
 
@@ -6840,14 +6784,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_MemoryManager =
-    {
+    static PyType_Spec type_spec_MemoryManager = {
         "winrt._winrt_windows_system.MemoryManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MemoryManager
-    };
+        _type_slots_MemoryManager};
 
     static PyGetSetDef getset_MemoryManager_Static[] = {
         { "app_memory_usage", reinterpret_cast<getter>(MemoryManager_get_AppMemoryUsage), nullptr, nullptr, nullptr },
@@ -6960,14 +6902,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_ProcessLauncher =
-    {
+    static PyType_Spec type_spec_ProcessLauncher = {
         "winrt._winrt_windows_system.ProcessLauncher",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProcessLauncher
-    };
+        _type_slots_ProcessLauncher};
 
     static PyGetSetDef getset_ProcessLauncher_Static[] = {
         { }
@@ -7269,14 +7209,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_ProcessLauncherOptions =
-    {
+    static PyType_Spec type_spec_ProcessLauncherOptions = {
         "winrt._winrt_windows_system.ProcessLauncherOptions",
         sizeof(py::wrapper::Windows::System::ProcessLauncherOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProcessLauncherOptions
-    };
+        _type_slots_ProcessLauncherOptions};
 
     // ----- ProcessLauncherResult class --------------------
 
@@ -7358,14 +7296,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_ProcessLauncherResult =
-    {
+    static PyType_Spec type_spec_ProcessLauncherResult = {
         "winrt._winrt_windows_system.ProcessLauncherResult",
         sizeof(py::wrapper::Windows::System::ProcessLauncherResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProcessLauncherResult
-    };
+        _type_slots_ProcessLauncherResult};
 
     // ----- ProcessMemoryReport class --------------------
 
@@ -7467,14 +7403,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_ProcessMemoryReport =
-    {
+    static PyType_Spec type_spec_ProcessMemoryReport = {
         "winrt._winrt_windows_system.ProcessMemoryReport",
         sizeof(py::wrapper::Windows::System::ProcessMemoryReport),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProcessMemoryReport
-    };
+        _type_slots_ProcessMemoryReport};
 
     // ----- ProtocolForResultsOperation class --------------------
 
@@ -7569,14 +7503,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_ProtocolForResultsOperation =
-    {
+    static PyType_Spec type_spec_ProtocolForResultsOperation = {
         "winrt._winrt_windows_system.ProtocolForResultsOperation",
         sizeof(py::wrapper::Windows::System::ProtocolForResultsOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ProtocolForResultsOperation
-    };
+        _type_slots_ProtocolForResultsOperation};
 
     // ----- RemoteLauncher class --------------------
 
@@ -7680,14 +7612,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_RemoteLauncher =
-    {
+    static PyType_Spec type_spec_RemoteLauncher = {
         "winrt._winrt_windows_system.RemoteLauncher",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteLauncher
-    };
+        _type_slots_RemoteLauncher};
 
     static PyGetSetDef getset_RemoteLauncher_Static[] = {
         { }
@@ -7865,14 +7795,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_RemoteLauncherOptions =
-    {
+    static PyType_Spec type_spec_RemoteLauncherOptions = {
         "winrt._winrt_windows_system.RemoteLauncherOptions",
         sizeof(py::wrapper::Windows::System::RemoteLauncherOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteLauncherOptions
-    };
+        _type_slots_RemoteLauncherOptions};
 
     // ----- ShutdownManager class --------------------
 
@@ -8047,14 +7975,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_ShutdownManager =
-    {
+    static PyType_Spec type_spec_ShutdownManager = {
         "winrt._winrt_windows_system.ShutdownManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ShutdownManager
-    };
+        _type_slots_ShutdownManager};
 
     static PyGetSetDef getset_ShutdownManager_Static[] = {
         { }
@@ -8230,14 +8156,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_TimeZoneSettings =
-    {
+    static PyType_Spec type_spec_TimeZoneSettings = {
         "winrt._winrt_windows_system.TimeZoneSettings",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TimeZoneSettings
-    };
+        _type_slots_TimeZoneSettings};
 
     static PyGetSetDef getset_TimeZoneSettings_Static[] = {
         { "can_change_time_zone", reinterpret_cast<getter>(TimeZoneSettings_get_CanChangeTimeZone), nullptr, nullptr, nullptr },
@@ -8676,14 +8600,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_User =
-    {
+    static PyType_Spec type_spec_User = {
         "winrt._winrt_windows_system.User",
         sizeof(py::wrapper::Windows::System::User),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_User
-    };
+        _type_slots_User};
 
     static PyGetSetDef getset_User_Static[] = {
         { }
@@ -8805,14 +8727,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_UserAuthenticationStatusChangeDeferral =
-    {
+    static PyType_Spec type_spec_UserAuthenticationStatusChangeDeferral = {
         "winrt._winrt_windows_system.UserAuthenticationStatusChangeDeferral",
         sizeof(py::wrapper::Windows::System::UserAuthenticationStatusChangeDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserAuthenticationStatusChangeDeferral
-    };
+        _type_slots_UserAuthenticationStatusChangeDeferral};
 
     // ----- UserAuthenticationStatusChangingEventArgs class --------------------
 
@@ -8964,14 +8884,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_UserAuthenticationStatusChangingEventArgs =
-    {
+    static PyType_Spec type_spec_UserAuthenticationStatusChangingEventArgs = {
         "winrt._winrt_windows_system.UserAuthenticationStatusChangingEventArgs",
         sizeof(py::wrapper::Windows::System::UserAuthenticationStatusChangingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserAuthenticationStatusChangingEventArgs
-    };
+        _type_slots_UserAuthenticationStatusChangingEventArgs};
 
     // ----- UserChangedEventArgs class --------------------
 
@@ -9073,14 +8991,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_UserChangedEventArgs =
-    {
+    static PyType_Spec type_spec_UserChangedEventArgs = {
         "winrt._winrt_windows_system.UserChangedEventArgs",
         sizeof(py::wrapper::Windows::System::UserChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserChangedEventArgs
-    };
+        _type_slots_UserChangedEventArgs};
 
     // ----- UserDeviceAssociation class --------------------
 
@@ -9183,14 +9099,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_UserDeviceAssociation =
-    {
+    static PyType_Spec type_spec_UserDeviceAssociation = {
         "winrt._winrt_windows_system.UserDeviceAssociation",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDeviceAssociation
-    };
+        _type_slots_UserDeviceAssociation};
 
     static PyGetSetDef getset_UserDeviceAssociation_Static[] = {
         { }
@@ -9338,14 +9252,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_UserDeviceAssociationChangedEventArgs =
-    {
+    static PyType_Spec type_spec_UserDeviceAssociationChangedEventArgs = {
         "winrt._winrt_windows_system.UserDeviceAssociationChangedEventArgs",
         sizeof(py::wrapper::Windows::System::UserDeviceAssociationChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserDeviceAssociationChangedEventArgs
-    };
+        _type_slots_UserDeviceAssociationChangedEventArgs};
 
     // ----- UserPicker class --------------------
 
@@ -9584,14 +9496,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_UserPicker =
-    {
+    static PyType_Spec type_spec_UserPicker = {
         "winrt._winrt_windows_system.UserPicker",
         sizeof(py::wrapper::Windows::System::UserPicker),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserPicker
-    };
+        _type_slots_UserPicker};
 
     static PyGetSetDef getset_UserPicker_Static[] = {
         { }
@@ -10076,14 +9986,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_UserWatcher =
-    {
+    static PyType_Spec type_spec_UserWatcher = {
         "winrt._winrt_windows_system.UserWatcher",
         sizeof(py::wrapper::Windows::System::UserWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserWatcher
-    };
+        _type_slots_UserWatcher};
 
     // ----- ILauncherViewOptions interface --------------------
 
@@ -10193,14 +10101,12 @@ namespace py::cpp::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_ILauncherViewOptions =
-    {
+    static PyType_Spec type_spec_ILauncherViewOptions = {
         "winrt._winrt_windows_system.ILauncherViewOptions",
         sizeof(py::wrapper::Windows::System::ILauncherViewOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ILauncherViewOptions
-    };
+        _type_slots_ILauncherViewOptions};
 
     // ----- Windows.System Initialization --------------------
 

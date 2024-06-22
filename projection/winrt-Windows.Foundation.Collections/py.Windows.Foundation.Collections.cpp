@@ -479,14 +479,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { },
     };
 
-    static PyType_Spec type_spec_PropertySet =
-    {
+    static PyType_Spec type_spec_PropertySet = {
         "winrt._winrt_windows_foundation_collections.PropertySet",
         sizeof(py::wrapper::Windows::Foundation::Collections::PropertySet),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PropertySet
-    };
+        _type_slots_PropertySet};
 
     // ----- StringMap class --------------------
 
@@ -962,14 +960,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { },
     };
 
-    static PyType_Spec type_spec_StringMap =
-    {
+    static PyType_Spec type_spec_StringMap = {
         "winrt._winrt_windows_foundation_collections.StringMap",
         sizeof(py::wrapper::Windows::Foundation::Collections::StringMap),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StringMap
-    };
+        _type_slots_StringMap};
 
     // ----- ValueSet class --------------------
 
@@ -1445,14 +1441,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { },
     };
 
-    static PyType_Spec type_spec_ValueSet =
-    {
+    static PyType_Spec type_spec_ValueSet = {
         "winrt._winrt_windows_foundation_collections.ValueSet",
         sizeof(py::wrapper::Windows::Foundation::Collections::ValueSet),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ValueSet
-    };
+        _type_slots_ValueSet};
 
     // ----- IIterable interface --------------------
 
@@ -1502,14 +1496,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { },
     };
 
-    static PyType_Spec type_spec_IIterable =
-    {
+    static PyType_Spec type_spec_IIterable = {
         "winrt._winrt_windows_foundation_collections.IIterable",
         sizeof(py::wrapper::Windows::Foundation::Collections::IIterable),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IIterable
-    };
+        _type_slots_IIterable};
 
     // ----- IIterator interface --------------------
 
@@ -1611,14 +1603,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { },
     };
 
-    static PyType_Spec type_spec_IIterator =
-    {
+    static PyType_Spec type_spec_IIterator = {
         "winrt._winrt_windows_foundation_collections.IIterator",
         sizeof(py::wrapper::Windows::Foundation::Collections::IIterator),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IIterator
-    };
+        _type_slots_IIterator};
 
     // ----- IKeyValuePair interface --------------------
 
@@ -1696,14 +1686,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { },
     };
 
-    static PyType_Spec type_spec_IKeyValuePair =
-    {
+    static PyType_Spec type_spec_IKeyValuePair = {
         "winrt._winrt_windows_foundation_collections.IKeyValuePair",
         sizeof(py::wrapper::Windows::Foundation::Collections::IKeyValuePair),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IKeyValuePair
-    };
+        _type_slots_IKeyValuePair};
 
     // ----- IMapChangedEventArgs interface --------------------
 
@@ -1781,14 +1769,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { },
     };
 
-    static PyType_Spec type_spec_IMapChangedEventArgs =
-    {
+    static PyType_Spec type_spec_IMapChangedEventArgs = {
         "winrt._winrt_windows_foundation_collections.IMapChangedEventArgs",
         sizeof(py::wrapper::Windows::Foundation::Collections::IMapChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IMapChangedEventArgs
-    };
+        _type_slots_IMapChangedEventArgs};
 
     // ----- IMapView interface --------------------
 
@@ -1894,14 +1880,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { },
     };
 
-    static PyType_Spec type_spec_IMapView =
-    {
+    static PyType_Spec type_spec_IMapView = {
         "winrt._winrt_windows_foundation_collections.IMapView",
         sizeof(py::wrapper::Windows::Foundation::Collections::IMapView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IMapView
-    };
+        _type_slots_IMapView};
 
     // ----- IMap interface --------------------
 
@@ -2031,14 +2015,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { },
     };
 
-    static PyType_Spec type_spec_IMap =
-    {
+    static PyType_Spec type_spec_IMap = {
         "winrt._winrt_windows_foundation_collections.IMap",
         sizeof(py::wrapper::Windows::Foundation::Collections::IMap),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IMap
-    };
+        _type_slots_IMap};
 
     // ----- IObservableMap interface --------------------
 
@@ -2208,14 +2190,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { },
     };
 
-    static PyType_Spec type_spec_IObservableMap =
-    {
+    static PyType_Spec type_spec_IObservableMap = {
         "winrt._winrt_windows_foundation_collections.IObservableMap",
         sizeof(py::wrapper::Windows::Foundation::Collections::IObservableMap),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IObservableMap
-    };
+        _type_slots_IObservableMap};
 
     // ----- IObservableVector interface --------------------
 
@@ -2415,14 +2395,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { },
     };
 
-    static PyType_Spec type_spec_IObservableVector =
-    {
+    static PyType_Spec type_spec_IObservableVector = {
         "winrt._winrt_windows_foundation_collections.IObservableVector",
         sizeof(py::wrapper::Windows::Foundation::Collections::IObservableVector),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IObservableVector
-    };
+        _type_slots_IObservableVector};
 
     // ----- IPropertySet interface --------------------
 
@@ -2876,14 +2854,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { },
     };
 
-    static PyType_Spec type_spec_IPropertySet =
-    {
+    static PyType_Spec type_spec_IPropertySet = {
         "winrt._winrt_windows_foundation_collections.IPropertySet",
         sizeof(py::wrapper::Windows::Foundation::Collections::IPropertySet),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IPropertySet
-    };
+        _type_slots_IPropertySet};
 
     // ----- IVectorChangedEventArgs interface --------------------
 
@@ -2985,14 +2961,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { },
     };
 
-    static PyType_Spec type_spec_IVectorChangedEventArgs =
-    {
+    static PyType_Spec type_spec_IVectorChangedEventArgs = {
         "winrt._winrt_windows_foundation_collections.IVectorChangedEventArgs",
         sizeof(py::wrapper::Windows::Foundation::Collections::IVectorChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IVectorChangedEventArgs
-    };
+        _type_slots_IVectorChangedEventArgs};
 
     // ----- IVectorView interface --------------------
 
@@ -3098,14 +3072,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { },
     };
 
-    static PyType_Spec type_spec_IVectorView =
-    {
+    static PyType_Spec type_spec_IVectorView = {
         "winrt._winrt_windows_foundation_collections.IVectorView",
         sizeof(py::wrapper::Windows::Foundation::Collections::IVectorView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IVectorView
-    };
+        _type_slots_IVectorView};
 
     // ----- IVector interface --------------------
 
@@ -3265,14 +3237,12 @@ namespace py::cpp::Windows::Foundation::Collections
         { },
     };
 
-    static PyType_Spec type_spec_IVector =
-    {
+    static PyType_Spec type_spec_IVector = {
         "winrt._winrt_windows_foundation_collections.IVector",
         sizeof(py::wrapper::Windows::Foundation::Collections::IVector),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IVector
-    };
+        _type_slots_IVector};
 
     // ----- Windows.Foundation.Collections Initialization --------------------
 

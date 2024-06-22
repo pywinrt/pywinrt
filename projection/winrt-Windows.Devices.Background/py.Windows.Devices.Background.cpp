@@ -125,14 +125,12 @@ namespace py::cpp::Windows::Devices::Background
         { },
     };
 
-    static PyType_Spec type_spec_DeviceServicingDetails =
-    {
+    static PyType_Spec type_spec_DeviceServicingDetails = {
         "winrt._winrt_windows_devices_background.DeviceServicingDetails",
         sizeof(py::wrapper::Windows::Devices::Background::DeviceServicingDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceServicingDetails
-    };
+        _type_slots_DeviceServicingDetails};
 
     // ----- DeviceUseDetails class --------------------
 
@@ -234,14 +232,12 @@ namespace py::cpp::Windows::Devices::Background
         { },
     };
 
-    static PyType_Spec type_spec_DeviceUseDetails =
-    {
+    static PyType_Spec type_spec_DeviceUseDetails = {
         "winrt._winrt_windows_devices_background.DeviceUseDetails",
         sizeof(py::wrapper::Windows::Devices::Background::DeviceUseDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeviceUseDetails
-    };
+        _type_slots_DeviceUseDetails};
 
     // ----- Windows.Devices.Background Initialization --------------------
 

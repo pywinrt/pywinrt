@@ -125,14 +125,12 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
         { },
     };
 
-    static PyType_Spec type_spec_SpatialGraphInteropFrameOfReferencePreview =
-    {
+    static PyType_Spec type_spec_SpatialGraphInteropFrameOfReferencePreview = {
         "winrt._winrt_windows_perception_spatial_preview.SpatialGraphInteropFrameOfReferencePreview",
         sizeof(py::wrapper::Windows::Perception::Spatial::Preview::SpatialGraphInteropFrameOfReferencePreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialGraphInteropFrameOfReferencePreview
-    };
+        _type_slots_SpatialGraphInteropFrameOfReferencePreview};
 
     // ----- SpatialGraphInteropPreview class --------------------
 
@@ -338,14 +336,12 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
         { },
     };
 
-    static PyType_Spec type_spec_SpatialGraphInteropPreview =
-    {
+    static PyType_Spec type_spec_SpatialGraphInteropPreview = {
         "winrt._winrt_windows_perception_spatial_preview.SpatialGraphInteropPreview",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialGraphInteropPreview
-    };
+        _type_slots_SpatialGraphInteropPreview};
 
     static PyGetSetDef getset_SpatialGraphInteropPreview_Static[] = {
         { }

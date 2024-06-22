@@ -620,14 +620,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { },
     };
 
-    static PyType_Spec type_spec_UserActivity =
-    {
+    static PyType_Spec type_spec_UserActivity = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivity",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserActivity
-    };
+        _type_slots_UserActivity};
 
     static PyGetSetDef getset_UserActivity_Static[] = {
         { }
@@ -898,14 +896,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { },
     };
 
-    static PyType_Spec type_spec_UserActivityAttribution =
-    {
+    static PyType_Spec type_spec_UserActivityAttribution = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivityAttribution",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityAttribution),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserActivityAttribution
-    };
+        _type_slots_UserActivityAttribution};
 
     // ----- UserActivityChannel class --------------------
 
@@ -1247,14 +1243,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { },
     };
 
-    static PyType_Spec type_spec_UserActivityChannel =
-    {
+    static PyType_Spec type_spec_UserActivityChannel = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivityChannel",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityChannel),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserActivityChannel
-    };
+        _type_slots_UserActivityChannel};
 
     static PyGetSetDef getset_UserActivityChannel_Static[] = {
         { }
@@ -1406,14 +1400,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { },
     };
 
-    static PyType_Spec type_spec_UserActivityContentInfo =
-    {
+    static PyType_Spec type_spec_UserActivityContentInfo = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivityContentInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityContentInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserActivityContentInfo
-    };
+        _type_slots_UserActivityContentInfo};
 
     static PyGetSetDef getset_UserActivityContentInfo_Static[] = {
         { }
@@ -1534,14 +1526,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { },
     };
 
-    static PyType_Spec type_spec_UserActivityRequest =
-    {
+    static PyType_Spec type_spec_UserActivityRequest = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivityRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserActivityRequest
-    };
+        _type_slots_UserActivityRequest};
 
     // ----- UserActivityRequestManager class --------------------
 
@@ -1677,14 +1667,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { },
     };
 
-    static PyType_Spec type_spec_UserActivityRequestManager =
-    {
+    static PyType_Spec type_spec_UserActivityRequestManager = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivityRequestManager",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityRequestManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserActivityRequestManager
-    };
+        _type_slots_UserActivityRequestManager};
 
     static PyGetSetDef getset_UserActivityRequestManager_Static[] = {
         { }
@@ -1822,14 +1810,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { },
     };
 
-    static PyType_Spec type_spec_UserActivityRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_UserActivityRequestedEventArgs = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivityRequestedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserActivityRequestedEventArgs
-    };
+        _type_slots_UserActivityRequestedEventArgs};
 
     // ----- UserActivitySession class --------------------
 
@@ -1963,14 +1949,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { },
     };
 
-    static PyType_Spec type_spec_UserActivitySession =
-    {
+    static PyType_Spec type_spec_UserActivitySession = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivitySession",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivitySession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserActivitySession
-    };
+        _type_slots_UserActivitySession};
 
     // ----- UserActivitySessionHistoryItem class --------------------
 
@@ -2092,14 +2076,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { },
     };
 
-    static PyType_Spec type_spec_UserActivitySessionHistoryItem =
-    {
+    static PyType_Spec type_spec_UserActivitySessionHistoryItem = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivitySessionHistoryItem",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserActivitySessionHistoryItem
-    };
+        _type_slots_UserActivitySessionHistoryItem};
 
     // ----- UserActivityVisualElements class --------------------
 
@@ -2449,14 +2431,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { },
     };
 
-    static PyType_Spec type_spec_UserActivityVisualElements =
-    {
+    static PyType_Spec type_spec_UserActivityVisualElements = {
         "winrt._winrt_windows_applicationmodel_useractivities.UserActivityVisualElements",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UserActivityVisualElements
-    };
+        _type_slots_UserActivityVisualElements};
 
     // ----- IUserActivityContentInfo interface --------------------
 
@@ -2548,14 +2528,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { },
     };
 
-    static PyType_Spec type_spec_IUserActivityContentInfo =
-    {
+    static PyType_Spec type_spec_IUserActivityContentInfo = {
         "winrt._winrt_windows_applicationmodel_useractivities.IUserActivityContentInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IUserActivityContentInfo
-    };
+        _type_slots_IUserActivityContentInfo};
 
     // ----- Windows.ApplicationModel.UserActivities Initialization --------------------
 

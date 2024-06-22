@@ -315,14 +315,12 @@ namespace py::cpp::Windows::Devices::Haptics
         { },
     };
 
-    static PyType_Spec type_spec_KnownSimpleHapticsControllerWaveforms =
-    {
+    static PyType_Spec type_spec_KnownSimpleHapticsControllerWaveforms = {
         "winrt._winrt_windows_devices_haptics.KnownSimpleHapticsControllerWaveforms",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownSimpleHapticsControllerWaveforms
-    };
+        _type_slots_KnownSimpleHapticsControllerWaveforms};
 
     static PyGetSetDef getset_KnownSimpleHapticsControllerWaveforms_Static[] = {
         { "buzz_continuous", reinterpret_cast<getter>(KnownSimpleHapticsControllerWaveforms_get_BuzzContinuous), nullptr, nullptr, nullptr },
@@ -701,14 +699,12 @@ namespace py::cpp::Windows::Devices::Haptics
         { },
     };
 
-    static PyType_Spec type_spec_SimpleHapticsController =
-    {
+    static PyType_Spec type_spec_SimpleHapticsController = {
         "winrt._winrt_windows_devices_haptics.SimpleHapticsController",
         sizeof(py::wrapper::Windows::Devices::Haptics::SimpleHapticsController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SimpleHapticsController
-    };
+        _type_slots_SimpleHapticsController};
 
     // ----- SimpleHapticsControllerFeedback class --------------------
 
@@ -810,14 +806,12 @@ namespace py::cpp::Windows::Devices::Haptics
         { },
     };
 
-    static PyType_Spec type_spec_SimpleHapticsControllerFeedback =
-    {
+    static PyType_Spec type_spec_SimpleHapticsControllerFeedback = {
         "winrt._winrt_windows_devices_haptics.SimpleHapticsControllerFeedback",
         sizeof(py::wrapper::Windows::Devices::Haptics::SimpleHapticsControllerFeedback),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SimpleHapticsControllerFeedback
-    };
+        _type_slots_SimpleHapticsControllerFeedback};
 
     // ----- VibrationDevice class --------------------
 
@@ -1066,14 +1060,12 @@ namespace py::cpp::Windows::Devices::Haptics
         { },
     };
 
-    static PyType_Spec type_spec_VibrationDevice =
-    {
+    static PyType_Spec type_spec_VibrationDevice = {
         "winrt._winrt_windows_devices_haptics.VibrationDevice",
         sizeof(py::wrapper::Windows::Devices::Haptics::VibrationDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VibrationDevice
-    };
+        _type_slots_VibrationDevice};
 
     static PyGetSetDef getset_VibrationDevice_Static[] = {
         { }

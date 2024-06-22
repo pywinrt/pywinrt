@@ -146,14 +146,12 @@ namespace py::cpp::Windows::Globalization
         { },
     };
 
-    static PyType_Spec type_spec_ApplicationLanguages =
-    {
+    static PyType_Spec type_spec_ApplicationLanguages = {
         "winrt._winrt_windows_globalization.ApplicationLanguages",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ApplicationLanguages
-    };
+        _type_slots_ApplicationLanguages};
 
     static PyGetSetDef getset_ApplicationLanguages_Static[] = {
         { "primary_language_override", reinterpret_cast<getter>(ApplicationLanguages_get_PrimaryLanguageOverride), reinterpret_cast<setter>(ApplicationLanguages_put_PrimaryLanguageOverride), nullptr, nullptr },
@@ -2974,14 +2972,12 @@ namespace py::cpp::Windows::Globalization
         { },
     };
 
-    static PyType_Spec type_spec_Calendar =
-    {
+    static PyType_Spec type_spec_Calendar = {
         "winrt._winrt_windows_globalization.Calendar",
         sizeof(py::wrapper::Windows::Globalization::Calendar),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Calendar
-    };
+        _type_slots_Calendar};
 
     // ----- CalendarIdentifiers class --------------------
 
@@ -3293,14 +3289,12 @@ namespace py::cpp::Windows::Globalization
         { },
     };
 
-    static PyType_Spec type_spec_CalendarIdentifiers =
-    {
+    static PyType_Spec type_spec_CalendarIdentifiers = {
         "winrt._winrt_windows_globalization.CalendarIdentifiers",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CalendarIdentifiers
-    };
+        _type_slots_CalendarIdentifiers};
 
     static PyGetSetDef getset_CalendarIdentifiers_Static[] = {
         { "julian", reinterpret_cast<getter>(CalendarIdentifiers_get_Julian), nullptr, nullptr, nullptr },
@@ -3405,14 +3399,12 @@ namespace py::cpp::Windows::Globalization
         { },
     };
 
-    static PyType_Spec type_spec_ClockIdentifiers =
-    {
+    static PyType_Spec type_spec_ClockIdentifiers = {
         "winrt._winrt_windows_globalization.ClockIdentifiers",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ClockIdentifiers
-    };
+        _type_slots_ClockIdentifiers};
 
     static PyGetSetDef getset_ClockIdentifiers_Static[] = {
         { "twelve_hour", reinterpret_cast<getter>(ClockIdentifiers_get_TwelveHour), nullptr, nullptr, nullptr },
@@ -3566,14 +3558,12 @@ namespace py::cpp::Windows::Globalization
         { },
     };
 
-    static PyType_Spec type_spec_CurrencyAmount =
-    {
+    static PyType_Spec type_spec_CurrencyAmount = {
         "winrt._winrt_windows_globalization.CurrencyAmount",
         sizeof(py::wrapper::Windows::Globalization::CurrencyAmount),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CurrencyAmount
-    };
+        _type_slots_CurrencyAmount};
 
     // ----- CurrencyIdentifiers class --------------------
 
@@ -6678,14 +6668,12 @@ namespace py::cpp::Windows::Globalization
         { },
     };
 
-    static PyType_Spec type_spec_CurrencyIdentifiers =
-    {
+    static PyType_Spec type_spec_CurrencyIdentifiers = {
         "winrt._winrt_windows_globalization.CurrencyIdentifiers",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CurrencyIdentifiers
-    };
+        _type_slots_CurrencyIdentifiers};
 
     static PyGetSetDef getset_CurrencyIdentifiers_Static[] = {
         { "h_n_l", reinterpret_cast<getter>(CurrencyIdentifiers_get_HNL), nullptr, nullptr, nullptr },
@@ -7142,14 +7130,12 @@ namespace py::cpp::Windows::Globalization
         { },
     };
 
-    static PyType_Spec type_spec_GeographicRegion =
-    {
+    static PyType_Spec type_spec_GeographicRegion = {
         "winrt._winrt_windows_globalization.GeographicRegion",
         sizeof(py::wrapper::Windows::Globalization::GeographicRegion),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GeographicRegion
-    };
+        _type_slots_GeographicRegion};
 
     static PyGetSetDef getset_GeographicRegion_Static[] = {
         { }
@@ -7297,14 +7283,12 @@ namespace py::cpp::Windows::Globalization
         { },
     };
 
-    static PyType_Spec type_spec_JapanesePhoneme =
-    {
+    static PyType_Spec type_spec_JapanesePhoneme = {
         "winrt._winrt_windows_globalization.JapanesePhoneme",
         sizeof(py::wrapper::Windows::Globalization::JapanesePhoneme),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_JapanesePhoneme
-    };
+        _type_slots_JapanesePhoneme};
 
     // ----- JapanesePhoneticAnalyzer class --------------------
 
@@ -7383,14 +7367,12 @@ namespace py::cpp::Windows::Globalization
         { },
     };
 
-    static PyType_Spec type_spec_JapanesePhoneticAnalyzer =
-    {
+    static PyType_Spec type_spec_JapanesePhoneticAnalyzer = {
         "winrt._winrt_windows_globalization.JapanesePhoneticAnalyzer",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_JapanesePhoneticAnalyzer
-    };
+        _type_slots_JapanesePhoneticAnalyzer};
 
     static PyGetSetDef getset_JapanesePhoneticAnalyzer_Static[] = {
         { }
@@ -7766,14 +7748,12 @@ namespace py::cpp::Windows::Globalization
         { },
     };
 
-    static PyType_Spec type_spec_Language =
-    {
+    static PyType_Spec type_spec_Language = {
         "winrt._winrt_windows_globalization.Language",
         sizeof(py::wrapper::Windows::Globalization::Language),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Language
-    };
+        _type_slots_Language};
 
     static PyGetSetDef getset_Language_Static[] = {
         { "current_input_method_language_tag", reinterpret_cast<getter>(Language_get_CurrentInputMethodLanguageTag), nullptr, nullptr, nullptr },
@@ -8741,14 +8721,12 @@ namespace py::cpp::Windows::Globalization
         { },
     };
 
-    static PyType_Spec type_spec_NumeralSystemIdentifiers =
-    {
+    static PyType_Spec type_spec_NumeralSystemIdentifiers = {
         "winrt._winrt_windows_globalization.NumeralSystemIdentifiers",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NumeralSystemIdentifiers
-    };
+        _type_slots_NumeralSystemIdentifiers};
 
     static PyGetSetDef getset_NumeralSystemIdentifiers_Static[] = {
         { "full_wide", reinterpret_cast<getter>(NumeralSystemIdentifiers_get_FullWide), nullptr, nullptr, nullptr },

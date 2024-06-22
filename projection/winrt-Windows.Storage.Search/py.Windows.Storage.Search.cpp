@@ -403,14 +403,12 @@ namespace py::cpp::Windows::Storage::Search
         { },
     };
 
-    static PyType_Spec type_spec_ContentIndexer =
-    {
+    static PyType_Spec type_spec_ContentIndexer = {
         "winrt._winrt_windows_storage_search.ContentIndexer",
         sizeof(py::wrapper::Windows::Storage::Search::ContentIndexer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentIndexer
-    };
+        _type_slots_ContentIndexer};
 
     static PyGetSetDef getset_ContentIndexer_Static[] = {
         { }
@@ -650,14 +648,12 @@ namespace py::cpp::Windows::Storage::Search
         { },
     };
 
-    static PyType_Spec type_spec_ContentIndexerQuery =
-    {
+    static PyType_Spec type_spec_ContentIndexerQuery = {
         "winrt._winrt_windows_storage_search.ContentIndexerQuery",
         sizeof(py::wrapper::Windows::Storage::Search::ContentIndexerQuery),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContentIndexerQuery
-    };
+        _type_slots_ContentIndexerQuery};
 
     // ----- IndexableContent class --------------------
 
@@ -905,14 +901,12 @@ namespace py::cpp::Windows::Storage::Search
         { },
     };
 
-    static PyType_Spec type_spec_IndexableContent =
-    {
+    static PyType_Spec type_spec_IndexableContent = {
         "winrt._winrt_windows_storage_search.IndexableContent",
         sizeof(py::wrapper::Windows::Storage::Search::IndexableContent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IndexableContent
-    };
+        _type_slots_IndexableContent};
 
     // ----- QueryOptions class --------------------
 
@@ -1499,14 +1493,12 @@ namespace py::cpp::Windows::Storage::Search
         { },
     };
 
-    static PyType_Spec type_spec_QueryOptions =
-    {
+    static PyType_Spec type_spec_QueryOptions = {
         "winrt._winrt_windows_storage_search.QueryOptions",
         sizeof(py::wrapper::Windows::Storage::Search::QueryOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_QueryOptions
-    };
+        _type_slots_QueryOptions};
 
     // ----- SortEntryVector class --------------------
 
@@ -2113,14 +2105,12 @@ namespace py::cpp::Windows::Storage::Search
         { },
     };
 
-    static PyType_Spec type_spec_SortEntryVector =
-    {
+    static PyType_Spec type_spec_SortEntryVector = {
         "winrt._winrt_windows_storage_search.SortEntryVector",
         sizeof(py::wrapper::Windows::Storage::Search::SortEntryVector),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SortEntryVector
-    };
+        _type_slots_SortEntryVector};
 
     // ----- StorageFileQueryResult class --------------------
 
@@ -2500,14 +2490,12 @@ namespace py::cpp::Windows::Storage::Search
         { },
     };
 
-    static PyType_Spec type_spec_StorageFileQueryResult =
-    {
+    static PyType_Spec type_spec_StorageFileQueryResult = {
         "winrt._winrt_windows_storage_search.StorageFileQueryResult",
         sizeof(py::wrapper::Windows::Storage::Search::StorageFileQueryResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageFileQueryResult
-    };
+        _type_slots_StorageFileQueryResult};
 
     // ----- StorageFolderQueryResult class --------------------
 
@@ -2855,14 +2843,12 @@ namespace py::cpp::Windows::Storage::Search
         { },
     };
 
-    static PyType_Spec type_spec_StorageFolderQueryResult =
-    {
+    static PyType_Spec type_spec_StorageFolderQueryResult = {
         "winrt._winrt_windows_storage_search.StorageFolderQueryResult",
         sizeof(py::wrapper::Windows::Storage::Search::StorageFolderQueryResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageFolderQueryResult
-    };
+        _type_slots_StorageFolderQueryResult};
 
     // ----- StorageItemQueryResult class --------------------
 
@@ -3210,14 +3196,12 @@ namespace py::cpp::Windows::Storage::Search
         { },
     };
 
-    static PyType_Spec type_spec_StorageItemQueryResult =
-    {
+    static PyType_Spec type_spec_StorageItemQueryResult = {
         "winrt._winrt_windows_storage_search.StorageItemQueryResult",
         sizeof(py::wrapper::Windows::Storage::Search::StorageItemQueryResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageItemQueryResult
-    };
+        _type_slots_StorageItemQueryResult};
 
     // ----- StorageLibraryChangeTrackerTriggerDetails class --------------------
 
@@ -3319,14 +3303,12 @@ namespace py::cpp::Windows::Storage::Search
         { },
     };
 
-    static PyType_Spec type_spec_StorageLibraryChangeTrackerTriggerDetails =
-    {
+    static PyType_Spec type_spec_StorageLibraryChangeTrackerTriggerDetails = {
         "winrt._winrt_windows_storage_search.StorageLibraryChangeTrackerTriggerDetails",
         sizeof(py::wrapper::Windows::Storage::Search::StorageLibraryChangeTrackerTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageLibraryChangeTrackerTriggerDetails
-    };
+        _type_slots_StorageLibraryChangeTrackerTriggerDetails};
 
     // ----- StorageLibraryContentChangedTriggerDetails class --------------------
 
@@ -3440,14 +3422,12 @@ namespace py::cpp::Windows::Storage::Search
         { },
     };
 
-    static PyType_Spec type_spec_StorageLibraryContentChangedTriggerDetails =
-    {
+    static PyType_Spec type_spec_StorageLibraryContentChangedTriggerDetails = {
         "winrt._winrt_windows_storage_search.StorageLibraryContentChangedTriggerDetails",
         sizeof(py::wrapper::Windows::Storage::Search::StorageLibraryContentChangedTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StorageLibraryContentChangedTriggerDetails
-    };
+        _type_slots_StorageLibraryContentChangedTriggerDetails};
 
     // ----- ValueAndLanguage class --------------------
 
@@ -3627,14 +3607,12 @@ namespace py::cpp::Windows::Storage::Search
         { },
     };
 
-    static PyType_Spec type_spec_ValueAndLanguage =
-    {
+    static PyType_Spec type_spec_ValueAndLanguage = {
         "winrt._winrt_windows_storage_search.ValueAndLanguage",
         sizeof(py::wrapper::Windows::Storage::Search::ValueAndLanguage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ValueAndLanguage
-    };
+        _type_slots_ValueAndLanguage};
 
     // ----- IIndexableContent interface --------------------
 
@@ -3860,14 +3838,12 @@ namespace py::cpp::Windows::Storage::Search
         { },
     };
 
-    static PyType_Spec type_spec_IIndexableContent =
-    {
+    static PyType_Spec type_spec_IIndexableContent = {
         "winrt._winrt_windows_storage_search.IIndexableContent",
         sizeof(py::wrapper::Windows::Storage::Search::IIndexableContent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IIndexableContent
-    };
+        _type_slots_IIndexableContent};
 
     // ----- IStorageFolderQueryOperations interface --------------------
 
@@ -4422,14 +4398,12 @@ namespace py::cpp::Windows::Storage::Search
         { },
     };
 
-    static PyType_Spec type_spec_IStorageFolderQueryOperations =
-    {
+    static PyType_Spec type_spec_IStorageFolderQueryOperations = {
         "winrt._winrt_windows_storage_search.IStorageFolderQueryOperations",
         sizeof(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IStorageFolderQueryOperations
-    };
+        _type_slots_IStorageFolderQueryOperations};
 
     // ----- IStorageQueryResultBase interface --------------------
 
@@ -4726,14 +4700,12 @@ namespace py::cpp::Windows::Storage::Search
         { },
     };
 
-    static PyType_Spec type_spec_IStorageQueryResultBase =
-    {
+    static PyType_Spec type_spec_IStorageQueryResultBase = {
         "winrt._winrt_windows_storage_search.IStorageQueryResultBase",
         sizeof(py::wrapper::Windows::Storage::Search::IStorageQueryResultBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IStorageQueryResultBase
-    };
+        _type_slots_IStorageQueryResultBase};
 
     // ----- SortEntry struct --------------------
 
@@ -4887,14 +4859,12 @@ namespace py::cpp::Windows::Storage::Search
         { },
     };
 
-    static PyType_Spec type_spec_SortEntry =
-    {
+    static PyType_Spec type_spec_SortEntry = {
         "winrt._winrt_windows_storage_search.SortEntry",
         sizeof(py::wrapper::Windows::Storage::Search::SortEntry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SortEntry
-    };
+        _type_slots_SortEntry};
 
     // ----- Windows.Storage.Search Initialization --------------------
 

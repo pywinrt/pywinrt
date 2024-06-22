@@ -118,14 +118,12 @@ namespace py::cpp::Microsoft::UI::Dispatching
         { },
     };
 
-    static PyType_Spec type_spec_DispatcherExitDeferral =
-    {
+    static PyType_Spec type_spec_DispatcherExitDeferral = {
         "winrt._winrt_microsoft_ui_dispatching.DispatcherExitDeferral",
         sizeof(py::wrapper::Microsoft::UI::Dispatching::DispatcherExitDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DispatcherExitDeferral
-    };
+        _type_slots_DispatcherExitDeferral};
 
     // ----- DispatcherQueue class --------------------
 
@@ -614,14 +612,12 @@ namespace py::cpp::Microsoft::UI::Dispatching
         { },
     };
 
-    static PyType_Spec type_spec_DispatcherQueue =
-    {
+    static PyType_Spec type_spec_DispatcherQueue = {
         "winrt._winrt_microsoft_ui_dispatching.DispatcherQueue",
         sizeof(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DispatcherQueue
-    };
+        _type_slots_DispatcherQueue};
 
     static PyGetSetDef getset_DispatcherQueue_Static[] = {
         { }
@@ -848,14 +844,12 @@ namespace py::cpp::Microsoft::UI::Dispatching
         { },
     };
 
-    static PyType_Spec type_spec_DispatcherQueueController =
-    {
+    static PyType_Spec type_spec_DispatcherQueueController = {
         "winrt._winrt_microsoft_ui_dispatching.DispatcherQueueController",
         sizeof(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueueController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DispatcherQueueController
-    };
+        _type_slots_DispatcherQueueController};
 
     static PyGetSetDef getset_DispatcherQueueController_Static[] = {
         { }
@@ -974,14 +968,12 @@ namespace py::cpp::Microsoft::UI::Dispatching
         { },
     };
 
-    static PyType_Spec type_spec_DispatcherQueueShutdownStartingEventArgs =
-    {
+    static PyType_Spec type_spec_DispatcherQueueShutdownStartingEventArgs = {
         "winrt._winrt_microsoft_ui_dispatching.DispatcherQueueShutdownStartingEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueueShutdownStartingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DispatcherQueueShutdownStartingEventArgs
-    };
+        _type_slots_DispatcherQueueShutdownStartingEventArgs};
 
     // ----- DispatcherQueueTimer class --------------------
 
@@ -1266,14 +1258,12 @@ namespace py::cpp::Microsoft::UI::Dispatching
         { },
     };
 
-    static PyType_Spec type_spec_DispatcherQueueTimer =
-    {
+    static PyType_Spec type_spec_DispatcherQueueTimer = {
         "winrt._winrt_microsoft_ui_dispatching.DispatcherQueueTimer",
         sizeof(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueueTimer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DispatcherQueueTimer
-    };
+        _type_slots_DispatcherQueueTimer};
 
     // ----- Microsoft.UI.Dispatching Initialization --------------------
 

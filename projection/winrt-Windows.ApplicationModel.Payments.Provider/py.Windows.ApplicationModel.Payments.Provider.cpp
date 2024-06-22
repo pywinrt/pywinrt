@@ -118,14 +118,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PaymentAppCanMakePaymentTriggerDetails =
-    {
+    static PyType_Spec type_spec_PaymentAppCanMakePaymentTriggerDetails = {
         "winrt._winrt_windows_applicationmodel_payments_provider.PaymentAppCanMakePaymentTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::Provider::PaymentAppCanMakePaymentTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentAppCanMakePaymentTriggerDetails
-    };
+        _type_slots_PaymentAppCanMakePaymentTriggerDetails};
 
     // ----- PaymentAppManager class --------------------
 
@@ -268,14 +266,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PaymentAppManager =
-    {
+    static PyType_Spec type_spec_PaymentAppManager = {
         "winrt._winrt_windows_applicationmodel_payments_provider.PaymentAppManager",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::Provider::PaymentAppManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentAppManager
-    };
+        _type_slots_PaymentAppManager};
 
     static PyGetSetDef getset_PaymentAppManager_Static[] = {
         { "current", reinterpret_cast<getter>(PaymentAppManager_get_Current), nullptr, nullptr, nullptr },
@@ -685,14 +681,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PaymentTransaction =
-    {
+    static PyType_Spec type_spec_PaymentTransaction = {
         "winrt._winrt_windows_applicationmodel_payments_provider.PaymentTransaction",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::Provider::PaymentTransaction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentTransaction
-    };
+        _type_slots_PaymentTransaction};
 
     static PyGetSetDef getset_PaymentTransaction_Static[] = {
         { }
@@ -800,14 +794,12 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PaymentTransactionAcceptResult =
-    {
+    static PyType_Spec type_spec_PaymentTransactionAcceptResult = {
         "winrt._winrt_windows_applicationmodel_payments_provider.PaymentTransactionAcceptResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::Provider::PaymentTransactionAcceptResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PaymentTransactionAcceptResult
-    };
+        _type_slots_PaymentTransactionAcceptResult};
 
     // ----- Windows.ApplicationModel.Payments.Provider Initialization --------------------
 

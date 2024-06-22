@@ -272,14 +272,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_DeleteSmsMessageOperation =
-    {
+    static PyType_Spec type_spec_DeleteSmsMessageOperation = {
         "winrt._winrt_windows_devices_sms.DeleteSmsMessageOperation",
         sizeof(py::wrapper::Windows::Devices::Sms::DeleteSmsMessageOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeleteSmsMessageOperation
-    };
+        _type_slots_DeleteSmsMessageOperation};
 
     // ----- DeleteSmsMessagesOperation class --------------------
 
@@ -548,14 +546,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_DeleteSmsMessagesOperation =
-    {
+    static PyType_Spec type_spec_DeleteSmsMessagesOperation = {
         "winrt._winrt_windows_devices_sms.DeleteSmsMessagesOperation",
         sizeof(py::wrapper::Windows::Devices::Sms::DeleteSmsMessagesOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DeleteSmsMessagesOperation
-    };
+        _type_slots_DeleteSmsMessagesOperation};
 
     // ----- GetSmsDeviceOperation class --------------------
 
@@ -823,14 +819,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_GetSmsDeviceOperation =
-    {
+    static PyType_Spec type_spec_GetSmsDeviceOperation = {
         "winrt._winrt_windows_devices_sms.GetSmsDeviceOperation",
         sizeof(py::wrapper::Windows::Devices::Sms::GetSmsDeviceOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GetSmsDeviceOperation
-    };
+        _type_slots_GetSmsDeviceOperation};
 
     // ----- GetSmsMessageOperation class --------------------
 
@@ -1098,14 +1092,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_GetSmsMessageOperation =
-    {
+    static PyType_Spec type_spec_GetSmsMessageOperation = {
         "winrt._winrt_windows_devices_sms.GetSmsMessageOperation",
         sizeof(py::wrapper::Windows::Devices::Sms::GetSmsMessageOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GetSmsMessageOperation
-    };
+        _type_slots_GetSmsMessageOperation};
 
     // ----- GetSmsMessagesOperation class --------------------
 
@@ -1421,14 +1413,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_GetSmsMessagesOperation =
-    {
+    static PyType_Spec type_spec_GetSmsMessagesOperation = {
         "winrt._winrt_windows_devices_sms.GetSmsMessagesOperation",
         sizeof(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GetSmsMessagesOperation
-    };
+        _type_slots_GetSmsMessagesOperation};
 
     // ----- SendSmsMessageOperation class --------------------
 
@@ -1697,14 +1687,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SendSmsMessageOperation =
-    {
+    static PyType_Spec type_spec_SendSmsMessageOperation = {
         "winrt._winrt_windows_devices_sms.SendSmsMessageOperation",
         sizeof(py::wrapper::Windows::Devices::Sms::SendSmsMessageOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SendSmsMessageOperation
-    };
+        _type_slots_SendSmsMessageOperation};
 
     // ----- SmsAppMessage class --------------------
 
@@ -2408,14 +2396,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsAppMessage =
-    {
+    static PyType_Spec type_spec_SmsAppMessage = {
         "winrt._winrt_windows_devices_sms.SmsAppMessage",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsAppMessage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsAppMessage
-    };
+        _type_slots_SmsAppMessage};
 
     // ----- SmsBinaryMessage class --------------------
 
@@ -2650,14 +2636,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsBinaryMessage =
-    {
+    static PyType_Spec type_spec_SmsBinaryMessage = {
         "winrt._winrt_windows_devices_sms.SmsBinaryMessage",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsBinaryMessage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsBinaryMessage
-    };
+        _type_slots_SmsBinaryMessage};
 
     // ----- SmsBroadcastMessage class --------------------
 
@@ -3019,14 +3003,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsBroadcastMessage =
-    {
+    static PyType_Spec type_spec_SmsBroadcastMessage = {
         "winrt._winrt_windows_devices_sms.SmsBroadcastMessage",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsBroadcastMessage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsBroadcastMessage
-    };
+        _type_slots_SmsBroadcastMessage};
 
     // ----- SmsDevice class --------------------
 
@@ -3442,14 +3424,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsDevice =
-    {
+    static PyType_Spec type_spec_SmsDevice = {
         "winrt._winrt_windows_devices_sms.SmsDevice",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsDevice
-    };
+        _type_slots_SmsDevice};
 
     static PyGetSetDef getset_SmsDevice_Static[] = {
         { }
@@ -3917,14 +3897,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsDevice2 =
-    {
+    static PyType_Spec type_spec_SmsDevice2 = {
         "winrt._winrt_windows_devices_sms.SmsDevice2",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsDevice2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsDevice2
-    };
+        _type_slots_SmsDevice2};
 
     static PyGetSetDef getset_SmsDevice2_Static[] = {
         { }
@@ -4163,14 +4141,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsDeviceMessageStore =
-    {
+    static PyType_Spec type_spec_SmsDeviceMessageStore = {
         "winrt._winrt_windows_devices_sms.SmsDeviceMessageStore",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsDeviceMessageStore),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsDeviceMessageStore
-    };
+        _type_slots_SmsDeviceMessageStore};
 
     // ----- SmsFilterRule class --------------------
 
@@ -4544,14 +4520,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsFilterRule =
-    {
+    static PyType_Spec type_spec_SmsFilterRule = {
         "winrt._winrt_windows_devices_sms.SmsFilterRule",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsFilterRule),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsFilterRule
-    };
+        _type_slots_SmsFilterRule};
 
     // ----- SmsFilterRules class --------------------
 
@@ -4677,14 +4651,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsFilterRules =
-    {
+    static PyType_Spec type_spec_SmsFilterRules = {
         "winrt._winrt_windows_devices_sms.SmsFilterRules",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsFilterRules),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsFilterRules
-    };
+        _type_slots_SmsFilterRules};
 
     // ----- SmsMessageReceivedEventArgs class --------------------
 
@@ -4786,14 +4758,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsMessageReceivedEventArgs =
-    {
+    static PyType_Spec type_spec_SmsMessageReceivedEventArgs = {
         "winrt._winrt_windows_devices_sms.SmsMessageReceivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsMessageReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsMessageReceivedEventArgs
-    };
+        _type_slots_SmsMessageReceivedEventArgs};
 
     // ----- SmsMessageReceivedTriggerDetails class --------------------
 
@@ -5057,14 +5027,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsMessageReceivedTriggerDetails =
-    {
+    static PyType_Spec type_spec_SmsMessageReceivedTriggerDetails = {
         "winrt._winrt_windows_devices_sms.SmsMessageReceivedTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsMessageReceivedTriggerDetails
-    };
+        _type_slots_SmsMessageReceivedTriggerDetails};
 
     // ----- SmsMessageRegistration class --------------------
 
@@ -5273,14 +5241,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsMessageRegistration =
-    {
+    static PyType_Spec type_spec_SmsMessageRegistration = {
         "winrt._winrt_windows_devices_sms.SmsMessageRegistration",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsMessageRegistration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsMessageRegistration
-    };
+        _type_slots_SmsMessageRegistration};
 
     static PyGetSetDef getset_SmsMessageRegistration_Static[] = {
         { "all_registrations", reinterpret_cast<getter>(SmsMessageRegistration_get_AllRegistrations), nullptr, nullptr, nullptr },
@@ -5449,14 +5415,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsReceivedEventDetails =
-    {
+    static PyType_Spec type_spec_SmsReceivedEventDetails = {
         "winrt._winrt_windows_devices_sms.SmsReceivedEventDetails",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsReceivedEventDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsReceivedEventDetails
-    };
+        _type_slots_SmsReceivedEventDetails};
 
     // ----- SmsSendMessageResult class --------------------
 
@@ -5658,14 +5622,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsSendMessageResult =
-    {
+    static PyType_Spec type_spec_SmsSendMessageResult = {
         "winrt._winrt_windows_devices_sms.SmsSendMessageResult",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsSendMessageResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsSendMessageResult
-    };
+        _type_slots_SmsSendMessageResult};
 
     // ----- SmsStatusMessage class --------------------
 
@@ -5967,14 +5929,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsStatusMessage =
-    {
+    static PyType_Spec type_spec_SmsStatusMessage = {
         "winrt._winrt_windows_devices_sms.SmsStatusMessage",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsStatusMessage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsStatusMessage
-    };
+        _type_slots_SmsStatusMessage};
 
     // ----- SmsTextMessage class --------------------
 
@@ -6465,14 +6425,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsTextMessage =
-    {
+    static PyType_Spec type_spec_SmsTextMessage = {
         "winrt._winrt_windows_devices_sms.SmsTextMessage",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsTextMessage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsTextMessage
-    };
+        _type_slots_SmsTextMessage};
 
     static PyGetSetDef getset_SmsTextMessage_Static[] = {
         { }
@@ -7051,14 +7009,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsTextMessage2 =
-    {
+    static PyType_Spec type_spec_SmsTextMessage2 = {
         "winrt._winrt_windows_devices_sms.SmsTextMessage2",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsTextMessage2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsTextMessage2
-    };
+        _type_slots_SmsTextMessage2};
 
     // ----- SmsVoicemailMessage class --------------------
 
@@ -7300,14 +7256,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsVoicemailMessage =
-    {
+    static PyType_Spec type_spec_SmsVoicemailMessage = {
         "winrt._winrt_windows_devices_sms.SmsVoicemailMessage",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsVoicemailMessage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsVoicemailMessage
-    };
+        _type_slots_SmsVoicemailMessage};
 
     // ----- SmsWapMessage class --------------------
 
@@ -7609,14 +7563,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsWapMessage =
-    {
+    static PyType_Spec type_spec_SmsWapMessage = {
         "winrt._winrt_windows_devices_sms.SmsWapMessage",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsWapMessage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsWapMessage
-    };
+        _type_slots_SmsWapMessage};
 
     // ----- ISmsBinaryMessage interface --------------------
 
@@ -7829,14 +7781,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_ISmsBinaryMessage =
-    {
+    static PyType_Spec type_spec_ISmsBinaryMessage = {
         "winrt._winrt_windows_devices_sms.ISmsBinaryMessage",
         sizeof(py::wrapper::Windows::Devices::Sms::ISmsBinaryMessage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISmsBinaryMessage
-    };
+        _type_slots_ISmsBinaryMessage};
 
     // ----- ISmsDevice interface --------------------
 
@@ -8132,14 +8082,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_ISmsDevice =
-    {
+    static PyType_Spec type_spec_ISmsDevice = {
         "winrt._winrt_windows_devices_sms.ISmsDevice",
         sizeof(py::wrapper::Windows::Devices::Sms::ISmsDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISmsDevice
-    };
+        _type_slots_ISmsDevice};
 
     // ----- ISmsMessage interface --------------------
 
@@ -8241,14 +8189,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_ISmsMessage =
-    {
+    static PyType_Spec type_spec_ISmsMessage = {
         "winrt._winrt_windows_devices_sms.ISmsMessage",
         sizeof(py::wrapper::Windows::Devices::Sms::ISmsMessage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISmsMessage
-    };
+        _type_slots_ISmsMessage};
 
     // ----- ISmsMessageBase interface --------------------
 
@@ -8410,14 +8356,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_ISmsMessageBase =
-    {
+    static PyType_Spec type_spec_ISmsMessageBase = {
         "winrt._winrt_windows_devices_sms.ISmsMessageBase",
         sizeof(py::wrapper::Windows::Devices::Sms::ISmsMessageBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISmsMessageBase
-    };
+        _type_slots_ISmsMessageBase};
 
     // ----- ISmsTextMessage interface --------------------
 
@@ -8823,14 +8767,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_ISmsTextMessage =
-    {
+    static PyType_Spec type_spec_ISmsTextMessage = {
         "winrt._winrt_windows_devices_sms.ISmsTextMessage",
         sizeof(py::wrapper::Windows::Devices::Sms::ISmsTextMessage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ISmsTextMessage
-    };
+        _type_slots_ISmsTextMessage};
 
     // ----- SmsEncodedLength struct --------------------
 
@@ -9089,14 +9031,12 @@ namespace py::cpp::Windows::Devices::Sms
         { },
     };
 
-    static PyType_Spec type_spec_SmsEncodedLength =
-    {
+    static PyType_Spec type_spec_SmsEncodedLength = {
         "winrt._winrt_windows_devices_sms.SmsEncodedLength",
         sizeof(py::wrapper::Windows::Devices::Sms::SmsEncodedLength),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SmsEncodedLength
-    };
+        _type_slots_SmsEncodedLength};
 
     // ----- Windows.Devices.Sms Initialization --------------------
 

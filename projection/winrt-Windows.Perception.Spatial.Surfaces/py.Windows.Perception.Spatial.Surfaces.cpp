@@ -190,14 +190,12 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         { },
     };
 
-    static PyType_Spec type_spec_SpatialSurfaceInfo =
-    {
+    static PyType_Spec type_spec_SpatialSurfaceInfo = {
         "winrt._winrt_windows_perception_spatial_surfaces.SpatialSurfaceInfo",
         sizeof(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialSurfaceInfo
-    };
+        _type_slots_SpatialSurfaceInfo};
 
     // ----- SpatialSurfaceMesh class --------------------
 
@@ -379,14 +377,12 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         { },
     };
 
-    static PyType_Spec type_spec_SpatialSurfaceMesh =
-    {
+    static PyType_Spec type_spec_SpatialSurfaceMesh = {
         "winrt._winrt_windows_perception_spatial_surfaces.SpatialSurfaceMesh",
         sizeof(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialSurfaceMesh
-    };
+        _type_slots_SpatialSurfaceMesh};
 
     // ----- SpatialSurfaceMeshBuffer class --------------------
 
@@ -528,14 +524,12 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         { },
     };
 
-    static PyType_Spec type_spec_SpatialSurfaceMeshBuffer =
-    {
+    static PyType_Spec type_spec_SpatialSurfaceMeshBuffer = {
         "winrt._winrt_windows_perception_spatial_surfaces.SpatialSurfaceMeshBuffer",
         sizeof(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshBuffer),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialSurfaceMeshBuffer
-    };
+        _type_slots_SpatialSurfaceMeshBuffer};
 
     // ----- SpatialSurfaceMeshOptions class --------------------
 
@@ -868,14 +862,12 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         { },
     };
 
-    static PyType_Spec type_spec_SpatialSurfaceMeshOptions =
-    {
+    static PyType_Spec type_spec_SpatialSurfaceMeshOptions = {
         "winrt._winrt_windows_perception_spatial_surfaces.SpatialSurfaceMeshOptions",
         sizeof(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialSurfaceMeshOptions
-    };
+        _type_slots_SpatialSurfaceMeshOptions};
 
     static PyGetSetDef getset_SpatialSurfaceMeshOptions_Static[] = {
         { "supported_triangle_index_formats", reinterpret_cast<getter>(SpatialSurfaceMeshOptions_get_SupportedTriangleIndexFormats), nullptr, nullptr, nullptr },
@@ -1186,14 +1178,12 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         { },
     };
 
-    static PyType_Spec type_spec_SpatialSurfaceObserver =
-    {
+    static PyType_Spec type_spec_SpatialSurfaceObserver = {
         "winrt._winrt_windows_perception_spatial_surfaces.SpatialSurfaceObserver",
         sizeof(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpatialSurfaceObserver
-    };
+        _type_slots_SpatialSurfaceObserver};
 
     static PyGetSetDef getset_SpatialSurfaceObserver_Static[] = {
         { }

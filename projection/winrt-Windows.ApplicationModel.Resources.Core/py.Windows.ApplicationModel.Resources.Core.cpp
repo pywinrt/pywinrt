@@ -205,14 +205,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { },
     };
 
-    static PyType_Spec type_spec_NamedResource =
-    {
+    static PyType_Spec type_spec_NamedResource = {
         "winrt._winrt_windows_applicationmodel_resources_core.NamedResource",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::NamedResource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NamedResource
-    };
+        _type_slots_NamedResource};
 
     // ----- ResourceCandidate class --------------------
 
@@ -486,14 +484,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { },
     };
 
-    static PyType_Spec type_spec_ResourceCandidate =
-    {
+    static PyType_Spec type_spec_ResourceCandidate = {
         "winrt._winrt_windows_applicationmodel_resources_core.ResourceCandidate",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceCandidate),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResourceCandidate
-    };
+        _type_slots_ResourceCandidate};
 
     // ----- ResourceCandidateVectorView class --------------------
 
@@ -818,14 +814,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { },
     };
 
-    static PyType_Spec type_spec_ResourceCandidateVectorView =
-    {
+    static PyType_Spec type_spec_ResourceCandidateVectorView = {
         "winrt._winrt_windows_applicationmodel_resources_core.ResourceCandidateVectorView",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResourceCandidateVectorView
-    };
+        _type_slots_ResourceCandidateVectorView};
 
     // ----- ResourceContext class --------------------
 
@@ -1319,14 +1313,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { },
     };
 
-    static PyType_Spec type_spec_ResourceContext =
-    {
+    static PyType_Spec type_spec_ResourceContext = {
         "winrt._winrt_windows_applicationmodel_resources_core.ResourceContext",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceContext),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResourceContext
-    };
+        _type_slots_ResourceContext};
 
     static PyGetSetDef getset_ResourceContext_Static[] = {
         { }
@@ -1682,14 +1674,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { },
     };
 
-    static PyType_Spec type_spec_ResourceContextLanguagesVectorView =
-    {
+    static PyType_Spec type_spec_ResourceContextLanguagesVectorView = {
         "winrt._winrt_windows_applicationmodel_resources_core.ResourceContextLanguagesVectorView",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResourceContextLanguagesVectorView
-    };
+        _type_slots_ResourceContextLanguagesVectorView};
 
     // ----- ResourceManager class --------------------
 
@@ -1993,14 +1983,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { },
     };
 
-    static PyType_Spec type_spec_ResourceManager =
-    {
+    static PyType_Spec type_spec_ResourceManager = {
         "winrt._winrt_windows_applicationmodel_resources_core.ResourceManager",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResourceManager
-    };
+        _type_slots_ResourceManager};
 
     static PyGetSetDef getset_ResourceManager_Static[] = {
         { "current", reinterpret_cast<getter>(ResourceManager_get_Current), nullptr, nullptr, nullptr },
@@ -2432,14 +2420,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { },
     };
 
-    static PyType_Spec type_spec_ResourceMap =
-    {
+    static PyType_Spec type_spec_ResourceMap = {
         "winrt._winrt_windows_applicationmodel_resources_core.ResourceMap",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMap),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResourceMap
-    };
+        _type_slots_ResourceMap};
 
     // ----- ResourceMapIterator class --------------------
 
@@ -2632,14 +2618,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { },
     };
 
-    static PyType_Spec type_spec_ResourceMapIterator =
-    {
+    static PyType_Spec type_spec_ResourceMapIterator = {
         "winrt._winrt_windows_applicationmodel_resources_core.ResourceMapIterator",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapIterator),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResourceMapIterator
-    };
+        _type_slots_ResourceMapIterator};
 
     // ----- ResourceMapMapView class --------------------
 
@@ -2939,14 +2923,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { },
     };
 
-    static PyType_Spec type_spec_ResourceMapMapView =
-    {
+    static PyType_Spec type_spec_ResourceMapMapView = {
         "winrt._winrt_windows_applicationmodel_resources_core.ResourceMapMapView",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapMapView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResourceMapMapView
-    };
+        _type_slots_ResourceMapMapView};
 
     // ----- ResourceMapMapViewIterator class --------------------
 
@@ -3139,14 +3121,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { },
     };
 
-    static PyType_Spec type_spec_ResourceMapMapViewIterator =
-    {
+    static PyType_Spec type_spec_ResourceMapMapViewIterator = {
         "winrt._winrt_windows_applicationmodel_resources_core.ResourceMapMapViewIterator",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResourceMapMapViewIterator
-    };
+        _type_slots_ResourceMapMapViewIterator};
 
     // ----- ResourceQualifier class --------------------
 
@@ -3308,14 +3288,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { },
     };
 
-    static PyType_Spec type_spec_ResourceQualifier =
-    {
+    static PyType_Spec type_spec_ResourceQualifier = {
         "winrt._winrt_windows_applicationmodel_resources_core.ResourceQualifier",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifier),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResourceQualifier
-    };
+        _type_slots_ResourceQualifier};
 
     // ----- ResourceQualifierMapView class --------------------
 
@@ -3615,14 +3593,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { },
     };
 
-    static PyType_Spec type_spec_ResourceQualifierMapView =
-    {
+    static PyType_Spec type_spec_ResourceQualifierMapView = {
         "winrt._winrt_windows_applicationmodel_resources_core.ResourceQualifierMapView",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResourceQualifierMapView
-    };
+        _type_slots_ResourceQualifierMapView};
 
     // ----- ResourceQualifierObservableMap class --------------------
 
@@ -4076,14 +4052,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { },
     };
 
-    static PyType_Spec type_spec_ResourceQualifierObservableMap =
-    {
+    static PyType_Spec type_spec_ResourceQualifierObservableMap = {
         "winrt._winrt_windows_applicationmodel_resources_core.ResourceQualifierObservableMap",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResourceQualifierObservableMap
-    };
+        _type_slots_ResourceQualifierObservableMap};
 
     // ----- ResourceQualifierVectorView class --------------------
 
@@ -4408,14 +4382,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { },
     };
 
-    static PyType_Spec type_spec_ResourceQualifierVectorView =
-    {
+    static PyType_Spec type_spec_ResourceQualifierVectorView = {
         "winrt._winrt_windows_applicationmodel_resources_core.ResourceQualifierVectorView",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResourceQualifierVectorView
-    };
+        _type_slots_ResourceQualifierVectorView};
 
     // ----- ResourceLayoutInfo struct --------------------
 
@@ -4674,14 +4646,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { },
     };
 
-    static PyType_Spec type_spec_ResourceLayoutInfo =
-    {
+    static PyType_Spec type_spec_ResourceLayoutInfo = {
         "winrt._winrt_windows_applicationmodel_resources_core.ResourceLayoutInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ResourceLayoutInfo
-    };
+        _type_slots_ResourceLayoutInfo};
 
     // ----- Windows.ApplicationModel.Resources.Core Initialization --------------------
 

@@ -215,14 +215,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreFrameworkInputView =
-    {
+    static PyType_Spec type_spec_CoreFrameworkInputView = {
         "winrt._winrt_windows_ui_viewmanagement_core.CoreFrameworkInputView",
         sizeof(py::wrapper::Windows::UI::ViewManagement::Core::CoreFrameworkInputView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreFrameworkInputView
-    };
+        _type_slots_CoreFrameworkInputView};
 
     static PyGetSetDef getset_CoreFrameworkInputView_Static[] = {
         { }
@@ -371,14 +369,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreFrameworkInputViewAnimationStartingEventArgs =
-    {
+    static PyType_Spec type_spec_CoreFrameworkInputViewAnimationStartingEventArgs = {
         "winrt._winrt_windows_ui_viewmanagement_core.CoreFrameworkInputViewAnimationStartingEventArgs",
         sizeof(py::wrapper::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewAnimationStartingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreFrameworkInputViewAnimationStartingEventArgs
-    };
+        _type_slots_CoreFrameworkInputViewAnimationStartingEventArgs};
 
     // ----- CoreFrameworkInputViewOcclusionsChangedEventArgs class --------------------
 
@@ -480,14 +476,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreFrameworkInputViewOcclusionsChangedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreFrameworkInputViewOcclusionsChangedEventArgs = {
         "winrt._winrt_windows_ui_viewmanagement_core.CoreFrameworkInputViewOcclusionsChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewOcclusionsChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreFrameworkInputViewOcclusionsChangedEventArgs
-    };
+        _type_slots_CoreFrameworkInputViewOcclusionsChangedEventArgs};
 
     // ----- CoreInputView class --------------------
 
@@ -1159,14 +1153,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreInputView =
-    {
+    static PyType_Spec type_spec_CoreInputView = {
         "winrt._winrt_windows_ui_viewmanagement_core.CoreInputView",
         sizeof(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreInputView
-    };
+        _type_slots_CoreInputView};
 
     static PyGetSetDef getset_CoreInputView_Static[] = {
         { }
@@ -1343,14 +1335,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreInputViewAnimationStartingEventArgs =
-    {
+    static PyType_Spec type_spec_CoreInputViewAnimationStartingEventArgs = {
         "winrt._winrt_windows_ui_viewmanagement_core.CoreInputViewAnimationStartingEventArgs",
         sizeof(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputViewAnimationStartingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreInputViewAnimationStartingEventArgs
-    };
+        _type_slots_CoreInputViewAnimationStartingEventArgs};
 
     // ----- CoreInputViewHidingEventArgs class --------------------
 
@@ -1442,14 +1432,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreInputViewHidingEventArgs =
-    {
+    static PyType_Spec type_spec_CoreInputViewHidingEventArgs = {
         "winrt._winrt_windows_ui_viewmanagement_core.CoreInputViewHidingEventArgs",
         sizeof(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputViewHidingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreInputViewHidingEventArgs
-    };
+        _type_slots_CoreInputViewHidingEventArgs};
 
     // ----- CoreInputViewOcclusion class --------------------
 
@@ -1551,14 +1539,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreInputViewOcclusion =
-    {
+    static PyType_Spec type_spec_CoreInputViewOcclusion = {
         "winrt._winrt_windows_ui_viewmanagement_core.CoreInputViewOcclusion",
         sizeof(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreInputViewOcclusion
-    };
+        _type_slots_CoreInputViewOcclusion};
 
     // ----- CoreInputViewOcclusionsChangedEventArgs class --------------------
 
@@ -1688,14 +1674,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreInputViewOcclusionsChangedEventArgs =
-    {
+    static PyType_Spec type_spec_CoreInputViewOcclusionsChangedEventArgs = {
         "winrt._winrt_windows_ui_viewmanagement_core.CoreInputViewOcclusionsChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionsChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreInputViewOcclusionsChangedEventArgs
-    };
+        _type_slots_CoreInputViewOcclusionsChangedEventArgs};
 
     // ----- CoreInputViewShowingEventArgs class --------------------
 
@@ -1787,14 +1771,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreInputViewShowingEventArgs =
-    {
+    static PyType_Spec type_spec_CoreInputViewShowingEventArgs = {
         "winrt._winrt_windows_ui_viewmanagement_core.CoreInputViewShowingEventArgs",
         sizeof(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputViewShowingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreInputViewShowingEventArgs
-    };
+        _type_slots_CoreInputViewShowingEventArgs};
 
     // ----- CoreInputViewTransferringXYFocusEventArgs class --------------------
 
@@ -1992,14 +1974,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreInputViewTransferringXYFocusEventArgs =
-    {
+    static PyType_Spec type_spec_CoreInputViewTransferringXYFocusEventArgs = {
         "winrt._winrt_windows_ui_viewmanagement_core.CoreInputViewTransferringXYFocusEventArgs",
         sizeof(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreInputViewTransferringXYFocusEventArgs
-    };
+        _type_slots_CoreInputViewTransferringXYFocusEventArgs};
 
     // ----- UISettingsController class --------------------
 
@@ -2255,14 +2235,12 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         { },
     };
 
-    static PyType_Spec type_spec_UISettingsController =
-    {
+    static PyType_Spec type_spec_UISettingsController = {
         "winrt._winrt_windows_ui_viewmanagement_core.UISettingsController",
         sizeof(py::wrapper::Windows::UI::ViewManagement::Core::UISettingsController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UISettingsController
-    };
+        _type_slots_UISettingsController};
 
     static PyGetSetDef getset_UISettingsController_Static[] = {
         { }

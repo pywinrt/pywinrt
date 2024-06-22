@@ -193,14 +193,12 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         { },
     };
 
-    static PyType_Spec type_spec_NotifyCollectionChangedEventArgs =
-    {
+    static PyType_Spec type_spec_NotifyCollectionChangedEventArgs = {
         "winrt._winrt_windows_ui_xaml_interop.NotifyCollectionChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NotifyCollectionChangedEventArgs
-    };
+        _type_slots_NotifyCollectionChangedEventArgs};
 
     // ----- IBindableIterable interface --------------------
 
@@ -292,14 +290,12 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         { },
     };
 
-    static PyType_Spec type_spec_IBindableIterable =
-    {
+    static PyType_Spec type_spec_IBindableIterable = {
         "winrt._winrt_windows_ui_xaml_interop.IBindableIterable",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::IBindableIterable),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBindableIterable
-    };
+        _type_slots_IBindableIterable};
 
     // ----- IBindableIterator interface --------------------
 
@@ -431,14 +427,12 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         { },
     };
 
-    static PyType_Spec type_spec_IBindableIterator =
-    {
+    static PyType_Spec type_spec_IBindableIterator = {
         "winrt._winrt_windows_ui_xaml_interop.IBindableIterator",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::IBindableIterator),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBindableIterator
-    };
+        _type_slots_IBindableIterator};
 
     // ----- IBindableObservableVector interface --------------------
 
@@ -898,14 +892,12 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         { },
     };
 
-    static PyType_Spec type_spec_IBindableObservableVector =
-    {
+    static PyType_Spec type_spec_IBindableObservableVector = {
         "winrt._winrt_windows_ui_xaml_interop.IBindableObservableVector",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::IBindableObservableVector),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBindableObservableVector
-    };
+        _type_slots_IBindableObservableVector};
 
     // ----- IBindableVector interface --------------------
 
@@ -1320,14 +1312,12 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         { },
     };
 
-    static PyType_Spec type_spec_IBindableVector =
-    {
+    static PyType_Spec type_spec_IBindableVector = {
         "winrt._winrt_windows_ui_xaml_interop.IBindableVector",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::IBindableVector),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBindableVector
-    };
+        _type_slots_IBindableVector};
 
     // ----- IBindableVectorView interface --------------------
 
@@ -1516,14 +1506,12 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         { },
     };
 
-    static PyType_Spec type_spec_IBindableVectorView =
-    {
+    static PyType_Spec type_spec_IBindableVectorView = {
         "winrt._winrt_windows_ui_xaml_interop.IBindableVectorView",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::IBindableVectorView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IBindableVectorView
-    };
+        _type_slots_IBindableVectorView};
 
     // ----- INotifyCollectionChanged interface --------------------
 
@@ -1630,14 +1618,12 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         { },
     };
 
-    static PyType_Spec type_spec_INotifyCollectionChanged =
-    {
+    static PyType_Spec type_spec_INotifyCollectionChanged = {
         "winrt._winrt_windows_ui_xaml_interop.INotifyCollectionChanged",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::INotifyCollectionChanged),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_INotifyCollectionChanged
-    };
+        _type_slots_INotifyCollectionChanged};
 
     // ----- TypeName struct --------------------
 
@@ -1791,14 +1777,12 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         { },
     };
 
-    static PyType_Spec type_spec_TypeName =
-    {
+    static PyType_Spec type_spec_TypeName = {
         "winrt._winrt_windows_ui_xaml_interop.TypeName",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::TypeName),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_TypeName
-    };
+        _type_slots_TypeName};
 
     // ----- Windows.UI.Xaml.Interop Initialization --------------------
 

@@ -49,14 +49,12 @@ namespace py::cpp::Windows::System::RemoteDesktop
         { },
     };
 
-    static PyType_Spec type_spec_InteractiveSession =
-    {
+    static PyType_Spec type_spec_InteractiveSession = {
         "winrt._winrt_windows_system_remotedesktop.InteractiveSession",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InteractiveSession
-    };
+        _type_slots_InteractiveSession};
 
     static PyGetSetDef getset_InteractiveSession_Static[] = {
         { "is_remote", reinterpret_cast<getter>(InteractiveSession_get_IsRemote), nullptr, nullptr, nullptr },

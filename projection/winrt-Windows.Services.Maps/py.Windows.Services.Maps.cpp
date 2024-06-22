@@ -130,14 +130,12 @@ namespace py::cpp::Windows::Services::Maps
         { },
     };
 
-    static PyType_Spec type_spec_EnhancedWaypoint =
-    {
+    static PyType_Spec type_spec_EnhancedWaypoint = {
         "winrt._winrt_windows_services_maps.EnhancedWaypoint",
         sizeof(py::wrapper::Windows::Services::Maps::EnhancedWaypoint),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EnhancedWaypoint
-    };
+        _type_slots_EnhancedWaypoint};
 
     // ----- ManeuverWarning class --------------------
 
@@ -239,14 +237,12 @@ namespace py::cpp::Windows::Services::Maps
         { },
     };
 
-    static PyType_Spec type_spec_ManeuverWarning =
-    {
+    static PyType_Spec type_spec_ManeuverWarning = {
         "winrt._winrt_windows_services_maps.ManeuverWarning",
         sizeof(py::wrapper::Windows::Services::Maps::ManeuverWarning),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ManeuverWarning
-    };
+        _type_slots_ManeuverWarning};
 
     // ----- MapAddress class --------------------
 
@@ -628,14 +624,12 @@ namespace py::cpp::Windows::Services::Maps
         { },
     };
 
-    static PyType_Spec type_spec_MapAddress =
-    {
+    static PyType_Spec type_spec_MapAddress = {
         "winrt._winrt_windows_services_maps.MapAddress",
         sizeof(py::wrapper::Windows::Services::Maps::MapAddress),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MapAddress
-    };
+        _type_slots_MapAddress};
 
     // ----- MapLocation class --------------------
 
@@ -777,14 +771,12 @@ namespace py::cpp::Windows::Services::Maps
         { },
     };
 
-    static PyType_Spec type_spec_MapLocation =
-    {
+    static PyType_Spec type_spec_MapLocation = {
         "winrt._winrt_windows_services_maps.MapLocation",
         sizeof(py::wrapper::Windows::Services::Maps::MapLocation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MapLocation
-    };
+        _type_slots_MapLocation};
 
     // ----- MapLocationFinder class --------------------
 
@@ -917,14 +909,12 @@ namespace py::cpp::Windows::Services::Maps
         { },
     };
 
-    static PyType_Spec type_spec_MapLocationFinder =
-    {
+    static PyType_Spec type_spec_MapLocationFinder = {
         "winrt._winrt_windows_services_maps.MapLocationFinder",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MapLocationFinder
-    };
+        _type_slots_MapLocationFinder};
 
     static PyGetSetDef getset_MapLocationFinder_Static[] = {
         { }
@@ -1053,14 +1043,12 @@ namespace py::cpp::Windows::Services::Maps
         { },
     };
 
-    static PyType_Spec type_spec_MapLocationFinderResult =
-    {
+    static PyType_Spec type_spec_MapLocationFinderResult = {
         "winrt._winrt_windows_services_maps.MapLocationFinderResult",
         sizeof(py::wrapper::Windows::Services::Maps::MapLocationFinderResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MapLocationFinderResult
-    };
+        _type_slots_MapLocationFinderResult};
 
     // ----- MapManager class --------------------
 
@@ -1147,14 +1135,12 @@ namespace py::cpp::Windows::Services::Maps
         { },
     };
 
-    static PyType_Spec type_spec_MapManager =
-    {
+    static PyType_Spec type_spec_MapManager = {
         "winrt._winrt_windows_services_maps.MapManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MapManager
-    };
+        _type_slots_MapManager};
 
     static PyGetSetDef getset_MapManager_Static[] = {
         { }
@@ -1463,14 +1449,12 @@ namespace py::cpp::Windows::Services::Maps
         { },
     };
 
-    static PyType_Spec type_spec_MapRoute =
-    {
+    static PyType_Spec type_spec_MapRoute = {
         "winrt._winrt_windows_services_maps.MapRoute",
         sizeof(py::wrapper::Windows::Services::Maps::MapRoute),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MapRoute
-    };
+        _type_slots_MapRoute};
 
     // ----- MapRouteDrivingOptions class --------------------
 
@@ -1794,14 +1778,12 @@ namespace py::cpp::Windows::Services::Maps
         { },
     };
 
-    static PyType_Spec type_spec_MapRouteDrivingOptions =
-    {
+    static PyType_Spec type_spec_MapRouteDrivingOptions = {
         "winrt._winrt_windows_services_maps.MapRouteDrivingOptions",
         sizeof(py::wrapper::Windows::Services::Maps::MapRouteDrivingOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MapRouteDrivingOptions
-    };
+        _type_slots_MapRouteDrivingOptions};
 
     // ----- MapRouteFinder class --------------------
 
@@ -2141,14 +2123,12 @@ namespace py::cpp::Windows::Services::Maps
         { },
     };
 
-    static PyType_Spec type_spec_MapRouteFinder =
-    {
+    static PyType_Spec type_spec_MapRouteFinder = {
         "winrt._winrt_windows_services_maps.MapRouteFinder",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MapRouteFinder
-    };
+        _type_slots_MapRouteFinder};
 
     static PyGetSetDef getset_MapRouteFinder_Static[] = {
         { }
@@ -2300,14 +2280,12 @@ namespace py::cpp::Windows::Services::Maps
         { },
     };
 
-    static PyType_Spec type_spec_MapRouteFinderResult =
-    {
+    static PyType_Spec type_spec_MapRouteFinderResult = {
         "winrt._winrt_windows_services_maps.MapRouteFinderResult",
         sizeof(py::wrapper::Windows::Services::Maps::MapRouteFinderResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MapRouteFinderResult
-    };
+        _type_slots_MapRouteFinderResult};
 
     // ----- MapRouteLeg class --------------------
 
@@ -2509,14 +2487,12 @@ namespace py::cpp::Windows::Services::Maps
         { },
     };
 
-    static PyType_Spec type_spec_MapRouteLeg =
-    {
+    static PyType_Spec type_spec_MapRouteLeg = {
         "winrt._winrt_windows_services_maps.MapRouteLeg",
         sizeof(py::wrapper::Windows::Services::Maps::MapRouteLeg),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MapRouteLeg
-    };
+        _type_slots_MapRouteLeg};
 
     // ----- MapRouteManeuver class --------------------
 
@@ -2778,14 +2754,12 @@ namespace py::cpp::Windows::Services::Maps
         { },
     };
 
-    static PyType_Spec type_spec_MapRouteManeuver =
-    {
+    static PyType_Spec type_spec_MapRouteManeuver = {
         "winrt._winrt_windows_services_maps.MapRouteManeuver",
         sizeof(py::wrapper::Windows::Services::Maps::MapRouteManeuver),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MapRouteManeuver
-    };
+        _type_slots_MapRouteManeuver};
 
     // ----- MapService class --------------------
 
@@ -2944,14 +2918,12 @@ namespace py::cpp::Windows::Services::Maps
         { },
     };
 
-    static PyType_Spec type_spec_MapService =
-    {
+    static PyType_Spec type_spec_MapService = {
         "winrt._winrt_windows_services_maps.MapService",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MapService
-    };
+        _type_slots_MapService};
 
     static PyGetSetDef getset_MapService_Static[] = {
         { "service_token", reinterpret_cast<getter>(MapService_get_ServiceToken), reinterpret_cast<setter>(MapService_put_ServiceToken), nullptr, nullptr },
@@ -3384,14 +3356,12 @@ namespace py::cpp::Windows::Services::Maps
         { },
     };
 
-    static PyType_Spec type_spec_PlaceInfo =
-    {
+    static PyType_Spec type_spec_PlaceInfo = {
         "winrt._winrt_windows_services_maps.PlaceInfo",
         sizeof(py::wrapper::Windows::Services::Maps::PlaceInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlaceInfo
-    };
+        _type_slots_PlaceInfo};
 
     static PyGetSetDef getset_PlaceInfo_Static[] = {
         { "is_show_supported", reinterpret_cast<getter>(PlaceInfo_get_IsShowSupported), nullptr, nullptr, nullptr },
@@ -3601,14 +3571,12 @@ namespace py::cpp::Windows::Services::Maps
         { },
     };
 
-    static PyType_Spec type_spec_PlaceInfoCreateOptions =
-    {
+    static PyType_Spec type_spec_PlaceInfoCreateOptions = {
         "winrt._winrt_windows_services_maps.PlaceInfoCreateOptions",
         sizeof(py::wrapper::Windows::Services::Maps::PlaceInfoCreateOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlaceInfoCreateOptions
-    };
+        _type_slots_PlaceInfoCreateOptions};
 
     // ----- Windows.Services.Maps Initialization --------------------
 

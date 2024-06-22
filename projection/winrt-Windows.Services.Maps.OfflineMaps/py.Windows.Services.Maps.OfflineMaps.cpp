@@ -313,14 +313,12 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
         { },
     };
 
-    static PyType_Spec type_spec_OfflineMapPackage =
-    {
+    static PyType_Spec type_spec_OfflineMapPackage = {
         "winrt._winrt_windows_services_maps_offlinemaps.OfflineMapPackage",
         sizeof(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_OfflineMapPackage
-    };
+        _type_slots_OfflineMapPackage};
 
     static PyGetSetDef getset_OfflineMapPackage_Static[] = {
         { }
@@ -450,14 +448,12 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
         { },
     };
 
-    static PyType_Spec type_spec_OfflineMapPackageQueryResult =
-    {
+    static PyType_Spec type_spec_OfflineMapPackageQueryResult = {
         "winrt._winrt_windows_services_maps_offlinemaps.OfflineMapPackageQueryResult",
         sizeof(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_OfflineMapPackageQueryResult
-    };
+        _type_slots_OfflineMapPackageQueryResult};
 
     // ----- OfflineMapPackageStartDownloadResult class --------------------
 
@@ -539,14 +535,12 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
         { },
     };
 
-    static PyType_Spec type_spec_OfflineMapPackageStartDownloadResult =
-    {
+    static PyType_Spec type_spec_OfflineMapPackageStartDownloadResult = {
         "winrt._winrt_windows_services_maps_offlinemaps.OfflineMapPackageStartDownloadResult",
         sizeof(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStartDownloadResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_OfflineMapPackageStartDownloadResult
-    };
+        _type_slots_OfflineMapPackageStartDownloadResult};
 
     // ----- Windows.Services.Maps.OfflineMaps Initialization --------------------
 

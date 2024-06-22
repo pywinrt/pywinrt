@@ -334,14 +334,12 @@ namespace py::cpp::Windows::Services::Cortana
         { },
     };
 
-    static PyType_Spec type_spec_CortanaActionableInsights =
-    {
+    static PyType_Spec type_spec_CortanaActionableInsights = {
         "winrt._winrt_windows_services_cortana.CortanaActionableInsights",
         sizeof(py::wrapper::Windows::Services::Cortana::CortanaActionableInsights),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CortanaActionableInsights
-    };
+        _type_slots_CortanaActionableInsights};
 
     static PyGetSetDef getset_CortanaActionableInsights_Static[] = {
         { }
@@ -548,14 +546,12 @@ namespace py::cpp::Windows::Services::Cortana
         { },
     };
 
-    static PyType_Spec type_spec_CortanaActionableInsightsOptions =
-    {
+    static PyType_Spec type_spec_CortanaActionableInsightsOptions = {
         "winrt._winrt_windows_services_cortana.CortanaActionableInsightsOptions",
         sizeof(py::wrapper::Windows::Services::Cortana::CortanaActionableInsightsOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CortanaActionableInsightsOptions
-    };
+        _type_slots_CortanaActionableInsightsOptions};
 
     // ----- CortanaPermissionsManager class --------------------
 
@@ -772,14 +768,12 @@ namespace py::cpp::Windows::Services::Cortana
         { },
     };
 
-    static PyType_Spec type_spec_CortanaPermissionsManager =
-    {
+    static PyType_Spec type_spec_CortanaPermissionsManager = {
         "winrt._winrt_windows_services_cortana.CortanaPermissionsManager",
         sizeof(py::wrapper::Windows::Services::Cortana::CortanaPermissionsManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CortanaPermissionsManager
-    };
+        _type_slots_CortanaPermissionsManager};
 
     static PyGetSetDef getset_CortanaPermissionsManager_Static[] = {
         { }
@@ -993,14 +987,12 @@ namespace py::cpp::Windows::Services::Cortana
         { },
     };
 
-    static PyType_Spec type_spec_CortanaSettings =
-    {
+    static PyType_Spec type_spec_CortanaSettings = {
         "winrt._winrt_windows_services_cortana.CortanaSettings",
         sizeof(py::wrapper::Windows::Services::Cortana::CortanaSettings),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CortanaSettings
-    };
+        _type_slots_CortanaSettings};
 
     static PyGetSetDef getset_CortanaSettings_Static[] = {
         { }

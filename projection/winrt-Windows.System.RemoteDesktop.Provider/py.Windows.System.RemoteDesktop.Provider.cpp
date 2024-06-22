@@ -85,14 +85,12 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
         { },
     };
 
-    static PyType_Spec type_spec_PerformLocalActionRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_PerformLocalActionRequestedEventArgs = {
         "winrt._winrt_windows_system_remotedesktop_provider.PerformLocalActionRequestedEventArgs",
         sizeof(py::wrapper::Windows::System::RemoteDesktop::Provider::PerformLocalActionRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerformLocalActionRequestedEventArgs
-    };
+        _type_slots_PerformLocalActionRequestedEventArgs};
 
     // ----- RemoteDesktopConnectionInfo class --------------------
 
@@ -283,14 +281,12 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
         { },
     };
 
-    static PyType_Spec type_spec_RemoteDesktopConnectionInfo =
-    {
+    static PyType_Spec type_spec_RemoteDesktopConnectionInfo = {
         "winrt._winrt_windows_system_remotedesktop_provider.RemoteDesktopConnectionInfo",
         sizeof(py::wrapper::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteDesktopConnectionInfo
-    };
+        _type_slots_RemoteDesktopConnectionInfo};
 
     static PyGetSetDef getset_RemoteDesktopConnectionInfo_Static[] = {
         { }
@@ -611,14 +607,12 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
         { },
     };
 
-    static PyType_Spec type_spec_RemoteDesktopConnectionRemoteInfo =
-    {
+    static PyType_Spec type_spec_RemoteDesktopConnectionRemoteInfo = {
         "winrt._winrt_windows_system_remotedesktop_provider.RemoteDesktopConnectionRemoteInfo",
         sizeof(py::wrapper::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionRemoteInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteDesktopConnectionRemoteInfo
-    };
+        _type_slots_RemoteDesktopConnectionRemoteInfo};
 
     static PyGetSetDef getset_RemoteDesktopConnectionRemoteInfo_Static[] = {
         { }
@@ -772,14 +766,12 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
         { },
     };
 
-    static PyType_Spec type_spec_RemoteDesktopInfo =
-    {
+    static PyType_Spec type_spec_RemoteDesktopInfo = {
         "winrt._winrt_windows_system_remotedesktop_provider.RemoteDesktopInfo",
         sizeof(py::wrapper::Windows::System::RemoteDesktop::Provider::RemoteDesktopInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteDesktopInfo
-    };
+        _type_slots_RemoteDesktopInfo};
 
     // ----- RemoteDesktopRegistrar class --------------------
 
@@ -854,14 +846,12 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
         { },
     };
 
-    static PyType_Spec type_spec_RemoteDesktopRegistrar =
-    {
+    static PyType_Spec type_spec_RemoteDesktopRegistrar = {
         "winrt._winrt_windows_system_remotedesktop_provider.RemoteDesktopRegistrar",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoteDesktopRegistrar
-    };
+        _type_slots_RemoteDesktopRegistrar};
 
     static PyGetSetDef getset_RemoteDesktopRegistrar_Static[] = {
         { "desktop_infos", reinterpret_cast<getter>(RemoteDesktopRegistrar_get_DesktopInfos), nullptr, nullptr, nullptr },

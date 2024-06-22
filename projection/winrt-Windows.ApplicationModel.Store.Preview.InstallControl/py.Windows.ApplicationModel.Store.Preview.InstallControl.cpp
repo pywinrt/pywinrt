@@ -749,14 +749,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { },
     };
 
-    static PyType_Spec type_spec_AppInstallItem =
-    {
+    static PyType_Spec type_spec_AppInstallItem = {
         "winrt._winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallItem",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppInstallItem
-    };
+        _type_slots_AppInstallItem};
 
     // ----- AppInstallManager class --------------------
 
@@ -2193,14 +2191,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { },
     };
 
-    static PyType_Spec type_spec_AppInstallManager =
-    {
+    static PyType_Spec type_spec_AppInstallManager = {
         "winrt._winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallManager",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppInstallManager
-    };
+        _type_slots_AppInstallManager};
 
     // ----- AppInstallManagerItemEventArgs class --------------------
 
@@ -2282,14 +2278,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { },
     };
 
-    static PyType_Spec type_spec_AppInstallManagerItemEventArgs =
-    {
+    static PyType_Spec type_spec_AppInstallManagerItemEventArgs = {
         "winrt._winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallManagerItemEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppInstallManagerItemEventArgs
-    };
+        _type_slots_AppInstallManagerItemEventArgs};
 
     // ----- AppInstallOptions class --------------------
 
@@ -3093,14 +3087,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { },
     };
 
-    static PyType_Spec type_spec_AppInstallOptions =
-    {
+    static PyType_Spec type_spec_AppInstallOptions = {
         "winrt._winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppInstallOptions
-    };
+        _type_slots_AppInstallOptions};
 
     // ----- AppInstallStatus class --------------------
 
@@ -3322,14 +3314,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { },
     };
 
-    static PyType_Spec type_spec_AppInstallStatus =
-    {
+    static PyType_Spec type_spec_AppInstallStatus = {
         "winrt._winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallStatus",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppInstallStatus
-    };
+        _type_slots_AppInstallStatus};
 
     // ----- AppUpdateOptions class --------------------
 
@@ -3557,14 +3547,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { },
     };
 
-    static PyType_Spec type_spec_AppUpdateOptions =
-    {
+    static PyType_Spec type_spec_AppUpdateOptions = {
         "winrt._winrt_windows_applicationmodel_store_preview_installcontrol.AppUpdateOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppUpdateOptions
-    };
+        _type_slots_AppUpdateOptions};
 
     // ----- GetEntitlementResult class --------------------
 
@@ -3646,14 +3634,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { },
     };
 
-    static PyType_Spec type_spec_GetEntitlementResult =
-    {
+    static PyType_Spec type_spec_GetEntitlementResult = {
         "winrt._winrt_windows_applicationmodel_store_preview_installcontrol.GetEntitlementResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GetEntitlementResult
-    };
+        _type_slots_GetEntitlementResult};
 
     // ----- Windows.ApplicationModel.Store.Preview.InstallControl Initialization --------------------
 

@@ -478,14 +478,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         { },
     };
 
-    static PyType_Spec type_spec_DesktopWindowXamlSource =
-    {
+    static PyType_Spec type_spec_DesktopWindowXamlSource = {
         "winrt._winrt_microsoft_ui_xaml_hosting.DesktopWindowXamlSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DesktopWindowXamlSource
-    };
+        _type_slots_DesktopWindowXamlSource};
 
     // ----- DesktopWindowXamlSourceGotFocusEventArgs class --------------------
 
@@ -567,14 +565,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         { },
     };
 
-    static PyType_Spec type_spec_DesktopWindowXamlSourceGotFocusEventArgs =
-    {
+    static PyType_Spec type_spec_DesktopWindowXamlSourceGotFocusEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_hosting.DesktopWindowXamlSourceGotFocusEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DesktopWindowXamlSourceGotFocusEventArgs
-    };
+        _type_slots_DesktopWindowXamlSourceGotFocusEventArgs};
 
     // ----- DesktopWindowXamlSourceTakeFocusRequestedEventArgs class --------------------
 
@@ -656,14 +652,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         { },
     };
 
-    static PyType_Spec type_spec_DesktopWindowXamlSourceTakeFocusRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_DesktopWindowXamlSourceTakeFocusRequestedEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DesktopWindowXamlSourceTakeFocusRequestedEventArgs
-    };
+        _type_slots_DesktopWindowXamlSourceTakeFocusRequestedEventArgs};
 
     // ----- ElementCompositionPreview class --------------------
 
@@ -981,14 +975,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         { },
     };
 
-    static PyType_Spec type_spec_ElementCompositionPreview =
-    {
+    static PyType_Spec type_spec_ElementCompositionPreview = {
         "winrt._winrt_microsoft_ui_xaml_hosting.ElementCompositionPreview",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Hosting::ElementCompositionPreview),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ElementCompositionPreview
-    };
+        _type_slots_ElementCompositionPreview};
 
     static PyGetSetDef getset_ElementCompositionPreview_Static[] = {
         { }
@@ -1238,14 +1230,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         { },
     };
 
-    static PyType_Spec type_spec_WindowsXamlManager =
-    {
+    static PyType_Spec type_spec_WindowsXamlManager = {
         "winrt._winrt_microsoft_ui_xaml_hosting.WindowsXamlManager",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Hosting::WindowsXamlManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WindowsXamlManager
-    };
+        _type_slots_WindowsXamlManager};
 
     static PyGetSetDef getset_WindowsXamlManager_Static[] = {
         { }
@@ -1364,14 +1354,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         { },
     };
 
-    static PyType_Spec type_spec_XamlShutdownCompletedOnThreadEventArgs =
-    {
+    static PyType_Spec type_spec_XamlShutdownCompletedOnThreadEventArgs = {
         "winrt._winrt_microsoft_ui_xaml_hosting.XamlShutdownCompletedOnThreadEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XamlShutdownCompletedOnThreadEventArgs
-    };
+        _type_slots_XamlShutdownCompletedOnThreadEventArgs};
 
     // ----- XamlSourceFocusNavigationRequest class --------------------
 
@@ -1550,14 +1538,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         { },
     };
 
-    static PyType_Spec type_spec_XamlSourceFocusNavigationRequest =
-    {
+    static PyType_Spec type_spec_XamlSourceFocusNavigationRequest = {
         "winrt._winrt_microsoft_ui_xaml_hosting.XamlSourceFocusNavigationRequest",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XamlSourceFocusNavigationRequest
-    };
+        _type_slots_XamlSourceFocusNavigationRequest};
 
     // ----- XamlSourceFocusNavigationResult class --------------------
 
@@ -1663,14 +1649,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         { },
     };
 
-    static PyType_Spec type_spec_XamlSourceFocusNavigationResult =
-    {
+    static PyType_Spec type_spec_XamlSourceFocusNavigationResult = {
         "winrt._winrt_microsoft_ui_xaml_hosting.XamlSourceFocusNavigationResult",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Hosting::XamlSourceFocusNavigationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_XamlSourceFocusNavigationResult
-    };
+        _type_slots_XamlSourceFocusNavigationResult};
 
     // ----- Microsoft.UI.Xaml.Hosting Initialization --------------------
 

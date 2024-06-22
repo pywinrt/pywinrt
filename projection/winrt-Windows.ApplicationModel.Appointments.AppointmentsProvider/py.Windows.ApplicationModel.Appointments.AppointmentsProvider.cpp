@@ -233,14 +233,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
         { },
     };
 
-    static PyType_Spec type_spec_AddAppointmentOperation =
-    {
+    static PyType_Spec type_spec_AddAppointmentOperation = {
         "winrt._winrt_windows_applicationmodel_appointments_appointmentsprovider.AddAppointmentOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AddAppointmentOperation
-    };
+        _type_slots_AddAppointmentOperation};
 
     // ----- AppointmentsProviderLaunchActionVerbs class --------------------
 
@@ -362,14 +360,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
         { },
     };
 
-    static PyType_Spec type_spec_AppointmentsProviderLaunchActionVerbs =
-    {
+    static PyType_Spec type_spec_AppointmentsProviderLaunchActionVerbs = {
         "winrt._winrt_windows_applicationmodel_appointments_appointmentsprovider.AppointmentsProviderLaunchActionVerbs",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppointmentsProviderLaunchActionVerbs
-    };
+        _type_slots_AppointmentsProviderLaunchActionVerbs};
 
     static PyGetSetDef getset_AppointmentsProviderLaunchActionVerbs_Static[] = {
         { "add_appointment", reinterpret_cast<getter>(AppointmentsProviderLaunchActionVerbs_get_AddAppointment), nullptr, nullptr, nullptr },
@@ -647,14 +643,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
         { },
     };
 
-    static PyType_Spec type_spec_RemoveAppointmentOperation =
-    {
+    static PyType_Spec type_spec_RemoveAppointmentOperation = {
         "winrt._winrt_windows_applicationmodel_appointments_appointmentsprovider.RemoveAppointmentOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RemoveAppointmentOperation
-    };
+        _type_slots_RemoveAppointmentOperation};
 
     // ----- ReplaceAppointmentOperation class --------------------
 
@@ -924,14 +918,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
         { },
     };
 
-    static PyType_Spec type_spec_ReplaceAppointmentOperation =
-    {
+    static PyType_Spec type_spec_ReplaceAppointmentOperation = {
         "winrt._winrt_windows_applicationmodel_appointments_appointmentsprovider.ReplaceAppointmentOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ReplaceAppointmentOperation
-    };
+        _type_slots_ReplaceAppointmentOperation};
 
     // ----- Windows.ApplicationModel.Appointments.AppointmentsProvider Initialization --------------------
 

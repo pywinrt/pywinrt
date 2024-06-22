@@ -106,14 +106,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_KnownCameraIntrinsicsProperties =
-    {
+    static PyType_Spec type_spec_KnownCameraIntrinsicsProperties = {
         "winrt._winrt_windows_devices_perception.KnownCameraIntrinsicsProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownCameraIntrinsicsProperties
-    };
+        _type_slots_KnownCameraIntrinsicsProperties};
 
     static PyGetSetDef getset_KnownCameraIntrinsicsProperties_Static[] = {
         { "focal_length", reinterpret_cast<getter>(KnownCameraIntrinsicsProperties_get_FocalLength), nullptr, nullptr, nullptr },
@@ -226,14 +224,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_KnownPerceptionColorFrameSourceProperties =
-    {
+    static PyType_Spec type_spec_KnownPerceptionColorFrameSourceProperties = {
         "winrt._winrt_windows_devices_perception.KnownPerceptionColorFrameSourceProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownPerceptionColorFrameSourceProperties
-    };
+        _type_slots_KnownPerceptionColorFrameSourceProperties};
 
     static PyGetSetDef getset_KnownPerceptionColorFrameSourceProperties_Static[] = {
         { "auto_exposure_enabled", reinterpret_cast<getter>(KnownPerceptionColorFrameSourceProperties_get_AutoExposureEnabled), nullptr, nullptr, nullptr },
@@ -326,14 +322,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_KnownPerceptionDepthFrameSourceProperties =
-    {
+    static PyType_Spec type_spec_KnownPerceptionDepthFrameSourceProperties = {
         "winrt._winrt_windows_devices_perception.KnownPerceptionDepthFrameSourceProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownPerceptionDepthFrameSourceProperties
-    };
+        _type_slots_KnownPerceptionDepthFrameSourceProperties};
 
     static PyGetSetDef getset_KnownPerceptionDepthFrameSourceProperties_Static[] = {
         { "max_depth", reinterpret_cast<getter>(KnownPerceptionDepthFrameSourceProperties_get_MaxDepth), nullptr, nullptr, nullptr },
@@ -501,14 +495,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_KnownPerceptionFrameSourceProperties =
-    {
+    static PyType_Spec type_spec_KnownPerceptionFrameSourceProperties = {
         "winrt._winrt_windows_devices_perception.KnownPerceptionFrameSourceProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownPerceptionFrameSourceProperties
-    };
+        _type_slots_KnownPerceptionFrameSourceProperties};
 
     static PyGetSetDef getset_KnownPerceptionFrameSourceProperties_Static[] = {
         { "device_model_version", reinterpret_cast<getter>(KnownPerceptionFrameSourceProperties_get_DeviceModelVersion), nullptr, nullptr, nullptr },
@@ -699,14 +691,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_KnownPerceptionInfraredFrameSourceProperties =
-    {
+    static PyType_Spec type_spec_KnownPerceptionInfraredFrameSourceProperties = {
         "winrt._winrt_windows_devices_perception.KnownPerceptionInfraredFrameSourceProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownPerceptionInfraredFrameSourceProperties
-    };
+        _type_slots_KnownPerceptionInfraredFrameSourceProperties};
 
     static PyGetSetDef getset_KnownPerceptionInfraredFrameSourceProperties_Static[] = {
         { "active_illumination_enabled", reinterpret_cast<getter>(KnownPerceptionInfraredFrameSourceProperties_get_ActiveIlluminationEnabled), nullptr, nullptr, nullptr },
@@ -860,14 +850,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_KnownPerceptionVideoFrameSourceProperties =
-    {
+    static PyType_Spec type_spec_KnownPerceptionVideoFrameSourceProperties = {
         "winrt._winrt_windows_devices_perception.KnownPerceptionVideoFrameSourceProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownPerceptionVideoFrameSourceProperties
-    };
+        _type_slots_KnownPerceptionVideoFrameSourceProperties};
 
     static PyGetSetDef getset_KnownPerceptionVideoFrameSourceProperties_Static[] = {
         { "available_video_profiles", reinterpret_cast<getter>(KnownPerceptionVideoFrameSourceProperties_get_AvailableVideoProfiles), nullptr, nullptr, nullptr },
@@ -1019,14 +1007,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_KnownPerceptionVideoProfileProperties =
-    {
+    static PyType_Spec type_spec_KnownPerceptionVideoProfileProperties = {
         "winrt._winrt_windows_devices_perception.KnownPerceptionVideoProfileProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KnownPerceptionVideoProfileProperties
-    };
+        _type_slots_KnownPerceptionVideoProfileProperties};
 
     static PyGetSetDef getset_KnownPerceptionVideoProfileProperties_Static[] = {
         { "bitmap_alpha_mode", reinterpret_cast<getter>(KnownPerceptionVideoProfileProperties_get_BitmapAlphaMode), nullptr, nullptr, nullptr },
@@ -1190,14 +1176,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionColorFrame =
-    {
+    static PyType_Spec type_spec_PerceptionColorFrame = {
         "winrt._winrt_windows_devices_perception.PerceptionColorFrame",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionColorFrame),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionColorFrame
-    };
+        _type_slots_PerceptionColorFrame};
 
     // ----- PerceptionColorFrameArrivedEventArgs class --------------------
 
@@ -1309,14 +1293,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionColorFrameArrivedEventArgs =
-    {
+    static PyType_Spec type_spec_PerceptionColorFrameArrivedEventArgs = {
         "winrt._winrt_windows_devices_perception.PerceptionColorFrameArrivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameArrivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionColorFrameArrivedEventArgs
-    };
+        _type_slots_PerceptionColorFrameArrivedEventArgs};
 
     // ----- PerceptionColorFrameReader class --------------------
 
@@ -1573,14 +1555,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionColorFrameReader =
-    {
+    static PyType_Spec type_spec_PerceptionColorFrameReader = {
         "winrt._winrt_windows_devices_perception.PerceptionColorFrameReader",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameReader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionColorFrameReader
-    };
+        _type_slots_PerceptionColorFrameReader};
 
     // ----- PerceptionColorFrameSource class --------------------
 
@@ -2492,14 +2472,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionColorFrameSource =
-    {
+    static PyType_Spec type_spec_PerceptionColorFrameSource = {
         "winrt._winrt_windows_devices_perception.PerceptionColorFrameSource",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionColorFrameSource
-    };
+        _type_slots_PerceptionColorFrameSource};
 
     static PyGetSetDef getset_PerceptionColorFrameSource_Static[] = {
         { }
@@ -2610,14 +2588,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionColorFrameSourceAddedEventArgs =
-    {
+    static PyType_Spec type_spec_PerceptionColorFrameSourceAddedEventArgs = {
         "winrt._winrt_windows_devices_perception.PerceptionColorFrameSourceAddedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceAddedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionColorFrameSourceAddedEventArgs
-    };
+        _type_slots_PerceptionColorFrameSourceAddedEventArgs};
 
     // ----- PerceptionColorFrameSourceRemovedEventArgs class --------------------
 
@@ -2699,14 +2675,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionColorFrameSourceRemovedEventArgs =
-    {
+    static PyType_Spec type_spec_PerceptionColorFrameSourceRemovedEventArgs = {
         "winrt._winrt_windows_devices_perception.PerceptionColorFrameSourceRemovedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionColorFrameSourceRemovedEventArgs
-    };
+        _type_slots_PerceptionColorFrameSourceRemovedEventArgs};
 
     // ----- PerceptionColorFrameSourceWatcher class --------------------
 
@@ -3030,14 +3004,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionColorFrameSourceWatcher =
-    {
+    static PyType_Spec type_spec_PerceptionColorFrameSourceWatcher = {
         "winrt._winrt_windows_devices_perception.PerceptionColorFrameSourceWatcher",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionColorFrameSourceWatcher
-    };
+        _type_slots_PerceptionColorFrameSourceWatcher};
 
     // ----- PerceptionControlSession class --------------------
 
@@ -3229,14 +3201,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionControlSession =
-    {
+    static PyType_Spec type_spec_PerceptionControlSession = {
         "winrt._winrt_windows_devices_perception.PerceptionControlSession",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionControlSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionControlSession
-    };
+        _type_slots_PerceptionControlSession};
 
     // ----- PerceptionDepthCorrelatedCameraIntrinsics class --------------------
 
@@ -3433,14 +3403,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionDepthCorrelatedCameraIntrinsics =
-    {
+    static PyType_Spec type_spec_PerceptionDepthCorrelatedCameraIntrinsics = {
         "winrt._winrt_windows_devices_perception.PerceptionDepthCorrelatedCameraIntrinsics",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionDepthCorrelatedCameraIntrinsics
-    };
+        _type_slots_PerceptionDepthCorrelatedCameraIntrinsics};
 
     // ----- PerceptionDepthCorrelatedCoordinateMapper class --------------------
 
@@ -3637,14 +3605,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionDepthCorrelatedCoordinateMapper =
-    {
+    static PyType_Spec type_spec_PerceptionDepthCorrelatedCoordinateMapper = {
         "winrt._winrt_windows_devices_perception.PerceptionDepthCorrelatedCoordinateMapper",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionDepthCorrelatedCoordinateMapper
-    };
+        _type_slots_PerceptionDepthCorrelatedCoordinateMapper};
 
     // ----- PerceptionDepthFrame class --------------------
 
@@ -3778,14 +3744,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionDepthFrame =
-    {
+    static PyType_Spec type_spec_PerceptionDepthFrame = {
         "winrt._winrt_windows_devices_perception.PerceptionDepthFrame",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrame),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionDepthFrame
-    };
+        _type_slots_PerceptionDepthFrame};
 
     // ----- PerceptionDepthFrameArrivedEventArgs class --------------------
 
@@ -3897,14 +3861,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionDepthFrameArrivedEventArgs =
-    {
+    static PyType_Spec type_spec_PerceptionDepthFrameArrivedEventArgs = {
         "winrt._winrt_windows_devices_perception.PerceptionDepthFrameArrivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameArrivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionDepthFrameArrivedEventArgs
-    };
+        _type_slots_PerceptionDepthFrameArrivedEventArgs};
 
     // ----- PerceptionDepthFrameReader class --------------------
 
@@ -4161,14 +4123,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionDepthFrameReader =
-    {
+    static PyType_Spec type_spec_PerceptionDepthFrameReader = {
         "winrt._winrt_windows_devices_perception.PerceptionDepthFrameReader",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameReader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionDepthFrameReader
-    };
+        _type_slots_PerceptionDepthFrameReader};
 
     // ----- PerceptionDepthFrameSource class --------------------
 
@@ -5080,14 +5040,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionDepthFrameSource =
-    {
+    static PyType_Spec type_spec_PerceptionDepthFrameSource = {
         "winrt._winrt_windows_devices_perception.PerceptionDepthFrameSource",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionDepthFrameSource
-    };
+        _type_slots_PerceptionDepthFrameSource};
 
     static PyGetSetDef getset_PerceptionDepthFrameSource_Static[] = {
         { }
@@ -5198,14 +5156,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionDepthFrameSourceAddedEventArgs =
-    {
+    static PyType_Spec type_spec_PerceptionDepthFrameSourceAddedEventArgs = {
         "winrt._winrt_windows_devices_perception.PerceptionDepthFrameSourceAddedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceAddedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionDepthFrameSourceAddedEventArgs
-    };
+        _type_slots_PerceptionDepthFrameSourceAddedEventArgs};
 
     // ----- PerceptionDepthFrameSourceRemovedEventArgs class --------------------
 
@@ -5287,14 +5243,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionDepthFrameSourceRemovedEventArgs =
-    {
+    static PyType_Spec type_spec_PerceptionDepthFrameSourceRemovedEventArgs = {
         "winrt._winrt_windows_devices_perception.PerceptionDepthFrameSourceRemovedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionDepthFrameSourceRemovedEventArgs
-    };
+        _type_slots_PerceptionDepthFrameSourceRemovedEventArgs};
 
     // ----- PerceptionDepthFrameSourceWatcher class --------------------
 
@@ -5618,14 +5572,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionDepthFrameSourceWatcher =
-    {
+    static PyType_Spec type_spec_PerceptionDepthFrameSourceWatcher = {
         "winrt._winrt_windows_devices_perception.PerceptionDepthFrameSourceWatcher",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionDepthFrameSourceWatcher
-    };
+        _type_slots_PerceptionDepthFrameSourceWatcher};
 
     // ----- PerceptionFrameSourcePropertiesChangedEventArgs class --------------------
 
@@ -5727,14 +5679,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionFrameSourcePropertiesChangedEventArgs =
-    {
+    static PyType_Spec type_spec_PerceptionFrameSourcePropertiesChangedEventArgs = {
         "winrt._winrt_windows_devices_perception.PerceptionFrameSourcePropertiesChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionFrameSourcePropertiesChangedEventArgs
-    };
+        _type_slots_PerceptionFrameSourcePropertiesChangedEventArgs};
 
     // ----- PerceptionFrameSourcePropertyChangeResult class --------------------
 
@@ -5836,14 +5786,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionFrameSourcePropertyChangeResult =
-    {
+    static PyType_Spec type_spec_PerceptionFrameSourcePropertyChangeResult = {
         "winrt._winrt_windows_devices_perception.PerceptionFrameSourcePropertyChangeResult",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionFrameSourcePropertyChangeResult
-    };
+        _type_slots_PerceptionFrameSourcePropertyChangeResult};
 
     // ----- PerceptionInfraredFrame class --------------------
 
@@ -5977,14 +5925,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionInfraredFrame =
-    {
+    static PyType_Spec type_spec_PerceptionInfraredFrame = {
         "winrt._winrt_windows_devices_perception.PerceptionInfraredFrame",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrame),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionInfraredFrame
-    };
+        _type_slots_PerceptionInfraredFrame};
 
     // ----- PerceptionInfraredFrameArrivedEventArgs class --------------------
 
@@ -6096,14 +6042,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionInfraredFrameArrivedEventArgs =
-    {
+    static PyType_Spec type_spec_PerceptionInfraredFrameArrivedEventArgs = {
         "winrt._winrt_windows_devices_perception.PerceptionInfraredFrameArrivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameArrivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionInfraredFrameArrivedEventArgs
-    };
+        _type_slots_PerceptionInfraredFrameArrivedEventArgs};
 
     // ----- PerceptionInfraredFrameReader class --------------------
 
@@ -6360,14 +6304,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionInfraredFrameReader =
-    {
+    static PyType_Spec type_spec_PerceptionInfraredFrameReader = {
         "winrt._winrt_windows_devices_perception.PerceptionInfraredFrameReader",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameReader),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionInfraredFrameReader
-    };
+        _type_slots_PerceptionInfraredFrameReader};
 
     // ----- PerceptionInfraredFrameSource class --------------------
 
@@ -7279,14 +7221,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionInfraredFrameSource =
-    {
+    static PyType_Spec type_spec_PerceptionInfraredFrameSource = {
         "winrt._winrt_windows_devices_perception.PerceptionInfraredFrameSource",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionInfraredFrameSource
-    };
+        _type_slots_PerceptionInfraredFrameSource};
 
     static PyGetSetDef getset_PerceptionInfraredFrameSource_Static[] = {
         { }
@@ -7397,14 +7337,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionInfraredFrameSourceAddedEventArgs =
-    {
+    static PyType_Spec type_spec_PerceptionInfraredFrameSourceAddedEventArgs = {
         "winrt._winrt_windows_devices_perception.PerceptionInfraredFrameSourceAddedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceAddedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionInfraredFrameSourceAddedEventArgs
-    };
+        _type_slots_PerceptionInfraredFrameSourceAddedEventArgs};
 
     // ----- PerceptionInfraredFrameSourceRemovedEventArgs class --------------------
 
@@ -7486,14 +7424,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionInfraredFrameSourceRemovedEventArgs =
-    {
+    static PyType_Spec type_spec_PerceptionInfraredFrameSourceRemovedEventArgs = {
         "winrt._winrt_windows_devices_perception.PerceptionInfraredFrameSourceRemovedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionInfraredFrameSourceRemovedEventArgs
-    };
+        _type_slots_PerceptionInfraredFrameSourceRemovedEventArgs};
 
     // ----- PerceptionInfraredFrameSourceWatcher class --------------------
 
@@ -7817,14 +7753,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionInfraredFrameSourceWatcher =
-    {
+    static PyType_Spec type_spec_PerceptionInfraredFrameSourceWatcher = {
         "winrt._winrt_windows_devices_perception.PerceptionInfraredFrameSourceWatcher",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionInfraredFrameSourceWatcher
-    };
+        _type_slots_PerceptionInfraredFrameSourceWatcher};
 
     // ----- PerceptionVideoProfile class --------------------
 
@@ -8018,14 +7952,12 @@ namespace py::cpp::Windows::Devices::Perception
         { },
     };
 
-    static PyType_Spec type_spec_PerceptionVideoProfile =
-    {
+    static PyType_Spec type_spec_PerceptionVideoProfile = {
         "winrt._winrt_windows_devices_perception.PerceptionVideoProfile",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionVideoProfile),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PerceptionVideoProfile
-    };
+        _type_slots_PerceptionVideoProfile};
 
     // ----- Windows.Devices.Perception Initialization --------------------
 

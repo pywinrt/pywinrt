@@ -419,14 +419,12 @@ namespace py::cpp::Microsoft::Windows::System
         { },
     };
 
-    static PyType_Spec type_spec_EnvironmentManager =
-    {
+    static PyType_Spec type_spec_EnvironmentManager = {
         "winrt._winrt_microsoft_windows_system.EnvironmentManager",
         sizeof(py::wrapper::Microsoft::Windows::System::EnvironmentManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_EnvironmentManager
-    };
+        _type_slots_EnvironmentManager};
 
     static PyGetSetDef getset_EnvironmentManager_Static[] = {
         { "is_supported", reinterpret_cast<getter>(EnvironmentManager_get_IsSupported), nullptr, nullptr, nullptr },

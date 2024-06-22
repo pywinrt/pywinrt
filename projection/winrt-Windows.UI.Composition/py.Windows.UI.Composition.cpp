@@ -161,14 +161,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_AmbientLight =
-    {
+    static PyType_Spec type_spec_AmbientLight = {
         "winrt._winrt_windows_ui_composition.AmbientLight",
         sizeof(py::wrapper::Windows::UI::Composition::AmbientLight),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AmbientLight
-    };
+        _type_slots_AmbientLight};
 
     // ----- AnimationController class --------------------
 
@@ -474,14 +472,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_AnimationController =
-    {
+    static PyType_Spec type_spec_AnimationController = {
         "winrt._winrt_windows_ui_composition.AnimationController",
         sizeof(py::wrapper::Windows::UI::Composition::AnimationController),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AnimationController
-    };
+        _type_slots_AnimationController};
 
     static PyGetSetDef getset_AnimationController_Static[] = {
         { "max_playback_rate", reinterpret_cast<getter>(AnimationController_get_MaxPlaybackRate), nullptr, nullptr, nullptr },
@@ -678,14 +674,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_AnimationPropertyInfo =
-    {
+    static PyType_Spec type_spec_AnimationPropertyInfo = {
         "winrt._winrt_windows_ui_composition.AnimationPropertyInfo",
         sizeof(py::wrapper::Windows::UI::Composition::AnimationPropertyInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AnimationPropertyInfo
-    };
+        _type_slots_AnimationPropertyInfo};
 
     // ----- BackEasingFunction class --------------------
 
@@ -787,14 +781,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_BackEasingFunction =
-    {
+    static PyType_Spec type_spec_BackEasingFunction = {
         "winrt._winrt_windows_ui_composition.BackEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::BackEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BackEasingFunction
-    };
+        _type_slots_BackEasingFunction};
 
     // ----- BooleanKeyFrameAnimation class --------------------
 
@@ -890,14 +882,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_BooleanKeyFrameAnimation =
-    {
+    static PyType_Spec type_spec_BooleanKeyFrameAnimation = {
         "winrt._winrt_windows_ui_composition.BooleanKeyFrameAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::BooleanKeyFrameAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BooleanKeyFrameAnimation
-    };
+        _type_slots_BooleanKeyFrameAnimation};
 
     // ----- BounceEasingFunction class --------------------
 
@@ -1019,14 +1009,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_BounceEasingFunction =
-    {
+    static PyType_Spec type_spec_BounceEasingFunction = {
         "winrt._winrt_windows_ui_composition.BounceEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::BounceEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BounceEasingFunction
-    };
+        _type_slots_BounceEasingFunction};
 
     // ----- BounceScalarNaturalMotionAnimation class --------------------
 
@@ -1184,14 +1172,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_BounceScalarNaturalMotionAnimation =
-    {
+    static PyType_Spec type_spec_BounceScalarNaturalMotionAnimation = {
         "winrt._winrt_windows_ui_composition.BounceScalarNaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::BounceScalarNaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BounceScalarNaturalMotionAnimation
-    };
+        _type_slots_BounceScalarNaturalMotionAnimation};
 
     // ----- BounceVector2NaturalMotionAnimation class --------------------
 
@@ -1349,14 +1335,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_BounceVector2NaturalMotionAnimation =
-    {
+    static PyType_Spec type_spec_BounceVector2NaturalMotionAnimation = {
         "winrt._winrt_windows_ui_composition.BounceVector2NaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::BounceVector2NaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BounceVector2NaturalMotionAnimation
-    };
+        _type_slots_BounceVector2NaturalMotionAnimation};
 
     // ----- BounceVector3NaturalMotionAnimation class --------------------
 
@@ -1514,14 +1498,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_BounceVector3NaturalMotionAnimation =
-    {
+    static PyType_Spec type_spec_BounceVector3NaturalMotionAnimation = {
         "winrt._winrt_windows_ui_composition.BounceVector3NaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::BounceVector3NaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BounceVector3NaturalMotionAnimation
-    };
+        _type_slots_BounceVector3NaturalMotionAnimation};
 
     // ----- CircleEasingFunction class --------------------
 
@@ -1603,14 +1585,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CircleEasingFunction =
-    {
+    static PyType_Spec type_spec_CircleEasingFunction = {
         "winrt._winrt_windows_ui_composition.CircleEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::CircleEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CircleEasingFunction
-    };
+        _type_slots_CircleEasingFunction};
 
     // ----- ColorKeyFrameAnimation class --------------------
 
@@ -1777,14 +1757,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_ColorKeyFrameAnimation =
-    {
+    static PyType_Spec type_spec_ColorKeyFrameAnimation = {
         "winrt._winrt_windows_ui_composition.ColorKeyFrameAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::ColorKeyFrameAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ColorKeyFrameAnimation
-    };
+        _type_slots_ColorKeyFrameAnimation};
 
     // ----- CompositionAnimation class --------------------
 
@@ -2352,14 +2330,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionAnimation =
-    {
+    static PyType_Spec type_spec_CompositionAnimation = {
         "winrt._winrt_windows_ui_composition.CompositionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionAnimation
-    };
+        _type_slots_CompositionAnimation};
 
     // ----- CompositionAnimationGroup class --------------------
 
@@ -2582,14 +2558,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionAnimationGroup =
-    {
+    static PyType_Spec type_spec_CompositionAnimationGroup = {
         "winrt._winrt_windows_ui_composition.CompositionAnimationGroup",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionAnimationGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionAnimationGroup
-    };
+        _type_slots_CompositionAnimationGroup};
 
     // ----- CompositionBackdropBrush class --------------------
 
@@ -2651,14 +2625,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionBackdropBrush =
-    {
+    static PyType_Spec type_spec_CompositionBackdropBrush = {
         "winrt._winrt_windows_ui_composition.CompositionBackdropBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionBackdropBrush),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionBackdropBrush
-    };
+        _type_slots_CompositionBackdropBrush};
 
     // ----- CompositionBatchCompletedEventArgs class --------------------
 
@@ -2720,14 +2692,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionBatchCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_CompositionBatchCompletedEventArgs = {
         "winrt._winrt_windows_ui_composition.CompositionBatchCompletedEventArgs",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionBatchCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionBatchCompletedEventArgs
-    };
+        _type_slots_CompositionBatchCompletedEventArgs};
 
     // ----- CompositionBrush class --------------------
 
@@ -2789,14 +2759,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionBrush =
-    {
+    static PyType_Spec type_spec_CompositionBrush = {
         "winrt._winrt_windows_ui_composition.CompositionBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionBrush),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionBrush
-    };
+        _type_slots_CompositionBrush};
 
     // ----- CompositionCapabilities class --------------------
 
@@ -2992,14 +2960,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionCapabilities =
-    {
+    static PyType_Spec type_spec_CompositionCapabilities = {
         "winrt._winrt_windows_ui_composition.CompositionCapabilities",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionCapabilities
-    };
+        _type_slots_CompositionCapabilities};
 
     static PyGetSetDef getset_CompositionCapabilities_Static[] = {
         { }
@@ -3423,14 +3389,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionClip =
-    {
+    static PyType_Spec type_spec_CompositionClip = {
         "winrt._winrt_windows_ui_composition.CompositionClip",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionClip),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionClip
-    };
+        _type_slots_CompositionClip};
 
     // ----- CompositionColorBrush class --------------------
 
@@ -3540,14 +3504,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionColorBrush =
-    {
+    static PyType_Spec type_spec_CompositionColorBrush = {
         "winrt._winrt_windows_ui_composition.CompositionColorBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionColorBrush),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionColorBrush
-    };
+        _type_slots_CompositionColorBrush};
 
     // ----- CompositionColorGradientStop class --------------------
 
@@ -3705,14 +3667,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionColorGradientStop =
-    {
+    static PyType_Spec type_spec_CompositionColorGradientStop = {
         "winrt._winrt_windows_ui_composition.CompositionColorGradientStop",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionColorGradientStop),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionColorGradientStop
-    };
+        _type_slots_CompositionColorGradientStop};
 
     // ----- CompositionColorGradientStopCollection class --------------------
 
@@ -4319,14 +4279,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionColorGradientStopCollection =
-    {
+    static PyType_Spec type_spec_CompositionColorGradientStopCollection = {
         "winrt._winrt_windows_ui_composition.CompositionColorGradientStopCollection",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionColorGradientStopCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionColorGradientStopCollection
-    };
+        _type_slots_CompositionColorGradientStopCollection};
 
     // ----- CompositionCommitBatch class --------------------
 
@@ -4473,14 +4431,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionCommitBatch =
-    {
+    static PyType_Spec type_spec_CompositionCommitBatch = {
         "winrt._winrt_windows_ui_composition.CompositionCommitBatch",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionCommitBatch),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionCommitBatch
-    };
+        _type_slots_CompositionCommitBatch};
 
     // ----- CompositionContainerShape class --------------------
 
@@ -4562,14 +4518,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionContainerShape =
-    {
+    static PyType_Spec type_spec_CompositionContainerShape = {
         "winrt._winrt_windows_ui_composition.CompositionContainerShape",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionContainerShape),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionContainerShape
-    };
+        _type_slots_CompositionContainerShape};
 
     // ----- CompositionDrawingSurface class --------------------
 
@@ -4856,14 +4810,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionDrawingSurface =
-    {
+    static PyType_Spec type_spec_CompositionDrawingSurface = {
         "winrt._winrt_windows_ui_composition.CompositionDrawingSurface",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionDrawingSurface),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionDrawingSurface
-    };
+        _type_slots_CompositionDrawingSurface};
 
     // ----- CompositionEasingFunction class --------------------
 
@@ -5272,14 +5224,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionEasingFunction =
-    {
+    static PyType_Spec type_spec_CompositionEasingFunction = {
         "winrt._winrt_windows_ui_composition.CompositionEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionEasingFunction
-    };
+        _type_slots_CompositionEasingFunction};
 
     static PyGetSetDef getset_CompositionEasingFunction_Static[] = {
         { }
@@ -5442,14 +5392,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionEffectBrush =
-    {
+    static PyType_Spec type_spec_CompositionEffectBrush = {
         "winrt._winrt_windows_ui_composition.CompositionEffectBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionEffectBrush),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionEffectBrush
-    };
+        _type_slots_CompositionEffectBrush};
 
     // ----- CompositionEffectFactory class --------------------
 
@@ -5581,14 +5529,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionEffectFactory =
-    {
+    static PyType_Spec type_spec_CompositionEffectFactory = {
         "winrt._winrt_windows_ui_composition.CompositionEffectFactory",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionEffectFactory),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionEffectFactory
-    };
+        _type_slots_CompositionEffectFactory};
 
     // ----- CompositionEffectSourceParameter class --------------------
 
@@ -5694,14 +5640,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionEffectSourceParameter =
-    {
+    static PyType_Spec type_spec_CompositionEffectSourceParameter = {
         "winrt._winrt_windows_ui_composition.CompositionEffectSourceParameter",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionEffectSourceParameter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionEffectSourceParameter
-    };
+        _type_slots_CompositionEffectSourceParameter};
 
     // ----- CompositionEllipseGeometry class --------------------
 
@@ -5859,14 +5803,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionEllipseGeometry =
-    {
+    static PyType_Spec type_spec_CompositionEllipseGeometry = {
         "winrt._winrt_windows_ui_composition.CompositionEllipseGeometry",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionEllipseGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionEllipseGeometry
-    };
+        _type_slots_CompositionEllipseGeometry};
 
     // ----- CompositionGeometricClip class --------------------
 
@@ -6024,14 +5966,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionGeometricClip =
-    {
+    static PyType_Spec type_spec_CompositionGeometricClip = {
         "winrt._winrt_windows_ui_composition.CompositionGeometricClip",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionGeometricClip),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionGeometricClip
-    };
+        _type_slots_CompositionGeometricClip};
 
     // ----- CompositionGeometry class --------------------
 
@@ -6237,14 +6177,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionGeometry =
-    {
+    static PyType_Spec type_spec_CompositionGeometry = {
         "winrt._winrt_windows_ui_composition.CompositionGeometry",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionGeometry
-    };
+        _type_slots_CompositionGeometry};
 
     // ----- CompositionGradientBrush class --------------------
 
@@ -6806,14 +6744,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionGradientBrush =
-    {
+    static PyType_Spec type_spec_CompositionGradientBrush = {
         "winrt._winrt_windows_ui_composition.CompositionGradientBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionGradientBrush),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionGradientBrush
-    };
+        _type_slots_CompositionGradientBrush};
 
     // ----- CompositionGraphicsDevice class --------------------
 
@@ -7123,14 +7059,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionGraphicsDevice =
-    {
+    static PyType_Spec type_spec_CompositionGraphicsDevice = {
         "winrt._winrt_windows_ui_composition.CompositionGraphicsDevice",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionGraphicsDevice),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionGraphicsDevice
-    };
+        _type_slots_CompositionGraphicsDevice};
 
     // ----- CompositionLight class --------------------
 
@@ -7280,14 +7214,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionLight =
-    {
+    static PyType_Spec type_spec_CompositionLight = {
         "winrt._winrt_windows_ui_composition.CompositionLight",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionLight),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionLight
-    };
+        _type_slots_CompositionLight};
 
     // ----- CompositionLineGeometry class --------------------
 
@@ -7445,14 +7377,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionLineGeometry =
-    {
+    static PyType_Spec type_spec_CompositionLineGeometry = {
         "winrt._winrt_windows_ui_composition.CompositionLineGeometry",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionLineGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionLineGeometry
-    };
+        _type_slots_CompositionLineGeometry};
 
     // ----- CompositionLinearGradientBrush class --------------------
 
@@ -7610,14 +7540,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionLinearGradientBrush =
-    {
+    static PyType_Spec type_spec_CompositionLinearGradientBrush = {
         "winrt._winrt_windows_ui_composition.CompositionLinearGradientBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionLinearGradientBrush),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionLinearGradientBrush
-    };
+        _type_slots_CompositionLinearGradientBrush};
 
     // ----- CompositionMaskBrush class --------------------
 
@@ -7775,14 +7703,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionMaskBrush =
-    {
+    static PyType_Spec type_spec_CompositionMaskBrush = {
         "winrt._winrt_windows_ui_composition.CompositionMaskBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionMaskBrush),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionMaskBrush
-    };
+        _type_slots_CompositionMaskBrush};
 
     // ----- CompositionMipmapSurface class --------------------
 
@@ -7956,14 +7882,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionMipmapSurface =
-    {
+    static PyType_Spec type_spec_CompositionMipmapSurface = {
         "winrt._winrt_windows_ui_composition.CompositionMipmapSurface",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionMipmapSurface),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionMipmapSurface
-    };
+        _type_slots_CompositionMipmapSurface};
 
     // ----- CompositionNineGridBrush class --------------------
 
@@ -8619,14 +8543,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionNineGridBrush =
-    {
+    static PyType_Spec type_spec_CompositionNineGridBrush = {
         "winrt._winrt_windows_ui_composition.CompositionNineGridBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionNineGridBrush),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionNineGridBrush
-    };
+        _type_slots_CompositionNineGridBrush};
 
     // ----- CompositionObject class --------------------
 
@@ -9205,14 +9127,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionObject =
-    {
+    static PyType_Spec type_spec_CompositionObject = {
         "winrt._winrt_windows_ui_composition.CompositionObject",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionObject),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionObject
-    };
+        _type_slots_CompositionObject};
 
     static PyGetSetDef getset_CompositionObject_Static[] = {
         { }
@@ -9325,14 +9245,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionPath =
-    {
+    static PyType_Spec type_spec_CompositionPath = {
         "winrt._winrt_windows_ui_composition.CompositionPath",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionPath),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionPath
-    };
+        _type_slots_CompositionPath};
 
     // ----- CompositionPathGeometry class --------------------
 
@@ -9442,14 +9360,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionPathGeometry =
-    {
+    static PyType_Spec type_spec_CompositionPathGeometry = {
         "winrt._winrt_windows_ui_composition.CompositionPathGeometry",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionPathGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionPathGeometry
-    };
+        _type_slots_CompositionPathGeometry};
 
     // ----- CompositionProjectedShadow class --------------------
 
@@ -9743,14 +9659,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionProjectedShadow =
-    {
+    static PyType_Spec type_spec_CompositionProjectedShadow = {
         "winrt._winrt_windows_ui_composition.CompositionProjectedShadow",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionProjectedShadow),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionProjectedShadow
-    };
+        _type_slots_CompositionProjectedShadow};
 
     // ----- CompositionProjectedShadowCaster class --------------------
 
@@ -9908,14 +9822,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionProjectedShadowCaster =
-    {
+    static PyType_Spec type_spec_CompositionProjectedShadowCaster = {
         "winrt._winrt_windows_ui_composition.CompositionProjectedShadowCaster",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionProjectedShadowCaster),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionProjectedShadowCaster
-    };
+        _type_slots_CompositionProjectedShadowCaster};
 
     // ----- CompositionProjectedShadowCasterCollection class --------------------
 
@@ -10258,14 +10170,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionProjectedShadowCasterCollection =
-    {
+    static PyType_Spec type_spec_CompositionProjectedShadowCasterCollection = {
         "winrt._winrt_windows_ui_composition.CompositionProjectedShadowCasterCollection",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionProjectedShadowCasterCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionProjectedShadowCasterCollection
-    };
+        _type_slots_CompositionProjectedShadowCasterCollection};
 
     static PyGetSetDef getset_CompositionProjectedShadowCasterCollection_Static[] = {
         { "max_respected_casters", reinterpret_cast<getter>(CompositionProjectedShadowCasterCollection_get_MaxRespectedCasters), nullptr, nullptr, nullptr },
@@ -10401,14 +10311,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionProjectedShadowReceiver =
-    {
+    static PyType_Spec type_spec_CompositionProjectedShadowReceiver = {
         "winrt._winrt_windows_ui_composition.CompositionProjectedShadowReceiver",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionProjectedShadowReceiver),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionProjectedShadowReceiver
-    };
+        _type_slots_CompositionProjectedShadowReceiver};
 
     // ----- CompositionProjectedShadowReceiverUnorderedCollection class --------------------
 
@@ -10631,14 +10539,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionProjectedShadowReceiverUnorderedCollection =
-    {
+    static PyType_Spec type_spec_CompositionProjectedShadowReceiverUnorderedCollection = {
         "winrt._winrt_windows_ui_composition.CompositionProjectedShadowReceiverUnorderedCollection",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionProjectedShadowReceiverUnorderedCollection
-    };
+        _type_slots_CompositionProjectedShadowReceiverUnorderedCollection};
 
     // ----- CompositionPropertySet class --------------------
 
@@ -11411,14 +11317,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionPropertySet =
-    {
+    static PyType_Spec type_spec_CompositionPropertySet = {
         "winrt._winrt_windows_ui_composition.CompositionPropertySet",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionPropertySet),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionPropertySet
-    };
+        _type_slots_CompositionPropertySet};
 
     // ----- CompositionRadialGradientBrush class --------------------
 
@@ -11624,14 +11528,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionRadialGradientBrush =
-    {
+    static PyType_Spec type_spec_CompositionRadialGradientBrush = {
         "winrt._winrt_windows_ui_composition.CompositionRadialGradientBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionRadialGradientBrush),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionRadialGradientBrush
-    };
+        _type_slots_CompositionRadialGradientBrush};
 
     // ----- CompositionRectangleGeometry class --------------------
 
@@ -11789,14 +11691,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionRectangleGeometry =
-    {
+    static PyType_Spec type_spec_CompositionRectangleGeometry = {
         "winrt._winrt_windows_ui_composition.CompositionRectangleGeometry",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionRectangleGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionRectangleGeometry
-    };
+        _type_slots_CompositionRectangleGeometry};
 
     // ----- CompositionRoundedRectangleGeometry class --------------------
 
@@ -12002,14 +11902,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionRoundedRectangleGeometry =
-    {
+    static PyType_Spec type_spec_CompositionRoundedRectangleGeometry = {
         "winrt._winrt_windows_ui_composition.CompositionRoundedRectangleGeometry",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionRoundedRectangleGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionRoundedRectangleGeometry
-    };
+        _type_slots_CompositionRoundedRectangleGeometry};
 
     // ----- CompositionScopedBatch class --------------------
 
@@ -12249,14 +12147,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionScopedBatch =
-    {
+    static PyType_Spec type_spec_CompositionScopedBatch = {
         "winrt._winrt_windows_ui_composition.CompositionScopedBatch",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionScopedBatch),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionScopedBatch
-    };
+        _type_slots_CompositionScopedBatch};
 
     // ----- CompositionShadow class --------------------
 
@@ -12318,14 +12214,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionShadow =
-    {
+    static PyType_Spec type_spec_CompositionShadow = {
         "winrt._winrt_windows_ui_composition.CompositionShadow",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionShadow),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionShadow
-    };
+        _type_slots_CompositionShadow};
 
     // ----- CompositionShape class --------------------
 
@@ -12675,14 +12569,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionShape =
-    {
+    static PyType_Spec type_spec_CompositionShape = {
         "winrt._winrt_windows_ui_composition.CompositionShape",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionShape),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionShape
-    };
+        _type_slots_CompositionShape};
 
     // ----- CompositionShapeCollection class --------------------
 
@@ -13289,14 +13181,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionShapeCollection =
-    {
+    static PyType_Spec type_spec_CompositionShapeCollection = {
         "winrt._winrt_windows_ui_composition.CompositionShapeCollection",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionShapeCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionShapeCollection
-    };
+        _type_slots_CompositionShapeCollection};
 
     // ----- CompositionSpriteShape class --------------------
 
@@ -13906,14 +13796,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionSpriteShape =
-    {
+    static PyType_Spec type_spec_CompositionSpriteShape = {
         "winrt._winrt_windows_ui_composition.CompositionSpriteShape",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionSpriteShape),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionSpriteShape
-    };
+        _type_slots_CompositionSpriteShape};
 
     // ----- CompositionStrokeDashArray class --------------------
 
@@ -14520,14 +14408,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionStrokeDashArray =
-    {
+    static PyType_Spec type_spec_CompositionStrokeDashArray = {
         "winrt._winrt_windows_ui_composition.CompositionStrokeDashArray",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionStrokeDashArray),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionStrokeDashArray
-    };
+        _type_slots_CompositionStrokeDashArray};
 
     // ----- CompositionSurfaceBrush class --------------------
 
@@ -15213,14 +15099,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionSurfaceBrush =
-    {
+    static PyType_Spec type_spec_CompositionSurfaceBrush = {
         "winrt._winrt_windows_ui_composition.CompositionSurfaceBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionSurfaceBrush),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionSurfaceBrush
-    };
+        _type_slots_CompositionSurfaceBrush};
 
     // ----- CompositionTarget class --------------------
 
@@ -15330,14 +15214,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionTarget =
-    {
+    static PyType_Spec type_spec_CompositionTarget = {
         "winrt._winrt_windows_ui_composition.CompositionTarget",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionTarget),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionTarget
-    };
+        _type_slots_CompositionTarget};
 
     // ----- CompositionTexture class --------------------
 
@@ -15543,14 +15425,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionTexture =
-    {
+    static PyType_Spec type_spec_CompositionTexture = {
         "winrt._winrt_windows_ui_composition.CompositionTexture",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionTexture),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionTexture
-    };
+        _type_slots_CompositionTexture};
 
     // ----- CompositionTransform class --------------------
 
@@ -15612,14 +15492,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionTransform =
-    {
+    static PyType_Spec type_spec_CompositionTransform = {
         "winrt._winrt_windows_ui_composition.CompositionTransform",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionTransform),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionTransform
-    };
+        _type_slots_CompositionTransform};
 
     // ----- CompositionViewBox class --------------------
 
@@ -15921,14 +15799,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionViewBox =
-    {
+    static PyType_Spec type_spec_CompositionViewBox = {
         "winrt._winrt_windows_ui_composition.CompositionViewBox",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionViewBox),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionViewBox
-    };
+        _type_slots_CompositionViewBox};
 
     // ----- CompositionVirtualDrawingSurface class --------------------
 
@@ -16023,14 +15899,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionVirtualDrawingSurface =
-    {
+    static PyType_Spec type_spec_CompositionVirtualDrawingSurface = {
         "winrt._winrt_windows_ui_composition.CompositionVirtualDrawingSurface",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionVirtualDrawingSurface),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionVirtualDrawingSurface
-    };
+        _type_slots_CompositionVirtualDrawingSurface};
 
     // ----- CompositionVisualSurface class --------------------
 
@@ -16236,14 +16110,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CompositionVisualSurface =
-    {
+    static PyType_Spec type_spec_CompositionVisualSurface = {
         "winrt._winrt_windows_ui_composition.CompositionVisualSurface",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionVisualSurface),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CompositionVisualSurface
-    };
+        _type_slots_CompositionVisualSurface};
 
     // ----- Compositor class --------------------
 
@@ -18707,14 +18579,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_Compositor =
-    {
+    static PyType_Spec type_spec_Compositor = {
         "winrt._winrt_windows_ui_composition.Compositor",
         sizeof(py::wrapper::Windows::UI::Composition::Compositor),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Compositor
-    };
+        _type_slots_Compositor};
 
     static PyGetSetDef getset_Compositor_Static[] = {
         { "max_global_playback_rate", reinterpret_cast<getter>(Compositor_get_MaxGlobalPlaybackRate), nullptr, nullptr, nullptr },
@@ -18823,14 +18693,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_ContainerVisual =
-    {
+    static PyType_Spec type_spec_ContainerVisual = {
         "winrt._winrt_windows_ui_composition.ContainerVisual",
         sizeof(py::wrapper::Windows::UI::Composition::ContainerVisual),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ContainerVisual
-    };
+        _type_slots_ContainerVisual};
 
     // ----- CubicBezierEasingFunction class --------------------
 
@@ -18932,14 +18800,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_CubicBezierEasingFunction =
-    {
+    static PyType_Spec type_spec_CubicBezierEasingFunction = {
         "winrt._winrt_windows_ui_composition.CubicBezierEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::CubicBezierEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CubicBezierEasingFunction
-    };
+        _type_slots_CubicBezierEasingFunction};
 
     // ----- DelegatedInkTrailVisual class --------------------
 
@@ -19195,14 +19061,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_DelegatedInkTrailVisual =
-    {
+    static PyType_Spec type_spec_DelegatedInkTrailVisual = {
         "winrt._winrt_windows_ui_composition.DelegatedInkTrailVisual",
         sizeof(py::wrapper::Windows::UI::Composition::DelegatedInkTrailVisual),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DelegatedInkTrailVisual
-    };
+        _type_slots_DelegatedInkTrailVisual};
 
     static PyGetSetDef getset_DelegatedInkTrailVisual_Static[] = {
         { }
@@ -19483,14 +19347,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_DistantLight =
-    {
+    static PyType_Spec type_spec_DistantLight = {
         "winrt._winrt_windows_ui_composition.DistantLight",
         sizeof(py::wrapper::Windows::UI::Composition::DistantLight),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DistantLight
-    };
+        _type_slots_DistantLight};
 
     // ----- DropShadow class --------------------
 
@@ -19840,14 +19702,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_DropShadow =
-    {
+    static PyType_Spec type_spec_DropShadow = {
         "winrt._winrt_windows_ui_composition.DropShadow",
         sizeof(py::wrapper::Windows::UI::Composition::DropShadow),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_DropShadow
-    };
+        _type_slots_DropShadow};
 
     // ----- ElasticEasingFunction class --------------------
 
@@ -19969,14 +19829,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_ElasticEasingFunction =
-    {
+    static PyType_Spec type_spec_ElasticEasingFunction = {
         "winrt._winrt_windows_ui_composition.ElasticEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::ElasticEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ElasticEasingFunction
-    };
+        _type_slots_ElasticEasingFunction};
 
     // ----- ExponentialEasingFunction class --------------------
 
@@ -20078,14 +19936,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_ExponentialEasingFunction =
-    {
+    static PyType_Spec type_spec_ExponentialEasingFunction = {
         "winrt._winrt_windows_ui_composition.ExponentialEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::ExponentialEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ExponentialEasingFunction
-    };
+        _type_slots_ExponentialEasingFunction};
 
     // ----- ExpressionAnimation class --------------------
 
@@ -20195,14 +20051,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_ExpressionAnimation =
-    {
+    static PyType_Spec type_spec_ExpressionAnimation = {
         "winrt._winrt_windows_ui_composition.ExpressionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::ExpressionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ExpressionAnimation
-    };
+        _type_slots_ExpressionAnimation};
 
     // ----- ImplicitAnimationCollection class --------------------
 
@@ -20611,14 +20465,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_ImplicitAnimationCollection =
-    {
+    static PyType_Spec type_spec_ImplicitAnimationCollection = {
         "winrt._winrt_windows_ui_composition.ImplicitAnimationCollection",
         sizeof(py::wrapper::Windows::UI::Composition::ImplicitAnimationCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ImplicitAnimationCollection
-    };
+        _type_slots_ImplicitAnimationCollection};
 
     // ----- InitialValueExpressionCollection class --------------------
 
@@ -21027,14 +20879,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_InitialValueExpressionCollection =
-    {
+    static PyType_Spec type_spec_InitialValueExpressionCollection = {
         "winrt._winrt_windows_ui_composition.InitialValueExpressionCollection",
         sizeof(py::wrapper::Windows::UI::Composition::InitialValueExpressionCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InitialValueExpressionCollection
-    };
+        _type_slots_InitialValueExpressionCollection};
 
     // ----- InsetClip class --------------------
 
@@ -21288,14 +21138,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_InsetClip =
-    {
+    static PyType_Spec type_spec_InsetClip = {
         "winrt._winrt_windows_ui_composition.InsetClip",
         sizeof(py::wrapper::Windows::UI::Composition::InsetClip),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InsetClip
-    };
+        _type_slots_InsetClip};
 
     // ----- KeyFrameAnimation class --------------------
 
@@ -21770,14 +21618,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_KeyFrameAnimation =
-    {
+    static PyType_Spec type_spec_KeyFrameAnimation = {
         "winrt._winrt_windows_ui_composition.KeyFrameAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::KeyFrameAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_KeyFrameAnimation
-    };
+        _type_slots_KeyFrameAnimation};
 
     // ----- LayerVisual class --------------------
 
@@ -21935,14 +21781,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_LayerVisual =
-    {
+    static PyType_Spec type_spec_LayerVisual = {
         "winrt._winrt_windows_ui_composition.LayerVisual",
         sizeof(py::wrapper::Windows::UI::Composition::LayerVisual),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LayerVisual
-    };
+        _type_slots_LayerVisual};
 
     // ----- LinearEasingFunction class --------------------
 
@@ -22004,14 +21848,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_LinearEasingFunction =
-    {
+    static PyType_Spec type_spec_LinearEasingFunction = {
         "winrt._winrt_windows_ui_composition.LinearEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::LinearEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LinearEasingFunction
-    };
+        _type_slots_LinearEasingFunction};
 
     // ----- NaturalMotionAnimation class --------------------
 
@@ -22217,14 +22059,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_NaturalMotionAnimation =
-    {
+    static PyType_Spec type_spec_NaturalMotionAnimation = {
         "winrt._winrt_windows_ui_composition.NaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::NaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_NaturalMotionAnimation
-    };
+        _type_slots_NaturalMotionAnimation};
 
     // ----- PathKeyFrameAnimation class --------------------
 
@@ -22343,14 +22183,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_PathKeyFrameAnimation =
-    {
+    static PyType_Spec type_spec_PathKeyFrameAnimation = {
         "winrt._winrt_windows_ui_composition.PathKeyFrameAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::PathKeyFrameAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PathKeyFrameAnimation
-    };
+        _type_slots_PathKeyFrameAnimation};
 
     // ----- PointLight class --------------------
 
@@ -22844,14 +22682,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_PointLight =
-    {
+    static PyType_Spec type_spec_PointLight = {
         "winrt._winrt_windows_ui_composition.PointLight",
         sizeof(py::wrapper::Windows::UI::Composition::PointLight),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PointLight
-    };
+        _type_slots_PointLight};
 
     // ----- PowerEasingFunction class --------------------
 
@@ -22953,14 +22789,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_PowerEasingFunction =
-    {
+    static PyType_Spec type_spec_PowerEasingFunction = {
         "winrt._winrt_windows_ui_composition.PowerEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::PowerEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PowerEasingFunction
-    };
+        _type_slots_PowerEasingFunction};
 
     // ----- QuaternionKeyFrameAnimation class --------------------
 
@@ -23079,14 +22913,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_QuaternionKeyFrameAnimation =
-    {
+    static PyType_Spec type_spec_QuaternionKeyFrameAnimation = {
         "winrt._winrt_windows_ui_composition.QuaternionKeyFrameAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::QuaternionKeyFrameAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_QuaternionKeyFrameAnimation
-    };
+        _type_slots_QuaternionKeyFrameAnimation};
 
     // ----- RectangleClip class --------------------
 
@@ -23532,14 +23364,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_RectangleClip =
-    {
+    static PyType_Spec type_spec_RectangleClip = {
         "winrt._winrt_windows_ui_composition.RectangleClip",
         sizeof(py::wrapper::Windows::UI::Composition::RectangleClip),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RectangleClip
-    };
+        _type_slots_RectangleClip};
 
     // ----- RedirectVisual class --------------------
 
@@ -23649,14 +23479,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_RedirectVisual =
-    {
+    static PyType_Spec type_spec_RedirectVisual = {
         "winrt._winrt_windows_ui_composition.RedirectVisual",
         sizeof(py::wrapper::Windows::UI::Composition::RedirectVisual),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RedirectVisual
-    };
+        _type_slots_RedirectVisual};
 
     // ----- RenderingDeviceReplacedEventArgs class --------------------
 
@@ -23738,14 +23566,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_RenderingDeviceReplacedEventArgs =
-    {
+    static PyType_Spec type_spec_RenderingDeviceReplacedEventArgs = {
         "winrt._winrt_windows_ui_composition.RenderingDeviceReplacedEventArgs",
         sizeof(py::wrapper::Windows::UI::Composition::RenderingDeviceReplacedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RenderingDeviceReplacedEventArgs
-    };
+        _type_slots_RenderingDeviceReplacedEventArgs};
 
     // ----- ScalarKeyFrameAnimation class --------------------
 
@@ -23864,14 +23690,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_ScalarKeyFrameAnimation =
-    {
+    static PyType_Spec type_spec_ScalarKeyFrameAnimation = {
         "winrt._winrt_windows_ui_composition.ScalarKeyFrameAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::ScalarKeyFrameAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScalarKeyFrameAnimation
-    };
+        _type_slots_ScalarKeyFrameAnimation};
 
     // ----- ScalarNaturalMotionAnimation class --------------------
 
@@ -24077,14 +23901,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_ScalarNaturalMotionAnimation =
-    {
+    static PyType_Spec type_spec_ScalarNaturalMotionAnimation = {
         "winrt._winrt_windows_ui_composition.ScalarNaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::ScalarNaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ScalarNaturalMotionAnimation
-    };
+        _type_slots_ScalarNaturalMotionAnimation};
 
     // ----- ShapeVisual class --------------------
 
@@ -24214,14 +24036,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_ShapeVisual =
-    {
+    static PyType_Spec type_spec_ShapeVisual = {
         "winrt._winrt_windows_ui_composition.ShapeVisual",
         sizeof(py::wrapper::Windows::UI::Composition::ShapeVisual),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ShapeVisual
-    };
+        _type_slots_ShapeVisual};
 
     // ----- SineEasingFunction class --------------------
 
@@ -24303,14 +24123,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_SineEasingFunction =
-    {
+    static PyType_Spec type_spec_SineEasingFunction = {
         "winrt._winrt_windows_ui_composition.SineEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::SineEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SineEasingFunction
-    };
+        _type_slots_SineEasingFunction};
 
     // ----- SpotLight class --------------------
 
@@ -25140,14 +24958,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_SpotLight =
-    {
+    static PyType_Spec type_spec_SpotLight = {
         "winrt._winrt_windows_ui_composition.SpotLight",
         sizeof(py::wrapper::Windows::UI::Composition::SpotLight),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpotLight
-    };
+        _type_slots_SpotLight};
 
     // ----- SpringScalarNaturalMotionAnimation class --------------------
 
@@ -25305,14 +25121,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_SpringScalarNaturalMotionAnimation =
-    {
+    static PyType_Spec type_spec_SpringScalarNaturalMotionAnimation = {
         "winrt._winrt_windows_ui_composition.SpringScalarNaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::SpringScalarNaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpringScalarNaturalMotionAnimation
-    };
+        _type_slots_SpringScalarNaturalMotionAnimation};
 
     // ----- SpringVector2NaturalMotionAnimation class --------------------
 
@@ -25470,14 +25284,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_SpringVector2NaturalMotionAnimation =
-    {
+    static PyType_Spec type_spec_SpringVector2NaturalMotionAnimation = {
         "winrt._winrt_windows_ui_composition.SpringVector2NaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::SpringVector2NaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpringVector2NaturalMotionAnimation
-    };
+        _type_slots_SpringVector2NaturalMotionAnimation};
 
     // ----- SpringVector3NaturalMotionAnimation class --------------------
 
@@ -25635,14 +25447,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_SpringVector3NaturalMotionAnimation =
-    {
+    static PyType_Spec type_spec_SpringVector3NaturalMotionAnimation = {
         "winrt._winrt_windows_ui_composition.SpringVector3NaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::SpringVector3NaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpringVector3NaturalMotionAnimation
-    };
+        _type_slots_SpringVector3NaturalMotionAnimation};
 
     // ----- SpriteVisual class --------------------
 
@@ -25800,14 +25610,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_SpriteVisual =
-    {
+    static PyType_Spec type_spec_SpriteVisual = {
         "winrt._winrt_windows_ui_composition.SpriteVisual",
         sizeof(py::wrapper::Windows::UI::Composition::SpriteVisual),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SpriteVisual
-    };
+        _type_slots_SpriteVisual};
 
     // ----- StepEasingFunction class --------------------
 
@@ -26109,14 +25917,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_StepEasingFunction =
-    {
+    static PyType_Spec type_spec_StepEasingFunction = {
         "winrt._winrt_windows_ui_composition.StepEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::StepEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_StepEasingFunction
-    };
+        _type_slots_StepEasingFunction};
 
     // ----- Vector2KeyFrameAnimation class --------------------
 
@@ -26235,14 +26041,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_Vector2KeyFrameAnimation =
-    {
+    static PyType_Spec type_spec_Vector2KeyFrameAnimation = {
         "winrt._winrt_windows_ui_composition.Vector2KeyFrameAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::Vector2KeyFrameAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Vector2KeyFrameAnimation
-    };
+        _type_slots_Vector2KeyFrameAnimation};
 
     // ----- Vector2NaturalMotionAnimation class --------------------
 
@@ -26448,14 +26252,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_Vector2NaturalMotionAnimation =
-    {
+    static PyType_Spec type_spec_Vector2NaturalMotionAnimation = {
         "winrt._winrt_windows_ui_composition.Vector2NaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::Vector2NaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Vector2NaturalMotionAnimation
-    };
+        _type_slots_Vector2NaturalMotionAnimation};
 
     // ----- Vector3KeyFrameAnimation class --------------------
 
@@ -26574,14 +26376,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_Vector3KeyFrameAnimation =
-    {
+    static PyType_Spec type_spec_Vector3KeyFrameAnimation = {
         "winrt._winrt_windows_ui_composition.Vector3KeyFrameAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::Vector3KeyFrameAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Vector3KeyFrameAnimation
-    };
+        _type_slots_Vector3KeyFrameAnimation};
 
     // ----- Vector3NaturalMotionAnimation class --------------------
 
@@ -26787,14 +26587,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_Vector3NaturalMotionAnimation =
-    {
+    static PyType_Spec type_spec_Vector3NaturalMotionAnimation = {
         "winrt._winrt_windows_ui_composition.Vector3NaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::Vector3NaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Vector3NaturalMotionAnimation
-    };
+        _type_slots_Vector3NaturalMotionAnimation};
 
     // ----- Vector4KeyFrameAnimation class --------------------
 
@@ -26913,14 +26711,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_Vector4KeyFrameAnimation =
-    {
+    static PyType_Spec type_spec_Vector4KeyFrameAnimation = {
         "winrt._winrt_windows_ui_composition.Vector4KeyFrameAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::Vector4KeyFrameAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Vector4KeyFrameAnimation
-    };
+        _type_slots_Vector4KeyFrameAnimation};
 
     // ----- Visual class --------------------
 
@@ -28010,14 +27806,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_Visual =
-    {
+    static PyType_Spec type_spec_Visual = {
         "winrt._winrt_windows_ui_composition.Visual",
         sizeof(py::wrapper::Windows::UI::Composition::Visual),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Visual
-    };
+        _type_slots_Visual};
 
     // ----- VisualCollection class --------------------
 
@@ -28341,14 +28135,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_VisualCollection =
-    {
+    static PyType_Spec type_spec_VisualCollection = {
         "winrt._winrt_windows_ui_composition.VisualCollection",
         sizeof(py::wrapper::Windows::UI::Composition::VisualCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VisualCollection
-    };
+        _type_slots_VisualCollection};
 
     // ----- VisualUnorderedCollection class --------------------
 
@@ -28571,14 +28363,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_VisualUnorderedCollection =
-    {
+    static PyType_Spec type_spec_VisualUnorderedCollection = {
         "winrt._winrt_windows_ui_composition.VisualUnorderedCollection",
         sizeof(py::wrapper::Windows::UI::Composition::VisualUnorderedCollection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VisualUnorderedCollection
-    };
+        _type_slots_VisualUnorderedCollection};
 
     // ----- IAnimationObject interface --------------------
 
@@ -28674,14 +28464,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_IAnimationObject =
-    {
+    static PyType_Spec type_spec_IAnimationObject = {
         "winrt._winrt_windows_ui_composition.IAnimationObject",
         sizeof(py::wrapper::Windows::UI::Composition::IAnimationObject),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IAnimationObject
-    };
+        _type_slots_IAnimationObject};
 
     // ----- ICompositionAnimationBase interface --------------------
 
@@ -28743,14 +28531,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_ICompositionAnimationBase =
-    {
+    static PyType_Spec type_spec_ICompositionAnimationBase = {
         "winrt._winrt_windows_ui_composition.ICompositionAnimationBase",
         sizeof(py::wrapper::Windows::UI::Composition::ICompositionAnimationBase),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICompositionAnimationBase
-    };
+        _type_slots_ICompositionAnimationBase};
 
     // ----- ICompositionSupportsSystemBackdrop interface --------------------
 
@@ -28860,14 +28646,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_ICompositionSupportsSystemBackdrop =
-    {
+    static PyType_Spec type_spec_ICompositionSupportsSystemBackdrop = {
         "winrt._winrt_windows_ui_composition.ICompositionSupportsSystemBackdrop",
         sizeof(py::wrapper::Windows::UI::Composition::ICompositionSupportsSystemBackdrop),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICompositionSupportsSystemBackdrop
-    };
+        _type_slots_ICompositionSupportsSystemBackdrop};
 
     // ----- ICompositionSurface interface --------------------
 
@@ -28929,14 +28713,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_ICompositionSurface =
-    {
+    static PyType_Spec type_spec_ICompositionSurface = {
         "winrt._winrt_windows_ui_composition.ICompositionSurface",
         sizeof(py::wrapper::Windows::UI::Composition::ICompositionSurface),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICompositionSurface
-    };
+        _type_slots_ICompositionSurface};
 
     // ----- ICompositionSurfaceFacade interface --------------------
 
@@ -29028,14 +28810,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_ICompositionSurfaceFacade =
-    {
+    static PyType_Spec type_spec_ICompositionSurfaceFacade = {
         "winrt._winrt_windows_ui_composition.ICompositionSurfaceFacade",
         sizeof(py::wrapper::Windows::UI::Composition::ICompositionSurfaceFacade),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICompositionSurfaceFacade
-    };
+        _type_slots_ICompositionSurfaceFacade};
 
     // ----- IVisualElement interface --------------------
 
@@ -29097,14 +28877,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_IVisualElement =
-    {
+    static PyType_Spec type_spec_IVisualElement = {
         "winrt._winrt_windows_ui_composition.IVisualElement",
         sizeof(py::wrapper::Windows::UI::Composition::IVisualElement),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IVisualElement
-    };
+        _type_slots_IVisualElement};
 
     // ----- IVisualElement2 interface --------------------
 
@@ -29196,14 +28974,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_IVisualElement2 =
-    {
+    static PyType_Spec type_spec_IVisualElement2 = {
         "winrt._winrt_windows_ui_composition.IVisualElement2",
         sizeof(py::wrapper::Windows::UI::Composition::IVisualElement2),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IVisualElement2
-    };
+        _type_slots_IVisualElement2};
 
     // ----- InkTrailPoint struct --------------------
 
@@ -29357,14 +29133,12 @@ namespace py::cpp::Windows::UI::Composition
         { },
     };
 
-    static PyType_Spec type_spec_InkTrailPoint =
-    {
+    static PyType_Spec type_spec_InkTrailPoint = {
         "winrt._winrt_windows_ui_composition.InkTrailPoint",
         sizeof(py::wrapper::Windows::UI::Composition::InkTrailPoint),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkTrailPoint
-    };
+        _type_slots_InkTrailPoint};
 
     // ----- Windows.UI.Composition Initialization --------------------
 

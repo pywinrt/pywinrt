@@ -85,14 +85,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { },
     };
 
-    static PyType_Spec type_spec_CurrentTimeChangeRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_CurrentTimeChangeRequestedEventArgs = {
         "winrt._winrt_windows_media_playto.CurrentTimeChangeRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::CurrentTimeChangeRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CurrentTimeChangeRequestedEventArgs
-    };
+        _type_slots_CurrentTimeChangeRequestedEventArgs};
 
     // ----- MuteChangeRequestedEventArgs class --------------------
 
@@ -174,14 +172,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { },
     };
 
-    static PyType_Spec type_spec_MuteChangeRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_MuteChangeRequestedEventArgs = {
         "winrt._winrt_windows_media_playto.MuteChangeRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::MuteChangeRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MuteChangeRequestedEventArgs
-    };
+        _type_slots_MuteChangeRequestedEventArgs};
 
     // ----- PlayToConnection class --------------------
 
@@ -398,14 +394,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { },
     };
 
-    static PyType_Spec type_spec_PlayToConnection =
-    {
+    static PyType_Spec type_spec_PlayToConnection = {
         "winrt._winrt_windows_media_playto.PlayToConnection",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToConnection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlayToConnection
-    };
+        _type_slots_PlayToConnection};
 
     // ----- PlayToConnectionErrorEventArgs class --------------------
 
@@ -507,14 +501,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { },
     };
 
-    static PyType_Spec type_spec_PlayToConnectionErrorEventArgs =
-    {
+    static PyType_Spec type_spec_PlayToConnectionErrorEventArgs = {
         "winrt._winrt_windows_media_playto.PlayToConnectionErrorEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToConnectionErrorEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlayToConnectionErrorEventArgs
-    };
+        _type_slots_PlayToConnectionErrorEventArgs};
 
     // ----- PlayToConnectionStateChangedEventArgs class --------------------
 
@@ -616,14 +608,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { },
     };
 
-    static PyType_Spec type_spec_PlayToConnectionStateChangedEventArgs =
-    {
+    static PyType_Spec type_spec_PlayToConnectionStateChangedEventArgs = {
         "winrt._winrt_windows_media_playto.PlayToConnectionStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToConnectionStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlayToConnectionStateChangedEventArgs
-    };
+        _type_slots_PlayToConnectionStateChangedEventArgs};
 
     // ----- PlayToConnectionTransferredEventArgs class --------------------
 
@@ -725,14 +715,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { },
     };
 
-    static PyType_Spec type_spec_PlayToConnectionTransferredEventArgs =
-    {
+    static PyType_Spec type_spec_PlayToConnectionTransferredEventArgs = {
         "winrt._winrt_windows_media_playto.PlayToConnectionTransferredEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToConnectionTransferredEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlayToConnectionTransferredEventArgs
-    };
+        _type_slots_PlayToConnectionTransferredEventArgs};
 
     // ----- PlayToManager class --------------------
 
@@ -991,14 +979,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { },
     };
 
-    static PyType_Spec type_spec_PlayToManager =
-    {
+    static PyType_Spec type_spec_PlayToManager = {
         "winrt._winrt_windows_media_playto.PlayToManager",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlayToManager
-    };
+        _type_slots_PlayToManager};
 
     static PyGetSetDef getset_PlayToManager_Static[] = {
         { }
@@ -2167,14 +2153,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { },
     };
 
-    static PyType_Spec type_spec_PlayToReceiver =
-    {
+    static PyType_Spec type_spec_PlayToReceiver = {
         "winrt._winrt_windows_media_playto.PlayToReceiver",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToReceiver),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlayToReceiver
-    };
+        _type_slots_PlayToReceiver};
 
     // ----- PlayToSource class --------------------
 
@@ -2383,14 +2367,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { },
     };
 
-    static PyType_Spec type_spec_PlayToSource =
-    {
+    static PyType_Spec type_spec_PlayToSource = {
         "winrt._winrt_windows_media_playto.PlayToSource",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlayToSource
-    };
+        _type_slots_PlayToSource};
 
     // ----- PlayToSourceDeferral class --------------------
 
@@ -2483,14 +2465,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { },
     };
 
-    static PyType_Spec type_spec_PlayToSourceDeferral =
-    {
+    static PyType_Spec type_spec_PlayToSourceDeferral = {
         "winrt._winrt_windows_media_playto.PlayToSourceDeferral",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToSourceDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlayToSourceDeferral
-    };
+        _type_slots_PlayToSourceDeferral};
 
     // ----- PlayToSourceRequest class --------------------
 
@@ -2668,14 +2648,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { },
     };
 
-    static PyType_Spec type_spec_PlayToSourceRequest =
-    {
+    static PyType_Spec type_spec_PlayToSourceRequest = {
         "winrt._winrt_windows_media_playto.PlayToSourceRequest",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToSourceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlayToSourceRequest
-    };
+        _type_slots_PlayToSourceRequest};
 
     // ----- PlayToSourceRequestedEventArgs class --------------------
 
@@ -2757,14 +2735,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { },
     };
 
-    static PyType_Spec type_spec_PlayToSourceRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_PlayToSourceRequestedEventArgs = {
         "winrt._winrt_windows_media_playto.PlayToSourceRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToSourceRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlayToSourceRequestedEventArgs
-    };
+        _type_slots_PlayToSourceRequestedEventArgs};
 
     // ----- PlayToSourceSelectedEventArgs class --------------------
 
@@ -2926,14 +2902,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { },
     };
 
-    static PyType_Spec type_spec_PlayToSourceSelectedEventArgs =
-    {
+    static PyType_Spec type_spec_PlayToSourceSelectedEventArgs = {
         "winrt._winrt_windows_media_playto.PlayToSourceSelectedEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToSourceSelectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlayToSourceSelectedEventArgs
-    };
+        _type_slots_PlayToSourceSelectedEventArgs};
 
     // ----- PlaybackRateChangeRequestedEventArgs class --------------------
 
@@ -3015,14 +2989,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { },
     };
 
-    static PyType_Spec type_spec_PlaybackRateChangeRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_PlaybackRateChangeRequestedEventArgs = {
         "winrt._winrt_windows_media_playto.PlaybackRateChangeRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlaybackRateChangeRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PlaybackRateChangeRequestedEventArgs
-    };
+        _type_slots_PlaybackRateChangeRequestedEventArgs};
 
     // ----- SourceChangeRequestedEventArgs class --------------------
 
@@ -3284,14 +3256,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { },
     };
 
-    static PyType_Spec type_spec_SourceChangeRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_SourceChangeRequestedEventArgs = {
         "winrt._winrt_windows_media_playto.SourceChangeRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::SourceChangeRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SourceChangeRequestedEventArgs
-    };
+        _type_slots_SourceChangeRequestedEventArgs};
 
     // ----- VolumeChangeRequestedEventArgs class --------------------
 
@@ -3373,14 +3343,12 @@ namespace py::cpp::Windows::Media::PlayTo
         { },
     };
 
-    static PyType_Spec type_spec_VolumeChangeRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_VolumeChangeRequestedEventArgs = {
         "winrt._winrt_windows_media_playto.VolumeChangeRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::VolumeChangeRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_VolumeChangeRequestedEventArgs
-    };
+        _type_slots_VolumeChangeRequestedEventArgs};
 
     // ----- Windows.Media.PlayTo Initialization --------------------
 

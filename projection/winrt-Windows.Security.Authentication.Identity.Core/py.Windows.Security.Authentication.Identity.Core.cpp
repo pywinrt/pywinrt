@@ -390,14 +390,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
         { },
     };
 
-    static PyType_Spec type_spec_MicrosoftAccountMultiFactorAuthenticationManager =
-    {
+    static PyType_Spec type_spec_MicrosoftAccountMultiFactorAuthenticationManager = {
         "winrt._winrt_windows_security_authentication_identity_core.MicrosoftAccountMultiFactorAuthenticationManager",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MicrosoftAccountMultiFactorAuthenticationManager
-    };
+        _type_slots_MicrosoftAccountMultiFactorAuthenticationManager};
 
     static PyGetSetDef getset_MicrosoftAccountMultiFactorAuthenticationManager_Static[] = {
         { "current", reinterpret_cast<getter>(MicrosoftAccountMultiFactorAuthenticationManager_get_Current), nullptr, nullptr, nullptr },
@@ -525,14 +523,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
         { },
     };
 
-    static PyType_Spec type_spec_MicrosoftAccountMultiFactorGetSessionsResult =
-    {
+    static PyType_Spec type_spec_MicrosoftAccountMultiFactorGetSessionsResult = {
         "winrt._winrt_windows_security_authentication_identity_core.MicrosoftAccountMultiFactorGetSessionsResult",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MicrosoftAccountMultiFactorGetSessionsResult
-    };
+        _type_slots_MicrosoftAccountMultiFactorGetSessionsResult};
 
     // ----- MicrosoftAccountMultiFactorOneTimeCodedInfo class --------------------
 
@@ -674,14 +670,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
         { },
     };
 
-    static PyType_Spec type_spec_MicrosoftAccountMultiFactorOneTimeCodedInfo =
-    {
+    static PyType_Spec type_spec_MicrosoftAccountMultiFactorOneTimeCodedInfo = {
         "winrt._winrt_windows_security_authentication_identity_core.MicrosoftAccountMultiFactorOneTimeCodedInfo",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MicrosoftAccountMultiFactorOneTimeCodedInfo
-    };
+        _type_slots_MicrosoftAccountMultiFactorOneTimeCodedInfo};
 
     // ----- MicrosoftAccountMultiFactorSessionInfo class --------------------
 
@@ -883,14 +877,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
         { },
     };
 
-    static PyType_Spec type_spec_MicrosoftAccountMultiFactorSessionInfo =
-    {
+    static PyType_Spec type_spec_MicrosoftAccountMultiFactorSessionInfo = {
         "winrt._winrt_windows_security_authentication_identity_core.MicrosoftAccountMultiFactorSessionInfo",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MicrosoftAccountMultiFactorSessionInfo
-    };
+        _type_slots_MicrosoftAccountMultiFactorSessionInfo};
 
     // ----- MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo class --------------------
 
@@ -1012,14 +1004,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
         { },
     };
 
-    static PyType_Spec type_spec_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo =
-    {
+    static PyType_Spec type_spec_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo = {
         "winrt._winrt_windows_security_authentication_identity_core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
-    };
+        _type_slots_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo};
 
     // ----- Windows.Security.Authentication.Identity.Core Initialization --------------------
 

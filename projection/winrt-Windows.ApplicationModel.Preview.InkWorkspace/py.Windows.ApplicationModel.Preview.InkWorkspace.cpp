@@ -126,14 +126,12 @@ namespace py::cpp::Windows::ApplicationModel::Preview::InkWorkspace
         { },
     };
 
-    static PyType_Spec type_spec_InkWorkspaceHostedAppManager =
-    {
+    static PyType_Spec type_spec_InkWorkspaceHostedAppManager = {
         "winrt._winrt_windows_applicationmodel_preview_inkworkspace.InkWorkspaceHostedAppManager",
         sizeof(py::wrapper::Windows::ApplicationModel::Preview::InkWorkspace::InkWorkspaceHostedAppManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InkWorkspaceHostedAppManager
-    };
+        _type_slots_InkWorkspaceHostedAppManager};
 
     static PyGetSetDef getset_InkWorkspaceHostedAppManager_Static[] = {
         { }

@@ -187,14 +187,12 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { },
     };
 
-    static PyType_Spec type_spec_AppListEntry =
-    {
+    static PyType_Spec type_spec_AppListEntry = {
         "winrt._winrt_windows_applicationmodel_core.AppListEntry",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::AppListEntry),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_AppListEntry
-    };
+        _type_slots_AppListEntry};
 
     // ----- CoreApplication class --------------------
 
@@ -960,14 +958,12 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreApplication =
-    {
+    static PyType_Spec type_spec_CoreApplication = {
         "winrt._winrt_windows_applicationmodel_core.CoreApplication",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreApplication
-    };
+        _type_slots_CoreApplication};
 
     static PyGetSetDef getset_CoreApplication_Static[] = {
         { "id", reinterpret_cast<getter>(CoreApplication_get_Id), nullptr, nullptr, nullptr },
@@ -1318,14 +1314,12 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreApplicationView =
-    {
+    static PyType_Spec type_spec_CoreApplicationView = {
         "winrt._winrt_windows_applicationmodel_core.CoreApplicationView",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreApplicationView
-    };
+        _type_slots_CoreApplicationView};
 
     // ----- CoreApplicationViewTitleBar class --------------------
 
@@ -1605,14 +1599,12 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { },
     };
 
-    static PyType_Spec type_spec_CoreApplicationViewTitleBar =
-    {
+    static PyType_Spec type_spec_CoreApplicationViewTitleBar = {
         "winrt._winrt_windows_applicationmodel_core.CoreApplicationViewTitleBar",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_CoreApplicationViewTitleBar
-    };
+        _type_slots_CoreApplicationViewTitleBar};
 
     // ----- HostedViewClosingEventArgs class --------------------
 
@@ -1704,14 +1696,12 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { },
     };
 
-    static PyType_Spec type_spec_HostedViewClosingEventArgs =
-    {
+    static PyType_Spec type_spec_HostedViewClosingEventArgs = {
         "winrt._winrt_windows_applicationmodel_core.HostedViewClosingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::HostedViewClosingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_HostedViewClosingEventArgs
-    };
+        _type_slots_HostedViewClosingEventArgs};
 
     // ----- UnhandledError class --------------------
 
@@ -1824,14 +1814,12 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { },
     };
 
-    static PyType_Spec type_spec_UnhandledError =
-    {
+    static PyType_Spec type_spec_UnhandledError = {
         "winrt._winrt_windows_applicationmodel_core.UnhandledError",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::UnhandledError),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UnhandledError
-    };
+        _type_slots_UnhandledError};
 
     // ----- UnhandledErrorDetectedEventArgs class --------------------
 
@@ -1913,14 +1901,12 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { },
     };
 
-    static PyType_Spec type_spec_UnhandledErrorDetectedEventArgs =
-    {
+    static PyType_Spec type_spec_UnhandledErrorDetectedEventArgs = {
         "winrt._winrt_windows_applicationmodel_core.UnhandledErrorDetectedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_UnhandledErrorDetectedEventArgs
-    };
+        _type_slots_UnhandledErrorDetectedEventArgs};
 
     // ----- ICoreApplicationUnhandledError interface --------------------
 
@@ -2027,14 +2013,12 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { },
     };
 
-    static PyType_Spec type_spec_ICoreApplicationUnhandledError =
-    {
+    static PyType_Spec type_spec_ICoreApplicationUnhandledError = {
         "winrt._winrt_windows_applicationmodel_core.ICoreApplicationUnhandledError",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ICoreApplicationUnhandledError
-    };
+        _type_slots_ICoreApplicationUnhandledError};
 
     // ----- IFrameworkView interface --------------------
 
@@ -2257,14 +2241,12 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { },
     };
 
-    static PyType_Spec type_spec_IFrameworkView =
-    {
+    static PyType_Spec type_spec_IFrameworkView = {
         "winrt._winrt_windows_applicationmodel_core.IFrameworkView",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::IFrameworkView),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IFrameworkView
-    };
+        _type_slots_IFrameworkView};
 
     // ----- IFrameworkViewSource interface --------------------
 
@@ -2356,14 +2338,12 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { },
     };
 
-    static PyType_Spec type_spec_IFrameworkViewSource =
-    {
+    static PyType_Spec type_spec_IFrameworkViewSource = {
         "winrt._winrt_windows_applicationmodel_core.IFrameworkViewSource",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::IFrameworkViewSource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_IFrameworkViewSource
-    };
+        _type_slots_IFrameworkViewSource};
 
     // ----- Windows.ApplicationModel.Core Initialization --------------------
 

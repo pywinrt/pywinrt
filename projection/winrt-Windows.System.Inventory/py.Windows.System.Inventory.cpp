@@ -218,14 +218,12 @@ namespace py::cpp::Windows::System::Inventory
         { },
     };
 
-    static PyType_Spec type_spec_InstalledDesktopApp =
-    {
+    static PyType_Spec type_spec_InstalledDesktopApp = {
         "winrt._winrt_windows_system_inventory.InstalledDesktopApp",
         sizeof(py::wrapper::Windows::System::Inventory::InstalledDesktopApp),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_InstalledDesktopApp
-    };
+        _type_slots_InstalledDesktopApp};
 
     static PyGetSetDef getset_InstalledDesktopApp_Static[] = {
         { }

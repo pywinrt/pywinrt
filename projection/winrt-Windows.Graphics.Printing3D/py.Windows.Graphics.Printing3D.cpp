@@ -168,14 +168,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Print3DManager =
-    {
+    static PyType_Spec type_spec_Print3DManager = {
         "winrt._winrt_windows_graphics_printing3d.Print3DManager",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Print3DManager),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Print3DManager
-    };
+        _type_slots_Print3DManager};
 
     static PyGetSetDef getset_Print3DManager_Static[] = {
         { }
@@ -419,14 +417,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Print3DTask =
-    {
+    static PyType_Spec type_spec_Print3DTask = {
         "winrt._winrt_windows_graphics_printing3d.Print3DTask",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Print3DTask),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Print3DTask
-    };
+        _type_slots_Print3DTask};
 
     // ----- Print3DTaskCompletedEventArgs class --------------------
 
@@ -528,14 +524,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Print3DTaskCompletedEventArgs =
-    {
+    static PyType_Spec type_spec_Print3DTaskCompletedEventArgs = {
         "winrt._winrt_windows_graphics_printing3d.Print3DTaskCompletedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Print3DTaskCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Print3DTaskCompletedEventArgs
-    };
+        _type_slots_Print3DTaskCompletedEventArgs};
 
     // ----- Print3DTaskRequest class --------------------
 
@@ -631,14 +625,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Print3DTaskRequest =
-    {
+    static PyType_Spec type_spec_Print3DTaskRequest = {
         "winrt._winrt_windows_graphics_printing3d.Print3DTaskRequest",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Print3DTaskRequest),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Print3DTaskRequest
-    };
+        _type_slots_Print3DTaskRequest};
 
     // ----- Print3DTaskRequestedEventArgs class --------------------
 
@@ -720,14 +712,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Print3DTaskRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_Print3DTaskRequestedEventArgs = {
         "winrt._winrt_windows_graphics_printing3d.Print3DTaskRequestedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Print3DTaskRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Print3DTaskRequestedEventArgs
-    };
+        _type_slots_Print3DTaskRequestedEventArgs};
 
     // ----- Print3DTaskSourceChangedEventArgs class --------------------
 
@@ -809,14 +799,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Print3DTaskSourceChangedEventArgs =
-    {
+    static PyType_Spec type_spec_Print3DTaskSourceChangedEventArgs = {
         "winrt._winrt_windows_graphics_printing3d.Print3DTaskSourceChangedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Print3DTaskSourceChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Print3DTaskSourceChangedEventArgs
-    };
+        _type_slots_Print3DTaskSourceChangedEventArgs};
 
     // ----- Print3DTaskSourceRequestedArgs class --------------------
 
@@ -911,14 +899,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Print3DTaskSourceRequestedArgs =
-    {
+    static PyType_Spec type_spec_Print3DTaskSourceRequestedArgs = {
         "winrt._winrt_windows_graphics_printing3d.Print3DTaskSourceRequestedArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Print3DTaskSourceRequestedArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Print3DTaskSourceRequestedArgs
-    };
+        _type_slots_Print3DTaskSourceRequestedArgs};
 
     // ----- Printing3D3MFPackage class --------------------
 
@@ -1339,14 +1325,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3D3MFPackage =
-    {
+    static PyType_Spec type_spec_Printing3D3MFPackage = {
         "winrt._winrt_windows_graphics_printing3d.Printing3D3MFPackage",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3D3MFPackage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3D3MFPackage
-    };
+        _type_slots_Printing3D3MFPackage};
 
     static PyGetSetDef getset_Printing3D3MFPackage_Static[] = {
         { }
@@ -1590,14 +1574,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DBaseMaterial =
-    {
+    static PyType_Spec type_spec_Printing3DBaseMaterial = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DBaseMaterial",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DBaseMaterial),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DBaseMaterial
-    };
+        _type_slots_Printing3DBaseMaterial};
 
     static PyGetSetDef getset_Printing3DBaseMaterial_Static[] = {
         { "abs", reinterpret_cast<getter>(Printing3DBaseMaterial_get_Abs), nullptr, nullptr, nullptr },
@@ -1750,14 +1732,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DBaseMaterialGroup =
-    {
+    static PyType_Spec type_spec_Printing3DBaseMaterialGroup = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DBaseMaterialGroup",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DBaseMaterialGroup
-    };
+        _type_slots_Printing3DBaseMaterialGroup};
 
     // ----- Printing3DColorMaterial class --------------------
 
@@ -1937,14 +1917,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DColorMaterial =
-    {
+    static PyType_Spec type_spec_Printing3DColorMaterial = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DColorMaterial",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DColorMaterial),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DColorMaterial
-    };
+        _type_slots_Printing3DColorMaterial};
 
     // ----- Printing3DColorMaterialGroup class --------------------
 
@@ -2070,14 +2048,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DColorMaterialGroup =
-    {
+    static PyType_Spec type_spec_Printing3DColorMaterialGroup = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DColorMaterialGroup",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DColorMaterialGroup
-    };
+        _type_slots_Printing3DColorMaterialGroup};
 
     // ----- Printing3DComponent class --------------------
 
@@ -2421,14 +2397,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DComponent =
-    {
+    static PyType_Spec type_spec_Printing3DComponent = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DComponent",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DComponent
-    };
+        _type_slots_Printing3DComponent};
 
     // ----- Printing3DComponentWithMatrix class --------------------
 
@@ -2608,14 +2582,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DComponentWithMatrix =
-    {
+    static PyType_Spec type_spec_Printing3DComponentWithMatrix = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DComponentWithMatrix",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DComponentWithMatrix
-    };
+        _type_slots_Printing3DComponentWithMatrix};
 
     // ----- Printing3DCompositeMaterial class --------------------
 
@@ -2719,14 +2691,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DCompositeMaterial =
-    {
+    static PyType_Spec type_spec_Printing3DCompositeMaterial = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DCompositeMaterial",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DCompositeMaterial),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DCompositeMaterial
-    };
+        _type_slots_Printing3DCompositeMaterial};
 
     // ----- Printing3DCompositeMaterialGroup class --------------------
 
@@ -2920,14 +2890,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DCompositeMaterialGroup =
-    {
+    static PyType_Spec type_spec_Printing3DCompositeMaterialGroup = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DCompositeMaterialGroup",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DCompositeMaterialGroup
-    };
+        _type_slots_Printing3DCompositeMaterialGroup};
 
     // ----- Printing3DFaceReductionOptions class --------------------
 
@@ -3155,14 +3123,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DFaceReductionOptions =
-    {
+    static PyType_Spec type_spec_Printing3DFaceReductionOptions = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DFaceReductionOptions",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DFaceReductionOptions
-    };
+        _type_slots_Printing3DFaceReductionOptions};
 
     // ----- Printing3DMaterial class --------------------
 
@@ -3346,14 +3312,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DMaterial =
-    {
+    static PyType_Spec type_spec_Printing3DMaterial = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DMaterial",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DMaterial),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DMaterial
-    };
+        _type_slots_Printing3DMaterial};
 
     // ----- Printing3DMesh class --------------------
 
@@ -4049,14 +4013,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DMesh =
-    {
+    static PyType_Spec type_spec_Printing3DMesh = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DMesh",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DMesh
-    };
+        _type_slots_Printing3DMesh};
 
     // ----- Printing3DMeshVerificationResult class --------------------
 
@@ -4178,14 +4140,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DMeshVerificationResult =
-    {
+    static PyType_Spec type_spec_Printing3DMeshVerificationResult = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DMeshVerificationResult",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DMeshVerificationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DMeshVerificationResult
-    };
+        _type_slots_Printing3DMeshVerificationResult};
 
     // ----- Printing3DModel class --------------------
 
@@ -4772,14 +4732,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DModel =
-    {
+    static PyType_Spec type_spec_Printing3DModel = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DModel",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DModel
-    };
+        _type_slots_Printing3DModel};
 
     // ----- Printing3DModelTexture class --------------------
 
@@ -5007,14 +4965,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DModelTexture =
-    {
+    static PyType_Spec type_spec_Printing3DModelTexture = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DModelTexture",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DModelTexture),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DModelTexture
-    };
+        _type_slots_Printing3DModelTexture};
 
     // ----- Printing3DMultiplePropertyMaterial class --------------------
 
@@ -5118,14 +5074,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DMultiplePropertyMaterial =
-    {
+    static PyType_Spec type_spec_Printing3DMultiplePropertyMaterial = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DMultiplePropertyMaterial",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DMultiplePropertyMaterial
-    };
+        _type_slots_Printing3DMultiplePropertyMaterial};
 
     // ----- Printing3DMultiplePropertyMaterialGroup class --------------------
 
@@ -5271,14 +5225,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DMultiplePropertyMaterialGroup =
-    {
+    static PyType_Spec type_spec_Printing3DMultiplePropertyMaterialGroup = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DMultiplePropertyMaterialGroup",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterialGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DMultiplePropertyMaterialGroup
-    };
+        _type_slots_Printing3DMultiplePropertyMaterialGroup};
 
     // ----- Printing3DTexture2CoordMaterial class --------------------
 
@@ -5506,14 +5458,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DTexture2CoordMaterial =
-    {
+    static PyType_Spec type_spec_Printing3DTexture2CoordMaterial = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DTexture2CoordMaterial",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DTexture2CoordMaterial
-    };
+        _type_slots_Printing3DTexture2CoordMaterial};
 
     // ----- Printing3DTexture2CoordMaterialGroup class --------------------
 
@@ -5687,14 +5637,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DTexture2CoordMaterialGroup =
-    {
+    static PyType_Spec type_spec_Printing3DTexture2CoordMaterialGroup = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DTexture2CoordMaterialGroup",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DTexture2CoordMaterialGroup
-    };
+        _type_slots_Printing3DTexture2CoordMaterialGroup};
 
     // ----- Printing3DTextureResource class --------------------
 
@@ -5874,14 +5822,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DTextureResource =
-    {
+    static PyType_Spec type_spec_Printing3DTextureResource = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DTextureResource",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DTextureResource),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DTextureResource
-    };
+        _type_slots_Printing3DTextureResource};
 
     // ----- Printing3DBufferDescription struct --------------------
 
@@ -6035,14 +5981,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { },
     };
 
-    static PyType_Spec type_spec_Printing3DBufferDescription =
-    {
+    static PyType_Spec type_spec_Printing3DBufferDescription = {
         "winrt._winrt_windows_graphics_printing3d.Printing3DBufferDescription",
         sizeof(py::wrapper::Windows::Graphics::Printing3D::Printing3DBufferDescription),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_Printing3DBufferDescription
-    };
+        _type_slots_Printing3DBufferDescription};
 
     // ----- Windows.Graphics.Printing3D Initialization --------------------
 

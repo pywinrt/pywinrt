@@ -348,14 +348,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { },
     };
 
-    static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthentication =
-    {
+    static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthentication = {
         "winrt._winrt_windows_security_authentication_identity_provider.SecondaryAuthenticationFactorAuthentication",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SecondaryAuthenticationFactorAuthentication
-    };
+        _type_slots_SecondaryAuthenticationFactorAuthentication};
 
     static PyGetSetDef getset_SecondaryAuthenticationFactorAuthentication_Static[] = {
         { }
@@ -485,14 +483,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { },
     };
 
-    static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthenticationResult =
-    {
+    static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthenticationResult = {
         "winrt._winrt_windows_security_authentication_identity_provider.SecondaryAuthenticationFactorAuthenticationResult",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SecondaryAuthenticationFactorAuthenticationResult
-    };
+        _type_slots_SecondaryAuthenticationFactorAuthenticationResult};
 
     // ----- SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs class --------------------
 
@@ -574,14 +570,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { },
     };
 
-    static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs =
-    {
+    static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs = {
         "winrt._winrt_windows_security_authentication_identity_provider.SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs
-    };
+        _type_slots_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs};
 
     // ----- SecondaryAuthenticationFactorAuthenticationStageInfo class --------------------
 
@@ -703,14 +697,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { },
     };
 
-    static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthenticationStageInfo =
-    {
+    static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthenticationStageInfo = {
         "winrt._winrt_windows_security_authentication_identity_provider.SecondaryAuthenticationFactorAuthenticationStageInfo",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SecondaryAuthenticationFactorAuthenticationStageInfo
-    };
+        _type_slots_SecondaryAuthenticationFactorAuthenticationStageInfo};
 
     // ----- SecondaryAuthenticationFactorInfo class --------------------
 
@@ -924,14 +916,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { },
     };
 
-    static PyType_Spec type_spec_SecondaryAuthenticationFactorInfo =
-    {
+    static PyType_Spec type_spec_SecondaryAuthenticationFactorInfo = {
         "winrt._winrt_windows_security_authentication_identity_provider.SecondaryAuthenticationFactorInfo",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SecondaryAuthenticationFactorInfo
-    };
+        _type_slots_SecondaryAuthenticationFactorInfo};
 
     // ----- SecondaryAuthenticationFactorRegistration class --------------------
 
@@ -1305,14 +1295,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { },
     };
 
-    static PyType_Spec type_spec_SecondaryAuthenticationFactorRegistration =
-    {
+    static PyType_Spec type_spec_SecondaryAuthenticationFactorRegistration = {
         "winrt._winrt_windows_security_authentication_identity_provider.SecondaryAuthenticationFactorRegistration",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SecondaryAuthenticationFactorRegistration
-    };
+        _type_slots_SecondaryAuthenticationFactorRegistration};
 
     static PyGetSetDef getset_SecondaryAuthenticationFactorRegistration_Static[] = {
         { }
@@ -1446,14 +1434,12 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { },
     };
 
-    static PyType_Spec type_spec_SecondaryAuthenticationFactorRegistrationResult =
-    {
+    static PyType_Spec type_spec_SecondaryAuthenticationFactorRegistrationResult = {
         "winrt._winrt_windows_security_authentication_identity_provider.SecondaryAuthenticationFactorRegistrationResult",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistrationResult),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_SecondaryAuthenticationFactorRegistrationResult
-    };
+        _type_slots_SecondaryAuthenticationFactorRegistrationResult};
 
     // ----- Windows.Security.Authentication.Identity.Provider Initialization --------------------
 

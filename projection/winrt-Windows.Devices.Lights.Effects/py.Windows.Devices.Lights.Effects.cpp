@@ -347,14 +347,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { },
     };
 
-    static PyType_Spec type_spec_LampArrayBitmapEffect =
-    {
+    static PyType_Spec type_spec_LampArrayBitmapEffect = {
         "winrt._winrt_windows_devices_lights_effects.LampArrayBitmapEffect",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapEffect),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LampArrayBitmapEffect
-    };
+        _type_slots_LampArrayBitmapEffect};
 
     // ----- LampArrayBitmapRequestedEventArgs class --------------------
 
@@ -469,14 +467,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { },
     };
 
-    static PyType_Spec type_spec_LampArrayBitmapRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_LampArrayBitmapRequestedEventArgs = {
         "winrt._winrt_windows_devices_lights_effects.LampArrayBitmapRequestedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LampArrayBitmapRequestedEventArgs
-    };
+        _type_slots_LampArrayBitmapRequestedEventArgs};
 
     // ----- LampArrayBlinkEffect class --------------------
 
@@ -995,14 +991,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { },
     };
 
-    static PyType_Spec type_spec_LampArrayBlinkEffect =
-    {
+    static PyType_Spec type_spec_LampArrayBlinkEffect = {
         "winrt._winrt_windows_devices_lights_effects.LampArrayBlinkEffect",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LampArrayBlinkEffect
-    };
+        _type_slots_LampArrayBlinkEffect};
 
     // ----- LampArrayColorRampEffect class --------------------
 
@@ -1329,14 +1323,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { },
     };
 
-    static PyType_Spec type_spec_LampArrayColorRampEffect =
-    {
+    static PyType_Spec type_spec_LampArrayColorRampEffect = {
         "winrt._winrt_windows_devices_lights_effects.LampArrayColorRampEffect",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::LampArrayColorRampEffect),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LampArrayColorRampEffect
-    };
+        _type_slots_LampArrayColorRampEffect};
 
     // ----- LampArrayCustomEffect class --------------------
 
@@ -1612,14 +1604,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { },
     };
 
-    static PyType_Spec type_spec_LampArrayCustomEffect =
-    {
+    static PyType_Spec type_spec_LampArrayCustomEffect = {
         "winrt._winrt_windows_devices_lights_effects.LampArrayCustomEffect",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::LampArrayCustomEffect),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LampArrayCustomEffect
-    };
+        _type_slots_LampArrayCustomEffect};
 
     // ----- LampArrayEffectPlaylist class --------------------
 
@@ -2365,14 +2355,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { },
     };
 
-    static PyType_Spec type_spec_LampArrayEffectPlaylist =
-    {
+    static PyType_Spec type_spec_LampArrayEffectPlaylist = {
         "winrt._winrt_windows_devices_lights_effects.LampArrayEffectPlaylist",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LampArrayEffectPlaylist
-    };
+        _type_slots_LampArrayEffectPlaylist};
 
     static PyGetSetDef getset_LampArrayEffectPlaylist_Static[] = {
         { }
@@ -2727,14 +2715,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { },
     };
 
-    static PyType_Spec type_spec_LampArraySolidEffect =
-    {
+    static PyType_Spec type_spec_LampArraySolidEffect = {
         "winrt._winrt_windows_devices_lights_effects.LampArraySolidEffect",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::LampArraySolidEffect),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LampArraySolidEffect
-    };
+        _type_slots_LampArraySolidEffect};
 
     // ----- LampArrayUpdateRequestedEventArgs class --------------------
 
@@ -2951,14 +2937,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { },
     };
 
-    static PyType_Spec type_spec_LampArrayUpdateRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_LampArrayUpdateRequestedEventArgs = {
         "winrt._winrt_windows_devices_lights_effects.LampArrayUpdateRequestedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_LampArrayUpdateRequestedEventArgs
-    };
+        _type_slots_LampArrayUpdateRequestedEventArgs};
 
     // ----- ILampArrayEffect interface --------------------
 
@@ -3068,14 +3052,12 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { },
     };
 
-    static PyType_Spec type_spec_ILampArrayEffect =
-    {
+    static PyType_Spec type_spec_ILampArrayEffect = {
         "winrt._winrt_windows_devices_lights_effects.ILampArrayEffect",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::ILampArrayEffect),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_ILampArrayEffect
-    };
+        _type_slots_ILampArrayEffect};
 
     // ----- Windows.Devices.Lights.Effects Initialization --------------------
 

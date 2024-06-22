@@ -251,14 +251,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { },
     };
 
-    static PyType_Spec type_spec_PrintSupportExtensionSession =
-    {
+    static PyType_Spec type_spec_PrintSupportExtensionSession = {
         "winrt._winrt_windows_graphics_printing_printsupport.PrintSupportExtensionSession",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintSupportExtensionSession
-    };
+        _type_slots_PrintSupportExtensionSession};
 
     // ----- PrintSupportExtensionTriggerDetails class --------------------
 
@@ -340,14 +338,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { },
     };
 
-    static PyType_Spec type_spec_PrintSupportExtensionTriggerDetails =
-    {
+    static PyType_Spec type_spec_PrintSupportExtensionTriggerDetails = {
         "winrt._winrt_windows_graphics_printing_printsupport.PrintSupportExtensionTriggerDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintSupportExtensionTriggerDetails
-    };
+        _type_slots_PrintSupportExtensionTriggerDetails};
 
     // ----- PrintSupportPrintDeviceCapabilitiesChangedEventArgs class --------------------
 
@@ -651,14 +647,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { },
     };
 
-    static PyType_Spec type_spec_PrintSupportPrintDeviceCapabilitiesChangedEventArgs =
-    {
+    static PyType_Spec type_spec_PrintSupportPrintDeviceCapabilitiesChangedEventArgs = {
         "winrt._winrt_windows_graphics_printing_printsupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintSupportPrintDeviceCapabilitiesChangedEventArgs
-    };
+        _type_slots_PrintSupportPrintDeviceCapabilitiesChangedEventArgs};
 
     // ----- PrintSupportPrintDeviceCapabilitiesUpdatePolicy class --------------------
 
@@ -782,14 +776,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { },
     };
 
-    static PyType_Spec type_spec_PrintSupportPrintDeviceCapabilitiesUpdatePolicy =
-    {
+    static PyType_Spec type_spec_PrintSupportPrintDeviceCapabilitiesUpdatePolicy = {
         "winrt._winrt_windows_graphics_printing_printsupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintSupportPrintDeviceCapabilitiesUpdatePolicy
-    };
+        _type_slots_PrintSupportPrintDeviceCapabilitiesUpdatePolicy};
 
     static PyGetSetDef getset_PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static[] = {
         { }
@@ -996,14 +988,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { },
     };
 
-    static PyType_Spec type_spec_PrintSupportPrintTicketElement =
-    {
+    static PyType_Spec type_spec_PrintSupportPrintTicketElement = {
         "winrt._winrt_windows_graphics_printing_printsupport.PrintSupportPrintTicketElement",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintSupportPrintTicketElement
-    };
+        _type_slots_PrintSupportPrintTicketElement};
 
     // ----- PrintSupportPrintTicketValidationRequestedEventArgs class --------------------
 
@@ -1148,14 +1138,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { },
     };
 
-    static PyType_Spec type_spec_PrintSupportPrintTicketValidationRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_PrintSupportPrintTicketValidationRequestedEventArgs = {
         "winrt._winrt_windows_graphics_printing_printsupport.PrintSupportPrintTicketValidationRequestedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintSupportPrintTicketValidationRequestedEventArgs
-    };
+        _type_slots_PrintSupportPrintTicketValidationRequestedEventArgs};
 
     // ----- PrintSupportPrinterSelectedEventArgs class --------------------
 
@@ -1434,14 +1422,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { },
     };
 
-    static PyType_Spec type_spec_PrintSupportPrinterSelectedEventArgs =
-    {
+    static PyType_Spec type_spec_PrintSupportPrinterSelectedEventArgs = {
         "winrt._winrt_windows_graphics_printing_printsupport.PrintSupportPrinterSelectedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintSupportPrinterSelectedEventArgs
-    };
+        _type_slots_PrintSupportPrinterSelectedEventArgs};
 
     // ----- PrintSupportSessionInfo class --------------------
 
@@ -1543,14 +1529,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { },
     };
 
-    static PyType_Spec type_spec_PrintSupportSessionInfo =
-    {
+    static PyType_Spec type_spec_PrintSupportSessionInfo = {
         "winrt._winrt_windows_graphics_printing_printsupport.PrintSupportSessionInfo",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSessionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintSupportSessionInfo
-    };
+        _type_slots_PrintSupportSessionInfo};
 
     // ----- PrintSupportSettingsActivatedEventArgs class --------------------
 
@@ -1742,14 +1726,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { },
     };
 
-    static PyType_Spec type_spec_PrintSupportSettingsActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_PrintSupportSettingsActivatedEventArgs = {
         "winrt._winrt_windows_graphics_printing_printsupport.PrintSupportSettingsActivatedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintSupportSettingsActivatedEventArgs
-    };
+        _type_slots_PrintSupportSettingsActivatedEventArgs};
 
     // ----- PrintSupportSettingsUISession class --------------------
 
@@ -1924,14 +1906,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { },
     };
 
-    static PyType_Spec type_spec_PrintSupportSettingsUISession =
-    {
+    static PyType_Spec type_spec_PrintSupportSettingsUISession = {
         "winrt._winrt_windows_graphics_printing_printsupport.PrintSupportSettingsUISession",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintSupportSettingsUISession
-    };
+        _type_slots_PrintSupportSettingsUISession};
 
     // ----- Windows.Graphics.Printing.PrintSupport Initialization --------------------
 

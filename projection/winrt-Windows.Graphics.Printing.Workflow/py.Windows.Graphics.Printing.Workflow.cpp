@@ -206,14 +206,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowBackgroundSession =
-    {
+    static PyType_Spec type_spec_PrintWorkflowBackgroundSession = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowBackgroundSession",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowBackgroundSession
-    };
+        _type_slots_PrintWorkflowBackgroundSession};
 
     // ----- PrintWorkflowBackgroundSetupRequestedEventArgs class --------------------
 
@@ -386,14 +384,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowBackgroundSetupRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_PrintWorkflowBackgroundSetupRequestedEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowBackgroundSetupRequestedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSetupRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowBackgroundSetupRequestedEventArgs
-    };
+        _type_slots_PrintWorkflowBackgroundSetupRequestedEventArgs};
 
     // ----- PrintWorkflowConfiguration class --------------------
 
@@ -548,14 +544,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowConfiguration =
-    {
+    static PyType_Spec type_spec_PrintWorkflowConfiguration = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowConfiguration",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowConfiguration
-    };
+        _type_slots_PrintWorkflowConfiguration};
 
     // ----- PrintWorkflowForegroundSession class --------------------
 
@@ -758,14 +752,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowForegroundSession =
-    {
+    static PyType_Spec type_spec_PrintWorkflowForegroundSession = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowForegroundSession",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowForegroundSession
-    };
+        _type_slots_PrintWorkflowForegroundSession};
 
     // ----- PrintWorkflowForegroundSetupRequestedEventArgs class --------------------
 
@@ -907,14 +899,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowForegroundSetupRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_PrintWorkflowForegroundSetupRequestedEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowForegroundSetupRequestedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSetupRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowForegroundSetupRequestedEventArgs
-    };
+        _type_slots_PrintWorkflowForegroundSetupRequestedEventArgs};
 
     // ----- PrintWorkflowJobActivatedEventArgs class --------------------
 
@@ -1076,14 +1066,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowJobActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_PrintWorkflowJobActivatedEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowJobActivatedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowJobActivatedEventArgs
-    };
+        _type_slots_PrintWorkflowJobActivatedEventArgs};
 
     // ----- PrintWorkflowJobBackgroundSession class --------------------
 
@@ -1286,14 +1274,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowJobBackgroundSession =
-    {
+    static PyType_Spec type_spec_PrintWorkflowJobBackgroundSession = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowJobBackgroundSession",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowJobBackgroundSession
-    };
+        _type_slots_PrintWorkflowJobBackgroundSession};
 
     // ----- PrintWorkflowJobNotificationEventArgs class --------------------
 
@@ -1425,14 +1411,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowJobNotificationEventArgs =
-    {
+    static PyType_Spec type_spec_PrintWorkflowJobNotificationEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowJobNotificationEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobNotificationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowJobNotificationEventArgs
-    };
+        _type_slots_PrintWorkflowJobNotificationEventArgs};
 
     // ----- PrintWorkflowJobStartingEventArgs class --------------------
 
@@ -1595,14 +1579,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowJobStartingEventArgs =
-    {
+    static PyType_Spec type_spec_PrintWorkflowJobStartingEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowJobStartingEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowJobStartingEventArgs
-    };
+        _type_slots_PrintWorkflowJobStartingEventArgs};
 
     // ----- PrintWorkflowJobTriggerDetails class --------------------
 
@@ -1684,14 +1666,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowJobTriggerDetails =
-    {
+    static PyType_Spec type_spec_PrintWorkflowJobTriggerDetails = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowJobTriggerDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowJobTriggerDetails
-    };
+        _type_slots_PrintWorkflowJobTriggerDetails};
 
     // ----- PrintWorkflowJobUISession class --------------------
 
@@ -1894,14 +1874,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowJobUISession =
-    {
+    static PyType_Spec type_spec_PrintWorkflowJobUISession = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowJobUISession",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobUISession),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowJobUISession
-    };
+        _type_slots_PrintWorkflowJobUISession};
 
     // ----- PrintWorkflowObjectModelSourceFileContent class --------------------
 
@@ -1987,14 +1965,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowObjectModelSourceFileContent =
-    {
+    static PyType_Spec type_spec_PrintWorkflowObjectModelSourceFileContent = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowObjectModelSourceFileContent",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelSourceFileContent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowObjectModelSourceFileContent
-    };
+        _type_slots_PrintWorkflowObjectModelSourceFileContent};
 
     // ----- PrintWorkflowObjectModelTargetPackage class --------------------
 
@@ -2056,14 +2032,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowObjectModelTargetPackage =
-    {
+    static PyType_Spec type_spec_PrintWorkflowObjectModelTargetPackage = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowObjectModelTargetPackage",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelTargetPackage),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowObjectModelTargetPackage
-    };
+        _type_slots_PrintWorkflowObjectModelTargetPackage};
 
     // ----- PrintWorkflowPdlConverter class --------------------
 
@@ -2182,14 +2156,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowPdlConverter =
-    {
+    static PyType_Spec type_spec_PrintWorkflowPdlConverter = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowPdlConverter",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlConverter),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowPdlConverter
-    };
+        _type_slots_PrintWorkflowPdlConverter};
 
     // ----- PrintWorkflowPdlDataAvailableEventArgs class --------------------
 
@@ -2341,14 +2313,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowPdlDataAvailableEventArgs =
-    {
+    static PyType_Spec type_spec_PrintWorkflowPdlDataAvailableEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowPdlDataAvailableEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlDataAvailableEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowPdlDataAvailableEventArgs
-    };
+        _type_slots_PrintWorkflowPdlDataAvailableEventArgs};
 
     // ----- PrintWorkflowPdlModificationRequestedEventArgs class --------------------
 
@@ -2698,14 +2668,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowPdlModificationRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_PrintWorkflowPdlModificationRequestedEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowPdlModificationRequestedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowPdlModificationRequestedEventArgs
-    };
+        _type_slots_PrintWorkflowPdlModificationRequestedEventArgs};
 
     // ----- PrintWorkflowPdlSourceContent class --------------------
 
@@ -2847,14 +2815,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowPdlSourceContent =
-    {
+    static PyType_Spec type_spec_PrintWorkflowPdlSourceContent = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowPdlSourceContent",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlSourceContent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowPdlSourceContent
-    };
+        _type_slots_PrintWorkflowPdlSourceContent};
 
     // ----- PrintWorkflowPdlTargetStream class --------------------
 
@@ -2979,14 +2945,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowPdlTargetStream =
-    {
+    static PyType_Spec type_spec_PrintWorkflowPdlTargetStream = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowPdlTargetStream",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlTargetStream),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowPdlTargetStream
-    };
+        _type_slots_PrintWorkflowPdlTargetStream};
 
     // ----- PrintWorkflowPrinterJob class --------------------
 
@@ -3276,14 +3240,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowPrinterJob =
-    {
+    static PyType_Spec type_spec_PrintWorkflowPrinterJob = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowPrinterJob",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJob),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowPrinterJob
-    };
+        _type_slots_PrintWorkflowPrinterJob};
 
     // ----- PrintWorkflowSourceContent class --------------------
 
@@ -3435,14 +3397,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowSourceContent =
-    {
+    static PyType_Spec type_spec_PrintWorkflowSourceContent = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowSourceContent",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowSourceContent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowSourceContent
-    };
+        _type_slots_PrintWorkflowSourceContent};
 
     // ----- PrintWorkflowSpoolStreamContent class --------------------
 
@@ -3534,14 +3494,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowSpoolStreamContent =
-    {
+    static PyType_Spec type_spec_PrintWorkflowSpoolStreamContent = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowSpoolStreamContent",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowSpoolStreamContent),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowSpoolStreamContent
-    };
+        _type_slots_PrintWorkflowSpoolStreamContent};
 
     // ----- PrintWorkflowStreamTarget class --------------------
 
@@ -3633,14 +3591,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowStreamTarget =
-    {
+    static PyType_Spec type_spec_PrintWorkflowStreamTarget = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowStreamTarget",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowStreamTarget),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowStreamTarget
-    };
+        _type_slots_PrintWorkflowStreamTarget};
 
     // ----- PrintWorkflowSubmittedEventArgs class --------------------
 
@@ -3784,14 +3740,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowSubmittedEventArgs =
-    {
+    static PyType_Spec type_spec_PrintWorkflowSubmittedEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowSubmittedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowSubmittedEventArgs
-    };
+        _type_slots_PrintWorkflowSubmittedEventArgs};
 
     // ----- PrintWorkflowSubmittedOperation class --------------------
 
@@ -3926,14 +3880,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowSubmittedOperation =
-    {
+    static PyType_Spec type_spec_PrintWorkflowSubmittedOperation = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowSubmittedOperation",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedOperation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowSubmittedOperation
-    };
+        _type_slots_PrintWorkflowSubmittedOperation};
 
     // ----- PrintWorkflowTarget class --------------------
 
@@ -4035,14 +3987,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowTarget =
-    {
+    static PyType_Spec type_spec_PrintWorkflowTarget = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowTarget",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowTarget),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowTarget
-    };
+        _type_slots_PrintWorkflowTarget};
 
     // ----- PrintWorkflowTriggerDetails class --------------------
 
@@ -4124,14 +4074,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowTriggerDetails =
-    {
+    static PyType_Spec type_spec_PrintWorkflowTriggerDetails = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowTriggerDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowTriggerDetails
-    };
+        _type_slots_PrintWorkflowTriggerDetails};
 
     // ----- PrintWorkflowUIActivatedEventArgs class --------------------
 
@@ -4293,14 +4241,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowUIActivatedEventArgs =
-    {
+    static PyType_Spec type_spec_PrintWorkflowUIActivatedEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowUIActivatedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowUIActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowUIActivatedEventArgs
-    };
+        _type_slots_PrintWorkflowUIActivatedEventArgs};
 
     // ----- PrintWorkflowUILauncher class --------------------
 
@@ -4422,14 +4368,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowUILauncher =
-    {
+    static PyType_Spec type_spec_PrintWorkflowUILauncher = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowUILauncher",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowUILauncher),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowUILauncher
-    };
+        _type_slots_PrintWorkflowUILauncher};
 
     // ----- PrintWorkflowXpsDataAvailableEventArgs class --------------------
 
@@ -4541,14 +4485,12 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { },
     };
 
-    static PyType_Spec type_spec_PrintWorkflowXpsDataAvailableEventArgs =
-    {
+    static PyType_Spec type_spec_PrintWorkflowXpsDataAvailableEventArgs = {
         "winrt._winrt_windows_graphics_printing_workflow.PrintWorkflowXpsDataAvailableEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowXpsDataAvailableEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_PrintWorkflowXpsDataAvailableEventArgs
-    };
+        _type_slots_PrintWorkflowXpsDataAvailableEventArgs};
 
     // ----- Windows.Graphics.Printing.Workflow Initialization --------------------
 

@@ -125,14 +125,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothLEAdvertisementPublisherTriggerDetails =
-    {
+    static PyType_Spec type_spec_BluetoothLEAdvertisementPublisherTriggerDetails = {
         "winrt._winrt_windows_devices_bluetooth_background.BluetoothLEAdvertisementPublisherTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementPublisherTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothLEAdvertisementPublisherTriggerDetails
-    };
+        _type_slots_BluetoothLEAdvertisementPublisherTriggerDetails};
 
     // ----- BluetoothLEAdvertisementWatcherTriggerDetails class --------------------
 
@@ -254,14 +252,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { },
     };
 
-    static PyType_Spec type_spec_BluetoothLEAdvertisementWatcherTriggerDetails =
-    {
+    static PyType_Spec type_spec_BluetoothLEAdvertisementWatcherTriggerDetails = {
         "winrt._winrt_windows_devices_bluetooth_background.BluetoothLEAdvertisementWatcherTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementWatcherTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_BluetoothLEAdvertisementWatcherTriggerDetails
-    };
+        _type_slots_BluetoothLEAdvertisementWatcherTriggerDetails};
 
     // ----- GattCharacteristicNotificationTriggerDetails class --------------------
 
@@ -423,14 +419,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { },
     };
 
-    static PyType_Spec type_spec_GattCharacteristicNotificationTriggerDetails =
-    {
+    static PyType_Spec type_spec_GattCharacteristicNotificationTriggerDetails = {
         "winrt._winrt_windows_devices_bluetooth_background.GattCharacteristicNotificationTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Background::GattCharacteristicNotificationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GattCharacteristicNotificationTriggerDetails
-    };
+        _type_slots_GattCharacteristicNotificationTriggerDetails};
 
     // ----- GattServiceProviderConnection class --------------------
 
@@ -582,14 +576,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { },
     };
 
-    static PyType_Spec type_spec_GattServiceProviderConnection =
-    {
+    static PyType_Spec type_spec_GattServiceProviderConnection = {
         "winrt._winrt_windows_devices_bluetooth_background.GattServiceProviderConnection",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Background::GattServiceProviderConnection),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GattServiceProviderConnection
-    };
+        _type_slots_GattServiceProviderConnection};
 
     static PyGetSetDef getset_GattServiceProviderConnection_Static[] = {
         { "all_services", reinterpret_cast<getter>(GattServiceProviderConnection_get_AllServices), nullptr, nullptr, nullptr },
@@ -697,14 +689,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { },
     };
 
-    static PyType_Spec type_spec_GattServiceProviderTriggerDetails =
-    {
+    static PyType_Spec type_spec_GattServiceProviderTriggerDetails = {
         "winrt._winrt_windows_devices_bluetooth_background.GattServiceProviderTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Background::GattServiceProviderTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_GattServiceProviderTriggerDetails
-    };
+        _type_slots_GattServiceProviderTriggerDetails};
 
     // ----- RfcommConnectionTriggerDetails class --------------------
 
@@ -826,14 +816,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { },
     };
 
-    static PyType_Spec type_spec_RfcommConnectionTriggerDetails =
-    {
+    static PyType_Spec type_spec_RfcommConnectionTriggerDetails = {
         "winrt._winrt_windows_devices_bluetooth_background.RfcommConnectionTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Background::RfcommConnectionTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RfcommConnectionTriggerDetails
-    };
+        _type_slots_RfcommConnectionTriggerDetails};
 
     // ----- RfcommInboundConnectionInformation class --------------------
 
@@ -1039,14 +1027,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { },
     };
 
-    static PyType_Spec type_spec_RfcommInboundConnectionInformation =
-    {
+    static PyType_Spec type_spec_RfcommInboundConnectionInformation = {
         "winrt._winrt_windows_devices_bluetooth_background.RfcommInboundConnectionInformation",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Background::RfcommInboundConnectionInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RfcommInboundConnectionInformation
-    };
+        _type_slots_RfcommInboundConnectionInformation};
 
     // ----- RfcommOutboundConnectionInformation class --------------------
 
@@ -1156,14 +1142,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         { },
     };
 
-    static PyType_Spec type_spec_RfcommOutboundConnectionInformation =
-    {
+    static PyType_Spec type_spec_RfcommOutboundConnectionInformation = {
         "winrt._winrt_windows_devices_bluetooth_background.RfcommOutboundConnectionInformation",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Background::RfcommOutboundConnectionInformation),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_RfcommOutboundConnectionInformation
-    };
+        _type_slots_RfcommOutboundConnectionInformation};
 
     // ----- Windows.Devices.Bluetooth.Background Initialization --------------------
 

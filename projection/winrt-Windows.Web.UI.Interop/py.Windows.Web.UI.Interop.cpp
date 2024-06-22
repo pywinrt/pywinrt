@@ -1912,14 +1912,12 @@ namespace py::cpp::Windows::Web::UI::Interop
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControl =
-    {
+    static PyType_Spec type_spec_WebViewControl = {
         "winrt._winrt_windows_web_ui_interop.WebViewControl",
         sizeof(py::wrapper::Windows::Web::UI::Interop::WebViewControl),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControl
-    };
+        _type_slots_WebViewControl};
 
     // ----- WebViewControlAcceleratorKeyPressedEventArgs class --------------------
 
@@ -2109,14 +2107,12 @@ namespace py::cpp::Windows::Web::UI::Interop
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControlAcceleratorKeyPressedEventArgs =
-    {
+    static PyType_Spec type_spec_WebViewControlAcceleratorKeyPressedEventArgs = {
         "winrt._winrt_windows_web_ui_interop.WebViewControlAcceleratorKeyPressedEventArgs",
         sizeof(py::wrapper::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControlAcceleratorKeyPressedEventArgs
-    };
+        _type_slots_WebViewControlAcceleratorKeyPressedEventArgs};
 
     // ----- WebViewControlMoveFocusRequestedEventArgs class --------------------
 
@@ -2198,14 +2194,12 @@ namespace py::cpp::Windows::Web::UI::Interop
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControlMoveFocusRequestedEventArgs =
-    {
+    static PyType_Spec type_spec_WebViewControlMoveFocusRequestedEventArgs = {
         "winrt._winrt_windows_web_ui_interop.WebViewControlMoveFocusRequestedEventArgs",
         sizeof(py::wrapper::Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControlMoveFocusRequestedEventArgs
-    };
+        _type_slots_WebViewControlMoveFocusRequestedEventArgs};
 
     // ----- WebViewControlProcess class --------------------
 
@@ -2503,14 +2497,12 @@ namespace py::cpp::Windows::Web::UI::Interop
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControlProcess =
-    {
+    static PyType_Spec type_spec_WebViewControlProcess = {
         "winrt._winrt_windows_web_ui_interop.WebViewControlProcess",
         sizeof(py::wrapper::Windows::Web::UI::Interop::WebViewControlProcess),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControlProcess
-    };
+        _type_slots_WebViewControlProcess};
 
     // ----- WebViewControlProcessOptions class --------------------
 
@@ -2690,14 +2682,12 @@ namespace py::cpp::Windows::Web::UI::Interop
         { },
     };
 
-    static PyType_Spec type_spec_WebViewControlProcessOptions =
-    {
+    static PyType_Spec type_spec_WebViewControlProcessOptions = {
         "winrt._winrt_windows_web_ui_interop.WebViewControlProcessOptions",
         sizeof(py::wrapper::Windows::Web::UI::Interop::WebViewControlProcessOptions),
         0,
         Py_TPFLAGS_DEFAULT,
-        _type_slots_WebViewControlProcessOptions
-    };
+        _type_slots_WebViewControlProcessOptions};
 
     // ----- Windows.Web.UI.Interop Initialization --------------------
 
