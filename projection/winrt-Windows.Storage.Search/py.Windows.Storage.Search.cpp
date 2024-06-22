@@ -2027,9 +2027,7 @@ namespace py::cpp::Windows::Storage::Search
 
             Py_ssize_t start, stop, step, length;
 
-            if (PySlice_GetIndicesEx(
-                    slice, self->obj.Size(), &start, &stop, &step, &length)
-                < 0)
+            if (PySlice_GetIndicesEx(slice, self->obj.Size(), &start, &stop, &step, &length) < 0)
             {
                 return nullptr;
             }

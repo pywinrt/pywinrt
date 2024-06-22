@@ -142,14 +142,9 @@ static class SeqWriterExtensions
             w.WriteBlankLine();
             w.WriteLine("Py_ssize_t start, stop, step, length;");
             w.WriteBlankLine();
-            // FIXME: put on single line
-            w.WriteLine($"if (PySlice_GetIndicesEx(");
-            w.Indent++;
-            w.Indent++;
-            w.WriteLine($"slice, {self}.Size(), &start, &stop, &step, &length)");
-            w.Indent--;
-            w.WriteLine("< 0)");
-            w.Indent--;
+            w.WriteLine(
+                $"if (PySlice_GetIndicesEx(slice, {self}.Size(), &start, &stop, &step, &length) < 0)"
+            );
             w.WriteLine("{");
             w.Indent++;
             w.WriteLine("return nullptr;");
