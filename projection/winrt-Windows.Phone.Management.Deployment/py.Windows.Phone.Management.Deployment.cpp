@@ -920,20 +920,19 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     };
 
     // ----- Windows.Phone.Management.Deployment Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Phone::Management::Deployment");
 
+    PyDoc_STRVAR(module_doc, "Windows.Phone.Management.Deployment");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_phone_management_deployment",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_phone_management_deployment",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Phone::Management::Deployment
 
 PyMODINIT_FUNC PyInit__winrt_windows_phone_management_deployment(void) noexcept

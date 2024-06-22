@@ -3078,20 +3078,19 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     };
 
     // ----- Windows.Devices.Lights.Effects Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Lights::Effects");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Lights.Effects");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_lights_effects",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_lights_effects",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Lights::Effects
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_lights_effects(void) noexcept

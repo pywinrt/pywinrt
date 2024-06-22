@@ -3928,20 +3928,19 @@ namespace py::cpp::Windows::Phone::PersonalInformation
     };
 
     // ----- Windows.Phone.PersonalInformation Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Phone::PersonalInformation");
 
+    PyDoc_STRVAR(module_doc, "Windows.Phone.PersonalInformation");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_phone_personalinformation",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_phone_personalinformation",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Phone::PersonalInformation
 
 PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation(void) noexcept

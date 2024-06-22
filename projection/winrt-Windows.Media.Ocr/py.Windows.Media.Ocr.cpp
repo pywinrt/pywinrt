@@ -633,20 +633,19 @@ namespace py::cpp::Windows::Media::Ocr
     };
 
     // ----- Windows.Media.Ocr Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Media::Ocr");
 
+    PyDoc_STRVAR(module_doc, "Windows.Media.Ocr");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_media_ocr",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_media_ocr",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Media::Ocr
 
 PyMODINIT_FUNC PyInit__winrt_windows_media_ocr(void) noexcept

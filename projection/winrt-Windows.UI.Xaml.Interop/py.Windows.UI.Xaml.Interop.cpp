@@ -1801,20 +1801,19 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     };
 
     // ----- Windows.UI.Xaml.Interop Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Interop");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.Xaml.Interop");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_xaml_interop",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_xaml_interop",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::Xaml::Interop
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_interop(void) noexcept

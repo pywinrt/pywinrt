@@ -542,20 +542,19 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
     };
 
     // ----- Windows.System.Profile.SystemManufacturers Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::System::Profile::SystemManufacturers");
 
+    PyDoc_STRVAR(module_doc, "Windows.System.Profile.SystemManufacturers");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_system_profile_systemmanufacturers",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_system_profile_systemmanufacturers",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::System::Profile::SystemManufacturers
 
 PyMODINIT_FUNC PyInit__winrt_windows_system_profile_systemmanufacturers(void) noexcept

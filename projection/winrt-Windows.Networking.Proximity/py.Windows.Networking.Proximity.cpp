@@ -2168,20 +2168,19 @@ namespace py::cpp::Windows::Networking::Proximity
     };
 
     // ----- Windows.Networking.Proximity Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Networking::Proximity");
 
+    PyDoc_STRVAR(module_doc, "Windows.Networking.Proximity");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_networking_proximity",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_networking_proximity",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Networking::Proximity
 
 PyMODINIT_FUNC PyInit__winrt_windows_networking_proximity(void) noexcept

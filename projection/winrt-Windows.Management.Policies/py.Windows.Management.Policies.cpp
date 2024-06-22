@@ -516,20 +516,19 @@ namespace py::cpp::Windows::Management::Policies
     };
 
     // ----- Windows.Management.Policies Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Management::Policies");
 
+    PyDoc_STRVAR(module_doc, "Windows.Management.Policies");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_management_policies",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_management_policies",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Management::Policies
 
 PyMODINIT_FUNC PyInit__winrt_windows_management_policies(void) noexcept

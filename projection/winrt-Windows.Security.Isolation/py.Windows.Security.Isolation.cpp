@@ -3982,20 +3982,19 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- Windows.Security.Isolation Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Security::Isolation");
 
+    PyDoc_STRVAR(module_doc, "Windows.Security.Isolation");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_security_isolation",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_security_isolation",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Security::Isolation
 
 PyMODINIT_FUNC PyInit__winrt_windows_security_isolation(void) noexcept

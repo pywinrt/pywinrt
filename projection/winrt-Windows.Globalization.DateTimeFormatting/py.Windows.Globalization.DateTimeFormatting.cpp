@@ -722,20 +722,19 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
     };
 
     // ----- Windows.Globalization.DateTimeFormatting Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Globalization::DateTimeFormatting");
 
+    PyDoc_STRVAR(module_doc, "Windows.Globalization.DateTimeFormatting");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_globalization_datetimeformatting",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_globalization_datetimeformatting",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Globalization::DateTimeFormatting
 
 PyMODINIT_FUNC PyInit__winrt_windows_globalization_datetimeformatting(void) noexcept

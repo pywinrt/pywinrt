@@ -4551,20 +4551,19 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     };
 
     // ----- Windows.Graphics.Printing.Workflow Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Graphics::Printing::Workflow");
 
+    PyDoc_STRVAR(module_doc, "Windows.Graphics.Printing.Workflow");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_graphics_printing_workflow",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_graphics_printing_workflow",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Graphics::Printing::Workflow
 
 PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_workflow(void) noexcept

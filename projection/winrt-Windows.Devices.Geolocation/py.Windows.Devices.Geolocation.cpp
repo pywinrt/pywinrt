@@ -3687,20 +3687,19 @@ namespace py::cpp::Windows::Devices::Geolocation
     };
 
     // ----- Windows.Devices.Geolocation Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Geolocation");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Geolocation");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_geolocation",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_geolocation",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Geolocation
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_geolocation(void) noexcept

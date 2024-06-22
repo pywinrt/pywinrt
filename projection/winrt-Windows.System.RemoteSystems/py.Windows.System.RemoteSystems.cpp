@@ -6434,20 +6434,19 @@ namespace py::cpp::Windows::System::RemoteSystems
     };
 
     // ----- Windows.System.RemoteSystems Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::System::RemoteSystems");
 
+    PyDoc_STRVAR(module_doc, "Windows.System.RemoteSystems");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_system_remotesystems",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_system_remotesystems",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::System::RemoteSystems
 
 PyMODINIT_FUNC PyInit__winrt_windows_system_remotesystems(void) noexcept

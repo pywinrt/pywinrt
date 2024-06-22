@@ -9099,20 +9099,19 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- Windows.Devices.Sms Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Sms");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Sms");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_sms",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_sms",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Sms
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_sms(void) noexcept

@@ -6045,20 +6045,19 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Windows.Graphics.Printing3D Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Graphics::Printing3D");
 
+    PyDoc_STRVAR(module_doc, "Windows.Graphics.Printing3D");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_graphics_printing3d",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_graphics_printing3d",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Graphics::Printing3D
 
 PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing3d(void) noexcept

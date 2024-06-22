@@ -1022,20 +1022,19 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
     };
 
     // ----- Windows.Security.Authentication.Identity.Core Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Security::Authentication::Identity::Core");
 
+    PyDoc_STRVAR(module_doc, "Windows.Security.Authentication.Identity.Core");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_security_authentication_identity_core",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_security_authentication_identity_core",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Security::Authentication::Identity::Core
 
 PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_identity_core(void) noexcept

@@ -4254,20 +4254,19 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     };
 
     // ----- Windows.ApplicationModel.ConversationalAgent Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::ConversationalAgent");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.ConversationalAgent");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_conversationalagent",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_conversationalagent",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::ConversationalAgent
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_conversationalagent(void) noexcept

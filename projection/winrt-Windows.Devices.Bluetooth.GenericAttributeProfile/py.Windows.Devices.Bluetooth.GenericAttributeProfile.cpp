@@ -10811,20 +10811,19 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- Windows.Devices.Bluetooth.GenericAttributeProfile Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Bluetooth::GenericAttributeProfile");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Bluetooth.GenericAttributeProfile");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_bluetooth_genericattributeprofile",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_bluetooth_genericattributeprofile",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(void) noexcept

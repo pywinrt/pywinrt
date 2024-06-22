@@ -623,20 +623,19 @@ namespace py::cpp::Windows::Phone::StartScreen
     };
 
     // ----- Windows.Phone.StartScreen Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Phone::StartScreen");
 
+    PyDoc_STRVAR(module_doc, "Windows.Phone.StartScreen");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_phone_startscreen",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_phone_startscreen",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Phone::StartScreen
 
 PyMODINIT_FUNC PyInit__winrt_windows_phone_startscreen(void) noexcept

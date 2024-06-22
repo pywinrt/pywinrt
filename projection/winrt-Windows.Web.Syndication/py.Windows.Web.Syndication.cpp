@@ -8651,20 +8651,19 @@ namespace py::cpp::Windows::Web::Syndication
     };
 
     // ----- Windows.Web.Syndication Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Web::Syndication");
 
+    PyDoc_STRVAR(module_doc, "Windows.Web.Syndication");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_web_syndication",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_web_syndication",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Web::Syndication
 
 PyMODINIT_FUNC PyInit__winrt_windows_web_syndication(void) noexcept

@@ -1324,20 +1324,19 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
     };
 
     // ----- Windows.Networking.ServiceDiscovery.Dnssd Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Networking::ServiceDiscovery::Dnssd");
 
+    PyDoc_STRVAR(module_doc, "Windows.Networking.ServiceDiscovery.Dnssd");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_networking_servicediscovery_dnssd",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_networking_servicediscovery_dnssd",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
 PyMODINIT_FUNC PyInit__winrt_windows_networking_servicediscovery_dnssd(void) noexcept

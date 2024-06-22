@@ -6048,20 +6048,19 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- Windows.Networking.BackgroundTransfer Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Networking::BackgroundTransfer");
 
+    PyDoc_STRVAR(module_doc, "Windows.Networking.BackgroundTransfer");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_networking_backgroundtransfer",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_networking_backgroundtransfer",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Networking::BackgroundTransfer
 
 PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcept

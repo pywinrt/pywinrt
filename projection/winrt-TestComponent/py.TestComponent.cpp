@@ -4484,20 +4484,19 @@ namespace py::cpp::TestComponent
     };
 
     // ----- TestComponent Initialization --------------------
+
     PyDoc_STRVAR(module_doc, "TestComponent");
 
-
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_testcomponent",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_testcomponent",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::TestComponent
 
 PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept

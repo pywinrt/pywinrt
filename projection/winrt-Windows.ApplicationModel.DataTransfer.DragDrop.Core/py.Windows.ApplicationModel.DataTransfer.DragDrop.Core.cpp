@@ -1345,20 +1345,19 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
     };
 
     // ----- Windows.ApplicationModel.DataTransfer.DragDrop.Core Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::DataTransfer::DragDrop::Core");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.DataTransfer.DragDrop.Core");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_datatransfer_dragdrop_core",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_datatransfer_dragdrop_core",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer_dragdrop_core(void) noexcept

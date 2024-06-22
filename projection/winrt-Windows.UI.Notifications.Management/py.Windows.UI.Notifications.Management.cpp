@@ -353,20 +353,19 @@ namespace py::cpp::Windows::UI::Notifications::Management
     };
 
     // ----- Windows.UI.Notifications.Management Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::Notifications::Management");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.Notifications.Management");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_notifications_management",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_notifications_management",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::Notifications::Management
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications_management(void) noexcept

@@ -394,20 +394,19 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
     };
 
     // ----- Windows.System.Diagnostics.Telemetry Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::System::Diagnostics::Telemetry");
 
+    PyDoc_STRVAR(module_doc, "Windows.System.Diagnostics.Telemetry");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_system_diagnostics_telemetry",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_system_diagnostics_telemetry",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::System::Diagnostics::Telemetry
 
 PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics_telemetry(void) noexcept

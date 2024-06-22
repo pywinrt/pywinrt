@@ -3570,20 +3570,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
     };
 
     // ----- Microsoft.UI.Xaml.Markup Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::UI::Xaml::Markup");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.UI.Xaml.Markup");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_ui_xaml_markup",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_ui_xaml_markup",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::UI::Xaml::Markup
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_markup(void) noexcept

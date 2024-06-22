@@ -3505,20 +3505,19 @@ namespace py::cpp::Windows::UI::StartScreen
     };
 
     // ----- Windows.UI.StartScreen Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::StartScreen");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.StartScreen");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_startscreen",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_startscreen",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::StartScreen
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_startscreen(void) noexcept

@@ -359,20 +359,19 @@ namespace py::cpp::Windows::Devices::Radios
     };
 
     // ----- Windows.Devices.Radios Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Radios");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Radios");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_radios",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_radios",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Radios
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_radios(void) noexcept

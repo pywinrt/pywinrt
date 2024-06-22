@@ -4879,20 +4879,19 @@ namespace py::cpp::Microsoft::UI::Content
     };
 
     // ----- Microsoft.UI.Content Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::UI::Content");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.UI.Content");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_ui_content",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_ui_content",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::UI::Content
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_ui_content(void) noexcept

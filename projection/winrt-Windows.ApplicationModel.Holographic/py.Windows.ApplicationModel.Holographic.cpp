@@ -220,20 +220,19 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
     };
 
     // ----- Windows.ApplicationModel.Holographic Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Holographic");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.Holographic");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_holographic",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_holographic",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::Holographic
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_holographic(void) noexcept

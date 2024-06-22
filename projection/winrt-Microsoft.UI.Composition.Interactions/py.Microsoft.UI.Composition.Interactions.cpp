@@ -5053,20 +5053,19 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
     };
 
     // ----- Microsoft.UI.Composition.Interactions Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::UI::Composition::Interactions");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.UI.Composition.Interactions");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_ui_composition_interactions",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_ui_composition_interactions",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::UI::Composition::Interactions
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_interactions(void) noexcept

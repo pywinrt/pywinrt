@@ -480,20 +480,19 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
     };
 
     // ----- Windows.ApplicationModel.Store.LicenseManagement Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Store::LicenseManagement");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.Store.LicenseManagement");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_store_licensemanagement",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_store_licensemanagement",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_licensemanagement(void) noexcept

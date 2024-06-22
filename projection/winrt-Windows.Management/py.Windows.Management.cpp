@@ -839,20 +839,19 @@ namespace py::cpp::Windows::Management
     };
 
     // ----- Windows.Management Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Management");
 
+    PyDoc_STRVAR(module_doc, "Windows.Management");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_management",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_management",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Management
 
 PyMODINIT_FUNC PyInit__winrt_windows_management(void) noexcept

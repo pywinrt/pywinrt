@@ -116,20 +116,19 @@ namespace py::cpp::Windows::Phone::System
     };
 
     // ----- Windows.Phone.System Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Phone::System");
 
+    PyDoc_STRVAR(module_doc, "Windows.Phone.System");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_phone_system",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_phone_system",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Phone::System
 
 PyMODINIT_FUNC PyInit__winrt_windows_phone_system(void) noexcept

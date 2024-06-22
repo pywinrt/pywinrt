@@ -261,20 +261,19 @@ namespace py::cpp::Windows::Media::Playlists
     };
 
     // ----- Windows.Media.Playlists Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Media::Playlists");
 
+    PyDoc_STRVAR(module_doc, "Windows.Media.Playlists");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_media_playlists",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_media_playlists",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Media::Playlists
 
 PyMODINIT_FUNC PyInit__winrt_windows_media_playlists(void) noexcept

@@ -715,20 +715,19 @@ namespace py::cpp::Windows::Media::ContentRestrictions
     };
 
     // ----- Windows.Media.ContentRestrictions Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Media::ContentRestrictions");
 
+    PyDoc_STRVAR(module_doc, "Windows.Media.ContentRestrictions");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_media_contentrestrictions",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_media_contentrestrictions",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Media::ContentRestrictions
 
 PyMODINIT_FUNC PyInit__winrt_windows_media_contentrestrictions(void) noexcept

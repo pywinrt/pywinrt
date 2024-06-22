@@ -85,20 +85,19 @@ namespace py::cpp::Windows::Phone::System::Profile
     };
 
     // ----- Windows.Phone.System.Profile Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Phone::System::Profile");
 
+    PyDoc_STRVAR(module_doc, "Windows.Phone.System.Profile");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_phone_system_profile",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_phone_system_profile",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Phone::System::Profile
 
 PyMODINIT_FUNC PyInit__winrt_windows_phone_system_profile(void) noexcept

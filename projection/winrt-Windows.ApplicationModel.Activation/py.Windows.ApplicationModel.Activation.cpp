@@ -18839,20 +18839,19 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     };
 
     // ----- Windows.ApplicationModel.Activation Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Activation");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.Activation");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_activation",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_activation",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::Activation
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept

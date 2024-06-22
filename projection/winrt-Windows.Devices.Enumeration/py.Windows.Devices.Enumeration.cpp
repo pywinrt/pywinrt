@@ -4999,20 +4999,19 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- Windows.Devices.Enumeration Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Enumeration");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Enumeration");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_enumeration",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_enumeration",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Enumeration
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_enumeration(void) noexcept

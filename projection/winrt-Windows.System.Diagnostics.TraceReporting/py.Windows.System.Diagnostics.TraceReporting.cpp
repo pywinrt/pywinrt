@@ -630,20 +630,19 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
     };
 
     // ----- Windows.System.Diagnostics.TraceReporting Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::System::Diagnostics::TraceReporting");
 
+    PyDoc_STRVAR(module_doc, "Windows.System.Diagnostics.TraceReporting");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_system_diagnostics_tracereporting",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_system_diagnostics_tracereporting",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::System::Diagnostics::TraceReporting
 
 PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics_tracereporting(void) noexcept

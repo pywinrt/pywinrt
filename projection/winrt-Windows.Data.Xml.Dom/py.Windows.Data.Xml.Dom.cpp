@@ -17091,20 +17091,19 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- Windows.Data.Xml.Dom Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Data::Xml::Dom");
 
+    PyDoc_STRVAR(module_doc, "Windows.Data.Xml.Dom");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_data_xml_dom",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_data_xml_dom",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Data::Xml::Dom
 
 PyMODINIT_FUNC PyInit__winrt_windows_data_xml_dom(void) noexcept

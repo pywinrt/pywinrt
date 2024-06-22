@@ -12242,20 +12242,19 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- Windows.Media.Protection.PlayReady Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Media::Protection::PlayReady");
 
+    PyDoc_STRVAR(module_doc, "Windows.Media.Protection.PlayReady");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_media_protection_playready",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_media_protection_playready",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Media::Protection::PlayReady
 
 PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept

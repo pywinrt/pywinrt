@@ -16070,20 +16070,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
     };
 
     // ----- Microsoft.UI.Xaml.Automation.Peers Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::UI::Xaml::Automation::Peers");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.UI.Xaml.Automation.Peers");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_ui_xaml_automation_peers",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_ui_xaml_automation_peers",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_peers(void) noexcept

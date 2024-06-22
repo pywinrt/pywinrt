@@ -1235,26 +1235,21 @@ static class WriterExtensions
     public static void WriteNamespaceInitialization(this IndentedTextWriter w, string ns)
     {
         w.WriteLine($"// ----- {ns} Initialization --------------------");
-        // FIXME: don't use ToCppNamespace
-        w.WriteLine($"PyDoc_STRVAR(module_doc, \"{ns.ToCppNamespace()}\");");
-        // FIXME: remove extra blank line
         w.WriteBlankLine();
+        w.WriteLine($"PyDoc_STRVAR(module_doc, \"{ns}\");");
         w.WriteBlankLine();
-        w.WriteLine("static PyModuleDef module_def");
+        w.WriteLine("static PyModuleDef module_def = {");
         w.Indent++;
-        w.WriteLine("= {PyModuleDef_HEAD_INIT,");
-        // FIXME: use automatic indent
-        w.WriteLine($"   \"{ns.ToNsModuleName()}\",");
-        w.WriteLine("   module_doc,");
-        w.WriteLine("   0,");
-        w.WriteLine("   nullptr,");
-        w.WriteLine("   nullptr,");
-        w.WriteLine("   nullptr,");
-        w.WriteLine("   nullptr,");
-        w.WriteLine("   nullptr};");
+        w.WriteLine("PyModuleDef_HEAD_INIT,");
+        w.WriteLine($"\"{ns.ToNsModuleName()}\",");
+        w.WriteLine("module_doc,");
+        w.WriteLine("0,");
+        w.WriteLine("nullptr,");
+        w.WriteLine("nullptr,");
+        w.WriteLine("nullptr,");
+        w.WriteLine("nullptr,");
+        w.WriteLine("nullptr};");
         w.Indent--;
-        // FIXME: remove extra blank line
-        w.WriteBlankLine();
     }
 
     public static void WriteNamespaceModuleInitFunction(

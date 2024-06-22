@@ -453,20 +453,19 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
     };
 
     // ----- Windows.Devices.Pwm.Provider Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Pwm::Provider");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Pwm.Provider");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_pwm_provider",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_pwm_provider",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Pwm::Provider
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_pwm_provider(void) noexcept

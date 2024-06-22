@@ -3909,20 +3909,19 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- Windows.Security.Authentication.Web.Provider Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Security::Authentication::Web::Provider");
 
+    PyDoc_STRVAR(module_doc, "Windows.Security.Authentication.Web.Provider");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_security_authentication_web_provider",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_security_authentication_web_provider",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Security::Authentication::Web::Provider
 
 PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_provider(void) noexcept

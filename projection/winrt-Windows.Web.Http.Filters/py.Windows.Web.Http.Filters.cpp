@@ -1422,20 +1422,19 @@ namespace py::cpp::Windows::Web::Http::Filters
     };
 
     // ----- Windows.Web.Http.Filters Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Web::Http::Filters");
 
+    PyDoc_STRVAR(module_doc, "Windows.Web.Http.Filters");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_web_http_filters",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_web_http_filters",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Web::Http::Filters
 
 PyMODINIT_FUNC PyInit__winrt_windows_web_http_filters(void) noexcept

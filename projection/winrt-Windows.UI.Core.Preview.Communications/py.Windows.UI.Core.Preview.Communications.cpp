@@ -1454,20 +1454,19 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
     };
 
     // ----- Windows.UI.Core.Preview.Communications Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::Core::Preview::Communications");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.Core.Preview.Communications");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_core_preview_communications",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_core_preview_communications",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::Core::Preview::Communications
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_core_preview_communications(void) noexcept

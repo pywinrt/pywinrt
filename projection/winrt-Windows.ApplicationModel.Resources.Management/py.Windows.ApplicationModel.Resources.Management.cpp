@@ -489,20 +489,19 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
     };
 
     // ----- Windows.ApplicationModel.Resources.Management Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Resources::Management");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.Resources.Management");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_resources_management",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_resources_management",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::Resources::Management
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_resources_management(void) noexcept

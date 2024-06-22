@@ -97,20 +97,19 @@ namespace py::cpp::Windows::Data::Html
     };
 
     // ----- Windows.Data.Html Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Data::Html");
 
+    PyDoc_STRVAR(module_doc, "Windows.Data.Html");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_data_html",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_data_html",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Data::Html
 
 PyMODINIT_FUNC PyInit__winrt_windows_data_html(void) noexcept

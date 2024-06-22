@@ -1844,20 +1844,19 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
     };
 
     // ----- Windows.ApplicationModel.UserDataTasks.DataProvider Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::UserDataTasks::DataProvider");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.UserDataTasks.DataProvider");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_userdatatasks_dataprovider",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_userdatatasks_dataprovider",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdatatasks_dataprovider(void) noexcept

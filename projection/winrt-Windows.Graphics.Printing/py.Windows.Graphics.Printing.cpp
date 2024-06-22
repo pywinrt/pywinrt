@@ -4447,20 +4447,19 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- Windows.Graphics.Printing Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Graphics::Printing");
 
+    PyDoc_STRVAR(module_doc, "Windows.Graphics.Printing");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_graphics_printing",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_graphics_printing",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Graphics::Printing
 
 PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing(void) noexcept

@@ -2116,20 +2116,19 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     };
 
     // ----- Windows.ApplicationModel.VoiceCommands Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::VoiceCommands");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.VoiceCommands");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_voicecommands",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_voicecommands",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::VoiceCommands
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_voicecommands(void) noexcept

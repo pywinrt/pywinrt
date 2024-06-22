@@ -2415,20 +2415,19 @@ namespace py::cpp::Windows::System::UserProfile
     };
 
     // ----- Windows.System.UserProfile Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::System::UserProfile");
 
+    PyDoc_STRVAR(module_doc, "Windows.System.UserProfile");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_system_userprofile",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_system_userprofile",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::System::UserProfile
 
 PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept

@@ -2972,20 +2972,19 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     };
 
     // ----- Windows.UI.Input.Preview.Injection Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::Input::Preview::Injection");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.Input.Preview.Injection");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_input_preview_injection",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_input_preview_injection",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::Input::Preview::Injection
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_input_preview_injection(void) noexcept

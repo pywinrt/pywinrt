@@ -2420,20 +2420,19 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     };
 
     // ----- Windows.ApplicationModel.UserDataAccounts.SystemAccess Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::UserDataAccounts::SystemAccess");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.UserDataAccounts.SystemAccess");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_userdataaccounts_systemaccess",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_userdataaccounts_systemaccess",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts_systemaccess(void) noexcept

@@ -1295,20 +1295,19 @@ namespace py::cpp::Windows::Devices::Spi
     };
 
     // ----- Windows.Devices.Spi Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Spi");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Spi");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_spi",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_spi",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Spi
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_spi(void) noexcept

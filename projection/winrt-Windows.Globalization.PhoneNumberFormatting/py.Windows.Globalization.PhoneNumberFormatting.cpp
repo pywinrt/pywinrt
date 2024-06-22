@@ -871,20 +871,19 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
     };
 
     // ----- Windows.Globalization.PhoneNumberFormatting Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Globalization::PhoneNumberFormatting");
 
+    PyDoc_STRVAR(module_doc, "Windows.Globalization.PhoneNumberFormatting");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_globalization_phonenumberformatting",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_globalization_phonenumberformatting",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Globalization::PhoneNumberFormatting
 
 PyMODINIT_FUNC PyInit__winrt_windows_globalization_phonenumberformatting(void) noexcept

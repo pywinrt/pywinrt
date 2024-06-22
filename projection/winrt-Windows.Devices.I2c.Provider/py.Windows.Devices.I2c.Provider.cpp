@@ -918,20 +918,19 @@ namespace py::cpp::Windows::Devices::I2c::Provider
     };
 
     // ----- Windows.Devices.I2c.Provider Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::I2c::Provider");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.I2c.Provider");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_i2c_provider",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_i2c_provider",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::I2c::Provider
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c_provider(void) noexcept

@@ -1041,20 +1041,19 @@ namespace py::cpp::Windows::Security::Credentials::UI
     };
 
     // ----- Windows.Security.Credentials.UI Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Security::Credentials::UI");
 
+    PyDoc_STRVAR(module_doc, "Windows.Security.Credentials.UI");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_security_credentials_ui",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_security_credentials_ui",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Security::Credentials::UI
 
 PyMODINIT_FUNC PyInit__winrt_windows_security_credentials_ui(void) noexcept

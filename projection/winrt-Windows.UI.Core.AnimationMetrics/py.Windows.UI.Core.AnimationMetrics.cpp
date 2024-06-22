@@ -1185,20 +1185,19 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     };
 
     // ----- Windows.UI.Core.AnimationMetrics Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::Core::AnimationMetrics");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.Core.AnimationMetrics");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_core_animationmetrics",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_core_animationmetrics",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::Core::AnimationMetrics
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_core_animationmetrics(void) noexcept

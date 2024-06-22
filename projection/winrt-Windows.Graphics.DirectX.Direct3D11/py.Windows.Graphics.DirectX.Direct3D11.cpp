@@ -691,20 +691,19 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     };
 
     // ----- Windows.Graphics.DirectX.Direct3D11 Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Graphics::DirectX::Direct3D11");
 
+    PyDoc_STRVAR(module_doc, "Windows.Graphics.DirectX.Direct3D11");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_graphics_directx_direct3d11",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_graphics_directx_direct3d11",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Graphics::DirectX::Direct3D11
 
 PyMODINIT_FUNC PyInit__winrt_windows_graphics_directx_direct3d11(void) noexcept

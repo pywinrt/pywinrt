@@ -1538,20 +1538,19 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
     };
 
     // ----- Microsoft.Windows.AppNotifications Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::Windows::AppNotifications");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.Windows.AppNotifications");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_windows_appnotifications",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_windows_appnotifications",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::Windows::AppNotifications
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_windows_appnotifications(void) noexcept

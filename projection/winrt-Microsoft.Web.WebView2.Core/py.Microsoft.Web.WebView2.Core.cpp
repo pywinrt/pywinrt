@@ -21310,20 +21310,19 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     };
 
     // ----- Microsoft.Web.WebView2.Core Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::Web::WebView2::Core");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.Web.WebView2.Core");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_web_webview2_core",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_web_webview2_core",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::Web::WebView2::Core
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_web_webview2_core(void) noexcept

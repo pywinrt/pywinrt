@@ -2546,20 +2546,19 @@ namespace py::cpp::Windows::Services::TargetedContent
     };
 
     // ----- Windows.Services.TargetedContent Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Services::TargetedContent");
 
+    PyDoc_STRVAR(module_doc, "Windows.Services.TargetedContent");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_services_targetedcontent",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_services_targetedcontent",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Services::TargetedContent
 
 PyMODINIT_FUNC PyInit__winrt_windows_services_targetedcontent(void) noexcept

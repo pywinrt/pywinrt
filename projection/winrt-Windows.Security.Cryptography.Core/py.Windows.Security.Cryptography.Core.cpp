@@ -5249,20 +5249,19 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     };
 
     // ----- Windows.Security.Cryptography.Core Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Security::Cryptography::Core");
 
+    PyDoc_STRVAR(module_doc, "Windows.Security.Cryptography.Core");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_security_cryptography_core",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_security_cryptography_core",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Security::Cryptography::Core
 
 PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept

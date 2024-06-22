@@ -493,20 +493,19 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
     };
 
     // ----- Windows.Security.Authorization.AppCapabilityAccess Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Security::Authorization::AppCapabilityAccess");
 
+    PyDoc_STRVAR(module_doc, "Windows.Security.Authorization.AppCapabilityAccess");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_security_authorization_appcapabilityaccess",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_security_authorization_appcapabilityaccess",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
 PyMODINIT_FUNC PyInit__winrt_windows_security_authorization_appcapabilityaccess(void) noexcept

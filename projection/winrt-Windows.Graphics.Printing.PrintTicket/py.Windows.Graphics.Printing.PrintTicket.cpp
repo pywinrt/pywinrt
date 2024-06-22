@@ -2396,20 +2396,19 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     };
 
     // ----- Windows.Graphics.Printing.PrintTicket Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Graphics::Printing::PrintTicket");
 
+    PyDoc_STRVAR(module_doc, "Windows.Graphics.Printing.PrintTicket");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_graphics_printing_printticket",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_graphics_printing_printticket",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Graphics::Printing::PrintTicket
 
 PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_printticket(void) noexcept

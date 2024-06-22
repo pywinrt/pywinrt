@@ -7004,20 +7004,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
     };
 
     // ----- Microsoft.UI.Xaml.Automation Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::UI::Xaml::Automation");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.UI.Xaml.Automation");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_ui_xaml_automation",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_ui_xaml_automation",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::UI::Xaml::Automation
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept

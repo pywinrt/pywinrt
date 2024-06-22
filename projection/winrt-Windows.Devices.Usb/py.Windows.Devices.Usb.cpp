@@ -4757,20 +4757,19 @@ namespace py::cpp::Windows::Devices::Usb
     };
 
     // ----- Windows.Devices.Usb Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Usb");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Usb");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_usb",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_usb",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Usb
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_usb(void) noexcept

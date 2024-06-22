@@ -1332,20 +1332,19 @@ namespace py::cpp::Windows::UI::Popups
     };
 
     // ----- Windows.UI.Popups Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::Popups");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.Popups");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_popups",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_popups",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::Popups
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_popups(void) noexcept

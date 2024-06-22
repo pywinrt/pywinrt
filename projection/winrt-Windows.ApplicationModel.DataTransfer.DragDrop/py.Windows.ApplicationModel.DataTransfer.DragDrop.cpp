@@ -6,20 +6,19 @@
 namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop
 {
     // ----- Windows.ApplicationModel.DataTransfer.DragDrop Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::DataTransfer::DragDrop");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.DataTransfer.DragDrop");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_datatransfer_dragdrop",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_datatransfer_dragdrop",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer_dragdrop(void) noexcept

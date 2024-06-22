@@ -5734,20 +5734,19 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     };
 
     // ----- Windows.Globalization.NumberFormatting Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Globalization::NumberFormatting");
 
+    PyDoc_STRVAR(module_doc, "Windows.Globalization.NumberFormatting");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_globalization_numberformatting",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_globalization_numberformatting",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Globalization::NumberFormatting
 
 PyMODINIT_FUNC PyInit__winrt_windows_globalization_numberformatting(void) noexcept

@@ -7691,20 +7691,19 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- Windows.Foundation Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Foundation");
 
+    PyDoc_STRVAR(module_doc, "Windows.Foundation");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_foundation",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_foundation",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Foundation
 
 PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept

@@ -3656,20 +3656,19 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     };
 
     // ----- Windows.ApplicationModel.Store.Preview.InstallControl Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Store::Preview::InstallControl");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.Store.Preview.InstallControl");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_store_preview_installcontrol",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_store_preview_installcontrol",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_preview_installcontrol(void) noexcept

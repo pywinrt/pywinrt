@@ -5193,20 +5193,19 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- Windows.UI.Input.Spatial Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::Input::Spatial");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.Input.Spatial");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_input_spatial",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_input_spatial",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::Input::Spatial
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_input_spatial(void) noexcept

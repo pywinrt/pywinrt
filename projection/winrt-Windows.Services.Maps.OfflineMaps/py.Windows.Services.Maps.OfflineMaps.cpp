@@ -549,20 +549,19 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
     };
 
     // ----- Windows.Services.Maps.OfflineMaps Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Services::Maps::OfflineMaps");
 
+    PyDoc_STRVAR(module_doc, "Windows.Services.Maps.OfflineMaps");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_services_maps_offlinemaps",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_services_maps_offlinemaps",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Services::Maps::OfflineMaps
 
 PyMODINIT_FUNC PyInit__winrt_windows_services_maps_offlinemaps(void) noexcept

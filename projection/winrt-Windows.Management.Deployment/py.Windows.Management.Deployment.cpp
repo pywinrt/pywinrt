@@ -8008,20 +8008,19 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- Windows.Management.Deployment Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Management::Deployment");
 
+    PyDoc_STRVAR(module_doc, "Windows.Management.Deployment");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_management_deployment",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_management_deployment",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Management::Deployment
 
 PyMODINIT_FUNC PyInit__winrt_windows_management_deployment(void) noexcept

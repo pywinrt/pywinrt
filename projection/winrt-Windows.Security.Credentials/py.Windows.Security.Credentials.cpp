@@ -2481,20 +2481,19 @@ namespace py::cpp::Windows::Security::Credentials
     };
 
     // ----- Windows.Security.Credentials Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Security::Credentials");
 
+    PyDoc_STRVAR(module_doc, "Windows.Security.Credentials");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_security_credentials",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_security_credentials",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Security::Credentials
 
 PyMODINIT_FUNC PyInit__winrt_windows_security_credentials(void) noexcept

@@ -415,20 +415,19 @@ namespace py::cpp::Windows::System::Threading
     };
 
     // ----- Windows.System.Threading Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::System::Threading");
 
+    PyDoc_STRVAR(module_doc, "Windows.System.Threading");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_system_threading",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_system_threading",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::System::Threading
 
 PyMODINIT_FUNC PyInit__winrt_windows_system_threading(void) noexcept

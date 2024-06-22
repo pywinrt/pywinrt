@@ -367,20 +367,19 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
     };
 
     // ----- Windows.ApplicationModel.Wallet.System Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Wallet::System");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.Wallet.System");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_wallet_system",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_wallet_system",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::Wallet::System
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_wallet_system(void) noexcept

@@ -383,20 +383,19 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
     };
 
     // ----- Windows.ApplicationModel.CommunicationBlocking Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::CommunicationBlocking");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.CommunicationBlocking");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_communicationblocking",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_communicationblocking",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_communicationblocking(void) noexcept
