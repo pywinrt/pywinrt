@@ -93,21 +93,7 @@ class ProjectedType
         PyBufferSize = iBuffer ? "Length" : "Capacity";
 
         Constructors = EnumerateConstructors(type).ToArray();
-        var methods = EnumerateMethods(type).ToList();
-
-        // FIXME: remove this hack
-        // HACK: bad sorting to match C++ code generator
-        if (type.Namespace == "Windows.Networking.Sockets" && type.Name == "IWebSocket")
-        {
-            var firstIndex = methods.FindIndex(m => m.Name == "Close");
-
-            (methods[firstIndex], methods[firstIndex + 1]) = (
-                methods[firstIndex + 1],
-                methods[firstIndex]
-            );
-        }
-
-        Methods = methods;
+        Methods = EnumerateMethods(type).ToList();
         Properties = EnumerateProperties(type).ToArray();
         Events = EnumerateEvents(type).ToArray();
     }

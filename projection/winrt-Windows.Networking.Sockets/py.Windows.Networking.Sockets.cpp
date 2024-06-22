@@ -8870,7 +8870,26 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 2)
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 2)
         {
             try
             {
@@ -8884,25 +8903,6 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 self->obj.Close(param0, param1);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 0)
-        {
-            try
-            {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                self->obj.Close();
                 Py_RETURN_NONE;
             }
             catch (...)
