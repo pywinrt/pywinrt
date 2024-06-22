@@ -9,10 +9,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.Windows.Security.AccessControl.h>
 
 namespace py::proj::Microsoft::Windows::Security::AccessControl
-{}
+{
+}
 
 namespace py::impl::Microsoft::Windows::Security::AccessControl
-{}
+{
+}
 
 namespace py::wrapper::Microsoft::Windows::Security::AccessControl
 {

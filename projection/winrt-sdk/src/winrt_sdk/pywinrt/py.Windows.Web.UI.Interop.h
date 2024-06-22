@@ -59,10 +59,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Web.UI.Interop.h>
 
 namespace py::proj::Windows::Web::UI::Interop
-{}
+{
+}
 
 namespace py::impl::Windows::Web::UI::Interop
-{}
+{
+}
 
 namespace py::wrapper::Windows::Web::UI::Interop
 {

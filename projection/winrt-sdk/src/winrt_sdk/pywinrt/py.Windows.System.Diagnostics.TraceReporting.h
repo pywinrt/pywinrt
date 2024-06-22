@@ -14,10 +14,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.System.Diagnostics.TraceReporting.h>
 
 namespace py::proj::Windows::System::Diagnostics::TraceReporting
-{}
+{
+}
 
 namespace py::impl::Windows::System::Diagnostics::TraceReporting
-{}
+{
+}
 
 namespace py::wrapper::Windows::System::Diagnostics::TraceReporting
 {

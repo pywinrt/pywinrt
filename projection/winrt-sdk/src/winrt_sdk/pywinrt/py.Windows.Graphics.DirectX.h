@@ -9,10 +9,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Graphics.DirectX.h>
 
 namespace py::proj::Windows::Graphics::DirectX
-{}
+{
+}
 
 namespace py::impl::Windows::Graphics::DirectX
-{}
+{
+}
 
 namespace py::wrapper::Windows::Graphics::DirectX
 {

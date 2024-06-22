@@ -49,10 +49,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.AI.MachineLearning.h>
 
 namespace py::proj::Windows::AI::MachineLearning
-{}
+{
+}
 
 namespace py::impl::Windows::AI::MachineLearning
-{}
+{
+}
 
 namespace py::wrapper::Windows::AI::MachineLearning
 {

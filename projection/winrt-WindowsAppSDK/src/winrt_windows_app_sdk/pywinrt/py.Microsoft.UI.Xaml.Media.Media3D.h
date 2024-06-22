@@ -14,10 +14,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.UI.Xaml.Media.Media3D.h>
 
 namespace py::proj::Microsoft::UI::Xaml::Media::Media3D
-{}
+{
+}
 
 namespace py::impl::Microsoft::UI::Xaml::Media::Media3D
-{}
+{
+}
 
 namespace py::wrapper::Microsoft::UI::Xaml::Media::Media3D
 {

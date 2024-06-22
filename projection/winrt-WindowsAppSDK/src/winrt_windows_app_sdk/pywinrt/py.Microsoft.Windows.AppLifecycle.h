@@ -24,10 +24,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.Windows.AppLifecycle.h>
 
 namespace py::proj::Microsoft::Windows::AppLifecycle
-{}
+{
+}
 
 namespace py::impl::Microsoft::Windows::AppLifecycle
-{}
+{
+}
 
 namespace py::wrapper::Microsoft::Windows::AppLifecycle
 {

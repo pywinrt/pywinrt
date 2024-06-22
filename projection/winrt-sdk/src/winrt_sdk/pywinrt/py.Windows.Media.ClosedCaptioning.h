@@ -19,10 +19,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Media.ClosedCaptioning.h>
 
 namespace py::proj::Windows::Media::ClosedCaptioning
-{}
+{
+}
 
 namespace py::impl::Windows::Media::ClosedCaptioning
-{}
+{
+}
 
 namespace py::wrapper::Windows::Media::ClosedCaptioning
 {

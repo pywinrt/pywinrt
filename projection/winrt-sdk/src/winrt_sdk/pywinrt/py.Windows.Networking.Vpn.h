@@ -54,10 +54,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Networking.Vpn.h>
 
 namespace py::proj::Windows::Networking::Vpn
-{}
+{
+}
 
 namespace py::impl::Windows::Networking::Vpn
-{}
+{
+}
 
 namespace py::wrapper::Windows::Networking::Vpn
 {

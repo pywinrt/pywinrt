@@ -29,10 +29,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Phone.Management.Deployment.h>
 
 namespace py::proj::Windows::Phone::Management::Deployment
-{}
+{
+}
 
 namespace py::impl::Windows::Phone::Management::Deployment
-{}
+{
+}
 
 namespace py::wrapper::Windows::Phone::Management::Deployment
 {

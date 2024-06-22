@@ -44,10 +44,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Web.Http.Filters.h>
 
 namespace py::proj::Windows::Web::Http::Filters
-{}
+{
+}
 
 namespace py::impl::Windows::Web::Http::Filters
-{}
+{
+}
 
 namespace py::wrapper::Windows::Web::Http::Filters
 {

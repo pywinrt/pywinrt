@@ -39,10 +39,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Devices.WiFiDirect.Services.h>
 
 namespace py::proj::Windows::Devices::WiFiDirect::Services
-{}
+{
+}
 
 namespace py::impl::Windows::Devices::WiFiDirect::Services
-{}
+{
+}
 
 namespace py::wrapper::Windows::Devices::WiFiDirect::Services
 {

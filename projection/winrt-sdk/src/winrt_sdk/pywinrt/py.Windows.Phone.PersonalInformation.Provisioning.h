@@ -29,10 +29,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Phone.PersonalInformation.Provisioning.h>
 
 namespace py::proj::Windows::Phone::PersonalInformation::Provisioning
-{}
+{
+}
 
 namespace py::impl::Windows::Phone::PersonalInformation::Provisioning
-{}
+{
+}
 
 namespace py::wrapper::Windows::Phone::PersonalInformation::Provisioning
 {

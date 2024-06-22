@@ -24,10 +24,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.ApplicationModel.Preview.Holographic.h>
 
 namespace py::proj::Windows::ApplicationModel::Preview::Holographic
-{}
+{
+}
 
 namespace py::impl::Windows::ApplicationModel::Preview::Holographic
-{}
+{
+}
 
 namespace py::wrapper::Windows::ApplicationModel::Preview::Holographic
 {

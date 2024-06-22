@@ -9,10 +9,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.System.Diagnostics.Telemetry.h>
 
 namespace py::proj::Windows::System::Diagnostics::Telemetry
-{}
+{
+}
 
 namespace py::impl::Windows::System::Diagnostics::Telemetry
-{}
+{
+}
 
 namespace py::wrapper::Windows::System::Diagnostics::Telemetry
 {

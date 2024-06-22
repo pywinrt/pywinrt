@@ -24,10 +24,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Management.Policies.h>
 
 namespace py::proj::Windows::Management::Policies
-{}
+{
+}
 
 namespace py::impl::Windows::Management::Policies
-{}
+{
+}
 
 namespace py::wrapper::Windows::Management::Policies
 {

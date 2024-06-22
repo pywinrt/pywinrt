@@ -34,10 +34,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.UI.Xaml.Markup.h>
 
 namespace py::proj::Microsoft::UI::Xaml::Markup
-{}
+{
+}
 
 namespace py::impl::Microsoft::UI::Xaml::Markup
-{}
+{
+}
 
 namespace py::wrapper::Microsoft::UI::Xaml::Markup
 {

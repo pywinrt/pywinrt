@@ -9,10 +9,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.UI.UIAutomation.h>
 
 namespace py::proj::Windows::UI::UIAutomation
-{}
+{
+}
 
 namespace py::impl::Windows::UI::UIAutomation
-{}
+{
+}
 
 namespace py::wrapper::Windows::UI::UIAutomation
 {

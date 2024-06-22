@@ -49,10 +49,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Networking.BackgroundTransfer.h>
 
 namespace py::proj::Windows::Networking::BackgroundTransfer
-{}
+{
+}
 
 namespace py::impl::Windows::Networking::BackgroundTransfer
-{}
+{
+}
 
 namespace py::wrapper::Windows::Networking::BackgroundTransfer
 {

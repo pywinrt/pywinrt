@@ -34,10 +34,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Services.Store.h>
 
 namespace py::proj::Windows::Services::Store
-{}
+{
+}
 
 namespace py::impl::Windows::Services::Store
-{}
+{
+}
 
 namespace py::wrapper::Windows::Services::Store
 {

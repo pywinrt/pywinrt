@@ -692,8 +692,7 @@ static class FileWriters
         w.WriteBlankLine();
 
         w.WriteLine($"namespace py::proj::{ns.ToCppNamespace()}");
-        // FIXME: change this to WriteLine
-        w.Write("{");
+        w.WriteLine("{");
         w.Indent++;
 
         foreach (
@@ -706,11 +705,6 @@ static class FileWriters
             {
                 w.WriteBlankLine();
             }
-            else
-            {
-                // FIXME: remove this
-                w.WriteLine();
-            }
 
             w.WriteGenericInterfaceDecl(iface);
         }
@@ -720,8 +714,7 @@ static class FileWriters
 
         w.WriteBlankLine();
         w.WriteLine($"namespace py::impl::{ns.ToCppNamespace()}");
-        // FIXME: change this to WriteLine
-        w.Write("{");
+        w.WriteLine("{");
         w.Indent++;
 
         var n = 0;
@@ -731,11 +724,6 @@ static class FileWriters
             if (n++ > 0)
             {
                 w.WriteBlankLine();
-            }
-            else
-            {
-                // FIXME: remove this
-                w.WriteLine();
             }
 
             w.WriteDelegateCallableWrapper(del);

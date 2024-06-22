@@ -49,10 +49,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.Web.WebView2.Core.h>
 
 namespace py::proj::Microsoft::Web::WebView2::Core
-{}
+{
+}
 
 namespace py::impl::Microsoft::Web::WebView2::Core
-{}
+{
+}
 
 namespace py::wrapper::Microsoft::Web::WebView2::Core
 {

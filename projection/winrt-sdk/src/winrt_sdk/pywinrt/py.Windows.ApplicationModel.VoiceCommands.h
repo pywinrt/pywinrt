@@ -39,10 +39,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.ApplicationModel.VoiceCommands.h>
 
 namespace py::proj::Windows::ApplicationModel::VoiceCommands
-{}
+{
+}
 
 namespace py::impl::Windows::ApplicationModel::VoiceCommands
-{}
+{
+}
 
 namespace py::wrapper::Windows::ApplicationModel::VoiceCommands
 {

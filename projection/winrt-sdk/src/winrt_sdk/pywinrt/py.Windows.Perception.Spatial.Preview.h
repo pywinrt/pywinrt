@@ -19,10 +19,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Perception.Spatial.Preview.h>
 
 namespace py::proj::Windows::Perception::Spatial::Preview
-{}
+{
+}
 
 namespace py::impl::Windows::Perception::Spatial::Preview
-{}
+{
+}
 
 namespace py::wrapper::Windows::Perception::Spatial::Preview
 {

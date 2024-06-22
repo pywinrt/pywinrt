@@ -44,10 +44,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Devices.Enumeration.h>
 
 namespace py::proj::Windows::Devices::Enumeration
-{}
+{
+}
 
 namespace py::impl::Windows::Devices::Enumeration
-{}
+{
+}
 
 namespace py::wrapper::Windows::Devices::Enumeration
 {

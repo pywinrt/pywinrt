@@ -9,10 +9,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.System.Power.Diagnostics.h>
 
 namespace py::proj::Windows::System::Power::Diagnostics
-{}
+{
+}
 
 namespace py::impl::Windows::System::Power::Diagnostics
-{}
+{
+}
 
 namespace py::wrapper::Windows::System::Power::Diagnostics
 {

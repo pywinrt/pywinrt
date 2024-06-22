@@ -24,10 +24,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.UI.Xaml.Automation.h>
 
 namespace py::proj::Microsoft::UI::Xaml::Automation
-{}
+{
+}
 
 namespace py::impl::Microsoft::UI::Xaml::Automation
-{}
+{
+}
 
 namespace py::wrapper::Microsoft::UI::Xaml::Automation
 {

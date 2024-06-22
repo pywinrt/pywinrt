@@ -14,10 +14,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.Windows.System.Power.h>
 
 namespace py::proj::Microsoft::Windows::System::Power
-{}
+{
+}
 
 namespace py::impl::Microsoft::Windows::System::Power
-{}
+{
+}
 
 namespace py::wrapper::Microsoft::Windows::System::Power
 {

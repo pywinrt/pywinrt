@@ -14,10 +14,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Globalization.Collation.h>
 
 namespace py::proj::Windows::Globalization::Collation
-{}
+{
+}
 
 namespace py::impl::Windows::Globalization::Collation
-{}
+{
+}
 
 namespace py::wrapper::Windows::Globalization::Collation
 {

@@ -44,10 +44,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Devices.Perception.h>
 
 namespace py::proj::Windows::Devices::Perception
-{}
+{
+}
 
 namespace py::impl::Windows::Devices::Perception
-{}
+{
+}
 
 namespace py::wrapper::Windows::Devices::Perception
 {

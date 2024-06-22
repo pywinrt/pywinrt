@@ -59,10 +59,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Media.Editing.h>
 
 namespace py::proj::Windows::Media::Editing
-{}
+{
+}
 
 namespace py::impl::Windows::Media::Editing
-{}
+{
+}
 
 namespace py::wrapper::Windows::Media::Editing
 {

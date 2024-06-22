@@ -29,10 +29,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Storage.Streams.h>
 
 namespace py::proj::Windows::Storage::Streams
-{}
+{
+}
 
 namespace py::impl::Windows::Storage::Streams
-{}
+{
+}
 
 namespace py::wrapper::Windows::Storage::Streams
 {

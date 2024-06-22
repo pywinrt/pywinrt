@@ -24,10 +24,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.ApplicationModel.Payments.Provider.h>
 
 namespace py::proj::Windows::ApplicationModel::Payments::Provider
-{}
+{
+}
 
 namespace py::impl::Windows::ApplicationModel::Payments::Provider
-{}
+{
+}
 
 namespace py::wrapper::Windows::ApplicationModel::Payments::Provider
 {

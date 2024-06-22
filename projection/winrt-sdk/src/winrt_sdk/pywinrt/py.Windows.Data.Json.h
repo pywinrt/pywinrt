@@ -14,10 +14,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Data.Json.h>
 
 namespace py::proj::Windows::Data::Json
-{}
+{
+}
 
 namespace py::impl::Windows::Data::Json
-{}
+{
+}
 
 namespace py::wrapper::Windows::Data::Json
 {

@@ -19,10 +19,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.ApplicationModel.Contacts.DataProvider.h>
 
 namespace py::proj::Windows::ApplicationModel::Contacts::DataProvider
-{}
+{
+}
 
 namespace py::impl::Windows::ApplicationModel::Contacts::DataProvider
-{}
+{
+}
 
 namespace py::wrapper::Windows::ApplicationModel::Contacts::DataProvider
 {

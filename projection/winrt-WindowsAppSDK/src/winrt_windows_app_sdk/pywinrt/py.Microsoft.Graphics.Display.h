@@ -29,10 +29,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.Graphics.Display.h>
 
 namespace py::proj::Microsoft::Graphics::Display
-{}
+{
+}
 
 namespace py::impl::Microsoft::Graphics::Display
-{}
+{
+}
 
 namespace py::wrapper::Microsoft::Graphics::Display
 {

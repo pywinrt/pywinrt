@@ -39,10 +39,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Web.Http.Headers.h>
 
 namespace py::proj::Windows::Web::Http::Headers
-{}
+{
+}
 
 namespace py::impl::Windows::Web::Http::Headers
-{}
+{
+}
 
 namespace py::wrapper::Windows::Web::Http::Headers
 {

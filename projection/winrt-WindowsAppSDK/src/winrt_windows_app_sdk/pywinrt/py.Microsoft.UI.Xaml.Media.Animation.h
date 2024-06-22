@@ -44,10 +44,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.UI.Xaml.Media.Animation.h>
 
 namespace py::proj::Microsoft::UI::Xaml::Media::Animation
-{}
+{
+}
 
 namespace py::impl::Microsoft::UI::Xaml::Media::Animation
-{}
+{
+}
 
 namespace py::wrapper::Microsoft::UI::Xaml::Media::Animation
 {

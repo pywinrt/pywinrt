@@ -39,10 +39,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Web.AtomPub.h>
 
 namespace py::proj::Windows::Web::AtomPub
-{}
+{
+}
 
 namespace py::impl::Windows::Web::AtomPub
-{}
+{
+}
 
 namespace py::wrapper::Windows::Web::AtomPub
 {

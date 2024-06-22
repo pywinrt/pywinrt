@@ -29,7 +29,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Devices.SmartCards.h>
 
 namespace py::proj::Windows::Devices::SmartCards
-{}
+{
+}
 
 namespace py::impl::Windows::Devices::SmartCards
 {

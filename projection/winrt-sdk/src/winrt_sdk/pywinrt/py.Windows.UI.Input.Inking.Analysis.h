@@ -24,10 +24,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.UI.Input.Inking.Analysis.h>
 
 namespace py::proj::Windows::UI::Input::Inking::Analysis
-{}
+{
+}
 
 namespace py::impl::Windows::UI::Input::Inking::Analysis
-{}
+{
+}
 
 namespace py::wrapper::Windows::UI::Input::Inking::Analysis
 {

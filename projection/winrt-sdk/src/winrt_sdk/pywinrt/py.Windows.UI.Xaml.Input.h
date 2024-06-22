@@ -49,7 +49,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.UI.Xaml.Input.h>
 
 namespace py::proj::Windows::UI::Xaml::Input
-{}
+{
+}
 
 namespace py::impl::Windows::UI::Xaml::Input
 {

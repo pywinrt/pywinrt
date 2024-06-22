@@ -9,10 +9,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.System.Display.h>
 
 namespace py::proj::Windows::System::Display
-{}
+{
+}
 
 namespace py::impl::Windows::System::Display
-{}
+{
+}
 
 namespace py::wrapper::Windows::System::Display
 {

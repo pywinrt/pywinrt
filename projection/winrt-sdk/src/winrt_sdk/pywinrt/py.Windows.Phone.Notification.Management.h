@@ -34,10 +34,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Phone.Notification.Management.h>
 
 namespace py::proj::Windows::Phone::Notification::Management
-{}
+{
+}
 
 namespace py::impl::Windows::Phone::Notification::Management
-{}
+{
+}
 
 namespace py::wrapper::Windows::Phone::Notification::Management
 {

@@ -9,10 +9,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Globalization.PhoneNumberFormatting.h>
 
 namespace py::proj::Windows::Globalization::PhoneNumberFormatting
-{}
+{
+}
 
 namespace py::impl::Windows::Globalization::PhoneNumberFormatting
-{}
+{
+}
 
 namespace py::wrapper::Windows::Globalization::PhoneNumberFormatting
 {

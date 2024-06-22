@@ -14,10 +14,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Networking.h>
 
 namespace py::proj::Windows::Networking
-{}
+{
+}
 
 namespace py::impl::Windows::Networking
-{}
+{
+}
 
 namespace py::wrapper::Windows::Networking
 {

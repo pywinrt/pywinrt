@@ -34,10 +34,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.UI.WindowManagement.h>
 
 namespace py::proj::Windows::UI::WindowManagement
-{}
+{
+}
 
 namespace py::impl::Windows::UI::WindowManagement
-{}
+{
+}
 
 namespace py::wrapper::Windows::UI::WindowManagement
 {

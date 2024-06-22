@@ -34,10 +34,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.UI.Input.DragDrop.h>
 
 namespace py::proj::Microsoft::UI::Input::DragDrop
-{}
+{
+}
 
 namespace py::impl::Microsoft::UI::Input::DragDrop
-{}
+{
+}
 
 namespace py::wrapper::Microsoft::UI::Input::DragDrop
 {

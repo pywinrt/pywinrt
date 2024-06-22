@@ -19,10 +19,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.ApplicationModel.Appointments.AppointmentsProvider.h>
 
 namespace py::proj::Windows::ApplicationModel::Appointments::AppointmentsProvider
-{}
+{
+}
 
 namespace py::impl::Windows::ApplicationModel::Appointments::AppointmentsProvider
-{}
+{
+}
 
 namespace py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider
 {

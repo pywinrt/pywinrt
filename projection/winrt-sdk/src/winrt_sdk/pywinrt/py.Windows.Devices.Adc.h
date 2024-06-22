@@ -24,10 +24,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Devices.Adc.h>
 
 namespace py::proj::Windows::Devices::Adc
-{}
+{
+}
 
 namespace py::impl::Windows::Devices::Adc
-{}
+{
+}
 
 namespace py::wrapper::Windows::Devices::Adc
 {

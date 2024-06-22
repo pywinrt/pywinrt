@@ -29,10 +29,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.UI.Text.h>
 
 namespace py::proj::Microsoft::UI::Text
-{}
+{
+}
 
 namespace py::impl::Microsoft::UI::Text
-{}
+{
+}
 
 namespace py::wrapper::Microsoft::UI::Text
 {

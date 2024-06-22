@@ -29,7 +29,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Gaming.Preview.GamesEnumeration.h>
 
 namespace py::proj::Windows::Gaming::Preview::GamesEnumeration
-{}
+{
+}
 
 namespace py::impl::Windows::Gaming::Preview::GamesEnumeration
 {

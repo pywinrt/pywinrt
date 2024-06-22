@@ -19,10 +19,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Diagnostics.h>
 
 namespace py::proj::Windows::Foundation::Diagnostics
-{}
+{
+}
 
 namespace py::impl::Windows::Foundation::Diagnostics
-{}
+{
+}
 
 namespace py::wrapper::Windows::Foundation::Diagnostics
 {
