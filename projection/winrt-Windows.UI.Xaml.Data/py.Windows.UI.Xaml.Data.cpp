@@ -3005,8 +3005,15 @@ namespace py::cpp::Windows::UI::Xaml::Data
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Foundation::IInspectable>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Foundation::IInspectable>(value));
+            }
+
             return 0;
         }
         catch (...)

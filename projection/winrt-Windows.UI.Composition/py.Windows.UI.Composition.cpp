@@ -4274,8 +4274,15 @@ namespace py::cpp::Windows::UI::Composition
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Composition::CompositionColorGradientStop>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Composition::CompositionColorGradientStop>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -13247,8 +13254,15 @@ namespace py::cpp::Windows::UI::Composition
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Composition::CompositionShape>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Composition::CompositionShape>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -14481,8 +14495,15 @@ namespace py::cpp::Windows::UI::Composition
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<float>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<float>(value));
+            }
+
             return 0;
         }
         catch (...)

@@ -858,8 +858,15 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -1903,8 +1910,15 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -2888,8 +2902,15 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -3873,8 +3894,15 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -4894,8 +4922,15 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -7795,8 +7830,15 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -9434,8 +9476,15 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -10160,8 +10209,15 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Globalization::Language>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Globalization::Language>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -11181,8 +11237,15 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -12681,8 +12744,15 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -13407,8 +13477,15 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::HttpMethod>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::HttpMethod>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -15046,8 +15123,15 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -18029,8 +18113,15 @@ namespace py::cpp::Windows::Web::Http::Headers
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(value));
+            }
+
             return 0;
         }
         catch (...)

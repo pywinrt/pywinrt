@@ -5557,8 +5557,15 @@ namespace py::cpp::Windows::UI::Xaml
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -15018,8 +15025,15 @@ namespace py::cpp::Windows::UI::Xaml
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::SetterBase>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::SetterBase>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -16937,8 +16951,15 @@ namespace py::cpp::Windows::UI::Xaml
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::TriggerAction>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::TriggerAction>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -17623,8 +17644,15 @@ namespace py::cpp::Windows::UI::Xaml
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::TriggerBase>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::TriggerBase>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -24824,8 +24852,15 @@ namespace py::cpp::Windows::UI::Xaml
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::UIElement>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::UI::Xaml::UIElement>(value));
+            }
+
             return 0;
         }
         catch (...)

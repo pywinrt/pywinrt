@@ -1052,8 +1052,15 @@ namespace py::cpp::Windows::Data::Json
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Data::Json::IJsonValue>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Windows::Data::Json::IJsonValue>(value));
+            }
+
             return 0;
         }
         catch (...)

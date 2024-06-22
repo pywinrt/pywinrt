@@ -999,8 +999,15 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Microsoft::UI::Xaml::Documents::Block>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Microsoft::UI::Xaml::Documents::Block>(value));
+            }
+
             return 0;
         }
         catch (...)
@@ -3848,8 +3855,15 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
     {
         try
         {
-            if (value == nullptr) { self->obj.RemoveAt(static_cast<uint32_t>(i)); }
-            else { self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Microsoft::UI::Xaml::Documents::Inline>(value)); }
+            if (!value)
+            {
+                self->obj.RemoveAt(static_cast<uint32_t>(i));
+            }
+            else
+            {
+                self->obj.SetAt(static_cast<uint32_t>(i), py::convert_to<winrt::Microsoft::UI::Xaml::Documents::Inline>(value));
+            }
+
             return 0;
         }
         catch (...)

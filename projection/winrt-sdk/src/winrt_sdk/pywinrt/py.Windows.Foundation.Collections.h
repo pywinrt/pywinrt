@@ -1902,8 +1902,15 @@ namespace py::impl::Windows::Foundation::Collections
         {
             try
             {
-                if (value == nullptr) { _obj.RemoveAt(static_cast<uint32_t>(i)); }
-                else { _obj.SetAt(static_cast<uint32_t>(i), py::convert_to<T>(value)); }
+                if (!value)
+                {
+                    _obj.RemoveAt(static_cast<uint32_t>(i));
+                }
+                else
+                {
+                    _obj.SetAt(static_cast<uint32_t>(i), py::convert_to<T>(value));
+                }
+
                 return 0;
             }
             catch (...)
@@ -2673,8 +2680,15 @@ namespace py::impl::Windows::Foundation::Collections
         {
             try
             {
-                if (value == nullptr) { _obj.RemoveAt(static_cast<uint32_t>(i)); }
-                else { _obj.SetAt(static_cast<uint32_t>(i), py::convert_to<T>(value)); }
+                if (!value)
+                {
+                    _obj.RemoveAt(static_cast<uint32_t>(i));
+                }
+                else
+                {
+                    _obj.SetAt(static_cast<uint32_t>(i), py::convert_to<T>(value));
+                }
+
                 return 0;
             }
             catch (...)
