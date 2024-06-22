@@ -6898,7 +6898,7 @@ namespace py::cpp::Windows::Media::Devices
                     return nullptr;
                 }
 
-                bool param0 {  };
+                bool param0{};
 
                 auto return_value = self->obj.TryGetAuto(param0);
 
@@ -6941,7 +6941,7 @@ namespace py::cpp::Windows::Media::Devices
                     return nullptr;
                 }
 
-                double param0 {  };
+                double param0{};
 
                 auto return_value = self->obj.TryGetValue(param0);
 
@@ -9339,7 +9339,7 @@ namespace py::cpp::Windows::Media::Devices
                     return nullptr;
                 }
 
-                winrt::Windows::Media::Capture::PowerlineFrequency param0 {  };
+                winrt::Windows::Media::Capture::PowerlineFrequency param0{};
 
                 auto return_value = self->obj.TryGetPowerlineFrequency(param0);
 

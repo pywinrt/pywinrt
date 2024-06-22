@@ -542,7 +542,7 @@ namespace py::cpp::Windows::Data::Json
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Data::Json::IJsonValue>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -835,7 +835,7 @@ namespace py::cpp::Windows::Data::Json
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Data::Json::JsonArray param1 { nullptr };
+                winrt::Windows::Data::Json::JsonArray param1{nullptr};
 
                 auto return_value = winrt::Windows::Data::Json::JsonArray::TryParse(param0, param1);
 
@@ -2085,7 +2085,7 @@ namespace py::cpp::Windows::Data::Json
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Data::Json::JsonObject param1 { nullptr };
+                winrt::Windows::Data::Json::JsonObject param1{nullptr};
 
                 auto return_value = winrt::Windows::Data::Json::JsonObject::TryParse(param0, param1);
 
@@ -2762,7 +2762,7 @@ namespace py::cpp::Windows::Data::Json
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Data::Json::JsonValue param1 { nullptr };
+                winrt::Windows::Data::Json::JsonValue param1{nullptr};
 
                 auto return_value = winrt::Windows::Data::Json::JsonValue::TryParse(param0, param1);
 

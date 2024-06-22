@@ -654,7 +654,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 }
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Documents::Block>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -3500,7 +3500,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
                 }
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Documents::Inline>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 

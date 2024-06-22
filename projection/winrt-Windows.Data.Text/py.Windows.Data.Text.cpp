@@ -1530,8 +1530,8 @@ namespace py::cpp::Windows::Data::Text
                 }
 
                 auto param0 = py::convert_to<uint32_t>(args, 0);
-                char16_t param1 {  };
-                char16_t param2 {  };
+                char16_t param1{};
+                char16_t param2{};
 
                 winrt::Windows::Data::Text::UnicodeCharacters::GetSurrogatePairFromCodepoint(param0, param1, param2);
 

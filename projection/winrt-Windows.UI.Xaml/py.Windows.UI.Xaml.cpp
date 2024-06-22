@@ -5169,7 +5169,7 @@ namespace py::cpp::Windows::UI::Xaml
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -14651,7 +14651,7 @@ namespace py::cpp::Windows::UI::Xaml
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::SetterBase>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -16586,7 +16586,7 @@ namespace py::cpp::Windows::UI::Xaml
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::TriggerAction>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -17269,7 +17269,7 @@ namespace py::cpp::Windows::UI::Xaml
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::TriggerBase>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -24467,7 +24467,7 @@ namespace py::cpp::Windows::UI::Xaml
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 

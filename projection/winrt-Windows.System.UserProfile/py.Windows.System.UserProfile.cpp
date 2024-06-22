@@ -788,8 +788,8 @@ namespace py::cpp::Windows::System::UserProfile
                     return nullptr;
                 }
 
-                winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param0 { nullptr };
-                winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param1 { nullptr };
+                winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param0{nullptr};
+                winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param1{nullptr};
 
                 self->obj.Split(param0, param1);
 

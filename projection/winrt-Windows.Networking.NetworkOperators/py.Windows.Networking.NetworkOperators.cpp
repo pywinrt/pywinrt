@@ -3037,7 +3037,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationContext param1 { nullptr };
+                winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationContext param1{nullptr};
 
                 auto return_value = winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationContext::TryGetAuthenticationContext(param0, param1);
 

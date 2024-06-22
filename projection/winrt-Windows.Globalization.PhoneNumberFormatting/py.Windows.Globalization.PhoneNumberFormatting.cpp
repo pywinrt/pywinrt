@@ -267,7 +267,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter param1 { nullptr };
+                winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter param1{nullptr};
 
                 winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter::TryCreate(param0, param1);
 
@@ -668,7 +668,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo param1 { nullptr };
+                winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo param1{nullptr};
 
                 auto return_value = winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo::TryParse(param0, param1);
 
@@ -702,7 +702,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo param2 { nullptr };
+                winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo param2{nullptr};
 
                 auto return_value = winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo::TryParse(param0, param1, param2);
 

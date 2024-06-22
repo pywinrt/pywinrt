@@ -4138,7 +4138,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
                     return nullptr;
                 }
 
-                bool param0 {  };
+                bool param0{};
 
                 auto return_value = self->obj.GetCaretRange(param0);
 

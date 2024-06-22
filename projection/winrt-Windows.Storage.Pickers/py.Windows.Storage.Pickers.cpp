@@ -220,7 +220,7 @@ namespace py::cpp::Windows::Storage::Pickers
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -1731,7 +1731,7 @@ namespace py::cpp::Windows::Storage::Pickers
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 

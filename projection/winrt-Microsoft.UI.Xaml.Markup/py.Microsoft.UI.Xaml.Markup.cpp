@@ -1704,7 +1704,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
-                int32_t param3 {  };
+                int32_t param3{};
 
                 self->obj.ProcessBindings(param0, param1, param2, param3);
 

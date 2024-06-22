@@ -2052,7 +2052,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode>(args, 4);
                 auto param5 = py::convert_to<bool>(args, 5);
-                winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode param6 {  };
+                winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode param6{};
 
                 auto return_value = winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter::GetFlyoutPlacement(param0, param1, param2, param3, param4, param5, param6);
 
@@ -2097,8 +2097,8 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::FrameworkElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode>(args, 1);
-                winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode param2 {  };
-                bool param3 {  };
+                winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode param2{};
+                bool param3{};
 
                 auto return_value = winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter::GetFlyoutPlacementTargetInfo(param0, param1, param2, param3);
 

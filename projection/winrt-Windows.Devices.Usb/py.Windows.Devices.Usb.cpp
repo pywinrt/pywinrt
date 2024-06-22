@@ -880,7 +880,7 @@ namespace py::cpp::Windows::Devices::Usb
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbDescriptor>(args, 0);
-                winrt::Windows::Devices::Usb::UsbConfigurationDescriptor param1 { nullptr };
+                winrt::Windows::Devices::Usb::UsbConfigurationDescriptor param1{nullptr};
 
                 auto return_value = winrt::Windows::Devices::Usb::UsbConfigurationDescriptor::TryParse(param0, param1);
 
@@ -2705,7 +2705,7 @@ namespace py::cpp::Windows::Devices::Usb
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbDescriptor>(args, 0);
-                winrt::Windows::Devices::Usb::UsbEndpointDescriptor param1 { nullptr };
+                winrt::Windows::Devices::Usb::UsbEndpointDescriptor param1{nullptr};
 
                 auto return_value = winrt::Windows::Devices::Usb::UsbEndpointDescriptor::TryParse(param0, param1);
 
@@ -3225,7 +3225,7 @@ namespace py::cpp::Windows::Devices::Usb
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbDescriptor>(args, 0);
-                winrt::Windows::Devices::Usb::UsbInterfaceDescriptor param1 { nullptr };
+                winrt::Windows::Devices::Usb::UsbInterfaceDescriptor param1{nullptr};
 
                 auto return_value = winrt::Windows::Devices::Usb::UsbInterfaceDescriptor::TryParse(param0, param1);
 

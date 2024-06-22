@@ -3929,7 +3929,7 @@ namespace py::cpp::Windows::UI::Composition
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::CompositionColorGradientStop>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -10969,7 +10969,7 @@ namespace py::cpp::Windows::UI::Composition
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                bool param1 {  };
+                bool param1{};
 
                 auto return_value = self->obj.TryGetBoolean(param0, param1);
 
@@ -11013,7 +11013,7 @@ namespace py::cpp::Windows::UI::Composition
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::UI::Color param1 {  };
+                winrt::Windows::UI::Color param1{};
 
                 auto return_value = self->obj.TryGetColor(param0, param1);
 
@@ -11057,7 +11057,7 @@ namespace py::cpp::Windows::UI::Composition
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Foundation::Numerics::float3x2 param1 {  };
+                winrt::Windows::Foundation::Numerics::float3x2 param1{};
 
                 auto return_value = self->obj.TryGetMatrix3x2(param0, param1);
 
@@ -11101,7 +11101,7 @@ namespace py::cpp::Windows::UI::Composition
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Foundation::Numerics::float4x4 param1 {  };
+                winrt::Windows::Foundation::Numerics::float4x4 param1{};
 
                 auto return_value = self->obj.TryGetMatrix4x4(param0, param1);
 
@@ -11145,7 +11145,7 @@ namespace py::cpp::Windows::UI::Composition
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Foundation::Numerics::quaternion param1 {  };
+                winrt::Windows::Foundation::Numerics::quaternion param1{};
 
                 auto return_value = self->obj.TryGetQuaternion(param0, param1);
 
@@ -11189,7 +11189,7 @@ namespace py::cpp::Windows::UI::Composition
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                float param1 {  };
+                float param1{};
 
                 auto return_value = self->obj.TryGetScalar(param0, param1);
 
@@ -11233,7 +11233,7 @@ namespace py::cpp::Windows::UI::Composition
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Foundation::Numerics::float2 param1 {  };
+                winrt::Windows::Foundation::Numerics::float2 param1{};
 
                 auto return_value = self->obj.TryGetVector2(param0, param1);
 
@@ -11277,7 +11277,7 @@ namespace py::cpp::Windows::UI::Composition
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Foundation::Numerics::float3 param1 {  };
+                winrt::Windows::Foundation::Numerics::float3 param1{};
 
                 auto return_value = self->obj.TryGetVector3(param0, param1);
 
@@ -11321,7 +11321,7 @@ namespace py::cpp::Windows::UI::Composition
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Foundation::Numerics::float4 param1 {  };
+                winrt::Windows::Foundation::Numerics::float4 param1{};
 
                 auto return_value = self->obj.TryGetVector4(param0, param1);
 
@@ -12899,7 +12899,7 @@ namespace py::cpp::Windows::UI::Composition
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::CompositionShape>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -14130,7 +14130,7 @@ namespace py::cpp::Windows::UI::Composition
                 }
 
                 auto param0 = py::convert_to<float>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 

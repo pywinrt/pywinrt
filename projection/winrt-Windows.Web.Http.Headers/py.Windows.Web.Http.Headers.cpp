@@ -220,7 +220,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -1052,7 +1052,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue param1 { nullptr };
+                winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue param1{nullptr};
 
                 auto return_value = winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue::TryParse(param0, param1);
 
@@ -1450,7 +1450,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -2074,7 +2074,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue param1 { nullptr };
+                winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue param1{nullptr};
 
                 auto return_value = winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue::TryParse(param0, param1);
 
@@ -2432,7 +2432,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -3056,7 +3056,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue param1 { nullptr };
+                winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue param1{nullptr};
 
                 auto return_value = winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue::TryParse(param0, param1);
 
@@ -3414,7 +3414,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -4054,7 +4054,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue param1 { nullptr };
+                winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue param1{nullptr};
 
                 auto return_value = winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue::TryParse(param0, param1);
 
@@ -4432,7 +4432,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -5056,7 +5056,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue param1 { nullptr };
+                winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue param1{nullptr};
 
                 auto return_value = winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue::TryParse(param0, param1);
 
@@ -6561,7 +6561,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue param1 { nullptr };
+                winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue param1{nullptr};
 
                 auto return_value = winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue::TryParse(param0, param1);
 
@@ -6924,7 +6924,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue param1 { nullptr };
+                winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue param1{nullptr};
 
                 auto return_value = winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue::TryParse(param0, param1);
 
@@ -7330,7 +7330,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -7970,7 +7970,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue param1 { nullptr };
+                winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue param1{nullptr};
 
                 auto return_value = winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue::TryParse(param0, param1);
 
@@ -8245,7 +8245,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue param1 { nullptr };
+                winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue param1{nullptr};
 
                 auto return_value = winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue::TryParse(param0, param1);
 
@@ -8540,7 +8540,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue param1 { nullptr };
+                winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue param1{nullptr};
 
                 auto return_value = winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue::TryParse(param0, param1);
 
@@ -8966,7 +8966,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -9689,7 +9689,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Globalization::Language>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -10329,7 +10329,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue param1 { nullptr };
+                winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue param1{nullptr};
 
                 auto return_value = winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue::TryParse(param0, param1);
 
@@ -10707,7 +10707,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -11331,7 +11331,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue param1 { nullptr };
+                winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue param1{nullptr};
 
                 auto return_value = winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue::TryParse(param0, param1);
 
@@ -11702,7 +11702,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue param1 { nullptr };
+                winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue param1{nullptr};
 
                 auto return_value = winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue::TryParse(param0, param1);
 
@@ -12204,7 +12204,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -12927,7 +12927,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpMethod>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -13567,7 +13567,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue param1 { nullptr };
+                winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue param1{nullptr};
 
                 auto return_value = winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue::TryParse(param0, param1);
 
@@ -13890,7 +13890,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Web::Http::Headers::HttpProductHeaderValue param1 { nullptr };
+                winrt::Windows::Web::Http::Headers::HttpProductHeaderValue param1{nullptr};
 
                 auto return_value = winrt::Windows::Web::Http::Headers::HttpProductHeaderValue::TryParse(param0, param1);
 
@@ -14185,7 +14185,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue param1 { nullptr };
+                winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue param1{nullptr};
 
                 auto return_value = winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue::TryParse(param0, param1);
 
@@ -14563,7 +14563,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 
@@ -17165,7 +17165,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue param1 { nullptr };
+                winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue param1{nullptr};
 
                 auto return_value = winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue::TryParse(param0, param1);
 
@@ -17543,7 +17543,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 

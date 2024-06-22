@@ -1003,7 +1003,7 @@ namespace py::cpp::Windows::UI::Text
                     return nullptr;
                 }
 
-                winrt::hstring param0 {  };
+                winrt::hstring param0{};
 
                 self->obj.GetMath(param0);
 
@@ -1106,7 +1106,7 @@ namespace py::cpp::Windows::UI::Text
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextGetOptions>(args, 0);
-                winrt::hstring param1 {  };
+                winrt::hstring param1{};
 
                 self->obj.GetText(param0, param1);
 
@@ -2067,7 +2067,7 @@ namespace py::cpp::Windows::UI::Text
                     return nullptr;
                 }
 
-                uint32_t param0 {  };
+                uint32_t param0{};
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
                 self->obj.GetCharacterUtf32(param0, param1);
@@ -2169,7 +2169,7 @@ namespace py::cpp::Windows::UI::Text
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::HorizontalCharacterAlignment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Text::VerticalCharacterAlignment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 2);
-                winrt::Windows::Foundation::Point param3 {  };
+                winrt::Windows::Foundation::Point param3{};
 
                 self->obj.GetPoint(param0, param1, param2, param3);
 
@@ -2208,8 +2208,8 @@ namespace py::cpp::Windows::UI::Text
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 0);
-                winrt::Windows::Foundation::Rect param1 {  };
-                int32_t param2 {  };
+                winrt::Windows::Foundation::Rect param1{};
+                int32_t param2{};
 
                 self->obj.GetRect(param0, param1, param2);
 
@@ -2253,7 +2253,7 @@ namespace py::cpp::Windows::UI::Text
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextGetOptions>(args, 0);
-                winrt::hstring param1 {  };
+                winrt::hstring param1{};
 
                 self->obj.GetText(param0, param1);
 
@@ -5328,7 +5328,7 @@ namespace py::cpp::Windows::UI::Text
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextGetOptions>(args, 0);
-                winrt::hstring param1 {  };
+                winrt::hstring param1{};
 
                 self->obj.GetText(param0, param1);
 
@@ -5968,9 +5968,9 @@ namespace py::cpp::Windows::UI::Text
                 }
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
-                float param1 {  };
-                winrt::Windows::UI::Text::TabAlignment param2 {  };
-                winrt::Windows::UI::Text::TabLeader param3 {  };
+                float param1{};
+                winrt::Windows::UI::Text::TabAlignment param2{};
+                winrt::Windows::UI::Text::TabLeader param3{};
 
                 self->obj.GetTab(param0, param1, param2, param3);
 
@@ -7425,7 +7425,7 @@ namespace py::cpp::Windows::UI::Text
                     return nullptr;
                 }
 
-                uint32_t param0 {  };
+                uint32_t param0{};
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
                 self->obj.GetCharacterUtf32(param0, param1);
@@ -7527,7 +7527,7 @@ namespace py::cpp::Windows::UI::Text
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::HorizontalCharacterAlignment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Text::VerticalCharacterAlignment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 2);
-                winrt::Windows::Foundation::Point param3 {  };
+                winrt::Windows::Foundation::Point param3{};
 
                 self->obj.GetPoint(param0, param1, param2, param3);
 
@@ -7566,8 +7566,8 @@ namespace py::cpp::Windows::UI::Text
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 0);
-                winrt::Windows::Foundation::Rect param1 {  };
-                int32_t param2 {  };
+                winrt::Windows::Foundation::Rect param1{};
+                int32_t param2{};
 
                 self->obj.GetRect(param0, param1, param2);
 
@@ -7611,7 +7611,7 @@ namespace py::cpp::Windows::UI::Text
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextGetOptions>(args, 0);
-                winrt::hstring param1 {  };
+                winrt::hstring param1{};
 
                 self->obj.GetText(param0, param1);
 
@@ -9089,7 +9089,7 @@ namespace py::cpp::Windows::UI::Text
                     return nullptr;
                 }
 
-                uint32_t param0 {  };
+                uint32_t param0{};
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
                 self->obj.GetCharacterUtf32(param0, param1);
@@ -9191,7 +9191,7 @@ namespace py::cpp::Windows::UI::Text
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::HorizontalCharacterAlignment>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Text::VerticalCharacterAlignment>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 2);
-                winrt::Windows::Foundation::Point param3 {  };
+                winrt::Windows::Foundation::Point param3{};
 
                 self->obj.GetPoint(param0, param1, param2, param3);
 
@@ -9230,8 +9230,8 @@ namespace py::cpp::Windows::UI::Text
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::PointOptions>(args, 0);
-                winrt::Windows::Foundation::Rect param1 {  };
-                int32_t param2 {  };
+                winrt::Windows::Foundation::Rect param1{};
+                int32_t param2{};
 
                 self->obj.GetRect(param0, param1, param2);
 
@@ -9275,7 +9275,7 @@ namespace py::cpp::Windows::UI::Text
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Text::TextGetOptions>(args, 0);
-                winrt::hstring param1 {  };
+                winrt::hstring param1{};
 
                 self->obj.GetText(param0, param1);
 

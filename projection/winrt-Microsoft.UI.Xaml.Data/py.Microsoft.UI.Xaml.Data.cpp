@@ -2349,7 +2349,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
-                uint32_t param1 {  };
+                uint32_t param1{};
 
                 auto return_value = self->obj.IndexOf(param0, param1);
 

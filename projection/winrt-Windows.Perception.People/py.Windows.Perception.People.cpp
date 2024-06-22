@@ -714,7 +714,7 @@ namespace py::cpp::Windows::Perception::People
 
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Perception::People::HandJointKind>(args, 1);
-                winrt::Windows::Perception::People::JointPose param2 {  };
+                winrt::Windows::Perception::People::JointPose param2{};
 
                 auto return_value = self->obj.TryGetJoint(param0, param1, param2);
 

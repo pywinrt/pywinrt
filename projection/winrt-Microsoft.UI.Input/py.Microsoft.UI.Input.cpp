@@ -9362,7 +9362,7 @@ namespace py::cpp::Microsoft::UI::Input
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
-                winrt::Windows::Foundation::Point param1 {  };
+                winrt::Windows::Foundation::Point param1{};
 
                 auto return_value = self->obj.TryTransform(param0, param1);
 
@@ -9406,7 +9406,7 @@ namespace py::cpp::Microsoft::UI::Input
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
-                winrt::Windows::Foundation::Rect param1 {  };
+                winrt::Windows::Foundation::Rect param1{};
 
                 auto return_value = self->obj.TryTransformBounds(param0, param1);
 
