@@ -5545,7 +5545,8 @@ namespace py::cpp::Windows::UI::Xaml
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -15013,7 +15014,8 @@ namespace py::cpp::Windows::UI::Xaml
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -16939,7 +16941,8 @@ namespace py::cpp::Windows::UI::Xaml
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -17632,7 +17635,8 @@ namespace py::cpp::Windows::UI::Xaml
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -24840,7 +24844,8 @@ namespace py::cpp::Windows::UI::Xaml
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();

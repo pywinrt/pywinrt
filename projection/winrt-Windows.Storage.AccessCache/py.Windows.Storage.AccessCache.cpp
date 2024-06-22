@@ -302,7 +302,8 @@ namespace py::cpp::Windows::Storage::AccessCache
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();

@@ -190,8 +190,7 @@ static class SeqWriterExtensions
             w.Indent--;
             w.WriteLine("}");
             w.WriteBlankLine();
-            // FIXME: make this WriteLine
-            w.Write("return convert(items);");
+            w.WriteLine("return convert(items);");
         });
     }
 

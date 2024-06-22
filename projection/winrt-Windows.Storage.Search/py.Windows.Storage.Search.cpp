@@ -2056,7 +2056,8 @@ namespace py::cpp::Windows::Storage::Search
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();

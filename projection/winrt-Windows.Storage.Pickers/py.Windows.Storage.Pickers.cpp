@@ -553,7 +553,8 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -1914,7 +1915,8 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();

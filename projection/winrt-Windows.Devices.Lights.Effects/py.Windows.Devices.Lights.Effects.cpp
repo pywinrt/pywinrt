@@ -2331,7 +2331,8 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();

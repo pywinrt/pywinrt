@@ -1002,7 +1002,8 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();

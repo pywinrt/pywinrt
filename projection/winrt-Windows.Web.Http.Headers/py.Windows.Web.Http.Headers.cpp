@@ -846,7 +846,8 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -1898,7 +1899,8 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -2890,7 +2892,8 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -3882,7 +3885,8 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -4910,7 +4914,8 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -7818,7 +7823,8 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -9464,7 +9470,8 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -10197,7 +10204,8 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -11225,7 +11233,8 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -12732,7 +12741,8 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -13465,7 +13475,8 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -15111,7 +15122,8 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
@@ -18101,7 +18113,8 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            return convert(items);}
+            return convert(items);
+        }
         catch (...)
         {
             py::to_PyErr();
