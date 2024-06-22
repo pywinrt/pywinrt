@@ -965,10 +965,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
             if (!PySlice_Check(slice))
             {
-                PyErr_Format(
-                    PyExc_TypeError,
-                    "indicies must be integers, not '%s'",
-                    Py_TYPE(slice)->tp_name);
+                PyErr_Format(PyExc_TypeError, "indices must be integers, not '%s'", Py_TYPE(slice)->tp_name);
             }
 
             Py_ssize_t start, stop, step, length;
