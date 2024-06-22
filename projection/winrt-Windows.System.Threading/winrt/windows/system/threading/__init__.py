@@ -10,7 +10,6 @@ from winrt import _winrt_windows_system_threading
 if typing.TYPE_CHECKING:
     import winrt.windows.foundation as windows_foundation
 
-
 __all__ = [
     "WorkItemOptions",
     "WorkItemPriority",

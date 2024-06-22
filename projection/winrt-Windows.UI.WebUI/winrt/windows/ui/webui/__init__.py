@@ -11,7 +11,6 @@ if typing.TYPE_CHECKING:
     import winrt.windows.applicationmodel as windows_applicationmodel
     import winrt.windows.applicationmodel.activation as windows_applicationmodel_activation
 
-
 __all__ = [
     "PrintContent",
     "ActivatedDeferral",

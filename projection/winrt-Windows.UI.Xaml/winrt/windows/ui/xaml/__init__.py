@@ -11,7 +11,6 @@ if typing.TYPE_CHECKING:
     import winrt.windows.applicationmodel as windows_applicationmodel
     import winrt.windows.ui.core as windows_ui_core
 
-
 __all__ = [
     "ApplicationHighContrastAdjustment",
     "ApplicationRequiresPointerMode",
