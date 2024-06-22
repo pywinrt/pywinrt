@@ -95,7 +95,7 @@ class MapLocationFinderStatus(enum.IntEnum):
     NOT_SUPPORTED = 6
 
 class MapManeuverNotices(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     TOLL = 0x1
     UNPAVED = 0x2
 
@@ -145,7 +145,7 @@ class MapRouteOptimization(enum.IntEnum):
     SCENIC = 3
 
 class MapRouteRestrictions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     HIGHWAYS = 0x1
     TOLL_ROADS = 0x2
     FERRIES = 0x4

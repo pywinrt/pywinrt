@@ -92,7 +92,7 @@ class FileAccessMode(enum.IntEnum):
     READ_WRITE = 1
 
 class FileAttributes(enum.IntFlag):
-    NORMAL = 0
+    NORMAL = 0x0
     READ_ONLY = 0x1
     DIRECTORY = 0x10
     ARCHIVE = 0x20
@@ -142,7 +142,7 @@ class StorageDeleteOption(enum.IntEnum):
     PERMANENT_DELETE = 1
 
 class StorageItemTypes(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     FILE = 0x1
     FOLDER = 0x2
 
@@ -159,7 +159,7 @@ class StorageLibraryChangeType(enum.IntEnum):
     CHANGE_TRACKING_LOST = 9
 
 class StorageOpenOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     ALLOW_ONLY_READERS = 0x1
     ALLOW_READERS_AND_WRITERS = 0x2
 

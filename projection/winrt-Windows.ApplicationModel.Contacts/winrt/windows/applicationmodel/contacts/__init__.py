@@ -90,7 +90,7 @@ class ContactAddressKind(enum.IntEnum):
     OTHER = 2
 
 class ContactAnnotationOperations(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     CONTACT_PROFILE = 0x1
     MESSAGE = 0x2
     AUDIO_CALL = 0x4
@@ -202,17 +202,17 @@ class ContactPhoneKind(enum.IntEnum):
     RADIO = 9
 
 class ContactQueryDesiredFields(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     PHONE_NUMBER = 0x1
     EMAIL_ADDRESS = 0x2
     POSTAL_ADDRESS = 0x4
 
 class ContactQuerySearchFields(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     NAME = 0x1
     EMAIL = 0x2
     PHONE = 0x4
-    ALL = 0xffffffff
+    ALL = 0xFFFFFFFF
 
 class ContactQuerySearchScope(enum.IntEnum):
     LOCAL = 0

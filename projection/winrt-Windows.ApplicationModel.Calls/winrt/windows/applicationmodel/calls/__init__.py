@@ -114,10 +114,10 @@ class PhoneCallHistoryEntryOtherAppReadAccess(enum.IntEnum):
     SYSTEM_ONLY = 1
 
 class PhoneCallHistoryEntryQueryDesiredMedia(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     AUDIO = 0x1
     VIDEO = 0x2
-    ALL = 0xffffffff
+    ALL = 0xFFFFFFFF
 
 class PhoneCallHistoryEntryRawAddressKind(enum.IntEnum):
     PHONE_NUMBER = 0
@@ -207,7 +207,7 @@ class TransportDeviceAudioRoutingStatus(enum.IntEnum):
     CANNOT_ROUTE_TO_LOCAL_DEVICE = 2
 
 class VoipPhoneCallMedia(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     AUDIO = 0x1
     VIDEO = 0x2
 

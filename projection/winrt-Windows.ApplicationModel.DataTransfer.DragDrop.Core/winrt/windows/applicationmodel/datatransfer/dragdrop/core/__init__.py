@@ -16,7 +16,7 @@ __all__ = [
 ]
 
 class CoreDragUIContentMode(enum.IntFlag):
-    AUTO = 0
+    AUTO = 0x0
     DEFERRED = 0x1
 
 CoreDragDropManager = _winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragDropManager

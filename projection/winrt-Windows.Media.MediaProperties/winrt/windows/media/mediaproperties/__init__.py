@@ -38,7 +38,7 @@ class AudioEncodingQuality(enum.IntEnum):
     LOW = 3
 
 class MediaMirroringOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     HORIZONTAL = 0x1
     VERTICAL = 0x2
 

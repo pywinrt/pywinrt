@@ -24,7 +24,7 @@ class DispatcherQueuePriority(enum.IntEnum):
     HIGH = 10
 
 class DispatcherRunOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     CONTINUE_ON_QUIT = 0x1
     QUIT_ONLY_LOCAL_LOOP = 0x2
 

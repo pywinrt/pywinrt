@@ -35,7 +35,7 @@ __all__ = [
 ]
 
 class InteractionBindingAxisModes(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     POSITION_X = 0x1
     POSITION_Y = 0x2
     SCALE = 0x4

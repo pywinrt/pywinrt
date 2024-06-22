@@ -28,13 +28,13 @@ class GeofenceRemovalReason(enum.IntEnum):
     EXPIRED = 1
 
 class GeofenceState(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     ENTERED = 0x1
     EXITED = 0x2
     REMOVED = 0x4
 
 class MonitoredGeofenceStates(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     ENTERED = 0x1
     EXITED = 0x2
     REMOVED = 0x4

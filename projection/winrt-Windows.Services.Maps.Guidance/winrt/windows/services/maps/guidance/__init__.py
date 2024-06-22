@@ -39,7 +39,7 @@ class GuidanceAudioNotificationKind(enum.IntEnum):
     TRAFFIC_CAMERA = 5
 
 class GuidanceAudioNotifications(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     MANEUVER = 0x1
     ROUTE = 0x2
     GPS = 0x4
@@ -48,7 +48,7 @@ class GuidanceAudioNotifications(enum.IntFlag):
     TRAFFIC_CAMERA = 0x20
 
 class GuidanceLaneMarkers(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     LIGHT_RIGHT = 0x1
     RIGHT = 0x2
     HARD_RIGHT = 0x4
@@ -58,7 +58,7 @@ class GuidanceLaneMarkers(enum.IntFlag):
     LEFT = 0x40
     LIGHT_LEFT = 0x80
     U_TURN_RIGHT = 0x100
-    UNKNOWN = 0xffffffff
+    UNKNOWN = 0xFFFFFFFF
 
 class GuidanceManeuverKind(enum.IntEnum):
     NONE = 0

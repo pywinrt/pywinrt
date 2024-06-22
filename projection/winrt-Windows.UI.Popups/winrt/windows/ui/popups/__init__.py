@@ -19,7 +19,7 @@ __all__ = [
 ]
 
 class MessageDialogOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     ACCEPT_USER_INPUT_AFTER_DELAY = 0x1
 
 class Placement(enum.IntEnum):

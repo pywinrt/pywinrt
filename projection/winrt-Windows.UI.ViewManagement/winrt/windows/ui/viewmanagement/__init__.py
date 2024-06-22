@@ -59,7 +59,7 @@ class ApplicationViewState(enum.IntEnum):
     FULL_SCREEN_PORTRAIT = 3
 
 class ApplicationViewSwitchingOptions(enum.IntFlag):
-    DEFAULT = 0
+    DEFAULT = 0x0
     SKIP_ANIMATION = 0x1
     CONSOLIDATE_VIEWS = 0x2
 

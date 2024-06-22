@@ -35,7 +35,7 @@ class PhotoOrientation(enum.IntEnum):
     ROTATE90 = 8
 
 class PropertyPrefetchOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     MUSIC_PROPERTIES = 0x1
     VIDEO_PROPERTIES = 0x2
     IMAGE_PROPERTIES = 0x4
@@ -51,7 +51,7 @@ class ThumbnailMode(enum.IntEnum):
     SINGLE_ITEM = 5
 
 class ThumbnailOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     RETURN_ONLY_IF_CACHED = 0x1
     RESIZE_THUMBNAIL = 0x2
     USE_CURRENT_SCALE = 0x4

@@ -18,7 +18,7 @@ __all__ = [
 ]
 
 class AccessCacheOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     DISALLOW_USER_INPUT = 0x1
     FAST_LOCATIONS_ONLY = 0x2
     USE_READ_ONLY_CACHED_COPY = 0x4

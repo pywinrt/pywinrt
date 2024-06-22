@@ -41,7 +41,7 @@ class TileMixedRealityModelActivationBehavior(enum.IntEnum):
     NONE = 1
 
 class TileOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     SHOW_NAME_ON_LOGO = 0x1
     SHOW_NAME_ON_WIDE_LOGO = 0x2
     COPY_ON_DEPLOYMENT = 0x4

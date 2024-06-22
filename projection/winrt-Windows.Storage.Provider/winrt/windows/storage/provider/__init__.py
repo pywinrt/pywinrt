@@ -55,7 +55,7 @@ __all__ = [
 ]
 
 class CachedFileOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     REQUIRE_UPDATE_ON_ACCESS = 0x1
     USE_CACHED_FILE_WHEN_OFFLINE = 0x2
     DENY_ACCESS_WHEN_OFFLINE = 0x4
@@ -77,7 +77,7 @@ class ReadActivationMode(enum.IntEnum):
     BEFORE_ACCESS = 1
 
 class StorageProviderHardlinkPolicy(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     ALLOWED = 0x1
 
 class StorageProviderHydrationPolicy(enum.IntEnum):
@@ -87,14 +87,14 @@ class StorageProviderHydrationPolicy(enum.IntEnum):
     ALWAYS_FULL = 3
 
 class StorageProviderHydrationPolicyModifier(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     VALIDATION_REQUIRED = 0x1
     STREAMING_ALLOWED = 0x2
     AUTO_DEHYDRATION_ALLOWED = 0x4
     ALLOW_FULL_RESTART_HYDRATION = 0x8
 
 class StorageProviderInSyncPolicy(enum.IntFlag):
-    DEFAULT = 0
+    DEFAULT = 0x0
     FILE_CREATION_TIME = 0x1
     FILE_READ_ONLY_ATTRIBUTE = 0x2
     FILE_HIDDEN_ATTRIBUTE = 0x4

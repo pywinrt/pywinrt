@@ -22,7 +22,7 @@ class PackageDependencyLifetimeArtifactKind(enum.IntEnum):
     REGISTRY_KEY = 2
 
 class PackageDependencyProcessorArchitectures(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     NEUTRAL = 0x1
     X86 = 0x2
     X64 = 0x4

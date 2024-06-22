@@ -29,7 +29,7 @@ class LampArrayKind(enum.IntEnum):
     HEADSET = 11
 
 class LampPurposes(enum.IntFlag):
-    UNDEFINED = 0
+    UNDEFINED = 0x0
     CONTROL = 0x1
     ACCENT = 0x2
     BRANDING = 0x4

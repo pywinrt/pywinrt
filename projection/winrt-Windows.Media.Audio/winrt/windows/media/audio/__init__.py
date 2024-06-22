@@ -96,7 +96,7 @@ class AudioNodeEmitterDecayKind(enum.IntEnum):
     CUSTOM = 1
 
 class AudioNodeEmitterSettings(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     DISABLE_DOPPLER = 0x1
 
 class AudioNodeEmitterShapeKind(enum.IntEnum):

@@ -78,7 +78,7 @@ class AppointmentConflictType(enum.IntEnum):
     OVERLAP = 2
 
 class AppointmentDaysOfWeek(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     SUNDAY = 0x1
     MONDAY = 0x2
     TUESDAY = 0x4
@@ -141,7 +141,7 @@ class AppointmentWeekOfMonth(enum.IntEnum):
     LAST = 4
 
 class FindAppointmentCalendarsOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     INCLUDE_HIDDEN = 0x1
 
 class RecurrenceType(enum.IntEnum):

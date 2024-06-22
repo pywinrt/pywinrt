@@ -81,7 +81,7 @@ class VpnChannelActivityEventType(enum.IntEnum):
     ACTIVE = 1
 
 class VpnChannelRequestCredentialsOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     RETRYING = 0x1
     USE_FOR_SINGLE_SIGN_IN = 0x2
 

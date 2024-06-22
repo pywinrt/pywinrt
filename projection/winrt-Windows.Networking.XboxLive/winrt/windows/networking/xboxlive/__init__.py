@@ -25,7 +25,7 @@ __all__ = [
 ]
 
 class XboxLiveEndpointPairCreationBehaviors(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     REEVALUATE_PATH = 0x1
 
 class XboxLiveEndpointPairCreationStatus(enum.IntEnum):

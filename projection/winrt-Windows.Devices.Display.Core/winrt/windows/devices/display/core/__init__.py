@@ -53,7 +53,7 @@ __all__ = [
 ]
 
 class DisplayBitsPerChannel(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     BPC6 = 0x1
     BPC8 = 0x2
     BPC10 = 0x4
@@ -65,7 +65,7 @@ class DisplayDeviceCapability(enum.IntEnum):
     FLIP_OVERRIDE = 0
 
 class DisplayManagerOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     ENFORCE_SOURCE_OWNERSHIP = 0x1
     VIRTUAL_REFRESH_RATE_AWARE = 0x2
 
@@ -77,7 +77,7 @@ class DisplayManagerResult(enum.IntEnum):
     REMOTE_SESSION_NOT_SUPPORTED = 4
 
 class DisplayModeQueryOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     ONLY_PREFERRED_RESOLUTION = 0x1
 
 class DisplayPathScaling(enum.IntEnum):
@@ -111,7 +111,7 @@ class DisplayRotation(enum.IntEnum):
     CLOCKWISE270_DEGREES = 3
 
 class DisplayScanoutOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     ALLOW_TEARING = 0x2
 
 class DisplaySourceStatus(enum.IntEnum):
@@ -122,13 +122,13 @@ class DisplaySourceStatus(enum.IntEnum):
     UNOWNED = 4
 
 class DisplayStateApplyOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     FAIL_IF_STATE_CHANGED = 0x1
     FORCE_REAPPLY = 0x2
     FORCE_MODE_ENUMERATION = 0x4
 
 class DisplayStateFunctionalizeOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     FAIL_IF_STATE_CHANGED = 0x1
     VALIDATE_TOPOLOGY_ONLY = 0x2
 

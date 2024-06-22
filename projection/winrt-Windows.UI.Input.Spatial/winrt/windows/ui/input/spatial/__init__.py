@@ -42,7 +42,7 @@ __all__ = [
 ]
 
 class SpatialGestureSettings(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     TAP = 0x1
     DOUBLE_TAP = 0x2
     HOLD = 0x4

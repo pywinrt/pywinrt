@@ -154,7 +154,7 @@ class KeyboardNavigationMode(enum.IntEnum):
     ONCE = 2
 
 class ManipulationModes(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     TRANSLATE_X = 0x1
     TRANSLATE_Y = 0x2
     TRANSLATE_RAILS_X = 0x4
@@ -164,7 +164,7 @@ class ManipulationModes(enum.IntFlag):
     TRANSLATE_INERTIA = 0x40
     ROTATE_INERTIA = 0x80
     SCALE_INERTIA = 0x100
-    ALL = 0xffff
+    ALL = 0xFFFF
     SYSTEM = 0x10000
 
 class StandardUICommandKind(enum.IntEnum):

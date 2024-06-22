@@ -254,7 +254,7 @@ class CoreWebView2MouseEventKind(enum.IntEnum):
     NON_CLIENT_RIGHT_BUTTON_UP = 165
 
 class CoreWebView2MouseEventVirtualKeys(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     LEFT_BUTTON = 0x1
     RIGHT_BUTTON = 0x2
     SHIFT = 0x4
@@ -274,7 +274,7 @@ class CoreWebView2NavigationKind(enum.IntEnum):
     NEW_DOCUMENT = 2
 
 class CoreWebView2PdfToolbarItems(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     SAVE = 0x1
     PRINT = 0x2
     SAVE_AS = 0x4

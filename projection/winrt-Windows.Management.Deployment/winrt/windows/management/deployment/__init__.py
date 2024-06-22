@@ -43,14 +43,14 @@ __all__ = [
 ]
 
 class AddPackageByAppInstallerOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     INSTALL_ALL_RESOURCES = 0x20
     FORCE_TARGET_APP_SHUTDOWN = 0x40
     REQUIRED_CONTENT_GROUP_ONLY = 0x100
     LIMIT_TO_EXISTING_PACKAGES = 0x200
 
 class DeploymentOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     FORCE_APPLICATION_SHUTDOWN = 0x1
     DEVELOPMENT_MODE = 0x2
     INSTALL_ALL_RESOURCES = 0x20
@@ -77,7 +77,7 @@ class PackageState(enum.IntEnum):
     TAMPERED = 3
 
 class PackageStatus(enum.IntFlag):
-    O_K = 0
+    O_K = 0x0
     LICENSE_ISSUE = 0x1
     MODIFIED = 0x2
     TAMPERED = 0x4
@@ -88,17 +88,17 @@ class PackageStubPreference(enum.IntEnum):
     STUB = 1
 
 class PackageTypes(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     MAIN = 0x1
     FRAMEWORK = 0x2
     RESOURCE = 0x4
     BUNDLE = 0x8
     XAP = 0x10
     OPTIONAL = 0x20
-    ALL = 0xffffffff
+    ALL = 0xFFFFFFFF
 
 class RemovalOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     PRESERVE_APPLICATION_DATA = 0x1000
     PRESERVE_ROAMABLE_APPLICATION_DATA = 0x80
     REMOVE_FOR_ALL_USERS = 0x80000

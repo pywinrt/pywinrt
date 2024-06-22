@@ -18,7 +18,7 @@ __all__ = [
 ]
 
 class AttributeTargets(enum.IntFlag):
-    ALL = 0xffffffff
+    ALL = 0xFFFFFFFF
     DELEGATE = 0x1
     ENUM = 0x2
     EVENT = 0x4

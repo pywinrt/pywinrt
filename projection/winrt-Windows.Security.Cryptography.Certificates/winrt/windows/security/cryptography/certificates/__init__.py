@@ -62,18 +62,18 @@ class ChainValidationResult(enum.IntEnum):
     OTHER_ERRORS = 13
 
 class EnrollKeyUsages(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     DECRYPTION = 0x1
     SIGNING = 0x2
     KEY_AGREEMENT = 0x4
-    ALL = 0xffffff
+    ALL = 0xFFFFFF
 
 class ExportOption(enum.IntEnum):
     NOT_EXPORTABLE = 0
     EXPORTABLE = 1
 
 class InstallOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     DELETE_EXPIRED = 0x1
 
 class KeyProtectionLevel(enum.IntEnum):

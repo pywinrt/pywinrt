@@ -36,7 +36,7 @@ class AlternateNormalizationFormat(enum.IntEnum):
     TIME = 5
 
 class TextPredictionOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     PREDICTIONS = 0x1
     CORRECTIONS = 0x2
 

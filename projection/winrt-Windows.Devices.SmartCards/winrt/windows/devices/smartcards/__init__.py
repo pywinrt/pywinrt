@@ -126,7 +126,7 @@ class SmartCardCryptogramMaterialType(enum.IntEnum):
     RSA_PKCS1 = 4
 
 class SmartCardCryptogramPlacementOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     UNITS_ARE_IN_NIBBLES = 0x1
     CHAIN_OUTPUT = 0x2
 
@@ -135,7 +135,7 @@ class SmartCardCryptogramStorageKeyAlgorithm(enum.IntEnum):
     RSA2048 = 1
 
 class SmartCardCryptogramStorageKeyCapabilities(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     HARDWARE_PROTECTION = 0x1
     UNLOCK_PROMPT = 0x2
 

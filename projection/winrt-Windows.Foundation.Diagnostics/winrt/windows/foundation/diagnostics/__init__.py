@@ -56,7 +56,7 @@ class CausalityTraceLevel(enum.IntEnum):
     VERBOSE = 2
 
 class ErrorOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     SUPPRESS_EXCEPTIONS = 0x1
     FORCE_EXCEPTIONS = 0x2
     USE_SET_ERROR_INFO = 0x4

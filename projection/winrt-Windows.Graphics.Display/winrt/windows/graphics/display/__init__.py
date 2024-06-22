@@ -36,7 +36,7 @@ class AdvancedColorKind(enum.IntEnum):
     HIGH_DYNAMIC_RANGE = 2
 
 class DisplayBrightnessOverrideOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     USE_DIMMED_POLICY_WHEN_BATTERY_IS_LOW = 0x1
 
 class DisplayBrightnessOverrideScenario(enum.IntEnum):
@@ -54,7 +54,7 @@ class DisplayColorOverrideScenario(enum.IntEnum):
     ACCURATE = 0
 
 class DisplayOrientations(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     LANDSCAPE = 0x1
     PORTRAIT = 0x2
     LANDSCAPE_FLIPPED = 0x4

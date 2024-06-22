@@ -21,7 +21,7 @@ __all__ = [
 ]
 
 class WorkItemOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     TIME_SLICED = 0x1
 
 class WorkItemPriority(enum.IntEnum):

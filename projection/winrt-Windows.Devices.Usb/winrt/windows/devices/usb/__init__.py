@@ -55,7 +55,7 @@ class UsbEndpointType(enum.IntEnum):
     INTERRUPT = 3
 
 class UsbReadOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     AUTO_CLEAR_STALL = 0x1
     OVERRIDE_AUTOMATIC_BUFFER_MANAGEMENT = 0x2
     IGNORE_SHORT_PACKET = 0x4
@@ -66,7 +66,7 @@ class UsbTransferDirection(enum.IntEnum):
     IN = 1
 
 class UsbWriteOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     AUTO_CLEAR_STALL = 0x1
     SHORT_PACKET_TERMINATE = 0x2
 

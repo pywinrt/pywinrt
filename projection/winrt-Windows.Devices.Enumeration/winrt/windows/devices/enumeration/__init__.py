@@ -68,7 +68,7 @@ class DeviceInformationKind(enum.IntEnum):
     DEVICE_PANEL = 8
 
 class DevicePairingKinds(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     CONFIRM_ONLY = 0x1
     DISPLAY_PIN = 0x2
     PROVIDE_PIN = 0x4
@@ -104,7 +104,7 @@ class DevicePairingResultStatus(enum.IntEnum):
     FAILED = 19
 
 class DevicePickerDisplayStatusOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     SHOW_PROGRESS = 0x1
     SHOW_DISCONNECT_BUTTON = 0x2
     SHOW_RETRY_BUTTON = 0x4

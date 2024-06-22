@@ -22,7 +22,7 @@ class AudioRoutingEndpoint(enum.IntEnum):
     BLUETOOTH_PREFERRED = 7
 
 class AvailableAudioRoutingEndpoints(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     EARPIECE = 0x1
     SPEAKERPHONE = 0x2
     BLUETOOTH = 0x4

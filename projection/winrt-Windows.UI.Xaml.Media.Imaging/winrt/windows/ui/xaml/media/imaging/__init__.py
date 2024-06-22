@@ -27,7 +27,7 @@ __all__ = [
 ]
 
 class BitmapCreateOptions(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     IGNORE_IMAGE_CACHE = 0x8
 
 class DecodePixelType(enum.IntEnum):

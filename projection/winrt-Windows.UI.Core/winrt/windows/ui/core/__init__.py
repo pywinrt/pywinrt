@@ -101,7 +101,7 @@ class CoreDispatcherPriority(enum.IntEnum):
     HIGH = 1
 
 class CoreIndependentInputFilters(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     MOUSE_BUTTON = 0x1
     MOUSE_WHEEL = 0x2
     MOUSE_HOVER = 0x4
@@ -109,7 +109,7 @@ class CoreIndependentInputFilters(enum.IntFlag):
     PEN_INVERTED = 0x10
 
 class CoreInputDeviceTypes(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     TOUCH = 0x1
     PEN = 0x2
     MOUSE = 0x4
@@ -125,7 +125,7 @@ class CoreProximityEvaluationScore(enum.IntEnum):
     FARTHEST = 2147483647
 
 class CoreVirtualKeyStates(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     DOWN = 0x1
     LOCKED = 0x2
 

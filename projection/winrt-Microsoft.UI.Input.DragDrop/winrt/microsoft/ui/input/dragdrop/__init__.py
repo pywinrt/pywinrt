@@ -17,7 +17,7 @@ __all__ = [
 ]
 
 class DragDropModifiers(enum.IntFlag):
-    NONE = 0
+    NONE = 0x0
     SHIFT = 0x1
     CONTROL = 0x2
     ALT = 0x4
