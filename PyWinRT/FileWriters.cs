@@ -316,8 +316,7 @@ static class FileWriters
 
                 w.WriteLine("def __len__(self) -> int: ...");
                 w.WriteLine($"def __iter__(self) -> typing.Iterator[{keyType}]: ...");
-                // FIXME: space after :
-                w.WriteLine("def __contains__(self, key: object) -> bool:...");
+                w.WriteLine("def __contains__(self, key: object) -> bool: ...");
                 // FIXME: combine ifs
                 if (type.IsPyMutableMapping)
                 {
