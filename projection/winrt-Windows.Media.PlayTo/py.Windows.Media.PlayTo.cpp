@@ -3383,20 +3383,19 @@ namespace py::cpp::Windows::Media::PlayTo
     };
 
     // ----- Windows.Media.PlayTo Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Media::PlayTo");
 
+    PyDoc_STRVAR(module_doc, "Windows.Media.PlayTo");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_media_playto",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_media_playto",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Media::PlayTo
 
 PyMODINIT_FUNC PyInit__winrt_windows_media_playto(void) noexcept

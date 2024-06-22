@@ -8028,20 +8028,19 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- Windows.Devices.Perception Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Perception");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Perception");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_perception",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_perception",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Perception
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept

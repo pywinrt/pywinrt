@@ -18471,20 +18471,19 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- Windows.UI.Xaml.Controls.Maps Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Controls::Maps");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.Xaml.Controls.Maps");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_xaml_controls_maps",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_xaml_controls_maps",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::Xaml::Controls::Maps
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept

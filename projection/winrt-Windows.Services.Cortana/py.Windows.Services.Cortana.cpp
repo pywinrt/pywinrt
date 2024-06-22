@@ -1030,20 +1030,19 @@ namespace py::cpp::Windows::Services::Cortana
     };
 
     // ----- Windows.Services.Cortana Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Services::Cortana");
 
+    PyDoc_STRVAR(module_doc, "Windows.Services.Cortana");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_services_cortana",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_services_cortana",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Services::Cortana
 
 PyMODINIT_FUNC PyInit__winrt_windows_services_cortana(void) noexcept

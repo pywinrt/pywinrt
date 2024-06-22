@@ -2317,20 +2317,19 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
     };
 
     // ----- Windows.UI.Xaml.Shapes Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Shapes");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.Xaml.Shapes");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_xaml_shapes",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_xaml_shapes",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::Xaml::Shapes
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept

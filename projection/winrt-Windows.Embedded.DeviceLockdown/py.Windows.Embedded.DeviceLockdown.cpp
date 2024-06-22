@@ -278,20 +278,19 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
     };
 
     // ----- Windows.Embedded.DeviceLockdown Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Embedded::DeviceLockdown");
 
+    PyDoc_STRVAR(module_doc, "Windows.Embedded.DeviceLockdown");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_embedded_devicelockdown",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_embedded_devicelockdown",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Embedded::DeviceLockdown
 
 PyMODINIT_FUNC PyInit__winrt_windows_embedded_devicelockdown(void) noexcept

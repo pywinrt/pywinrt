@@ -2536,20 +2536,19 @@ namespace py::cpp::Windows::ApplicationModel::Store
     };
 
     // ----- Windows.ApplicationModel.Store Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Store");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.Store");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_store",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_store",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::Store
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store(void) noexcept

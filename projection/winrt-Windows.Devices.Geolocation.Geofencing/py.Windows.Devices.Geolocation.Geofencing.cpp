@@ -741,20 +741,19 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
     };
 
     // ----- Windows.Devices.Geolocation.Geofencing Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Geolocation::Geofencing");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Geolocation.Geofencing");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_geolocation_geofencing",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_geolocation_geofencing",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Geolocation::Geofencing
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_geolocation_geofencing(void) noexcept

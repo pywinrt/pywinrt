@@ -4069,20 +4069,19 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     };
 
     // ----- Windows.ApplicationModel.Payments Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Payments");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.Payments");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_payments",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_payments",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::Payments
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_payments(void) noexcept

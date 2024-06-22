@@ -555,20 +555,19 @@ namespace py::cpp::Windows::Devices::Adc
     };
 
     // ----- Windows.Devices.Adc Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Adc");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Adc");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_adc",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_adc",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Adc
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_adc(void) noexcept

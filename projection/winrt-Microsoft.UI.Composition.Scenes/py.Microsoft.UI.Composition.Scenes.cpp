@@ -4609,20 +4609,19 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
     };
 
     // ----- Microsoft.UI.Composition.Scenes Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::UI::Composition::Scenes");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.UI.Composition.Scenes");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_ui_composition_scenes",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_ui_composition_scenes",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::UI::Composition::Scenes
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_scenes(void) noexcept

@@ -721,20 +721,19 @@ namespace py::cpp::Windows::Media::Transcoding
     };
 
     // ----- Windows.Media.Transcoding Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Media::Transcoding");
 
+    PyDoc_STRVAR(module_doc, "Windows.Media.Transcoding");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_media_transcoding",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_media_transcoding",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Media::Transcoding
 
 PyMODINIT_FUNC PyInit__winrt_windows_media_transcoding(void) noexcept

@@ -1354,20 +1354,19 @@ namespace py::cpp::Windows::Perception::People
     };
 
     // ----- Windows.Perception.People Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Perception::People");
 
+    PyDoc_STRVAR(module_doc, "Windows.Perception.People");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_perception_people",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_perception_people",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Perception::People
 
 PyMODINIT_FUNC PyInit__winrt_windows_perception_people(void) noexcept

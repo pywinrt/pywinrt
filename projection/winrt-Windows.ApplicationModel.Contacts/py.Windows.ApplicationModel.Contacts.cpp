@@ -15151,20 +15151,19 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- Windows.ApplicationModel.Contacts Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Contacts");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.Contacts");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_contacts",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_contacts",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::Contacts
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept

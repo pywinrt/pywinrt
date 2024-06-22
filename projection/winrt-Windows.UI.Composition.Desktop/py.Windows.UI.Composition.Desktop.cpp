@@ -95,20 +95,19 @@ namespace py::cpp::Windows::UI::Composition::Desktop
     };
 
     // ----- Windows.UI.Composition.Desktop Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::Composition::Desktop");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.Composition.Desktop");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_composition_desktop",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_composition_desktop",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::Composition::Desktop
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_desktop(void) noexcept

@@ -483,20 +483,19 @@ namespace py::cpp::Windows::System::Preview
     };
 
     // ----- Windows.System.Preview Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::System::Preview");
 
+    PyDoc_STRVAR(module_doc, "Windows.System.Preview");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_system_preview",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_system_preview",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::System::Preview
 
 PyMODINIT_FUNC PyInit__winrt_windows_system_preview(void) noexcept

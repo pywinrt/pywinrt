@@ -2787,20 +2787,19 @@ namespace py::cpp::Windows::Networking::XboxLive
     };
 
     // ----- Windows.Networking.XboxLive Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Networking::XboxLive");
 
+    PyDoc_STRVAR(module_doc, "Windows.Networking.XboxLive");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_networking_xboxlive",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_networking_xboxlive",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Networking::XboxLive
 
 PyMODINIT_FUNC PyInit__winrt_windows_networking_xboxlive(void) noexcept

@@ -7830,20 +7830,19 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     };
 
     // ----- Windows.Foundation.Diagnostics Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Foundation::Diagnostics");
 
+    PyDoc_STRVAR(module_doc, "Windows.Foundation.Diagnostics");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_foundation_diagnostics",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_foundation_diagnostics",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Foundation::Diagnostics
 
 PyMODINIT_FUNC PyInit__winrt_windows_foundation_diagnostics(void) noexcept

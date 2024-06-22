@@ -810,20 +810,19 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
     };
 
     // ----- Windows.ApplicationModel.Payments.Provider Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Payments::Provider");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.Payments.Provider");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_payments_provider",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_payments_provider",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::Payments::Provider
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_payments_provider(void) noexcept

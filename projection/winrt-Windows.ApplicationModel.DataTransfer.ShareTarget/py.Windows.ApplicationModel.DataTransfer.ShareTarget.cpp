@@ -650,20 +650,19 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
     };
 
     // ----- Windows.ApplicationModel.DataTransfer.ShareTarget Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::DataTransfer::ShareTarget");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.DataTransfer.ShareTarget");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_datatransfer_sharetarget",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_datatransfer_sharetarget",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer_sharetarget(void) noexcept

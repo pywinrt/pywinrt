@@ -891,20 +891,19 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
     };
 
     // ----- Windows.System.RemoteDesktop.Provider Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::System::RemoteDesktop::Provider");
 
+    PyDoc_STRVAR(module_doc, "Windows.System.RemoteDesktop.Provider");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_system_remotedesktop_provider",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_system_remotedesktop_provider",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::System::RemoteDesktop::Provider
 
 PyMODINIT_FUNC PyInit__winrt_windows_system_remotedesktop_provider(void) noexcept

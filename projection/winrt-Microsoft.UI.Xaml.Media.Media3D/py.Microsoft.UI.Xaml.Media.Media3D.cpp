@@ -2268,20 +2268,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
     };
 
     // ----- Microsoft.UI.Xaml.Media.Media3D Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::UI::Xaml::Media::Media3D");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.UI.Xaml.Media.Media3D");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_ui_xaml_media_media3d",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_ui_xaml_media_media3d",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media_media3d(void) noexcept

@@ -1223,20 +1223,19 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     };
 
     // ----- Windows.Perception.Spatial.Surfaces Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Perception::Spatial::Surfaces");
 
+    PyDoc_STRVAR(module_doc, "Windows.Perception.Spatial.Surfaces");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_perception_spatial_surfaces",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_perception_spatial_surfaces",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Perception::Spatial::Surfaces
 
 PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial_surfaces(void) noexcept

@@ -8947,20 +8947,19 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- Windows.Storage.Streams Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Storage::Streams");
 
+    PyDoc_STRVAR(module_doc, "Windows.Storage.Streams");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_storage_streams",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_storage_streams",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Storage::Streams
 
 PyMODINIT_FUNC PyInit__winrt_windows_storage_streams(void) noexcept

@@ -701,20 +701,19 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
     };
 
     // ----- Windows.ApplicationModel.SocialInfo.Provider Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::SocialInfo::Provider");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.SocialInfo.Provider");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_socialinfo_provider",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_socialinfo_provider",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_socialinfo_provider(void) noexcept

@@ -271,20 +271,19 @@ namespace py::cpp::Windows::UI::Accessibility
     };
 
     // ----- Windows.UI.Accessibility Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::Accessibility");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.Accessibility");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_accessibility",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_accessibility",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::Accessibility
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_accessibility(void) noexcept

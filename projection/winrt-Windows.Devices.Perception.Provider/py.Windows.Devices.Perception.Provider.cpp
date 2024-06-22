@@ -2334,20 +2334,19 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     };
 
     // ----- Windows.Devices.Perception.Provider Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Perception::Provider");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Perception.Provider");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_perception_provider",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_perception_provider",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Perception::Provider
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_perception_provider(void) noexcept

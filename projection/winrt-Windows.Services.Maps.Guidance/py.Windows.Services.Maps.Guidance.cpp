@@ -3164,20 +3164,19 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     };
 
     // ----- Windows.Services.Maps.Guidance Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Services::Maps::Guidance");
 
+    PyDoc_STRVAR(module_doc, "Windows.Services.Maps.Guidance");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_services_maps_guidance",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_services_maps_guidance",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Services::Maps::Guidance
 
 PyMODINIT_FUNC PyInit__winrt_windows_services_maps_guidance(void) noexcept

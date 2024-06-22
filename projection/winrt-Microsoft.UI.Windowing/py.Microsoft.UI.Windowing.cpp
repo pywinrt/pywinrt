@@ -4292,20 +4292,19 @@ namespace py::cpp::Microsoft::UI::Windowing
     };
 
     // ----- Microsoft.UI.Windowing Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::UI::Windowing");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.UI.Windowing");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_ui_windowing",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_ui_windowing",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::UI::Windowing
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_ui_windowing(void) noexcept

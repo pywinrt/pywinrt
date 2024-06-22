@@ -1726,20 +1726,19 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     };
 
     // ----- Windows.Gaming.XboxLive.Storage Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Gaming::XboxLive::Storage");
 
+    PyDoc_STRVAR(module_doc, "Windows.Gaming.XboxLive.Storage");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_gaming_xboxlive_storage",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_gaming_xboxlive_storage",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Gaming::XboxLive::Storage
 
 PyMODINIT_FUNC PyInit__winrt_windows_gaming_xboxlive_storage(void) noexcept

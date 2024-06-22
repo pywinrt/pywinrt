@@ -3185,20 +3185,19 @@ namespace py::cpp::Windows::Data::Json
     };
 
     // ----- Windows.Data.Json Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Data::Json");
 
+    PyDoc_STRVAR(module_doc, "Windows.Data.Json");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_data_json",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_data_json",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Data::Json
 
 PyMODINIT_FUNC PyInit__winrt_windows_data_json(void) noexcept

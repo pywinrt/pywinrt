@@ -1356,20 +1356,19 @@ namespace py::cpp::Windows::Graphics::Capture
     };
 
     // ----- Windows.Graphics.Capture Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Graphics::Capture");
 
+    PyDoc_STRVAR(module_doc, "Windows.Graphics.Capture");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_graphics_capture",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_graphics_capture",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Graphics::Capture
 
 PyMODINIT_FUNC PyInit__winrt_windows_graphics_capture(void) noexcept

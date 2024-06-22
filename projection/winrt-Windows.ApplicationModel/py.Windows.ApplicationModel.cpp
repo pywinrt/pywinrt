@@ -8035,20 +8035,19 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- Windows.ApplicationModel Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept

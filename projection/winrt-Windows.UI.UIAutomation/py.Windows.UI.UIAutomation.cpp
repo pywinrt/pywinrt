@@ -422,20 +422,19 @@ namespace py::cpp::Windows::UI::UIAutomation
     };
 
     // ----- Windows.UI.UIAutomation Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::UIAutomation");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.UIAutomation");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_uiautomation",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_uiautomation",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::UIAutomation
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_uiautomation(void) noexcept

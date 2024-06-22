@@ -2400,20 +2400,19 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
     };
 
     // ----- Microsoft.UI.Composition.SystemBackdrops Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::UI::Composition::SystemBackdrops");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.UI.Composition.SystemBackdrops");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_ui_composition_systembackdrops",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_ui_composition_systembackdrops",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_systembackdrops(void) noexcept

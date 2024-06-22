@@ -1672,20 +1672,19 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
     };
 
     // ----- Microsoft.Windows.ApplicationModel.Resources Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::Windows::ApplicationModel::Resources");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.Windows.ApplicationModel.Resources");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_windows_applicationmodel_resources",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_windows_applicationmodel_resources",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applicationmodel_resources(void) noexcept

@@ -1569,20 +1569,19 @@ namespace py::cpp::Windows::Media::Protection
     };
 
     // ----- Windows.Media.Protection Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Media::Protection");
 
+    PyDoc_STRVAR(module_doc, "Windows.Media.Protection");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_media_protection",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_media_protection",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Media::Protection
 
 PyMODINIT_FUNC PyInit__winrt_windows_media_protection(void) noexcept

@@ -5034,20 +5034,19 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- Windows.Graphics.Holographic Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Graphics::Holographic");
 
+    PyDoc_STRVAR(module_doc, "Windows.Graphics.Holographic");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_graphics_holographic",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_graphics_holographic",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Graphics::Holographic
 
 PyMODINIT_FUNC PyInit__winrt_windows_graphics_holographic(void) noexcept

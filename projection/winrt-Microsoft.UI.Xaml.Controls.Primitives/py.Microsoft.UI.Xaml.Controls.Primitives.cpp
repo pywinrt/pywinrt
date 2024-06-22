@@ -28989,20 +28989,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     };
 
     // ----- Microsoft.UI.Xaml.Controls.Primitives Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::UI::Xaml::Controls::Primitives");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.UI.Xaml.Controls.Primitives");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_ui_xaml_controls_primitives",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_ui_xaml_controls_primitives",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcept

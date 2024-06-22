@@ -2527,20 +2527,19 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     };
 
     // ----- Windows.Gaming.Input.Custom Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Gaming::Input::Custom");
 
+    PyDoc_STRVAR(module_doc, "Windows.Gaming.Input.Custom");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_gaming_input_custom",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_gaming_input_custom",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Gaming::Input::Custom
 
 PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_custom(void) noexcept

@@ -718,20 +718,19 @@ namespace py::cpp::Windows::Devices::Custom
     };
 
     // ----- Windows.Devices.Custom Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Custom");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Custom");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_custom",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_custom",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Custom
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_custom(void) noexcept

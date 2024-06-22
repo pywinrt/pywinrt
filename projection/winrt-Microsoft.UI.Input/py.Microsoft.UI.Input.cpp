@@ -10469,20 +10469,19 @@ namespace py::cpp::Microsoft::UI::Input
     };
 
     // ----- Microsoft.UI.Input Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::UI::Input");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.UI.Input");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_ui_input",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_ui_input",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::UI::Input
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept

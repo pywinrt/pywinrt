@@ -458,20 +458,19 @@ namespace py::cpp::Microsoft::Windows::System
     };
 
     // ----- Microsoft.Windows.System Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::Windows::System");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.Windows.System");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_windows_system",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_windows_system",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::Windows::System
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_windows_system(void) noexcept

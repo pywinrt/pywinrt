@@ -250,20 +250,19 @@ namespace py::cpp::Windows::Devices::Portable
     };
 
     // ----- Windows.Devices.Portable Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Portable");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Portable");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_portable",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_portable",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Portable
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_portable(void) noexcept

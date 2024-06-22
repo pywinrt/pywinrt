@@ -8518,20 +8518,19 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- Windows.ApplicationModel.Chat Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::Chat");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.Chat");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_chat",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_chat",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::Chat
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_chat(void) noexcept

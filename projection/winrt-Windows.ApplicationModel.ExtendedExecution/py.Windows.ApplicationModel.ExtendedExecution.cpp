@@ -457,20 +457,19 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
     };
 
     // ----- Windows.ApplicationModel.ExtendedExecution Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::ExtendedExecution");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.ExtendedExecution");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_extendedexecution",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_extendedexecution",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::ExtendedExecution
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_extendedexecution(void) noexcept

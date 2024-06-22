@@ -2458,20 +2458,19 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     };
 
     // ----- Windows.AI.MachineLearning.Preview Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::AI::MachineLearning::Preview");
 
+    PyDoc_STRVAR(module_doc, "Windows.AI.MachineLearning.Preview");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ai_machinelearning_preview",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ai_machinelearning_preview",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::AI::MachineLearning::Preview
 
 PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning_preview(void) noexcept

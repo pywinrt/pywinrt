@@ -1455,20 +1455,19 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     };
 
     // ----- Windows.Storage.Pickers.Provider Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Storage::Pickers::Provider");
 
+    PyDoc_STRVAR(module_doc, "Windows.Storage.Pickers.Provider");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_storage_pickers_provider",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_storage_pickers_provider",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Storage::Pickers::Provider
 
 PyMODINIT_FUNC PyInit__winrt_windows_storage_pickers_provider(void) noexcept

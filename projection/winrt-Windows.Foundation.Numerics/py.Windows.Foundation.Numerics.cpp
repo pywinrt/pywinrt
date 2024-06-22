@@ -2099,20 +2099,19 @@ namespace py::cpp::Windows::Foundation::Numerics
     };
 
     // ----- Windows.Foundation.Numerics Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Foundation::Numerics");
 
+    PyDoc_STRVAR(module_doc, "Windows.Foundation.Numerics");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_foundation_numerics",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_foundation_numerics",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Foundation::Numerics
 
 PyMODINIT_FUNC PyInit__winrt_windows_foundation_numerics(void) noexcept

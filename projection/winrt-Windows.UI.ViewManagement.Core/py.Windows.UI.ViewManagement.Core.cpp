@@ -2291,20 +2291,19 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     };
 
     // ----- Windows.UI.ViewManagement.Core Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::ViewManagement::Core");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.ViewManagement.Core");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_viewmanagement_core",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_viewmanagement_core",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::ViewManagement::Core
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement_core(void) noexcept

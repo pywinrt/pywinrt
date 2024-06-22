@@ -215,20 +215,19 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
     };
 
     // ----- Microsoft.UI.Xaml.XamlTypeInfo Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::UI::Xaml::XamlTypeInfo");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.UI.Xaml.XamlTypeInfo");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_ui_xaml_xamltypeinfo",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_ui_xaml_xamltypeinfo",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_xamltypeinfo(void) noexcept

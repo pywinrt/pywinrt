@@ -1195,20 +1195,19 @@ namespace py::cpp::Windows::Devices::SerialCommunication
     };
 
     // ----- Windows.Devices.SerialCommunication Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::SerialCommunication");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.SerialCommunication");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_serialcommunication",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_serialcommunication",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::SerialCommunication
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_serialcommunication(void) noexcept

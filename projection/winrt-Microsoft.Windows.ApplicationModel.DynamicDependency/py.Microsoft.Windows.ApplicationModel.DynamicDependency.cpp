@@ -1253,20 +1253,19 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
     };
 
     // ----- Microsoft.Windows.ApplicationModel.DynamicDependency Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::Windows::ApplicationModel::DynamicDependency");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.Windows.ApplicationModel.DynamicDependency");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_windows_applicationmodel_dynamicdependency",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_windows_applicationmodel_dynamicdependency",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applicationmodel_dynamicdependency(void) noexcept

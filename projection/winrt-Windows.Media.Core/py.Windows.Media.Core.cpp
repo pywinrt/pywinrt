@@ -20706,20 +20706,19 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- Windows.Media.Core Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Media::Core");
 
+    PyDoc_STRVAR(module_doc, "Windows.Media.Core");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_media_core",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_media_core",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Media::Core
 
 PyMODINIT_FUNC PyInit__winrt_windows_media_core(void) noexcept

@@ -1886,20 +1886,19 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     };
 
     // ----- Windows.UI.ApplicationSettings Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::ApplicationSettings");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.ApplicationSettings");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_applicationsettings",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_applicationsettings",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::ApplicationSettings
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_applicationsettings(void) noexcept

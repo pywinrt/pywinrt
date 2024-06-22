@@ -8493,20 +8493,19 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- Windows.UI.Input.Inking Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::Input::Inking");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.Input.Inking");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_input_inking",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_input_inking",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::Input::Inking
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking(void) noexcept

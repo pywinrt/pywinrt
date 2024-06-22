@@ -244,20 +244,19 @@ namespace py::cpp::Windows::Devices::Background
     };
 
     // ----- Windows.Devices.Background Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Background");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Background");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_background",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_background",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Background
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_background(void) noexcept

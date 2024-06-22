@@ -9062,20 +9062,19 @@ namespace py::cpp::Windows::AI::MachineLearning
     };
 
     // ----- Windows.AI.MachineLearning Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::AI::MachineLearning");
 
+    PyDoc_STRVAR(module_doc, "Windows.AI.MachineLearning");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ai_machinelearning",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ai_machinelearning",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::AI::MachineLearning
 
 PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept

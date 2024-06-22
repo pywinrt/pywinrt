@@ -215,20 +215,19 @@ namespace py::cpp::Windows::Phone::Devices::Power
     };
 
     // ----- Windows.Phone.Devices.Power Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Phone::Devices::Power");
 
+    PyDoc_STRVAR(module_doc, "Windows.Phone.Devices.Power");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_phone_devices_power",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_phone_devices_power",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Phone::Devices::Power
 
 PyMODINIT_FUNC PyInit__winrt_windows_phone_devices_power(void) noexcept

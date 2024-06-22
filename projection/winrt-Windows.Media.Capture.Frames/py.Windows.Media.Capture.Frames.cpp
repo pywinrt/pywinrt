@@ -3625,20 +3625,19 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- Windows.Media.Capture.Frames Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Media::Capture::Frames");
 
+    PyDoc_STRVAR(module_doc, "Windows.Media.Capture.Frames");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_media_capture_frames",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_media_capture_frames",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Media::Capture::Frames
 
 PyMODINIT_FUNC PyInit__winrt_windows_media_capture_frames(void) noexcept

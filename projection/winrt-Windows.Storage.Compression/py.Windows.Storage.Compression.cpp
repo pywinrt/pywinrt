@@ -499,20 +499,19 @@ namespace py::cpp::Windows::Storage::Compression
     };
 
     // ----- Windows.Storage.Compression Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Storage::Compression");
 
+    PyDoc_STRVAR(module_doc, "Windows.Storage.Compression");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_storage_compression",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_storage_compression",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Storage::Compression
 
 PyMODINIT_FUNC PyInit__winrt_windows_storage_compression(void) noexcept

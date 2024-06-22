@@ -409,20 +409,19 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
     };
 
     // ----- Windows.ApplicationModel.ExtendedExecution.Foreground Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::ExtendedExecution::Foreground");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.ExtendedExecution.Foreground");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_extendedexecution_foreground",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_extendedexecution_foreground",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_extendedexecution_foreground(void) noexcept

@@ -3275,20 +3275,19 @@ namespace py::cpp::Windows::Foundation::Collections
     };
 
     // ----- Windows.Foundation.Collections Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Foundation::Collections");
 
+    PyDoc_STRVAR(module_doc, "Windows.Foundation.Collections");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_foundation_collections",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_foundation_collections",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Foundation::Collections
 
 PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept

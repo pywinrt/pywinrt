@@ -474,20 +474,19 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
     };
 
     // ----- Windows.Phone.System.UserProfile.GameServices.Core Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Phone::System::UserProfile::GameServices::Core");
 
+    PyDoc_STRVAR(module_doc, "Windows.Phone.System.UserProfile.GameServices.Core");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_phone_system_userprofile_gameservices_core",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_phone_system_userprofile_gameservices_core",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
 PyMODINIT_FUNC PyInit__winrt_windows_phone_system_userprofile_gameservices_core(void) noexcept

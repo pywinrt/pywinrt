@@ -1130,20 +1130,19 @@ namespace py::cpp::Windows::Data::Pdf
     };
 
     // ----- Windows.Data.Pdf Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Data::Pdf");
 
+    PyDoc_STRVAR(module_doc, "Windows.Data.Pdf");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_data_pdf",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_data_pdf",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Data::Pdf
 
 PyMODINIT_FUNC PyInit__winrt_windows_data_pdf(void) noexcept

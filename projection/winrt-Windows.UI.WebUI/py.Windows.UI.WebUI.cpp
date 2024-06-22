@@ -14101,20 +14101,19 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- Windows.UI.WebUI Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::WebUI");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.WebUI");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_webui",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_webui",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::WebUI
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_webui(void) noexcept

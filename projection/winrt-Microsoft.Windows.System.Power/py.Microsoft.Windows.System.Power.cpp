@@ -780,20 +780,19 @@ namespace py::cpp::Microsoft::Windows::System::Power
     };
 
     // ----- Microsoft.Windows.System.Power Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::Windows::System::Power");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.Windows.System.Power");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_windows_system_power",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_windows_system_power",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::Windows::System::Power
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_windows_system_power(void) noexcept

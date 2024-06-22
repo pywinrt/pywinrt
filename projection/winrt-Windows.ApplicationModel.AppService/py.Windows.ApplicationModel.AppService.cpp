@@ -1475,20 +1475,19 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     };
 
     // ----- Windows.ApplicationModel.AppService Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::AppService");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.AppService");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_appservice",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_appservice",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::AppService
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appservice(void) noexcept

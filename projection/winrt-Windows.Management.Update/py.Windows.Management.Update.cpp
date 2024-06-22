@@ -3959,20 +3959,19 @@ namespace py::cpp::Windows::Management::Update
     };
 
     // ----- Windows.Management.Update Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Management::Update");
 
+    PyDoc_STRVAR(module_doc, "Windows.Management.Update");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_management_update",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_management_update",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Management::Update
 
 PyMODINIT_FUNC PyInit__winrt_windows_management_update(void) noexcept

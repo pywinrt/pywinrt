@@ -299,20 +299,19 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
     };
 
     // ----- Windows.System.RemoteDesktop.Input Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::System::RemoteDesktop::Input");
 
+    PyDoc_STRVAR(module_doc, "Windows.System.RemoteDesktop.Input");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_system_remotedesktop_input",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_system_remotedesktop_input",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::System::RemoteDesktop::Input
 
 PyMODINIT_FUNC PyInit__winrt_windows_system_remotedesktop_input(void) noexcept

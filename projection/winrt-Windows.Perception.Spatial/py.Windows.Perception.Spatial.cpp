@@ -4935,20 +4935,19 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- Windows.Perception.Spatial Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Perception::Spatial");
 
+    PyDoc_STRVAR(module_doc, "Windows.Perception.Spatial");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_perception_spatial",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_perception_spatial",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Perception::Spatial
 
 PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial(void) noexcept

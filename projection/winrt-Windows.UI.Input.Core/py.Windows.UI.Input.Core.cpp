@@ -192,20 +192,19 @@ namespace py::cpp::Windows::UI::Input::Core
     };
 
     // ----- Windows.UI.Input.Core Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::Input::Core");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.Input.Core");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_input_core",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_input_core",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::Input::Core
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_input_core(void) noexcept

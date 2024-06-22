@@ -626,20 +626,19 @@ namespace py::cpp::Windows::Devices::Display
     };
 
     // ----- Windows.Devices.Display Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Display");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Display");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_display",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_display",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Display
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_display(void) noexcept

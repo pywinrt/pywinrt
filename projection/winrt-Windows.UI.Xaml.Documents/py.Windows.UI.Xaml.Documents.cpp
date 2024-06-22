@@ -13307,20 +13307,19 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- Windows.UI.Xaml.Documents Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Documents");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.Xaml.Documents");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_xaml_documents",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_xaml_documents",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::Xaml::Documents
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept

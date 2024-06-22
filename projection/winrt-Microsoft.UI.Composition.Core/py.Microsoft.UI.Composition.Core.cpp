@@ -275,20 +275,19 @@ namespace py::cpp::Microsoft::UI::Composition::Core
     };
 
     // ----- Microsoft.UI.Composition.Core Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::UI::Composition::Core");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.UI.Composition.Core");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_ui_composition_core",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_ui_composition_core",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::UI::Composition::Core
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_core(void) noexcept

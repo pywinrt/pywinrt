@@ -6,20 +6,19 @@
 namespace py::cpp::Windows::UI::Xaml::Automation::Text
 {
     // ----- Windows.UI.Xaml.Automation.Text Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::UI::Xaml::Automation::Text");
 
+    PyDoc_STRVAR(module_doc, "Windows.UI.Xaml.Automation.Text");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_ui_xaml_automation_text",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_ui_xaml_automation_text",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::UI::Xaml::Automation::Text
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_text(void) noexcept

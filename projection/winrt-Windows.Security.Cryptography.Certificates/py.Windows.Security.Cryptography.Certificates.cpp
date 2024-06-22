@@ -6696,20 +6696,19 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     };
 
     // ----- Windows.Security.Cryptography.Certificates Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Security::Cryptography::Certificates");
 
+    PyDoc_STRVAR(module_doc, "Windows.Security.Cryptography.Certificates");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_security_cryptography_certificates",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_security_cryptography_certificates",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Security::Cryptography::Certificates
 
 PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) noexcept

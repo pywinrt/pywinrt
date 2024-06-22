@@ -1106,20 +1106,19 @@ namespace py::cpp::Windows::Devices::Haptics
     };
 
     // ----- Windows.Devices.Haptics Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Haptics");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Haptics");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_haptics",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_haptics",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Haptics
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_haptics(void) noexcept

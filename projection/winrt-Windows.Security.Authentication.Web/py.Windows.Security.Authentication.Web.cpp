@@ -411,20 +411,19 @@ namespace py::cpp::Windows::Security::Authentication::Web
     };
 
     // ----- Windows.Security.Authentication.Web Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Security::Authentication::Web");
 
+    PyDoc_STRVAR(module_doc, "Windows.Security.Authentication.Web");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_security_authentication_web",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_security_authentication_web",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Security::Authentication::Web
 
 PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web(void) noexcept

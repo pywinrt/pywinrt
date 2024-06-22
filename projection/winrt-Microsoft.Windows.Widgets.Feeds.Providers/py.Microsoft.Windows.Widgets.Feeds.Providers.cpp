@@ -1287,20 +1287,19 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     };
 
     // ----- Microsoft.Windows.Widgets.Feeds.Providers Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::Windows::Widgets::Feeds::Providers");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.Windows.Widgets.Feeds.Providers");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_windows_widgets_feeds_providers",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_windows_widgets_feeds_providers",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noexcept

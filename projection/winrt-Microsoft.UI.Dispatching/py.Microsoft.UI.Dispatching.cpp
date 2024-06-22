@@ -1276,20 +1276,19 @@ namespace py::cpp::Microsoft::UI::Dispatching
     };
 
     // ----- Microsoft.UI.Dispatching Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::UI::Dispatching");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.UI.Dispatching");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_ui_dispatching",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_ui_dispatching",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::UI::Dispatching
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_ui_dispatching(void) noexcept

@@ -3953,20 +3953,19 @@ namespace py::cpp::Windows::Devices::Scanners
     };
 
     // ----- Windows.Devices.Scanners Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Scanners");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Scanners");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_scanners",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_scanners",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Scanners
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_scanners(void) noexcept

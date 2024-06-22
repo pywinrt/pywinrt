@@ -700,20 +700,19 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
     };
 
     // ----- Windows.Devices.Gpio.Provider Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Gpio::Provider");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Gpio.Provider");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_gpio_provider",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_gpio_provider",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Gpio::Provider
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_gpio_provider(void) noexcept

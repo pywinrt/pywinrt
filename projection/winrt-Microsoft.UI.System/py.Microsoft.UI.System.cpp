@@ -217,20 +217,19 @@ namespace py::cpp::Microsoft::UI::System
     };
 
     // ----- Microsoft.UI.System Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::UI::System");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.UI.System");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_ui_system",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_ui_system",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::UI::System
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_ui_system(void) noexcept

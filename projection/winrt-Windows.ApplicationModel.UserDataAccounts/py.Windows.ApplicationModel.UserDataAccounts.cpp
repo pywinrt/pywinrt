@@ -1443,20 +1443,19 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
     };
 
     // ----- Windows.ApplicationModel.UserDataAccounts Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::ApplicationModel::UserDataAccounts");
 
+    PyDoc_STRVAR(module_doc, "Windows.ApplicationModel.UserDataAccounts");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_applicationmodel_userdataaccounts",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_applicationmodel_userdataaccounts",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::ApplicationModel::UserDataAccounts
 
 PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts(void) noexcept

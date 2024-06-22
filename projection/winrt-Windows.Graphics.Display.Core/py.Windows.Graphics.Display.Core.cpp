@@ -1172,20 +1172,19 @@ namespace py::cpp::Windows::Graphics::Display::Core
     };
 
     // ----- Windows.Graphics.Display.Core Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Graphics::Display::Core");
 
+    PyDoc_STRVAR(module_doc, "Windows.Graphics.Display.Core");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_graphics_display_core",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_graphics_display_core",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Graphics::Display::Core
 
 PyMODINIT_FUNC PyInit__winrt_windows_graphics_display_core(void) noexcept

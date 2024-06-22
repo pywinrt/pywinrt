@@ -206,20 +206,19 @@ namespace py::cpp::Windows::Management::Deployment::Preview
     };
 
     // ----- Windows.Management.Deployment.Preview Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Management::Deployment::Preview");
 
+    PyDoc_STRVAR(module_doc, "Windows.Management.Deployment.Preview");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_management_deployment_preview",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_management_deployment_preview",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Management::Deployment::Preview
 
 PyMODINIT_FUNC PyInit__winrt_windows_management_deployment_preview(void) noexcept

@@ -198,20 +198,19 @@ namespace py::cpp::Windows::Web
     };
 
     // ----- Windows.Web Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Web");
 
+    PyDoc_STRVAR(module_doc, "Windows.Web");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_web",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_web",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Web
 
 PyMODINIT_FUNC PyInit__winrt_windows_web(void) noexcept

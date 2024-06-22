@@ -5437,20 +5437,19 @@ namespace py::cpp::Windows::Devices::Bluetooth
     };
 
     // ----- Windows.Devices.Bluetooth Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Bluetooth");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Bluetooth");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_bluetooth",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_bluetooth",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Bluetooth
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth(void) noexcept

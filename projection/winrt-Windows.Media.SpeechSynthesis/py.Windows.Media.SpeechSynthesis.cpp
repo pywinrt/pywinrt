@@ -1464,20 +1464,19 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     };
 
     // ----- Windows.Media.SpeechSynthesis Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Media::SpeechSynthesis");
 
+    PyDoc_STRVAR(module_doc, "Windows.Media.SpeechSynthesis");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_media_speechsynthesis",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_media_speechsynthesis",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Media::SpeechSynthesis
 
 PyMODINIT_FUNC PyInit__winrt_windows_media_speechsynthesis(void) noexcept

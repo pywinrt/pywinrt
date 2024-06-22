@@ -613,20 +613,19 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     };
 
     // ----- Windows.Devices.Sensors.Custom Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Sensors::Custom");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Sensors.Custom");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_sensors_custom",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_sensors_custom",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Sensors::Custom
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors_custom(void) noexcept

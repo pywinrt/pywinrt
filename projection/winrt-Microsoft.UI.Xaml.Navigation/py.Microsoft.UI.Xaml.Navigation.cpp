@@ -964,20 +964,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
     };
 
     // ----- Microsoft.UI.Xaml.Navigation Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::UI::Xaml::Navigation");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.UI.Xaml.Navigation");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_ui_xaml_navigation",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_ui_xaml_navigation",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::UI::Xaml::Navigation
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_navigation(void) noexcept

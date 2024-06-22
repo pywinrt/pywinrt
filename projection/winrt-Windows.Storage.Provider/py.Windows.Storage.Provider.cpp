@@ -5529,20 +5529,19 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- Windows.Storage.Provider Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Storage::Provider");
 
+    PyDoc_STRVAR(module_doc, "Windows.Storage.Provider");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_storage_provider",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_storage_provider",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Storage::Provider
 
 PyMODINIT_FUNC PyInit__winrt_windows_storage_provider(void) noexcept

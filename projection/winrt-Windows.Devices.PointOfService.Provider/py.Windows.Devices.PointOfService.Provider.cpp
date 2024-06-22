@@ -4235,20 +4235,19 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     };
 
     // ----- Windows.Devices.PointOfService.Provider Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::PointOfService::Provider");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.PointOfService.Provider");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_pointofservice_provider",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_pointofservice_provider",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::PointOfService::Provider
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice_provider(void) noexcept

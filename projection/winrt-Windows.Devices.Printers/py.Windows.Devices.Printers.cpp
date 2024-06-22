@@ -3970,20 +3970,19 @@ namespace py::cpp::Windows::Devices::Printers
     };
 
     // ----- Windows.Devices.Printers Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Windows::Devices::Printers");
 
+    PyDoc_STRVAR(module_doc, "Windows.Devices.Printers");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_devices_printers",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_windows_devices_printers",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Windows::Devices::Printers
 
 PyMODINIT_FUNC PyInit__winrt_windows_devices_printers(void) noexcept

@@ -466,20 +466,19 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
     };
 
     // ----- Microsoft.Windows.ApplicationModel.WindowsAppRuntime Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::Windows::ApplicationModel::WindowsAppRuntime");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.Windows.ApplicationModel.WindowsAppRuntime");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_windows_applicationmodel_windowsappruntime",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_windows_applicationmodel_windowsappruntime",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applicationmodel_windowsappruntime(void) noexcept

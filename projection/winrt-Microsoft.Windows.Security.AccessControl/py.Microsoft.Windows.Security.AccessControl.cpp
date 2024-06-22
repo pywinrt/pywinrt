@@ -294,20 +294,19 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
     };
 
     // ----- Microsoft.Windows.Security.AccessControl Initialization --------------------
-    PyDoc_STRVAR(module_doc, "Microsoft::Windows::Security::AccessControl");
 
+    PyDoc_STRVAR(module_doc, "Microsoft.Windows.Security.AccessControl");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_windows_security_accesscontrol",
-           module_doc,
-           0,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
+    static PyModuleDef module_def = {
+        PyModuleDef_HEAD_INIT,
+        "_winrt_microsoft_windows_security_accesscontrol",
+        module_doc,
+        0,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr,
+        nullptr};
 } // py::cpp::Microsoft::Windows::Security::AccessControl
 
 PyMODINIT_FUNC PyInit__winrt_microsoft_windows_security_accesscontrol(void) noexcept
