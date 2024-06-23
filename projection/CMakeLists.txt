@@ -110,10 +110,10 @@ install(DIRECTORY "${WINRT_RUNTIME_PATH}/src/winrt/" DESTINATION "${PYWINRT_SITE
 ################################################################################
 
 if (PYWINRT_FULL_PROJECTION)
-    file(GLOB packages CONFIGURE_DEPENDS "winrt-Windows.*")
-    file(GLOB app_packages CONFIGURE_DEPENDS "winrt-Microsoft.*")
-    file(GLOB interop_packages CONFIGURE_DEPENDS "interop/winrt-Windows.*")
-    file(GLOB app_interop_packages CONFIGURE_DEPENDS "interop/winrt-Microsoft.*")
+    file(GLOB packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winrt-Windows.*")
+    file(GLOB app_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winrt-Microsoft.*")
+    file(GLOB interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "interop/winrt-Windows.*")
+    file(GLOB app_interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "interop/winrt-Microsoft.*")
 else()
     # minimum set of packages required for unit tests
     set(packages
