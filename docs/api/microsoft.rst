@@ -4,9 +4,9 @@
 
 The :mod:`winrt.microsoft` namespace package contains the automatically generated
 bindings for the Windows App SDK. Each namespace is distributed as a separate package
-on PyPI. For example, the ``winrt-Microsoft.Windows.UI`` package contains the
-bindings for the ``Microsoft.Windows.UI`` namespace and can be imported in Python
-as ``import winrt.microsoft.windows.ui``.
+on PyPI. For example, the ``winrt-Microsoft.UI.Xaml`` package contains the
+bindings for the ``Microsoft.UI.Xaml`` namespace and can be imported in Python
+as ``import winrt.microsoft.windows.ui.xaml``.
 
 Since most of the code is generated, there currently aren't Python API docs.
 You can use https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/winrt/
