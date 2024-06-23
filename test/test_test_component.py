@@ -9,21 +9,21 @@ class TestTestComponent(unittest.TestCase):
         # subclassing a struct type is not allowed
         with self.assertRaisesRegex(TypeError, "not an acceptable base type"):
 
-            class s(tc.Blittable):
+            class s(tc.Blittable):  # type: ignore
                 pass
 
     def test_class_subclass(self):
         # subclassing a class type is not allowed
         with self.assertRaisesRegex(TypeError, "not an acceptable base type"):
 
-            class s(tc.TestRunner):
+            class s(tc.TestRunner):  # type: ignore
                 pass
 
     def test_interface_subclass(self):
         # subclassing a interface type is not allowed
         with self.assertRaisesRegex(TypeError, "not an acceptable base type"):
 
-            class s(tc.ITests):
+            class s(tc.ITests):  # type: ignore
                 pass
 
     def test_struct_hashable(self):
