@@ -2316,12 +2316,48 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }
     };
 
+    static PyObject* _richcompare_GameControllerVersionInfo(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_GameControllerVersionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameControllerVersionInfo) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GameControllerVersionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameControllerVersionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameControllerVersionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameControllerVersionInfo) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_GameControllerVersionInfo) },
         { }
     };
 
@@ -2476,12 +2512,48 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { }
     };
 
+    static PyObject* _richcompare_GipFirmwareUpdateProgress(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_GipFirmwareUpdateProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GipFirmwareUpdateProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GipFirmwareUpdateProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GipFirmwareUpdateProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GipFirmwareUpdateProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GipFirmwareUpdateProgress) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_GipFirmwareUpdateProgress) },
         { }
     };
 

@@ -19634,12 +19634,48 @@ namespace py::cpp::Windows::Media::Core
         { }
     };
 
+    static PyObject* _richcompare_MseTimeRange(py::wrapper::Windows::Media::Core::MseTimeRange* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Media::Core::MseTimeRange>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_MseTimeRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MseTimeRange) },
         { Py_tp_init, reinterpret_cast<void*>(_init_MseTimeRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MseTimeRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MseTimeRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MseTimeRange) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_MseTimeRange) },
         { }
     };
 
@@ -19794,12 +19830,48 @@ namespace py::cpp::Windows::Media::Core
         { }
     };
 
+    static PyObject* _richcompare_TimedTextDouble(py::wrapper::Windows::Media::Core::TimedTextDouble* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Media::Core::TimedTextDouble>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_TimedTextDouble[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextDouble) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TimedTextDouble) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextDouble) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextDouble) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextDouble) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_TimedTextDouble) },
         { }
     };
 
@@ -20062,12 +20134,48 @@ namespace py::cpp::Windows::Media::Core
         { }
     };
 
+    static PyObject* _richcompare_TimedTextPadding(py::wrapper::Windows::Media::Core::TimedTextPadding* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Media::Core::TimedTextPadding>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_TimedTextPadding[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextPadding) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TimedTextPadding) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextPadding) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextPadding) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextPadding) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_TimedTextPadding) },
         { }
     };
 
@@ -20258,12 +20366,48 @@ namespace py::cpp::Windows::Media::Core
         { }
     };
 
+    static PyObject* _richcompare_TimedTextPoint(py::wrapper::Windows::Media::Core::TimedTextPoint* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Media::Core::TimedTextPoint>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_TimedTextPoint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextPoint) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TimedTextPoint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextPoint) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextPoint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextPoint) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_TimedTextPoint) },
         { }
     };
 
@@ -20454,12 +20598,48 @@ namespace py::cpp::Windows::Media::Core
         { }
     };
 
+    static PyObject* _richcompare_TimedTextSize(py::wrapper::Windows::Media::Core::TimedTextSize* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Media::Core::TimedTextSize>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_TimedTextSize[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextSize) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TimedTextSize) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextSize) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextSize) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextSize) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_TimedTextSize) },
         { }
     };
 

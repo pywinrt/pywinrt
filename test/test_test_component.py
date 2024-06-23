@@ -26,6 +26,41 @@ class TestTestComponent(unittest.TestCase):
             class s(tc.ITests):
                 pass
 
+    def test_struct_hashable(self):
+        b = tc.Blittable()
+
+        # structs are currently not hashable because they are mutable
+        with self.assertRaisesRegex(TypeError, "unhashable type"):
+            hash(b)
+
+    def test_struct_equality(self):
+        b1 = tc.Blittable()
+        b2 = tc.Blittable()
+
+        self.assertEqual(b1, b2)
+
+        b1.a = 1
+        self.assertNotEqual(b1, b2)
+
+        b2.a = 1
+        self.assertEqual(b1, b2)
+
+    def test_struct_comparison(self):
+        b1 = tc.Blittable()
+        b2 = tc.Blittable()
+
+        with self.assertRaisesRegex(TypeError, "'<' not supported"):
+            b1 < b2
+
+        with self.assertRaisesRegex(TypeError, "'>' not supported"):
+            b1 > b2
+
+        with self.assertRaisesRegex(TypeError, "'<=' not supported"):
+            b1 <= b2
+
+        with self.assertRaisesRegex(TypeError, "'>=' not supported"):
+            b1 >= b2
+
     def test_blittable(self):
         b = tc.Blittable()
 
@@ -137,6 +172,7 @@ class TestTestComponent(unittest.TestCase):
         n.non_blittable.d = 4
 
         # FIXME: nested struct assignment is not working
+        # Alternately, we could make structs immutable so that they can be hashable
         # self.assertEqual(n.blittable.a, 1)
         # self.assertEqual(n.blittable.b, 2)
         # self.assertEqual(n.blittable.c, 3)

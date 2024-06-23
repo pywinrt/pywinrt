@@ -3910,12 +3910,48 @@ namespace py::cpp::Windows::Devices::Scanners
         { }
     };
 
+    static PyObject* _richcompare_ImageScannerResolution(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Devices::Scanners::ImageScannerResolution>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_ImageScannerResolution[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageScannerResolution) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ImageScannerResolution) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageScannerResolution) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageScannerResolution) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageScannerResolution) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_ImageScannerResolution) },
         { }
     };
 

@@ -265,8 +265,7 @@ class TestWinRTArray(unittest.TestCase):
 
         self.assertEqual(a._winrt_element_type_name_, "Windows.Foundation.Point")
         self.assertEqual(len(a), 2)
-        # FIXME: Point does not override object.__eq__
-        # self.assertEqual(list(a), actual)
+        self.assertEqual(list(a), actual)
 
         with memoryview(a) as m:
             self.assertEqual(m.ndim, 1)
@@ -285,8 +284,7 @@ class TestWinRTArray(unittest.TestCase):
 
         self.assertEqual(a._winrt_element_type_name_, "Windows.Foundation.Size")
         self.assertEqual(len(a), 2)
-        # FIXME: Size does not override object.__eq__
-        # self.assertEqual(list(a), actual)
+        self.assertEqual(list(a), actual)
 
         with memoryview(a) as m:
             self.assertEqual(m.ndim, 1)
@@ -305,8 +303,7 @@ class TestWinRTArray(unittest.TestCase):
 
         self.assertEqual(a._winrt_element_type_name_, "Windows.Foundation.Rect")
         self.assertEqual(len(a), 2)
-        # FIXME: Rect does not override object.__eq__
-        # self.assertEqual(list(a), actual)
+        self.assertEqual(list(a), actual)
 
         with memoryview(a) as m:
             self.assertEqual(m.ndim, 1)

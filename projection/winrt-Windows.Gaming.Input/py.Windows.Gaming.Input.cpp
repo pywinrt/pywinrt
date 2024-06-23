@@ -4197,12 +4197,48 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
+    static PyObject* _richcompare_ArcadeStickReading(py::wrapper::Windows::Gaming::Input::ArcadeStickReading* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Gaming::Input::ArcadeStickReading>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_ArcadeStickReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ArcadeStickReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ArcadeStickReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ArcadeStickReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ArcadeStickReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ArcadeStickReading) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_ArcadeStickReading) },
         { }
     };
 
@@ -4537,12 +4573,48 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
+    static PyObject* _richcompare_FlightStickReading(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Gaming::Input::FlightStickReading>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_FlightStickReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FlightStickReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_FlightStickReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FlightStickReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FlightStickReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FlightStickReading) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_FlightStickReading) },
         { }
     };
 
@@ -4913,12 +4985,48 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
+    static PyObject* _richcompare_GamepadReading(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Gaming::Input::GamepadReading>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_GamepadReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GamepadReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GamepadReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GamepadReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GamepadReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GamepadReading) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_GamepadReading) },
         { }
     };
 
@@ -5145,12 +5253,48 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
+    static PyObject* _richcompare_GamepadVibration(py::wrapper::Windows::Gaming::Input::GamepadVibration* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Gaming::Input::GamepadVibration>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_GamepadVibration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GamepadVibration) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GamepadVibration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GamepadVibration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GamepadVibration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GamepadVibration) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_GamepadVibration) },
         { }
     };
 
@@ -5521,12 +5665,48 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
+    static PyObject* _richcompare_RacingWheelReading(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Gaming::Input::RacingWheelReading>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_RacingWheelReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RacingWheelReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RacingWheelReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RacingWheelReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RacingWheelReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RacingWheelReading) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_RacingWheelReading) },
         { }
     };
 
@@ -5717,12 +5897,48 @@ namespace py::cpp::Windows::Gaming::Input
         { }
     };
 
+    static PyObject* _richcompare_UINavigationReading(py::wrapper::Windows::Gaming::Input::UINavigationReading* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Gaming::Input::UINavigationReading>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_UINavigationReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UINavigationReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_UINavigationReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UINavigationReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UINavigationReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UINavigationReading) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_UINavigationReading) },
         { }
     };
 

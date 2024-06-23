@@ -2438,12 +2438,48 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { }
     };
 
+    static PyObject* _richcompare_InjectedInputPoint(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPoint* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_InjectedInputPoint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputPoint) },
         { Py_tp_init, reinterpret_cast<void*>(_init_InjectedInputPoint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputPoint) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputPoint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputPoint) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_InjectedInputPoint) },
         { }
     };
 
@@ -2706,12 +2742,48 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { }
     };
 
+    static PyObject* _richcompare_InjectedInputPointerInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_InjectedInputPointerInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputPointerInfo) },
         { Py_tp_init, reinterpret_cast<void*>(_init_InjectedInputPointerInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputPointerInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputPointerInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputPointerInfo) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_InjectedInputPointerInfo) },
         { }
     };
 
@@ -2938,12 +3010,48 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { }
     };
 
+    static PyObject* _richcompare_InjectedInputRectangle(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_InjectedInputRectangle[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputRectangle) },
         { Py_tp_init, reinterpret_cast<void*>(_init_InjectedInputRectangle) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputRectangle) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputRectangle) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputRectangle) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_InjectedInputRectangle) },
         { }
     };
 

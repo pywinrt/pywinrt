@@ -6909,12 +6909,48 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
+    static PyObject* _richcompare_EventRegistrationToken(py::wrapper::Windows::Foundation::EventRegistrationToken* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::event_token>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_EventRegistrationToken[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_EventRegistrationToken) },
         { Py_tp_init, reinterpret_cast<void*>(_init_EventRegistrationToken) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EventRegistrationToken) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_EventRegistrationToken) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EventRegistrationToken) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_EventRegistrationToken) },
         { }
     };
 
@@ -7033,12 +7069,48 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
+    static PyObject* _richcompare_HResult(py::wrapper::Windows::Foundation::HResult* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::hresult>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_HResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HResult) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HResult) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_HResult) },
         { }
     };
 
@@ -7193,12 +7265,48 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
+    static PyObject* _richcompare_Point(py::wrapper::Windows::Foundation::Point* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Foundation::Point>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_Point[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Point) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Point) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Point) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Point) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Point) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Point) },
         { }
     };
 
@@ -7425,12 +7533,48 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
+    static PyObject* _richcompare_Rect(py::wrapper::Windows::Foundation::Rect* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Foundation::Rect>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_Rect[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Rect) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Rect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Rect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Rect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Rect) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Rect) },
         { }
     };
 
@@ -7585,12 +7729,48 @@ namespace py::cpp::Windows::Foundation
         { }
     };
 
+    static PyObject* _richcompare_Size(py::wrapper::Windows::Foundation::Size* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Foundation::Size>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_Size[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Size) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Size) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Size) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Size) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Size) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Size) },
         { }
     };
 

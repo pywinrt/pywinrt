@@ -9601,12 +9601,48 @@ namespace py::cpp::Microsoft::UI::Input
         { }
     };
 
+    static PyObject* _richcompare_CrossSlideThresholds(py::wrapper::Microsoft::UI::Input::CrossSlideThresholds* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Microsoft::UI::Input::CrossSlideThresholds>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_CrossSlideThresholds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CrossSlideThresholds) },
         { Py_tp_init, reinterpret_cast<void*>(_init_CrossSlideThresholds) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CrossSlideThresholds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CrossSlideThresholds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CrossSlideThresholds) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_CrossSlideThresholds) },
         { }
     };
 
@@ -9833,12 +9869,48 @@ namespace py::cpp::Microsoft::UI::Input
         { }
     };
 
+    static PyObject* _richcompare_ManipulationDelta(py::wrapper::Microsoft::UI::Input::ManipulationDelta* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Microsoft::UI::Input::ManipulationDelta>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_ManipulationDelta[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationDelta) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ManipulationDelta) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManipulationDelta) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationDelta) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationDelta) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_ManipulationDelta) },
         { }
     };
 
@@ -10029,12 +10101,48 @@ namespace py::cpp::Microsoft::UI::Input
         { }
     };
 
+    static PyObject* _richcompare_ManipulationVelocities(py::wrapper::Microsoft::UI::Input::ManipulationVelocities* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Microsoft::UI::Input::ManipulationVelocities>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_ManipulationVelocities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationVelocities) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ManipulationVelocities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManipulationVelocities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationVelocities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationVelocities) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_ManipulationVelocities) },
         { }
     };
 
@@ -10333,12 +10441,48 @@ namespace py::cpp::Microsoft::UI::Input
         { }
     };
 
+    static PyObject* _richcompare_PhysicalKeyStatus(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Microsoft::UI::Input::PhysicalKeyStatus>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_PhysicalKeyStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhysicalKeyStatus) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PhysicalKeyStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhysicalKeyStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhysicalKeyStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhysicalKeyStatus) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PhysicalKeyStatus) },
         { }
     };
 

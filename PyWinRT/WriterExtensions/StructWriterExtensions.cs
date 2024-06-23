@@ -15,6 +15,7 @@ static class StructWriterExtensions
             w.WriteStructGetSetFunction(type, field);
         }
         w.WriteGetSetTable(type);
+        w.WriteStructEqualityMethods(type);
         w.WriteTypeSlotTable(type);
         w.WriteTypeSpec(type);
     }
@@ -145,6 +146,52 @@ static class StructWriterExtensions
             catchReturn: "-1"
         );
 
+        w.Indent--;
+        w.WriteLine("}");
+    }
+
+    static void WriteStructEqualityMethods(this IndentedTextWriter w, ProjectedType type)
+    {
+        w.WriteBlankLine();
+        w.WriteLine(
+            $"static PyObject* _richcompare_{type.Name}({type.CppPyWrapperType}* self, PyObject* other, int op) noexcept"
+        );
+        w.WriteLine("{");
+        w.Indent++;
+        w.WriteTryCatch(() =>
+        {
+            w.WriteLine($"auto _other = py::converter<{type.CppWinrtType}>::convert_to(other);");
+            w.WriteBlankLine();
+            w.WriteLine("if (op == Py_EQ)");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("if (self->obj == _other)");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("Py_RETURN_TRUE;");
+            w.Indent--;
+            w.WriteLine("}");
+            w.WriteBlankLine();
+            w.WriteLine("Py_RETURN_FALSE;");
+            w.Indent--;
+            w.WriteLine("}");
+            w.WriteBlankLine();
+            w.WriteLine("if (op == Py_NE)");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("if (self->obj != _other)");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("Py_RETURN_TRUE;");
+            w.Indent--;
+            w.WriteLine("}");
+            w.WriteBlankLine();
+            w.WriteLine("Py_RETURN_FALSE;");
+            w.Indent--;
+            w.WriteLine("}");
+            w.WriteBlankLine();
+            w.WriteLine("Py_RETURN_NOTIMPLEMENTED;");
+        });
         w.Indent--;
         w.WriteLine("}");
     }

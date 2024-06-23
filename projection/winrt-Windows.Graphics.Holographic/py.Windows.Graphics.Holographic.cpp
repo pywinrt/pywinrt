@@ -4674,12 +4674,48 @@ namespace py::cpp::Windows::Graphics::Holographic
         { }
     };
 
+    static PyObject* _richcompare_HolographicAdapterId(py::wrapper::Windows::Graphics::Holographic::HolographicAdapterId* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Graphics::Holographic::HolographicAdapterId>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_HolographicAdapterId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicAdapterId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HolographicAdapterId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicAdapterId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicAdapterId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicAdapterId) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_HolographicAdapterId) },
         { }
     };
 
@@ -4798,12 +4834,48 @@ namespace py::cpp::Windows::Graphics::Holographic
         { }
     };
 
+    static PyObject* _richcompare_HolographicFrameId(py::wrapper::Windows::Graphics::Holographic::HolographicFrameId* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Graphics::Holographic::HolographicFrameId>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_HolographicFrameId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicFrameId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HolographicFrameId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicFrameId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicFrameId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicFrameId) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_HolographicFrameId) },
         { }
     };
 
@@ -4958,12 +5030,48 @@ namespace py::cpp::Windows::Graphics::Holographic
         { }
     };
 
+    static PyObject* _richcompare_HolographicStereoTransform(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_HolographicStereoTransform[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicStereoTransform) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HolographicStereoTransform) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicStereoTransform) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicStereoTransform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicStereoTransform) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_HolographicStereoTransform) },
         { }
     };
 

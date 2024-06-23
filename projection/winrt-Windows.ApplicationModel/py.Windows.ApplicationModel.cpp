@@ -7667,12 +7667,48 @@ namespace py::cpp::Windows::ApplicationModel
         { }
     };
 
+    static PyObject* _richcompare_PackageInstallProgress(py::wrapper::Windows::ApplicationModel::PackageInstallProgress* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::ApplicationModel::PackageInstallProgress>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_PackageInstallProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageInstallProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PackageInstallProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageInstallProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageInstallProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageInstallProgress) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PackageInstallProgress) },
         { }
     };
 
@@ -7899,12 +7935,48 @@ namespace py::cpp::Windows::ApplicationModel
         { }
     };
 
+    static PyObject* _richcompare_PackageVersion(py::wrapper::Windows::ApplicationModel::PackageVersion* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::ApplicationModel::PackageVersion>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_PackageVersion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageVersion) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PackageVersion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageVersion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageVersion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageVersion) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PackageVersion) },
         { }
     };
 

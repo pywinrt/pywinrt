@@ -1793,12 +1793,48 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { }
     };
 
+    static PyObject* _richcompare_AutomationAnnotationTypeRegistration(py::wrapper::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_AutomationAnnotationTypeRegistration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationAnnotationTypeRegistration) },
         { Py_tp_init, reinterpret_cast<void*>(_init_AutomationAnnotationTypeRegistration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationAnnotationTypeRegistration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationAnnotationTypeRegistration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationAnnotationTypeRegistration) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_AutomationAnnotationTypeRegistration) },
         { }
     };
 
@@ -1917,12 +1953,48 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { }
     };
 
+    static PyObject* _richcompare_AutomationRemoteOperationOperandId(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_AutomationRemoteOperationOperandId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationRemoteOperationOperandId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_AutomationRemoteOperationOperandId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationRemoteOperationOperandId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationRemoteOperationOperandId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationRemoteOperationOperandId) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_AutomationRemoteOperationOperandId) },
         { }
     };
 

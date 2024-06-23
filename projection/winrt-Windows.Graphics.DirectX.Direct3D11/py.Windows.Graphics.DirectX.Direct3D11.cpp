@@ -435,12 +435,48 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         { }
     };
 
+    static PyObject* _richcompare_Direct3DMultisampleDescription(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_Direct3DMultisampleDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Direct3DMultisampleDescription) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Direct3DMultisampleDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Direct3DMultisampleDescription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Direct3DMultisampleDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Direct3DMultisampleDescription) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Direct3DMultisampleDescription) },
         { }
     };
 
@@ -667,12 +703,48 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         { }
     };
 
+    static PyObject* _richcompare_Direct3DSurfaceDescription(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_Direct3DSurfaceDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Direct3DSurfaceDescription) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Direct3DSurfaceDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Direct3DSurfaceDescription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Direct3DSurfaceDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Direct3DSurfaceDescription) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Direct3DSurfaceDescription) },
         { }
     };
 

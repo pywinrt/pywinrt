@@ -4034,12 +4034,48 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
+    static PyObject* _richcompare_SpatialBoundingBox(py::wrapper::Windows::Perception::Spatial::SpatialBoundingBox* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Perception::Spatial::SpatialBoundingBox>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_SpatialBoundingBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingBox) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialBoundingBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialBoundingBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingBox) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SpatialBoundingBox) },
         { }
     };
 
@@ -4338,12 +4374,48 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
+    static PyObject* _richcompare_SpatialBoundingFrustum(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Perception::Spatial::SpatialBoundingFrustum>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_SpatialBoundingFrustum[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingFrustum) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingFrustum) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialBoundingFrustum) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialBoundingFrustum) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingFrustum) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SpatialBoundingFrustum) },
         { }
     };
 
@@ -4534,12 +4606,48 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
+    static PyObject* _richcompare_SpatialBoundingOrientedBox(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_SpatialBoundingOrientedBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingOrientedBox) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingOrientedBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialBoundingOrientedBox) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialBoundingOrientedBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingOrientedBox) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SpatialBoundingOrientedBox) },
         { }
     };
 
@@ -4694,12 +4802,48 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
+    static PyObject* _richcompare_SpatialBoundingSphere(py::wrapper::Windows::Perception::Spatial::SpatialBoundingSphere* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Perception::Spatial::SpatialBoundingSphere>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_SpatialBoundingSphere[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingSphere) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingSphere) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialBoundingSphere) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialBoundingSphere) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingSphere) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SpatialBoundingSphere) },
         { }
     };
 
@@ -4854,12 +4998,48 @@ namespace py::cpp::Windows::Perception::Spatial
         { }
     };
 
+    static PyObject* _richcompare_SpatialRay(py::wrapper::Windows::Perception::Spatial::SpatialRay* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Perception::Spatial::SpatialRay>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_SpatialRay[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialRay) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialRay) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialRay) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialRay) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialRay) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SpatialRay) },
         { }
     };
 

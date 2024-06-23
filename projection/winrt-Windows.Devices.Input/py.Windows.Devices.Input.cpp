@@ -2227,12 +2227,48 @@ namespace py::cpp::Windows::Devices::Input
         { }
     };
 
+    static PyObject* _richcompare_MouseDelta(py::wrapper::Windows::Devices::Input::MouseDelta* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Devices::Input::MouseDelta>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_MouseDelta[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MouseDelta) },
         { Py_tp_init, reinterpret_cast<void*>(_init_MouseDelta) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MouseDelta) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MouseDelta) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MouseDelta) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_MouseDelta) },
         { }
     };
 
@@ -2603,12 +2639,48 @@ namespace py::cpp::Windows::Devices::Input
         { }
     };
 
+    static PyObject* _richcompare_PointerDeviceUsage(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Devices::Input::PointerDeviceUsage>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_PointerDeviceUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointerDeviceUsage) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PointerDeviceUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointerDeviceUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointerDeviceUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointerDeviceUsage) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PointerDeviceUsage) },
         { }
     };
 

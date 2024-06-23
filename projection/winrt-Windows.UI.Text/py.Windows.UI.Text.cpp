@@ -10755,12 +10755,48 @@ namespace py::cpp::Windows::UI::Text
         { }
     };
 
+    static PyObject* _richcompare_FontWeight(py::wrapper::Windows::UI::Text::FontWeight* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::UI::Text::FontWeight>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_FontWeight[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FontWeight) },
         { Py_tp_init, reinterpret_cast<void*>(_init_FontWeight) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FontWeight) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FontWeight) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FontWeight) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_FontWeight) },
         { }
     };
 

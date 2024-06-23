@@ -5864,12 +5864,48 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
+    static PyObject* _richcompare_BitmapBounds(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Graphics::Imaging::BitmapBounds>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_BitmapBounds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapBounds) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BitmapBounds) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapBounds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapBounds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapBounds) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BitmapBounds) },
         { }
     };
 
@@ -6096,12 +6132,48 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
+    static PyObject* _richcompare_BitmapPlaneDescription(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Graphics::Imaging::BitmapPlaneDescription>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_BitmapPlaneDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapPlaneDescription) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BitmapPlaneDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapPlaneDescription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapPlaneDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapPlaneDescription) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BitmapPlaneDescription) },
         { }
     };
 
@@ -6256,12 +6328,48 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
+    static PyObject* _richcompare_BitmapSize(py::wrapper::Windows::Graphics::Imaging::BitmapSize* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Graphics::Imaging::BitmapSize>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_BitmapSize[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapSize) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BitmapSize) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapSize) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapSize) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapSize) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BitmapSize) },
         { }
     };
 

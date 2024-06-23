@@ -184,6 +184,8 @@ static class FileWriters
             w.WriteLine(
                 $"def __init__(self, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns)}"))}) -> None: ..."
             );
+            w.WriteLine("def __eq__(self, other: object, /) -> bool: ...");
+            w.WriteLine("def __ne__(self, other: object, /) -> bool: ...");
 
             w.Indent--;
             w.WriteBlankLine();

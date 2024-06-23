@@ -5484,12 +5484,48 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { }
     };
 
+    static PyObject* _richcompare_BackgroundDownloadProgress(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_BackgroundDownloadProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundDownloadProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BackgroundDownloadProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundDownloadProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundDownloadProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundDownloadProgress) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BackgroundDownloadProgress) },
         { }
     };
 
@@ -5644,12 +5680,48 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { }
     };
 
+    static PyObject* _richcompare_BackgroundTransferFileRange(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_BackgroundTransferFileRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundTransferFileRange) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BackgroundTransferFileRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundTransferFileRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundTransferFileRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundTransferFileRange) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BackgroundTransferFileRange) },
         { }
     };
 
@@ -5984,12 +6056,48 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { }
     };
 
+    static PyObject* _richcompare_BackgroundUploadProgress(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_BackgroundUploadProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundUploadProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BackgroundUploadProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundUploadProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundUploadProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundUploadProgress) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BackgroundUploadProgress) },
         { }
     };
 

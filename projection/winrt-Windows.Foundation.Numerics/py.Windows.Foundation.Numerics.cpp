@@ -292,12 +292,48 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _richcompare_Matrix3x2(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_Matrix3x2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix3x2) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Matrix3x2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix3x2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix3x2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix3x2) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Matrix3x2) },
         { }
     };
 
@@ -956,12 +992,48 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _richcompare_Matrix4x4(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_Matrix4x4[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix4x4) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Matrix4x4) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix4x4) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix4x4) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix4x4) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Matrix4x4) },
         { }
     };
 
@@ -1116,12 +1188,48 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _richcompare_Plane(py::wrapper::Windows::Foundation::Numerics::Plane* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_Plane[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Plane) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Plane) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Plane) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Plane) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Plane) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Plane) },
         { }
     };
 
@@ -1348,12 +1456,48 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _richcompare_Quaternion(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_Quaternion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Quaternion) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Quaternion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Quaternion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Quaternion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Quaternion) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Quaternion) },
         { }
     };
 
@@ -1508,12 +1652,48 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _richcompare_Rational(py::wrapper::Windows::Foundation::Numerics::Rational* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Foundation::Numerics::Rational>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_Rational[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Rational) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Rational) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Rational) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Rational) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Rational) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Rational) },
         { }
     };
 
@@ -1668,12 +1848,48 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _richcompare_Vector2(py::wrapper::Windows::Foundation::Numerics::Vector2* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_Vector2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector2) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Vector2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector2) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector2) },
         { }
     };
 
@@ -1864,12 +2080,48 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _richcompare_Vector3(py::wrapper::Windows::Foundation::Numerics::Vector3* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_Vector3[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector3) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Vector3) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector3) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector3) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector3) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector3) },
         { }
     };
 
@@ -2096,12 +2348,48 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _richcompare_Vector4(py::wrapper::Windows::Foundation::Numerics::Vector4* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_Vector4[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector4) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Vector4) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector4) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector4) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector4) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector4) },
         { }
     };
 

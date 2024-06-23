@@ -21853,12 +21853,48 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         { }
     };
 
+    static PyObject* _richcompare_KeyTime(py::wrapper::Windows::UI::Xaml::Media::Animation::KeyTime* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_KeyTime[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyTime) },
         { Py_tp_init, reinterpret_cast<void*>(_init_KeyTime) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyTime) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyTime) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyTime) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_KeyTime) },
         { }
     };
 
@@ -22049,12 +22085,48 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         { }
     };
 
+    static PyObject* _richcompare_RepeatBehavior(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehavior* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_RepeatBehavior[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RepeatBehavior) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RepeatBehavior) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RepeatBehavior) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RepeatBehavior) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RepeatBehavior) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_RepeatBehavior) },
         { }
     };
 

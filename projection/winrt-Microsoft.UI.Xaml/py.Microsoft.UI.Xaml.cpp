@@ -29328,12 +29328,48 @@ namespace py::cpp::Microsoft::UI::Xaml
         { }
     };
 
+    static PyObject* _richcompare_CornerRadius(py::wrapper::Microsoft::UI::Xaml::CornerRadius* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Microsoft::UI::Xaml::CornerRadius>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_CornerRadius[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CornerRadius) },
         { Py_tp_init, reinterpret_cast<void*>(_init_CornerRadius) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CornerRadius) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CornerRadius) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CornerRadius) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_CornerRadius) },
         { }
     };
 
@@ -29488,12 +29524,48 @@ namespace py::cpp::Microsoft::UI::Xaml
         { }
     };
 
+    static PyObject* _richcompare_Duration(py::wrapper::Microsoft::UI::Xaml::Duration* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Microsoft::UI::Xaml::Duration>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_Duration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Duration) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Duration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Duration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Duration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Duration) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Duration) },
         { }
     };
 
@@ -29648,12 +29720,48 @@ namespace py::cpp::Microsoft::UI::Xaml
         { }
     };
 
+    static PyObject* _richcompare_GridLength(py::wrapper::Microsoft::UI::Xaml::GridLength* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Microsoft::UI::Xaml::GridLength>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_GridLength[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GridLength) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GridLength) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GridLength) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GridLength) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GridLength) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_GridLength) },
         { }
     };
 
@@ -29880,12 +29988,48 @@ namespace py::cpp::Microsoft::UI::Xaml
         { }
     };
 
+    static PyObject* _richcompare_Thickness(py::wrapper::Microsoft::UI::Xaml::Thickness* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Microsoft::UI::Xaml::Thickness>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_Thickness[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Thickness) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Thickness) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Thickness) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Thickness) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Thickness) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Thickness) },
         { }
     };
 

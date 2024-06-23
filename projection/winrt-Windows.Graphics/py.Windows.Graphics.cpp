@@ -214,12 +214,48 @@ namespace py::cpp::Windows::Graphics
         { }
     };
 
+    static PyObject* _richcompare_DisplayAdapterId(py::wrapper::Windows::Graphics::DisplayAdapterId* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Graphics::DisplayAdapterId>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_DisplayAdapterId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayAdapterId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_DisplayAdapterId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayAdapterId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayAdapterId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayAdapterId) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_DisplayAdapterId) },
         { }
     };
 
@@ -338,12 +374,48 @@ namespace py::cpp::Windows::Graphics
         { }
     };
 
+    static PyObject* _richcompare_DisplayId(py::wrapper::Windows::Graphics::DisplayId* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Graphics::DisplayId>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_DisplayId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_DisplayId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayId) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_DisplayId) },
         { }
     };
 
@@ -498,12 +570,48 @@ namespace py::cpp::Windows::Graphics
         { }
     };
 
+    static PyObject* _richcompare_PointInt32(py::wrapper::Windows::Graphics::PointInt32* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Graphics::PointInt32>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_PointInt32[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointInt32) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PointInt32) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointInt32) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointInt32) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointInt32) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PointInt32) },
         { }
     };
 
@@ -730,12 +838,48 @@ namespace py::cpp::Windows::Graphics
         { }
     };
 
+    static PyObject* _richcompare_RectInt32(py::wrapper::Windows::Graphics::RectInt32* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Graphics::RectInt32>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_RectInt32[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RectInt32) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RectInt32) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RectInt32) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RectInt32) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RectInt32) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_RectInt32) },
         { }
     };
 
@@ -890,12 +1034,48 @@ namespace py::cpp::Windows::Graphics
         { }
     };
 
+    static PyObject* _richcompare_SizeInt32(py::wrapper::Windows::Graphics::SizeInt32* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::Graphics::SizeInt32>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_SizeInt32[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SizeInt32) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SizeInt32) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SizeInt32) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SizeInt32) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SizeInt32) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SizeInt32) },
         { }
     };
 

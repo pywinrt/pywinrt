@@ -11521,12 +11521,48 @@ namespace py::cpp::Windows::UI::Core
         { }
     };
 
+    static PyObject* _richcompare_CorePhysicalKeyStatus(py::wrapper::Windows::UI::Core::CorePhysicalKeyStatus* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::UI::Core::CorePhysicalKeyStatus>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_CorePhysicalKeyStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CorePhysicalKeyStatus) },
         { Py_tp_init, reinterpret_cast<void*>(_init_CorePhysicalKeyStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CorePhysicalKeyStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CorePhysicalKeyStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CorePhysicalKeyStatus) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_CorePhysicalKeyStatus) },
         { }
     };
 
@@ -11681,12 +11717,48 @@ namespace py::cpp::Windows::UI::Core
         { }
     };
 
+    static PyObject* _richcompare_CoreProximityEvaluation(py::wrapper::Windows::UI::Core::CoreProximityEvaluation* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::Windows::UI::Core::CoreProximityEvaluation>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_CoreProximityEvaluation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreProximityEvaluation) },
         { Py_tp_init, reinterpret_cast<void*>(_init_CoreProximityEvaluation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreProximityEvaluation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreProximityEvaluation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreProximityEvaluation) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_CoreProximityEvaluation) },
         { }
     };
 

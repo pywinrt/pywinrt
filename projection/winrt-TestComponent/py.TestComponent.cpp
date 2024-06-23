@@ -4075,12 +4075,48 @@ namespace py::cpp::TestComponent
         { }
     };
 
+    static PyObject* _richcompare_Blittable(py::wrapper::TestComponent::Blittable* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::TestComponent::Blittable>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_Blittable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Blittable) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Blittable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Blittable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Blittable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Blittable) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Blittable) },
         { }
     };
 
@@ -4235,12 +4271,48 @@ namespace py::cpp::TestComponent
         { }
     };
 
+    static PyObject* _richcompare_Nested(py::wrapper::TestComponent::Nested* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::TestComponent::Nested>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_Nested[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Nested) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Nested) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Nested) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Nested) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Nested) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Nested) },
         { }
     };
 
@@ -4467,12 +4539,48 @@ namespace py::cpp::TestComponent
         { }
     };
 
+    static PyObject* _richcompare_NonBlittable(py::wrapper::TestComponent::NonBlittable* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::converter<winrt::TestComponent::NonBlittable>::convert_to(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyType_Slot _type_slots_NonBlittable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NonBlittable) },
         { Py_tp_init, reinterpret_cast<void*>(_init_NonBlittable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NonBlittable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NonBlittable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NonBlittable) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_NonBlittable) },
         { }
     };
 
