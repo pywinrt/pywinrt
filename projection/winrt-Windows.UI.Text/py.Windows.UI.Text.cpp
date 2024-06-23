@@ -10684,7 +10684,8 @@ namespace py::cpp::Windows::UI::Text
 
         try
         {
-            self->obj = {_Weight};
+            self->obj.Weight = _Weight;
+
             return 0;
         }
         catch (...)

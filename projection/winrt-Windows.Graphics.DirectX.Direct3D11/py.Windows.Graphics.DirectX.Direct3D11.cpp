@@ -329,7 +329,9 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
         try
         {
-            self->obj = {_Count, _Quality};
+            self->obj.Count = _Count;
+            self->obj.Quality = _Quality;
+
             return 0;
         }
         catch (...)
@@ -489,7 +491,11 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
         try
         {
-            self->obj = {_Width, _Height, static_cast<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(_Format), py::converter<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>::convert_to(_MultisampleDescription)};
+            self->obj.Width = _Width;
+            self->obj.Height = _Height;
+            self->obj.Format = static_cast<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(_Format);
+            self->obj.MultisampleDescription = py::converter<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>::convert_to(_MultisampleDescription);
+
             return 0;
         }
         catch (...)

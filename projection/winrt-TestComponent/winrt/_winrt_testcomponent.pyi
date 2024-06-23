@@ -41,8 +41,8 @@ class NonBlittable:
     a: bool
     b: winrt.system.Char16
     c: str
-    d: winrt.system.Int64
-    def __init__(self, a: bool, b: winrt.system.Char16, c: str, d: winrt.system.Int64) -> None: ...
+    d: typing.Optional[winrt.system.Int64]
+    def __init__(self, a: bool, b: winrt.system.Char16, c: str, d: typing.Optional[winrt.system.Int64]) -> None: ...
 
 @typing.final
 class TestRunner_Static(type):

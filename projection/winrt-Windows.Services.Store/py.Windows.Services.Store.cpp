@@ -6746,7 +6746,7 @@ namespace py::cpp::Windows::Services::Store
             return 0;
         }
 
-        winrt::hstring _PackageFamilyName{};
+        PyObject* _PackageFamilyName{};
         uint64_t _PackageDownloadSizeInBytes{};
         uint64_t _PackageBytesDownloaded{};
         double _PackageDownloadProgress{};
@@ -6754,14 +6754,20 @@ namespace py::cpp::Windows::Services::Store
         int32_t _PackageUpdateState{};
 
         static const char* kwlist[] = {"package_family_name", "package_download_size_in_bytes", "package_bytes_downloaded", "package_download_progress", "total_download_progress", "package_update_state", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "uKKddi", const_cast<char**>(kwlist), &_PackageFamilyName, &_PackageDownloadSizeInBytes, &_PackageBytesDownloaded, &_PackageDownloadProgress, &_TotalDownloadProgress, &_PackageUpdateState))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "OKKddi", const_cast<char**>(kwlist), &_PackageFamilyName, &_PackageDownloadSizeInBytes, &_PackageBytesDownloaded, &_PackageDownloadProgress, &_TotalDownloadProgress, &_PackageUpdateState))
         {
             return -1;
         }
 
         try
         {
-            self->obj = {_PackageFamilyName, _PackageDownloadSizeInBytes, _PackageBytesDownloaded, _PackageDownloadProgress, _TotalDownloadProgress, static_cast<winrt::Windows::Services::Store::StorePackageUpdateState>(_PackageUpdateState)};
+            self->obj.PackageFamilyName = py::converter<winrt::hstring>::convert_to(_PackageFamilyName);
+            self->obj.PackageDownloadSizeInBytes = _PackageDownloadSizeInBytes;
+            self->obj.PackageBytesDownloaded = _PackageBytesDownloaded;
+            self->obj.PackageDownloadProgress = _PackageDownloadProgress;
+            self->obj.TotalDownloadProgress = _TotalDownloadProgress;
+            self->obj.PackageUpdateState = static_cast<winrt::Windows::Services::Store::StorePackageUpdateState>(_PackageUpdateState);
+
             return 0;
         }
         catch (...)

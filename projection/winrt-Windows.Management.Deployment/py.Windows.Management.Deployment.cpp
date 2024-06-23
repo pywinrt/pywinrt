@@ -7820,7 +7820,9 @@ namespace py::cpp::Windows::Management::Deployment
 
         try
         {
-            self->obj = {static_cast<winrt::Windows::Management::Deployment::DeploymentProgressState>(_state), _percentage};
+            self->obj.state = static_cast<winrt::Windows::Management::Deployment::DeploymentProgressState>(_state);
+            self->obj.percentage = _percentage;
+
             return 0;
         }
         catch (...)

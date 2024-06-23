@@ -3928,7 +3928,9 @@ namespace py::cpp::Windows::Perception::Spatial
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Center), py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Extents)};
+            self->obj.Center = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Center);
+            self->obj.Extents = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Extents);
+
             return 0;
         }
         catch (...)
@@ -4090,7 +4092,13 @@ namespace py::cpp::Windows::Perception::Spatial
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Near), py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Far), py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Right), py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Left), py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Top), py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Bottom)};
+            self->obj.Near = py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Near);
+            self->obj.Far = py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Far);
+            self->obj.Right = py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Right);
+            self->obj.Left = py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Left);
+            self->obj.Top = py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Top);
+            self->obj.Bottom = py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Bottom);
+
             return 0;
         }
         catch (...)
@@ -4385,7 +4393,10 @@ namespace py::cpp::Windows::Perception::Spatial
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Center), py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Extents), py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(_Orientation)};
+            self->obj.Center = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Center);
+            self->obj.Extents = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Extents);
+            self->obj.Orientation = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(_Orientation);
+
             return 0;
         }
         catch (...)
@@ -4577,7 +4588,9 @@ namespace py::cpp::Windows::Perception::Spatial
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Center), _Radius};
+            self->obj.Center = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Center);
+            self->obj.Radius = _Radius;
+
             return 0;
         }
         catch (...)
@@ -4735,7 +4748,9 @@ namespace py::cpp::Windows::Perception::Spatial
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Origin), py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Direction)};
+            self->obj.Origin = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Origin);
+            self->obj.Direction = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Direction);
+
             return 0;
         }
         catch (...)

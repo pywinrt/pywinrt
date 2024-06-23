@@ -25395,7 +25395,9 @@ namespace py::cpp::Windows::Devices::PointOfService
 
         try
         {
-            self->obj = {_Width, _Height};
+            self->obj.Width = _Width;
+            self->obj.Height = _Height;
+
             return 0;
         }
         catch (...)

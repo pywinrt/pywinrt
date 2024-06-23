@@ -701,7 +701,19 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
         try
         {
-            self->obj = {_RedPrimaryX, _RedPrimaryY, _GreenPrimaryX, _GreenPrimaryY, _BluePrimaryX, _BluePrimaryY, _WhitePointX, _WhitePointY, _MaxMasteringLuminance, _MinMasteringLuminance, _MaxContentLightLevel, _MaxFrameAverageLightLevel};
+            self->obj.RedPrimaryX = _RedPrimaryX;
+            self->obj.RedPrimaryY = _RedPrimaryY;
+            self->obj.GreenPrimaryX = _GreenPrimaryX;
+            self->obj.GreenPrimaryY = _GreenPrimaryY;
+            self->obj.BluePrimaryX = _BluePrimaryX;
+            self->obj.BluePrimaryY = _BluePrimaryY;
+            self->obj.WhitePointX = _WhitePointX;
+            self->obj.WhitePointY = _WhitePointY;
+            self->obj.MaxMasteringLuminance = _MaxMasteringLuminance;
+            self->obj.MinMasteringLuminance = _MinMasteringLuminance;
+            self->obj.MaxContentLightLevel = _MaxContentLightLevel;
+            self->obj.MaxFrameAverageLightLevel = _MaxFrameAverageLightLevel;
+
             return 0;
         }
         catch (...)

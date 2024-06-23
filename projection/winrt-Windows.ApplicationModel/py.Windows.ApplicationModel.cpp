@@ -7596,7 +7596,8 @@ namespace py::cpp::Windows::ApplicationModel
 
         try
         {
-            self->obj = {_PercentComplete};
+            self->obj.PercentComplete = _PercentComplete;
+
             return 0;
         }
         catch (...)
@@ -7722,7 +7723,11 @@ namespace py::cpp::Windows::ApplicationModel
 
         try
         {
-            self->obj = {_Major, _Minor, _Build, _Revision};
+            self->obj.Major = _Major;
+            self->obj.Minor = _Minor;
+            self->obj.Build = _Build;
+            self->obj.Revision = _Revision;
+
             return 0;
         }
         catch (...)

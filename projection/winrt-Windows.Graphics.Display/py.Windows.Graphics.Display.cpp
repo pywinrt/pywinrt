@@ -3268,7 +3268,10 @@ namespace py::cpp::Windows::Graphics::Display
 
         try
         {
-            self->obj = {_MinNits, _MaxNits, _StepSizeNits};
+            self->obj.MinNits = _MinNits;
+            self->obj.MaxNits = _MaxNits;
+            self->obj.StepSizeNits = _StepSizeNits;
+
             return 0;
         }
         catch (...)

@@ -887,7 +887,12 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         try
         {
-            self->obj = {_band1Gain, _band2Gain, _band3Gain, _band4Gain, _band5Gain};
+            self->obj.band1Gain = _band1Gain;
+            self->obj.band2Gain = _band2Gain;
+            self->obj.band3Gain = _band3Gain;
+            self->obj.band4Gain = _band4Gain;
+            self->obj.band5Gain = _band5Gain;
+
             return 0;
         }
         catch (...)

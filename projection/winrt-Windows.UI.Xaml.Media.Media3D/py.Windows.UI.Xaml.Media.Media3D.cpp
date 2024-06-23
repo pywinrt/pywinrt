@@ -1655,7 +1655,23 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
         try
         {
-            self->obj = {_M11, _M12, _M13, _M14, _M21, _M22, _M23, _M24, _M31, _M32, _M33, _M34, _OffsetX, _OffsetY, _OffsetZ, _M44};
+            self->obj.M11 = _M11;
+            self->obj.M12 = _M12;
+            self->obj.M13 = _M13;
+            self->obj.M14 = _M14;
+            self->obj.M21 = _M21;
+            self->obj.M22 = _M22;
+            self->obj.M23 = _M23;
+            self->obj.M24 = _M24;
+            self->obj.M31 = _M31;
+            self->obj.M32 = _M32;
+            self->obj.M33 = _M33;
+            self->obj.M34 = _M34;
+            self->obj.OffsetX = _OffsetX;
+            self->obj.OffsetY = _OffsetY;
+            self->obj.OffsetZ = _OffsetZ;
+            self->obj.M44 = _M44;
+
             return 0;
         }
         catch (...)

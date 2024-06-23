@@ -1147,7 +1147,8 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
         try
         {
-            self->obj = {_Id};
+            self->obj.Id = _Id;
+
             return 0;
         }
         catch (...)

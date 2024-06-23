@@ -1644,18 +1644,20 @@ namespace py::cpp::Windows::UI::Xaml::Interop
             return 0;
         }
 
-        winrt::hstring _Name{};
+        PyObject* _Name{};
         int32_t _Kind{};
 
         static const char* kwlist[] = {"name", "kind", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ui", const_cast<char**>(kwlist), &_Name, &_Kind))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "Oi", const_cast<char**>(kwlist), &_Name, &_Kind))
         {
             return -1;
         }
 
         try
         {
-            self->obj = {_Name, static_cast<winrt::Windows::UI::Xaml::Interop::TypeKind>(_Kind)};
+            self->obj.Name = py::converter<winrt::hstring>::convert_to(_Name);
+            self->obj.Kind = static_cast<winrt::Windows::UI::Xaml::Interop::TypeKind>(_Kind);
+
             return 0;
         }
         catch (...)

@@ -18593,7 +18593,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
         try
         {
-            self->obj = {_M11, _M12, _M21, _M22, _OffsetX, _OffsetY};
+            self->obj.M11 = _M11;
+            self->obj.M12 = _M12;
+            self->obj.M21 = _M21;
+            self->obj.M22 = _M22;
+            self->obj.OffsetX = _OffsetX;
+            self->obj.OffsetY = _OffsetY;
+
             return 0;
         }
         catch (...)

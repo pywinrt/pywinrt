@@ -7384,20 +7384,26 @@ namespace py::cpp::Windows::Web::Http
 
         int32_t _Stage{};
         uint64_t _BytesSent{};
-        uint64_t _TotalBytesToSend{};
+        PyObject* _TotalBytesToSend{};
         uint64_t _BytesReceived{};
-        uint64_t _TotalBytesToReceive{};
+        PyObject* _TotalBytesToReceive{};
         uint32_t _Retries{};
 
         static const char* kwlist[] = {"stage", "bytes_sent", "total_bytes_to_send", "bytes_received", "total_bytes_to_receive", "retries", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "iKKKKI", const_cast<char**>(kwlist), &_Stage, &_BytesSent, &_TotalBytesToSend, &_BytesReceived, &_TotalBytesToReceive, &_Retries))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "iKOKOI", const_cast<char**>(kwlist), &_Stage, &_BytesSent, &_TotalBytesToSend, &_BytesReceived, &_TotalBytesToReceive, &_Retries))
         {
             return -1;
         }
 
         try
         {
-            self->obj = {static_cast<winrt::Windows::Web::Http::HttpProgressStage>(_Stage), _BytesSent, _TotalBytesToSend, _BytesReceived, _TotalBytesToReceive, _Retries};
+            self->obj.Stage = static_cast<winrt::Windows::Web::Http::HttpProgressStage>(_Stage);
+            self->obj.BytesSent = _BytesSent;
+            self->obj.TotalBytesToSend = py::converter<winrt::Windows::Foundation::IReference<uint64_t>>::convert_to(_TotalBytesToSend);
+            self->obj.BytesReceived = _BytesReceived;
+            self->obj.TotalBytesToReceive = py::converter<winrt::Windows::Foundation::IReference<uint64_t>>::convert_to(_TotalBytesToReceive);
+            self->obj.Retries = _Retries;
+
             return 0;
         }
         catch (...)

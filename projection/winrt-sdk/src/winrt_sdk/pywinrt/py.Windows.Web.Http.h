@@ -93,7 +93,7 @@ namespace py
     inline constexpr const char* buffer_format<winrt::Windows::Web::Http::HttpVersion> = "i";
 
     template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Web::Http::HttpProgress> = "T{i:stage:Q:bytes_sent:Q:total_bytes_to_send:Q:bytes_received:Q:total_bytes_to_receive:I:retries:}";
+    inline constexpr const char* buffer_format<winrt::Windows::Web::Http::HttpProgress> = "T{i:stage:Q:bytes_sent:P:total_bytes_to_send:Q:bytes_received:P:total_bytes_to_receive:I:retries:}";
 
 
     template<>

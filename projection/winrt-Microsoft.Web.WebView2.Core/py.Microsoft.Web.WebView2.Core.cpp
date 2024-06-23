@@ -20869,7 +20869,13 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
         try
         {
-            self->obj = {_RepeatCount, _ScanCode, _IsExtendedKey, _IsMenuKeyDown, _WasKeyDown, _IsKeyReleased};
+            self->obj.RepeatCount = _RepeatCount;
+            self->obj.ScanCode = _ScanCode;
+            self->obj.IsExtendedKey = _IsExtendedKey;
+            self->obj.IsMenuKeyDown = _IsMenuKeyDown;
+            self->obj.WasKeyDown = _WasKeyDown;
+            self->obj.IsKeyReleased = _IsKeyReleased;
+
             return 0;
         }
         catch (...)

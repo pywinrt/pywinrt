@@ -3903,7 +3903,12 @@ namespace py::cpp::Windows::Media::Import
 
         try
         {
-            self->obj = {_ItemsImported, _TotalItemsToImport, _BytesImported, _TotalBytesToImport, _ImportProgress};
+            self->obj.ItemsImported = _ItemsImported;
+            self->obj.TotalItemsToImport = _TotalItemsToImport;
+            self->obj.BytesImported = _BytesImported;
+            self->obj.TotalBytesToImport = _TotalBytesToImport;
+            self->obj.ImportProgress = _ImportProgress;
+
             return 0;
         }
         catch (...)

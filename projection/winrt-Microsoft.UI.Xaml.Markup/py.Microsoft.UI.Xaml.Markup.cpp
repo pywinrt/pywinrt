@@ -3202,7 +3202,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
         try
         {
-            self->obj = {_InputStreamIndex, _LineNumber, _LinePosition};
+            self->obj.InputStreamIndex = _InputStreamIndex;
+            self->obj.LineNumber = _LineNumber;
+            self->obj.LinePosition = _LinePosition;
+
             return 0;
         }
         catch (...)
@@ -3383,18 +3386,20 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
             return 0;
         }
 
-        winrt::hstring _XmlNamespace{};
-        winrt::hstring _Namespace{};
+        PyObject* _XmlNamespace{};
+        PyObject* _Namespace{};
 
         static const char* kwlist[] = {"xml_namespace", "namespace", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "uu", const_cast<char**>(kwlist), &_XmlNamespace, &_Namespace))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_XmlNamespace, &_Namespace))
         {
             return -1;
         }
 
         try
         {
-            self->obj = {_XmlNamespace, _Namespace};
+            self->obj.XmlNamespace = py::converter<winrt::hstring>::convert_to(_XmlNamespace);
+            self->obj.Namespace = py::converter<winrt::hstring>::convert_to(_Namespace);
+
             return 0;
         }
         catch (...)

@@ -5652,7 +5652,9 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
         try
         {
-            self->obj = {static_cast<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgressStatus>(_Status), _Progress};
+            self->obj.Status = static_cast<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgressStatus>(_Status);
+            self->obj.Progress = _Progress;
+
             return 0;
         }
         catch (...)

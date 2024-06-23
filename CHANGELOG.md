@@ -25,6 +25,7 @@
 - Fixed some type hints not working when not all depedent packages installed.
 - Fixed type hints should not have `_from()` method in projected static classes.
 - Fixed type hints for methods that return an array.
+- Fixed handling of bool, char, string and IReference types in projected structs.
 
 [#25]: https://github.com/pywinrt/pywinrt/issues/25
 

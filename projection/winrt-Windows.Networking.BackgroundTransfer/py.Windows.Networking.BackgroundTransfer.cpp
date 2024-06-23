@@ -5262,8 +5262,8 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         uint64_t _BytesReceived{};
         uint64_t _TotalBytesToReceive{};
         int32_t _Status{};
-        bool _HasResponseChanged{};
-        bool _HasRestarted{};
+        int _HasResponseChanged{};
+        int _HasRestarted{};
 
         static const char* kwlist[] = {"bytes_received", "total_bytes_to_receive", "status", "has_response_changed", "has_restarted", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "KKipp", const_cast<char**>(kwlist), &_BytesReceived, &_TotalBytesToReceive, &_Status, &_HasResponseChanged, &_HasRestarted))
@@ -5273,7 +5273,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
-            self->obj = {_BytesReceived, _TotalBytesToReceive, static_cast<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus>(_Status), _HasResponseChanged, _HasRestarted};
+            self->obj.BytesReceived = _BytesReceived;
+            self->obj.TotalBytesToReceive = _TotalBytesToReceive;
+            self->obj.Status = static_cast<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus>(_Status);
+            self->obj.HasResponseChanged = _HasResponseChanged;
+            self->obj.HasRestarted = _HasRestarted;
+
             return 0;
         }
         catch (...)
@@ -5533,7 +5538,9 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
-            self->obj = {_Offset, _Length};
+            self->obj.Offset = _Offset;
+            self->obj.Length = _Length;
+
             return 0;
         }
         catch (...)
@@ -5685,8 +5692,8 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         uint64_t _TotalBytesToReceive{};
         uint64_t _TotalBytesToSend{};
         int32_t _Status{};
-        bool _HasResponseChanged{};
-        bool _HasRestarted{};
+        int _HasResponseChanged{};
+        int _HasRestarted{};
 
         static const char* kwlist[] = {"bytes_received", "bytes_sent", "total_bytes_to_receive", "total_bytes_to_send", "status", "has_response_changed", "has_restarted", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "KKKKipp", const_cast<char**>(kwlist), &_BytesReceived, &_BytesSent, &_TotalBytesToReceive, &_TotalBytesToSend, &_Status, &_HasResponseChanged, &_HasRestarted))
@@ -5696,7 +5703,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
-            self->obj = {_BytesReceived, _BytesSent, _TotalBytesToReceive, _TotalBytesToSend, static_cast<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus>(_Status), _HasResponseChanged, _HasRestarted};
+            self->obj.BytesReceived = _BytesReceived;
+            self->obj.BytesSent = _BytesSent;
+            self->obj.TotalBytesToReceive = _TotalBytesToReceive;
+            self->obj.TotalBytesToSend = _TotalBytesToSend;
+            self->obj.Status = static_cast<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus>(_Status);
+            self->obj.HasResponseChanged = _HasResponseChanged;
+            self->obj.HasRestarted = _HasRestarted;
+
             return 0;
         }
         catch (...)

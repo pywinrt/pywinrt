@@ -20142,7 +20142,10 @@ namespace py::cpp::Windows::Media::Capture
 
         try
         {
-            self->obj = {_R, _G, _B};
+            self->obj.R = _R;
+            self->obj.G = _G;
+            self->obj.B = _B;
+
             return 0;
         }
         catch (...)

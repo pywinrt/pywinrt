@@ -1131,7 +1131,7 @@ static class WriterExtensions
 
         foreach (var field in type.Type.Fields)
         {
-            w.WriteLine($"{field.GetWrongFieldType().ToStructFieldType()} _{field.Name}{{}};");
+            w.WriteLine($"{field.FieldType.ToStructFieldType()} _{field.Name}{{}};");
         }
 
         w.WriteBlankLine();
@@ -1150,9 +1150,13 @@ static class WriterExtensions
         w.WriteTryCatch(
             () =>
             {
-                w.WriteLine(
-                    $"self->obj = {{{string.Join(", ", type.Type.Fields.Select(f => f.ToStructFieldInitializer()))}}};"
-                );
+                foreach (var field in type.Type.Fields)
+                {
+                    w.WriteLine(
+                        $"self->obj.{field.ToWinrtFieldName()} = {field.ToStructFieldInitializer()};"
+                    );
+                }
+                w.WriteBlankLine();
                 w.WriteLine("return 0;");
             },
             catchReturn: "-1"

@@ -3804,7 +3804,9 @@ namespace py::cpp::Windows::Devices::Scanners
 
         try
         {
-            self->obj = {_DpiX, _DpiY};
+            self->obj.DpiX = _DpiX;
+            self->obj.DpiY = _DpiY;
+
             return 0;
         }
         catch (...)

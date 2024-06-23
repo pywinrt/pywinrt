@@ -3217,7 +3217,9 @@ namespace py::cpp::Windows::UI::Text::Core
 
         try
         {
-            self->obj = {_StartCaretPosition, _EndCaretPosition};
+            self->obj.StartCaretPosition = _StartCaretPosition;
+            self->obj.EndCaretPosition = _EndCaretPosition;
+
             return 0;
         }
         catch (...)

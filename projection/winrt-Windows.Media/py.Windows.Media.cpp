@@ -7309,7 +7309,9 @@ namespace py::cpp::Windows::Media
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_Start), py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_End)};
+            self->obj.Start = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_Start);
+            self->obj.End = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_End);
+
             return 0;
         }
         catch (...)

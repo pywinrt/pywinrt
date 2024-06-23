@@ -5688,7 +5688,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
-            self->obj = {_X, _Y, _Width, _Height};
+            self->obj.X = _X;
+            self->obj.Y = _Y;
+            self->obj.Width = _Width;
+            self->obj.Height = _Height;
+
             return 0;
         }
         catch (...)
@@ -5916,7 +5920,11 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
-            self->obj = {_StartIndex, _Width, _Height, _Stride};
+            self->obj.StartIndex = _StartIndex;
+            self->obj.Width = _Width;
+            self->obj.Height = _Height;
+            self->obj.Stride = _Stride;
+
             return 0;
         }
         catch (...)
@@ -6142,7 +6150,9 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
-            self->obj = {_Width, _Height};
+            self->obj.Width = _Width;
+            self->obj.Height = _Height;
+
             return 0;
         }
         catch (...)

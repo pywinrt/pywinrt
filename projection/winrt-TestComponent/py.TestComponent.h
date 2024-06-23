@@ -1839,10 +1839,10 @@ namespace py
     inline constexpr const char* buffer_format<winrt::TestComponent::Blittable> = "T{B:a:H:b:I:c:Q:d:h:e:i:f:q:g:f:h:d:i:T{I2H8B}:j:}";
 
     template<>
-    inline constexpr const char* buffer_format<winrt::TestComponent::Nested> = "T{T{B:a:H:b:I:c:Q:d:h:e:i:f:q:g:f:h:d:i:T{I2H8B}:j:}:blittable:T{?:a:u:b:P:c:q:d:}:non_blittable:}";
+    inline constexpr const char* buffer_format<winrt::TestComponent::Nested> = "T{T{B:a:H:b:I:c:Q:d:h:e:i:f:q:g:f:h:d:i:T{I2H8B}:j:}:blittable:T{?:a:u:b:P:c:P:d:}:non_blittable:}";
 
     template<>
-    inline constexpr const char* buffer_format<winrt::TestComponent::NonBlittable> = "T{?:a:u:b:P:c:q:d:}";
+    inline constexpr const char* buffer_format<winrt::TestComponent::NonBlittable> = "T{?:a:u:b:P:c:P:d:}";
 
 
     template<>

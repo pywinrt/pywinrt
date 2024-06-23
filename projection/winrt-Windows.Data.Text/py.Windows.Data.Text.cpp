@@ -2376,7 +2376,9 @@ namespace py::cpp::Windows::Data::Text
 
         try
         {
-            self->obj = {_StartPosition, _Length};
+            self->obj.StartPosition = _StartPosition;
+            self->obj.Length = _Length;
+
             return 0;
         }
         catch (...)

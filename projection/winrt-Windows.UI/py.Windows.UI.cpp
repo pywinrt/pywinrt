@@ -3265,7 +3265,11 @@ namespace py::cpp::Windows::UI
 
         try
         {
-            self->obj = {_A, _R, _G, _B};
+            self->obj.A = _A;
+            self->obj.R = _R;
+            self->obj.G = _G;
+            self->obj.B = _B;
+
             return 0;
         }
         catch (...)
@@ -3490,7 +3494,8 @@ namespace py::cpp::Windows::UI
 
         try
         {
-            self->obj = {_Value};
+            self->obj.Value = _Value;
+
             return 0;
         }
         catch (...)

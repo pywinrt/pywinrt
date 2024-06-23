@@ -4568,7 +4568,9 @@ namespace py::cpp::Windows::Graphics::Holographic
 
         try
         {
-            self->obj = {_LowPart, _HighPart};
+            self->obj.LowPart = _LowPart;
+            self->obj.HighPart = _HighPart;
+
             return 0;
         }
         catch (...)
@@ -4725,7 +4727,8 @@ namespace py::cpp::Windows::Graphics::Holographic
 
         try
         {
-            self->obj = {_Value};
+            self->obj.Value = _Value;
+
             return 0;
         }
         catch (...)
@@ -4849,7 +4852,9 @@ namespace py::cpp::Windows::Graphics::Holographic
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(_Left), py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(_Right)};
+            self->obj.Left = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(_Left);
+            self->obj.Right = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(_Right);
+
             return 0;
         }
         catch (...)

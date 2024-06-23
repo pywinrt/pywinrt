@@ -11262,10 +11262,10 @@ namespace py::cpp::Windows::UI::Core
 
         uint32_t _RepeatCount{};
         uint32_t _ScanCode{};
-        bool _IsExtendedKey{};
-        bool _IsMenuKeyDown{};
-        bool _WasKeyDown{};
-        bool _IsKeyReleased{};
+        int _IsExtendedKey{};
+        int _IsMenuKeyDown{};
+        int _WasKeyDown{};
+        int _IsKeyReleased{};
 
         static const char* kwlist[] = {"repeat_count", "scan_code", "is_extended_key", "is_menu_key_down", "was_key_down", "is_key_released", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIpppp", const_cast<char**>(kwlist), &_RepeatCount, &_ScanCode, &_IsExtendedKey, &_IsMenuKeyDown, &_WasKeyDown, &_IsKeyReleased))
@@ -11275,7 +11275,13 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
-            self->obj = {_RepeatCount, _ScanCode, _IsExtendedKey, _IsMenuKeyDown, _WasKeyDown, _IsKeyReleased};
+            self->obj.RepeatCount = _RepeatCount;
+            self->obj.ScanCode = _ScanCode;
+            self->obj.IsExtendedKey = _IsExtendedKey;
+            self->obj.IsMenuKeyDown = _IsMenuKeyDown;
+            self->obj.WasKeyDown = _WasKeyDown;
+            self->obj.IsKeyReleased = _IsKeyReleased;
+
             return 0;
         }
         catch (...)
@@ -11569,7 +11575,9 @@ namespace py::cpp::Windows::UI::Core
 
         try
         {
-            self->obj = {_Score, py::converter<winrt::Windows::Foundation::Point>::convert_to(_AdjustedPoint)};
+            self->obj.Score = _Score;
+            self->obj.AdjustedPoint = py::converter<winrt::Windows::Foundation::Point>::convert_to(_AdjustedPoint);
+
             return 0;
         }
         catch (...)

@@ -28630,7 +28630,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
         try
         {
-            self->obj = {_Index, _Offset};
+            self->obj.Index = _Index;
+            self->obj.Offset = _Offset;
+
             return 0;
         }
         catch (...)

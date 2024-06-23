@@ -9860,8 +9860,8 @@ namespace py::cpp::Windows::Networking::Sockets
         uint64_t _InboundBitsPerSecond{};
         uint64_t _OutboundBitsPerSecondInstability{};
         uint64_t _InboundBitsPerSecondInstability{};
-        bool _OutboundBandwidthPeaked{};
-        bool _InboundBandwidthPeaked{};
+        int _OutboundBandwidthPeaked{};
+        int _InboundBandwidthPeaked{};
 
         static const char* kwlist[] = {"outbound_bits_per_second", "inbound_bits_per_second", "outbound_bits_per_second_instability", "inbound_bits_per_second_instability", "outbound_bandwidth_peaked", "inbound_bandwidth_peaked", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "KKKKpp", const_cast<char**>(kwlist), &_OutboundBitsPerSecond, &_InboundBitsPerSecond, &_OutboundBitsPerSecondInstability, &_InboundBitsPerSecondInstability, &_OutboundBandwidthPeaked, &_InboundBandwidthPeaked))
@@ -9871,7 +9871,13 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            self->obj = {_OutboundBitsPerSecond, _InboundBitsPerSecond, _OutboundBitsPerSecondInstability, _InboundBitsPerSecondInstability, _OutboundBandwidthPeaked, _InboundBandwidthPeaked};
+            self->obj.OutboundBitsPerSecond = _OutboundBitsPerSecond;
+            self->obj.InboundBitsPerSecond = _InboundBitsPerSecond;
+            self->obj.OutboundBitsPerSecondInstability = _OutboundBitsPerSecondInstability;
+            self->obj.InboundBitsPerSecondInstability = _InboundBitsPerSecondInstability;
+            self->obj.OutboundBandwidthPeaked = _OutboundBandwidthPeaked;
+            self->obj.InboundBandwidthPeaked = _InboundBandwidthPeaked;
+
             return 0;
         }
         catch (...)
@@ -10167,7 +10173,11 @@ namespace py::cpp::Windows::Networking::Sockets
 
         try
         {
-            self->obj = {_Variance, _Max, _Min, _Sum};
+            self->obj.Variance = _Variance;
+            self->obj.Max = _Max;
+            self->obj.Min = _Min;
+            self->obj.Sum = _Sum;
+
             return 0;
         }
         catch (...)

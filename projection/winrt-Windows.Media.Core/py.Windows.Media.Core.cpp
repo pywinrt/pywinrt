@@ -19528,7 +19528,9 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_Start), py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_End)};
+            self->obj.Start = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_Start);
+            self->obj.End = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_End);
+
             return 0;
         }
         catch (...)
@@ -19686,7 +19688,9 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj = {_Value, static_cast<winrt::Windows::Media::Core::TimedTextUnit>(_Unit)};
+            self->obj.Value = _Value;
+            self->obj.Unit = static_cast<winrt::Windows::Media::Core::TimedTextUnit>(_Unit);
+
             return 0;
         }
         catch (...)
@@ -19847,7 +19851,12 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj = {_Before, _After, _Start, _End, static_cast<winrt::Windows::Media::Core::TimedTextUnit>(_Unit)};
+            self->obj.Before = _Before;
+            self->obj.After = _After;
+            self->obj.Start = _Start;
+            self->obj.End = _End;
+            self->obj.Unit = static_cast<winrt::Windows::Media::Core::TimedTextUnit>(_Unit);
+
             return 0;
         }
         catch (...)
@@ -20108,7 +20117,10 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj = {_X, _Y, static_cast<winrt::Windows::Media::Core::TimedTextUnit>(_Unit)};
+            self->obj.X = _X;
+            self->obj.Y = _Y;
+            self->obj.Unit = static_cast<winrt::Windows::Media::Core::TimedTextUnit>(_Unit);
+
             return 0;
         }
         catch (...)
@@ -20301,7 +20313,10 @@ namespace py::cpp::Windows::Media::Core
 
         try
         {
-            self->obj = {_Height, _Width, static_cast<winrt::Windows::Media::Core::TimedTextUnit>(_Unit)};
+            self->obj.Height = _Height;
+            self->obj.Width = _Width;
+            self->obj.Unit = static_cast<winrt::Windows::Media::Core::TimedTextUnit>(_Unit);
+
             return 0;
         }
         catch (...)

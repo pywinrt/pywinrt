@@ -3477,7 +3477,10 @@ namespace py::cpp::Windows::Devices::Geolocation
 
         try
         {
-            self->obj = {_Latitude, _Longitude, _Altitude};
+            self->obj.Latitude = _Latitude;
+            self->obj.Longitude = _Longitude;
+            self->obj.Altitude = _Altitude;
+
             return 0;
         }
         catch (...)

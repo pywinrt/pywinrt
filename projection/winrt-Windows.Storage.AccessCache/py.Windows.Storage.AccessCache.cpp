@@ -2206,18 +2206,20 @@ namespace py::cpp::Windows::Storage::AccessCache
             return 0;
         }
 
-        winrt::hstring _Token{};
-        winrt::hstring _Metadata{};
+        PyObject* _Token{};
+        PyObject* _Metadata{};
 
         static const char* kwlist[] = {"token", "metadata", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "uu", const_cast<char**>(kwlist), &_Token, &_Metadata))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_Token, &_Metadata))
         {
             return -1;
         }
 
         try
         {
-            self->obj = {_Token, _Metadata};
+            self->obj.Token = py::converter<winrt::hstring>::convert_to(_Token);
+            self->obj.Metadata = py::converter<winrt::hstring>::convert_to(_Metadata);
+
             return 0;
         }
         catch (...)

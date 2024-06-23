@@ -2332,7 +2332,9 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
-            self->obj = {_PositionX, _PositionY};
+            self->obj.PositionX = _PositionX;
+            self->obj.PositionY = _PositionY;
+
             return 0;
         }
         catch (...)
@@ -2493,7 +2495,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
-            self->obj = {_PointerId, static_cast<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions>(_PointerOptions), py::converter<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>::convert_to(_PixelLocation), _TimeOffsetInMilliseconds, _PerformanceCount};
+            self->obj.PointerId = _PointerId;
+            self->obj.PointerOptions = static_cast<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions>(_PointerOptions);
+            self->obj.PixelLocation = py::converter<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>::convert_to(_PixelLocation);
+            self->obj.TimeOffsetInMilliseconds = _TimeOffsetInMilliseconds;
+            self->obj.PerformanceCount = _PerformanceCount;
+
             return 0;
         }
         catch (...)
@@ -2755,7 +2762,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
         try
         {
-            self->obj = {_Left, _Top, _Bottom, _Right};
+            self->obj.Left = _Left;
+            self->obj.Top = _Top;
+            self->obj.Bottom = _Bottom;
+            self->obj.Right = _Right;
+
             return 0;
         }
         catch (...)

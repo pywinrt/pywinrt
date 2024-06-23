@@ -778,7 +778,10 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
         try
         {
-            self->obj = {static_cast<winrt::Microsoft::Windows::PushNotifications::PushNotificationChannelStatus>(_status), py::converter<winrt::hresult>::convert_to(_extendedError), _retryCount};
+            self->obj.status = static_cast<winrt::Microsoft::Windows::PushNotifications::PushNotificationChannelStatus>(_status);
+            self->obj.extendedError = py::converter<winrt::hresult>::convert_to(_extendedError);
+            self->obj.retryCount = _retryCount;
+
             return 0;
         }
         catch (...)

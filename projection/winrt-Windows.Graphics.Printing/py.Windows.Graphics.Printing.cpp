@@ -4200,7 +4200,11 @@ namespace py::cpp::Windows::Graphics::Printing
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::Size>::convert_to(_PageSize), py::converter<winrt::Windows::Foundation::Rect>::convert_to(_ImageableRect), _DpiX, _DpiY};
+            self->obj.PageSize = py::converter<winrt::Windows::Foundation::Size>::convert_to(_PageSize);
+            self->obj.ImageableRect = py::converter<winrt::Windows::Foundation::Rect>::convert_to(_ImageableRect);
+            self->obj.DpiX = _DpiX;
+            self->obj.DpiY = _DpiY;
+
             return 0;
         }
         catch (...)

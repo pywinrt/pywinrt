@@ -29152,7 +29152,11 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
-            self->obj = {_TopLeft, _TopRight, _BottomRight, _BottomLeft};
+            self->obj.TopLeft = _TopLeft;
+            self->obj.TopRight = _TopRight;
+            self->obj.BottomRight = _BottomRight;
+            self->obj.BottomLeft = _BottomLeft;
+
             return 0;
         }
         catch (...)
@@ -29378,7 +29382,9 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_TimeSpan), static_cast<winrt::Microsoft::UI::Xaml::DurationType>(_Type)};
+            self->obj.TimeSpan = py::converter<winrt::Windows::Foundation::TimeSpan>::convert_to(_TimeSpan);
+            self->obj.Type = static_cast<winrt::Microsoft::UI::Xaml::DurationType>(_Type);
+
             return 0;
         }
         catch (...)
@@ -29536,7 +29542,9 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
-            self->obj = {_Value, static_cast<winrt::Microsoft::UI::Xaml::GridUnitType>(_GridUnitType)};
+            self->obj.Value = _Value;
+            self->obj.GridUnitType = static_cast<winrt::Microsoft::UI::Xaml::GridUnitType>(_GridUnitType);
+
             return 0;
         }
         catch (...)
@@ -29696,7 +29704,11 @@ namespace py::cpp::Microsoft::UI::Xaml
 
         try
         {
-            self->obj = {_Left, _Top, _Right, _Bottom};
+            self->obj.Left = _Left;
+            self->obj.Top = _Top;
+            self->obj.Right = _Right;
+            self->obj.Bottom = _Bottom;
+
             return 0;
         }
         catch (...)

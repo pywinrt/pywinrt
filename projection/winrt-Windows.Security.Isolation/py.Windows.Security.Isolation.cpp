@@ -3800,7 +3800,9 @@ namespace py::cpp::Windows::Security::Isolation
 
         try
         {
-            self->obj = {static_cast<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProgressState>(_State), _PercentComplete};
+            self->obj.State = static_cast<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProgressState>(_State);
+            self->obj.PercentComplete = _PercentComplete;
+
             return 0;
         }
         catch (...)

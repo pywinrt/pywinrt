@@ -9491,7 +9491,11 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
-            self->obj = {_SelectionStart, _SpeedBumpStart, _SpeedBumpEnd, _RearrangeStart};
+            self->obj.SelectionStart = _SelectionStart;
+            self->obj.SpeedBumpStart = _SpeedBumpStart;
+            self->obj.SpeedBumpEnd = _SpeedBumpEnd;
+            self->obj.RearrangeStart = _RearrangeStart;
+
             return 0;
         }
         catch (...)
@@ -9719,7 +9723,11 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::Point>::convert_to(_Translation), _Scale, _Rotation, _Expansion};
+            self->obj.Translation = py::converter<winrt::Windows::Foundation::Point>::convert_to(_Translation);
+            self->obj.Scale = _Scale;
+            self->obj.Rotation = _Rotation;
+            self->obj.Expansion = _Expansion;
+
             return 0;
         }
         catch (...)
@@ -9946,7 +9954,10 @@ namespace py::cpp::Windows::UI::Input
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::Point>::convert_to(_Linear), _Angular, _Expansion};
+            self->obj.Linear = py::converter<winrt::Windows::Foundation::Point>::convert_to(_Linear);
+            self->obj.Angular = _Angular;
+            self->obj.Expansion = _Expansion;
+
             return 0;
         }
         catch (...)

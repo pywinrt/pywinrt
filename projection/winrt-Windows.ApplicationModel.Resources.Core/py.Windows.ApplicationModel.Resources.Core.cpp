@@ -4415,7 +4415,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
         try
         {
-            self->obj = {_MajorVersion, _MinorVersion, _ResourceSubtreeCount, _NamedResourceCount, _Checksum};
+            self->obj.MajorVersion = _MajorVersion;
+            self->obj.MinorVersion = _MinorVersion;
+            self->obj.ResourceSubtreeCount = _ResourceSubtreeCount;
+            self->obj.NamedResourceCount = _NamedResourceCount;
+            self->obj.Checksum = _Checksum;
+
             return 0;
         }
         catch (...)

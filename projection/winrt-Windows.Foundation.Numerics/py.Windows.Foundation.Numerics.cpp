@@ -46,7 +46,13 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj = {_M11, _M12, _M21, _M22, _M31, _M32};
+            self->obj.m11 = _M11;
+            self->obj.m12 = _M12;
+            self->obj.m21 = _M21;
+            self->obj.m22 = _M22;
+            self->obj.m31 = _M31;
+            self->obj.m32 = _M32;
+
             return 0;
         }
         catch (...)
@@ -354,7 +360,23 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj = {_M11, _M12, _M13, _M14, _M21, _M22, _M23, _M24, _M31, _M32, _M33, _M34, _M41, _M42, _M43, _M44};
+            self->obj.m11 = _M11;
+            self->obj.m12 = _M12;
+            self->obj.m13 = _M13;
+            self->obj.m14 = _M14;
+            self->obj.m21 = _M21;
+            self->obj.m22 = _M22;
+            self->obj.m23 = _M23;
+            self->obj.m24 = _M24;
+            self->obj.m31 = _M31;
+            self->obj.m32 = _M32;
+            self->obj.m33 = _M33;
+            self->obj.m34 = _M34;
+            self->obj.m41 = _M41;
+            self->obj.m42 = _M42;
+            self->obj.m43 = _M43;
+            self->obj.m44 = _M44;
+
             return 0;
         }
         catch (...)
@@ -988,7 +1010,9 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Normal), _D};
+            self->obj.normal = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Normal);
+            self->obj.d = _D;
+
             return 0;
         }
         catch (...)
@@ -1148,7 +1172,11 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj = {_X, _Y, _Z, _W};
+            self->obj.x = _X;
+            self->obj.y = _Y;
+            self->obj.z = _Z;
+            self->obj.w = _W;
+
             return 0;
         }
         catch (...)
@@ -1374,7 +1402,9 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj = {_Numerator, _Denominator};
+            self->obj.Numerator = _Numerator;
+            self->obj.Denominator = _Denominator;
+
             return 0;
         }
         catch (...)
@@ -1532,7 +1562,9 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj = {_X, _Y};
+            self->obj.x = _X;
+            self->obj.y = _Y;
+
             return 0;
         }
         catch (...)
@@ -1691,7 +1723,10 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj = {_X, _Y, _Z};
+            self->obj.x = _X;
+            self->obj.y = _Y;
+            self->obj.z = _Z;
+
             return 0;
         }
         catch (...)
@@ -1885,7 +1920,11 @@ namespace py::cpp::Windows::Foundation::Numerics
 
         try
         {
-            self->obj = {_X, _Y, _Z, _W};
+            self->obj.x = _X;
+            self->obj.y = _Y;
+            self->obj.z = _Z;
+            self->obj.w = _W;
+
             return 0;
         }
         catch (...)

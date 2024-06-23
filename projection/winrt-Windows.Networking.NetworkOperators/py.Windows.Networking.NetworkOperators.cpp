@@ -15311,7 +15311,9 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         try
         {
-            self->obj = {_TotalSizeInBytes, _InstalledSizeInBytes};
+            self->obj.TotalSizeInBytes = _TotalSizeInBytes;
+            self->obj.InstalledSizeInBytes = _InstalledSizeInBytes;
+
             return 0;
         }
         catch (...)
@@ -15469,7 +15471,9 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
         try
         {
-            self->obj = {_UsageInMegabytes, py::converter<winrt::Windows::Foundation::DateTime>::convert_to(_LastSyncTime)};
+            self->obj.UsageInMegabytes = _UsageInMegabytes;
+            self->obj.LastSyncTime = py::converter<winrt::Windows::Foundation::DateTime>::convert_to(_LastSyncTime);
+
             return 0;
         }
         catch (...)

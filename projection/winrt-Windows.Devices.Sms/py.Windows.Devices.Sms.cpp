@@ -8785,7 +8785,12 @@ namespace py::cpp::Windows::Devices::Sms
 
         try
         {
-            self->obj = {_SegmentCount, _CharacterCountLastSegment, _CharactersPerSegment, _ByteCountLastSegment, _BytesPerSegment};
+            self->obj.SegmentCount = _SegmentCount;
+            self->obj.CharacterCountLastSegment = _CharacterCountLastSegment;
+            self->obj.CharactersPerSegment = _CharactersPerSegment;
+            self->obj.ByteCountLastSegment = _ByteCountLastSegment;
+            self->obj.BytesPerSegment = _BytesPerSegment;
+
             return 0;
         }
         catch (...)

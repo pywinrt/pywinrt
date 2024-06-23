@@ -4926,7 +4926,9 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
-            self->obj = {static_cast<winrt::Windows::Networking::Connectivity::TriStates>(_Roaming), static_cast<winrt::Windows::Networking::Connectivity::TriStates>(_Shared)};
+            self->obj.Roaming = static_cast<winrt::Windows::Networking::Connectivity::TriStates>(_Roaming);
+            self->obj.Shared = static_cast<winrt::Windows::Networking::Connectivity::TriStates>(_Shared);
+
             return 0;
         }
         catch (...)

@@ -3689,7 +3689,17 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj = {_A, _B, _C, _D, _E, _F, _G, _H, _I, py::converter<winrt::guid>::convert_to(_J)};
+            self->obj.A = _A;
+            self->obj.B = _B;
+            self->obj.C = _C;
+            self->obj.D = _D;
+            self->obj.E = _E;
+            self->obj.F = _F;
+            self->obj.G = _G;
+            self->obj.H = _H;
+            self->obj.I = _I;
+            self->obj.J = py::converter<winrt::guid>::convert_to(_J);
+
             return 0;
         }
         catch (...)
@@ -4119,7 +4129,9 @@ namespace py::cpp::TestComponent
 
         try
         {
-            self->obj = {py::converter<winrt::TestComponent::Blittable>::convert_to(_Blittable), py::converter<winrt::TestComponent::NonBlittable>::convert_to(_NonBlittable)};
+            self->obj.Blittable = py::converter<winrt::TestComponent::Blittable>::convert_to(_Blittable);
+            self->obj.NonBlittable = py::converter<winrt::TestComponent::NonBlittable>::convert_to(_NonBlittable);
+
             return 0;
         }
         catch (...)
@@ -4266,20 +4278,24 @@ namespace py::cpp::TestComponent
             return 0;
         }
 
-        bool _A{};
-        char16_t _B{};
-        winrt::hstring _C{};
-        int64_t _D{};
+        int _A{};
+        PyObject* _B{};
+        PyObject* _C{};
+        PyObject* _D{};
 
         static const char* kwlist[] = {"a", "b", "c", "d", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "pu1uL", const_cast<char**>(kwlist), &_A, &_B, &_C, &_D))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "pOOO", const_cast<char**>(kwlist), &_A, &_B, &_C, &_D))
         {
             return -1;
         }
 
         try
         {
-            self->obj = {_A, _B, _C, _D};
+            self->obj.A = _A;
+            self->obj.B = py::converter<char16_t>::convert_to(_B);
+            self->obj.C = py::converter<winrt::hstring>::convert_to(_C);
+            self->obj.D = py::converter<winrt::Windows::Foundation::IReference<int64_t>>::convert_to(_D);
+
             return 0;
         }
         catch (...)

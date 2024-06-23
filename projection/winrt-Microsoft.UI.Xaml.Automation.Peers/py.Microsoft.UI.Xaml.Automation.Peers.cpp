@@ -15633,7 +15633,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
         try
         {
-            self->obj = {_Part1, _Part2};
+            self->obj.Part1 = _Part1;
+            self->obj.Part2 = _Part2;
+
             return 0;
         }
         catch (...)

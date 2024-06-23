@@ -9425,7 +9425,11 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj = {_SelectionStart, _SpeedBumpStart, _SpeedBumpEnd, _RearrangeStart};
+            self->obj.SelectionStart = _SelectionStart;
+            self->obj.SpeedBumpStart = _SpeedBumpStart;
+            self->obj.SpeedBumpEnd = _SpeedBumpEnd;
+            self->obj.RearrangeStart = _RearrangeStart;
+
             return 0;
         }
         catch (...)
@@ -9653,7 +9657,11 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::Point>::convert_to(_Translation), _Scale, _Rotation, _Expansion};
+            self->obj.Translation = py::converter<winrt::Windows::Foundation::Point>::convert_to(_Translation);
+            self->obj.Scale = _Scale;
+            self->obj.Rotation = _Rotation;
+            self->obj.Expansion = _Expansion;
+
             return 0;
         }
         catch (...)
@@ -9880,7 +9888,10 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::Point>::convert_to(_Linear), _Angular, _Expansion};
+            self->obj.Linear = py::converter<winrt::Windows::Foundation::Point>::convert_to(_Linear);
+            self->obj.Angular = _Angular;
+            self->obj.Expansion = _Expansion;
+
             return 0;
         }
         catch (...)
@@ -10063,10 +10074,10 @@ namespace py::cpp::Microsoft::UI::Input
 
         uint32_t _RepeatCount{};
         uint32_t _ScanCode{};
-        bool _IsExtendedKey{};
-        bool _IsMenuKeyDown{};
-        bool _WasKeyDown{};
-        bool _IsKeyReleased{};
+        int _IsExtendedKey{};
+        int _IsMenuKeyDown{};
+        int _WasKeyDown{};
+        int _IsKeyReleased{};
 
         static const char* kwlist[] = {"repeat_count", "scan_code", "is_extended_key", "is_menu_key_down", "was_key_down", "is_key_released", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIpppp", const_cast<char**>(kwlist), &_RepeatCount, &_ScanCode, &_IsExtendedKey, &_IsMenuKeyDown, &_WasKeyDown, &_IsKeyReleased))
@@ -10076,7 +10087,13 @@ namespace py::cpp::Microsoft::UI::Input
 
         try
         {
-            self->obj = {_RepeatCount, _ScanCode, _IsExtendedKey, _IsMenuKeyDown, _WasKeyDown, _IsKeyReleased};
+            self->obj.RepeatCount = _RepeatCount;
+            self->obj.ScanCode = _ScanCode;
+            self->obj.IsExtendedKey = _IsExtendedKey;
+            self->obj.IsMenuKeyDown = _IsMenuKeyDown;
+            self->obj.WasKeyDown = _WasKeyDown;
+            self->obj.IsKeyReleased = _IsKeyReleased;
+
             return 0;
         }
         catch (...)

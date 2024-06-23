@@ -5585,7 +5585,9 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::Rational>::convert_to(_VerticalSyncRate), _VerticalSyncsPerPresentation};
+            self->obj.VerticalSyncRate = py::converter<winrt::Windows::Foundation::Numerics::Rational>::convert_to(_VerticalSyncRate);
+            self->obj.VerticalSyncsPerPresentation = _VerticalSyncsPerPresentation;
+
             return 0;
         }
         catch (...)

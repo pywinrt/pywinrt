@@ -47,8 +47,8 @@ static class TypeExtensions
                     "Windows.Foundation.IReference`1" => "PyObject*",
                     _ => throw new NotImplementedException(),
                 },
-            { FullName: "System.Boolean" } => "bool",
-            { FullName: "System.Char" } => "char16_t",
+            // NB: Boolean needs to be int for Python compatibility, C++ bool is wrong size
+            { FullName: "System.Boolean" } => "int",
             { FullName: "System.SByte" } => "int8_t",
             { FullName: "System.Byte" } => "uint8_t",
             { FullName: "System.Int16" } => "int16_t",
@@ -59,8 +59,10 @@ static class TypeExtensions
             { FullName: "System.UInt64" } => "uint64_t",
             { FullName: "System.Single" } => "float",
             { FullName: "System.Double" } => "double",
-            { FullName: "System.String" } => "winrt::hstring",
-            { FullName: "System.Guid" } => "PyObject*",
+            { FullName: "System.Char" }
+            or { FullName: "System.String" }
+            or { FullName: "System.Guid" }
+                => "PyObject*",
             { IsValueType: true }
                 => type.Resolve() switch
                 {
@@ -77,8 +79,17 @@ static class TypeExtensions
     public static string ToWinrtFieldName(this FieldDefinition field)
     {
         if (
-            field.DeclaringType.Namespace == "Windows.Foundation.Numerics"
-            && ProjectedType.CustomNumerics.ContainsKey(field.DeclaringType.Name)
+            (
+                field.DeclaringType.Namespace == "Windows.Foundation"
+                && (
+                    field.DeclaringType.Name == "HResult"
+                    || field.DeclaringType.Name == "EventRegistrationToken"
+                )
+            )
+            || (
+                field.DeclaringType.Namespace == "Windows.Foundation.Numerics"
+                && ProjectedType.CustomNumerics.ContainsKey(field.DeclaringType.Name)
+            )
         )
         {
             return field.Name.ToLowerInvariant();
@@ -101,7 +112,7 @@ static class TypeExtensions
 
     public static string ToStructBufferFormat(this FieldDefinition field)
     {
-        return field.GetWrongFieldType() switch
+        return field.FieldType switch
         {
             GenericInstanceType gen
                 => gen.ElementType.FullName switch
@@ -143,23 +154,6 @@ static class TypeExtensions
         };
     }
 
-    // FIXME: this is a hack to get the correct type to match the C++ code
-    // generator, but we should not actually be resolving the IReference type.
-    // Delete this method and replaces all uses with FieldType.
-    public static TypeReference GetWrongFieldType(this FieldDefinition field)
-    {
-        return field.FieldType switch
-        {
-            GenericInstanceType gen
-                => gen.ElementType.FullName switch
-                {
-                    "Windows.Foundation.IReference`1" => gen.GenericArguments[0],
-                    _ => throw new NotImplementedException(),
-                },
-            _ => field.FieldType,
-        };
-    }
-
     public static string ToStructFieldFormat(this TypeDefinition type)
     {
         var sb = new StringBuilder();
@@ -167,7 +161,7 @@ static class TypeExtensions
         foreach (var field in type.Fields)
         {
             sb.Append(
-                field.GetWrongFieldType() switch
+                field.FieldType switch
                 {
                     GenericInstanceType gen
                         => gen.ElementType.FullName switch
@@ -176,9 +170,6 @@ static class TypeExtensions
                             _ => throw new NotImplementedException(),
                         },
                     { FullName: "System.Boolean" } => "p",
-                    // TODO: 'u' format string was deprecated in Python 3.3.
-                    // Need to move to a supported construct
-                    { FullName: "System.Char" } => "u1",
                     { FullName: "System.SByte" } => "b",
                     { FullName: "System.Byte" } => "B",
                     { FullName: "System.Int16" } => "h",
@@ -189,10 +180,10 @@ static class TypeExtensions
                     { FullName: "System.UInt64" } => "K",
                     { FullName: "System.Single" } => "f",
                     { FullName: "System.Double" } => "d",
-                    // TODO: 'u' format string was deprecated in Python 3.3.
-                    // Need to move to a supported construct
-                    { FullName: "System.String" } => "u",
-                    { FullName: "System.Guid" } => "O",
+                    { FullName: "System.Char" }
+                    or { FullName: "System.String" }
+                    or { FullName: "System.Guid" }
+                        => "O",
                     { IsValueType: true }
                         => field.FieldType.Resolve() switch
                         {
@@ -225,7 +216,7 @@ static class TypeExtensions
 
     public static string ToStructFieldInitializer(this FieldDefinition field)
     {
-        return field.GetWrongFieldType() switch
+        return field.FieldType switch
         {
             GenericInstanceType gen
                 => gen.ElementType.FullName switch
@@ -235,7 +226,6 @@ static class TypeExtensions
                     _ => throw new NotImplementedException(),
                 },
             { FullName: "System.Boolean" }
-            or { FullName: "System.Char" }
             or { FullName: "System.SByte" }
             or { FullName: "System.Byte" }
             or { FullName: "System.Int16" }
@@ -246,9 +236,11 @@ static class TypeExtensions
             or { FullName: "System.UInt64" }
             or { FullName: "System.Single" }
             or { FullName: "System.Double" }
-            or { FullName: "System.String" }
                 => $"_{field.Name}",
-            { FullName: "System.Guid" } => $"py::converter<winrt::guid>::convert_to(_{field.Name})",
+            { FullName: "System.Char" }
+            or { FullName: "System.String" }
+            or { FullName: "System.Guid" }
+                => $"py::converter<{field.FieldType.ToCppTypeName()}>::convert_to(_{field.Name})",
             { IsValueType: true }
                 => field.FieldType.Resolve() switch
                 {

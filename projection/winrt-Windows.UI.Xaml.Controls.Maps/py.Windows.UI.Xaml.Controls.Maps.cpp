@@ -18184,7 +18184,9 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
         try
         {
-            self->obj = {_Min, _Max};
+            self->obj.Min = _Min;
+            self->obj.Max = _Max;
+
             return 0;
         }
         catch (...)

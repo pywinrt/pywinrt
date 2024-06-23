@@ -1073,7 +1073,9 @@ namespace py::cpp::Windows::Devices::I2c
 
         try
         {
-            self->obj = {static_cast<winrt::Windows::Devices::I2c::I2cTransferStatus>(_Status), _BytesTransferred};
+            self->obj.Status = static_cast<winrt::Windows::Devices::I2c::I2cTransferStatus>(_Status);
+            self->obj.BytesTransferred = _BytesTransferred;
+
             return 0;
         }
         catch (...)

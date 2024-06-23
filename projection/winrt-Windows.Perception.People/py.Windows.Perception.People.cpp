@@ -983,7 +983,9 @@ namespace py::cpp::Windows::Perception::People
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Position), py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Normal)};
+            self->obj.Position = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Position);
+            self->obj.Normal = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Normal);
+
             return 0;
         }
         catch (...)
@@ -1143,7 +1145,11 @@ namespace py::cpp::Windows::Perception::People
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(_Orientation), py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Position), _Radius, static_cast<winrt::Windows::Perception::People::JointPoseAccuracy>(_Accuracy)};
+            self->obj.Orientation = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(_Orientation);
+            self->obj.Position = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Position);
+            self->obj.Radius = _Radius;
+            self->obj.Accuracy = static_cast<winrt::Windows::Perception::People::JointPoseAccuracy>(_Accuracy);
+
             return 0;
         }
         catch (...)

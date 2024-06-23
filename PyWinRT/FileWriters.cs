@@ -177,12 +177,12 @@ static class FileWriters
             foreach (var field in type.Type.Fields)
             {
                 w.WriteLine(
-                    $"{field.Name.ToPythonIdentifier()}: {field.GetWrongFieldType().ToPyTypeName(ns)}"
+                    $"{field.Name.ToPythonIdentifier()}: {field.FieldType.ToPyTypeName(ns)}"
                 );
             }
 
             w.WriteLine(
-                $"def __init__(self, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.GetWrongFieldType().ToPyTypeName(ns)}"))}) -> None: ..."
+                $"def __init__(self, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns)}"))}) -> None: ..."
             );
 
             w.Indent--;

@@ -8250,7 +8250,9 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            self->obj = {_BytesRetrieved, _TotalBytesToRetrieve};
+            self->obj.BytesRetrieved = _BytesRetrieved;
+            self->obj.TotalBytesToRetrieve = _TotalBytesToRetrieve;
+
             return 0;
         }
         catch (...)
@@ -8410,7 +8412,11 @@ namespace py::cpp::Windows::Web::Syndication
 
         try
         {
-            self->obj = {_BytesSent, _TotalBytesToSend, _BytesRetrieved, _TotalBytesToRetrieve};
+            self->obj.BytesSent = _BytesSent;
+            self->obj.TotalBytesToSend = _TotalBytesToSend;
+            self->obj.BytesRetrieved = _BytesRetrieved;
+            self->obj.TotalBytesToRetrieve = _TotalBytesToRetrieve;
+
             return 0;
         }
         catch (...)

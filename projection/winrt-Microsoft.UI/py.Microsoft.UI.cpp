@@ -3254,7 +3254,8 @@ namespace py::cpp::Microsoft::UI
 
         try
         {
-            self->obj = {_Value};
+            self->obj.Value = _Value;
+
             return 0;
         }
         catch (...)
@@ -3377,7 +3378,8 @@ namespace py::cpp::Microsoft::UI
 
         try
         {
-            self->obj = {_Value};
+            self->obj.Value = _Value;
+
             return 0;
         }
         catch (...)
@@ -3500,7 +3502,8 @@ namespace py::cpp::Microsoft::UI
 
         try
         {
-            self->obj = {_Value};
+            self->obj.Value = _Value;
+
             return 0;
         }
         catch (...)

@@ -4756,7 +4756,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
         try
         {
-            self->obj = {_Count};
+            self->obj.Count = _Count;
+
             return 0;
         }
         catch (...)

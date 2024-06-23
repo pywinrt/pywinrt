@@ -4091,7 +4091,9 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj = {_Timestamp, static_cast<winrt::Windows::Gaming::Input::ArcadeStickButtons>(_Buttons)};
+            self->obj.Timestamp = _Timestamp;
+            self->obj.Buttons = static_cast<winrt::Windows::Gaming::Input::ArcadeStickButtons>(_Buttons);
+
             return 0;
         }
         catch (...)
@@ -4254,7 +4256,14 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj = {_Timestamp, static_cast<winrt::Windows::Gaming::Input::FlightStickButtons>(_Buttons), static_cast<winrt::Windows::Gaming::Input::GameControllerSwitchPosition>(_HatSwitch), _Roll, _Pitch, _Yaw, _Throttle};
+            self->obj.Timestamp = _Timestamp;
+            self->obj.Buttons = static_cast<winrt::Windows::Gaming::Input::FlightStickButtons>(_Buttons);
+            self->obj.HatSwitch = static_cast<winrt::Windows::Gaming::Input::GameControllerSwitchPosition>(_HatSwitch);
+            self->obj.Roll = _Roll;
+            self->obj.Pitch = _Pitch;
+            self->obj.Yaw = _Yaw;
+            self->obj.Throttle = _Throttle;
+
             return 0;
         }
         catch (...)
@@ -4588,7 +4597,15 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj = {_Timestamp, static_cast<winrt::Windows::Gaming::Input::GamepadButtons>(_Buttons), _LeftTrigger, _RightTrigger, _LeftThumbstickX, _LeftThumbstickY, _RightThumbstickX, _RightThumbstickY};
+            self->obj.Timestamp = _Timestamp;
+            self->obj.Buttons = static_cast<winrt::Windows::Gaming::Input::GamepadButtons>(_Buttons);
+            self->obj.LeftTrigger = _LeftTrigger;
+            self->obj.RightTrigger = _RightTrigger;
+            self->obj.LeftThumbstickX = _LeftThumbstickX;
+            self->obj.LeftThumbstickY = _LeftThumbstickY;
+            self->obj.RightThumbstickX = _RightThumbstickX;
+            self->obj.RightThumbstickY = _RightThumbstickY;
+
             return 0;
         }
         catch (...)
@@ -4952,7 +4969,11 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj = {_LeftMotor, _RightMotor, _LeftTrigger, _RightTrigger};
+            self->obj.LeftMotor = _LeftMotor;
+            self->obj.RightMotor = _RightMotor;
+            self->obj.LeftTrigger = _LeftTrigger;
+            self->obj.RightTrigger = _RightTrigger;
+
             return 0;
         }
         catch (...)
@@ -5184,7 +5205,15 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj = {_Timestamp, static_cast<winrt::Windows::Gaming::Input::RacingWheelButtons>(_Buttons), _PatternShifterGear, _Wheel, _Throttle, _Brake, _Clutch, _Handbrake};
+            self->obj.Timestamp = _Timestamp;
+            self->obj.Buttons = static_cast<winrt::Windows::Gaming::Input::RacingWheelButtons>(_Buttons);
+            self->obj.PatternShifterGear = _PatternShifterGear;
+            self->obj.Wheel = _Wheel;
+            self->obj.Throttle = _Throttle;
+            self->obj.Brake = _Brake;
+            self->obj.Clutch = _Clutch;
+            self->obj.Handbrake = _Handbrake;
+
             return 0;
         }
         catch (...)
@@ -5547,7 +5576,10 @@ namespace py::cpp::Windows::Gaming::Input
 
         try
         {
-            self->obj = {_Timestamp, static_cast<winrt::Windows::Gaming::Input::RequiredUINavigationButtons>(_RequiredButtons), static_cast<winrt::Windows::Gaming::Input::OptionalUINavigationButtons>(_OptionalButtons)};
+            self->obj.Timestamp = _Timestamp;
+            self->obj.RequiredButtons = static_cast<winrt::Windows::Gaming::Input::RequiredUINavigationButtons>(_RequiredButtons);
+            self->obj.OptionalButtons = static_cast<winrt::Windows::Gaming::Input::OptionalUINavigationButtons>(_OptionalButtons);
+
             return 0;
         }
         catch (...)

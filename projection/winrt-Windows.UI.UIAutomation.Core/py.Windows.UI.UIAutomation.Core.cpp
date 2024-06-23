@@ -1722,7 +1722,8 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         try
         {
-            self->obj = {_LocalId};
+            self->obj.LocalId = _LocalId;
+
             return 0;
         }
         catch (...)
@@ -1845,7 +1846,8 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         try
         {
-            self->obj = {_Value};
+            self->obj.Value = _Value;
+
             return 0;
         }
         catch (...)

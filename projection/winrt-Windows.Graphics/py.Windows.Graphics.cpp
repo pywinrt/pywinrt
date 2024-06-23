@@ -108,7 +108,9 @@ namespace py::cpp::Windows::Graphics
 
         try
         {
-            self->obj = {_LowPart, _HighPart};
+            self->obj.LowPart = _LowPart;
+            self->obj.HighPart = _HighPart;
+
             return 0;
         }
         catch (...)
@@ -265,7 +267,8 @@ namespace py::cpp::Windows::Graphics
 
         try
         {
-            self->obj = {_Value};
+            self->obj.Value = _Value;
+
             return 0;
         }
         catch (...)
@@ -389,7 +392,9 @@ namespace py::cpp::Windows::Graphics
 
         try
         {
-            self->obj = {_X, _Y};
+            self->obj.X = _X;
+            self->obj.Y = _Y;
+
             return 0;
         }
         catch (...)
@@ -549,7 +554,11 @@ namespace py::cpp::Windows::Graphics
 
         try
         {
-            self->obj = {_X, _Y, _Width, _Height};
+            self->obj.X = _X;
+            self->obj.Y = _Y;
+            self->obj.Width = _Width;
+            self->obj.Height = _Height;
+
             return 0;
         }
         catch (...)
@@ -775,7 +784,9 @@ namespace py::cpp::Windows::Graphics
 
         try
         {
-            self->obj = {_Width, _Height};
+            self->obj.Width = _Width;
+            self->obj.Height = _Height;
+
             return 0;
         }
         catch (...)

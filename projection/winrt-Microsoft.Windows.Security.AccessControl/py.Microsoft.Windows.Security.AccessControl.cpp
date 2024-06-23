@@ -155,18 +155,20 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
             return 0;
         }
 
-        winrt::hstring _appContainerName{};
+        PyObject* _appContainerName{};
         uint32_t _accessMask{};
 
         static const char* kwlist[] = {"app_container_name", "access_mask", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "uI", const_cast<char**>(kwlist), &_appContainerName, &_accessMask))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "OI", const_cast<char**>(kwlist), &_appContainerName, &_accessMask))
         {
             return -1;
         }
 
         try
         {
-            self->obj = {_appContainerName, _accessMask};
+            self->obj.appContainerName = py::converter<winrt::hstring>::convert_to(_appContainerName);
+            self->obj.accessMask = _accessMask;
+
             return 0;
         }
         catch (...)

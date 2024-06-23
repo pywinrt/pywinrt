@@ -28906,7 +28906,9 @@ namespace py::cpp::Windows::UI::Composition
 
         try
         {
-            self->obj = {py::converter<winrt::Windows::Foundation::Point>::convert_to(_Point), _Radius};
+            self->obj.Point = py::converter<winrt::Windows::Foundation::Point>::convert_to(_Point);
+            self->obj.Radius = _Radius;
+
             return 0;
         }
         catch (...)

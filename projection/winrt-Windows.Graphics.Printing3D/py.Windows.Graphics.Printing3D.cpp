@@ -5839,7 +5839,9 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
         try
         {
-            self->obj = {static_cast<winrt::Windows::Graphics::Printing3D::Printing3DBufferFormat>(_Format), _Stride};
+            self->obj.Format = static_cast<winrt::Windows::Graphics::Printing3D::Printing3DBufferFormat>(_Format);
+            self->obj.Stride = _Stride;
+
             return 0;
         }
         catch (...)

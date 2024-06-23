@@ -6858,7 +6858,8 @@ namespace py::cpp::Windows::Foundation
 
         try
         {
-            self->obj = {_Value};
+            self->obj.value = _Value;
+
             return 0;
         }
         catch (...)
@@ -6981,7 +6982,8 @@ namespace py::cpp::Windows::Foundation
 
         try
         {
-            self->obj = {_Value};
+            self->obj.value = _Value;
+
             return 0;
         }
         catch (...)
@@ -7105,7 +7107,9 @@ namespace py::cpp::Windows::Foundation
 
         try
         {
-            self->obj = {_X, _Y};
+            self->obj.X = _X;
+            self->obj.Y = _Y;
+
             return 0;
         }
         catch (...)
@@ -7265,7 +7269,11 @@ namespace py::cpp::Windows::Foundation
 
         try
         {
-            self->obj = {_X, _Y, _Width, _Height};
+            self->obj.X = _X;
+            self->obj.Y = _Y;
+            self->obj.Width = _Width;
+            self->obj.Height = _Height;
+
             return 0;
         }
         catch (...)
@@ -7491,7 +7499,9 @@ namespace py::cpp::Windows::Foundation
 
         try
         {
-            self->obj = {_Width, _Height};
+            self->obj.Width = _Width;
+            self->obj.Height = _Height;
+
             return 0;
         }
         catch (...)

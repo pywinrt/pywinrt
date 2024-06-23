@@ -13104,7 +13104,9 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
         try
         {
-            self->obj = {_StartIndex, _Length};
+            self->obj.StartIndex = _StartIndex;
+            self->obj.Length = _Length;
+
             return 0;
         }
         catch (...)

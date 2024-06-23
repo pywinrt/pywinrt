@@ -2121,7 +2121,9 @@ namespace py::cpp::Windows::Devices::Input
 
         try
         {
-            self->obj = {_X, _Y};
+            self->obj.X = _X;
+            self->obj.Y = _Y;
+
             return 0;
         }
         catch (...)
@@ -2285,7 +2287,15 @@ namespace py::cpp::Windows::Devices::Input
 
         try
         {
-            self->obj = {_UsagePage, _Usage, _MinLogical, _MaxLogical, _MinPhysical, _MaxPhysical, _Unit, _PhysicalMultiplier};
+            self->obj.UsagePage = _UsagePage;
+            self->obj.Usage = _Usage;
+            self->obj.MinLogical = _MinLogical;
+            self->obj.MaxLogical = _MaxLogical;
+            self->obj.MinPhysical = _MinPhysical;
+            self->obj.MaxPhysical = _MaxPhysical;
+            self->obj.Unit = _Unit;
+            self->obj.PhysicalMultiplier = _PhysicalMultiplier;
+
             return 0;
         }
         catch (...)

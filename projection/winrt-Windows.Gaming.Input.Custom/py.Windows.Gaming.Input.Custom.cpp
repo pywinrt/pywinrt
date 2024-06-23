@@ -2140,7 +2140,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         try
         {
-            self->obj = {_Major, _Minor, _Build, _Revision};
+            self->obj.Major = _Major;
+            self->obj.Minor = _Minor;
+            self->obj.Build = _Build;
+            self->obj.Revision = _Revision;
+
             return 0;
         }
         catch (...)
@@ -2366,7 +2370,9 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
         try
         {
-            self->obj = {_PercentCompleted, _CurrentComponentId};
+            self->obj.PercentCompleted = _PercentCompleted;
+            self->obj.CurrentComponentId = _CurrentComponentId;
+
             return 0;
         }
         catch (...)
