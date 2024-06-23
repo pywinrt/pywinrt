@@ -3,26 +3,6 @@
 #include "py.Windows.Foundation.h"
 
 
-static int64_t custom_get(winrt::event_token const& instance)
-{
-    return instance.value;
-}
-
-static void custom_set(winrt::event_token& instance, int64_t value)
-{
-    instance.value = value;
-}
-
-static int32_t custom_get(winrt::hresult const& instance)
-{
-    return instance;
-}
-
-static void custom_set(winrt::hresult& instance, int32_t value)
-{
-    instance = value;
-}
-
 namespace py::cpp::Windows::Foundation
 {
     // ----- Deferral class --------------------
@@ -6896,7 +6876,7 @@ namespace py::cpp::Windows::Foundation
     {
         try
         {
-            return py::convert(custom_get(self->obj));
+            return py::convert(self->obj.value);
         }
         catch (...)
         {
@@ -6915,7 +6895,7 @@ namespace py::cpp::Windows::Foundation
 
         try
         {
-            custom_set(self->obj, py::converter<int64_t>::convert_to(arg));
+            self->obj.value = py::converter<int64_t>::convert_to(arg);
             return 0;
         }
         catch (...)
@@ -7020,7 +7000,7 @@ namespace py::cpp::Windows::Foundation
     {
         try
         {
-            return py::convert(custom_get(self->obj));
+            return py::convert(self->obj.value);
         }
         catch (...)
         {
@@ -7039,7 +7019,7 @@ namespace py::cpp::Windows::Foundation
 
         try
         {
-            custom_set(self->obj, py::converter<int32_t>::convert_to(arg));
+            self->obj.value = py::converter<int32_t>::convert_to(arg);
             return 0;
         }
         catch (...)

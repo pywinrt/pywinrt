@@ -32,12 +32,6 @@ static class TypeExtensions
             || type.FullName == "Windows.Foundation.TimeSpan";
     }
 
-    public static bool HasCustomConversion(this TypeDefinition type)
-    {
-        return type.FullName == "Windows.Foundation.EventRegistrationToken"
-            || type.FullName == "Windows.Foundation.HResult";
-    }
-
     public static string ToStructFieldType(this TypeReference type) =>
         type switch
         {

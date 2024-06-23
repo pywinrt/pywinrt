@@ -1180,14 +1180,7 @@ static class WriterExtensions
 
         w.WriteTryCatch(() =>
         {
-            if (type.Type.HasCustomConversion())
-            {
-                w.WriteLine($"return py::convert(custom_get(self->obj));");
-            }
-            else
-            {
-                w.WriteLine($"return py::convert(self->obj.{field.ToWinrtFieldName()});");
-            }
+            w.WriteLine($"return py::convert(self->obj.{field.ToWinrtFieldName()});");
         });
 
         w.Indent--;
@@ -1212,19 +1205,9 @@ static class WriterExtensions
         w.WriteTryCatch(
             () =>
             {
-                if (type.Type.HasCustomConversion())
-                {
-                    w.WriteLine(
-                        $"custom_set(self->obj, py::converter<{field.FieldType.ToCppTypeName()}>::convert_to(arg));"
-                    );
-                }
-                else
-                {
-                    w.WriteLine(
-                        $"self->obj.{field.ToWinrtFieldName()} = py::converter<{field.FieldType.ToCppTypeName()}>::convert_to(arg);"
-                    );
-                }
-
+                w.WriteLine(
+                    $"self->obj.{field.ToWinrtFieldName()} = py::converter<{field.FieldType.ToCppTypeName()}>::convert_to(arg);"
+                );
                 w.WriteLine("return 0;");
             },
             catchReturn: "-1"
