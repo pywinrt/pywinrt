@@ -24,6 +24,7 @@
 - Fixed `ui.xaml.Application.start()` methods not releasing GIL.
 - Fixed some type hints not working when not all depedent packages installed.
 - Fixed type hints should not have `_from()` method in projected static classes.
+- Fixed type hints for methods that return an array.
 
 [#25]: https://github.com/pywinrt/pywinrt/issues/25
 

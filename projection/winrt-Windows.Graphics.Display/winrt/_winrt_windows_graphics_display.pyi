@@ -235,7 +235,7 @@ class DisplayProperties(winrt.system.Object, metaclass=DisplayProperties_Static)
 
 @typing.final
 class DisplayServices_Static(type):
-    def find_all(cls) -> windows_graphics.DisplayId: ...
+    def find_all(cls) -> winrt.system.Array[windows_graphics.DisplayId]: ...
 
 @typing.final
 class DisplayServices(winrt.system.Object, metaclass=DisplayServices_Static):

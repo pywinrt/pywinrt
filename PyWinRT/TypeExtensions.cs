@@ -427,11 +427,20 @@ static class TypeExtensions
 
         if (method.ReturnType.FullName != "System.Void")
         {
-            // FIXME: this needs to be ToPyOutParamTyping()
-            outParams.Insert(
-                0,
-                method.ReturnType.ToNullablePyTypeName(ns, map, quoteImportedTypes)
-            );
+            if (method.ReturnType.IsArray)
+            {
+                outParams.Insert(
+                    0,
+                    $"winrt.system.Array[{method.ReturnType.ToNullablePyTypeName(ns, map, quoteImportedTypes)}]"
+                );
+            }
+            else
+            {
+                outParams.Insert(
+                    0,
+                    method.ReturnType.ToNullablePyTypeName(ns, map, quoteImportedTypes)
+                );
+            }
         }
 
         if (outParams.Count == 1)
