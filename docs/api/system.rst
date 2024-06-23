@@ -21,7 +21,7 @@
 
         Gets the WinRT runtime class name of the object.
 
-        .. versionadded:: unreleased
+        .. versionadded:: 2.1
 
     .. attribute:: _iids_
         :type: Array[uuid.UUID]
@@ -29,7 +29,7 @@
         Gets the Interface Identifiers (IIDS) of the WinRT interfaces
         implemented by the object.
 
-        .. versionadded:: unreleased
+        .. versionadded:: 2.1
 
 .. class:: Array(type, [initializer, ] /)
 

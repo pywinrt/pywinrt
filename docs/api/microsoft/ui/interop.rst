@@ -21,7 +21,7 @@ See: https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/win32/winrt-m
     :raises OSError:
         if the the OS call failed.
 
-    .. versionadded:: unreleased
+    .. versionadded:: 2.1
 
 .. function:: get_window_from_window_id(winrt.microsoft.ui.WindowId windowId) -> int
 
@@ -38,7 +38,7 @@ See: https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/win32/winrt-m
     :raises OSError:
         if the the OS call failed.
 
-    .. versionadded:: unreleased
+    .. versionadded:: 2.1
 
 .. function:: get_display_id_from_monitor(int hmonitor) -> winrt.microsoft.ui.DisplayId
 
@@ -55,7 +55,7 @@ See: https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/win32/winrt-m
     :raises OSError:
         if the the OS call failed.
 
-    .. versionadded:: unreleased
+    .. versionadded:: 2.1
 
 .. function:: get_monitor_from_display_id(winrt.microsoft.ui.DisplayId displayId) -> int
 
@@ -73,7 +73,7 @@ See: https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/win32/winrt-m
     :raises OSError:
         if the the OS call failed.
 
-    .. versionadded:: unreleased
+    .. versionadded:: 2.1
 
 .. function:: get_icon_id_from_icon(int hicon) -> winrt.microsoft.ui.IconId
 
@@ -90,7 +90,7 @@ See: https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/win32/winrt-m
 
         if the the OS call failed.
 
-    .. versionadded:: unreleased
+    .. versionadded:: 2.1
 
 .. function:: get_icon_from_icon_id(winrt.microsoft.ui.IconId iconId) -> int
 
@@ -107,4 +107,4 @@ See: https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/win32/winrt-m
     :raises OSError:
         if the the OS call failed.
 
-    .. versionadded:: unreleased
+    .. versionadded:: 2.1

@@ -4,11 +4,14 @@
 
 ## [Unreleased]
 
+## [v2.1.0] - 2024-06-23
+
 ### Added
 - Added `winrt.Microsoft.Windows.ApplicationModel.DynamicDepedency.Bootstrap`
   interop package.
 - Added `_iids_` and `_runtime_class_name_` properties to `system.Object`.
 - Added `__eq__` and `__ne__` methods to projected structs.
+- Added projection of inherited members of composed classes.
 
 ### Changed
 - PyWinRT.exe is now a dotnet tool.
@@ -23,7 +26,7 @@
   requires subclass ([#25]).
 - Fixed `TypeError` when passing `None` to APIs that require a `system.Object`.
 - Fixed `ui.xaml.Application.start()` methods not releasing GIL.
-- Fixed some type hints not working when not all depedent packages installed.
+- Fixed some type hints not working when not all dependent packages installed.
 - Fixed type hints should not have `_from()` method in projected static classes.
 - Fixed type hints for methods that return an array.
 - Fixed handling of bool, char, string and IReference types in projected structs.
@@ -263,7 +266,8 @@
 ### Removed
 - Removed selecting apartment thread type during module init.
 
-[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v2.0.1...HEAD
+[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v2.1.0...HEAD
+[v2.1.0]: https://github.com/pywinrt/pywinrt/compare/v2.0.1...v2.1.0
 [v2.0.1]: https://github.com/pywinrt/pywinrt/compare/v2.0.0...v2.0.1
 [v2.0.0]: https://github.com/pywinrt/pywinrt/compare/v2.0.0-beta.2...v2.0.0
 [v2.0.0-beta.2]: https://github.com/pywinrt/pywinrt/compare/v2.0.0-beta.1...v2.0.0-beta.2

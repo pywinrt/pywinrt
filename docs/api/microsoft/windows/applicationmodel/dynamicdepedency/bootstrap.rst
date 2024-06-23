@@ -25,7 +25,7 @@ APIs for bootstrapping the Windows App runtime.
     :raises OSError:
         if the initialization fails.
 
-    .. versionadded:: unreleased
+    .. versionadded:: 2.1
 
     Example::
 
@@ -38,14 +38,14 @@ APIs for bootstrapping the Windows App runtime.
 
     The package release version of the Windows App SDK used at compile time.
 
-    .. versionadded:: unreleased
+    .. versionadded:: 2.1
 
 .. attribute:: RUNTIME_VERSION
     :type: str
 
     The runtime version of the Windows App SDK used at compile time.
 
-    .. versionadded:: unreleased
+    .. versionadded:: 2.1
 
 .. class:: InitializeOptions
 
@@ -77,4 +77,4 @@ APIs for bootstrapping the Windows App runtime.
 
         Do nothing (do not error) if the process has package identity
 
-    .. versionadded:: unreleased
+    .. versionadded:: 2.1
