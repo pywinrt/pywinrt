@@ -3381,6 +3381,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* ColorAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ColorAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::ColorAnimation>>();
@@ -3413,6 +3456,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(ColorAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(ColorAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(ColorAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(ColorAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(ColorAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_ColorAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ColorAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -4147,6 +4192,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* ColorAnimationUsingKeyFrames_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorAnimationUsingKeyFrames_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ColorAnimationUsingKeyFrames(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames>>();
@@ -4179,6 +4267,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(ColorAnimationUsingKeyFrames_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(ColorAnimationUsingKeyFrames_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(ColorAnimationUsingKeyFrames_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(ColorAnimationUsingKeyFrames_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(ColorAnimationUsingKeyFrames_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_ColorAnimationUsingKeyFrames, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ColorAnimationUsingKeyFrames), METH_O | METH_STATIC, nullptr },
         { }
@@ -11061,6 +11151,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* DoubleAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DoubleAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::DoubleAnimation>>();
@@ -11093,6 +11226,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DoubleAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(DoubleAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DoubleAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(DoubleAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(DoubleAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_DoubleAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DoubleAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -11827,6 +11962,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* DoubleAnimationUsingKeyFrames_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleAnimationUsingKeyFrames_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DoubleAnimationUsingKeyFrames(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames>>();
@@ -11859,6 +12037,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DoubleAnimationUsingKeyFrames_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(DoubleAnimationUsingKeyFrames_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DoubleAnimationUsingKeyFrames_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(DoubleAnimationUsingKeyFrames_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(DoubleAnimationUsingKeyFrames_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_DoubleAnimationUsingKeyFrames, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DoubleAnimationUsingKeyFrames), METH_O | METH_STATIC, nullptr },
         { }
@@ -13697,6 +13877,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* DragItemThemeAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DragItemThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DragItemThemeAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DragItemThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DragItemThemeAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::DragItemThemeAnimation>>();
@@ -13729,6 +13952,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DragItemThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(DragItemThemeAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DragItemThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(DragItemThemeAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(DragItemThemeAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_DragItemThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DragItemThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -14568,6 +14793,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* DragOverThemeAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DragOverThemeAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DragOverThemeAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::DragOverThemeAnimation>>();
@@ -14600,6 +14868,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DragOverThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(DragOverThemeAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DragOverThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(DragOverThemeAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(DragOverThemeAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_DragOverThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DragOverThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -15867,6 +16137,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* DrillInThemeAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillInThemeAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DrillInThemeAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::DrillInThemeAnimation>>();
@@ -15899,6 +16212,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DrillInThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(DrillInThemeAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DrillInThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(DrillInThemeAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(DrillInThemeAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_DrillInThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DrillInThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -16810,6 +17125,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* DrillOutThemeAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillOutThemeAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DrillOutThemeAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::DrillOutThemeAnimation>>();
@@ -16842,6 +17200,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DrillOutThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(DrillOutThemeAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DrillOutThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(DrillOutThemeAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(DrillOutThemeAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_DrillOutThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DrillOutThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -17555,6 +17915,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* DropTargetItemThemeAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DropTargetItemThemeAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DropTargetItemThemeAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation>>();
@@ -17587,6 +17990,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DropTargetItemThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(DropTargetItemThemeAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DropTargetItemThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(DropTargetItemThemeAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(DropTargetItemThemeAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_DropTargetItemThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DropTargetItemThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -23033,6 +23438,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* FadeInThemeAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::FadeInThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* FadeInThemeAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::FadeInThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_FadeInThemeAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::FadeInThemeAnimation>>();
@@ -23065,6 +23513,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(FadeInThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(FadeInThemeAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(FadeInThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(FadeInThemeAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(FadeInThemeAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_FadeInThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FadeInThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -23772,6 +24222,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* FadeOutThemeAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::FadeOutThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* FadeOutThemeAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::FadeOutThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_FadeOutThemeAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::FadeOutThemeAnimation>>();
@@ -23804,6 +24297,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(FadeOutThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(FadeOutThemeAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(FadeOutThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(FadeOutThemeAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(FadeOutThemeAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_FadeOutThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FadeOutThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -27392,6 +27887,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* ObjectAnimationUsingKeyFrames_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ObjectAnimationUsingKeyFrames_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ObjectAnimationUsingKeyFrames(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames>>();
@@ -27424,6 +27962,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(ObjectAnimationUsingKeyFrames_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(ObjectAnimationUsingKeyFrames_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(ObjectAnimationUsingKeyFrames_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(ObjectAnimationUsingKeyFrames_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(ObjectAnimationUsingKeyFrames_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_ObjectAnimationUsingKeyFrames, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ObjectAnimationUsingKeyFrames), METH_O | METH_STATIC, nullptr },
         { }
@@ -29977,6 +30517,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* PointAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PointAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::PointAnimation>>();
@@ -30009,6 +30592,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(PointAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(PointAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(PointAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(PointAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(PointAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_PointAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -30743,6 +31328,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* PointAnimationUsingKeyFrames_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointAnimationUsingKeyFrames_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PointAnimationUsingKeyFrames(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames>>();
@@ -30775,6 +31403,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(PointAnimationUsingKeyFrames_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(PointAnimationUsingKeyFrames_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(PointAnimationUsingKeyFrames_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(PointAnimationUsingKeyFrames_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(PointAnimationUsingKeyFrames_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_PointAnimationUsingKeyFrames, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointAnimationUsingKeyFrames), METH_O | METH_STATIC, nullptr },
         { }
@@ -32613,6 +33243,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* PointerDownThemeAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointerDownThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointerDownThemeAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointerDownThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PointerDownThemeAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::PointerDownThemeAnimation>>();
@@ -32645,6 +33318,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(PointerDownThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(PointerDownThemeAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(PointerDownThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(PointerDownThemeAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(PointerDownThemeAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_PointerDownThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointerDownThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -33352,6 +34027,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* PointerUpThemeAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointerUpThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointerUpThemeAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointerUpThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PointerUpThemeAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::PointerUpThemeAnimation>>();
@@ -33384,6 +34102,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(PointerUpThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(PointerUpThemeAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(PointerUpThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(PointerUpThemeAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(PointerUpThemeAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_PointerUpThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointerUpThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -34223,6 +34943,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* PopInThemeAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PopInThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopInThemeAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PopInThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PopInThemeAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::PopInThemeAnimation>>();
@@ -34255,6 +35018,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(PopInThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(PopInThemeAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(PopInThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(PopInThemeAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(PopInThemeAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_PopInThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PopInThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -34966,6 +35731,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* PopOutThemeAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PopOutThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopOutThemeAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PopOutThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PopOutThemeAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::PopOutThemeAnimation>>();
@@ -34998,6 +35806,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(PopOutThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(PopOutThemeAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(PopOutThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(PopOutThemeAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(PopOutThemeAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_PopOutThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PopOutThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -38831,6 +39641,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* RepositionThemeAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* RepositionThemeAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_RepositionThemeAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::RepositionThemeAnimation>>();
@@ -38863,6 +39716,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(RepositionThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(RepositionThemeAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(RepositionThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(RepositionThemeAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(RepositionThemeAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_RepositionThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RepositionThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -43215,6 +44070,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* SplitCloseThemeAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplitCloseThemeAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_SplitCloseThemeAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::SplitCloseThemeAnimation>>();
@@ -43247,6 +44145,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(SplitCloseThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(SplitCloseThemeAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(SplitCloseThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(SplitCloseThemeAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(SplitCloseThemeAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_SplitCloseThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SplitCloseThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -44634,6 +45534,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* SplitOpenThemeAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplitOpenThemeAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_SplitOpenThemeAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::SplitOpenThemeAnimation>>();
@@ -44666,6 +45609,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(SplitOpenThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(SplitOpenThemeAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(SplitOpenThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(SplitOpenThemeAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(SplitOpenThemeAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_SplitOpenThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SplitOpenThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -45817,6 +46762,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* Storyboard_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Storyboard* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Storyboard_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Storyboard* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Storyboard(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::Storyboard>>();
@@ -45858,6 +46846,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "skip_to_fill", reinterpret_cast<PyCFunction>(Storyboard_SkipToFill), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(Storyboard_Stop), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Storyboard_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(Storyboard_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(Storyboard_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_Storyboard, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Storyboard), METH_O | METH_STATIC, nullptr },
         { }
@@ -47061,6 +48051,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* SwipeBackThemeAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* SwipeBackThemeAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_SwipeBackThemeAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::SwipeBackThemeAnimation>>();
@@ -47093,6 +48126,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(SwipeBackThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(SwipeBackThemeAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(SwipeBackThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(SwipeBackThemeAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(SwipeBackThemeAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_SwipeBackThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SwipeBackThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -47936,6 +48971,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* SwipeHintThemeAnimation_add_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Completed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* SwipeHintThemeAnimation_remove_Completed(py::wrapper::Microsoft::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Completed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_SwipeHintThemeAnimation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Animation::SwipeHintThemeAnimation>>();
@@ -47968,6 +49046,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(SwipeHintThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(SwipeHintThemeAnimation_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(SwipeHintThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_completed", reinterpret_cast<PyCFunction>(SwipeHintThemeAnimation_add_Completed), METH_O, nullptr },
+        { "remove_completed", reinterpret_cast<PyCFunction>(SwipeHintThemeAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_SwipeHintThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SwipeHintThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }

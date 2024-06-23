@@ -9418,6 +9418,135 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         }
     }
 
+    static PyObject* StandardUICommand_add_CanExecuteRequested(py::wrapper::Microsoft::UI::Xaml::Input::StandardUICommand* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Input.XamlUICommand", L"CanExecuteRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Input::XamlUICommand, winrt::Microsoft::UI::Xaml::Input::CanExecuteRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.CanExecuteRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* StandardUICommand_remove_CanExecuteRequested(py::wrapper::Microsoft::UI::Xaml::Input::StandardUICommand* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Input.XamlUICommand", L"CanExecuteRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.CanExecuteRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* StandardUICommand_add_ExecuteRequested(py::wrapper::Microsoft::UI::Xaml::Input::StandardUICommand* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Input.XamlUICommand", L"ExecuteRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Input::XamlUICommand, winrt::Microsoft::UI::Xaml::Input::ExecuteRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.ExecuteRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* StandardUICommand_remove_ExecuteRequested(py::wrapper::Microsoft::UI::Xaml::Input::StandardUICommand* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Input.XamlUICommand", L"ExecuteRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.ExecuteRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* StandardUICommand_add_CanExecuteChanged(py::wrapper::Microsoft::UI::Xaml::Input::StandardUICommand* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Input.XamlUICommand", L"CanExecuteChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.CanExecuteChanged(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* StandardUICommand_remove_CanExecuteChanged(py::wrapper::Microsoft::UI::Xaml::Input::StandardUICommand* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Input.XamlUICommand", L"CanExecuteChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.CanExecuteChanged(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_StandardUICommand(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Input::StandardUICommand>>();
@@ -9453,6 +9582,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(StandardUICommand_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(StandardUICommand_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(StandardUICommand_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_can_execute_requested", reinterpret_cast<PyCFunction>(StandardUICommand_add_CanExecuteRequested), METH_O, nullptr },
+        { "remove_can_execute_requested", reinterpret_cast<PyCFunction>(StandardUICommand_remove_CanExecuteRequested), METH_O, nullptr },
+        { "add_execute_requested", reinterpret_cast<PyCFunction>(StandardUICommand_add_ExecuteRequested), METH_O, nullptr },
+        { "remove_execute_requested", reinterpret_cast<PyCFunction>(StandardUICommand_remove_ExecuteRequested), METH_O, nullptr },
+        { "add_can_execute_changed", reinterpret_cast<PyCFunction>(StandardUICommand_add_CanExecuteChanged), METH_O, nullptr },
+        { "remove_can_execute_changed", reinterpret_cast<PyCFunction>(StandardUICommand_remove_CanExecuteChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_StandardUICommand, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StandardUICommand), METH_O | METH_STATIC, nullptr },
         { }

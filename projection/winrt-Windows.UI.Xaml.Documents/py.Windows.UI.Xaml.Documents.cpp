@@ -1612,6 +1612,135 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         }
     }
 
+    static PyObject* Block_add_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Block* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayDismissed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Block_remove_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Block* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayDismissed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Block_add_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Block* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Block_remove_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Block* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Block_add_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Block* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyInvoked(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Block_remove_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Block* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyInvoked(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Block(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Documents::Block>>();
@@ -1645,6 +1774,12 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(Block_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(Block_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Block_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Block_add_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "remove_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Block_remove_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "add_access_key_display_requested", reinterpret_cast<PyCFunction>(Block_add_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "remove_access_key_display_requested", reinterpret_cast<PyCFunction>(Block_remove_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "add_access_key_invoked", reinterpret_cast<PyCFunction>(Block_add_AccessKeyInvoked), METH_O, nullptr },
+        { "remove_access_key_invoked", reinterpret_cast<PyCFunction>(Block_remove_AccessKeyInvoked), METH_O, nullptr },
         { "_assign_array_", _assign_array_Block, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Block), METH_O | METH_STATIC, nullptr },
         { }
@@ -3687,6 +3822,135 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         }
     }
 
+    static PyObject* Bold_add_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Bold* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayDismissed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Bold_remove_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Bold* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayDismissed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Bold_add_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Bold* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Bold_remove_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Bold* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Bold_add_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Bold* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyInvoked(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Bold_remove_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Bold* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyInvoked(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Bold(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Documents::Bold>>();
@@ -3720,6 +3984,12 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(Bold_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(Bold_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Bold_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Bold_add_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "remove_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Bold_remove_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "add_access_key_display_requested", reinterpret_cast<PyCFunction>(Bold_add_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "remove_access_key_display_requested", reinterpret_cast<PyCFunction>(Bold_remove_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "add_access_key_invoked", reinterpret_cast<PyCFunction>(Bold_add_AccessKeyInvoked), METH_O, nullptr },
+        { "remove_access_key_invoked", reinterpret_cast<PyCFunction>(Bold_remove_AccessKeyInvoked), METH_O, nullptr },
         { "_assign_array_", _assign_array_Bold, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Bold), METH_O | METH_STATIC, nullptr },
         { }
@@ -6511,6 +6781,135 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         }
     }
 
+    static PyObject* ContentLink_add_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::ContentLink* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayDismissed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentLink_remove_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::ContentLink* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayDismissed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentLink_add_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::ContentLink* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentLink_remove_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::ContentLink* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentLink_add_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::ContentLink* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyInvoked(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentLink_remove_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::ContentLink* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyInvoked(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ContentLink(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Documents::ContentLink>>();
@@ -6551,6 +6950,12 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { "remove_invoked", reinterpret_cast<PyCFunction>(ContentLink_remove_Invoked), METH_O, nullptr },
         { "add_lost_focus", reinterpret_cast<PyCFunction>(ContentLink_add_LostFocus), METH_O, nullptr },
         { "remove_lost_focus", reinterpret_cast<PyCFunction>(ContentLink_remove_LostFocus), METH_O, nullptr },
+        { "add_access_key_display_dismissed", reinterpret_cast<PyCFunction>(ContentLink_add_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "remove_access_key_display_dismissed", reinterpret_cast<PyCFunction>(ContentLink_remove_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "add_access_key_display_requested", reinterpret_cast<PyCFunction>(ContentLink_add_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "remove_access_key_display_requested", reinterpret_cast<PyCFunction>(ContentLink_remove_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "add_access_key_invoked", reinterpret_cast<PyCFunction>(ContentLink_add_AccessKeyInvoked), METH_O, nullptr },
+        { "remove_access_key_invoked", reinterpret_cast<PyCFunction>(ContentLink_remove_AccessKeyInvoked), METH_O, nullptr },
         { "_assign_array_", _assign_array_ContentLink, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentLink), METH_O | METH_STATIC, nullptr },
         { }
@@ -13121,6 +13526,2070 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         }
     }
 
+    static PyObject* Glyphs_add_LayoutUpdated(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.FrameworkElement", L"LayoutUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.LayoutUpdated(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_LayoutUpdated(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.FrameworkElement", L"LayoutUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.LayoutUpdated(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_Loaded(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.FrameworkElement", L"Loaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::RoutedEventHandler>(arg);
+
+            return py::convert(self->obj.Loaded(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_Loaded(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.FrameworkElement", L"Loaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Loaded(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_SizeChanged(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.FrameworkElement", L"SizeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::SizeChangedEventHandler>(arg);
+
+            return py::convert(self->obj.SizeChanged(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_SizeChanged(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.FrameworkElement", L"SizeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.SizeChanged(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_Unloaded(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.FrameworkElement", L"Unloaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::RoutedEventHandler>(arg);
+
+            return py::convert(self->obj.Unloaded(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_Unloaded(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.FrameworkElement", L"Unloaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Unloaded(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_DataContextChanged(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.FrameworkElement", L"DataContextChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::FrameworkElement, winrt::Windows::UI::Xaml::DataContextChangedEventArgs>>(arg);
+
+            return py::convert(self->obj.DataContextChanged(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_DataContextChanged(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.FrameworkElement", L"DataContextChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.DataContextChanged(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_Loading(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.FrameworkElement", L"Loading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::FrameworkElement, winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Loading(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_Loading(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.FrameworkElement", L"Loading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Loading(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_ActualThemeChanged(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.FrameworkElement", L"ActualThemeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::FrameworkElement, winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.ActualThemeChanged(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_ActualThemeChanged(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.FrameworkElement", L"ActualThemeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.ActualThemeChanged(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_EffectiveViewportChanged(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.FrameworkElement", L"EffectiveViewportChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::FrameworkElement, winrt::Windows::UI::Xaml::EffectiveViewportChangedEventArgs>>(arg);
+
+            return py::convert(self->obj.EffectiveViewportChanged(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_EffectiveViewportChanged(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.FrameworkElement", L"EffectiveViewportChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.EffectiveViewportChanged(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_DoubleTapped(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"DoubleTapped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::DoubleTappedEventHandler>(arg);
+
+            return py::convert(self->obj.DoubleTapped(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_DoubleTapped(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"DoubleTapped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.DoubleTapped(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_DragEnter(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"DragEnter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DragEventHandler>(arg);
+
+            return py::convert(self->obj.DragEnter(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_DragEnter(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"DragEnter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.DragEnter(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_DragLeave(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"DragLeave"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DragEventHandler>(arg);
+
+            return py::convert(self->obj.DragLeave(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_DragLeave(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"DragLeave"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.DragLeave(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_DragOver(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"DragOver"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DragEventHandler>(arg);
+
+            return py::convert(self->obj.DragOver(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_DragOver(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"DragOver"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.DragOver(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_Drop(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"Drop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DragEventHandler>(arg);
+
+            return py::convert(self->obj.Drop(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_Drop(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"Drop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Drop(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_GotFocus(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"GotFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::RoutedEventHandler>(arg);
+
+            return py::convert(self->obj.GotFocus(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_GotFocus(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"GotFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.GotFocus(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_Holding(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"Holding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::HoldingEventHandler>(arg);
+
+            return py::convert(self->obj.Holding(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_Holding(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"Holding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Holding(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_KeyDown(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"KeyDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::KeyEventHandler>(arg);
+
+            return py::convert(self->obj.KeyDown(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_KeyDown(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"KeyDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.KeyDown(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_KeyUp(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"KeyUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::KeyEventHandler>(arg);
+
+            return py::convert(self->obj.KeyUp(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_KeyUp(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"KeyUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.KeyUp(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_LostFocus(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"LostFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::RoutedEventHandler>(arg);
+
+            return py::convert(self->obj.LostFocus(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_LostFocus(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"LostFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.LostFocus(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_ManipulationCompleted(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"ManipulationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::ManipulationCompletedEventHandler>(arg);
+
+            return py::convert(self->obj.ManipulationCompleted(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_ManipulationCompleted(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"ManipulationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.ManipulationCompleted(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_ManipulationDelta(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"ManipulationDelta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::ManipulationDeltaEventHandler>(arg);
+
+            return py::convert(self->obj.ManipulationDelta(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_ManipulationDelta(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"ManipulationDelta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.ManipulationDelta(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_ManipulationInertiaStarting(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"ManipulationInertiaStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::ManipulationInertiaStartingEventHandler>(arg);
+
+            return py::convert(self->obj.ManipulationInertiaStarting(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_ManipulationInertiaStarting(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"ManipulationInertiaStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.ManipulationInertiaStarting(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_ManipulationStarted(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"ManipulationStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::ManipulationStartedEventHandler>(arg);
+
+            return py::convert(self->obj.ManipulationStarted(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_ManipulationStarted(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"ManipulationStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.ManipulationStarted(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_ManipulationStarting(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"ManipulationStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::ManipulationStartingEventHandler>(arg);
+
+            return py::convert(self->obj.ManipulationStarting(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_ManipulationStarting(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"ManipulationStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.ManipulationStarting(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_PointerCanceled(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PointerCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::PointerEventHandler>(arg);
+
+            return py::convert(self->obj.PointerCanceled(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_PointerCanceled(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PointerCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.PointerCanceled(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_PointerCaptureLost(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PointerCaptureLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::PointerEventHandler>(arg);
+
+            return py::convert(self->obj.PointerCaptureLost(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_PointerCaptureLost(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PointerCaptureLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.PointerCaptureLost(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_PointerEntered(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PointerEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::PointerEventHandler>(arg);
+
+            return py::convert(self->obj.PointerEntered(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_PointerEntered(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PointerEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.PointerEntered(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_PointerExited(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PointerExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::PointerEventHandler>(arg);
+
+            return py::convert(self->obj.PointerExited(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_PointerExited(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PointerExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.PointerExited(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_PointerMoved(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PointerMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::PointerEventHandler>(arg);
+
+            return py::convert(self->obj.PointerMoved(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_PointerMoved(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PointerMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.PointerMoved(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_PointerPressed(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PointerPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::PointerEventHandler>(arg);
+
+            return py::convert(self->obj.PointerPressed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_PointerPressed(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PointerPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.PointerPressed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_PointerReleased(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PointerReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::PointerEventHandler>(arg);
+
+            return py::convert(self->obj.PointerReleased(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_PointerReleased(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PointerReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.PointerReleased(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_PointerWheelChanged(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PointerWheelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::PointerEventHandler>(arg);
+
+            return py::convert(self->obj.PointerWheelChanged(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_PointerWheelChanged(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PointerWheelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.PointerWheelChanged(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_RightTapped(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"RightTapped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::RightTappedEventHandler>(arg);
+
+            return py::convert(self->obj.RightTapped(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_RightTapped(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"RightTapped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.RightTapped(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_Tapped(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"Tapped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::TappedEventHandler>(arg);
+
+            return py::convert(self->obj.Tapped(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_Tapped(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"Tapped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Tapped(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_DragStarting(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"DragStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::DragStartingEventArgs>>(arg);
+
+            return py::convert(self->obj.DragStarting(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_DragStarting(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"DragStarting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.DragStarting(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_DropCompleted(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"DropCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::DropCompletedEventArgs>>(arg);
+
+            return py::convert(self->obj.DropCompleted(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_DropCompleted(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"DropCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.DropCompleted(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayDismissed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayDismissed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyInvoked(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyInvoked(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_ContextCanceled(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"ContextCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::RoutedEventArgs>>(arg);
+
+            return py::convert(self->obj.ContextCanceled(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_ContextCanceled(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"ContextCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.ContextCanceled(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_ContextRequested(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"ContextRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::Input::ContextRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.ContextRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_ContextRequested(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"ContextRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.ContextRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_GettingFocus(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"GettingFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::Input::GettingFocusEventArgs>>(arg);
+
+            return py::convert(self->obj.GettingFocus(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_GettingFocus(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"GettingFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.GettingFocus(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_LosingFocus(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"LosingFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::Input::LosingFocusEventArgs>>(arg);
+
+            return py::convert(self->obj.LosingFocus(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_LosingFocus(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"LosingFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.LosingFocus(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_NoFocusCandidateFound(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"NoFocusCandidateFound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::Input::NoFocusCandidateFoundEventArgs>>(arg);
+
+            return py::convert(self->obj.NoFocusCandidateFound(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_NoFocusCandidateFound(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"NoFocusCandidateFound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.NoFocusCandidateFound(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_CharacterReceived(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"CharacterReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::Input::CharacterReceivedRoutedEventArgs>>(arg);
+
+            return py::convert(self->obj.CharacterReceived(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_CharacterReceived(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"CharacterReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.CharacterReceived(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_PreviewKeyDown(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PreviewKeyDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::KeyEventHandler>(arg);
+
+            return py::convert(self->obj.PreviewKeyDown(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_PreviewKeyDown(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PreviewKeyDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.PreviewKeyDown(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_PreviewKeyUp(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PreviewKeyUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::KeyEventHandler>(arg);
+
+            return py::convert(self->obj.PreviewKeyUp(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_PreviewKeyUp(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"PreviewKeyUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.PreviewKeyUp(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_ProcessKeyboardAccelerators(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"ProcessKeyboardAccelerators"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>>(arg);
+
+            return py::convert(self->obj.ProcessKeyboardAccelerators(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_ProcessKeyboardAccelerators(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"ProcessKeyboardAccelerators"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.ProcessKeyboardAccelerators(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_add_BringIntoViewRequested(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"BringIntoViewRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::BringIntoViewRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.BringIntoViewRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_remove_BringIntoViewRequested(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.UIElement", L"BringIntoViewRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.BringIntoViewRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Glyphs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Documents::Glyphs>>();
@@ -13174,6 +15643,102 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { "try_invoke_keyboard_accelerator", reinterpret_cast<PyCFunction>(Glyphs_TryInvokeKeyboardAccelerator), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Glyphs_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "update_layout", reinterpret_cast<PyCFunction>(Glyphs_UpdateLayout), METH_VARARGS, nullptr },
+        { "add_layout_updated", reinterpret_cast<PyCFunction>(Glyphs_add_LayoutUpdated), METH_O, nullptr },
+        { "remove_layout_updated", reinterpret_cast<PyCFunction>(Glyphs_remove_LayoutUpdated), METH_O, nullptr },
+        { "add_loaded", reinterpret_cast<PyCFunction>(Glyphs_add_Loaded), METH_O, nullptr },
+        { "remove_loaded", reinterpret_cast<PyCFunction>(Glyphs_remove_Loaded), METH_O, nullptr },
+        { "add_size_changed", reinterpret_cast<PyCFunction>(Glyphs_add_SizeChanged), METH_O, nullptr },
+        { "remove_size_changed", reinterpret_cast<PyCFunction>(Glyphs_remove_SizeChanged), METH_O, nullptr },
+        { "add_unloaded", reinterpret_cast<PyCFunction>(Glyphs_add_Unloaded), METH_O, nullptr },
+        { "remove_unloaded", reinterpret_cast<PyCFunction>(Glyphs_remove_Unloaded), METH_O, nullptr },
+        { "add_data_context_changed", reinterpret_cast<PyCFunction>(Glyphs_add_DataContextChanged), METH_O, nullptr },
+        { "remove_data_context_changed", reinterpret_cast<PyCFunction>(Glyphs_remove_DataContextChanged), METH_O, nullptr },
+        { "add_loading", reinterpret_cast<PyCFunction>(Glyphs_add_Loading), METH_O, nullptr },
+        { "remove_loading", reinterpret_cast<PyCFunction>(Glyphs_remove_Loading), METH_O, nullptr },
+        { "add_actual_theme_changed", reinterpret_cast<PyCFunction>(Glyphs_add_ActualThemeChanged), METH_O, nullptr },
+        { "remove_actual_theme_changed", reinterpret_cast<PyCFunction>(Glyphs_remove_ActualThemeChanged), METH_O, nullptr },
+        { "add_effective_viewport_changed", reinterpret_cast<PyCFunction>(Glyphs_add_EffectiveViewportChanged), METH_O, nullptr },
+        { "remove_effective_viewport_changed", reinterpret_cast<PyCFunction>(Glyphs_remove_EffectiveViewportChanged), METH_O, nullptr },
+        { "add_double_tapped", reinterpret_cast<PyCFunction>(Glyphs_add_DoubleTapped), METH_O, nullptr },
+        { "remove_double_tapped", reinterpret_cast<PyCFunction>(Glyphs_remove_DoubleTapped), METH_O, nullptr },
+        { "add_drag_enter", reinterpret_cast<PyCFunction>(Glyphs_add_DragEnter), METH_O, nullptr },
+        { "remove_drag_enter", reinterpret_cast<PyCFunction>(Glyphs_remove_DragEnter), METH_O, nullptr },
+        { "add_drag_leave", reinterpret_cast<PyCFunction>(Glyphs_add_DragLeave), METH_O, nullptr },
+        { "remove_drag_leave", reinterpret_cast<PyCFunction>(Glyphs_remove_DragLeave), METH_O, nullptr },
+        { "add_drag_over", reinterpret_cast<PyCFunction>(Glyphs_add_DragOver), METH_O, nullptr },
+        { "remove_drag_over", reinterpret_cast<PyCFunction>(Glyphs_remove_DragOver), METH_O, nullptr },
+        { "add_drop", reinterpret_cast<PyCFunction>(Glyphs_add_Drop), METH_O, nullptr },
+        { "remove_drop", reinterpret_cast<PyCFunction>(Glyphs_remove_Drop), METH_O, nullptr },
+        { "add_got_focus", reinterpret_cast<PyCFunction>(Glyphs_add_GotFocus), METH_O, nullptr },
+        { "remove_got_focus", reinterpret_cast<PyCFunction>(Glyphs_remove_GotFocus), METH_O, nullptr },
+        { "add_holding", reinterpret_cast<PyCFunction>(Glyphs_add_Holding), METH_O, nullptr },
+        { "remove_holding", reinterpret_cast<PyCFunction>(Glyphs_remove_Holding), METH_O, nullptr },
+        { "add_key_down", reinterpret_cast<PyCFunction>(Glyphs_add_KeyDown), METH_O, nullptr },
+        { "remove_key_down", reinterpret_cast<PyCFunction>(Glyphs_remove_KeyDown), METH_O, nullptr },
+        { "add_key_up", reinterpret_cast<PyCFunction>(Glyphs_add_KeyUp), METH_O, nullptr },
+        { "remove_key_up", reinterpret_cast<PyCFunction>(Glyphs_remove_KeyUp), METH_O, nullptr },
+        { "add_lost_focus", reinterpret_cast<PyCFunction>(Glyphs_add_LostFocus), METH_O, nullptr },
+        { "remove_lost_focus", reinterpret_cast<PyCFunction>(Glyphs_remove_LostFocus), METH_O, nullptr },
+        { "add_manipulation_completed", reinterpret_cast<PyCFunction>(Glyphs_add_ManipulationCompleted), METH_O, nullptr },
+        { "remove_manipulation_completed", reinterpret_cast<PyCFunction>(Glyphs_remove_ManipulationCompleted), METH_O, nullptr },
+        { "add_manipulation_delta", reinterpret_cast<PyCFunction>(Glyphs_add_ManipulationDelta), METH_O, nullptr },
+        { "remove_manipulation_delta", reinterpret_cast<PyCFunction>(Glyphs_remove_ManipulationDelta), METH_O, nullptr },
+        { "add_manipulation_inertia_starting", reinterpret_cast<PyCFunction>(Glyphs_add_ManipulationInertiaStarting), METH_O, nullptr },
+        { "remove_manipulation_inertia_starting", reinterpret_cast<PyCFunction>(Glyphs_remove_ManipulationInertiaStarting), METH_O, nullptr },
+        { "add_manipulation_started", reinterpret_cast<PyCFunction>(Glyphs_add_ManipulationStarted), METH_O, nullptr },
+        { "remove_manipulation_started", reinterpret_cast<PyCFunction>(Glyphs_remove_ManipulationStarted), METH_O, nullptr },
+        { "add_manipulation_starting", reinterpret_cast<PyCFunction>(Glyphs_add_ManipulationStarting), METH_O, nullptr },
+        { "remove_manipulation_starting", reinterpret_cast<PyCFunction>(Glyphs_remove_ManipulationStarting), METH_O, nullptr },
+        { "add_pointer_canceled", reinterpret_cast<PyCFunction>(Glyphs_add_PointerCanceled), METH_O, nullptr },
+        { "remove_pointer_canceled", reinterpret_cast<PyCFunction>(Glyphs_remove_PointerCanceled), METH_O, nullptr },
+        { "add_pointer_capture_lost", reinterpret_cast<PyCFunction>(Glyphs_add_PointerCaptureLost), METH_O, nullptr },
+        { "remove_pointer_capture_lost", reinterpret_cast<PyCFunction>(Glyphs_remove_PointerCaptureLost), METH_O, nullptr },
+        { "add_pointer_entered", reinterpret_cast<PyCFunction>(Glyphs_add_PointerEntered), METH_O, nullptr },
+        { "remove_pointer_entered", reinterpret_cast<PyCFunction>(Glyphs_remove_PointerEntered), METH_O, nullptr },
+        { "add_pointer_exited", reinterpret_cast<PyCFunction>(Glyphs_add_PointerExited), METH_O, nullptr },
+        { "remove_pointer_exited", reinterpret_cast<PyCFunction>(Glyphs_remove_PointerExited), METH_O, nullptr },
+        { "add_pointer_moved", reinterpret_cast<PyCFunction>(Glyphs_add_PointerMoved), METH_O, nullptr },
+        { "remove_pointer_moved", reinterpret_cast<PyCFunction>(Glyphs_remove_PointerMoved), METH_O, nullptr },
+        { "add_pointer_pressed", reinterpret_cast<PyCFunction>(Glyphs_add_PointerPressed), METH_O, nullptr },
+        { "remove_pointer_pressed", reinterpret_cast<PyCFunction>(Glyphs_remove_PointerPressed), METH_O, nullptr },
+        { "add_pointer_released", reinterpret_cast<PyCFunction>(Glyphs_add_PointerReleased), METH_O, nullptr },
+        { "remove_pointer_released", reinterpret_cast<PyCFunction>(Glyphs_remove_PointerReleased), METH_O, nullptr },
+        { "add_pointer_wheel_changed", reinterpret_cast<PyCFunction>(Glyphs_add_PointerWheelChanged), METH_O, nullptr },
+        { "remove_pointer_wheel_changed", reinterpret_cast<PyCFunction>(Glyphs_remove_PointerWheelChanged), METH_O, nullptr },
+        { "add_right_tapped", reinterpret_cast<PyCFunction>(Glyphs_add_RightTapped), METH_O, nullptr },
+        { "remove_right_tapped", reinterpret_cast<PyCFunction>(Glyphs_remove_RightTapped), METH_O, nullptr },
+        { "add_tapped", reinterpret_cast<PyCFunction>(Glyphs_add_Tapped), METH_O, nullptr },
+        { "remove_tapped", reinterpret_cast<PyCFunction>(Glyphs_remove_Tapped), METH_O, nullptr },
+        { "add_drag_starting", reinterpret_cast<PyCFunction>(Glyphs_add_DragStarting), METH_O, nullptr },
+        { "remove_drag_starting", reinterpret_cast<PyCFunction>(Glyphs_remove_DragStarting), METH_O, nullptr },
+        { "add_drop_completed", reinterpret_cast<PyCFunction>(Glyphs_add_DropCompleted), METH_O, nullptr },
+        { "remove_drop_completed", reinterpret_cast<PyCFunction>(Glyphs_remove_DropCompleted), METH_O, nullptr },
+        { "add_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Glyphs_add_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "remove_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Glyphs_remove_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "add_access_key_display_requested", reinterpret_cast<PyCFunction>(Glyphs_add_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "remove_access_key_display_requested", reinterpret_cast<PyCFunction>(Glyphs_remove_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "add_access_key_invoked", reinterpret_cast<PyCFunction>(Glyphs_add_AccessKeyInvoked), METH_O, nullptr },
+        { "remove_access_key_invoked", reinterpret_cast<PyCFunction>(Glyphs_remove_AccessKeyInvoked), METH_O, nullptr },
+        { "add_context_canceled", reinterpret_cast<PyCFunction>(Glyphs_add_ContextCanceled), METH_O, nullptr },
+        { "remove_context_canceled", reinterpret_cast<PyCFunction>(Glyphs_remove_ContextCanceled), METH_O, nullptr },
+        { "add_context_requested", reinterpret_cast<PyCFunction>(Glyphs_add_ContextRequested), METH_O, nullptr },
+        { "remove_context_requested", reinterpret_cast<PyCFunction>(Glyphs_remove_ContextRequested), METH_O, nullptr },
+        { "add_getting_focus", reinterpret_cast<PyCFunction>(Glyphs_add_GettingFocus), METH_O, nullptr },
+        { "remove_getting_focus", reinterpret_cast<PyCFunction>(Glyphs_remove_GettingFocus), METH_O, nullptr },
+        { "add_losing_focus", reinterpret_cast<PyCFunction>(Glyphs_add_LosingFocus), METH_O, nullptr },
+        { "remove_losing_focus", reinterpret_cast<PyCFunction>(Glyphs_remove_LosingFocus), METH_O, nullptr },
+        { "add_no_focus_candidate_found", reinterpret_cast<PyCFunction>(Glyphs_add_NoFocusCandidateFound), METH_O, nullptr },
+        { "remove_no_focus_candidate_found", reinterpret_cast<PyCFunction>(Glyphs_remove_NoFocusCandidateFound), METH_O, nullptr },
+        { "add_character_received", reinterpret_cast<PyCFunction>(Glyphs_add_CharacterReceived), METH_O, nullptr },
+        { "remove_character_received", reinterpret_cast<PyCFunction>(Glyphs_remove_CharacterReceived), METH_O, nullptr },
+        { "add_preview_key_down", reinterpret_cast<PyCFunction>(Glyphs_add_PreviewKeyDown), METH_O, nullptr },
+        { "remove_preview_key_down", reinterpret_cast<PyCFunction>(Glyphs_remove_PreviewKeyDown), METH_O, nullptr },
+        { "add_preview_key_up", reinterpret_cast<PyCFunction>(Glyphs_add_PreviewKeyUp), METH_O, nullptr },
+        { "remove_preview_key_up", reinterpret_cast<PyCFunction>(Glyphs_remove_PreviewKeyUp), METH_O, nullptr },
+        { "add_process_keyboard_accelerators", reinterpret_cast<PyCFunction>(Glyphs_add_ProcessKeyboardAccelerators), METH_O, nullptr },
+        { "remove_process_keyboard_accelerators", reinterpret_cast<PyCFunction>(Glyphs_remove_ProcessKeyboardAccelerators), METH_O, nullptr },
+        { "add_bring_into_view_requested", reinterpret_cast<PyCFunction>(Glyphs_add_BringIntoViewRequested), METH_O, nullptr },
+        { "remove_bring_into_view_requested", reinterpret_cast<PyCFunction>(Glyphs_remove_BringIntoViewRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_Glyphs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Glyphs), METH_O | METH_STATIC, nullptr },
         { }
@@ -15736,6 +18301,135 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         }
     }
 
+    static PyObject* Hyperlink_add_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Hyperlink* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayDismissed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Hyperlink_remove_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Hyperlink* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayDismissed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Hyperlink_add_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Hyperlink* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Hyperlink_remove_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Hyperlink* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Hyperlink_add_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Hyperlink* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyInvoked(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Hyperlink_remove_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Hyperlink* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyInvoked(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Hyperlink(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Documents::Hyperlink>>();
@@ -15776,6 +18470,12 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { "remove_got_focus", reinterpret_cast<PyCFunction>(Hyperlink_remove_GotFocus), METH_O, nullptr },
         { "add_lost_focus", reinterpret_cast<PyCFunction>(Hyperlink_add_LostFocus), METH_O, nullptr },
         { "remove_lost_focus", reinterpret_cast<PyCFunction>(Hyperlink_remove_LostFocus), METH_O, nullptr },
+        { "add_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Hyperlink_add_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "remove_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Hyperlink_remove_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "add_access_key_display_requested", reinterpret_cast<PyCFunction>(Hyperlink_add_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "remove_access_key_display_requested", reinterpret_cast<PyCFunction>(Hyperlink_remove_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "add_access_key_invoked", reinterpret_cast<PyCFunction>(Hyperlink_add_AccessKeyInvoked), METH_O, nullptr },
+        { "remove_access_key_invoked", reinterpret_cast<PyCFunction>(Hyperlink_remove_AccessKeyInvoked), METH_O, nullptr },
         { "_assign_array_", _assign_array_Hyperlink, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Hyperlink), METH_O | METH_STATIC, nullptr },
         { }
@@ -17243,6 +19943,135 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         }
     }
 
+    static PyObject* Inline_add_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Inline* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayDismissed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Inline_remove_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Inline* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayDismissed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Inline_add_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Inline* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Inline_remove_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Inline* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Inline_add_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Inline* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyInvoked(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Inline_remove_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Inline* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyInvoked(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Inline(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Documents::Inline>>();
@@ -17276,6 +20105,12 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(Inline_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(Inline_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Inline_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Inline_add_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "remove_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Inline_remove_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "add_access_key_display_requested", reinterpret_cast<PyCFunction>(Inline_add_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "remove_access_key_display_requested", reinterpret_cast<PyCFunction>(Inline_remove_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "add_access_key_invoked", reinterpret_cast<PyCFunction>(Inline_add_AccessKeyInvoked), METH_O, nullptr },
+        { "remove_access_key_invoked", reinterpret_cast<PyCFunction>(Inline_remove_AccessKeyInvoked), METH_O, nullptr },
         { "_assign_array_", _assign_array_Inline, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Inline), METH_O | METH_STATIC, nullptr },
         { }
@@ -19283,6 +22118,135 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         }
     }
 
+    static PyObject* InlineUIContainer_add_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::InlineUIContainer* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayDismissed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InlineUIContainer_remove_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::InlineUIContainer* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayDismissed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InlineUIContainer_add_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::InlineUIContainer* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InlineUIContainer_remove_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::InlineUIContainer* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InlineUIContainer_add_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::InlineUIContainer* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyInvoked(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InlineUIContainer_remove_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::InlineUIContainer* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyInvoked(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_InlineUIContainer(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Documents::InlineUIContainer>>();
@@ -19316,6 +22280,12 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(InlineUIContainer_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(InlineUIContainer_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(InlineUIContainer_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_access_key_display_dismissed", reinterpret_cast<PyCFunction>(InlineUIContainer_add_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "remove_access_key_display_dismissed", reinterpret_cast<PyCFunction>(InlineUIContainer_remove_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "add_access_key_display_requested", reinterpret_cast<PyCFunction>(InlineUIContainer_add_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "remove_access_key_display_requested", reinterpret_cast<PyCFunction>(InlineUIContainer_remove_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "add_access_key_invoked", reinterpret_cast<PyCFunction>(InlineUIContainer_add_AccessKeyInvoked), METH_O, nullptr },
+        { "remove_access_key_invoked", reinterpret_cast<PyCFunction>(InlineUIContainer_remove_AccessKeyInvoked), METH_O, nullptr },
         { "_assign_array_", _assign_array_InlineUIContainer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InlineUIContainer), METH_O | METH_STATIC, nullptr },
         { }
@@ -20713,6 +23683,135 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         }
     }
 
+    static PyObject* Italic_add_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Italic* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayDismissed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Italic_remove_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Italic* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayDismissed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Italic_add_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Italic* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Italic_remove_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Italic* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Italic_add_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Italic* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyInvoked(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Italic_remove_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Italic* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyInvoked(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Italic(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Documents::Italic>>();
@@ -20746,6 +23845,12 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(Italic_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(Italic_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Italic_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Italic_add_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "remove_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Italic_remove_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "add_access_key_display_requested", reinterpret_cast<PyCFunction>(Italic_add_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "remove_access_key_display_requested", reinterpret_cast<PyCFunction>(Italic_remove_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "add_access_key_invoked", reinterpret_cast<PyCFunction>(Italic_add_AccessKeyInvoked), METH_O, nullptr },
+        { "remove_access_key_invoked", reinterpret_cast<PyCFunction>(Italic_remove_AccessKeyInvoked), METH_O, nullptr },
         { "_assign_array_", _assign_array_Italic, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Italic), METH_O | METH_STATIC, nullptr },
         { }
@@ -22096,6 +25201,135 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         }
     }
 
+    static PyObject* LineBreak_add_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::LineBreak* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayDismissed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* LineBreak_remove_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::LineBreak* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayDismissed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* LineBreak_add_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::LineBreak* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* LineBreak_remove_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::LineBreak* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* LineBreak_add_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::LineBreak* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyInvoked(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* LineBreak_remove_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::LineBreak* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyInvoked(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_LineBreak(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Documents::LineBreak>>();
@@ -22129,6 +25363,12 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(LineBreak_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(LineBreak_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(LineBreak_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_access_key_display_dismissed", reinterpret_cast<PyCFunction>(LineBreak_add_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "remove_access_key_display_dismissed", reinterpret_cast<PyCFunction>(LineBreak_remove_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "add_access_key_display_requested", reinterpret_cast<PyCFunction>(LineBreak_add_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "remove_access_key_display_requested", reinterpret_cast<PyCFunction>(LineBreak_remove_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "add_access_key_invoked", reinterpret_cast<PyCFunction>(LineBreak_add_AccessKeyInvoked), METH_O, nullptr },
+        { "remove_access_key_invoked", reinterpret_cast<PyCFunction>(LineBreak_remove_AccessKeyInvoked), METH_O, nullptr },
         { "_assign_array_", _assign_array_LineBreak, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LineBreak), METH_O | METH_STATIC, nullptr },
         { }
@@ -23798,6 +27038,135 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         }
     }
 
+    static PyObject* Paragraph_add_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Paragraph* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayDismissed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Paragraph_remove_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Paragraph* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayDismissed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Paragraph_add_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Paragraph* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Paragraph_remove_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Paragraph* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Paragraph_add_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Paragraph* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyInvoked(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Paragraph_remove_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Paragraph* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyInvoked(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Paragraph(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Documents::Paragraph>>();
@@ -23831,6 +27200,12 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(Paragraph_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(Paragraph_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Paragraph_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Paragraph_add_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "remove_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Paragraph_remove_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "add_access_key_display_requested", reinterpret_cast<PyCFunction>(Paragraph_add_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "remove_access_key_display_requested", reinterpret_cast<PyCFunction>(Paragraph_remove_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "add_access_key_invoked", reinterpret_cast<PyCFunction>(Paragraph_add_AccessKeyInvoked), METH_O, nullptr },
+        { "remove_access_key_invoked", reinterpret_cast<PyCFunction>(Paragraph_remove_AccessKeyInvoked), METH_O, nullptr },
         { "_assign_array_", _assign_array_Paragraph, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Paragraph), METH_O | METH_STATIC, nullptr },
         { }
@@ -25664,6 +29039,135 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         }
     }
 
+    static PyObject* Run_add_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Run* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayDismissed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Run_remove_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Run* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayDismissed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Run_add_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Run* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Run_remove_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Run* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Run_add_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Run* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyInvoked(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Run_remove_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Run* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyInvoked(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Run(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Documents::Run>>();
@@ -25697,6 +29201,12 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(Run_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(Run_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Run_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Run_add_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "remove_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Run_remove_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "add_access_key_display_requested", reinterpret_cast<PyCFunction>(Run_add_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "remove_access_key_display_requested", reinterpret_cast<PyCFunction>(Run_remove_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "add_access_key_invoked", reinterpret_cast<PyCFunction>(Run_add_AccessKeyInvoked), METH_O, nullptr },
+        { "remove_access_key_invoked", reinterpret_cast<PyCFunction>(Run_remove_AccessKeyInvoked), METH_O, nullptr },
         { "_assign_array_", _assign_array_Run, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Run), METH_O | METH_STATIC, nullptr },
         { }
@@ -27121,6 +30631,135 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         }
     }
 
+    static PyObject* Span_add_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Span* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayDismissed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Span_remove_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Span* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayDismissed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Span_add_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Span* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Span_remove_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Span* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Span_add_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Span* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyInvoked(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Span_remove_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Span* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyInvoked(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Span(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Documents::Span>>();
@@ -27154,6 +30793,12 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(Span_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(Span_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Span_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Span_add_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "remove_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Span_remove_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "add_access_key_display_requested", reinterpret_cast<PyCFunction>(Span_add_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "remove_access_key_display_requested", reinterpret_cast<PyCFunction>(Span_remove_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "add_access_key_invoked", reinterpret_cast<PyCFunction>(Span_add_AccessKeyInvoked), METH_O, nullptr },
+        { "remove_access_key_invoked", reinterpret_cast<PyCFunction>(Span_remove_AccessKeyInvoked), METH_O, nullptr },
         { "_assign_array_", _assign_array_Span, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Span), METH_O | METH_STATIC, nullptr },
         { }
@@ -35016,6 +38661,135 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         }
     }
 
+    static PyObject* Underline_add_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Underline* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayDismissed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Underline_remove_AccessKeyDisplayDismissed(py::wrapper::Windows::UI::Xaml::Documents::Underline* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayDismissed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Underline_add_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Underline* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyDisplayRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Underline_remove_AccessKeyDisplayRequested(py::wrapper::Windows::UI::Xaml::Documents::Underline* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyDisplayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyDisplayRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Underline_add_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Underline* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs>>(arg);
+
+            return py::convert(self->obj.AccessKeyInvoked(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Underline_remove_AccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Documents::Underline* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Documents.TextElement", L"AccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AccessKeyInvoked(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Underline(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Documents::Underline>>();
@@ -35049,6 +38823,12 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(Underline_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(Underline_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Underline_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "add_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Underline_add_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "remove_access_key_display_dismissed", reinterpret_cast<PyCFunction>(Underline_remove_AccessKeyDisplayDismissed), METH_O, nullptr },
+        { "add_access_key_display_requested", reinterpret_cast<PyCFunction>(Underline_add_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "remove_access_key_display_requested", reinterpret_cast<PyCFunction>(Underline_remove_AccessKeyDisplayRequested), METH_O, nullptr },
+        { "add_access_key_invoked", reinterpret_cast<PyCFunction>(Underline_add_AccessKeyInvoked), METH_O, nullptr },
+        { "remove_access_key_invoked", reinterpret_cast<PyCFunction>(Underline_remove_AccessKeyInvoked), METH_O, nullptr },
         { "_assign_array_", _assign_array_Underline, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Underline), METH_O | METH_STATIC, nullptr },
         { }

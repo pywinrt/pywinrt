@@ -4269,6 +4269,92 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
+    static PyObject* DesktopChildSiteBridge_add_Closed(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
+
+            return py::convert(self->obj.Closed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_remove_Closed(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Closed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_add_FrameworkClosed(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"FrameworkClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
+
+            return py::convert(self->obj.FrameworkClosed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_remove_FrameworkClosed(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"FrameworkClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.FrameworkClosed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DesktopChildSiteBridge(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Content::DesktopChildSiteBridge>>();
@@ -4304,6 +4390,10 @@ namespace py::cpp::Microsoft::UI::Content
         { "move_in_z_order_at_top", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_MoveInZOrderAtTop), METH_VARARGS, nullptr },
         { "move_in_z_order_below", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_MoveInZOrderBelow), METH_VARARGS, nullptr },
         { "show", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_Show), METH_VARARGS, nullptr },
+        { "add_closed", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_add_Closed), METH_O, nullptr },
+        { "remove_closed", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_remove_Closed), METH_O, nullptr },
+        { "add_framework_closed", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_add_FrameworkClosed), METH_O, nullptr },
+        { "remove_framework_closed", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_remove_FrameworkClosed), METH_O, nullptr },
         { "_assign_array_", _assign_array_DesktopChildSiteBridge, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DesktopChildSiteBridge), METH_O | METH_STATIC, nullptr },
         { }

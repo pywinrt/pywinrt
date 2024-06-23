@@ -5764,6 +5764,264 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
+    static PyObject* CoreWebView2CompositionController_add_RasterizationScaleChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"RasterizationScaleChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.RasterizationScaleChanged(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_remove_RasterizationScaleChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"RasterizationScaleChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.RasterizationScaleChanged(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_add_AcceleratorKeyPressed(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"AcceleratorKeyPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs>>(arg);
+
+            return py::convert(self->obj.AcceleratorKeyPressed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_remove_AcceleratorKeyPressed(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"AcceleratorKeyPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AcceleratorKeyPressed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_add_GotFocus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"GotFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.GotFocus(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_remove_GotFocus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"GotFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.GotFocus(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_add_LostFocus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"LostFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.LostFocus(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_remove_LostFocus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"LostFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.LostFocus(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_add_MoveFocusRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"MoveFocusRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Microsoft::Web::WebView2::Core::CoreWebView2MoveFocusRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.MoveFocusRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_remove_MoveFocusRequested(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"MoveFocusRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.MoveFocusRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_add_ZoomFactorChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ZoomFactorChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.ZoomFactorChanged(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_remove_ZoomFactorChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ZoomFactorChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.ZoomFactorChanged(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_CoreWebView2CompositionController(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController>>();
@@ -5801,6 +6059,18 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "set_bounds_and_zoom_factor", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_SetBoundsAndZoomFactor), METH_VARARGS, nullptr },
         { "add_cursor_changed", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_add_CursorChanged), METH_O, nullptr },
         { "remove_cursor_changed", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_remove_CursorChanged), METH_O, nullptr },
+        { "add_rasterization_scale_changed", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_add_RasterizationScaleChanged), METH_O, nullptr },
+        { "remove_rasterization_scale_changed", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_remove_RasterizationScaleChanged), METH_O, nullptr },
+        { "add_accelerator_key_pressed", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_add_AcceleratorKeyPressed), METH_O, nullptr },
+        { "remove_accelerator_key_pressed", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_remove_AcceleratorKeyPressed), METH_O, nullptr },
+        { "add_got_focus", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_add_GotFocus), METH_O, nullptr },
+        { "remove_got_focus", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_remove_GotFocus), METH_O, nullptr },
+        { "add_lost_focus", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_add_LostFocus), METH_O, nullptr },
+        { "remove_lost_focus", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_remove_LostFocus), METH_O, nullptr },
+        { "add_move_focus_requested", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_add_MoveFocusRequested), METH_O, nullptr },
+        { "remove_move_focus_requested", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_remove_MoveFocusRequested), METH_O, nullptr },
+        { "add_zoom_factor_changed", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_add_ZoomFactorChanged), METH_O, nullptr },
+        { "remove_zoom_factor_changed", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_remove_ZoomFactorChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2CompositionController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2CompositionController), METH_O | METH_STATIC, nullptr },
         { }
