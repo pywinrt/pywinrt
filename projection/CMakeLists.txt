@@ -132,6 +132,7 @@ else()
         "winrt-Windows.Storage.Streams"
     )
     set(app_packages
+        "winrt-Microsoft.UI"
         "winrt-Microsoft.Windows.AppNotifications"
     )
     set(interop_packages
@@ -139,6 +140,7 @@ else()
         "interop/winrt-Windows.Graphics.Capture.Interop"
     )
     set(app_interop_packages
+        "interop/winrt-Microsoft.UI.Interop"
         "interop/winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
     )
 endif()
@@ -171,7 +173,7 @@ foreach(package ${packages} ${app_packages} ${interop_packages} ${app_interop_pa
     set_target_properties(${package_target} PROPERTIES DEFINE_SYMBOL "")
 
     # windows app sdk headers
-    if (package IN_LIST app_packages)
+    if (package IN_LIST app_packages OR package IN_LIST app_interop_packages)
         target_include_directories(${package_target} PRIVATE
             "${WINRT_WINDOWS_APP_SDK_PATH}/cppwinrt"
             "${WINRT_WINDOWS_APP_SDK_PATH}/pywinrt"
@@ -185,6 +187,16 @@ foreach(package ${packages} ${app_packages} ${interop_packages} ${app_interop_pa
         target_link_directories(${package_target} PRIVATE
             "${WINDOWS_APP_SDK_PATH}/lib/win10-${WINDOWS_APP_SDK_ARCH}"
         )
+    endif()
+
+    if (${package} STREQUAL "interop/winrt-Microsoft.UI.Interop")
+        if (NOT MSVC)
+            # winrt/Microsoft.UI.Interop.h has stuff that other compilers don't like
+            target_compile_options(${package_target} PRIVATE
+                -Wno-unknown-pragmas
+                -Wno-missing-field-initializers
+            )
+        endif()
     endif()
 
     if (${package} STREQUAL "interop/winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap")

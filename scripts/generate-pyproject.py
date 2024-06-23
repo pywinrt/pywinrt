@@ -215,8 +215,13 @@ def is_sdk_package(name: str) -> bool:
 
 def is_app_sdk_interop_package(name: str) -> bool:
     return name in [
-        "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
+        "winrt-Microsoft.UI.Interop",
+        "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap",
     ]
+
+
+def is_app_sdk_bootstrap_package(name: str) -> bool:
+    return name == "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
 
 
 def is_windows_app_package(name: str) -> bool:
@@ -319,7 +324,7 @@ def write_project_files(
                     if is_app_sdk_interop_package(package_name)
                     else "",
                     extra_libraries=', "Microsoft.WindowsAppRuntime.Bootstrap"'
-                    if is_app_sdk_interop_package(package_name)
+                    if is_app_sdk_bootstrap_package(package_name)
                     else "",
                 )
             )

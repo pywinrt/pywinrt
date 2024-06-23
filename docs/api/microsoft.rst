@@ -42,4 +42,5 @@ to bridge between WinRT and other interfaces.
 .. toctree::
    :maxdepth: 2
 
+   microsoft/ui/interop
    microsoft/windows/applicationmodel/dynamicdepedency/bootstrap
