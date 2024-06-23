@@ -253,10 +253,6 @@ namespace py::cpp::Windows::System::Power
     }
 
     static PyMethodDef _methods_BackgroundEnergyManager[] = {
-        { "add_recent_energy_usage_increased", reinterpret_cast<PyCFunction>(BackgroundEnergyManager_add_RecentEnergyUsageIncreased), METH_O | METH_STATIC, nullptr },
-        { "remove_recent_energy_usage_increased", reinterpret_cast<PyCFunction>(BackgroundEnergyManager_remove_RecentEnergyUsageIncreased), METH_O | METH_STATIC, nullptr },
-        { "add_recent_energy_usage_returned_to_low", reinterpret_cast<PyCFunction>(BackgroundEnergyManager_add_RecentEnergyUsageReturnedToLow), METH_O | METH_STATIC, nullptr },
-        { "remove_recent_energy_usage_returned_to_low", reinterpret_cast<PyCFunction>(BackgroundEnergyManager_remove_RecentEnergyUsageReturnedToLow), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -291,6 +287,10 @@ namespace py::cpp::Windows::System::Power
     };
 
     static PyMethodDef methods_BackgroundEnergyManager_Static[] = {
+        { "add_recent_energy_usage_increased", reinterpret_cast<PyCFunction>(BackgroundEnergyManager_add_RecentEnergyUsageIncreased), METH_O, nullptr },
+        { "remove_recent_energy_usage_increased", reinterpret_cast<PyCFunction>(BackgroundEnergyManager_remove_RecentEnergyUsageIncreased), METH_O, nullptr },
+        { "add_recent_energy_usage_returned_to_low", reinterpret_cast<PyCFunction>(BackgroundEnergyManager_add_RecentEnergyUsageReturnedToLow), METH_O, nullptr },
+        { "remove_recent_energy_usage_returned_to_low", reinterpret_cast<PyCFunction>(BackgroundEnergyManager_remove_RecentEnergyUsageReturnedToLow), METH_O, nullptr },
         { }
     };
 
@@ -521,10 +521,6 @@ namespace py::cpp::Windows::System::Power
     }
 
     static PyMethodDef _methods_ForegroundEnergyManager[] = {
-        { "add_recent_energy_usage_increased", reinterpret_cast<PyCFunction>(ForegroundEnergyManager_add_RecentEnergyUsageIncreased), METH_O | METH_STATIC, nullptr },
-        { "remove_recent_energy_usage_increased", reinterpret_cast<PyCFunction>(ForegroundEnergyManager_remove_RecentEnergyUsageIncreased), METH_O | METH_STATIC, nullptr },
-        { "add_recent_energy_usage_returned_to_low", reinterpret_cast<PyCFunction>(ForegroundEnergyManager_add_RecentEnergyUsageReturnedToLow), METH_O | METH_STATIC, nullptr },
-        { "remove_recent_energy_usage_returned_to_low", reinterpret_cast<PyCFunction>(ForegroundEnergyManager_remove_RecentEnergyUsageReturnedToLow), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -557,6 +553,10 @@ namespace py::cpp::Windows::System::Power
     };
 
     static PyMethodDef methods_ForegroundEnergyManager_Static[] = {
+        { "add_recent_energy_usage_increased", reinterpret_cast<PyCFunction>(ForegroundEnergyManager_add_RecentEnergyUsageIncreased), METH_O, nullptr },
+        { "remove_recent_energy_usage_increased", reinterpret_cast<PyCFunction>(ForegroundEnergyManager_remove_RecentEnergyUsageIncreased), METH_O, nullptr },
+        { "add_recent_energy_usage_returned_to_low", reinterpret_cast<PyCFunction>(ForegroundEnergyManager_add_RecentEnergyUsageReturnedToLow), METH_O, nullptr },
+        { "remove_recent_energy_usage_returned_to_low", reinterpret_cast<PyCFunction>(ForegroundEnergyManager_remove_RecentEnergyUsageReturnedToLow), METH_O, nullptr },
         { }
     };
 
@@ -897,16 +897,6 @@ namespace py::cpp::Windows::System::Power
     }
 
     static PyMethodDef _methods_PowerManager[] = {
-        { "add_battery_status_changed", reinterpret_cast<PyCFunction>(PowerManager_add_BatteryStatusChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_battery_status_changed", reinterpret_cast<PyCFunction>(PowerManager_remove_BatteryStatusChanged), METH_O | METH_STATIC, nullptr },
-        { "add_energy_saver_status_changed", reinterpret_cast<PyCFunction>(PowerManager_add_EnergySaverStatusChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_energy_saver_status_changed", reinterpret_cast<PyCFunction>(PowerManager_remove_EnergySaverStatusChanged), METH_O | METH_STATIC, nullptr },
-        { "add_power_supply_status_changed", reinterpret_cast<PyCFunction>(PowerManager_add_PowerSupplyStatusChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_power_supply_status_changed", reinterpret_cast<PyCFunction>(PowerManager_remove_PowerSupplyStatusChanged), METH_O | METH_STATIC, nullptr },
-        { "add_remaining_charge_percent_changed", reinterpret_cast<PyCFunction>(PowerManager_add_RemainingChargePercentChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_remaining_charge_percent_changed", reinterpret_cast<PyCFunction>(PowerManager_remove_RemainingChargePercentChanged), METH_O | METH_STATIC, nullptr },
-        { "add_remaining_discharge_time_changed", reinterpret_cast<PyCFunction>(PowerManager_add_RemainingDischargeTimeChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_remaining_discharge_time_changed", reinterpret_cast<PyCFunction>(PowerManager_remove_RemainingDischargeTimeChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -938,6 +928,16 @@ namespace py::cpp::Windows::System::Power
     };
 
     static PyMethodDef methods_PowerManager_Static[] = {
+        { "add_battery_status_changed", reinterpret_cast<PyCFunction>(PowerManager_add_BatteryStatusChanged), METH_O, nullptr },
+        { "remove_battery_status_changed", reinterpret_cast<PyCFunction>(PowerManager_remove_BatteryStatusChanged), METH_O, nullptr },
+        { "add_energy_saver_status_changed", reinterpret_cast<PyCFunction>(PowerManager_add_EnergySaverStatusChanged), METH_O, nullptr },
+        { "remove_energy_saver_status_changed", reinterpret_cast<PyCFunction>(PowerManager_remove_EnergySaverStatusChanged), METH_O, nullptr },
+        { "add_power_supply_status_changed", reinterpret_cast<PyCFunction>(PowerManager_add_PowerSupplyStatusChanged), METH_O, nullptr },
+        { "remove_power_supply_status_changed", reinterpret_cast<PyCFunction>(PowerManager_remove_PowerSupplyStatusChanged), METH_O, nullptr },
+        { "add_remaining_charge_percent_changed", reinterpret_cast<PyCFunction>(PowerManager_add_RemainingChargePercentChanged), METH_O, nullptr },
+        { "remove_remaining_charge_percent_changed", reinterpret_cast<PyCFunction>(PowerManager_remove_RemainingChargePercentChanged), METH_O, nullptr },
+        { "add_remaining_discharge_time_changed", reinterpret_cast<PyCFunction>(PowerManager_add_RemainingDischargeTimeChanged), METH_O, nullptr },
+        { "remove_remaining_discharge_time_changed", reinterpret_cast<PyCFunction>(PowerManager_remove_RemainingDischargeTimeChanged), METH_O, nullptr },
         { }
     };
 

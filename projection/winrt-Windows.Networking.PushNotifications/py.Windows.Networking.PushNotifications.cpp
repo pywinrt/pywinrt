@@ -380,8 +380,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     }
 
     static PyMethodDef _methods_PushNotificationChannelManager[] = {
-        { "add_channels_revoked", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_add_ChannelsRevoked), METH_O | METH_STATIC, nullptr },
-        { "remove_channels_revoked", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_remove_ChannelsRevoked), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -412,6 +410,8 @@ namespace py::cpp::Windows::Networking::PushNotifications
         { "create_push_notification_channel_for_secondary_tile_async", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_CreatePushNotificationChannelForSecondaryTileAsync), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_GetDefault), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_GetForUser), METH_VARARGS, nullptr },
+        { "add_channels_revoked", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_add_ChannelsRevoked), METH_O, nullptr },
+        { "remove_channels_revoked", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_remove_ChannelsRevoked), METH_O, nullptr },
         { }
     };
 

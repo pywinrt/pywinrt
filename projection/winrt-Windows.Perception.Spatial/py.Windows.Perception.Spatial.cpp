@@ -3749,8 +3749,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static PyMethodDef _methods_SpatialStageFrameOfReference[] = {
         { "get_coordinate_system_at_current_location", reinterpret_cast<PyCFunction>(SpatialStageFrameOfReference_GetCoordinateSystemAtCurrentLocation), METH_VARARGS, nullptr },
         { "try_get_movement_bounds", reinterpret_cast<PyCFunction>(SpatialStageFrameOfReference_TryGetMovementBounds), METH_VARARGS, nullptr },
-        { "add_current_changed", reinterpret_cast<PyCFunction>(SpatialStageFrameOfReference_add_CurrentChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_current_changed", reinterpret_cast<PyCFunction>(SpatialStageFrameOfReference_remove_CurrentChanged), METH_O | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_SpatialStageFrameOfReference, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialStageFrameOfReference), METH_O | METH_STATIC, nullptr },
         { }
@@ -3785,6 +3783,8 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyMethodDef methods_SpatialStageFrameOfReference_Static[] = {
         { "request_new_stage_async", reinterpret_cast<PyCFunction>(SpatialStageFrameOfReference_RequestNewStageAsync), METH_VARARGS, nullptr },
+        { "add_current_changed", reinterpret_cast<PyCFunction>(SpatialStageFrameOfReference_add_CurrentChanged), METH_O, nullptr },
+        { "remove_current_changed", reinterpret_cast<PyCFunction>(SpatialStageFrameOfReference_remove_CurrentChanged), METH_O, nullptr },
         { }
     };
 

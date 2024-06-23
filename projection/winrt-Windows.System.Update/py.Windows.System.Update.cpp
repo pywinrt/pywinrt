@@ -952,8 +952,6 @@ namespace py::cpp::Windows::System::Update
     }
 
     static PyMethodDef _methods_SystemUpdateManager[] = {
-        { "add_state_changed", reinterpret_cast<PyCFunction>(SystemUpdateManager_add_StateChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_state_changed", reinterpret_cast<PyCFunction>(SystemUpdateManager_remove_StateChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -1002,6 +1000,8 @@ namespace py::cpp::Windows::System::Update
         { "start_install", reinterpret_cast<PyCFunction>(SystemUpdateManager_StartInstall), METH_VARARGS, nullptr },
         { "try_set_user_active_hours", reinterpret_cast<PyCFunction>(SystemUpdateManager_TrySetUserActiveHours), METH_VARARGS, nullptr },
         { "unblock_automatic_reboot_async", reinterpret_cast<PyCFunction>(SystemUpdateManager_UnblockAutomaticRebootAsync), METH_VARARGS, nullptr },
+        { "add_state_changed", reinterpret_cast<PyCFunction>(SystemUpdateManager_add_StateChanged), METH_O, nullptr },
+        { "remove_state_changed", reinterpret_cast<PyCFunction>(SystemUpdateManager_remove_StateChanged), METH_O, nullptr },
         { }
     };
 

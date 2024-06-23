@@ -3918,8 +3918,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "remove_camera_removed", reinterpret_cast<PyCFunction>(HolographicSpace_remove_CameraRemoved), METH_O, nullptr },
         { "add_user_presence_changed", reinterpret_cast<PyCFunction>(HolographicSpace_add_UserPresenceChanged), METH_O, nullptr },
         { "remove_user_presence_changed", reinterpret_cast<PyCFunction>(HolographicSpace_remove_UserPresenceChanged), METH_O, nullptr },
-        { "add_is_available_changed", reinterpret_cast<PyCFunction>(HolographicSpace_add_IsAvailableChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_is_available_changed", reinterpret_cast<PyCFunction>(HolographicSpace_remove_IsAvailableChanged), METH_O | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_HolographicSpace, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicSpace), METH_O | METH_STATIC, nullptr },
         { }
@@ -3955,6 +3953,8 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyMethodDef methods_HolographicSpace_Static[] = {
         { "create_for_core_window", reinterpret_cast<PyCFunction>(HolographicSpace_CreateForCoreWindow), METH_VARARGS, nullptr },
+        { "add_is_available_changed", reinterpret_cast<PyCFunction>(HolographicSpace_add_IsAvailableChanged), METH_O, nullptr },
+        { "remove_is_available_changed", reinterpret_cast<PyCFunction>(HolographicSpace_remove_IsAvailableChanged), METH_O, nullptr },
         { }
     };
 

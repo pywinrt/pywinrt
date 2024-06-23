@@ -6725,10 +6725,6 @@ namespace py::cpp::Windows::Media::Devices
     }
 
     static PyMethodDef _methods_MediaDevice[] = {
-        { "add_default_audio_capture_device_changed", reinterpret_cast<PyCFunction>(MediaDevice_add_DefaultAudioCaptureDeviceChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_default_audio_capture_device_changed", reinterpret_cast<PyCFunction>(MediaDevice_remove_DefaultAudioCaptureDeviceChanged), METH_O | METH_STATIC, nullptr },
-        { "add_default_audio_render_device_changed", reinterpret_cast<PyCFunction>(MediaDevice_add_DefaultAudioRenderDeviceChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_default_audio_render_device_changed", reinterpret_cast<PyCFunction>(MediaDevice_remove_DefaultAudioRenderDeviceChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -6760,6 +6756,10 @@ namespace py::cpp::Windows::Media::Devices
         { "get_default_audio_capture_id", reinterpret_cast<PyCFunction>(MediaDevice_GetDefaultAudioCaptureId), METH_VARARGS, nullptr },
         { "get_default_audio_render_id", reinterpret_cast<PyCFunction>(MediaDevice_GetDefaultAudioRenderId), METH_VARARGS, nullptr },
         { "get_video_capture_selector", reinterpret_cast<PyCFunction>(MediaDevice_GetVideoCaptureSelector), METH_VARARGS, nullptr },
+        { "add_default_audio_capture_device_changed", reinterpret_cast<PyCFunction>(MediaDevice_add_DefaultAudioCaptureDeviceChanged), METH_O, nullptr },
+        { "remove_default_audio_capture_device_changed", reinterpret_cast<PyCFunction>(MediaDevice_remove_DefaultAudioCaptureDeviceChanged), METH_O, nullptr },
+        { "add_default_audio_render_device_changed", reinterpret_cast<PyCFunction>(MediaDevice_add_DefaultAudioRenderDeviceChanged), METH_O, nullptr },
+        { "remove_default_audio_render_device_changed", reinterpret_cast<PyCFunction>(MediaDevice_remove_DefaultAudioRenderDeviceChanged), METH_O, nullptr },
         { }
     };
 

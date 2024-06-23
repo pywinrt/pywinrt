@@ -237,8 +237,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     }
 
     static PyMethodDef _methods_AsyncCausalityTracer[] = {
-        { "add_tracing_status_changed", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_add_TracingStatusChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_tracing_status_changed", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_remove_TracingStatusChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -270,6 +268,8 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         { "trace_operation_relation", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_TraceOperationRelation), METH_VARARGS, nullptr },
         { "trace_synchronous_work_completion", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_TraceSynchronousWorkCompletion), METH_VARARGS, nullptr },
         { "trace_synchronous_work_start", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_TraceSynchronousWorkStart), METH_VARARGS, nullptr },
+        { "add_tracing_status_changed", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_add_TracingStatusChanged), METH_O, nullptr },
+        { "remove_tracing_status_changed", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_remove_TracingStatusChanged), METH_O, nullptr },
         { }
     };
 

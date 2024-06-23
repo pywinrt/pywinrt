@@ -286,8 +286,6 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
     }
 
     static PyMethodDef _methods_ClosedCaptionProperties[] = {
-        { "add_properties_changed", reinterpret_cast<PyCFunction>(ClosedCaptionProperties_add_PropertiesChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_properties_changed", reinterpret_cast<PyCFunction>(ClosedCaptionProperties_remove_PropertiesChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -326,6 +324,8 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
     };
 
     static PyMethodDef methods_ClosedCaptionProperties_Static[] = {
+        { "add_properties_changed", reinterpret_cast<PyCFunction>(ClosedCaptionProperties_add_PropertiesChanged), METH_O, nullptr },
+        { "remove_properties_changed", reinterpret_cast<PyCFunction>(ClosedCaptionProperties_remove_PropertiesChanged), METH_O, nullptr },
         { }
     };
 

@@ -256,12 +256,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     }
 
     static PyMethodDef _methods_GameList[] = {
-        { "add_game_added", reinterpret_cast<PyCFunction>(GameList_add_GameAdded), METH_O | METH_STATIC, nullptr },
-        { "remove_game_added", reinterpret_cast<PyCFunction>(GameList_remove_GameAdded), METH_O | METH_STATIC, nullptr },
-        { "add_game_removed", reinterpret_cast<PyCFunction>(GameList_add_GameRemoved), METH_O | METH_STATIC, nullptr },
-        { "remove_game_removed", reinterpret_cast<PyCFunction>(GameList_remove_GameRemoved), METH_O | METH_STATIC, nullptr },
-        { "add_game_updated", reinterpret_cast<PyCFunction>(GameList_add_GameUpdated), METH_O | METH_STATIC, nullptr },
-        { "remove_game_updated", reinterpret_cast<PyCFunction>(GameList_remove_GameUpdated), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -291,6 +285,12 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         { "find_all_async", reinterpret_cast<PyCFunction>(GameList_FindAllAsync), METH_VARARGS, nullptr },
         { "merge_entries_async", reinterpret_cast<PyCFunction>(GameList_MergeEntriesAsync), METH_VARARGS, nullptr },
         { "unmerge_entry_async", reinterpret_cast<PyCFunction>(GameList_UnmergeEntryAsync), METH_VARARGS, nullptr },
+        { "add_game_added", reinterpret_cast<PyCFunction>(GameList_add_GameAdded), METH_O, nullptr },
+        { "remove_game_added", reinterpret_cast<PyCFunction>(GameList_remove_GameAdded), METH_O, nullptr },
+        { "add_game_removed", reinterpret_cast<PyCFunction>(GameList_add_GameRemoved), METH_O, nullptr },
+        { "remove_game_removed", reinterpret_cast<PyCFunction>(GameList_remove_GameRemoved), METH_O, nullptr },
+        { "add_game_updated", reinterpret_cast<PyCFunction>(GameList_add_GameUpdated), METH_O, nullptr },
+        { "remove_game_updated", reinterpret_cast<PyCFunction>(GameList_remove_GameUpdated), METH_O, nullptr },
         { }
     };
 

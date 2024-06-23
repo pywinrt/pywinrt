@@ -243,10 +243,6 @@ namespace py::cpp::Windows::Media::Playback
     }
 
     static PyMethodDef _methods_BackgroundMediaPlayer[] = {
-        { "add_message_received_from_background", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_add_MessageReceivedFromBackground), METH_O | METH_STATIC, nullptr },
-        { "remove_message_received_from_background", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_remove_MessageReceivedFromBackground), METH_O | METH_STATIC, nullptr },
-        { "add_message_received_from_foreground", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_add_MessageReceivedFromForeground), METH_O | METH_STATIC, nullptr },
-        { "remove_message_received_from_foreground", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_remove_MessageReceivedFromForeground), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -278,6 +274,10 @@ namespace py::cpp::Windows::Media::Playback
         { "send_message_to_background", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_SendMessageToBackground), METH_VARARGS, nullptr },
         { "send_message_to_foreground", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_SendMessageToForeground), METH_VARARGS, nullptr },
         { "shutdown", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_Shutdown), METH_VARARGS, nullptr },
+        { "add_message_received_from_background", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_add_MessageReceivedFromBackground), METH_O, nullptr },
+        { "remove_message_received_from_background", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_remove_MessageReceivedFromBackground), METH_O, nullptr },
+        { "add_message_received_from_foreground", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_add_MessageReceivedFromForeground), METH_O, nullptr },
+        { "remove_message_received_from_foreground", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_remove_MessageReceivedFromForeground), METH_O, nullptr },
         { }
     };
 

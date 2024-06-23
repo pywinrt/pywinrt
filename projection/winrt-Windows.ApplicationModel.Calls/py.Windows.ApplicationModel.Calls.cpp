@@ -4412,8 +4412,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     }
 
     static PyMethodDef _methods_PhoneCallManager[] = {
-        { "add_call_state_changed", reinterpret_cast<PyCFunction>(PhoneCallManager_add_CallStateChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_call_state_changed", reinterpret_cast<PyCFunction>(PhoneCallManager_remove_CallStateChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -4445,6 +4443,8 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { "request_store_async", reinterpret_cast<PyCFunction>(PhoneCallManager_RequestStoreAsync), METH_VARARGS, nullptr },
         { "show_phone_call_settings_u_i", reinterpret_cast<PyCFunction>(PhoneCallManager_ShowPhoneCallSettingsUI), METH_VARARGS, nullptr },
         { "show_phone_call_u_i", reinterpret_cast<PyCFunction>(PhoneCallManager_ShowPhoneCallUI), METH_VARARGS, nullptr },
+        { "add_call_state_changed", reinterpret_cast<PyCFunction>(PhoneCallManager_add_CallStateChanged), METH_O, nullptr },
+        { "remove_call_state_changed", reinterpret_cast<PyCFunction>(PhoneCallManager_remove_CallStateChanged), METH_O, nullptr },
         { }
     };
 

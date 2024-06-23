@@ -6735,12 +6735,6 @@ namespace py::cpp::Windows::System
     }
 
     static PyMethodDef _methods_MemoryManager[] = {
-        { "add_app_memory_usage_decreased", reinterpret_cast<PyCFunction>(MemoryManager_add_AppMemoryUsageDecreased), METH_O | METH_STATIC, nullptr },
-        { "remove_app_memory_usage_decreased", reinterpret_cast<PyCFunction>(MemoryManager_remove_AppMemoryUsageDecreased), METH_O | METH_STATIC, nullptr },
-        { "add_app_memory_usage_increased", reinterpret_cast<PyCFunction>(MemoryManager_add_AppMemoryUsageIncreased), METH_O | METH_STATIC, nullptr },
-        { "remove_app_memory_usage_increased", reinterpret_cast<PyCFunction>(MemoryManager_remove_AppMemoryUsageIncreased), METH_O | METH_STATIC, nullptr },
-        { "add_app_memory_usage_limit_changing", reinterpret_cast<PyCFunction>(MemoryManager_add_AppMemoryUsageLimitChanging), METH_O | METH_STATIC, nullptr },
-        { "remove_app_memory_usage_limit_changing", reinterpret_cast<PyCFunction>(MemoryManager_remove_AppMemoryUsageLimitChanging), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -6774,6 +6768,12 @@ namespace py::cpp::Windows::System
         { "get_app_memory_report", reinterpret_cast<PyCFunction>(MemoryManager_GetAppMemoryReport), METH_VARARGS, nullptr },
         { "get_process_memory_report", reinterpret_cast<PyCFunction>(MemoryManager_GetProcessMemoryReport), METH_VARARGS, nullptr },
         { "try_set_app_memory_usage_limit", reinterpret_cast<PyCFunction>(MemoryManager_TrySetAppMemoryUsageLimit), METH_VARARGS, nullptr },
+        { "add_app_memory_usage_decreased", reinterpret_cast<PyCFunction>(MemoryManager_add_AppMemoryUsageDecreased), METH_O, nullptr },
+        { "remove_app_memory_usage_decreased", reinterpret_cast<PyCFunction>(MemoryManager_remove_AppMemoryUsageDecreased), METH_O, nullptr },
+        { "add_app_memory_usage_increased", reinterpret_cast<PyCFunction>(MemoryManager_add_AppMemoryUsageIncreased), METH_O, nullptr },
+        { "remove_app_memory_usage_increased", reinterpret_cast<PyCFunction>(MemoryManager_remove_AppMemoryUsageIncreased), METH_O, nullptr },
+        { "add_app_memory_usage_limit_changing", reinterpret_cast<PyCFunction>(MemoryManager_add_AppMemoryUsageLimitChanging), METH_O, nullptr },
+        { "remove_app_memory_usage_limit_changing", reinterpret_cast<PyCFunction>(MemoryManager_remove_AppMemoryUsageLimitChanging), METH_O, nullptr },
         { }
     };
 
@@ -9040,8 +9040,6 @@ namespace py::cpp::Windows::System
     }
 
     static PyMethodDef _methods_UserDeviceAssociation[] = {
-        { "add_user_device_association_changed", reinterpret_cast<PyCFunction>(UserDeviceAssociation_add_UserDeviceAssociationChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_user_device_association_changed", reinterpret_cast<PyCFunction>(UserDeviceAssociation_remove_UserDeviceAssociationChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -9069,6 +9067,8 @@ namespace py::cpp::Windows::System
 
     static PyMethodDef methods_UserDeviceAssociation_Static[] = {
         { "find_user_from_device_id", reinterpret_cast<PyCFunction>(UserDeviceAssociation_FindUserFromDeviceId), METH_VARARGS, nullptr },
+        { "add_user_device_association_changed", reinterpret_cast<PyCFunction>(UserDeviceAssociation_add_UserDeviceAssociationChanged), METH_O, nullptr },
+        { "remove_user_device_association_changed", reinterpret_cast<PyCFunction>(UserDeviceAssociation_remove_UserDeviceAssociationChanged), METH_O, nullptr },
         { }
     };
 

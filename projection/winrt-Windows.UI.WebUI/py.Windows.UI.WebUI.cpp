@@ -1934,22 +1934,6 @@ namespace py::cpp::Windows::UI::WebUI
     }
 
     static PyMethodDef _methods_WebUIApplication[] = {
-        { "add_background_activated", reinterpret_cast<PyCFunction>(WebUIApplication_add_BackgroundActivated), METH_O | METH_STATIC, nullptr },
-        { "remove_background_activated", reinterpret_cast<PyCFunction>(WebUIApplication_remove_BackgroundActivated), METH_O | METH_STATIC, nullptr },
-        { "add_new_web_u_i_view_created", reinterpret_cast<PyCFunction>(WebUIApplication_add_NewWebUIViewCreated), METH_O | METH_STATIC, nullptr },
-        { "remove_new_web_u_i_view_created", reinterpret_cast<PyCFunction>(WebUIApplication_remove_NewWebUIViewCreated), METH_O | METH_STATIC, nullptr },
-        { "add_entered_background", reinterpret_cast<PyCFunction>(WebUIApplication_add_EnteredBackground), METH_O | METH_STATIC, nullptr },
-        { "remove_entered_background", reinterpret_cast<PyCFunction>(WebUIApplication_remove_EnteredBackground), METH_O | METH_STATIC, nullptr },
-        { "add_leaving_background", reinterpret_cast<PyCFunction>(WebUIApplication_add_LeavingBackground), METH_O | METH_STATIC, nullptr },
-        { "remove_leaving_background", reinterpret_cast<PyCFunction>(WebUIApplication_remove_LeavingBackground), METH_O | METH_STATIC, nullptr },
-        { "add_activated", reinterpret_cast<PyCFunction>(WebUIApplication_add_Activated), METH_O | METH_STATIC, nullptr },
-        { "remove_activated", reinterpret_cast<PyCFunction>(WebUIApplication_remove_Activated), METH_O | METH_STATIC, nullptr },
-        { "add_navigated", reinterpret_cast<PyCFunction>(WebUIApplication_add_Navigated), METH_O | METH_STATIC, nullptr },
-        { "remove_navigated", reinterpret_cast<PyCFunction>(WebUIApplication_remove_Navigated), METH_O | METH_STATIC, nullptr },
-        { "add_resuming", reinterpret_cast<PyCFunction>(WebUIApplication_add_Resuming), METH_O | METH_STATIC, nullptr },
-        { "remove_resuming", reinterpret_cast<PyCFunction>(WebUIApplication_remove_Resuming), METH_O | METH_STATIC, nullptr },
-        { "add_suspending", reinterpret_cast<PyCFunction>(WebUIApplication_add_Suspending), METH_O | METH_STATIC, nullptr },
-        { "remove_suspending", reinterpret_cast<PyCFunction>(WebUIApplication_remove_Suspending), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -1979,6 +1963,22 @@ namespace py::cpp::Windows::UI::WebUI
         { "enable_prelaunch", reinterpret_cast<PyCFunction>(WebUIApplication_EnablePrelaunch), METH_VARARGS, nullptr },
         { "request_restart_async", reinterpret_cast<PyCFunction>(WebUIApplication_RequestRestartAsync), METH_VARARGS, nullptr },
         { "request_restart_for_user_async", reinterpret_cast<PyCFunction>(WebUIApplication_RequestRestartForUserAsync), METH_VARARGS, nullptr },
+        { "add_background_activated", reinterpret_cast<PyCFunction>(WebUIApplication_add_BackgroundActivated), METH_O, nullptr },
+        { "remove_background_activated", reinterpret_cast<PyCFunction>(WebUIApplication_remove_BackgroundActivated), METH_O, nullptr },
+        { "add_new_web_u_i_view_created", reinterpret_cast<PyCFunction>(WebUIApplication_add_NewWebUIViewCreated), METH_O, nullptr },
+        { "remove_new_web_u_i_view_created", reinterpret_cast<PyCFunction>(WebUIApplication_remove_NewWebUIViewCreated), METH_O, nullptr },
+        { "add_entered_background", reinterpret_cast<PyCFunction>(WebUIApplication_add_EnteredBackground), METH_O, nullptr },
+        { "remove_entered_background", reinterpret_cast<PyCFunction>(WebUIApplication_remove_EnteredBackground), METH_O, nullptr },
+        { "add_leaving_background", reinterpret_cast<PyCFunction>(WebUIApplication_add_LeavingBackground), METH_O, nullptr },
+        { "remove_leaving_background", reinterpret_cast<PyCFunction>(WebUIApplication_remove_LeavingBackground), METH_O, nullptr },
+        { "add_activated", reinterpret_cast<PyCFunction>(WebUIApplication_add_Activated), METH_O, nullptr },
+        { "remove_activated", reinterpret_cast<PyCFunction>(WebUIApplication_remove_Activated), METH_O, nullptr },
+        { "add_navigated", reinterpret_cast<PyCFunction>(WebUIApplication_add_Navigated), METH_O, nullptr },
+        { "remove_navigated", reinterpret_cast<PyCFunction>(WebUIApplication_remove_Navigated), METH_O, nullptr },
+        { "add_resuming", reinterpret_cast<PyCFunction>(WebUIApplication_add_Resuming), METH_O, nullptr },
+        { "remove_resuming", reinterpret_cast<PyCFunction>(WebUIApplication_remove_Resuming), METH_O, nullptr },
+        { "add_suspending", reinterpret_cast<PyCFunction>(WebUIApplication_add_Suspending), METH_O, nullptr },
+        { "remove_suspending", reinterpret_cast<PyCFunction>(WebUIApplication_remove_Suspending), METH_O, nullptr },
         { }
     };
 

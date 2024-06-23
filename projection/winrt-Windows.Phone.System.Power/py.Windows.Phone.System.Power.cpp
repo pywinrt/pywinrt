@@ -96,8 +96,6 @@ namespace py::cpp::Windows::Phone::System::Power
     }
 
     static PyMethodDef _methods_PowerManager[] = {
-        { "add_power_saving_mode_changed", reinterpret_cast<PyCFunction>(PowerManager_add_PowerSavingModeChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_power_saving_mode_changed", reinterpret_cast<PyCFunction>(PowerManager_remove_PowerSavingModeChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -126,6 +124,8 @@ namespace py::cpp::Windows::Phone::System::Power
     };
 
     static PyMethodDef methods_PowerManager_Static[] = {
+        { "add_power_saving_mode_changed", reinterpret_cast<PyCFunction>(PowerManager_add_PowerSavingModeChanged), METH_O, nullptr },
+        { "remove_power_saving_mode_changed", reinterpret_cast<PyCFunction>(PowerManager_remove_PowerSavingModeChanged), METH_O, nullptr },
         { }
     };
 

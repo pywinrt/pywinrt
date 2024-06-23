@@ -1027,8 +1027,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     }
 
     static PyMethodDef _methods_ESimManager[] = {
-        { "add_service_info_changed", reinterpret_cast<PyCFunction>(ESimManager_add_ServiceInfoChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_service_info_changed", reinterpret_cast<PyCFunction>(ESimManager_remove_ServiceInfoChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -1057,6 +1055,8 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyMethodDef methods_ESimManager_Static[] = {
         { "try_create_e_sim_watcher", reinterpret_cast<PyCFunction>(ESimManager_TryCreateESimWatcher), METH_VARARGS, nullptr },
+        { "add_service_info_changed", reinterpret_cast<PyCFunction>(ESimManager_add_ServiceInfoChanged), METH_O, nullptr },
+        { "remove_service_info_changed", reinterpret_cast<PyCFunction>(ESimManager_remove_ServiceInfoChanged), METH_O, nullptr },
         { }
     };
 

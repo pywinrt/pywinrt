@@ -518,14 +518,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     }
 
     static PyMethodDef _methods_Clipboard[] = {
-        { "add_history_changed", reinterpret_cast<PyCFunction>(Clipboard_add_HistoryChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_history_changed", reinterpret_cast<PyCFunction>(Clipboard_remove_HistoryChanged), METH_O | METH_STATIC, nullptr },
-        { "add_history_enabled_changed", reinterpret_cast<PyCFunction>(Clipboard_add_HistoryEnabledChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_history_enabled_changed", reinterpret_cast<PyCFunction>(Clipboard_remove_HistoryEnabledChanged), METH_O | METH_STATIC, nullptr },
-        { "add_roaming_enabled_changed", reinterpret_cast<PyCFunction>(Clipboard_add_RoamingEnabledChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_roaming_enabled_changed", reinterpret_cast<PyCFunction>(Clipboard_remove_RoamingEnabledChanged), METH_O | METH_STATIC, nullptr },
-        { "add_content_changed", reinterpret_cast<PyCFunction>(Clipboard_add_ContentChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_content_changed", reinterpret_cast<PyCFunction>(Clipboard_remove_ContentChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -563,6 +555,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { "set_content", reinterpret_cast<PyCFunction>(Clipboard_SetContent), METH_VARARGS, nullptr },
         { "set_content_with_options", reinterpret_cast<PyCFunction>(Clipboard_SetContentWithOptions), METH_VARARGS, nullptr },
         { "set_history_item_as_content", reinterpret_cast<PyCFunction>(Clipboard_SetHistoryItemAsContent), METH_VARARGS, nullptr },
+        { "add_history_changed", reinterpret_cast<PyCFunction>(Clipboard_add_HistoryChanged), METH_O, nullptr },
+        { "remove_history_changed", reinterpret_cast<PyCFunction>(Clipboard_remove_HistoryChanged), METH_O, nullptr },
+        { "add_history_enabled_changed", reinterpret_cast<PyCFunction>(Clipboard_add_HistoryEnabledChanged), METH_O, nullptr },
+        { "remove_history_enabled_changed", reinterpret_cast<PyCFunction>(Clipboard_remove_HistoryEnabledChanged), METH_O, nullptr },
+        { "add_roaming_enabled_changed", reinterpret_cast<PyCFunction>(Clipboard_add_RoamingEnabledChanged), METH_O, nullptr },
+        { "remove_roaming_enabled_changed", reinterpret_cast<PyCFunction>(Clipboard_remove_RoamingEnabledChanged), METH_O, nullptr },
+        { "add_content_changed", reinterpret_cast<PyCFunction>(Clipboard_add_ContentChanged), METH_O, nullptr },
+        { "remove_content_changed", reinterpret_cast<PyCFunction>(Clipboard_remove_ContentChanged), METH_O, nullptr },
         { }
     };
 

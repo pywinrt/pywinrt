@@ -550,8 +550,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     }
 
     static PyMethodDef _methods_AccessKeyManager[] = {
-        { "add_is_display_mode_enabled_changed", reinterpret_cast<PyCFunction>(AccessKeyManager_add_IsDisplayModeEnabledChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_is_display_mode_enabled_changed", reinterpret_cast<PyCFunction>(AccessKeyManager_remove_IsDisplayModeEnabledChanged), METH_O | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_AccessKeyManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AccessKeyManager), METH_O | METH_STATIC, nullptr },
         { }
@@ -585,6 +583,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     static PyMethodDef methods_AccessKeyManager_Static[] = {
         { "enter_display_mode", reinterpret_cast<PyCFunction>(AccessKeyManager_EnterDisplayMode), METH_VARARGS, nullptr },
         { "exit_display_mode", reinterpret_cast<PyCFunction>(AccessKeyManager_ExitDisplayMode), METH_VARARGS, nullptr },
+        { "add_is_display_mode_enabled_changed", reinterpret_cast<PyCFunction>(AccessKeyManager_add_IsDisplayModeEnabledChanged), METH_O, nullptr },
+        { "remove_is_display_mode_enabled_changed", reinterpret_cast<PyCFunction>(AccessKeyManager_remove_IsDisplayModeEnabledChanged), METH_O, nullptr },
         { }
     };
 
@@ -2193,14 +2193,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
     }
 
     static PyMethodDef _methods_FocusManager[] = {
-        { "add_getting_focus", reinterpret_cast<PyCFunction>(FocusManager_add_GettingFocus), METH_O | METH_STATIC, nullptr },
-        { "remove_getting_focus", reinterpret_cast<PyCFunction>(FocusManager_remove_GettingFocus), METH_O | METH_STATIC, nullptr },
-        { "add_got_focus", reinterpret_cast<PyCFunction>(FocusManager_add_GotFocus), METH_O | METH_STATIC, nullptr },
-        { "remove_got_focus", reinterpret_cast<PyCFunction>(FocusManager_remove_GotFocus), METH_O | METH_STATIC, nullptr },
-        { "add_losing_focus", reinterpret_cast<PyCFunction>(FocusManager_add_LosingFocus), METH_O | METH_STATIC, nullptr },
-        { "remove_losing_focus", reinterpret_cast<PyCFunction>(FocusManager_remove_LosingFocus), METH_O | METH_STATIC, nullptr },
-        { "add_lost_focus", reinterpret_cast<PyCFunction>(FocusManager_add_LostFocus), METH_O | METH_STATIC, nullptr },
-        { "remove_lost_focus", reinterpret_cast<PyCFunction>(FocusManager_remove_LostFocus), METH_O | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_FocusManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FocusManager), METH_O | METH_STATIC, nullptr },
         { }
@@ -2238,6 +2230,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         { "try_focus_async", reinterpret_cast<PyCFunction>(FocusManager_TryFocusAsync), METH_VARARGS, nullptr },
         { "try_move_focus", reinterpret_cast<PyCFunction>(FocusManager_TryMoveFocus), METH_VARARGS, nullptr },
         { "try_move_focus_async", reinterpret_cast<PyCFunction>(FocusManager_TryMoveFocusAsync), METH_VARARGS, nullptr },
+        { "add_getting_focus", reinterpret_cast<PyCFunction>(FocusManager_add_GettingFocus), METH_O, nullptr },
+        { "remove_getting_focus", reinterpret_cast<PyCFunction>(FocusManager_remove_GettingFocus), METH_O, nullptr },
+        { "add_got_focus", reinterpret_cast<PyCFunction>(FocusManager_add_GotFocus), METH_O, nullptr },
+        { "remove_got_focus", reinterpret_cast<PyCFunction>(FocusManager_remove_GotFocus), METH_O, nullptr },
+        { "add_losing_focus", reinterpret_cast<PyCFunction>(FocusManager_add_LosingFocus), METH_O, nullptr },
+        { "remove_losing_focus", reinterpret_cast<PyCFunction>(FocusManager_remove_LosingFocus), METH_O, nullptr },
+        { "add_lost_focus", reinterpret_cast<PyCFunction>(FocusManager_add_LostFocus), METH_O, nullptr },
+        { "remove_lost_focus", reinterpret_cast<PyCFunction>(FocusManager_remove_LostFocus), METH_O, nullptr },
         { }
     };
 

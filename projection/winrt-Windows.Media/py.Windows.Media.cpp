@@ -1628,30 +1628,6 @@ namespace py::cpp::Windows::Media
     }
 
     static PyMethodDef _methods_MediaControl[] = {
-        { "add_channel_down_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_ChannelDownPressed), METH_O | METH_STATIC, nullptr },
-        { "remove_channel_down_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_ChannelDownPressed), METH_O | METH_STATIC, nullptr },
-        { "add_channel_up_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_ChannelUpPressed), METH_O | METH_STATIC, nullptr },
-        { "remove_channel_up_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_ChannelUpPressed), METH_O | METH_STATIC, nullptr },
-        { "add_fast_forward_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_FastForwardPressed), METH_O | METH_STATIC, nullptr },
-        { "remove_fast_forward_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_FastForwardPressed), METH_O | METH_STATIC, nullptr },
-        { "add_next_track_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_NextTrackPressed), METH_O | METH_STATIC, nullptr },
-        { "remove_next_track_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_NextTrackPressed), METH_O | METH_STATIC, nullptr },
-        { "add_pause_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_PausePressed), METH_O | METH_STATIC, nullptr },
-        { "remove_pause_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_PausePressed), METH_O | METH_STATIC, nullptr },
-        { "add_play_pause_toggle_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_PlayPauseTogglePressed), METH_O | METH_STATIC, nullptr },
-        { "remove_play_pause_toggle_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_PlayPauseTogglePressed), METH_O | METH_STATIC, nullptr },
-        { "add_play_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_PlayPressed), METH_O | METH_STATIC, nullptr },
-        { "remove_play_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_PlayPressed), METH_O | METH_STATIC, nullptr },
-        { "add_previous_track_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_PreviousTrackPressed), METH_O | METH_STATIC, nullptr },
-        { "remove_previous_track_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_PreviousTrackPressed), METH_O | METH_STATIC, nullptr },
-        { "add_record_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_RecordPressed), METH_O | METH_STATIC, nullptr },
-        { "remove_record_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_RecordPressed), METH_O | METH_STATIC, nullptr },
-        { "add_rewind_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_RewindPressed), METH_O | METH_STATIC, nullptr },
-        { "remove_rewind_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_RewindPressed), METH_O | METH_STATIC, nullptr },
-        { "add_sound_level_changed", reinterpret_cast<PyCFunction>(MediaControl_add_SoundLevelChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_sound_level_changed", reinterpret_cast<PyCFunction>(MediaControl_remove_SoundLevelChanged), METH_O | METH_STATIC, nullptr },
-        { "add_stop_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_StopPressed), METH_O | METH_STATIC, nullptr },
-        { "remove_stop_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_StopPressed), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -1683,6 +1659,30 @@ namespace py::cpp::Windows::Media
     };
 
     static PyMethodDef methods_MediaControl_Static[] = {
+        { "add_channel_down_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_ChannelDownPressed), METH_O, nullptr },
+        { "remove_channel_down_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_ChannelDownPressed), METH_O, nullptr },
+        { "add_channel_up_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_ChannelUpPressed), METH_O, nullptr },
+        { "remove_channel_up_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_ChannelUpPressed), METH_O, nullptr },
+        { "add_fast_forward_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_FastForwardPressed), METH_O, nullptr },
+        { "remove_fast_forward_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_FastForwardPressed), METH_O, nullptr },
+        { "add_next_track_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_NextTrackPressed), METH_O, nullptr },
+        { "remove_next_track_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_NextTrackPressed), METH_O, nullptr },
+        { "add_pause_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_PausePressed), METH_O, nullptr },
+        { "remove_pause_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_PausePressed), METH_O, nullptr },
+        { "add_play_pause_toggle_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_PlayPauseTogglePressed), METH_O, nullptr },
+        { "remove_play_pause_toggle_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_PlayPauseTogglePressed), METH_O, nullptr },
+        { "add_play_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_PlayPressed), METH_O, nullptr },
+        { "remove_play_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_PlayPressed), METH_O, nullptr },
+        { "add_previous_track_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_PreviousTrackPressed), METH_O, nullptr },
+        { "remove_previous_track_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_PreviousTrackPressed), METH_O, nullptr },
+        { "add_record_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_RecordPressed), METH_O, nullptr },
+        { "remove_record_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_RecordPressed), METH_O, nullptr },
+        { "add_rewind_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_RewindPressed), METH_O, nullptr },
+        { "remove_rewind_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_RewindPressed), METH_O, nullptr },
+        { "add_sound_level_changed", reinterpret_cast<PyCFunction>(MediaControl_add_SoundLevelChanged), METH_O, nullptr },
+        { "remove_sound_level_changed", reinterpret_cast<PyCFunction>(MediaControl_remove_SoundLevelChanged), METH_O, nullptr },
+        { "add_stop_pressed", reinterpret_cast<PyCFunction>(MediaControl_add_StopPressed), METH_O, nullptr },
+        { "remove_stop_pressed", reinterpret_cast<PyCFunction>(MediaControl_remove_StopPressed), METH_O, nullptr },
         { }
     };
 

@@ -7595,8 +7595,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     }
 
     static PyMethodDef _methods_RcsManager[] = {
-        { "add_transport_list_changed", reinterpret_cast<PyCFunction>(RcsManager_add_TransportListChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_transport_list_changed", reinterpret_cast<PyCFunction>(RcsManager_remove_TransportListChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -7627,6 +7625,8 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { "get_transport_async", reinterpret_cast<PyCFunction>(RcsManager_GetTransportAsync), METH_VARARGS, nullptr },
         { "get_transports_async", reinterpret_cast<PyCFunction>(RcsManager_GetTransportsAsync), METH_VARARGS, nullptr },
         { "leave_conversation_async", reinterpret_cast<PyCFunction>(RcsManager_LeaveConversationAsync), METH_VARARGS, nullptr },
+        { "add_transport_list_changed", reinterpret_cast<PyCFunction>(RcsManager_add_TransportListChanged), METH_O, nullptr },
+        { "remove_transport_list_changed", reinterpret_cast<PyCFunction>(RcsManager_remove_TransportListChanged), METH_O, nullptr },
         { }
     };
 

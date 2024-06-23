@@ -117,6 +117,7 @@ if (PYWINRT_FULL_PROJECTION)
 else()
     # minimum set of packages required for unit tests
     set(packages
+        "winrt-Windows.ApplicationModel.Core"
         "winrt-Windows.Data.Json"
         "winrt-Windows.Devices"
         "winrt-Windows.Devices.Geolocation"

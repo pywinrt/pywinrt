@@ -11,6 +11,7 @@
 
 ### Changed
 - PyWinRT.exe is now a dotnet tool.
+- Static events are moved to the metaclass.
 
 ### Fixed
 - Fixed possible crash when checking if API is available at runtime.

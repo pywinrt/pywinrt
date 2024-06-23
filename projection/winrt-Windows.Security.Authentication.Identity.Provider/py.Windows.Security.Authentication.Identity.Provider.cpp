@@ -324,8 +324,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     static PyMethodDef _methods_SecondaryAuthenticationFactorAuthentication[] = {
         { "abort_authentication_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_AbortAuthenticationAsync), METH_VARARGS, nullptr },
         { "finish_authentication_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_FinishAuthenticationAsync), METH_VARARGS, nullptr },
-        { "add_authentication_stage_changed", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_add_AuthenticationStageChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_authentication_stage_changed", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_remove_AuthenticationStageChanged), METH_O | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_SecondaryAuthenticationFactorAuthentication, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SecondaryAuthenticationFactorAuthentication), METH_O | METH_STATIC, nullptr },
         { }
@@ -362,6 +360,8 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { "get_authentication_stage_info_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_GetAuthenticationStageInfoAsync), METH_VARARGS, nullptr },
         { "show_notification_message_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_ShowNotificationMessageAsync), METH_VARARGS, nullptr },
         { "start_authentication_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_StartAuthenticationAsync), METH_VARARGS, nullptr },
+        { "add_authentication_stage_changed", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_add_AuthenticationStageChanged), METH_O, nullptr },
+        { "remove_authentication_stage_changed", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_remove_AuthenticationStageChanged), METH_O, nullptr },
         { }
     };
 

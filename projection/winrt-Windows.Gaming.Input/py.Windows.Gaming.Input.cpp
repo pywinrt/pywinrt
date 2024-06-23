@@ -467,10 +467,6 @@ namespace py::cpp::Windows::Gaming::Input
         { "remove_headset_disconnected", reinterpret_cast<PyCFunction>(ArcadeStick_remove_HeadsetDisconnected), METH_O, nullptr },
         { "add_user_changed", reinterpret_cast<PyCFunction>(ArcadeStick_add_UserChanged), METH_O, nullptr },
         { "remove_user_changed", reinterpret_cast<PyCFunction>(ArcadeStick_remove_UserChanged), METH_O, nullptr },
-        { "add_arcade_stick_added", reinterpret_cast<PyCFunction>(ArcadeStick_add_ArcadeStickAdded), METH_O | METH_STATIC, nullptr },
-        { "remove_arcade_stick_added", reinterpret_cast<PyCFunction>(ArcadeStick_remove_ArcadeStickAdded), METH_O | METH_STATIC, nullptr },
-        { "add_arcade_stick_removed", reinterpret_cast<PyCFunction>(ArcadeStick_add_ArcadeStickRemoved), METH_O | METH_STATIC, nullptr },
-        { "remove_arcade_stick_removed", reinterpret_cast<PyCFunction>(ArcadeStick_remove_ArcadeStickRemoved), METH_O | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_ArcadeStick, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ArcadeStick), METH_O | METH_STATIC, nullptr },
         { }
@@ -505,6 +501,10 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyMethodDef methods_ArcadeStick_Static[] = {
         { "from_game_controller", reinterpret_cast<PyCFunction>(ArcadeStick_FromGameController), METH_VARARGS, nullptr },
+        { "add_arcade_stick_added", reinterpret_cast<PyCFunction>(ArcadeStick_add_ArcadeStickAdded), METH_O, nullptr },
+        { "remove_arcade_stick_added", reinterpret_cast<PyCFunction>(ArcadeStick_remove_ArcadeStickAdded), METH_O, nullptr },
+        { "add_arcade_stick_removed", reinterpret_cast<PyCFunction>(ArcadeStick_add_ArcadeStickRemoved), METH_O, nullptr },
+        { "remove_arcade_stick_removed", reinterpret_cast<PyCFunction>(ArcadeStick_remove_ArcadeStickRemoved), METH_O, nullptr },
         { }
     };
 
@@ -1006,10 +1006,6 @@ namespace py::cpp::Windows::Gaming::Input
         { "remove_headset_disconnected", reinterpret_cast<PyCFunction>(FlightStick_remove_HeadsetDisconnected), METH_O, nullptr },
         { "add_user_changed", reinterpret_cast<PyCFunction>(FlightStick_add_UserChanged), METH_O, nullptr },
         { "remove_user_changed", reinterpret_cast<PyCFunction>(FlightStick_remove_UserChanged), METH_O, nullptr },
-        { "add_flight_stick_added", reinterpret_cast<PyCFunction>(FlightStick_add_FlightStickAdded), METH_O | METH_STATIC, nullptr },
-        { "remove_flight_stick_added", reinterpret_cast<PyCFunction>(FlightStick_remove_FlightStickAdded), METH_O | METH_STATIC, nullptr },
-        { "add_flight_stick_removed", reinterpret_cast<PyCFunction>(FlightStick_add_FlightStickRemoved), METH_O | METH_STATIC, nullptr },
-        { "remove_flight_stick_removed", reinterpret_cast<PyCFunction>(FlightStick_remove_FlightStickRemoved), METH_O | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_FlightStick, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FlightStick), METH_O | METH_STATIC, nullptr },
         { }
@@ -1045,6 +1041,10 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyMethodDef methods_FlightStick_Static[] = {
         { "from_game_controller", reinterpret_cast<PyCFunction>(FlightStick_FromGameController), METH_VARARGS, nullptr },
+        { "add_flight_stick_added", reinterpret_cast<PyCFunction>(FlightStick_add_FlightStickAdded), METH_O, nullptr },
+        { "remove_flight_stick_added", reinterpret_cast<PyCFunction>(FlightStick_remove_FlightStickAdded), METH_O, nullptr },
+        { "add_flight_stick_removed", reinterpret_cast<PyCFunction>(FlightStick_add_FlightStickRemoved), METH_O, nullptr },
+        { "remove_flight_stick_removed", reinterpret_cast<PyCFunction>(FlightStick_remove_FlightStickRemoved), METH_O, nullptr },
         { }
     };
 
@@ -1574,10 +1574,6 @@ namespace py::cpp::Windows::Gaming::Input
         { "remove_headset_disconnected", reinterpret_cast<PyCFunction>(Gamepad_remove_HeadsetDisconnected), METH_O, nullptr },
         { "add_user_changed", reinterpret_cast<PyCFunction>(Gamepad_add_UserChanged), METH_O, nullptr },
         { "remove_user_changed", reinterpret_cast<PyCFunction>(Gamepad_remove_UserChanged), METH_O, nullptr },
-        { "add_gamepad_added", reinterpret_cast<PyCFunction>(Gamepad_add_GamepadAdded), METH_O | METH_STATIC, nullptr },
-        { "remove_gamepad_added", reinterpret_cast<PyCFunction>(Gamepad_remove_GamepadAdded), METH_O | METH_STATIC, nullptr },
-        { "add_gamepad_removed", reinterpret_cast<PyCFunction>(Gamepad_add_GamepadRemoved), METH_O | METH_STATIC, nullptr },
-        { "remove_gamepad_removed", reinterpret_cast<PyCFunction>(Gamepad_remove_GamepadRemoved), METH_O | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_Gamepad, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Gamepad), METH_O | METH_STATIC, nullptr },
         { }
@@ -1613,6 +1609,10 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyMethodDef methods_Gamepad_Static[] = {
         { "from_game_controller", reinterpret_cast<PyCFunction>(Gamepad_FromGameController), METH_VARARGS, nullptr },
+        { "add_gamepad_added", reinterpret_cast<PyCFunction>(Gamepad_add_GamepadAdded), METH_O, nullptr },
+        { "remove_gamepad_added", reinterpret_cast<PyCFunction>(Gamepad_remove_GamepadAdded), METH_O, nullptr },
+        { "add_gamepad_removed", reinterpret_cast<PyCFunction>(Gamepad_add_GamepadRemoved), METH_O, nullptr },
+        { "remove_gamepad_removed", reinterpret_cast<PyCFunction>(Gamepad_remove_GamepadRemoved), METH_O, nullptr },
         { }
     };
 
@@ -2345,10 +2345,6 @@ namespace py::cpp::Windows::Gaming::Input
         { "remove_headset_disconnected", reinterpret_cast<PyCFunction>(RacingWheel_remove_HeadsetDisconnected), METH_O, nullptr },
         { "add_user_changed", reinterpret_cast<PyCFunction>(RacingWheel_add_UserChanged), METH_O, nullptr },
         { "remove_user_changed", reinterpret_cast<PyCFunction>(RacingWheel_remove_UserChanged), METH_O, nullptr },
-        { "add_racing_wheel_added", reinterpret_cast<PyCFunction>(RacingWheel_add_RacingWheelAdded), METH_O | METH_STATIC, nullptr },
-        { "remove_racing_wheel_added", reinterpret_cast<PyCFunction>(RacingWheel_remove_RacingWheelAdded), METH_O | METH_STATIC, nullptr },
-        { "add_racing_wheel_removed", reinterpret_cast<PyCFunction>(RacingWheel_add_RacingWheelRemoved), METH_O | METH_STATIC, nullptr },
-        { "remove_racing_wheel_removed", reinterpret_cast<PyCFunction>(RacingWheel_remove_RacingWheelRemoved), METH_O | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_RacingWheel, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RacingWheel), METH_O | METH_STATIC, nullptr },
         { }
@@ -2389,6 +2385,10 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyMethodDef methods_RacingWheel_Static[] = {
         { "from_game_controller", reinterpret_cast<PyCFunction>(RacingWheel_FromGameController), METH_VARARGS, nullptr },
+        { "add_racing_wheel_added", reinterpret_cast<PyCFunction>(RacingWheel_add_RacingWheelAdded), METH_O, nullptr },
+        { "remove_racing_wheel_added", reinterpret_cast<PyCFunction>(RacingWheel_remove_RacingWheelAdded), METH_O, nullptr },
+        { "add_racing_wheel_removed", reinterpret_cast<PyCFunction>(RacingWheel_add_RacingWheelRemoved), METH_O, nullptr },
+        { "remove_racing_wheel_removed", reinterpret_cast<PyCFunction>(RacingWheel_remove_RacingWheelRemoved), METH_O, nullptr },
         { }
     };
 
@@ -3078,10 +3078,6 @@ namespace py::cpp::Windows::Gaming::Input
         { "remove_headset_disconnected", reinterpret_cast<PyCFunction>(RawGameController_remove_HeadsetDisconnected), METH_O, nullptr },
         { "add_user_changed", reinterpret_cast<PyCFunction>(RawGameController_add_UserChanged), METH_O, nullptr },
         { "remove_user_changed", reinterpret_cast<PyCFunction>(RawGameController_remove_UserChanged), METH_O, nullptr },
-        { "add_raw_game_controller_added", reinterpret_cast<PyCFunction>(RawGameController_add_RawGameControllerAdded), METH_O | METH_STATIC, nullptr },
-        { "remove_raw_game_controller_added", reinterpret_cast<PyCFunction>(RawGameController_remove_RawGameControllerAdded), METH_O | METH_STATIC, nullptr },
-        { "add_raw_game_controller_removed", reinterpret_cast<PyCFunction>(RawGameController_add_RawGameControllerRemoved), METH_O | METH_STATIC, nullptr },
-        { "remove_raw_game_controller_removed", reinterpret_cast<PyCFunction>(RawGameController_remove_RawGameControllerRemoved), METH_O | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_RawGameController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RawGameController), METH_O | METH_STATIC, nullptr },
         { }
@@ -3125,6 +3121,10 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyMethodDef methods_RawGameController_Static[] = {
         { "from_game_controller", reinterpret_cast<PyCFunction>(RawGameController_FromGameController), METH_VARARGS, nullptr },
+        { "add_raw_game_controller_added", reinterpret_cast<PyCFunction>(RawGameController_add_RawGameControllerAdded), METH_O, nullptr },
+        { "remove_raw_game_controller_added", reinterpret_cast<PyCFunction>(RawGameController_remove_RawGameControllerAdded), METH_O, nullptr },
+        { "add_raw_game_controller_removed", reinterpret_cast<PyCFunction>(RawGameController_add_RawGameControllerRemoved), METH_O, nullptr },
+        { "remove_raw_game_controller_removed", reinterpret_cast<PyCFunction>(RawGameController_remove_RawGameControllerRemoved), METH_O, nullptr },
         { }
     };
 
@@ -3639,10 +3639,6 @@ namespace py::cpp::Windows::Gaming::Input
         { "remove_headset_disconnected", reinterpret_cast<PyCFunction>(UINavigationController_remove_HeadsetDisconnected), METH_O, nullptr },
         { "add_user_changed", reinterpret_cast<PyCFunction>(UINavigationController_add_UserChanged), METH_O, nullptr },
         { "remove_user_changed", reinterpret_cast<PyCFunction>(UINavigationController_remove_UserChanged), METH_O, nullptr },
-        { "add_u_i_navigation_controller_added", reinterpret_cast<PyCFunction>(UINavigationController_add_UINavigationControllerAdded), METH_O | METH_STATIC, nullptr },
-        { "remove_u_i_navigation_controller_added", reinterpret_cast<PyCFunction>(UINavigationController_remove_UINavigationControllerAdded), METH_O | METH_STATIC, nullptr },
-        { "add_u_i_navigation_controller_removed", reinterpret_cast<PyCFunction>(UINavigationController_add_UINavigationControllerRemoved), METH_O | METH_STATIC, nullptr },
-        { "remove_u_i_navigation_controller_removed", reinterpret_cast<PyCFunction>(UINavigationController_remove_UINavigationControllerRemoved), METH_O | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_UINavigationController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UINavigationController), METH_O | METH_STATIC, nullptr },
         { }
@@ -3677,6 +3673,10 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyMethodDef methods_UINavigationController_Static[] = {
         { "from_game_controller", reinterpret_cast<PyCFunction>(UINavigationController_FromGameController), METH_VARARGS, nullptr },
+        { "add_u_i_navigation_controller_added", reinterpret_cast<PyCFunction>(UINavigationController_add_UINavigationControllerAdded), METH_O, nullptr },
+        { "remove_u_i_navigation_controller_added", reinterpret_cast<PyCFunction>(UINavigationController_remove_UINavigationControllerAdded), METH_O, nullptr },
+        { "add_u_i_navigation_controller_removed", reinterpret_cast<PyCFunction>(UINavigationController_add_UINavigationControllerRemoved), METH_O, nullptr },
+        { "remove_u_i_navigation_controller_removed", reinterpret_cast<PyCFunction>(UINavigationController_remove_UINavigationControllerRemoved), METH_O, nullptr },
         { }
     };
 

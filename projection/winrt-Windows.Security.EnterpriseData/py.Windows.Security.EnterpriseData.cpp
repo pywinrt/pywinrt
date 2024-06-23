@@ -3516,14 +3516,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     }
 
     static PyMethodDef _methods_ProtectionPolicyManager[] = {
-        { "add_policy_changed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_add_PolicyChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_policy_changed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_remove_PolicyChanged), METH_O | METH_STATIC, nullptr },
-        { "add_protected_access_resumed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_add_ProtectedAccessResumed), METH_O | METH_STATIC, nullptr },
-        { "remove_protected_access_resumed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_remove_ProtectedAccessResumed), METH_O | METH_STATIC, nullptr },
-        { "add_protected_access_suspending", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_add_ProtectedAccessSuspending), METH_O | METH_STATIC, nullptr },
-        { "remove_protected_access_suspending", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_remove_ProtectedAccessSuspending), METH_O | METH_STATIC, nullptr },
-        { "add_protected_content_revoked", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_add_ProtectedContentRevoked), METH_O | METH_STATIC, nullptr },
-        { "remove_protected_content_revoked", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_remove_ProtectedContentRevoked), METH_O | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_ProtectionPolicyManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProtectionPolicyManager), METH_O | METH_STATIC, nullptr },
         { }
@@ -3579,6 +3571,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { "request_access_to_files_for_process_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessToFilesForProcessAsync), METH_VARARGS, nullptr },
         { "revoke_content", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RevokeContent), METH_VARARGS, nullptr },
         { "try_apply_process_u_i_policy", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_TryApplyProcessUIPolicy), METH_VARARGS, nullptr },
+        { "add_policy_changed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_add_PolicyChanged), METH_O, nullptr },
+        { "remove_policy_changed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_remove_PolicyChanged), METH_O, nullptr },
+        { "add_protected_access_resumed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_add_ProtectedAccessResumed), METH_O, nullptr },
+        { "remove_protected_access_resumed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_remove_ProtectedAccessResumed), METH_O, nullptr },
+        { "add_protected_access_suspending", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_add_ProtectedAccessSuspending), METH_O, nullptr },
+        { "remove_protected_access_suspending", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_remove_ProtectedAccessSuspending), METH_O, nullptr },
+        { "add_protected_content_revoked", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_add_ProtectedContentRevoked), METH_O, nullptr },
+        { "remove_protected_content_revoked", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_remove_ProtectedContentRevoked), METH_O, nullptr },
         { }
     };
 

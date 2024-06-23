@@ -77,8 +77,6 @@ namespace py::cpp::Windows::Media::Core::Preview
     }
 
     static PyMethodDef _methods_SoundLevelBroker[] = {
-        { "add_sound_level_changed", reinterpret_cast<PyCFunction>(SoundLevelBroker_add_SoundLevelChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_sound_level_changed", reinterpret_cast<PyCFunction>(SoundLevelBroker_remove_SoundLevelChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -106,6 +104,8 @@ namespace py::cpp::Windows::Media::Core::Preview
     };
 
     static PyMethodDef methods_SoundLevelBroker_Static[] = {
+        { "add_sound_level_changed", reinterpret_cast<PyCFunction>(SoundLevelBroker_add_SoundLevelChanged), METH_O, nullptr },
+        { "remove_sound_level_changed", reinterpret_cast<PyCFunction>(SoundLevelBroker_remove_SoundLevelChanged), METH_O, nullptr },
         { }
     };
 

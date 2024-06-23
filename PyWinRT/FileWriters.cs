@@ -209,7 +209,7 @@ static class FileWriters
                     w.WritePythonMethodTyping(method, ns, "cls");
                 }
 
-                foreach (var evt in type.Events.Where(e => e.AddMethod.IsStatic))
+                foreach (var evt in type.Events.Where(e => e.IsStatic))
                 {
                     w.WritePythonMethodTyping(evt.AddMethod, ns, "cls");
                     w.WritePythonMethodTyping(evt.RemoveMethod, ns, "cls");

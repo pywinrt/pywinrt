@@ -2586,8 +2586,6 @@ namespace py::cpp::Windows::Graphics::Display
         { "remove_stereo_enabled_changed", reinterpret_cast<PyCFunction>(DisplayInformation_remove_StereoEnabledChanged), METH_O, nullptr },
         { "add_advanced_color_info_changed", reinterpret_cast<PyCFunction>(DisplayInformation_add_AdvancedColorInfoChanged), METH_O, nullptr },
         { "remove_advanced_color_info_changed", reinterpret_cast<PyCFunction>(DisplayInformation_remove_AdvancedColorInfoChanged), METH_O, nullptr },
-        { "add_display_contents_invalidated", reinterpret_cast<PyCFunction>(DisplayInformation_add_DisplayContentsInvalidated), METH_O | METH_STATIC, nullptr },
-        { "remove_display_contents_invalidated", reinterpret_cast<PyCFunction>(DisplayInformation_remove_DisplayContentsInvalidated), METH_O | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_DisplayInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DisplayInformation), METH_O | METH_STATIC, nullptr },
         { }
@@ -2630,6 +2628,8 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyMethodDef methods_DisplayInformation_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(DisplayInformation_GetForCurrentView), METH_VARARGS, nullptr },
+        { "add_display_contents_invalidated", reinterpret_cast<PyCFunction>(DisplayInformation_add_DisplayContentsInvalidated), METH_O, nullptr },
+        { "remove_display_contents_invalidated", reinterpret_cast<PyCFunction>(DisplayInformation_remove_DisplayContentsInvalidated), METH_O, nullptr },
         { }
     };
 
@@ -3046,16 +3046,6 @@ namespace py::cpp::Windows::Graphics::Display
     }
 
     static PyMethodDef _methods_DisplayProperties[] = {
-        { "add_color_profile_changed", reinterpret_cast<PyCFunction>(DisplayProperties_add_ColorProfileChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_color_profile_changed", reinterpret_cast<PyCFunction>(DisplayProperties_remove_ColorProfileChanged), METH_O | METH_STATIC, nullptr },
-        { "add_display_contents_invalidated", reinterpret_cast<PyCFunction>(DisplayProperties_add_DisplayContentsInvalidated), METH_O | METH_STATIC, nullptr },
-        { "remove_display_contents_invalidated", reinterpret_cast<PyCFunction>(DisplayProperties_remove_DisplayContentsInvalidated), METH_O | METH_STATIC, nullptr },
-        { "add_logical_dpi_changed", reinterpret_cast<PyCFunction>(DisplayProperties_add_LogicalDpiChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_logical_dpi_changed", reinterpret_cast<PyCFunction>(DisplayProperties_remove_LogicalDpiChanged), METH_O | METH_STATIC, nullptr },
-        { "add_orientation_changed", reinterpret_cast<PyCFunction>(DisplayProperties_add_OrientationChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_orientation_changed", reinterpret_cast<PyCFunction>(DisplayProperties_remove_OrientationChanged), METH_O | METH_STATIC, nullptr },
-        { "add_stereo_enabled_changed", reinterpret_cast<PyCFunction>(DisplayProperties_add_StereoEnabledChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_stereo_enabled_changed", reinterpret_cast<PyCFunction>(DisplayProperties_remove_StereoEnabledChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -3089,6 +3079,16 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyMethodDef methods_DisplayProperties_Static[] = {
         { "get_color_profile_async", reinterpret_cast<PyCFunction>(DisplayProperties_GetColorProfileAsync), METH_VARARGS, nullptr },
+        { "add_color_profile_changed", reinterpret_cast<PyCFunction>(DisplayProperties_add_ColorProfileChanged), METH_O, nullptr },
+        { "remove_color_profile_changed", reinterpret_cast<PyCFunction>(DisplayProperties_remove_ColorProfileChanged), METH_O, nullptr },
+        { "add_display_contents_invalidated", reinterpret_cast<PyCFunction>(DisplayProperties_add_DisplayContentsInvalidated), METH_O, nullptr },
+        { "remove_display_contents_invalidated", reinterpret_cast<PyCFunction>(DisplayProperties_remove_DisplayContentsInvalidated), METH_O, nullptr },
+        { "add_logical_dpi_changed", reinterpret_cast<PyCFunction>(DisplayProperties_add_LogicalDpiChanged), METH_O, nullptr },
+        { "remove_logical_dpi_changed", reinterpret_cast<PyCFunction>(DisplayProperties_remove_LogicalDpiChanged), METH_O, nullptr },
+        { "add_orientation_changed", reinterpret_cast<PyCFunction>(DisplayProperties_add_OrientationChanged), METH_O, nullptr },
+        { "remove_orientation_changed", reinterpret_cast<PyCFunction>(DisplayProperties_remove_OrientationChanged), METH_O, nullptr },
+        { "add_stereo_enabled_changed", reinterpret_cast<PyCFunction>(DisplayProperties_add_StereoEnabledChanged), METH_O, nullptr },
+        { "remove_stereo_enabled_changed", reinterpret_cast<PyCFunction>(DisplayProperties_remove_StereoEnabledChanged), METH_O, nullptr },
         { }
     };
 

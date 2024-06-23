@@ -1312,8 +1312,6 @@ namespace py::cpp::Windows::System::Profile
     }
 
     static PyMethodDef _methods_PlatformDiagnosticsAndUsageDataSettings[] = {
-        { "add_collection_level_changed", reinterpret_cast<PyCFunction>(PlatformDiagnosticsAndUsageDataSettings_add_CollectionLevelChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_collection_level_changed", reinterpret_cast<PyCFunction>(PlatformDiagnosticsAndUsageDataSettings_remove_CollectionLevelChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -1342,6 +1340,8 @@ namespace py::cpp::Windows::System::Profile
 
     static PyMethodDef methods_PlatformDiagnosticsAndUsageDataSettings_Static[] = {
         { "can_collect_diagnostics", reinterpret_cast<PyCFunction>(PlatformDiagnosticsAndUsageDataSettings_CanCollectDiagnostics), METH_VARARGS, nullptr },
+        { "add_collection_level_changed", reinterpret_cast<PyCFunction>(PlatformDiagnosticsAndUsageDataSettings_add_CollectionLevelChanged), METH_O, nullptr },
+        { "remove_collection_level_changed", reinterpret_cast<PyCFunction>(PlatformDiagnosticsAndUsageDataSettings_remove_CollectionLevelChanged), METH_O, nullptr },
         { }
     };
 
@@ -1626,8 +1626,6 @@ namespace py::cpp::Windows::System::Profile
     }
 
     static PyMethodDef _methods_SmartAppControlPolicy[] = {
-        { "add_changed", reinterpret_cast<PyCFunction>(SmartAppControlPolicy_add_Changed), METH_O | METH_STATIC, nullptr },
-        { "remove_changed", reinterpret_cast<PyCFunction>(SmartAppControlPolicy_remove_Changed), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -1655,6 +1653,8 @@ namespace py::cpp::Windows::System::Profile
     };
 
     static PyMethodDef methods_SmartAppControlPolicy_Static[] = {
+        { "add_changed", reinterpret_cast<PyCFunction>(SmartAppControlPolicy_add_Changed), METH_O, nullptr },
+        { "remove_changed", reinterpret_cast<PyCFunction>(SmartAppControlPolicy_remove_Changed), METH_O, nullptr },
         { }
     };
 
@@ -1971,8 +1971,6 @@ namespace py::cpp::Windows::System::Profile
     }
 
     static PyMethodDef _methods_SystemSetupInfo[] = {
-        { "add_out_of_box_experience_state_changed", reinterpret_cast<PyCFunction>(SystemSetupInfo_add_OutOfBoxExperienceStateChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_out_of_box_experience_state_changed", reinterpret_cast<PyCFunction>(SystemSetupInfo_remove_OutOfBoxExperienceStateChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -2000,6 +1998,8 @@ namespace py::cpp::Windows::System::Profile
     };
 
     static PyMethodDef methods_SystemSetupInfo_Static[] = {
+        { "add_out_of_box_experience_state_changed", reinterpret_cast<PyCFunction>(SystemSetupInfo_add_OutOfBoxExperienceStateChanged), METH_O, nullptr },
+        { "remove_out_of_box_experience_state_changed", reinterpret_cast<PyCFunction>(SystemSetupInfo_remove_OutOfBoxExperienceStateChanged), METH_O, nullptr },
         { }
     };
 
@@ -2255,8 +2255,6 @@ namespace py::cpp::Windows::System::Profile
     }
 
     static PyMethodDef _methods_WindowsIntegrityPolicy[] = {
-        { "add_policy_changed", reinterpret_cast<PyCFunction>(WindowsIntegrityPolicy_add_PolicyChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_policy_changed", reinterpret_cast<PyCFunction>(WindowsIntegrityPolicy_remove_PolicyChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -2287,6 +2285,8 @@ namespace py::cpp::Windows::System::Profile
     };
 
     static PyMethodDef methods_WindowsIntegrityPolicy_Static[] = {
+        { "add_policy_changed", reinterpret_cast<PyCFunction>(WindowsIntegrityPolicy_add_PolicyChanged), METH_O, nullptr },
+        { "remove_policy_changed", reinterpret_cast<PyCFunction>(WindowsIntegrityPolicy_remove_PolicyChanged), METH_O, nullptr },
         { }
     };
 

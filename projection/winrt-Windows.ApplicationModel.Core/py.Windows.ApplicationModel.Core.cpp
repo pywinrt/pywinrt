@@ -928,20 +928,6 @@ namespace py::cpp::Windows::ApplicationModel::Core
     }
 
     static PyMethodDef _methods_CoreApplication[] = {
-        { "add_unhandled_error_detected", reinterpret_cast<PyCFunction>(CoreApplication_add_UnhandledErrorDetected), METH_O | METH_STATIC, nullptr },
-        { "remove_unhandled_error_detected", reinterpret_cast<PyCFunction>(CoreApplication_remove_UnhandledErrorDetected), METH_O | METH_STATIC, nullptr },
-        { "add_exiting", reinterpret_cast<PyCFunction>(CoreApplication_add_Exiting), METH_O | METH_STATIC, nullptr },
-        { "remove_exiting", reinterpret_cast<PyCFunction>(CoreApplication_remove_Exiting), METH_O | METH_STATIC, nullptr },
-        { "add_background_activated", reinterpret_cast<PyCFunction>(CoreApplication_add_BackgroundActivated), METH_O | METH_STATIC, nullptr },
-        { "remove_background_activated", reinterpret_cast<PyCFunction>(CoreApplication_remove_BackgroundActivated), METH_O | METH_STATIC, nullptr },
-        { "add_entered_background", reinterpret_cast<PyCFunction>(CoreApplication_add_EnteredBackground), METH_O | METH_STATIC, nullptr },
-        { "remove_entered_background", reinterpret_cast<PyCFunction>(CoreApplication_remove_EnteredBackground), METH_O | METH_STATIC, nullptr },
-        { "add_leaving_background", reinterpret_cast<PyCFunction>(CoreApplication_add_LeavingBackground), METH_O | METH_STATIC, nullptr },
-        { "remove_leaving_background", reinterpret_cast<PyCFunction>(CoreApplication_remove_LeavingBackground), METH_O | METH_STATIC, nullptr },
-        { "add_resuming", reinterpret_cast<PyCFunction>(CoreApplication_add_Resuming), METH_O | METH_STATIC, nullptr },
-        { "remove_resuming", reinterpret_cast<PyCFunction>(CoreApplication_remove_Resuming), METH_O | METH_STATIC, nullptr },
-        { "add_suspending", reinterpret_cast<PyCFunction>(CoreApplication_add_Suspending), METH_O | METH_STATIC, nullptr },
-        { "remove_suspending", reinterpret_cast<PyCFunction>(CoreApplication_remove_Suspending), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -982,6 +968,20 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { "request_restart_for_user_async", reinterpret_cast<PyCFunction>(CoreApplication_RequestRestartForUserAsync), METH_VARARGS, nullptr },
         { "run", reinterpret_cast<PyCFunction>(CoreApplication_Run), METH_VARARGS, nullptr },
         { "run_with_activation_factories", reinterpret_cast<PyCFunction>(CoreApplication_RunWithActivationFactories), METH_VARARGS, nullptr },
+        { "add_unhandled_error_detected", reinterpret_cast<PyCFunction>(CoreApplication_add_UnhandledErrorDetected), METH_O, nullptr },
+        { "remove_unhandled_error_detected", reinterpret_cast<PyCFunction>(CoreApplication_remove_UnhandledErrorDetected), METH_O, nullptr },
+        { "add_exiting", reinterpret_cast<PyCFunction>(CoreApplication_add_Exiting), METH_O, nullptr },
+        { "remove_exiting", reinterpret_cast<PyCFunction>(CoreApplication_remove_Exiting), METH_O, nullptr },
+        { "add_background_activated", reinterpret_cast<PyCFunction>(CoreApplication_add_BackgroundActivated), METH_O, nullptr },
+        { "remove_background_activated", reinterpret_cast<PyCFunction>(CoreApplication_remove_BackgroundActivated), METH_O, nullptr },
+        { "add_entered_background", reinterpret_cast<PyCFunction>(CoreApplication_add_EnteredBackground), METH_O, nullptr },
+        { "remove_entered_background", reinterpret_cast<PyCFunction>(CoreApplication_remove_EnteredBackground), METH_O, nullptr },
+        { "add_leaving_background", reinterpret_cast<PyCFunction>(CoreApplication_add_LeavingBackground), METH_O, nullptr },
+        { "remove_leaving_background", reinterpret_cast<PyCFunction>(CoreApplication_remove_LeavingBackground), METH_O, nullptr },
+        { "add_resuming", reinterpret_cast<PyCFunction>(CoreApplication_add_Resuming), METH_O, nullptr },
+        { "remove_resuming", reinterpret_cast<PyCFunction>(CoreApplication_remove_Resuming), METH_O, nullptr },
+        { "add_suspending", reinterpret_cast<PyCFunction>(CoreApplication_add_Suspending), METH_O, nullptr },
+        { "remove_suspending", reinterpret_cast<PyCFunction>(CoreApplication_remove_Suspending), METH_O, nullptr },
         { }
     };
 

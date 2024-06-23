@@ -677,10 +677,6 @@ namespace py::cpp::Windows::Networking::Proximity
     }
 
     static PyMethodDef _methods_PeerFinder[] = {
-        { "add_connection_requested", reinterpret_cast<PyCFunction>(PeerFinder_add_ConnectionRequested), METH_O | METH_STATIC, nullptr },
-        { "remove_connection_requested", reinterpret_cast<PyCFunction>(PeerFinder_remove_ConnectionRequested), METH_O | METH_STATIC, nullptr },
-        { "add_triggered_connection_state_changed", reinterpret_cast<PyCFunction>(PeerFinder_add_TriggeredConnectionStateChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_triggered_connection_state_changed", reinterpret_cast<PyCFunction>(PeerFinder_remove_TriggeredConnectionStateChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -720,6 +716,10 @@ namespace py::cpp::Windows::Networking::Proximity
         { "find_all_peers_async", reinterpret_cast<PyCFunction>(PeerFinder_FindAllPeersAsync), METH_VARARGS, nullptr },
         { "start", reinterpret_cast<PyCFunction>(PeerFinder_Start), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(PeerFinder_Stop), METH_VARARGS, nullptr },
+        { "add_connection_requested", reinterpret_cast<PyCFunction>(PeerFinder_add_ConnectionRequested), METH_O, nullptr },
+        { "remove_connection_requested", reinterpret_cast<PyCFunction>(PeerFinder_remove_ConnectionRequested), METH_O, nullptr },
+        { "add_triggered_connection_state_changed", reinterpret_cast<PyCFunction>(PeerFinder_add_TriggeredConnectionStateChanged), METH_O, nullptr },
+        { "remove_triggered_connection_state_changed", reinterpret_cast<PyCFunction>(PeerFinder_remove_TriggeredConnectionStateChanged), METH_O, nullptr },
         { }
     };
 

@@ -3308,12 +3308,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     }
 
     static PyMethodDef _methods_CompositionTarget[] = {
-        { "add_rendered", reinterpret_cast<PyCFunction>(CompositionTarget_add_Rendered), METH_O | METH_STATIC, nullptr },
-        { "remove_rendered", reinterpret_cast<PyCFunction>(CompositionTarget_remove_Rendered), METH_O | METH_STATIC, nullptr },
-        { "add_rendering", reinterpret_cast<PyCFunction>(CompositionTarget_add_Rendering), METH_O | METH_STATIC, nullptr },
-        { "remove_rendering", reinterpret_cast<PyCFunction>(CompositionTarget_remove_Rendering), METH_O | METH_STATIC, nullptr },
-        { "add_surface_contents_lost", reinterpret_cast<PyCFunction>(CompositionTarget_add_SurfaceContentsLost), METH_O | METH_STATIC, nullptr },
-        { "remove_surface_contents_lost", reinterpret_cast<PyCFunction>(CompositionTarget_remove_SurfaceContentsLost), METH_O | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_CompositionTarget, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionTarget), METH_O | METH_STATIC, nullptr },
         { }
@@ -3343,6 +3337,12 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     static PyMethodDef methods_CompositionTarget_Static[] = {
+        { "add_rendered", reinterpret_cast<PyCFunction>(CompositionTarget_add_Rendered), METH_O, nullptr },
+        { "remove_rendered", reinterpret_cast<PyCFunction>(CompositionTarget_remove_Rendered), METH_O, nullptr },
+        { "add_rendering", reinterpret_cast<PyCFunction>(CompositionTarget_add_Rendering), METH_O, nullptr },
+        { "remove_rendering", reinterpret_cast<PyCFunction>(CompositionTarget_remove_Rendering), METH_O, nullptr },
+        { "add_surface_contents_lost", reinterpret_cast<PyCFunction>(CompositionTarget_add_SurfaceContentsLost), METH_O, nullptr },
+        { "remove_surface_contents_lost", reinterpret_cast<PyCFunction>(CompositionTarget_remove_SurfaceContentsLost), METH_O, nullptr },
         { }
     };
 

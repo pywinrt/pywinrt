@@ -3574,8 +3574,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     }
 
     static PyMethodDef _methods_NetworkInformation[] = {
-        { "add_network_status_changed", reinterpret_cast<PyCFunction>(NetworkInformation_add_NetworkStatusChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_network_status_changed", reinterpret_cast<PyCFunction>(NetworkInformation_remove_NetworkStatusChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -3609,6 +3607,8 @@ namespace py::cpp::Windows::Networking::Connectivity
         { "get_lan_identifiers", reinterpret_cast<PyCFunction>(NetworkInformation_GetLanIdentifiers), METH_VARARGS, nullptr },
         { "get_proxy_configuration_async", reinterpret_cast<PyCFunction>(NetworkInformation_GetProxyConfigurationAsync), METH_VARARGS, nullptr },
         { "get_sorted_endpoint_pairs", reinterpret_cast<PyCFunction>(NetworkInformation_GetSortedEndpointPairs), METH_VARARGS, nullptr },
+        { "add_network_status_changed", reinterpret_cast<PyCFunction>(NetworkInformation_add_NetworkStatusChanged), METH_O, nullptr },
+        { "remove_network_status_changed", reinterpret_cast<PyCFunction>(NetworkInformation_remove_NetworkStatusChanged), METH_O, nullptr },
         { }
     };
 

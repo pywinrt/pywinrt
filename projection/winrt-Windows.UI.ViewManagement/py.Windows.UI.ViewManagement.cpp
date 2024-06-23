@@ -3904,8 +3904,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     }
 
     static PyMethodDef _methods_ProjectionManager[] = {
-        { "add_projection_display_available_changed", reinterpret_cast<PyCFunction>(ProjectionManager_add_ProjectionDisplayAvailableChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_projection_display_available_changed", reinterpret_cast<PyCFunction>(ProjectionManager_remove_ProjectionDisplayAvailableChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -3938,6 +3936,8 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "start_projecting_async", reinterpret_cast<PyCFunction>(ProjectionManager_StartProjectingAsync), METH_VARARGS, nullptr },
         { "stop_projecting_async", reinterpret_cast<PyCFunction>(ProjectionManager_StopProjectingAsync), METH_VARARGS, nullptr },
         { "swap_displays_for_views_async", reinterpret_cast<PyCFunction>(ProjectionManager_SwapDisplaysForViewsAsync), METH_VARARGS, nullptr },
+        { "add_projection_display_available_changed", reinterpret_cast<PyCFunction>(ProjectionManager_add_ProjectionDisplayAvailableChanged), METH_O, nullptr },
+        { "remove_projection_display_available_changed", reinterpret_cast<PyCFunction>(ProjectionManager_remove_ProjectionDisplayAvailableChanged), METH_O, nullptr },
         { }
     };
 

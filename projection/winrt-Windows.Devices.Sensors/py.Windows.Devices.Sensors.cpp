@@ -7716,8 +7716,6 @@ namespace py::cpp::Windows::Devices::Sensors
     }
 
     static PyMethodDef _methods_HumanPresenceSettings[] = {
-        { "add_settings_changed", reinterpret_cast<PyCFunction>(HumanPresenceSettings_add_SettingsChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_settings_changed", reinterpret_cast<PyCFunction>(HumanPresenceSettings_remove_SettingsChanged), METH_O | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_HumanPresenceSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HumanPresenceSettings), METH_O | METH_STATIC, nullptr },
         { }
@@ -7765,6 +7763,8 @@ namespace py::cpp::Windows::Devices::Sensors
         { "get_supported_lock_on_leave_timeouts", reinterpret_cast<PyCFunction>(HumanPresenceSettings_GetSupportedLockOnLeaveTimeouts), METH_VARARGS, nullptr },
         { "update_settings", reinterpret_cast<PyCFunction>(HumanPresenceSettings_UpdateSettings), METH_VARARGS, nullptr },
         { "update_settings_async", reinterpret_cast<PyCFunction>(HumanPresenceSettings_UpdateSettingsAsync), METH_VARARGS, nullptr },
+        { "add_settings_changed", reinterpret_cast<PyCFunction>(HumanPresenceSettings_add_SettingsChanged), METH_O, nullptr },
+        { "remove_settings_changed", reinterpret_cast<PyCFunction>(HumanPresenceSettings_remove_SettingsChanged), METH_O, nullptr },
         { }
     };
 

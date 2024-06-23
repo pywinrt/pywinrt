@@ -139,10 +139,6 @@ namespace py::cpp::Windows::Gaming::UI
     }
 
     static PyMethodDef _methods_GameBar[] = {
-        { "add_is_input_redirected_changed", reinterpret_cast<PyCFunction>(GameBar_add_IsInputRedirectedChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_is_input_redirected_changed", reinterpret_cast<PyCFunction>(GameBar_remove_IsInputRedirectedChanged), METH_O | METH_STATIC, nullptr },
-        { "add_visibility_changed", reinterpret_cast<PyCFunction>(GameBar_add_VisibilityChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_visibility_changed", reinterpret_cast<PyCFunction>(GameBar_remove_VisibilityChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -171,6 +167,10 @@ namespace py::cpp::Windows::Gaming::UI
     };
 
     static PyMethodDef methods_GameBar_Static[] = {
+        { "add_is_input_redirected_changed", reinterpret_cast<PyCFunction>(GameBar_add_IsInputRedirectedChanged), METH_O, nullptr },
+        { "remove_is_input_redirected_changed", reinterpret_cast<PyCFunction>(GameBar_remove_IsInputRedirectedChanged), METH_O, nullptr },
+        { "add_visibility_changed", reinterpret_cast<PyCFunction>(GameBar_add_VisibilityChanged), METH_O, nullptr },
+        { "remove_visibility_changed", reinterpret_cast<PyCFunction>(GameBar_remove_VisibilityChanged), METH_O, nullptr },
         { }
     };
 

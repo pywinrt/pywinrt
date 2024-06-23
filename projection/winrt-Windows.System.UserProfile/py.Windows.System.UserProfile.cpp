@@ -2118,8 +2118,6 @@ namespace py::cpp::Windows::System::UserProfile
     }
 
     static PyMethodDef _methods_UserInformation[] = {
-        { "add_account_picture_changed", reinterpret_cast<PyCFunction>(UserInformation_add_AccountPictureChanged), METH_O | METH_STATIC, nullptr },
-        { "remove_account_picture_changed", reinterpret_cast<PyCFunction>(UserInformation_remove_AccountPictureChanged), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -2159,6 +2157,8 @@ namespace py::cpp::Windows::System::UserProfile
         { "set_account_picture_from_stream_async", reinterpret_cast<PyCFunction>(UserInformation_SetAccountPictureFromStreamAsync), METH_VARARGS, nullptr },
         { "set_account_pictures_async", reinterpret_cast<PyCFunction>(UserInformation_SetAccountPicturesAsync), METH_VARARGS, nullptr },
         { "set_account_pictures_from_streams_async", reinterpret_cast<PyCFunction>(UserInformation_SetAccountPicturesFromStreamsAsync), METH_VARARGS, nullptr },
+        { "add_account_picture_changed", reinterpret_cast<PyCFunction>(UserInformation_add_AccountPictureChanged), METH_O, nullptr },
+        { "remove_account_picture_changed", reinterpret_cast<PyCFunction>(UserInformation_remove_AccountPictureChanged), METH_O, nullptr },
         { }
     };
 

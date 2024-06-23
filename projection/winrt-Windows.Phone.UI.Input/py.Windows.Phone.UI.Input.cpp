@@ -367,14 +367,6 @@ namespace py::cpp::Windows::Phone::UI::Input
     }
 
     static PyMethodDef _methods_HardwareButtons[] = {
-        { "add_back_pressed", reinterpret_cast<PyCFunction>(HardwareButtons_add_BackPressed), METH_O | METH_STATIC, nullptr },
-        { "remove_back_pressed", reinterpret_cast<PyCFunction>(HardwareButtons_remove_BackPressed), METH_O | METH_STATIC, nullptr },
-        { "add_camera_half_pressed", reinterpret_cast<PyCFunction>(HardwareButtons_add_CameraHalfPressed), METH_O | METH_STATIC, nullptr },
-        { "remove_camera_half_pressed", reinterpret_cast<PyCFunction>(HardwareButtons_remove_CameraHalfPressed), METH_O | METH_STATIC, nullptr },
-        { "add_camera_pressed", reinterpret_cast<PyCFunction>(HardwareButtons_add_CameraPressed), METH_O | METH_STATIC, nullptr },
-        { "remove_camera_pressed", reinterpret_cast<PyCFunction>(HardwareButtons_remove_CameraPressed), METH_O | METH_STATIC, nullptr },
-        { "add_camera_released", reinterpret_cast<PyCFunction>(HardwareButtons_add_CameraReleased), METH_O | METH_STATIC, nullptr },
-        { "remove_camera_released", reinterpret_cast<PyCFunction>(HardwareButtons_remove_CameraReleased), METH_O | METH_STATIC, nullptr },
         { }
     };
 
@@ -401,6 +393,14 @@ namespace py::cpp::Windows::Phone::UI::Input
     };
 
     static PyMethodDef methods_HardwareButtons_Static[] = {
+        { "add_back_pressed", reinterpret_cast<PyCFunction>(HardwareButtons_add_BackPressed), METH_O, nullptr },
+        { "remove_back_pressed", reinterpret_cast<PyCFunction>(HardwareButtons_remove_BackPressed), METH_O, nullptr },
+        { "add_camera_half_pressed", reinterpret_cast<PyCFunction>(HardwareButtons_add_CameraHalfPressed), METH_O, nullptr },
+        { "remove_camera_half_pressed", reinterpret_cast<PyCFunction>(HardwareButtons_remove_CameraHalfPressed), METH_O, nullptr },
+        { "add_camera_pressed", reinterpret_cast<PyCFunction>(HardwareButtons_add_CameraPressed), METH_O, nullptr },
+        { "remove_camera_pressed", reinterpret_cast<PyCFunction>(HardwareButtons_remove_CameraPressed), METH_O, nullptr },
+        { "add_camera_released", reinterpret_cast<PyCFunction>(HardwareButtons_add_CameraReleased), METH_O, nullptr },
+        { "remove_camera_released", reinterpret_cast<PyCFunction>(HardwareButtons_remove_CameraReleased), METH_O, nullptr },
         { }
     };
 

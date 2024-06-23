@@ -47,16 +47,15 @@ static class WriterExtensions
         w.WriteGetSetTable(type);
         w.WriteTypeSlotTable(type);
         w.WriteTypeSpec(type);
-        w.WriteMetaclass(type);
+
+        if (type.PyRequiresMetaclass)
+        {
+            w.WriteMetaclass(type);
+        }
     }
 
     static void WriteMetaclass(this IndentedTextWriter w, ProjectedType type)
     {
-        if (!type.PyRequiresMetaclass)
-        {
-            return;
-        }
-
         w.WriteMetaclassPropertyGetsetTable(type);
         w.WriteMetaclassMethodTable(type);
 
@@ -119,6 +118,16 @@ static class WriterExtensions
         {
             w.WriteLine(
                 $"{{ \"{method.Name.ToPythonIdentifier()}\", reinterpret_cast<PyCFunction>({type.Name}_{method.Name}), METH_VARARGS, nullptr }},"
+            );
+        }
+
+        foreach (var @event in type.Events.Where(e => e.IsStatic))
+        {
+            w.WriteLine(
+                $"{{ \"{@event.AddMethod.Name.ToPythonIdentifier()}\", reinterpret_cast<PyCFunction>({type.Name}_{@event.AddMethod.Name}), METH_O, nullptr }},"
+            );
+            w.WriteLine(
+                $"{{ \"{@event.RemoveMethod.Name.ToPythonIdentifier()}\", reinterpret_cast<PyCFunction>({type.Name}_{@event.RemoveMethod.Name}), METH_O, nullptr }},"
             );
         }
 
@@ -278,10 +287,9 @@ static class WriterExtensions
         void writeRow(ProjectedMethod method)
         {
             var argumentConventionFlag = getArgumentConventionFlag(method);
-            var staticFlag = method.IsStatic || method.IsConstructor ? " | METH_STATIC" : "";
 
             w.WriteLine(
-                $"{{ \"{method.Name.ToPythonIdentifier()}\", reinterpret_cast<PyCFunction>({type.Name}_{method.Name}), {argumentConventionFlag}{staticFlag}, nullptr }},"
+                $"{{ \"{method.Name.ToPythonIdentifier()}\", reinterpret_cast<PyCFunction>({type.Name}_{method.Name}), {argumentConventionFlag}, nullptr }},"
             );
         }
 
@@ -294,8 +302,7 @@ static class WriterExtensions
             writeRow(method);
         }
 
-        // FIXME: this should only be non-static events
-        foreach (var evt in type.Events)
+        foreach (var evt in type.Events.Where(e => !e.IsStatic))
         {
             writeRow(evt.AddMethod);
             writeRow(evt.RemoveMethod);
