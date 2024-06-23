@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 option(PYWINRT_FULL_PROJECTION "Build full projection" ON)
 set(PYWINRT_SITE_PACKAGES_DIR "." CACHE STRING "Python site-packages install prefix")
 
-set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
 link_libraries("RuntimeObject.lib")
 
 if (MSVC)
