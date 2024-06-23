@@ -2836,6 +2836,25 @@ namespace py::cpp::Windows::UI::WindowManagement
         Py_DECREF(tp);
     }
 
+    static PyObject* CompactOverlayPresentationConfiguration_get_Kind(py::wrapper::Windows::UI::WindowManagement::CompactOverlayPresentationConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WindowManagement.AppWindowPresentationConfiguration", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Kind());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_CompactOverlayPresentationConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::WindowManagement::CompactOverlayPresentationConfiguration>>();
@@ -2867,6 +2886,7 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     static PyGetSetDef _getset_CompactOverlayPresentationConfiguration[] = {
+        { "kind", reinterpret_cast<getter>(CompactOverlayPresentationConfiguration_get_Kind), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -2924,6 +2944,25 @@ namespace py::cpp::Windows::UI::WindowManagement
         Py_DECREF(tp);
     }
 
+    static PyObject* DefaultPresentationConfiguration_get_Kind(py::wrapper::Windows::UI::WindowManagement::DefaultPresentationConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WindowManagement.AppWindowPresentationConfiguration", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Kind());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DefaultPresentationConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::WindowManagement::DefaultPresentationConfiguration>>();
@@ -2955,6 +2994,7 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     static PyGetSetDef _getset_DefaultPresentationConfiguration[] = {
+        { "kind", reinterpret_cast<getter>(DefaultPresentationConfiguration_get_Kind), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -3270,6 +3310,25 @@ namespace py::cpp::Windows::UI::WindowManagement
         }
     }
 
+    static PyObject* FullScreenPresentationConfiguration_get_Kind(py::wrapper::Windows::UI::WindowManagement::FullScreenPresentationConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.WindowManagement.AppWindowPresentationConfiguration", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Kind());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_FullScreenPresentationConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::WindowManagement::FullScreenPresentationConfiguration>>();
@@ -3302,6 +3361,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyGetSetDef _getset_FullScreenPresentationConfiguration[] = {
         { "is_exclusive", reinterpret_cast<getter>(FullScreenPresentationConfiguration_get_IsExclusive), reinterpret_cast<setter>(FullScreenPresentationConfiguration_put_IsExclusive), nullptr, nullptr },
+        { "kind", reinterpret_cast<getter>(FullScreenPresentationConfiguration_get_Kind), nullptr, nullptr, nullptr },
         { }
     };
 

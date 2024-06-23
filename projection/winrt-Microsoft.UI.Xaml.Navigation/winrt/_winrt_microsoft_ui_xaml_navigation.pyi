@@ -9,9 +9,11 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
+import winrt.microsoft.ui.dispatching as microsoft_ui_dispatching
 import winrt.microsoft.ui.xaml as microsoft_ui_xaml
 import winrt.microsoft.ui.xaml.media.animation as microsoft_ui_xaml_media_animation
 import winrt.windows.foundation as windows_foundation
+import winrt.windows.ui.core as windows_ui_core
 import winrt.windows.ui.xaml.interop as windows_ui_xaml_interop
 
 from winrt.microsoft.ui.xaml.navigation import NavigationCacheMode, NavigationMode
@@ -105,4 +107,8 @@ class PageStackEntry(winrt.system.Object, metaclass=PageStackEntry_Static):
     def parameter(self) -> typing.Optional[winrt.system.Object]: ...
     @_property
     def source_page_type(self) -> windows_ui_xaml_interop.TypeName: ...
+    @_property
+    def dispatcher(self) -> typing.Optional[windows_ui_core.CoreDispatcher]: ...
+    @_property
+    def dispatcher_queue(self) -> typing.Optional[microsoft_ui_dispatching.DispatcherQueue]: ...
 

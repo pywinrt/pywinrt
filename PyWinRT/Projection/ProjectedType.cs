@@ -461,6 +461,32 @@ class ProjectedType
 
         addInterfaces(type);
 
+        void addBaseClasses(TypeDefinition parent)
+        {
+            if (parent.BaseType is null || parent.BaseType.Namespace == "System")
+            {
+                return;
+            }
+
+            var resolvedType = parent.BaseType.Resolve();
+
+            inheritance.Push(parent.BaseType);
+            add(
+                resolvedType.Properties.Where(m =>
+                    (m.GetMethod?.IsPublic ?? false) && !(m.GetMethod?.IsStatic ?? false)
+                ),
+                inheritance.Reverse().ToList(),
+                default
+            );
+            addBaseClasses(resolvedType);
+            inheritance.Pop();
+        }
+
+        if (type.GetCategory() == Category.Class)
+        {
+            addBaseClasses(type);
+        }
+
         return collectedProperties;
     }
 

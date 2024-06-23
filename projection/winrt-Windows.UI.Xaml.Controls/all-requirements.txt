@@ -5,6 +5,7 @@ winrt-Windows.ApplicationModel.DataTransfer[all]==0.0.0
 winrt-Windows.ApplicationModel.Search[all]==0.0.0
 winrt-Windows.Foundation[all]==0.0.0
 winrt-Windows.Foundation.Collections[all]==0.0.0
+winrt-Windows.Foundation.Numerics[all]==0.0.0
 winrt-Windows.Globalization[all]==0.0.0
 winrt-Windows.Media.Capture[all]==0.0.0
 winrt-Windows.Media.Casting[all]==0.0.0
@@ -30,6 +31,7 @@ winrt-Windows.UI.Xaml.Input[all]==0.0.0
 winrt-Windows.UI.Xaml.Interop[all]==0.0.0
 winrt-Windows.UI.Xaml.Media[all]==0.0.0
 winrt-Windows.UI.Xaml.Media.Animation[all]==0.0.0
+winrt-Windows.UI.Xaml.Media.Media3D[all]==0.0.0
 winrt-Windows.UI.Xaml.Navigation[all]==0.0.0
 winrt-Windows.Web[all]==0.0.0
 winrt-Windows.Web.Http[all]==0.0.0

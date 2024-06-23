@@ -286,6 +286,223 @@ namespace py::cpp::Windows::UI::Composition::Desktop
         }
     }
 
+    static PyObject* DesktopWindowTarget_get_Root(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionTarget", L"Root"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Root());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int DesktopWindowTarget_put_Root(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionTarget", L"Root"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Composition::Visual>(arg);
+
+            self->obj.Root(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* DesktopWindowTarget_get_Compositor(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Compositor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Compositor());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopWindowTarget_get_Dispatcher(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopWindowTarget_get_Properties(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Properties());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopWindowTarget_get_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ImplicitAnimations());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int DesktopWindowTarget_put_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Composition::ImplicitAnimationCollection>(arg);
+
+            self->obj.ImplicitAnimations(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* DesktopWindowTarget_get_Comment(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Comment());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int DesktopWindowTarget_put_Comment(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Comment(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* DesktopWindowTarget_get_DispatcherQueue(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DesktopWindowTarget(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Desktop::DesktopWindowTarget>>();
@@ -325,6 +542,13 @@ namespace py::cpp::Windows::UI::Composition::Desktop
 
     static PyGetSetDef _getset_DesktopWindowTarget[] = {
         { "is_topmost", reinterpret_cast<getter>(DesktopWindowTarget_get_IsTopmost), nullptr, nullptr, nullptr },
+        { "root", reinterpret_cast<getter>(DesktopWindowTarget_get_Root), reinterpret_cast<setter>(DesktopWindowTarget_put_Root), nullptr, nullptr },
+        { "compositor", reinterpret_cast<getter>(DesktopWindowTarget_get_Compositor), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(DesktopWindowTarget_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "properties", reinterpret_cast<getter>(DesktopWindowTarget_get_Properties), nullptr, nullptr, nullptr },
+        { "implicit_animations", reinterpret_cast<getter>(DesktopWindowTarget_get_ImplicitAnimations), reinterpret_cast<setter>(DesktopWindowTarget_put_ImplicitAnimations), nullptr, nullptr },
+        { "comment", reinterpret_cast<getter>(DesktopWindowTarget_get_Comment), reinterpret_cast<setter>(DesktopWindowTarget_put_Comment), nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(DesktopWindowTarget_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 

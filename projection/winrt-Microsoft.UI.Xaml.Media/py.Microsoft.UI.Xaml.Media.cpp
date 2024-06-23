@@ -629,6 +629,232 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* AcrylicBrush_get_FallbackColor(py::wrapper::Microsoft::UI::Xaml::Media::AcrylicBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.XamlCompositionBrushBase", L"FallbackColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FallbackColor());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AcrylicBrush_put_FallbackColor(py::wrapper::Microsoft::UI::Xaml::Media::AcrylicBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.XamlCompositionBrushBase", L"FallbackColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
+
+            self->obj.FallbackColor(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* AcrylicBrush_get_Transform(py::wrapper::Microsoft::UI::Xaml::Media::AcrylicBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Transform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AcrylicBrush_put_Transform(py::wrapper::Microsoft::UI::Xaml::Media::AcrylicBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.Transform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* AcrylicBrush_get_RelativeTransform(py::wrapper::Microsoft::UI::Xaml::Media::AcrylicBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"RelativeTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RelativeTransform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AcrylicBrush_put_RelativeTransform(py::wrapper::Microsoft::UI::Xaml::Media::AcrylicBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"RelativeTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.RelativeTransform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* AcrylicBrush_get_Opacity(py::wrapper::Microsoft::UI::Xaml::Media::AcrylicBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Opacity());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AcrylicBrush_put_Opacity(py::wrapper::Microsoft::UI::Xaml::Media::AcrylicBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.Opacity(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* AcrylicBrush_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::AcrylicBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* AcrylicBrush_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::AcrylicBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_AcrylicBrush(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>>();
@@ -673,6 +899,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { "tint_color", reinterpret_cast<getter>(AcrylicBrush_get_TintColor), reinterpret_cast<setter>(AcrylicBrush_put_TintColor), nullptr, nullptr },
         { "always_use_fallback", reinterpret_cast<getter>(AcrylicBrush_get_AlwaysUseFallback), reinterpret_cast<setter>(AcrylicBrush_put_AlwaysUseFallback), nullptr, nullptr },
         { "tint_luminosity_opacity", reinterpret_cast<getter>(AcrylicBrush_get_TintLuminosityOpacity), reinterpret_cast<setter>(AcrylicBrush_put_TintLuminosityOpacity), nullptr, nullptr },
+        { "fallback_color", reinterpret_cast<getter>(AcrylicBrush_get_FallbackColor), reinterpret_cast<setter>(AcrylicBrush_put_FallbackColor), nullptr, nullptr },
+        { "transform", reinterpret_cast<getter>(AcrylicBrush_get_Transform), reinterpret_cast<setter>(AcrylicBrush_put_Transform), nullptr, nullptr },
+        { "relative_transform", reinterpret_cast<getter>(AcrylicBrush_get_RelativeTransform), reinterpret_cast<setter>(AcrylicBrush_put_RelativeTransform), nullptr, nullptr },
+        { "opacity", reinterpret_cast<getter>(AcrylicBrush_get_Opacity), reinterpret_cast<setter>(AcrylicBrush_put_Opacity), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(AcrylicBrush_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(AcrylicBrush_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -1313,6 +1545,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* ArcSegment_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::ArcSegment* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ArcSegment_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::ArcSegment* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ArcSegment(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::ArcSegment>>();
@@ -1356,6 +1626,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { "rotation_angle", reinterpret_cast<getter>(ArcSegment_get_RotationAngle), reinterpret_cast<setter>(ArcSegment_put_RotationAngle), nullptr, nullptr },
         { "point", reinterpret_cast<getter>(ArcSegment_get_Point), reinterpret_cast<setter>(ArcSegment_put_Point), nullptr, nullptr },
         { "is_large_arc", reinterpret_cast<getter>(ArcSegment_get_IsLargeArc), reinterpret_cast<setter>(ArcSegment_put_IsLargeArc), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(ArcSegment_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(ArcSegment_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -1864,6 +2136,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* BezierSegment_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::BezierSegment* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* BezierSegment_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::BezierSegment* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_BezierSegment(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::BezierSegment>>();
@@ -1905,6 +2215,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { "point3", reinterpret_cast<getter>(BezierSegment_get_Point3), reinterpret_cast<setter>(BezierSegment_put_Point3), nullptr, nullptr },
         { "point2", reinterpret_cast<getter>(BezierSegment_get_Point2), reinterpret_cast<setter>(BezierSegment_put_Point2), nullptr, nullptr },
         { "point1", reinterpret_cast<getter>(BezierSegment_get_Point1), reinterpret_cast<setter>(BezierSegment_put_Point1), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(BezierSegment_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(BezierSegment_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -2213,6 +2525,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* BitmapCache_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::BitmapCache* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* BitmapCache_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::BitmapCache* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_BitmapCache(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::BitmapCache>>();
@@ -2251,6 +2601,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     };
 
     static PyGetSetDef _getset_BitmapCache[] = {
+        { "dispatcher", reinterpret_cast<getter>(BitmapCache_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(BitmapCache_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -2740,6 +3092,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* Brush_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::Brush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Brush_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::Brush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Brush(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Brush>>();
@@ -2782,6 +3172,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { "transform", reinterpret_cast<getter>(Brush_get_Transform), reinterpret_cast<setter>(Brush_put_Transform), nullptr, nullptr },
         { "relative_transform", reinterpret_cast<getter>(Brush_get_RelativeTransform), reinterpret_cast<setter>(Brush_put_RelativeTransform), nullptr, nullptr },
         { "opacity", reinterpret_cast<getter>(Brush_get_Opacity), reinterpret_cast<setter>(Brush_put_Opacity), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(Brush_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(Brush_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -3701,6 +4093,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* CacheMode_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::CacheMode* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CacheMode_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::CacheMode* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_CacheMode(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::CacheMode>>();
@@ -3739,6 +4169,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     };
 
     static PyGetSetDef _getset_CacheMode[] = {
+        { "dispatcher", reinterpret_cast<getter>(CacheMode_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(CacheMode_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -4719,6 +5151,63 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* CompositeTransform_get_Inverse(py::wrapper::Microsoft::UI::Xaml::Media::CompositeTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GeneralTransform", L"Inverse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Inverse());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositeTransform_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::CompositeTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositeTransform_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::CompositeTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_CompositeTransform(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::CompositeTransform>>();
@@ -4769,6 +5258,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { "rotation", reinterpret_cast<getter>(CompositeTransform_get_Rotation), reinterpret_cast<setter>(CompositeTransform_put_Rotation), nullptr, nullptr },
         { "center_y", reinterpret_cast<getter>(CompositeTransform_get_CenterY), reinterpret_cast<setter>(CompositeTransform_put_CenterY), nullptr, nullptr },
         { "center_x", reinterpret_cast<getter>(CompositeTransform_get_CenterX), reinterpret_cast<setter>(CompositeTransform_put_CenterX), nullptr, nullptr },
+        { "inverse", reinterpret_cast<getter>(CompositeTransform_get_Inverse), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(CompositeTransform_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(CompositeTransform_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -5371,6 +5863,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* DesktopAcrylicBackdrop_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::DesktopAcrylicBackdrop* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopAcrylicBackdrop_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::DesktopAcrylicBackdrop* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DesktopAcrylicBackdrop(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::DesktopAcrylicBackdrop>>();
@@ -5410,6 +5940,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     };
 
     static PyGetSetDef _getset_DesktopAcrylicBackdrop[] = {
+        { "dispatcher", reinterpret_cast<getter>(DesktopAcrylicBackdrop_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(DesktopAcrylicBackdrop_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -6521,6 +7053,110 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* EllipseGeometry_get_Transform(py::wrapper::Microsoft::UI::Xaml::Media::EllipseGeometry* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Geometry", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Transform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int EllipseGeometry_put_Transform(py::wrapper::Microsoft::UI::Xaml::Media::EllipseGeometry* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Geometry", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.Transform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* EllipseGeometry_get_Bounds(py::wrapper::Microsoft::UI::Xaml::Media::EllipseGeometry* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Geometry", L"Bounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Bounds());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* EllipseGeometry_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::EllipseGeometry* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* EllipseGeometry_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::EllipseGeometry* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_EllipseGeometry(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::EllipseGeometry>>();
@@ -6562,6 +7198,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { "radius_y", reinterpret_cast<getter>(EllipseGeometry_get_RadiusY), reinterpret_cast<setter>(EllipseGeometry_put_RadiusY), nullptr, nullptr },
         { "radius_x", reinterpret_cast<getter>(EllipseGeometry_get_RadiusX), reinterpret_cast<setter>(EllipseGeometry_put_RadiusX), nullptr, nullptr },
         { "center", reinterpret_cast<getter>(EllipseGeometry_get_Center), reinterpret_cast<setter>(EllipseGeometry_put_Center), nullptr, nullptr },
+        { "transform", reinterpret_cast<getter>(EllipseGeometry_get_Transform), reinterpret_cast<setter>(EllipseGeometry_put_Transform), nullptr, nullptr },
+        { "bounds", reinterpret_cast<getter>(EllipseGeometry_get_Bounds), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(EllipseGeometry_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(EllipseGeometry_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -7128,6 +7768,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* GeneralTransform_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::GeneralTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* GeneralTransform_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::GeneralTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_GeneralTransform(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::GeneralTransform>>();
@@ -7170,6 +7848,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyGetSetDef _getset_GeneralTransform[] = {
         { "inverse", reinterpret_cast<getter>(GeneralTransform_get_Inverse), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(GeneralTransform_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(GeneralTransform_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -7551,6 +8231,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* Geometry_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::Geometry* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Geometry_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::Geometry* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Geometry(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Geometry>>();
@@ -7591,6 +8309,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     static PyGetSetDef _getset_Geometry[] = {
         { "transform", reinterpret_cast<getter>(Geometry_get_Transform), reinterpret_cast<setter>(Geometry_put_Transform), nullptr, nullptr },
         { "bounds", reinterpret_cast<getter>(Geometry_get_Bounds), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(Geometry_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(Geometry_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -8664,6 +9384,110 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* GeometryGroup_get_Transform(py::wrapper::Microsoft::UI::Xaml::Media::GeometryGroup* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Geometry", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Transform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int GeometryGroup_put_Transform(py::wrapper::Microsoft::UI::Xaml::Media::GeometryGroup* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Geometry", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.Transform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* GeometryGroup_get_Bounds(py::wrapper::Microsoft::UI::Xaml::Media::GeometryGroup* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Geometry", L"Bounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Bounds());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* GeometryGroup_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::GeometryGroup* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* GeometryGroup_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::GeometryGroup* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_GeometryGroup(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::GeometryGroup>>();
@@ -8704,6 +9528,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     static PyGetSetDef _getset_GeometryGroup[] = {
         { "fill_rule", reinterpret_cast<getter>(GeometryGroup_get_FillRule), reinterpret_cast<setter>(GeometryGroup_put_FillRule), nullptr, nullptr },
         { "children", reinterpret_cast<getter>(GeometryGroup_get_Children), reinterpret_cast<setter>(GeometryGroup_put_Children), nullptr, nullptr },
+        { "transform", reinterpret_cast<getter>(GeometryGroup_get_Transform), reinterpret_cast<setter>(GeometryGroup_put_Transform), nullptr, nullptr },
+        { "bounds", reinterpret_cast<getter>(GeometryGroup_get_Bounds), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(GeometryGroup_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(GeometryGroup_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -9286,6 +10114,185 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* GradientBrush_get_Transform(py::wrapper::Microsoft::UI::Xaml::Media::GradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Transform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int GradientBrush_put_Transform(py::wrapper::Microsoft::UI::Xaml::Media::GradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.Transform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* GradientBrush_get_RelativeTransform(py::wrapper::Microsoft::UI::Xaml::Media::GradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"RelativeTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RelativeTransform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int GradientBrush_put_RelativeTransform(py::wrapper::Microsoft::UI::Xaml::Media::GradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"RelativeTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.RelativeTransform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* GradientBrush_get_Opacity(py::wrapper::Microsoft::UI::Xaml::Media::GradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Opacity());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int GradientBrush_put_Opacity(py::wrapper::Microsoft::UI::Xaml::Media::GradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.Opacity(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* GradientBrush_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::GradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* GradientBrush_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::GradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_GradientBrush(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::GradientBrush>>();
@@ -9329,6 +10336,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { "mapping_mode", reinterpret_cast<getter>(GradientBrush_get_MappingMode), reinterpret_cast<setter>(GradientBrush_put_MappingMode), nullptr, nullptr },
         { "gradient_stops", reinterpret_cast<getter>(GradientBrush_get_GradientStops), reinterpret_cast<setter>(GradientBrush_put_GradientStops), nullptr, nullptr },
         { "color_interpolation_mode", reinterpret_cast<getter>(GradientBrush_get_ColorInterpolationMode), reinterpret_cast<setter>(GradientBrush_put_ColorInterpolationMode), nullptr, nullptr },
+        { "transform", reinterpret_cast<getter>(GradientBrush_get_Transform), reinterpret_cast<setter>(GradientBrush_put_Transform), nullptr, nullptr },
+        { "relative_transform", reinterpret_cast<getter>(GradientBrush_get_RelativeTransform), reinterpret_cast<setter>(GradientBrush_put_RelativeTransform), nullptr, nullptr },
+        { "opacity", reinterpret_cast<getter>(GradientBrush_get_Opacity), reinterpret_cast<setter>(GradientBrush_put_Opacity), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(GradientBrush_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(GradientBrush_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -9770,6 +10782,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* GradientStop_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::GradientStop* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* GradientStop_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::GradientStop* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_GradientStop(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::GradientStop>>();
@@ -9810,6 +10860,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     static PyGetSetDef _getset_GradientStop[] = {
         { "offset", reinterpret_cast<getter>(GradientStop_get_Offset), reinterpret_cast<setter>(GradientStop_put_Offset), nullptr, nullptr },
         { "color", reinterpret_cast<getter>(GradientStop_get_Color), reinterpret_cast<setter>(GradientStop_put_Color), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(GradientStop_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(GradientStop_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -10849,6 +11901,326 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* ImageBrush_get_Stretch(py::wrapper::Microsoft::UI::Xaml::Media::ImageBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TileBrush", L"Stretch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Stretch());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ImageBrush_put_Stretch(py::wrapper::Microsoft::UI::Xaml::Media::ImageBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TileBrush", L"Stretch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Stretch>(arg);
+
+            self->obj.Stretch(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ImageBrush_get_AlignmentY(py::wrapper::Microsoft::UI::Xaml::Media::ImageBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TileBrush", L"AlignmentY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AlignmentY());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ImageBrush_put_AlignmentY(py::wrapper::Microsoft::UI::Xaml::Media::ImageBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TileBrush", L"AlignmentY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::AlignmentY>(arg);
+
+            self->obj.AlignmentY(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ImageBrush_get_AlignmentX(py::wrapper::Microsoft::UI::Xaml::Media::ImageBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TileBrush", L"AlignmentX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AlignmentX());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ImageBrush_put_AlignmentX(py::wrapper::Microsoft::UI::Xaml::Media::ImageBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.TileBrush", L"AlignmentX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::AlignmentX>(arg);
+
+            self->obj.AlignmentX(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ImageBrush_get_Transform(py::wrapper::Microsoft::UI::Xaml::Media::ImageBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Transform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ImageBrush_put_Transform(py::wrapper::Microsoft::UI::Xaml::Media::ImageBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.Transform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ImageBrush_get_RelativeTransform(py::wrapper::Microsoft::UI::Xaml::Media::ImageBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"RelativeTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RelativeTransform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ImageBrush_put_RelativeTransform(py::wrapper::Microsoft::UI::Xaml::Media::ImageBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"RelativeTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.RelativeTransform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ImageBrush_get_Opacity(py::wrapper::Microsoft::UI::Xaml::Media::ImageBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Opacity());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ImageBrush_put_Opacity(py::wrapper::Microsoft::UI::Xaml::Media::ImageBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.Opacity(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ImageBrush_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::ImageBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ImageBrush_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::ImageBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* ImageBrush_add_ImageFailed(py::wrapper::Microsoft::UI::Xaml::Media::ImageBrush* self, PyObject* arg) noexcept
     {
         try
@@ -10979,6 +12351,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyGetSetDef _getset_ImageBrush[] = {
         { "image_source", reinterpret_cast<getter>(ImageBrush_get_ImageSource), reinterpret_cast<setter>(ImageBrush_put_ImageSource), nullptr, nullptr },
+        { "stretch", reinterpret_cast<getter>(ImageBrush_get_Stretch), reinterpret_cast<setter>(ImageBrush_put_Stretch), nullptr, nullptr },
+        { "alignment_y", reinterpret_cast<getter>(ImageBrush_get_AlignmentY), reinterpret_cast<setter>(ImageBrush_put_AlignmentY), nullptr, nullptr },
+        { "alignment_x", reinterpret_cast<getter>(ImageBrush_get_AlignmentX), reinterpret_cast<setter>(ImageBrush_put_AlignmentX), nullptr, nullptr },
+        { "transform", reinterpret_cast<getter>(ImageBrush_get_Transform), reinterpret_cast<setter>(ImageBrush_put_Transform), nullptr, nullptr },
+        { "relative_transform", reinterpret_cast<getter>(ImageBrush_get_RelativeTransform), reinterpret_cast<setter>(ImageBrush_put_RelativeTransform), nullptr, nullptr },
+        { "opacity", reinterpret_cast<getter>(ImageBrush_get_Opacity), reinterpret_cast<setter>(ImageBrush_put_Opacity), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(ImageBrush_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(ImageBrush_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -11263,6 +12643,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* ImageSource_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::ImageSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ImageSource_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::ImageSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ImageSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::ImageSource>>();
@@ -11301,6 +12719,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     };
 
     static PyGetSetDef _getset_ImageSource[] = {
+        { "dispatcher", reinterpret_cast<getter>(ImageSource_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(ImageSource_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -11713,6 +13133,110 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* LineGeometry_get_Transform(py::wrapper::Microsoft::UI::Xaml::Media::LineGeometry* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Geometry", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Transform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int LineGeometry_put_Transform(py::wrapper::Microsoft::UI::Xaml::Media::LineGeometry* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Geometry", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.Transform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* LineGeometry_get_Bounds(py::wrapper::Microsoft::UI::Xaml::Media::LineGeometry* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Geometry", L"Bounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Bounds());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* LineGeometry_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::LineGeometry* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* LineGeometry_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::LineGeometry* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_LineGeometry(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::LineGeometry>>();
@@ -11753,6 +13277,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     static PyGetSetDef _getset_LineGeometry[] = {
         { "start_point", reinterpret_cast<getter>(LineGeometry_get_StartPoint), reinterpret_cast<setter>(LineGeometry_put_StartPoint), nullptr, nullptr },
         { "end_point", reinterpret_cast<getter>(LineGeometry_get_EndPoint), reinterpret_cast<setter>(LineGeometry_put_EndPoint), nullptr, nullptr },
+        { "transform", reinterpret_cast<getter>(LineGeometry_get_Transform), reinterpret_cast<setter>(LineGeometry_put_Transform), nullptr, nullptr },
+        { "bounds", reinterpret_cast<getter>(LineGeometry_get_Bounds), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(LineGeometry_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(LineGeometry_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -12126,6 +13654,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* LineSegment_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::LineSegment* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* LineSegment_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::LineSegment* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_LineSegment(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::LineSegment>>();
@@ -12165,6 +13731,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyGetSetDef _getset_LineSegment[] = {
         { "point", reinterpret_cast<getter>(LineSegment_get_Point), reinterpret_cast<setter>(LineSegment_put_Point), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(LineSegment_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(LineSegment_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -12652,6 +14220,373 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* LinearGradientBrush_get_SpreadMethod(py::wrapper::Microsoft::UI::Xaml::Media::LinearGradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientBrush", L"SpreadMethod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.SpreadMethod());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int LinearGradientBrush_put_SpreadMethod(py::wrapper::Microsoft::UI::Xaml::Media::LinearGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientBrush", L"SpreadMethod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::GradientSpreadMethod>(arg);
+
+            self->obj.SpreadMethod(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* LinearGradientBrush_get_MappingMode(py::wrapper::Microsoft::UI::Xaml::Media::LinearGradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientBrush", L"MappingMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MappingMode());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int LinearGradientBrush_put_MappingMode(py::wrapper::Microsoft::UI::Xaml::Media::LinearGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientBrush", L"MappingMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::BrushMappingMode>(arg);
+
+            self->obj.MappingMode(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* LinearGradientBrush_get_GradientStops(py::wrapper::Microsoft::UI::Xaml::Media::LinearGradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientBrush", L"GradientStops"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.GradientStops());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int LinearGradientBrush_put_GradientStops(py::wrapper::Microsoft::UI::Xaml::Media::LinearGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientBrush", L"GradientStops"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::GradientStopCollection>(arg);
+
+            self->obj.GradientStops(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* LinearGradientBrush_get_ColorInterpolationMode(py::wrapper::Microsoft::UI::Xaml::Media::LinearGradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientBrush", L"ColorInterpolationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ColorInterpolationMode());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int LinearGradientBrush_put_ColorInterpolationMode(py::wrapper::Microsoft::UI::Xaml::Media::LinearGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GradientBrush", L"ColorInterpolationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::ColorInterpolationMode>(arg);
+
+            self->obj.ColorInterpolationMode(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* LinearGradientBrush_get_Transform(py::wrapper::Microsoft::UI::Xaml::Media::LinearGradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Transform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int LinearGradientBrush_put_Transform(py::wrapper::Microsoft::UI::Xaml::Media::LinearGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.Transform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* LinearGradientBrush_get_RelativeTransform(py::wrapper::Microsoft::UI::Xaml::Media::LinearGradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"RelativeTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RelativeTransform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int LinearGradientBrush_put_RelativeTransform(py::wrapper::Microsoft::UI::Xaml::Media::LinearGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"RelativeTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.RelativeTransform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* LinearGradientBrush_get_Opacity(py::wrapper::Microsoft::UI::Xaml::Media::LinearGradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Opacity());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int LinearGradientBrush_put_Opacity(py::wrapper::Microsoft::UI::Xaml::Media::LinearGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.Opacity(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* LinearGradientBrush_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::LinearGradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearGradientBrush_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::LinearGradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_LinearGradientBrush(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::LinearGradientBrush>>();
@@ -12693,6 +14628,15 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     static PyGetSetDef _getset_LinearGradientBrush[] = {
         { "start_point", reinterpret_cast<getter>(LinearGradientBrush_get_StartPoint), reinterpret_cast<setter>(LinearGradientBrush_put_StartPoint), nullptr, nullptr },
         { "end_point", reinterpret_cast<getter>(LinearGradientBrush_get_EndPoint), reinterpret_cast<setter>(LinearGradientBrush_put_EndPoint), nullptr, nullptr },
+        { "spread_method", reinterpret_cast<getter>(LinearGradientBrush_get_SpreadMethod), reinterpret_cast<setter>(LinearGradientBrush_put_SpreadMethod), nullptr, nullptr },
+        { "mapping_mode", reinterpret_cast<getter>(LinearGradientBrush_get_MappingMode), reinterpret_cast<setter>(LinearGradientBrush_put_MappingMode), nullptr, nullptr },
+        { "gradient_stops", reinterpret_cast<getter>(LinearGradientBrush_get_GradientStops), reinterpret_cast<setter>(LinearGradientBrush_put_GradientStops), nullptr, nullptr },
+        { "color_interpolation_mode", reinterpret_cast<getter>(LinearGradientBrush_get_ColorInterpolationMode), reinterpret_cast<setter>(LinearGradientBrush_put_ColorInterpolationMode), nullptr, nullptr },
+        { "transform", reinterpret_cast<getter>(LinearGradientBrush_get_Transform), reinterpret_cast<setter>(LinearGradientBrush_put_Transform), nullptr, nullptr },
+        { "relative_transform", reinterpret_cast<getter>(LinearGradientBrush_get_RelativeTransform), reinterpret_cast<setter>(LinearGradientBrush_put_RelativeTransform), nullptr, nullptr },
+        { "opacity", reinterpret_cast<getter>(LinearGradientBrush_get_Opacity), reinterpret_cast<setter>(LinearGradientBrush_put_Opacity), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(LinearGradientBrush_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(LinearGradientBrush_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -13506,6 +15450,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* Matrix3DProjection_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::Matrix3DProjection* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Matrix3DProjection_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::Matrix3DProjection* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Matrix3DProjection(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Matrix3DProjection>>();
@@ -13545,6 +15527,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyGetSetDef _getset_Matrix3DProjection[] = {
         { "projection_matrix", reinterpret_cast<getter>(Matrix3DProjection_get_ProjectionMatrix), reinterpret_cast<setter>(Matrix3DProjection_put_ProjectionMatrix), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(Matrix3DProjection_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(Matrix3DProjection_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -14236,6 +16220,63 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* MatrixTransform_get_Inverse(py::wrapper::Microsoft::UI::Xaml::Media::MatrixTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GeneralTransform", L"Inverse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Inverse());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MatrixTransform_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::MatrixTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MatrixTransform_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::MatrixTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MatrixTransform(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::MatrixTransform>>();
@@ -14278,6 +16319,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyGetSetDef _getset_MatrixTransform[] = {
         { "matrix", reinterpret_cast<getter>(MatrixTransform_get_Matrix), reinterpret_cast<setter>(MatrixTransform_put_Matrix), nullptr, nullptr },
+        { "inverse", reinterpret_cast<getter>(MatrixTransform_get_Inverse), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(MatrixTransform_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(MatrixTransform_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -14811,6 +16855,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* MicaBackdrop_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::MicaBackdrop* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MicaBackdrop_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::MicaBackdrop* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MicaBackdrop(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::MicaBackdrop>>();
@@ -14851,6 +16933,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyGetSetDef _getset_MicaBackdrop[] = {
         { "kind", reinterpret_cast<getter>(MicaBackdrop_get_Kind), reinterpret_cast<setter>(MicaBackdrop_put_Kind), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(MicaBackdrop_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(MicaBackdrop_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -15421,6 +17505,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* PathFigure_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::PathFigure* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PathFigure_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::PathFigure* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PathFigure(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::PathFigure>>();
@@ -15463,6 +17585,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { "segments", reinterpret_cast<getter>(PathFigure_get_Segments), reinterpret_cast<setter>(PathFigure_put_Segments), nullptr, nullptr },
         { "is_filled", reinterpret_cast<getter>(PathFigure_get_IsFilled), reinterpret_cast<setter>(PathFigure_put_IsFilled), nullptr, nullptr },
         { "is_closed", reinterpret_cast<getter>(PathFigure_get_IsClosed), reinterpret_cast<setter>(PathFigure_put_IsClosed), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(PathFigure_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(PathFigure_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -16537,6 +18661,110 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* PathGeometry_get_Transform(py::wrapper::Microsoft::UI::Xaml::Media::PathGeometry* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Geometry", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Transform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PathGeometry_put_Transform(py::wrapper::Microsoft::UI::Xaml::Media::PathGeometry* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Geometry", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.Transform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PathGeometry_get_Bounds(py::wrapper::Microsoft::UI::Xaml::Media::PathGeometry* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Geometry", L"Bounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Bounds());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PathGeometry_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::PathGeometry* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PathGeometry_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::PathGeometry* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PathGeometry(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::PathGeometry>>();
@@ -16577,6 +18805,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     static PyGetSetDef _getset_PathGeometry[] = {
         { "fill_rule", reinterpret_cast<getter>(PathGeometry_get_FillRule), reinterpret_cast<setter>(PathGeometry_put_FillRule), nullptr, nullptr },
         { "figures", reinterpret_cast<getter>(PathGeometry_get_Figures), reinterpret_cast<setter>(PathGeometry_put_Figures), nullptr, nullptr },
+        { "transform", reinterpret_cast<getter>(PathGeometry_get_Transform), reinterpret_cast<setter>(PathGeometry_put_Transform), nullptr, nullptr },
+        { "bounds", reinterpret_cast<getter>(PathGeometry_get_Bounds), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(PathGeometry_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(PathGeometry_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -16862,6 +19094,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* PathSegment_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::PathSegment* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PathSegment_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::PathSegment* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PathSegment(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::PathSegment>>();
@@ -16900,6 +19170,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     };
 
     static PyGetSetDef _getset_PathSegment[] = {
+        { "dispatcher", reinterpret_cast<getter>(PathSegment_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(PathSegment_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -18643,6 +20915,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* PlaneProjection_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::PlaneProjection* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PlaneProjection_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::PlaneProjection* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PlaneProjection(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::PlaneProjection>>();
@@ -18694,6 +21004,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { "center_of_rotation_y", reinterpret_cast<getter>(PlaneProjection_get_CenterOfRotationY), reinterpret_cast<setter>(PlaneProjection_put_CenterOfRotationY), nullptr, nullptr },
         { "center_of_rotation_x", reinterpret_cast<getter>(PlaneProjection_get_CenterOfRotationX), reinterpret_cast<setter>(PlaneProjection_put_CenterOfRotationX), nullptr, nullptr },
         { "projection_matrix", reinterpret_cast<getter>(PlaneProjection_get_ProjectionMatrix), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(PlaneProjection_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(PlaneProjection_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -19711,6 +22023,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* PolyBezierSegment_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::PolyBezierSegment* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PolyBezierSegment_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::PolyBezierSegment* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PolyBezierSegment(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::PolyBezierSegment>>();
@@ -19750,6 +22100,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyGetSetDef _getset_PolyBezierSegment[] = {
         { "points", reinterpret_cast<getter>(PolyBezierSegment_get_Points), reinterpret_cast<setter>(PolyBezierSegment_put_Points), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(PolyBezierSegment_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(PolyBezierSegment_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -20122,6 +22474,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* PolyLineSegment_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::PolyLineSegment* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PolyLineSegment_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::PolyLineSegment* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PolyLineSegment(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::PolyLineSegment>>();
@@ -20161,6 +22551,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyGetSetDef _getset_PolyLineSegment[] = {
         { "points", reinterpret_cast<getter>(PolyLineSegment_get_Points), reinterpret_cast<setter>(PolyLineSegment_put_Points), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(PolyLineSegment_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(PolyLineSegment_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -20533,6 +22925,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* PolyQuadraticBezierSegment_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::PolyQuadraticBezierSegment* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PolyQuadraticBezierSegment_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::PolyQuadraticBezierSegment* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PolyQuadraticBezierSegment(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::PolyQuadraticBezierSegment>>();
@@ -20572,6 +23002,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyGetSetDef _getset_PolyQuadraticBezierSegment[] = {
         { "points", reinterpret_cast<getter>(PolyQuadraticBezierSegment_get_Points), reinterpret_cast<setter>(PolyQuadraticBezierSegment_put_Points), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(PolyQuadraticBezierSegment_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(PolyQuadraticBezierSegment_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -20856,6 +23288,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* Projection_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::Projection* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Projection_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::Projection* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Projection(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Projection>>();
@@ -20894,6 +23364,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     };
 
     static PyGetSetDef _getset_Projection[] = {
+        { "dispatcher", reinterpret_cast<getter>(Projection_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(Projection_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -21306,6 +23778,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* QuadraticBezierSegment_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::QuadraticBezierSegment* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuadraticBezierSegment_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::QuadraticBezierSegment* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_QuadraticBezierSegment(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::QuadraticBezierSegment>>();
@@ -21346,6 +23856,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     static PyGetSetDef _getset_QuadraticBezierSegment[] = {
         { "point2", reinterpret_cast<getter>(QuadraticBezierSegment_get_Point2), reinterpret_cast<setter>(QuadraticBezierSegment_put_Point2), nullptr, nullptr },
         { "point1", reinterpret_cast<getter>(QuadraticBezierSegment_get_Point1), reinterpret_cast<setter>(QuadraticBezierSegment_put_Point1), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(QuadraticBezierSegment_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(QuadraticBezierSegment_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -22167,6 +24679,232 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* RadialGradientBrush_get_FallbackColor(py::wrapper::Microsoft::UI::Xaml::Media::RadialGradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.XamlCompositionBrushBase", L"FallbackColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FallbackColor());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int RadialGradientBrush_put_FallbackColor(py::wrapper::Microsoft::UI::Xaml::Media::RadialGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.XamlCompositionBrushBase", L"FallbackColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
+
+            self->obj.FallbackColor(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* RadialGradientBrush_get_Transform(py::wrapper::Microsoft::UI::Xaml::Media::RadialGradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Transform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int RadialGradientBrush_put_Transform(py::wrapper::Microsoft::UI::Xaml::Media::RadialGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.Transform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* RadialGradientBrush_get_RelativeTransform(py::wrapper::Microsoft::UI::Xaml::Media::RadialGradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"RelativeTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RelativeTransform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int RadialGradientBrush_put_RelativeTransform(py::wrapper::Microsoft::UI::Xaml::Media::RadialGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"RelativeTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.RelativeTransform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* RadialGradientBrush_get_Opacity(py::wrapper::Microsoft::UI::Xaml::Media::RadialGradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Opacity());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int RadialGradientBrush_put_Opacity(py::wrapper::Microsoft::UI::Xaml::Media::RadialGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.Opacity(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* RadialGradientBrush_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::RadialGradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* RadialGradientBrush_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::RadialGradientBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_RadialGradientBrush(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>>();
@@ -22214,6 +24952,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { "gradient_origin", reinterpret_cast<getter>(RadialGradientBrush_get_GradientOrigin), reinterpret_cast<setter>(RadialGradientBrush_put_GradientOrigin), nullptr, nullptr },
         { "center", reinterpret_cast<getter>(RadialGradientBrush_get_Center), reinterpret_cast<setter>(RadialGradientBrush_put_Center), nullptr, nullptr },
         { "gradient_stops", reinterpret_cast<getter>(RadialGradientBrush_get_GradientStops), nullptr, nullptr, nullptr },
+        { "fallback_color", reinterpret_cast<getter>(RadialGradientBrush_get_FallbackColor), reinterpret_cast<setter>(RadialGradientBrush_put_FallbackColor), nullptr, nullptr },
+        { "transform", reinterpret_cast<getter>(RadialGradientBrush_get_Transform), reinterpret_cast<setter>(RadialGradientBrush_put_Transform), nullptr, nullptr },
+        { "relative_transform", reinterpret_cast<getter>(RadialGradientBrush_get_RelativeTransform), reinterpret_cast<setter>(RadialGradientBrush_put_RelativeTransform), nullptr, nullptr },
+        { "opacity", reinterpret_cast<getter>(RadialGradientBrush_get_Opacity), reinterpret_cast<setter>(RadialGradientBrush_put_Opacity), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(RadialGradientBrush_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(RadialGradientBrush_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -22592,6 +25336,110 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* RectangleGeometry_get_Transform(py::wrapper::Microsoft::UI::Xaml::Media::RectangleGeometry* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Geometry", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Transform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int RectangleGeometry_put_Transform(py::wrapper::Microsoft::UI::Xaml::Media::RectangleGeometry* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Geometry", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.Transform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* RectangleGeometry_get_Bounds(py::wrapper::Microsoft::UI::Xaml::Media::RectangleGeometry* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Geometry", L"Bounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Bounds());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* RectangleGeometry_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::RectangleGeometry* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* RectangleGeometry_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::RectangleGeometry* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_RectangleGeometry(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::RectangleGeometry>>();
@@ -22631,6 +25479,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyGetSetDef _getset_RectangleGeometry[] = {
         { "rect", reinterpret_cast<getter>(RectangleGeometry_get_Rect), reinterpret_cast<setter>(RectangleGeometry_put_Rect), nullptr, nullptr },
+        { "transform", reinterpret_cast<getter>(RectangleGeometry_get_Transform), reinterpret_cast<setter>(RectangleGeometry_put_Transform), nullptr, nullptr },
+        { "bounds", reinterpret_cast<getter>(RectangleGeometry_get_Bounds), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(RectangleGeometry_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(RectangleGeometry_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -23413,6 +26265,63 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* RotateTransform_get_Inverse(py::wrapper::Microsoft::UI::Xaml::Media::RotateTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GeneralTransform", L"Inverse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Inverse());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* RotateTransform_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::RotateTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* RotateTransform_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::RotateTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_RotateTransform(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::RotateTransform>>();
@@ -23457,6 +26366,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { "center_y", reinterpret_cast<getter>(RotateTransform_get_CenterY), reinterpret_cast<setter>(RotateTransform_put_CenterY), nullptr, nullptr },
         { "center_x", reinterpret_cast<getter>(RotateTransform_get_CenterX), reinterpret_cast<setter>(RotateTransform_put_CenterX), nullptr, nullptr },
         { "angle", reinterpret_cast<getter>(RotateTransform_get_Angle), reinterpret_cast<setter>(RotateTransform_put_Angle), nullptr, nullptr },
+        { "inverse", reinterpret_cast<getter>(RotateTransform_get_Inverse), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(RotateTransform_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(RotateTransform_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -24135,6 +27047,63 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* ScaleTransform_get_Inverse(py::wrapper::Microsoft::UI::Xaml::Media::ScaleTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GeneralTransform", L"Inverse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Inverse());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ScaleTransform_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::ScaleTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ScaleTransform_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::ScaleTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ScaleTransform(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::ScaleTransform>>();
@@ -24180,6 +27149,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { "scale_x", reinterpret_cast<getter>(ScaleTransform_get_ScaleX), reinterpret_cast<setter>(ScaleTransform_put_ScaleX), nullptr, nullptr },
         { "center_y", reinterpret_cast<getter>(ScaleTransform_get_CenterY), reinterpret_cast<setter>(ScaleTransform_put_CenterY), nullptr, nullptr },
         { "center_x", reinterpret_cast<getter>(ScaleTransform_get_CenterX), reinterpret_cast<setter>(ScaleTransform_put_CenterX), nullptr, nullptr },
+        { "inverse", reinterpret_cast<getter>(ScaleTransform_get_Inverse), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(ScaleTransform_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(ScaleTransform_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -24467,6 +27439,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* Shadow_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::Shadow* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shadow_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::Shadow* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Shadow(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Shadow>>();
@@ -24505,6 +27515,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     };
 
     static PyGetSetDef _getset_Shadow[] = {
+        { "dispatcher", reinterpret_cast<getter>(Shadow_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(Shadow_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -25155,6 +28167,63 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* SkewTransform_get_Inverse(py::wrapper::Microsoft::UI::Xaml::Media::SkewTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GeneralTransform", L"Inverse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Inverse());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* SkewTransform_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::SkewTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* SkewTransform_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::SkewTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_SkewTransform(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::SkewTransform>>();
@@ -25200,6 +28269,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { "center_x", reinterpret_cast<getter>(SkewTransform_get_CenterX), reinterpret_cast<setter>(SkewTransform_put_CenterX), nullptr, nullptr },
         { "angle_y", reinterpret_cast<getter>(SkewTransform_get_AngleY), reinterpret_cast<setter>(SkewTransform_put_AngleY), nullptr, nullptr },
         { "angle_x", reinterpret_cast<getter>(SkewTransform_get_AngleX), reinterpret_cast<setter>(SkewTransform_put_AngleX), nullptr, nullptr },
+        { "inverse", reinterpret_cast<getter>(SkewTransform_get_Inverse), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(SkewTransform_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(SkewTransform_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -25623,6 +28695,185 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* SolidColorBrush_get_Transform(py::wrapper::Microsoft::UI::Xaml::Media::SolidColorBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Transform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int SolidColorBrush_put_Transform(py::wrapper::Microsoft::UI::Xaml::Media::SolidColorBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.Transform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* SolidColorBrush_get_RelativeTransform(py::wrapper::Microsoft::UI::Xaml::Media::SolidColorBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"RelativeTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RelativeTransform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int SolidColorBrush_put_RelativeTransform(py::wrapper::Microsoft::UI::Xaml::Media::SolidColorBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"RelativeTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.RelativeTransform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* SolidColorBrush_get_Opacity(py::wrapper::Microsoft::UI::Xaml::Media::SolidColorBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Opacity());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int SolidColorBrush_put_Opacity(py::wrapper::Microsoft::UI::Xaml::Media::SolidColorBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.Opacity(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* SolidColorBrush_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::SolidColorBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* SolidColorBrush_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::SolidColorBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_SolidColorBrush(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::SolidColorBrush>>();
@@ -25663,6 +28914,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyGetSetDef _getset_SolidColorBrush[] = {
         { "color", reinterpret_cast<getter>(SolidColorBrush_get_Color), reinterpret_cast<setter>(SolidColorBrush_put_Color), nullptr, nullptr },
+        { "transform", reinterpret_cast<getter>(SolidColorBrush_get_Transform), reinterpret_cast<setter>(SolidColorBrush_put_Transform), nullptr, nullptr },
+        { "relative_transform", reinterpret_cast<getter>(SolidColorBrush_get_RelativeTransform), reinterpret_cast<setter>(SolidColorBrush_put_RelativeTransform), nullptr, nullptr },
+        { "opacity", reinterpret_cast<getter>(SolidColorBrush_get_Opacity), reinterpret_cast<setter>(SolidColorBrush_put_Opacity), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(SolidColorBrush_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(SolidColorBrush_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -25979,6 +29235,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* SystemBackdrop_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::SystemBackdrop* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* SystemBackdrop_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::SystemBackdrop* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_SystemBackdrop(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::SystemBackdrop>>();
@@ -26018,6 +29312,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     };
 
     static PyGetSetDef _getset_SystemBackdrop[] = {
+        { "dispatcher", reinterpret_cast<getter>(SystemBackdrop_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(SystemBackdrop_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -26317,6 +29613,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* ThemeShadow_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::ThemeShadow* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ThemeShadow_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::ThemeShadow* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ThemeShadow(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::ThemeShadow>>();
@@ -26356,6 +29690,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyGetSetDef _getset_ThemeShadow[] = {
         { "receivers", reinterpret_cast<getter>(ThemeShadow_get_Receivers), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(ThemeShadow_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(ThemeShadow_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -26845,6 +30181,185 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* TileBrush_get_Transform(py::wrapper::Microsoft::UI::Xaml::Media::TileBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Transform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int TileBrush_put_Transform(py::wrapper::Microsoft::UI::Xaml::Media::TileBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.Transform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* TileBrush_get_RelativeTransform(py::wrapper::Microsoft::UI::Xaml::Media::TileBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"RelativeTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RelativeTransform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int TileBrush_put_RelativeTransform(py::wrapper::Microsoft::UI::Xaml::Media::TileBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"RelativeTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.RelativeTransform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* TileBrush_get_Opacity(py::wrapper::Microsoft::UI::Xaml::Media::TileBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Opacity());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int TileBrush_put_Opacity(py::wrapper::Microsoft::UI::Xaml::Media::TileBrush* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.Opacity(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* TileBrush_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::TileBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* TileBrush_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::TileBrush* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_TileBrush(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::TileBrush>>();
@@ -26887,6 +30402,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         { "stretch", reinterpret_cast<getter>(TileBrush_get_Stretch), reinterpret_cast<setter>(TileBrush_put_Stretch), nullptr, nullptr },
         { "alignment_y", reinterpret_cast<getter>(TileBrush_get_AlignmentY), reinterpret_cast<setter>(TileBrush_put_AlignmentY), nullptr, nullptr },
         { "alignment_x", reinterpret_cast<getter>(TileBrush_get_AlignmentX), reinterpret_cast<setter>(TileBrush_put_AlignmentX), nullptr, nullptr },
+        { "transform", reinterpret_cast<getter>(TileBrush_get_Transform), reinterpret_cast<setter>(TileBrush_put_Transform), nullptr, nullptr },
+        { "relative_transform", reinterpret_cast<getter>(TileBrush_get_RelativeTransform), reinterpret_cast<setter>(TileBrush_put_RelativeTransform), nullptr, nullptr },
+        { "opacity", reinterpret_cast<getter>(TileBrush_get_Opacity), reinterpret_cast<setter>(TileBrush_put_Opacity), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(TileBrush_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(TileBrush_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -27279,6 +30799,63 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* Transform_get_Inverse(py::wrapper::Microsoft::UI::Xaml::Media::Transform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GeneralTransform", L"Inverse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Inverse());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Transform_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::Transform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Transform_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::Transform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Transform(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::Transform>>();
@@ -27320,6 +30897,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     };
 
     static PyGetSetDef _getset_Transform[] = {
+        { "inverse", reinterpret_cast<getter>(Transform_get_Inverse), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(Transform_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(Transform_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -28424,6 +32004,63 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* TransformGroup_get_Inverse(py::wrapper::Microsoft::UI::Xaml::Media::TransformGroup* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GeneralTransform", L"Inverse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Inverse());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* TransformGroup_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::TransformGroup* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* TransformGroup_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::TransformGroup* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_TransformGroup(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::TransformGroup>>();
@@ -28467,6 +32104,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     static PyGetSetDef _getset_TransformGroup[] = {
         { "children", reinterpret_cast<getter>(TransformGroup_get_Children), reinterpret_cast<setter>(TransformGroup_put_Children), nullptr, nullptr },
         { "value", reinterpret_cast<getter>(TransformGroup_get_Value), nullptr, nullptr, nullptr },
+        { "inverse", reinterpret_cast<getter>(TransformGroup_get_Inverse), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(TransformGroup_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(TransformGroup_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -29011,6 +32651,63 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* TranslateTransform_get_Inverse(py::wrapper::Microsoft::UI::Xaml::Media::TranslateTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.GeneralTransform", L"Inverse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Inverse());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* TranslateTransform_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::TranslateTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* TranslateTransform_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::TranslateTransform* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_TranslateTransform(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::TranslateTransform>>();
@@ -29054,6 +32751,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     static PyGetSetDef _getset_TranslateTransform[] = {
         { "y", reinterpret_cast<getter>(TranslateTransform_get_Y), reinterpret_cast<setter>(TranslateTransform_put_Y), nullptr, nullptr },
         { "x", reinterpret_cast<getter>(TranslateTransform_get_X), reinterpret_cast<setter>(TranslateTransform_put_X), nullptr, nullptr },
+        { "inverse", reinterpret_cast<getter>(TranslateTransform_get_Inverse), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(TranslateTransform_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(TranslateTransform_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -29778,6 +33478,185 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* XamlCompositionBrushBase_get_Transform(py::wrapper::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Transform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int XamlCompositionBrushBase_put_Transform(py::wrapper::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.Transform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* XamlCompositionBrushBase_get_RelativeTransform(py::wrapper::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"RelativeTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RelativeTransform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int XamlCompositionBrushBase_put_RelativeTransform(py::wrapper::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"RelativeTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.RelativeTransform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* XamlCompositionBrushBase_get_Opacity(py::wrapper::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Opacity());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int XamlCompositionBrushBase_put_Opacity(py::wrapper::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.Brush", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.Opacity(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* XamlCompositionBrushBase_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* XamlCompositionBrushBase_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_XamlCompositionBrushBase(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase>>();
@@ -29818,6 +33697,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyGetSetDef _getset_XamlCompositionBrushBase[] = {
         { "fallback_color", reinterpret_cast<getter>(XamlCompositionBrushBase_get_FallbackColor), reinterpret_cast<setter>(XamlCompositionBrushBase_put_FallbackColor), nullptr, nullptr },
+        { "transform", reinterpret_cast<getter>(XamlCompositionBrushBase_get_Transform), reinterpret_cast<setter>(XamlCompositionBrushBase_put_Transform), nullptr, nullptr },
+        { "relative_transform", reinterpret_cast<getter>(XamlCompositionBrushBase_get_RelativeTransform), reinterpret_cast<setter>(XamlCompositionBrushBase_put_RelativeTransform), nullptr, nullptr },
+        { "opacity", reinterpret_cast<getter>(XamlCompositionBrushBase_get_Opacity), reinterpret_cast<setter>(XamlCompositionBrushBase_put_Opacity), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(XamlCompositionBrushBase_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(XamlCompositionBrushBase_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -30256,6 +34140,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
+    static PyObject* XamlLight_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Media::XamlLight* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* XamlLight_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Media::XamlLight* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_XamlLight(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::XamlLight>>();
@@ -30294,6 +34216,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     };
 
     static PyGetSetDef _getset_XamlLight[] = {
+        { "dispatcher", reinterpret_cast<getter>(XamlLight_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(XamlLight_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 

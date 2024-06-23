@@ -5260,6 +5260,467 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
+    static PyObject* CoreWebView2CompositionController_get_ZoomFactor(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ZoomFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ZoomFactor());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CoreWebView2CompositionController_put_ZoomFactor(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ZoomFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.ZoomFactor(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_get_ParentWindow(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ParentWindow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ParentWindow());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CoreWebView2CompositionController_put_ParentWindow(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ParentWindow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference>(arg);
+
+            self->obj.ParentWindow(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_get_IsVisible(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"IsVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsVisible());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CoreWebView2CompositionController_put_IsVisible(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"IsVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IsVisible(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_get_Bounds(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"Bounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Bounds());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CoreWebView2CompositionController_put_Bounds(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"Bounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
+
+            self->obj.Bounds(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_get_CoreWebView2(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"CoreWebView2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CoreWebView2());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_get_DefaultBackgroundColor(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"DefaultBackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DefaultBackgroundColor());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CoreWebView2CompositionController_put_DefaultBackgroundColor(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"DefaultBackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
+
+            self->obj.DefaultBackgroundColor(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_get_ShouldDetectMonitorScaleChanges(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ShouldDetectMonitorScaleChanges"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ShouldDetectMonitorScaleChanges());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CoreWebView2CompositionController_put_ShouldDetectMonitorScaleChanges(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"ShouldDetectMonitorScaleChanges"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.ShouldDetectMonitorScaleChanges(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_get_RasterizationScale(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"RasterizationScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RasterizationScale());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CoreWebView2CompositionController_put_RasterizationScale(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"RasterizationScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.RasterizationScale(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_get_BoundsMode(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"BoundsMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.BoundsMode());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CoreWebView2CompositionController_put_BoundsMode(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"BoundsMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BoundsMode>(arg);
+
+            self->obj.BoundsMode(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_get_AllowExternalDrop(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"AllowExternalDrop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AllowExternalDrop());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CoreWebView2CompositionController_put_AllowExternalDrop(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"AllowExternalDrop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.AllowExternalDrop(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_get_IsBrowserHitTransparent(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"IsBrowserHitTransparent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsBrowserHitTransparent());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* CoreWebView2CompositionController_add_CursorChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* arg) noexcept
     {
         try
@@ -5348,6 +5809,17 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyGetSetDef _getset_CoreWebView2CompositionController[] = {
         { "root_visual_target", reinterpret_cast<getter>(CoreWebView2CompositionController_get_RootVisualTarget), reinterpret_cast<setter>(CoreWebView2CompositionController_put_RootVisualTarget), nullptr, nullptr },
         { "cursor", reinterpret_cast<getter>(CoreWebView2CompositionController_get_Cursor), nullptr, nullptr, nullptr },
+        { "zoom_factor", reinterpret_cast<getter>(CoreWebView2CompositionController_get_ZoomFactor), reinterpret_cast<setter>(CoreWebView2CompositionController_put_ZoomFactor), nullptr, nullptr },
+        { "parent_window", reinterpret_cast<getter>(CoreWebView2CompositionController_get_ParentWindow), reinterpret_cast<setter>(CoreWebView2CompositionController_put_ParentWindow), nullptr, nullptr },
+        { "is_visible", reinterpret_cast<getter>(CoreWebView2CompositionController_get_IsVisible), reinterpret_cast<setter>(CoreWebView2CompositionController_put_IsVisible), nullptr, nullptr },
+        { "bounds", reinterpret_cast<getter>(CoreWebView2CompositionController_get_Bounds), reinterpret_cast<setter>(CoreWebView2CompositionController_put_Bounds), nullptr, nullptr },
+        { "core_web_view2", reinterpret_cast<getter>(CoreWebView2CompositionController_get_CoreWebView2), nullptr, nullptr, nullptr },
+        { "default_background_color", reinterpret_cast<getter>(CoreWebView2CompositionController_get_DefaultBackgroundColor), reinterpret_cast<setter>(CoreWebView2CompositionController_put_DefaultBackgroundColor), nullptr, nullptr },
+        { "should_detect_monitor_scale_changes", reinterpret_cast<getter>(CoreWebView2CompositionController_get_ShouldDetectMonitorScaleChanges), reinterpret_cast<setter>(CoreWebView2CompositionController_put_ShouldDetectMonitorScaleChanges), nullptr, nullptr },
+        { "rasterization_scale", reinterpret_cast<getter>(CoreWebView2CompositionController_get_RasterizationScale), reinterpret_cast<setter>(CoreWebView2CompositionController_put_RasterizationScale), nullptr, nullptr },
+        { "bounds_mode", reinterpret_cast<getter>(CoreWebView2CompositionController_get_BoundsMode), reinterpret_cast<setter>(CoreWebView2CompositionController_put_BoundsMode), nullptr, nullptr },
+        { "allow_external_drop", reinterpret_cast<getter>(CoreWebView2CompositionController_get_AllowExternalDrop), reinterpret_cast<setter>(CoreWebView2CompositionController_put_AllowExternalDrop), nullptr, nullptr },
+        { "is_browser_hit_transparent", reinterpret_cast<getter>(CoreWebView2CompositionController_get_IsBrowserHitTransparent), nullptr, nullptr, nullptr },
         { }
     };
 

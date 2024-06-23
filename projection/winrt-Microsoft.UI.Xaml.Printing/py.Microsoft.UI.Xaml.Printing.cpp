@@ -806,6 +806,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Printing
         }
     }
 
+    static PyObject* PrintDocument_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Printing::PrintDocument* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PrintDocument_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Printing::PrintDocument* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* PrintDocument_add_AddPages(py::wrapper::Microsoft::UI::Xaml::Printing::PrintDocument* self, PyObject* arg) noexcept
     {
         try
@@ -985,6 +1023,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Printing
 
     static PyGetSetDef _getset_PrintDocument[] = {
         { "document_source", reinterpret_cast<getter>(PrintDocument_get_DocumentSource), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(PrintDocument_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(PrintDocument_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 

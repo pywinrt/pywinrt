@@ -45,12 +45,28 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.UI.Composition.h"
 #endif
 
+#if __has_include("py.Windows.UI.Core.h")
+#include "py.Windows.UI.Core.h"
+#endif
+
 #if __has_include("py.Windows.UI.Input.h")
 #include "py.Windows.UI.Input.h"
 #endif
 
+#if __has_include("py.Windows.UI.Text.h")
+#include "py.Windows.UI.Text.h"
+#endif
+
 #if __has_include("py.Windows.UI.Xaml.h")
 #include "py.Windows.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Controls.h")
+#include "py.Windows.UI.Xaml.Controls.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Controls.Primitives.h")
+#include "py.Windows.UI.Xaml.Controls.Primitives.h"
 #endif
 
 #if __has_include("py.Windows.UI.Xaml.Data.h")
@@ -65,6 +81,14 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.UI.Xaml.Media.h"
 #endif
 
+#if __has_include("py.Windows.UI.Xaml.Media.Animation.h")
+#include "py.Windows.UI.Xaml.Media.Animation.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Media.Media3D.h")
+#include "py.Windows.UI.Xaml.Media.Media3D.h"
+#endif
+
 #include <winrt/Windows.ApplicationModel.DataTransfer.h>
 #include <winrt/Windows.Devices.Geolocation.h>
 #include <winrt/Windows.Foundation.h>
@@ -75,11 +99,17 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Storage.Streams.h>
 #include <winrt/Windows.UI.h>
 #include <winrt/Windows.UI.Composition.h>
+#include <winrt/Windows.UI.Core.h>
 #include <winrt/Windows.UI.Input.h>
+#include <winrt/Windows.UI.Text.h>
 #include <winrt/Windows.UI.Xaml.h>
+#include <winrt/Windows.UI.Xaml.Controls.h>
+#include <winrt/Windows.UI.Xaml.Controls.Primitives.h>
 #include <winrt/Windows.UI.Xaml.Data.h>
 #include <winrt/Windows.UI.Xaml.Input.h>
 #include <winrt/Windows.UI.Xaml.Media.h>
+#include <winrt/Windows.UI.Xaml.Media.Animation.h>
+#include <winrt/Windows.UI.Xaml.Media.Media3D.h>
 
 #include <winrt/Windows.UI.Xaml.Controls.Maps.h>
 

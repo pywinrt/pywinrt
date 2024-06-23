@@ -9,9 +9,11 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
+import winrt.microsoft.ui.dispatching as microsoft_ui_dispatching
 import winrt.microsoft.ui.xaml as microsoft_ui_xaml
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.graphics.printing as windows_graphics_printing
+import winrt.windows.ui.core as windows_ui_core
 
 from winrt.microsoft.ui.xaml.printing import PreviewPageCountType
 from winrt.microsoft.ui.xaml.printing import AddPagesEventHandler, GetPreviewPageEventHandler, PaginateEventHandler
@@ -74,4 +76,8 @@ class PrintDocument(winrt.system.Object, metaclass=PrintDocument_Static):
     def remove_paginate(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @_property
     def document_source(self) -> typing.Optional[windows_graphics_printing.IPrintDocumentSource]: ...
+    @_property
+    def dispatcher(self) -> typing.Optional[windows_ui_core.CoreDispatcher]: ...
+    @_property
+    def dispatcher_queue(self) -> typing.Optional[microsoft_ui_dispatching.DispatcherQueue]: ...
 

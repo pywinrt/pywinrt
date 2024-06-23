@@ -11,6 +11,7 @@ import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.graphics.printing as windows_graphics_printing
+import winrt.windows.ui.core as windows_ui_core
 import winrt.windows.ui.xaml as windows_ui_xaml
 
 from winrt.windows.ui.xaml.printing import PreviewPageCountType
@@ -74,4 +75,6 @@ class PrintDocument(winrt.system.Object, metaclass=PrintDocument_Static):
     def remove_paginate(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @_property
     def document_source(self) -> typing.Optional[windows_graphics_printing.IPrintDocumentSource]: ...
+    @_property
+    def dispatcher(self) -> typing.Optional[windows_ui_core.CoreDispatcher]: ...
 

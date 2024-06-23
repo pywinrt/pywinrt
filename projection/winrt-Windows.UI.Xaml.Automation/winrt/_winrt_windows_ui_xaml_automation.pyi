@@ -10,6 +10,7 @@ from builtins import property as _property
 import winrt._winrt
 import winrt.system
 import winrt.windows.foundation.collections as windows_foundation_collections
+import winrt.windows.ui.core as windows_ui_core
 import winrt.windows.ui.xaml as windows_ui_xaml
 import winrt.windows.ui.xaml.automation.peers as windows_ui_xaml_automation_peers
 
@@ -67,6 +68,8 @@ class AutomationAnnotation(winrt.system.Object, metaclass=AutomationAnnotation_S
     def element(self) -> typing.Optional[windows_ui_xaml.UIElement]: ...
     @element.setter
     def element(self, value: typing.Optional[windows_ui_xaml.UIElement]) -> None: ...
+    @_property
+    def dispatcher(self) -> typing.Optional[windows_ui_core.CoreDispatcher]: ...
 
 @typing.final
 class AutomationElementIdentifiers_Static(type):

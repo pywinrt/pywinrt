@@ -392,6 +392,176 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
+    static PyObject* CompositionConditionalValue_get_Compositor(py::wrapper::Windows::UI::Composition::Interactions::CompositionConditionalValue* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Compositor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Compositor());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionConditionalValue_get_Dispatcher(py::wrapper::Windows::UI::Composition::Interactions::CompositionConditionalValue* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionConditionalValue_get_Properties(py::wrapper::Windows::UI::Composition::Interactions::CompositionConditionalValue* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Properties());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionConditionalValue_get_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::CompositionConditionalValue* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ImplicitAnimations());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CompositionConditionalValue_put_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::CompositionConditionalValue* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Composition::ImplicitAnimationCollection>(arg);
+
+            self->obj.ImplicitAnimations(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CompositionConditionalValue_get_Comment(py::wrapper::Windows::UI::Composition::Interactions::CompositionConditionalValue* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Comment());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CompositionConditionalValue_put_Comment(py::wrapper::Windows::UI::Composition::Interactions::CompositionConditionalValue* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Comment(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CompositionConditionalValue_get_DispatcherQueue(py::wrapper::Windows::UI::Composition::Interactions::CompositionConditionalValue* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_CompositionConditionalValue(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue>>();
@@ -432,6 +602,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static PyGetSetDef _getset_CompositionConditionalValue[] = {
         { "value", reinterpret_cast<getter>(CompositionConditionalValue_get_Value), reinterpret_cast<setter>(CompositionConditionalValue_put_Value), nullptr, nullptr },
         { "condition", reinterpret_cast<getter>(CompositionConditionalValue_get_Condition), reinterpret_cast<setter>(CompositionConditionalValue_put_Condition), nullptr, nullptr },
+        { "compositor", reinterpret_cast<getter>(CompositionConditionalValue_get_Compositor), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(CompositionConditionalValue_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "properties", reinterpret_cast<getter>(CompositionConditionalValue_get_Properties), nullptr, nullptr, nullptr },
+        { "implicit_animations", reinterpret_cast<getter>(CompositionConditionalValue_get_ImplicitAnimations), reinterpret_cast<setter>(CompositionConditionalValue_put_ImplicitAnimations), nullptr, nullptr },
+        { "comment", reinterpret_cast<getter>(CompositionConditionalValue_get_Comment), reinterpret_cast<setter>(CompositionConditionalValue_put_Comment), nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(CompositionConditionalValue_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -881,6 +1057,176 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
+    static PyObject* CompositionInteractionSourceCollection_get_Compositor(py::wrapper::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Compositor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Compositor());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionInteractionSourceCollection_get_Dispatcher(py::wrapper::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionInteractionSourceCollection_get_Properties(py::wrapper::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Properties());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionInteractionSourceCollection_get_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ImplicitAnimations());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CompositionInteractionSourceCollection_put_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Composition::ImplicitAnimationCollection>(arg);
+
+            self->obj.ImplicitAnimations(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CompositionInteractionSourceCollection_get_Comment(py::wrapper::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Comment());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CompositionInteractionSourceCollection_put_Comment(py::wrapper::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Comment(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CompositionInteractionSourceCollection_get_DispatcherQueue(py::wrapper::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_CompositionInteractionSourceCollection(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection>>();
@@ -937,6 +1283,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyGetSetDef _getset_CompositionInteractionSourceCollection[] = {
         { "count", reinterpret_cast<getter>(CompositionInteractionSourceCollection_get_Count), nullptr, nullptr, nullptr },
+        { "compositor", reinterpret_cast<getter>(CompositionInteractionSourceCollection_get_Compositor), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(CompositionInteractionSourceCollection_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "properties", reinterpret_cast<getter>(CompositionInteractionSourceCollection_get_Properties), nullptr, nullptr, nullptr },
+        { "implicit_animations", reinterpret_cast<getter>(CompositionInteractionSourceCollection_get_ImplicitAnimations), reinterpret_cast<setter>(CompositionInteractionSourceCollection_put_ImplicitAnimations), nullptr, nullptr },
+        { "comment", reinterpret_cast<getter>(CompositionInteractionSourceCollection_get_Comment), reinterpret_cast<setter>(CompositionInteractionSourceCollection_put_Comment), nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(CompositionInteractionSourceCollection_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -1360,6 +1712,176 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
+    static PyObject* InteractionSourceConfiguration_get_Compositor(py::wrapper::Windows::UI::Composition::Interactions::InteractionSourceConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Compositor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Compositor());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionSourceConfiguration_get_Dispatcher(py::wrapper::Windows::UI::Composition::Interactions::InteractionSourceConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionSourceConfiguration_get_Properties(py::wrapper::Windows::UI::Composition::Interactions::InteractionSourceConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Properties());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionSourceConfiguration_get_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::InteractionSourceConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ImplicitAnimations());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InteractionSourceConfiguration_put_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::InteractionSourceConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Composition::ImplicitAnimationCollection>(arg);
+
+            self->obj.ImplicitAnimations(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* InteractionSourceConfiguration_get_Comment(py::wrapper::Windows::UI::Composition::Interactions::InteractionSourceConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Comment());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InteractionSourceConfiguration_put_Comment(py::wrapper::Windows::UI::Composition::Interactions::InteractionSourceConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Comment(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* InteractionSourceConfiguration_get_DispatcherQueue(py::wrapper::Windows::UI::Composition::Interactions::InteractionSourceConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_InteractionSourceConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Interactions::InteractionSourceConfiguration>>();
@@ -1401,6 +1923,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { "scale_source_mode", reinterpret_cast<getter>(InteractionSourceConfiguration_get_ScaleSourceMode), reinterpret_cast<setter>(InteractionSourceConfiguration_put_ScaleSourceMode), nullptr, nullptr },
         { "position_y_source_mode", reinterpret_cast<getter>(InteractionSourceConfiguration_get_PositionYSourceMode), reinterpret_cast<setter>(InteractionSourceConfiguration_put_PositionYSourceMode), nullptr, nullptr },
         { "position_x_source_mode", reinterpret_cast<getter>(InteractionSourceConfiguration_get_PositionXSourceMode), reinterpret_cast<setter>(InteractionSourceConfiguration_put_PositionXSourceMode), nullptr, nullptr },
+        { "compositor", reinterpret_cast<getter>(InteractionSourceConfiguration_get_Compositor), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(InteractionSourceConfiguration_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "properties", reinterpret_cast<getter>(InteractionSourceConfiguration_get_Properties), nullptr, nullptr, nullptr },
+        { "implicit_animations", reinterpret_cast<getter>(InteractionSourceConfiguration_get_ImplicitAnimations), reinterpret_cast<setter>(InteractionSourceConfiguration_put_ImplicitAnimations), nullptr, nullptr },
+        { "comment", reinterpret_cast<getter>(InteractionSourceConfiguration_get_Comment), reinterpret_cast<setter>(InteractionSourceConfiguration_put_Comment), nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(InteractionSourceConfiguration_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -2825,6 +3353,176 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
+    static PyObject* InteractionTracker_get_Compositor(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Compositor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Compositor());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTracker_get_Dispatcher(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTracker_get_Properties(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Properties());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTracker_get_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ImplicitAnimations());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InteractionTracker_put_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Composition::ImplicitAnimationCollection>(arg);
+
+            self->obj.ImplicitAnimations(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* InteractionTracker_get_Comment(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Comment());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InteractionTracker_put_Comment(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Comment(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* InteractionTracker_get_DispatcherQueue(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_InteractionTracker(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Interactions::InteractionTracker>>();
@@ -2894,6 +3592,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { "scale", reinterpret_cast<getter>(InteractionTracker_get_Scale), nullptr, nullptr, nullptr },
         { "scale_velocity_in_percent_per_second", reinterpret_cast<getter>(InteractionTracker_get_ScaleVelocityInPercentPerSecond), nullptr, nullptr, nullptr },
         { "is_inertia_from_impulse", reinterpret_cast<getter>(InteractionTracker_get_IsInertiaFromImpulse), nullptr, nullptr, nullptr },
+        { "compositor", reinterpret_cast<getter>(InteractionTracker_get_Compositor), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(InteractionTracker_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "properties", reinterpret_cast<getter>(InteractionTracker_get_Properties), nullptr, nullptr, nullptr },
+        { "implicit_animations", reinterpret_cast<getter>(InteractionTracker_get_ImplicitAnimations), reinterpret_cast<setter>(InteractionTracker_put_ImplicitAnimations), nullptr, nullptr },
+        { "comment", reinterpret_cast<getter>(InteractionTracker_get_Comment), reinterpret_cast<setter>(InteractionTracker_put_Comment), nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(InteractionTracker_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -3416,6 +4120,176 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
+    static PyObject* InteractionTrackerInertiaModifier_get_Compositor(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Compositor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Compositor());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaModifier_get_Dispatcher(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaModifier_get_Properties(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Properties());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaModifier_get_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ImplicitAnimations());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InteractionTrackerInertiaModifier_put_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Composition::ImplicitAnimationCollection>(arg);
+
+            self->obj.ImplicitAnimations(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaModifier_get_Comment(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Comment());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InteractionTrackerInertiaModifier_put_Comment(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Comment(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaModifier_get_DispatcherQueue(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_InteractionTrackerInertiaModifier(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier>>();
@@ -3454,6 +4328,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     };
 
     static PyGetSetDef _getset_InteractionTrackerInertiaModifier[] = {
+        { "compositor", reinterpret_cast<getter>(InteractionTrackerInertiaModifier_get_Compositor), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(InteractionTrackerInertiaModifier_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "properties", reinterpret_cast<getter>(InteractionTrackerInertiaModifier_get_Properties), nullptr, nullptr, nullptr },
+        { "implicit_animations", reinterpret_cast<getter>(InteractionTrackerInertiaModifier_get_ImplicitAnimations), reinterpret_cast<setter>(InteractionTrackerInertiaModifier_put_ImplicitAnimations), nullptr, nullptr },
+        { "comment", reinterpret_cast<getter>(InteractionTrackerInertiaModifier_get_Comment), reinterpret_cast<setter>(InteractionTrackerInertiaModifier_put_Comment), nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(InteractionTrackerInertiaModifier_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -3860,6 +4740,176 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
+    static PyObject* InteractionTrackerInertiaMotion_get_Compositor(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Compositor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Compositor());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaMotion_get_Dispatcher(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaMotion_get_Properties(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Properties());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaMotion_get_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ImplicitAnimations());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InteractionTrackerInertiaMotion_put_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Composition::ImplicitAnimationCollection>(arg);
+
+            self->obj.ImplicitAnimations(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaMotion_get_Comment(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Comment());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InteractionTrackerInertiaMotion_put_Comment(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Comment(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaMotion_get_DispatcherQueue(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_InteractionTrackerInertiaMotion(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion>>();
@@ -3900,6 +4950,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static PyGetSetDef _getset_InteractionTrackerInertiaMotion[] = {
         { "motion", reinterpret_cast<getter>(InteractionTrackerInertiaMotion_get_Motion), reinterpret_cast<setter>(InteractionTrackerInertiaMotion_put_Motion), nullptr, nullptr },
         { "condition", reinterpret_cast<getter>(InteractionTrackerInertiaMotion_get_Condition), reinterpret_cast<setter>(InteractionTrackerInertiaMotion_put_Condition), nullptr, nullptr },
+        { "compositor", reinterpret_cast<getter>(InteractionTrackerInertiaMotion_get_Compositor), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(InteractionTrackerInertiaMotion_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "properties", reinterpret_cast<getter>(InteractionTrackerInertiaMotion_get_Properties), nullptr, nullptr, nullptr },
+        { "implicit_animations", reinterpret_cast<getter>(InteractionTrackerInertiaMotion_get_ImplicitAnimations), reinterpret_cast<setter>(InteractionTrackerInertiaMotion_put_ImplicitAnimations), nullptr, nullptr },
+        { "comment", reinterpret_cast<getter>(InteractionTrackerInertiaMotion_get_Comment), reinterpret_cast<setter>(InteractionTrackerInertiaMotion_put_Comment), nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(InteractionTrackerInertiaMotion_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -4332,6 +5388,176 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
+    static PyObject* InteractionTrackerInertiaNaturalMotion_get_Compositor(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Compositor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Compositor());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaNaturalMotion_get_Dispatcher(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaNaturalMotion_get_Properties(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Properties());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaNaturalMotion_get_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ImplicitAnimations());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InteractionTrackerInertiaNaturalMotion_put_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Composition::ImplicitAnimationCollection>(arg);
+
+            self->obj.ImplicitAnimations(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaNaturalMotion_get_Comment(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Comment());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InteractionTrackerInertiaNaturalMotion_put_Comment(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Comment(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaNaturalMotion_get_DispatcherQueue(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_InteractionTrackerInertiaNaturalMotion(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion>>();
@@ -4372,6 +5598,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static PyGetSetDef _getset_InteractionTrackerInertiaNaturalMotion[] = {
         { "natural_motion", reinterpret_cast<getter>(InteractionTrackerInertiaNaturalMotion_get_NaturalMotion), reinterpret_cast<setter>(InteractionTrackerInertiaNaturalMotion_put_NaturalMotion), nullptr, nullptr },
         { "condition", reinterpret_cast<getter>(InteractionTrackerInertiaNaturalMotion_get_Condition), reinterpret_cast<setter>(InteractionTrackerInertiaNaturalMotion_put_Condition), nullptr, nullptr },
+        { "compositor", reinterpret_cast<getter>(InteractionTrackerInertiaNaturalMotion_get_Compositor), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(InteractionTrackerInertiaNaturalMotion_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "properties", reinterpret_cast<getter>(InteractionTrackerInertiaNaturalMotion_get_Properties), nullptr, nullptr, nullptr },
+        { "implicit_animations", reinterpret_cast<getter>(InteractionTrackerInertiaNaturalMotion_get_ImplicitAnimations), reinterpret_cast<setter>(InteractionTrackerInertiaNaturalMotion_put_ImplicitAnimations), nullptr, nullptr },
+        { "comment", reinterpret_cast<getter>(InteractionTrackerInertiaNaturalMotion_get_Comment), reinterpret_cast<setter>(InteractionTrackerInertiaNaturalMotion_put_Comment), nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(InteractionTrackerInertiaNaturalMotion_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -4804,6 +6036,176 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
+    static PyObject* InteractionTrackerInertiaRestingValue_get_Compositor(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Compositor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Compositor());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaRestingValue_get_Dispatcher(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaRestingValue_get_Properties(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Properties());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaRestingValue_get_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ImplicitAnimations());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InteractionTrackerInertiaRestingValue_put_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Composition::ImplicitAnimationCollection>(arg);
+
+            self->obj.ImplicitAnimations(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaRestingValue_get_Comment(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Comment());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InteractionTrackerInertiaRestingValue_put_Comment(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Comment(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* InteractionTrackerInertiaRestingValue_get_DispatcherQueue(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_InteractionTrackerInertiaRestingValue(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue>>();
@@ -4844,6 +6246,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static PyGetSetDef _getset_InteractionTrackerInertiaRestingValue[] = {
         { "resting_value", reinterpret_cast<getter>(InteractionTrackerInertiaRestingValue_get_RestingValue), reinterpret_cast<setter>(InteractionTrackerInertiaRestingValue_put_RestingValue), nullptr, nullptr },
         { "condition", reinterpret_cast<getter>(InteractionTrackerInertiaRestingValue_get_Condition), reinterpret_cast<setter>(InteractionTrackerInertiaRestingValue_put_Condition), nullptr, nullptr },
+        { "compositor", reinterpret_cast<getter>(InteractionTrackerInertiaRestingValue_get_Compositor), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(InteractionTrackerInertiaRestingValue_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "properties", reinterpret_cast<getter>(InteractionTrackerInertiaRestingValue_get_Properties), nullptr, nullptr, nullptr },
+        { "implicit_animations", reinterpret_cast<getter>(InteractionTrackerInertiaRestingValue_get_ImplicitAnimations), reinterpret_cast<setter>(InteractionTrackerInertiaRestingValue_put_ImplicitAnimations), nullptr, nullptr },
+        { "comment", reinterpret_cast<getter>(InteractionTrackerInertiaRestingValue_get_Comment), reinterpret_cast<setter>(InteractionTrackerInertiaRestingValue_put_Comment), nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(InteractionTrackerInertiaRestingValue_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -5715,6 +7123,176 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
+    static PyObject* InteractionTrackerVector2InertiaModifier_get_Compositor(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Compositor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Compositor());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTrackerVector2InertiaModifier_get_Dispatcher(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTrackerVector2InertiaModifier_get_Properties(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Properties());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTrackerVector2InertiaModifier_get_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ImplicitAnimations());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InteractionTrackerVector2InertiaModifier_put_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Composition::ImplicitAnimationCollection>(arg);
+
+            self->obj.ImplicitAnimations(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* InteractionTrackerVector2InertiaModifier_get_Comment(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Comment());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InteractionTrackerVector2InertiaModifier_put_Comment(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Comment(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* InteractionTrackerVector2InertiaModifier_get_DispatcherQueue(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_InteractionTrackerVector2InertiaModifier(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier>>();
@@ -5753,6 +7331,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     };
 
     static PyGetSetDef _getset_InteractionTrackerVector2InertiaModifier[] = {
+        { "compositor", reinterpret_cast<getter>(InteractionTrackerVector2InertiaModifier_get_Compositor), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(InteractionTrackerVector2InertiaModifier_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "properties", reinterpret_cast<getter>(InteractionTrackerVector2InertiaModifier_get_Properties), nullptr, nullptr, nullptr },
+        { "implicit_animations", reinterpret_cast<getter>(InteractionTrackerVector2InertiaModifier_get_ImplicitAnimations), reinterpret_cast<setter>(InteractionTrackerVector2InertiaModifier_put_ImplicitAnimations), nullptr, nullptr },
+        { "comment", reinterpret_cast<getter>(InteractionTrackerVector2InertiaModifier_get_Comment), reinterpret_cast<setter>(InteractionTrackerVector2InertiaModifier_put_Comment), nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(InteractionTrackerVector2InertiaModifier_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -6159,6 +7743,176 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
+    static PyObject* InteractionTrackerVector2InertiaNaturalMotion_get_Compositor(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Compositor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Compositor());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTrackerVector2InertiaNaturalMotion_get_Dispatcher(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTrackerVector2InertiaNaturalMotion_get_Properties(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Properties());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InteractionTrackerVector2InertiaNaturalMotion_get_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ImplicitAnimations());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InteractionTrackerVector2InertiaNaturalMotion_put_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Composition::ImplicitAnimationCollection>(arg);
+
+            self->obj.ImplicitAnimations(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* InteractionTrackerVector2InertiaNaturalMotion_get_Comment(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Comment());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InteractionTrackerVector2InertiaNaturalMotion_put_Comment(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Comment(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* InteractionTrackerVector2InertiaNaturalMotion_get_DispatcherQueue(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_InteractionTrackerVector2InertiaNaturalMotion(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion>>();
@@ -6199,6 +7953,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static PyGetSetDef _getset_InteractionTrackerVector2InertiaNaturalMotion[] = {
         { "natural_motion", reinterpret_cast<getter>(InteractionTrackerVector2InertiaNaturalMotion_get_NaturalMotion), reinterpret_cast<setter>(InteractionTrackerVector2InertiaNaturalMotion_put_NaturalMotion), nullptr, nullptr },
         { "condition", reinterpret_cast<getter>(InteractionTrackerVector2InertiaNaturalMotion_get_Condition), reinterpret_cast<setter>(InteractionTrackerVector2InertiaNaturalMotion_put_Condition), nullptr, nullptr },
+        { "compositor", reinterpret_cast<getter>(InteractionTrackerVector2InertiaNaturalMotion_get_Compositor), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(InteractionTrackerVector2InertiaNaturalMotion_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "properties", reinterpret_cast<getter>(InteractionTrackerVector2InertiaNaturalMotion_get_Properties), nullptr, nullptr, nullptr },
+        { "implicit_animations", reinterpret_cast<getter>(InteractionTrackerVector2InertiaNaturalMotion_get_ImplicitAnimations), reinterpret_cast<setter>(InteractionTrackerVector2InertiaNaturalMotion_put_ImplicitAnimations), nullptr, nullptr },
+        { "comment", reinterpret_cast<getter>(InteractionTrackerVector2InertiaNaturalMotion_get_Comment), reinterpret_cast<setter>(InteractionTrackerVector2InertiaNaturalMotion_put_Comment), nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(InteractionTrackerVector2InertiaNaturalMotion_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -7335,6 +9095,176 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         }
     }
 
+    static PyObject* VisualInteractionSource_get_Compositor(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Compositor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Compositor());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* VisualInteractionSource_get_Dispatcher(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* VisualInteractionSource_get_Properties(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Properties());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* VisualInteractionSource_get_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ImplicitAnimations());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int VisualInteractionSource_put_ImplicitAnimations(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Composition::ImplicitAnimationCollection>(arg);
+
+            self->obj.ImplicitAnimations(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* VisualInteractionSource_get_Comment(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Comment());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int VisualInteractionSource_put_Comment(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Comment(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* VisualInteractionSource_get_DispatcherQueue(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_VisualInteractionSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Interactions::VisualInteractionSource>>();
@@ -7396,6 +9326,12 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { "scale", reinterpret_cast<getter>(VisualInteractionSource_get_Scale), nullptr, nullptr, nullptr },
         { "scale_velocity", reinterpret_cast<getter>(VisualInteractionSource_get_ScaleVelocity), nullptr, nullptr, nullptr },
         { "pointer_wheel_config", reinterpret_cast<getter>(VisualInteractionSource_get_PointerWheelConfig), nullptr, nullptr, nullptr },
+        { "compositor", reinterpret_cast<getter>(VisualInteractionSource_get_Compositor), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(VisualInteractionSource_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "properties", reinterpret_cast<getter>(VisualInteractionSource_get_Properties), nullptr, nullptr, nullptr },
+        { "implicit_animations", reinterpret_cast<getter>(VisualInteractionSource_get_ImplicitAnimations), reinterpret_cast<setter>(VisualInteractionSource_put_ImplicitAnimations), nullptr, nullptr },
+        { "comment", reinterpret_cast<getter>(VisualInteractionSource_get_Comment), reinterpret_cast<setter>(VisualInteractionSource_put_Comment), nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(VisualInteractionSource_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 

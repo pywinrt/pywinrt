@@ -244,6 +244,25 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         }
     }
 
+    static PyObject* IRawElementProviderSimple_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_IRawElementProviderSimple(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>>();
@@ -282,6 +301,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     };
 
     static PyGetSetDef _getset_IRawElementProviderSimple[] = {
+        { "dispatcher", reinterpret_cast<getter>(IRawElementProviderSimple_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 

@@ -2723,6 +2723,25 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    static PyObject* InputActivationListener_get_DispatcherQueue(py::wrapper::Microsoft::UI::Input::InputActivationListener* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.InputObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* InputActivationListener_add_InputActivationChanged(py::wrapper::Microsoft::UI::Input::InputActivationListener* self, PyObject* arg) noexcept
     {
         try
@@ -2800,6 +2819,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static PyGetSetDef _getset_InputActivationListener[] = {
         { "state", reinterpret_cast<getter>(InputActivationListener_get_State), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(InputActivationListener_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -3764,6 +3784,25 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    static PyObject* InputFocusController_get_DispatcherQueue(py::wrapper::Microsoft::UI::Input::InputFocusController* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.InputObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* InputFocusController_add_GotFocus(py::wrapper::Microsoft::UI::Input::InputFocusController* self, PyObject* arg) noexcept
     {
         try
@@ -3933,6 +3972,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static PyGetSetDef _getset_InputFocusController[] = {
         { "has_focus", reinterpret_cast<getter>(InputFocusController_get_HasFocus), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(InputFocusController_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -4075,6 +4115,25 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    static PyObject* InputFocusNavigationHost_get_DispatcherQueue(py::wrapper::Microsoft::UI::Input::InputFocusNavigationHost* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.InputObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* InputFocusNavigationHost_add_DepartFocusRequested(py::wrapper::Microsoft::UI::Input::InputFocusNavigationHost* self, PyObject* arg) noexcept
     {
         try
@@ -4153,6 +4212,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static PyGetSetDef _getset_InputFocusNavigationHost[] = {
         { "contains_focus", reinterpret_cast<getter>(InputFocusNavigationHost_get_ContainsFocus), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(InputFocusNavigationHost_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -4334,6 +4394,25 @@ namespace py::cpp::Microsoft::UI::Input
         else
         {
             py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputKeyboardSource_get_DispatcherQueue(py::wrapper::Microsoft::UI::Input::InputKeyboardSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.InputObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
     }
@@ -4641,6 +4720,7 @@ namespace py::cpp::Microsoft::UI::Input
     };
 
     static PyGetSetDef _getset_InputKeyboardSource[] = {
+        { "dispatcher_queue", reinterpret_cast<getter>(InputKeyboardSource_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -4734,6 +4814,25 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    static PyObject* InputLightDismissAction_get_DispatcherQueue(py::wrapper::Microsoft::UI::Input::InputLightDismissAction* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.InputObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* InputLightDismissAction_add_Dismissed(py::wrapper::Microsoft::UI::Input::InputLightDismissAction* self, PyObject* arg) noexcept
     {
         try
@@ -4810,6 +4909,7 @@ namespace py::cpp::Microsoft::UI::Input
     };
 
     static PyGetSetDef _getset_InputLightDismissAction[] = {
+        { "dispatcher_queue", reinterpret_cast<getter>(InputLightDismissAction_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -5708,6 +5808,25 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    static PyObject* InputPointerSource_get_DispatcherQueue(py::wrapper::Microsoft::UI::Input::InputPointerSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.InputObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* InputPointerSource_add_PointerCaptureLost(py::wrapper::Microsoft::UI::Input::InputPointerSource* self, PyObject* arg) noexcept
     {
         try
@@ -6191,6 +6310,7 @@ namespace py::cpp::Microsoft::UI::Input
     static PyGetSetDef _getset_InputPointerSource[] = {
         { "cursor", reinterpret_cast<getter>(InputPointerSource_get_Cursor), reinterpret_cast<setter>(InputPointerSource_put_Cursor), nullptr, nullptr },
         { "device_kinds", reinterpret_cast<getter>(InputPointerSource_get_DeviceKinds), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(InputPointerSource_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -6283,6 +6403,25 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    static PyObject* InputPreTranslateKeyboardSource_get_DispatcherQueue(py::wrapper::Microsoft::UI::Input::InputPreTranslateKeyboardSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.InputObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_InputPreTranslateKeyboardSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Input::InputPreTranslateKeyboardSource>>();
@@ -6314,6 +6453,7 @@ namespace py::cpp::Microsoft::UI::Input
     };
 
     static PyGetSetDef _getset_InputPreTranslateKeyboardSource[] = {
+        { "dispatcher_queue", reinterpret_cast<getter>(InputPreTranslateKeyboardSource_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 

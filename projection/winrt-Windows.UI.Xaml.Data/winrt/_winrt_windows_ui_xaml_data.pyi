@@ -11,6 +11,7 @@ import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
+import winrt.windows.ui.core as windows_ui_core
 import winrt.windows.ui.xaml as windows_ui_xaml
 import winrt.windows.ui.xaml.interop as windows_ui_xaml_interop
 
@@ -82,6 +83,8 @@ class Binding(winrt.system.Object):
     def fallback_value(self) -> typing.Optional[winrt.system.Object]: ...
     @fallback_value.setter
     def fallback_value(self, value: typing.Optional[winrt.system.Object]) -> None: ...
+    @_property
+    def dispatcher(self) -> typing.Optional[windows_ui_core.CoreDispatcher]: ...
 
 @typing.final
 class BindingBase(winrt.system.Object):
@@ -95,6 +98,8 @@ class BindingBase(winrt.system.Object):
     def register_property_changed_callback(self, dp: typing.Optional[windows_ui_xaml.DependencyProperty], callback: typing.Optional[windows_ui_xaml.DependencyPropertyChangedCallback], /) -> winrt.system.Int64: ...
     def set_value(self, dp: typing.Optional[windows_ui_xaml.DependencyProperty], value: typing.Optional[winrt.system.Object], /) -> None: ...
     def unregister_property_changed_callback(self, dp: typing.Optional[windows_ui_xaml.DependencyProperty], token: winrt.system.Int64, /) -> None: ...
+    @_property
+    def dispatcher(self) -> typing.Optional[windows_ui_core.CoreDispatcher]: ...
 
 @typing.final
 class BindingExpression(winrt.system.Object):
@@ -157,6 +162,8 @@ class CollectionViewSource(winrt.system.Object, metaclass=CollectionViewSource_S
     def is_source_grouped(self, value: bool) -> None: ...
     @_property
     def view(self) -> typing.Optional[ICollectionView]: ...
+    @_property
+    def dispatcher(self) -> typing.Optional[windows_ui_core.CoreDispatcher]: ...
 
 @typing.final
 class CurrentChangingEventArgs(winrt.system.Object):
@@ -209,6 +216,8 @@ class RelativeSource(winrt.system.Object):
     def mode(self) -> RelativeSourceMode: ...
     @mode.setter
     def mode(self, value: RelativeSourceMode) -> None: ...
+    @_property
+    def dispatcher(self) -> typing.Optional[windows_ui_core.CoreDispatcher]: ...
 
 @typing.final
 class ICollectionView(winrt.system.Object, winrt._winrt.MutableSequence[winrt.system.Object]):

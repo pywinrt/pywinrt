@@ -4080,6 +4080,195 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
+    static PyObject* DesktopChildSiteBridge_get_OverrideScale(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"OverrideScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OverrideScale());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int DesktopChildSiteBridge_put_OverrideScale(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"OverrideScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<float>(arg);
+
+            self->obj.OverrideScale(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_get_LayoutDirectionOverride(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"LayoutDirectionOverride"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.LayoutDirectionOverride());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int DesktopChildSiteBridge_put_LayoutDirectionOverride(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"LayoutDirectionOverride"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Microsoft::UI::Content::ContentLayoutDirection>>(arg);
+
+            self->obj.LayoutDirectionOverride(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_get_DispatcherQueue(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_get_IsEnabled(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsEnabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_get_IsVisible(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"IsVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsVisible());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_get_WindowId(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"WindowId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.WindowId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_get_IsClosed(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"IsClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsClosed());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DesktopChildSiteBridge(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Content::DesktopChildSiteBridge>>();
@@ -4123,6 +4312,13 @@ namespace py::cpp::Microsoft::UI::Content
     static PyGetSetDef _getset_DesktopChildSiteBridge[] = {
         { "resize_policy", reinterpret_cast<getter>(DesktopChildSiteBridge_get_ResizePolicy), reinterpret_cast<setter>(DesktopChildSiteBridge_put_ResizePolicy), nullptr, nullptr },
         { "site_view", reinterpret_cast<getter>(DesktopChildSiteBridge_get_SiteView), nullptr, nullptr, nullptr },
+        { "override_scale", reinterpret_cast<getter>(DesktopChildSiteBridge_get_OverrideScale), reinterpret_cast<setter>(DesktopChildSiteBridge_put_OverrideScale), nullptr, nullptr },
+        { "layout_direction_override", reinterpret_cast<getter>(DesktopChildSiteBridge_get_LayoutDirectionOverride), reinterpret_cast<setter>(DesktopChildSiteBridge_put_LayoutDirectionOverride), nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(DesktopChildSiteBridge_get_DispatcherQueue), nullptr, nullptr, nullptr },
+        { "is_enabled", reinterpret_cast<getter>(DesktopChildSiteBridge_get_IsEnabled), nullptr, nullptr, nullptr },
+        { "is_visible", reinterpret_cast<getter>(DesktopChildSiteBridge_get_IsVisible), nullptr, nullptr, nullptr },
+        { "window_id", reinterpret_cast<getter>(DesktopChildSiteBridge_get_WindowId), nullptr, nullptr, nullptr },
+        { "is_closed", reinterpret_cast<getter>(DesktopChildSiteBridge_get_IsClosed), nullptr, nullptr, nullptr },
         { }
     };
 

@@ -1058,6 +1058,25 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         }
     }
 
+    static PyObject* CompositeTransform3D_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_CompositeTransform3D(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D>>();
@@ -1108,6 +1127,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         { "center_z", reinterpret_cast<getter>(CompositeTransform3D_get_CenterZ), reinterpret_cast<setter>(CompositeTransform3D_put_CenterZ), nullptr, nullptr },
         { "center_y", reinterpret_cast<getter>(CompositeTransform3D_get_CenterY), reinterpret_cast<setter>(CompositeTransform3D_put_CenterY), nullptr, nullptr },
         { "center_x", reinterpret_cast<getter>(CompositeTransform3D_get_CenterX), reinterpret_cast<setter>(CompositeTransform3D_put_CenterX), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(CompositeTransform3D_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -1910,6 +1930,25 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         }
     }
 
+    static PyObject* PerspectiveTransform3D_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PerspectiveTransform3D(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D>>();
@@ -1951,6 +1990,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         { "offset_y", reinterpret_cast<getter>(PerspectiveTransform3D_get_OffsetY), reinterpret_cast<setter>(PerspectiveTransform3D_put_OffsetY), nullptr, nullptr },
         { "offset_x", reinterpret_cast<getter>(PerspectiveTransform3D_get_OffsetX), reinterpret_cast<setter>(PerspectiveTransform3D_put_OffsetX), nullptr, nullptr },
         { "depth", reinterpret_cast<getter>(PerspectiveTransform3D_get_Depth), reinterpret_cast<setter>(PerspectiveTransform3D_put_Depth), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(PerspectiveTransform3D_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -2237,6 +2277,25 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         }
     }
 
+    static PyObject* Transform3D_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Media::Media3D::Transform3D* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Transform3D(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Media3D::Transform3D>>();
@@ -2275,6 +2334,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
     };
 
     static PyGetSetDef _getset_Transform3D[] = {
+        { "dispatcher", reinterpret_cast<getter>(Transform3D_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 

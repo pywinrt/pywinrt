@@ -25,6 +25,10 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
 #if __has_include("py.Windows.Globalization.h")
 #include "py.Windows.Globalization.h"
 #endif
@@ -125,6 +129,10 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.UI.Xaml.Media.Animation.h"
 #endif
 
+#if __has_include("py.Windows.UI.Xaml.Media.Media3D.h")
+#include "py.Windows.UI.Xaml.Media.Media3D.h"
+#endif
+
 #if __has_include("py.Windows.UI.Xaml.Navigation.h")
 #include "py.Windows.UI.Xaml.Navigation.h"
 #endif
@@ -142,6 +150,7 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.ApplicationModel.Search.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
+#include <winrt/Windows.Foundation.Numerics.h>
 #include <winrt/Windows.Globalization.h>
 #include <winrt/Windows.Media.Capture.h>
 #include <winrt/Windows.Media.Casting.h>
@@ -167,6 +176,7 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.UI.Xaml.Interop.h>
 #include <winrt/Windows.UI.Xaml.Media.h>
 #include <winrt/Windows.UI.Xaml.Media.Animation.h>
+#include <winrt/Windows.UI.Xaml.Media.Media3D.h>
 #include <winrt/Windows.UI.Xaml.Navigation.h>
 #include <winrt/Windows.Web.h>
 #include <winrt/Windows.Web.Http.h>

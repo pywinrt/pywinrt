@@ -807,6 +807,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* CharacterReceivedRoutedEventArgs_get_OriginalSource(py::wrapper::Windows::UI::Xaml::Input::CharacterReceivedRoutedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.RoutedEventArgs", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OriginalSource());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_CharacterReceivedRoutedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::CharacterReceivedRoutedEventArgs>>();
@@ -841,6 +860,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         { "handled", reinterpret_cast<getter>(CharacterReceivedRoutedEventArgs_get_Handled), reinterpret_cast<setter>(CharacterReceivedRoutedEventArgs_put_Handled), nullptr, nullptr },
         { "character", reinterpret_cast<getter>(CharacterReceivedRoutedEventArgs_get_Character), nullptr, nullptr, nullptr },
         { "key_status", reinterpret_cast<getter>(CharacterReceivedRoutedEventArgs_get_KeyStatus), nullptr, nullptr, nullptr },
+        { "original_source", reinterpret_cast<getter>(CharacterReceivedRoutedEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -989,6 +1009,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* ContextRequestedEventArgs_get_OriginalSource(py::wrapper::Windows::UI::Xaml::Input::ContextRequestedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.RoutedEventArgs", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OriginalSource());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ContextRequestedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::ContextRequestedEventArgs>>();
@@ -1022,6 +1061,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyGetSetDef _getset_ContextRequestedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(ContextRequestedEventArgs_get_Handled), reinterpret_cast<setter>(ContextRequestedEventArgs_put_Handled), nullptr, nullptr },
+        { "original_source", reinterpret_cast<getter>(ContextRequestedEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -1176,6 +1216,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* DoubleTappedRoutedEventArgs_get_OriginalSource(py::wrapper::Windows::UI::Xaml::Input::DoubleTappedRoutedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.RoutedEventArgs", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OriginalSource());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DoubleTappedRoutedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::DoubleTappedRoutedEventArgs>>();
@@ -1210,6 +1269,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static PyGetSetDef _getset_DoubleTappedRoutedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(DoubleTappedRoutedEventArgs_get_Handled), reinterpret_cast<setter>(DoubleTappedRoutedEventArgs_put_Handled), nullptr, nullptr },
         { "pointer_device_type", reinterpret_cast<getter>(DoubleTappedRoutedEventArgs_get_PointerDeviceType), nullptr, nullptr, nullptr },
+        { "original_source", reinterpret_cast<getter>(DoubleTappedRoutedEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -2835,6 +2895,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* GettingFocusEventArgs_get_OriginalSource(py::wrapper::Windows::UI::Xaml::Input::GettingFocusEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.RoutedEventArgs", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OriginalSource());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_GettingFocusEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::GettingFocusEventArgs>>();
@@ -2876,6 +2955,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         { "input_device", reinterpret_cast<getter>(GettingFocusEventArgs_get_InputDevice), nullptr, nullptr, nullptr },
         { "old_focused_element", reinterpret_cast<getter>(GettingFocusEventArgs_get_OldFocusedElement), nullptr, nullptr, nullptr },
         { "correlation_id", reinterpret_cast<getter>(GettingFocusEventArgs_get_CorrelationId), nullptr, nullptr, nullptr },
+        { "original_source", reinterpret_cast<getter>(GettingFocusEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -3049,6 +3129,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* HoldingRoutedEventArgs_get_OriginalSource(py::wrapper::Windows::UI::Xaml::Input::HoldingRoutedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.RoutedEventArgs", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OriginalSource());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_HoldingRoutedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::HoldingRoutedEventArgs>>();
@@ -3084,6 +3183,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         { "handled", reinterpret_cast<getter>(HoldingRoutedEventArgs_get_Handled), reinterpret_cast<setter>(HoldingRoutedEventArgs_put_Handled), nullptr, nullptr },
         { "holding_state", reinterpret_cast<getter>(HoldingRoutedEventArgs_get_HoldingState), nullptr, nullptr, nullptr },
         { "pointer_device_type", reinterpret_cast<getter>(HoldingRoutedEventArgs_get_PointerDeviceType), nullptr, nullptr, nullptr },
+        { "original_source", reinterpret_cast<getter>(HoldingRoutedEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -3869,6 +3969,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* InputScope_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Input::InputScope* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_InputScope(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::InputScope>>();
@@ -3908,6 +4027,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyGetSetDef _getset_InputScope[] = {
         { "names", reinterpret_cast<getter>(InputScope_get_Names), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(InputScope_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -4250,6 +4370,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* InputScopeName_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Input::InputScopeName* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_InputScopeName(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::InputScopeName>>();
@@ -4289,6 +4428,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyGetSetDef _getset_InputScopeName[] = {
         { "name_value", reinterpret_cast<getter>(InputScopeName_get_NameValue), reinterpret_cast<setter>(InputScopeName_put_NameValue), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(InputScopeName_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -4447,6 +4587,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* KeyRoutedEventArgs_get_OriginalSource(py::wrapper::Windows::UI::Xaml::Input::KeyRoutedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.RoutedEventArgs", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OriginalSource());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_KeyRoutedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs>>();
@@ -4483,6 +4642,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         { "key_status", reinterpret_cast<getter>(KeyRoutedEventArgs_get_KeyStatus), nullptr, nullptr, nullptr },
         { "original_key", reinterpret_cast<getter>(KeyRoutedEventArgs_get_OriginalKey), nullptr, nullptr, nullptr },
         { "device_id", reinterpret_cast<getter>(KeyRoutedEventArgs_get_DeviceId), nullptr, nullptr, nullptr },
+        { "original_source", reinterpret_cast<getter>(KeyRoutedEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -5027,6 +5187,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* KeyboardAccelerator_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* KeyboardAccelerator_add_Invoked(py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator* self, PyObject* arg) noexcept
     {
         try
@@ -5114,6 +5293,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         { "modifiers", reinterpret_cast<getter>(KeyboardAccelerator_get_Modifiers), reinterpret_cast<setter>(KeyboardAccelerator_put_Modifiers), nullptr, nullptr },
         { "key", reinterpret_cast<getter>(KeyboardAccelerator_get_Key), reinterpret_cast<setter>(KeyboardAccelerator_put_Key), nullptr, nullptr },
         { "is_enabled", reinterpret_cast<getter>(KeyboardAccelerator_get_IsEnabled), reinterpret_cast<setter>(KeyboardAccelerator_put_IsEnabled), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(KeyboardAccelerator_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -5628,6 +5808,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* LosingFocusEventArgs_get_OriginalSource(py::wrapper::Windows::UI::Xaml::Input::LosingFocusEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.RoutedEventArgs", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OriginalSource());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_LosingFocusEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::LosingFocusEventArgs>>();
@@ -5669,6 +5868,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         { "input_device", reinterpret_cast<getter>(LosingFocusEventArgs_get_InputDevice), nullptr, nullptr, nullptr },
         { "old_focused_element", reinterpret_cast<getter>(LosingFocusEventArgs_get_OldFocusedElement), nullptr, nullptr, nullptr },
         { "correlation_id", reinterpret_cast<getter>(LosingFocusEventArgs_get_CorrelationId), nullptr, nullptr, nullptr },
+        { "original_source", reinterpret_cast<getter>(LosingFocusEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -5887,6 +6087,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* ManipulationCompletedRoutedEventArgs_get_OriginalSource(py::wrapper::Windows::UI::Xaml::Input::ManipulationCompletedRoutedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.RoutedEventArgs", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OriginalSource());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ManipulationCompletedRoutedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::ManipulationCompletedRoutedEventArgs>>();
@@ -5925,6 +6144,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         { "pointer_device_type", reinterpret_cast<getter>(ManipulationCompletedRoutedEventArgs_get_PointerDeviceType), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(ManipulationCompletedRoutedEventArgs_get_Position), nullptr, nullptr, nullptr },
         { "velocities", reinterpret_cast<getter>(ManipulationCompletedRoutedEventArgs_get_Velocities), nullptr, nullptr, nullptr },
+        { "original_source", reinterpret_cast<getter>(ManipulationCompletedRoutedEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -6192,6 +6412,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* ManipulationDeltaRoutedEventArgs_get_OriginalSource(py::wrapper::Windows::UI::Xaml::Input::ManipulationDeltaRoutedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.RoutedEventArgs", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OriginalSource());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ManipulationDeltaRoutedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::ManipulationDeltaRoutedEventArgs>>();
@@ -6232,6 +6471,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         { "pointer_device_type", reinterpret_cast<getter>(ManipulationDeltaRoutedEventArgs_get_PointerDeviceType), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(ManipulationDeltaRoutedEventArgs_get_Position), nullptr, nullptr, nullptr },
         { "velocities", reinterpret_cast<getter>(ManipulationDeltaRoutedEventArgs_get_Velocities), nullptr, nullptr, nullptr },
+        { "original_source", reinterpret_cast<getter>(ManipulationDeltaRoutedEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -6572,6 +6812,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* ManipulationInertiaStartingRoutedEventArgs_get_OriginalSource(py::wrapper::Windows::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.RoutedEventArgs", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OriginalSource());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ManipulationInertiaStartingRoutedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs>>();
@@ -6612,6 +6871,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         { "delta", reinterpret_cast<getter>(ManipulationInertiaStartingRoutedEventArgs_get_Delta), nullptr, nullptr, nullptr },
         { "pointer_device_type", reinterpret_cast<getter>(ManipulationInertiaStartingRoutedEventArgs_get_PointerDeviceType), nullptr, nullptr, nullptr },
         { "velocities", reinterpret_cast<getter>(ManipulationInertiaStartingRoutedEventArgs_get_Velocities), nullptr, nullptr, nullptr },
+        { "original_source", reinterpret_cast<getter>(ManipulationInertiaStartingRoutedEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -7022,6 +7282,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* ManipulationStartedRoutedEventArgs_get_OriginalSource(py::wrapper::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.RoutedEventArgs", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OriginalSource());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ManipulationStartedRoutedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>>();
@@ -7059,6 +7338,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         { "cumulative", reinterpret_cast<getter>(ManipulationStartedRoutedEventArgs_get_Cumulative), nullptr, nullptr, nullptr },
         { "pointer_device_type", reinterpret_cast<getter>(ManipulationStartedRoutedEventArgs_get_PointerDeviceType), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(ManipulationStartedRoutedEventArgs_get_Position), nullptr, nullptr, nullptr },
+        { "original_source", reinterpret_cast<getter>(ManipulationStartedRoutedEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -7304,6 +7584,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* ManipulationStartingRoutedEventArgs_get_OriginalSource(py::wrapper::Windows::UI::Xaml::Input::ManipulationStartingRoutedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.RoutedEventArgs", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OriginalSource());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ManipulationStartingRoutedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::ManipulationStartingRoutedEventArgs>>();
@@ -7339,6 +7638,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         { "mode", reinterpret_cast<getter>(ManipulationStartingRoutedEventArgs_get_Mode), reinterpret_cast<setter>(ManipulationStartingRoutedEventArgs_put_Mode), nullptr, nullptr },
         { "handled", reinterpret_cast<getter>(ManipulationStartingRoutedEventArgs_get_Handled), reinterpret_cast<setter>(ManipulationStartingRoutedEventArgs_put_Handled), nullptr, nullptr },
         { "container", reinterpret_cast<getter>(ManipulationStartingRoutedEventArgs_get_Container), reinterpret_cast<setter>(ManipulationStartingRoutedEventArgs_put_Container), nullptr, nullptr },
+        { "original_source", reinterpret_cast<getter>(ManipulationStartingRoutedEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -7459,6 +7759,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* NoFocusCandidateFoundEventArgs_get_OriginalSource(py::wrapper::Windows::UI::Xaml::Input::NoFocusCandidateFoundEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.RoutedEventArgs", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OriginalSource());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_NoFocusCandidateFoundEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::NoFocusCandidateFoundEventArgs>>();
@@ -7493,6 +7812,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         { "handled", reinterpret_cast<getter>(NoFocusCandidateFoundEventArgs_get_Handled), reinterpret_cast<setter>(NoFocusCandidateFoundEventArgs_put_Handled), nullptr, nullptr },
         { "direction", reinterpret_cast<getter>(NoFocusCandidateFoundEventArgs_get_Direction), nullptr, nullptr, nullptr },
         { "input_device", reinterpret_cast<getter>(NoFocusCandidateFoundEventArgs_get_InputDevice), nullptr, nullptr, nullptr },
+        { "original_source", reinterpret_cast<getter>(NoFocusCandidateFoundEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -7840,6 +8160,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* PointerRoutedEventArgs_get_OriginalSource(py::wrapper::Windows::UI::Xaml::Input::PointerRoutedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.RoutedEventArgs", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OriginalSource());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PointerRoutedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::PointerRoutedEventArgs>>();
@@ -7877,6 +8216,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         { "key_modifiers", reinterpret_cast<getter>(PointerRoutedEventArgs_get_KeyModifiers), nullptr, nullptr, nullptr },
         { "pointer", reinterpret_cast<getter>(PointerRoutedEventArgs_get_Pointer), nullptr, nullptr, nullptr },
         { "is_generated", reinterpret_cast<getter>(PointerRoutedEventArgs_get_IsGenerated), nullptr, nullptr, nullptr },
+        { "original_source", reinterpret_cast<getter>(PointerRoutedEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -8185,6 +8525,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* RightTappedRoutedEventArgs_get_OriginalSource(py::wrapper::Windows::UI::Xaml::Input::RightTappedRoutedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.RoutedEventArgs", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OriginalSource());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_RightTappedRoutedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::RightTappedRoutedEventArgs>>();
@@ -8219,6 +8578,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static PyGetSetDef _getset_RightTappedRoutedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(RightTappedRoutedEventArgs_get_Handled), reinterpret_cast<setter>(RightTappedRoutedEventArgs_put_Handled), nullptr, nullptr },
         { "pointer_device_type", reinterpret_cast<getter>(RightTappedRoutedEventArgs_get_PointerDeviceType), nullptr, nullptr, nullptr },
+        { "original_source", reinterpret_cast<getter>(RightTappedRoutedEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -8673,6 +9033,279 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* StandardUICommand_get_Label(py::wrapper::Windows::UI::Xaml::Input::StandardUICommand* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Input.XamlUICommand", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Label());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int StandardUICommand_put_Label(py::wrapper::Windows::UI::Xaml::Input::StandardUICommand* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Input.XamlUICommand", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Label(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* StandardUICommand_get_IconSource(py::wrapper::Windows::UI::Xaml::Input::StandardUICommand* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Input.XamlUICommand", L"IconSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IconSource());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int StandardUICommand_put_IconSource(py::wrapper::Windows::UI::Xaml::Input::StandardUICommand* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Input.XamlUICommand", L"IconSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::IconSource>(arg);
+
+            self->obj.IconSource(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* StandardUICommand_get_Description(py::wrapper::Windows::UI::Xaml::Input::StandardUICommand* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Input.XamlUICommand", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Description());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int StandardUICommand_put_Description(py::wrapper::Windows::UI::Xaml::Input::StandardUICommand* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Input.XamlUICommand", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Description(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* StandardUICommand_get_Command(py::wrapper::Windows::UI::Xaml::Input::StandardUICommand* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Input.XamlUICommand", L"Command"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Command());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int StandardUICommand_put_Command(py::wrapper::Windows::UI::Xaml::Input::StandardUICommand* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Input.XamlUICommand", L"Command"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::ICommand>(arg);
+
+            self->obj.Command(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* StandardUICommand_get_AccessKey(py::wrapper::Windows::UI::Xaml::Input::StandardUICommand* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Input.XamlUICommand", L"AccessKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AccessKey());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int StandardUICommand_put_AccessKey(py::wrapper::Windows::UI::Xaml::Input::StandardUICommand* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Input.XamlUICommand", L"AccessKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.AccessKey(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* StandardUICommand_get_KeyboardAccelerators(py::wrapper::Windows::UI::Xaml::Input::StandardUICommand* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Input.XamlUICommand", L"KeyboardAccelerators"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.KeyboardAccelerators());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* StandardUICommand_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Input::StandardUICommand* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_StandardUICommand(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::StandardUICommand>>();
@@ -8715,6 +9348,13 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyGetSetDef _getset_StandardUICommand[] = {
         { "kind", reinterpret_cast<getter>(StandardUICommand_get_Kind), reinterpret_cast<setter>(StandardUICommand_put_Kind), nullptr, nullptr },
+        { "label", reinterpret_cast<getter>(StandardUICommand_get_Label), reinterpret_cast<setter>(StandardUICommand_put_Label), nullptr, nullptr },
+        { "icon_source", reinterpret_cast<getter>(StandardUICommand_get_IconSource), reinterpret_cast<setter>(StandardUICommand_put_IconSource), nullptr, nullptr },
+        { "description", reinterpret_cast<getter>(StandardUICommand_get_Description), reinterpret_cast<setter>(StandardUICommand_put_Description), nullptr, nullptr },
+        { "command", reinterpret_cast<getter>(StandardUICommand_get_Command), reinterpret_cast<setter>(StandardUICommand_put_Command), nullptr, nullptr },
+        { "access_key", reinterpret_cast<getter>(StandardUICommand_get_AccessKey), reinterpret_cast<setter>(StandardUICommand_put_AccessKey), nullptr, nullptr },
+        { "keyboard_accelerators", reinterpret_cast<getter>(StandardUICommand_get_KeyboardAccelerators), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(StandardUICommand_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -8895,6 +9535,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* TappedRoutedEventArgs_get_OriginalSource(py::wrapper::Windows::UI::Xaml::Input::TappedRoutedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.RoutedEventArgs", L"OriginalSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OriginalSource());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_TappedRoutedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Input::TappedRoutedEventArgs>>();
@@ -8929,6 +9588,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static PyGetSetDef _getset_TappedRoutedEventArgs[] = {
         { "handled", reinterpret_cast<getter>(TappedRoutedEventArgs_get_Handled), reinterpret_cast<setter>(TappedRoutedEventArgs_put_Handled), nullptr, nullptr },
         { "pointer_device_type", reinterpret_cast<getter>(TappedRoutedEventArgs_get_PointerDeviceType), nullptr, nullptr, nullptr },
+        { "original_source", reinterpret_cast<getter>(TappedRoutedEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -9670,6 +10330,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
+    static PyObject* XamlUICommand_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* XamlUICommand_add_CanExecuteRequested(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self, PyObject* arg) noexcept
     {
         try
@@ -9852,6 +10531,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         { "command", reinterpret_cast<getter>(XamlUICommand_get_Command), reinterpret_cast<setter>(XamlUICommand_put_Command), nullptr, nullptr },
         { "access_key", reinterpret_cast<getter>(XamlUICommand_get_AccessKey), reinterpret_cast<setter>(XamlUICommand_put_AccessKey), nullptr, nullptr },
         { "keyboard_accelerators", reinterpret_cast<getter>(XamlUICommand_get_KeyboardAccelerators), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(XamlUICommand_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 

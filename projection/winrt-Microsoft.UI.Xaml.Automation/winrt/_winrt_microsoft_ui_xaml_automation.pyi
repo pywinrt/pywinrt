@@ -9,9 +9,11 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
+import winrt.microsoft.ui.dispatching as microsoft_ui_dispatching
 import winrt.microsoft.ui.xaml as microsoft_ui_xaml
 import winrt.microsoft.ui.xaml.automation.peers as microsoft_ui_xaml_automation_peers
 import winrt.windows.foundation.collections as windows_foundation_collections
+import winrt.windows.ui.core as windows_ui_core
 
 from winrt.microsoft.ui.xaml.automation import AnnotationType, AutomationActiveEnd, AutomationAnimationStyle, AutomationBulletStyle, AutomationCaretBidiMode, AutomationCaretPosition, AutomationFlowDirections, AutomationOutlineStyles, AutomationStyleId, AutomationTextDecorationLineStyle, AutomationTextEditChangeType, DockPosition, ExpandCollapseState, RowOrColumnMajor, ScrollAmount, SupportedTextSelection, SynchronizedInputType, ToggleState, WindowInteractionState, WindowVisualState, ZoomUnit
 
@@ -67,6 +69,10 @@ class AutomationAnnotation(winrt.system.Object, metaclass=AutomationAnnotation_S
     def element(self) -> typing.Optional[microsoft_ui_xaml.UIElement]: ...
     @element.setter
     def element(self, value: typing.Optional[microsoft_ui_xaml.UIElement]) -> None: ...
+    @_property
+    def dispatcher(self) -> typing.Optional[windows_ui_core.CoreDispatcher]: ...
+    @_property
+    def dispatcher_queue(self) -> typing.Optional[microsoft_ui_dispatching.DispatcherQueue]: ...
 
 @typing.final
 class AutomationElementIdentifiers_Static(type):

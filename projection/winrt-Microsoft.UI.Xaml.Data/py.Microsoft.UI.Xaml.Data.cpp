@@ -783,6 +783,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         }
     }
 
+    static PyObject* Binding_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Data::Binding* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Binding_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Data::Binding* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Binding(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Data::Binding>>();
@@ -832,6 +870,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { "converter_parameter", reinterpret_cast<getter>(Binding_get_ConverterParameter), reinterpret_cast<setter>(Binding_put_ConverterParameter), nullptr, nullptr },
         { "converter_language", reinterpret_cast<getter>(Binding_get_ConverterLanguage), reinterpret_cast<setter>(Binding_put_ConverterLanguage), nullptr, nullptr },
         { "converter", reinterpret_cast<getter>(Binding_get_Converter), reinterpret_cast<setter>(Binding_put_Converter), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(Binding_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(Binding_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -1112,6 +1152,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         }
     }
 
+    static PyObject* BindingBase_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Data::BindingBase* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* BindingBase_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Data::BindingBase* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_BindingBase(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Data::BindingBase>>();
@@ -1150,6 +1228,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
     };
 
     static PyGetSetDef _getset_BindingBase[] = {
+        { "dispatcher", reinterpret_cast<getter>(BindingBase_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(BindingBase_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -1995,6 +2075,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         }
     }
 
+    static PyObject* CollectionViewSource_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Data::CollectionViewSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CollectionViewSource_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Data::CollectionViewSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_CollectionViewSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Data::CollectionViewSource>>();
@@ -2037,6 +2155,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { "items_path", reinterpret_cast<getter>(CollectionViewSource_get_ItemsPath), reinterpret_cast<setter>(CollectionViewSource_put_ItemsPath), nullptr, nullptr },
         { "is_source_grouped", reinterpret_cast<getter>(CollectionViewSource_get_IsSourceGrouped), reinterpret_cast<setter>(CollectionViewSource_put_IsSourceGrouped), nullptr, nullptr },
         { "view", reinterpret_cast<getter>(CollectionViewSource_get_View), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(CollectionViewSource_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(CollectionViewSource_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -2963,6 +3083,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         }
     }
 
+    static PyObject* RelativeSource_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Data::RelativeSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* RelativeSource_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Data::RelativeSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DispatcherQueue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_RelativeSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Data::RelativeSource>>();
@@ -3002,6 +3160,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyGetSetDef _getset_RelativeSource[] = {
         { "mode", reinterpret_cast<getter>(RelativeSource_get_Mode), reinterpret_cast<setter>(RelativeSource_put_Mode), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(RelativeSource_get_Dispatcher), nullptr, nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(RelativeSource_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 

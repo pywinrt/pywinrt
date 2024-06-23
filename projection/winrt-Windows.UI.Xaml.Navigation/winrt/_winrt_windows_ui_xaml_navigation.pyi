@@ -10,6 +10,7 @@ from builtins import property as _property
 import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
+import winrt.windows.ui.core as windows_ui_core
 import winrt.windows.ui.xaml as windows_ui_xaml
 import winrt.windows.ui.xaml.interop as windows_ui_xaml_interop
 import winrt.windows.ui.xaml.media.animation as windows_ui_xaml_media_animation
@@ -105,4 +106,6 @@ class PageStackEntry(winrt.system.Object, metaclass=PageStackEntry_Static):
     def parameter(self) -> typing.Optional[winrt.system.Object]: ...
     @_property
     def source_page_type(self) -> windows_ui_xaml_interop.TypeName: ...
+    @_property
+    def dispatcher(self) -> typing.Optional[windows_ui_core.CoreDispatcher]: ...
 

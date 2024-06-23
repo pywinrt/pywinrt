@@ -876,6 +876,63 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
+    static PyObject* BitmapImage_get_PixelHeight(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapSource", L"PixelHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PixelHeight());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* BitmapImage_get_PixelWidth(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapSource", L"PixelWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PixelWidth());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* BitmapImage_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* BitmapImage_add_DownloadProgress(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* arg) noexcept
     {
         try
@@ -1061,6 +1118,9 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         { "auto_play", reinterpret_cast<getter>(BitmapImage_get_AutoPlay), reinterpret_cast<setter>(BitmapImage_put_AutoPlay), nullptr, nullptr },
         { "is_animated_bitmap", reinterpret_cast<getter>(BitmapImage_get_IsAnimatedBitmap), nullptr, nullptr, nullptr },
         { "is_playing", reinterpret_cast<getter>(BitmapImage_get_IsPlaying), nullptr, nullptr, nullptr },
+        { "pixel_height", reinterpret_cast<getter>(BitmapImage_get_PixelHeight), nullptr, nullptr, nullptr },
+        { "pixel_width", reinterpret_cast<getter>(BitmapImage_get_PixelWidth), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(BitmapImage_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -1491,6 +1551,25 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
+    static PyObject* BitmapSource_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_BitmapSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource>>();
@@ -1533,6 +1612,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     static PyGetSetDef _getset_BitmapSource[] = {
         { "pixel_height", reinterpret_cast<getter>(BitmapSource_get_PixelHeight), nullptr, nullptr, nullptr },
         { "pixel_width", reinterpret_cast<getter>(BitmapSource_get_PixelWidth), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(BitmapSource_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -2112,6 +2192,25 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
+    static PyObject* RenderTargetBitmap_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_RenderTargetBitmap(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap>>();
@@ -2154,6 +2253,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     static PyGetSetDef _getset_RenderTargetBitmap[] = {
         { "pixel_height", reinterpret_cast<getter>(RenderTargetBitmap_get_PixelHeight), nullptr, nullptr, nullptr },
         { "pixel_width", reinterpret_cast<getter>(RenderTargetBitmap_get_PixelWidth), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(RenderTargetBitmap_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -2522,6 +2622,25 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
+    static PyObject* SoftwareBitmapSource_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Media::Imaging::SoftwareBitmapSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_SoftwareBitmapSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Imaging::SoftwareBitmapSource>>();
@@ -2583,6 +2702,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     };
 
     static PyGetSetDef _getset_SoftwareBitmapSource[] = {
+        { "dispatcher", reinterpret_cast<getter>(SoftwareBitmapSource_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -2883,6 +3003,25 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
+    static PyObject* SurfaceImageSource_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_SurfaceImageSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource>>();
@@ -2921,6 +3060,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     };
 
     static PyGetSetDef _getset_SurfaceImageSource[] = {
+        { "dispatcher", reinterpret_cast<getter>(SurfaceImageSource_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -3445,6 +3585,25 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
+    static PyObject* SvgImageSource_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* SvgImageSource_add_OpenFailed(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self, PyObject* arg) noexcept
     {
         try
@@ -3577,6 +3736,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         { "uri_source", reinterpret_cast<getter>(SvgImageSource_get_UriSource), reinterpret_cast<setter>(SvgImageSource_put_UriSource), nullptr, nullptr },
         { "rasterize_pixel_width", reinterpret_cast<getter>(SvgImageSource_get_RasterizePixelWidth), reinterpret_cast<setter>(SvgImageSource_put_RasterizePixelWidth), nullptr, nullptr },
         { "rasterize_pixel_height", reinterpret_cast<getter>(SvgImageSource_get_RasterizePixelHeight), reinterpret_cast<setter>(SvgImageSource_put_RasterizePixelHeight), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(SvgImageSource_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -4057,6 +4217,25 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
+    static PyObject* VirtualSurfaceImageSource_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_VirtualSurfaceImageSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource>>();
@@ -4095,6 +4274,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     };
 
     static PyGetSetDef _getset_VirtualSurfaceImageSource[] = {
+        { "dispatcher", reinterpret_cast<getter>(VirtualSurfaceImageSource_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -4490,6 +4670,63 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         }
     }
 
+    static PyObject* WriteableBitmap_get_PixelHeight(py::wrapper::Windows::UI::Xaml::Media::Imaging::WriteableBitmap* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapSource", L"PixelHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PixelHeight());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WriteableBitmap_get_PixelWidth(py::wrapper::Windows::UI::Xaml::Media::Imaging::WriteableBitmap* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Imaging.BitmapSource", L"PixelWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PixelWidth());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WriteableBitmap_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Media::Imaging::WriteableBitmap* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_WriteableBitmap(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Imaging::WriteableBitmap>>();
@@ -4532,6 +4769,9 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyGetSetDef _getset_WriteableBitmap[] = {
         { "pixel_buffer", reinterpret_cast<getter>(WriteableBitmap_get_PixelBuffer), nullptr, nullptr, nullptr },
+        { "pixel_height", reinterpret_cast<getter>(WriteableBitmap_get_PixelHeight), nullptr, nullptr, nullptr },
+        { "pixel_width", reinterpret_cast<getter>(WriteableBitmap_get_PixelWidth), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(WriteableBitmap_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 

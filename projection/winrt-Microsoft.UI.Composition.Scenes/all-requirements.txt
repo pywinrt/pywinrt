@@ -2,6 +2,7 @@
 
 winrt-Microsoft.Graphics.DirectX[all]==0.0.0
 winrt-Microsoft.UI.Composition[all]==0.0.0
+winrt-Microsoft.UI.Dispatching[all]==0.0.0
 winrt-Windows.Foundation[all]==0.0.0
 winrt-Windows.Foundation.Collections[all]==0.0.0
 winrt-Windows.Foundation.Numerics[all]==0.0.0

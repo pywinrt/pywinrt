@@ -13,6 +13,10 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Microsoft.UI.Composition.h"
 #endif
 
+#if __has_include("py.Microsoft.UI.Dispatching.h")
+#include "py.Microsoft.UI.Dispatching.h"
+#endif
+
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
@@ -27,6 +31,7 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 #include <winrt/Microsoft.Graphics.DirectX.h>
 #include <winrt/Microsoft.UI.Composition.h>
+#include <winrt/Microsoft.UI.Dispatching.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Foundation.Numerics.h>

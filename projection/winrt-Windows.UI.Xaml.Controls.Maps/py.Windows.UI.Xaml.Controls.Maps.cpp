@@ -266,6 +266,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* CustomMapTileDataSource_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* CustomMapTileDataSource_add_BitmapRequested(py::wrapper::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource* self, PyObject* arg) noexcept
     {
         try
@@ -349,6 +368,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     static PyGetSetDef _getset_CustomMapTileDataSource[] = {
+        { "dispatcher", reinterpret_cast<getter>(CustomMapTileDataSource_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -757,6 +777,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* HttpMapTileDataSource_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* HttpMapTileDataSource_add_UriRequested(py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource* self, PyObject* arg) noexcept
     {
         try
@@ -843,6 +882,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "uri_format_string", reinterpret_cast<getter>(HttpMapTileDataSource_get_UriFormatString), reinterpret_cast<setter>(HttpMapTileDataSource_put_UriFormatString), nullptr, nullptr },
         { "allow_caching", reinterpret_cast<getter>(HttpMapTileDataSource_get_AllowCaching), reinterpret_cast<setter>(HttpMapTileDataSource_put_AllowCaching), nullptr, nullptr },
         { "additional_request_headers", reinterpret_cast<getter>(HttpMapTileDataSource_get_AdditionalRequestHeaders), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(HttpMapTileDataSource_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -1185,6 +1225,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* LocalMapTileDataSource_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* LocalMapTileDataSource_add_UriRequested(py::wrapper::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource* self, PyObject* arg) noexcept
     {
         try
@@ -1269,6 +1328,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyGetSetDef _getset_LocalMapTileDataSource[] = {
         { "uri_format_string", reinterpret_cast<getter>(LocalMapTileDataSource_get_UriFormatString), reinterpret_cast<setter>(LocalMapTileDataSource_put_UriFormatString), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(LocalMapTileDataSource_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -2071,6 +2131,354 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapBillboard_get_ZIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ZIndex());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapBillboard_put_ZIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<int32_t>(arg);
+
+            self->obj.ZIndex(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapBillboard_get_Visible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Visible());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapBillboard_put_Visible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.Visible(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapBillboard_get_MapTabIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapTabIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MapTabIndex());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapBillboard_put_MapTabIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapTabIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<int32_t>(arg);
+
+            self->obj.MapTabIndex(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapBillboard_get_Tag(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Tag());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapBillboard_put_Tag(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+
+            self->obj.Tag(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapBillboard_get_MapStyleSheetEntryState(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntryState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MapStyleSheetEntryState());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapBillboard_put_MapStyleSheetEntryState(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntryState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.MapStyleSheetEntryState(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapBillboard_get_MapStyleSheetEntry(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntry"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MapStyleSheetEntry());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapBillboard_put_MapStyleSheetEntry(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntry"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.MapStyleSheetEntry(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapBillboard_get_IsEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsEnabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapBillboard_put_IsEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IsEnabled(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapBillboard_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MapBillboard(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Maps::MapBillboard>>();
@@ -2114,6 +2522,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "image", reinterpret_cast<getter>(MapBillboard_get_Image), reinterpret_cast<setter>(MapBillboard_put_Image), nullptr, nullptr },
         { "collision_behavior_desired", reinterpret_cast<getter>(MapBillboard_get_CollisionBehaviorDesired), reinterpret_cast<setter>(MapBillboard_put_CollisionBehaviorDesired), nullptr, nullptr },
         { "reference_camera", reinterpret_cast<getter>(MapBillboard_get_ReferenceCamera), nullptr, nullptr, nullptr },
+        { "z_index", reinterpret_cast<getter>(MapBillboard_get_ZIndex), reinterpret_cast<setter>(MapBillboard_put_ZIndex), nullptr, nullptr },
+        { "visible", reinterpret_cast<getter>(MapBillboard_get_Visible), reinterpret_cast<setter>(MapBillboard_put_Visible), nullptr, nullptr },
+        { "map_tab_index", reinterpret_cast<getter>(MapBillboard_get_MapTabIndex), reinterpret_cast<setter>(MapBillboard_put_MapTabIndex), nullptr, nullptr },
+        { "tag", reinterpret_cast<getter>(MapBillboard_get_Tag), reinterpret_cast<setter>(MapBillboard_put_Tag), nullptr, nullptr },
+        { "map_style_sheet_entry_state", reinterpret_cast<getter>(MapBillboard_get_MapStyleSheetEntryState), reinterpret_cast<setter>(MapBillboard_put_MapStyleSheetEntryState), nullptr, nullptr },
+        { "map_style_sheet_entry", reinterpret_cast<getter>(MapBillboard_get_MapStyleSheetEntry), reinterpret_cast<setter>(MapBillboard_put_MapStyleSheetEntry), nullptr, nullptr },
+        { "is_enabled", reinterpret_cast<getter>(MapBillboard_get_IsEnabled), reinterpret_cast<setter>(MapBillboard_put_IsEnabled), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(MapBillboard_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -2711,6 +3127,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapCamera_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCamera* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MapCamera(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Maps::MapCamera>>();
@@ -2754,6 +3189,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "location", reinterpret_cast<getter>(MapCamera_get_Location), reinterpret_cast<setter>(MapCamera_put_Location), nullptr, nullptr },
         { "heading", reinterpret_cast<getter>(MapCamera_get_Heading), reinterpret_cast<setter>(MapCamera_put_Heading), nullptr, nullptr },
         { "field_of_view", reinterpret_cast<getter>(MapCamera_get_FieldOfView), reinterpret_cast<setter>(MapCamera_put_FieldOfView), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(MapCamera_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -7429,6 +7865,5217 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapControl_get_Padding(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"Padding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Padding());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Padding(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"Padding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
+
+            self->obj.Padding(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_IsTabStop(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"IsTabStop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsTabStop());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_IsTabStop(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"IsTabStop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IsTabStop(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_IsEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsEnabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_IsEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IsEnabled(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_HorizontalContentAlignment(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"HorizontalContentAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.HorizontalContentAlignment());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_HorizontalContentAlignment(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"HorizontalContentAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::HorizontalAlignment>(arg);
+
+            self->obj.HorizontalContentAlignment(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Foreground(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"Foreground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Foreground());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Foreground(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"Foreground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
+
+            self->obj.Foreground(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_FontWeight(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"FontWeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FontWeight());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_FontWeight(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"FontWeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Text::FontWeight>(arg);
+
+            self->obj.FontWeight(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_FontStyle(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"FontStyle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FontStyle());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_FontStyle(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"FontStyle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Text::FontStyle>(arg);
+
+            self->obj.FontStyle(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_FontStretch(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"FontStretch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FontStretch());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_FontStretch(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"FontStretch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Text::FontStretch>(arg);
+
+            self->obj.FontStretch(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_FontSize(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"FontSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FontSize());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_FontSize(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"FontSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.FontSize(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_FontFamily(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"FontFamily"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FontFamily());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_FontFamily(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"FontFamily"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::FontFamily>(arg);
+
+            self->obj.FontFamily(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_TabIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"TabIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.TabIndex());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_TabIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"TabIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<int32_t>(arg);
+
+            self->obj.TabIndex(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_CharacterSpacing(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"CharacterSpacing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CharacterSpacing());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_CharacterSpacing(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"CharacterSpacing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<int32_t>(arg);
+
+            self->obj.CharacterSpacing(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_BorderThickness(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"BorderThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.BorderThickness());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_BorderThickness(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"BorderThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
+
+            self->obj.BorderThickness(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_BorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"BorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.BorderBrush());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_BorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"BorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
+
+            self->obj.BorderBrush(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_TabNavigation(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"TabNavigation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.TabNavigation());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_TabNavigation(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"TabNavigation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::KeyboardNavigationMode>(arg);
+
+            self->obj.TabNavigation(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Background(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"Background"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Background());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Background(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"Background"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
+
+            self->obj.Background(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_VerticalContentAlignment(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"VerticalContentAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.VerticalContentAlignment());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_VerticalContentAlignment(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"VerticalContentAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::VerticalAlignment>(arg);
+
+            self->obj.VerticalContentAlignment(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Template(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"Template"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Template());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Template(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"Template"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ControlTemplate>(arg);
+
+            self->obj.Template(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_FocusState(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"FocusState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FocusState());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_get_IsTextScaleFactorEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"IsTextScaleFactorEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsTextScaleFactorEnabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_IsTextScaleFactorEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"IsTextScaleFactorEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IsTextScaleFactorEnabled(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_UseSystemFocusVisuals(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"UseSystemFocusVisuals"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.UseSystemFocusVisuals());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_UseSystemFocusVisuals(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"UseSystemFocusVisuals"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.UseSystemFocusVisuals(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_XYFocusUp(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"XYFocusUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.XYFocusUp());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_XYFocusUp(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"XYFocusUp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
+
+            self->obj.XYFocusUp(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_XYFocusRight(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"XYFocusRight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.XYFocusRight());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_XYFocusRight(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"XYFocusRight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
+
+            self->obj.XYFocusRight(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_XYFocusLeft(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"XYFocusLeft"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.XYFocusLeft());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_XYFocusLeft(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"XYFocusLeft"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
+
+            self->obj.XYFocusLeft(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_XYFocusDown(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"XYFocusDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.XYFocusDown());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_XYFocusDown(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"XYFocusDown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
+
+            self->obj.XYFocusDown(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_RequiresPointer(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"RequiresPointer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RequiresPointer());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_RequiresPointer(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"RequiresPointer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::RequiresPointer>(arg);
+
+            self->obj.RequiresPointer(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_IsFocusEngagementEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"IsFocusEngagementEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsFocusEngagementEnabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_IsFocusEngagementEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"IsFocusEngagementEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IsFocusEngagementEnabled(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_IsFocusEngaged(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"IsFocusEngaged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsFocusEngaged());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_IsFocusEngaged(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"IsFocusEngaged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IsFocusEngaged(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_ElementSoundMode(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"ElementSoundMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ElementSoundMode());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_ElementSoundMode(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"ElementSoundMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::ElementSoundMode>(arg);
+
+            self->obj.ElementSoundMode(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_DefaultStyleResourceUri(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"DefaultStyleResourceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DefaultStyleResourceUri());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_DefaultStyleResourceUri(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"DefaultStyleResourceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
+
+            self->obj.DefaultStyleResourceUri(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_CornerRadius(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"CornerRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CornerRadius());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_CornerRadius(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"CornerRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::CornerRadius>(arg);
+
+            self->obj.CornerRadius(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_BackgroundSizing(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"BackgroundSizing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.BackgroundSizing());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_BackgroundSizing(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Control", L"BackgroundSizing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::BackgroundSizing>(arg);
+
+            self->obj.BackgroundSizing(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Width(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Width());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Width(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.Width(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_VerticalAlignment(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"VerticalAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.VerticalAlignment());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_VerticalAlignment(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"VerticalAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::VerticalAlignment>(arg);
+
+            self->obj.VerticalAlignment(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Tag(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Tag());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Tag(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+
+            self->obj.Tag(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Resources(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"Resources"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Resources());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Resources(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"Resources"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::ResourceDictionary>(arg);
+
+            self->obj.Resources(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Name(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Name());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Name(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Name(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_MinWidth(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"MinWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MinWidth());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_MinWidth(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"MinWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.MinWidth(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_MinHeight(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"MinHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MinHeight());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_MinHeight(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"MinHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.MinHeight(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_MaxWidth(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"MaxWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MaxWidth());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_MaxWidth(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"MaxWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.MaxWidth(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_MaxHeight(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"MaxHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MaxHeight());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_MaxHeight(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"MaxHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.MaxHeight(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Margin(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"Margin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Margin());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Margin(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"Margin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
+
+            self->obj.Margin(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Language(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Language());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Language(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Language(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_HorizontalAlignment(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"HorizontalAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.HorizontalAlignment());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_HorizontalAlignment(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"HorizontalAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::HorizontalAlignment>(arg);
+
+            self->obj.HorizontalAlignment(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Height(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Height());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Height(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.Height(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_FlowDirection(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"FlowDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FlowDirection());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_FlowDirection(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"FlowDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::FlowDirection>(arg);
+
+            self->obj.FlowDirection(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_DataContext(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"DataContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DataContext());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_DataContext(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"DataContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+
+            self->obj.DataContext(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_ActualHeight(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"ActualHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ActualHeight());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_get_ActualWidth(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"ActualWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ActualWidth());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_get_BaseUri(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.BaseUri());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_get_Parent(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Parent());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_get_Triggers(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"Triggers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Triggers());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_get_RequestedTheme(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"RequestedTheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RequestedTheme());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_RequestedTheme(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"RequestedTheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::ElementTheme>(arg);
+
+            self->obj.RequestedTheme(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_FocusVisualSecondaryThickness(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"FocusVisualSecondaryThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FocusVisualSecondaryThickness());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_FocusVisualSecondaryThickness(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"FocusVisualSecondaryThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
+
+            self->obj.FocusVisualSecondaryThickness(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_FocusVisualSecondaryBrush(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"FocusVisualSecondaryBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FocusVisualSecondaryBrush());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_FocusVisualSecondaryBrush(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"FocusVisualSecondaryBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
+
+            self->obj.FocusVisualSecondaryBrush(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_FocusVisualPrimaryThickness(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"FocusVisualPrimaryThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FocusVisualPrimaryThickness());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_FocusVisualPrimaryThickness(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"FocusVisualPrimaryThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
+
+            self->obj.FocusVisualPrimaryThickness(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_FocusVisualPrimaryBrush(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"FocusVisualPrimaryBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FocusVisualPrimaryBrush());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_FocusVisualPrimaryBrush(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"FocusVisualPrimaryBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
+
+            self->obj.FocusVisualPrimaryBrush(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_FocusVisualMargin(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"FocusVisualMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FocusVisualMargin());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_FocusVisualMargin(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"FocusVisualMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
+
+            self->obj.FocusVisualMargin(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_AllowFocusWhenDisabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"AllowFocusWhenDisabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AllowFocusWhenDisabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_AllowFocusWhenDisabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"AllowFocusWhenDisabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.AllowFocusWhenDisabled(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_AllowFocusOnInteraction(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"AllowFocusOnInteraction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AllowFocusOnInteraction());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_AllowFocusOnInteraction(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"AllowFocusOnInteraction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.AllowFocusOnInteraction(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_ActualTheme(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"ActualTheme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ActualTheme());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_get_IsLoaded(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.FrameworkElement", L"IsLoaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsLoaded());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_get_Transitions(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Transitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Transitions());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Transitions(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Transitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::TransitionCollection>(arg);
+
+            self->obj.Transitions(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Projection(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Projection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Projection());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Projection(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Projection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Projection>(arg);
+
+            self->obj.Projection(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_RenderTransformOrigin(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"RenderTransformOrigin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RenderTransformOrigin());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_RenderTransformOrigin(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"RenderTransformOrigin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
+
+            self->obj.RenderTransformOrigin(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Opacity(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Opacity());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Opacity(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.Opacity(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_ManipulationMode(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"ManipulationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ManipulationMode());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_ManipulationMode(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"ManipulationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::ManipulationModes>(arg);
+
+            self->obj.ManipulationMode(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_IsTapEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"IsTapEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsTapEnabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_IsTapEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"IsTapEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IsTapEnabled(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_IsRightTapEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"IsRightTapEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsRightTapEnabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_IsRightTapEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"IsRightTapEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IsRightTapEnabled(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_IsHoldingEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"IsHoldingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsHoldingEnabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_IsHoldingEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"IsHoldingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IsHoldingEnabled(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_IsHitTestVisible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"IsHitTestVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsHitTestVisible());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_IsHitTestVisible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"IsHitTestVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IsHitTestVisible(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_IsDoubleTapEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"IsDoubleTapEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsDoubleTapEnabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_IsDoubleTapEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"IsDoubleTapEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IsDoubleTapEnabled(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_AllowDrop(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"AllowDrop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AllowDrop());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_AllowDrop(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"AllowDrop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.AllowDrop(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Clip(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Clip"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Clip());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Clip(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Clip"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::RectangleGeometry>(arg);
+
+            self->obj.Clip(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_CacheMode(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"CacheMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CacheMode());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_CacheMode(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"CacheMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::CacheMode>(arg);
+
+            self->obj.CacheMode(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_UseLayoutRounding(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"UseLayoutRounding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.UseLayoutRounding());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_UseLayoutRounding(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"UseLayoutRounding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.UseLayoutRounding(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_RenderTransform(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"RenderTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RenderTransform());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_RenderTransform(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"RenderTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Transform>(arg);
+
+            self->obj.RenderTransform(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Visibility(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Visibility"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Visibility());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Visibility(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Visibility"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Visibility>(arg);
+
+            self->obj.Visibility(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_DesiredSize(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"DesiredSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DesiredSize());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_get_PointerCaptures(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"PointerCaptures"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PointerCaptures());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_get_RenderSize(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"RenderSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RenderSize());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_get_XamlRoot(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"XamlRoot"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.XamlRoot());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_XamlRoot(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"XamlRoot"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::XamlRoot>(arg);
+
+            self->obj.XamlRoot(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Shadow(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Shadow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Shadow());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Shadow(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Shadow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Shadow>(arg);
+
+            self->obj.Shadow(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_ActualOffset(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"ActualOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ActualOffset());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_get_ActualSize(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"ActualSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ActualSize());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_get_UIContext(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"UIContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.UIContext());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_get_CompositeMode(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"CompositeMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CompositeMode());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_CompositeMode(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"CompositeMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::ElementCompositeMode>(arg);
+
+            self->obj.CompositeMode(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Transform3D(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Transform3D"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Transform3D());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Transform3D(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Transform3D"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Media3D::Transform3D>(arg);
+
+            self->obj.Transform3D(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_CanDrag(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"CanDrag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CanDrag());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_CanDrag(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"CanDrag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.CanDrag(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_IsAccessKeyScope(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"IsAccessKeyScope"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsAccessKeyScope());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_IsAccessKeyScope(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"IsAccessKeyScope"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IsAccessKeyScope(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_ExitDisplayModeOnAccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"ExitDisplayModeOnAccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ExitDisplayModeOnAccessKeyInvoked());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_ExitDisplayModeOnAccessKeyInvoked(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"ExitDisplayModeOnAccessKeyInvoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.ExitDisplayModeOnAccessKeyInvoked(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_ContextFlyout(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"ContextFlyout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ContextFlyout());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_ContextFlyout(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"ContextFlyout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>(arg);
+
+            self->obj.ContextFlyout(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_AccessKeyScopeOwner(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"AccessKeyScopeOwner"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AccessKeyScopeOwner());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_AccessKeyScopeOwner(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"AccessKeyScopeOwner"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
+
+            self->obj.AccessKeyScopeOwner(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_AccessKey(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"AccessKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AccessKey());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_AccessKey(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"AccessKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.AccessKey(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_KeyTipHorizontalOffset(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"KeyTipHorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.KeyTipHorizontalOffset());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_KeyTipHorizontalOffset(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"KeyTipHorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.KeyTipHorizontalOffset(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_HighContrastAdjustment(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"HighContrastAdjustment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.HighContrastAdjustment());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_HighContrastAdjustment(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"HighContrastAdjustment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::ElementHighContrastAdjustment>(arg);
+
+            self->obj.HighContrastAdjustment(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_XYFocusRightNavigationStrategy(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"XYFocusRightNavigationStrategy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.XYFocusRightNavigationStrategy());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_XYFocusRightNavigationStrategy(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"XYFocusRightNavigationStrategy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::XYFocusNavigationStrategy>(arg);
+
+            self->obj.XYFocusRightNavigationStrategy(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_XYFocusKeyboardNavigation(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"XYFocusKeyboardNavigation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.XYFocusKeyboardNavigation());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_XYFocusKeyboardNavigation(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"XYFocusKeyboardNavigation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::XYFocusKeyboardNavigationMode>(arg);
+
+            self->obj.XYFocusKeyboardNavigation(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_XYFocusDownNavigationStrategy(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"XYFocusDownNavigationStrategy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.XYFocusDownNavigationStrategy());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_XYFocusDownNavigationStrategy(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"XYFocusDownNavigationStrategy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::XYFocusNavigationStrategy>(arg);
+
+            self->obj.XYFocusDownNavigationStrategy(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_TabFocusNavigation(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"TabFocusNavigation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.TabFocusNavigation());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_TabFocusNavigation(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"TabFocusNavigation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::KeyboardNavigationMode>(arg);
+
+            self->obj.TabFocusNavigation(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_KeyTipVerticalOffset(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"KeyTipVerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.KeyTipVerticalOffset());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_KeyTipVerticalOffset(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"KeyTipVerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            self->obj.KeyTipVerticalOffset(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_XYFocusUpNavigationStrategy(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"XYFocusUpNavigationStrategy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.XYFocusUpNavigationStrategy());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_XYFocusUpNavigationStrategy(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"XYFocusUpNavigationStrategy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::XYFocusNavigationStrategy>(arg);
+
+            self->obj.XYFocusUpNavigationStrategy(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_KeyTipPlacementMode(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"KeyTipPlacementMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.KeyTipPlacementMode());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_KeyTipPlacementMode(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"KeyTipPlacementMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::KeyTipPlacementMode>(arg);
+
+            self->obj.KeyTipPlacementMode(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_XYFocusLeftNavigationStrategy(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"XYFocusLeftNavigationStrategy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.XYFocusLeftNavigationStrategy());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_XYFocusLeftNavigationStrategy(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"XYFocusLeftNavigationStrategy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::XYFocusNavigationStrategy>(arg);
+
+            self->obj.XYFocusLeftNavigationStrategy(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Lights(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Lights"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Lights());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_get_KeyboardAccelerators(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"KeyboardAccelerators"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.KeyboardAccelerators());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_get_KeyboardAcceleratorPlacementTarget(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"KeyboardAcceleratorPlacementTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.KeyboardAcceleratorPlacementTarget());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_KeyboardAcceleratorPlacementTarget(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"KeyboardAcceleratorPlacementTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
+
+            self->obj.KeyboardAcceleratorPlacementTarget(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_KeyboardAcceleratorPlacementMode(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"KeyboardAcceleratorPlacementMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.KeyboardAcceleratorPlacementMode());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_KeyboardAcceleratorPlacementMode(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"KeyboardAcceleratorPlacementMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorPlacementMode>(arg);
+
+            self->obj.KeyboardAcceleratorPlacementMode(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_KeyTipTarget(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"KeyTipTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.KeyTipTarget());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_KeyTipTarget(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"KeyTipTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
+
+            self->obj.KeyTipTarget(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_TranslationTransition(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"TranslationTransition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.TranslationTransition());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_TranslationTransition(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"TranslationTransition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Vector3Transition>(arg);
+
+            self->obj.TranslationTransition(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_OpacityTransition(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"OpacityTransition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OpacityTransition());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_OpacityTransition(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"OpacityTransition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::ScalarTransition>(arg);
+
+            self->obj.OpacityTransition(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_TransformMatrix(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"TransformMatrix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.TransformMatrix());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_TransformMatrix(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"TransformMatrix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(arg);
+
+            self->obj.TransformMatrix(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_ScaleTransition(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"ScaleTransition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ScaleTransition());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_ScaleTransition(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"ScaleTransition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Vector3Transition>(arg);
+
+            self->obj.ScaleTransition(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Scale(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Scale());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Scale(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
+
+            self->obj.Scale(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_RotationTransition(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"RotationTransition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RotationTransition());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_RotationTransition(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"RotationTransition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Xaml::ScalarTransition>(arg);
+
+            self->obj.RotationTransition(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_RotationAxis(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"RotationAxis"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RotationAxis());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_RotationAxis(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"RotationAxis"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
+
+            self->obj.RotationAxis(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Rotation(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Rotation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Rotation());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Rotation(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Rotation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<float>(arg);
+
+            self->obj.Rotation(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Translation(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Translation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Translation());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_Translation(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"Translation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
+
+            self->obj.Translation(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_CenterPoint(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"CenterPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CenterPoint());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_CenterPoint(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"CenterPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
+
+            self->obj.CenterPoint(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_CanBeScrollAnchor(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"CanBeScrollAnchor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CanBeScrollAnchor());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapControl_put_CanBeScrollAnchor(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.UIElement", L"CanBeScrollAnchor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.CanBeScrollAnchor(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapControl_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* MapControl_add_CenterChanged(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* arg) noexcept
     {
         try
@@ -8370,6 +14017,127 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "can_tilt_up", reinterpret_cast<getter>(MapControl_get_CanTiltUp), nullptr, nullptr, nullptr },
         { "can_zoom_in", reinterpret_cast<getter>(MapControl_get_CanZoomIn), nullptr, nullptr, nullptr },
         { "can_zoom_out", reinterpret_cast<getter>(MapControl_get_CanZoomOut), nullptr, nullptr, nullptr },
+        { "padding", reinterpret_cast<getter>(MapControl_get_Padding), reinterpret_cast<setter>(MapControl_put_Padding), nullptr, nullptr },
+        { "is_tab_stop", reinterpret_cast<getter>(MapControl_get_IsTabStop), reinterpret_cast<setter>(MapControl_put_IsTabStop), nullptr, nullptr },
+        { "is_enabled", reinterpret_cast<getter>(MapControl_get_IsEnabled), reinterpret_cast<setter>(MapControl_put_IsEnabled), nullptr, nullptr },
+        { "horizontal_content_alignment", reinterpret_cast<getter>(MapControl_get_HorizontalContentAlignment), reinterpret_cast<setter>(MapControl_put_HorizontalContentAlignment), nullptr, nullptr },
+        { "foreground", reinterpret_cast<getter>(MapControl_get_Foreground), reinterpret_cast<setter>(MapControl_put_Foreground), nullptr, nullptr },
+        { "font_weight", reinterpret_cast<getter>(MapControl_get_FontWeight), reinterpret_cast<setter>(MapControl_put_FontWeight), nullptr, nullptr },
+        { "font_style", reinterpret_cast<getter>(MapControl_get_FontStyle), reinterpret_cast<setter>(MapControl_put_FontStyle), nullptr, nullptr },
+        { "font_stretch", reinterpret_cast<getter>(MapControl_get_FontStretch), reinterpret_cast<setter>(MapControl_put_FontStretch), nullptr, nullptr },
+        { "font_size", reinterpret_cast<getter>(MapControl_get_FontSize), reinterpret_cast<setter>(MapControl_put_FontSize), nullptr, nullptr },
+        { "font_family", reinterpret_cast<getter>(MapControl_get_FontFamily), reinterpret_cast<setter>(MapControl_put_FontFamily), nullptr, nullptr },
+        { "tab_index", reinterpret_cast<getter>(MapControl_get_TabIndex), reinterpret_cast<setter>(MapControl_put_TabIndex), nullptr, nullptr },
+        { "character_spacing", reinterpret_cast<getter>(MapControl_get_CharacterSpacing), reinterpret_cast<setter>(MapControl_put_CharacterSpacing), nullptr, nullptr },
+        { "border_thickness", reinterpret_cast<getter>(MapControl_get_BorderThickness), reinterpret_cast<setter>(MapControl_put_BorderThickness), nullptr, nullptr },
+        { "border_brush", reinterpret_cast<getter>(MapControl_get_BorderBrush), reinterpret_cast<setter>(MapControl_put_BorderBrush), nullptr, nullptr },
+        { "tab_navigation", reinterpret_cast<getter>(MapControl_get_TabNavigation), reinterpret_cast<setter>(MapControl_put_TabNavigation), nullptr, nullptr },
+        { "background", reinterpret_cast<getter>(MapControl_get_Background), reinterpret_cast<setter>(MapControl_put_Background), nullptr, nullptr },
+        { "vertical_content_alignment", reinterpret_cast<getter>(MapControl_get_VerticalContentAlignment), reinterpret_cast<setter>(MapControl_put_VerticalContentAlignment), nullptr, nullptr },
+        { "template", reinterpret_cast<getter>(MapControl_get_Template), reinterpret_cast<setter>(MapControl_put_Template), nullptr, nullptr },
+        { "focus_state", reinterpret_cast<getter>(MapControl_get_FocusState), nullptr, nullptr, nullptr },
+        { "is_text_scale_factor_enabled", reinterpret_cast<getter>(MapControl_get_IsTextScaleFactorEnabled), reinterpret_cast<setter>(MapControl_put_IsTextScaleFactorEnabled), nullptr, nullptr },
+        { "use_system_focus_visuals", reinterpret_cast<getter>(MapControl_get_UseSystemFocusVisuals), reinterpret_cast<setter>(MapControl_put_UseSystemFocusVisuals), nullptr, nullptr },
+        { "x_y_focus_up", reinterpret_cast<getter>(MapControl_get_XYFocusUp), reinterpret_cast<setter>(MapControl_put_XYFocusUp), nullptr, nullptr },
+        { "x_y_focus_right", reinterpret_cast<getter>(MapControl_get_XYFocusRight), reinterpret_cast<setter>(MapControl_put_XYFocusRight), nullptr, nullptr },
+        { "x_y_focus_left", reinterpret_cast<getter>(MapControl_get_XYFocusLeft), reinterpret_cast<setter>(MapControl_put_XYFocusLeft), nullptr, nullptr },
+        { "x_y_focus_down", reinterpret_cast<getter>(MapControl_get_XYFocusDown), reinterpret_cast<setter>(MapControl_put_XYFocusDown), nullptr, nullptr },
+        { "requires_pointer", reinterpret_cast<getter>(MapControl_get_RequiresPointer), reinterpret_cast<setter>(MapControl_put_RequiresPointer), nullptr, nullptr },
+        { "is_focus_engagement_enabled", reinterpret_cast<getter>(MapControl_get_IsFocusEngagementEnabled), reinterpret_cast<setter>(MapControl_put_IsFocusEngagementEnabled), nullptr, nullptr },
+        { "is_focus_engaged", reinterpret_cast<getter>(MapControl_get_IsFocusEngaged), reinterpret_cast<setter>(MapControl_put_IsFocusEngaged), nullptr, nullptr },
+        { "element_sound_mode", reinterpret_cast<getter>(MapControl_get_ElementSoundMode), reinterpret_cast<setter>(MapControl_put_ElementSoundMode), nullptr, nullptr },
+        { "default_style_resource_uri", reinterpret_cast<getter>(MapControl_get_DefaultStyleResourceUri), reinterpret_cast<setter>(MapControl_put_DefaultStyleResourceUri), nullptr, nullptr },
+        { "corner_radius", reinterpret_cast<getter>(MapControl_get_CornerRadius), reinterpret_cast<setter>(MapControl_put_CornerRadius), nullptr, nullptr },
+        { "background_sizing", reinterpret_cast<getter>(MapControl_get_BackgroundSizing), reinterpret_cast<setter>(MapControl_put_BackgroundSizing), nullptr, nullptr },
+        { "width", reinterpret_cast<getter>(MapControl_get_Width), reinterpret_cast<setter>(MapControl_put_Width), nullptr, nullptr },
+        { "vertical_alignment", reinterpret_cast<getter>(MapControl_get_VerticalAlignment), reinterpret_cast<setter>(MapControl_put_VerticalAlignment), nullptr, nullptr },
+        { "tag", reinterpret_cast<getter>(MapControl_get_Tag), reinterpret_cast<setter>(MapControl_put_Tag), nullptr, nullptr },
+        { "resources", reinterpret_cast<getter>(MapControl_get_Resources), reinterpret_cast<setter>(MapControl_put_Resources), nullptr, nullptr },
+        { "name", reinterpret_cast<getter>(MapControl_get_Name), reinterpret_cast<setter>(MapControl_put_Name), nullptr, nullptr },
+        { "min_width", reinterpret_cast<getter>(MapControl_get_MinWidth), reinterpret_cast<setter>(MapControl_put_MinWidth), nullptr, nullptr },
+        { "min_height", reinterpret_cast<getter>(MapControl_get_MinHeight), reinterpret_cast<setter>(MapControl_put_MinHeight), nullptr, nullptr },
+        { "max_width", reinterpret_cast<getter>(MapControl_get_MaxWidth), reinterpret_cast<setter>(MapControl_put_MaxWidth), nullptr, nullptr },
+        { "max_height", reinterpret_cast<getter>(MapControl_get_MaxHeight), reinterpret_cast<setter>(MapControl_put_MaxHeight), nullptr, nullptr },
+        { "margin", reinterpret_cast<getter>(MapControl_get_Margin), reinterpret_cast<setter>(MapControl_put_Margin), nullptr, nullptr },
+        { "language", reinterpret_cast<getter>(MapControl_get_Language), reinterpret_cast<setter>(MapControl_put_Language), nullptr, nullptr },
+        { "horizontal_alignment", reinterpret_cast<getter>(MapControl_get_HorizontalAlignment), reinterpret_cast<setter>(MapControl_put_HorizontalAlignment), nullptr, nullptr },
+        { "height", reinterpret_cast<getter>(MapControl_get_Height), reinterpret_cast<setter>(MapControl_put_Height), nullptr, nullptr },
+        { "flow_direction", reinterpret_cast<getter>(MapControl_get_FlowDirection), reinterpret_cast<setter>(MapControl_put_FlowDirection), nullptr, nullptr },
+        { "data_context", reinterpret_cast<getter>(MapControl_get_DataContext), reinterpret_cast<setter>(MapControl_put_DataContext), nullptr, nullptr },
+        { "actual_height", reinterpret_cast<getter>(MapControl_get_ActualHeight), nullptr, nullptr, nullptr },
+        { "actual_width", reinterpret_cast<getter>(MapControl_get_ActualWidth), nullptr, nullptr, nullptr },
+        { "base_uri", reinterpret_cast<getter>(MapControl_get_BaseUri), nullptr, nullptr, nullptr },
+        { "parent", reinterpret_cast<getter>(MapControl_get_Parent), nullptr, nullptr, nullptr },
+        { "triggers", reinterpret_cast<getter>(MapControl_get_Triggers), nullptr, nullptr, nullptr },
+        { "requested_theme", reinterpret_cast<getter>(MapControl_get_RequestedTheme), reinterpret_cast<setter>(MapControl_put_RequestedTheme), nullptr, nullptr },
+        { "focus_visual_secondary_thickness", reinterpret_cast<getter>(MapControl_get_FocusVisualSecondaryThickness), reinterpret_cast<setter>(MapControl_put_FocusVisualSecondaryThickness), nullptr, nullptr },
+        { "focus_visual_secondary_brush", reinterpret_cast<getter>(MapControl_get_FocusVisualSecondaryBrush), reinterpret_cast<setter>(MapControl_put_FocusVisualSecondaryBrush), nullptr, nullptr },
+        { "focus_visual_primary_thickness", reinterpret_cast<getter>(MapControl_get_FocusVisualPrimaryThickness), reinterpret_cast<setter>(MapControl_put_FocusVisualPrimaryThickness), nullptr, nullptr },
+        { "focus_visual_primary_brush", reinterpret_cast<getter>(MapControl_get_FocusVisualPrimaryBrush), reinterpret_cast<setter>(MapControl_put_FocusVisualPrimaryBrush), nullptr, nullptr },
+        { "focus_visual_margin", reinterpret_cast<getter>(MapControl_get_FocusVisualMargin), reinterpret_cast<setter>(MapControl_put_FocusVisualMargin), nullptr, nullptr },
+        { "allow_focus_when_disabled", reinterpret_cast<getter>(MapControl_get_AllowFocusWhenDisabled), reinterpret_cast<setter>(MapControl_put_AllowFocusWhenDisabled), nullptr, nullptr },
+        { "allow_focus_on_interaction", reinterpret_cast<getter>(MapControl_get_AllowFocusOnInteraction), reinterpret_cast<setter>(MapControl_put_AllowFocusOnInteraction), nullptr, nullptr },
+        { "actual_theme", reinterpret_cast<getter>(MapControl_get_ActualTheme), nullptr, nullptr, nullptr },
+        { "is_loaded", reinterpret_cast<getter>(MapControl_get_IsLoaded), nullptr, nullptr, nullptr },
+        { "transitions", reinterpret_cast<getter>(MapControl_get_Transitions), reinterpret_cast<setter>(MapControl_put_Transitions), nullptr, nullptr },
+        { "projection", reinterpret_cast<getter>(MapControl_get_Projection), reinterpret_cast<setter>(MapControl_put_Projection), nullptr, nullptr },
+        { "render_transform_origin", reinterpret_cast<getter>(MapControl_get_RenderTransformOrigin), reinterpret_cast<setter>(MapControl_put_RenderTransformOrigin), nullptr, nullptr },
+        { "opacity", reinterpret_cast<getter>(MapControl_get_Opacity), reinterpret_cast<setter>(MapControl_put_Opacity), nullptr, nullptr },
+        { "manipulation_mode", reinterpret_cast<getter>(MapControl_get_ManipulationMode), reinterpret_cast<setter>(MapControl_put_ManipulationMode), nullptr, nullptr },
+        { "is_tap_enabled", reinterpret_cast<getter>(MapControl_get_IsTapEnabled), reinterpret_cast<setter>(MapControl_put_IsTapEnabled), nullptr, nullptr },
+        { "is_right_tap_enabled", reinterpret_cast<getter>(MapControl_get_IsRightTapEnabled), reinterpret_cast<setter>(MapControl_put_IsRightTapEnabled), nullptr, nullptr },
+        { "is_holding_enabled", reinterpret_cast<getter>(MapControl_get_IsHoldingEnabled), reinterpret_cast<setter>(MapControl_put_IsHoldingEnabled), nullptr, nullptr },
+        { "is_hit_test_visible", reinterpret_cast<getter>(MapControl_get_IsHitTestVisible), reinterpret_cast<setter>(MapControl_put_IsHitTestVisible), nullptr, nullptr },
+        { "is_double_tap_enabled", reinterpret_cast<getter>(MapControl_get_IsDoubleTapEnabled), reinterpret_cast<setter>(MapControl_put_IsDoubleTapEnabled), nullptr, nullptr },
+        { "allow_drop", reinterpret_cast<getter>(MapControl_get_AllowDrop), reinterpret_cast<setter>(MapControl_put_AllowDrop), nullptr, nullptr },
+        { "clip", reinterpret_cast<getter>(MapControl_get_Clip), reinterpret_cast<setter>(MapControl_put_Clip), nullptr, nullptr },
+        { "cache_mode", reinterpret_cast<getter>(MapControl_get_CacheMode), reinterpret_cast<setter>(MapControl_put_CacheMode), nullptr, nullptr },
+        { "use_layout_rounding", reinterpret_cast<getter>(MapControl_get_UseLayoutRounding), reinterpret_cast<setter>(MapControl_put_UseLayoutRounding), nullptr, nullptr },
+        { "render_transform", reinterpret_cast<getter>(MapControl_get_RenderTransform), reinterpret_cast<setter>(MapControl_put_RenderTransform), nullptr, nullptr },
+        { "visibility", reinterpret_cast<getter>(MapControl_get_Visibility), reinterpret_cast<setter>(MapControl_put_Visibility), nullptr, nullptr },
+        { "desired_size", reinterpret_cast<getter>(MapControl_get_DesiredSize), nullptr, nullptr, nullptr },
+        { "pointer_captures", reinterpret_cast<getter>(MapControl_get_PointerCaptures), nullptr, nullptr, nullptr },
+        { "render_size", reinterpret_cast<getter>(MapControl_get_RenderSize), nullptr, nullptr, nullptr },
+        { "xaml_root", reinterpret_cast<getter>(MapControl_get_XamlRoot), reinterpret_cast<setter>(MapControl_put_XamlRoot), nullptr, nullptr },
+        { "shadow", reinterpret_cast<getter>(MapControl_get_Shadow), reinterpret_cast<setter>(MapControl_put_Shadow), nullptr, nullptr },
+        { "actual_offset", reinterpret_cast<getter>(MapControl_get_ActualOffset), nullptr, nullptr, nullptr },
+        { "actual_size", reinterpret_cast<getter>(MapControl_get_ActualSize), nullptr, nullptr, nullptr },
+        { "u_i_context", reinterpret_cast<getter>(MapControl_get_UIContext), nullptr, nullptr, nullptr },
+        { "composite_mode", reinterpret_cast<getter>(MapControl_get_CompositeMode), reinterpret_cast<setter>(MapControl_put_CompositeMode), nullptr, nullptr },
+        { "transform3_d", reinterpret_cast<getter>(MapControl_get_Transform3D), reinterpret_cast<setter>(MapControl_put_Transform3D), nullptr, nullptr },
+        { "can_drag", reinterpret_cast<getter>(MapControl_get_CanDrag), reinterpret_cast<setter>(MapControl_put_CanDrag), nullptr, nullptr },
+        { "is_access_key_scope", reinterpret_cast<getter>(MapControl_get_IsAccessKeyScope), reinterpret_cast<setter>(MapControl_put_IsAccessKeyScope), nullptr, nullptr },
+        { "exit_display_mode_on_access_key_invoked", reinterpret_cast<getter>(MapControl_get_ExitDisplayModeOnAccessKeyInvoked), reinterpret_cast<setter>(MapControl_put_ExitDisplayModeOnAccessKeyInvoked), nullptr, nullptr },
+        { "context_flyout", reinterpret_cast<getter>(MapControl_get_ContextFlyout), reinterpret_cast<setter>(MapControl_put_ContextFlyout), nullptr, nullptr },
+        { "access_key_scope_owner", reinterpret_cast<getter>(MapControl_get_AccessKeyScopeOwner), reinterpret_cast<setter>(MapControl_put_AccessKeyScopeOwner), nullptr, nullptr },
+        { "access_key", reinterpret_cast<getter>(MapControl_get_AccessKey), reinterpret_cast<setter>(MapControl_put_AccessKey), nullptr, nullptr },
+        { "key_tip_horizontal_offset", reinterpret_cast<getter>(MapControl_get_KeyTipHorizontalOffset), reinterpret_cast<setter>(MapControl_put_KeyTipHorizontalOffset), nullptr, nullptr },
+        { "high_contrast_adjustment", reinterpret_cast<getter>(MapControl_get_HighContrastAdjustment), reinterpret_cast<setter>(MapControl_put_HighContrastAdjustment), nullptr, nullptr },
+        { "x_y_focus_right_navigation_strategy", reinterpret_cast<getter>(MapControl_get_XYFocusRightNavigationStrategy), reinterpret_cast<setter>(MapControl_put_XYFocusRightNavigationStrategy), nullptr, nullptr },
+        { "x_y_focus_keyboard_navigation", reinterpret_cast<getter>(MapControl_get_XYFocusKeyboardNavigation), reinterpret_cast<setter>(MapControl_put_XYFocusKeyboardNavigation), nullptr, nullptr },
+        { "x_y_focus_down_navigation_strategy", reinterpret_cast<getter>(MapControl_get_XYFocusDownNavigationStrategy), reinterpret_cast<setter>(MapControl_put_XYFocusDownNavigationStrategy), nullptr, nullptr },
+        { "tab_focus_navigation", reinterpret_cast<getter>(MapControl_get_TabFocusNavigation), reinterpret_cast<setter>(MapControl_put_TabFocusNavigation), nullptr, nullptr },
+        { "key_tip_vertical_offset", reinterpret_cast<getter>(MapControl_get_KeyTipVerticalOffset), reinterpret_cast<setter>(MapControl_put_KeyTipVerticalOffset), nullptr, nullptr },
+        { "x_y_focus_up_navigation_strategy", reinterpret_cast<getter>(MapControl_get_XYFocusUpNavigationStrategy), reinterpret_cast<setter>(MapControl_put_XYFocusUpNavigationStrategy), nullptr, nullptr },
+        { "key_tip_placement_mode", reinterpret_cast<getter>(MapControl_get_KeyTipPlacementMode), reinterpret_cast<setter>(MapControl_put_KeyTipPlacementMode), nullptr, nullptr },
+        { "x_y_focus_left_navigation_strategy", reinterpret_cast<getter>(MapControl_get_XYFocusLeftNavigationStrategy), reinterpret_cast<setter>(MapControl_put_XYFocusLeftNavigationStrategy), nullptr, nullptr },
+        { "lights", reinterpret_cast<getter>(MapControl_get_Lights), nullptr, nullptr, nullptr },
+        { "keyboard_accelerators", reinterpret_cast<getter>(MapControl_get_KeyboardAccelerators), nullptr, nullptr, nullptr },
+        { "keyboard_accelerator_placement_target", reinterpret_cast<getter>(MapControl_get_KeyboardAcceleratorPlacementTarget), reinterpret_cast<setter>(MapControl_put_KeyboardAcceleratorPlacementTarget), nullptr, nullptr },
+        { "keyboard_accelerator_placement_mode", reinterpret_cast<getter>(MapControl_get_KeyboardAcceleratorPlacementMode), reinterpret_cast<setter>(MapControl_put_KeyboardAcceleratorPlacementMode), nullptr, nullptr },
+        { "key_tip_target", reinterpret_cast<getter>(MapControl_get_KeyTipTarget), reinterpret_cast<setter>(MapControl_put_KeyTipTarget), nullptr, nullptr },
+        { "translation_transition", reinterpret_cast<getter>(MapControl_get_TranslationTransition), reinterpret_cast<setter>(MapControl_put_TranslationTransition), nullptr, nullptr },
+        { "opacity_transition", reinterpret_cast<getter>(MapControl_get_OpacityTransition), reinterpret_cast<setter>(MapControl_put_OpacityTransition), nullptr, nullptr },
+        { "transform_matrix", reinterpret_cast<getter>(MapControl_get_TransformMatrix), reinterpret_cast<setter>(MapControl_put_TransformMatrix), nullptr, nullptr },
+        { "scale_transition", reinterpret_cast<getter>(MapControl_get_ScaleTransition), reinterpret_cast<setter>(MapControl_put_ScaleTransition), nullptr, nullptr },
+        { "scale", reinterpret_cast<getter>(MapControl_get_Scale), reinterpret_cast<setter>(MapControl_put_Scale), nullptr, nullptr },
+        { "rotation_transition", reinterpret_cast<getter>(MapControl_get_RotationTransition), reinterpret_cast<setter>(MapControl_put_RotationTransition), nullptr, nullptr },
+        { "rotation_axis", reinterpret_cast<getter>(MapControl_get_RotationAxis), reinterpret_cast<setter>(MapControl_put_RotationAxis), nullptr, nullptr },
+        { "rotation", reinterpret_cast<getter>(MapControl_get_Rotation), reinterpret_cast<setter>(MapControl_put_Rotation), nullptr, nullptr },
+        { "translation", reinterpret_cast<getter>(MapControl_get_Translation), reinterpret_cast<setter>(MapControl_put_Translation), nullptr, nullptr },
+        { "center_point", reinterpret_cast<getter>(MapControl_get_CenterPoint), reinterpret_cast<setter>(MapControl_put_CenterPoint), nullptr, nullptr },
+        { "can_be_scroll_anchor", reinterpret_cast<getter>(MapControl_get_CanBeScrollAnchor), reinterpret_cast<setter>(MapControl_put_CanBeScrollAnchor), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(MapControl_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -9184,6 +14952,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapControlDataHelper_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlDataHelper* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* MapControlDataHelper_add_BusinessLandmarkClick(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlDataHelper* self, PyObject* arg) noexcept
     {
         try
@@ -9582,6 +15369,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     static PyGetSetDef _getset_MapControlDataHelper[] = {
+        { "dispatcher", reinterpret_cast<getter>(MapControlDataHelper_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -10480,6 +16268,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapCustomExperience_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCustomExperience* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MapCustomExperience(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperience>>();
@@ -10518,6 +16325,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     static PyGetSetDef _getset_MapCustomExperience[] = {
+        { "dispatcher", reinterpret_cast<getter>(MapCustomExperience_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -11348,6 +17156,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapElement_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MapElement(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>>();
@@ -11393,6 +17220,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "map_style_sheet_entry_state", reinterpret_cast<getter>(MapElement_get_MapStyleSheetEntryState), reinterpret_cast<setter>(MapElement_put_MapStyleSheetEntryState), nullptr, nullptr },
         { "map_style_sheet_entry", reinterpret_cast<getter>(MapElement_get_MapStyleSheetEntry), reinterpret_cast<setter>(MapElement_put_MapStyleSheetEntry), nullptr, nullptr },
         { "is_enabled", reinterpret_cast<getter>(MapElement_get_IsEnabled), reinterpret_cast<setter>(MapElement_put_IsEnabled), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(MapElement_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -12082,6 +17910,354 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapElement3D_get_ZIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ZIndex());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapElement3D_put_ZIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<int32_t>(arg);
+
+            self->obj.ZIndex(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapElement3D_get_Visible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Visible());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapElement3D_put_Visible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.Visible(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapElement3D_get_MapTabIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapTabIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MapTabIndex());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapElement3D_put_MapTabIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapTabIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<int32_t>(arg);
+
+            self->obj.MapTabIndex(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapElement3D_get_Tag(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Tag());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapElement3D_put_Tag(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+
+            self->obj.Tag(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapElement3D_get_MapStyleSheetEntryState(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntryState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MapStyleSheetEntryState());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapElement3D_put_MapStyleSheetEntryState(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntryState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.MapStyleSheetEntryState(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapElement3D_get_MapStyleSheetEntry(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntry"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MapStyleSheetEntry());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapElement3D_put_MapStyleSheetEntry(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntry"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.MapStyleSheetEntry(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapElement3D_get_IsEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsEnabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapElement3D_put_IsEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IsEnabled(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapElement3D_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MapElement3D(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Maps::MapElement3D>>();
@@ -12126,6 +18302,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "model", reinterpret_cast<getter>(MapElement3D_get_Model), reinterpret_cast<setter>(MapElement3D_put_Model), nullptr, nullptr },
         { "location", reinterpret_cast<getter>(MapElement3D_get_Location), reinterpret_cast<setter>(MapElement3D_put_Location), nullptr, nullptr },
         { "heading", reinterpret_cast<getter>(MapElement3D_get_Heading), reinterpret_cast<setter>(MapElement3D_put_Heading), nullptr, nullptr },
+        { "z_index", reinterpret_cast<getter>(MapElement3D_get_ZIndex), reinterpret_cast<setter>(MapElement3D_put_ZIndex), nullptr, nullptr },
+        { "visible", reinterpret_cast<getter>(MapElement3D_get_Visible), reinterpret_cast<setter>(MapElement3D_put_Visible), nullptr, nullptr },
+        { "map_tab_index", reinterpret_cast<getter>(MapElement3D_get_MapTabIndex), reinterpret_cast<setter>(MapElement3D_put_MapTabIndex), nullptr, nullptr },
+        { "tag", reinterpret_cast<getter>(MapElement3D_get_Tag), reinterpret_cast<setter>(MapElement3D_put_Tag), nullptr, nullptr },
+        { "map_style_sheet_entry_state", reinterpret_cast<getter>(MapElement3D_get_MapStyleSheetEntryState), reinterpret_cast<setter>(MapElement3D_put_MapStyleSheetEntryState), nullptr, nullptr },
+        { "map_style_sheet_entry", reinterpret_cast<getter>(MapElement3D_get_MapStyleSheetEntry), reinterpret_cast<setter>(MapElement3D_put_MapStyleSheetEntry), nullptr, nullptr },
+        { "is_enabled", reinterpret_cast<getter>(MapElement3D_get_IsEnabled), reinterpret_cast<setter>(MapElement3D_put_IsEnabled), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(MapElement3D_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -12946,6 +19130,166 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapElementsLayer_get_ZIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayer* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapLayer", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ZIndex());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapElementsLayer_put_ZIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayer* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapLayer", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<int32_t>(arg);
+
+            self->obj.ZIndex(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapElementsLayer_get_Visible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayer* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapLayer", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Visible());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapElementsLayer_put_Visible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayer* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapLayer", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.Visible(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapElementsLayer_get_MapTabIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayer* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapLayer", L"MapTabIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MapTabIndex());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapElementsLayer_put_MapTabIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayer* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapLayer", L"MapTabIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<int32_t>(arg);
+
+            self->obj.MapTabIndex(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapElementsLayer_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayer* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* MapElementsLayer_add_MapContextRequested(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayer* self, PyObject* arg) noexcept
     {
         try
@@ -13165,6 +19509,10 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyGetSetDef _getset_MapElementsLayer[] = {
         { "map_elements", reinterpret_cast<getter>(MapElementsLayer_get_MapElements), reinterpret_cast<setter>(MapElementsLayer_put_MapElements), nullptr, nullptr },
+        { "z_index", reinterpret_cast<getter>(MapElementsLayer_get_ZIndex), reinterpret_cast<setter>(MapElementsLayer_put_ZIndex), nullptr, nullptr },
+        { "visible", reinterpret_cast<getter>(MapElementsLayer_get_Visible), reinterpret_cast<setter>(MapElementsLayer_put_Visible), nullptr, nullptr },
+        { "map_tab_index", reinterpret_cast<getter>(MapElementsLayer_get_MapTabIndex), reinterpret_cast<setter>(MapElementsLayer_put_MapTabIndex), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(MapElementsLayer_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -14374,6 +20722,354 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapIcon_get_ZIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ZIndex());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapIcon_put_ZIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<int32_t>(arg);
+
+            self->obj.ZIndex(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapIcon_get_Visible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Visible());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapIcon_put_Visible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.Visible(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapIcon_get_MapTabIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapTabIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MapTabIndex());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapIcon_put_MapTabIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapTabIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<int32_t>(arg);
+
+            self->obj.MapTabIndex(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapIcon_get_Tag(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Tag());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapIcon_put_Tag(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+
+            self->obj.Tag(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapIcon_get_MapStyleSheetEntryState(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntryState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MapStyleSheetEntryState());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapIcon_put_MapStyleSheetEntryState(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntryState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.MapStyleSheetEntryState(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapIcon_get_MapStyleSheetEntry(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntry"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MapStyleSheetEntry());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapIcon_put_MapStyleSheetEntry(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntry"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.MapStyleSheetEntry(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapIcon_get_IsEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsEnabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapIcon_put_IsEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IsEnabled(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapIcon_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MapIcon(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Maps::MapIcon>>();
@@ -14417,6 +21113,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "location", reinterpret_cast<getter>(MapIcon_get_Location), reinterpret_cast<setter>(MapIcon_put_Location), nullptr, nullptr },
         { "image", reinterpret_cast<getter>(MapIcon_get_Image), reinterpret_cast<setter>(MapIcon_put_Image), nullptr, nullptr },
         { "collision_behavior_desired", reinterpret_cast<getter>(MapIcon_get_CollisionBehaviorDesired), reinterpret_cast<setter>(MapIcon_put_CollisionBehaviorDesired), nullptr, nullptr },
+        { "z_index", reinterpret_cast<getter>(MapIcon_get_ZIndex), reinterpret_cast<setter>(MapIcon_put_ZIndex), nullptr, nullptr },
+        { "visible", reinterpret_cast<getter>(MapIcon_get_Visible), reinterpret_cast<setter>(MapIcon_put_Visible), nullptr, nullptr },
+        { "map_tab_index", reinterpret_cast<getter>(MapIcon_get_MapTabIndex), reinterpret_cast<setter>(MapIcon_put_MapTabIndex), nullptr, nullptr },
+        { "tag", reinterpret_cast<getter>(MapIcon_get_Tag), reinterpret_cast<setter>(MapIcon_put_Tag), nullptr, nullptr },
+        { "map_style_sheet_entry_state", reinterpret_cast<getter>(MapIcon_get_MapStyleSheetEntryState), reinterpret_cast<setter>(MapIcon_put_MapStyleSheetEntryState), nullptr, nullptr },
+        { "map_style_sheet_entry", reinterpret_cast<getter>(MapIcon_get_MapStyleSheetEntry), reinterpret_cast<setter>(MapIcon_put_MapStyleSheetEntry), nullptr, nullptr },
+        { "is_enabled", reinterpret_cast<getter>(MapIcon_get_IsEnabled), reinterpret_cast<setter>(MapIcon_put_IsEnabled), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(MapIcon_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -14764,6 +21468,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapInputEventArgs_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapInputEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MapInputEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Maps::MapInputEventArgs>>();
@@ -14804,6 +21527,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static PyGetSetDef _getset_MapInputEventArgs[] = {
         { "location", reinterpret_cast<getter>(MapInputEventArgs_get_Location), nullptr, nullptr, nullptr },
         { "position", reinterpret_cast<getter>(MapInputEventArgs_get_Position), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(MapInputEventArgs_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -15254,6 +21978,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapItemsControl_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapItemsControl* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MapItemsControl(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Maps::MapItemsControl>>();
@@ -15295,6 +22038,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "items_source", reinterpret_cast<getter>(MapItemsControl_get_ItemsSource), reinterpret_cast<setter>(MapItemsControl_put_ItemsSource), nullptr, nullptr },
         { "item_template", reinterpret_cast<getter>(MapItemsControl_get_ItemTemplate), reinterpret_cast<setter>(MapItemsControl_put_ItemTemplate), nullptr, nullptr },
         { "items", reinterpret_cast<getter>(MapItemsControl_get_Items), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(MapItemsControl_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -15801,6 +22545,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapLayer_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapLayer* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MapLayer(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>>();
@@ -15842,6 +22605,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "z_index", reinterpret_cast<getter>(MapLayer_get_ZIndex), reinterpret_cast<setter>(MapLayer_put_ZIndex), nullptr, nullptr },
         { "visible", reinterpret_cast<getter>(MapLayer_get_Visible), reinterpret_cast<setter>(MapLayer_put_Visible), nullptr, nullptr },
         { "map_tab_index", reinterpret_cast<getter>(MapLayer_get_MapTabIndex), reinterpret_cast<setter>(MapLayer_put_MapTabIndex), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(MapLayer_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -16202,6 +22966,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapModel3D_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapModel3D* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MapModel3D(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Maps::MapModel3D>>();
@@ -16240,6 +23023,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     static PyGetSetDef _getset_MapModel3D[] = {
+        { "dispatcher", reinterpret_cast<getter>(MapModel3D_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -16857,6 +23641,354 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapPolygon_get_ZIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ZIndex());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapPolygon_put_ZIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<int32_t>(arg);
+
+            self->obj.ZIndex(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapPolygon_get_Visible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Visible());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapPolygon_put_Visible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.Visible(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapPolygon_get_MapTabIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapTabIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MapTabIndex());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapPolygon_put_MapTabIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapTabIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<int32_t>(arg);
+
+            self->obj.MapTabIndex(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapPolygon_get_Tag(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Tag());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapPolygon_put_Tag(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+
+            self->obj.Tag(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapPolygon_get_MapStyleSheetEntryState(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntryState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MapStyleSheetEntryState());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapPolygon_put_MapStyleSheetEntryState(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntryState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.MapStyleSheetEntryState(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapPolygon_get_MapStyleSheetEntry(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntry"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MapStyleSheetEntry());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapPolygon_put_MapStyleSheetEntry(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntry"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.MapStyleSheetEntry(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapPolygon_get_IsEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsEnabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapPolygon_put_IsEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IsEnabled(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapPolygon_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MapPolygon(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Maps::MapPolygon>>();
@@ -16901,6 +24033,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "path", reinterpret_cast<getter>(MapPolygon_get_Path), reinterpret_cast<setter>(MapPolygon_put_Path), nullptr, nullptr },
         { "fill_color", reinterpret_cast<getter>(MapPolygon_get_FillColor), reinterpret_cast<setter>(MapPolygon_put_FillColor), nullptr, nullptr },
         { "paths", reinterpret_cast<getter>(MapPolygon_get_Paths), nullptr, nullptr, nullptr },
+        { "z_index", reinterpret_cast<getter>(MapPolygon_get_ZIndex), reinterpret_cast<setter>(MapPolygon_put_ZIndex), nullptr, nullptr },
+        { "visible", reinterpret_cast<getter>(MapPolygon_get_Visible), reinterpret_cast<setter>(MapPolygon_put_Visible), nullptr, nullptr },
+        { "map_tab_index", reinterpret_cast<getter>(MapPolygon_get_MapTabIndex), reinterpret_cast<setter>(MapPolygon_put_MapTabIndex), nullptr, nullptr },
+        { "tag", reinterpret_cast<getter>(MapPolygon_get_Tag), reinterpret_cast<setter>(MapPolygon_put_Tag), nullptr, nullptr },
+        { "map_style_sheet_entry_state", reinterpret_cast<getter>(MapPolygon_get_MapStyleSheetEntryState), reinterpret_cast<setter>(MapPolygon_put_MapStyleSheetEntryState), nullptr, nullptr },
+        { "map_style_sheet_entry", reinterpret_cast<getter>(MapPolygon_get_MapStyleSheetEntry), reinterpret_cast<setter>(MapPolygon_put_MapStyleSheetEntry), nullptr, nullptr },
+        { "is_enabled", reinterpret_cast<getter>(MapPolygon_get_IsEnabled), reinterpret_cast<setter>(MapPolygon_put_IsEnabled), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(MapPolygon_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -17435,6 +24575,354 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapPolyline_get_ZIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ZIndex());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapPolyline_put_ZIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"ZIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<int32_t>(arg);
+
+            self->obj.ZIndex(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapPolyline_get_Visible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Visible());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapPolyline_put_Visible(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Visible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.Visible(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapPolyline_get_MapTabIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapTabIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MapTabIndex());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapPolyline_put_MapTabIndex(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapTabIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<int32_t>(arg);
+
+            self->obj.MapTabIndex(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapPolyline_get_Tag(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Tag());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapPolyline_put_Tag(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+
+            self->obj.Tag(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapPolyline_get_MapStyleSheetEntryState(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntryState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MapStyleSheetEntryState());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapPolyline_put_MapStyleSheetEntryState(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntryState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.MapStyleSheetEntryState(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapPolyline_get_MapStyleSheetEntry(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntry"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MapStyleSheetEntry());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapPolyline_put_MapStyleSheetEntry(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"MapStyleSheetEntry"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.MapStyleSheetEntry(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapPolyline_get_IsEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsEnabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MapPolyline_put_IsEnabled(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Maps.MapElement", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IsEnabled(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MapPolyline_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MapPolyline(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Maps::MapPolyline>>();
@@ -17477,6 +24965,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "stroke_dashed", reinterpret_cast<getter>(MapPolyline_get_StrokeDashed), reinterpret_cast<setter>(MapPolyline_put_StrokeDashed), nullptr, nullptr },
         { "stroke_color", reinterpret_cast<getter>(MapPolyline_get_StrokeColor), reinterpret_cast<setter>(MapPolyline_put_StrokeColor), nullptr, nullptr },
         { "path", reinterpret_cast<getter>(MapPolyline_get_Path), reinterpret_cast<setter>(MapPolyline_put_Path), nullptr, nullptr },
+        { "z_index", reinterpret_cast<getter>(MapPolyline_get_ZIndex), reinterpret_cast<setter>(MapPolyline_put_ZIndex), nullptr, nullptr },
+        { "visible", reinterpret_cast<getter>(MapPolyline_get_Visible), reinterpret_cast<setter>(MapPolyline_put_Visible), nullptr, nullptr },
+        { "map_tab_index", reinterpret_cast<getter>(MapPolyline_get_MapTabIndex), reinterpret_cast<setter>(MapPolyline_put_MapTabIndex), nullptr, nullptr },
+        { "tag", reinterpret_cast<getter>(MapPolyline_get_Tag), reinterpret_cast<setter>(MapPolyline_put_Tag), nullptr, nullptr },
+        { "map_style_sheet_entry_state", reinterpret_cast<getter>(MapPolyline_get_MapStyleSheetEntryState), reinterpret_cast<setter>(MapPolyline_put_MapStyleSheetEntryState), nullptr, nullptr },
+        { "map_style_sheet_entry", reinterpret_cast<getter>(MapPolyline_get_MapStyleSheetEntry), reinterpret_cast<setter>(MapPolyline_put_MapStyleSheetEntry), nullptr, nullptr },
+        { "is_enabled", reinterpret_cast<getter>(MapPolyline_get_IsEnabled), reinterpret_cast<setter>(MapPolyline_put_IsEnabled), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(MapPolyline_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -18027,6 +25523,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapRouteView_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapRouteView* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MapRouteView(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>>();
@@ -18068,6 +25583,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "route_color", reinterpret_cast<getter>(MapRouteView_get_RouteColor), reinterpret_cast<setter>(MapRouteView_put_RouteColor), nullptr, nullptr },
         { "outline_color", reinterpret_cast<getter>(MapRouteView_get_OutlineColor), reinterpret_cast<setter>(MapRouteView_put_OutlineColor), nullptr, nullptr },
         { "route", reinterpret_cast<getter>(MapRouteView_get_Route), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(MapRouteView_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -18590,6 +26106,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapScene_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapScene* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* MapScene_add_TargetCameraChanged(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapScene* self, PyObject* arg) noexcept
     {
         try
@@ -18674,6 +26209,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyGetSetDef _getset_MapScene[] = {
         { "target_camera", reinterpret_cast<getter>(MapScene_get_TargetCamera), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(MapScene_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -19242,6 +26778,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapStyleSheet_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapStyleSheet* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MapStyleSheet(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheet>>();
@@ -19280,6 +26835,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     static PyGetSetDef _getset_MapStyleSheet[] = {
+        { "dispatcher", reinterpret_cast<getter>(MapStyleSheet_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -21647,6 +29203,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapTileDataSource_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileDataSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MapTileDataSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource>>();
@@ -21685,6 +29260,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     static PyGetSetDef _getset_MapTileDataSource[] = {
+        { "dispatcher", reinterpret_cast<getter>(MapTileDataSource_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -23083,6 +30659,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* MapTileSource_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MapTileSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>>();
@@ -23139,6 +30734,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "frame_count", reinterpret_cast<getter>(MapTileSource_get_FrameCount), reinterpret_cast<setter>(MapTileSource_put_FrameCount), nullptr, nullptr },
         { "auto_play", reinterpret_cast<getter>(MapTileSource_get_AutoPlay), reinterpret_cast<setter>(MapTileSource_put_AutoPlay), nullptr, nullptr },
         { "animation_state", reinterpret_cast<getter>(MapTileSource_get_AnimationState), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(MapTileSource_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -24234,6 +31830,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* StreetsideExperience_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::StreetsideExperience* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_StreetsideExperience(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Maps::StreetsideExperience>>();
@@ -24278,6 +31893,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "exit_button_visible", reinterpret_cast<getter>(StreetsideExperience_get_ExitButtonVisible), reinterpret_cast<setter>(StreetsideExperience_put_ExitButtonVisible), nullptr, nullptr },
         { "cursor_visible", reinterpret_cast<getter>(StreetsideExperience_get_CursorVisible), reinterpret_cast<setter>(StreetsideExperience_put_CursorVisible), nullptr, nullptr },
         { "address_text_visible", reinterpret_cast<getter>(StreetsideExperience_get_AddressTextVisible), reinterpret_cast<setter>(StreetsideExperience_put_AddressTextVisible), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(StreetsideExperience_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -24607,6 +32223,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* StreetsidePanorama_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_StreetsidePanorama(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama>>();
@@ -24646,6 +32281,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyGetSetDef _getset_StreetsidePanorama[] = {
         { "location", reinterpret_cast<getter>(StreetsidePanorama_get_Location), nullptr, nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(StreetsidePanorama_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 

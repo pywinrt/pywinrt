@@ -9,12 +9,14 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
+import winrt.microsoft.ui.dispatching as microsoft_ui_dispatching
 import winrt.microsoft.ui.xaml as microsoft_ui_xaml
 import winrt.microsoft.ui.xaml.automation as microsoft_ui_xaml_automation
 import winrt.microsoft.ui.xaml.automation.peers as microsoft_ui_xaml_automation_peers
 import winrt.microsoft.ui.xaml.automation.text as microsoft_ui_xaml_automation_text
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.ui as windows_ui
+import winrt.windows.ui.core as windows_ui_core
 
 Self = typing.TypeVar('Self')
 
@@ -29,6 +31,10 @@ class IRawElementProviderSimple(winrt.system.Object):
     def register_property_changed_callback(self, dp: typing.Optional[microsoft_ui_xaml.DependencyProperty], callback: typing.Optional[microsoft_ui_xaml.DependencyPropertyChangedCallback], /) -> winrt.system.Int64: ...
     def set_value(self, dp: typing.Optional[microsoft_ui_xaml.DependencyProperty], value: typing.Optional[winrt.system.Object], /) -> None: ...
     def unregister_property_changed_callback(self, dp: typing.Optional[microsoft_ui_xaml.DependencyProperty], token: winrt.system.Int64, /) -> None: ...
+    @_property
+    def dispatcher(self) -> typing.Optional[windows_ui_core.CoreDispatcher]: ...
+    @_property
+    def dispatcher_queue(self) -> typing.Optional[microsoft_ui_dispatching.DispatcherQueue]: ...
 
 @typing.final
 class IAnnotationProvider(winrt.system.Object):

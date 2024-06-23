@@ -620,6 +620,25 @@ namespace py::cpp::Windows::UI::Xaml::Automation
         }
     }
 
+    static PyObject* AutomationAnnotation_get_Dispatcher(py::wrapper::Windows::UI::Xaml::Automation::AutomationAnnotation* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.DependencyObject", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Dispatcher());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_AutomationAnnotation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::AutomationAnnotation>>();
@@ -660,6 +679,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static PyGetSetDef _getset_AutomationAnnotation[] = {
         { "type", reinterpret_cast<getter>(AutomationAnnotation_get_Type), reinterpret_cast<setter>(AutomationAnnotation_put_Type), nullptr, nullptr },
         { "element", reinterpret_cast<getter>(AutomationAnnotation_get_Element), reinterpret_cast<setter>(AutomationAnnotation_put_Element), nullptr, nullptr },
+        { "dispatcher", reinterpret_cast<getter>(AutomationAnnotation_get_Dispatcher), nullptr, nullptr, nullptr },
         { }
     };
 
