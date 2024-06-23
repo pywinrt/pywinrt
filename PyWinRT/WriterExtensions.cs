@@ -401,7 +401,7 @@ static class WriterExtensions
         w.WriteLine("}");
     }
 
-    public static void WriteMethodFunctions(this IndentedTextWriter w, ProjectedType type)
+    static void WriteMethodFunctions(this IndentedTextWriter w, ProjectedType type)
     {
         foreach (
             var (methodName, isStatic) in type.Methods.Select(m => (m.Name, m.IsStatic)).Distinct()
@@ -735,7 +735,7 @@ static class WriterExtensions
         w.WriteLine("}");
     }
 
-    static void WriteAssignArrayMethod(this IndentedTextWriter w, ProjectedType type)
+    public static void WriteAssignArrayMethod(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteBlankLine();
         w.WriteLine(

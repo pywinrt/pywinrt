@@ -8,7 +8,7 @@ static class StructWriterExtensions
         w.WriteLine($"// ----- {type.Name} struct --------------------");
         w.WriteStructConstructor(type);
         w.WriteDeallocFunction(type);
-        w.WriteMethodFunctions(type);
+        w.WriteAssignArrayMethod(type);
         w.WriteMethodTable(type);
         foreach (var field in type.Type.Fields)
         {
