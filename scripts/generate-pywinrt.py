@@ -7,22 +7,21 @@ import sys
 REPO_ROOT_PATH = pathlib.Path(__file__).parent.parent.resolve()
 PROJECTION_PATH = REPO_ROOT_PATH / "projection"
 
-if "--nuget" in sys.argv:
-    PYWINRT_EXE = REPO_ROOT_PATH / "_tools" / "PyWinRT" / "bin" / "pywinrt.exe"
+DOTNET = []
 
-    if not PYWINRT_EXE.exists():
-        raise RuntimeError(
-            "PyWinRT.exe not found. Please run `./scripts/fetch-tools.cmd`"
-        )
+if "--dotnet" in sys.argv:
+    DOTNET = ["dotnet"]
+    PYWINRT_EXE = "pywinrt"
+
+    subprocess.check_call(DOTNET + ["tool", "list", "PyWinRT"])
+
 elif "--debug" in sys.argv:
     PYWINRT_EXE = (
         REPO_ROOT_PATH / "PyWinRT" / "bin" / "Debug" / "net8.0" / "PyWinRT.exe"
     )
 
     if not PYWINRT_EXE.exists():
-        raise RuntimeError(
-            "PyWinRT.exe not found. Please run `dotnet build PyWinRT`"
-        )
+        raise RuntimeError("PyWinRT.exe not found. Please run `dotnet build PyWinRT`")
 else:
     PYWINRT_EXE = (
         REPO_ROOT_PATH / "PyWinRT" / "bin" / "Release" / "net8.0" / "PyWinRT.exe"
@@ -54,7 +53,8 @@ if "--minimal" in sys.argv:
         include_args.extend(["-include", ns])
 
 subprocess.check_call(
-    [
+    DOTNET
+    + [
         PYWINRT_EXE,
         "--input",
         WINDOWS_SDK,
@@ -83,7 +83,8 @@ WINDOWS_APP_SDK_PACKAGE_PATH = (
 )
 
 subprocess.check_call(
-    [
+    DOTNET
+    + [
         PYWINRT_EXE,
         "--input",
         WINDOWS_APP_SDK_PACKAGE_METADATA,
@@ -110,7 +111,8 @@ TEST_PACKAGE_METADATA = (
 )
 
 subprocess.check_call(
-    [
+    DOTNET
+    + [
         PYWINRT_EXE,
         "--input",
         TEST_PACKAGE_METADATA,
