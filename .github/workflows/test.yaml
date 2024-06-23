@@ -37,7 +37,7 @@ jobs:
           allow-prereleases: true
           architecture: ${{ matrix.architecture }}
       - name: install nuget packages
-        run: ./scripts/fetch-tools.ps1 -noCppWinRT -noPyWinRT -noTestWinRT
+        run: ./scripts/fetch-tools.ps1 -noCppWinRT -noTestWinRT
       - name: configure
         run: cmake -S projection -B _build/projection -DPYWINRT_FULL_PROJECTION=OFF -A ${{ matrix.vs-arch }}
       - name: build
@@ -75,7 +75,7 @@ jobs:
             python:p
       - name: install nuget packages
         shell: pwsh
-        run: ./scripts/fetch-tools.ps1 -noCppWinRT -noPyWinRT -noTestWinRT
+        run: ./scripts/fetch-tools.ps1 -noCppWinRT -noTestWinRT
       - name: configure
         run: ${MINGW_PREFIX}/bin/cmake -S projection -B _build/projection -DPYWINRT_FULL_PROJECTION=OFF -DPython3_ROOT_DIR=${MINGW_PREFIX}
       - name: build

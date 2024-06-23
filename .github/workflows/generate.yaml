@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: dotnet build PyWinRT -c Release
-      - run: ./scripts/fetch-tools.ps1 -noPyWinRT
+      - run: ./scripts/fetch-tools.ps1
       - run: python3 ./scripts/generate-cppwinrt.py
       - run: python3 ./scripts/generate-pywinrt.py
       - run: python3 ./scripts/generate-pyproject.py

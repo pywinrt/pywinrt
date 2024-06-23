@@ -6,11 +6,6 @@ param(
     [switch]$noCppWinRT,
 
     [Parameter(Mandatory=$false)]
-    [string]$PyWinRTVersion = "2.0.1",
-    [switch]$useLocalPyWinRTNuget,
-    [switch]$noPyWinRT,
-
-    [Parameter(Mandatory=$false)]
     [string]$WindowsAppSDKVersion = "1.5.240311000",
     [switch]$noWindowsAppSDK,
 
@@ -30,15 +25,6 @@ try {
 
 if (!$noCppWinRT) {
     & nuget install Microsoft.Windows.CppWinRT -Version $CppWinRTVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
-
-    if ($LASTEXITCODE -ne 0) {
-        exit $LASTEXITCODE
-    }
-}
-
-If (!$noPyWinRT) {
-    $source = If ($useLocalPyWinRTNuget) { "-Source", "$repoRootPath" } Else { "" }
-    & nuget install PyWinRT -Version $PyWinRTVersion -Prerelease -DependencyVersion Ignore -ExcludeVersion -OutputDirectory "$repoRootPath/_tools" $source
 
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE
