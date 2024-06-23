@@ -17,10 +17,12 @@ winrt-Windows.System[all]==0.0.0
 winrt-Windows.UI[all]==0.0.0
 winrt-Windows.UI.Composition[all]==0.0.0
 winrt-Windows.UI.Core[all]==0.0.0
+winrt-Windows.UI.Input[all]==0.0.0
 winrt-Windows.UI.Input.Inking[all]==0.0.0
 winrt-Windows.UI.Text[all]==0.0.0
 winrt-Windows.UI.Xaml[all]==0.0.0
 winrt-Windows.UI.Xaml.Automation[all]==0.0.0
+winrt-Windows.UI.Xaml.Automation.Peers[all]==0.0.0
 winrt-Windows.UI.Xaml.Controls.Primitives[all]==0.0.0
 winrt-Windows.UI.Xaml.Data[all]==0.0.0
 winrt-Windows.UI.Xaml.Documents[all]==0.0.0

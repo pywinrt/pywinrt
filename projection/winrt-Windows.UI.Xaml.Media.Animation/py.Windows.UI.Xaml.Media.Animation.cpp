@@ -43,6 +43,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* AddDeleteThemeTransition_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::AddDeleteThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AddDeleteThemeTransition_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::AddDeleteThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AddDeleteThemeTransition_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::AddDeleteThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AddDeleteThemeTransition_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::AddDeleteThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AddDeleteThemeTransition_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::AddDeleteThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AddDeleteThemeTransition_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::AddDeleteThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AddDeleteThemeTransition_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::AddDeleteThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_AddDeleteThemeTransition(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::AddDeleteThemeTransition>>();
@@ -68,6 +291,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_AddDeleteThemeTransition[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(AddDeleteThemeTransition_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(AddDeleteThemeTransition_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(AddDeleteThemeTransition_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(AddDeleteThemeTransition_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(AddDeleteThemeTransition_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(AddDeleteThemeTransition_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(AddDeleteThemeTransition_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AddDeleteThemeTransition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AddDeleteThemeTransition), METH_O | METH_STATIC, nullptr },
         { }
@@ -129,6 +359,260 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* BackEase_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::BackEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BackEase_Ease(py::wrapper::Windows::UI::Xaml::Media::Animation::BackEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"Ease", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<double>(args, 0);
+
+                return py::convert(self->obj.Ease(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BackEase_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::BackEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BackEase_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::BackEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BackEase_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::BackEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BackEase_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::BackEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BackEase_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::BackEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BackEase_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::BackEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* BackEase_get_Amplitude(py::wrapper::Windows::UI::Xaml::Media::Animation::BackEase* self, void* /*unused*/) noexcept
@@ -222,6 +706,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_BackEase[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(BackEase_ClearValue), METH_VARARGS, nullptr },
+        { "ease", reinterpret_cast<PyCFunction>(BackEase_Ease), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(BackEase_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(BackEase_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(BackEase_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(BackEase_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(BackEase_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(BackEase_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BackEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BackEase), METH_O | METH_STATIC, nullptr },
         { }
@@ -400,6 +892,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* BeginStoryboard_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::BeginStoryboard* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BeginStoryboard_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::BeginStoryboard* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BeginStoryboard_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::BeginStoryboard* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BeginStoryboard_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::BeginStoryboard* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BeginStoryboard_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::BeginStoryboard* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BeginStoryboard_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::BeginStoryboard* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BeginStoryboard_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::BeginStoryboard* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* BeginStoryboard_get_Storyboard(py::wrapper::Windows::UI::Xaml::Media::Animation::BeginStoryboard* self, void* /*unused*/) noexcept
     {
         try
@@ -491,6 +1206,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_BeginStoryboard[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(BeginStoryboard_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(BeginStoryboard_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(BeginStoryboard_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(BeginStoryboard_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(BeginStoryboard_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(BeginStoryboard_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(BeginStoryboard_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BeginStoryboard, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BeginStoryboard), METH_O | METH_STATIC, nullptr },
         { }
@@ -579,6 +1301,260 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* BounceEase_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::BounceEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BounceEase_Ease(py::wrapper::Windows::UI::Xaml::Media::Animation::BounceEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"Ease", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<double>(args, 0);
+
+                return py::convert(self->obj.Ease(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BounceEase_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::BounceEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BounceEase_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::BounceEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BounceEase_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::BounceEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BounceEase_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::BounceEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BounceEase_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::BounceEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BounceEase_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::BounceEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* BounceEase_get_Bounciness(py::wrapper::Windows::UI::Xaml::Media::Animation::BounceEase* self, void* /*unused*/) noexcept
@@ -738,6 +1714,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_BounceEase[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(BounceEase_ClearValue), METH_VARARGS, nullptr },
+        { "ease", reinterpret_cast<PyCFunction>(BounceEase_Ease), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(BounceEase_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(BounceEase_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(BounceEase_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(BounceEase_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(BounceEase_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(BounceEase_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BounceEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BounceEase), METH_O | METH_STATIC, nullptr },
         { }
@@ -830,6 +1814,260 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* CircleEase_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::CircleEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CircleEase_Ease(py::wrapper::Windows::UI::Xaml::Media::Animation::CircleEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"Ease", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<double>(args, 0);
+
+                return py::convert(self->obj.Ease(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CircleEase_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::CircleEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CircleEase_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::CircleEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CircleEase_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::CircleEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CircleEase_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::CircleEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CircleEase_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::CircleEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CircleEase_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::CircleEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_CircleEase(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::CircleEase>>();
@@ -855,6 +2093,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_CircleEase[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(CircleEase_ClearValue), METH_VARARGS, nullptr },
+        { "ease", reinterpret_cast<PyCFunction>(CircleEase_Ease), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(CircleEase_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(CircleEase_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(CircleEase_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(CircleEase_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(CircleEase_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(CircleEase_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CircleEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CircleEase), METH_O | METH_STATIC, nullptr },
         { }
@@ -916,6 +2162,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* ColorAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* ColorAnimation_get_To(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, void* /*unused*/) noexcept
@@ -1273,6 +2742,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_ColorAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(ColorAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(ColorAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(ColorAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(ColorAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(ColorAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(ColorAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(ColorAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ColorAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ColorAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -1369,6 +2845,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* ColorAnimationUsingKeyFrames_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorAnimationUsingKeyFrames_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorAnimationUsingKeyFrames_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorAnimationUsingKeyFrames_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorAnimationUsingKeyFrames_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorAnimationUsingKeyFrames_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorAnimationUsingKeyFrames_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* ColorAnimationUsingKeyFrames_get_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames* self, void* /*unused*/) noexcept
@@ -1481,6 +3180,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_ColorAnimationUsingKeyFrames[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(ColorAnimationUsingKeyFrames_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(ColorAnimationUsingKeyFrames_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(ColorAnimationUsingKeyFrames_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(ColorAnimationUsingKeyFrames_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(ColorAnimationUsingKeyFrames_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(ColorAnimationUsingKeyFrames_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(ColorAnimationUsingKeyFrames_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ColorAnimationUsingKeyFrames, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ColorAnimationUsingKeyFrames), METH_O | METH_STATIC, nullptr },
         { }
@@ -1548,6 +3254,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* ColorKeyFrame_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorKeyFrame_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorKeyFrame_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorKeyFrame_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorKeyFrame_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorKeyFrame_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorKeyFrame_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* ColorKeyFrame_get_Value(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorKeyFrame* self, void* /*unused*/) noexcept
@@ -1707,6 +3636,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_ColorKeyFrame[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(ColorKeyFrame_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(ColorKeyFrame_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(ColorKeyFrame_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(ColorKeyFrame_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(ColorKeyFrame_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(ColorKeyFrame_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(ColorKeyFrame_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ColorKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ColorKeyFrame), METH_O | METH_STATIC, nullptr },
         { }
@@ -2432,6 +4368,69 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* CommonNavigationTransitionInfo_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CommonNavigationTransitionInfo_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* CommonNavigationTransitionInfo_GetIsStaggerElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -2449,6 +4448,100 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo::GetIsStaggerElement(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CommonNavigationTransitionInfo_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CommonNavigationTransitionInfo_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CommonNavigationTransitionInfo_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
             }
             catch (...)
             {
@@ -2481,6 +4574,72 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 auto param1 = py::convert_to<bool>(args, 1);
 
                 winrt::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo::SetIsStaggerElement(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CommonNavigationTransitionInfo_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CommonNavigationTransitionInfo_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2606,6 +4765,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_CommonNavigationTransitionInfo[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(CommonNavigationTransitionInfo_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(CommonNavigationTransitionInfo_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(CommonNavigationTransitionInfo_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(CommonNavigationTransitionInfo_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(CommonNavigationTransitionInfo_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(CommonNavigationTransitionInfo_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(CommonNavigationTransitionInfo_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CommonNavigationTransitionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CommonNavigationTransitionInfo), METH_O | METH_STATIC, nullptr },
         { }
@@ -3372,6 +5538,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* ContentThemeTransition_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ContentThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentThemeTransition_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ContentThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentThemeTransition_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ContentThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentThemeTransition_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ContentThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentThemeTransition_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ContentThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentThemeTransition_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ContentThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentThemeTransition_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ContentThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* ContentThemeTransition_get_VerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::ContentThemeTransition* self, void* /*unused*/) noexcept
     {
         try
@@ -3529,6 +5918,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_ContentThemeTransition[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(ContentThemeTransition_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(ContentThemeTransition_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(ContentThemeTransition_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(ContentThemeTransition_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(ContentThemeTransition_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(ContentThemeTransition_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(ContentThemeTransition_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContentThemeTransition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentThemeTransition), METH_O | METH_STATIC, nullptr },
         { }
@@ -3621,6 +6017,69 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* ContinuumNavigationTransitionInfo_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContinuumNavigationTransitionInfo_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* ContinuumNavigationTransitionInfo_GetExitElementContainer(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -3700,6 +6159,100 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo::GetIsExitElement(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContinuumNavigationTransitionInfo_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContinuumNavigationTransitionInfo_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContinuumNavigationTransitionInfo_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
             }
             catch (...)
             {
@@ -3798,6 +6351,72 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 auto param1 = py::convert_to<bool>(args, 1);
 
                 winrt::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo::SetIsExitElement(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContinuumNavigationTransitionInfo_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContinuumNavigationTransitionInfo_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3961,6 +6580,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_ContinuumNavigationTransitionInfo[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(ContinuumNavigationTransitionInfo_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(ContinuumNavigationTransitionInfo_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(ContinuumNavigationTransitionInfo_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(ContinuumNavigationTransitionInfo_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(ContinuumNavigationTransitionInfo_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(ContinuumNavigationTransitionInfo_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(ContinuumNavigationTransitionInfo_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContinuumNavigationTransitionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContinuumNavigationTransitionInfo), METH_O | METH_STATIC, nullptr },
         { }
@@ -4060,6 +6686,260 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* CubicEase_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::CubicEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CubicEase_Ease(py::wrapper::Windows::UI::Xaml::Media::Animation::CubicEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"Ease", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<double>(args, 0);
+
+                return py::convert(self->obj.Ease(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CubicEase_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::CubicEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CubicEase_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::CubicEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CubicEase_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::CubicEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CubicEase_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::CubicEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CubicEase_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::CubicEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CubicEase_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::CubicEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_CubicEase(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::CubicEase>>();
@@ -4085,6 +6965,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_CubicEase[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(CubicEase_ClearValue), METH_VARARGS, nullptr },
+        { "ease", reinterpret_cast<PyCFunction>(CubicEase_Ease), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(CubicEase_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(CubicEase_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(CubicEase_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(CubicEase_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(CubicEase_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(CubicEase_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CubicEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CubicEase), METH_O | METH_STATIC, nullptr },
         { }
@@ -4236,6 +7124,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* DiscreteColorKeyFrame_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscreteColorKeyFrame_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscreteColorKeyFrame_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscreteColorKeyFrame_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscreteColorKeyFrame_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscreteColorKeyFrame_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscreteColorKeyFrame_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DiscreteColorKeyFrame(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::DiscreteColorKeyFrame>>();
@@ -4261,6 +7372,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_DiscreteColorKeyFrame[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(DiscreteColorKeyFrame_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(DiscreteColorKeyFrame_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(DiscreteColorKeyFrame_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(DiscreteColorKeyFrame_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DiscreteColorKeyFrame_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(DiscreteColorKeyFrame_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DiscreteColorKeyFrame_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DiscreteColorKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DiscreteColorKeyFrame), METH_O | METH_STATIC, nullptr },
         { }
@@ -4324,6 +7442,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* DiscreteDoubleKeyFrame_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscreteDoubleKeyFrame_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscreteDoubleKeyFrame_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscreteDoubleKeyFrame_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscreteDoubleKeyFrame_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscreteDoubleKeyFrame_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscreteDoubleKeyFrame_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DiscreteDoubleKeyFrame(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame>>();
@@ -4349,6 +7690,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_DiscreteDoubleKeyFrame[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(DiscreteDoubleKeyFrame_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(DiscreteDoubleKeyFrame_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(DiscreteDoubleKeyFrame_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(DiscreteDoubleKeyFrame_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DiscreteDoubleKeyFrame_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(DiscreteDoubleKeyFrame_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DiscreteDoubleKeyFrame_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DiscreteDoubleKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DiscreteDoubleKeyFrame), METH_O | METH_STATIC, nullptr },
         { }
@@ -4412,6 +7760,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* DiscreteObjectKeyFrame_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscreteObjectKeyFrame_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscreteObjectKeyFrame_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscreteObjectKeyFrame_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscreteObjectKeyFrame_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscreteObjectKeyFrame_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscreteObjectKeyFrame_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DiscreteObjectKeyFrame(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame>>();
@@ -4437,6 +8008,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_DiscreteObjectKeyFrame[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(DiscreteObjectKeyFrame_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(DiscreteObjectKeyFrame_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(DiscreteObjectKeyFrame_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(DiscreteObjectKeyFrame_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DiscreteObjectKeyFrame_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(DiscreteObjectKeyFrame_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DiscreteObjectKeyFrame_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DiscreteObjectKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DiscreteObjectKeyFrame), METH_O | METH_STATIC, nullptr },
         { }
@@ -4500,6 +8078,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* DiscretePointKeyFrame_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscretePointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscretePointKeyFrame_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscretePointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscretePointKeyFrame_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscretePointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscretePointKeyFrame_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscretePointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscretePointKeyFrame_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscretePointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscretePointKeyFrame_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscretePointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DiscretePointKeyFrame_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscretePointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DiscretePointKeyFrame(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::DiscretePointKeyFrame>>();
@@ -4525,6 +8326,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_DiscretePointKeyFrame[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(DiscretePointKeyFrame_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(DiscretePointKeyFrame_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(DiscretePointKeyFrame_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(DiscretePointKeyFrame_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DiscretePointKeyFrame_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(DiscretePointKeyFrame_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DiscretePointKeyFrame_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DiscretePointKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DiscretePointKeyFrame), METH_O | METH_STATIC, nullptr },
         { }
@@ -4586,6 +8394,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* DoubleAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* DoubleAnimation_get_To(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, void* /*unused*/) noexcept
@@ -4943,6 +8974,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_DoubleAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(DoubleAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(DoubleAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(DoubleAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(DoubleAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DoubleAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(DoubleAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DoubleAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DoubleAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DoubleAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -5039,6 +9077,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* DoubleAnimationUsingKeyFrames_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleAnimationUsingKeyFrames_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleAnimationUsingKeyFrames_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleAnimationUsingKeyFrames_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleAnimationUsingKeyFrames_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleAnimationUsingKeyFrames_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleAnimationUsingKeyFrames_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* DoubleAnimationUsingKeyFrames_get_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames* self, void* /*unused*/) noexcept
@@ -5151,6 +9412,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_DoubleAnimationUsingKeyFrames[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(DoubleAnimationUsingKeyFrames_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(DoubleAnimationUsingKeyFrames_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(DoubleAnimationUsingKeyFrames_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(DoubleAnimationUsingKeyFrames_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DoubleAnimationUsingKeyFrames_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(DoubleAnimationUsingKeyFrames_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DoubleAnimationUsingKeyFrames_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DoubleAnimationUsingKeyFrames, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DoubleAnimationUsingKeyFrames), METH_O | METH_STATIC, nullptr },
         { }
@@ -5218,6 +9486,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* DoubleKeyFrame_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleKeyFrame_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleKeyFrame_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleKeyFrame_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleKeyFrame_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleKeyFrame_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DoubleKeyFrame_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* DoubleKeyFrame_get_Value(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame* self, void* /*unused*/) noexcept
@@ -5377,6 +9868,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_DoubleKeyFrame[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(DoubleKeyFrame_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(DoubleKeyFrame_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(DoubleKeyFrame_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(DoubleKeyFrame_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DoubleKeyFrame_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(DoubleKeyFrame_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DoubleKeyFrame_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DoubleKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DoubleKeyFrame), METH_O | METH_STATIC, nullptr },
         { }
@@ -6102,6 +10600,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* DragItemThemeAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DragItemThemeAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DragItemThemeAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DragItemThemeAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DragItemThemeAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DragItemThemeAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DragItemThemeAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* DragItemThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation* self, void* /*unused*/) noexcept
     {
         try
@@ -6193,6 +10914,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_DragItemThemeAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(DragItemThemeAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(DragItemThemeAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(DragItemThemeAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(DragItemThemeAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DragItemThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(DragItemThemeAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DragItemThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DragItemThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DragItemThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -6281,6 +11009,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* DragOverThemeAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DragOverThemeAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DragOverThemeAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DragOverThemeAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DragOverThemeAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DragOverThemeAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DragOverThemeAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* DragOverThemeAnimation_get_ToOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, void* /*unused*/) noexcept
@@ -6506,6 +11457,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_DragOverThemeAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(DragOverThemeAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(DragOverThemeAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(DragOverThemeAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(DragOverThemeAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DragOverThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(DragOverThemeAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DragOverThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DragOverThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DragOverThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -6600,6 +11558,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* DrillInNavigationTransitionInfo_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillInNavigationTransitionInfo_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillInNavigationTransitionInfo_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillInNavigationTransitionInfo_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillInNavigationTransitionInfo_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillInNavigationTransitionInfo_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillInNavigationTransitionInfo_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DrillInNavigationTransitionInfo(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo>>();
@@ -6625,6 +11806,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_DrillInNavigationTransitionInfo[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(DrillInNavigationTransitionInfo_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(DrillInNavigationTransitionInfo_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(DrillInNavigationTransitionInfo_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(DrillInNavigationTransitionInfo_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DrillInNavigationTransitionInfo_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(DrillInNavigationTransitionInfo_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DrillInNavigationTransitionInfo_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DrillInNavigationTransitionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DrillInNavigationTransitionInfo), METH_O | METH_STATIC, nullptr },
         { }
@@ -6686,6 +11874,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* DrillInThemeAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillInThemeAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillInThemeAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillInThemeAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillInThemeAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillInThemeAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillInThemeAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* DrillInThemeAnimation_get_ExitTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, void* /*unused*/) noexcept
@@ -6977,6 +12388,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_DrillInThemeAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(DrillInThemeAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(DrillInThemeAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(DrillInThemeAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(DrillInThemeAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DrillInThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(DrillInThemeAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DrillInThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DrillInThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DrillInThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -7071,6 +12489,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* DrillOutThemeAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillOutThemeAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillOutThemeAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillOutThemeAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillOutThemeAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillOutThemeAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DrillOutThemeAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* DrillOutThemeAnimation_get_ExitTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, void* /*unused*/) noexcept
@@ -7362,6 +13003,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_DrillOutThemeAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(DrillOutThemeAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(DrillOutThemeAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(DrillOutThemeAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(DrillOutThemeAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DrillOutThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(DrillOutThemeAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DrillOutThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DrillOutThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DrillOutThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -7458,6 +13106,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* DropTargetItemThemeAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DropTargetItemThemeAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DropTargetItemThemeAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DropTargetItemThemeAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DropTargetItemThemeAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DropTargetItemThemeAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DropTargetItemThemeAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* DropTargetItemThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation* self, void* /*unused*/) noexcept
     {
         try
@@ -7549,6 +13420,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_DropTargetItemThemeAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(DropTargetItemThemeAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(DropTargetItemThemeAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(DropTargetItemThemeAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(DropTargetItemThemeAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(DropTargetItemThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(DropTargetItemThemeAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(DropTargetItemThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DropTargetItemThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DropTargetItemThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -7637,6 +13515,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* EasingColorKeyFrame_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingColorKeyFrame_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingColorKeyFrame_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingColorKeyFrame_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingColorKeyFrame_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingColorKeyFrame_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingColorKeyFrame_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* EasingColorKeyFrame_get_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame* self, void* /*unused*/) noexcept
@@ -7730,6 +13831,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_EasingColorKeyFrame[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(EasingColorKeyFrame_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(EasingColorKeyFrame_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(EasingColorKeyFrame_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(EasingColorKeyFrame_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(EasingColorKeyFrame_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(EasingColorKeyFrame_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(EasingColorKeyFrame_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EasingColorKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EasingColorKeyFrame), METH_O | METH_STATIC, nullptr },
         { }
@@ -7818,6 +13926,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* EasingDoubleKeyFrame_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingDoubleKeyFrame_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingDoubleKeyFrame_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingDoubleKeyFrame_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingDoubleKeyFrame_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingDoubleKeyFrame_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingDoubleKeyFrame_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* EasingDoubleKeyFrame_get_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame* self, void* /*unused*/) noexcept
@@ -7911,6 +14242,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_EasingDoubleKeyFrame[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(EasingDoubleKeyFrame_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(EasingDoubleKeyFrame_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(EasingDoubleKeyFrame_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(EasingDoubleKeyFrame_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(EasingDoubleKeyFrame_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(EasingDoubleKeyFrame_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(EasingDoubleKeyFrame_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EasingDoubleKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EasingDoubleKeyFrame), METH_O | METH_STATIC, nullptr },
         { }
@@ -7979,6 +14317,38 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* EasingFunctionBase_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingFunctionBase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* EasingFunctionBase_Ease(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingFunctionBase* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -7996,6 +14366,197 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.Ease(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingFunctionBase_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingFunctionBase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingFunctionBase_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingFunctionBase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingFunctionBase_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingFunctionBase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingFunctionBase_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingFunctionBase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingFunctionBase_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingFunctionBase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingFunctionBase_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingFunctionBase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
             }
             catch (...)
             {
@@ -8101,7 +14662,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_EasingFunctionBase[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(EasingFunctionBase_ClearValue), METH_VARARGS, nullptr },
         { "ease", reinterpret_cast<PyCFunction>(EasingFunctionBase_Ease), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(EasingFunctionBase_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(EasingFunctionBase_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(EasingFunctionBase_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(EasingFunctionBase_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(EasingFunctionBase_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(EasingFunctionBase_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EasingFunctionBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EasingFunctionBase), METH_O | METH_STATIC, nullptr },
         { }
@@ -8190,6 +14758,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* EasingPointKeyFrame_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingPointKeyFrame_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingPointKeyFrame_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingPointKeyFrame_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingPointKeyFrame_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingPointKeyFrame_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EasingPointKeyFrame_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* EasingPointKeyFrame_get_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame* self, void* /*unused*/) noexcept
@@ -8283,6 +15074,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_EasingPointKeyFrame[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(EasingPointKeyFrame_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(EasingPointKeyFrame_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(EasingPointKeyFrame_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(EasingPointKeyFrame_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(EasingPointKeyFrame_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(EasingPointKeyFrame_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(EasingPointKeyFrame_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EasingPointKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EasingPointKeyFrame), METH_O | METH_STATIC, nullptr },
         { }
@@ -8371,6 +15169,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* EdgeUIThemeTransition_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EdgeUIThemeTransition_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EdgeUIThemeTransition_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EdgeUIThemeTransition_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EdgeUIThemeTransition_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EdgeUIThemeTransition_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EdgeUIThemeTransition_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* EdgeUIThemeTransition_get_Edge(py::wrapper::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition* self, void* /*unused*/) noexcept
@@ -8464,6 +15485,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_EdgeUIThemeTransition[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(EdgeUIThemeTransition_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(EdgeUIThemeTransition_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(EdgeUIThemeTransition_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(EdgeUIThemeTransition_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(EdgeUIThemeTransition_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(EdgeUIThemeTransition_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(EdgeUIThemeTransition_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EdgeUIThemeTransition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EdgeUIThemeTransition), METH_O | METH_STATIC, nullptr },
         { }
@@ -8552,6 +15580,260 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* ElasticEase_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ElasticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ElasticEase_Ease(py::wrapper::Windows::UI::Xaml::Media::Animation::ElasticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"Ease", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<double>(args, 0);
+
+                return py::convert(self->obj.Ease(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ElasticEase_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ElasticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ElasticEase_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ElasticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ElasticEase_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ElasticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ElasticEase_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ElasticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ElasticEase_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ElasticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ElasticEase_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ElasticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* ElasticEase_get_Springiness(py::wrapper::Windows::UI::Xaml::Media::Animation::ElasticEase* self, void* /*unused*/) noexcept
@@ -8711,6 +15993,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_ElasticEase[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(ElasticEase_ClearValue), METH_VARARGS, nullptr },
+        { "ease", reinterpret_cast<PyCFunction>(ElasticEase_Ease), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(ElasticEase_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(ElasticEase_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(ElasticEase_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(ElasticEase_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(ElasticEase_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(ElasticEase_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ElasticEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ElasticEase), METH_O | METH_STATIC, nullptr },
         { }
@@ -8803,6 +16093,69 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* EntranceNavigationTransitionInfo_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EntranceNavigationTransitionInfo_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* EntranceNavigationTransitionInfo_GetIsTargetElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -8820,6 +16173,100 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo::GetIsTargetElement(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EntranceNavigationTransitionInfo_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EntranceNavigationTransitionInfo_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EntranceNavigationTransitionInfo_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
             }
             catch (...)
             {
@@ -8852,6 +16299,72 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 auto param1 = py::convert_to<bool>(args, 1);
 
                 winrt::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo::SetIsTargetElement(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EntranceNavigationTransitionInfo_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EntranceNavigationTransitionInfo_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8911,6 +16424,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_EntranceNavigationTransitionInfo[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(EntranceNavigationTransitionInfo_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(EntranceNavigationTransitionInfo_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(EntranceNavigationTransitionInfo_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(EntranceNavigationTransitionInfo_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(EntranceNavigationTransitionInfo_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(EntranceNavigationTransitionInfo_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(EntranceNavigationTransitionInfo_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EntranceNavigationTransitionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EntranceNavigationTransitionInfo), METH_O | METH_STATIC, nullptr },
         { }
@@ -9000,6 +16520,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* EntranceThemeTransition_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EntranceThemeTransition_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EntranceThemeTransition_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EntranceThemeTransition_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EntranceThemeTransition_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EntranceThemeTransition_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EntranceThemeTransition_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* EntranceThemeTransition_get_IsStaggeringEnabled(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition* self, void* /*unused*/) noexcept
@@ -9225,6 +16968,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_EntranceThemeTransition[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(EntranceThemeTransition_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(EntranceThemeTransition_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(EntranceThemeTransition_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(EntranceThemeTransition_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(EntranceThemeTransition_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(EntranceThemeTransition_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(EntranceThemeTransition_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EntranceThemeTransition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EntranceThemeTransition), METH_O | METH_STATIC, nullptr },
         { }
@@ -9319,6 +17069,260 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* ExponentialEase_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ExponentialEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ExponentialEase_Ease(py::wrapper::Windows::UI::Xaml::Media::Animation::ExponentialEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"Ease", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<double>(args, 0);
+
+                return py::convert(self->obj.Ease(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ExponentialEase_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ExponentialEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ExponentialEase_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ExponentialEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ExponentialEase_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ExponentialEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ExponentialEase_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ExponentialEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ExponentialEase_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ExponentialEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ExponentialEase_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ExponentialEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* ExponentialEase_get_Exponent(py::wrapper::Windows::UI::Xaml::Media::Animation::ExponentialEase* self, void* /*unused*/) noexcept
     {
         try
@@ -9410,6 +17414,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_ExponentialEase[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(ExponentialEase_ClearValue), METH_VARARGS, nullptr },
+        { "ease", reinterpret_cast<PyCFunction>(ExponentialEase_Ease), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(ExponentialEase_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(ExponentialEase_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(ExponentialEase_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(ExponentialEase_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(ExponentialEase_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(ExponentialEase_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ExponentialEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ExponentialEase), METH_O | METH_STATIC, nullptr },
         { }
@@ -9498,6 +17510,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* FadeInThemeAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FadeInThemeAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FadeInThemeAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FadeInThemeAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FadeInThemeAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FadeInThemeAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FadeInThemeAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* FadeInThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation* self, void* /*unused*/) noexcept
@@ -9591,6 +17826,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_FadeInThemeAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(FadeInThemeAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(FadeInThemeAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(FadeInThemeAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(FadeInThemeAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(FadeInThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(FadeInThemeAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(FadeInThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_FadeInThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FadeInThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -9679,6 +17921,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* FadeOutThemeAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FadeOutThemeAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FadeOutThemeAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FadeOutThemeAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FadeOutThemeAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FadeOutThemeAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FadeOutThemeAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* FadeOutThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation* self, void* /*unused*/) noexcept
@@ -9772,6 +18237,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_FadeOutThemeAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(FadeOutThemeAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(FadeOutThemeAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(FadeOutThemeAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(FadeOutThemeAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(FadeOutThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(FadeOutThemeAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(FadeOutThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_FadeOutThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FadeOutThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -9998,6 +18470,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* KeySpline_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::KeySpline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* KeySpline_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::KeySpline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* KeySpline_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::KeySpline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* KeySpline_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::KeySpline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* KeySpline_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::KeySpline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* KeySpline_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::KeySpline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* KeySpline_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::KeySpline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* KeySpline_get_ControlPoint2(py::wrapper::Windows::UI::Xaml::Media::Animation::KeySpline* self, void* /*unused*/) noexcept
     {
         try
@@ -10117,6 +18812,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_KeySpline[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(KeySpline_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(KeySpline_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(KeySpline_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(KeySpline_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(KeySpline_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(KeySpline_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(KeySpline_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_KeySpline, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_KeySpline), METH_O | METH_STATIC, nullptr },
         { }
@@ -10305,6 +19007,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* LinearColorKeyFrame_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearColorKeyFrame_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearColorKeyFrame_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearColorKeyFrame_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearColorKeyFrame_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearColorKeyFrame_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearColorKeyFrame_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_LinearColorKeyFrame(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::LinearColorKeyFrame>>();
@@ -10330,6 +19255,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_LinearColorKeyFrame[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(LinearColorKeyFrame_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(LinearColorKeyFrame_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(LinearColorKeyFrame_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(LinearColorKeyFrame_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(LinearColorKeyFrame_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(LinearColorKeyFrame_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(LinearColorKeyFrame_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LinearColorKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LinearColorKeyFrame), METH_O | METH_STATIC, nullptr },
         { }
@@ -10393,6 +19325,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* LinearDoubleKeyFrame_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearDoubleKeyFrame_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearDoubleKeyFrame_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearDoubleKeyFrame_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearDoubleKeyFrame_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearDoubleKeyFrame_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearDoubleKeyFrame_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_LinearDoubleKeyFrame(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::LinearDoubleKeyFrame>>();
@@ -10418,6 +19573,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_LinearDoubleKeyFrame[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(LinearDoubleKeyFrame_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(LinearDoubleKeyFrame_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(LinearDoubleKeyFrame_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(LinearDoubleKeyFrame_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(LinearDoubleKeyFrame_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(LinearDoubleKeyFrame_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(LinearDoubleKeyFrame_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LinearDoubleKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LinearDoubleKeyFrame), METH_O | METH_STATIC, nullptr },
         { }
@@ -10481,6 +19643,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* LinearPointKeyFrame_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearPointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearPointKeyFrame_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearPointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearPointKeyFrame_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearPointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearPointKeyFrame_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearPointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearPointKeyFrame_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearPointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearPointKeyFrame_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearPointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearPointKeyFrame_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearPointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_LinearPointKeyFrame(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::LinearPointKeyFrame>>();
@@ -10506,6 +19891,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_LinearPointKeyFrame[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(LinearPointKeyFrame_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(LinearPointKeyFrame_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(LinearPointKeyFrame_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(LinearPointKeyFrame_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(LinearPointKeyFrame_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(LinearPointKeyFrame_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(LinearPointKeyFrame_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LinearPointKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LinearPointKeyFrame), METH_O | METH_STATIC, nullptr },
         { }
@@ -10567,6 +19959,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* NavigationThemeTransition_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NavigationThemeTransition_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NavigationThemeTransition_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NavigationThemeTransition_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NavigationThemeTransition_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NavigationThemeTransition_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NavigationThemeTransition_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* NavigationThemeTransition_get_DefaultNavigationTransitionInfo(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition* self, void* /*unused*/) noexcept
@@ -10660,6 +20275,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_NavigationThemeTransition[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(NavigationThemeTransition_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(NavigationThemeTransition_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(NavigationThemeTransition_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(NavigationThemeTransition_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(NavigationThemeTransition_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(NavigationThemeTransition_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(NavigationThemeTransition_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NavigationThemeTransition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NavigationThemeTransition), METH_O | METH_STATIC, nullptr },
         { }
@@ -10728,6 +20350,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* NavigationTransitionInfo_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NavigationTransitionInfo_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NavigationTransitionInfo_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NavigationTransitionInfo_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NavigationTransitionInfo_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NavigationTransitionInfo_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NavigationTransitionInfo_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_NavigationTransitionInfo(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo>>();
@@ -10753,6 +20598,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_NavigationTransitionInfo[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(NavigationTransitionInfo_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(NavigationTransitionInfo_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(NavigationTransitionInfo_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(NavigationTransitionInfo_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(NavigationTransitionInfo_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(NavigationTransitionInfo_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(NavigationTransitionInfo_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NavigationTransitionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NavigationTransitionInfo), METH_O | METH_STATIC, nullptr },
         { }
@@ -10814,6 +20666,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* ObjectAnimationUsingKeyFrames_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ObjectAnimationUsingKeyFrames_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ObjectAnimationUsingKeyFrames_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ObjectAnimationUsingKeyFrames_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ObjectAnimationUsingKeyFrames_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ObjectAnimationUsingKeyFrames_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ObjectAnimationUsingKeyFrames_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* ObjectAnimationUsingKeyFrames_get_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames* self, void* /*unused*/) noexcept
@@ -10926,6 +21001,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_ObjectAnimationUsingKeyFrames[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(ObjectAnimationUsingKeyFrames_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(ObjectAnimationUsingKeyFrames_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(ObjectAnimationUsingKeyFrames_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(ObjectAnimationUsingKeyFrames_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(ObjectAnimationUsingKeyFrames_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(ObjectAnimationUsingKeyFrames_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(ObjectAnimationUsingKeyFrames_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ObjectAnimationUsingKeyFrames, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ObjectAnimationUsingKeyFrames), METH_O | METH_STATIC, nullptr },
         { }
@@ -10993,6 +21075,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* ObjectKeyFrame_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ObjectKeyFrame_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ObjectKeyFrame_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ObjectKeyFrame_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ObjectKeyFrame_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ObjectKeyFrame_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ObjectKeyFrame_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* ObjectKeyFrame_get_Value(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame* self, void* /*unused*/) noexcept
@@ -11152,6 +21457,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_ObjectKeyFrame[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(ObjectKeyFrame_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(ObjectKeyFrame_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(ObjectKeyFrame_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(ObjectKeyFrame_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(ObjectKeyFrame_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(ObjectKeyFrame_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(ObjectKeyFrame_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ObjectKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ObjectKeyFrame), METH_O | METH_STATIC, nullptr },
         { }
@@ -11877,6 +22189,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* PaneThemeTransition_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PaneThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PaneThemeTransition_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PaneThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PaneThemeTransition_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PaneThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PaneThemeTransition_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PaneThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PaneThemeTransition_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PaneThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PaneThemeTransition_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PaneThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PaneThemeTransition_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PaneThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* PaneThemeTransition_get_Edge(py::wrapper::Windows::UI::Xaml::Media::Animation::PaneThemeTransition* self, void* /*unused*/) noexcept
     {
         try
@@ -11968,6 +22503,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_PaneThemeTransition[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(PaneThemeTransition_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(PaneThemeTransition_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(PaneThemeTransition_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(PaneThemeTransition_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(PaneThemeTransition_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(PaneThemeTransition_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(PaneThemeTransition_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PaneThemeTransition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PaneThemeTransition), METH_O | METH_STATIC, nullptr },
         { }
@@ -12056,6 +22598,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* PointAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* PointAnimation_get_To(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, void* /*unused*/) noexcept
@@ -12413,6 +23178,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_PointAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(PointAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(PointAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(PointAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(PointAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(PointAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(PointAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(PointAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PointAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -12509,6 +23281,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* PointAnimationUsingKeyFrames_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointAnimationUsingKeyFrames_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointAnimationUsingKeyFrames_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointAnimationUsingKeyFrames_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointAnimationUsingKeyFrames_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointAnimationUsingKeyFrames_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointAnimationUsingKeyFrames_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* PointAnimationUsingKeyFrames_get_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames* self, void* /*unused*/) noexcept
@@ -12621,6 +23616,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_PointAnimationUsingKeyFrames[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(PointAnimationUsingKeyFrames_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(PointAnimationUsingKeyFrames_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(PointAnimationUsingKeyFrames_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(PointAnimationUsingKeyFrames_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(PointAnimationUsingKeyFrames_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(PointAnimationUsingKeyFrames_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(PointAnimationUsingKeyFrames_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PointAnimationUsingKeyFrames, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointAnimationUsingKeyFrames), METH_O | METH_STATIC, nullptr },
         { }
@@ -12688,6 +23690,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* PointKeyFrame_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointKeyFrame_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointKeyFrame_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointKeyFrame_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointKeyFrame_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointKeyFrame_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointKeyFrame_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* PointKeyFrame_get_Value(py::wrapper::Windows::UI::Xaml::Media::Animation::PointKeyFrame* self, void* /*unused*/) noexcept
@@ -12847,6 +24072,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_PointKeyFrame[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(PointKeyFrame_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(PointKeyFrame_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(PointKeyFrame_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(PointKeyFrame_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(PointKeyFrame_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(PointKeyFrame_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(PointKeyFrame_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PointKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointKeyFrame), METH_O | METH_STATIC, nullptr },
         { }
@@ -13572,6 +24804,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* PointerDownThemeAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointerDownThemeAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointerDownThemeAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointerDownThemeAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointerDownThemeAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointerDownThemeAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointerDownThemeAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* PointerDownThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation* self, void* /*unused*/) noexcept
     {
         try
@@ -13663,6 +25118,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_PointerDownThemeAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(PointerDownThemeAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(PointerDownThemeAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(PointerDownThemeAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(PointerDownThemeAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(PointerDownThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(PointerDownThemeAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(PointerDownThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PointerDownThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointerDownThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -13751,6 +25213,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* PointerUpThemeAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointerUpThemeAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointerUpThemeAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointerUpThemeAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointerUpThemeAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointerUpThemeAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointerUpThemeAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* PointerUpThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation* self, void* /*unused*/) noexcept
@@ -13844,6 +25529,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_PointerUpThemeAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(PointerUpThemeAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(PointerUpThemeAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(PointerUpThemeAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(PointerUpThemeAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(PointerUpThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(PointerUpThemeAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(PointerUpThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PointerUpThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointerUpThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -13932,6 +25624,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* PopInThemeAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopInThemeAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopInThemeAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopInThemeAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopInThemeAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopInThemeAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopInThemeAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* PopInThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation* self, void* /*unused*/) noexcept
@@ -14157,6 +26072,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_PopInThemeAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(PopInThemeAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(PopInThemeAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(PopInThemeAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(PopInThemeAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(PopInThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(PopInThemeAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(PopInThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PopInThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PopInThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -14251,6 +26173,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* PopOutThemeAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopOutThemeAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopOutThemeAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopOutThemeAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopOutThemeAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopOutThemeAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopOutThemeAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* PopOutThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation* self, void* /*unused*/) noexcept
     {
         try
@@ -14342,6 +26487,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_PopOutThemeAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(PopOutThemeAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(PopOutThemeAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(PopOutThemeAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(PopOutThemeAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(PopOutThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(PopOutThemeAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(PopOutThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PopOutThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PopOutThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -14430,6 +26582,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* PopupThemeTransition_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PopupThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopupThemeTransition_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PopupThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopupThemeTransition_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PopupThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopupThemeTransition_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PopupThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopupThemeTransition_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PopupThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopupThemeTransition_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PopupThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PopupThemeTransition_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PopupThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* PopupThemeTransition_get_FromVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::PopupThemeTransition* self, void* /*unused*/) noexcept
@@ -14589,6 +26964,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_PopupThemeTransition[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(PopupThemeTransition_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(PopupThemeTransition_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(PopupThemeTransition_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(PopupThemeTransition_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(PopupThemeTransition_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(PopupThemeTransition_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(PopupThemeTransition_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PopupThemeTransition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PopupThemeTransition), METH_O | METH_STATIC, nullptr },
         { }
@@ -14679,6 +27061,260 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* PowerEase_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PowerEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PowerEase_Ease(py::wrapper::Windows::UI::Xaml::Media::Animation::PowerEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"Ease", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<double>(args, 0);
+
+                return py::convert(self->obj.Ease(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PowerEase_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PowerEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PowerEase_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PowerEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PowerEase_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PowerEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PowerEase_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PowerEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PowerEase_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::PowerEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PowerEase_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::PowerEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* PowerEase_get_Power(py::wrapper::Windows::UI::Xaml::Media::Animation::PowerEase* self, void* /*unused*/) noexcept
@@ -14772,6 +27408,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_PowerEase[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(PowerEase_ClearValue), METH_VARARGS, nullptr },
+        { "ease", reinterpret_cast<PyCFunction>(PowerEase_Ease), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(PowerEase_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(PowerEase_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(PowerEase_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(PowerEase_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(PowerEase_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(PowerEase_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PowerEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PowerEase), METH_O | METH_STATIC, nullptr },
         { }
@@ -14862,6 +27506,260 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* QuadraticEase_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::QuadraticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuadraticEase_Ease(py::wrapper::Windows::UI::Xaml::Media::Animation::QuadraticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"Ease", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<double>(args, 0);
+
+                return py::convert(self->obj.Ease(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuadraticEase_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::QuadraticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuadraticEase_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::QuadraticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuadraticEase_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::QuadraticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuadraticEase_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::QuadraticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuadraticEase_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::QuadraticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuadraticEase_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::QuadraticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_QuadraticEase(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::QuadraticEase>>();
@@ -14887,6 +27785,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_QuadraticEase[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(QuadraticEase_ClearValue), METH_VARARGS, nullptr },
+        { "ease", reinterpret_cast<PyCFunction>(QuadraticEase_Ease), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(QuadraticEase_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(QuadraticEase_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(QuadraticEase_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(QuadraticEase_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(QuadraticEase_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(QuadraticEase_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_QuadraticEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_QuadraticEase), METH_O | METH_STATIC, nullptr },
         { }
@@ -14950,6 +27856,260 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* QuarticEase_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::QuarticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuarticEase_Ease(py::wrapper::Windows::UI::Xaml::Media::Animation::QuarticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"Ease", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<double>(args, 0);
+
+                return py::convert(self->obj.Ease(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuarticEase_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::QuarticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuarticEase_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::QuarticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuarticEase_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::QuarticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuarticEase_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::QuarticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuarticEase_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::QuarticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuarticEase_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::QuarticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_QuarticEase(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::QuarticEase>>();
@@ -14975,6 +28135,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_QuarticEase[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(QuarticEase_ClearValue), METH_VARARGS, nullptr },
+        { "ease", reinterpret_cast<PyCFunction>(QuarticEase_Ease), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(QuarticEase_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(QuarticEase_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(QuarticEase_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(QuarticEase_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(QuarticEase_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(QuarticEase_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_QuarticEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_QuarticEase), METH_O | METH_STATIC, nullptr },
         { }
@@ -15038,6 +28206,260 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* QuinticEase_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::QuinticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuinticEase_Ease(py::wrapper::Windows::UI::Xaml::Media::Animation::QuinticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"Ease", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<double>(args, 0);
+
+                return py::convert(self->obj.Ease(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuinticEase_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::QuinticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuinticEase_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::QuinticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuinticEase_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::QuinticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuinticEase_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::QuinticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuinticEase_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::QuinticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuinticEase_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::QuinticEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_QuinticEase(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::QuinticEase>>();
@@ -15063,6 +28485,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_QuinticEase[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(QuinticEase_ClearValue), METH_VARARGS, nullptr },
+        { "ease", reinterpret_cast<PyCFunction>(QuinticEase_Ease), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(QuinticEase_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(QuinticEase_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(QuinticEase_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(QuinticEase_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(QuinticEase_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(QuinticEase_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_QuinticEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_QuinticEase), METH_O | METH_STATIC, nullptr },
         { }
@@ -15126,6 +28556,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* ReorderThemeTransition_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ReorderThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ReorderThemeTransition_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ReorderThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ReorderThemeTransition_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ReorderThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ReorderThemeTransition_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ReorderThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ReorderThemeTransition_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ReorderThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ReorderThemeTransition_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::ReorderThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ReorderThemeTransition_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::ReorderThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ReorderThemeTransition(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::ReorderThemeTransition>>();
@@ -15151,6 +28804,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_ReorderThemeTransition[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(ReorderThemeTransition_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(ReorderThemeTransition_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(ReorderThemeTransition_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(ReorderThemeTransition_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(ReorderThemeTransition_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(ReorderThemeTransition_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(ReorderThemeTransition_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ReorderThemeTransition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ReorderThemeTransition), METH_O | METH_STATIC, nullptr },
         { }
@@ -15486,6 +29146,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* RepositionThemeAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RepositionThemeAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RepositionThemeAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RepositionThemeAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RepositionThemeAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RepositionThemeAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RepositionThemeAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* RepositionThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, void* /*unused*/) noexcept
     {
         try
@@ -15709,6 +29592,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_RepositionThemeAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(RepositionThemeAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(RepositionThemeAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(RepositionThemeAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(RepositionThemeAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(RepositionThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(RepositionThemeAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(RepositionThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RepositionThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RepositionThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -15803,6 +29693,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* RepositionThemeTransition_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RepositionThemeTransition_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RepositionThemeTransition_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RepositionThemeTransition_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RepositionThemeTransition_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RepositionThemeTransition_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RepositionThemeTransition_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* RepositionThemeTransition_get_IsStaggeringEnabled(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition* self, void* /*unused*/) noexcept
     {
         try
@@ -15894,6 +30007,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_RepositionThemeTransition[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(RepositionThemeTransition_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(RepositionThemeTransition_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(RepositionThemeTransition_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(RepositionThemeTransition_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(RepositionThemeTransition_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(RepositionThemeTransition_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(RepositionThemeTransition_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RepositionThemeTransition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RepositionThemeTransition), METH_O | METH_STATIC, nullptr },
         { }
@@ -15984,6 +30104,260 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* SineEase_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SineEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SineEase_Ease(py::wrapper::Windows::UI::Xaml::Media::Animation::SineEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"Ease", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<double>(args, 0);
+
+                return py::convert(self->obj.Ease(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SineEase_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SineEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SineEase_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SineEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SineEase_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SineEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SineEase_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SineEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SineEase_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SineEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SineEase_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SineEase* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_SineEase(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::SineEase>>();
@@ -16009,6 +30383,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_SineEase[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(SineEase_ClearValue), METH_VARARGS, nullptr },
+        { "ease", reinterpret_cast<PyCFunction>(SineEase_Ease), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(SineEase_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(SineEase_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(SineEase_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(SineEase_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(SineEase_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(SineEase_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SineEase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SineEase), METH_O | METH_STATIC, nullptr },
         { }
@@ -16070,6 +30452,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* SlideNavigationTransitionInfo_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SlideNavigationTransitionInfo_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SlideNavigationTransitionInfo_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SlideNavigationTransitionInfo_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SlideNavigationTransitionInfo_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SlideNavigationTransitionInfo_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SlideNavigationTransitionInfo_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* SlideNavigationTransitionInfo_get_Effect(py::wrapper::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo* self, void* /*unused*/) noexcept
@@ -16163,6 +30768,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_SlideNavigationTransitionInfo[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(SlideNavigationTransitionInfo_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(SlideNavigationTransitionInfo_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(SlideNavigationTransitionInfo_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(SlideNavigationTransitionInfo_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(SlideNavigationTransitionInfo_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(SlideNavigationTransitionInfo_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(SlideNavigationTransitionInfo_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SlideNavigationTransitionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SlideNavigationTransitionInfo), METH_O | METH_STATIC, nullptr },
         { }
@@ -16251,6 +30863,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* SplineColorKeyFrame_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplineColorKeyFrame_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplineColorKeyFrame_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplineColorKeyFrame_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplineColorKeyFrame_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplineColorKeyFrame_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplineColorKeyFrame_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* SplineColorKeyFrame_get_KeySpline(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame* self, void* /*unused*/) noexcept
@@ -16344,6 +31179,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_SplineColorKeyFrame[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(SplineColorKeyFrame_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(SplineColorKeyFrame_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(SplineColorKeyFrame_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(SplineColorKeyFrame_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(SplineColorKeyFrame_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(SplineColorKeyFrame_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(SplineColorKeyFrame_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SplineColorKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SplineColorKeyFrame), METH_O | METH_STATIC, nullptr },
         { }
@@ -16432,6 +31274,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* SplineDoubleKeyFrame_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplineDoubleKeyFrame_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplineDoubleKeyFrame_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplineDoubleKeyFrame_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplineDoubleKeyFrame_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplineDoubleKeyFrame_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplineDoubleKeyFrame_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* SplineDoubleKeyFrame_get_KeySpline(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame* self, void* /*unused*/) noexcept
@@ -16525,6 +31590,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_SplineDoubleKeyFrame[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(SplineDoubleKeyFrame_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(SplineDoubleKeyFrame_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(SplineDoubleKeyFrame_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(SplineDoubleKeyFrame_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(SplineDoubleKeyFrame_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(SplineDoubleKeyFrame_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(SplineDoubleKeyFrame_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SplineDoubleKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SplineDoubleKeyFrame), METH_O | METH_STATIC, nullptr },
         { }
@@ -16613,6 +31685,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* SplinePointKeyFrame_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplinePointKeyFrame_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplinePointKeyFrame_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplinePointKeyFrame_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplinePointKeyFrame_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplinePointKeyFrame_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplinePointKeyFrame_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* SplinePointKeyFrame_get_KeySpline(py::wrapper::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame* self, void* /*unused*/) noexcept
@@ -16706,6 +32001,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_SplinePointKeyFrame[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(SplinePointKeyFrame_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(SplinePointKeyFrame_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(SplinePointKeyFrame_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(SplinePointKeyFrame_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(SplinePointKeyFrame_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(SplinePointKeyFrame_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(SplinePointKeyFrame_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SplinePointKeyFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SplinePointKeyFrame), METH_O | METH_STATIC, nullptr },
         { }
@@ -16794,6 +32096,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* SplitCloseThemeAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplitCloseThemeAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplitCloseThemeAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplitCloseThemeAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplitCloseThemeAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplitCloseThemeAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplitCloseThemeAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* SplitCloseThemeAnimation_get_OpenedTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, void* /*unused*/) noexcept
@@ -17547,6 +33072,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_SplitCloseThemeAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(SplitCloseThemeAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(SplitCloseThemeAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(SplitCloseThemeAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(SplitCloseThemeAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(SplitCloseThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(SplitCloseThemeAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(SplitCloseThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SplitCloseThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SplitCloseThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -17655,6 +33187,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* SplitOpenThemeAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplitOpenThemeAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplitOpenThemeAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplitOpenThemeAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplitOpenThemeAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplitOpenThemeAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SplitOpenThemeAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* SplitOpenThemeAnimation_get_OpenedTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, void* /*unused*/) noexcept
@@ -18408,6 +34163,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_SplitOpenThemeAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(SplitOpenThemeAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(SplitOpenThemeAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(SplitOpenThemeAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(SplitOpenThemeAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(SplitOpenThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(SplitOpenThemeAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(SplitOpenThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SplitOpenThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SplitOpenThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -18548,6 +34310,69 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* Storyboard_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Storyboard_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* Storyboard_GetCurrentState(py::wrapper::Windows::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -18668,6 +34493,37 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* Storyboard_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* Storyboard_Pause(py::wrapper::Windows::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -18684,6 +34540,69 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
                 self->obj.Pause();
                 Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Storyboard_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Storyboard_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
             }
             catch (...)
             {
@@ -18891,6 +34810,39 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* Storyboard_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* Storyboard_SkipToFill(py::wrapper::Windows::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -18936,6 +34888,39 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 }
 
                 self->obj.Stop();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Storyboard_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19034,14 +35019,21 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyMethodDef _methods_Storyboard[] = {
         { "begin", reinterpret_cast<PyCFunction>(Storyboard_Begin), METH_VARARGS, nullptr },
+        { "clear_value", reinterpret_cast<PyCFunction>(Storyboard_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(Storyboard_GetAnimationBaseValue), METH_VARARGS, nullptr },
         { "get_current_state", reinterpret_cast<PyCFunction>(Storyboard_GetCurrentState), METH_VARARGS, nullptr },
         { "get_current_time", reinterpret_cast<PyCFunction>(Storyboard_GetCurrentTime), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(Storyboard_GetValue), METH_VARARGS, nullptr },
         { "pause", reinterpret_cast<PyCFunction>(Storyboard_Pause), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(Storyboard_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(Storyboard_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "resume", reinterpret_cast<PyCFunction>(Storyboard_Resume), METH_VARARGS, nullptr },
         { "seek", reinterpret_cast<PyCFunction>(Storyboard_Seek), METH_VARARGS, nullptr },
         { "seek_aligned_to_last_tick", reinterpret_cast<PyCFunction>(Storyboard_SeekAlignedToLastTick), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(Storyboard_SetValue), METH_VARARGS, nullptr },
         { "skip_to_fill", reinterpret_cast<PyCFunction>(Storyboard_SkipToFill), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(Storyboard_Stop), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Storyboard_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Storyboard, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Storyboard), METH_O | METH_STATIC, nullptr },
         { }
@@ -19138,6 +35130,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* SuppressNavigationTransitionInfo_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SuppressNavigationTransitionInfo_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SuppressNavigationTransitionInfo_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SuppressNavigationTransitionInfo_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SuppressNavigationTransitionInfo_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SuppressNavigationTransitionInfo_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SuppressNavigationTransitionInfo_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_SuppressNavigationTransitionInfo(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo>>();
@@ -19163,6 +35378,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_SuppressNavigationTransitionInfo[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(SuppressNavigationTransitionInfo_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(SuppressNavigationTransitionInfo_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(SuppressNavigationTransitionInfo_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(SuppressNavigationTransitionInfo_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(SuppressNavigationTransitionInfo_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(SuppressNavigationTransitionInfo_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(SuppressNavigationTransitionInfo_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SuppressNavigationTransitionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SuppressNavigationTransitionInfo), METH_O | METH_STATIC, nullptr },
         { }
@@ -19224,6 +35446,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* SwipeBackThemeAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SwipeBackThemeAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SwipeBackThemeAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SwipeBackThemeAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SwipeBackThemeAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SwipeBackThemeAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SwipeBackThemeAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* SwipeBackThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, void* /*unused*/) noexcept
@@ -19449,6 +35894,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_SwipeBackThemeAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(SwipeBackThemeAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(SwipeBackThemeAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(SwipeBackThemeAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(SwipeBackThemeAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(SwipeBackThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(SwipeBackThemeAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(SwipeBackThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SwipeBackThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SwipeBackThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -19541,6 +35993,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* SwipeHintThemeAnimation_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SwipeHintThemeAnimation_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SwipeHintThemeAnimation_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SwipeHintThemeAnimation_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SwipeHintThemeAnimation_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SwipeHintThemeAnimation_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SwipeHintThemeAnimation_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* SwipeHintThemeAnimation_get_ToVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, void* /*unused*/) noexcept
@@ -19766,6 +36441,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_SwipeHintThemeAnimation[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(SwipeHintThemeAnimation_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(SwipeHintThemeAnimation_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(SwipeHintThemeAnimation_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(SwipeHintThemeAnimation_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(SwipeHintThemeAnimation_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(SwipeHintThemeAnimation_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(SwipeHintThemeAnimation_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SwipeHintThemeAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SwipeHintThemeAnimation), METH_O | METH_STATIC, nullptr },
         { }
@@ -19836,6 +36518,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* Timeline_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Timeline_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Timeline_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Timeline_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Timeline_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Timeline_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Timeline_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* Timeline_get_SpeedRatio(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, void* /*unused*/) noexcept
@@ -20349,6 +37254,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_Timeline[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(Timeline_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(Timeline_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(Timeline_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(Timeline_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(Timeline_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(Timeline_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Timeline_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "add_completed", reinterpret_cast<PyCFunction>(Timeline_add_Completed), METH_O, nullptr },
         { "remove_completed", reinterpret_cast<PyCFunction>(Timeline_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_Timeline, METH_O | METH_STATIC, nullptr },
@@ -21063,6 +37975,229 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* Transition_ClearValue(py::wrapper::Windows::UI::Xaml::Media::Animation::Transition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Transition_GetAnimationBaseValue(py::wrapper::Windows::UI::Xaml::Media::Animation::Transition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Transition_GetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::Transition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Transition_ReadLocalValue(py::wrapper::Windows::UI::Xaml::Media::Animation::Transition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Transition_RegisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::Transition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Transition_SetValue(py::wrapper::Windows::UI::Xaml::Media::Animation::Transition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Transition_UnregisterPropertyChangedCallback(py::wrapper::Windows::UI::Xaml::Media::Animation::Transition* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Transition(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::Transition>>();
@@ -21088,6 +38223,13 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_Transition[] = {
+        { "clear_value", reinterpret_cast<PyCFunction>(Transition_ClearValue), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(Transition_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(Transition_GetValue), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(Transition_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(Transition_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(Transition_SetValue), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Transition_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Transition, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Transition), METH_O | METH_STATIC, nullptr },
         { }

@@ -21,6 +21,252 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         Py_DECREF(tp);
     }
 
+    static PyObject* SceneBoundingBox_Close(py::wrapper::Windows::UI::Composition::Scenes::SceneBoundingBox* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneBoundingBox_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::Scenes::SceneBoundingBox* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneBoundingBox_StartAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneBoundingBox* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+
+                self->obj.StartAnimation(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneBoundingBox_StartAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneBoundingBox* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneBoundingBox_StopAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneBoundingBox* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneBoundingBox_StopAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneBoundingBox* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneBoundingBox_TryGetAnimationController(py::wrapper::Windows::UI::Composition::Scenes::SceneBoundingBox* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryGetAnimationController(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* SceneBoundingBox_get_Center(py::wrapper::Windows::UI::Composition::Scenes::SceneBoundingBox* self, void* /*unused*/) noexcept
     {
         try
@@ -141,6 +387,13 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneBoundingBox[] = {
+        { "close", reinterpret_cast<PyCFunction>(SceneBoundingBox_Close), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(SceneBoundingBox_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(SceneBoundingBox_StartAnimation), METH_VARARGS, nullptr },
+        { "start_animation_group", reinterpret_cast<PyCFunction>(SceneBoundingBox_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(SceneBoundingBox_StopAnimation), METH_VARARGS, nullptr },
+        { "stop_animation_group", reinterpret_cast<PyCFunction>(SceneBoundingBox_StopAnimationGroup), METH_VARARGS, nullptr },
+        { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SceneBoundingBox_TryGetAnimationController), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneBoundingBox, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneBoundingBox), METH_O | METH_STATIC, nullptr },
         { }
@@ -187,6 +440,252 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         Py_DECREF(tp);
     }
 
+    static PyObject* SceneComponent_Close(py::wrapper::Windows::UI::Composition::Scenes::SceneComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneComponent_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::Scenes::SceneComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneComponent_StartAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+
+                self->obj.StartAnimation(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneComponent_StartAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneComponent_StopAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneComponent_StopAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneComponent_TryGetAnimationController(py::wrapper::Windows::UI::Composition::Scenes::SceneComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryGetAnimationController(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* SceneComponent_get_ComponentType(py::wrapper::Windows::UI::Composition::Scenes::SceneComponent* self, void* /*unused*/) noexcept
     {
         try
@@ -231,6 +730,13 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneComponent[] = {
+        { "close", reinterpret_cast<PyCFunction>(SceneComponent_Close), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(SceneComponent_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(SceneComponent_StartAnimation), METH_VARARGS, nullptr },
+        { "start_animation_group", reinterpret_cast<PyCFunction>(SceneComponent_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(SceneComponent_StopAnimation), METH_VARARGS, nullptr },
+        { "stop_animation_group", reinterpret_cast<PyCFunction>(SceneComponent_StopAnimationGroup), METH_VARARGS, nullptr },
+        { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SceneComponent_TryGetAnimationController), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneComponent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneComponent), METH_O | METH_STATIC, nullptr },
         { }
@@ -320,6 +826,36 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 }
 
                 self->obj.Clear();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneComponentCollection_Close(py::wrapper::Windows::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -533,6 +1069,39 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
+    static PyObject* SceneComponentCollection_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* SceneComponentCollection_RemoveAt(py::wrapper::Windows::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -646,6 +1215,189 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 self->obj.SetAt(param0, param1);
                 Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneComponentCollection_StartAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+
+                self->obj.StartAnimation(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneComponentCollection_StartAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneComponentCollection_StopAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneComponentCollection_StopAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneComponentCollection_TryGetAnimationController(py::wrapper::Windows::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryGetAnimationController(param0));
             }
             catch (...)
             {
@@ -827,16 +1579,23 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static PyMethodDef _methods_SceneComponentCollection[] = {
         { "append", reinterpret_cast<PyCFunction>(SceneComponentCollection_Append), METH_VARARGS, nullptr },
         { "clear", reinterpret_cast<PyCFunction>(SceneComponentCollection_Clear), METH_VARARGS, nullptr },
+        { "close", reinterpret_cast<PyCFunction>(SceneComponentCollection_Close), METH_VARARGS, nullptr },
         { "first", reinterpret_cast<PyCFunction>(SceneComponentCollection_First), METH_VARARGS, nullptr },
         { "get_at", reinterpret_cast<PyCFunction>(SceneComponentCollection_GetAt), METH_VARARGS, nullptr },
         { "get_many", reinterpret_cast<PyCFunction>(SceneComponentCollection_GetMany), METH_VARARGS, nullptr },
         { "get_view", reinterpret_cast<PyCFunction>(SceneComponentCollection_GetView), METH_VARARGS, nullptr },
         { "index_of", reinterpret_cast<PyCFunction>(SceneComponentCollection_IndexOf), METH_VARARGS, nullptr },
         { "insert_at", reinterpret_cast<PyCFunction>(SceneComponentCollection_InsertAt), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(SceneComponentCollection_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "remove_at", reinterpret_cast<PyCFunction>(SceneComponentCollection_RemoveAt), METH_VARARGS, nullptr },
         { "remove_at_end", reinterpret_cast<PyCFunction>(SceneComponentCollection_RemoveAtEnd), METH_VARARGS, nullptr },
         { "replace_all", reinterpret_cast<PyCFunction>(SceneComponentCollection_ReplaceAll), METH_VARARGS, nullptr },
         { "set_at", reinterpret_cast<PyCFunction>(SceneComponentCollection_SetAt), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(SceneComponentCollection_StartAnimation), METH_VARARGS, nullptr },
+        { "start_animation_group", reinterpret_cast<PyCFunction>(SceneComponentCollection_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(SceneComponentCollection_StopAnimation), METH_VARARGS, nullptr },
+        { "stop_animation_group", reinterpret_cast<PyCFunction>(SceneComponentCollection_StopAnimationGroup), METH_VARARGS, nullptr },
+        { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SceneComponentCollection_TryGetAnimationController), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneComponentCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneComponentCollection), METH_O | METH_STATIC, nullptr },
         { }
@@ -884,6 +1643,252 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         Py_DECREF(tp);
     }
 
+    static PyObject* SceneMaterial_Close(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMaterial_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMaterial_StartAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+
+                self->obj.StartAnimation(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMaterial_StartAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMaterial_StopAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMaterial_StopAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMaterial_TryGetAnimationController(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryGetAnimationController(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_SceneMaterial(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Scenes::SceneMaterial>>();
@@ -909,6 +1914,13 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneMaterial[] = {
+        { "close", reinterpret_cast<PyCFunction>(SceneMaterial_Close), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(SceneMaterial_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(SceneMaterial_StartAnimation), METH_VARARGS, nullptr },
+        { "start_animation_group", reinterpret_cast<PyCFunction>(SceneMaterial_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(SceneMaterial_StopAnimation), METH_VARARGS, nullptr },
+        { "stop_animation_group", reinterpret_cast<PyCFunction>(SceneMaterial_StopAnimationGroup), METH_VARARGS, nullptr },
+        { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SceneMaterial_TryGetAnimationController), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneMaterial, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneMaterial), METH_O | METH_STATIC, nullptr },
         { }
@@ -950,6 +1962,252 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         Py_DECREF(tp);
     }
 
+    static PyObject* SceneMaterialInput_Close(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterialInput* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMaterialInput_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterialInput* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMaterialInput_StartAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterialInput* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+
+                self->obj.StartAnimation(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMaterialInput_StartAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterialInput* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMaterialInput_StopAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterialInput* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMaterialInput_StopAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterialInput* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMaterialInput_TryGetAnimationController(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterialInput* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryGetAnimationController(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_SceneMaterialInput(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Scenes::SceneMaterialInput>>();
@@ -975,6 +2233,13 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneMaterialInput[] = {
+        { "close", reinterpret_cast<PyCFunction>(SceneMaterialInput_Close), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(SceneMaterialInput_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(SceneMaterialInput_StartAnimation), METH_VARARGS, nullptr },
+        { "start_animation_group", reinterpret_cast<PyCFunction>(SceneMaterialInput_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(SceneMaterialInput_StopAnimation), METH_VARARGS, nullptr },
+        { "stop_animation_group", reinterpret_cast<PyCFunction>(SceneMaterialInput_StopAnimationGroup), METH_VARARGS, nullptr },
+        { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SceneMaterialInput_TryGetAnimationController), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneMaterialInput, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneMaterialInput), METH_O | METH_STATIC, nullptr },
         { }
@@ -1014,6 +2279,36 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* SceneMesh_Close(py::wrapper::Windows::UI::Composition::Scenes::SceneMesh* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* SceneMesh_Create(PyObject* /*unused*/, PyObject* args) noexcept
@@ -1067,6 +2362,222 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 self->obj.FillMeshAttribute(param0, param1, param2);
                 Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMesh_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::Scenes::SceneMesh* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMesh_StartAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneMesh* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+
+                self->obj.StartAnimation(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMesh_StartAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneMesh* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMesh_StopAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneMesh* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMesh_StopAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneMesh* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMesh_TryGetAnimationController(py::wrapper::Windows::UI::Composition::Scenes::SceneMesh* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryGetAnimationController(param0));
             }
             catch (...)
             {
@@ -1172,7 +2683,14 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneMesh[] = {
+        { "close", reinterpret_cast<PyCFunction>(SceneMesh_Close), METH_VARARGS, nullptr },
         { "fill_mesh_attribute", reinterpret_cast<PyCFunction>(SceneMesh_FillMeshAttribute), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(SceneMesh_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(SceneMesh_StartAnimation), METH_VARARGS, nullptr },
+        { "start_animation_group", reinterpret_cast<PyCFunction>(SceneMesh_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(SceneMesh_StopAnimation), METH_VARARGS, nullptr },
+        { "stop_animation_group", reinterpret_cast<PyCFunction>(SceneMesh_StopAnimationGroup), METH_VARARGS, nullptr },
+        { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SceneMesh_TryGetAnimationController), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneMesh, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneMesh), METH_O | METH_STATIC, nullptr },
         { }
@@ -1257,6 +2775,36 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 }
 
                 self->obj.Clear();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMeshMaterialAttributeMap_Close(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1424,6 +2972,39 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
+    static PyObject* SceneMeshMaterialAttributeMap_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* SceneMeshMaterialAttributeMap_Remove(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1442,6 +3023,189 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 self->obj.Remove(param0);
                 Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMeshMaterialAttributeMap_StartAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+
+                self->obj.StartAnimation(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMeshMaterialAttributeMap_StartAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMeshMaterialAttributeMap_StopAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMeshMaterialAttributeMap_StopAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMeshMaterialAttributeMap_TryGetAnimationController(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryGetAnimationController(param0));
             }
             catch (...)
             {
@@ -1602,12 +3366,19 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyMethodDef _methods_SceneMeshMaterialAttributeMap[] = {
         { "clear", reinterpret_cast<PyCFunction>(SceneMeshMaterialAttributeMap_Clear), METH_VARARGS, nullptr },
+        { "close", reinterpret_cast<PyCFunction>(SceneMeshMaterialAttributeMap_Close), METH_VARARGS, nullptr },
         { "first", reinterpret_cast<PyCFunction>(SceneMeshMaterialAttributeMap_First), METH_VARARGS, nullptr },
         { "get_view", reinterpret_cast<PyCFunction>(SceneMeshMaterialAttributeMap_GetView), METH_VARARGS, nullptr },
         { "has_key", reinterpret_cast<PyCFunction>(SceneMeshMaterialAttributeMap_HasKey), METH_VARARGS, nullptr },
         { "insert", reinterpret_cast<PyCFunction>(SceneMeshMaterialAttributeMap_Insert), METH_VARARGS, nullptr },
         { "lookup", reinterpret_cast<PyCFunction>(SceneMeshMaterialAttributeMap_Lookup), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(SceneMeshMaterialAttributeMap_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "remove", reinterpret_cast<PyCFunction>(SceneMeshMaterialAttributeMap_Remove), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(SceneMeshMaterialAttributeMap_StartAnimation), METH_VARARGS, nullptr },
+        { "start_animation_group", reinterpret_cast<PyCFunction>(SceneMeshMaterialAttributeMap_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(SceneMeshMaterialAttributeMap_StopAnimation), METH_VARARGS, nullptr },
+        { "stop_animation_group", reinterpret_cast<PyCFunction>(SceneMeshMaterialAttributeMap_StopAnimationGroup), METH_VARARGS, nullptr },
+        { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SceneMeshMaterialAttributeMap_TryGetAnimationController), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneMeshMaterialAttributeMap, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneMeshMaterialAttributeMap), METH_O | METH_STATIC, nullptr },
         { }
@@ -1655,6 +3426,36 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         Py_DECREF(tp);
     }
 
+    static PyObject* SceneMeshRendererComponent_Close(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshRendererComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* SceneMeshRendererComponent_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1672,6 +3473,222 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Composition::Scenes::SceneMeshRendererComponent::Create(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMeshRendererComponent_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshRendererComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMeshRendererComponent_StartAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshRendererComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+
+                self->obj.StartAnimation(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMeshRendererComponent_StartAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshRendererComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMeshRendererComponent_StopAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshRendererComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMeshRendererComponent_StopAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshRendererComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMeshRendererComponent_TryGetAnimationController(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshRendererComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryGetAnimationController(param0));
             }
             catch (...)
             {
@@ -1824,6 +3841,13 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneMeshRendererComponent[] = {
+        { "close", reinterpret_cast<PyCFunction>(SceneMeshRendererComponent_Close), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(SceneMeshRendererComponent_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(SceneMeshRendererComponent_StartAnimation), METH_VARARGS, nullptr },
+        { "start_animation_group", reinterpret_cast<PyCFunction>(SceneMeshRendererComponent_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(SceneMeshRendererComponent_StopAnimation), METH_VARARGS, nullptr },
+        { "stop_animation_group", reinterpret_cast<PyCFunction>(SceneMeshRendererComponent_StopAnimationGroup), METH_VARARGS, nullptr },
+        { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SceneMeshRendererComponent_TryGetAnimationController), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneMeshRendererComponent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneMeshRendererComponent), METH_O | METH_STATIC, nullptr },
         { }
@@ -1894,6 +3918,36 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         Py_DECREF(tp);
     }
 
+    static PyObject* SceneMetallicRoughnessMaterial_Close(py::wrapper::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* SceneMetallicRoughnessMaterial_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1911,6 +3965,222 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial::Create(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMetallicRoughnessMaterial_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMetallicRoughnessMaterial_StartAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+
+                self->obj.StartAnimation(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMetallicRoughnessMaterial_StartAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMetallicRoughnessMaterial_StopAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMetallicRoughnessMaterial_StopAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneMetallicRoughnessMaterial_TryGetAnimationController(py::wrapper::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryGetAnimationController(param0));
             }
             catch (...)
             {
@@ -2185,6 +4455,13 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneMetallicRoughnessMaterial[] = {
+        { "close", reinterpret_cast<PyCFunction>(SceneMetallicRoughnessMaterial_Close), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(SceneMetallicRoughnessMaterial_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(SceneMetallicRoughnessMaterial_StartAnimation), METH_VARARGS, nullptr },
+        { "start_animation_group", reinterpret_cast<PyCFunction>(SceneMetallicRoughnessMaterial_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(SceneMetallicRoughnessMaterial_StopAnimation), METH_VARARGS, nullptr },
+        { "stop_animation_group", reinterpret_cast<PyCFunction>(SceneMetallicRoughnessMaterial_StopAnimationGroup), METH_VARARGS, nullptr },
+        { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SceneMetallicRoughnessMaterial_TryGetAnimationController), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneMetallicRoughnessMaterial, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneMetallicRoughnessMaterial), METH_O | METH_STATIC, nullptr },
         { }
@@ -2255,6 +4532,252 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* SceneModelTransform_Close(py::wrapper::Windows::UI::Composition::Scenes::SceneModelTransform* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneModelTransform_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::Scenes::SceneModelTransform* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneModelTransform_StartAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneModelTransform* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+
+                self->obj.StartAnimation(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneModelTransform_StartAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneModelTransform* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneModelTransform_StopAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneModelTransform* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneModelTransform_StopAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneModelTransform* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneModelTransform_TryGetAnimationController(py::wrapper::Windows::UI::Composition::Scenes::SceneModelTransform* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryGetAnimationController(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* SceneModelTransform_get_Translation(py::wrapper::Windows::UI::Composition::Scenes::SceneModelTransform* self, void* /*unused*/) noexcept
@@ -2564,6 +5087,13 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneModelTransform[] = {
+        { "close", reinterpret_cast<PyCFunction>(SceneModelTransform_Close), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(SceneModelTransform_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(SceneModelTransform_StartAnimation), METH_VARARGS, nullptr },
+        { "start_animation_group", reinterpret_cast<PyCFunction>(SceneModelTransform_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(SceneModelTransform_StopAnimation), METH_VARARGS, nullptr },
+        { "stop_animation_group", reinterpret_cast<PyCFunction>(SceneModelTransform_StopAnimationGroup), METH_VARARGS, nullptr },
+        { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SceneModelTransform_TryGetAnimationController), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneModelTransform, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneModelTransform), METH_O | METH_STATIC, nullptr },
         { }
@@ -2609,6 +5139,36 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* SceneNode_Close(py::wrapper::Windows::UI::Composition::Scenes::SceneNode* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* SceneNode_Create(PyObject* /*unused*/, PyObject* args) noexcept
@@ -2659,6 +5219,222 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneComponentType>(args, 0);
 
                 return py::convert(self->obj.FindFirstComponentOfType(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneNode_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::Scenes::SceneNode* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneNode_StartAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneNode* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+
+                self->obj.StartAnimation(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneNode_StartAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneNode* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneNode_StopAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneNode* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneNode_StopAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneNode* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneNode_TryGetAnimationController(py::wrapper::Windows::UI::Composition::Scenes::SceneNode* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryGetAnimationController(param0));
             }
             catch (...)
             {
@@ -2774,7 +5550,14 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneNode[] = {
+        { "close", reinterpret_cast<PyCFunction>(SceneNode_Close), METH_VARARGS, nullptr },
         { "find_first_component_of_type", reinterpret_cast<PyCFunction>(SceneNode_FindFirstComponentOfType), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(SceneNode_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(SceneNode_StartAnimation), METH_VARARGS, nullptr },
+        { "start_animation_group", reinterpret_cast<PyCFunction>(SceneNode_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(SceneNode_StopAnimation), METH_VARARGS, nullptr },
+        { "stop_animation_group", reinterpret_cast<PyCFunction>(SceneNode_StopAnimationGroup), METH_VARARGS, nullptr },
+        { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SceneNode_TryGetAnimationController), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneNode), METH_O | METH_STATIC, nullptr },
         { }
@@ -2893,6 +5676,36 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 }
 
                 self->obj.Clear();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneNodeCollection_Close(py::wrapper::Windows::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3106,6 +5919,39 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         }
     }
 
+    static PyObject* SceneNodeCollection_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* SceneNodeCollection_RemoveAt(py::wrapper::Windows::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -3219,6 +6065,189 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
                 self->obj.SetAt(param0, param1);
                 Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneNodeCollection_StartAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+
+                self->obj.StartAnimation(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneNodeCollection_StartAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneNodeCollection_StopAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneNodeCollection_StopAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneNodeCollection_TryGetAnimationController(py::wrapper::Windows::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryGetAnimationController(param0));
             }
             catch (...)
             {
@@ -3400,16 +6429,23 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static PyMethodDef _methods_SceneNodeCollection[] = {
         { "append", reinterpret_cast<PyCFunction>(SceneNodeCollection_Append), METH_VARARGS, nullptr },
         { "clear", reinterpret_cast<PyCFunction>(SceneNodeCollection_Clear), METH_VARARGS, nullptr },
+        { "close", reinterpret_cast<PyCFunction>(SceneNodeCollection_Close), METH_VARARGS, nullptr },
         { "first", reinterpret_cast<PyCFunction>(SceneNodeCollection_First), METH_VARARGS, nullptr },
         { "get_at", reinterpret_cast<PyCFunction>(SceneNodeCollection_GetAt), METH_VARARGS, nullptr },
         { "get_many", reinterpret_cast<PyCFunction>(SceneNodeCollection_GetMany), METH_VARARGS, nullptr },
         { "get_view", reinterpret_cast<PyCFunction>(SceneNodeCollection_GetView), METH_VARARGS, nullptr },
         { "index_of", reinterpret_cast<PyCFunction>(SceneNodeCollection_IndexOf), METH_VARARGS, nullptr },
         { "insert_at", reinterpret_cast<PyCFunction>(SceneNodeCollection_InsertAt), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(SceneNodeCollection_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "remove_at", reinterpret_cast<PyCFunction>(SceneNodeCollection_RemoveAt), METH_VARARGS, nullptr },
         { "remove_at_end", reinterpret_cast<PyCFunction>(SceneNodeCollection_RemoveAtEnd), METH_VARARGS, nullptr },
         { "replace_all", reinterpret_cast<PyCFunction>(SceneNodeCollection_ReplaceAll), METH_VARARGS, nullptr },
         { "set_at", reinterpret_cast<PyCFunction>(SceneNodeCollection_SetAt), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(SceneNodeCollection_StartAnimation), METH_VARARGS, nullptr },
+        { "start_animation_group", reinterpret_cast<PyCFunction>(SceneNodeCollection_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(SceneNodeCollection_StopAnimation), METH_VARARGS, nullptr },
+        { "stop_animation_group", reinterpret_cast<PyCFunction>(SceneNodeCollection_StopAnimationGroup), METH_VARARGS, nullptr },
+        { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SceneNodeCollection_TryGetAnimationController), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneNodeCollection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneNodeCollection), METH_O | METH_STATIC, nullptr },
         { }
@@ -3457,6 +6493,252 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         Py_DECREF(tp);
     }
 
+    static PyObject* SceneObject_Close(py::wrapper::Windows::UI::Composition::Scenes::SceneObject* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneObject_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::Scenes::SceneObject* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneObject_StartAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneObject* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+
+                self->obj.StartAnimation(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneObject_StartAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneObject* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneObject_StopAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneObject* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneObject_StopAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneObject* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneObject_TryGetAnimationController(py::wrapper::Windows::UI::Composition::Scenes::SceneObject* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryGetAnimationController(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_SceneObject(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Scenes::SceneObject>>();
@@ -3482,6 +6764,13 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneObject[] = {
+        { "close", reinterpret_cast<PyCFunction>(SceneObject_Close), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(SceneObject_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(SceneObject_StartAnimation), METH_VARARGS, nullptr },
+        { "start_animation_group", reinterpret_cast<PyCFunction>(SceneObject_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(SceneObject_StopAnimation), METH_VARARGS, nullptr },
+        { "stop_animation_group", reinterpret_cast<PyCFunction>(SceneObject_StopAnimationGroup), METH_VARARGS, nullptr },
+        { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SceneObject_TryGetAnimationController), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneObject, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneObject), METH_O | METH_STATIC, nullptr },
         { }
@@ -3521,6 +6810,252 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* ScenePbrMaterial_Close(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ScenePbrMaterial_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ScenePbrMaterial_StartAnimation(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+
+                self->obj.StartAnimation(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ScenePbrMaterial_StartAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ScenePbrMaterial_StopAnimation(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ScenePbrMaterial_StopAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ScenePbrMaterial_TryGetAnimationController(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryGetAnimationController(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* ScenePbrMaterial_get_OcclusionStrength(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
@@ -3971,6 +7506,13 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_ScenePbrMaterial[] = {
+        { "close", reinterpret_cast<PyCFunction>(ScenePbrMaterial_Close), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(ScenePbrMaterial_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(ScenePbrMaterial_StartAnimation), METH_VARARGS, nullptr },
+        { "start_animation_group", reinterpret_cast<PyCFunction>(ScenePbrMaterial_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(ScenePbrMaterial_StopAnimation), METH_VARARGS, nullptr },
+        { "stop_animation_group", reinterpret_cast<PyCFunction>(ScenePbrMaterial_StopAnimationGroup), METH_VARARGS, nullptr },
+        { "try_get_animation_controller", reinterpret_cast<PyCFunction>(ScenePbrMaterial_TryGetAnimationController), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ScenePbrMaterial, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ScenePbrMaterial), METH_O | METH_STATIC, nullptr },
         { }
@@ -4021,6 +7563,252 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         Py_DECREF(tp);
     }
 
+    static PyObject* SceneRendererComponent_Close(py::wrapper::Windows::UI::Composition::Scenes::SceneRendererComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneRendererComponent_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::Scenes::SceneRendererComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneRendererComponent_StartAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneRendererComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+
+                self->obj.StartAnimation(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneRendererComponent_StartAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneRendererComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneRendererComponent_StopAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneRendererComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneRendererComponent_StopAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneRendererComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneRendererComponent_TryGetAnimationController(py::wrapper::Windows::UI::Composition::Scenes::SceneRendererComponent* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryGetAnimationController(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_SceneRendererComponent(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::Scenes::SceneRendererComponent>>();
@@ -4046,6 +7834,13 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneRendererComponent[] = {
+        { "close", reinterpret_cast<PyCFunction>(SceneRendererComponent_Close), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(SceneRendererComponent_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(SceneRendererComponent_StartAnimation), METH_VARARGS, nullptr },
+        { "start_animation_group", reinterpret_cast<PyCFunction>(SceneRendererComponent_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(SceneRendererComponent_StopAnimation), METH_VARARGS, nullptr },
+        { "stop_animation_group", reinterpret_cast<PyCFunction>(SceneRendererComponent_StopAnimationGroup), METH_VARARGS, nullptr },
+        { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SceneRendererComponent_TryGetAnimationController), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneRendererComponent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneRendererComponent), METH_O | METH_STATIC, nullptr },
         { }
@@ -4087,6 +7882,36 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         Py_DECREF(tp);
     }
 
+    static PyObject* SceneSurfaceMaterialInput_Close(py::wrapper::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* SceneSurfaceMaterialInput_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -4104,6 +7929,222 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput::Create(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneSurfaceMaterialInput_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneSurfaceMaterialInput_StartAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+
+                self->obj.StartAnimation(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneSurfaceMaterialInput_StartAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneSurfaceMaterialInput_StopAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneSurfaceMaterialInput_StopAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneSurfaceMaterialInput_TryGetAnimationController(py::wrapper::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryGetAnimationController(param0));
             }
             catch (...)
             {
@@ -4331,6 +8372,13 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneSurfaceMaterialInput[] = {
+        { "close", reinterpret_cast<PyCFunction>(SceneSurfaceMaterialInput_Close), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(SceneSurfaceMaterialInput_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(SceneSurfaceMaterialInput_StartAnimation), METH_VARARGS, nullptr },
+        { "start_animation_group", reinterpret_cast<PyCFunction>(SceneSurfaceMaterialInput_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(SceneSurfaceMaterialInput_StopAnimation), METH_VARARGS, nullptr },
+        { "stop_animation_group", reinterpret_cast<PyCFunction>(SceneSurfaceMaterialInput_StopAnimationGroup), METH_VARARGS, nullptr },
+        { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SceneSurfaceMaterialInput_TryGetAnimationController), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneSurfaceMaterialInput, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneSurfaceMaterialInput), METH_O | METH_STATIC, nullptr },
         { }
@@ -4402,6 +8450,36 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         Py_DECREF(tp);
     }
 
+    static PyObject* SceneVisual_Close(py::wrapper::Windows::UI::Composition::Scenes::SceneVisual* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* SceneVisual_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -4419,6 +8497,222 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::Compositor>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Composition::Scenes::SceneVisual::Create(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneVisual_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::Scenes::SceneVisual* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneVisual_StartAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneVisual* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+
+                self->obj.StartAnimation(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneVisual_StartAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneVisual* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneVisual_StopAnimation(py::wrapper::Windows::UI::Composition::Scenes::SceneVisual* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneVisual_StopAnimationGroup(py::wrapper::Windows::UI::Composition::Scenes::SceneVisual* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SceneVisual_TryGetAnimationController(py::wrapper::Windows::UI::Composition::Scenes::SceneVisual* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryGetAnimationController(param0));
             }
             catch (...)
             {
@@ -4505,6 +8799,13 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneVisual[] = {
+        { "close", reinterpret_cast<PyCFunction>(SceneVisual_Close), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(SceneVisual_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(SceneVisual_StartAnimation), METH_VARARGS, nullptr },
+        { "start_animation_group", reinterpret_cast<PyCFunction>(SceneVisual_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(SceneVisual_StopAnimation), METH_VARARGS, nullptr },
+        { "stop_animation_group", reinterpret_cast<PyCFunction>(SceneVisual_StopAnimationGroup), METH_VARARGS, nullptr },
+        { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SceneVisual_TryGetAnimationController), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneVisual, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneVisual), METH_O | METH_STATIC, nullptr },
         { }

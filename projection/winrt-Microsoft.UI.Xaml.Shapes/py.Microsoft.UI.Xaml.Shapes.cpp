@@ -43,6 +43,998 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         Py_DECREF(tp);
     }
 
+    static PyObject* Ellipse_AddHandler(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"AddHandler", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEvent>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+                auto param2 = py::convert_to<bool>(args, 2);
+
+                self->obj.AddHandler(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_Arrange(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Arrange", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
+
+                self->obj.Arrange(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_CancelDirectManipulations(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"CancelDirectManipulations", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.CancelDirectManipulations());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_CapturePointer(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"CapturePointer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::Pointer>(args, 0);
+
+                return py::convert(self->obj.CapturePointer(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_ClearValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_FindName(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FindName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.FindName(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_Focus(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Focus", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FocusState>(args, 0);
+
+                return py::convert(self->obj.Focus(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_GetAlphaMask(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"GetAlphaMask", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetAlphaMask());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_GetAnimationBaseValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_GetBindingExpression(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"GetBindingExpression", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetBindingExpression(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_GetValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_GetVisualInternal(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"GetVisualInternal", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetVisualInternal());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_InvalidateArrange(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"InvalidateArrange", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.InvalidateArrange();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_InvalidateMeasure(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"InvalidateMeasure", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.InvalidateMeasure();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_Measure(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Measure", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
+
+                self->obj.Measure(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_PopulatePropertyInfo(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_ReadLocalValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_RegisterPropertyChangedCallback(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_ReleasePointerCapture(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"ReleasePointerCapture", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::Pointer>(args, 0);
+
+                self->obj.ReleasePointerCapture(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_ReleasePointerCaptures(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"ReleasePointerCaptures", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.ReleasePointerCaptures();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_RemoveHandler(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"RemoveHandler", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEvent>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.RemoveHandler(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_SetBinding(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"SetBinding", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Data::BindingBase>(args, 1);
+
+                self->obj.SetBinding(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_SetValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_StartAnimation(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_StartBringIntoView(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartBringIntoView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.StartBringIntoView();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartBringIntoView", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::BringIntoViewOptions>(args, 0);
+
+                self->obj.StartBringIntoView(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_StartDragAsync(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartDragAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Input::PointerPoint>(args, 0);
+
+                return py::convert(self->obj.StartDragAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_StopAnimation(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_TransformToVisual(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TransformToVisual", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
+
+                return py::convert(self->obj.TransformToVisual(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_TryInvokeKeyboardAccelerator(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TryInvokeKeyboardAccelerator", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>(args, 0);
+
+                self->obj.TryInvokeKeyboardAccelerator(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_UnregisterPropertyChangedCallback(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_UpdateLayout(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"UpdateLayout", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.UpdateLayout();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Ellipse(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Shapes::Ellipse>>();
@@ -68,6 +1060,37 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     }
 
     static PyMethodDef _methods_Ellipse[] = {
+        { "add_handler", reinterpret_cast<PyCFunction>(Ellipse_AddHandler), METH_VARARGS, nullptr },
+        { "arrange", reinterpret_cast<PyCFunction>(Ellipse_Arrange), METH_VARARGS, nullptr },
+        { "cancel_direct_manipulations", reinterpret_cast<PyCFunction>(Ellipse_CancelDirectManipulations), METH_VARARGS, nullptr },
+        { "capture_pointer", reinterpret_cast<PyCFunction>(Ellipse_CapturePointer), METH_VARARGS, nullptr },
+        { "clear_value", reinterpret_cast<PyCFunction>(Ellipse_ClearValue), METH_VARARGS, nullptr },
+        { "find_name", reinterpret_cast<PyCFunction>(Ellipse_FindName), METH_VARARGS, nullptr },
+        { "focus", reinterpret_cast<PyCFunction>(Ellipse_Focus), METH_VARARGS, nullptr },
+        { "get_alpha_mask", reinterpret_cast<PyCFunction>(Ellipse_GetAlphaMask), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(Ellipse_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_binding_expression", reinterpret_cast<PyCFunction>(Ellipse_GetBindingExpression), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(Ellipse_GetValue), METH_VARARGS, nullptr },
+        { "get_visual_internal", reinterpret_cast<PyCFunction>(Ellipse_GetVisualInternal), METH_VARARGS, nullptr },
+        { "invalidate_arrange", reinterpret_cast<PyCFunction>(Ellipse_InvalidateArrange), METH_VARARGS, nullptr },
+        { "invalidate_measure", reinterpret_cast<PyCFunction>(Ellipse_InvalidateMeasure), METH_VARARGS, nullptr },
+        { "measure", reinterpret_cast<PyCFunction>(Ellipse_Measure), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(Ellipse_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(Ellipse_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(Ellipse_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "release_pointer_capture", reinterpret_cast<PyCFunction>(Ellipse_ReleasePointerCapture), METH_VARARGS, nullptr },
+        { "release_pointer_captures", reinterpret_cast<PyCFunction>(Ellipse_ReleasePointerCaptures), METH_VARARGS, nullptr },
+        { "remove_handler", reinterpret_cast<PyCFunction>(Ellipse_RemoveHandler), METH_VARARGS, nullptr },
+        { "set_binding", reinterpret_cast<PyCFunction>(Ellipse_SetBinding), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(Ellipse_SetValue), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(Ellipse_StartAnimation), METH_VARARGS, nullptr },
+        { "start_bring_into_view", reinterpret_cast<PyCFunction>(Ellipse_StartBringIntoView), METH_VARARGS, nullptr },
+        { "start_drag_async", reinterpret_cast<PyCFunction>(Ellipse_StartDragAsync), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(Ellipse_StopAnimation), METH_VARARGS, nullptr },
+        { "transform_to_visual", reinterpret_cast<PyCFunction>(Ellipse_TransformToVisual), METH_VARARGS, nullptr },
+        { "try_invoke_keyboard_accelerator", reinterpret_cast<PyCFunction>(Ellipse_TryInvokeKeyboardAccelerator), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Ellipse_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "update_layout", reinterpret_cast<PyCFunction>(Ellipse_UpdateLayout), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Ellipse, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Ellipse), METH_O | METH_STATIC, nullptr },
         { }
@@ -129,6 +1152,998 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* Line_AddHandler(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"AddHandler", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEvent>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+                auto param2 = py::convert_to<bool>(args, 2);
+
+                self->obj.AddHandler(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_Arrange(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Arrange", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
+
+                self->obj.Arrange(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_CancelDirectManipulations(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"CancelDirectManipulations", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.CancelDirectManipulations());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_CapturePointer(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"CapturePointer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::Pointer>(args, 0);
+
+                return py::convert(self->obj.CapturePointer(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_ClearValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_FindName(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FindName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.FindName(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_Focus(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Focus", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FocusState>(args, 0);
+
+                return py::convert(self->obj.Focus(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_GetAlphaMask(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"GetAlphaMask", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetAlphaMask());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_GetAnimationBaseValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_GetBindingExpression(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"GetBindingExpression", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetBindingExpression(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_GetValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_GetVisualInternal(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"GetVisualInternal", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetVisualInternal());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_InvalidateArrange(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"InvalidateArrange", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.InvalidateArrange();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_InvalidateMeasure(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"InvalidateMeasure", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.InvalidateMeasure();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_Measure(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Measure", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
+
+                self->obj.Measure(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_PopulatePropertyInfo(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_ReadLocalValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_RegisterPropertyChangedCallback(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_ReleasePointerCapture(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"ReleasePointerCapture", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::Pointer>(args, 0);
+
+                self->obj.ReleasePointerCapture(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_ReleasePointerCaptures(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"ReleasePointerCaptures", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.ReleasePointerCaptures();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_RemoveHandler(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"RemoveHandler", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEvent>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.RemoveHandler(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_SetBinding(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"SetBinding", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Data::BindingBase>(args, 1);
+
+                self->obj.SetBinding(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_SetValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_StartAnimation(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_StartBringIntoView(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartBringIntoView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.StartBringIntoView();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartBringIntoView", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::BringIntoViewOptions>(args, 0);
+
+                self->obj.StartBringIntoView(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_StartDragAsync(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartDragAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Input::PointerPoint>(args, 0);
+
+                return py::convert(self->obj.StartDragAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_StopAnimation(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_TransformToVisual(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TransformToVisual", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
+
+                return py::convert(self->obj.TransformToVisual(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_TryInvokeKeyboardAccelerator(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TryInvokeKeyboardAccelerator", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>(args, 0);
+
+                self->obj.TryInvokeKeyboardAccelerator(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_UnregisterPropertyChangedCallback(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_UpdateLayout(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"UpdateLayout", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.UpdateLayout();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* Line_get_Y2(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, void* /*unused*/) noexcept
@@ -420,6 +2435,37 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     }
 
     static PyMethodDef _methods_Line[] = {
+        { "add_handler", reinterpret_cast<PyCFunction>(Line_AddHandler), METH_VARARGS, nullptr },
+        { "arrange", reinterpret_cast<PyCFunction>(Line_Arrange), METH_VARARGS, nullptr },
+        { "cancel_direct_manipulations", reinterpret_cast<PyCFunction>(Line_CancelDirectManipulations), METH_VARARGS, nullptr },
+        { "capture_pointer", reinterpret_cast<PyCFunction>(Line_CapturePointer), METH_VARARGS, nullptr },
+        { "clear_value", reinterpret_cast<PyCFunction>(Line_ClearValue), METH_VARARGS, nullptr },
+        { "find_name", reinterpret_cast<PyCFunction>(Line_FindName), METH_VARARGS, nullptr },
+        { "focus", reinterpret_cast<PyCFunction>(Line_Focus), METH_VARARGS, nullptr },
+        { "get_alpha_mask", reinterpret_cast<PyCFunction>(Line_GetAlphaMask), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(Line_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_binding_expression", reinterpret_cast<PyCFunction>(Line_GetBindingExpression), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(Line_GetValue), METH_VARARGS, nullptr },
+        { "get_visual_internal", reinterpret_cast<PyCFunction>(Line_GetVisualInternal), METH_VARARGS, nullptr },
+        { "invalidate_arrange", reinterpret_cast<PyCFunction>(Line_InvalidateArrange), METH_VARARGS, nullptr },
+        { "invalidate_measure", reinterpret_cast<PyCFunction>(Line_InvalidateMeasure), METH_VARARGS, nullptr },
+        { "measure", reinterpret_cast<PyCFunction>(Line_Measure), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(Line_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(Line_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(Line_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "release_pointer_capture", reinterpret_cast<PyCFunction>(Line_ReleasePointerCapture), METH_VARARGS, nullptr },
+        { "release_pointer_captures", reinterpret_cast<PyCFunction>(Line_ReleasePointerCaptures), METH_VARARGS, nullptr },
+        { "remove_handler", reinterpret_cast<PyCFunction>(Line_RemoveHandler), METH_VARARGS, nullptr },
+        { "set_binding", reinterpret_cast<PyCFunction>(Line_SetBinding), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(Line_SetValue), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(Line_StartAnimation), METH_VARARGS, nullptr },
+        { "start_bring_into_view", reinterpret_cast<PyCFunction>(Line_StartBringIntoView), METH_VARARGS, nullptr },
+        { "start_drag_async", reinterpret_cast<PyCFunction>(Line_StartDragAsync), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(Line_StopAnimation), METH_VARARGS, nullptr },
+        { "transform_to_visual", reinterpret_cast<PyCFunction>(Line_TransformToVisual), METH_VARARGS, nullptr },
+        { "try_invoke_keyboard_accelerator", reinterpret_cast<PyCFunction>(Line_TryInvokeKeyboardAccelerator), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Line_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "update_layout", reinterpret_cast<PyCFunction>(Line_UpdateLayout), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Line, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Line), METH_O | METH_STATIC, nullptr },
         { }
@@ -516,6 +2562,998 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         Py_DECREF(tp);
     }
 
+    static PyObject* Path_AddHandler(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"AddHandler", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEvent>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+                auto param2 = py::convert_to<bool>(args, 2);
+
+                self->obj.AddHandler(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_Arrange(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Arrange", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
+
+                self->obj.Arrange(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_CancelDirectManipulations(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"CancelDirectManipulations", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.CancelDirectManipulations());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_CapturePointer(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"CapturePointer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::Pointer>(args, 0);
+
+                return py::convert(self->obj.CapturePointer(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_ClearValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_FindName(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FindName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.FindName(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_Focus(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Focus", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FocusState>(args, 0);
+
+                return py::convert(self->obj.Focus(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_GetAlphaMask(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"GetAlphaMask", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetAlphaMask());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_GetAnimationBaseValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_GetBindingExpression(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"GetBindingExpression", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetBindingExpression(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_GetValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_GetVisualInternal(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"GetVisualInternal", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetVisualInternal());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_InvalidateArrange(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"InvalidateArrange", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.InvalidateArrange();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_InvalidateMeasure(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"InvalidateMeasure", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.InvalidateMeasure();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_Measure(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Measure", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
+
+                self->obj.Measure(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_PopulatePropertyInfo(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_ReadLocalValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_RegisterPropertyChangedCallback(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_ReleasePointerCapture(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"ReleasePointerCapture", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::Pointer>(args, 0);
+
+                self->obj.ReleasePointerCapture(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_ReleasePointerCaptures(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"ReleasePointerCaptures", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.ReleasePointerCaptures();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_RemoveHandler(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"RemoveHandler", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEvent>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.RemoveHandler(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_SetBinding(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"SetBinding", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Data::BindingBase>(args, 1);
+
+                self->obj.SetBinding(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_SetValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_StartAnimation(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_StartBringIntoView(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartBringIntoView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.StartBringIntoView();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartBringIntoView", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::BringIntoViewOptions>(args, 0);
+
+                self->obj.StartBringIntoView(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_StartDragAsync(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartDragAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Input::PointerPoint>(args, 0);
+
+                return py::convert(self->obj.StartDragAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_StopAnimation(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_TransformToVisual(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TransformToVisual", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
+
+                return py::convert(self->obj.TransformToVisual(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_TryInvokeKeyboardAccelerator(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TryInvokeKeyboardAccelerator", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>(args, 0);
+
+                self->obj.TryInvokeKeyboardAccelerator(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_UnregisterPropertyChangedCallback(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_UpdateLayout(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"UpdateLayout", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.UpdateLayout();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* Path_get_Data(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, void* /*unused*/) noexcept
     {
         try
@@ -607,6 +3645,37 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     }
 
     static PyMethodDef _methods_Path[] = {
+        { "add_handler", reinterpret_cast<PyCFunction>(Path_AddHandler), METH_VARARGS, nullptr },
+        { "arrange", reinterpret_cast<PyCFunction>(Path_Arrange), METH_VARARGS, nullptr },
+        { "cancel_direct_manipulations", reinterpret_cast<PyCFunction>(Path_CancelDirectManipulations), METH_VARARGS, nullptr },
+        { "capture_pointer", reinterpret_cast<PyCFunction>(Path_CapturePointer), METH_VARARGS, nullptr },
+        { "clear_value", reinterpret_cast<PyCFunction>(Path_ClearValue), METH_VARARGS, nullptr },
+        { "find_name", reinterpret_cast<PyCFunction>(Path_FindName), METH_VARARGS, nullptr },
+        { "focus", reinterpret_cast<PyCFunction>(Path_Focus), METH_VARARGS, nullptr },
+        { "get_alpha_mask", reinterpret_cast<PyCFunction>(Path_GetAlphaMask), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(Path_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_binding_expression", reinterpret_cast<PyCFunction>(Path_GetBindingExpression), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(Path_GetValue), METH_VARARGS, nullptr },
+        { "get_visual_internal", reinterpret_cast<PyCFunction>(Path_GetVisualInternal), METH_VARARGS, nullptr },
+        { "invalidate_arrange", reinterpret_cast<PyCFunction>(Path_InvalidateArrange), METH_VARARGS, nullptr },
+        { "invalidate_measure", reinterpret_cast<PyCFunction>(Path_InvalidateMeasure), METH_VARARGS, nullptr },
+        { "measure", reinterpret_cast<PyCFunction>(Path_Measure), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(Path_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(Path_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(Path_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "release_pointer_capture", reinterpret_cast<PyCFunction>(Path_ReleasePointerCapture), METH_VARARGS, nullptr },
+        { "release_pointer_captures", reinterpret_cast<PyCFunction>(Path_ReleasePointerCaptures), METH_VARARGS, nullptr },
+        { "remove_handler", reinterpret_cast<PyCFunction>(Path_RemoveHandler), METH_VARARGS, nullptr },
+        { "set_binding", reinterpret_cast<PyCFunction>(Path_SetBinding), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(Path_SetValue), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(Path_StartAnimation), METH_VARARGS, nullptr },
+        { "start_bring_into_view", reinterpret_cast<PyCFunction>(Path_StartBringIntoView), METH_VARARGS, nullptr },
+        { "start_drag_async", reinterpret_cast<PyCFunction>(Path_StartDragAsync), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(Path_StopAnimation), METH_VARARGS, nullptr },
+        { "transform_to_visual", reinterpret_cast<PyCFunction>(Path_TransformToVisual), METH_VARARGS, nullptr },
+        { "try_invoke_keyboard_accelerator", reinterpret_cast<PyCFunction>(Path_TryInvokeKeyboardAccelerator), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Path_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "update_layout", reinterpret_cast<PyCFunction>(Path_UpdateLayout), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Path, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Path), METH_O | METH_STATIC, nullptr },
         { }
@@ -695,6 +3764,998 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* Polygon_AddHandler(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"AddHandler", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEvent>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+                auto param2 = py::convert_to<bool>(args, 2);
+
+                self->obj.AddHandler(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_Arrange(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Arrange", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
+
+                self->obj.Arrange(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_CancelDirectManipulations(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"CancelDirectManipulations", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.CancelDirectManipulations());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_CapturePointer(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"CapturePointer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::Pointer>(args, 0);
+
+                return py::convert(self->obj.CapturePointer(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_ClearValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_FindName(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FindName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.FindName(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_Focus(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Focus", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FocusState>(args, 0);
+
+                return py::convert(self->obj.Focus(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_GetAlphaMask(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"GetAlphaMask", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetAlphaMask());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_GetAnimationBaseValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_GetBindingExpression(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"GetBindingExpression", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetBindingExpression(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_GetValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_GetVisualInternal(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"GetVisualInternal", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetVisualInternal());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_InvalidateArrange(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"InvalidateArrange", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.InvalidateArrange();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_InvalidateMeasure(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"InvalidateMeasure", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.InvalidateMeasure();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_Measure(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Measure", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
+
+                self->obj.Measure(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_PopulatePropertyInfo(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_ReadLocalValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_RegisterPropertyChangedCallback(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_ReleasePointerCapture(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"ReleasePointerCapture", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::Pointer>(args, 0);
+
+                self->obj.ReleasePointerCapture(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_ReleasePointerCaptures(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"ReleasePointerCaptures", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.ReleasePointerCaptures();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_RemoveHandler(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"RemoveHandler", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEvent>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.RemoveHandler(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_SetBinding(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"SetBinding", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Data::BindingBase>(args, 1);
+
+                self->obj.SetBinding(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_SetValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_StartAnimation(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_StartBringIntoView(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartBringIntoView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.StartBringIntoView();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartBringIntoView", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::BringIntoViewOptions>(args, 0);
+
+                self->obj.StartBringIntoView(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_StartDragAsync(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartDragAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Input::PointerPoint>(args, 0);
+
+                return py::convert(self->obj.StartDragAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_StopAnimation(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_TransformToVisual(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TransformToVisual", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
+
+                return py::convert(self->obj.TransformToVisual(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_TryInvokeKeyboardAccelerator(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TryInvokeKeyboardAccelerator", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>(args, 0);
+
+                self->obj.TryInvokeKeyboardAccelerator(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_UnregisterPropertyChangedCallback(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_UpdateLayout(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"UpdateLayout", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.UpdateLayout();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* Polygon_get_Points(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, void* /*unused*/) noexcept
@@ -854,6 +4915,37 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     }
 
     static PyMethodDef _methods_Polygon[] = {
+        { "add_handler", reinterpret_cast<PyCFunction>(Polygon_AddHandler), METH_VARARGS, nullptr },
+        { "arrange", reinterpret_cast<PyCFunction>(Polygon_Arrange), METH_VARARGS, nullptr },
+        { "cancel_direct_manipulations", reinterpret_cast<PyCFunction>(Polygon_CancelDirectManipulations), METH_VARARGS, nullptr },
+        { "capture_pointer", reinterpret_cast<PyCFunction>(Polygon_CapturePointer), METH_VARARGS, nullptr },
+        { "clear_value", reinterpret_cast<PyCFunction>(Polygon_ClearValue), METH_VARARGS, nullptr },
+        { "find_name", reinterpret_cast<PyCFunction>(Polygon_FindName), METH_VARARGS, nullptr },
+        { "focus", reinterpret_cast<PyCFunction>(Polygon_Focus), METH_VARARGS, nullptr },
+        { "get_alpha_mask", reinterpret_cast<PyCFunction>(Polygon_GetAlphaMask), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(Polygon_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_binding_expression", reinterpret_cast<PyCFunction>(Polygon_GetBindingExpression), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(Polygon_GetValue), METH_VARARGS, nullptr },
+        { "get_visual_internal", reinterpret_cast<PyCFunction>(Polygon_GetVisualInternal), METH_VARARGS, nullptr },
+        { "invalidate_arrange", reinterpret_cast<PyCFunction>(Polygon_InvalidateArrange), METH_VARARGS, nullptr },
+        { "invalidate_measure", reinterpret_cast<PyCFunction>(Polygon_InvalidateMeasure), METH_VARARGS, nullptr },
+        { "measure", reinterpret_cast<PyCFunction>(Polygon_Measure), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(Polygon_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(Polygon_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(Polygon_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "release_pointer_capture", reinterpret_cast<PyCFunction>(Polygon_ReleasePointerCapture), METH_VARARGS, nullptr },
+        { "release_pointer_captures", reinterpret_cast<PyCFunction>(Polygon_ReleasePointerCaptures), METH_VARARGS, nullptr },
+        { "remove_handler", reinterpret_cast<PyCFunction>(Polygon_RemoveHandler), METH_VARARGS, nullptr },
+        { "set_binding", reinterpret_cast<PyCFunction>(Polygon_SetBinding), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(Polygon_SetValue), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(Polygon_StartAnimation), METH_VARARGS, nullptr },
+        { "start_bring_into_view", reinterpret_cast<PyCFunction>(Polygon_StartBringIntoView), METH_VARARGS, nullptr },
+        { "start_drag_async", reinterpret_cast<PyCFunction>(Polygon_StartDragAsync), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(Polygon_StopAnimation), METH_VARARGS, nullptr },
+        { "transform_to_visual", reinterpret_cast<PyCFunction>(Polygon_TransformToVisual), METH_VARARGS, nullptr },
+        { "try_invoke_keyboard_accelerator", reinterpret_cast<PyCFunction>(Polygon_TryInvokeKeyboardAccelerator), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Polygon_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "update_layout", reinterpret_cast<PyCFunction>(Polygon_UpdateLayout), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Polygon, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Polygon), METH_O | METH_STATIC, nullptr },
         { }
@@ -944,6 +5036,998 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* Polyline_AddHandler(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"AddHandler", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEvent>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+                auto param2 = py::convert_to<bool>(args, 2);
+
+                self->obj.AddHandler(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_Arrange(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Arrange", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
+
+                self->obj.Arrange(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_CancelDirectManipulations(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"CancelDirectManipulations", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.CancelDirectManipulations());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_CapturePointer(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"CapturePointer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::Pointer>(args, 0);
+
+                return py::convert(self->obj.CapturePointer(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_ClearValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_FindName(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FindName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.FindName(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_Focus(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Focus", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FocusState>(args, 0);
+
+                return py::convert(self->obj.Focus(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_GetAlphaMask(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"GetAlphaMask", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetAlphaMask());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_GetAnimationBaseValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_GetBindingExpression(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"GetBindingExpression", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetBindingExpression(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_GetValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_GetVisualInternal(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"GetVisualInternal", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetVisualInternal());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_InvalidateArrange(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"InvalidateArrange", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.InvalidateArrange();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_InvalidateMeasure(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"InvalidateMeasure", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.InvalidateMeasure();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_Measure(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Measure", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
+
+                self->obj.Measure(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_PopulatePropertyInfo(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_ReadLocalValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_RegisterPropertyChangedCallback(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_ReleasePointerCapture(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"ReleasePointerCapture", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::Pointer>(args, 0);
+
+                self->obj.ReleasePointerCapture(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_ReleasePointerCaptures(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"ReleasePointerCaptures", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.ReleasePointerCaptures();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_RemoveHandler(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"RemoveHandler", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEvent>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.RemoveHandler(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_SetBinding(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"SetBinding", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Data::BindingBase>(args, 1);
+
+                self->obj.SetBinding(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_SetValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_StartAnimation(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_StartBringIntoView(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartBringIntoView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.StartBringIntoView();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartBringIntoView", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::BringIntoViewOptions>(args, 0);
+
+                self->obj.StartBringIntoView(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_StartDragAsync(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartDragAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Input::PointerPoint>(args, 0);
+
+                return py::convert(self->obj.StartDragAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_StopAnimation(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_TransformToVisual(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TransformToVisual", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
+
+                return py::convert(self->obj.TransformToVisual(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_TryInvokeKeyboardAccelerator(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TryInvokeKeyboardAccelerator", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>(args, 0);
+
+                self->obj.TryInvokeKeyboardAccelerator(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_UnregisterPropertyChangedCallback(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_UpdateLayout(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"UpdateLayout", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.UpdateLayout();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* Polyline_get_Points(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, void* /*unused*/) noexcept
@@ -1103,6 +6187,37 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     }
 
     static PyMethodDef _methods_Polyline[] = {
+        { "add_handler", reinterpret_cast<PyCFunction>(Polyline_AddHandler), METH_VARARGS, nullptr },
+        { "arrange", reinterpret_cast<PyCFunction>(Polyline_Arrange), METH_VARARGS, nullptr },
+        { "cancel_direct_manipulations", reinterpret_cast<PyCFunction>(Polyline_CancelDirectManipulations), METH_VARARGS, nullptr },
+        { "capture_pointer", reinterpret_cast<PyCFunction>(Polyline_CapturePointer), METH_VARARGS, nullptr },
+        { "clear_value", reinterpret_cast<PyCFunction>(Polyline_ClearValue), METH_VARARGS, nullptr },
+        { "find_name", reinterpret_cast<PyCFunction>(Polyline_FindName), METH_VARARGS, nullptr },
+        { "focus", reinterpret_cast<PyCFunction>(Polyline_Focus), METH_VARARGS, nullptr },
+        { "get_alpha_mask", reinterpret_cast<PyCFunction>(Polyline_GetAlphaMask), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(Polyline_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_binding_expression", reinterpret_cast<PyCFunction>(Polyline_GetBindingExpression), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(Polyline_GetValue), METH_VARARGS, nullptr },
+        { "get_visual_internal", reinterpret_cast<PyCFunction>(Polyline_GetVisualInternal), METH_VARARGS, nullptr },
+        { "invalidate_arrange", reinterpret_cast<PyCFunction>(Polyline_InvalidateArrange), METH_VARARGS, nullptr },
+        { "invalidate_measure", reinterpret_cast<PyCFunction>(Polyline_InvalidateMeasure), METH_VARARGS, nullptr },
+        { "measure", reinterpret_cast<PyCFunction>(Polyline_Measure), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(Polyline_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(Polyline_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(Polyline_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "release_pointer_capture", reinterpret_cast<PyCFunction>(Polyline_ReleasePointerCapture), METH_VARARGS, nullptr },
+        { "release_pointer_captures", reinterpret_cast<PyCFunction>(Polyline_ReleasePointerCaptures), METH_VARARGS, nullptr },
+        { "remove_handler", reinterpret_cast<PyCFunction>(Polyline_RemoveHandler), METH_VARARGS, nullptr },
+        { "set_binding", reinterpret_cast<PyCFunction>(Polyline_SetBinding), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(Polyline_SetValue), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(Polyline_StartAnimation), METH_VARARGS, nullptr },
+        { "start_bring_into_view", reinterpret_cast<PyCFunction>(Polyline_StartBringIntoView), METH_VARARGS, nullptr },
+        { "start_drag_async", reinterpret_cast<PyCFunction>(Polyline_StartDragAsync), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(Polyline_StopAnimation), METH_VARARGS, nullptr },
+        { "transform_to_visual", reinterpret_cast<PyCFunction>(Polyline_TransformToVisual), METH_VARARGS, nullptr },
+        { "try_invoke_keyboard_accelerator", reinterpret_cast<PyCFunction>(Polyline_TryInvokeKeyboardAccelerator), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Polyline_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "update_layout", reinterpret_cast<PyCFunction>(Polyline_UpdateLayout), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Polyline, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Polyline), METH_O | METH_STATIC, nullptr },
         { }
@@ -1193,6 +6308,998 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* Rectangle_AddHandler(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"AddHandler", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEvent>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+                auto param2 = py::convert_to<bool>(args, 2);
+
+                self->obj.AddHandler(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_Arrange(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Arrange", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
+
+                self->obj.Arrange(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_CancelDirectManipulations(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"CancelDirectManipulations", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.CancelDirectManipulations());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_CapturePointer(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"CapturePointer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::Pointer>(args, 0);
+
+                return py::convert(self->obj.CapturePointer(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_ClearValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_FindName(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FindName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.FindName(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_Focus(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Focus", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FocusState>(args, 0);
+
+                return py::convert(self->obj.Focus(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_GetAlphaMask(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Shapes.Shape", L"GetAlphaMask", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetAlphaMask());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_GetAnimationBaseValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_GetBindingExpression(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"GetBindingExpression", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetBindingExpression(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_GetValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_GetVisualInternal(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"GetVisualInternal", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetVisualInternal());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_InvalidateArrange(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"InvalidateArrange", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.InvalidateArrange();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_InvalidateMeasure(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"InvalidateMeasure", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.InvalidateMeasure();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_Measure(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Measure", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
+
+                self->obj.Measure(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_PopulatePropertyInfo(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_ReadLocalValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_RegisterPropertyChangedCallback(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_ReleasePointerCapture(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"ReleasePointerCapture", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::Pointer>(args, 0);
+
+                self->obj.ReleasePointerCapture(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_ReleasePointerCaptures(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"ReleasePointerCaptures", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.ReleasePointerCaptures();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_RemoveHandler(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"RemoveHandler", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEvent>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.RemoveHandler(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_SetBinding(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"SetBinding", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Data::BindingBase>(args, 1);
+
+                self->obj.SetBinding(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_SetValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_StartAnimation(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_StartBringIntoView(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartBringIntoView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.StartBringIntoView();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartBringIntoView", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::BringIntoViewOptions>(args, 0);
+
+                self->obj.StartBringIntoView(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_StartDragAsync(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartDragAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Input::PointerPoint>(args, 0);
+
+                return py::convert(self->obj.StartDragAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_StopAnimation(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_TransformToVisual(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TransformToVisual", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
+
+                return py::convert(self->obj.TransformToVisual(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_TryInvokeKeyboardAccelerator(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TryInvokeKeyboardAccelerator", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>(args, 0);
+
+                self->obj.TryInvokeKeyboardAccelerator(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_UnregisterPropertyChangedCallback(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_UpdateLayout(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"UpdateLayout", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.UpdateLayout();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* Rectangle_get_RadiusY(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, void* /*unused*/) noexcept
@@ -1352,6 +7459,37 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     }
 
     static PyMethodDef _methods_Rectangle[] = {
+        { "add_handler", reinterpret_cast<PyCFunction>(Rectangle_AddHandler), METH_VARARGS, nullptr },
+        { "arrange", reinterpret_cast<PyCFunction>(Rectangle_Arrange), METH_VARARGS, nullptr },
+        { "cancel_direct_manipulations", reinterpret_cast<PyCFunction>(Rectangle_CancelDirectManipulations), METH_VARARGS, nullptr },
+        { "capture_pointer", reinterpret_cast<PyCFunction>(Rectangle_CapturePointer), METH_VARARGS, nullptr },
+        { "clear_value", reinterpret_cast<PyCFunction>(Rectangle_ClearValue), METH_VARARGS, nullptr },
+        { "find_name", reinterpret_cast<PyCFunction>(Rectangle_FindName), METH_VARARGS, nullptr },
+        { "focus", reinterpret_cast<PyCFunction>(Rectangle_Focus), METH_VARARGS, nullptr },
+        { "get_alpha_mask", reinterpret_cast<PyCFunction>(Rectangle_GetAlphaMask), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(Rectangle_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_binding_expression", reinterpret_cast<PyCFunction>(Rectangle_GetBindingExpression), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(Rectangle_GetValue), METH_VARARGS, nullptr },
+        { "get_visual_internal", reinterpret_cast<PyCFunction>(Rectangle_GetVisualInternal), METH_VARARGS, nullptr },
+        { "invalidate_arrange", reinterpret_cast<PyCFunction>(Rectangle_InvalidateArrange), METH_VARARGS, nullptr },
+        { "invalidate_measure", reinterpret_cast<PyCFunction>(Rectangle_InvalidateMeasure), METH_VARARGS, nullptr },
+        { "measure", reinterpret_cast<PyCFunction>(Rectangle_Measure), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(Rectangle_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(Rectangle_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(Rectangle_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "release_pointer_capture", reinterpret_cast<PyCFunction>(Rectangle_ReleasePointerCapture), METH_VARARGS, nullptr },
+        { "release_pointer_captures", reinterpret_cast<PyCFunction>(Rectangle_ReleasePointerCaptures), METH_VARARGS, nullptr },
+        { "remove_handler", reinterpret_cast<PyCFunction>(Rectangle_RemoveHandler), METH_VARARGS, nullptr },
+        { "set_binding", reinterpret_cast<PyCFunction>(Rectangle_SetBinding), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(Rectangle_SetValue), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(Rectangle_StartAnimation), METH_VARARGS, nullptr },
+        { "start_bring_into_view", reinterpret_cast<PyCFunction>(Rectangle_StartBringIntoView), METH_VARARGS, nullptr },
+        { "start_drag_async", reinterpret_cast<PyCFunction>(Rectangle_StartDragAsync), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(Rectangle_StopAnimation), METH_VARARGS, nullptr },
+        { "transform_to_visual", reinterpret_cast<PyCFunction>(Rectangle_TransformToVisual), METH_VARARGS, nullptr },
+        { "try_invoke_keyboard_accelerator", reinterpret_cast<PyCFunction>(Rectangle_TryInvokeKeyboardAccelerator), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Rectangle_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "update_layout", reinterpret_cast<PyCFunction>(Rectangle_UpdateLayout), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Rectangle, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Rectangle), METH_O | METH_STATIC, nullptr },
         { }
@@ -1422,6 +7560,226 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         Py_DECREF(tp);
     }
 
+    static PyObject* Shape_AddHandler(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"AddHandler", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEvent>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+                auto param2 = py::convert_to<bool>(args, 2);
+
+                self->obj.AddHandler(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_Arrange(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Arrange", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
+
+                self->obj.Arrange(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_CancelDirectManipulations(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"CancelDirectManipulations", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.CancelDirectManipulations());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_CapturePointer(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"CapturePointer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::Pointer>(args, 0);
+
+                return py::convert(self->obj.CapturePointer(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_ClearValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ClearValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                self->obj.ClearValue(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_FindName(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"FindName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.FindName(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_Focus(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Focus", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FocusState>(args, 0);
+
+                return py::convert(self->obj.Focus(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* Shape_GetAlphaMask(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1437,6 +7795,749 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 }
 
                 return py::convert(self->obj.GetAlphaMask());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_GetAnimationBaseValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetAnimationBaseValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_GetBindingExpression(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"GetBindingExpression", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetBindingExpression(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_GetValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.GetValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_GetVisualInternal(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"GetVisualInternal", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetVisualInternal());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_InvalidateArrange(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"InvalidateArrange", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.InvalidateArrange();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_InvalidateMeasure(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"InvalidateMeasure", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.InvalidateMeasure();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_Measure(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"Measure", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
+
+                self->obj.Measure(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_PopulatePropertyInfo(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_ReadLocalValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ReadLocalValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+
+                return py::convert(self->obj.ReadLocalValue(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_RegisterPropertyChangedCallback(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
+
+                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_ReleasePointerCapture(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"ReleasePointerCapture", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::Pointer>(args, 0);
+
+                self->obj.ReleasePointerCapture(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_ReleasePointerCaptures(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"ReleasePointerCaptures", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.ReleasePointerCaptures();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_RemoveHandler(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"RemoveHandler", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::RoutedEvent>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.RemoveHandler(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_SetBinding(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"SetBinding", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Data::BindingBase>(args, 1);
+
+                self->obj.SetBinding(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_SetValue(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"SetValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.SetValue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_StartAnimation(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_StartBringIntoView(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartBringIntoView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.StartBringIntoView();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartBringIntoView", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::BringIntoViewOptions>(args, 0);
+
+                self->obj.StartBringIntoView(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_StartDragAsync(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StartDragAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Input::PointerPoint>(args, 0);
+
+                return py::convert(self->obj.StartDragAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_StopAnimation(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_TransformToVisual(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TransformToVisual", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
+
+                return py::convert(self->obj.TransformToVisual(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_TryInvokeKeyboardAccelerator(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"TryInvokeKeyboardAccelerator", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>(args, 0);
+
+                self->obj.TryInvokeKeyboardAccelerator(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_UnregisterPropertyChangedCallback(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+
+                self->obj.UnregisterPropertyChangedCallback(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_UpdateLayout(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"UpdateLayout", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.UpdateLayout();
+                Py_RETURN_NONE;
             }
             catch (...)
             {
@@ -2221,7 +9322,37 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
     }
 
     static PyMethodDef _methods_Shape[] = {
+        { "add_handler", reinterpret_cast<PyCFunction>(Shape_AddHandler), METH_VARARGS, nullptr },
+        { "arrange", reinterpret_cast<PyCFunction>(Shape_Arrange), METH_VARARGS, nullptr },
+        { "cancel_direct_manipulations", reinterpret_cast<PyCFunction>(Shape_CancelDirectManipulations), METH_VARARGS, nullptr },
+        { "capture_pointer", reinterpret_cast<PyCFunction>(Shape_CapturePointer), METH_VARARGS, nullptr },
+        { "clear_value", reinterpret_cast<PyCFunction>(Shape_ClearValue), METH_VARARGS, nullptr },
+        { "find_name", reinterpret_cast<PyCFunction>(Shape_FindName), METH_VARARGS, nullptr },
+        { "focus", reinterpret_cast<PyCFunction>(Shape_Focus), METH_VARARGS, nullptr },
         { "get_alpha_mask", reinterpret_cast<PyCFunction>(Shape_GetAlphaMask), METH_VARARGS, nullptr },
+        { "get_animation_base_value", reinterpret_cast<PyCFunction>(Shape_GetAnimationBaseValue), METH_VARARGS, nullptr },
+        { "get_binding_expression", reinterpret_cast<PyCFunction>(Shape_GetBindingExpression), METH_VARARGS, nullptr },
+        { "get_value", reinterpret_cast<PyCFunction>(Shape_GetValue), METH_VARARGS, nullptr },
+        { "get_visual_internal", reinterpret_cast<PyCFunction>(Shape_GetVisualInternal), METH_VARARGS, nullptr },
+        { "invalidate_arrange", reinterpret_cast<PyCFunction>(Shape_InvalidateArrange), METH_VARARGS, nullptr },
+        { "invalidate_measure", reinterpret_cast<PyCFunction>(Shape_InvalidateMeasure), METH_VARARGS, nullptr },
+        { "measure", reinterpret_cast<PyCFunction>(Shape_Measure), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(Shape_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "read_local_value", reinterpret_cast<PyCFunction>(Shape_ReadLocalValue), METH_VARARGS, nullptr },
+        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(Shape_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "release_pointer_capture", reinterpret_cast<PyCFunction>(Shape_ReleasePointerCapture), METH_VARARGS, nullptr },
+        { "release_pointer_captures", reinterpret_cast<PyCFunction>(Shape_ReleasePointerCaptures), METH_VARARGS, nullptr },
+        { "remove_handler", reinterpret_cast<PyCFunction>(Shape_RemoveHandler), METH_VARARGS, nullptr },
+        { "set_binding", reinterpret_cast<PyCFunction>(Shape_SetBinding), METH_VARARGS, nullptr },
+        { "set_value", reinterpret_cast<PyCFunction>(Shape_SetValue), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(Shape_StartAnimation), METH_VARARGS, nullptr },
+        { "start_bring_into_view", reinterpret_cast<PyCFunction>(Shape_StartBringIntoView), METH_VARARGS, nullptr },
+        { "start_drag_async", reinterpret_cast<PyCFunction>(Shape_StartDragAsync), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(Shape_StopAnimation), METH_VARARGS, nullptr },
+        { "transform_to_visual", reinterpret_cast<PyCFunction>(Shape_TransformToVisual), METH_VARARGS, nullptr },
+        { "try_invoke_keyboard_accelerator", reinterpret_cast<PyCFunction>(Shape_TryInvokeKeyboardAccelerator), METH_VARARGS, nullptr },
+        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(Shape_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
+        { "update_layout", reinterpret_cast<PyCFunction>(Shape_UpdateLayout), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Shape, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Shape), METH_O | METH_STATIC, nullptr },
         { }

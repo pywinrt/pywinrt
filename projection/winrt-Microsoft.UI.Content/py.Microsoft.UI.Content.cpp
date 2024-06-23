@@ -3676,6 +3676,68 @@ namespace py::cpp::Microsoft::UI::Content
         Py_DECREF(tp);
     }
 
+    static PyObject* DesktopChildSiteBridge_Close(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_Connect(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Connect", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Content::ContentIsland>(args, 0);
+
+                self->obj.Connect(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* DesktopChildSiteBridge_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -3694,6 +3756,250 @@ namespace py::cpp::Microsoft::UI::Content
                 auto param1 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 1);
 
                 return py::convert(winrt::Microsoft::UI::Content::DesktopChildSiteBridge::Create(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_Disable(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Disable", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Disable();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_Enable(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Enable", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Enable();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_Hide(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Hide", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Hide();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_MoveAndResize(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"MoveAndResize", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 0);
+
+                self->obj.MoveAndResize(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_MoveInZOrderAtBottom(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"MoveInZOrderAtBottom", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.MoveInZOrderAtBottom();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_MoveInZOrderAtTop(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"MoveInZOrderAtTop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.MoveInZOrderAtTop();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_MoveInZOrderBelow(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"MoveInZOrderBelow", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
+
+                self->obj.MoveInZOrderBelow(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_Show(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Show", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Show();
+                Py_RETURN_NONE;
             }
             catch (...)
             {
@@ -3799,6 +4105,16 @@ namespace py::cpp::Microsoft::UI::Content
     }
 
     static PyMethodDef _methods_DesktopChildSiteBridge[] = {
+        { "close", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_Close), METH_VARARGS, nullptr },
+        { "connect", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_Connect), METH_VARARGS, nullptr },
+        { "disable", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_Disable), METH_VARARGS, nullptr },
+        { "enable", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_Enable), METH_VARARGS, nullptr },
+        { "hide", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_Hide), METH_VARARGS, nullptr },
+        { "move_and_resize", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_MoveAndResize), METH_VARARGS, nullptr },
+        { "move_in_z_order_at_bottom", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_MoveInZOrderAtBottom), METH_VARARGS, nullptr },
+        { "move_in_z_order_at_top", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_MoveInZOrderAtTop), METH_VARARGS, nullptr },
+        { "move_in_z_order_below", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_MoveInZOrderBelow), METH_VARARGS, nullptr },
+        { "show", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_Show), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DesktopChildSiteBridge, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DesktopChildSiteBridge), METH_O | METH_STATIC, nullptr },
         { }

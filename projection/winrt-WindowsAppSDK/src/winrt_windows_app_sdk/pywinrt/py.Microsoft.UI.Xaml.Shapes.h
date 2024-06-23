@@ -9,17 +9,42 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Microsoft.UI.Composition.h"
 #endif
 
+#if __has_include("py.Microsoft.UI.Input.h")
+#include "py.Microsoft.UI.Input.h"
+#endif
+
 #if __has_include("py.Microsoft.UI.Xaml.h")
 #include "py.Microsoft.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Data.h")
+#include "py.Microsoft.UI.Xaml.Data.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Input.h")
+#include "py.Microsoft.UI.Xaml.Input.h"
 #endif
 
 #if __has_include("py.Microsoft.UI.Xaml.Media.h")
 #include "py.Microsoft.UI.Xaml.Media.h"
 #endif
 
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
+#include "py.Windows.ApplicationModel.DataTransfer.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
 #include <winrt/Microsoft.UI.Composition.h>
+#include <winrt/Microsoft.UI.Input.h>
 #include <winrt/Microsoft.UI.Xaml.h>
+#include <winrt/Microsoft.UI.Xaml.Data.h>
+#include <winrt/Microsoft.UI.Xaml.Input.h>
 #include <winrt/Microsoft.UI.Xaml.Media.h>
+#include <winrt/Windows.ApplicationModel.DataTransfer.h>
+#include <winrt/Windows.Foundation.h>
 
 #include <winrt/Microsoft.UI.Xaml.Shapes.h>
 

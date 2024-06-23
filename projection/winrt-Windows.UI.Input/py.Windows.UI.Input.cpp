@@ -2824,6 +2824,36 @@ namespace py::cpp::Windows::UI::Input
         Py_DECREF(tp);
     }
 
+    static PyObject* InputActivationListener_Close(py::wrapper::Windows::UI::Input::InputActivationListener* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.AttachableInputObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* InputActivationListener_get_State(py::wrapper::Windows::UI::Input::InputActivationListener* self, void* /*unused*/) noexcept
     {
         try
@@ -2911,6 +2941,7 @@ namespace py::cpp::Windows::UI::Input
     }
 
     static PyMethodDef _methods_InputActivationListener[] = {
+        { "close", reinterpret_cast<PyCFunction>(InputActivationListener_Close), METH_VARARGS, nullptr },
         { "add_input_activation_changed", reinterpret_cast<PyCFunction>(InputActivationListener_add_InputActivationChanged), METH_O, nullptr },
         { "remove_input_activation_changed", reinterpret_cast<PyCFunction>(InputActivationListener_remove_InputActivationChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_InputActivationListener, METH_O | METH_STATIC, nullptr },
@@ -8414,6 +8445,36 @@ namespace py::cpp::Windows::UI::Input
         Py_DECREF(tp);
     }
 
+    static PyObject* SystemButtonEventController_Close(py::wrapper::Windows::UI::Input::SystemButtonEventController* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.AttachableInputObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* SystemButtonEventController_CreateForDispatcherQueue(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -8642,6 +8703,7 @@ namespace py::cpp::Windows::UI::Input
     }
 
     static PyMethodDef _methods_SystemButtonEventController[] = {
+        { "close", reinterpret_cast<PyCFunction>(SystemButtonEventController_Close), METH_VARARGS, nullptr },
         { "add_system_function_button_pressed", reinterpret_cast<PyCFunction>(SystemButtonEventController_add_SystemFunctionButtonPressed), METH_O, nullptr },
         { "remove_system_function_button_pressed", reinterpret_cast<PyCFunction>(SystemButtonEventController_remove_SystemFunctionButtonPressed), METH_O, nullptr },
         { "add_system_function_button_released", reinterpret_cast<PyCFunction>(SystemButtonEventController_add_SystemFunctionButtonReleased), METH_O, nullptr },

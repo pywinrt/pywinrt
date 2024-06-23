@@ -4876,6 +4876,36 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         Py_DECREF(tp);
     }
 
+    static PyObject* CoreWebView2CompositionController_Close(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* CoreWebView2CompositionController_DragEnter(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -5001,6 +5031,68 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
+    static PyObject* CoreWebView2CompositionController_MoveFocus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"MoveFocus", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2MoveFocusReason>(args, 0);
+
+                self->obj.MoveFocus(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_NotifyParentWindowPositionChanged(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"NotifyParentWindowPositionChanged", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.NotifyParentWindowPositionChanged();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* CoreWebView2CompositionController_SendMouseInput(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -5054,6 +5146,39 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param1 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo>(args, 1);
 
                 self->obj.SendPointerInput(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2CompositionController_SetBoundsAndZoomFactor(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Controller", L"SetBoundsAndZoomFactor", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
+                auto param1 = py::convert_to<double>(args, 1);
+
+                self->obj.SetBoundsAndZoomFactor(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5203,12 +5328,16 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     }
 
     static PyMethodDef _methods_CoreWebView2CompositionController[] = {
+        { "close", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_Close), METH_VARARGS, nullptr },
         { "drag_enter", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_DragEnter), METH_VARARGS, nullptr },
         { "drag_leave", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_DragLeave), METH_VARARGS, nullptr },
         { "drag_over", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_DragOver), METH_VARARGS, nullptr },
         { "drop", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_Drop), METH_VARARGS, nullptr },
+        { "move_focus", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_MoveFocus), METH_VARARGS, nullptr },
+        { "notify_parent_window_position_changed", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_NotifyParentWindowPositionChanged), METH_VARARGS, nullptr },
         { "send_mouse_input", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_SendMouseInput), METH_VARARGS, nullptr },
         { "send_pointer_input", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_SendPointerInput), METH_VARARGS, nullptr },
+        { "set_bounds_and_zoom_factor", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_SetBoundsAndZoomFactor), METH_VARARGS, nullptr },
         { "add_cursor_changed", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_add_CursorChanged), METH_O, nullptr },
         { "remove_cursor_changed", reinterpret_cast<PyCFunction>(CoreWebView2CompositionController_remove_CursorChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2CompositionController, METH_O | METH_STATIC, nullptr },

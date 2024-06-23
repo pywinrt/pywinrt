@@ -21,6 +21,252 @@ namespace py::cpp::Windows::UI::Composition::Desktop
         Py_DECREF(tp);
     }
 
+    static PyObject* DesktopWindowTarget_Close(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopWindowTarget_PopulatePropertyInfo(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
+
+                self->obj.PopulatePropertyInfo(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopWindowTarget_StartAnimation(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+
+                self->obj.StartAnimation(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopWindowTarget_StartAnimationGroup(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopWindowTarget_StopAnimation(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.StopAnimation(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopWindowTarget_StopAnimationGroup(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
+
+                self->obj.StopAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopWindowTarget_TryGetAnimationController(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryGetAnimationController(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* DesktopWindowTarget_get_IsTopmost(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, void* /*unused*/) noexcept
     {
         try
@@ -65,6 +311,13 @@ namespace py::cpp::Windows::UI::Composition::Desktop
     }
 
     static PyMethodDef _methods_DesktopWindowTarget[] = {
+        { "close", reinterpret_cast<PyCFunction>(DesktopWindowTarget_Close), METH_VARARGS, nullptr },
+        { "populate_property_info", reinterpret_cast<PyCFunction>(DesktopWindowTarget_PopulatePropertyInfo), METH_VARARGS, nullptr },
+        { "start_animation", reinterpret_cast<PyCFunction>(DesktopWindowTarget_StartAnimation), METH_VARARGS, nullptr },
+        { "start_animation_group", reinterpret_cast<PyCFunction>(DesktopWindowTarget_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "stop_animation", reinterpret_cast<PyCFunction>(DesktopWindowTarget_StopAnimation), METH_VARARGS, nullptr },
+        { "stop_animation_group", reinterpret_cast<PyCFunction>(DesktopWindowTarget_StopAnimationGroup), METH_VARARGS, nullptr },
+        { "try_get_animation_controller", reinterpret_cast<PyCFunction>(DesktopWindowTarget_TryGetAnimationController), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DesktopWindowTarget, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DesktopWindowTarget), METH_O | METH_STATIC, nullptr },
         { }

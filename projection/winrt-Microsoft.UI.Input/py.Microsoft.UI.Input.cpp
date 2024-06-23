@@ -3103,6 +3103,36 @@ namespace py::cpp::Microsoft::UI::Input
         Py_DECREF(tp);
     }
 
+    static PyObject* InputCustomCursor_Close(py::wrapper::Microsoft::UI::Input::InputCustomCursor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.InputCursor", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_InputCustomCursor(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Input::InputCustomCursor>>();
@@ -3128,6 +3158,7 @@ namespace py::cpp::Microsoft::UI::Input
     }
 
     static PyMethodDef _methods_InputCustomCursor[] = {
+        { "close", reinterpret_cast<PyCFunction>(InputCustomCursor_Close), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InputCustomCursor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InputCustomCursor), METH_O | METH_STATIC, nullptr },
         { }
@@ -3167,6 +3198,36 @@ namespace py::cpp::Microsoft::UI::Input
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* InputDesktopNamedResourceCursor_Close(py::wrapper::Microsoft::UI::Input::InputDesktopNamedResourceCursor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.InputCursor", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* InputDesktopNamedResourceCursor_Create(PyObject* /*unused*/, PyObject* args) noexcept
@@ -3295,6 +3356,7 @@ namespace py::cpp::Microsoft::UI::Input
     }
 
     static PyMethodDef _methods_InputDesktopNamedResourceCursor[] = {
+        { "close", reinterpret_cast<PyCFunction>(InputDesktopNamedResourceCursor_Close), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InputDesktopNamedResourceCursor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InputDesktopNamedResourceCursor), METH_O | METH_STATIC, nullptr },
         { }
@@ -3363,6 +3425,36 @@ namespace py::cpp::Microsoft::UI::Input
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* InputDesktopResourceCursor_Close(py::wrapper::Microsoft::UI::Input::InputDesktopResourceCursor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.InputCursor", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* InputDesktopResourceCursor_Create(PyObject* /*unused*/, PyObject* args) noexcept
@@ -3491,6 +3583,7 @@ namespace py::cpp::Microsoft::UI::Input
     }
 
     static PyMethodDef _methods_InputDesktopResourceCursor[] = {
+        { "close", reinterpret_cast<PyCFunction>(InputDesktopResourceCursor_Close), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InputDesktopResourceCursor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InputDesktopResourceCursor), METH_O | METH_STATIC, nullptr },
         { }
@@ -6282,6 +6375,36 @@ namespace py::cpp::Microsoft::UI::Input
         Py_DECREF(tp);
     }
 
+    static PyObject* InputSystemCursor_Close(py::wrapper::Microsoft::UI::Input::InputSystemCursor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.InputCursor", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* InputSystemCursor_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -6357,6 +6480,7 @@ namespace py::cpp::Microsoft::UI::Input
     }
 
     static PyMethodDef _methods_InputSystemCursor[] = {
+        { "close", reinterpret_cast<PyCFunction>(InputSystemCursor_Close), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InputSystemCursor, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InputSystemCursor), METH_O | METH_STATIC, nullptr },
         { }

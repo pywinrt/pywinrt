@@ -5,6 +5,10 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
+#include "py.Windows.ApplicationModel.DataTransfer.h"
+#endif
+
 #if __has_include("py.Windows.Devices.Geolocation.h")
 #include "py.Windows.Devices.Geolocation.h"
 #endif
@@ -37,10 +41,31 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.UI.h"
 #endif
 
+#if __has_include("py.Windows.UI.Composition.h")
+#include "py.Windows.UI.Composition.h"
+#endif
+
+#if __has_include("py.Windows.UI.Input.h")
+#include "py.Windows.UI.Input.h"
+#endif
+
 #if __has_include("py.Windows.UI.Xaml.h")
 #include "py.Windows.UI.Xaml.h"
 #endif
 
+#if __has_include("py.Windows.UI.Xaml.Data.h")
+#include "py.Windows.UI.Xaml.Data.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Input.h")
+#include "py.Windows.UI.Xaml.Input.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Media.h")
+#include "py.Windows.UI.Xaml.Media.h"
+#endif
+
+#include <winrt/Windows.ApplicationModel.DataTransfer.h>
 #include <winrt/Windows.Devices.Geolocation.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -49,7 +74,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Services.Maps.LocalSearch.h>
 #include <winrt/Windows.Storage.Streams.h>
 #include <winrt/Windows.UI.h>
+#include <winrt/Windows.UI.Composition.h>
+#include <winrt/Windows.UI.Input.h>
 #include <winrt/Windows.UI.Xaml.h>
+#include <winrt/Windows.UI.Xaml.Data.h>
+#include <winrt/Windows.UI.Xaml.Input.h>
+#include <winrt/Windows.UI.Xaml.Media.h>
 
 #include <winrt/Windows.UI.Xaml.Controls.Maps.h>
 
