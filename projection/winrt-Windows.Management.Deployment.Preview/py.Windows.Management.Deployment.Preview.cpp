@@ -2,7 +2,6 @@
 
 #include "py.Windows.Management.Deployment.Preview.h"
 
-
 namespace py::cpp::Windows::Management::Deployment::Preview
 {
     // ----- ClassicAppManager class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.ExtendedExecution.Foreground.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
 {
     // ----- ExtendedExecutionForegroundRevokedEventArgs class --------------------

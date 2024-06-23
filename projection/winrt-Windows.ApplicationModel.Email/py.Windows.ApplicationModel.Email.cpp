@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Email.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Email
 {
     // ----- EmailAttachment class --------------------

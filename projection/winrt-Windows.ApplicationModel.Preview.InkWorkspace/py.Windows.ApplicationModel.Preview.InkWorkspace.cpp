@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Preview.InkWorkspace.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Preview::InkWorkspace
 {
     // ----- InkWorkspaceHostedAppManager class --------------------

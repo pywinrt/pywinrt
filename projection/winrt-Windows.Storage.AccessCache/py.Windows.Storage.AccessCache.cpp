@@ -2,7 +2,6 @@
 
 #include "py.Windows.Storage.AccessCache.h"
 
-
 namespace py::cpp::Windows::Storage::AccessCache
 {
     // ----- AccessListEntryView class --------------------

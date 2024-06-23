@@ -2,7 +2,6 @@
 
 #include "py.Windows.Foundation.Collections.h"
 
-
 namespace py::cpp::Windows::Foundation::Collections
 {
     // ----- PropertySet class --------------------

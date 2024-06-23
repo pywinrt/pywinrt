@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Protection.h"
 
-
 namespace py::cpp::Windows::Media::Protection
 {
     // ----- ComponentLoadFailedEventArgs class --------------------

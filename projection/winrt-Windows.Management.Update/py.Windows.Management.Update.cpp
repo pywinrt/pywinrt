@@ -2,7 +2,6 @@
 
 #include "py.Windows.Management.Update.h"
 
-
 namespace py::cpp::Windows::Management::Update
 {
     // ----- PreviewBuildsManager class --------------------

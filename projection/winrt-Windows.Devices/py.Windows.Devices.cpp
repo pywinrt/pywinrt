@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.h"
 
-
 namespace py::cpp::Windows::Devices
 {
     // ----- LowLevelDevicesAggregateProvider class --------------------

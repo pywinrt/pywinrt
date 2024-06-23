@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Perception.h"
 
-
 namespace py::cpp::Windows::Devices::Perception
 {
     // ----- KnownCameraIntrinsicsProperties class --------------------

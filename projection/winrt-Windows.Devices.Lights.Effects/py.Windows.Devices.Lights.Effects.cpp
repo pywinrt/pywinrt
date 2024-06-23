@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Lights.Effects.h"
 
-
 namespace py::cpp::Windows::Devices::Lights::Effects
 {
     // ----- LampArrayBitmapEffect class --------------------

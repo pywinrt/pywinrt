@@ -2,7 +2,6 @@
 
 #include "py.Windows.Phone.Devices.Power.h"
 
-
 namespace py::cpp::Windows::Phone::Devices::Power
 {
     // ----- Battery class --------------------

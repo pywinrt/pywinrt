@@ -2,7 +2,6 @@
 
 #include "py.Windows.Security.Credentials.UI.h"
 
-
 namespace py::cpp::Windows::Security::Credentials::UI
 {
     // ----- CredentialPicker class --------------------

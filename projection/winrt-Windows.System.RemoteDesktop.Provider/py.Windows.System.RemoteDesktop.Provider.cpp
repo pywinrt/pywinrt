@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.RemoteDesktop.Provider.h"
 
-
 namespace py::cpp::Windows::System::RemoteDesktop::Provider
 {
     // ----- PerformLocalActionRequestedEventArgs class --------------------

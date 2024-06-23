@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Search.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Search
 {
     // ----- LocalContentSuggestionSettings class --------------------

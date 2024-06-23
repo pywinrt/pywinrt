@@ -2,7 +2,6 @@
 
 #include "py.Windows.Security.Credentials.h"
 
-
 namespace py::cpp::Windows::Security::Credentials
 {
     // ----- KeyCredential class --------------------

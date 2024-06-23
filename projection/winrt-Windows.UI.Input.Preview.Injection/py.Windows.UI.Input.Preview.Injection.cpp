@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Input.Preview.Injection.h"
 
-
 namespace py::cpp::Windows::UI::Input::Preview::Injection
 {
     // ----- InjectedInputGamepadInfo class --------------------

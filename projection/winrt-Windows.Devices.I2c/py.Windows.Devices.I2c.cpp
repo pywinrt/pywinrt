@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.I2c.h"
 
-
 namespace py::cpp::Windows::Devices::I2c
 {
     // ----- I2cConnectionSettings class --------------------

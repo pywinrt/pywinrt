@@ -2,7 +2,6 @@
 
 #include "py.Windows.Gaming.XboxLive.Storage.h"
 
-
 namespace py::cpp::Windows::Gaming::XboxLive::Storage
 {
     // ----- GameSaveBlobGetResult class --------------------

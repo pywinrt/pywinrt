@@ -2,7 +2,6 @@
 
 #include "py.Windows.Gaming.Input.ForceFeedback.h"
 
-
 namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 {
     // ----- ConditionForceEffect class --------------------

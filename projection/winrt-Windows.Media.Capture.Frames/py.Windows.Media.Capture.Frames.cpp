@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Capture.Frames.h"
 
-
 namespace py::cpp::Windows::Media::Capture::Frames
 {
     // ----- AudioMediaFrame class --------------------

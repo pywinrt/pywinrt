@@ -2,7 +2,6 @@
 
 #include "py.Windows.Networking.h"
 
-
 namespace py::cpp::Windows::Networking
 {
     // ----- EndpointPair class --------------------

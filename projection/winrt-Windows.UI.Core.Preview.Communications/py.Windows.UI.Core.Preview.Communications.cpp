@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Core.Preview.Communications.h"
 
-
 namespace py::cpp::Windows::UI::Core::Preview::Communications
 {
     // ----- PreviewTeamCleanupRequestedEventArgs class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Display.h"
 
-
 namespace py::cpp::Windows::Devices::Display
 {
     // ----- DisplayMonitor class --------------------

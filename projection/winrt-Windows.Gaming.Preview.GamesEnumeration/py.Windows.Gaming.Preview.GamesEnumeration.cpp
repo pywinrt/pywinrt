@@ -2,7 +2,6 @@
 
 #include "py.Windows.Gaming.Preview.GamesEnumeration.h"
 
-
 namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 {
     // ----- GameList class --------------------

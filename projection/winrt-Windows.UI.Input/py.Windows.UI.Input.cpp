@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Input.h"
 
-
 namespace py::cpp::Windows::UI::Input
 {
     // ----- AttachableInputObject class --------------------

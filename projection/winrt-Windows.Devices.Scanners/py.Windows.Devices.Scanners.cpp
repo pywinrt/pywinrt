@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Scanners.h"
 
-
 namespace py::cpp::Windows::Devices::Scanners
 {
     // ----- ImageScanner class --------------------

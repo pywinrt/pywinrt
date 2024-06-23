@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Background.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Background
 {
     // ----- ActivitySensorTrigger class --------------------

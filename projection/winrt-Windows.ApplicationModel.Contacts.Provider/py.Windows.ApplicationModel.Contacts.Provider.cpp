@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Contacts.Provider.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
 {
     // ----- ContactPickerUI class --------------------

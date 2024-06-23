@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.ExtendedExecution.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
 {
     // ----- ExtendedExecutionRevokedEventArgs class --------------------

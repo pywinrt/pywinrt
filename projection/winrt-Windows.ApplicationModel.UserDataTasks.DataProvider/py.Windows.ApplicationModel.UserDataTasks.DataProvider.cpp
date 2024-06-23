@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.UserDataTasks.DataProvider.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 {
     // ----- UserDataTaskDataProviderConnection class --------------------

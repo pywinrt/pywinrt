@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.HumanInterfaceDevice.h"
 
-
 namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 {
     // ----- HidBooleanControl class --------------------

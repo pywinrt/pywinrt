@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.DataTransfer.DragDrop.Core.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 {
     // ----- CoreDragDropManager class --------------------

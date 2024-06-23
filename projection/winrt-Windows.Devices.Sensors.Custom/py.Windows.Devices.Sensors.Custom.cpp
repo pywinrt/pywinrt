@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Sensors.Custom.h"
 
-
 namespace py::cpp::Windows::Devices::Sensors::Custom
 {
     // ----- CustomSensor class --------------------

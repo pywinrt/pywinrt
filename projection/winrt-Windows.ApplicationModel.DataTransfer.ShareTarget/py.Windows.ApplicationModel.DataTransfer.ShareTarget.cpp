@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.DataTransfer.ShareTarget.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 {
     // ----- QuickLink class --------------------

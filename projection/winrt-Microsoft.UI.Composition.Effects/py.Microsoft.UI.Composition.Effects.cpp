@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Composition.Effects.h"
 
-
 namespace py::cpp::Microsoft::UI::Composition::Effects
 {
     // ----- SceneLightingEffect class --------------------

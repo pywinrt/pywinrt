@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Xaml.Documents.h"
 
-
 namespace py::cpp::Windows::UI::Xaml::Documents
 {
     // ----- Block class --------------------

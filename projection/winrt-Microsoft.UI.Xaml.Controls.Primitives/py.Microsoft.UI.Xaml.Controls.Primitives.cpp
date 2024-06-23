@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Xaml.Controls.Primitives.h"
 
-
 namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 {
     // ----- AppBarButtonTemplateSettings class --------------------

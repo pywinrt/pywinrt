@@ -2,7 +2,6 @@
 
 #include "py.Windows.Graphics.Printing.OptionDetails.h"
 
-
 namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 {
     // ----- PrintBindingOptionDetails class --------------------

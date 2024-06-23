@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Shell.h"
 
-
 namespace py::cpp::Windows::UI::Shell
 {
     // ----- AdaptiveCardBuilder class --------------------

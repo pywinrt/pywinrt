@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Calls.Background.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Calls::Background
 {
     // ----- PhoneCallBlockedTriggerDetails class --------------------

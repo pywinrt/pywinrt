@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Xaml.Media.Media3D.h"
 
-
 namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 {
     // ----- CompositeTransform3D class --------------------

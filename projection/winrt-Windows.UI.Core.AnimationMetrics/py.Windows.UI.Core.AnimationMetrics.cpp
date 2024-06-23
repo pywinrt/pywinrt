@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Core.AnimationMetrics.h"
 
-
 namespace py::cpp::Windows::UI::Core::AnimationMetrics
 {
     // ----- AnimationDescription class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Phone.Media.Devices.h"
 
-
 namespace py::cpp::Windows::Phone::Media::Devices
 {
     // ----- AudioRoutingManager class --------------------

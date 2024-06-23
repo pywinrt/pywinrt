@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Search.Core.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Search::Core
 {
     // ----- RequestingFocusOnKeyboardInputEventArgs class --------------------

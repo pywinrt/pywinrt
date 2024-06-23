@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Payments.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Payments
 {
     // ----- PaymentAddress class --------------------

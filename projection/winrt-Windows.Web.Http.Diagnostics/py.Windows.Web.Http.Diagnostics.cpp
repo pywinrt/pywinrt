@@ -2,7 +2,6 @@
 
 #include "py.Windows.Web.Http.Diagnostics.h"
 
-
 namespace py::cpp::Windows::Web::Http::Diagnostics
 {
     // ----- HttpDiagnosticProvider class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Wallet.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Wallet
 {
     // ----- WalletBarcode class --------------------

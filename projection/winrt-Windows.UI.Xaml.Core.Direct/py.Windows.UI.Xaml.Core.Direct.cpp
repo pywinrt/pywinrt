@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Xaml.Core.Direct.h"
 
-
 namespace py::cpp::Windows::UI::Xaml::Core::Direct
 {
     // ----- XamlDirect class --------------------

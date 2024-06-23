@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Core.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Core
 {
     // ----- AppListEntry class --------------------

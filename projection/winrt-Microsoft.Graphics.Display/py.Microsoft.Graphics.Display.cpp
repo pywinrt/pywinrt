@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.Graphics.Display.h"
 
-
 namespace py::cpp::Microsoft::Graphics::Display
 {
     // ----- DisplayAdvancedColorInfo class --------------------

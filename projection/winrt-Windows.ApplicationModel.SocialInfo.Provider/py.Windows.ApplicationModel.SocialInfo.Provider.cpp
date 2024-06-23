@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.SocialInfo.Provider.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 {
     // ----- SocialDashboardItemUpdater class --------------------

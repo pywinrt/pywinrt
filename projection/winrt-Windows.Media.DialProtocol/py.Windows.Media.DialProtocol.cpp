@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.DialProtocol.h"
 
-
 namespace py::cpp::Windows::Media::DialProtocol
 {
     // ----- DialApp class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Input.Interop.h"
 
-
 namespace py::cpp::Microsoft::UI::Input::Interop
 {
     // ----- PenDeviceInterop class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.UIAutomation.h"
 
-
 namespace py::cpp::Windows::UI::UIAutomation
 {
     // ----- AutomationConnection class --------------------

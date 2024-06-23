@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.PlayTo.h"
 
-
 namespace py::cpp::Windows::Media::PlayTo
 {
     // ----- CurrentTimeChangeRequestedEventArgs class --------------------

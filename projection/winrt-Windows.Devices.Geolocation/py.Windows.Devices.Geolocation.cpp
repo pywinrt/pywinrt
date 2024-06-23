@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Geolocation.h"
 
-
 namespace py::cpp::Windows::Devices::Geolocation
 {
     // ----- CivicAddress class --------------------

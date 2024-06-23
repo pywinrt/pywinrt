@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Email.DataProvider.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 {
     // ----- EmailDataProviderConnection class --------------------

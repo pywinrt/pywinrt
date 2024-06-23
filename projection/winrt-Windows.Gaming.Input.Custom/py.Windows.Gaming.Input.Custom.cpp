@@ -2,7 +2,6 @@
 
 #include "py.Windows.Gaming.Input.Custom.h"
 
-
 namespace py::cpp::Windows::Gaming::Input::Custom
 {
     // ----- GameControllerFactoryManager class --------------------

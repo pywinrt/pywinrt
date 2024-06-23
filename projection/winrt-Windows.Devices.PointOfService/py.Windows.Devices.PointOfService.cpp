@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.PointOfService.h"
 
-
 namespace py::cpp::Windows::Devices::PointOfService
 {
     // ----- BarcodeScanner class --------------------

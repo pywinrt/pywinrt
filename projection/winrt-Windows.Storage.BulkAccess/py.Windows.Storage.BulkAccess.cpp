@@ -2,7 +2,6 @@
 
 #include "py.Windows.Storage.BulkAccess.h"
 
-
 namespace py::cpp::Windows::Storage::BulkAccess
 {
     // ----- FileInformation class --------------------

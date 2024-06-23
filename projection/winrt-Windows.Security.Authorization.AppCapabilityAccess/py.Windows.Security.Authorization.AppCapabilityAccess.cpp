@@ -2,7 +2,6 @@
 
 #include "py.Windows.Security.Authorization.AppCapabilityAccess.h"
 
-
 namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 {
     // ----- AppCapability class --------------------

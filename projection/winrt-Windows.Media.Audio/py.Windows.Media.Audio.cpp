@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Audio.h"
 
-
 namespace py::cpp::Windows::Media::Audio
 {
     // ----- AudioDeviceInputNode class --------------------

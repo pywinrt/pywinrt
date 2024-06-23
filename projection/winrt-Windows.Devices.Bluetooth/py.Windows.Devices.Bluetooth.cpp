@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Bluetooth.h"
 
-
 namespace py::cpp::Windows::Devices::Bluetooth
 {
     // ----- BluetoothAdapter class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Gaming.Input.Preview.h"
 
-
 namespace py::cpp::Windows::Gaming::Input::Preview
 {
     // ----- GameControllerProviderInfo class --------------------

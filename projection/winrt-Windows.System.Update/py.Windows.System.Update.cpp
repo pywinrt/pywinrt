@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.Update.h"
 
-
 namespace py::cpp::Windows::System::Update
 {
     // ----- SystemUpdateItem class --------------------

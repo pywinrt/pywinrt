@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.Inventory.h"
 
-
 namespace py::cpp::Windows::System::Inventory
 {
     // ----- InstalledDesktopApp class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Security.Cryptography.Certificates.h"
 
-
 namespace py::cpp::Windows::Security::Cryptography::Certificates
 {
     // ----- Certificate class --------------------

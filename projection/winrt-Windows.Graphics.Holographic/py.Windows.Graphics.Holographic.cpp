@@ -2,7 +2,6 @@
 
 #include "py.Windows.Graphics.Holographic.h"
 
-
 namespace py::cpp::Windows::Graphics::Holographic
 {
     // ----- HolographicCamera class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Security.ExchangeActiveSyncProvisioning.h"
 
-
 namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 {
     // ----- EasClientDeviceInformation class --------------------

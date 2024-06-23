@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.h"
 
-
 namespace py::cpp::Windows::ApplicationModel
 {
     // ----- AppDisplayInfo class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Security.Cryptography.h"
 
-
 namespace py::cpp::Windows::Security::Cryptography
 {
     // ----- CryptographicBuffer class --------------------

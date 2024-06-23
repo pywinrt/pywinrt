@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.UserDataAccounts.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 {
     // ----- UserDataAccount class --------------------

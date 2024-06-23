@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Xaml.Hosting.h"
 
-
 namespace py::cpp::Windows::UI::Xaml::Hosting
 {
     // ----- DesignerAppExitedEventArgs class --------------------

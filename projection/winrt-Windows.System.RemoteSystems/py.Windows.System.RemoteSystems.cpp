@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.RemoteSystems.h"
 
-
 namespace py::cpp::Windows::System::RemoteSystems
 {
     // ----- KnownRemoteSystemCapabilities class --------------------

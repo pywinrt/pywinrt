@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Xaml.Automation.Provider.h"
 
-
 namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 {
     // ----- IRawElementProviderSimple class --------------------

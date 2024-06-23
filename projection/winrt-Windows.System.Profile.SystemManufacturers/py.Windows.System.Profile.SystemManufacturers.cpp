@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.Profile.SystemManufacturers.h"
 
-
 namespace py::cpp::Windows::System::Profile::SystemManufacturers
 {
     // ----- OemSupportInfo class --------------------

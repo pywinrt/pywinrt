@@ -2,7 +2,6 @@
 
 #include "py.Windows.Phone.ApplicationModel.h"
 
-
 namespace py::cpp::Windows::Phone::ApplicationModel
 {
     // ----- ApplicationProfile class --------------------

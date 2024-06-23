@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Holographic.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Holographic
 {
     // ----- HolographicKeyboard class --------------------

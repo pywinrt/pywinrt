@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.FaceAnalysis.h"
 
-
 namespace py::cpp::Windows::Media::FaceAnalysis
 {
     // ----- DetectedFace class --------------------

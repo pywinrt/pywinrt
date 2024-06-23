@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.ContentRestrictions.h"
 
-
 namespace py::cpp::Windows::Media::ContentRestrictions
 {
     // ----- ContentRestrictionsBrowsePolicy class --------------------

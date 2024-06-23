@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.Windows.System.Power.h"
 
-
 namespace py::cpp::Microsoft::Windows::System::Power
 {
     // ----- PowerManager class --------------------

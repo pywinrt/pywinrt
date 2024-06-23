@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.StartScreen.h"
 
-
 namespace py::cpp::Windows::UI::StartScreen
 {
     // ----- JumpList class --------------------

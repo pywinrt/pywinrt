@@ -2,7 +2,6 @@
 
 #include "py.Windows.Web.Syndication.h"
 
-
 namespace py::cpp::Windows::Web::Syndication
 {
     // ----- SyndicationAttribute class --------------------

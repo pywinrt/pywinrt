@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.Windows.Widgets.Feeds.Providers.h"
 
-
 namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 {
     // ----- CustomQueryParametersRequestedArgs class --------------------

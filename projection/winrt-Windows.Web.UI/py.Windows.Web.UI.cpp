@@ -2,7 +2,6 @@
 
 #include "py.Windows.Web.UI.h"
 
-
 namespace py::cpp::Windows::Web::UI
 {
     // ----- WebViewControlContentLoadingEventArgs class --------------------

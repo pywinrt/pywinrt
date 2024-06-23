@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Perception.Provider.h"
 
-
 namespace py::cpp::Windows::Devices::Perception::Provider
 {
     // ----- KnownPerceptionFrameKind class --------------------

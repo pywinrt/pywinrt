@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Resources.Management.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Resources::Management
 {
     // ----- IndexedResourceCandidate class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Xaml.Input.h"
 
-
 namespace py::cpp::Microsoft::UI::Xaml::Input
 {
     // ----- AccessKeyDisplayDismissedEventArgs class --------------------

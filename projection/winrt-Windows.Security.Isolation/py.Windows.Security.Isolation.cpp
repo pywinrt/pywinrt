@@ -2,7 +2,6 @@
 
 #include "py.Windows.Security.Isolation.h"
 
-
 namespace py::cpp::Windows::Security::Isolation
 {
     // ----- IsolatedWindowsEnvironment class --------------------

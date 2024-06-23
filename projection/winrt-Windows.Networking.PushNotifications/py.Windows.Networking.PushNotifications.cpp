@@ -2,7 +2,6 @@
 
 #include "py.Windows.Networking.PushNotifications.h"
 
-
 namespace py::cpp::Windows::Networking::PushNotifications
 {
     // ----- PushNotificationChannel class --------------------

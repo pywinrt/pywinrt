@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.Display.h"
 
-
 namespace py::cpp::Windows::System::Display
 {
     // ----- DisplayRequest class --------------------

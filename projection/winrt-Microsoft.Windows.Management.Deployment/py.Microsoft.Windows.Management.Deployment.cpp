@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.Windows.Management.Deployment.h"
 
-
 namespace py::cpp::Microsoft::Windows::Management::Deployment
 {
     // ----- AddPackageOptions class --------------------

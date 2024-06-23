@@ -2,7 +2,6 @@
 
 #include "py.Windows.Graphics.Effects.h"
 
-
 namespace py::cpp::Windows::Graphics::Effects
 {
     // ----- IGraphicsEffect interface --------------------

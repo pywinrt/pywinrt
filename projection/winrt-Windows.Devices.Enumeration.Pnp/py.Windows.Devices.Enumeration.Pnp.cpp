@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Enumeration.Pnp.h"
 
-
 namespace py::cpp::Windows::Devices::Enumeration::Pnp
 {
     // ----- PnpObject class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Graphics.Capture.h"
 
-
 namespace py::cpp::Windows::Graphics::Capture
 {
     // ----- Direct3D11CaptureFrame class --------------------

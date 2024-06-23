@@ -2,7 +2,6 @@
 
 #include "py.Windows.Services.Cortana.h"
 
-
 namespace py::cpp::Windows::Services::Cortana
 {
     // ----- CortanaActionableInsights class --------------------

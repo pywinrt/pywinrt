@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Import.h"
 
-
 namespace py::cpp::Windows::Media::Import
 {
     // ----- PhotoImportDeleteImportedItemsFromSourceResult class --------------------

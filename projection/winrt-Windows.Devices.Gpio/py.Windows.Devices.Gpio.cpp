@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Gpio.h"
 
-
 namespace py::cpp::Windows::Devices::Gpio
 {
     // ----- GpioChangeCounter class --------------------

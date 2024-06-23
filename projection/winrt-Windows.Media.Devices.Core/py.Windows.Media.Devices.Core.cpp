@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Devices.Core.h"
 
-
 namespace py::cpp::Windows::Media::Devices::Core
 {
     // ----- CameraIntrinsics class --------------------

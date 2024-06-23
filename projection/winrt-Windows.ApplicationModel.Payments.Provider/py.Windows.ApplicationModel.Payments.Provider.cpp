@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Payments.Provider.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 {
     // ----- PaymentAppCanMakePaymentTriggerDetails class --------------------

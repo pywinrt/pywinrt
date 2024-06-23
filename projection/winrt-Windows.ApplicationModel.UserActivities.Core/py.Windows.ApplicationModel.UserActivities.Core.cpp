@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.UserActivities.Core.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::UserActivities::Core
 {
     // ----- CoreUserActivityManager class --------------------

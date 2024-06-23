@@ -2,7 +2,6 @@
 
 #include "py.Windows.Storage.Provider.h"
 
-
 namespace py::cpp::Windows::Storage::Provider
 {
     // ----- CachedFileUpdater class --------------------

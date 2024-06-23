@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.Diagnostics.h"
 
-
 namespace py::cpp::Windows::System::Diagnostics
 {
     // ----- DiagnosticActionResult class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.System.h"
 
-
 namespace py::cpp::Microsoft::UI::System
 {
     // ----- ThemeSettings class --------------------

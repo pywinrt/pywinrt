@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.UserDataAccounts.SystemAccess.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 {
     // ----- DeviceAccountConfiguration class --------------------

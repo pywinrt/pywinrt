@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Xaml.Media.Animation.h"
 
-
 namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 {
     // ----- AddDeleteThemeTransition class --------------------

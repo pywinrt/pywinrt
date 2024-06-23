@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Ocr.h"
 
-
 namespace py::cpp::Windows::Media::Ocr
 {
     // ----- OcrEngine class --------------------

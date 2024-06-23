@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.UserProfile.h"
 
-
 namespace py::cpp::Windows::System::UserProfile
 {
     // ----- AdvertisingManager class --------------------

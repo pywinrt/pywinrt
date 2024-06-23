@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Text.h"
 
-
 namespace py::cpp::Microsoft::UI::Text
 {
     // ----- FontWeights class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Store.Preview.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Store::Preview
 {
     // ----- DeliveryOptimizationSettings class --------------------

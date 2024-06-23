@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Adc.Provider.h"
 
-
 namespace py::cpp::Windows::Devices::Adc::Provider
 {
     // ----- IAdcControllerProvider interface --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.WiFi.h"
 
-
 namespace py::cpp::Windows::Devices::WiFi
 {
     // ----- WiFiAdapter class --------------------

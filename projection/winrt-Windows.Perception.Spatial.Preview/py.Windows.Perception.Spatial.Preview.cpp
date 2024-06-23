@@ -2,7 +2,6 @@
 
 #include "py.Windows.Perception.Spatial.Preview.h"
 
-
 namespace py::cpp::Windows::Perception::Spatial::Preview
 {
     // ----- SpatialGraphInteropFrameOfReferencePreview class --------------------

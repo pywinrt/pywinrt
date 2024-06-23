@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Bluetooth.Background.h"
 
-
 namespace py::cpp::Windows::Devices::Bluetooth::Background
 {
     // ----- BluetoothLEAdvertisementPublisherTriggerDetails class --------------------

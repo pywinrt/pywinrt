@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Store.Preview.InstallControl.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 {
     // ----- AppInstallItem class --------------------

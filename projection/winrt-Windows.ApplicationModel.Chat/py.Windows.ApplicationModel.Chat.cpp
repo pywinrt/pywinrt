@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Chat.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Chat
 {
     // ----- ChatCapabilities class --------------------

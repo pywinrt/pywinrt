@@ -2,7 +2,6 @@
 
 #include "py.Windows.Networking.NetworkOperators.h"
 
-
 namespace py::cpp::Windows::Networking::NetworkOperators
 {
     // ----- ESim class --------------------

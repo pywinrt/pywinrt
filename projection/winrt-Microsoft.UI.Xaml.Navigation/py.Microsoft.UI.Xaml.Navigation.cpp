@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Xaml.Navigation.h"
 
-
 namespace py::cpp::Microsoft::UI::Xaml::Navigation
 {
     // ----- FrameNavigationOptions class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.Diagnostics.DevicePortal.h"
 
-
 namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 {
     // ----- DevicePortalConnection class --------------------

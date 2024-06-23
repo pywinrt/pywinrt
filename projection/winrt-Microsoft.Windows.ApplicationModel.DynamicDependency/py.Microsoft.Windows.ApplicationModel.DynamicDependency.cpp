@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.Windows.ApplicationModel.DynamicDependency.h"
 
-
 namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 {
     // ----- AddPackageDependencyOptions class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Management.Core.h"
 
-
 namespace py::cpp::Windows::Management::Core
 {
     // ----- ApplicationDataManager class --------------------

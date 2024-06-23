@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Notifications.Preview.h"
 
-
 namespace py::cpp::Windows::UI::Notifications::Preview
 {
     // ----- ToastOcclusionManagerPreview class --------------------

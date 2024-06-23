@@ -2,7 +2,6 @@
 
 #include "py.Windows.Phone.Speech.Recognition.h"
 
-
 namespace py::cpp::Windows::Phone::Speech::Recognition
 {
     // ----- Windows.Phone.Speech.Recognition Initialization --------------------

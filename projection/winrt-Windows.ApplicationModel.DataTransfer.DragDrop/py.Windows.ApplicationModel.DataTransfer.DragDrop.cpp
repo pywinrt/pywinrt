@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.DataTransfer.DragDrop.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop
 {
     // ----- Windows.ApplicationModel.DataTransfer.DragDrop Initialization --------------------

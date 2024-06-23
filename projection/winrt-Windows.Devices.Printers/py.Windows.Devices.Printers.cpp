@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Printers.h"
 
-
 namespace py::cpp::Windows::Devices::Printers
 {
     // ----- IppAttributeError class --------------------

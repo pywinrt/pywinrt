@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.ClosedCaptioning.h"
 
-
 namespace py::cpp::Windows::Media::ClosedCaptioning
 {
     // ----- ClosedCaptionProperties class --------------------

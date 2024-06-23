@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Activation.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Activation
 {
     // ----- AppointmentsProviderAddAppointmentActivatedEventArgs class --------------------

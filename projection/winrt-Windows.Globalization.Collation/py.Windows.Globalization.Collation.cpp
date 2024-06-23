@@ -2,7 +2,6 @@
 
 #include "py.Windows.Globalization.Collation.h"
 
-
 namespace py::cpp::Windows::Globalization::Collation
 {
     // ----- CharacterGrouping class --------------------

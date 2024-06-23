@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.Power.h"
 
-
 namespace py::cpp::Windows::System::Power
 {
     // ----- BackgroundEnergyManager class --------------------

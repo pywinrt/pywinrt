@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Xaml.Automation.Peers.h"
 
-
 namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 {
     // ----- AnimatedVisualPlayerAutomationPeer class --------------------

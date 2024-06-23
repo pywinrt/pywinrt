@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.ApplicationSettings.h"
 
-
 namespace py::cpp::Windows::UI::ApplicationSettings
 {
     // ----- AccountsSettingsPane class --------------------

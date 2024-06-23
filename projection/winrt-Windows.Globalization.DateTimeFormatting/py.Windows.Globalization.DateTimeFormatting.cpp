@@ -2,7 +2,6 @@
 
 #include "py.Windows.Globalization.DateTimeFormatting.h"
 
-
 namespace py::cpp::Windows::Globalization::DateTimeFormatting
 {
     // ----- DateTimeFormatter class --------------------

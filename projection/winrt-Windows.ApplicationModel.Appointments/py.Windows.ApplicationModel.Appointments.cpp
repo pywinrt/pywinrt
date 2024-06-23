@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Appointments.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Appointments
 {
     // ----- Appointment class --------------------

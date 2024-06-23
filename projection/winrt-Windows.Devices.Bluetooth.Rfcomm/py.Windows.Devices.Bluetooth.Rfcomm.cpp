@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Bluetooth.Rfcomm.h"
 
-
 namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 {
     // ----- RfcommDeviceService class --------------------

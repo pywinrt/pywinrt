@@ -2,7 +2,6 @@
 
 #include "py.TestComponent.h"
 
-
 namespace py::cpp::TestComponent
 {
     // ----- TestRunner class --------------------

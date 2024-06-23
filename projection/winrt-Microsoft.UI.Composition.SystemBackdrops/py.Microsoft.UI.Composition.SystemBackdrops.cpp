@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Composition.SystemBackdrops.h"
 
-
 namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 {
     // ----- DesktopAcrylicController class --------------------

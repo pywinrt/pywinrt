@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.RemoteDesktop.h"
 
-
 namespace py::cpp::Windows::System::RemoteDesktop
 {
     // ----- InteractiveSession class --------------------

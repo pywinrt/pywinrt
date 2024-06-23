@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.Power.Diagnostics.h"
 
-
 namespace py::cpp::Windows::System::Power::Diagnostics
 {
     // ----- BackgroundEnergyDiagnostics class --------------------

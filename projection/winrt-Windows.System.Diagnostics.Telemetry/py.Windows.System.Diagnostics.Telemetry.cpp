@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.Diagnostics.Telemetry.h"
 
-
 namespace py::cpp::Windows::System::Diagnostics::Telemetry
 {
     // ----- PlatformTelemetryClient class --------------------

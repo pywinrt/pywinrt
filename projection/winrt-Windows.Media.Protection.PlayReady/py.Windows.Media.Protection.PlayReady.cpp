@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Protection.PlayReady.h"
 
-
 namespace py::cpp::Windows::Media::Protection::PlayReady
 {
     // ----- NDClient class --------------------

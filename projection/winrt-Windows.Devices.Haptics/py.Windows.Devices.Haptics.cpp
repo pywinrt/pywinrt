@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Haptics.h"
 
-
 namespace py::cpp::Windows::Devices::Haptics
 {
     // ----- KnownSimpleHapticsControllerWaveforms class --------------------

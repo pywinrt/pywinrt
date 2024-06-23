@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Effects.h"
 
-
 namespace py::cpp::Windows::Media::Effects
 {
     // ----- AudioCaptureEffectsManager class --------------------

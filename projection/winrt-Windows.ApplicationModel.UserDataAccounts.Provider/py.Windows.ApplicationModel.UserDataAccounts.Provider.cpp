@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.UserDataAccounts.Provider.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 {
     // ----- UserDataAccountPartnerAccountInfo class --------------------

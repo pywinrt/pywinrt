@@ -2,7 +2,6 @@
 
 #include "py.Windows.Security.Cryptography.Core.h"
 
-
 namespace py::cpp::Windows::Security::Cryptography::Core
 {
     // ----- AsymmetricAlgorithmNames class --------------------

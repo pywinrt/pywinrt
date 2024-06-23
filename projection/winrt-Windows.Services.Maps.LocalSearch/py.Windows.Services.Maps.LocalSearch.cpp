@@ -2,7 +2,6 @@
 
 #include "py.Windows.Services.Maps.LocalSearch.h"
 
-
 namespace py::cpp::Windows::Services::Maps::LocalSearch
 {
     // ----- LocalCategories class --------------------

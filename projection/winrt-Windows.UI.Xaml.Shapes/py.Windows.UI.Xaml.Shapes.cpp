@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Xaml.Shapes.h"
 
-
 namespace py::cpp::Windows::UI::Xaml::Shapes
 {
     // ----- Ellipse class --------------------

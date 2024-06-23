@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Transcoding.h"
 
-
 namespace py::cpp::Windows::Media::Transcoding
 {
     // ----- MediaTranscoder class --------------------

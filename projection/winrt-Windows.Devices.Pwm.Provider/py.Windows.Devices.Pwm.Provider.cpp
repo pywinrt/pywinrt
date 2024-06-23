@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Pwm.Provider.h"
 
-
 namespace py::cpp::Windows::Devices::Pwm::Provider
 {
     // ----- IPwmControllerProvider interface --------------------

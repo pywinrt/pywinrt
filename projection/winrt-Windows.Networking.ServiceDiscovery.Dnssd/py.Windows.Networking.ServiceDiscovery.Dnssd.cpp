@@ -2,7 +2,6 @@
 
 #include "py.Windows.Networking.ServiceDiscovery.Dnssd.h"
 
-
 namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 {
     // ----- DnssdRegistrationResult class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Custom.h"
 
-
 namespace py::cpp::Windows::Devices::Custom
 {
     // ----- CustomDevice class --------------------

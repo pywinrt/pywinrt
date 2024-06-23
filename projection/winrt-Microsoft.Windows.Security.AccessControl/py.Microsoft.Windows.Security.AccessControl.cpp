@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.Windows.Security.AccessControl.h"
 
-
 namespace py::cpp::Microsoft::Windows::Security::AccessControl
 {
     // ----- SecurityDescriptorHelpers class --------------------

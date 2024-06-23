@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Preview.Holographic.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 {
     // ----- HolographicApplicationPreview class --------------------

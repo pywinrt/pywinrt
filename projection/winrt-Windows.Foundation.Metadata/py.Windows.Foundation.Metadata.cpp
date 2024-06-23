@@ -2,7 +2,6 @@
 
 #include "py.Windows.Foundation.Metadata.h"
 
-
 namespace py::cpp::Windows::Foundation::Metadata
 {
     // ----- ApiInformation class --------------------

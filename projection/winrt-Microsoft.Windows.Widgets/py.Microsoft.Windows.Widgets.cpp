@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.Windows.Widgets.h"
 
-
 namespace py::cpp::Microsoft::Windows::Widgets
 {
     // ----- Microsoft.Windows.Widgets Initialization --------------------

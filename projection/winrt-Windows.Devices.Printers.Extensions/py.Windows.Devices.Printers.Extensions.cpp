@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Printers.Extensions.h"
 
-
 namespace py::cpp::Windows::Devices::Printers::Extensions
 {
     // ----- Print3DWorkflow class --------------------

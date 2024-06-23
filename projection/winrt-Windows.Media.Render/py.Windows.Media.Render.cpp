@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Render.h"
 
-
 namespace py::cpp::Windows::Media::Render
 {
     // ----- Windows.Media.Render Initialization --------------------

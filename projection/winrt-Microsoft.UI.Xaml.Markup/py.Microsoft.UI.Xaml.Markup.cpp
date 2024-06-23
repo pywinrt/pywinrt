@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Xaml.Markup.h"
 
-
 namespace py::cpp::Microsoft::UI::Xaml::Markup
 {
     // ----- MarkupExtension class --------------------

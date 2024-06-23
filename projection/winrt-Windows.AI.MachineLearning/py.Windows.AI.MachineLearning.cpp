@@ -2,7 +2,6 @@
 
 #include "py.Windows.AI.MachineLearning.h"
 
-
 namespace py::cpp::Windows::AI::MachineLearning
 {
     // ----- ImageFeatureDescriptor class --------------------

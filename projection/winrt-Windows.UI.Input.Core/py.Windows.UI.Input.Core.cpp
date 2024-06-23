@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Input.Core.h"
 
-
 namespace py::cpp::Windows::UI::Input::Core
 {
     // ----- RadialControllerIndependentInputSource class --------------------

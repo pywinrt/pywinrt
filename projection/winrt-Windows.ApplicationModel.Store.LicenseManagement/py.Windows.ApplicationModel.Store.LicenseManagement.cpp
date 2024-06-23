@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Store.LicenseManagement.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 {
     // ----- LicenseManager class --------------------

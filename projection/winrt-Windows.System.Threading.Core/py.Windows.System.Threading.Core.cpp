@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.Threading.Core.h"
 
-
 namespace py::cpp::Windows::System::Threading::Core
 {
     // ----- PreallocatedWorkItem class --------------------

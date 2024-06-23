@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.Profile.h"
 
-
 namespace py::cpp::Windows::System::Profile
 {
     // ----- AnalyticsInfo class --------------------

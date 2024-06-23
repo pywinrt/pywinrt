@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.LockScreen.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::LockScreen
 {
     // ----- LockApplicationHost class --------------------

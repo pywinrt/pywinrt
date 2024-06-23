@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Xaml.h"
 
-
 namespace py::cpp::Microsoft::UI::Xaml
 {
     // ----- AdaptiveTrigger class --------------------

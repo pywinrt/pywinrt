@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Portable.h"
 
-
 namespace py::cpp::Windows::Devices::Portable
 {
     // ----- ServiceDevice class --------------------

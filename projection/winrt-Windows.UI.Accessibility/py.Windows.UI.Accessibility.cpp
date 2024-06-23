@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Accessibility.h"
 
-
 namespace py::cpp::Windows::UI::Accessibility
 {
     // ----- ScreenReaderPositionChangedEventArgs class --------------------

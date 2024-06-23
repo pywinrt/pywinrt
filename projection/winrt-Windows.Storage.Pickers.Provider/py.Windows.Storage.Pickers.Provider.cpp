@@ -2,7 +2,6 @@
 
 #include "py.Windows.Storage.Pickers.Provider.h"
 
-
 namespace py::cpp::Windows::Storage::Pickers::Provider
 {
     // ----- FileOpenPickerUI class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Management.Policies.h"
 
-
 namespace py::cpp::Windows::Management::Policies
 {
     // ----- NamedPolicy class --------------------

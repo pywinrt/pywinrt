@@ -2,7 +2,6 @@
 
 #include "py.Windows.Data.Xml.Dom.h"
 
-
 namespace py::cpp::Windows::Data::Xml::Dom
 {
     // ----- DtdEntity class --------------------

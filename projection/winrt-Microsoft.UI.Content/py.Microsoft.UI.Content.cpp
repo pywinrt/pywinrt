@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Content.h"
 
-
 namespace py::cpp::Microsoft::UI::Content
 {
     // ----- ContentCoordinateConverter class --------------------

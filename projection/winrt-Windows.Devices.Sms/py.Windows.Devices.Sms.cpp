@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Sms.h"
 
-
 namespace py::cpp::Windows::Devices::Sms
 {
     // ----- DeleteSmsMessageOperation class --------------------

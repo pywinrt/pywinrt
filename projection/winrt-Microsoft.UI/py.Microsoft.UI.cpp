@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.h"
 
-
 namespace py::cpp::Microsoft::UI
 {
     // ----- ColorHelper class --------------------

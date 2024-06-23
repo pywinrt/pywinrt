@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Notifications.h"
 
-
 namespace py::cpp::Windows::UI::Notifications
 {
     // ----- AdaptiveNotificationText class --------------------

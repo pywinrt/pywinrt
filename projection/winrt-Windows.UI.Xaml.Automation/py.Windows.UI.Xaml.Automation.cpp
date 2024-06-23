@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Xaml.Automation.h"
 
-
 namespace py::cpp::Windows::UI::Xaml::Automation
 {
     // ----- AnnotationPatternIdentifiers class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Xaml.Data.h"
 
-
 namespace py::cpp::Windows::UI::Xaml::Data
 {
     // ----- Binding class --------------------

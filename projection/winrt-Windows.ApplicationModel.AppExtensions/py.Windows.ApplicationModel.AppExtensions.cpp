@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.AppExtensions.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::AppExtensions
 {
     // ----- AppExtension class --------------------

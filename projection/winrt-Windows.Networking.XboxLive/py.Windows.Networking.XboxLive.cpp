@@ -2,7 +2,6 @@
 
 #include "py.Windows.Networking.XboxLive.h"
 
-
 namespace py::cpp::Windows::Networking::XboxLive
 {
     // ----- XboxLiveDeviceAddress class --------------------

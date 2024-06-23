@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.Preview.h"
 
-
 namespace py::cpp::Windows::System::Preview
 {
     // ----- TwoPanelHingedDevicePosturePreview class --------------------

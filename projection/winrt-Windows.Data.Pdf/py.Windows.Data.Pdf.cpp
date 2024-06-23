@@ -2,7 +2,6 @@
 
 #include "py.Windows.Data.Pdf.h"
 
-
 namespace py::cpp::Windows::Data::Pdf
 {
     // ----- PdfDocument class --------------------

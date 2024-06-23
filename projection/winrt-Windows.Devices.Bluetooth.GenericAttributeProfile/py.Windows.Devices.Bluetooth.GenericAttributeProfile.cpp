@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Bluetooth.GenericAttributeProfile.h"
 
-
 namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 {
     // ----- GattCharacteristic class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Midi.h"
 
-
 namespace py::cpp::Windows::Devices::Midi
 {
     // ----- MidiActiveSensingMessage class --------------------

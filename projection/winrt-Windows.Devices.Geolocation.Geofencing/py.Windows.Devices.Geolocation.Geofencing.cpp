@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Geolocation.Geofencing.h"
 
-
 namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 {
     // ----- Geofence class --------------------

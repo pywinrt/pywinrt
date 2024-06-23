@@ -2,7 +2,6 @@
 
 #include "py.Windows.Perception.Spatial.Surfaces.h"
 
-
 namespace py::cpp::Windows::Perception::Spatial::Surfaces
 {
     // ----- SpatialSurfaceInfo class --------------------

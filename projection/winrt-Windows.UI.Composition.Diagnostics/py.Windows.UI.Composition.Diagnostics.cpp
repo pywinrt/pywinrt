@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Composition.Diagnostics.h"
 
-
 namespace py::cpp::Windows::UI::Composition::Diagnostics
 {
     // ----- CompositionDebugHeatMaps class --------------------

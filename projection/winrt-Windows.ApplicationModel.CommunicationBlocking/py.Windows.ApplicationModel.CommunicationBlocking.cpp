@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.CommunicationBlocking.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 {
     // ----- CommunicationBlockingAccessManager class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.Windows.ApplicationModel.WindowsAppRuntime.h"
 
-
 namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 {
     // ----- DeploymentInitializeOptions class --------------------

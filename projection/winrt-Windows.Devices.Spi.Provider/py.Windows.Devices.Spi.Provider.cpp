@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Spi.Provider.h"
 
-
 namespace py::cpp::Windows::Devices::Spi::Provider
 {
     // ----- ProviderSpiConnectionSettings class --------------------

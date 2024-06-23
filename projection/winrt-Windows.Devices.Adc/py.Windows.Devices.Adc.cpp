@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Adc.h"
 
-
 namespace py::cpp::Windows::Devices::Adc
 {
     // ----- AdcChannel class --------------------

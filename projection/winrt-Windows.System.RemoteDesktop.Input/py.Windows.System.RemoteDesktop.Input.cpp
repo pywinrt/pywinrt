@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.RemoteDesktop.Input.h"
 
-
 namespace py::cpp::Windows::System::RemoteDesktop::Input
 {
     // ----- RemoteTextConnection class --------------------

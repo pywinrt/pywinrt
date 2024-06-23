@@ -2,7 +2,6 @@
 
 #include "py.Windows.Phone.System.Profile.h"
 
-
 namespace py::cpp::Windows::Phone::System::Profile
 {
     // ----- RetailMode class --------------------

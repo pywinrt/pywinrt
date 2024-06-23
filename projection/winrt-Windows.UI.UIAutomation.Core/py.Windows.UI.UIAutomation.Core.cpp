@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.UIAutomation.Core.h"
 
-
 namespace py::cpp::Windows::UI::UIAutomation::Core
 {
     // ----- AutomationRemoteOperationResult class --------------------

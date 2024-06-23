@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Notifications.Management.h"
 
-
 namespace py::cpp::Windows::UI::Notifications::Management
 {
     // ----- UserNotificationListener class --------------------

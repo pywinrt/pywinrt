@@ -2,7 +2,6 @@
 
 #include "py.Windows.Web.Http.h"
 
-
 namespace py::cpp::Windows::Web::Http
 {
     // ----- HttpBufferContent class --------------------

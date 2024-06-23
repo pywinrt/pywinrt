@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.Windows.Widgets.Providers.h"
 
-
 namespace py::cpp::Microsoft::Windows::Widgets::Providers
 {
     // ----- WidgetActionInvokedArgs class --------------------

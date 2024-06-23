@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.Threading.h"
 
-
 namespace py::cpp::Windows::System::Threading
 {
     // ----- ThreadPool class --------------------

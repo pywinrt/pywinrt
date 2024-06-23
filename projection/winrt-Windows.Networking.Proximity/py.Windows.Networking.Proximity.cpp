@@ -2,7 +2,6 @@
 
 #include "py.Windows.Networking.Proximity.h"
 
-
 namespace py::cpp::Windows::Networking::Proximity
 {
     // ----- ConnectionRequestedEventArgs class --------------------

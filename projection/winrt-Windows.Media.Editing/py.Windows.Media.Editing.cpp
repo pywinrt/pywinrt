@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Editing.h"
 
-
 namespace py::cpp::Windows::Media::Editing
 {
     // ----- BackgroundAudioTrack class --------------------

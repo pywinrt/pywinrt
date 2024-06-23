@@ -2,7 +2,6 @@
 
 #include "py.Windows.Security.Authentication.Web.Core.h"
 
-
 namespace py::cpp::Windows::Security::Authentication::Web::Core
 {
     // ----- FindAllAccountsResult class --------------------

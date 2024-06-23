@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Streaming.Adaptive.h"
 
-
 namespace py::cpp::Windows::Media::Streaming::Adaptive
 {
     // ----- AdaptiveMediaSource class --------------------

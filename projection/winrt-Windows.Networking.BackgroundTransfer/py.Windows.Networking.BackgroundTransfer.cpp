@@ -2,7 +2,6 @@
 
 #include "py.Windows.Networking.BackgroundTransfer.h"
 
-
 namespace py::cpp::Windows::Networking::BackgroundTransfer
 {
     // ----- BackgroundDownloader class --------------------

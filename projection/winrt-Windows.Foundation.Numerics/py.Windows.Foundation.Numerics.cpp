@@ -2,7 +2,6 @@
 
 #include "py.Windows.Foundation.Numerics.h"
 
-
 namespace py::cpp::Windows::Foundation::Numerics
 {
     // ----- Matrix3x2 struct --------------------

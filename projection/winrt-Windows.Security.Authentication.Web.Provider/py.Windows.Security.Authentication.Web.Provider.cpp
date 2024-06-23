@@ -2,7 +2,6 @@
 
 #include "py.Windows.Security.Authentication.Web.Provider.h"
 
-
 namespace py::cpp::Windows::Security::Authentication::Web::Provider
 {
     // ----- WebAccountClientView class --------------------

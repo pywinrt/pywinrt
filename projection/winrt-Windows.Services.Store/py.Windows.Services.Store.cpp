@@ -2,7 +2,6 @@
 
 #include "py.Windows.Services.Store.h"
 
-
 namespace py::cpp::Windows::Services::Store
 {
     // ----- StoreAcquireLicenseResult class --------------------

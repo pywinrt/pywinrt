@@ -2,7 +2,6 @@
 
 #include "py.Windows.Security.Authentication.OnlineId.h"
 
-
 namespace py::cpp::Windows::Security::Authentication::OnlineId
 {
     // ----- OnlineIdAuthenticator class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.AppService.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::AppService
 {
     // ----- AppServiceCatalog class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Core.h"
 
-
 namespace py::cpp::Windows::Media::Core
 {
     // ----- AudioStreamDescriptor class --------------------

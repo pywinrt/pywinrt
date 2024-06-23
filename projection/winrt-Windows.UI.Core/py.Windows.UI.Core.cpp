@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Core.h"
 
-
 namespace py::cpp::Windows::UI::Core
 {
     // ----- AcceleratorKeyEventArgs class --------------------

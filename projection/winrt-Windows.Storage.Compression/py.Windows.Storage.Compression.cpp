@@ -2,7 +2,6 @@
 
 #include "py.Windows.Storage.Compression.h"
 
-
 namespace py::cpp::Windows::Storage::Compression
 {
     // ----- Compressor class --------------------

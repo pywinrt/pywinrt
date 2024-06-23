@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Input.Inking.Preview.h"
 
-
 namespace py::cpp::Windows::UI::Input::Inking::Preview
 {
     // ----- PalmRejectionDelayZonePreview class --------------------

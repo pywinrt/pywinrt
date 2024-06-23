@@ -2,7 +2,6 @@
 
 #include "py.Windows.Security.Cryptography.DataProtection.h"
 
-
 namespace py::cpp::Windows::Security::Cryptography::DataProtection
 {
     // ----- DataProtectionProvider class --------------------

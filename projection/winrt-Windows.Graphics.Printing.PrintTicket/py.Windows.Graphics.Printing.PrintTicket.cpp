@@ -2,7 +2,6 @@
 
 #include "py.Windows.Graphics.Printing.PrintTicket.h"
 
-
 namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 {
     // ----- PrintTicketCapabilities class --------------------

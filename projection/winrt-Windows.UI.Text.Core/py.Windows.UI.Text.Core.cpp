@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Text.Core.h"
 
-
 namespace py::cpp::Windows::UI::Text::Core
 {
     // ----- CoreTextCompositionCompletedEventArgs class --------------------

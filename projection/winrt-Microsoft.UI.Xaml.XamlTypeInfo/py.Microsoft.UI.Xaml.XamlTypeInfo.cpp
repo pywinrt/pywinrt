@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Xaml.XamlTypeInfo.h"
 
-
 namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
 {
     // ----- XamlControlsXamlMetaDataProvider class --------------------

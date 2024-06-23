@@ -816,7 +816,6 @@ static class FileWriters
         w.WriteLine($"#include \"py.{ns}.h\"");
         w.WriteBlankLine();
 
-        w.WriteBlankLine();
         w.WriteLine($"namespace py::cpp::{ns.ToCppNamespace()}");
         w.WriteLine("{");
         w.Indent++;

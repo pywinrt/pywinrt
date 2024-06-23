@@ -2,7 +2,6 @@
 
 #include "py.Windows.Perception.Automation.Core.h"
 
-
 namespace py::cpp::Windows::Perception::Automation::Core
 {
     // ----- CorePerceptionAutomation class --------------------

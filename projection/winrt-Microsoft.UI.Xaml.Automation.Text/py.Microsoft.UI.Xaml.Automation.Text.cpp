@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Xaml.Automation.Text.h"
 
-
 namespace py::cpp::Microsoft::UI::Xaml::Automation::Text
 {
     // ----- Microsoft.UI.Xaml.Automation.Text Initialization --------------------

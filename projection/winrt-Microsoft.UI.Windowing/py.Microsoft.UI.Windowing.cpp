@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Windowing.h"
 
-
 namespace py::cpp::Microsoft::UI::Windowing
 {
     // ----- AppWindow class --------------------

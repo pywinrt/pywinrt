@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.WindowManagement.h"
 
-
 namespace py::cpp::Windows::UI::WindowManagement
 {
     // ----- AppWindow class --------------------

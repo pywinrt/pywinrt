@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Sensors.h"
 
-
 namespace py::cpp::Windows::Devices::Sensors
 {
     // ----- Accelerometer class --------------------

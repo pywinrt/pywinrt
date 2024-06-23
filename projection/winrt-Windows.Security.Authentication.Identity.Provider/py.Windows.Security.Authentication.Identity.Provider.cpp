@@ -2,7 +2,6 @@
 
 #include "py.Windows.Security.Authentication.Identity.Provider.h"
 
-
 namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 {
     // ----- SecondaryAuthenticationFactorAuthentication class --------------------

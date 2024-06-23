@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.VoiceCommands.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 {
     // ----- VoiceCommand class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Phone.PersonalInformation.h"
 
-
 namespace py::cpp::Windows::Phone::PersonalInformation
 {
     // ----- ContactAddress class --------------------

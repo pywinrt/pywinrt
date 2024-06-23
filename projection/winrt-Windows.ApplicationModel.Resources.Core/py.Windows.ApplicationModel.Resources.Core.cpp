@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Resources.Core.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Resources::Core
 {
     // ----- NamedResource class --------------------

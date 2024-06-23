@@ -2,7 +2,6 @@
 
 #include "py.Windows.Networking.Connectivity.h"
 
-
 namespace py::cpp::Windows::Networking::Connectivity
 {
     // ----- AttributedNetworkUsage class --------------------

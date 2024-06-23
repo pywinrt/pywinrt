@@ -2,7 +2,6 @@
 
 #include "py.Windows.Management.Workplace.h"
 
-
 namespace py::cpp::Windows::Management::Workplace
 {
     // ----- MdmPolicy class --------------------

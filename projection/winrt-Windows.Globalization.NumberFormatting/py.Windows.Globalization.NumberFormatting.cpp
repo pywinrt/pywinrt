@@ -2,7 +2,6 @@
 
 #include "py.Windows.Globalization.NumberFormatting.h"
 
-
 namespace py::cpp::Windows::Globalization::NumberFormatting
 {
     // ----- CurrencyFormatter class --------------------

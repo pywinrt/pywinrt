@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Appointments.DataProvider.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 {
     // ----- AppointmentCalendarCancelMeetingRequest class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Gaming.UI.h"
 
-
 namespace py::cpp::Windows::Gaming::UI
 {
     // ----- GameBar class --------------------

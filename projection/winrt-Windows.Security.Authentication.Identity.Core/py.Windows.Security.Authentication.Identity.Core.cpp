@@ -2,7 +2,6 @@
 
 #include "py.Windows.Security.Authentication.Identity.Core.h"
 
-
 namespace py::cpp::Windows::Security::Authentication::Identity::Core
 {
     // ----- MicrosoftAccountMultiFactorAuthenticationManager class --------------------

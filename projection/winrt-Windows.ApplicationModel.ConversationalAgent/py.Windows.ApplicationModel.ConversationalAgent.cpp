@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.ConversationalAgent.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 {
     // ----- ActivationSignalDetectionConfiguration class --------------------

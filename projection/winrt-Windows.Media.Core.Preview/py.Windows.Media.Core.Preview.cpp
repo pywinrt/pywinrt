@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Core.Preview.h"
 
-
 namespace py::cpp::Windows::Media::Core::Preview
 {
     // ----- SoundLevelBroker class --------------------

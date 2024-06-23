@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Composition.Scenes.h"
 
-
 namespace py::cpp::Microsoft::UI::Composition::Scenes
 {
     // ----- SceneBoundingBox class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Xaml.Controls.AnimatedVisuals.h"
 
-
 namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 {
     // ----- AnimatedAcceptVisualSource class --------------------

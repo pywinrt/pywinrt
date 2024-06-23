@@ -2,7 +2,6 @@
 
 #include "py.Windows.Web.h"
 
-
 namespace py::cpp::Windows::Web
 {
     // ----- WebError class --------------------

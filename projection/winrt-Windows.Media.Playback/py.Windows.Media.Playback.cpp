@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Playback.h"
 
-
 namespace py::cpp::Windows::Media::Playback
 {
     // ----- BackgroundMediaPlayer class --------------------

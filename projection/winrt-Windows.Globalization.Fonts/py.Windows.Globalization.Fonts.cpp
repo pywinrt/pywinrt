@@ -2,7 +2,6 @@
 
 #include "py.Windows.Globalization.Fonts.h"
 
-
 namespace py::cpp::Windows::Globalization::Fonts
 {
     // ----- LanguageFont class --------------------

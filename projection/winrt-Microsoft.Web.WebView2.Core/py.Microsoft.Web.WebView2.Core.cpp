@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.Web.WebView2.Core.h"
 
-
 namespace py::cpp::Microsoft::Web::WebView2::Core
 {
     // ----- CoreWebView2 class --------------------

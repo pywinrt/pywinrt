@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Input.Spatial.h"
 
-
 namespace py::cpp::Windows::UI::Input::Spatial
 {
     // ----- SpatialGestureRecognizer class --------------------

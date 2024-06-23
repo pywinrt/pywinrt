@@ -2,7 +2,6 @@
 
 #include "py.Windows.Web.Http.Headers.h"
 
-
 namespace py::cpp::Windows::Web::Http::Headers
 {
     // ----- HttpCacheDirectiveHeaderValueCollection class --------------------

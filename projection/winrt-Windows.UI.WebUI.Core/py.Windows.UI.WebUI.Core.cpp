@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.WebUI.Core.h"
 
-
 namespace py::cpp::Windows::UI::WebUI::Core
 {
     // ----- WebUICommandBar class --------------------

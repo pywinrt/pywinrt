@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.SocialInfo.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::SocialInfo
 {
     // ----- SocialFeedChildItem class --------------------

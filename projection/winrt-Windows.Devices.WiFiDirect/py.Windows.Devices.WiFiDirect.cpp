@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.WiFiDirect.h"
 
-
 namespace py::cpp::Windows::Devices::WiFiDirect
 {
     // ----- WiFiDirectAdvertisement class --------------------

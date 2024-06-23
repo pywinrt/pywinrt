@@ -2,7 +2,6 @@
 
 #include "py.Windows.Storage.Streams.h"
 
-
 namespace py::cpp::Windows::Storage::Streams
 {
     // ----- Buffer class --------------------

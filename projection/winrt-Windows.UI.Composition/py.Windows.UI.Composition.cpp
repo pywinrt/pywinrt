@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Composition.h"
 
-
 namespace py::cpp::Windows::UI::Composition
 {
     // ----- AmbientLight class --------------------

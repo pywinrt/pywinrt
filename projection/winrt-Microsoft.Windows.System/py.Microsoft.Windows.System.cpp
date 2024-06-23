@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.Windows.System.h"
 
-
 namespace py::cpp::Microsoft::Windows::System
 {
     // ----- EnvironmentManager class --------------------

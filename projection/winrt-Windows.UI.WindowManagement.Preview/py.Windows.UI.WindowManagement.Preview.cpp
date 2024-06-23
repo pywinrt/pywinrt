@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.WindowManagement.Preview.h"
 
-
 namespace py::cpp::Windows::UI::WindowManagement::Preview
 {
     // ----- WindowManagementPreview class --------------------

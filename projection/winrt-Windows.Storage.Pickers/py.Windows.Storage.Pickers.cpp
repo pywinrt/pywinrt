@@ -2,7 +2,6 @@
 
 #include "py.Windows.Storage.Pickers.h"
 
-
 namespace py::cpp::Windows::Storage::Pickers
 {
     // ----- FileExtensionVector class --------------------

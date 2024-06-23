@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Input.Preview.h"
 
-
 namespace py::cpp::Windows::Devices::Input::Preview
 {
     // ----- GazeDevicePreview class --------------------

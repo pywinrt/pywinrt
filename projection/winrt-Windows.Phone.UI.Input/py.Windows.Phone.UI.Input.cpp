@@ -2,7 +2,6 @@
 
 #include "py.Windows.Phone.UI.Input.h"
 
-
 namespace py::cpp::Windows::Phone::UI::Input
 {
     // ----- BackPressedEventArgs class --------------------

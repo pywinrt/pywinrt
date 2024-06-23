@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Input.Preview.h"
 
-
 namespace py::cpp::Windows::UI::Input::Preview
 {
     // ----- InputActivationListenerPreview class --------------------

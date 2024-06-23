@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Casting.h"
 
-
 namespace py::cpp::Windows::Media::Casting
 {
     // ----- CastingConnection class --------------------

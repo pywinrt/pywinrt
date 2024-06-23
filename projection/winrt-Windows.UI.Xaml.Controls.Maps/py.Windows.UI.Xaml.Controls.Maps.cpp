@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Xaml.Controls.Maps.h"
 
-
 namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 {
     // ----- CustomMapTileDataSource class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.Implementation.FileExplorer.h"
 
-
 namespace py::cpp::Windows::System::Implementation::FileExplorer
 {
     // ----- SysStorageProviderEventReceivedEventArgs class --------------------

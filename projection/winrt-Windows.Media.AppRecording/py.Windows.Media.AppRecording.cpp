@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.AppRecording.h"
 
-
 namespace py::cpp::Windows::Media::AppRecording
 {
     // ----- AppRecordingManager class --------------------

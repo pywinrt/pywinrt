@@ -2,7 +2,6 @@
 
 #include "py.Windows.Phone.Notification.Management.h"
 
-
 namespace py::cpp::Windows::Phone::Notification::Management
 {
     // ----- AccessoryManager class --------------------

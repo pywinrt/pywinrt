@@ -2,7 +2,6 @@
 
 #include "py.Windows.Storage.h"
 
-
 namespace py::cpp::Windows::Storage
 {
     // ----- AppDataPaths class --------------------

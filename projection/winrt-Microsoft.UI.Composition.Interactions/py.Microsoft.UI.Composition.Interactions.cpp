@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Composition.Interactions.h"
 
-
 namespace py::cpp::Microsoft::UI::Composition::Interactions
 {
     // ----- CompositionConditionalValue class --------------------

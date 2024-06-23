@@ -2,7 +2,6 @@
 
 #include "py.Windows.Phone.Devices.Notification.h"
 
-
 namespace py::cpp::Windows::Phone::Devices::Notification
 {
     // ----- VibrationDevice class --------------------

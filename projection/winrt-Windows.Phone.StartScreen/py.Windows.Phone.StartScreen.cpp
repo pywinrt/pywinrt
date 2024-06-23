@@ -2,7 +2,6 @@
 
 #include "py.Windows.Phone.StartScreen.h"
 
-
 namespace py::cpp::Windows::Phone::StartScreen
 {
     // ----- DualSimTile class --------------------

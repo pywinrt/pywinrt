@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.UserActivities.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::UserActivities
 {
     // ----- UserActivity class --------------------

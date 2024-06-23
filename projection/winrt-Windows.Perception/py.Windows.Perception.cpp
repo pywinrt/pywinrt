@@ -2,7 +2,6 @@
 
 #include "py.Windows.Perception.h"
 
-
 namespace py::cpp::Windows::Perception
 {
     // ----- PerceptionTimestamp class --------------------

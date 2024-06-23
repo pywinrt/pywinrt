@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Background.h"
 
-
 namespace py::cpp::Windows::Devices::Background
 {
     // ----- DeviceServicingDetails class --------------------

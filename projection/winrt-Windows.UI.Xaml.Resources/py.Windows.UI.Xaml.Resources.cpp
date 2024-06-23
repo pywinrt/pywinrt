@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Xaml.Resources.h"
 
-
 namespace py::cpp::Windows::UI::Xaml::Resources
 {
     // ----- CustomXamlResourceLoader class --------------------

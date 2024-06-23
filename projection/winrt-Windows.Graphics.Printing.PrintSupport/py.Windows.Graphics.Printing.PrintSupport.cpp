@@ -2,7 +2,6 @@
 
 #include "py.Windows.Graphics.Printing.PrintSupport.h"
 
-
 namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 {
     // ----- PrintSupportExtensionSession class --------------------

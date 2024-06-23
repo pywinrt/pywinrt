@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.PointOfService.Provider.h"
 
-
 namespace py::cpp::Windows::Devices::PointOfService::Provider
 {
     // ----- BarcodeScannerDisableScannerRequest class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Capture.Core.h"
 
-
 namespace py::cpp::Windows::Media::Capture::Core
 {
     // ----- VariablePhotoCapturedEventArgs class --------------------

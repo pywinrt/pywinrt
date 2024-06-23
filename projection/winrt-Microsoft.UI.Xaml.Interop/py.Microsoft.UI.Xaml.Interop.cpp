@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Xaml.Interop.h"
 
-
 namespace py::cpp::Microsoft::UI::Xaml::Interop
 {
     // ----- NotifyCollectionChangedEventArgs class --------------------

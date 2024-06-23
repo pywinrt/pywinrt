@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Geolocation.Provider.h"
 
-
 namespace py::cpp::Windows::Devices::Geolocation::Provider
 {
     // ----- GeolocationProvider class --------------------

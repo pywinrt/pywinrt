@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Input.h"
 
-
 namespace py::cpp::Windows::Devices::Input
 {
     // ----- KeyboardCapabilities class --------------------

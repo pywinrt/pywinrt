@@ -2,7 +2,6 @@
 
 #include "py.Windows.Graphics.Printing3D.h"
 
-
 namespace py::cpp::Windows::Graphics::Printing3D
 {
     // ----- Print3DManager class --------------------

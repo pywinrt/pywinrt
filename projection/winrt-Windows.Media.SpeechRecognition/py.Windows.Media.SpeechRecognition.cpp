@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.SpeechRecognition.h"
 
-
 namespace py::cpp::Windows::Media::SpeechRecognition
 {
     // ----- SpeechContinuousRecognitionCompletedEventArgs class --------------------

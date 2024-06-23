@@ -2,7 +2,6 @@
 
 #include "py.Windows.Phone.Management.Deployment.h"
 
-
 namespace py::cpp::Windows::Phone::Management::Deployment
 {
     // ----- Enterprise class --------------------

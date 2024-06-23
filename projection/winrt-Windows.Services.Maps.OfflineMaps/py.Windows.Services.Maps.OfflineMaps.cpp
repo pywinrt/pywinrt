@@ -2,7 +2,6 @@
 
 #include "py.Windows.Services.Maps.OfflineMaps.h"
 
-
 namespace py::cpp::Windows::Services::Maps::OfflineMaps
 {
     // ----- OfflineMapPackage class --------------------

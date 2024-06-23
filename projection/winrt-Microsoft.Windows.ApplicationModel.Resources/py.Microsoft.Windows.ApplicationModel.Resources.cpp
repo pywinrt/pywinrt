@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.Windows.ApplicationModel.Resources.h"
 
-
 namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 {
     // ----- KnownResourceQualifierName class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Services.Maps.h"
 
-
 namespace py::cpp::Windows::Services::Maps
 {
     // ----- EnhancedWaypoint class --------------------

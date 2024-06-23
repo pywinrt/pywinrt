@@ -2,7 +2,6 @@
 
 #include "py.Windows.Graphics.h"
 
-
 namespace py::cpp::Windows::Graphics
 {
     // ----- IGeometrySource2D interface --------------------

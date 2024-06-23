@@ -2,7 +2,6 @@
 
 #include "py.Windows.Services.TargetedContent.h"
 
-
 namespace py::cpp::Windows::Services::TargetedContent
 {
     // ----- TargetedContentAction class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Foundation.h"
 
-
 namespace py::cpp::Windows::Foundation
 {
     // ----- Deferral class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.WebUI.h"
 
-
 namespace py::cpp::Windows::UI::WebUI
 {
     // ----- ActivatedDeferral class --------------------

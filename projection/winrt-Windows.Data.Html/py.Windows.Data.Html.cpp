@@ -2,7 +2,6 @@
 
 #include "py.Windows.Data.Html.h"
 
-
 namespace py::cpp::Windows::Data::Html
 {
     // ----- HtmlUtilities class --------------------

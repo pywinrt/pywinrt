@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Contacts.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Contacts
 {
     // ----- AggregateContactManager class --------------------

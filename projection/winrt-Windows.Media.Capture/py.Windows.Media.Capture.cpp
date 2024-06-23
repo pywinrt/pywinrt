@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Capture.h"
 
-
 namespace py::cpp::Windows::Media::Capture
 {
     // ----- AdvancedCapturedPhoto class --------------------

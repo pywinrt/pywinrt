@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Xaml.Media.h"
 
-
 namespace py::cpp::Windows::UI::Xaml::Media
 {
     // ----- AcrylicBrush class --------------------

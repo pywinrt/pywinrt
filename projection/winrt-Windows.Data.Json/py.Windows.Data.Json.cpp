@@ -2,7 +2,6 @@
 
 #include "py.Windows.Data.Json.h"
 
-
 namespace py::cpp::Windows::Data::Json
 {
     // ----- JsonArray class --------------------

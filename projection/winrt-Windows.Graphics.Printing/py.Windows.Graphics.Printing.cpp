@@ -2,7 +2,6 @@
 
 #include "py.Windows.Graphics.Printing.h"
 
-
 namespace py::cpp::Windows::Graphics::Printing
 {
     // ----- PrintManager class --------------------

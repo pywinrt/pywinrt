@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.AllJoyn.h"
 
-
 namespace py::cpp::Windows::Devices::AllJoyn
 {
     // ----- AllJoynAboutData class --------------------

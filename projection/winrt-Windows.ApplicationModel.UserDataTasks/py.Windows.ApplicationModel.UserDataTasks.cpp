@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.UserDataTasks.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 {
     // ----- UserDataTask class --------------------

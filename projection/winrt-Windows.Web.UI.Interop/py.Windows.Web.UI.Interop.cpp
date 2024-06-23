@@ -2,7 +2,6 @@
 
 #include "py.Windows.Web.UI.Interop.h"
 
-
 namespace py::cpp::Windows::Web::UI::Interop
 {
     // ----- WebViewControl class --------------------

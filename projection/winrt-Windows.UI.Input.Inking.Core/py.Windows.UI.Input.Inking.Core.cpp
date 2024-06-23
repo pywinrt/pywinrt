@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Input.Inking.Core.h"
 
-
 namespace py::cpp::Windows::UI::Input::Inking::Core
 {
     // ----- CoreIncrementalInkStroke class --------------------

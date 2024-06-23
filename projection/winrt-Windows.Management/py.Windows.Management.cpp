@@ -2,7 +2,6 @@
 
 #include "py.Windows.Management.h"
 
-
 namespace py::cpp::Windows::Management
 {
     // ----- MdmAlert class --------------------

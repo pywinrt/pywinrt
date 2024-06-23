@@ -2,7 +2,6 @@
 
 #include "py.Windows.Security.Authentication.Identity.h"
 
-
 namespace py::cpp::Windows::Security::Authentication::Identity
 {
     // ----- EnterpriseKeyCredentialRegistrationInfo class --------------------

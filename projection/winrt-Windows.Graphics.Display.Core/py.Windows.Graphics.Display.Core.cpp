@@ -2,7 +2,6 @@
 
 #include "py.Windows.Graphics.Display.Core.h"
 
-
 namespace py::cpp::Windows::Graphics::Display::Core
 {
     // ----- HdmiDisplayInformation class --------------------

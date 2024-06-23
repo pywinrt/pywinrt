@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Preview.Notes.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 {
     // ----- NotePlacementChangedPreviewEventArgs class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.WiFiDirect.Services.h"
 
-
 namespace py::cpp::Windows::Devices::WiFiDirect::Services
 {
     // ----- WiFiDirectService class --------------------

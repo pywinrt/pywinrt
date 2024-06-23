@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Wallet.System.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Wallet::System
 {
     // ----- WalletItemSystemStore class --------------------

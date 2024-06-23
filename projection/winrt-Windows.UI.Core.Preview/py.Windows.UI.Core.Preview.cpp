@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Core.Preview.h"
 
-
 namespace py::cpp::Windows::UI::Core::Preview
 {
     // ----- CoreAppWindowPreview class --------------------

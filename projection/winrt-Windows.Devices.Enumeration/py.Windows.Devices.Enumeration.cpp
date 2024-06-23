@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Enumeration.h"
 
-
 namespace py::cpp::Windows::Devices::Enumeration
 {
     // ----- DeviceAccessChangedEventArgs class --------------------

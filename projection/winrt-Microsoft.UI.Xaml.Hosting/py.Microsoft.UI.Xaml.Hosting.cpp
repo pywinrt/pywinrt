@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Xaml.Hosting.h"
 
-
 namespace py::cpp::Microsoft::UI::Xaml::Hosting
 {
     // ----- DesktopWindowXamlSource class --------------------

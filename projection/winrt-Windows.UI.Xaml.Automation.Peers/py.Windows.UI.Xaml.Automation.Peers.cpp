@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Xaml.Automation.Peers.h"
 
-
 namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 {
     // ----- AppBarAutomationPeer class --------------------

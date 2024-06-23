@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Control.h"
 
-
 namespace py::cpp::Windows::Media::Control
 {
     // ----- CurrentSessionChangedEventArgs class --------------------

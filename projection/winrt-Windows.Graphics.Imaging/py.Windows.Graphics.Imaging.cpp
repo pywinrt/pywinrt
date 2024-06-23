@@ -2,7 +2,6 @@
 
 #include "py.Windows.Graphics.Imaging.h"
 
-
 namespace py::cpp::Windows::Graphics::Imaging
 {
     // ----- BitmapBuffer class --------------------

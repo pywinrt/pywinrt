@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.AppBroadcasting.h"
 
-
 namespace py::cpp::Windows::Media::AppBroadcasting
 {
     // ----- AppBroadcastingMonitor class --------------------

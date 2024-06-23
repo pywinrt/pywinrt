@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Contacts.DataProvider.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 {
     // ----- ContactDataProviderConnection class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Graphics.Printing.Workflow.h"
 
-
 namespace py::cpp::Windows::Graphics::Printing::Workflow
 {
     // ----- PrintWorkflowBackgroundSession class --------------------

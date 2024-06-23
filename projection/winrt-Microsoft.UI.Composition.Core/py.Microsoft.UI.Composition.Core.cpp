@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Composition.Core.h"
 
-
 namespace py::cpp::Microsoft::UI::Composition::Core
 {
     // ----- CompositorController class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.MediaProperties.h"
 
-
 namespace py::cpp::Windows::Media::MediaProperties
 {
     // ----- AudioEncodingProperties class --------------------

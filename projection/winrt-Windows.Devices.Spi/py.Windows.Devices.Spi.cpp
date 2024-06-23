@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Spi.h"
 
-
 namespace py::cpp::Windows::Devices::Spi
 {
     // ----- SpiBusInfo class --------------------

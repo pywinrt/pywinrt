@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Store.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Store
 {
     // ----- CurrentApp class --------------------

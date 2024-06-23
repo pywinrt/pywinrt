@@ -2,7 +2,6 @@
 
 #include "py.Windows.Security.EnterpriseData.h"
 
-
 namespace py::cpp::Windows::Security::EnterpriseData
 {
     // ----- BufferProtectUnprotectResult class --------------------

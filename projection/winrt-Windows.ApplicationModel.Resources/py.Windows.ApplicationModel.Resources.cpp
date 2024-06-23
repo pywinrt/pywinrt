@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Resources.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Resources
 {
     // ----- ResourceLoader class --------------------

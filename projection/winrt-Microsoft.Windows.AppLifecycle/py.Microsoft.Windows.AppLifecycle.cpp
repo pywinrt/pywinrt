@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.Windows.AppLifecycle.h"
 
-
 namespace py::cpp::Microsoft::Windows::AppLifecycle
 {
     // ----- ActivationRegistrationManager class --------------------

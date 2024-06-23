@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.h"
 
-
 namespace py::cpp::Windows::System
 {
     // ----- AppActivationResult class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.ViewManagement.h"
 
-
 namespace py::cpp::Windows::UI::ViewManagement
 {
     // ----- AccessibilitySettings class --------------------

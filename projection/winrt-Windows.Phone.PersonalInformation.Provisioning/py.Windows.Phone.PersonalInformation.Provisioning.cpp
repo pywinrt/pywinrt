@@ -2,7 +2,6 @@
 
 #include "py.Windows.Phone.PersonalInformation.Provisioning.h"
 
-
 namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 {
     // ----- ContactPartnerProvisioningManager class --------------------

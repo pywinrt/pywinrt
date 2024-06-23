@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.ViewManagement.Core.h"
 
-
 namespace py::cpp::Windows::UI::ViewManagement::Core
 {
     // ----- CoreFrameworkInputView class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Gaming.Input.h"
 
-
 namespace py::cpp::Windows::Gaming::Input
 {
     // ----- ArcadeStick class --------------------

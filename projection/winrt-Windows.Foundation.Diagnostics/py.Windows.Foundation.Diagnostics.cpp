@@ -2,7 +2,6 @@
 
 #include "py.Windows.Foundation.Diagnostics.h"
 
-
 namespace py::cpp::Windows::Foundation::Diagnostics
 {
     // ----- AsyncCausalityTracer class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Playlists.h"
 
-
 namespace py::cpp::Windows::Media::Playlists
 {
     // ----- Playlist class --------------------

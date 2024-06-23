@@ -2,7 +2,6 @@
 
 #include "py.Windows.Perception.People.h"
 
-
 namespace py::cpp::Windows::Perception::People
 {
     // ----- EyesPose class --------------------

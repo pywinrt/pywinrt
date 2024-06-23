@@ -2,7 +2,6 @@
 
 #include "py.Windows.Embedded.DeviceLockdown.h"
 
-
 namespace py::cpp::Windows::Embedded::DeviceLockdown
 {
     // ----- DeviceLockdownProfile class --------------------

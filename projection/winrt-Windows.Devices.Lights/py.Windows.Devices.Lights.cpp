@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Lights.h"
 
-
 namespace py::cpp::Windows::Devices::Lights
 {
     // ----- Lamp class --------------------

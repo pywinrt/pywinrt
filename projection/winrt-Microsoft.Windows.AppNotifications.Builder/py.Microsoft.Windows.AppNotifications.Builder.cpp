@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.Windows.AppNotifications.Builder.h"
 
-
 namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 {
     // ----- AppNotificationBuilder class --------------------

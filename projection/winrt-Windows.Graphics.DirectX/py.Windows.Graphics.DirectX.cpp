@@ -2,7 +2,6 @@
 
 #include "py.Windows.Graphics.DirectX.h"
 
-
 namespace py::cpp::Windows::Graphics::DirectX
 {
     // ----- Windows.Graphics.DirectX Initialization --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Graphics.Display.h"
 
-
 namespace py::cpp::Windows::Graphics::Display
 {
     // ----- AdvancedColorInfo class --------------------

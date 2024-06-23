@@ -2,7 +2,6 @@
 
 #include "py.Windows.Perception.Spatial.h"
 
-
 namespace py::cpp::Windows::Perception::Spatial
 {
     // ----- SpatialAnchor class --------------------

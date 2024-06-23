@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Xaml.Media.Imaging.h"
 
-
 namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 {
     // ----- BitmapImage class --------------------

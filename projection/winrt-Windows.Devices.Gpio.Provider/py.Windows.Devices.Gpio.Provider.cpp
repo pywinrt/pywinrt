@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Gpio.Provider.h"
 
-
 namespace py::cpp::Windows::Devices::Gpio::Provider
 {
     // ----- GpioPinProviderValueChangedEventArgs class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Services.Maps.Guidance.h"
 
-
 namespace py::cpp::Windows::Services::Maps::Guidance
 {
     // ----- GuidanceAudioNotificationRequestedEventArgs class --------------------

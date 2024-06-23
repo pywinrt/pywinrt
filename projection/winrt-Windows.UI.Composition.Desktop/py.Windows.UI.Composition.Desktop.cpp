@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Composition.Desktop.h"
 
-
 namespace py::cpp::Windows::UI::Composition::Desktop
 {
     // ----- DesktopWindowTarget class --------------------

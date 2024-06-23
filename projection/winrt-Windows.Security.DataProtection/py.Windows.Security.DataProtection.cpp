@@ -2,7 +2,6 @@
 
 #include "py.Windows.Security.DataProtection.h"
 
-
 namespace py::cpp::Windows::Security::DataProtection
 {
     // ----- UserDataAvailabilityStateChangedEventArgs class --------------------

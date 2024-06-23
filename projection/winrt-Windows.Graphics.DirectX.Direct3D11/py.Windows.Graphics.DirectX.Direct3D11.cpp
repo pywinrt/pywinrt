@@ -2,7 +2,6 @@
 
 #include "py.Windows.Graphics.DirectX.Direct3D11.h"
 
-
 namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 {
     // ----- IDirect3DDevice interface --------------------

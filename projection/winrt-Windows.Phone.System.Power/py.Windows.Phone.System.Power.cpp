@@ -2,7 +2,6 @@
 
 #include "py.Windows.Phone.System.Power.h"
 
-
 namespace py::cpp::Windows::Phone::System::Power
 {
     // ----- PowerManager class --------------------

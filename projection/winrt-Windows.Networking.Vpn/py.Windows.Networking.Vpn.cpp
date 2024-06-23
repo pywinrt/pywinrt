@@ -2,7 +2,6 @@
 
 #include "py.Windows.Networking.Vpn.h"
 
-
 namespace py::cpp::Windows::Networking::Vpn
 {
     // ----- VpnAppId class --------------------

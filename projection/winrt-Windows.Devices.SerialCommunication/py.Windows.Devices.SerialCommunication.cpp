@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.SerialCommunication.h"
 
-
 namespace py::cpp::Windows::Devices::SerialCommunication
 {
     // ----- ErrorReceivedEventArgs class --------------------

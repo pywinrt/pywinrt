@@ -2,7 +2,6 @@
 
 #include "py.Windows.Data.Text.h"
 
-
 namespace py::cpp::Windows::Data::Text
 {
     // ----- AlternateWordForm class --------------------

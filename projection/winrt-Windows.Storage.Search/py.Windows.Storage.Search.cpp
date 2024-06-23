@@ -2,7 +2,6 @@
 
 #include "py.Windows.Storage.Search.h"
 
-
 namespace py::cpp::Windows::Storage::Search
 {
     // ----- ContentIndexer class --------------------

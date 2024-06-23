@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Text.h"
 
-
 namespace py::cpp::Windows::UI::Text
 {
     // ----- ContentLinkInfo class --------------------

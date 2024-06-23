@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.h"
 
-
 namespace py::cpp::Windows::Media
 {
     // ----- AudioBuffer class --------------------

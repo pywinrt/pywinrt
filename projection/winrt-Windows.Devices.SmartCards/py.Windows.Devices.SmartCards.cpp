@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.SmartCards.h"
 
-
 namespace py::cpp::Windows::Devices::SmartCards
 {
     // ----- CardAddedEventArgs class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Popups.h"
 
-
 namespace py::cpp::Windows::UI::Popups
 {
     // ----- MessageDialog class --------------------

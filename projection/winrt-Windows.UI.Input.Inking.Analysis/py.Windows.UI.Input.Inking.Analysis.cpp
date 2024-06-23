@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Input.Inking.Analysis.h"
 
-
 namespace py::cpp::Windows::UI::Input::Inking::Analysis
 {
     // ----- InkAnalysisInkBullet class --------------------

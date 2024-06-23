@@ -2,7 +2,6 @@
 
 #include "py.Windows.UI.Xaml.Printing.h"
 
-
 namespace py::cpp::Windows::UI::Xaml::Printing
 {
     // ----- AddPagesEventArgs class --------------------

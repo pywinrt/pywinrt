@@ -2,7 +2,6 @@
 
 #include "py.Windows.Data.Xml.Xsl.h"
 
-
 namespace py::cpp::Windows::Data::Xml::Xsl
 {
     // ----- XsltProcessor class --------------------

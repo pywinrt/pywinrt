@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.Devices.h"
 
-
 namespace py::cpp::Windows::Media::Devices
 {
     // ----- AdvancedPhotoCaptureSettings class --------------------

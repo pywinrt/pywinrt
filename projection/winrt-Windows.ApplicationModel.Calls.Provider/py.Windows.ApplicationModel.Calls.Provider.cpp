@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Calls.Provider.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 {
     // ----- PhoneCallOrigin class --------------------

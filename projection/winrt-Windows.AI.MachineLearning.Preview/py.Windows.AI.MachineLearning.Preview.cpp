@@ -2,7 +2,6 @@
 
 #include "py.Windows.AI.MachineLearning.Preview.h"
 
-
 namespace py::cpp::Windows::AI::MachineLearning::Preview
 {
     // ----- ImageVariableDescriptorPreview class --------------------

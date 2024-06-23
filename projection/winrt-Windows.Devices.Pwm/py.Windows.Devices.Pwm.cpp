@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Pwm.h"
 
-
 namespace py::cpp::Windows::Devices::Pwm
 {
     // ----- PwmController class --------------------

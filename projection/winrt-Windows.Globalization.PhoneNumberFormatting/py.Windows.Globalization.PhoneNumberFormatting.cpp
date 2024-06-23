@@ -2,7 +2,6 @@
 
 #include "py.Windows.Globalization.PhoneNumberFormatting.h"
 
-
 namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 {
     // ----- PhoneNumberFormatter class --------------------

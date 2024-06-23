@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.DataTransfer.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::DataTransfer
 {
     // ----- Clipboard class --------------------

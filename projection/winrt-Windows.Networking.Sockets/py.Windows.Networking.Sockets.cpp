@@ -2,7 +2,6 @@
 
 #include "py.Windows.Networking.Sockets.h"
 
-
 namespace py::cpp::Windows::Networking::Sockets
 {
     // ----- ControlChannelTrigger class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Phone.System.UserProfile.GameServices.Core.h"
 
-
 namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 {
     // ----- GameService class --------------------

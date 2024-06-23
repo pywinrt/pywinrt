@@ -2,7 +2,6 @@
 
 #include "py.Windows.System.Diagnostics.TraceReporting.h"
 
-
 namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 {
     // ----- PlatformDiagnosticActions class --------------------

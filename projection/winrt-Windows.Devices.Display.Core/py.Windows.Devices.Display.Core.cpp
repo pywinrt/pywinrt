@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Display.Core.h"
 
-
 namespace py::cpp::Windows::Devices::Display::Core
 {
     // ----- DisplayAdapter class --------------------

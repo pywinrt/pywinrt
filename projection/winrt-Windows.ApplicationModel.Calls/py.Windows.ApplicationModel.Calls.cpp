@@ -2,7 +2,6 @@
 
 #include "py.Windows.ApplicationModel.Calls.h"
 
-
 namespace py::cpp::Windows::ApplicationModel::Calls
 {
     // ----- CallAnswerEventArgs class --------------------

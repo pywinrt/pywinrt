@@ -2,7 +2,6 @@
 
 #include "py.Windows.Media.SpeechSynthesis.h"
 
-
 namespace py::cpp::Windows::Media::SpeechSynthesis
 {
     // ----- SpeechSynthesisStream class --------------------

@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Usb.h"
 
-
 namespace py::cpp::Windows::Devices::Usb
 {
     // ----- UsbBulkInEndpointDescriptor class --------------------

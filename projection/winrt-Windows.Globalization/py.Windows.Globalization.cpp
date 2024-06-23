@@ -2,7 +2,6 @@
 
 #include "py.Windows.Globalization.h"
 
-
 namespace py::cpp::Windows::Globalization
 {
     // ----- ApplicationLanguages class --------------------

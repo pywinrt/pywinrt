@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Radios.h"
 
-
 namespace py::cpp::Windows::Devices::Radios
 {
     // ----- Radio class --------------------

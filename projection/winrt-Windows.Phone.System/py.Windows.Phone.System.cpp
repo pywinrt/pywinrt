@@ -2,7 +2,6 @@
 
 #include "py.Windows.Phone.System.h"
 
-
 namespace py::cpp::Windows::Phone::System
 {
     // ----- SystemProtection class --------------------

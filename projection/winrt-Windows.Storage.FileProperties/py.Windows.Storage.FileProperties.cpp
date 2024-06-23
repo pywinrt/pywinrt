@@ -2,7 +2,6 @@
 
 #include "py.Windows.Storage.FileProperties.h"
 
-
 namespace py::cpp::Windows::Storage::FileProperties
 {
     // ----- BasicProperties class --------------------

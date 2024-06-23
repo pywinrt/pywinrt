@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Dispatching.h"
 
-
 namespace py::cpp::Microsoft::UI::Dispatching
 {
     // ----- DispatcherExitDeferral class --------------------

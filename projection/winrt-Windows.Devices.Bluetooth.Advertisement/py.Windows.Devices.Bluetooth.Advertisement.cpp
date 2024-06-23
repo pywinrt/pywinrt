@@ -2,7 +2,6 @@
 
 #include "py.Windows.Devices.Bluetooth.Advertisement.h"
 
-
 namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 {
     // ----- BluetoothLEAdvertisement class --------------------

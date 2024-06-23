@@ -2,7 +2,6 @@
 
 #include "py.Microsoft.UI.Input.h"
 
-
 namespace py::cpp::Microsoft::UI::Input
 {
     // ----- CharacterReceivedEventArgs class --------------------
