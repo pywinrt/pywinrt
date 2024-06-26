@@ -45,4 +45,4 @@ test-skip = "*-win_arm64"
 
 [tool.cibuildwheel.windows]
 archs = ["x86", "AMD64", "ARM64"]
-repair-wheel-command = "python scripts/add_dlls.py {wheel} {dest_dir}"
+repair-wheel-command = "python scripts/add_msvcp140_dll.py {wheel} {dest_dir}"

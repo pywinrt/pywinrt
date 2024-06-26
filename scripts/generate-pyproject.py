@@ -287,7 +287,7 @@ def write_project_files(
                     extra_python_path=f";{relative}/winrt-WindowsAppSDK/src"
                     if is_windows_app_package(package_name)
                     else "",
-                    extra_cibuildwheel_windows='\nrepair-wheel-command = "python scripts/add_dlls.py {wheel} {dest_dir}"'
+                    extra_cibuildwheel_windows='\nrepair-wheel-command = "python scripts/add_msvcp140_dll.py {wheel} {dest_dir}"'
                     if package_name == "winrt-runtime"
                     else "",
                 )
