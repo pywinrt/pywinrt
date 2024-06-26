@@ -4,10 +4,14 @@
 
 ## [Unreleased]
 
+### Fixed
+- Fixed `winrt.Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap`
+  package missing `Microsoft.WindowsAppRuntime.Bootstrap.dll`.
+
 ## [v2.1.0] - 2024-06-23
 
 ### Added
-- Added `winrt.Microsoft.Windows.ApplicationModel.DynamicDepedency.Bootstrap`
+- Added `winrt.Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap`
   interop package.
 - Added `_iids_` and `_runtime_class_name_` properties to `system.Object`.
 - Added `__eq__` and `__ne__` methods to projected structs.
