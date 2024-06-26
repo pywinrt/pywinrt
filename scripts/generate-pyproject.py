@@ -221,7 +221,9 @@ def is_app_sdk_interop_package(name: str) -> bool:
 
 
 def is_app_sdk_bootstrap_package(name: str) -> bool:
-    return name == "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
+    return (
+        name == "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
+    )
 
 
 def is_windows_app_package(name: str) -> bool:
@@ -289,7 +291,11 @@ def write_project_files(
                     else "",
                     extra_cibuildwheel_windows='\nrepair-wheel-command = "python scripts/add_dlls.py {wheel} {dest_dir}"'
                     if package_name == "winrt-runtime"
-                    else "",
+                    else (
+                        '\nrepair-wheel-command = "python scripts/add_bootstrap_dll.py {wheel} {dest_dir}"'
+                        if is_app_sdk_bootstrap_package(package_name)
+                        else ""
+                    ),
                 )
             )
 
