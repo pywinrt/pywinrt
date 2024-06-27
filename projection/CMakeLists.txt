@@ -190,10 +190,11 @@ foreach(package ${packages} ${app_packages} ${interop_packages} ${app_interop_pa
     endif()
 
     if (${package} STREQUAL "interop/winrt-Microsoft.UI.Interop")
-        if (NOT MSVC)
+        if (NOT CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
             # winrt/Microsoft.UI.Interop.h has stuff that other compilers don't like
             target_compile_options(${package_target} PRIVATE
                 -Wno-unknown-pragmas
+                # https://github.com/microsoft/WindowsAppSDK/issues/4515
                 -Wno-missing-field-initializers
             )
         endif()
