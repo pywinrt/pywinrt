@@ -34800,6 +34800,23 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    static PyObject* _repr_MapZoomLevelRange(PyObject* self) noexcept
+    {
+        py::pyobj_handle Min{PyObject_GetAttrString(self, "min")};
+        if (!Min)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Max{PyObject_GetAttrString(self, "max")};
+        if (!Max)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("MapZoomLevelRange(min=%R, max=%R)", Min.get(), Max.get());
+    }
+
     static PyType_Slot _type_slots_MapZoomLevelRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MapZoomLevelRange) },
         { Py_tp_init, reinterpret_cast<void*>(_init_MapZoomLevelRange) },
@@ -34807,6 +34824,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MapZoomLevelRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MapZoomLevelRange) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_MapZoomLevelRange) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_MapZoomLevelRange) },
         { }
     };
 

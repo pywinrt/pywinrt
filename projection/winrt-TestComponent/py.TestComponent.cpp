@@ -4110,6 +4110,71 @@ namespace py::cpp::TestComponent
         }
     }
 
+    static PyObject* _repr_Blittable(PyObject* self) noexcept
+    {
+        py::pyobj_handle A{PyObject_GetAttrString(self, "a")};
+        if (!A)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle B{PyObject_GetAttrString(self, "b")};
+        if (!B)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle C{PyObject_GetAttrString(self, "c")};
+        if (!C)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle D{PyObject_GetAttrString(self, "d")};
+        if (!D)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle E{PyObject_GetAttrString(self, "e")};
+        if (!E)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle F{PyObject_GetAttrString(self, "f")};
+        if (!F)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle G{PyObject_GetAttrString(self, "g")};
+        if (!G)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle H{PyObject_GetAttrString(self, "h")};
+        if (!H)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle I{PyObject_GetAttrString(self, "i")};
+        if (!I)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle J{PyObject_GetAttrString(self, "j")};
+        if (!J)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("Blittable(a=%R, b=%R, c=%R, d=%R, e=%R, f=%R, g=%R, h=%R, i=%R, j=%R)", A.get(), B.get(), C.get(), D.get(), E.get(), F.get(), G.get(), H.get(), I.get(), J.get());
+    }
+
     static PyType_Slot _type_slots_Blittable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Blittable) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Blittable) },
@@ -4117,6 +4182,7 @@ namespace py::cpp::TestComponent
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Blittable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Blittable) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Blittable) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_Blittable) },
         { }
     };
 
@@ -4306,6 +4372,23 @@ namespace py::cpp::TestComponent
         }
     }
 
+    static PyObject* _repr_Nested(PyObject* self) noexcept
+    {
+        py::pyobj_handle Blittable{PyObject_GetAttrString(self, "blittable")};
+        if (!Blittable)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle NonBlittable{PyObject_GetAttrString(self, "non_blittable")};
+        if (!NonBlittable)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("Nested(blittable=%R, non_blittable=%R)", Blittable.get(), NonBlittable.get());
+    }
+
     static PyType_Slot _type_slots_Nested[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Nested) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Nested) },
@@ -4313,6 +4396,7 @@ namespace py::cpp::TestComponent
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Nested) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Nested) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Nested) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_Nested) },
         { }
     };
 
@@ -4574,6 +4658,35 @@ namespace py::cpp::TestComponent
         }
     }
 
+    static PyObject* _repr_NonBlittable(PyObject* self) noexcept
+    {
+        py::pyobj_handle A{PyObject_GetAttrString(self, "a")};
+        if (!A)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle B{PyObject_GetAttrString(self, "b")};
+        if (!B)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle C{PyObject_GetAttrString(self, "c")};
+        if (!C)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle D{PyObject_GetAttrString(self, "d")};
+        if (!D)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("NonBlittable(a=%R, b=%R, c=%R, d=%R)", A.get(), B.get(), C.get(), D.get());
+    }
+
     static PyType_Slot _type_slots_NonBlittable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NonBlittable) },
         { Py_tp_init, reinterpret_cast<void*>(_init_NonBlittable) },
@@ -4581,6 +4694,7 @@ namespace py::cpp::TestComponent
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NonBlittable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NonBlittable) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_NonBlittable) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_NonBlittable) },
         { }
     };
 

@@ -3096,6 +3096,107 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
         }
     }
 
+    static PyObject* _repr_Matrix3D(PyObject* self) noexcept
+    {
+        py::pyobj_handle M11{PyObject_GetAttrString(self, "m11")};
+        if (!M11)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M12{PyObject_GetAttrString(self, "m12")};
+        if (!M12)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M13{PyObject_GetAttrString(self, "m13")};
+        if (!M13)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M14{PyObject_GetAttrString(self, "m14")};
+        if (!M14)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M21{PyObject_GetAttrString(self, "m21")};
+        if (!M21)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M22{PyObject_GetAttrString(self, "m22")};
+        if (!M22)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M23{PyObject_GetAttrString(self, "m23")};
+        if (!M23)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M24{PyObject_GetAttrString(self, "m24")};
+        if (!M24)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M31{PyObject_GetAttrString(self, "m31")};
+        if (!M31)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M32{PyObject_GetAttrString(self, "m32")};
+        if (!M32)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M33{PyObject_GetAttrString(self, "m33")};
+        if (!M33)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M34{PyObject_GetAttrString(self, "m34")};
+        if (!M34)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle OffsetX{PyObject_GetAttrString(self, "offset_x")};
+        if (!OffsetX)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle OffsetY{PyObject_GetAttrString(self, "offset_y")};
+        if (!OffsetY)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle OffsetZ{PyObject_GetAttrString(self, "offset_z")};
+        if (!OffsetZ)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M44{PyObject_GetAttrString(self, "m44")};
+        if (!M44)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("Matrix3D(m11=%R, m12=%R, m13=%R, m14=%R, m21=%R, m22=%R, m23=%R, m24=%R, m31=%R, m32=%R, m33=%R, m34=%R, offset_x=%R, offset_y=%R, offset_z=%R, m44=%R)", M11.get(), M12.get(), M13.get(), M14.get(), M21.get(), M22.get(), M23.get(), M24.get(), M31.get(), M32.get(), M33.get(), M34.get(), OffsetX.get(), OffsetY.get(), OffsetZ.get(), M44.get());
+    }
+
     static PyType_Slot _type_slots_Matrix3D[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix3D) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Matrix3D) },
@@ -3103,6 +3204,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix3D) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix3D) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Matrix3D) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_Matrix3D) },
         { }
     };
 

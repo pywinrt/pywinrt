@@ -5942,6 +5942,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         }
     }
 
+    static PyObject* _repr_LoadMoreItemsResult(PyObject* self) noexcept
+    {
+        py::pyobj_handle Count{PyObject_GetAttrString(self, "count")};
+        if (!Count)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("LoadMoreItemsResult(count=%R)", Count.get());
+    }
+
     static PyType_Slot _type_slots_LoadMoreItemsResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_LoadMoreItemsResult) },
         { Py_tp_init, reinterpret_cast<void*>(_init_LoadMoreItemsResult) },
@@ -5949,6 +5960,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         { Py_tp_methods, reinterpret_cast<void*>(_methods_LoadMoreItemsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoadMoreItemsResult) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_LoadMoreItemsResult) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_LoadMoreItemsResult) },
         { }
     };
 

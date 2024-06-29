@@ -1253,6 +1253,17 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         }
     }
 
+    static PyObject* _repr_PackageDependencyContextId(PyObject* self) noexcept
+    {
+        py::pyobj_handle Id{PyObject_GetAttrString(self, "id")};
+        if (!Id)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("PackageDependencyContextId(id=%R)", Id.get());
+    }
+
     static PyType_Slot _type_slots_PackageDependencyContextId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageDependencyContextId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PackageDependencyContextId) },
@@ -1260,6 +1271,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageDependencyContextId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageDependencyContextId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PackageDependencyContextId) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_PackageDependencyContextId) },
         { }
     };
 

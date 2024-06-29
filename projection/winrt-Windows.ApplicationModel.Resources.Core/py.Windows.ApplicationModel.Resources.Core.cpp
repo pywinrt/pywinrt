@@ -4661,6 +4661,41 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         }
     }
 
+    static PyObject* _repr_ResourceLayoutInfo(PyObject* self) noexcept
+    {
+        py::pyobj_handle MajorVersion{PyObject_GetAttrString(self, "major_version")};
+        if (!MajorVersion)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle MinorVersion{PyObject_GetAttrString(self, "minor_version")};
+        if (!MinorVersion)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle ResourceSubtreeCount{PyObject_GetAttrString(self, "resource_subtree_count")};
+        if (!ResourceSubtreeCount)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle NamedResourceCount{PyObject_GetAttrString(self, "named_resource_count")};
+        if (!NamedResourceCount)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Checksum{PyObject_GetAttrString(self, "checksum")};
+        if (!Checksum)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("ResourceLayoutInfo(major_version=%R, minor_version=%R, resource_subtree_count=%R, named_resource_count=%R, checksum=%R)", MajorVersion.get(), MinorVersion.get(), ResourceSubtreeCount.get(), NamedResourceCount.get(), Checksum.get());
+    }
+
     static PyType_Slot _type_slots_ResourceLayoutInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceLayoutInfo) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ResourceLayoutInfo) },
@@ -4668,6 +4703,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceLayoutInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceLayoutInfo) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_ResourceLayoutInfo) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_ResourceLayoutInfo) },
         { }
     };
 

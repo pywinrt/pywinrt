@@ -5980,6 +5980,23 @@ namespace py::cpp::Windows::Graphics::Printing3D
         }
     }
 
+    static PyObject* _repr_Printing3DBufferDescription(PyObject* self) noexcept
+    {
+        py::pyobj_handle Format{PyObject_GetAttrString(self, "format")};
+        if (!Format)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Stride{PyObject_GetAttrString(self, "stride")};
+        if (!Stride)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("Printing3DBufferDescription(format=%R, stride=%R)", Format.get(), Stride.get());
+    }
+
     static PyType_Slot _type_slots_Printing3DBufferDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DBufferDescription) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Printing3DBufferDescription) },
@@ -5987,6 +6004,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DBufferDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DBufferDescription) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Printing3DBufferDescription) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_Printing3DBufferDescription) },
         { }
     };
 

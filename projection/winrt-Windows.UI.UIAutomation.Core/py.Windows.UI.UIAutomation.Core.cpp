@@ -1828,6 +1828,17 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         }
     }
 
+    static PyObject* _repr_AutomationAnnotationTypeRegistration(PyObject* self) noexcept
+    {
+        py::pyobj_handle LocalId{PyObject_GetAttrString(self, "local_id")};
+        if (!LocalId)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("AutomationAnnotationTypeRegistration(local_id=%R)", LocalId.get());
+    }
+
     static PyType_Slot _type_slots_AutomationAnnotationTypeRegistration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationAnnotationTypeRegistration) },
         { Py_tp_init, reinterpret_cast<void*>(_init_AutomationAnnotationTypeRegistration) },
@@ -1835,6 +1846,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationAnnotationTypeRegistration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationAnnotationTypeRegistration) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_AutomationAnnotationTypeRegistration) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_AutomationAnnotationTypeRegistration) },
         { }
     };
 
@@ -1988,6 +2000,17 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         }
     }
 
+    static PyObject* _repr_AutomationRemoteOperationOperandId(PyObject* self) noexcept
+    {
+        py::pyobj_handle Value{PyObject_GetAttrString(self, "value")};
+        if (!Value)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("AutomationRemoteOperationOperandId(value=%R)", Value.get());
+    }
+
     static PyType_Slot _type_slots_AutomationRemoteOperationOperandId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationRemoteOperationOperandId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_AutomationRemoteOperationOperandId) },
@@ -1995,6 +2018,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationRemoteOperationOperandId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationRemoteOperationOperandId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_AutomationRemoteOperationOperandId) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_AutomationRemoteOperationOperandId) },
         { }
     };
 

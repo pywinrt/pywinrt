@@ -4709,6 +4709,23 @@ namespace py::cpp::Windows::Graphics::Holographic
         }
     }
 
+    static PyObject* _repr_HolographicAdapterId(PyObject* self) noexcept
+    {
+        py::pyobj_handle LowPart{PyObject_GetAttrString(self, "low_part")};
+        if (!LowPart)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle HighPart{PyObject_GetAttrString(self, "high_part")};
+        if (!HighPart)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("HolographicAdapterId(low_part=%R, high_part=%R)", LowPart.get(), HighPart.get());
+    }
+
     static PyType_Slot _type_slots_HolographicAdapterId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicAdapterId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HolographicAdapterId) },
@@ -4716,6 +4733,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicAdapterId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicAdapterId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_HolographicAdapterId) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_HolographicAdapterId) },
         { }
     };
 
@@ -4869,6 +4887,17 @@ namespace py::cpp::Windows::Graphics::Holographic
         }
     }
 
+    static PyObject* _repr_HolographicFrameId(PyObject* self) noexcept
+    {
+        py::pyobj_handle Value{PyObject_GetAttrString(self, "value")};
+        if (!Value)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("HolographicFrameId(value=%R)", Value.get());
+    }
+
     static PyType_Slot _type_slots_HolographicFrameId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicFrameId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HolographicFrameId) },
@@ -4876,6 +4905,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicFrameId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicFrameId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_HolographicFrameId) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_HolographicFrameId) },
         { }
     };
 
@@ -5065,6 +5095,23 @@ namespace py::cpp::Windows::Graphics::Holographic
         }
     }
 
+    static PyObject* _repr_HolographicStereoTransform(PyObject* self) noexcept
+    {
+        py::pyobj_handle Left{PyObject_GetAttrString(self, "left")};
+        if (!Left)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Right{PyObject_GetAttrString(self, "right")};
+        if (!Right)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("HolographicStereoTransform(left=%R, right=%R)", Left.get(), Right.get());
+    }
+
     static PyType_Slot _type_slots_HolographicStereoTransform[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicStereoTransform) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HolographicStereoTransform) },
@@ -5072,6 +5119,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicStereoTransform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicStereoTransform) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_HolographicStereoTransform) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_HolographicStereoTransform) },
         { }
     };
 

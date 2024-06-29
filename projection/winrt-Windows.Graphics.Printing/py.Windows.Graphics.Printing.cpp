@@ -4411,6 +4411,35 @@ namespace py::cpp::Windows::Graphics::Printing
         }
     }
 
+    static PyObject* _repr_PrintPageDescription(PyObject* self) noexcept
+    {
+        py::pyobj_handle PageSize{PyObject_GetAttrString(self, "page_size")};
+        if (!PageSize)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle ImageableRect{PyObject_GetAttrString(self, "imageable_rect")};
+        if (!ImageableRect)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle DpiX{PyObject_GetAttrString(self, "dpi_x")};
+        if (!DpiX)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle DpiY{PyObject_GetAttrString(self, "dpi_y")};
+        if (!DpiY)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("PrintPageDescription(page_size=%R, imageable_rect=%R, dpi_x=%R, dpi_y=%R)", PageSize.get(), ImageableRect.get(), DpiX.get(), DpiY.get());
+    }
+
     static PyType_Slot _type_slots_PrintPageDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintPageDescription) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PrintPageDescription) },
@@ -4418,6 +4447,7 @@ namespace py::cpp::Windows::Graphics::Printing
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintPageDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintPageDescription) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PrintPageDescription) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_PrintPageDescription) },
         { }
     };
 

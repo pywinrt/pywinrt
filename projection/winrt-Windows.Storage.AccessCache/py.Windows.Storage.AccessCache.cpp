@@ -2358,6 +2358,23 @@ namespace py::cpp::Windows::Storage::AccessCache
         }
     }
 
+    static PyObject* _repr_AccessListEntry(PyObject* self) noexcept
+    {
+        py::pyobj_handle Token{PyObject_GetAttrString(self, "token")};
+        if (!Token)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Metadata{PyObject_GetAttrString(self, "metadata")};
+        if (!Metadata)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("AccessListEntry(token=%R, metadata=%R)", Token.get(), Metadata.get());
+    }
+
     static PyType_Slot _type_slots_AccessListEntry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccessListEntry) },
         { Py_tp_init, reinterpret_cast<void*>(_init_AccessListEntry) },
@@ -2365,6 +2382,7 @@ namespace py::cpp::Windows::Storage::AccessCache
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccessListEntry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccessListEntry) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_AccessListEntry) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_AccessListEntry) },
         { }
     };
 

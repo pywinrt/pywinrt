@@ -4069,6 +4069,23 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
+    static PyObject* _repr_SpatialBoundingBox(PyObject* self) noexcept
+    {
+        py::pyobj_handle Center{PyObject_GetAttrString(self, "center")};
+        if (!Center)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Extents{PyObject_GetAttrString(self, "extents")};
+        if (!Extents)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("SpatialBoundingBox(center=%R, extents=%R)", Center.get(), Extents.get());
+    }
+
     static PyType_Slot _type_slots_SpatialBoundingBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingBox) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingBox) },
@@ -4076,6 +4093,7 @@ namespace py::cpp::Windows::Perception::Spatial
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialBoundingBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingBox) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SpatialBoundingBox) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_SpatialBoundingBox) },
         { }
     };
 
@@ -4409,6 +4427,47 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
+    static PyObject* _repr_SpatialBoundingFrustum(PyObject* self) noexcept
+    {
+        py::pyobj_handle Near{PyObject_GetAttrString(self, "near")};
+        if (!Near)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Far{PyObject_GetAttrString(self, "far")};
+        if (!Far)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Right{PyObject_GetAttrString(self, "right")};
+        if (!Right)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Left{PyObject_GetAttrString(self, "left")};
+        if (!Left)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Top{PyObject_GetAttrString(self, "top")};
+        if (!Top)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Bottom{PyObject_GetAttrString(self, "bottom")};
+        if (!Bottom)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("SpatialBoundingFrustum(near=%R, far=%R, right=%R, left=%R, top=%R, bottom=%R)", Near.get(), Far.get(), Right.get(), Left.get(), Top.get(), Bottom.get());
+    }
+
     static PyType_Slot _type_slots_SpatialBoundingFrustum[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingFrustum) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingFrustum) },
@@ -4416,6 +4475,7 @@ namespace py::cpp::Windows::Perception::Spatial
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialBoundingFrustum) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingFrustum) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SpatialBoundingFrustum) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_SpatialBoundingFrustum) },
         { }
     };
 
@@ -4641,6 +4701,29 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
+    static PyObject* _repr_SpatialBoundingOrientedBox(PyObject* self) noexcept
+    {
+        py::pyobj_handle Center{PyObject_GetAttrString(self, "center")};
+        if (!Center)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Extents{PyObject_GetAttrString(self, "extents")};
+        if (!Extents)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Orientation{PyObject_GetAttrString(self, "orientation")};
+        if (!Orientation)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("SpatialBoundingOrientedBox(center=%R, extents=%R, orientation=%R)", Center.get(), Extents.get(), Orientation.get());
+    }
+
     static PyType_Slot _type_slots_SpatialBoundingOrientedBox[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingOrientedBox) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingOrientedBox) },
@@ -4648,6 +4731,7 @@ namespace py::cpp::Windows::Perception::Spatial
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialBoundingOrientedBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingOrientedBox) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SpatialBoundingOrientedBox) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_SpatialBoundingOrientedBox) },
         { }
     };
 
@@ -4837,6 +4921,23 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
+    static PyObject* _repr_SpatialBoundingSphere(PyObject* self) noexcept
+    {
+        py::pyobj_handle Center{PyObject_GetAttrString(self, "center")};
+        if (!Center)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Radius{PyObject_GetAttrString(self, "radius")};
+        if (!Radius)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("SpatialBoundingSphere(center=%R, radius=%R)", Center.get(), Radius.get());
+    }
+
     static PyType_Slot _type_slots_SpatialBoundingSphere[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingSphere) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingSphere) },
@@ -4844,6 +4945,7 @@ namespace py::cpp::Windows::Perception::Spatial
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialBoundingSphere) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingSphere) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SpatialBoundingSphere) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_SpatialBoundingSphere) },
         { }
     };
 
@@ -5033,6 +5135,23 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
+    static PyObject* _repr_SpatialRay(PyObject* self) noexcept
+    {
+        py::pyobj_handle Origin{PyObject_GetAttrString(self, "origin")};
+        if (!Origin)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Direction{PyObject_GetAttrString(self, "direction")};
+        if (!Direction)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("SpatialRay(origin=%R, direction=%R)", Origin.get(), Direction.get());
+    }
+
     static PyType_Slot _type_slots_SpatialRay[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialRay) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialRay) },
@@ -5040,6 +5159,7 @@ namespace py::cpp::Windows::Perception::Spatial
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialRay) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialRay) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SpatialRay) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_SpatialRay) },
         { }
     };
 

@@ -35302,6 +35302,47 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
+    static PyObject* _repr_Matrix(PyObject* self) noexcept
+    {
+        py::pyobj_handle M11{PyObject_GetAttrString(self, "m11")};
+        if (!M11)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M12{PyObject_GetAttrString(self, "m12")};
+        if (!M12)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M21{PyObject_GetAttrString(self, "m21")};
+        if (!M21)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M22{PyObject_GetAttrString(self, "m22")};
+        if (!M22)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle OffsetX{PyObject_GetAttrString(self, "offset_x")};
+        if (!OffsetX)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle OffsetY{PyObject_GetAttrString(self, "offset_y")};
+        if (!OffsetY)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("Matrix(m11=%R, m12=%R, m21=%R, m22=%R, offset_x=%R, offset_y=%R)", M11.get(), M12.get(), M21.get(), M22.get(), OffsetX.get(), OffsetY.get());
+    }
+
     static PyType_Slot _type_slots_Matrix[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Matrix) },
@@ -35309,6 +35350,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Matrix) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_Matrix) },
         { }
     };
 

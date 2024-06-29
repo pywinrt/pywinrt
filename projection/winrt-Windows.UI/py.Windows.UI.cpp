@@ -3476,6 +3476,35 @@ namespace py::cpp::Windows::UI
         }
     }
 
+    static PyObject* _repr_Color(PyObject* self) noexcept
+    {
+        py::pyobj_handle A{PyObject_GetAttrString(self, "a")};
+        if (!A)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle R{PyObject_GetAttrString(self, "r")};
+        if (!R)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle G{PyObject_GetAttrString(self, "g")};
+        if (!G)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle B{PyObject_GetAttrString(self, "b")};
+        if (!B)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("Color(a=%R, r=%R, g=%R, b=%R)", A.get(), R.get(), G.get(), B.get());
+    }
+
     static PyType_Slot _type_slots_Color[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Color) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Color) },
@@ -3483,6 +3512,7 @@ namespace py::cpp::Windows::UI
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Color) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Color) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Color) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_Color) },
         { }
     };
 
@@ -3636,6 +3666,17 @@ namespace py::cpp::Windows::UI
         }
     }
 
+    static PyObject* _repr_WindowId(PyObject* self) noexcept
+    {
+        py::pyobj_handle Value{PyObject_GetAttrString(self, "value")};
+        if (!Value)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("WindowId(value=%R)", Value.get());
+    }
+
     static PyType_Slot _type_slots_WindowId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_WindowId) },
@@ -3643,6 +3684,7 @@ namespace py::cpp::Windows::UI
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_WindowId) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_WindowId) },
         { }
     };
 

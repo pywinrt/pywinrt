@@ -1133,6 +1133,41 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         }
     }
 
+    static PyObject* _repr_HeadsetGeqGains(PyObject* self) noexcept
+    {
+        py::pyobj_handle band1Gain{PyObject_GetAttrString(self, "band1_gain")};
+        if (!band1Gain)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle band2Gain{PyObject_GetAttrString(self, "band2_gain")};
+        if (!band2Gain)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle band3Gain{PyObject_GetAttrString(self, "band3_gain")};
+        if (!band3Gain)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle band4Gain{PyObject_GetAttrString(self, "band4_gain")};
+        if (!band4Gain)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle band5Gain{PyObject_GetAttrString(self, "band5_gain")};
+        if (!band5Gain)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("HeadsetGeqGains(band1_gain=%R, band2_gain=%R, band3_gain=%R, band4_gain=%R, band5_gain=%R)", band1Gain.get(), band2Gain.get(), band3Gain.get(), band4Gain.get(), band5Gain.get());
+    }
+
     static PyType_Slot _type_slots_HeadsetGeqGains[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HeadsetGeqGains) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HeadsetGeqGains) },
@@ -1140,6 +1175,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HeadsetGeqGains) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HeadsetGeqGains) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_HeadsetGeqGains) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_HeadsetGeqGains) },
         { }
     };
 

@@ -25536,6 +25536,23 @@ namespace py::cpp::Windows::Devices::PointOfService
         }
     }
 
+    static PyObject* _repr_SizeUInt32(PyObject* self) noexcept
+    {
+        py::pyobj_handle Width{PyObject_GetAttrString(self, "width")};
+        if (!Width)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Height{PyObject_GetAttrString(self, "height")};
+        if (!Height)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("SizeUInt32(width=%R, height=%R)", Width.get(), Height.get());
+    }
+
     static PyType_Slot _type_slots_SizeUInt32[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SizeUInt32) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SizeUInt32) },
@@ -25543,6 +25560,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SizeUInt32) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SizeUInt32) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SizeUInt32) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_SizeUInt32) },
         { }
     };
 

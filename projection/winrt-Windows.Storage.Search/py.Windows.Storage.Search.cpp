@@ -4871,6 +4871,23 @@ namespace py::cpp::Windows::Storage::Search
         }
     }
 
+    static PyObject* _repr_SortEntry(PyObject* self) noexcept
+    {
+        py::pyobj_handle PropertyName{PyObject_GetAttrString(self, "property_name")};
+        if (!PropertyName)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle AscendingOrder{PyObject_GetAttrString(self, "ascending_order")};
+        if (!AscendingOrder)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("SortEntry(property_name=%R, ascending_order=%R)", PropertyName.get(), AscendingOrder.get());
+    }
+
     static PyType_Slot _type_slots_SortEntry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SortEntry) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SortEntry) },
@@ -4878,6 +4895,7 @@ namespace py::cpp::Windows::Storage::Search
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SortEntry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SortEntry) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SortEntry) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_SortEntry) },
         { }
     };
 

@@ -38481,6 +38481,35 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
+    static PyObject* _repr_CornerRadius(PyObject* self) noexcept
+    {
+        py::pyobj_handle TopLeft{PyObject_GetAttrString(self, "top_left")};
+        if (!TopLeft)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TopRight{PyObject_GetAttrString(self, "top_right")};
+        if (!TopRight)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BottomRight{PyObject_GetAttrString(self, "bottom_right")};
+        if (!BottomRight)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BottomLeft{PyObject_GetAttrString(self, "bottom_left")};
+        if (!BottomLeft)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("CornerRadius(top_left=%R, top_right=%R, bottom_right=%R, bottom_left=%R)", TopLeft.get(), TopRight.get(), BottomRight.get(), BottomLeft.get());
+    }
+
     static PyType_Slot _type_slots_CornerRadius[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CornerRadius) },
         { Py_tp_init, reinterpret_cast<void*>(_init_CornerRadius) },
@@ -38488,6 +38517,7 @@ namespace py::cpp::Windows::UI::Xaml
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CornerRadius) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CornerRadius) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_CornerRadius) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_CornerRadius) },
         { }
     };
 
@@ -38677,6 +38707,23 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
+    static PyObject* _repr_Duration(PyObject* self) noexcept
+    {
+        py::pyobj_handle TimeSpan{PyObject_GetAttrString(self, "time_span")};
+        if (!TimeSpan)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Type{PyObject_GetAttrString(self, "type")};
+        if (!Type)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("Duration(time_span=%R, type=%R)", TimeSpan.get(), Type.get());
+    }
+
     static PyType_Slot _type_slots_Duration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Duration) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Duration) },
@@ -38684,6 +38731,7 @@ namespace py::cpp::Windows::UI::Xaml
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Duration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Duration) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Duration) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_Duration) },
         { }
     };
 
@@ -38873,6 +38921,23 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
+    static PyObject* _repr_GridLength(PyObject* self) noexcept
+    {
+        py::pyobj_handle Value{PyObject_GetAttrString(self, "value")};
+        if (!Value)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle GridUnitType{PyObject_GetAttrString(self, "grid_unit_type")};
+        if (!GridUnitType)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("GridLength(value=%R, grid_unit_type=%R)", Value.get(), GridUnitType.get());
+    }
+
     static PyType_Slot _type_slots_GridLength[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GridLength) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GridLength) },
@@ -38880,6 +38945,7 @@ namespace py::cpp::Windows::UI::Xaml
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GridLength) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GridLength) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_GridLength) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_GridLength) },
         { }
     };
 
@@ -39141,6 +39207,35 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
+    static PyObject* _repr_Thickness(PyObject* self) noexcept
+    {
+        py::pyobj_handle Left{PyObject_GetAttrString(self, "left")};
+        if (!Left)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Top{PyObject_GetAttrString(self, "top")};
+        if (!Top)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Right{PyObject_GetAttrString(self, "right")};
+        if (!Right)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Bottom{PyObject_GetAttrString(self, "bottom")};
+        if (!Bottom)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("Thickness(left=%R, top=%R, right=%R, bottom=%R)", Left.get(), Top.get(), Right.get(), Bottom.get());
+    }
+
     static PyType_Slot _type_slots_Thickness[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Thickness) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Thickness) },
@@ -39148,6 +39243,7 @@ namespace py::cpp::Windows::UI::Xaml
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Thickness) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Thickness) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Thickness) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_Thickness) },
         { }
     };
 

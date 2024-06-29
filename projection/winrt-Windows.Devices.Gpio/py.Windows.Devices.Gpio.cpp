@@ -1839,6 +1839,23 @@ namespace py::cpp::Windows::Devices::Gpio
         }
     }
 
+    static PyObject* _repr_GpioChangeCount(PyObject* self) noexcept
+    {
+        py::pyobj_handle Count{PyObject_GetAttrString(self, "count")};
+        if (!Count)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle RelativeTime{PyObject_GetAttrString(self, "relative_time")};
+        if (!RelativeTime)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("GpioChangeCount(count=%R, relative_time=%R)", Count.get(), RelativeTime.get());
+    }
+
     static PyType_Slot _type_slots_GpioChangeCount[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioChangeCount) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GpioChangeCount) },
@@ -1846,6 +1863,7 @@ namespace py::cpp::Windows::Devices::Gpio
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioChangeCount) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioChangeCount) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_GpioChangeCount) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_GpioChangeCount) },
         { }
     };
 
@@ -2035,6 +2053,23 @@ namespace py::cpp::Windows::Devices::Gpio
         }
     }
 
+    static PyObject* _repr_GpioChangeRecord(PyObject* self) noexcept
+    {
+        py::pyobj_handle RelativeTime{PyObject_GetAttrString(self, "relative_time")};
+        if (!RelativeTime)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Edge{PyObject_GetAttrString(self, "edge")};
+        if (!Edge)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("GpioChangeRecord(relative_time=%R, edge=%R)", RelativeTime.get(), Edge.get());
+    }
+
     static PyType_Slot _type_slots_GpioChangeRecord[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioChangeRecord) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GpioChangeRecord) },
@@ -2042,6 +2077,7 @@ namespace py::cpp::Windows::Devices::Gpio
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioChangeRecord) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioChangeRecord) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_GpioChangeRecord) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_GpioChangeRecord) },
         { }
     };
 

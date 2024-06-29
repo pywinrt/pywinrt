@@ -3444,6 +3444,29 @@ namespace py::cpp::Windows::Graphics::Display
         }
     }
 
+    static PyObject* _repr_NitRange(PyObject* self) noexcept
+    {
+        py::pyobj_handle MinNits{PyObject_GetAttrString(self, "min_nits")};
+        if (!MinNits)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle MaxNits{PyObject_GetAttrString(self, "max_nits")};
+        if (!MaxNits)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle StepSizeNits{PyObject_GetAttrString(self, "step_size_nits")};
+        if (!StepSizeNits)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("NitRange(min_nits=%R, max_nits=%R, step_size_nits=%R)", MinNits.get(), MaxNits.get(), StepSizeNits.get());
+    }
+
     static PyType_Slot _type_slots_NitRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NitRange) },
         { Py_tp_init, reinterpret_cast<void*>(_init_NitRange) },
@@ -3451,6 +3474,7 @@ namespace py::cpp::Windows::Graphics::Display
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NitRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NitRange) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_NitRange) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_NitRange) },
         { }
     };
 

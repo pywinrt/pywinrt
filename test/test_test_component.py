@@ -61,6 +61,13 @@ class TestTestComponent(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "'>=' not supported"):
             b1 >= b2
 
+    def test_struct_repr(self):
+        nb = tc.NonBlittable(True, "b", "c", 4)
+        r = repr(nb)
+
+        self.assertEqual(r, "NonBlittable(a=True, b='b', c='c', d=4)")
+        self.assertEqual(eval("tc." + r), nb)
+
     def test_blittable(self):
         b = tc.Blittable()
 

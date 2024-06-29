@@ -7042,6 +7042,47 @@ namespace py::cpp::Windows::Services::Store
         }
     }
 
+    static PyObject* _repr_StorePackageUpdateStatus(PyObject* self) noexcept
+    {
+        py::pyobj_handle PackageFamilyName{PyObject_GetAttrString(self, "package_family_name")};
+        if (!PackageFamilyName)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PackageDownloadSizeInBytes{PyObject_GetAttrString(self, "package_download_size_in_bytes")};
+        if (!PackageDownloadSizeInBytes)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PackageBytesDownloaded{PyObject_GetAttrString(self, "package_bytes_downloaded")};
+        if (!PackageBytesDownloaded)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PackageDownloadProgress{PyObject_GetAttrString(self, "package_download_progress")};
+        if (!PackageDownloadProgress)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalDownloadProgress{PyObject_GetAttrString(self, "total_download_progress")};
+        if (!TotalDownloadProgress)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PackageUpdateState{PyObject_GetAttrString(self, "package_update_state")};
+        if (!PackageUpdateState)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("StorePackageUpdateStatus(package_family_name=%R, package_download_size_in_bytes=%R, package_bytes_downloaded=%R, package_download_progress=%R, total_download_progress=%R, package_update_state=%R)", PackageFamilyName.get(), PackageDownloadSizeInBytes.get(), PackageBytesDownloaded.get(), PackageDownloadProgress.get(), TotalDownloadProgress.get(), PackageUpdateState.get());
+    }
+
     static PyType_Slot _type_slots_StorePackageUpdateStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorePackageUpdateStatus) },
         { Py_tp_init, reinterpret_cast<void*>(_init_StorePackageUpdateStatus) },
@@ -7049,6 +7090,7 @@ namespace py::cpp::Windows::Services::Store
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorePackageUpdateStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorePackageUpdateStatus) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_StorePackageUpdateStatus) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_StorePackageUpdateStatus) },
         { }
     };
 

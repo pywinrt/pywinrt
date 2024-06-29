@@ -5519,6 +5519,41 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     }
 
+    static PyObject* _repr_BackgroundDownloadProgress(PyObject* self) noexcept
+    {
+        py::pyobj_handle BytesReceived{PyObject_GetAttrString(self, "bytes_received")};
+        if (!BytesReceived)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalBytesToReceive{PyObject_GetAttrString(self, "total_bytes_to_receive")};
+        if (!TotalBytesToReceive)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Status{PyObject_GetAttrString(self, "status")};
+        if (!Status)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle HasResponseChanged{PyObject_GetAttrString(self, "has_response_changed")};
+        if (!HasResponseChanged)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle HasRestarted{PyObject_GetAttrString(self, "has_restarted")};
+        if (!HasRestarted)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("BackgroundDownloadProgress(bytes_received=%R, total_bytes_to_receive=%R, status=%R, has_response_changed=%R, has_restarted=%R)", BytesReceived.get(), TotalBytesToReceive.get(), Status.get(), HasResponseChanged.get(), HasRestarted.get());
+    }
+
     static PyType_Slot _type_slots_BackgroundDownloadProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundDownloadProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BackgroundDownloadProgress) },
@@ -5526,6 +5561,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundDownloadProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundDownloadProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BackgroundDownloadProgress) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_BackgroundDownloadProgress) },
         { }
     };
 
@@ -5715,6 +5751,23 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     }
 
+    static PyObject* _repr_BackgroundTransferFileRange(PyObject* self) noexcept
+    {
+        py::pyobj_handle Offset{PyObject_GetAttrString(self, "offset")};
+        if (!Offset)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Length{PyObject_GetAttrString(self, "length")};
+        if (!Length)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("BackgroundTransferFileRange(offset=%R, length=%R)", Offset.get(), Length.get());
+    }
+
     static PyType_Slot _type_slots_BackgroundTransferFileRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundTransferFileRange) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BackgroundTransferFileRange) },
@@ -5722,6 +5775,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundTransferFileRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundTransferFileRange) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BackgroundTransferFileRange) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_BackgroundTransferFileRange) },
         { }
     };
 
@@ -6091,6 +6145,53 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     }
 
+    static PyObject* _repr_BackgroundUploadProgress(PyObject* self) noexcept
+    {
+        py::pyobj_handle BytesReceived{PyObject_GetAttrString(self, "bytes_received")};
+        if (!BytesReceived)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BytesSent{PyObject_GetAttrString(self, "bytes_sent")};
+        if (!BytesSent)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalBytesToReceive{PyObject_GetAttrString(self, "total_bytes_to_receive")};
+        if (!TotalBytesToReceive)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalBytesToSend{PyObject_GetAttrString(self, "total_bytes_to_send")};
+        if (!TotalBytesToSend)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Status{PyObject_GetAttrString(self, "status")};
+        if (!Status)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle HasResponseChanged{PyObject_GetAttrString(self, "has_response_changed")};
+        if (!HasResponseChanged)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle HasRestarted{PyObject_GetAttrString(self, "has_restarted")};
+        if (!HasRestarted)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("BackgroundUploadProgress(bytes_received=%R, bytes_sent=%R, total_bytes_to_receive=%R, total_bytes_to_send=%R, status=%R, has_response_changed=%R, has_restarted=%R)", BytesReceived.get(), BytesSent.get(), TotalBytesToReceive.get(), TotalBytesToSend.get(), Status.get(), HasResponseChanged.get(), HasRestarted.get());
+    }
+
     static PyType_Slot _type_slots_BackgroundUploadProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundUploadProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BackgroundUploadProgress) },
@@ -6098,6 +6199,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundUploadProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundUploadProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BackgroundUploadProgress) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_BackgroundUploadProgress) },
         { }
     };
 

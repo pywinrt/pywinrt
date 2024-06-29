@@ -2473,6 +2473,23 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         }
     }
 
+    static PyObject* _repr_InjectedInputPoint(PyObject* self) noexcept
+    {
+        py::pyobj_handle PositionX{PyObject_GetAttrString(self, "position_x")};
+        if (!PositionX)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PositionY{PyObject_GetAttrString(self, "position_y")};
+        if (!PositionY)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("InjectedInputPoint(position_x=%R, position_y=%R)", PositionX.get(), PositionY.get());
+    }
+
     static PyType_Slot _type_slots_InjectedInputPoint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputPoint) },
         { Py_tp_init, reinterpret_cast<void*>(_init_InjectedInputPoint) },
@@ -2480,6 +2497,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputPoint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputPoint) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_InjectedInputPoint) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_InjectedInputPoint) },
         { }
     };
 
@@ -2777,6 +2795,41 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         }
     }
 
+    static PyObject* _repr_InjectedInputPointerInfo(PyObject* self) noexcept
+    {
+        py::pyobj_handle PointerId{PyObject_GetAttrString(self, "pointer_id")};
+        if (!PointerId)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PointerOptions{PyObject_GetAttrString(self, "pointer_options")};
+        if (!PointerOptions)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PixelLocation{PyObject_GetAttrString(self, "pixel_location")};
+        if (!PixelLocation)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TimeOffsetInMilliseconds{PyObject_GetAttrString(self, "time_offset_in_milliseconds")};
+        if (!TimeOffsetInMilliseconds)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PerformanceCount{PyObject_GetAttrString(self, "performance_count")};
+        if (!PerformanceCount)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("InjectedInputPointerInfo(pointer_id=%R, pointer_options=%R, pixel_location=%R, time_offset_in_milliseconds=%R, performance_count=%R)", PointerId.get(), PointerOptions.get(), PixelLocation.get(), TimeOffsetInMilliseconds.get(), PerformanceCount.get());
+    }
+
     static PyType_Slot _type_slots_InjectedInputPointerInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputPointerInfo) },
         { Py_tp_init, reinterpret_cast<void*>(_init_InjectedInputPointerInfo) },
@@ -2784,6 +2837,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputPointerInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputPointerInfo) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_InjectedInputPointerInfo) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_InjectedInputPointerInfo) },
         { }
     };
 
@@ -3045,6 +3099,35 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         }
     }
 
+    static PyObject* _repr_InjectedInputRectangle(PyObject* self) noexcept
+    {
+        py::pyobj_handle Left{PyObject_GetAttrString(self, "left")};
+        if (!Left)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Top{PyObject_GetAttrString(self, "top")};
+        if (!Top)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Bottom{PyObject_GetAttrString(self, "bottom")};
+        if (!Bottom)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Right{PyObject_GetAttrString(self, "right")};
+        if (!Right)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("InjectedInputRectangle(left=%R, top=%R, bottom=%R, right=%R)", Left.get(), Top.get(), Bottom.get(), Right.get());
+    }
+
     static PyType_Slot _type_slots_InjectedInputRectangle[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputRectangle) },
         { Py_tp_init, reinterpret_cast<void*>(_init_InjectedInputRectangle) },
@@ -3052,6 +3135,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputRectangle) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputRectangle) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_InjectedInputRectangle) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_InjectedInputRectangle) },
         { }
     };
 

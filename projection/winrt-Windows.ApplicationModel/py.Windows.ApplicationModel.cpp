@@ -7702,6 +7702,17 @@ namespace py::cpp::Windows::ApplicationModel
         }
     }
 
+    static PyObject* _repr_PackageInstallProgress(PyObject* self) noexcept
+    {
+        py::pyobj_handle PercentComplete{PyObject_GetAttrString(self, "percent_complete")};
+        if (!PercentComplete)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("PackageInstallProgress(percent_complete=%R)", PercentComplete.get());
+    }
+
     static PyType_Slot _type_slots_PackageInstallProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageInstallProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PackageInstallProgress) },
@@ -7709,6 +7720,7 @@ namespace py::cpp::Windows::ApplicationModel
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageInstallProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageInstallProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PackageInstallProgress) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_PackageInstallProgress) },
         { }
     };
 
@@ -7970,6 +7982,35 @@ namespace py::cpp::Windows::ApplicationModel
         }
     }
 
+    static PyObject* _repr_PackageVersion(PyObject* self) noexcept
+    {
+        py::pyobj_handle Major{PyObject_GetAttrString(self, "major")};
+        if (!Major)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Minor{PyObject_GetAttrString(self, "minor")};
+        if (!Minor)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Build{PyObject_GetAttrString(self, "build")};
+        if (!Build)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Revision{PyObject_GetAttrString(self, "revision")};
+        if (!Revision)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("PackageVersion(major=%R, minor=%R, build=%R, revision=%R)", Major.get(), Minor.get(), Build.get(), Revision.get());
+    }
+
     static PyType_Slot _type_slots_PackageVersion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageVersion) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PackageVersion) },
@@ -7977,6 +8018,7 @@ namespace py::cpp::Windows::ApplicationModel
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageVersion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageVersion) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PackageVersion) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_PackageVersion) },
         { }
     };
 

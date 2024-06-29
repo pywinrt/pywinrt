@@ -15452,6 +15452,23 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
     }
 
+    static PyObject* _repr_ESimProfileInstallProgress(PyObject* self) noexcept
+    {
+        py::pyobj_handle TotalSizeInBytes{PyObject_GetAttrString(self, "total_size_in_bytes")};
+        if (!TotalSizeInBytes)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle InstalledSizeInBytes{PyObject_GetAttrString(self, "installed_size_in_bytes")};
+        if (!InstalledSizeInBytes)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("ESimProfileInstallProgress(total_size_in_bytes=%R, installed_size_in_bytes=%R)", TotalSizeInBytes.get(), InstalledSizeInBytes.get());
+    }
+
     static PyType_Slot _type_slots_ESimProfileInstallProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ESimProfileInstallProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ESimProfileInstallProgress) },
@@ -15459,6 +15476,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ESimProfileInstallProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESimProfileInstallProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_ESimProfileInstallProgress) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_ESimProfileInstallProgress) },
         { }
     };
 
@@ -15648,6 +15666,23 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
     }
 
+    static PyObject* _repr_ProfileUsage(PyObject* self) noexcept
+    {
+        py::pyobj_handle UsageInMegabytes{PyObject_GetAttrString(self, "usage_in_megabytes")};
+        if (!UsageInMegabytes)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle LastSyncTime{PyObject_GetAttrString(self, "last_sync_time")};
+        if (!LastSyncTime)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("ProfileUsage(usage_in_megabytes=%R, last_sync_time=%R)", UsageInMegabytes.get(), LastSyncTime.get());
+    }
+
     static PyType_Slot _type_slots_ProfileUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProfileUsage) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ProfileUsage) },
@@ -15655,6 +15690,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProfileUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProfileUsage) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_ProfileUsage) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_ProfileUsage) },
         { }
     };
 

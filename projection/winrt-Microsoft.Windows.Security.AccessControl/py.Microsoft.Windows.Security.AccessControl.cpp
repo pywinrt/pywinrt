@@ -307,6 +307,23 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
         }
     }
 
+    static PyObject* _repr_AppContainerNameAndAccess(PyObject* self) noexcept
+    {
+        py::pyobj_handle appContainerName{PyObject_GetAttrString(self, "app_container_name")};
+        if (!appContainerName)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle accessMask{PyObject_GetAttrString(self, "access_mask")};
+        if (!accessMask)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("AppContainerNameAndAccess(app_container_name=%R, access_mask=%R)", appContainerName.get(), accessMask.get());
+    }
+
     static PyType_Slot _type_slots_AppContainerNameAndAccess[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AppContainerNameAndAccess) },
         { Py_tp_init, reinterpret_cast<void*>(_init_AppContainerNameAndAccess) },
@@ -314,6 +331,7 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AppContainerNameAndAccess) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AppContainerNameAndAccess) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_AppContainerNameAndAccess) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_AppContainerNameAndAccess) },
         { }
     };
 

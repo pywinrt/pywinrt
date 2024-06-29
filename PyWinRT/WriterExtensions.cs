@@ -182,6 +182,7 @@ static class WriterExtensions
         if (type.Category == Category.Struct)
         {
             w.WriteLine($"{{ Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_{name}) }},");
+            w.WriteLine($"{{ Py_tp_repr, reinterpret_cast<void*>(_repr_{name}) }},");
         }
 
         if (type.IsPyBuffer)

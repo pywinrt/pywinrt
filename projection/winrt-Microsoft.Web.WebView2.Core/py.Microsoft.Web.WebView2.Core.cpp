@@ -22021,6 +22021,47 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
+    static PyObject* _repr_CoreWebView2PhysicalKeyStatus(PyObject* self) noexcept
+    {
+        py::pyobj_handle RepeatCount{PyObject_GetAttrString(self, "repeat_count")};
+        if (!RepeatCount)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle ScanCode{PyObject_GetAttrString(self, "scan_code")};
+        if (!ScanCode)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle IsExtendedKey{PyObject_GetAttrString(self, "is_extended_key")};
+        if (!IsExtendedKey)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle IsMenuKeyDown{PyObject_GetAttrString(self, "is_menu_key_down")};
+        if (!IsMenuKeyDown)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle WasKeyDown{PyObject_GetAttrString(self, "was_key_down")};
+        if (!WasKeyDown)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle IsKeyReleased{PyObject_GetAttrString(self, "is_key_released")};
+        if (!IsKeyReleased)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("CoreWebView2PhysicalKeyStatus(repeat_count=%R, scan_code=%R, is_extended_key=%R, is_menu_key_down=%R, was_key_down=%R, is_key_released=%R)", RepeatCount.get(), ScanCode.get(), IsExtendedKey.get(), IsMenuKeyDown.get(), WasKeyDown.get(), IsKeyReleased.get());
+    }
+
     static PyType_Slot _type_slots_CoreWebView2PhysicalKeyStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2PhysicalKeyStatus) },
         { Py_tp_init, reinterpret_cast<void*>(_init_CoreWebView2PhysicalKeyStatus) },
@@ -22028,6 +22069,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2PhysicalKeyStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2PhysicalKeyStatus) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_CoreWebView2PhysicalKeyStatus) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_CoreWebView2PhysicalKeyStatus) },
         { }
     };
 

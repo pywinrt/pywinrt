@@ -5899,6 +5899,35 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     }
 
+    static PyObject* _repr_BitmapBounds(PyObject* self) noexcept
+    {
+        py::pyobj_handle X{PyObject_GetAttrString(self, "x")};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{PyObject_GetAttrString(self, "y")};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Width{PyObject_GetAttrString(self, "width")};
+        if (!Width)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Height{PyObject_GetAttrString(self, "height")};
+        if (!Height)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("BitmapBounds(x=%R, y=%R, width=%R, height=%R)", X.get(), Y.get(), Width.get(), Height.get());
+    }
+
     static PyType_Slot _type_slots_BitmapBounds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapBounds) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BitmapBounds) },
@@ -5906,6 +5935,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapBounds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapBounds) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BitmapBounds) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_BitmapBounds) },
         { }
     };
 
@@ -6167,6 +6197,35 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     }
 
+    static PyObject* _repr_BitmapPlaneDescription(PyObject* self) noexcept
+    {
+        py::pyobj_handle StartIndex{PyObject_GetAttrString(self, "start_index")};
+        if (!StartIndex)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Width{PyObject_GetAttrString(self, "width")};
+        if (!Width)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Height{PyObject_GetAttrString(self, "height")};
+        if (!Height)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Stride{PyObject_GetAttrString(self, "stride")};
+        if (!Stride)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("BitmapPlaneDescription(start_index=%R, width=%R, height=%R, stride=%R)", StartIndex.get(), Width.get(), Height.get(), Stride.get());
+    }
+
     static PyType_Slot _type_slots_BitmapPlaneDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapPlaneDescription) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BitmapPlaneDescription) },
@@ -6174,6 +6233,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapPlaneDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapPlaneDescription) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BitmapPlaneDescription) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_BitmapPlaneDescription) },
         { }
     };
 
@@ -6363,6 +6423,23 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     }
 
+    static PyObject* _repr_BitmapSize(PyObject* self) noexcept
+    {
+        py::pyobj_handle Width{PyObject_GetAttrString(self, "width")};
+        if (!Width)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Height{PyObject_GetAttrString(self, "height")};
+        if (!Height)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("BitmapSize(width=%R, height=%R)", Width.get(), Height.get());
+    }
+
     static PyType_Slot _type_slots_BitmapSize[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapSize) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BitmapSize) },
@@ -6370,6 +6447,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapSize) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapSize) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BitmapSize) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_BitmapSize) },
         { }
     };
 

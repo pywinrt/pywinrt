@@ -2351,6 +2351,35 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     }
 
+    static PyObject* _repr_GameControllerVersionInfo(PyObject* self) noexcept
+    {
+        py::pyobj_handle Major{PyObject_GetAttrString(self, "major")};
+        if (!Major)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Minor{PyObject_GetAttrString(self, "minor")};
+        if (!Minor)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Build{PyObject_GetAttrString(self, "build")};
+        if (!Build)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Revision{PyObject_GetAttrString(self, "revision")};
+        if (!Revision)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("GameControllerVersionInfo(major=%R, minor=%R, build=%R, revision=%R)", Major.get(), Minor.get(), Build.get(), Revision.get());
+    }
+
     static PyType_Slot _type_slots_GameControllerVersionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameControllerVersionInfo) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GameControllerVersionInfo) },
@@ -2358,6 +2387,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameControllerVersionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameControllerVersionInfo) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_GameControllerVersionInfo) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_GameControllerVersionInfo) },
         { }
     };
 
@@ -2547,6 +2577,23 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     }
 
+    static PyObject* _repr_GipFirmwareUpdateProgress(PyObject* self) noexcept
+    {
+        py::pyobj_handle PercentCompleted{PyObject_GetAttrString(self, "percent_completed")};
+        if (!PercentCompleted)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle CurrentComponentId{PyObject_GetAttrString(self, "current_component_id")};
+        if (!CurrentComponentId)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("GipFirmwareUpdateProgress(percent_completed=%R, current_component_id=%R)", PercentCompleted.get(), CurrentComponentId.get());
+    }
+
     static PyType_Slot _type_slots_GipFirmwareUpdateProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GipFirmwareUpdateProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GipFirmwareUpdateProgress) },
@@ -2554,6 +2601,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GipFirmwareUpdateProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GipFirmwareUpdateProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_GipFirmwareUpdateProgress) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_GipFirmwareUpdateProgress) },
         { }
     };
 

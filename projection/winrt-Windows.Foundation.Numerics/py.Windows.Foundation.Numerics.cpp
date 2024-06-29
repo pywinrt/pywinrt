@@ -327,6 +327,47 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* _repr_Matrix3x2(PyObject* self) noexcept
+    {
+        py::pyobj_handle M11{PyObject_GetAttrString(self, "m11")};
+        if (!M11)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M12{PyObject_GetAttrString(self, "m12")};
+        if (!M12)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M21{PyObject_GetAttrString(self, "m21")};
+        if (!M21)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M22{PyObject_GetAttrString(self, "m22")};
+        if (!M22)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M31{PyObject_GetAttrString(self, "m31")};
+        if (!M31)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M32{PyObject_GetAttrString(self, "m32")};
+        if (!M32)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("Matrix3x2(m11=%R, m12=%R, m21=%R, m22=%R, m31=%R, m32=%R)", M11.get(), M12.get(), M21.get(), M22.get(), M31.get(), M32.get());
+    }
+
     static PyType_Slot _type_slots_Matrix3x2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix3x2) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Matrix3x2) },
@@ -334,6 +375,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix3x2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix3x2) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Matrix3x2) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_Matrix3x2) },
         { }
     };
 
@@ -1027,6 +1069,107 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* _repr_Matrix4x4(PyObject* self) noexcept
+    {
+        py::pyobj_handle M11{PyObject_GetAttrString(self, "m11")};
+        if (!M11)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M12{PyObject_GetAttrString(self, "m12")};
+        if (!M12)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M13{PyObject_GetAttrString(self, "m13")};
+        if (!M13)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M14{PyObject_GetAttrString(self, "m14")};
+        if (!M14)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M21{PyObject_GetAttrString(self, "m21")};
+        if (!M21)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M22{PyObject_GetAttrString(self, "m22")};
+        if (!M22)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M23{PyObject_GetAttrString(self, "m23")};
+        if (!M23)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M24{PyObject_GetAttrString(self, "m24")};
+        if (!M24)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M31{PyObject_GetAttrString(self, "m31")};
+        if (!M31)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M32{PyObject_GetAttrString(self, "m32")};
+        if (!M32)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M33{PyObject_GetAttrString(self, "m33")};
+        if (!M33)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M34{PyObject_GetAttrString(self, "m34")};
+        if (!M34)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M41{PyObject_GetAttrString(self, "m41")};
+        if (!M41)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M42{PyObject_GetAttrString(self, "m42")};
+        if (!M42)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M43{PyObject_GetAttrString(self, "m43")};
+        if (!M43)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M44{PyObject_GetAttrString(self, "m44")};
+        if (!M44)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("Matrix4x4(m11=%R, m12=%R, m13=%R, m14=%R, m21=%R, m22=%R, m23=%R, m24=%R, m31=%R, m32=%R, m33=%R, m34=%R, m41=%R, m42=%R, m43=%R, m44=%R)", M11.get(), M12.get(), M13.get(), M14.get(), M21.get(), M22.get(), M23.get(), M24.get(), M31.get(), M32.get(), M33.get(), M34.get(), M41.get(), M42.get(), M43.get(), M44.get());
+    }
+
     static PyType_Slot _type_slots_Matrix4x4[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix4x4) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Matrix4x4) },
@@ -1034,6 +1177,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix4x4) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix4x4) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Matrix4x4) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_Matrix4x4) },
         { }
     };
 
@@ -1223,6 +1367,23 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* _repr_Plane(PyObject* self) noexcept
+    {
+        py::pyobj_handle Normal{PyObject_GetAttrString(self, "normal")};
+        if (!Normal)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle D{PyObject_GetAttrString(self, "d")};
+        if (!D)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("Plane(normal=%R, d=%R)", Normal.get(), D.get());
+    }
+
     static PyType_Slot _type_slots_Plane[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Plane) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Plane) },
@@ -1230,6 +1391,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Plane) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Plane) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Plane) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_Plane) },
         { }
     };
 
@@ -1491,6 +1653,35 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* _repr_Quaternion(PyObject* self) noexcept
+    {
+        py::pyobj_handle X{PyObject_GetAttrString(self, "x")};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{PyObject_GetAttrString(self, "y")};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Z{PyObject_GetAttrString(self, "z")};
+        if (!Z)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle W{PyObject_GetAttrString(self, "w")};
+        if (!W)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("Quaternion(x=%R, y=%R, z=%R, w=%R)", X.get(), Y.get(), Z.get(), W.get());
+    }
+
     static PyType_Slot _type_slots_Quaternion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Quaternion) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Quaternion) },
@@ -1498,6 +1689,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Quaternion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Quaternion) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Quaternion) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_Quaternion) },
         { }
     };
 
@@ -1687,6 +1879,23 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* _repr_Rational(PyObject* self) noexcept
+    {
+        py::pyobj_handle Numerator{PyObject_GetAttrString(self, "numerator")};
+        if (!Numerator)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Denominator{PyObject_GetAttrString(self, "denominator")};
+        if (!Denominator)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("Rational(numerator=%R, denominator=%R)", Numerator.get(), Denominator.get());
+    }
+
     static PyType_Slot _type_slots_Rational[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Rational) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Rational) },
@@ -1694,6 +1903,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Rational) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Rational) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Rational) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_Rational) },
         { }
     };
 
@@ -1883,6 +2093,23 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* _repr_Vector2(PyObject* self) noexcept
+    {
+        py::pyobj_handle X{PyObject_GetAttrString(self, "x")};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{PyObject_GetAttrString(self, "y")};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("Vector2(x=%R, y=%R)", X.get(), Y.get());
+    }
+
     static PyType_Slot _type_slots_Vector2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector2) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Vector2) },
@@ -1890,6 +2117,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector2) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector2) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_Vector2) },
         { }
     };
 
@@ -2115,6 +2343,29 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* _repr_Vector3(PyObject* self) noexcept
+    {
+        py::pyobj_handle X{PyObject_GetAttrString(self, "x")};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{PyObject_GetAttrString(self, "y")};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Z{PyObject_GetAttrString(self, "z")};
+        if (!Z)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("Vector3(x=%R, y=%R, z=%R)", X.get(), Y.get(), Z.get());
+    }
+
     static PyType_Slot _type_slots_Vector3[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector3) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Vector3) },
@@ -2122,6 +2373,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector3) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector3) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector3) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_Vector3) },
         { }
     };
 
@@ -2383,6 +2635,35 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* _repr_Vector4(PyObject* self) noexcept
+    {
+        py::pyobj_handle X{PyObject_GetAttrString(self, "x")};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{PyObject_GetAttrString(self, "y")};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Z{PyObject_GetAttrString(self, "z")};
+        if (!Z)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle W{PyObject_GetAttrString(self, "w")};
+        if (!W)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("Vector4(x=%R, y=%R, z=%R, w=%R)", X.get(), Y.get(), Z.get(), W.get());
+    }
+
     static PyType_Slot _type_slots_Vector4[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector4) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Vector4) },
@@ -2390,6 +2671,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector4) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector4) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector4) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_Vector4) },
         { }
     };
 

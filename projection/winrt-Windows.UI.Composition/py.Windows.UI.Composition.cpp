@@ -97231,6 +97231,23 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
+    static PyObject* _repr_InkTrailPoint(PyObject* self) noexcept
+    {
+        py::pyobj_handle Point{PyObject_GetAttrString(self, "point")};
+        if (!Point)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Radius{PyObject_GetAttrString(self, "radius")};
+        if (!Radius)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("InkTrailPoint(point=%R, radius=%R)", Point.get(), Radius.get());
+    }
+
     static PyType_Slot _type_slots_InkTrailPoint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkTrailPoint) },
         { Py_tp_init, reinterpret_cast<void*>(_init_InkTrailPoint) },
@@ -97238,6 +97255,7 @@ namespace py::cpp::Windows::UI::Composition
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkTrailPoint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkTrailPoint) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_InkTrailPoint) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_InkTrailPoint) },
         { }
     };
 

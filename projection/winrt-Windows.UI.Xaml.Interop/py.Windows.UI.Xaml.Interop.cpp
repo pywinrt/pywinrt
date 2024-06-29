@@ -1796,6 +1796,23 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         }
     }
 
+    static PyObject* _repr_TypeName(PyObject* self) noexcept
+    {
+        py::pyobj_handle Name{PyObject_GetAttrString(self, "name")};
+        if (!Name)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Kind{PyObject_GetAttrString(self, "kind")};
+        if (!Kind)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("TypeName(name=%R, kind=%R)", Name.get(), Kind.get());
+    }
+
     static PyType_Slot _type_slots_TypeName[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TypeName) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TypeName) },
@@ -1803,6 +1820,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TypeName) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TypeName) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_TypeName) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_TypeName) },
         { }
     };
 

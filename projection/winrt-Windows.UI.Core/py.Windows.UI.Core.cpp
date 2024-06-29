@@ -11556,6 +11556,47 @@ namespace py::cpp::Windows::UI::Core
         }
     }
 
+    static PyObject* _repr_CorePhysicalKeyStatus(PyObject* self) noexcept
+    {
+        py::pyobj_handle RepeatCount{PyObject_GetAttrString(self, "repeat_count")};
+        if (!RepeatCount)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle ScanCode{PyObject_GetAttrString(self, "scan_code")};
+        if (!ScanCode)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle IsExtendedKey{PyObject_GetAttrString(self, "is_extended_key")};
+        if (!IsExtendedKey)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle IsMenuKeyDown{PyObject_GetAttrString(self, "is_menu_key_down")};
+        if (!IsMenuKeyDown)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle WasKeyDown{PyObject_GetAttrString(self, "was_key_down")};
+        if (!WasKeyDown)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle IsKeyReleased{PyObject_GetAttrString(self, "is_key_released")};
+        if (!IsKeyReleased)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("CorePhysicalKeyStatus(repeat_count=%R, scan_code=%R, is_extended_key=%R, is_menu_key_down=%R, was_key_down=%R, is_key_released=%R)", RepeatCount.get(), ScanCode.get(), IsExtendedKey.get(), IsMenuKeyDown.get(), WasKeyDown.get(), IsKeyReleased.get());
+    }
+
     static PyType_Slot _type_slots_CorePhysicalKeyStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CorePhysicalKeyStatus) },
         { Py_tp_init, reinterpret_cast<void*>(_init_CorePhysicalKeyStatus) },
@@ -11563,6 +11604,7 @@ namespace py::cpp::Windows::UI::Core
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CorePhysicalKeyStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CorePhysicalKeyStatus) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_CorePhysicalKeyStatus) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_CorePhysicalKeyStatus) },
         { }
     };
 
@@ -11752,6 +11794,23 @@ namespace py::cpp::Windows::UI::Core
         }
     }
 
+    static PyObject* _repr_CoreProximityEvaluation(PyObject* self) noexcept
+    {
+        py::pyobj_handle Score{PyObject_GetAttrString(self, "score")};
+        if (!Score)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle AdjustedPoint{PyObject_GetAttrString(self, "adjusted_point")};
+        if (!AdjustedPoint)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("CoreProximityEvaluation(score=%R, adjusted_point=%R)", Score.get(), AdjustedPoint.get());
+    }
+
     static PyType_Slot _type_slots_CoreProximityEvaluation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreProximityEvaluation) },
         { Py_tp_init, reinterpret_cast<void*>(_init_CoreProximityEvaluation) },
@@ -11759,6 +11818,7 @@ namespace py::cpp::Windows::UI::Core
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreProximityEvaluation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreProximityEvaluation) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_CoreProximityEvaluation) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_CoreProximityEvaluation) },
         { }
     };
 

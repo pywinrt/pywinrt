@@ -1214,6 +1214,23 @@ namespace py::cpp::Windows::Devices::I2c
         }
     }
 
+    static PyObject* _repr_I2cTransferResult(PyObject* self) noexcept
+    {
+        py::pyobj_handle Status{PyObject_GetAttrString(self, "status")};
+        if (!Status)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BytesTransferred{PyObject_GetAttrString(self, "bytes_transferred")};
+        if (!BytesTransferred)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("I2cTransferResult(status=%R, bytes_transferred=%R)", Status.get(), BytesTransferred.get());
+    }
+
     static PyType_Slot _type_slots_I2cTransferResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_I2cTransferResult) },
         { Py_tp_init, reinterpret_cast<void*>(_init_I2cTransferResult) },
@@ -1221,6 +1238,7 @@ namespace py::cpp::Windows::Devices::I2c
         { Py_tp_methods, reinterpret_cast<void*>(_methods_I2cTransferResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_I2cTransferResult) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_I2cTransferResult) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_I2cTransferResult) },
         { }
     };
 
