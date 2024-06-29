@@ -4232,6 +4232,23 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
+    static PyObject* _repr_ArcadeStickReading(PyObject* self) noexcept
+    {
+        py::pyobj_handle Timestamp{PyObject_GetAttrString(self, "timestamp")};
+        if (!Timestamp)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Buttons{PyObject_GetAttrString(self, "buttons")};
+        if (!Buttons)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("ArcadeStickReading(timestamp=%R, buttons=%R)", Timestamp.get(), Buttons.get());
+    }
+
     static PyType_Slot _type_slots_ArcadeStickReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ArcadeStickReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ArcadeStickReading) },
@@ -4239,6 +4256,7 @@ namespace py::cpp::Windows::Gaming::Input
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ArcadeStickReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ArcadeStickReading) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_ArcadeStickReading) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_ArcadeStickReading) },
         { }
     };
 
@@ -4608,6 +4626,53 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
+    static PyObject* _repr_FlightStickReading(PyObject* self) noexcept
+    {
+        py::pyobj_handle Timestamp{PyObject_GetAttrString(self, "timestamp")};
+        if (!Timestamp)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Buttons{PyObject_GetAttrString(self, "buttons")};
+        if (!Buttons)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle HatSwitch{PyObject_GetAttrString(self, "hat_switch")};
+        if (!HatSwitch)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Roll{PyObject_GetAttrString(self, "roll")};
+        if (!Roll)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Pitch{PyObject_GetAttrString(self, "pitch")};
+        if (!Pitch)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Yaw{PyObject_GetAttrString(self, "yaw")};
+        if (!Yaw)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Throttle{PyObject_GetAttrString(self, "throttle")};
+        if (!Throttle)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("FlightStickReading(timestamp=%R, buttons=%R, hat_switch=%R, roll=%R, pitch=%R, yaw=%R, throttle=%R)", Timestamp.get(), Buttons.get(), HatSwitch.get(), Roll.get(), Pitch.get(), Yaw.get(), Throttle.get());
+    }
+
     static PyType_Slot _type_slots_FlightStickReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FlightStickReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_FlightStickReading) },
@@ -4615,6 +4680,7 @@ namespace py::cpp::Windows::Gaming::Input
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FlightStickReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FlightStickReading) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_FlightStickReading) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_FlightStickReading) },
         { }
     };
 
@@ -5020,6 +5086,59 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
+    static PyObject* _repr_GamepadReading(PyObject* self) noexcept
+    {
+        py::pyobj_handle Timestamp{PyObject_GetAttrString(self, "timestamp")};
+        if (!Timestamp)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Buttons{PyObject_GetAttrString(self, "buttons")};
+        if (!Buttons)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle LeftTrigger{PyObject_GetAttrString(self, "left_trigger")};
+        if (!LeftTrigger)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle RightTrigger{PyObject_GetAttrString(self, "right_trigger")};
+        if (!RightTrigger)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle LeftThumbstickX{PyObject_GetAttrString(self, "left_thumbstick_x")};
+        if (!LeftThumbstickX)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle LeftThumbstickY{PyObject_GetAttrString(self, "left_thumbstick_y")};
+        if (!LeftThumbstickY)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle RightThumbstickX{PyObject_GetAttrString(self, "right_thumbstick_x")};
+        if (!RightThumbstickX)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle RightThumbstickY{PyObject_GetAttrString(self, "right_thumbstick_y")};
+        if (!RightThumbstickY)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("GamepadReading(timestamp=%R, buttons=%R, left_trigger=%R, right_trigger=%R, left_thumbstick_x=%R, left_thumbstick_y=%R, right_thumbstick_x=%R, right_thumbstick_y=%R)", Timestamp.get(), Buttons.get(), LeftTrigger.get(), RightTrigger.get(), LeftThumbstickX.get(), LeftThumbstickY.get(), RightThumbstickX.get(), RightThumbstickY.get());
+    }
+
     static PyType_Slot _type_slots_GamepadReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GamepadReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GamepadReading) },
@@ -5027,6 +5146,7 @@ namespace py::cpp::Windows::Gaming::Input
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GamepadReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GamepadReading) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_GamepadReading) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_GamepadReading) },
         { }
     };
 
@@ -5288,6 +5408,35 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
+    static PyObject* _repr_GamepadVibration(PyObject* self) noexcept
+    {
+        py::pyobj_handle LeftMotor{PyObject_GetAttrString(self, "left_motor")};
+        if (!LeftMotor)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle RightMotor{PyObject_GetAttrString(self, "right_motor")};
+        if (!RightMotor)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle LeftTrigger{PyObject_GetAttrString(self, "left_trigger")};
+        if (!LeftTrigger)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle RightTrigger{PyObject_GetAttrString(self, "right_trigger")};
+        if (!RightTrigger)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("GamepadVibration(left_motor=%R, right_motor=%R, left_trigger=%R, right_trigger=%R)", LeftMotor.get(), RightMotor.get(), LeftTrigger.get(), RightTrigger.get());
+    }
+
     static PyType_Slot _type_slots_GamepadVibration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GamepadVibration) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GamepadVibration) },
@@ -5295,6 +5444,7 @@ namespace py::cpp::Windows::Gaming::Input
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GamepadVibration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GamepadVibration) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_GamepadVibration) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_GamepadVibration) },
         { }
     };
 
@@ -5700,6 +5850,59 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
+    static PyObject* _repr_RacingWheelReading(PyObject* self) noexcept
+    {
+        py::pyobj_handle Timestamp{PyObject_GetAttrString(self, "timestamp")};
+        if (!Timestamp)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Buttons{PyObject_GetAttrString(self, "buttons")};
+        if (!Buttons)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PatternShifterGear{PyObject_GetAttrString(self, "pattern_shifter_gear")};
+        if (!PatternShifterGear)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Wheel{PyObject_GetAttrString(self, "wheel")};
+        if (!Wheel)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Throttle{PyObject_GetAttrString(self, "throttle")};
+        if (!Throttle)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Brake{PyObject_GetAttrString(self, "brake")};
+        if (!Brake)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Clutch{PyObject_GetAttrString(self, "clutch")};
+        if (!Clutch)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Handbrake{PyObject_GetAttrString(self, "handbrake")};
+        if (!Handbrake)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("RacingWheelReading(timestamp=%R, buttons=%R, pattern_shifter_gear=%R, wheel=%R, throttle=%R, brake=%R, clutch=%R, handbrake=%R)", Timestamp.get(), Buttons.get(), PatternShifterGear.get(), Wheel.get(), Throttle.get(), Brake.get(), Clutch.get(), Handbrake.get());
+    }
+
     static PyType_Slot _type_slots_RacingWheelReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RacingWheelReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RacingWheelReading) },
@@ -5707,6 +5910,7 @@ namespace py::cpp::Windows::Gaming::Input
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RacingWheelReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RacingWheelReading) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_RacingWheelReading) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_RacingWheelReading) },
         { }
     };
 
@@ -5932,6 +6136,29 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
+    static PyObject* _repr_UINavigationReading(PyObject* self) noexcept
+    {
+        py::pyobj_handle Timestamp{PyObject_GetAttrString(self, "timestamp")};
+        if (!Timestamp)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle RequiredButtons{PyObject_GetAttrString(self, "required_buttons")};
+        if (!RequiredButtons)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle OptionalButtons{PyObject_GetAttrString(self, "optional_buttons")};
+        if (!OptionalButtons)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("UINavigationReading(timestamp=%R, required_buttons=%R, optional_buttons=%R)", Timestamp.get(), RequiredButtons.get(), OptionalButtons.get());
+    }
+
     static PyType_Slot _type_slots_UINavigationReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UINavigationReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_UINavigationReading) },
@@ -5939,6 +6166,7 @@ namespace py::cpp::Windows::Gaming::Input
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UINavigationReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UINavigationReading) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_UINavigationReading) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_UINavigationReading) },
         { }
     };
 

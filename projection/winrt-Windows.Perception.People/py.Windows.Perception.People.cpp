@@ -1124,6 +1124,23 @@ namespace py::cpp::Windows::Perception::People
         }
     }
 
+    static PyObject* _repr_HandMeshVertex(PyObject* self) noexcept
+    {
+        py::pyobj_handle Position{PyObject_GetAttrString(self, "position")};
+        if (!Position)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Normal{PyObject_GetAttrString(self, "normal")};
+        if (!Normal)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("HandMeshVertex(position=%R, normal=%R)", Position.get(), Normal.get());
+    }
+
     static PyType_Slot _type_slots_HandMeshVertex[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HandMeshVertex) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HandMeshVertex) },
@@ -1131,6 +1148,7 @@ namespace py::cpp::Windows::Perception::People
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HandMeshVertex) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HandMeshVertex) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_HandMeshVertex) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_HandMeshVertex) },
         { }
     };
 
@@ -1392,6 +1410,35 @@ namespace py::cpp::Windows::Perception::People
         }
     }
 
+    static PyObject* _repr_JointPose(PyObject* self) noexcept
+    {
+        py::pyobj_handle Orientation{PyObject_GetAttrString(self, "orientation")};
+        if (!Orientation)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Position{PyObject_GetAttrString(self, "position")};
+        if (!Position)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Radius{PyObject_GetAttrString(self, "radius")};
+        if (!Radius)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Accuracy{PyObject_GetAttrString(self, "accuracy")};
+        if (!Accuracy)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("JointPose(orientation=%R, position=%R, radius=%R, accuracy=%R)", Orientation.get(), Position.get(), Radius.get(), Accuracy.get());
+    }
+
     static PyType_Slot _type_slots_JointPose[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_JointPose) },
         { Py_tp_init, reinterpret_cast<void*>(_init_JointPose) },
@@ -1399,6 +1446,7 @@ namespace py::cpp::Windows::Perception::People
         { Py_tp_methods, reinterpret_cast<void*>(_methods_JointPose) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JointPose) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_JointPose) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_JointPose) },
         { }
     };
 

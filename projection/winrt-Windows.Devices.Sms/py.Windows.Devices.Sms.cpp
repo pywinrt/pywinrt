@@ -9031,6 +9031,41 @@ namespace py::cpp::Windows::Devices::Sms
         }
     }
 
+    static PyObject* _repr_SmsEncodedLength(PyObject* self) noexcept
+    {
+        py::pyobj_handle SegmentCount{PyObject_GetAttrString(self, "segment_count")};
+        if (!SegmentCount)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle CharacterCountLastSegment{PyObject_GetAttrString(self, "character_count_last_segment")};
+        if (!CharacterCountLastSegment)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle CharactersPerSegment{PyObject_GetAttrString(self, "characters_per_segment")};
+        if (!CharactersPerSegment)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle ByteCountLastSegment{PyObject_GetAttrString(self, "byte_count_last_segment")};
+        if (!ByteCountLastSegment)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BytesPerSegment{PyObject_GetAttrString(self, "bytes_per_segment")};
+        if (!BytesPerSegment)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("SmsEncodedLength(segment_count=%R, character_count_last_segment=%R, characters_per_segment=%R, byte_count_last_segment=%R, bytes_per_segment=%R)", SegmentCount.get(), CharacterCountLastSegment.get(), CharactersPerSegment.get(), ByteCountLastSegment.get(), BytesPerSegment.get());
+    }
+
     static PyType_Slot _type_slots_SmsEncodedLength[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsEncodedLength) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SmsEncodedLength) },
@@ -9038,6 +9073,7 @@ namespace py::cpp::Windows::Devices::Sms
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsEncodedLength) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsEncodedLength) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SmsEncodedLength) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_SmsEncodedLength) },
         { }
     };
 

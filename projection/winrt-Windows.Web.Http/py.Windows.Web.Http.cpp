@@ -7678,6 +7678,47 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
+    static PyObject* _repr_HttpProgress(PyObject* self) noexcept
+    {
+        py::pyobj_handle Stage{PyObject_GetAttrString(self, "stage")};
+        if (!Stage)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BytesSent{PyObject_GetAttrString(self, "bytes_sent")};
+        if (!BytesSent)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalBytesToSend{PyObject_GetAttrString(self, "total_bytes_to_send")};
+        if (!TotalBytesToSend)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BytesReceived{PyObject_GetAttrString(self, "bytes_received")};
+        if (!BytesReceived)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalBytesToReceive{PyObject_GetAttrString(self, "total_bytes_to_receive")};
+        if (!TotalBytesToReceive)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Retries{PyObject_GetAttrString(self, "retries")};
+        if (!Retries)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("HttpProgress(stage=%R, bytes_sent=%R, total_bytes_to_send=%R, bytes_received=%R, total_bytes_to_receive=%R, retries=%R)", Stage.get(), BytesSent.get(), TotalBytesToSend.get(), BytesReceived.get(), TotalBytesToReceive.get(), Retries.get());
+    }
+
     static PyType_Slot _type_slots_HttpProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HttpProgress) },
@@ -7685,6 +7726,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_HttpProgress) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_HttpProgress) },
         { }
     };
 

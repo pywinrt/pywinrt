@@ -249,6 +249,23 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
+    static PyObject* _repr_DisplayAdapterId(PyObject* self) noexcept
+    {
+        py::pyobj_handle LowPart{PyObject_GetAttrString(self, "low_part")};
+        if (!LowPart)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle HighPart{PyObject_GetAttrString(self, "high_part")};
+        if (!HighPart)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("DisplayAdapterId(low_part=%R, high_part=%R)", LowPart.get(), HighPart.get());
+    }
+
     static PyType_Slot _type_slots_DisplayAdapterId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayAdapterId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_DisplayAdapterId) },
@@ -256,6 +273,7 @@ namespace py::cpp::Windows::Graphics
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayAdapterId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayAdapterId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_DisplayAdapterId) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_DisplayAdapterId) },
         { }
     };
 
@@ -409,6 +427,17 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
+    static PyObject* _repr_DisplayId(PyObject* self) noexcept
+    {
+        py::pyobj_handle Value{PyObject_GetAttrString(self, "value")};
+        if (!Value)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("DisplayId(value=%R)", Value.get());
+    }
+
     static PyType_Slot _type_slots_DisplayId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_DisplayId) },
@@ -416,6 +445,7 @@ namespace py::cpp::Windows::Graphics
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_DisplayId) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_DisplayId) },
         { }
     };
 
@@ -605,6 +635,23 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
+    static PyObject* _repr_PointInt32(PyObject* self) noexcept
+    {
+        py::pyobj_handle X{PyObject_GetAttrString(self, "x")};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{PyObject_GetAttrString(self, "y")};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("PointInt32(x=%R, y=%R)", X.get(), Y.get());
+    }
+
     static PyType_Slot _type_slots_PointInt32[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointInt32) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PointInt32) },
@@ -612,6 +659,7 @@ namespace py::cpp::Windows::Graphics
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointInt32) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointInt32) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PointInt32) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_PointInt32) },
         { }
     };
 
@@ -873,6 +921,35 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
+    static PyObject* _repr_RectInt32(PyObject* self) noexcept
+    {
+        py::pyobj_handle X{PyObject_GetAttrString(self, "x")};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{PyObject_GetAttrString(self, "y")};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Width{PyObject_GetAttrString(self, "width")};
+        if (!Width)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Height{PyObject_GetAttrString(self, "height")};
+        if (!Height)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("RectInt32(x=%R, y=%R, width=%R, height=%R)", X.get(), Y.get(), Width.get(), Height.get());
+    }
+
     static PyType_Slot _type_slots_RectInt32[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RectInt32) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RectInt32) },
@@ -880,6 +957,7 @@ namespace py::cpp::Windows::Graphics
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RectInt32) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RectInt32) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_RectInt32) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_RectInt32) },
         { }
     };
 
@@ -1069,6 +1147,23 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
+    static PyObject* _repr_SizeInt32(PyObject* self) noexcept
+    {
+        py::pyobj_handle Width{PyObject_GetAttrString(self, "width")};
+        if (!Width)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Height{PyObject_GetAttrString(self, "height")};
+        if (!Height)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("SizeInt32(width=%R, height=%R)", Width.get(), Height.get());
+    }
+
     static PyType_Slot _type_slots_SizeInt32[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SizeInt32) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SizeInt32) },
@@ -1076,6 +1171,7 @@ namespace py::cpp::Windows::Graphics
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SizeInt32) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SizeInt32) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_SizeInt32) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_SizeInt32) },
         { }
     };
 

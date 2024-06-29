@@ -4149,6 +4149,41 @@ namespace py::cpp::Windows::Media::Import
         }
     }
 
+    static PyObject* _repr_PhotoImportProgress(PyObject* self) noexcept
+    {
+        py::pyobj_handle ItemsImported{PyObject_GetAttrString(self, "items_imported")};
+        if (!ItemsImported)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalItemsToImport{PyObject_GetAttrString(self, "total_items_to_import")};
+        if (!TotalItemsToImport)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BytesImported{PyObject_GetAttrString(self, "bytes_imported")};
+        if (!BytesImported)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalBytesToImport{PyObject_GetAttrString(self, "total_bytes_to_import")};
+        if (!TotalBytesToImport)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle ImportProgress{PyObject_GetAttrString(self, "import_progress")};
+        if (!ImportProgress)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("PhotoImportProgress(items_imported=%R, total_items_to_import=%R, bytes_imported=%R, total_bytes_to_import=%R, import_progress=%R)", ItemsImported.get(), TotalItemsToImport.get(), BytesImported.get(), TotalBytesToImport.get(), ImportProgress.get());
+    }
+
     static PyType_Slot _type_slots_PhotoImportProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PhotoImportProgress) },
@@ -4156,6 +4191,7 @@ namespace py::cpp::Windows::Media::Import
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PhotoImportProgress) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_PhotoImportProgress) },
         { }
     };
 

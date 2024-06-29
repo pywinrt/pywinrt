@@ -20318,6 +20318,29 @@ namespace py::cpp::Windows::Media::Capture
         }
     }
 
+    static PyObject* _repr_WhiteBalanceGain(PyObject* self) noexcept
+    {
+        py::pyobj_handle R{PyObject_GetAttrString(self, "r")};
+        if (!R)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle G{PyObject_GetAttrString(self, "g")};
+        if (!G)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle B{PyObject_GetAttrString(self, "b")};
+        if (!B)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("WhiteBalanceGain(r=%R, g=%R, b=%R)", R.get(), G.get(), B.get());
+    }
+
     static PyType_Slot _type_slots_WhiteBalanceGain[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WhiteBalanceGain) },
         { Py_tp_init, reinterpret_cast<void*>(_init_WhiteBalanceGain) },
@@ -20325,6 +20348,7 @@ namespace py::cpp::Windows::Media::Capture
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WhiteBalanceGain) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WhiteBalanceGain) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_WhiteBalanceGain) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_WhiteBalanceGain) },
         { }
     };
 

@@ -3941,6 +3941,23 @@ namespace py::cpp::Windows::Security::Isolation
         }
     }
 
+    static PyObject* _repr_IsolatedWindowsEnvironmentCreateProgress(PyObject* self) noexcept
+    {
+        py::pyobj_handle State{PyObject_GetAttrString(self, "state")};
+        if (!State)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PercentComplete{PyObject_GetAttrString(self, "percent_complete")};
+        if (!PercentComplete)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("IsolatedWindowsEnvironmentCreateProgress(state=%R, percent_complete=%R)", State.get(), PercentComplete.get());
+    }
+
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentCreateProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentCreateProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_IsolatedWindowsEnvironmentCreateProgress) },
@@ -3948,6 +3965,7 @@ namespace py::cpp::Windows::Security::Isolation
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentCreateProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentCreateProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_IsolatedWindowsEnvironmentCreateProgress) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_IsolatedWindowsEnvironmentCreateProgress) },
         { }
     };
 

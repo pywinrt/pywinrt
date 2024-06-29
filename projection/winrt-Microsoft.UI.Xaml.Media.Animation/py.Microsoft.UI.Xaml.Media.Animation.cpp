@@ -51718,6 +51718,17 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* _repr_KeyTime(PyObject* self) noexcept
+    {
+        py::pyobj_handle TimeSpan{PyObject_GetAttrString(self, "time_span")};
+        if (!TimeSpan)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("KeyTime(time_span=%R)", TimeSpan.get());
+    }
+
     static PyType_Slot _type_slots_KeyTime[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyTime) },
         { Py_tp_init, reinterpret_cast<void*>(_init_KeyTime) },
@@ -51725,6 +51736,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyTime) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyTime) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_KeyTime) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_KeyTime) },
         { }
     };
 
@@ -51950,6 +51962,29 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         }
     }
 
+    static PyObject* _repr_RepeatBehavior(PyObject* self) noexcept
+    {
+        py::pyobj_handle Count{PyObject_GetAttrString(self, "count")};
+        if (!Count)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Duration{PyObject_GetAttrString(self, "duration")};
+        if (!Duration)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Type{PyObject_GetAttrString(self, "type")};
+        if (!Type)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("RepeatBehavior(count=%R, duration=%R, type=%R)", Count.get(), Duration.get(), Type.get());
+    }
+
     static PyType_Slot _type_slots_RepeatBehavior[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RepeatBehavior) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RepeatBehavior) },
@@ -51957,6 +51992,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RepeatBehavior) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RepeatBehavior) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_RepeatBehavior) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_RepeatBehavior) },
         { }
     };
 

@@ -5726,6 +5726,23 @@ namespace py::cpp::Windows::Devices::Display::Core
         }
     }
 
+    static PyObject* _repr_DisplayPresentationRate(PyObject* self) noexcept
+    {
+        py::pyobj_handle VerticalSyncRate{PyObject_GetAttrString(self, "vertical_sync_rate")};
+        if (!VerticalSyncRate)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle VerticalSyncsPerPresentation{PyObject_GetAttrString(self, "vertical_syncs_per_presentation")};
+        if (!VerticalSyncsPerPresentation)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("DisplayPresentationRate(vertical_sync_rate=%R, vertical_syncs_per_presentation=%R)", VerticalSyncRate.get(), VerticalSyncsPerPresentation.get());
+    }
+
     static PyType_Slot _type_slots_DisplayPresentationRate[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayPresentationRate) },
         { Py_tp_init, reinterpret_cast<void*>(_init_DisplayPresentationRate) },
@@ -5733,6 +5750,7 @@ namespace py::cpp::Windows::Devices::Display::Core
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayPresentationRate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayPresentationRate) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_DisplayPresentationRate) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_DisplayPresentationRate) },
         { }
     };
 

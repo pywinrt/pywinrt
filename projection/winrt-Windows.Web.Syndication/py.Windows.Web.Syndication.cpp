@@ -8391,6 +8391,23 @@ namespace py::cpp::Windows::Web::Syndication
         }
     }
 
+    static PyObject* _repr_RetrievalProgress(PyObject* self) noexcept
+    {
+        py::pyobj_handle BytesRetrieved{PyObject_GetAttrString(self, "bytes_retrieved")};
+        if (!BytesRetrieved)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalBytesToRetrieve{PyObject_GetAttrString(self, "total_bytes_to_retrieve")};
+        if (!TotalBytesToRetrieve)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("RetrievalProgress(bytes_retrieved=%R, total_bytes_to_retrieve=%R)", BytesRetrieved.get(), TotalBytesToRetrieve.get());
+    }
+
     static PyType_Slot _type_slots_RetrievalProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RetrievalProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RetrievalProgress) },
@@ -8398,6 +8415,7 @@ namespace py::cpp::Windows::Web::Syndication
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RetrievalProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RetrievalProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_RetrievalProgress) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_RetrievalProgress) },
         { }
     };
 
@@ -8659,6 +8677,35 @@ namespace py::cpp::Windows::Web::Syndication
         }
     }
 
+    static PyObject* _repr_TransferProgress(PyObject* self) noexcept
+    {
+        py::pyobj_handle BytesSent{PyObject_GetAttrString(self, "bytes_sent")};
+        if (!BytesSent)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalBytesToSend{PyObject_GetAttrString(self, "total_bytes_to_send")};
+        if (!TotalBytesToSend)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BytesRetrieved{PyObject_GetAttrString(self, "bytes_retrieved")};
+        if (!BytesRetrieved)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalBytesToRetrieve{PyObject_GetAttrString(self, "total_bytes_to_retrieve")};
+        if (!TotalBytesToRetrieve)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("TransferProgress(bytes_sent=%R, total_bytes_to_send=%R, bytes_retrieved=%R, total_bytes_to_retrieve=%R)", BytesSent.get(), TotalBytesToSend.get(), BytesRetrieved.get(), TotalBytesToRetrieve.get());
+    }
+
     static PyType_Slot _type_slots_TransferProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TransferProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TransferProgress) },
@@ -8666,6 +8713,7 @@ namespace py::cpp::Windows::Web::Syndication
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TransferProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TransferProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_TransferProgress) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_TransferProgress) },
         { }
     };
 

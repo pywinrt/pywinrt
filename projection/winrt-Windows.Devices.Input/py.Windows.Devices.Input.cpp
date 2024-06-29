@@ -2262,6 +2262,23 @@ namespace py::cpp::Windows::Devices::Input
         }
     }
 
+    static PyObject* _repr_MouseDelta(PyObject* self) noexcept
+    {
+        py::pyobj_handle X{PyObject_GetAttrString(self, "x")};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{PyObject_GetAttrString(self, "y")};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("MouseDelta(x=%R, y=%R)", X.get(), Y.get());
+    }
+
     static PyType_Slot _type_slots_MouseDelta[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MouseDelta) },
         { Py_tp_init, reinterpret_cast<void*>(_init_MouseDelta) },
@@ -2269,6 +2286,7 @@ namespace py::cpp::Windows::Devices::Input
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MouseDelta) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MouseDelta) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_MouseDelta) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_MouseDelta) },
         { }
     };
 
@@ -2674,6 +2692,59 @@ namespace py::cpp::Windows::Devices::Input
         }
     }
 
+    static PyObject* _repr_PointerDeviceUsage(PyObject* self) noexcept
+    {
+        py::pyobj_handle UsagePage{PyObject_GetAttrString(self, "usage_page")};
+        if (!UsagePage)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Usage{PyObject_GetAttrString(self, "usage")};
+        if (!Usage)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle MinLogical{PyObject_GetAttrString(self, "min_logical")};
+        if (!MinLogical)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle MaxLogical{PyObject_GetAttrString(self, "max_logical")};
+        if (!MaxLogical)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle MinPhysical{PyObject_GetAttrString(self, "min_physical")};
+        if (!MinPhysical)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle MaxPhysical{PyObject_GetAttrString(self, "max_physical")};
+        if (!MaxPhysical)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Unit{PyObject_GetAttrString(self, "unit")};
+        if (!Unit)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PhysicalMultiplier{PyObject_GetAttrString(self, "physical_multiplier")};
+        if (!PhysicalMultiplier)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("PointerDeviceUsage(usage_page=%R, usage=%R, min_logical=%R, max_logical=%R, min_physical=%R, max_physical=%R, unit=%R, physical_multiplier=%R)", UsagePage.get(), Usage.get(), MinLogical.get(), MaxLogical.get(), MinPhysical.get(), MaxPhysical.get(), Unit.get(), PhysicalMultiplier.get());
+    }
+
     static PyType_Slot _type_slots_PointerDeviceUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointerDeviceUsage) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PointerDeviceUsage) },
@@ -2681,6 +2752,7 @@ namespace py::cpp::Windows::Devices::Input
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointerDeviceUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointerDeviceUsage) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PointerDeviceUsage) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_PointerDeviceUsage) },
         { }
     };
 

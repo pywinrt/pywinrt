@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Added
+- Added `__repr__` implementation for projected struct types.
+
 ### Fixed
 - Fixed `winrt.Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap`
   package missing `Microsoft.WindowsAppRuntime.Bootstrap.dll`.

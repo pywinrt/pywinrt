@@ -3653,6 +3653,29 @@ namespace py::cpp::Windows::Devices::Geolocation
         }
     }
 
+    static PyObject* _repr_BasicGeoposition(PyObject* self) noexcept
+    {
+        py::pyobj_handle Latitude{PyObject_GetAttrString(self, "latitude")};
+        if (!Latitude)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Longitude{PyObject_GetAttrString(self, "longitude")};
+        if (!Longitude)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Altitude{PyObject_GetAttrString(self, "altitude")};
+        if (!Altitude)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("BasicGeoposition(latitude=%R, longitude=%R, altitude=%R)", Latitude.get(), Longitude.get(), Altitude.get());
+    }
+
     static PyType_Slot _type_slots_BasicGeoposition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BasicGeoposition) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BasicGeoposition) },
@@ -3660,6 +3683,7 @@ namespace py::cpp::Windows::Devices::Geolocation
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BasicGeoposition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BasicGeoposition) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BasicGeoposition) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_BasicGeoposition) },
         { }
     };
 

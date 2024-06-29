@@ -35344,6 +35344,23 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
+    static PyObject* _repr_TextRange(PyObject* self) noexcept
+    {
+        py::pyobj_handle StartIndex{PyObject_GetAttrString(self, "start_index")};
+        if (!StartIndex)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Length{PyObject_GetAttrString(self, "length")};
+        if (!Length)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("TextRange(start_index=%R, length=%R)", StartIndex.get(), Length.get());
+    }
+
     static PyType_Slot _type_slots_TextRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextRange) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TextRange) },
@@ -35351,6 +35368,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextRange) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_TextRange) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_TextRange) },
         { }
     };
 

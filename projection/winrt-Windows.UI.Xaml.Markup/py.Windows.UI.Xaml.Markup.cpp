@@ -3420,6 +3420,29 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
     }
 
+    static PyObject* _repr_XamlBinaryWriterErrorInformation(PyObject* self) noexcept
+    {
+        py::pyobj_handle InputStreamIndex{PyObject_GetAttrString(self, "input_stream_index")};
+        if (!InputStreamIndex)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle LineNumber{PyObject_GetAttrString(self, "line_number")};
+        if (!LineNumber)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle LinePosition{PyObject_GetAttrString(self, "line_position")};
+        if (!LinePosition)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("XamlBinaryWriterErrorInformation(input_stream_index=%R, line_number=%R, line_position=%R)", InputStreamIndex.get(), LineNumber.get(), LinePosition.get());
+    }
+
     static PyType_Slot _type_slots_XamlBinaryWriterErrorInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlBinaryWriterErrorInformation) },
         { Py_tp_init, reinterpret_cast<void*>(_init_XamlBinaryWriterErrorInformation) },
@@ -3427,6 +3450,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlBinaryWriterErrorInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlBinaryWriterErrorInformation) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_XamlBinaryWriterErrorInformation) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_XamlBinaryWriterErrorInformation) },
         { }
     };
 
@@ -3616,6 +3640,23 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         }
     }
 
+    static PyObject* _repr_XmlnsDefinition(PyObject* self) noexcept
+    {
+        py::pyobj_handle XmlNamespace{PyObject_GetAttrString(self, "xml_namespace")};
+        if (!XmlNamespace)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Namespace{PyObject_GetAttrString(self, "namespace")};
+        if (!Namespace)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("XmlnsDefinition(xml_namespace=%R, namespace=%R)", XmlNamespace.get(), Namespace.get());
+    }
+
     static PyType_Slot _type_slots_XmlnsDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlnsDefinition) },
         { Py_tp_init, reinterpret_cast<void*>(_init_XmlnsDefinition) },
@@ -3623,6 +3664,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlnsDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlnsDefinition) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_XmlnsDefinition) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_XmlnsDefinition) },
         { }
     };
 

@@ -10152,6 +10152,47 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
+    static PyObject* _repr_BandwidthStatistics(PyObject* self) noexcept
+    {
+        py::pyobj_handle OutboundBitsPerSecond{PyObject_GetAttrString(self, "outbound_bits_per_second")};
+        if (!OutboundBitsPerSecond)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle InboundBitsPerSecond{PyObject_GetAttrString(self, "inbound_bits_per_second")};
+        if (!InboundBitsPerSecond)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle OutboundBitsPerSecondInstability{PyObject_GetAttrString(self, "outbound_bits_per_second_instability")};
+        if (!OutboundBitsPerSecondInstability)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle InboundBitsPerSecondInstability{PyObject_GetAttrString(self, "inbound_bits_per_second_instability")};
+        if (!InboundBitsPerSecondInstability)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle OutboundBandwidthPeaked{PyObject_GetAttrString(self, "outbound_bandwidth_peaked")};
+        if (!OutboundBandwidthPeaked)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle InboundBandwidthPeaked{PyObject_GetAttrString(self, "inbound_bandwidth_peaked")};
+        if (!InboundBandwidthPeaked)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("BandwidthStatistics(outbound_bits_per_second=%R, inbound_bits_per_second=%R, outbound_bits_per_second_instability=%R, inbound_bits_per_second_instability=%R, outbound_bandwidth_peaked=%R, inbound_bandwidth_peaked=%R)", OutboundBitsPerSecond.get(), InboundBitsPerSecond.get(), OutboundBitsPerSecondInstability.get(), InboundBitsPerSecondInstability.get(), OutboundBandwidthPeaked.get(), InboundBandwidthPeaked.get());
+    }
+
     static PyType_Slot _type_slots_BandwidthStatistics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BandwidthStatistics) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BandwidthStatistics) },
@@ -10159,6 +10200,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BandwidthStatistics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BandwidthStatistics) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_BandwidthStatistics) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_BandwidthStatistics) },
         { }
     };
 
@@ -10420,6 +10462,35 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
+    static PyObject* _repr_RoundTripTimeStatistics(PyObject* self) noexcept
+    {
+        py::pyobj_handle Variance{PyObject_GetAttrString(self, "variance")};
+        if (!Variance)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Max{PyObject_GetAttrString(self, "max")};
+        if (!Max)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Min{PyObject_GetAttrString(self, "min")};
+        if (!Min)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Sum{PyObject_GetAttrString(self, "sum")};
+        if (!Sum)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("RoundTripTimeStatistics(variance=%R, max=%R, min=%R, sum=%R)", Variance.get(), Max.get(), Min.get(), Sum.get());
+    }
+
     static PyType_Slot _type_slots_RoundTripTimeStatistics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RoundTripTimeStatistics) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RoundTripTimeStatistics) },
@@ -10427,6 +10498,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RoundTripTimeStatistics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RoundTripTimeStatistics) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_RoundTripTimeStatistics) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_RoundTripTimeStatistics) },
         { }
     };
 

@@ -5793,6 +5793,23 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         }
     }
 
+    static PyObject* _repr_PackageDeploymentProgress(PyObject* self) noexcept
+    {
+        py::pyobj_handle Status{PyObject_GetAttrString(self, "status")};
+        if (!Status)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Progress{PyObject_GetAttrString(self, "progress")};
+        if (!Progress)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("PackageDeploymentProgress(status=%R, progress=%R)", Status.get(), Progress.get());
+    }
+
     static PyType_Slot _type_slots_PackageDeploymentProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageDeploymentProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PackageDeploymentProgress) },
@@ -5800,6 +5817,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageDeploymentProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageDeploymentProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PackageDeploymentProgress) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_PackageDeploymentProgress) },
         { }
     };
 

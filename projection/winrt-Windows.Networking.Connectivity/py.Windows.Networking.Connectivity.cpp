@@ -5067,6 +5067,23 @@ namespace py::cpp::Windows::Networking::Connectivity
         }
     }
 
+    static PyObject* _repr_NetworkUsageStates(PyObject* self) noexcept
+    {
+        py::pyobj_handle Roaming{PyObject_GetAttrString(self, "roaming")};
+        if (!Roaming)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Shared{PyObject_GetAttrString(self, "shared")};
+        if (!Shared)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("NetworkUsageStates(roaming=%R, shared=%R)", Roaming.get(), Shared.get());
+    }
+
     static PyType_Slot _type_slots_NetworkUsageStates[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkUsageStates) },
         { Py_tp_init, reinterpret_cast<void*>(_init_NetworkUsageStates) },
@@ -5074,6 +5091,7 @@ namespace py::cpp::Windows::Networking::Connectivity
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkUsageStates) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkUsageStates) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_NetworkUsageStates) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_NetworkUsageStates) },
         { }
     };
 

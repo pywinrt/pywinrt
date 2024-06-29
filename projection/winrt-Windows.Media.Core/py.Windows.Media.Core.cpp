@@ -19669,6 +19669,23 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
+    static PyObject* _repr_MseTimeRange(PyObject* self) noexcept
+    {
+        py::pyobj_handle Start{PyObject_GetAttrString(self, "start")};
+        if (!Start)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle End{PyObject_GetAttrString(self, "end")};
+        if (!End)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("MseTimeRange(start=%R, end=%R)", Start.get(), End.get());
+    }
+
     static PyType_Slot _type_slots_MseTimeRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MseTimeRange) },
         { Py_tp_init, reinterpret_cast<void*>(_init_MseTimeRange) },
@@ -19676,6 +19693,7 @@ namespace py::cpp::Windows::Media::Core
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MseTimeRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MseTimeRange) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_MseTimeRange) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_MseTimeRange) },
         { }
     };
 
@@ -19865,6 +19883,23 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
+    static PyObject* _repr_TimedTextDouble(PyObject* self) noexcept
+    {
+        py::pyobj_handle Value{PyObject_GetAttrString(self, "value")};
+        if (!Value)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Unit{PyObject_GetAttrString(self, "unit")};
+        if (!Unit)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("TimedTextDouble(value=%R, unit=%R)", Value.get(), Unit.get());
+    }
+
     static PyType_Slot _type_slots_TimedTextDouble[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextDouble) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TimedTextDouble) },
@@ -19872,6 +19907,7 @@ namespace py::cpp::Windows::Media::Core
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextDouble) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextDouble) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_TimedTextDouble) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_TimedTextDouble) },
         { }
     };
 
@@ -20169,6 +20205,41 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
+    static PyObject* _repr_TimedTextPadding(PyObject* self) noexcept
+    {
+        py::pyobj_handle Before{PyObject_GetAttrString(self, "before")};
+        if (!Before)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle After{PyObject_GetAttrString(self, "after")};
+        if (!After)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Start{PyObject_GetAttrString(self, "start")};
+        if (!Start)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle End{PyObject_GetAttrString(self, "end")};
+        if (!End)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Unit{PyObject_GetAttrString(self, "unit")};
+        if (!Unit)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("TimedTextPadding(before=%R, after=%R, start=%R, end=%R, unit=%R)", Before.get(), After.get(), Start.get(), End.get(), Unit.get());
+    }
+
     static PyType_Slot _type_slots_TimedTextPadding[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextPadding) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TimedTextPadding) },
@@ -20176,6 +20247,7 @@ namespace py::cpp::Windows::Media::Core
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextPadding) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextPadding) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_TimedTextPadding) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_TimedTextPadding) },
         { }
     };
 
@@ -20401,6 +20473,29 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
+    static PyObject* _repr_TimedTextPoint(PyObject* self) noexcept
+    {
+        py::pyobj_handle X{PyObject_GetAttrString(self, "x")};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{PyObject_GetAttrString(self, "y")};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Unit{PyObject_GetAttrString(self, "unit")};
+        if (!Unit)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("TimedTextPoint(x=%R, y=%R, unit=%R)", X.get(), Y.get(), Unit.get());
+    }
+
     static PyType_Slot _type_slots_TimedTextPoint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextPoint) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TimedTextPoint) },
@@ -20408,6 +20503,7 @@ namespace py::cpp::Windows::Media::Core
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextPoint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextPoint) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_TimedTextPoint) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_TimedTextPoint) },
         { }
     };
 
@@ -20633,6 +20729,29 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
+    static PyObject* _repr_TimedTextSize(PyObject* self) noexcept
+    {
+        py::pyobj_handle Height{PyObject_GetAttrString(self, "height")};
+        if (!Height)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Width{PyObject_GetAttrString(self, "width")};
+        if (!Width)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Unit{PyObject_GetAttrString(self, "unit")};
+        if (!Unit)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("TimedTextSize(height=%R, width=%R, unit=%R)", Height.get(), Width.get(), Unit.get());
+    }
+
     static PyType_Slot _type_slots_TimedTextSize[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextSize) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TimedTextSize) },
@@ -20640,6 +20759,7 @@ namespace py::cpp::Windows::Media::Core
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextSize) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextSize) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_TimedTextSize) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_TimedTextSize) },
         { }
     };
 

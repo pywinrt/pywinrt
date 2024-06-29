@@ -10790,6 +10790,17 @@ namespace py::cpp::Windows::UI::Text
         }
     }
 
+    static PyObject* _repr_FontWeight(PyObject* self) noexcept
+    {
+        py::pyobj_handle Weight{PyObject_GetAttrString(self, "weight")};
+        if (!Weight)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("FontWeight(weight=%R)", Weight.get());
+    }
+
     static PyType_Slot _type_slots_FontWeight[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FontWeight) },
         { Py_tp_init, reinterpret_cast<void*>(_init_FontWeight) },
@@ -10797,6 +10808,7 @@ namespace py::cpp::Windows::UI::Text
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FontWeight) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FontWeight) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_FontWeight) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_FontWeight) },
         { }
     };
 

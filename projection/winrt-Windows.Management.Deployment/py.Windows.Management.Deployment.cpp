@@ -7961,6 +7961,23 @@ namespace py::cpp::Windows::Management::Deployment
         }
     }
 
+    static PyObject* _repr_DeploymentProgress(PyObject* self) noexcept
+    {
+        py::pyobj_handle state{PyObject_GetAttrString(self, "state")};
+        if (!state)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle percentage{PyObject_GetAttrString(self, "percentage")};
+        if (!percentage)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("DeploymentProgress(state=%R, percentage=%R)", state.get(), percentage.get());
+    }
+
     static PyType_Slot _type_slots_DeploymentProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DeploymentProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_DeploymentProgress) },
@@ -7968,6 +7985,7 @@ namespace py::cpp::Windows::Management::Deployment
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeploymentProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeploymentProgress) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_DeploymentProgress) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_DeploymentProgress) },
         { }
     };
 

@@ -3945,6 +3945,23 @@ namespace py::cpp::Windows::Devices::Scanners
         }
     }
 
+    static PyObject* _repr_ImageScannerResolution(PyObject* self) noexcept
+    {
+        py::pyobj_handle DpiX{PyObject_GetAttrString(self, "dpi_x")};
+        if (!DpiX)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle DpiY{PyObject_GetAttrString(self, "dpi_y")};
+        if (!DpiY)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("ImageScannerResolution(dpi_x=%R, dpi_y=%R)", DpiX.get(), DpiY.get());
+    }
+
     static PyType_Slot _type_slots_ImageScannerResolution[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageScannerResolution) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ImageScannerResolution) },
@@ -3952,6 +3969,7 @@ namespace py::cpp::Windows::Devices::Scanners
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageScannerResolution) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageScannerResolution) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_ImageScannerResolution) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_ImageScannerResolution) },
         { }
     };
 

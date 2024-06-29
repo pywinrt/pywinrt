@@ -9900,6 +9900,35 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    static PyObject* _repr_CrossSlideThresholds(PyObject* self) noexcept
+    {
+        py::pyobj_handle SelectionStart{PyObject_GetAttrString(self, "selection_start")};
+        if (!SelectionStart)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle SpeedBumpStart{PyObject_GetAttrString(self, "speed_bump_start")};
+        if (!SpeedBumpStart)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle SpeedBumpEnd{PyObject_GetAttrString(self, "speed_bump_end")};
+        if (!SpeedBumpEnd)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle RearrangeStart{PyObject_GetAttrString(self, "rearrange_start")};
+        if (!RearrangeStart)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("CrossSlideThresholds(selection_start=%R, speed_bump_start=%R, speed_bump_end=%R, rearrange_start=%R)", SelectionStart.get(), SpeedBumpStart.get(), SpeedBumpEnd.get(), RearrangeStart.get());
+    }
+
     static PyType_Slot _type_slots_CrossSlideThresholds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CrossSlideThresholds) },
         { Py_tp_init, reinterpret_cast<void*>(_init_CrossSlideThresholds) },
@@ -9907,6 +9936,7 @@ namespace py::cpp::Microsoft::UI::Input
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CrossSlideThresholds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CrossSlideThresholds) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_CrossSlideThresholds) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_CrossSlideThresholds) },
         { }
     };
 
@@ -10168,6 +10198,35 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    static PyObject* _repr_ManipulationDelta(PyObject* self) noexcept
+    {
+        py::pyobj_handle Translation{PyObject_GetAttrString(self, "translation")};
+        if (!Translation)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Scale{PyObject_GetAttrString(self, "scale")};
+        if (!Scale)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Rotation{PyObject_GetAttrString(self, "rotation")};
+        if (!Rotation)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Expansion{PyObject_GetAttrString(self, "expansion")};
+        if (!Expansion)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("ManipulationDelta(translation=%R, scale=%R, rotation=%R, expansion=%R)", Translation.get(), Scale.get(), Rotation.get(), Expansion.get());
+    }
+
     static PyType_Slot _type_slots_ManipulationDelta[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationDelta) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ManipulationDelta) },
@@ -10175,6 +10234,7 @@ namespace py::cpp::Microsoft::UI::Input
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationDelta) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationDelta) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_ManipulationDelta) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_ManipulationDelta) },
         { }
     };
 
@@ -10400,6 +10460,29 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    static PyObject* _repr_ManipulationVelocities(PyObject* self) noexcept
+    {
+        py::pyobj_handle Linear{PyObject_GetAttrString(self, "linear")};
+        if (!Linear)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Angular{PyObject_GetAttrString(self, "angular")};
+        if (!Angular)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Expansion{PyObject_GetAttrString(self, "expansion")};
+        if (!Expansion)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("ManipulationVelocities(linear=%R, angular=%R, expansion=%R)", Linear.get(), Angular.get(), Expansion.get());
+    }
+
     static PyType_Slot _type_slots_ManipulationVelocities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationVelocities) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ManipulationVelocities) },
@@ -10407,6 +10490,7 @@ namespace py::cpp::Microsoft::UI::Input
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationVelocities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationVelocities) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_ManipulationVelocities) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_ManipulationVelocities) },
         { }
     };
 
@@ -10740,6 +10824,47 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    static PyObject* _repr_PhysicalKeyStatus(PyObject* self) noexcept
+    {
+        py::pyobj_handle RepeatCount{PyObject_GetAttrString(self, "repeat_count")};
+        if (!RepeatCount)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle ScanCode{PyObject_GetAttrString(self, "scan_code")};
+        if (!ScanCode)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle IsExtendedKey{PyObject_GetAttrString(self, "is_extended_key")};
+        if (!IsExtendedKey)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle IsMenuKeyDown{PyObject_GetAttrString(self, "is_menu_key_down")};
+        if (!IsMenuKeyDown)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle WasKeyDown{PyObject_GetAttrString(self, "was_key_down")};
+        if (!WasKeyDown)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle IsKeyReleased{PyObject_GetAttrString(self, "is_key_released")};
+        if (!IsKeyReleased)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("PhysicalKeyStatus(repeat_count=%R, scan_code=%R, is_extended_key=%R, is_menu_key_down=%R, was_key_down=%R, is_key_released=%R)", RepeatCount.get(), ScanCode.get(), IsExtendedKey.get(), IsMenuKeyDown.get(), WasKeyDown.get(), IsKeyReleased.get());
+    }
+
     static PyType_Slot _type_slots_PhysicalKeyStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhysicalKeyStatus) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PhysicalKeyStatus) },
@@ -10747,6 +10872,7 @@ namespace py::cpp::Microsoft::UI::Input
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PhysicalKeyStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhysicalKeyStatus) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PhysicalKeyStatus) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_PhysicalKeyStatus) },
         { }
     };
 

@@ -954,6 +954,29 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         }
     }
 
+    static PyObject* _repr_PushNotificationCreateChannelStatus(PyObject* self) noexcept
+    {
+        py::pyobj_handle status{PyObject_GetAttrString(self, "status")};
+        if (!status)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle extendedError{PyObject_GetAttrString(self, "extended_error")};
+        if (!extendedError)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle retryCount{PyObject_GetAttrString(self, "retry_count")};
+        if (!retryCount)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("PushNotificationCreateChannelStatus(status=%R, extended_error=%R, retry_count=%R)", status.get(), extendedError.get(), retryCount.get());
+    }
+
     static PyType_Slot _type_slots_PushNotificationCreateChannelStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PushNotificationCreateChannelStatus) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PushNotificationCreateChannelStatus) },
@@ -961,6 +984,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PushNotificationCreateChannelStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PushNotificationCreateChannelStatus) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_PushNotificationCreateChannelStatus) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_PushNotificationCreateChannelStatus) },
         { }
     };
 

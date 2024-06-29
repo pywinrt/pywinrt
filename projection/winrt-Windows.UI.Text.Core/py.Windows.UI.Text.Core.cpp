@@ -3358,6 +3358,23 @@ namespace py::cpp::Windows::UI::Text::Core
         }
     }
 
+    static PyObject* _repr_CoreTextRange(PyObject* self) noexcept
+    {
+        py::pyobj_handle StartCaretPosition{PyObject_GetAttrString(self, "start_caret_position")};
+        if (!StartCaretPosition)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle EndCaretPosition{PyObject_GetAttrString(self, "end_caret_position")};
+        if (!EndCaretPosition)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("CoreTextRange(start_caret_position=%R, end_caret_position=%R)", StartCaretPosition.get(), EndCaretPosition.get());
+    }
+
     static PyType_Slot _type_slots_CoreTextRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextRange) },
         { Py_tp_init, reinterpret_cast<void*>(_init_CoreTextRange) },
@@ -3365,6 +3382,7 @@ namespace py::cpp::Windows::UI::Text::Core
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextRange) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_CoreTextRange) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_CoreTextRange) },
         { }
     };
 

@@ -7450,6 +7450,23 @@ namespace py::cpp::Windows::Media
         }
     }
 
+    static PyObject* _repr_MediaTimeRange(PyObject* self) noexcept
+    {
+        py::pyobj_handle Start{PyObject_GetAttrString(self, "start")};
+        if (!Start)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle End{PyObject_GetAttrString(self, "end")};
+        if (!End)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("MediaTimeRange(start=%R, end=%R)", Start.get(), End.get());
+    }
+
     static PyType_Slot _type_slots_MediaTimeRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaTimeRange) },
         { Py_tp_init, reinterpret_cast<void*>(_init_MediaTimeRange) },
@@ -7457,6 +7474,7 @@ namespace py::cpp::Windows::Media
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaTimeRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaTimeRange) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_MediaTimeRange) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_MediaTimeRange) },
         { }
     };
 

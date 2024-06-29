@@ -16,6 +16,7 @@ static class StructWriterExtensions
         }
         w.WriteGetSetTable(type);
         w.WriteStructEqualityMethods(type);
+        w.WriteStructRepr(type);
         w.WriteTypeSlotTable(type);
         w.WriteTypeSpec(type);
     }
@@ -192,6 +193,35 @@ static class StructWriterExtensions
             w.WriteBlankLine();
             w.WriteLine("Py_RETURN_NOTIMPLEMENTED;");
         });
+        w.Indent--;
+        w.WriteLine("}");
+    }
+
+    private static void WriteStructRepr(this IndentedTextWriter w, ProjectedType type)
+    {
+        w.WriteBlankLine();
+        w.WriteLine($"static PyObject* _repr_{type.Name}(PyObject* self) noexcept");
+        w.WriteLine("{");
+        w.Indent++;
+
+        foreach (var field in type.Type.Fields)
+        {
+            w.WriteLine(
+                $"py::pyobj_handle {field.Name}{{PyObject_GetAttrString(self, \"{field.Name.ToPythonIdentifier()}\")}};"
+            );
+
+            w.WriteLine($"if (!{field.Name})");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("return nullptr;");
+            w.Indent--;
+            w.WriteLine("}");
+            w.WriteBlankLine();
+        }
+
+        w.WriteLine(
+            $"return PyUnicode_FromFormat(\"{type.Name}({string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}=%R"))})\"{string.Join("", type.Type.Fields.Select(f => $", {f.Name}.get()"))});"
+        );
         w.Indent--;
         w.WriteLine("}");
     }

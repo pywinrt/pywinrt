@@ -2517,6 +2517,23 @@ namespace py::cpp::Windows::Data::Text
         }
     }
 
+    static PyObject* _repr_TextSegment(PyObject* self) noexcept
+    {
+        py::pyobj_handle StartPosition{PyObject_GetAttrString(self, "start_position")};
+        if (!StartPosition)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Length{PyObject_GetAttrString(self, "length")};
+        if (!Length)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("TextSegment(start_position=%R, length=%R)", StartPosition.get(), Length.get());
+    }
+
     static PyType_Slot _type_slots_TextSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextSegment) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TextSegment) },
@@ -2524,6 +2541,7 @@ namespace py::cpp::Windows::Data::Text
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextSegment) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_TextSegment) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_TextSegment) },
         { }
     };
 

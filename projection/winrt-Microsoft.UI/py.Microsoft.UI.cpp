@@ -3360,6 +3360,17 @@ namespace py::cpp::Microsoft::UI
         }
     }
 
+    static PyObject* _repr_DisplayId(PyObject* self) noexcept
+    {
+        py::pyobj_handle Value{PyObject_GetAttrString(self, "value")};
+        if (!Value)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("DisplayId(value=%R)", Value.get());
+    }
+
     static PyType_Slot _type_slots_DisplayId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_DisplayId) },
@@ -3367,6 +3378,7 @@ namespace py::cpp::Microsoft::UI
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_DisplayId) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_DisplayId) },
         { }
     };
 
@@ -3520,6 +3532,17 @@ namespace py::cpp::Microsoft::UI
         }
     }
 
+    static PyObject* _repr_IconId(PyObject* self) noexcept
+    {
+        py::pyobj_handle Value{PyObject_GetAttrString(self, "value")};
+        if (!Value)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("IconId(value=%R)", Value.get());
+    }
+
     static PyType_Slot _type_slots_IconId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IconId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_IconId) },
@@ -3527,6 +3550,7 @@ namespace py::cpp::Microsoft::UI
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IconId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IconId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_IconId) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_IconId) },
         { }
     };
 
@@ -3680,6 +3704,17 @@ namespace py::cpp::Microsoft::UI
         }
     }
 
+    static PyObject* _repr_WindowId(PyObject* self) noexcept
+    {
+        py::pyobj_handle Value{PyObject_GetAttrString(self, "value")};
+        if (!Value)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("WindowId(value=%R)", Value.get());
+    }
+
     static PyType_Slot _type_slots_WindowId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_WindowId) },
@@ -3687,6 +3722,7 @@ namespace py::cpp::Microsoft::UI
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowId) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_WindowId) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_WindowId) },
         { }
     };
 
