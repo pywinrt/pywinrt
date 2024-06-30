@@ -60,6 +60,11 @@ var headerPathOption = new Option<DirectoryInfo?>("--header-path", "Install head
     ArgumentHelpName = "path",
 };
 
+var componentDllsOption = new Option<bool>(
+    "--component-dlls",
+    "Set this flag when generating projection for user components that will ship with the required .dlls in the Python package"
+);
+
 var verboseOption = new Option<bool>("--verbose", "Show detailed progress information");
 
 var rootCommand = new RootCommand("Generate Python projection for Windows Runtime types");
@@ -69,10 +74,11 @@ rootCommand.AddOption(outputOption);
 rootCommand.AddOption(includeOption);
 rootCommand.AddOption(excludeOption);
 rootCommand.AddOption(headerPathOption);
+rootCommand.AddOption(componentDllsOption);
 rootCommand.AddOption(verboseOption);
 
 rootCommand.SetHandler(
-    async (input, reference, output, include, exclude, headerPath, verbose) =>
+    async (input, reference, output, include, exclude, headerPath, componentDlls, verbose) =>
     {
         var resolver = new MetadataResolver();
         var types = new List<TypeDefinition>();
@@ -143,7 +149,13 @@ rootCommand.SetHandler(
             tasks.Add(
                 Task.Run(() =>
                 {
-                    FileWriters.WriteNamespaceFiles(output, headerPath, group.Key, group);
+                    FileWriters.WriteNamespaceFiles(
+                        output,
+                        headerPath,
+                        group.Key,
+                        group,
+                        componentDlls
+                    );
                 })
             );
         }
@@ -156,6 +168,7 @@ rootCommand.SetHandler(
     includeOption,
     excludeOption,
     headerPathOption,
+    componentDllsOption,
     verboseOption
 );
 

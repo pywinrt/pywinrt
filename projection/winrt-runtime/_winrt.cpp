@@ -1,5 +1,6 @@
 // must be included before winrt to avoid compile errors
 #include <Shobjidl.h>
+#include <libloaderapi.h>
 
 #define PYWINRT_RUNTIME_MODULE
 #include "pybase.h"
@@ -291,6 +292,44 @@ namespace py::cpp::_winrt
         Py_RETURN_NONE;
     }
 
+    static PyObject* add_dll_directory(PyObject* /*unused*/, PyObject* obj) noexcept
+    {
+        std::unique_ptr<wchar_t, decltype(&PyMem_Free)> path{
+            PyUnicode_AsWideCharString(obj, nullptr), &PyMem_Free};
+
+        if (!path)
+        {
+            return nullptr;
+        }
+
+        auto cookie = AddDllDirectory(path.get());
+
+        if (!cookie)
+        {
+            PyErr_SetFromWindowsErr(GetLastError());
+            return nullptr;
+        }
+
+        return PyLong_FromVoidPtr(cookie);
+    }
+
+    static PyObject* remove_dll_directory(PyObject* /*unused*/, PyObject* obj) noexcept
+    {
+        auto cookie = PyLong_AsVoidPtr(obj);
+        if (!cookie && PyErr_Occurred())
+        {
+            return nullptr;
+        }
+
+        if (!RemoveDllDirectory(cookie))
+        {
+            PyErr_SetFromWindowsErr(GetLastError());
+            return nullptr;
+        }
+
+        Py_RETURN_NONE;
+    }
+
     PyDoc_STRVAR(module_doc, "_winrt");
 
     static PyMethodDef module_methods[]{
@@ -298,11 +337,21 @@ namespace py::cpp::_winrt
         {"uninit_apartment",
          uninit_apartment,
          METH_NOARGS,
-         "uninitialize the apartment"},
+         PyDoc_STR("uninitialize the apartment")},
         {"initialize_with_window",
          initialize_with_window,
          METH_VARARGS,
-         "interop function to invoke IInitializeWithWindow::Initialize on an object"},
+         PyDoc_STR(
+             "interop function to invoke IInitializeWithWindow::Initialize on an object")},
+        {"_add_dll_directory",
+         add_dll_directory,
+         METH_O,
+         PyDoc_STR("Adds a directory to the DLL search path.")},
+        {"_remove_dll_directory",
+         remove_dll_directory,
+         METH_O,
+         PyDoc_STR(
+             "Removes a directory that was added to the process DLL search path by using _add_dll_directory.")},
         {}};
 
     static PyModuleDef module_def

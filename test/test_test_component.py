@@ -1,4 +1,5 @@
 from uuid import UUID
+import platform
 import unittest
 
 import winrt.testcomponent as tc
@@ -218,3 +219,10 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(n.non_blittable.b, "b")
         self.assertEqual(n.non_blittable.c, "c")
         self.assertEqual(n.non_blittable.d, 4)
+
+    @unittest.skipIf(
+        "ARM" in platform.processor(),
+        "TestWinRT nuget package doesn't ship with ARM64 binaries",
+    )
+    def test_test_runner(self):
+        tc.TestRunner.test_self()

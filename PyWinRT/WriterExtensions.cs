@@ -35,14 +35,18 @@ static class WriterExtensions
         File.WriteAllText(filePath, newContent);
     }
 
-    public static void WriteInspectableType(this IndentedTextWriter w, ProjectedType type)
+    public static void WriteInspectableType(
+        this IndentedTextWriter w,
+        ProjectedType type,
+        bool componentDlls
+    )
     {
         var category = type.Category.ToString().ToLowerInvariant();
 
         w.WriteLine($"// ----- {type.Name} {category} --------------------");
         w.WriteNewFunction(type);
         w.WriteDeallocFunction(type);
-        w.WriteMethodFunctions(type);
+        w.WriteMethodFunctions(type, componentDlls);
         w.WriteMethodTable(type);
         w.WriteGetSetTable(type);
         w.WriteTypeSlotTable(type);
@@ -407,7 +411,11 @@ static class WriterExtensions
         w.WriteLine("}");
     }
 
-    static void WriteMethodFunctions(this IndentedTextWriter w, ProjectedType type)
+    static void WriteMethodFunctions(
+        this IndentedTextWriter w,
+        ProjectedType type,
+        bool componentDlls
+    )
     {
         foreach (
             var (methodName, isStatic) in type.Methods.Select(m => (m.Name, m.IsStatic)).Distinct()
@@ -428,7 +436,7 @@ static class WriterExtensions
             }
             else
             {
-                w.WriteMethodOverloads(type, methodName);
+                w.WriteMethodOverloads(type, methodName, componentDlls);
             }
 
             w.Indent--;
@@ -437,18 +445,18 @@ static class WriterExtensions
 
         foreach (var prop in type.Properties)
         {
-            w.WritePropertyGetFunction(type, prop);
+            w.WritePropertyGetFunction(type, prop, componentDlls);
 
             if (prop.SetMethod is not null)
             {
-                w.WritePropertySetFunction(type, prop);
+                w.WritePropertySetFunction(type, prop, componentDlls);
             }
         }
 
         foreach (var evt in type.Events)
         {
-            w.WriteEventFunction(type, evt.AddMethod, evt.Name);
-            w.WriteEventFunction(type, evt.RemoveMethod, evt.Name);
+            w.WriteEventFunction(type, evt.AddMethod, evt.Name, componentDlls);
+            w.WriteEventFunction(type, evt.RemoveMethod, evt.Name, componentDlls);
         }
 
         if (!(type.IsGeneric || type.IsStatic))
@@ -603,7 +611,8 @@ static class WriterExtensions
         this IndentedTextWriter w,
         ProjectedType type,
         ProjectedMethod method,
-        string evtName
+        string evtName,
+        bool componentDlls
     )
     {
         var self = method.IsStatic ? "PyObject* /*unused*/" : $"{type.CppPyWrapperType}* self";
@@ -614,18 +623,21 @@ static class WriterExtensions
         w.Indent++;
         w.WriteTryCatch(() =>
         {
-            w.WriteLine(
-                $"if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{evtName}\"))"
-            );
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine(
-                "PyErr_SetString(PyExc_AttributeError, \"event is not available in this version of Windows\");"
-            );
-            w.WriteLine("return nullptr;");
-            w.Indent--;
-            w.WriteLine("}");
-            w.WriteBlankLine();
+            if (!componentDlls)
+            {
+                w.WriteLine(
+                    $"if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{evtName}\"))"
+                );
+                w.WriteLine("{");
+                w.Indent++;
+                w.WriteLine(
+                    "PyErr_SetString(PyExc_AttributeError, \"event is not available in this version of Windows\");"
+                );
+                w.WriteLine("return nullptr;");
+                w.Indent--;
+                w.WriteLine("}");
+                w.WriteBlankLine();
+            }
 
             if (type.IsGeneric)
             {
@@ -643,7 +655,8 @@ static class WriterExtensions
     static void WritePropertyGetFunction(
         this IndentedTextWriter w,
         ProjectedType type,
-        ProjectedProperty prop
+        ProjectedProperty prop,
+        bool componentDlls
     )
     {
         var self = type.GetMethodSelfParam(prop.IsStatic);
@@ -656,18 +669,21 @@ static class WriterExtensions
         w.Indent++;
         w.WriteTryCatch(() =>
         {
-            w.WriteLine(
-                $"if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"{prop.Property.DeclaringType.Namespace}.{prop.Property.DeclaringType.Name}\", L\"{prop.Name}\"))"
-            );
-            w.WriteLine("{");
-            w.Indent++;
-            w.WriteLine(
-                "PyErr_SetString(PyExc_AttributeError, \"property is not available in this version of Windows\");"
-            );
-            w.WriteLine("return nullptr;");
-            w.Indent--;
-            w.WriteLine("}");
-            w.WriteBlankLine();
+            if (!componentDlls)
+            {
+                w.WriteLine(
+                    $"if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"{prop.Property.DeclaringType.Namespace}.{prop.Property.DeclaringType.Name}\", L\"{prop.Name}\"))"
+                );
+                w.WriteLine("{");
+                w.Indent++;
+                w.WriteLine(
+                    "PyErr_SetString(PyExc_AttributeError, \"property is not available in this version of Windows\");"
+                );
+                w.WriteLine("return nullptr;");
+                w.Indent--;
+                w.WriteLine("}");
+                w.WriteBlankLine();
+            }
 
             if (type.IsGeneric)
             {
@@ -685,7 +701,8 @@ static class WriterExtensions
     static void WritePropertySetFunction(
         this IndentedTextWriter w,
         ProjectedType type,
-        ProjectedProperty prop
+        ProjectedProperty prop,
+        bool componentDlls
     )
     {
         if (prop.SetMethod is null)
@@ -713,18 +730,21 @@ static class WriterExtensions
         w.WriteTryCatch(
             () =>
             {
-                w.WriteLine(
-                    $"if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"{prop.Property.DeclaringType.Namespace}.{prop.Property.DeclaringType.Name}\", L\"{prop.Name}\"))"
-                );
-                w.WriteLine("{");
-                w.Indent++;
-                w.WriteLine(
-                    "PyErr_SetString(PyExc_AttributeError, \"property is not available in this version of Windows\");"
-                );
-                w.WriteLine("return -1;");
-                w.Indent--;
-                w.WriteLine("}");
-                w.WriteBlankLine();
+                if (!componentDlls)
+                {
+                    w.WriteLine(
+                        $"if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"{prop.Property.DeclaringType.Namespace}.{prop.Property.DeclaringType.Name}\", L\"{prop.Name}\"))"
+                    );
+                    w.WriteLine("{");
+                    w.Indent++;
+                    w.WriteLine(
+                        "PyErr_SetString(PyExc_AttributeError, \"property is not available in this version of Windows\");"
+                    );
+                    w.WriteLine("return -1;");
+                    w.Indent--;
+                    w.WriteLine("}");
+                    w.WriteBlankLine();
+                }
 
                 if (type.IsGeneric)
                 {
@@ -764,7 +784,8 @@ static class WriterExtensions
     static void WriteMethodOverloads(
         this IndentedTextWriter w,
         ProjectedType type,
-        string methodName
+        string methodName,
+        bool componentDlls
     )
     {
         w.WriteLine("auto arg_count = PyTuple_Size(args);");
@@ -790,16 +811,19 @@ static class WriterExtensions
             w.Indent++;
             w.WriteTryCatch(() =>
             {
-                w.WriteLine(
-                    $"if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{methodName}\", {inParamCount}))"
-                );
-                w.WriteLine("{");
-                w.Indent++;
-                w.WriteLine($"py::set_arg_count_version_error({inParamCount});");
-                w.WriteLine("return nullptr;");
-                w.Indent--;
-                w.WriteLine("}");
-                w.WriteBlankLine();
+                if (!componentDlls)
+                {
+                    w.WriteLine(
+                        $"if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{methodName}\", {inParamCount}))"
+                    );
+                    w.WriteLine("{");
+                    w.Indent++;
+                    w.WriteLine($"py::set_arg_count_version_error({inParamCount});");
+                    w.WriteLine("return nullptr;");
+                    w.Indent--;
+                    w.WriteLine("}");
+                    w.WriteBlankLine();
+                }
 
                 w.WriteMethodBodyContents(type, method);
             });
@@ -1444,7 +1468,11 @@ static class WriterExtensions
         w.WriteLine("};");
     }
 
-    public static void WriteGenericInterfaceImpl(this IndentedTextWriter w, ProjectedType type)
+    public static void WriteGenericInterfaceImpl(
+        this IndentedTextWriter w,
+        ProjectedType type,
+        bool componentDlls
+    )
     {
         w.WriteLine(
             $"template<{string.Join(", ", type.Type.GenericParameters.Select(p => $"typename {p.Name}"))}>"
@@ -1460,7 +1488,7 @@ static class WriterExtensions
             w.WriteLine($"PyObject* {methodName}(PyObject* args) noexcept override");
             w.WriteLine("{");
             w.Indent++;
-            w.WriteMethodOverloads(type, methodName);
+            w.WriteMethodOverloads(type, methodName, componentDlls);
             w.Indent--;
             w.WriteLine("}");
         }

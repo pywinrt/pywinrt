@@ -6,6 +6,7 @@
 
 ### Added
 - Added `__repr__` implementation for projected struct types.
+- Added `--component-dlls` option to PyWinRT.exe for user component packages.
 
 ### Fixed
 - Fixed `winrt.Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap`

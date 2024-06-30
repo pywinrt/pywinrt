@@ -21,12 +21,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.TestRunner", L"CreateInt32Vector", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert(winrt::TestComponent::TestRunner::CreateInt32Vector());
             }
             catch (...)
@@ -50,12 +44,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.TestRunner", L"CreateStringVector", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert(winrt::TestComponent::TestRunner::CreateStringVector());
             }
             catch (...)
@@ -79,12 +67,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.TestRunner", L"CreateStringableVector", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert(winrt::TestComponent::TestRunner::CreateStringableVector());
             }
             catch (...)
@@ -108,12 +90,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.TestRunner", L"MakeTests", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 return py::convert(winrt::TestComponent::TestRunner::MakeTests());
             }
             catch (...)
@@ -137,12 +113,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.TestRunner", L"TestConsumer", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::TestHandler>(args, 0);
 
                 return py::convert(winrt::TestComponent::TestRunner::TestConsumer(param0));
@@ -168,12 +138,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.TestRunner", L"TestProducer", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::ITests>(args, 0);
 
                 winrt::TestComponent::TestRunner::TestProducer(param0);
@@ -200,12 +164,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.TestRunner", L"TestSelf", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 winrt::TestComponent::TestRunner::TestSelf();
                 Py_RETURN_NONE;
             }
@@ -301,12 +259,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array1", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<bool, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<bool, true>>(args, 1);
                 winrt::com_array<bool> param2{};
@@ -346,12 +298,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array10", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<double, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<double, true>>(args, 1);
                 winrt::com_array<double> param2{};
@@ -391,12 +337,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array10Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Array10Handler>(args, 0);
 
                 self->obj.Array10Call(param0);
@@ -423,12 +363,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array11", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<char16_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<char16_t, true>>(args, 1);
                 winrt::com_array<char16_t> param2{};
@@ -468,12 +402,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array11Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Array11Handler>(args, 0);
 
                 self->obj.Array11Call(param0);
@@ -500,12 +428,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array12", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, true>>(args, 1);
                 winrt::com_array<winrt::hstring> param2{};
@@ -545,12 +467,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array12Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Array12Handler>(args, 0);
 
                 self->obj.Array12Call(param0);
@@ -577,12 +493,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array13", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::TestComponent::Blittable, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::TestComponent::Blittable, true>>(args, 1);
                 winrt::com_array<winrt::TestComponent::Blittable> param2{};
@@ -622,12 +532,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array13Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Array13Handler>(args, 0);
 
                 self->obj.Array13Call(param0);
@@ -654,12 +558,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array14", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::TestComponent::NonBlittable, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::TestComponent::NonBlittable, true>>(args, 1);
                 winrt::com_array<winrt::TestComponent::NonBlittable> param2{};
@@ -699,12 +597,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array14Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Array14Handler>(args, 0);
 
                 self->obj.Array14Call(param0);
@@ -731,12 +623,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array15", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<winrt::TestComponent::Nested, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::TestComponent::Nested, true>>(args, 1);
                 winrt::com_array<winrt::TestComponent::Nested> param2{};
@@ -776,12 +662,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array15Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Array15Handler>(args, 0);
 
                 self->obj.Array15Call(param0);
@@ -808,12 +688,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array1Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Array1Handler>(args, 0);
 
                 self->obj.Array1Call(param0);
@@ -840,12 +714,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array2", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 1);
                 winrt::com_array<uint8_t> param2{};
@@ -885,12 +753,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array2Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Array2Handler>(args, 0);
 
                 self->obj.Array2Call(param0);
@@ -917,12 +779,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array3", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint16_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint16_t, true>>(args, 1);
                 winrt::com_array<uint16_t> param2{};
@@ -962,12 +818,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array3Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Array3Handler>(args, 0);
 
                 self->obj.Array3Call(param0);
@@ -994,12 +844,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array4", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint32_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint32_t, true>>(args, 1);
                 winrt::com_array<uint32_t> param2{};
@@ -1039,12 +883,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array4Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Array4Handler>(args, 0);
 
                 self->obj.Array4Call(param0);
@@ -1071,12 +909,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array5", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<uint64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint64_t, true>>(args, 1);
                 winrt::com_array<uint64_t> param2{};
@@ -1116,12 +948,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array5Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Array5Handler>(args, 0);
 
                 self->obj.Array5Call(param0);
@@ -1148,12 +974,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array6", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int16_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int16_t, true>>(args, 1);
                 winrt::com_array<int16_t> param2{};
@@ -1193,12 +1013,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array6Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Array6Handler>(args, 0);
 
                 self->obj.Array6Call(param0);
@@ -1225,12 +1039,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array7", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, true>>(args, 1);
                 winrt::com_array<int32_t> param2{};
@@ -1270,12 +1078,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array7Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Array7Handler>(args, 0);
 
                 self->obj.Array7Call(param0);
@@ -1302,12 +1104,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array8", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int64_t, true>>(args, 1);
                 winrt::com_array<int64_t> param2{};
@@ -1347,12 +1143,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array8Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Array8Handler>(args, 0);
 
                 self->obj.Array8Call(param0);
@@ -1379,12 +1169,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array9", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<py::pybuf_view<float, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, true>>(args, 1);
                 winrt::com_array<float> param2{};
@@ -1424,12 +1208,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Array9Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Array9Handler>(args, 0);
 
                 self->obj.Array9Call(param0);
@@ -1456,12 +1234,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Async1", 2))
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IAsyncAction>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -1488,12 +1260,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Async1Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Async1Handler>(args, 0);
 
                 self->obj.Async1Call(param0);
@@ -1520,12 +1286,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Async2", 3))
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IAsyncAction>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -1553,12 +1313,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Async2Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Async2Handler>(args, 0);
 
                 self->obj.Async2Call(param0);
@@ -1585,12 +1339,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Async3", 3))
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IAsyncAction>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -1618,12 +1366,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Async3Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Async3Handler>(args, 0);
 
                 self->obj.Async3Call(param0);
@@ -1650,12 +1392,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Async4", 4))
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IAsyncAction>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -1684,12 +1420,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Async4Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Async4Handler>(args, 0);
 
                 self->obj.Async4Call(param0);
@@ -1716,12 +1446,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Collection1", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
                 winrt::Windows::Foundation::Collections::IIterable<winrt::hstring> param1{nullptr};
 
@@ -1760,12 +1484,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Collection1Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Collection1Handler>(args, 0);
 
                 self->obj.Collection1Call(param0);
@@ -1792,12 +1510,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Collection2", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(args, 0);
                 winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>> param1{nullptr};
 
@@ -1836,12 +1548,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Collection2Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Collection2Handler>(args, 0);
 
                 self->obj.Collection2Call(param0);
@@ -1868,12 +1574,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Collection3", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(args, 0);
                 winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring> param1{nullptr};
 
@@ -1912,12 +1612,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Collection3Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Collection3Handler>(args, 0);
 
                 self->obj.Collection3Call(param0);
@@ -1944,12 +1638,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Collection4", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(args, 0);
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring> param1{nullptr};
 
@@ -1988,12 +1676,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Collection4Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Collection4Handler>(args, 0);
 
                 self->obj.Collection4Call(param0);
@@ -2020,12 +1702,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Collection5", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::hstring>>(args, 0);
                 winrt::Windows::Foundation::Collections::IVector<winrt::hstring> param1{nullptr};
 
@@ -2064,12 +1740,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Collection5Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Collection5Handler>(args, 0);
 
                 self->obj.Collection5Call(param0);
@@ -2096,12 +1766,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Collection6", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(args, 0);
                 winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring> param1{nullptr};
 
@@ -2140,12 +1804,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Collection6Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Collection6Handler>(args, 0);
 
                 self->obj.Collection6Call(param0);
@@ -2172,12 +1830,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Event1Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.Event1Call(param0);
@@ -2204,12 +1856,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Event2Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.Event2Call(param0);
@@ -2236,12 +1882,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param1", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<bool>(args, 0);
                 bool param1{};
 
@@ -2280,12 +1920,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param10", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<double>(args, 0);
                 double param1{};
 
@@ -2324,12 +1958,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param10Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Param10Handler>(args, 0);
 
                 self->obj.Param10Call(param0);
@@ -2356,12 +1984,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param11", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<char16_t>(args, 0);
                 char16_t param1{};
 
@@ -2400,12 +2022,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param11Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Param11Handler>(args, 0);
 
                 self->obj.Param11Call(param0);
@@ -2432,12 +2048,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param12", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::hstring param1{};
 
@@ -2476,12 +2086,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param12Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Param12Handler>(args, 0);
 
                 self->obj.Param12Call(param0);
@@ -2508,12 +2112,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param13", 2))
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Blittable>(args, 0);
                 auto param1 = py::convert_to<winrt::TestComponent::Blittable>(args, 1);
                 winrt::TestComponent::Blittable param2{};
@@ -2553,12 +2151,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param13Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Param13Handler>(args, 0);
 
                 self->obj.Param13Call(param0);
@@ -2585,12 +2177,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param14", 2))
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::NonBlittable>(args, 0);
                 auto param1 = py::convert_to<winrt::TestComponent::NonBlittable>(args, 1);
                 winrt::TestComponent::NonBlittable param2{};
@@ -2630,12 +2216,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param14Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Param14Handler>(args, 0);
 
                 self->obj.Param14Call(param0);
@@ -2662,12 +2242,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param15", 2))
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Nested>(args, 0);
                 auto param1 = py::convert_to<winrt::TestComponent::Nested>(args, 1);
                 winrt::TestComponent::Nested param2{};
@@ -2707,12 +2281,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param15Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Param15Handler>(args, 0);
 
                 self->obj.Param15Call(param0);
@@ -2739,12 +2307,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param1Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Param1Handler>(args, 0);
 
                 self->obj.Param1Call(param0);
@@ -2771,12 +2333,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param2", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint8_t>(args, 0);
                 uint8_t param1{};
 
@@ -2815,12 +2371,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param2Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Param2Handler>(args, 0);
 
                 self->obj.Param2Call(param0);
@@ -2847,12 +2397,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param3", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 uint16_t param1{};
 
@@ -2891,12 +2435,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param3Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Param3Handler>(args, 0);
 
                 self->obj.Param3Call(param0);
@@ -2923,12 +2461,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param4", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 uint32_t param1{};
 
@@ -2967,12 +2499,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param4Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Param4Handler>(args, 0);
 
                 self->obj.Param4Call(param0);
@@ -2999,12 +2525,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param5", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<uint64_t>(args, 0);
                 uint64_t param1{};
 
@@ -3043,12 +2563,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param5Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Param5Handler>(args, 0);
 
                 self->obj.Param5Call(param0);
@@ -3075,12 +2589,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param6", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int16_t>(args, 0);
                 int16_t param1{};
 
@@ -3119,12 +2627,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param6Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Param6Handler>(args, 0);
 
                 self->obj.Param6Call(param0);
@@ -3151,12 +2653,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param7", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 int32_t param1{};
 
@@ -3195,12 +2691,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param7Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Param7Handler>(args, 0);
 
                 self->obj.Param7Call(param0);
@@ -3227,12 +2717,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param8", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<int64_t>(args, 0);
                 int64_t param1{};
 
@@ -3271,12 +2755,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param8Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Param8Handler>(args, 0);
 
                 self->obj.Param8Call(param0);
@@ -3303,12 +2781,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param9", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<float>(args, 0);
                 float param1{};
 
@@ -3347,12 +2819,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Param9Call", 1))
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
                 auto param0 = py::convert_to<winrt::TestComponent::Param9Handler>(args, 0);
 
                 self->obj.Param9Call(param0);
@@ -3379,12 +2845,6 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"TestComponent.ITests", L"Simple", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 self->obj.Simple();
                 Py_RETURN_NONE;
             }
@@ -3405,12 +2865,6 @@ namespace py::cpp::TestComponent
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"TestComponent.ITests", L"Percentage"))
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
             return py::convert(self->obj.Percentage());
         }
         catch (...)
@@ -3424,12 +2878,6 @@ namespace py::cpp::TestComponent
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"TestComponent.ITests", L"Event1"))
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<int32_t>>(arg);
 
             return py::convert(self->obj.Event1(param0));
@@ -3445,12 +2893,6 @@ namespace py::cpp::TestComponent
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"TestComponent.ITests", L"Event1"))
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Event1(param0);
@@ -3467,12 +2909,6 @@ namespace py::cpp::TestComponent
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"TestComponent.ITests", L"Event2"))
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::TestComponent::ITests, int32_t>>(arg);
 
             return py::convert(self->obj.Event2(param0));
@@ -3488,12 +2924,6 @@ namespace py::cpp::TestComponent
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"TestComponent.ITests", L"Event2"))
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Event2(param0);
