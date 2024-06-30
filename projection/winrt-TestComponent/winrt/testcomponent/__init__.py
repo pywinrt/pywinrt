@@ -10,6 +10,8 @@ if typing.TYPE_CHECKING:
     import winrt.windows.foundation as windows_foundation
     import winrt.windows.foundation.collections as windows_foundation_collections
 
+_dll_search_path_cookie_ = winrt.system._register_dll_search_path(__file__)
+
 __all__ = [
     "Blittable",
     "Nested",

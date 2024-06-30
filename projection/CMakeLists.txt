@@ -211,3 +211,9 @@ endforeach()
 ################################################################################
 
 pywinrt_add_namespace_package("winrt-TestComponent")
+if (${WINDOWS_APP_SDK_ARCH} STREQUAL "arm64")
+    message(WARNING "TestComponent.dll is not available on ARM64")
+else()
+    install(FILES "../_tools/KennyKerr.Windows.TestWinRT/runtimes/win10-${WINDOWS_APP_SDK_ARCH}/native/TestComponent.dll"
+        DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt/testcomponent/")
+endif()

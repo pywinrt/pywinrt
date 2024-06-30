@@ -120,6 +120,7 @@ subprocess.check_call(
         WINDOWS_SDK,
         "--output",
         PROJECTION_PATH,
+        "--component-dlls"
     ]
 )
 

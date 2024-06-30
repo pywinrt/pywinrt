@@ -1,6 +1,5 @@
 using System.CodeDom.Compiler;
 using Mono.Cecil;
-using Mono.Cecil.Rocks;
 
 static class FileWriters
 {
@@ -23,7 +22,8 @@ static class FileWriters
         DirectoryInfo outputPath,
         DirectoryInfo? headerPath,
         string ns,
-        IEnumerable<TypeDefinition> typeDefinitions
+        IEnumerable<TypeDefinition> typeDefinitions,
+        bool componentDlls
     )
     {
         var nsPackageName = $"winrt-{ns}";
@@ -53,9 +53,9 @@ static class FileWriters
             return;
         }
 
-        WriteNamespaceCpp(nsPackageDir, ns, members);
-        WriteNamespaceH(headerDir, ns, members);
-        WriteNamespaceDunderInitPy(nsDir, ns, members);
+        WriteNamespaceCpp(nsPackageDir, ns, members, componentDlls);
+        WriteNamespaceH(headerDir, ns, members, componentDlls);
+        WriteNamespaceDunderInitPy(nsDir, ns, members, componentDlls);
         WriteNamespacePyi(nsWinrtDir, ns, members);
         WritePyWinRTVersionTxt(nsPackageDir);
         WriteRequirementsTxt(nsPackageDir);
@@ -500,7 +500,12 @@ static class FileWriters
         sw.WriteFileIfChanged(nsWinrtDir, $"{ns.ToNsModuleName()}.pyi");
     }
 
-    private static void WriteNamespaceDunderInitPy(DirectoryInfo nsDir, string ns, Members members)
+    private static void WriteNamespaceDunderInitPy(
+        DirectoryInfo nsDir,
+        string ns,
+        Members members,
+        bool componentDlls
+    )
     {
         using var sw = new StringWriter();
         using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
@@ -564,6 +569,14 @@ static class FileWriters
             }
 
             w.Indent--;
+        }
+
+        if (componentDlls)
+        {
+            w.WriteBlankLine();
+            w.WriteLine(
+                "_dll_search_path_cookie_ = winrt.system._register_dll_search_path(__file__)"
+            );
         }
 
         w.WriteBlankLine();
@@ -661,7 +674,12 @@ static class FileWriters
         sw.WriteFileIfChanged(nsDir, "__init__.py");
     }
 
-    private static void WriteNamespaceH(DirectoryInfo headerDir, string ns, Members members)
+    private static void WriteNamespaceH(
+        DirectoryInfo headerDir,
+        string ns,
+        Members members,
+        bool componentDlls
+    )
     {
         using var sw = new StringWriter();
         using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
@@ -741,7 +759,7 @@ static class FileWriters
                 w.WriteBlankLine();
             }
 
-            w.WriteGenericInterfaceImpl(iface);
+            w.WriteGenericInterfaceImpl(iface, componentDlls);
         }
 
         w.Indent--;
@@ -805,7 +823,12 @@ static class FileWriters
         sw.WriteFileIfChanged(headerDir, $"py.{ns}.h");
     }
 
-    private static void WriteNamespaceCpp(DirectoryInfo nsPackageDir, string ns, Members members)
+    private static void WriteNamespaceCpp(
+        DirectoryInfo nsPackageDir,
+        string ns,
+        Members members,
+        bool componentDlls
+    )
     {
         using var sw = new StringWriter();
         using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
@@ -828,7 +851,7 @@ static class FileWriters
                 w.WriteBlankLine();
             }
 
-            w.WriteInspectableType(t);
+            w.WriteInspectableType(t, componentDlls);
         }
 
         foreach (var t in members.Structs.Where(s => !s.Type.IsCustomizedStruct()))

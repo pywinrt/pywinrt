@@ -1,7 +1,37 @@
 from collections.abc import Mapping, MutableMapping, MutableSequence, Sequence
+from pathlib import Path
 from typing import Annotated
 
 from .. import _winrt
+
+
+class _DllCookie:
+    def __init__(self, cookie: int) -> None:
+        self.cookie = cookie
+
+    def close(self):
+        if self.cookie:
+            _winrt._remove_dll_directory(self.cookie)
+            self.cookie = None
+
+    def __del__(self):
+        self.close()
+
+
+def _register_dll_search_path(module_path) -> _DllCookie:
+    """
+    Register a module's directory as a DLL search path.
+
+    Args:
+        module_path: The path to a module file (i.e. ``__file__``)
+
+    Returns:
+        An cookie object that will remove the search path when closed.
+    """
+    return _DllCookie(
+        _winrt._add_dll_directory(str(Path(module_path).parent.resolve()))
+    )
+
 
 # NB: The types implemented in C cannot inherit from abc.ABC since Python 3.12
 # so we have to implement the protocols like this instead.
