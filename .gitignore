@@ -113,6 +113,7 @@ ipch/
 *.vsp
 *.vspx
 *.sap
+*.diagsession
 
 # Visual Studio Trace Files
 *.e2e
@@ -339,3 +340,7 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder
 .mfractor/
+
+# PerfView
+*.etl
+*.etl.zip

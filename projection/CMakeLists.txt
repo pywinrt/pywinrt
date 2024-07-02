@@ -78,6 +78,10 @@ function(pywinrt_add_library target sources)
     Python3_add_library(${target} MODULE "${sources}")
     set_target_properties(${target} PROPERTIES LIBRARY_OUTPUT_NAME_DEBUG ${target}_d)
     target_include_directories(${target} PRIVATE "${WINRT_SDK_PATH}/cppwinrt" "${WINRT_SDK_PATH}/pywinrt")
+
+    if (MSVC)
+        target_link_options(${target} PRIVATE $<$<CONFIG:RelWithDebInfo>:/PROFILE /INCREMENTAL:NO>)
+    endif()
 endfunction()
 
 function(pywinrt_add_namespace_package package)
