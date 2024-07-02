@@ -21,7 +21,14 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions", L"DownloadLatestSettingsForNamespace", 5))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions", L"DownloadLatestSettingsForNamespace", 5);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(5);
                     return nullptr;
@@ -56,7 +63,14 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions", L"ForceUpload", 3))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions", L"ForceUpload", 3);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(3);
                     return nullptr;
@@ -89,7 +103,14 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions", L"GetActiveScenarioList", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions", L"GetActiveScenarioList", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -118,7 +139,14 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions", L"GetActiveTraceRuntime", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions", L"GetActiveTraceRuntime", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -149,7 +177,14 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions", L"GetKnownTraceList", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions", L"GetKnownTraceList", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -180,7 +215,14 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions", L"IsScenarioEnabled", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions", L"IsScenarioEnabled", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -211,7 +253,14 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions", L"IsTraceRunning", 3))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions", L"IsTraceRunning", 3);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(3);
                     return nullptr;
@@ -244,7 +293,14 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions", L"TryEscalateScenario", 6))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions", L"TryEscalateScenario", 6);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(6);
                     return nullptr;
@@ -348,7 +404,14 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo", L"IsAutoLogger"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo", L"IsAutoLogger");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -367,7 +430,14 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo", L"IsExclusive"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo", L"IsExclusive");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -386,7 +456,14 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo", L"MaxTraceDurationFileTime"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo", L"MaxTraceDurationFileTime");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -405,7 +482,14 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo", L"Priority"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo", L"Priority");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -424,7 +508,14 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo", L"ProfileHash"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo", L"ProfileHash");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -443,7 +534,14 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo", L"ScenarioId"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo", L"ScenarioId");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -534,7 +632,14 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo", L"EtwRuntimeFileTime"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo", L"EtwRuntimeFileTime");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -553,7 +658,14 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo", L"RuntimeFileTime"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo", L"RuntimeFileTime");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;

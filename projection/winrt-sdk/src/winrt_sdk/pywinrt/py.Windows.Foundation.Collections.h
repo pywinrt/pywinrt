@@ -262,7 +262,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -310,7 +317,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterator`1", L"GetMany", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterator`1", L"GetMany", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -340,7 +354,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterator`1", L"MoveNext", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterator`1", L"MoveNext", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -489,7 +510,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -517,7 +545,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMapView`2", L"HasKey", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMapView`2", L"HasKey", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -547,7 +582,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMapView`2", L"Lookup", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMapView`2", L"Lookup", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -577,7 +619,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMapView`2", L"Split", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMapView`2", L"Split", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -711,7 +760,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Clear", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Clear", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -740,7 +796,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -768,7 +831,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"GetView", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"GetView", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -796,7 +866,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"HasKey", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"HasKey", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -826,7 +903,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Insert", 2))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Insert", 2);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(2);
                         return nullptr;
@@ -857,7 +941,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Lookup", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Lookup", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -887,7 +978,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Remove", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Remove", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -1034,7 +1132,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Clear", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Clear", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1063,7 +1168,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1091,7 +1203,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"GetView", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"GetView", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1119,7 +1238,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"HasKey", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"HasKey", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -1149,7 +1275,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Insert", 2))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Insert", 2);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(2);
                         return nullptr;
@@ -1180,7 +1313,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Lookup", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Lookup", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -1210,7 +1350,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Remove", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IMap`2", L"Remove", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -1386,7 +1533,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Append", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Append", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -1417,7 +1571,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Clear", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Clear", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1446,7 +1607,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1474,7 +1642,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetAt", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetAt", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -1504,7 +1679,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetMany", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetMany", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -1535,7 +1717,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetView", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetView", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1563,7 +1752,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"IndexOf", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"IndexOf", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -1606,7 +1802,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"InsertAt", 2))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"InsertAt", 2);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(2);
                         return nullptr;
@@ -1638,7 +1841,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAt", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAt", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -1669,7 +1879,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAtEnd", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAtEnd", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1698,7 +1915,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"ReplaceAll", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"ReplaceAll", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -1729,7 +1953,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"SetAt", 2))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"SetAt", 2);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(2);
                         return nullptr;
@@ -1926,7 +2157,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1954,7 +2192,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVectorView`1", L"GetAt", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVectorView`1", L"GetAt", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -1984,7 +2229,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVectorView`1", L"GetMany", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVectorView`1", L"GetMany", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -2015,7 +2267,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVectorView`1", L"IndexOf", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVectorView`1", L"IndexOf", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -2173,7 +2432,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Append", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Append", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -2204,7 +2470,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Clear", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"Clear", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2233,7 +2506,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IIterable`1", L"First", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2261,7 +2541,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetAt", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetAt", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -2291,7 +2578,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetMany", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetMany", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -2322,7 +2616,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetView", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"GetView", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2350,7 +2651,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"IndexOf", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"IndexOf", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -2393,7 +2701,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"InsertAt", 2))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"InsertAt", 2);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(2);
                         return nullptr;
@@ -2425,7 +2740,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAt", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAt", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -2456,7 +2778,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAtEnd", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"RemoveAtEnd", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2485,7 +2814,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"ReplaceAll", 1))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"ReplaceAll", 1);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(1);
                         return nullptr;
@@ -2516,7 +2852,14 @@ namespace py::impl::Windows::Foundation::Collections
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"SetAt", 2))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Collections.IVector`1", L"SetAt", 2);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(2);
                         return nullptr;

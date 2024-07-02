@@ -21,7 +21,14 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Security.AccessControl.SecurityDescriptorHelpers", L"GetSddlForAppContainerNames", 3))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Security.AccessControl.SecurityDescriptorHelpers", L"GetSddlForAppContainerNames", 3);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(3);
                     return nullptr;
@@ -54,7 +61,14 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Security.AccessControl.SecurityDescriptorHelpers", L"GetSecurityDescriptorBytesFromAppContainerNames", 3))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Security.AccessControl.SecurityDescriptorHelpers", L"GetSecurityDescriptorBytesFromAppContainerNames", 3);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(3);
                     return nullptr;

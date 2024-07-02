@@ -21,7 +21,14 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"GetAuthenticationStatus", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"GetAuthenticationStatus", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -50,7 +57,14 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"GetGamerProfileAsync", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"GetGamerProfileAsync", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -79,7 +93,14 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"GetInstalledGameItemsAsync", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"GetInstalledGameItemsAsync", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -108,7 +129,14 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"GetPartnerTokenAsync", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"GetPartnerTokenAsync", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -139,7 +167,14 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"GetPrivilegesAsync", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"GetPrivilegesAsync", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -168,7 +203,14 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"GrantAchievement", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"GrantAchievement", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -200,7 +242,14 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"GrantAvatarAward", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"GrantAvatarAward", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -232,7 +281,14 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"NotifyPartnerTokenExpired", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"NotifyPartnerTokenExpired", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -264,7 +320,14 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"PostResult", 5))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"PostResult", 5);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(5);
                     return nullptr;
@@ -296,7 +359,14 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"ServiceUri"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameService", L"ServiceUri");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -393,7 +463,14 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameServicePropertyCollection", L"GetPropertyAsync", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.System.UserProfile.GameServices.Core.GameServicePropertyCollection", L"GetPropertyAsync", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;

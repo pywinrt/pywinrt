@@ -21,7 +21,14 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview", L"IsCurrentViewPresentedOnHolographicDisplay", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview", L"IsCurrentViewPresentedOnHolographicDisplay", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -50,7 +57,14 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview", L"IsHolographicActivation", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview", L"IsHolographicActivation", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -147,7 +161,14 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview", L"GetForCurrentView", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview", L"GetForCurrentView", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -176,7 +197,14 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview", L"ResetPlacementOverride", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview", L"ResetPlacementOverride", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -206,7 +234,14 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview", L"SetPlacementOverride", 3))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview", L"SetPlacementOverride", 3);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(3);
                     return nullptr;
@@ -229,7 +264,14 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview", L"SetPlacementOverride", 4))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview", L"SetPlacementOverride", 4);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(4);
                     return nullptr;

@@ -49,7 +49,14 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs", L"Json"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs", L"Json");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -135,7 +142,14 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource", L"EventReceived"))
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource", L"EventReceived");
+            }
+
+            if (!is_event_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
                 return nullptr;
@@ -156,7 +170,14 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource", L"EventReceived"))
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource", L"EventReceived");
+            }
+
+            if (!is_event_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
                 return nullptr;
@@ -250,7 +271,14 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory", L"GetEventSource", 2))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory", L"GetEventSource", 2);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(2);
                     return nullptr;
@@ -282,7 +310,14 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory", L"GetHttpRequestProvider", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory", L"GetHttpRequestProvider", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -381,7 +416,14 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderHttpRequestProvider", L"SendRequestAsync", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Implementation.FileExplorer.ISysStorageProviderHttpRequestProvider", L"SendRequestAsync", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
