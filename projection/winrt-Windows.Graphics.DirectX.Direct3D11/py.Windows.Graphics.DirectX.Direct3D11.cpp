@@ -29,7 +29,14 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -59,7 +66,14 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice", L"Trim", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice", L"Trim", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -178,7 +192,14 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -204,7 +225,14 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface", L"Description"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface", L"Description");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;

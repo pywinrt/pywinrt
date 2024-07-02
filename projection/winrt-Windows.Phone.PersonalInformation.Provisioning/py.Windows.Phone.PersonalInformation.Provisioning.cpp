@@ -21,7 +21,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.ContactPartnerProvisioningManager", L"AssociateNetworkAccountAsync", 3))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.ContactPartnerProvisioningManager", L"AssociateNetworkAccountAsync", 3);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(3);
                     return nullptr;
@@ -54,7 +61,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.ContactPartnerProvisioningManager", L"AssociateSocialNetworkAccountAsync", 3))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.ContactPartnerProvisioningManager", L"AssociateSocialNetworkAccountAsync", 3);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(3);
                     return nullptr;
@@ -87,7 +101,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.ContactPartnerProvisioningManager", L"ImportVcardToSystemAsync", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.ContactPartnerProvisioningManager", L"ImportVcardToSystemAsync", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -177,7 +198,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.MessagePartnerProvisioningManager", L"ImportMmsToSystemAsync", 7))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.MessagePartnerProvisioningManager", L"ImportMmsToSystemAsync", 7);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(7);
                     return nullptr;
@@ -214,7 +242,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.MessagePartnerProvisioningManager", L"ImportSmsToSystemAsync", 6))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.PersonalInformation.Provisioning.MessagePartnerProvisioningManager", L"ImportSmsToSystemAsync", 6);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(6);
                     return nullptr;

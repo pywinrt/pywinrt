@@ -25,7 +25,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.Enterprise", L"EnrollmentValidFrom"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.Enterprise", L"EnrollmentValidFrom");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -44,7 +51,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.Enterprise", L"EnrollmentValidTo"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.Enterprise", L"EnrollmentValidTo");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -63,7 +77,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.Enterprise", L"Id"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.Enterprise", L"Id");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -82,7 +103,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.Enterprise", L"Name"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.Enterprise", L"Name");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -101,7 +129,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.Enterprise", L"Status"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.Enterprise", L"Status");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -120,7 +155,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.Enterprise", L"WorkplaceId"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.Enterprise", L"WorkplaceId");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -207,7 +249,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.EnterpriseEnrollmentManager", L"RequestEnrollmentAsync", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.EnterpriseEnrollmentManager", L"RequestEnrollmentAsync", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -238,7 +287,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.EnterpriseEnrollmentManager", L"RequestUnenrollmentAsync", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.EnterpriseEnrollmentManager", L"RequestUnenrollmentAsync", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -269,7 +325,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.EnterpriseEnrollmentManager", L"ValidateEnterprisesAsync", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.EnterpriseEnrollmentManager", L"ValidateEnterprisesAsync", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -294,7 +357,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.EnterpriseEnrollmentManager", L"CurrentEnterprise"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.EnterpriseEnrollmentManager", L"CurrentEnterprise");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -313,7 +383,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.EnterpriseEnrollmentManager", L"EnrolledEnterprises"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.EnterpriseEnrollmentManager", L"EnrolledEnterprises");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -401,7 +478,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.EnterpriseEnrollmentResult", L"EnrolledEnterprise"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.EnterpriseEnrollmentResult", L"EnrolledEnterprise");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -420,7 +504,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.EnterpriseEnrollmentResult", L"Status"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.EnterpriseEnrollmentResult", L"Status");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -503,7 +594,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.InstallationManager", L"AddPackageAsync", 2))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.InstallationManager", L"AddPackageAsync", 2);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(2);
                     return nullptr;
@@ -524,7 +622,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.InstallationManager", L"AddPackageAsync", 5))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.InstallationManager", L"AddPackageAsync", 5);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(5);
                     return nullptr;
@@ -559,7 +664,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.InstallationManager", L"FindPackages", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.InstallationManager", L"FindPackages", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -577,7 +689,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.InstallationManager", L"FindPackages", 2))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.InstallationManager", L"FindPackages", 2);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(2);
                     return nullptr;
@@ -609,7 +728,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.InstallationManager", L"FindPackagesForCurrentPublisher", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.InstallationManager", L"FindPackagesForCurrentPublisher", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -638,7 +764,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.InstallationManager", L"GetPendingPackageInstalls", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.InstallationManager", L"GetPendingPackageInstalls", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -667,7 +800,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.InstallationManager", L"RegisterPackageAsync", 3))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.InstallationManager", L"RegisterPackageAsync", 3);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(3);
                     return nullptr;
@@ -700,7 +840,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.InstallationManager", L"RemovePackageAsync", 2))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Management.Deployment.InstallationManager", L"RemovePackageAsync", 2);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(2);
                     return nullptr;
@@ -798,7 +945,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.PackageInstallResult", L"InstallState"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.PackageInstallResult", L"InstallState");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -817,7 +971,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.PackageInstallResult", L"ProductId"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.PackageInstallResult", L"ProductId");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -836,7 +997,14 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.PackageInstallResult", L"ErrorText"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Management.Deployment.PackageInstallResult", L"ErrorText");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;

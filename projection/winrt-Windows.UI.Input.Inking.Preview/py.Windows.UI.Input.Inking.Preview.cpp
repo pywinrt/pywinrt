@@ -29,7 +29,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview", L"Close", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview", L"Close", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -59,7 +66,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview", L"CreateForVisual", 2))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview", L"CreateForVisual", 2);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(2);
                     return nullptr;
@@ -80,7 +94,14 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview", L"CreateForVisual", 4))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview", L"CreateForVisual", 4);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(4);
                     return nullptr;

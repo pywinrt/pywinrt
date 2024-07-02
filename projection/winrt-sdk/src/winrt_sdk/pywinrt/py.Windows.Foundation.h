@@ -531,7 +531,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Cancel", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Cancel", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -560,7 +567,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Close", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Close", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -589,7 +603,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncActionWithProgress`1", L"GetResults", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncActionWithProgress`1", L"GetResults", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -729,7 +750,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Cancel", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Cancel", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -758,7 +786,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Close", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Close", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -787,7 +822,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncOperationWithProgress`2", L"GetResults", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncOperationWithProgress`2", L"GetResults", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -926,7 +968,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Cancel", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Cancel", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -955,7 +1004,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Close", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Close", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -984,7 +1040,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncOperation`1", L"GetResults", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncOperation`1", L"GetResults", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1090,7 +1153,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetBoolean", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetBoolean", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1118,7 +1188,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetBooleanArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetBooleanArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1155,7 +1232,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetChar16", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetChar16", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1183,7 +1267,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetChar16Array", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetChar16Array", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1220,7 +1311,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDateTime", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDateTime", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1248,7 +1346,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDateTimeArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDateTimeArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1285,7 +1390,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDouble", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDouble", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1313,7 +1425,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDoubleArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDoubleArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1350,7 +1469,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetGuid", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetGuid", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1378,7 +1504,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetGuidArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetGuidArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1415,7 +1548,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInspectableArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInspectableArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1452,7 +1592,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt16", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt16", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1480,7 +1627,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt16Array", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt16Array", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1517,7 +1671,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt32", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt32", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1545,7 +1706,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt32Array", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt32Array", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1582,7 +1750,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt64", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt64", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1610,7 +1785,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt64Array", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt64Array", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1647,7 +1829,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetPoint", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetPoint", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1675,7 +1864,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetPointArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetPointArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1712,7 +1908,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetRect", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetRect", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1740,7 +1943,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetRectArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetRectArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1777,7 +1987,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSingle", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSingle", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1805,7 +2022,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSingleArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSingleArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1842,7 +2066,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSize", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSize", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1870,7 +2101,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSizeArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSizeArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1907,7 +2145,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetString", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetString", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1935,7 +2180,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetStringArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetStringArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -1972,7 +2224,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetTimeSpan", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetTimeSpan", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2000,7 +2259,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetTimeSpanArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetTimeSpanArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2037,7 +2303,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt16", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt16", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2065,7 +2338,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt16Array", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt16Array", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2102,7 +2382,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt32", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt32", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2130,7 +2417,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt32Array", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt32Array", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2167,7 +2461,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt64", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt64", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2195,7 +2496,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt64Array", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt64Array", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2232,7 +2540,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt8", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt8", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2260,7 +2575,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt8Array", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt8Array", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2341,7 +2663,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetBoolean", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetBoolean", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2369,7 +2698,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetBooleanArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetBooleanArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2406,7 +2742,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetChar16", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetChar16", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2434,7 +2777,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetChar16Array", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetChar16Array", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2471,7 +2821,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDateTime", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDateTime", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2499,7 +2856,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDateTimeArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDateTimeArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2536,7 +2900,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDouble", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDouble", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2564,7 +2935,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDoubleArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDoubleArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2601,7 +2979,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetGuid", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetGuid", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2629,7 +3014,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetGuidArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetGuidArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2666,7 +3058,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInspectableArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInspectableArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2703,7 +3102,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt16", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt16", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2731,7 +3137,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt16Array", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt16Array", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2768,7 +3181,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt32", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt32", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2796,7 +3216,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt32Array", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt32Array", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2833,7 +3260,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt64", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt64", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2861,7 +3295,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt64Array", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt64Array", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2898,7 +3339,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetPoint", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetPoint", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2926,7 +3374,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetPointArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetPointArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2963,7 +3418,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetRect", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetRect", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -2991,7 +3453,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetRectArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetRectArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -3028,7 +3497,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSingle", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSingle", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -3056,7 +3532,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSingleArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSingleArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -3093,7 +3576,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSize", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSize", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -3121,7 +3611,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSizeArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSizeArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -3158,7 +3655,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetString", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetString", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -3186,7 +3690,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetStringArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetStringArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -3223,7 +3734,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetTimeSpan", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetTimeSpan", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -3251,7 +3769,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetTimeSpanArray", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetTimeSpanArray", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -3288,7 +3813,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt16", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt16", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -3316,7 +3848,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt16Array", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt16Array", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -3353,7 +3892,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt32", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt32", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -3381,7 +3927,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt32Array", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt32Array", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -3418,7 +3971,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt64", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt64", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -3446,7 +4006,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt64Array", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt64Array", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -3483,7 +4050,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt8", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt8", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;
@@ -3511,7 +4085,14 @@ namespace py::impl::Windows::Foundation
             {
                 try
                 {
-                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt8Array", 0))
+                    static std::optional<bool> is_overload_present{};
+
+                    if (!is_overload_present.has_value())
+                    {
+                        is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt8Array", 0);
+                    }
+
+                    if (!is_overload_present.value())
                     {
                         py::set_arg_count_version_error(0);
                         return nullptr;

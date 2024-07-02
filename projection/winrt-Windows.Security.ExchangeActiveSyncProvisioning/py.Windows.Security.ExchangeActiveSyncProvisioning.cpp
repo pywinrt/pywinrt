@@ -47,7 +47,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation", L"FriendlyName"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation", L"FriendlyName");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -66,7 +73,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation", L"Id"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation", L"Id");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -85,7 +99,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation", L"OperatingSystem"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation", L"OperatingSystem");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -104,7 +125,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation", L"SystemManufacturer"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation", L"SystemManufacturer");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -123,7 +151,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation", L"SystemProductName"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation", L"SystemProductName");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -142,7 +177,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation", L"SystemSku"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation", L"SystemSku");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -161,7 +203,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation", L"SystemFirmwareVersion"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation", L"SystemFirmwareVersion");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -180,7 +229,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation", L"SystemHardwareVersion"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation", L"SystemHardwareVersion");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -299,7 +355,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"ApplyAsync", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"ApplyAsync", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -328,7 +391,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"CheckCompliance", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"CheckCompliance", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -353,7 +423,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"RequireEncryption"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"RequireEncryption");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -378,7 +455,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"RequireEncryption"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"RequireEncryption");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return -1;
@@ -400,7 +484,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"PasswordHistory"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"PasswordHistory");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -425,7 +516,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"PasswordHistory"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"PasswordHistory");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return -1;
@@ -447,7 +545,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"PasswordExpiration"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"PasswordExpiration");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -472,7 +577,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"PasswordExpiration"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"PasswordExpiration");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return -1;
@@ -494,7 +606,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"MinPasswordLength"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"MinPasswordLength");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -519,7 +638,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"MinPasswordLength"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"MinPasswordLength");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return -1;
@@ -541,7 +667,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"MinPasswordComplexCharacters"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"MinPasswordComplexCharacters");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -566,7 +699,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"MinPasswordComplexCharacters"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"MinPasswordComplexCharacters");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return -1;
@@ -588,7 +728,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"MaxPasswordFailedAttempts"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"MaxPasswordFailedAttempts");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -613,7 +760,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"MaxPasswordFailedAttempts"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"MaxPasswordFailedAttempts");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return -1;
@@ -635,7 +789,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"MaxInactivityTimeLock"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"MaxInactivityTimeLock");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -660,7 +821,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"MaxInactivityTimeLock"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"MaxInactivityTimeLock");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return -1;
@@ -682,7 +850,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"DisallowConvenienceLogon"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"DisallowConvenienceLogon");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -707,7 +882,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"DisallowConvenienceLogon"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy", L"DisallowConvenienceLogon");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return -1;
@@ -805,7 +987,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"Compliant"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"Compliant");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -824,7 +1013,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"DisallowConvenienceLogonResult"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"DisallowConvenienceLogonResult");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -843,7 +1039,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"MaxInactivityTimeLockResult"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"MaxInactivityTimeLockResult");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -862,7 +1065,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"MaxPasswordFailedAttemptsResult"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"MaxPasswordFailedAttemptsResult");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -881,7 +1091,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"MinPasswordComplexCharactersResult"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"MinPasswordComplexCharactersResult");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -900,7 +1117,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"MinPasswordLengthResult"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"MinPasswordLengthResult");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -919,7 +1143,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"PasswordExpirationResult"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"PasswordExpirationResult");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -938,7 +1169,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"PasswordHistoryResult"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"PasswordHistoryResult");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -957,7 +1195,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"RequireEncryptionResult"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"RequireEncryptionResult");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -976,7 +1221,14 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"EncryptionProviderType"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults", L"EncryptionProviderType");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;

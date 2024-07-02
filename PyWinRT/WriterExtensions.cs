@@ -625,9 +625,18 @@ static class WriterExtensions
         {
             if (!componentDlls)
             {
+                w.WriteLine("static std::optional<bool> is_event_present{};");
+                w.WriteBlankLine();
+                w.WriteLine("if (!is_event_present.has_value())");
+                w.WriteLine("{");
+                w.Indent++;
                 w.WriteLine(
-                    $"if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{evtName}\"))"
+                    $"is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{evtName}\");"
                 );
+                w.Indent--;
+                w.WriteLine("}");
+                w.WriteBlankLine();
+                w.WriteLine("if (!is_event_present.value())");
                 w.WriteLine("{");
                 w.Indent++;
                 w.WriteLine(
@@ -671,9 +680,18 @@ static class WriterExtensions
         {
             if (!componentDlls)
             {
+                w.WriteLine("static std::optional<bool> is_property_present{};");
+                w.WriteBlankLine();
+                w.WriteLine("if (!is_property_present.has_value())");
+                w.WriteLine("{");
+                w.Indent++;
                 w.WriteLine(
-                    $"if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"{prop.Property.DeclaringType.Namespace}.{prop.Property.DeclaringType.Name}\", L\"{prop.Name}\"))"
+                    $"is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"{prop.Property.DeclaringType.Namespace}.{prop.Property.DeclaringType.Name}\", L\"{prop.Name}\");"
                 );
+                w.Indent--;
+                w.WriteLine("}");
+                w.WriteBlankLine();
+                w.WriteLine("if (!is_property_present.value())");
                 w.WriteLine("{");
                 w.Indent++;
                 w.WriteLine(
@@ -732,9 +750,18 @@ static class WriterExtensions
             {
                 if (!componentDlls)
                 {
+                    w.WriteLine("static std::optional<bool> is_property_present{};");
+                    w.WriteBlankLine();
+                    w.WriteLine("if (!is_property_present.has_value())");
+                    w.WriteLine("{");
+                    w.Indent++;
                     w.WriteLine(
-                        $"if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"{prop.Property.DeclaringType.Namespace}.{prop.Property.DeclaringType.Name}\", L\"{prop.Name}\"))"
+                        $"is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"{prop.Property.DeclaringType.Namespace}.{prop.Property.DeclaringType.Name}\", L\"{prop.Name}\");"
                     );
+                    w.Indent--;
+                    w.WriteLine("}");
+                    w.WriteBlankLine();
+                    w.WriteLine("if (!is_property_present.value())");
                     w.WriteLine("{");
                     w.Indent++;
                     w.WriteLine(
@@ -813,9 +840,18 @@ static class WriterExtensions
             {
                 if (!componentDlls)
                 {
+                    w.WriteLine("static std::optional<bool> is_overload_present{};");
+                    w.WriteBlankLine();
+                    w.WriteLine("if (!is_overload_present.has_value())");
+                    w.WriteLine("{");
+                    w.Indent++;
                     w.WriteLine(
-                        $"if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{methodName}\", {inParamCount}))"
+                        $"is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{methodName}\", {inParamCount});"
                     );
+                    w.Indent--;
+                    w.WriteLine("}");
+                    w.WriteBlankLine();
+                    w.WriteLine("if (!is_overload_present.value())");
                     w.WriteLine("{");
                     w.Indent++;
                     w.WriteLine($"py::set_arg_count_version_error({inParamCount});");

@@ -25,7 +25,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.CustomQueryParametersRequestedArgs", L"FeedProviderDefinitionId"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.CustomQueryParametersRequestedArgs", L"FeedProviderDefinitionId");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -136,7 +143,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.CustomQueryParametersUpdateOptions", L"CustomQueryParameters"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.CustomQueryParametersUpdateOptions", L"CustomQueryParameters");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -155,7 +169,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.CustomQueryParametersUpdateOptions", L"FeedProviderDefinitionId"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.CustomQueryParametersUpdateOptions", L"FeedProviderDefinitionId");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -242,7 +263,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedDisabledArgs", L"FeedDefinitionId"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedDisabledArgs", L"FeedDefinitionId");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -261,7 +289,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedDisabledArgs", L"FeedProviderDefinitionId"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedDisabledArgs", L"FeedProviderDefinitionId");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -348,7 +383,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedEnabledArgs", L"FeedDefinitionId"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedEnabledArgs", L"FeedDefinitionId");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -367,7 +409,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedEnabledArgs", L"FeedProviderDefinitionId"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedEnabledArgs", L"FeedProviderDefinitionId");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -458,7 +507,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedManager", L"GetDefault", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedManager", L"GetDefault", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -487,7 +543,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedManager", L"GetEnabledFeedProviders", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedManager", L"GetEnabledFeedProviders", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -516,7 +579,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedManager", L"SetCustomQueryParameters", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedManager", L"SetCustomQueryParameters", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -638,7 +708,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderDisabledArgs", L"FeedProviderDefinitionId"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderDisabledArgs", L"FeedProviderDefinitionId");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -724,7 +801,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderEnabledArgs", L"FeedProviderDefinitionId"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderEnabledArgs", L"FeedProviderDefinitionId");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -810,7 +894,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderInfo", L"EnabledFeedDefinitionIds"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderInfo", L"EnabledFeedDefinitionIds");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -829,7 +920,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
     {
         try
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderInfo", L"FeedProviderDefinitionId"))
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderInfo", L"FeedProviderDefinitionId");
+            }
+
+            if (!is_property_present.value())
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -920,7 +1018,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager", L"GetEnabledFeedProviders", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager", L"GetEnabledFeedProviders", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -949,7 +1054,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager", L"SetCustomQueryParameters", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager", L"SetCustomQueryParameters", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -1049,7 +1161,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedProvider", L"OnCustomQueryParametersRequested", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedProvider", L"OnCustomQueryParametersRequested", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -1081,7 +1200,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedProvider", L"OnFeedDisabled", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedProvider", L"OnFeedDisabled", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -1113,7 +1239,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedProvider", L"OnFeedEnabled", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedProvider", L"OnFeedEnabled", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -1145,7 +1278,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedProvider", L"OnFeedProviderDisabled", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedProvider", L"OnFeedProviderDisabled", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -1177,7 +1317,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedProvider", L"OnFeedProviderEnabled", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedProvider", L"OnFeedProviderEnabled", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;

@@ -8,6 +8,9 @@
 - Added `__repr__` implementation for projected struct types.
 - Added `--component-dlls` option to PyWinRT.exe for user component packages.
 
+### Changed
+- General performance improvements.
+
 ### Fixed
 - Fixed spelling of `initialize` in `__all__` in Windows App bootstrap package.
 

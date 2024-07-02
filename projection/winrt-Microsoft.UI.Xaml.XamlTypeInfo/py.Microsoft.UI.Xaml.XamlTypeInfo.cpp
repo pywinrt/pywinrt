@@ -51,7 +51,14 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider", L"GetXamlType", 1))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider", L"GetXamlType", 1);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -82,7 +89,14 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider", L"GetXmlnsDefinitions", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider", L"GetXmlnsDefinitions", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -111,7 +125,14 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
         {
             try
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider", L"Initialize", 0))
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider", L"Initialize", 0);
+                }
+
+                if (!is_overload_present.value())
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
