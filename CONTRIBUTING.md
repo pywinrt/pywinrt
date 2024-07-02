@@ -99,3 +99,30 @@ To build Python wheels of the projection packages:
 To only build for a specific Python and target architecture:
 
     py .\scripts\build-bdist.py --only cp312_win_amd64
+
+
+## Profiling
+
+To measure performance, create a `RelWithDebInfo` build of the projection and
+and install it, e.g. in `_install_/perf`.
+
+Download the `PerfView.exe` tool from <https://github.com/microsoft/perfview>
+then start it.
+
+Use the `Collect` menu to start a profiling session with either the `Run`
+command to launch a Python process or `Collect` to attach to an already running
+process.
+
+You may need the POSIX `env.exe` command, e.g. from MSYS2, to set the `PYTHONPATH`
+environment variable. You may also need to give the full path to the Python
+executable and/or set the working directory.
+
+    C:\msys64\usr\bin\env.exe PYTHONPATH=_install_\perf python3.exe perf\string_iter.py
+
+Once the session is complete (either by ending the process or stopping the
+collection), expand the `.etl.zip` file in the PerfView UI and double-click on
+`CPU Stacks`. Then double-click on Python process from the list that is the
+one you want to profile. Then have a look at the `Flame Graph` tab.
+
+Note: profiling using `VSInstr.exe`/`VSDiagnostics.exe` does not seem to work
+very well and frequently crashes.
