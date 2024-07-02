@@ -1,11 +1,10 @@
 import enum
-from typing import TypedDict
 
 from ...... import (
     _winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap as bootstrap,
 )
 
-__all__ = ["InitializeOptions", "inialize"]
+__all__ = ["InitializeOptions", "initialize"]
 
 
 class InitializeOptions(enum.IntFlag):

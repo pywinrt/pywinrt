@@ -9,6 +9,9 @@
 - Added `--component-dlls` option to PyWinRT.exe for user component packages.
 
 ### Fixed
+- Fixed spelling of `initialize` in `__all__` in Windows App bootstrap package.
+
+### Fixed
 - Fixed `winrt.Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap`
   package missing `Microsoft.WindowsAppRuntime.Bootstrap.dll`.
 
