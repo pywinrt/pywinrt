@@ -388,18 +388,14 @@ winrt::Windows::Foundation::DateTime py::convert_to_datetime(PyObject* obj)
 
 PyObject* py::convert_guid(winrt::guid value) noexcept
 {
+    auto state = py::cpp::_winrt::get_module_state();
+    if (!state)
+    {
+        return nullptr;
+    }
+
     pyobj_handle valueAsBytes{PyBytes_FromStringAndSize((char*)&value, sizeof(value))};
     if (!valueAsBytes)
-    {
-        return nullptr;
-    }
-    pyobj_handle uuidModule{PyImport_ImportModule("uuid")};
-    if (!uuidModule)
-    {
-        return nullptr;
-    }
-    pyobj_handle uuidClass{PyObject_GetAttrString(uuidModule.get(), "UUID")};
-    if (!uuidClass)
     {
         return nullptr;
     }
@@ -420,7 +416,7 @@ PyObject* py::convert_guid(winrt::guid value) noexcept
         return nullptr;
     }
 
-    return PyObject_Call(uuidClass.get(), args.get(), kwargs.get());
+    return PyObject_Call(state->uuid_type, args.get(), kwargs.get());
 }
 
 winrt::guid py::convert_to_guid(PyObject* obj)

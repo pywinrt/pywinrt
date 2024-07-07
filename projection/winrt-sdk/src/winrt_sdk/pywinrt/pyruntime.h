@@ -11,6 +11,7 @@ namespace py::cpp::_winrt
         PyTypeObject* object_type;
         PyTypeObject* array_type;
         PyTypeObject* mapping_iter_type;
+        PyObject* uuid_type;
     };
 
     module_state* get_module_state() noexcept;
