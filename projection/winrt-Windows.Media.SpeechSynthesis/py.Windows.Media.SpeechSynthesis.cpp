@@ -528,7 +528,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         {
             try
             {
-                winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer instance{  };
+                winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

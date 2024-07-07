@@ -21,7 +21,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             {
                 auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup>(args, 0);
 
-                winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader instance{ param0 };
+                winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -34,7 +34,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         {
             try
             {
-                winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader instance{  };
+                winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -884,7 +884,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         {
             try
             {
-                winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup instance{  };
+                winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1151,7 +1151,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart instance{ param0 };
+                winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1167,7 +1167,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart instance{ param0, param1 };
+                winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1180,7 +1180,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         {
             try
             {
-                winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart instance{  };
+                winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1785,7 +1785,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             {
                 auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup>(args, 0);
 
-                winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader instance{ param0 };
+                winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1798,7 +1798,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         {
             try
             {
-                winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader instance{  };
+                winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

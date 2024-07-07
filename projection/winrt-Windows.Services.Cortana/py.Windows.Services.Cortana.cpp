@@ -381,7 +381,7 @@ namespace py::cpp::Windows::Services::Cortana
         {
             try
             {
-                winrt::Windows::Services::Cortana::CortanaActionableInsightsOptions instance{  };
+                winrt::Windows::Services::Cortana::CortanaActionableInsightsOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

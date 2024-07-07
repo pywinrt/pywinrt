@@ -771,7 +771,7 @@ namespace py::cpp::Windows::UI::Input
         {
             try
             {
-                winrt::Windows::UI::Input::GestureRecognizer instance{  };
+                winrt::Windows::UI::Input::GestureRecognizer instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

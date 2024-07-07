@@ -19,7 +19,7 @@ namespace py::cpp::Microsoft::UI::Composition::Core
         {
             try
             {
-                winrt::Microsoft::UI::Composition::Core::CompositorController instance{  };
+                winrt::Microsoft::UI::Composition::Core::CompositorController instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

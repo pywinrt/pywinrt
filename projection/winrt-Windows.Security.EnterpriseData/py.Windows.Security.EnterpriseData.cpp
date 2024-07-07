@@ -1220,7 +1220,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
             {
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                winrt::Windows::Security::EnterpriseData::FileUnprotectOptions instance{ param0 };
+                winrt::Windows::Security::EnterpriseData::FileUnprotectOptions instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2007,7 +2007,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo instance{ param0, param1, param2, param3 };
+                winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2023,7 +2023,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 auto param0 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditAction>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo instance{ param0, param1 };
+                winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)

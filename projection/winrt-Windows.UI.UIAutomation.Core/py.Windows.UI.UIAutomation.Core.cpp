@@ -330,7 +330,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         {
             try
             {
-                winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperation instance{  };
+                winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -774,7 +774,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession instance{ param0 };
+                winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -790,7 +790,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
 
-                winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession instance{ param0, param1 };
+                winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)

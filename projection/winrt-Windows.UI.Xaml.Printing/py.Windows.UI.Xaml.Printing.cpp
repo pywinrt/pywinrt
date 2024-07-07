@@ -19,7 +19,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         {
             try
             {
-                winrt::Windows::UI::Xaml::Printing::AddPagesEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Printing::AddPagesEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -127,7 +127,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         {
             try
             {
-                winrt::Windows::UI::Xaml::Printing::GetPreviewPageEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Printing::GetPreviewPageEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -235,7 +235,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         {
             try
             {
-                winrt::Windows::UI::Xaml::Printing::PaginateEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Printing::PaginateEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -363,7 +363,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         {
             try
             {
-                winrt::Windows::UI::Xaml::Printing::PrintDocument instance{  };
+                winrt::Windows::UI::Xaml::Printing::PrintDocument instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

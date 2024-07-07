@@ -19,7 +19,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
         {
             try
             {
-                winrt::Windows::ApplicationModel::Search::LocalContentSuggestionSettings instance{  };
+                winrt::Windows::ApplicationModel::Search::LocalContentSuggestionSettings instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1922,7 +1922,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                winrt::Windows::ApplicationModel::Search::SearchQueryLinguisticDetails instance{ param0, param1, param2 };
+                winrt::Windows::ApplicationModel::Search::SearchQueryLinguisticDetails instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)

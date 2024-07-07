@@ -21,7 +21,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                winrt::Windows::ApplicationModel::Background::ActivitySensorTrigger instance{ param0 };
+                winrt::Windows::ApplicationModel::Background::ActivitySensorTrigger instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -307,7 +307,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::ApplicationModel::Background::AppBroadcastTrigger instance{ param0 };
+                winrt::Windows::ApplicationModel::Background::AppBroadcastTrigger instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -797,7 +797,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::ApplicationTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::ApplicationTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1021,7 +1021,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::AppointmentStoreNotificationTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::AppointmentStoreNotificationTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1433,7 +1433,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::BackgroundTaskBuilder instance{  };
+                winrt::Windows::ApplicationModel::Background::BackgroundTaskBuilder instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2578,7 +2578,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup instance{ param0 };
+                winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2594,7 +2594,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2863,7 +2863,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::BluetoothLEAdvertisementPublisherTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::BluetoothLEAdvertisementPublisherTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3163,7 +3163,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::BluetoothLEAdvertisementWatcherTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::BluetoothLEAdvertisementWatcherTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3475,7 +3475,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::CachedFileUpdaterTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::CachedFileUpdaterTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3689,7 +3689,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::ChatMessageNotificationTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::ChatMessageNotificationTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3777,7 +3777,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::ChatMessageReceivedNotificationTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::ChatMessageReceivedNotificationTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3865,7 +3865,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::CommunicationBlockingAppSetAsActiveTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::CommunicationBlockingAppSetAsActiveTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3953,7 +3953,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::ContactStoreNotificationTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::ContactStoreNotificationTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4043,7 +4043,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
-                winrt::Windows::ApplicationModel::Background::ContentPrefetchTrigger instance{ param0 };
+                winrt::Windows::ApplicationModel::Background::ContentPrefetchTrigger instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4056,7 +4056,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::ContentPrefetchTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::ContentPrefetchTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4164,7 +4164,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::ConversationalAgentTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::ConversationalAgentTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4255,7 +4255,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Background::CustomSystemEventTriggerRecurrence>(args, 1);
 
-                winrt::Windows::ApplicationModel::Background::CustomSystemEventTrigger instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Background::CustomSystemEventTrigger instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4597,7 +4597,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Windows::ApplicationModel::Background::DeviceManufacturerNotificationTrigger instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Background::DeviceManufacturerNotificationTrigger instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4725,7 +4725,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::DeviceServicingTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::DeviceServicingTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4868,7 +4868,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::DeviceUseTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::DeviceUseTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5075,7 +5075,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::EmailStoreNotificationTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::EmailStoreNotificationTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5166,7 +5166,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::Background::BluetoothEventTriggeringMode>(args, 1);
 
-                winrt::Windows::ApplicationModel::Background::GattCharacteristicNotificationTrigger instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Background::GattCharacteristicNotificationTrigger instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5181,7 +5181,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             {
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic>(args, 0);
 
-                winrt::Windows::ApplicationModel::Background::GattCharacteristicNotificationTrigger instance{ param0 };
+                winrt::Windows::ApplicationModel::Background::GattCharacteristicNotificationTrigger instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5627,7 +5627,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::GeovisitTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::GeovisitTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5765,7 +5765,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             {
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::LocationTriggerType>(args, 0);
 
-                winrt::Windows::ApplicationModel::Background::LocationTrigger instance{ param0 };
+                winrt::Windows::ApplicationModel::Background::LocationTrigger instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5876,7 +5876,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Windows::ApplicationModel::Background::MaintenanceTrigger instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Background::MaintenanceTrigger instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6004,7 +6004,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::MediaProcessingTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::MediaProcessingTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6142,7 +6142,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::MobileBroadbandDeviceServiceNotificationTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::MobileBroadbandDeviceServiceNotificationTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6230,7 +6230,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::MobileBroadbandPcoDataChangeTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::MobileBroadbandPcoDataChangeTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6318,7 +6318,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::MobileBroadbandPinLockStateChangeTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::MobileBroadbandPinLockStateChangeTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6406,7 +6406,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::MobileBroadbandRadioStateChangeTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::MobileBroadbandRadioStateChangeTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6494,7 +6494,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::MobileBroadbandRegistrationStateChangeTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::MobileBroadbandRegistrationStateChangeTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6582,7 +6582,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::NetworkOperatorDataUsageTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::NetworkOperatorDataUsageTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6670,7 +6670,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::NetworkOperatorHotspotAuthenticationTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::NetworkOperatorHotspotAuthenticationTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6760,7 +6760,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::ApplicationModel::Background::NetworkOperatorNotificationTrigger instance{ param0 };
+                winrt::Windows::ApplicationModel::Background::NetworkOperatorNotificationTrigger instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6868,7 +6868,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::PaymentAppCanMakePaymentTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::PaymentAppCanMakePaymentTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6959,7 +6959,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::Background::PhoneTriggerType>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Windows::ApplicationModel::Background::PhoneTrigger instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Background::PhoneTrigger instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7089,7 +7089,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::ApplicationModel::Background::PushNotificationTrigger instance{ param0 };
+                winrt::Windows::ApplicationModel::Background::PushNotificationTrigger instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7102,7 +7102,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::PushNotificationTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::PushNotificationTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7190,7 +7190,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::RcsEndUserMessageAvailableTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::RcsEndUserMessageAvailableTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7278,7 +7278,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::RfcommConnectionTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::RfcommConnectionTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7550,7 +7550,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::SecondaryAuthenticationFactorAuthenticationTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::SecondaryAuthenticationFactorAuthenticationTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7640,7 +7640,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             {
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::ISensorDataThreshold>(args, 0);
 
-                winrt::Windows::ApplicationModel::Background::SensorDataThresholdTrigger instance{ param0 };
+                winrt::Windows::ApplicationModel::Background::SensorDataThresholdTrigger instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7730,7 +7730,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             {
                 auto param0 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardTriggerType>(args, 0);
 
-                winrt::Windows::ApplicationModel::Background::SmartCardTrigger instance{ param0 };
+                winrt::Windows::ApplicationModel::Background::SmartCardTrigger instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7840,7 +7840,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             {
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsFilterRules>(args, 0);
 
-                winrt::Windows::ApplicationModel::Background::SmsMessageReceivedTrigger instance{ param0 };
+                winrt::Windows::ApplicationModel::Background::SmsMessageReceivedTrigger instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7928,7 +7928,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::SocketActivityTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::SocketActivityTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8038,7 +8038,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             {
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageLibraryChangeTracker>(args, 0);
 
-                winrt::Windows::ApplicationModel::Background::StorageLibraryChangeTrackerTrigger instance{ param0 };
+                winrt::Windows::ApplicationModel::Background::StorageLibraryChangeTrackerTrigger instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8283,7 +8283,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             {
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::SystemConditionType>(args, 0);
 
-                winrt::Windows::ApplicationModel::Background::SystemCondition instance{ param0 };
+                winrt::Windows::ApplicationModel::Background::SystemCondition instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8394,7 +8394,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::SystemTriggerType>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Windows::ApplicationModel::Background::SystemTrigger instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Background::SystemTrigger instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8522,7 +8522,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::TetheringEntitlementCheckTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::TetheringEntitlementCheckTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8613,7 +8613,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Windows::ApplicationModel::Background::TimeTrigger instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Background::TimeTrigger instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8743,7 +8743,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::ApplicationModel::Background::ToastNotificationActionTrigger instance{ param0 };
+                winrt::Windows::ApplicationModel::Background::ToastNotificationActionTrigger instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8756,7 +8756,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::ToastNotificationActionTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::ToastNotificationActionTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8846,7 +8846,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::ApplicationModel::Background::ToastNotificationHistoryChangedTrigger instance{ param0 };
+                winrt::Windows::ApplicationModel::Background::ToastNotificationHistoryChangedTrigger instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8859,7 +8859,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::ToastNotificationHistoryChangedTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::ToastNotificationHistoryChangedTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8949,7 +8949,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             {
                 auto param0 = py::convert_to<winrt::Windows::UI::Notifications::NotificationKinds>(args, 0);
 
-                winrt::Windows::ApplicationModel::Background::UserNotificationChangedTrigger instance{ param0 };
+                winrt::Windows::ApplicationModel::Background::UserNotificationChangedTrigger instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9037,7 +9037,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::WiFiOnDemandHotspotConnectTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::WiFiOnDemandHotspotConnectTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9125,7 +9125,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         {
             try
             {
-                winrt::Windows::ApplicationModel::Background::WiFiOnDemandHotspotUpdateMetadataTrigger instance{  };
+                winrt::Windows::ApplicationModel::Background::WiFiOnDemandHotspotUpdateMetadataTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -2885,7 +2885,7 @@ namespace py::cpp::Windows::Graphics::Holographic
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
 
-                winrt::Windows::Graphics::Holographic::HolographicQuadLayer instance{ param0 };
+                winrt::Windows::Graphics::Holographic::HolographicQuadLayer instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2901,7 +2901,7 @@ namespace py::cpp::Windows::Graphics::Holographic
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(args, 1);
 
-                winrt::Windows::Graphics::Holographic::HolographicQuadLayer instance{ param0, param1 };
+                winrt::Windows::Graphics::Holographic::HolographicQuadLayer instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)

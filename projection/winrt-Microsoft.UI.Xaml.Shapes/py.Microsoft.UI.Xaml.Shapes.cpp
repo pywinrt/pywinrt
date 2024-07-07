@@ -19,7 +19,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Shapes::Ellipse instance{  };
+                winrt::Microsoft::UI::Xaml::Shapes::Ellipse instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8114,7 +8114,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Shapes::Line instance{  };
+                winrt::Microsoft::UI::Xaml::Shapes::Line instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -16506,7 +16506,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Shapes::Path instance{  };
+                winrt::Microsoft::UI::Xaml::Shapes::Path instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -24694,7 +24694,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Shapes::Polygon instance{  };
+                winrt::Microsoft::UI::Xaml::Shapes::Polygon instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -32950,7 +32950,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Shapes::Polyline instance{  };
+                winrt::Microsoft::UI::Xaml::Shapes::Polyline instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -41206,7 +41206,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Shapes::Rectangle instance{  };
+                winrt::Microsoft::UI::Xaml::Shapes::Rectangle instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

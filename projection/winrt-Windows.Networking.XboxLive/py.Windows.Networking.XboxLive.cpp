@@ -1709,7 +1709,7 @@ namespace py::cpp::Windows::Networking::XboxLive
         {
             try
             {
-                winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement instance{  };
+                winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

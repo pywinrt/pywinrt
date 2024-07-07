@@ -25,7 +25,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
                 auto param3 = py::convert_to<int32_t>(args, 3);
                 auto param4 = py::convert_to<int32_t>(args, 4);
 
-                winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs instance{ param0, param1, param2, param3, param4 };
+                winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs instance{param0, param1, param2, param3, param4};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -772,7 +772,7 @@ namespace py::cpp::Windows::Security::Credentials
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                winrt::Windows::Security::Credentials::PasswordCredential instance{ param0, param1, param2 };
+                winrt::Windows::Security::Credentials::PasswordCredential instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -785,7 +785,7 @@ namespace py::cpp::Windows::Security::Credentials
         {
             try
             {
-                winrt::Windows::Security::Credentials::PasswordCredential instance{  };
+                winrt::Windows::Security::Credentials::PasswordCredential instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1068,7 +1068,7 @@ namespace py::cpp::Windows::Security::Credentials
         {
             try
             {
-                winrt::Windows::Security::Credentials::PasswordCredentialPropertyStore instance{  };
+                winrt::Windows::Security::Credentials::PasswordCredentialPropertyStore instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1548,7 +1548,7 @@ namespace py::cpp::Windows::Security::Credentials
         {
             try
             {
-                winrt::Windows::Security::Credentials::PasswordVault instance{  };
+                winrt::Windows::Security::Credentials::PasswordVault instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1833,7 +1833,7 @@ namespace py::cpp::Windows::Security::Credentials
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Credentials::WebAccountState>(args, 2);
 
-                winrt::Windows::Security::Credentials::WebAccount instance{ param0, param1, param2 };
+                winrt::Windows::Security::Credentials::WebAccount instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2107,7 +2107,7 @@ namespace py::cpp::Windows::Security::Credentials
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 2);
 
-                winrt::Windows::Security::Credentials::WebAccountProvider instance{ param0, param1, param2 };
+                winrt::Windows::Security::Credentials::WebAccountProvider instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)

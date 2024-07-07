@@ -1810,7 +1810,7 @@ namespace py::cpp::Windows::Management::Update
         {
             try
             {
-                winrt::Windows::Management::Update::WindowsUpdateApprovalData instance{  };
+                winrt::Windows::Management::Update::WindowsUpdateApprovalData instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2684,7 +2684,7 @@ namespace py::cpp::Windows::Management::Update
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Management::Update::WindowsUpdateManager instance{ param0 };
+                winrt::Windows::Management::Update::WindowsUpdateManager instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3341,7 +3341,7 @@ namespace py::cpp::Windows::Management::Update
                 auto param3 = py::convert_to<int32_t>(args, 3);
                 auto param4 = py::convert_to<int32_t>(args, 4);
 
-                winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions instance{ param0, param1, param2, param3, param4 };
+                winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions instance{param0, param1, param2, param3, param4};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3354,7 +3354,7 @@ namespace py::cpp::Windows::Management::Update
         {
             try
             {
-                winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions instance{  };
+                winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

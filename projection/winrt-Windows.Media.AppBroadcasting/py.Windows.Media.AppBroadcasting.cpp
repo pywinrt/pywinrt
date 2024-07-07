@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Media::AppBroadcasting
         {
             try
             {
-                winrt::Windows::Media::AppBroadcasting::AppBroadcastingMonitor instance{  };
+                winrt::Windows::Media::AppBroadcasting::AppBroadcastingMonitor instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -19,7 +19,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Markup::MarkupExtension instance{  };
+                winrt::Microsoft::UI::Xaml::Markup::MarkupExtension instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -107,7 +107,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Markup::ProvideValueTargetProperty instance{  };
+                winrt::Microsoft::UI::Xaml::Markup::ProvideValueTargetProperty instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -127,7 +127,7 @@ namespace py::cpp::Windows::Globalization::Collation
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Globalization::Collation::CharacterGroupings instance{ param0 };
+                winrt::Windows::Globalization::Collation::CharacterGroupings instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -140,7 +140,7 @@ namespace py::cpp::Windows::Globalization::Collation
         {
             try
             {
-                winrt::Windows::Globalization::Collation::CharacterGroupings instance{  };
+                winrt::Windows::Globalization::Collation::CharacterGroupings instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -21,7 +21,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
             {
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Spatial::SpatialGestureSettings>(args, 0);
 
-                winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer instance{ param0 };
+                winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

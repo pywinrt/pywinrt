@@ -2511,7 +2511,7 @@ namespace py::cpp::Windows::Devices::Enumeration
         {
             try
             {
-                winrt::Windows::Devices::Enumeration::DevicePicker instance{  };
+                winrt::Windows::Devices::Enumeration::DevicePicker instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

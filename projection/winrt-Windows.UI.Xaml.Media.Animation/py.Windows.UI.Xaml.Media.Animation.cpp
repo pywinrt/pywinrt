@@ -19,7 +19,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::AddDeleteThemeTransition instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::AddDeleteThemeTransition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -357,7 +357,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::BackEase instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::BackEase instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -868,7 +868,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -956,7 +956,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::BeginStoryboard instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::BeginStoryboard instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1387,7 +1387,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::BounceEase instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::BounceEase instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1966,7 +1966,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::CircleEase instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::CircleEase instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2384,7 +2384,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::ColorAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::ColorAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3420,7 +3420,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4681,7 +4681,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrameCollection instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrameCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5314,7 +5314,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6504,7 +6504,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::ContentThemeTransition instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::ContentThemeTransition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7003,7 +7003,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7692,7 +7692,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::CubicEase instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::CubicEase instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8110,7 +8110,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8198,7 +8198,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::DiscreteColorKeyFrame instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::DiscreteColorKeyFrame instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8632,7 +8632,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9066,7 +9066,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9500,7 +9500,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::DiscretePointKeyFrame instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::DiscretePointKeyFrame instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9934,7 +9934,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -10970,7 +10970,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -12231,7 +12231,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrameCollection instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrameCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -12864,7 +12864,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -13628,7 +13628,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -14528,7 +14528,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -14866,7 +14866,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -15834,7 +15834,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -16802,7 +16802,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -17566,7 +17566,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -18093,7 +18093,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -19061,7 +19061,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -19588,7 +19588,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -20019,7 +20019,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::ElasticEase instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::ElasticEase instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -20598,7 +20598,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -21047,7 +21047,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -21614,7 +21614,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::ExponentialEase instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::ExponentialEase instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -22125,7 +22125,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -22889,7 +22889,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -23653,7 +23653,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -23789,7 +23789,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::KeySpline instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::KeySpline instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -24346,7 +24346,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::LinearColorKeyFrame instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::LinearColorKeyFrame instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -24780,7 +24780,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::LinearDoubleKeyFrame instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::LinearDoubleKeyFrame instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -25214,7 +25214,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::LinearPointKeyFrame instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::LinearPointKeyFrame instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -25648,7 +25648,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -26395,7 +26395,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -27656,7 +27656,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrameCollection instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrameCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -28289,7 +28289,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::PaneThemeTransition instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::PaneThemeTransition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -28720,7 +28720,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::PointAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::PointAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -29756,7 +29756,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -31017,7 +31017,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrameCollection instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrameCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -31650,7 +31650,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -32414,7 +32414,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -33178,7 +33178,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -34078,7 +34078,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -34842,7 +34842,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::PopupThemeTransition instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::PopupThemeTransition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -35341,7 +35341,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::PowerEase instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::PowerEase instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -35852,7 +35852,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::QuadraticEase instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::QuadraticEase instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -36270,7 +36270,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::QuarticEase instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::QuarticEase instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -36688,7 +36688,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::QuinticEase instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::QuinticEase instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -37106,7 +37106,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::ReorderThemeTransition instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::ReorderThemeTransition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -37716,7 +37716,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -38616,7 +38616,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -39047,7 +39047,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::SineEase instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::SineEase instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -39465,7 +39465,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -39896,7 +39896,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -40423,7 +40423,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -40950,7 +40950,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -41477,7 +41477,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -42921,7 +42921,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -44365,7 +44365,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::Storyboard instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::Storyboard instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -45568,7 +45568,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -45906,7 +45906,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -46806,7 +46806,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -48548,7 +48548,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::TimelineCollection instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::TimelineCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -49497,7 +49497,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Animation::TransitionCollection instance{  };
+                winrt::Windows::UI::Xaml::Media::Animation::TransitionCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

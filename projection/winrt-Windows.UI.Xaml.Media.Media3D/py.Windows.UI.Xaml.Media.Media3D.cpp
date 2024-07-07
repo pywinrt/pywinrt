@@ -19,7 +19,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D instance{  };
+                winrt::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1485,7 +1485,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D instance{  };
+                winrt::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

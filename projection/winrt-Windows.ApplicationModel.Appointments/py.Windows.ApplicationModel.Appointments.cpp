@@ -19,7 +19,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                winrt::Windows::ApplicationModel::Appointments::Appointment instance{  };
+                winrt::Windows::ApplicationModel::Appointments::Appointment instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3240,7 +3240,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                winrt::Windows::ApplicationModel::Appointments::AppointmentInvitee instance{  };
+                winrt::Windows::ApplicationModel::Appointments::AppointmentInvitee instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4422,7 +4422,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                winrt::Windows::ApplicationModel::Appointments::AppointmentOrganizer instance{  };
+                winrt::Windows::ApplicationModel::Appointments::AppointmentOrganizer instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5182,7 +5182,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                winrt::Windows::ApplicationModel::Appointments::AppointmentRecurrence instance{  };
+                winrt::Windows::ApplicationModel::Appointments::AppointmentRecurrence instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7233,7 +7233,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         {
             try
             {
-                winrt::Windows::ApplicationModel::Appointments::FindAppointmentsOptions instance{  };
+                winrt::Windows::ApplicationModel::Appointments::FindAppointmentsOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

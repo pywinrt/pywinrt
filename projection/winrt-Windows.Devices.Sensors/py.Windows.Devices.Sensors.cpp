@@ -6720,7 +6720,7 @@ namespace py::cpp::Windows::Devices::Sensors
         {
             try
             {
-                winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate instance{  };
+                winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -12083,7 +12083,7 @@ namespace py::cpp::Windows::Devices::Sensors
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::Pedometer>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                winrt::Windows::Devices::Sensors::PedometerDataThreshold instance{ param0, param1 };
+                winrt::Windows::Devices::Sensors::PedometerDataThreshold instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -12755,7 +12755,7 @@ namespace py::cpp::Windows::Devices::Sensors
             {
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::ProximitySensor>(args, 0);
 
-                winrt::Windows::Devices::Sensors::ProximitySensorDataThreshold instance{ param0 };
+                winrt::Windows::Devices::Sensors::ProximitySensorDataThreshold instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

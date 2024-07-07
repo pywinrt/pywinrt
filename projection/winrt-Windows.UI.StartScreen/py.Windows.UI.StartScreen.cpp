@@ -680,7 +680,7 @@ namespace py::cpp::Windows::UI::StartScreen
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::UI::StartScreen::TileSize>(args, 4);
 
-                winrt::Windows::UI::StartScreen::SecondaryTile instance{ param0, param1, param2, param3, param4 };
+                winrt::Windows::UI::StartScreen::SecondaryTile instance{param0, param1, param2, param3, param4};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -700,7 +700,7 @@ namespace py::cpp::Windows::UI::StartScreen
                 auto param4 = py::convert_to<winrt::Windows::UI::StartScreen::TileOptions>(args, 4);
                 auto param5 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 5);
 
-                winrt::Windows::UI::StartScreen::SecondaryTile instance{ param0, param1, param2, param3, param4, param5 };
+                winrt::Windows::UI::StartScreen::SecondaryTile instance{param0, param1, param2, param3, param4, param5};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -721,7 +721,7 @@ namespace py::cpp::Windows::UI::StartScreen
                 auto param5 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 5);
                 auto param6 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 6);
 
-                winrt::Windows::UI::StartScreen::SecondaryTile instance{ param0, param1, param2, param3, param4, param5, param6 };
+                winrt::Windows::UI::StartScreen::SecondaryTile instance{param0, param1, param2, param3, param4, param5, param6};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -736,7 +736,7 @@ namespace py::cpp::Windows::UI::StartScreen
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::UI::StartScreen::SecondaryTile instance{ param0 };
+                winrt::Windows::UI::StartScreen::SecondaryTile instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -749,7 +749,7 @@ namespace py::cpp::Windows::UI::StartScreen
         {
             try
             {
-                winrt::Windows::UI::StartScreen::SecondaryTile instance{  };
+                winrt::Windows::UI::StartScreen::SecondaryTile instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

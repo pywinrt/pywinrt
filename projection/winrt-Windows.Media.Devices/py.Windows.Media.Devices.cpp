@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Media::Devices
         {
             try
             {
-                winrt::Windows::Media::Devices::AdvancedPhotoCaptureSettings instance{  };
+                winrt::Windows::Media::Devices::AdvancedPhotoCaptureSettings instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -879,7 +879,7 @@ namespace py::cpp::Windows::Media::Devices
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Media::Devices::AudioDeviceModulesManager instance{ param0 };
+                winrt::Windows::Media::Devices::AudioDeviceModulesManager instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2352,7 +2352,7 @@ namespace py::cpp::Windows::Media::Devices
         {
             try
             {
-                winrt::Windows::Media::Devices::DigitalWindowBounds instance{  };
+                winrt::Windows::Media::Devices::DigitalWindowBounds instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4556,7 +4556,7 @@ namespace py::cpp::Windows::Media::Devices
         {
             try
             {
-                winrt::Windows::Media::Devices::FocusSettings instance{  };
+                winrt::Windows::Media::Devices::FocusSettings instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7891,7 +7891,7 @@ namespace py::cpp::Windows::Media::Devices
         {
             try
             {
-                winrt::Windows::Media::Devices::RegionOfInterest instance{  };
+                winrt::Windows::Media::Devices::RegionOfInterest instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -10927,7 +10927,7 @@ namespace py::cpp::Windows::Media::Devices
         {
             try
             {
-                winrt::Windows::Media::Devices::ZoomSettings instance{  };
+                winrt::Windows::Media::Devices::ZoomSettings instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

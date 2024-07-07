@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Devices::Input
         {
             try
             {
-                winrt::Windows::Devices::Input::KeyboardCapabilities instance{  };
+                winrt::Windows::Devices::Input::KeyboardCapabilities instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -127,7 +127,7 @@ namespace py::cpp::Windows::Devices::Input
         {
             try
             {
-                winrt::Windows::Devices::Input::MouseCapabilities instance{  };
+                winrt::Windows::Devices::Input::MouseCapabilities instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1970,7 +1970,7 @@ namespace py::cpp::Windows::Devices::Input
         {
             try
             {
-                winrt::Windows::Devices::Input::TouchCapabilities instance{  };
+                winrt::Windows::Devices::Input::TouchCapabilities instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

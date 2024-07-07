@@ -1236,7 +1236,7 @@ namespace py::cpp::Windows::Media::Editing
         {
             try
             {
-                winrt::Windows::Media::Editing::MediaComposition instance{  };
+                winrt::Windows::Media::Editing::MediaComposition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1803,7 +1803,7 @@ namespace py::cpp::Windows::Media::Editing
             {
                 auto param0 = py::convert_to<winrt::Windows::Media::Editing::MediaClip>(args, 0);
 
-                winrt::Windows::Media::Editing::MediaOverlay instance{ param0 };
+                winrt::Windows::Media::Editing::MediaOverlay instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1820,7 +1820,7 @@ namespace py::cpp::Windows::Media::Editing
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
 
-                winrt::Windows::Media::Editing::MediaOverlay instance{ param0, param1, param2 };
+                winrt::Windows::Media::Editing::MediaOverlay instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2152,7 +2152,7 @@ namespace py::cpp::Windows::Media::Editing
             {
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IVideoCompositorDefinition>(args, 0);
 
-                winrt::Windows::Media::Editing::MediaOverlayLayer instance{ param0 };
+                winrt::Windows::Media::Editing::MediaOverlayLayer instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2165,7 +2165,7 @@ namespace py::cpp::Windows::Media::Editing
         {
             try
             {
-                winrt::Windows::Media::Editing::MediaOverlayLayer instance{  };
+                winrt::Windows::Media::Editing::MediaOverlayLayer instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

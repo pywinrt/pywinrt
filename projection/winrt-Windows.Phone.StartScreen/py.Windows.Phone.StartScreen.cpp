@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Phone::StartScreen
         {
             try
             {
-                winrt::Windows::Phone::StartScreen::DualSimTile instance{  };
+                winrt::Windows::Phone::StartScreen::DualSimTile instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

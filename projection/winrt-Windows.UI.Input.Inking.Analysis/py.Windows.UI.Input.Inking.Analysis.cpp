@@ -2321,7 +2321,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
         {
             try
             {
-                winrt::Windows::UI::Input::Inking::Analysis::InkAnalyzer instance{  };
+                winrt::Windows::UI::Input::Inking::Analysis::InkAnalyzer instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

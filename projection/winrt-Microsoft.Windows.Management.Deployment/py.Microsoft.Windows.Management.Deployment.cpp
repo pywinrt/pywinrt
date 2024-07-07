@@ -19,7 +19,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         {
             try
             {
-                winrt::Microsoft::Windows::Management::Deployment::AddPackageOptions instance{  };
+                winrt::Microsoft::Windows::Management::Deployment::AddPackageOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -919,7 +919,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         {
             try
             {
-                winrt::Microsoft::Windows::Management::Deployment::EnsureReadyOptions instance{  };
+                winrt::Microsoft::Windows::Management::Deployment::EnsureReadyOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2631,7 +2631,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         {
             try
             {
-                winrt::Microsoft::Windows::Management::Deployment::PackageSet instance{  };
+                winrt::Microsoft::Windows::Management::Deployment::PackageSet instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2835,7 +2835,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         {
             try
             {
-                winrt::Microsoft::Windows::Management::Deployment::PackageSetItem instance{  };
+                winrt::Microsoft::Windows::Management::Deployment::PackageSetItem instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3163,7 +3163,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         {
             try
             {
-                winrt::Microsoft::Windows::Management::Deployment::PackageSetItemRuntimeDisposition instance{  };
+                winrt::Microsoft::Windows::Management::Deployment::PackageSetItemRuntimeDisposition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3331,7 +3331,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         {
             try
             {
-                winrt::Microsoft::Windows::Management::Deployment::PackageSetRuntimeDisposition instance{  };
+                winrt::Microsoft::Windows::Management::Deployment::PackageSetRuntimeDisposition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3873,7 +3873,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         {
             try
             {
-                winrt::Microsoft::Windows::Management::Deployment::ProvisionPackageOptions instance{  };
+                winrt::Microsoft::Windows::Management::Deployment::ProvisionPackageOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4041,7 +4041,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         {
             try
             {
-                winrt::Microsoft::Windows::Management::Deployment::RegisterPackageOptions instance{  };
+                winrt::Microsoft::Windows::Management::Deployment::RegisterPackageOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4709,7 +4709,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         {
             try
             {
-                winrt::Microsoft::Windows::Management::Deployment::RemovePackageOptions instance{  };
+                winrt::Microsoft::Windows::Management::Deployment::RemovePackageOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4989,7 +4989,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         {
             try
             {
-                winrt::Microsoft::Windows::Management::Deployment::StagePackageOptions instance{  };
+                winrt::Microsoft::Windows::Management::Deployment::StagePackageOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

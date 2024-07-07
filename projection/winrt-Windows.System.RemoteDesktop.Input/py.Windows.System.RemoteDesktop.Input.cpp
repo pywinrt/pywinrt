@@ -22,7 +22,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionDataHandler>(args, 1);
 
-                winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnection instance{ param0, param1 };
+                winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnection instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)

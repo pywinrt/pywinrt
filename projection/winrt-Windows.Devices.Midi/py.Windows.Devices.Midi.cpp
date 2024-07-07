@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Devices::Midi
         {
             try
             {
-                winrt::Windows::Devices::Midi::MidiActiveSensingMessage instance{  };
+                winrt::Windows::Devices::Midi::MidiActiveSensingMessage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -170,7 +170,7 @@ namespace py::cpp::Windows::Devices::Midi
                 auto param0 = py::convert_to<uint8_t>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
 
-                winrt::Windows::Devices::Midi::MidiChannelPressureMessage instance{ param0, param1 };
+                winrt::Windows::Devices::Midi::MidiChannelPressureMessage instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -358,7 +358,7 @@ namespace py::cpp::Windows::Devices::Midi
         {
             try
             {
-                winrt::Windows::Devices::Midi::MidiContinueMessage instance{  };
+                winrt::Windows::Devices::Midi::MidiContinueMessage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -510,7 +510,7 @@ namespace py::cpp::Windows::Devices::Midi
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<uint8_t>(args, 2);
 
-                winrt::Windows::Devices::Midi::MidiControlChangeMessage instance{ param0, param1, param2 };
+                winrt::Windows::Devices::Midi::MidiControlChangeMessage instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1078,7 +1078,7 @@ namespace py::cpp::Windows::Devices::Midi
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<uint8_t>(args, 2);
 
-                winrt::Windows::Devices::Midi::MidiNoteOffMessage instance{ param0, param1, param2 };
+                winrt::Windows::Devices::Midi::MidiNoteOffMessage instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1290,7 +1290,7 @@ namespace py::cpp::Windows::Devices::Midi
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<uint8_t>(args, 2);
 
-                winrt::Windows::Devices::Midi::MidiNoteOnMessage instance{ param0, param1, param2 };
+                winrt::Windows::Devices::Midi::MidiNoteOnMessage instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1792,7 +1792,7 @@ namespace py::cpp::Windows::Devices::Midi
                 auto param0 = py::convert_to<uint8_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
-                winrt::Windows::Devices::Midi::MidiPitchBendChangeMessage instance{ param0, param1 };
+                winrt::Windows::Devices::Midi::MidiPitchBendChangeMessage instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1984,7 +1984,7 @@ namespace py::cpp::Windows::Devices::Midi
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<uint8_t>(args, 2);
 
-                winrt::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage instance{ param0, param1, param2 };
+                winrt::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2195,7 +2195,7 @@ namespace py::cpp::Windows::Devices::Midi
                 auto param0 = py::convert_to<uint8_t>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
 
-                winrt::Windows::Devices::Midi::MidiProgramChangeMessage instance{ param0, param1 };
+                winrt::Windows::Devices::Midi::MidiProgramChangeMessage instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2385,7 +2385,7 @@ namespace py::cpp::Windows::Devices::Midi
             {
                 auto param0 = py::convert_to<uint16_t>(args, 0);
 
-                winrt::Windows::Devices::Midi::MidiSongPositionPointerMessage instance{ param0 };
+                winrt::Windows::Devices::Midi::MidiSongPositionPointerMessage instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2555,7 +2555,7 @@ namespace py::cpp::Windows::Devices::Midi
             {
                 auto param0 = py::convert_to<uint8_t>(args, 0);
 
-                winrt::Windows::Devices::Midi::MidiSongSelectMessage instance{ param0 };
+                winrt::Windows::Devices::Midi::MidiSongSelectMessage instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2723,7 +2723,7 @@ namespace py::cpp::Windows::Devices::Midi
         {
             try
             {
-                winrt::Windows::Devices::Midi::MidiStartMessage instance{  };
+                winrt::Windows::Devices::Midi::MidiStartMessage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2871,7 +2871,7 @@ namespace py::cpp::Windows::Devices::Midi
         {
             try
             {
-                winrt::Windows::Devices::Midi::MidiStopMessage instance{  };
+                winrt::Windows::Devices::Midi::MidiStopMessage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3400,7 +3400,7 @@ namespace py::cpp::Windows::Devices::Midi
             {
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                winrt::Windows::Devices::Midi::MidiSystemExclusiveMessage instance{ param0 };
+                winrt::Windows::Devices::Midi::MidiSystemExclusiveMessage instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3548,7 +3548,7 @@ namespace py::cpp::Windows::Devices::Midi
         {
             try
             {
-                winrt::Windows::Devices::Midi::MidiSystemResetMessage instance{  };
+                winrt::Windows::Devices::Midi::MidiSystemResetMessage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3699,7 +3699,7 @@ namespace py::cpp::Windows::Devices::Midi
                 auto param0 = py::convert_to<uint8_t>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
 
-                winrt::Windows::Devices::Midi::MidiTimeCodeMessage instance{ param0, param1 };
+                winrt::Windows::Devices::Midi::MidiTimeCodeMessage instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3887,7 +3887,7 @@ namespace py::cpp::Windows::Devices::Midi
         {
             try
             {
-                winrt::Windows::Devices::Midi::MidiTimingClockMessage instance{  };
+                winrt::Windows::Devices::Midi::MidiTimingClockMessage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4035,7 +4035,7 @@ namespace py::cpp::Windows::Devices::Midi
         {
             try
             {
-                winrt::Windows::Devices::Midi::MidiTuneRequestMessage instance{  };
+                winrt::Windows::Devices::Midi::MidiTuneRequestMessage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

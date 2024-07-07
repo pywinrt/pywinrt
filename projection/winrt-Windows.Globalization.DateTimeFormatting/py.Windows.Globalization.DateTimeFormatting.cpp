@@ -21,7 +21,7 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter instance{ param0 };
+                winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -37,7 +37,7 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
-                winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter instance{ param0, param1 };
+                winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -56,7 +56,7 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<winrt::hstring>(args, 4);
 
-                winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter instance{ param0, param1, param2, param3, param4 };
+                winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter instance{param0, param1, param2, param3, param4};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -74,7 +74,7 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 auto param2 = py::convert_to<winrt::Windows::Globalization::DateTimeFormatting::DayFormat>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Globalization::DateTimeFormatting::DayOfWeekFormat>(args, 3);
 
-                winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter instance{ param0, param1, param2, param3 };
+                winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -91,7 +91,7 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 auto param1 = py::convert_to<winrt::Windows::Globalization::DateTimeFormatting::MinuteFormat>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Globalization::DateTimeFormatting::SecondFormat>(args, 2);
 
-                winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter instance{ param0, param1, param2 };
+                winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -113,7 +113,7 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 auto param6 = py::convert_to<winrt::Windows::Globalization::DateTimeFormatting::SecondFormat>(args, 6);
                 auto param7 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 7);
 
-                winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter instance{ param0, param1, param2, param3, param4, param5, param6, param7 };
+                winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter instance{param0, param1, param2, param3, param4, param5, param6, param7};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -138,7 +138,7 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 auto param9 = py::convert_to<winrt::hstring>(args, 9);
                 auto param10 = py::convert_to<winrt::hstring>(args, 10);
 
-                winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter instance{ param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10 };
+                winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter instance{param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10};
                 return py::wrap(instance, type);
             }
             catch (...)

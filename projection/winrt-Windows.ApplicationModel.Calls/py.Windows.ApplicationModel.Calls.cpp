@@ -1943,7 +1943,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         {
             try
             {
-                winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry instance{  };
+                winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2842,7 +2842,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryRawAddressKind>(args, 1);
 
-                winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryAddress instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryAddress instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2855,7 +2855,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         {
             try
             {
-                winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryAddress instance{  };
+                winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryAddress instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3135,7 +3135,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         {
             try
             {
-                winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryQueryOptions instance{  };
+                winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryQueryOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4917,7 +4917,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         {
             try
             {
-                winrt::Windows::ApplicationModel::Calls::PhoneDialOptions instance{  };
+                winrt::Windows::ApplicationModel::Calls::PhoneDialOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

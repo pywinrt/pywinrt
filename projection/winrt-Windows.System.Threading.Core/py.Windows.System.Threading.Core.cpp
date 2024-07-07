@@ -21,7 +21,7 @@ namespace py::cpp::Windows::System::Threading::Core
             {
                 auto param0 = py::convert_to<winrt::Windows::System::Threading::WorkItemHandler>(args, 0);
 
-                winrt::Windows::System::Threading::Core::PreallocatedWorkItem instance{ param0 };
+                winrt::Windows::System::Threading::Core::PreallocatedWorkItem instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -37,7 +37,7 @@ namespace py::cpp::Windows::System::Threading::Core
                 auto param0 = py::convert_to<winrt::Windows::System::Threading::WorkItemHandler>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::System::Threading::WorkItemPriority>(args, 1);
 
-                winrt::Windows::System::Threading::Core::PreallocatedWorkItem instance{ param0, param1 };
+                winrt::Windows::System::Threading::Core::PreallocatedWorkItem instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -54,7 +54,7 @@ namespace py::cpp::Windows::System::Threading::Core
                 auto param1 = py::convert_to<winrt::Windows::System::Threading::WorkItemPriority>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::System::Threading::WorkItemOptions>(args, 2);
 
-                winrt::Windows::System::Threading::Core::PreallocatedWorkItem instance{ param0, param1, param2 };
+                winrt::Windows::System::Threading::Core::PreallocatedWorkItem instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)

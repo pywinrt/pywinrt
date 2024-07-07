@@ -24,7 +24,7 @@ namespace py::cpp::Windows::Networking
                 auto param2 = py::convert_to<winrt::Windows::Networking::HostName>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                winrt::Windows::Networking::EndpointPair instance{ param0, param1, param2, param3 };
+                winrt::Windows::Networking::EndpointPair instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -306,7 +306,7 @@ namespace py::cpp::Windows::Networking
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Networking::HostName instance{ param0 };
+                winrt::Windows::Networking::HostName instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

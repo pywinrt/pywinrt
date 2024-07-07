@@ -19,7 +19,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
         {
             try
             {
-                winrt::Microsoft::UI::Dispatching::DispatcherExitDeferral instance{  };
+                winrt::Microsoft::UI::Dispatching::DispatcherExitDeferral instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

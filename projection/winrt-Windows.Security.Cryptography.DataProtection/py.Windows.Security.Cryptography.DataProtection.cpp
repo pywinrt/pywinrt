@@ -21,7 +21,7 @@ namespace py::cpp::Windows::Security::Cryptography::DataProtection
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Security::Cryptography::DataProtection::DataProtectionProvider instance{ param0 };
+                winrt::Windows::Security::Cryptography::DataProtection::DataProtectionProvider instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -34,7 +34,7 @@ namespace py::cpp::Windows::Security::Cryptography::DataProtection
         {
             try
             {
-                winrt::Windows::Security::Cryptography::DataProtection::DataProtectionProvider instance{  };
+                winrt::Windows::Security::Cryptography::DataProtection::DataProtectionProvider instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -655,7 +655,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopInfo instance{ param0, param1 };
+                winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopInfo instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)

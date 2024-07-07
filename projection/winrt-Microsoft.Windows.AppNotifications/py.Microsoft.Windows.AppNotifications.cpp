@@ -21,7 +21,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Microsoft::Windows::AppNotifications::AppNotification instance{ param0 };
+                winrt::Microsoft::Windows::AppNotifications::AppNotification instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1211,7 +1211,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressData instance{ param0 };
+                winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressData instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

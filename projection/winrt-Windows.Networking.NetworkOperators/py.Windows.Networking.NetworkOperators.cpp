@@ -4473,7 +4473,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         {
             try
             {
-                winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher instance{  };
+                winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4871,7 +4871,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                winrt::Windows::Networking::NetworkOperators::MobileBroadbandAntennaSar instance{ param0, param1 };
+                winrt::Windows::Networking::NetworkOperators::MobileBroadbandAntennaSar instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9027,7 +9027,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemIsolation instance{ param0, param1 };
+                winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemIsolation instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -13005,7 +13005,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         {
             try
             {
-                winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration instance{  };
+                winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -14355,7 +14355,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         {
             try
             {
-                winrt::Windows::Networking::NetworkOperators::ProvisioningAgent instance{  };
+                winrt::Windows::Networking::NetworkOperators::ProvisioningAgent instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -14717,7 +14717,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Networking::NetworkOperators::UssdMessage instance{ param0 };
+                winrt::Windows::Networking::NetworkOperators::UssdMessage instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

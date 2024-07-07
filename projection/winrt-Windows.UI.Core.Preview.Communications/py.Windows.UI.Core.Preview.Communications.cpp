@@ -201,7 +201,7 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
         {
             try
             {
-                winrt::Windows::UI::Core::Preview::Communications::PreviewTeamDeviceCredentials instance{  };
+                winrt::Windows::UI::Core::Preview::Communications::PreviewTeamDeviceCredentials instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

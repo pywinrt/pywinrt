@@ -19,7 +19,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         {
             try
             {
-                winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::AddPackageDependencyOptions instance{  };
+                winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::AddPackageDependencyOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -203,7 +203,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         {
             try
             {
-                winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions instance{  };
+                winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -870,7 +870,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
             {
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId>(args, 0);
 
-                winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContext instance{ param0 };
+                winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContext instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

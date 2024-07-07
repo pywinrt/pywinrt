@@ -913,7 +913,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         {
             try
             {
-                winrt::Windows::Graphics::Printing3D::Printing3D3MFPackage instance{  };
+                winrt::Windows::Graphics::Printing3D::Printing3D3MFPackage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1364,7 +1364,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         {
             try
             {
-                winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterial instance{  };
+                winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterial instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1615,7 +1615,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup instance{ param0 };
+                winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1743,7 +1743,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         {
             try
             {
-                winrt::Windows::Graphics::Printing3D::Printing3DColorMaterial instance{  };
+                winrt::Windows::Graphics::Printing3D::Printing3DColorMaterial instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1929,7 +1929,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                winrt::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup instance{ param0 };
+                winrt::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2057,7 +2057,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         {
             try
             {
-                winrt::Windows::Graphics::Printing3D::Printing3DComponent instance{  };
+                winrt::Windows::Graphics::Printing3D::Printing3DComponent instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2405,7 +2405,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         {
             try
             {
-                winrt::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix instance{  };
+                winrt::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2589,7 +2589,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         {
             try
             {
-                winrt::Windows::Graphics::Printing3D::Printing3DCompositeMaterial instance{  };
+                winrt::Windows::Graphics::Printing3D::Printing3DCompositeMaterial instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2699,7 +2699,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                winrt::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup instance{ param0 };
+                winrt::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2895,7 +2895,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         {
             try
             {
-                winrt::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions instance{  };
+                winrt::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3127,7 +3127,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         {
             try
             {
-                winrt::Windows::Graphics::Printing3D::Printing3DMaterial instance{  };
+                winrt::Windows::Graphics::Printing3D::Printing3DMaterial instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3315,7 +3315,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         {
             try
             {
-                winrt::Windows::Graphics::Printing3D::Printing3DMesh instance{  };
+                winrt::Windows::Graphics::Printing3D::Printing3DMesh instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4141,7 +4141,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         {
             try
             {
-                winrt::Windows::Graphics::Printing3D::Printing3DModel instance{  };
+                winrt::Windows::Graphics::Printing3D::Printing3DModel instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4732,7 +4732,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         {
             try
             {
-                winrt::Windows::Graphics::Printing3D::Printing3DModelTexture instance{  };
+                winrt::Windows::Graphics::Printing3D::Printing3DModelTexture instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4964,7 +4964,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         {
             try
             {
-                winrt::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial instance{  };
+                winrt::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5074,7 +5074,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                winrt::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterialGroup instance{ param0 };
+                winrt::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterialGroup instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5222,7 +5222,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         {
             try
             {
-                winrt::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial instance{  };
+                winrt::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5456,7 +5456,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                winrt::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup instance{ param0 };
+                winrt::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5632,7 +5632,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         {
             try
             {
-                winrt::Windows::Graphics::Printing3D::Printing3DTextureResource instance{  };
+                winrt::Windows::Graphics::Printing3D::Printing3DTextureResource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

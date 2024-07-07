@@ -2051,7 +2051,7 @@ namespace py::cpp::Windows::Devices::Printers
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                winrt::Windows::Devices::Printers::IppIntegerRange instance{ param0, param1 };
+                winrt::Windows::Devices::Printers::IppIntegerRange instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2690,7 +2690,7 @@ namespace py::cpp::Windows::Devices::Printers
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Printers::IppResolutionUnit>(args, 2);
 
-                winrt::Windows::Devices::Printers::IppResolution instance{ param0, param1, param2 };
+                winrt::Windows::Devices::Printers::IppResolution instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2947,7 +2947,7 @@ namespace py::cpp::Windows::Devices::Printers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Devices::Printers::IppTextWithLanguage instance{ param0, param1 };
+                winrt::Windows::Devices::Printers::IppTextWithLanguage instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3075,7 +3075,7 @@ namespace py::cpp::Windows::Devices::Printers
         {
             try
             {
-                winrt::Windows::Devices::Printers::PageConfigurationSettings instance{  };
+                winrt::Windows::Devices::Printers::PageConfigurationSettings instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

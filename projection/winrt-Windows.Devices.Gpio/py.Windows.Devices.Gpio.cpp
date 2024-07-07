@@ -21,7 +21,7 @@ namespace py::cpp::Windows::Devices::Gpio
             {
                 auto param0 = py::convert_to<winrt::Windows::Devices::Gpio::GpioPin>(args, 0);
 
-                winrt::Windows::Devices::Gpio::GpioChangeCounter instance{ param0 };
+                winrt::Windows::Devices::Gpio::GpioChangeCounter instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -353,7 +353,7 @@ namespace py::cpp::Windows::Devices::Gpio
             {
                 auto param0 = py::convert_to<winrt::Windows::Devices::Gpio::GpioPin>(args, 0);
 
-                winrt::Windows::Devices::Gpio::GpioChangeReader instance{ param0 };
+                winrt::Windows::Devices::Gpio::GpioChangeReader instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -369,7 +369,7 @@ namespace py::cpp::Windows::Devices::Gpio
                 auto param0 = py::convert_to<winrt::Windows::Devices::Gpio::GpioPin>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                winrt::Windows::Devices::Gpio::GpioChangeReader instance{ param0, param1 };
+                winrt::Windows::Devices::Gpio::GpioChangeReader instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)

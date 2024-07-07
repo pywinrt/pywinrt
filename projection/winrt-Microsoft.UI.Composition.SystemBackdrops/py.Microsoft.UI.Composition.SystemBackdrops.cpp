@@ -19,7 +19,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         {
             try
             {
-                winrt::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController instance{  };
+                winrt::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -821,7 +821,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         {
             try
             {
-                winrt::Microsoft::UI::Composition::SystemBackdrops::MicaController instance{  };
+                winrt::Microsoft::UI::Composition::SystemBackdrops::MicaController instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1623,7 +1623,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         {
             try
             {
-                winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration instance{  };
+                winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

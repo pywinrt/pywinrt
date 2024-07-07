@@ -2805,7 +2805,7 @@ namespace py::cpp::Windows::Services::Store
         {
             try
             {
-                winrt::Windows::Services::Store::StorePackageInstallOptions instance{  };
+                winrt::Windows::Services::Store::StorePackageInstallOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4099,7 +4099,7 @@ namespace py::cpp::Windows::Services::Store
         {
             try
             {
-                winrt::Windows::Services::Store::StoreProductOptions instance{  };
+                winrt::Windows::Services::Store::StoreProductOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4577,7 +4577,7 @@ namespace py::cpp::Windows::Services::Store
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Services::Store::StorePurchaseProperties instance{ param0 };
+                winrt::Windows::Services::Store::StorePurchaseProperties instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4590,7 +4590,7 @@ namespace py::cpp::Windows::Services::Store
         {
             try
             {
-                winrt::Windows::Services::Store::StorePurchaseProperties instance{  };
+                winrt::Windows::Services::Store::StorePurchaseProperties instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

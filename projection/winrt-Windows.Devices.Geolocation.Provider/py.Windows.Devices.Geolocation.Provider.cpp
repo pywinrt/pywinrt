@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
         {
             try
             {
-                winrt::Windows::Devices::Geolocation::Provider::GeolocationProvider instance{  };
+                winrt::Windows::Devices::Geolocation::Provider::GeolocationProvider instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

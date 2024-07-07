@@ -858,7 +858,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         {
             try
             {
-                winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreviewShowNoteOptions instance{  };
+                winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreviewShowNoteOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

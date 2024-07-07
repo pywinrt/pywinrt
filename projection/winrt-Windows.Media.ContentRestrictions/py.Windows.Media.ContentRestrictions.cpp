@@ -149,7 +149,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::ContentRestrictions::RatedContentCategory>(args, 2);
 
-                winrt::Windows::Media::ContentRestrictions::RatedContentDescription instance{ param0, param1, param2 };
+                winrt::Windows::Media::ContentRestrictions::RatedContentDescription instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -479,7 +479,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                winrt::Windows::Media::ContentRestrictions::RatedContentRestrictions instance{ param0 };
+                winrt::Windows::Media::ContentRestrictions::RatedContentRestrictions instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -492,7 +492,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
         {
             try
             {
-                winrt::Windows::Media::ContentRestrictions::RatedContentRestrictions instance{  };
+                winrt::Windows::Media::ContentRestrictions::RatedContentRestrictions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -167,7 +167,7 @@ namespace py::cpp::Windows::Devices::Spi
             {
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                winrt::Windows::Devices::Spi::SpiConnectionSettings instance{ param0 };
+                winrt::Windows::Devices::Spi::SpiConnectionSettings instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

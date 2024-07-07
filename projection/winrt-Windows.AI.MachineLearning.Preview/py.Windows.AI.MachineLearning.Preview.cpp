@@ -533,7 +533,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
             {
                 auto param0 = py::convert_to<winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview>(args, 0);
 
-                winrt::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview instance{ param0 };
+                winrt::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

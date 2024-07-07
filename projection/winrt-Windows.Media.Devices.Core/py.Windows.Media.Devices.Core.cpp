@@ -26,7 +26,7 @@ namespace py::cpp::Windows::Media::Devices::Core
                 auto param4 = py::convert_to<uint32_t>(args, 4);
                 auto param5 = py::convert_to<uint32_t>(args, 5);
 
-                winrt::Windows::Media::Devices::Core::CameraIntrinsics instance{ param0, param1, param2, param3, param4, param5 };
+                winrt::Windows::Media::Devices::Core::CameraIntrinsics instance{param0, param1, param2, param3, param4, param5};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -960,7 +960,7 @@ namespace py::cpp::Windows::Media::Devices::Core
         {
             try
             {
-                winrt::Windows::Media::Devices::Core::FrameController instance{  };
+                winrt::Windows::Media::Devices::Core::FrameController instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

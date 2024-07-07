@@ -8580,7 +8580,7 @@ namespace py::cpp::Windows::Media::Capture
         {
             try
             {
-                winrt::Windows::Media::Capture::AppCaptureMetadataWriter instance{  };
+                winrt::Windows::Media::Capture::AppCaptureMetadataWriter instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -11377,7 +11377,7 @@ namespace py::cpp::Windows::Media::Capture
         {
             try
             {
-                winrt::Windows::Media::Capture::CameraCaptureUI instance{  };
+                winrt::Windows::Media::Capture::CameraCaptureUI instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -14595,7 +14595,7 @@ namespace py::cpp::Windows::Media::Capture
         {
             try
             {
-                winrt::Windows::Media::Capture::MediaCapture instance{  };
+                winrt::Windows::Media::Capture::MediaCapture instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -17021,7 +17021,7 @@ namespace py::cpp::Windows::Media::Capture
         {
             try
             {
-                winrt::Windows::Media::Capture::MediaCaptureInitializationSettings instance{  };
+                winrt::Windows::Media::Capture::MediaCaptureInitializationSettings instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

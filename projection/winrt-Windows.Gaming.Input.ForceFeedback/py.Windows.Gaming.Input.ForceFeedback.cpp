@@ -21,7 +21,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
             {
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::ForceFeedback::ConditionForceEffectKind>(args, 0);
 
-                winrt::Windows::Gaming::Input::ForceFeedback::ConditionForceEffect instance{ param0 };
+                winrt::Windows::Gaming::Input::ForceFeedback::ConditionForceEffect instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -298,7 +298,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                winrt::Windows::Gaming::Input::ForceFeedback::ConstantForceEffect instance{  };
+                winrt::Windows::Gaming::Input::ForceFeedback::ConstantForceEffect instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1014,7 +1014,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
             {
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffectKind>(args, 0);
 
-                winrt::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffect instance{ param0 };
+                winrt::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffect instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1333,7 +1333,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
         {
             try
             {
-                winrt::Windows::Gaming::Input::ForceFeedback::RampForceEffect instance{  };
+                winrt::Windows::Gaming::Input::ForceFeedback::RampForceEffect instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

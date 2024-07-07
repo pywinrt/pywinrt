@@ -1020,7 +1020,7 @@ namespace py::cpp::Windows::Media::PlayTo
         {
             try
             {
-                winrt::Windows::Media::PlayTo::PlayToReceiver instance{  };
+                winrt::Windows::Media::PlayTo::PlayToReceiver instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

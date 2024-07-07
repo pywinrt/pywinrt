@@ -19,7 +19,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
         {
             try
             {
-                winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration instance{  };
+                winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

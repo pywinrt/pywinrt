@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
         {
             try
             {
-                winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasClientDeviceInformation instance{  };
+                winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasClientDeviceInformation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -267,7 +267,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
         {
             try
             {
-                winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy instance{  };
+                winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

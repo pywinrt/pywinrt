@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Media::Miracast
         {
             try
             {
-                winrt::Windows::Media::Miracast::MiracastReceiver instance{  };
+                winrt::Windows::Media::Miracast::MiracastReceiver instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

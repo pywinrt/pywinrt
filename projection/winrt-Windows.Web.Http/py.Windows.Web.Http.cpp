@@ -21,7 +21,7 @@ namespace py::cpp::Windows::Web::Http
             {
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                winrt::Windows::Web::Http::HttpBufferContent instance{ param0 };
+                winrt::Windows::Web::Http::HttpBufferContent instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -38,7 +38,7 @@ namespace py::cpp::Windows::Web::Http
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                winrt::Windows::Web::Http::HttpBufferContent instance{ param0, param1, param2 };
+                winrt::Windows::Web::Http::HttpBufferContent instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -440,7 +440,7 @@ namespace py::cpp::Windows::Web::Http
             {
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::Filters::IHttpFilter>(args, 0);
 
-                winrt::Windows::Web::Http::HttpClient instance{ param0 };
+                winrt::Windows::Web::Http::HttpClient instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -453,7 +453,7 @@ namespace py::cpp::Windows::Web::Http
         {
             try
             {
-                winrt::Windows::Web::Http::HttpClient instance{  };
+                winrt::Windows::Web::Http::HttpClient instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1309,7 +1309,7 @@ namespace py::cpp::Windows::Web::Http
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                winrt::Windows::Web::Http::HttpCookie instance{ param0, param1, param2 };
+                winrt::Windows::Web::Http::HttpCookie instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2208,7 +2208,7 @@ namespace py::cpp::Windows::Web::Http
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(args, 0);
 
-                winrt::Windows::Web::Http::HttpFormUrlEncodedContent instance{ param0 };
+                winrt::Windows::Web::Http::HttpFormUrlEncodedContent instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3396,7 +3396,7 @@ namespace py::cpp::Windows::Web::Http
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::HttpMethod instance{ param0 };
+                winrt::Windows::Web::Http::HttpMethod instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3715,7 +3715,7 @@ namespace py::cpp::Windows::Web::Http
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::HttpMultipartContent instance{ param0 };
+                winrt::Windows::Web::Http::HttpMultipartContent instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3731,7 +3731,7 @@ namespace py::cpp::Windows::Web::Http
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Web::Http::HttpMultipartContent instance{ param0, param1 };
+                winrt::Windows::Web::Http::HttpMultipartContent instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3744,7 +3744,7 @@ namespace py::cpp::Windows::Web::Http
         {
             try
             {
-                winrt::Windows::Web::Http::HttpMultipartContent instance{  };
+                winrt::Windows::Web::Http::HttpMultipartContent instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4223,7 +4223,7 @@ namespace py::cpp::Windows::Web::Http
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::HttpMultipartFormDataContent instance{ param0 };
+                winrt::Windows::Web::Http::HttpMultipartFormDataContent instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4236,7 +4236,7 @@ namespace py::cpp::Windows::Web::Http
         {
             try
             {
-                winrt::Windows::Web::Http::HttpMultipartFormDataContent instance{  };
+                winrt::Windows::Web::Http::HttpMultipartFormDataContent instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4761,7 +4761,7 @@ namespace py::cpp::Windows::Web::Http
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpMethod>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
 
-                winrt::Windows::Web::Http::HttpRequestMessage instance{ param0, param1 };
+                winrt::Windows::Web::Http::HttpRequestMessage instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4774,7 +4774,7 @@ namespace py::cpp::Windows::Web::Http
         {
             try
             {
-                winrt::Windows::Web::Http::HttpRequestMessage instance{  };
+                winrt::Windows::Web::Http::HttpRequestMessage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5454,7 +5454,7 @@ namespace py::cpp::Windows::Web::Http
             {
                 auto param0 = py::convert_to<winrt::Windows::Web::Http::HttpStatusCode>(args, 0);
 
-                winrt::Windows::Web::Http::HttpResponseMessage instance{ param0 };
+                winrt::Windows::Web::Http::HttpResponseMessage instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5467,7 +5467,7 @@ namespace py::cpp::Windows::Web::Http
         {
             try
             {
-                winrt::Windows::Web::Http::HttpResponseMessage instance{  };
+                winrt::Windows::Web::Http::HttpResponseMessage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6011,7 +6011,7 @@ namespace py::cpp::Windows::Web::Http
             {
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
-                winrt::Windows::Web::Http::HttpStreamContent instance{ param0 };
+                winrt::Windows::Web::Http::HttpStreamContent instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6413,7 +6413,7 @@ namespace py::cpp::Windows::Web::Http
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::HttpStringContent instance{ param0 };
+                winrt::Windows::Web::Http::HttpStringContent instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6429,7 +6429,7 @@ namespace py::cpp::Windows::Web::Http
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::UnicodeEncoding>(args, 1);
 
-                winrt::Windows::Web::Http::HttpStringContent instance{ param0, param1 };
+                winrt::Windows::Web::Http::HttpStringContent instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6446,7 +6446,7 @@ namespace py::cpp::Windows::Web::Http
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::UnicodeEncoding>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                winrt::Windows::Web::Http::HttpStringContent instance{ param0, param1, param2 };
+                winrt::Windows::Web::Http::HttpStringContent instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)

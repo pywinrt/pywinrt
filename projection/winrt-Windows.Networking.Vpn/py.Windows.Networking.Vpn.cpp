@@ -22,7 +22,7 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnAppIdType>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Networking::Vpn::VpnAppId instance{ param0, param1 };
+                winrt::Windows::Networking::Vpn::VpnAppId instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1977,7 +1977,7 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                winrt::Windows::Networking::Vpn::VpnCustomCheckBox instance{  };
+                winrt::Windows::Networking::Vpn::VpnCustomCheckBox instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2277,7 +2277,7 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                winrt::Windows::Networking::Vpn::VpnCustomComboBox instance{  };
+                winrt::Windows::Networking::Vpn::VpnCustomComboBox instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2577,7 +2577,7 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                winrt::Windows::Networking::Vpn::VpnCustomEditBox instance{  };
+                winrt::Windows::Networking::Vpn::VpnCustomEditBox instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2925,7 +2925,7 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                winrt::Windows::Networking::Vpn::VpnCustomErrorBox instance{  };
+                winrt::Windows::Networking::Vpn::VpnCustomErrorBox instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3157,7 +3157,7 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                winrt::Windows::Networking::Vpn::VpnCustomPromptBooleanInput instance{  };
+                winrt::Windows::Networking::Vpn::VpnCustomPromptBooleanInput instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3457,7 +3457,7 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                winrt::Windows::Networking::Vpn::VpnCustomPromptOptionSelector instance{  };
+                winrt::Windows::Networking::Vpn::VpnCustomPromptOptionSelector instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3729,7 +3729,7 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                winrt::Windows::Networking::Vpn::VpnCustomPromptText instance{  };
+                winrt::Windows::Networking::Vpn::VpnCustomPromptText instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4009,7 +4009,7 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                winrt::Windows::Networking::Vpn::VpnCustomPromptTextInput instance{  };
+                winrt::Windows::Networking::Vpn::VpnCustomPromptTextInput instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4357,7 +4357,7 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                winrt::Windows::Networking::Vpn::VpnCustomTextBox instance{  };
+                winrt::Windows::Networking::Vpn::VpnCustomTextBox instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4637,7 +4637,7 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                winrt::Windows::Networking::Vpn::VpnDomainNameAssignment instance{  };
+                winrt::Windows::Networking::Vpn::VpnDomainNameAssignment instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4798,7 +4798,7 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::HostName>>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::HostName>>(args, 3);
 
-                winrt::Windows::Networking::Vpn::VpnDomainNameInfo instance{ param0, param1, param2, param3 };
+                winrt::Windows::Networking::Vpn::VpnDomainNameInfo instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5349,7 +5349,7 @@ namespace py::cpp::Windows::Networking::Vpn
             {
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                winrt::Windows::Networking::Vpn::VpnInterfaceId instance{ param0 };
+                winrt::Windows::Networking::Vpn::VpnInterfaceId instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5476,7 +5476,7 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                winrt::Windows::Networking::Vpn::VpnManagementAgent instance{  };
+                winrt::Windows::Networking::Vpn::VpnManagementAgent instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5851,7 +5851,7 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                winrt::Windows::Networking::Vpn::VpnNamespaceAssignment instance{  };
+                winrt::Windows::Networking::Vpn::VpnNamespaceAssignment instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6039,7 +6039,7 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::HostName>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::HostName>>(args, 2);
 
-                winrt::Windows::Networking::Vpn::VpnNamespaceInfo instance{ param0, param1, param2 };
+                winrt::Windows::Networking::Vpn::VpnNamespaceInfo instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6271,7 +6271,7 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                winrt::Windows::Networking::Vpn::VpnNativeProfile instance{  };
+                winrt::Windows::Networking::Vpn::VpnNativeProfile instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6915,7 +6915,7 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                winrt::Windows::Networking::Vpn::VpnPacketBuffer instance{ param0, param1, param2 };
+                winrt::Windows::Networking::Vpn::VpnPacketBuffer instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7648,7 +7648,7 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                winrt::Windows::Networking::Vpn::VpnPlugInProfile instance{  };
+                winrt::Windows::Networking::Vpn::VpnPlugInProfile instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8147,7 +8147,7 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
 
-                winrt::Windows::Networking::Vpn::VpnRoute instance{ param0, param1 };
+                winrt::Windows::Networking::Vpn::VpnRoute instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8331,7 +8331,7 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                winrt::Windows::Networking::Vpn::VpnRouteAssignment instance{  };
+                winrt::Windows::Networking::Vpn::VpnRouteAssignment instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8747,7 +8747,7 @@ namespace py::cpp::Windows::Networking::Vpn
             {
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnAppId>(args, 0);
 
-                winrt::Windows::Networking::Vpn::VpnTrafficFilter instance{ param0 };
+                winrt::Windows::Networking::Vpn::VpnTrafficFilter instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9079,7 +9079,7 @@ namespace py::cpp::Windows::Networking::Vpn
         {
             try
             {
-                winrt::Windows::Networking::Vpn::VpnTrafficFilterAssignment instance{  };
+                winrt::Windows::Networking::Vpn::VpnTrafficFilterAssignment instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

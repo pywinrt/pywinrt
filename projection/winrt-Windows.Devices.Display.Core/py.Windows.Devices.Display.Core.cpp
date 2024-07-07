@@ -3090,7 +3090,7 @@ namespace py::cpp::Windows::Devices::Display::Core
                 auto param4 = py::convert_to<bool>(args, 4);
                 auto param5 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>(args, 5);
 
-                winrt::Windows::Devices::Display::Core::DisplayPrimaryDescription instance{ param0, param1, param2, param3, param4, param5 };
+                winrt::Windows::Devices::Display::Core::DisplayPrimaryDescription instance{param0, param1, param2, param3, param4, param5};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5292,7 +5292,7 @@ namespace py::cpp::Windows::Devices::Display::Core
                 auto param3 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayWireFormatEotf>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayWireFormatHdrMetadata>(args, 4);
 
-                winrt::Windows::Devices::Display::Core::DisplayWireFormat instance{ param0, param1, param2, param3, param4 };
+                winrt::Windows::Devices::Display::Core::DisplayWireFormat instance{param0, param1, param2, param3, param4};
                 return py::wrap(instance, type);
             }
             catch (...)

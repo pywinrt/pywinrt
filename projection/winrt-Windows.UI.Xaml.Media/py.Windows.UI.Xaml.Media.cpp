@@ -19,7 +19,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::AcrylicBrush instance{  };
+                winrt::Windows::UI::Xaml::Media::AcrylicBrush instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1016,7 +1016,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::ArcSegment instance{  };
+                winrt::Windows::UI::Xaml::Media::ArcSegment instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1719,7 +1719,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::BezierSegment instance{  };
+                winrt::Windows::UI::Xaml::Media::BezierSegment instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2286,7 +2286,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::BitmapCache instance{  };
+                winrt::Windows::UI::Xaml::Media::BitmapCache instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3203,7 +3203,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::BrushCollection instance{  };
+                winrt::Windows::UI::Xaml::Media::BrushCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4152,7 +4152,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::CompositeTransform instance{  };
+                winrt::Windows::UI::Xaml::Media::CompositeTransform instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5482,7 +5482,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::DoubleCollection instance{  };
+                winrt::Windows::UI::Xaml::Media::DoubleCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6115,7 +6115,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::EllipseGeometry instance{  };
+                winrt::Windows::UI::Xaml::Media::EllipseGeometry instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6752,7 +6752,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::UI::Xaml::Media::FontFamily instance{ param0 };
+                winrt::Windows::UI::Xaml::Media::FontFamily instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7819,7 +7819,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::GeometryCollection instance{  };
+                winrt::Windows::UI::Xaml::Media::GeometryCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8452,7 +8452,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::GeometryGroup instance{  };
+                winrt::Windows::UI::Xaml::Media::GeometryGroup instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9810,7 +9810,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::GradientStop instance{  };
+                winrt::Windows::UI::Xaml::Media::GradientStop instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -10309,7 +10309,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::GradientStopCollection instance{  };
+                winrt::Windows::UI::Xaml::Media::GradientStopCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -10942,7 +10942,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::ImageBrush instance{  };
+                winrt::Windows::UI::Xaml::Media::ImageBrush instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -12101,7 +12101,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::LineGeometry instance{  };
+                winrt::Windows::UI::Xaml::Media::LineGeometry instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -12668,7 +12668,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::LineSegment instance{  };
+                winrt::Windows::UI::Xaml::Media::LineSegment instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -13102,7 +13102,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::GradientStopCollection>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                winrt::Windows::UI::Xaml::Media::LinearGradientBrush instance{ param0, param1 };
+                winrt::Windows::UI::Xaml::Media::LinearGradientBrush instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -13115,7 +13115,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::LinearGradientBrush instance{  };
+                winrt::Windows::UI::Xaml::Media::LinearGradientBrush instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -14424,7 +14424,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::Matrix3DProjection instance{  };
+                winrt::Windows::UI::Xaml::Media::Matrix3DProjection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -15068,7 +15068,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::MatrixTransform instance{  };
+                winrt::Windows::UI::Xaml::Media::MatrixTransform instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -15757,7 +15757,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::PartialMediaFailureDetectedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Media::PartialMediaFailureDetectedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -15885,7 +15885,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::PathFigure instance{  };
+                winrt::Windows::UI::Xaml::Media::PathFigure instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -16520,7 +16520,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::PathFigureCollection instance{  };
+                winrt::Windows::UI::Xaml::Media::PathFigureCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -17153,7 +17153,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::PathGeometry instance{  };
+                winrt::Windows::UI::Xaml::Media::PathGeometry instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -18036,7 +18036,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::PathSegmentCollection instance{  };
+                winrt::Windows::UI::Xaml::Media::PathSegmentCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -18669,7 +18669,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::PlaneProjection instance{  };
+                winrt::Windows::UI::Xaml::Media::PlaneProjection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -19888,7 +19888,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::PointCollection instance{  };
+                winrt::Windows::UI::Xaml::Media::PointCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -20521,7 +20521,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::PolyBezierSegment instance{  };
+                winrt::Windows::UI::Xaml::Media::PolyBezierSegment instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -20952,7 +20952,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::PolyLineSegment instance{  };
+                winrt::Windows::UI::Xaml::Media::PolyLineSegment instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -21383,7 +21383,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::PolyQuadraticBezierSegment instance{  };
+                winrt::Windows::UI::Xaml::Media::PolyQuadraticBezierSegment instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -22130,7 +22130,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::QuadraticBezierSegment instance{  };
+                winrt::Windows::UI::Xaml::Media::QuadraticBezierSegment instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -22629,7 +22629,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::RateChangedRoutedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Media::RateChangedRoutedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -22737,7 +22737,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::RectangleGeometry instance{  };
+                winrt::Windows::UI::Xaml::Media::RectangleGeometry instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -23408,7 +23408,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::RevealBackgroundBrush instance{  };
+                winrt::Windows::UI::Xaml::Media::RevealBackgroundBrush instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -24116,7 +24116,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::RevealBorderBrush instance{  };
+                winrt::Windows::UI::Xaml::Media::RevealBorderBrush instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -25681,7 +25681,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::RotateTransform instance{  };
+                winrt::Windows::UI::Xaml::Media::RotateTransform instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -26377,7 +26377,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::ScaleTransform instance{  };
+                winrt::Windows::UI::Xaml::Media::ScaleTransform instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -27457,7 +27457,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::SkewTransform instance{  };
+                winrt::Windows::UI::Xaml::Media::SkewTransform instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -28223,7 +28223,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
             {
                 auto param0 = py::convert_to<winrt::Windows::UI::Color>(args, 0);
 
-                winrt::Windows::UI::Xaml::Media::SolidColorBrush instance{ param0 };
+                winrt::Windows::UI::Xaml::Media::SolidColorBrush instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -28236,7 +28236,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::SolidColorBrush instance{  };
+                winrt::Windows::UI::Xaml::Media::SolidColorBrush instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -28845,7 +28845,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::ThemeShadow instance{  };
+                winrt::Windows::UI::Xaml::Media::ThemeShadow instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -29926,7 +29926,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::TimelineMarker instance{  };
+                winrt::Windows::UI::Xaml::Media::TimelineMarker instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -30493,7 +30493,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::TimelineMarkerCollection instance{  };
+                winrt::Windows::UI::Xaml::Media::TimelineMarkerCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -31126,7 +31126,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::TimelineMarkerRoutedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Media::TimelineMarkerRoutedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -31727,7 +31727,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::TransformCollection instance{  };
+                winrt::Windows::UI::Xaml::Media::TransformCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -32360,7 +32360,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::TransformGroup instance{  };
+                winrt::Windows::UI::Xaml::Media::TransformGroup instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -32940,7 +32940,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::TranslateTransform instance{  };
+                winrt::Windows::UI::Xaml::Media::TranslateTransform instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -34495,7 +34495,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             try
             {
-                winrt::Windows::UI::Xaml::Media::XamlLight instance{  };
+                winrt::Windows::UI::Xaml::Media::XamlLight instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

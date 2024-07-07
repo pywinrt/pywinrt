@@ -137,7 +137,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                winrt::Windows::Devices::Perception::Provider::PerceptionControlGroup instance{ param0 };
+                winrt::Windows::Devices::Perception::Provider::PerceptionControlGroup instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -249,7 +249,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 2);
 
-                winrt::Windows::Devices::Perception::Provider::PerceptionCorrelation instance{ param0, param1, param2 };
+                winrt::Windows::Devices::Perception::Provider::PerceptionCorrelation instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -399,7 +399,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelation>>(args, 0);
 
-                winrt::Windows::Devices::Perception::Provider::PerceptionCorrelationGroup instance{ param0 };
+                winrt::Windows::Devices::Perception::Provider::PerceptionCorrelationGroup instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -511,7 +511,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionStartFaceAuthenticationHandler>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Perception::Provider::PerceptionStopFaceAuthenticationHandler>(args, 2);
 
-                winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup instance{ param0, param1, param2 };
+                winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -773,7 +773,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         {
             try
             {
-                winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo instance{  };
+                winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1686,7 +1686,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Size>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 3);
 
-                winrt::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator instance{ param0, param1, param2, param3 };
+                winrt::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)

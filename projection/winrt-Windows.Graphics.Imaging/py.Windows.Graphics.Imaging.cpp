@@ -2580,7 +2580,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         {
             try
             {
-                winrt::Windows::Graphics::Imaging::BitmapPropertySet instance{  };
+                winrt::Windows::Graphics::Imaging::BitmapPropertySet instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3015,7 +3015,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         {
             try
             {
-                winrt::Windows::Graphics::Imaging::BitmapTransform instance{  };
+                winrt::Windows::Graphics::Imaging::BitmapTransform instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3394,7 +3394,7 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::PropertyType>(args, 1);
 
-                winrt::Windows::Graphics::Imaging::BitmapTypedValue instance{ param0, param1 };
+                winrt::Windows::Graphics::Imaging::BitmapTypedValue instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4091,7 +4091,7 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
 
-                winrt::Windows::Graphics::Imaging::SoftwareBitmap instance{ param0, param1, param2 };
+                winrt::Windows::Graphics::Imaging::SoftwareBitmap instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4109,7 +4109,7 @@ namespace py::cpp::Windows::Graphics::Imaging
                 auto param2 = py::convert_to<int32_t>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 3);
 
-                winrt::Windows::Graphics::Imaging::SoftwareBitmap instance{ param0, param1, param2, param3 };
+                winrt::Windows::Graphics::Imaging::SoftwareBitmap instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)

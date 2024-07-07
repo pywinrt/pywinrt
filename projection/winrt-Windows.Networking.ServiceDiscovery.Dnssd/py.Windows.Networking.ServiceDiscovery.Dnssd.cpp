@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         {
             try
             {
-                winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult instance{  };
+                winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -215,7 +215,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
                 auto param1 = py::convert_to<winrt::Windows::Networking::HostName>(args, 1);
                 auto param2 = py::convert_to<uint16_t>(args, 2);
 
-                winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance instance{ param0, param1, param2 };
+                winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         {
             try
             {
-                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisement instance{  };
+                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisement instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -327,7 +327,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         {
             try
             {
-                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementBytePattern instance{  };
+                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementBytePattern instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -344,7 +344,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
                 auto param1 = py::convert_to<int16_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
 
-                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementBytePattern instance{ param0, param1, param2 };
+                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementBytePattern instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -576,7 +576,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         {
             try
             {
-                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementDataSection instance{  };
+                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementDataSection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -592,7 +592,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
                 auto param0 = py::convert_to<uint8_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementDataSection instance{ param0, param1 };
+                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementDataSection instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1272,7 +1272,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         {
             try
             {
-                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFilter instance{  };
+                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFilter instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1428,7 +1428,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         {
             try
             {
-                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisher instance{  };
+                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisher instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1443,7 +1443,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
             {
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisement>(args, 0);
 
-                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisher instance{ param0 };
+                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisher instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2302,7 +2302,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         {
             try
             {
-                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher instance{  };
+                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2317,7 +2317,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
             {
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFilter>(args, 0);
 
-                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher instance{ param0 };
+                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2935,7 +2935,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         {
             try
             {
-                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufacturerData instance{  };
+                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufacturerData instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2951,7 +2951,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufacturerData instance{ param0, param1 };
+                winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufacturerData instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)

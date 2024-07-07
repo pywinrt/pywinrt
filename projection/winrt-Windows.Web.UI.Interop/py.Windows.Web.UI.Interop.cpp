@@ -2214,7 +2214,7 @@ namespace py::cpp::Windows::Web::UI::Interop
             {
                 auto param0 = py::convert_to<winrt::Windows::Web::UI::Interop::WebViewControlProcessOptions>(args, 0);
 
-                winrt::Windows::Web::UI::Interop::WebViewControlProcess instance{ param0 };
+                winrt::Windows::Web::UI::Interop::WebViewControlProcess instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2227,7 +2227,7 @@ namespace py::cpp::Windows::Web::UI::Interop
         {
             try
             {
-                winrt::Windows::Web::UI::Interop::WebViewControlProcess instance{  };
+                winrt::Windows::Web::UI::Interop::WebViewControlProcess instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2514,7 +2514,7 @@ namespace py::cpp::Windows::Web::UI::Interop
         {
             try
             {
-                winrt::Windows::Web::UI::Interop::WebViewControlProcessOptions instance{  };
+                winrt::Windows::Web::UI::Interop::WebViewControlProcessOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

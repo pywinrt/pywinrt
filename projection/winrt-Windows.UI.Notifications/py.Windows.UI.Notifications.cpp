@@ -19,7 +19,7 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                winrt::Windows::UI::Notifications::AdaptiveNotificationText instance{  };
+                winrt::Windows::UI::Notifications::AdaptiveNotificationText instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -245,7 +245,7 @@ namespace py::cpp::Windows::UI::Notifications
             {
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(args, 0);
 
-                winrt::Windows::UI::Notifications::BadgeNotification instance{ param0 };
+                winrt::Windows::UI::Notifications::BadgeNotification instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1677,7 +1677,7 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                winrt::Windows::UI::Notifications::Notification instance{  };
+                winrt::Windows::UI::Notifications::Notification instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2076,7 +2076,7 @@ namespace py::cpp::Windows::UI::Notifications
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                winrt::Windows::UI::Notifications::NotificationData instance{ param0, param1 };
+                winrt::Windows::UI::Notifications::NotificationData instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2091,7 +2091,7 @@ namespace py::cpp::Windows::UI::Notifications
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(args, 0);
 
-                winrt::Windows::UI::Notifications::NotificationData instance{ param0 };
+                winrt::Windows::UI::Notifications::NotificationData instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2104,7 +2104,7 @@ namespace py::cpp::Windows::UI::Notifications
         {
             try
             {
-                winrt::Windows::UI::Notifications::NotificationData instance{  };
+                winrt::Windows::UI::Notifications::NotificationData instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2429,7 +2429,7 @@ namespace py::cpp::Windows::UI::Notifications
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
-                winrt::Windows::UI::Notifications::ScheduledTileNotification instance{ param0, param1 };
+                winrt::Windows::UI::Notifications::ScheduledTileNotification instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2704,7 +2704,7 @@ namespace py::cpp::Windows::UI::Notifications
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
-                winrt::Windows::UI::Notifications::ScheduledToastNotification instance{ param0, param1 };
+                winrt::Windows::UI::Notifications::ScheduledToastNotification instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2722,7 +2722,7 @@ namespace py::cpp::Windows::UI::Notifications
                 auto param2 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 2);
                 auto param3 = py::convert_to<uint32_t>(args, 3);
 
-                winrt::Windows::UI::Notifications::ScheduledToastNotification instance{ param0, param1, param2, param3 };
+                winrt::Windows::UI::Notifications::ScheduledToastNotification instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3478,7 +3478,7 @@ namespace py::cpp::Windows::UI::Notifications
             {
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(args, 0);
 
-                winrt::Windows::UI::Notifications::TileFlyoutNotification instance{ param0 };
+                winrt::Windows::UI::Notifications::TileFlyoutNotification instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4044,7 +4044,7 @@ namespace py::cpp::Windows::UI::Notifications
             {
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(args, 0);
 
-                winrt::Windows::UI::Notifications::TileNotification instance{ param0 };
+                winrt::Windows::UI::Notifications::TileNotification instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5264,7 +5264,7 @@ namespace py::cpp::Windows::UI::Notifications
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 3);
 
-                winrt::Windows::UI::Notifications::ToastCollection instance{ param0, param1, param2, param3 };
+                winrt::Windows::UI::Notifications::ToastCollection instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5952,7 +5952,7 @@ namespace py::cpp::Windows::UI::Notifications
             {
                 auto param0 = py::convert_to<winrt::Windows::Data::Xml::Dom::XmlDocument>(args, 0);
 
-                winrt::Windows::UI::Notifications::ToastNotification instance{ param0 };
+                winrt::Windows::UI::Notifications::ToastNotification instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

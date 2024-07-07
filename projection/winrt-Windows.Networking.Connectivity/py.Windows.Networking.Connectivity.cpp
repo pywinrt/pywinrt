@@ -185,7 +185,7 @@ namespace py::cpp::Windows::Networking::Connectivity
         {
             try
             {
-                winrt::Windows::Networking::Connectivity::CellularApnContext instance{  };
+                winrt::Windows::Networking::Connectivity::CellularApnContext instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1455,7 +1455,7 @@ namespace py::cpp::Windows::Networking::Connectivity
         {
             try
             {
-                winrt::Windows::Networking::Connectivity::ConnectionProfileFilter instance{  };
+                winrt::Windows::Networking::Connectivity::ConnectionProfileFilter instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4453,7 +4453,7 @@ namespace py::cpp::Windows::Networking::Connectivity
                 auto param1 = py::convert_to<winrt::Windows::Networking::HostName>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::DomainNameType>(args, 2);
 
-                winrt::Windows::Networking::Connectivity::RoutePolicy instance{ param0, param1, param2 };
+                winrt::Windows::Networking::Connectivity::RoutePolicy instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)

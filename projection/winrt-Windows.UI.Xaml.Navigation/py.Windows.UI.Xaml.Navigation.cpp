@@ -19,7 +19,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
         {
             try
             {
-                winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions instance{  };
+                winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -769,7 +769,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo>(args, 2);
 
-                winrt::Windows::UI::Xaml::Navigation::PageStackEntry instance{ param0, param1, param2 };
+                winrt::Windows::UI::Xaml::Navigation::PageStackEntry instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -667,7 +667,7 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                winrt::Windows::Storage::Search::IndexableContent instance{  };
+                winrt::Windows::Storage::Search::IndexableContent instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -922,7 +922,7 @@ namespace py::cpp::Windows::Storage::Search
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
-                winrt::Windows::Storage::Search::QueryOptions instance{ param0, param1 };
+                winrt::Windows::Storage::Search::QueryOptions instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -937,7 +937,7 @@ namespace py::cpp::Windows::Storage::Search
             {
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
 
-                winrt::Windows::Storage::Search::QueryOptions instance{ param0 };
+                winrt::Windows::Storage::Search::QueryOptions instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -950,7 +950,7 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                winrt::Windows::Storage::Search::QueryOptions instance{  };
+                winrt::Windows::Storage::Search::QueryOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3433,7 +3433,7 @@ namespace py::cpp::Windows::Storage::Search
         {
             try
             {
-                winrt::Windows::Storage::Search::ValueAndLanguage instance{  };
+                winrt::Windows::Storage::Search::ValueAndLanguage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

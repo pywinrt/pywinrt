@@ -19,7 +19,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::AdaptiveTrigger instance{  };
+                winrt::Windows::UI::Xaml::AdaptiveTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -518,7 +518,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::Application instance{  };
+                winrt::Windows::UI::Xaml::Application instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1412,7 +1412,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::BringIntoViewOptions instance{  };
+                winrt::Windows::UI::Xaml::BringIntoViewOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2202,7 +2202,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::BrushTransition instance{  };
+                winrt::Windows::UI::Xaml::BrushTransition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2338,7 +2338,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::ColorPaletteResources instance{  };
+                winrt::Windows::UI::Xaml::ColorPaletteResources instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4593,7 +4593,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::DataTemplate instance{  };
+                winrt::Windows::UI::Xaml::DataTemplate instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5137,7 +5137,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::DataTemplateKey instance{  };
+                winrt::Windows::UI::Xaml::DataTemplateKey instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5152,7 +5152,7 @@ namespace py::cpp::Windows::UI::Xaml
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                winrt::Windows::UI::Xaml::DataTemplateKey instance{ param0 };
+                winrt::Windows::UI::Xaml::DataTemplateKey instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6003,7 +6003,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::DependencyObjectCollection instance{  };
+                winrt::Windows::UI::Xaml::DependencyObjectCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7270,7 +7270,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::DispatcherTimer instance{  };
+                winrt::Windows::UI::Xaml::DispatcherTimer instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9471,7 +9471,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::ElementFactoryGetArgs instance{  };
+                winrt::Windows::UI::Xaml::ElementFactoryGetArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9655,7 +9655,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::ElementFactoryRecycleArgs instance{  };
+                winrt::Windows::UI::Xaml::ElementFactoryRecycleArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -10107,7 +10107,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::EventTrigger instance{  };
+                winrt::Windows::UI::Xaml::EventTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -18542,7 +18542,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::FrameworkView instance{  };
+                winrt::Windows::UI::Xaml::FrameworkView instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -18791,7 +18791,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::FrameworkViewSource instance{  };
+                winrt::Windows::UI::Xaml::FrameworkViewSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -19466,7 +19466,7 @@ namespace py::cpp::Windows::UI::Xaml
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                winrt::Windows::UI::Xaml::PropertyMetadata instance{ param0 };
+                winrt::Windows::UI::Xaml::PropertyMetadata instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -19482,7 +19482,7 @@ namespace py::cpp::Windows::UI::Xaml
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::PropertyChangedCallback>(args, 1);
 
-                winrt::Windows::UI::Xaml::PropertyMetadata instance{ param0, param1 };
+                winrt::Windows::UI::Xaml::PropertyMetadata instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -19690,7 +19690,7 @@ namespace py::cpp::Windows::UI::Xaml
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::UI::Xaml::PropertyPath instance{ param0 };
+                winrt::Windows::UI::Xaml::PropertyPath instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -20552,7 +20552,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::ResourceDictionary instance{  };
+                winrt::Windows::UI::Xaml::ResourceDictionary instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -21391,7 +21391,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::RoutedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::RoutedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -21499,7 +21499,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::ScalarTransition instance{  };
+                winrt::Windows::UI::Xaml::ScalarTransition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -21638,7 +21638,7 @@ namespace py::cpp::Windows::UI::Xaml
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
-                winrt::Windows::UI::Xaml::Setter instance{ param0, param1 };
+                winrt::Windows::UI::Xaml::Setter instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -21651,7 +21651,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::Setter instance{  };
+                winrt::Windows::UI::Xaml::Setter instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -22489,7 +22489,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::SetterBaseCollection instance{  };
+                winrt::Windows::UI::Xaml::SetterBaseCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -23477,7 +23477,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::StateTrigger instance{  };
+                winrt::Windows::UI::Xaml::StateTrigger instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -24226,7 +24226,7 @@ namespace py::cpp::Windows::UI::Xaml
             {
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 0);
 
-                winrt::Windows::UI::Xaml::Style instance{ param0 };
+                winrt::Windows::UI::Xaml::Style instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -24239,7 +24239,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::Style instance{  };
+                winrt::Windows::UI::Xaml::Style instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -24746,7 +24746,7 @@ namespace py::cpp::Windows::UI::Xaml
             {
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyProperty>(args, 0);
 
-                winrt::Windows::UI::Xaml::TargetPropertyPath instance{ param0 };
+                winrt::Windows::UI::Xaml::TargetPropertyPath instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -24759,7 +24759,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::TargetPropertyPath instance{  };
+                winrt::Windows::UI::Xaml::TargetPropertyPath instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -25417,7 +25417,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::TriggerActionCollection instance{  };
+                winrt::Windows::UI::Xaml::TriggerActionCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -33786,7 +33786,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::UIElementWeakCollection instance{  };
+                winrt::Windows::UI::Xaml::UIElementWeakCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -34573,7 +34573,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::Vector3Transition instance{  };
+                winrt::Windows::UI::Xaml::Vector3Transition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -34757,7 +34757,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::VisualState instance{  };
+                winrt::Windows::UI::Xaml::VisualState instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -35203,7 +35203,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::VisualStateChangedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::VisualStateChangedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -35435,7 +35435,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::VisualStateGroup instance{  };
+                winrt::Windows::UI::Xaml::VisualStateGroup instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -35943,7 +35943,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::VisualStateManager instance{  };
+                winrt::Windows::UI::Xaml::VisualStateManager instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -36458,7 +36458,7 @@ namespace py::cpp::Windows::UI::Xaml
         {
             try
             {
-                winrt::Windows::UI::Xaml::VisualTransition instance{  };
+                winrt::Windows::UI::Xaml::VisualTransition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

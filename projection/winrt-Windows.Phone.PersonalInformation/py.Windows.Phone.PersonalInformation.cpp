@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         {
             try
             {
-                winrt::Windows::Phone::PersonalInformation::ContactAddress instance{  };
+                winrt::Windows::Phone::PersonalInformation::ContactAddress instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -493,7 +493,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         {
             try
             {
-                winrt::Windows::Phone::PersonalInformation::ContactInformation instance{  };
+                winrt::Windows::Phone::PersonalInformation::ContactInformation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1040,7 +1040,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         {
             try
             {
-                winrt::Windows::Phone::PersonalInformation::ContactQueryOptions instance{  };
+                winrt::Windows::Phone::PersonalInformation::ContactQueryOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2595,7 +2595,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
             {
                 auto param0 = py::convert_to<winrt::Windows::Phone::PersonalInformation::ContactStore>(args, 0);
 
-                winrt::Windows::Phone::PersonalInformation::StoredContact instance{ param0 };
+                winrt::Windows::Phone::PersonalInformation::StoredContact instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2611,7 +2611,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 auto param0 = py::convert_to<winrt::Windows::Phone::PersonalInformation::ContactStore>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Phone::PersonalInformation::ContactInformation>(args, 1);
 
-                winrt::Windows::Phone::PersonalInformation::StoredContact instance{ param0, param1 };
+                winrt::Windows::Phone::PersonalInformation::StoredContact instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)

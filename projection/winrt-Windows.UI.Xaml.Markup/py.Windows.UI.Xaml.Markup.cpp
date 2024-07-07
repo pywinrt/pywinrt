@@ -19,7 +19,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         {
             try
             {
-                winrt::Windows::UI::Xaml::Markup::MarkupExtension instance{  };
+                winrt::Windows::UI::Xaml::Markup::MarkupExtension instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -22,7 +22,7 @@ namespace py::cpp::Windows::Services::Maps
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Services::Maps::WaypointKind>(args, 1);
 
-                winrt::Windows::Services::Maps::EnhancedWaypoint instance{ param0, param1 };
+                winrt::Windows::Services::Maps::EnhancedWaypoint instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1462,7 +1462,7 @@ namespace py::cpp::Windows::Services::Maps
         {
             try
             {
-                winrt::Windows::Services::Maps::MapRouteDrivingOptions instance{  };
+                winrt::Windows::Services::Maps::MapRouteDrivingOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3392,7 +3392,7 @@ namespace py::cpp::Windows::Services::Maps
         {
             try
             {
-                winrt::Windows::Services::Maps::PlaceInfoCreateOptions instance{  };
+                winrt::Windows::Services::Maps::PlaceInfoCreateOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

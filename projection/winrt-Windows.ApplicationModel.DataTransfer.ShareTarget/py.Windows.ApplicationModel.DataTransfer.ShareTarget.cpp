@@ -19,7 +19,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
         {
             try
             {
-                winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink instance{  };
+                winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

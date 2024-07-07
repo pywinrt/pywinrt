@@ -188,7 +188,7 @@ namespace py::cpp::Windows::Devices::Geolocation
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::BasicGeoposition>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::BasicGeoposition>(args, 1);
 
-                winrt::Windows::Devices::Geolocation::GeoboundingBox instance{ param0, param1 };
+                winrt::Windows::Devices::Geolocation::GeoboundingBox instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -205,7 +205,7 @@ namespace py::cpp::Windows::Devices::Geolocation
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::BasicGeoposition>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>(args, 2);
 
-                winrt::Windows::Devices::Geolocation::GeoboundingBox instance{ param0, param1, param2 };
+                winrt::Windows::Devices::Geolocation::GeoboundingBox instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -223,7 +223,7 @@ namespace py::cpp::Windows::Devices::Geolocation
                 auto param2 = py::convert_to<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>(args, 2);
                 auto param3 = py::convert_to<uint32_t>(args, 3);
 
-                winrt::Windows::Devices::Geolocation::GeoboundingBox instance{ param0, param1, param2, param3 };
+                winrt::Windows::Devices::Geolocation::GeoboundingBox instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -574,7 +574,7 @@ namespace py::cpp::Windows::Devices::Geolocation
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::BasicGeoposition>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                winrt::Windows::Devices::Geolocation::Geocircle instance{ param0, param1 };
+                winrt::Windows::Devices::Geolocation::Geocircle instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -591,7 +591,7 @@ namespace py::cpp::Windows::Devices::Geolocation
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>(args, 2);
 
-                winrt::Windows::Devices::Geolocation::Geocircle instance{ param0, param1, param2 };
+                winrt::Windows::Devices::Geolocation::Geocircle instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -609,7 +609,7 @@ namespace py::cpp::Windows::Devices::Geolocation
                 auto param2 = py::convert_to<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>(args, 2);
                 auto param3 = py::convert_to<uint32_t>(args, 3);
 
-                winrt::Windows::Devices::Geolocation::Geocircle instance{ param0, param1, param2, param3 };
+                winrt::Windows::Devices::Geolocation::Geocircle instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1289,7 +1289,7 @@ namespace py::cpp::Windows::Devices::Geolocation
         {
             try
             {
-                winrt::Windows::Devices::Geolocation::Geolocator instance{  };
+                winrt::Windows::Devices::Geolocation::Geolocator instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1939,7 +1939,7 @@ namespace py::cpp::Windows::Devices::Geolocation
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Geolocation::BasicGeoposition>>(args, 0);
 
-                winrt::Windows::Devices::Geolocation::Geopath instance{ param0 };
+                winrt::Windows::Devices::Geolocation::Geopath instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1955,7 +1955,7 @@ namespace py::cpp::Windows::Devices::Geolocation
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Geolocation::BasicGeoposition>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>(args, 1);
 
-                winrt::Windows::Devices::Geolocation::Geopath instance{ param0, param1 };
+                winrt::Windows::Devices::Geolocation::Geopath instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1972,7 +1972,7 @@ namespace py::cpp::Windows::Devices::Geolocation
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                winrt::Windows::Devices::Geolocation::Geopath instance{ param0, param1, param2 };
+                winrt::Windows::Devices::Geolocation::Geopath instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2142,7 +2142,7 @@ namespace py::cpp::Windows::Devices::Geolocation
             {
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::BasicGeoposition>(args, 0);
 
-                winrt::Windows::Devices::Geolocation::Geopoint instance{ param0 };
+                winrt::Windows::Devices::Geolocation::Geopoint instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2158,7 +2158,7 @@ namespace py::cpp::Windows::Devices::Geolocation
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::BasicGeoposition>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>(args, 1);
 
-                winrt::Windows::Devices::Geolocation::Geopoint instance{ param0, param1 };
+                winrt::Windows::Devices::Geolocation::Geopoint instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2175,7 +2175,7 @@ namespace py::cpp::Windows::Devices::Geolocation
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                winrt::Windows::Devices::Geolocation::Geopoint instance{ param0, param1, param2 };
+                winrt::Windows::Devices::Geolocation::Geopoint instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2595,7 +2595,7 @@ namespace py::cpp::Windows::Devices::Geolocation
         {
             try
             {
-                winrt::Windows::Devices::Geolocation::GeovisitMonitor instance{  };
+                winrt::Windows::Devices::Geolocation::GeovisitMonitor instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

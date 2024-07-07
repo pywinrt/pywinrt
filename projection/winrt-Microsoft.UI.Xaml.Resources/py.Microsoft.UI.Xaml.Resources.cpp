@@ -19,7 +19,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Resources::CustomXamlResourceLoader instance{  };
+                winrt::Microsoft::UI::Xaml::Resources::CustomXamlResourceLoader instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

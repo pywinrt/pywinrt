@@ -21,7 +21,7 @@ namespace py::cpp::Windows::Media::Core
             {
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 0);
 
-                winrt::Windows::Media::Core::AudioStreamDescriptor instance{ param0 };
+                winrt::Windows::Media::Core::AudioStreamDescriptor instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -960,7 +960,7 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                winrt::Windows::Media::Core::ChapterCue instance{  };
+                winrt::Windows::Media::Core::ChapterCue instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1406,7 +1406,7 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                winrt::Windows::Media::Core::CodecQuery instance{  };
+                winrt::Windows::Media::Core::CodecQuery instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2604,7 +2604,7 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                winrt::Windows::Media::Core::DataCue instance{  };
+                winrt::Windows::Media::Core::DataCue instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3230,7 +3230,7 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                winrt::Windows::Media::Core::FaceDetectionEffectDefinition instance{  };
+                winrt::Windows::Media::Core::FaceDetectionEffectDefinition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4064,7 +4064,7 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                winrt::Windows::Media::Core::ImageCue instance{  };
+                winrt::Windows::Media::Core::ImageCue instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4842,7 +4842,7 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                winrt::Windows::Media::Core::MediaBinder instance{  };
+                winrt::Windows::Media::Core::MediaBinder instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6360,7 +6360,7 @@ namespace py::cpp::Windows::Media::Core
             {
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::AppService::AppServiceConnection>(args, 0);
 
-                winrt::Windows::Media::Core::MediaSourceAppServiceConnection instance{ param0 };
+                winrt::Windows::Media::Core::MediaSourceAppServiceConnection instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8027,7 +8027,7 @@ namespace py::cpp::Windows::Media::Core
             {
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::IMediaStreamDescriptor>(args, 0);
 
-                winrt::Windows::Media::Core::MediaStreamSource instance{ param0 };
+                winrt::Windows::Media::Core::MediaStreamSource instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8043,7 +8043,7 @@ namespace py::cpp::Windows::Media::Core
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::IMediaStreamDescriptor>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Core::IMediaStreamDescriptor>(args, 1);
 
-                winrt::Windows::Media::Core::MediaStreamSource instance{ param0, param1 };
+                winrt::Windows::Media::Core::MediaStreamSource instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -11053,7 +11053,7 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                winrt::Windows::Media::Core::MseStreamSource instance{  };
+                winrt::Windows::Media::Core::MseStreamSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -11799,7 +11799,7 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                winrt::Windows::Media::Core::SceneAnalysisEffectDefinition instance{  };
+                winrt::Windows::Media::Core::SceneAnalysisEffectDefinition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -12443,7 +12443,7 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                winrt::Windows::Media::Core::SpeechCue instance{  };
+                winrt::Windows::Media::Core::SpeechCue instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -12821,7 +12821,7 @@ namespace py::cpp::Windows::Media::Core
             {
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties>(args, 0);
 
-                winrt::Windows::Media::Core::TimedMetadataStreamDescriptor instance{ param0 };
+                winrt::Windows::Media::Core::TimedMetadataStreamDescriptor instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -13127,7 +13127,7 @@ namespace py::cpp::Windows::Media::Core
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::Core::TimedMetadataKind>(args, 2);
 
-                winrt::Windows::Media::Core::TimedMetadataTrack instance{ param0, param1, param2 };
+                winrt::Windows::Media::Core::TimedMetadataTrack instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -14046,7 +14046,7 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                winrt::Windows::Media::Core::TimedTextCue instance{  };
+                winrt::Windows::Media::Core::TimedTextCue instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -14394,7 +14394,7 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                winrt::Windows::Media::Core::TimedTextLine instance{  };
+                winrt::Windows::Media::Core::TimedTextLine instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -14550,7 +14550,7 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                winrt::Windows::Media::Core::TimedTextRegion instance{  };
+                winrt::Windows::Media::Core::TimedTextRegion instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -15930,7 +15930,7 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                winrt::Windows::Media::Core::TimedTextStyle instance{  };
+                winrt::Windows::Media::Core::TimedTextStyle instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -16922,7 +16922,7 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                winrt::Windows::Media::Core::TimedTextSubformat instance{  };
+                winrt::Windows::Media::Core::TimedTextSubformat instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -17379,7 +17379,7 @@ namespace py::cpp::Windows::Media::Core
         {
             try
             {
-                winrt::Windows::Media::Core::VideoStabilizationEffectDefinition instance{  };
+                winrt::Windows::Media::Core::VideoStabilizationEffectDefinition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -17595,7 +17595,7 @@ namespace py::cpp::Windows::Media::Core
             {
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingProperties>(args, 0);
 
-                winrt::Windows::Media::Core::VideoStreamDescriptor instance{ param0 };
+                winrt::Windows::Media::Core::VideoStreamDescriptor instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

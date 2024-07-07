@@ -317,7 +317,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         {
             try
             {
-                winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile instance{  };
+                winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1915,7 +1915,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
         {
             try
             {
-                winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage instance{  };
+                winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

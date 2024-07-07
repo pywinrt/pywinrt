@@ -1051,7 +1051,7 @@ namespace py::cpp::Windows::Devices::AllJoyn
                 auto param3 = py::convert_to<uint8_t>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner>(args, 4);
 
-                winrt::Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs instance{ param0, param1, param2, param3, param4 };
+                winrt::Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs instance{param0, param1, param2, param3, param4};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1398,7 +1398,7 @@ namespace py::cpp::Windows::Devices::AllJoyn
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment instance{ param0 };
+                winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1411,7 +1411,7 @@ namespace py::cpp::Windows::Devices::AllJoyn
         {
             try
             {
-                winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment instance{  };
+                winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2211,7 +2211,7 @@ namespace py::cpp::Windows::Devices::AllJoyn
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Devices::AllJoyn::AllJoynBusObject instance{ param0 };
+                winrt::Windows::Devices::AllJoyn::AllJoynBusObject instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2227,7 +2227,7 @@ namespace py::cpp::Windows::Devices::AllJoyn
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment>(args, 1);
 
-                winrt::Windows::Devices::AllJoyn::AllJoynBusObject instance{ param0, param1 };
+                winrt::Windows::Devices::AllJoyn::AllJoynBusObject instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2240,7 +2240,7 @@ namespace py::cpp::Windows::Devices::AllJoyn
         {
             try
             {
-                winrt::Windows::Devices::AllJoyn::AllJoynBusObject instance{  };
+                winrt::Windows::Devices::AllJoyn::AllJoynBusObject instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2510,7 +2510,7 @@ namespace py::cpp::Windows::Devices::AllJoyn
             {
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                winrt::Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs instance{ param0 };
+                winrt::Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3273,7 +3273,7 @@ namespace py::cpp::Windows::Devices::AllJoyn
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Devices::AllJoyn::AllJoynMessageInfo instance{ param0 };
+                winrt::Windows::Devices::AllJoyn::AllJoynMessageInfo instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3383,7 +3383,7 @@ namespace py::cpp::Windows::Devices::AllJoyn
             {
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                winrt::Windows::Devices::AllJoyn::AllJoynProducerStoppedEventArgs instance{ param0 };
+                winrt::Windows::Devices::AllJoyn::AllJoynProducerStoppedEventArgs instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3495,7 +3495,7 @@ namespace py::cpp::Windows::Devices::AllJoyn
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<uint16_t>(args, 2);
 
-                winrt::Windows::Devices::AllJoyn::AllJoynServiceInfo instance{ param0, param1, param2 };
+                winrt::Windows::Devices::AllJoyn::AllJoynServiceInfo instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3702,7 +3702,7 @@ namespace py::cpp::Windows::Devices::AllJoyn
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Devices::AllJoyn::AllJoynServiceInfoRemovedEventArgs instance{ param0 };
+                winrt::Windows::Devices::AllJoyn::AllJoynServiceInfoRemovedEventArgs instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4163,7 +4163,7 @@ namespace py::cpp::Windows::Devices::AllJoyn
             {
                 auto param0 = py::convert_to<winrt::Windows::Devices::AllJoyn::AllJoynSession>(args, 0);
 
-                winrt::Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs instance{ param0 };
+                winrt::Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4273,7 +4273,7 @@ namespace py::cpp::Windows::Devices::AllJoyn
             {
                 auto param0 = py::convert_to<winrt::Windows::Devices::AllJoyn::AllJoynSessionLostReason>(args, 0);
 
-                winrt::Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs instance{ param0 };
+                winrt::Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4383,7 +4383,7 @@ namespace py::cpp::Windows::Devices::AllJoyn
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs instance{ param0 };
+                winrt::Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4493,7 +4493,7 @@ namespace py::cpp::Windows::Devices::AllJoyn
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs instance{ param0 };
+                winrt::Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5019,7 +5019,7 @@ namespace py::cpp::Windows::Devices::AllJoyn
             {
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                winrt::Windows::Devices::AllJoyn::AllJoynWatcherStoppedEventArgs instance{ param0 };
+                winrt::Windows::Devices::AllJoyn::AllJoynWatcherStoppedEventArgs instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

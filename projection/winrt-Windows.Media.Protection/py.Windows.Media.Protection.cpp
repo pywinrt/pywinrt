@@ -213,7 +213,7 @@ namespace py::cpp::Windows::Media::Protection
         {
             try
             {
-                winrt::Windows::Media::Protection::HdcpSession instance{  };
+                winrt::Windows::Media::Protection::HdcpSession instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -492,7 +492,7 @@ namespace py::cpp::Windows::Media::Protection
         {
             try
             {
-                winrt::Windows::Media::Protection::MediaProtectionManager instance{  };
+                winrt::Windows::Media::Protection::MediaProtectionManager instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -737,7 +737,7 @@ namespace py::cpp::Windows::Media::Protection
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 0);
 
-                winrt::Windows::Media::Protection::MediaProtectionPMPServer instance{ param0 };
+                winrt::Windows::Media::Protection::MediaProtectionPMPServer instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -944,7 +944,7 @@ namespace py::cpp::Windows::Media::Protection
         {
             try
             {
-                winrt::Windows::Media::Protection::ProtectionCapabilities instance{  };
+                winrt::Windows::Media::Protection::ProtectionCapabilities instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

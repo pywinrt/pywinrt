@@ -105,7 +105,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
         {
             try
             {
-                winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession instance{  };
+                winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

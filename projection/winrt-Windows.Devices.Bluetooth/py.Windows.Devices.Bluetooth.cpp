@@ -5005,7 +5005,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
         {
             try
             {
-                winrt::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter instance{  };
+                winrt::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

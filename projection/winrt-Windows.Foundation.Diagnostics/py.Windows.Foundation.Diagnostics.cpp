@@ -489,7 +489,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Foundation::Diagnostics::FileLoggingSession instance{ param0 };
+                winrt::Windows::Foundation::Diagnostics::FileLoggingSession instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -901,7 +901,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 1);
 
-                winrt::Windows::Foundation::Diagnostics::LoggingActivity instance{ param0, param1 };
+                winrt::Windows::Foundation::Diagnostics::LoggingActivity instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -918,7 +918,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
 
-                winrt::Windows::Foundation::Diagnostics::LoggingActivity instance{ param0, param1, param2 };
+                winrt::Windows::Foundation::Diagnostics::LoggingActivity instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1470,7 +1470,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingChannelOptions>(args, 1);
 
-                winrt::Windows::Foundation::Diagnostics::LoggingChannel instance{ param0, param1 };
+                winrt::Windows::Foundation::Diagnostics::LoggingChannel instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1487,7 +1487,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingChannelOptions>(args, 1);
                 auto param2 = py::convert_to<winrt::guid>(args, 2);
 
-                winrt::Windows::Foundation::Diagnostics::LoggingChannel instance{ param0, param1, param2 };
+                winrt::Windows::Foundation::Diagnostics::LoggingChannel instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1502,7 +1502,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Foundation::Diagnostics::LoggingChannel instance{ param0 };
+                winrt::Windows::Foundation::Diagnostics::LoggingChannel instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2150,7 +2150,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                winrt::Windows::Foundation::Diagnostics::LoggingChannelOptions instance{  };
+                winrt::Windows::Foundation::Diagnostics::LoggingChannelOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2165,7 +2165,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
             {
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                winrt::Windows::Foundation::Diagnostics::LoggingChannelOptions instance{ param0 };
+                winrt::Windows::Foundation::Diagnostics::LoggingChannelOptions instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2301,7 +2301,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                winrt::Windows::Foundation::Diagnostics::LoggingFields instance{  };
+                winrt::Windows::Foundation::Diagnostics::LoggingFields instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5500,7 +5500,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                winrt::Windows::Foundation::Diagnostics::LoggingOptions instance{  };
+                winrt::Windows::Foundation::Diagnostics::LoggingOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5515,7 +5515,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
             {
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
-                winrt::Windows::Foundation::Diagnostics::LoggingOptions instance{ param0 };
+                winrt::Windows::Foundation::Diagnostics::LoggingOptions instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5893,7 +5893,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Foundation::Diagnostics::LoggingSession instance{ param0 };
+                winrt::Windows::Foundation::Diagnostics::LoggingSession instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6174,7 +6174,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         {
             try
             {
-                winrt::Windows::Foundation::Diagnostics::RuntimeBrokerErrorSettings instance{  };
+                winrt::Windows::Foundation::Diagnostics::RuntimeBrokerErrorSettings instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

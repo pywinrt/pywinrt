@@ -480,7 +480,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAdvertiser instance{ param0 };
+                winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAdvertiser instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

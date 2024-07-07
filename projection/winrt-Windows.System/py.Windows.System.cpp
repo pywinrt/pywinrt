@@ -2571,7 +2571,7 @@ namespace py::cpp::Windows::System
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::System::AppUriHandlerHost instance{ param0 };
+                winrt::Windows::System::AppUriHandlerHost instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2584,7 +2584,7 @@ namespace py::cpp::Windows::System
         {
             try
             {
-                winrt::Windows::System::AppUriHandlerHost instance{  };
+                winrt::Windows::System::AppUriHandlerHost instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4268,7 +4268,7 @@ namespace py::cpp::Windows::System
         {
             try
             {
-                winrt::Windows::System::FolderLauncherOptions instance{  };
+                winrt::Windows::System::FolderLauncherOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5599,7 +5599,7 @@ namespace py::cpp::Windows::System
         {
             try
             {
-                winrt::Windows::System::LauncherOptions instance{  };
+                winrt::Windows::System::LauncherOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6919,7 +6919,7 @@ namespace py::cpp::Windows::System
         {
             try
             {
-                winrt::Windows::System::ProcessLauncherOptions instance{  };
+                winrt::Windows::System::ProcessLauncherOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7624,7 +7624,7 @@ namespace py::cpp::Windows::System
         {
             try
             {
-                winrt::Windows::System::RemoteLauncherOptions instance{  };
+                winrt::Windows::System::RemoteLauncherOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9229,7 +9229,7 @@ namespace py::cpp::Windows::System
         {
             try
             {
-                winrt::Windows::System::UserPicker instance{  };
+                winrt::Windows::System::UserPicker instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

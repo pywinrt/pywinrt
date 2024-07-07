@@ -597,7 +597,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                winrt::Windows::ApplicationModel::DataTransfer::ClipboardContentOptions instance{  };
+                winrt::Windows::ApplicationModel::DataTransfer::ClipboardContentOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1119,7 +1119,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                winrt::Windows::ApplicationModel::DataTransfer::DataPackage instance{  };
+                winrt::Windows::ApplicationModel::DataTransfer::DataPackage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5379,7 +5379,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 auto param2 = py::convert_to<winrt::Windows::UI::Color>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::ShareProviderHandler>(args, 3);
 
-                winrt::Windows::ApplicationModel::DataTransfer::ShareProvider instance{ param0, param1, param2, param3 };
+                winrt::Windows::ApplicationModel::DataTransfer::ShareProvider instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5954,7 +5954,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         {
             try
             {
-                winrt::Windows::ApplicationModel::DataTransfer::ShareUIOptions instance{  };
+                winrt::Windows::ApplicationModel::DataTransfer::ShareUIOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -21,7 +21,7 @@ namespace py::cpp::Windows::Devices::I2c
             {
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                winrt::Windows::Devices::I2c::I2cConnectionSettings instance{ param0 };
+                winrt::Windows::Devices::I2c::I2cConnectionSettings instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

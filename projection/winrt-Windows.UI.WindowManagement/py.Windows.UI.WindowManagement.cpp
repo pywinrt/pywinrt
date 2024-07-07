@@ -2812,7 +2812,7 @@ namespace py::cpp::Windows::UI::WindowManagement
         {
             try
             {
-                winrt::Windows::UI::WindowManagement::CompactOverlayPresentationConfiguration instance{  };
+                winrt::Windows::UI::WindowManagement::CompactOverlayPresentationConfiguration instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2920,7 +2920,7 @@ namespace py::cpp::Windows::UI::WindowManagement
         {
             try
             {
-                winrt::Windows::UI::WindowManagement::DefaultPresentationConfiguration instance{  };
+                winrt::Windows::UI::WindowManagement::DefaultPresentationConfiguration instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3239,7 +3239,7 @@ namespace py::cpp::Windows::UI::WindowManagement
         {
             try
             {
-                winrt::Windows::UI::WindowManagement::FullScreenPresentationConfiguration instance{  };
+                winrt::Windows::UI::WindowManagement::FullScreenPresentationConfiguration instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

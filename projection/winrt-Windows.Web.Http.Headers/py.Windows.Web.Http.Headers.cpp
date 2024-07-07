@@ -933,7 +933,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue instance{ param0 };
+                winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -949,7 +949,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue instance{ param0, param1 };
+                winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1965,7 +1965,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue instance{ param0 };
+                winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2941,7 +2941,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue instance{ param0 };
+                winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3917,7 +3917,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue instance{ param0 };
+                winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3933,7 +3933,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue instance{ param0, param1 };
+                winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4929,7 +4929,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue instance{ param0 };
+                winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5423,7 +5423,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         {
             try
             {
-                winrt::Windows::Web::Http::Headers::HttpContentHeaderCollection instance{  };
+                winrt::Windows::Web::Http::Headers::HttpContentHeaderCollection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6395,7 +6395,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             {
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue instance{ param0 };
+                winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6411,7 +6411,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<uint64_t>(args, 0);
                 auto param1 = py::convert_to<uint64_t>(args, 1);
 
-                winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue instance{ param0, param1 };
+                winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6428,7 +6428,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param1 = py::convert_to<uint64_t>(args, 1);
                 auto param2 = py::convert_to<uint64_t>(args, 2);
 
-                winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue instance{ param0, param1, param2 };
+                winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6772,7 +6772,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue instance{ param0 };
+                winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6788,7 +6788,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue instance{ param0, param1 };
+                winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7812,7 +7812,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue instance{ param0 };
+                winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7828,7 +7828,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue instance{ param0, param1 };
+                winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8376,7 +8376,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue instance{ param0 };
+                winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8392,7 +8392,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue instance{ param0, param1 };
+                winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -10156,7 +10156,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue instance{ param0 };
+                winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -10172,7 +10172,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue instance{ param0, param1 };
+                winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -11168,7 +11168,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue instance{ param0 };
+                winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -11520,7 +11520,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue instance{ param0 };
+                winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -11536,7 +11536,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue instance{ param0, param1 };
+                winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -13376,7 +13376,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue instance{ param0 };
+                winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -13392,7 +13392,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue instance{ param0, param1 };
+                winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -13696,7 +13696,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::Headers::HttpProductHeaderValue instance{ param0 };
+                winrt::Windows::Web::Http::Headers::HttpProductHeaderValue instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -13712,7 +13712,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Web::Http::Headers::HttpProductHeaderValue instance{ param0, param1 };
+                winrt::Windows::Web::Http::Headers::HttpProductHeaderValue instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -13988,7 +13988,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue instance{ param0 };
+                winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -14004,7 +14004,7 @@ namespace py::cpp::Windows::Web::Http::Headers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue instance{ param0, param1 };
+                winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -16972,7 +16972,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue instance{ param0 };
+                winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -945,7 +945,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             {
                 auto param0 = py::convert_to<winrt::Windows::AI::MachineLearning::LearningModelSession>(args, 0);
 
-                winrt::Windows::AI::MachineLearning::LearningModelBinding instance{ param0 };
+                winrt::Windows::AI::MachineLearning::LearningModelBinding instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1361,7 +1361,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             {
                 auto param0 = py::convert_to<winrt::Windows::AI::MachineLearning::LearningModelDeviceKind>(args, 0);
 
-                winrt::Windows::AI::MachineLearning::LearningModelDevice instance{ param0 };
+                winrt::Windows::AI::MachineLearning::LearningModelDevice instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1696,7 +1696,7 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param1 = py::convert_to<winrt::Windows::AI::MachineLearning::LearningModelDevice>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::AI::MachineLearning::LearningModelSessionOptions>(args, 2);
 
-                winrt::Windows::AI::MachineLearning::LearningModelSession instance{ param0, param1, param2 };
+                winrt::Windows::AI::MachineLearning::LearningModelSession instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1711,7 +1711,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             {
                 auto param0 = py::convert_to<winrt::Windows::AI::MachineLearning::LearningModel>(args, 0);
 
-                winrt::Windows::AI::MachineLearning::LearningModelSession instance{ param0 };
+                winrt::Windows::AI::MachineLearning::LearningModelSession instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1727,7 +1727,7 @@ namespace py::cpp::Windows::AI::MachineLearning
                 auto param0 = py::convert_to<winrt::Windows::AI::MachineLearning::LearningModel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::AI::MachineLearning::LearningModelDevice>(args, 1);
 
-                winrt::Windows::AI::MachineLearning::LearningModelSession instance{ param0, param1 };
+                winrt::Windows::AI::MachineLearning::LearningModelSession instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2059,7 +2059,7 @@ namespace py::cpp::Windows::AI::MachineLearning
         {
             try
             {
-                winrt::Windows::AI::MachineLearning::LearningModelSessionOptions instance{  };
+                winrt::Windows::AI::MachineLearning::LearningModelSessionOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

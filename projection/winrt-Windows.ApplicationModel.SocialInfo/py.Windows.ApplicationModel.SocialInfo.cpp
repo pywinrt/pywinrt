@@ -19,7 +19,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         {
             try
             {
-                winrt::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem instance{  };
+                winrt::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -541,7 +541,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         {
             try
             {
-                winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItem instance{  };
+                winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItem instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1093,7 +1093,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         {
             try
             {
-                winrt::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem instance{  };
+                winrt::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1393,7 +1393,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
         {
             try
             {
-                winrt::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail instance{  };
+                winrt::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

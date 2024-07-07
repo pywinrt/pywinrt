@@ -21,7 +21,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::ApplicationModel::UserActivities::UserActivity instance{ param0 };
+                winrt::Windows::ApplicationModel::UserActivities::UserActivity instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -670,7 +670,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                winrt::Windows::ApplicationModel::UserActivities::UserActivityAttribution instance{ param0 };
+                winrt::Windows::ApplicationModel::UserActivities::UserActivityAttribution instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -683,7 +683,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         {
             try
             {
-                winrt::Windows::ApplicationModel::UserActivities::UserActivityAttribution instance{  };
+                winrt::Windows::ApplicationModel::UserActivities::UserActivityAttribution instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

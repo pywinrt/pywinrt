@@ -21,7 +21,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                winrt::Microsoft::UI::Xaml::Media::Imaging::BitmapImage instance{ param0 };
+                winrt::Microsoft::UI::Xaml::Media::Imaging::BitmapImage instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -34,7 +34,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Media::Imaging::BitmapImage instance{  };
+                winrt::Microsoft::UI::Xaml::Media::Imaging::BitmapImage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1827,7 +1827,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Media::Imaging::RenderTargetBitmap instance{  };
+                winrt::Microsoft::UI::Xaml::Media::Imaging::RenderTargetBitmap instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2374,7 +2374,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Media::Imaging::SoftwareBitmapSource instance{  };
+                winrt::Microsoft::UI::Xaml::Media::Imaging::SoftwareBitmapSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2819,7 +2819,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Media::Imaging::SurfaceImageSource instance{ param0, param1 };
+                winrt::Microsoft::UI::Xaml::Media::Imaging::SurfaceImageSource instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2836,7 +2836,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                winrt::Microsoft::UI::Xaml::Media::Imaging::SurfaceImageSource instance{ param0, param1, param2 };
+                winrt::Microsoft::UI::Xaml::Media::Imaging::SurfaceImageSource instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3194,7 +3194,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource instance{  };
+                winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3209,7 +3209,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource instance{ param0 };
+                winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4073,7 +4073,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource instance{ param0, param1 };
+                winrt::Microsoft::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4090,7 +4090,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                winrt::Microsoft::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource instance{ param0, param1, param2 };
+                winrt::Microsoft::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4451,7 +4451,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Media::Imaging::WriteableBitmap instance{ param0, param1 };
+                winrt::Microsoft::UI::Xaml::Media::Imaging::WriteableBitmap instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)

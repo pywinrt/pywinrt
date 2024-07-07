@@ -22,7 +22,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkDrawingAttributes>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(args, 1);
 
-                winrt::Windows::UI::Input::Inking::Core::CoreIncrementalInkStroke instance{ param0, param1 };
+                winrt::Windows::UI::Input::Inking::Core::CoreIncrementalInkStroke instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -738,7 +738,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
         {
             try
             {
-                winrt::Windows::UI::Input::Inking::Core::CoreInkPresenterHost instance{  };
+                winrt::Windows::UI::Input::Inking::Core::CoreInkPresenterHost instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

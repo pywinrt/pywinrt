@@ -1702,7 +1702,7 @@ namespace py::cpp::Windows::Devices::Sms
         {
             try
             {
-                winrt::Windows::Devices::Sms::SmsAppMessage instance{  };
+                winrt::Windows::Devices::Sms::SmsAppMessage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2410,7 +2410,7 @@ namespace py::cpp::Windows::Devices::Sms
         {
             try
             {
-                winrt::Windows::Devices::Sms::SmsBinaryMessage instance{  };
+                winrt::Windows::Devices::Sms::SmsBinaryMessage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4152,7 +4152,7 @@ namespace py::cpp::Windows::Devices::Sms
             {
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsMessageType>(args, 0);
 
-                winrt::Windows::Devices::Sms::SmsFilterRule instance{ param0 };
+                winrt::Windows::Devices::Sms::SmsFilterRule instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4530,7 +4530,7 @@ namespace py::cpp::Windows::Devices::Sms
             {
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sms::SmsFilterActionType>(args, 0);
 
-                winrt::Windows::Devices::Sms::SmsFilterRules instance{ param0 };
+                winrt::Windows::Devices::Sms::SmsFilterRules instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5930,7 +5930,7 @@ namespace py::cpp::Windows::Devices::Sms
         {
             try
             {
-                winrt::Windows::Devices::Sms::SmsTextMessage instance{  };
+                winrt::Windows::Devices::Sms::SmsTextMessage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6452,7 +6452,7 @@ namespace py::cpp::Windows::Devices::Sms
         {
             try
             {
-                winrt::Windows::Devices::Sms::SmsTextMessage2 instance{  };
+                winrt::Windows::Devices::Sms::SmsTextMessage2 instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

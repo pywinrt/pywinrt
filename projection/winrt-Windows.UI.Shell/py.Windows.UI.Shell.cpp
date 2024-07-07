@@ -543,7 +543,7 @@ namespace py::cpp::Windows::UI::Shell
         {
             try
             {
-                winrt::Windows::UI::Shell::SecurityAppManager instance{  };
+                winrt::Windows::UI::Shell::SecurityAppManager instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1556,7 +1556,7 @@ namespace py::cpp::Windows::UI::Shell
         {
             try
             {
-                winrt::Windows::UI::Shell::WindowTab instance{  };
+                winrt::Windows::UI::Shell::WindowTab instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2646,7 +2646,7 @@ namespace py::cpp::Windows::UI::Shell
         {
             try
             {
-                winrt::Windows::UI::Shell::WindowTabGroup instance{  };
+                winrt::Windows::UI::Shell::WindowTabGroup instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -4890,7 +4890,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters instance{  };
+                winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5580,7 +5580,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorParameters instance{  };
+                winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorParameters instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7931,7 +7931,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReliableWriteTransaction instance{  };
+                winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReliableWriteTransaction instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8616,7 +8616,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         {
             try
             {
-                winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters instance{  };
+                winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

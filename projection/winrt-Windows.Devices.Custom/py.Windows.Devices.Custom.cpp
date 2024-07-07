@@ -289,7 +289,7 @@ namespace py::cpp::Windows::Devices::Custom
                 auto param2 = py::convert_to<winrt::Windows::Devices::Custom::IOControlAccessMode>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Devices::Custom::IOControlBufferingMethod>(args, 3);
 
-                winrt::Windows::Devices::Custom::IOControlCode instance{ param0, param1, param2, param3 };
+                winrt::Windows::Devices::Custom::IOControlCode instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)

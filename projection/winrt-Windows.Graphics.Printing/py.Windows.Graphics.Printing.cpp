@@ -245,7 +245,7 @@ namespace py::cpp::Windows::Graphics::Printing
         {
             try
             {
-                winrt::Windows::Graphics::Printing::PrintPageInfo instance{  };
+                winrt::Windows::Graphics::Printing::PrintPageInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -576,7 +576,7 @@ namespace py::cpp::Windows::Graphics::Printing
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
-                winrt::Windows::Graphics::Printing::PrintPageRange instance{ param0, param1 };
+                winrt::Windows::Graphics::Printing::PrintPageRange instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -591,7 +591,7 @@ namespace py::cpp::Windows::Graphics::Printing
             {
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                winrt::Windows::Graphics::Printing::PrintPageRange instance{ param0 };
+                winrt::Windows::Graphics::Printing::PrintPageRange instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

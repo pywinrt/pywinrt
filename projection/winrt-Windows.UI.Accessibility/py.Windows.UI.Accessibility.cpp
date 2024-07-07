@@ -125,7 +125,7 @@ namespace py::cpp::Windows::UI::Accessibility
         {
             try
             {
-                winrt::Windows::UI::Accessibility::ScreenReaderService instance{  };
+                winrt::Windows::UI::Accessibility::ScreenReaderService instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

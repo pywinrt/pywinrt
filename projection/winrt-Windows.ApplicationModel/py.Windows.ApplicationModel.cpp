@@ -1445,7 +1445,7 @@ namespace py::cpp::Windows::ApplicationModel
             {
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::PackageRelationship>(args, 0);
 
-                winrt::Windows::ApplicationModel::FindRelatedPackagesOptions instance{ param0 };
+                winrt::Windows::ApplicationModel::FindRelatedPackagesOptions instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -755,7 +755,7 @@ namespace py::cpp::Windows::Data::Pdf
         {
             try
             {
-                winrt::Windows::Data::Pdf::PdfPageRenderOptions instance{  };
+                winrt::Windows::Data::Pdf::PdfPageRenderOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

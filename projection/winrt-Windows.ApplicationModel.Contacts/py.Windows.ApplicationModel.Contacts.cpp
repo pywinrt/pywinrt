@@ -249,7 +249,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                winrt::Windows::ApplicationModel::Contacts::Contact instance{  };
+                winrt::Windows::ApplicationModel::Contacts::Contact instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1641,7 +1641,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                winrt::Windows::ApplicationModel::Contacts::ContactAddress instance{  };
+                winrt::Windows::ApplicationModel::Contacts::ContactAddress instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2065,7 +2065,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                winrt::Windows::ApplicationModel::Contacts::ContactAnnotation instance{  };
+                winrt::Windows::ApplicationModel::Contacts::ContactAnnotation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3334,7 +3334,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                winrt::Windows::ApplicationModel::Contacts::ContactCardOptions instance{  };
+                winrt::Windows::ApplicationModel::Contacts::ContactCardOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4175,7 +4175,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                winrt::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount instance{  };
+                winrt::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4359,7 +4359,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                winrt::Windows::ApplicationModel::Contacts::ContactDate instance{  };
+                winrt::Windows::ApplicationModel::Contacts::ContactDate instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4687,7 +4687,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                winrt::Windows::ApplicationModel::Contacts::ContactEmail instance{  };
+                winrt::Windows::ApplicationModel::Contacts::ContactEmail instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4922,7 +4922,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldType>(args, 1);
 
-                winrt::Windows::ApplicationModel::Contacts::ContactField instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Contacts::ContactField instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4939,7 +4939,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldType>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 2);
 
-                winrt::Windows::ApplicationModel::Contacts::ContactField instance{ param0, param1, param2 };
+                winrt::Windows::ApplicationModel::Contacts::ContactField instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4957,7 +4957,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldType>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 3);
 
-                winrt::Windows::ApplicationModel::Contacts::ContactField instance{ param0, param1, param2, param3 };
+                winrt::Windows::ApplicationModel::Contacts::ContactField instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5125,7 +5125,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                winrt::Windows::ApplicationModel::Contacts::ContactFieldFactory instance{  };
+                winrt::Windows::ApplicationModel::Contacts::ContactFieldFactory instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5763,7 +5763,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField instance{ param0 };
+                winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5779,7 +5779,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 1);
 
-                winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5798,7 +5798,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 4);
 
-                winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField instance{ param0, param1, param2, param3, param4 };
+                winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField instance{param0, param1, param2, param3, param4};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6046,7 +6046,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                winrt::Windows::ApplicationModel::Contacts::ContactJobInfo instance{  };
+                winrt::Windows::ApplicationModel::Contacts::ContactJobInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9322,7 +9322,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::ApplicationModel::Contacts::ContactLocationField instance{ param0 };
+                winrt::Windows::ApplicationModel::Contacts::ContactLocationField instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9338,7 +9338,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 1);
 
-                winrt::Windows::ApplicationModel::Contacts::ContactLocationField instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Contacts::ContactLocationField instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9359,7 +9359,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 auto param5 = py::convert_to<winrt::hstring>(args, 5);
                 auto param6 = py::convert_to<winrt::hstring>(args, 6);
 
-                winrt::Windows::ApplicationModel::Contacts::ContactLocationField instance{ param0, param1, param2, param3, param4, param5, param6 };
+                winrt::Windows::ApplicationModel::Contacts::ContactLocationField instance{param0, param1, param2, param3, param4, param5, param6};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -11244,7 +11244,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                winrt::Windows::ApplicationModel::Contacts::ContactPhone instance{  };
+                winrt::Windows::ApplicationModel::Contacts::ContactPhone instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -11476,7 +11476,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                winrt::Windows::ApplicationModel::Contacts::ContactPicker instance{  };
+                winrt::Windows::ApplicationModel::Contacts::ContactPicker instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -11929,7 +11929,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions instance{ param0 };
+                winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -11945,7 +11945,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactQuerySearchFields>(args, 1);
 
-                winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -11958,7 +11958,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions instance{  };
+                winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -12588,7 +12588,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                winrt::Windows::ApplicationModel::Contacts::ContactSignificantOther instance{  };
+                winrt::Windows::ApplicationModel::Contacts::ContactSignificantOther instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -13346,7 +13346,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                winrt::Windows::ApplicationModel::Contacts::ContactWebsite instance{  };
+                winrt::Windows::ApplicationModel::Contacts::ContactWebsite instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -13578,7 +13578,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         {
             try
             {
-                winrt::Windows::ApplicationModel::Contacts::FullContactCardOptions instance{  };
+                winrt::Windows::ApplicationModel::Contacts::FullContactCardOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

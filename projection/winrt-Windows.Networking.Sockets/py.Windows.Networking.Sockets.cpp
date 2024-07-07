@@ -22,7 +22,7 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                winrt::Windows::Networking::Sockets::ControlChannelTrigger instance{ param0, param1 };
+                winrt::Windows::Networking::Sockets::ControlChannelTrigger instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -39,7 +39,7 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Sockets::ControlChannelTriggerResourceType>(args, 2);
 
-                winrt::Windows::Networking::Sockets::ControlChannelTrigger instance{ param0, param1, param2 };
+                winrt::Windows::Networking::Sockets::ControlChannelTrigger instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -472,7 +472,7 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                winrt::Windows::Networking::Sockets::DatagramSocket instance{  };
+                winrt::Windows::Networking::Sockets::DatagramSocket instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1823,7 +1823,7 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                winrt::Windows::Networking::Sockets::MessageWebSocket instance{  };
+                winrt::Windows::Networking::Sockets::MessageWebSocket instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4095,7 +4095,7 @@ namespace py::cpp::Windows::Networking::Sockets
             {
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                winrt::Windows::Networking::Sockets::SocketActivityContext instance{ param0 };
+                winrt::Windows::Networking::Sockets::SocketActivityContext instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4648,7 +4648,7 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                winrt::Windows::Networking::Sockets::StreamSocket instance{  };
+                winrt::Windows::Networking::Sockets::StreamSocket instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6058,7 +6058,7 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                winrt::Windows::Networking::Sockets::StreamSocketListener instance{  };
+                winrt::Windows::Networking::Sockets::StreamSocketListener instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7009,7 +7009,7 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                winrt::Windows::Networking::Sockets::StreamWebSocket instance{  };
+                winrt::Windows::Networking::Sockets::StreamWebSocket instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8221,7 +8221,7 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             try
             {
-                winrt::Windows::Networking::Sockets::WebSocketKeepAlive instance{  };
+                winrt::Windows::Networking::Sockets::WebSocketKeepAlive instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

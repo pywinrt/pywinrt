@@ -108,7 +108,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Microsoft::Windows::Widgets::Feeds::Providers::CustomQueryParametersUpdateOptions instance{ param0, param1 };
+                winrt::Microsoft::Windows::Widgets::Feeds::Providers::CustomQueryParametersUpdateOptions instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)

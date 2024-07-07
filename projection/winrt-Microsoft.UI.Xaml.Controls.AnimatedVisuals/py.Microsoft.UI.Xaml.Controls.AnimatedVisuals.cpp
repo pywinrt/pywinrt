@@ -19,7 +19,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedAcceptVisualSource instance{  };
+                winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedAcceptVisualSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -206,7 +206,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedBackVisualSource instance{  };
+                winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedBackVisualSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -393,7 +393,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronDownSmallVisualSource instance{  };
+                winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronDownSmallVisualSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -580,7 +580,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronRightDownSmallVisualSource instance{  };
+                winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronRightDownSmallVisualSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -767,7 +767,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronUpDownSmallVisualSource instance{  };
+                winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronUpDownSmallVisualSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -954,7 +954,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedFindVisualSource instance{  };
+                winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedFindVisualSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1141,7 +1141,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedGlobalNavigationButtonVisualSource instance{  };
+                winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedGlobalNavigationButtonVisualSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1328,7 +1328,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedSettingsVisualSource instance{  };
+                winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedSettingsVisualSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

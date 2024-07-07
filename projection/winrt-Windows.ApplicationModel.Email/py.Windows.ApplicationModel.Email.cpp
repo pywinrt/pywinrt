@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                winrt::Windows::ApplicationModel::Email::EmailAttachment instance{ param0, param1, param2 };
+                winrt::Windows::ApplicationModel::Email::EmailAttachment instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -39,7 +39,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 1);
 
-                winrt::Windows::ApplicationModel::Email::EmailAttachment instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Email::EmailAttachment instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -52,7 +52,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                winrt::Windows::ApplicationModel::Email::EmailAttachment instance{  };
+                winrt::Windows::ApplicationModel::Email::EmailAttachment instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1852,7 +1852,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailIrmTemplate>(args, 1);
 
-                winrt::Windows::ApplicationModel::Email::EmailIrmInfo instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Email::EmailIrmInfo instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1865,7 +1865,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                winrt::Windows::ApplicationModel::Email::EmailIrmInfo instance{  };
+                winrt::Windows::ApplicationModel::Email::EmailIrmInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2533,7 +2533,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                winrt::Windows::ApplicationModel::Email::EmailIrmTemplate instance{ param0, param1, param2 };
+                winrt::Windows::ApplicationModel::Email::EmailIrmTemplate instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2546,7 +2546,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                winrt::Windows::ApplicationModel::Email::EmailIrmTemplate instance{  };
+                winrt::Windows::ApplicationModel::Email::EmailIrmTemplate instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4907,7 +4907,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings instance{  };
+                winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7709,7 +7709,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                winrt::Windows::ApplicationModel::Email::EmailMeetingInfo instance{  };
+                winrt::Windows::ApplicationModel::Email::EmailMeetingInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8441,7 +8441,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                winrt::Windows::ApplicationModel::Email::EmailMessage instance{  };
+                winrt::Windows::ApplicationModel::Email::EmailMessage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -10127,7 +10127,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::ApplicationModel::Email::EmailQueryOptions instance{ param0 };
+                winrt::Windows::ApplicationModel::Email::EmailQueryOptions instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -10143,7 +10143,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Email::EmailQuerySearchFields>(args, 1);
 
-                winrt::Windows::ApplicationModel::Email::EmailQueryOptions instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Email::EmailQueryOptions instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -10156,7 +10156,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                winrt::Windows::ApplicationModel::Email::EmailQueryOptions instance{  };
+                winrt::Windows::ApplicationModel::Email::EmailQueryOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -10640,7 +10640,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::ApplicationModel::Email::EmailRecipient instance{ param0 };
+                winrt::Windows::ApplicationModel::Email::EmailRecipient instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -10656,7 +10656,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::ApplicationModel::Email::EmailRecipient instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Email::EmailRecipient instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -10669,7 +10669,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                winrt::Windows::ApplicationModel::Email::EmailRecipient instance{  };
+                winrt::Windows::ApplicationModel::Email::EmailRecipient instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -10853,7 +10853,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
         {
             try
             {
-                winrt::Windows::ApplicationModel::Email::EmailRecipientResolutionResult instance{  };
+                winrt::Windows::ApplicationModel::Email::EmailRecipientResolutionResult instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

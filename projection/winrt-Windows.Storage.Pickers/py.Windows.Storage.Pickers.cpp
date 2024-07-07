@@ -630,7 +630,7 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                winrt::Windows::Storage::Pickers::FileOpenPicker instance{  };
+                winrt::Windows::Storage::Pickers::FileOpenPicker instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1941,7 +1941,7 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                winrt::Windows::Storage::Pickers::FileSavePicker instance{  };
+                winrt::Windows::Storage::Pickers::FileSavePicker instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2543,7 +2543,7 @@ namespace py::cpp::Windows::Storage::Pickers
         {
             try
             {
-                winrt::Windows::Storage::Pickers::FolderPicker instance{  };
+                winrt::Windows::Storage::Pickers::FolderPicker instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

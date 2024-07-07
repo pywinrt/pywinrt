@@ -19,7 +19,7 @@ namespace py::cpp::Windows::UI::Text
         {
             try
             {
-                winrt::Windows::UI::Text::ContentLinkInfo instance{  };
+                winrt::Windows::UI::Text::ContentLinkInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -832,7 +832,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             try
             {
-                winrt::Windows::ApplicationModel::Resources::Core::ResourceContext instance{  };
+                winrt::Windows::ApplicationModel::Resources::Core::ResourceContext instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

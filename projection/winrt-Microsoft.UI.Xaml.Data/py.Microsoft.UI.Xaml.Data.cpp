@@ -19,7 +19,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Data::Binding instance{  };
+                winrt::Microsoft::UI::Xaml::Data::Binding instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -905,7 +905,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Data::BindingBase instance{  };
+                winrt::Microsoft::UI::Xaml::Data::BindingBase instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1592,7 +1592,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Data::CollectionViewSource instance{  };
+                winrt::Microsoft::UI::Xaml::Data::CollectionViewSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2219,7 +2219,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Data::CurrentChangingEventArgs instance{  };
+                winrt::Microsoft::UI::Xaml::Data::CurrentChangingEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2234,7 +2234,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
             {
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                winrt::Microsoft::UI::Xaml::Data::CurrentChangingEventArgs instance{ param0 };
+                winrt::Microsoft::UI::Xaml::Data::CurrentChangingEventArgs instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2392,7 +2392,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Microsoft::UI::Xaml::Data::DataErrorsChangedEventArgs instance{ param0 };
+                winrt::Microsoft::UI::Xaml::Data::DataErrorsChangedEventArgs instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2531,7 +2531,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Data::ItemIndexRange instance{ param0, param1 };
+                winrt::Microsoft::UI::Xaml::Data::ItemIndexRange instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2681,7 +2681,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Microsoft::UI::Xaml::Data::PropertyChangedEventArgs instance{ param0 };
+                winrt::Microsoft::UI::Xaml::Data::PropertyChangedEventArgs instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2789,7 +2789,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Data::RelativeSource instance{  };
+                winrt::Microsoft::UI::Xaml::Data::RelativeSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -950,7 +950,7 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                winrt::Windows::Storage::ApplicationDataCompositeValue instance{  };
+                winrt::Windows::Storage::ApplicationDataCompositeValue instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7933,7 +7933,7 @@ namespace py::cpp::Windows::Storage
         {
             try
             {
-                winrt::Windows::Storage::StorageLibraryChangeTrackerOptions instance{  };
+                winrt::Windows::Storage::StorageLibraryChangeTrackerOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -582,7 +582,7 @@ namespace py::cpp::Windows::Media::DialProtocol
         {
             try
             {
-                winrt::Windows::Media::DialProtocol::DialDevicePicker instance{  };
+                winrt::Windows::Media::DialProtocol::DialDevicePicker instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -19,7 +19,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -402,7 +402,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -417,7 +417,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource instance{ param0 };
+                winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -916,7 +916,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -931,7 +931,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource instance{ param0 };
+                winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1362,7 +1362,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1490,7 +1490,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangingEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangingEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1620,7 +1620,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             {
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapCamera>(args, 0);
 
-                winrt::Windows::UI::Xaml::Controls::Maps::MapBillboard instance{ param0 };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapBillboard instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2593,7 +2593,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             {
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
 
-                winrt::Windows::UI::Xaml::Controls::Maps::MapCamera instance{ param0 };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapCamera instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2609,7 +2609,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                winrt::Windows::UI::Xaml::Controls::Maps::MapCamera instance{ param0, param1 };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapCamera instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2626,7 +2626,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
 
-                winrt::Windows::UI::Xaml::Controls::Maps::MapCamera instance{ param0, param1, param2 };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapCamera instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2645,7 +2645,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 auto param3 = py::convert_to<double>(args, 3);
                 auto param4 = py::convert_to<double>(args, 4);
 
-                winrt::Windows::UI::Xaml::Controls::Maps::MapCamera instance{ param0, param1, param2, param3, param4 };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapCamera instance{param0, param1, param2, param3, param4};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3223,7 +3223,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapContextRequestedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapContextRequestedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3371,7 +3371,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapControl instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapControl instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -16535,7 +16535,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkClickEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkClickEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -16643,7 +16643,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerEnteredEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerEnteredEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -16751,7 +16751,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerExitedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerExitedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -16859,7 +16859,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkRightTappedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkRightTappedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -16969,7 +16969,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             {
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapControl>(args, 0);
 
-                winrt::Windows::UI::Xaml::Controls::Maps::MapControlDataHelper instance{ param0 };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapControlDataHelper instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -17724,7 +17724,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureClickEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureClickEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -17872,7 +17872,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerEnteredEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerEnteredEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -18020,7 +18020,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerExitedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerExitedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -18168,7 +18168,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureRightTappedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureRightTappedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -18316,7 +18316,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperience instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperience instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -18654,7 +18654,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperienceChangedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperienceChangedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -18742,7 +18742,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapElement instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapElement instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -19581,7 +19581,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapElement3D instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapElement3D instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -20668,7 +20668,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapElementClickEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapElementClickEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -20816,7 +20816,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerEnteredEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerEnteredEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -20964,7 +20964,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerExitedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerExitedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -21112,7 +21112,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayer instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayer instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -21867,7 +21867,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerClickEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerClickEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -22015,7 +22015,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerContextRequestedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerContextRequestedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -22163,7 +22163,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerEnteredEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerEnteredEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -22311,7 +22311,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerExitedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerExitedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -22459,7 +22459,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapIcon instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapIcon instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -23478,7 +23478,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapInputEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapInputEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -23856,7 +23856,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapItemsControl instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapItemsControl instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -24395,7 +24395,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapLayer instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapLayer instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -24962,7 +24962,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapModel3D instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapModel3D instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -25378,7 +25378,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapPolygon instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapPolygon instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -26397,7 +26397,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapPolyline instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapPolyline instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -27328,7 +27328,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapRightTappedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapRightTappedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -27458,7 +27458,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             {
                 auto param0 = py::convert_to<winrt::Windows::Services::Maps::MapRoute>(args, 0);
 
-                winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView instance{ param0 };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -30650,7 +30650,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapTargetCameraChangedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapTargetCameraChangedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -30778,7 +30778,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequest instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequest instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -30944,7 +30944,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestDeferral instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestDeferral instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -31063,7 +31063,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -31251,7 +31251,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -31589,7 +31589,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -31604,7 +31604,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             {
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource>(args, 0);
 
-                winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource instance{ param0 };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -31620,7 +31620,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>(args, 1);
 
-                winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource instance{ param0, param1 };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -31637,7 +31637,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Geolocation::GeoboundingBox>(args, 2);
 
-                winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource instance{ param0, param1, param2 };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -31655,7 +31655,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 auto param2 = py::convert_to<winrt::Windows::Devices::Geolocation::GeoboundingBox>(args, 2);
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
-                winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource instance{ param0, param1, param2, param3 };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -33103,7 +33103,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequest instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequest instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -33269,7 +33269,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestDeferral instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestDeferral instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -33388,7 +33388,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         {
             try
             {
-                winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestedEventArgs instance{  };
+                winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -33578,7 +33578,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             {
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama>(args, 0);
 
-                winrt::Windows::UI::Xaml::Controls::Maps::StreetsideExperience instance{ param0 };
+                winrt::Windows::UI::Xaml::Controls::Maps::StreetsideExperience instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -33596,7 +33596,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 auto param2 = py::convert_to<double>(args, 2);
                 auto param3 = py::convert_to<double>(args, 3);
 
-                winrt::Windows::UI::Xaml::Controls::Maps::StreetsideExperience instance{ param0, param1, param2, param3 };
+                winrt::Windows::UI::Xaml::Controls::Maps::StreetsideExperience instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)

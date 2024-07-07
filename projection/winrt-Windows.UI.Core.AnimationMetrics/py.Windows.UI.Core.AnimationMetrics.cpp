@@ -22,7 +22,7 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::AnimationMetrics::AnimationEffect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Core::AnimationMetrics::AnimationEffectTarget>(args, 1);
 
-                winrt::Windows::UI::Core::AnimationMetrics::AnimationDescription instance{ param0, param1 };
+                winrt::Windows::UI::Core::AnimationMetrics::AnimationDescription instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)

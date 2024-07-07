@@ -1039,7 +1039,7 @@ static class WriterExtensions
                     }
 
                     w.WriteLine(
-                        $"{type.CppPyWrapperTemplateType} instance{{ {ctor.Method.Parameters.ToParameterList()} }};"
+                        $"{type.CppPyWrapperTemplateType} instance{{{ctor.Method.Parameters.ToParameterList()}}};"
                     );
                     w.WriteLine("return py::wrap(instance, type);");
                 });

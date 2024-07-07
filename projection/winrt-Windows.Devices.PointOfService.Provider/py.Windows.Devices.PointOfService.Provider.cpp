@@ -3920,7 +3920,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         {
             try
             {
-                winrt::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder instance{  };
+                winrt::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -214,7 +214,7 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
         {
             try
             {
-                winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationSettings instance{  };
+                winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationSettings instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

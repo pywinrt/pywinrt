@@ -21,7 +21,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Globalization::NumberFormatting::CurrencyFormatter instance{ param0 };
+                winrt::Windows::Globalization::NumberFormatting::CurrencyFormatter instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -38,7 +38,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                winrt::Windows::Globalization::NumberFormatting::CurrencyFormatter instance{ param0, param1, param2 };
+                winrt::Windows::Globalization::NumberFormatting::CurrencyFormatter instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -946,7 +946,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Globalization::NumberFormatting::DecimalFormatter instance{ param0, param1 };
+                winrt::Windows::Globalization::NumberFormatting::DecimalFormatter instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -959,7 +959,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         {
             try
             {
-                winrt::Windows::Globalization::NumberFormatting::DecimalFormatter instance{  };
+                winrt::Windows::Globalization::NumberFormatting::DecimalFormatter instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1735,7 +1735,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         {
             try
             {
-                winrt::Windows::Globalization::NumberFormatting::IncrementNumberRounder instance{  };
+                winrt::Windows::Globalization::NumberFormatting::IncrementNumberRounder instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2113,7 +2113,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                winrt::Windows::Globalization::NumberFormatting::NumeralSystemTranslator instance{ param0 };
+                winrt::Windows::Globalization::NumberFormatting::NumeralSystemTranslator instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2126,7 +2126,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         {
             try
             {
-                winrt::Windows::Globalization::NumberFormatting::NumeralSystemTranslator instance{  };
+                winrt::Windows::Globalization::NumberFormatting::NumeralSystemTranslator instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2337,7 +2337,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Globalization::NumberFormatting::PercentFormatter instance{ param0, param1 };
+                winrt::Windows::Globalization::NumberFormatting::PercentFormatter instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2350,7 +2350,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         {
             try
             {
-                winrt::Windows::Globalization::NumberFormatting::PercentFormatter instance{  };
+                winrt::Windows::Globalization::NumberFormatting::PercentFormatter instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3129,7 +3129,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Globalization::NumberFormatting::PermilleFormatter instance{ param0, param1 };
+                winrt::Windows::Globalization::NumberFormatting::PermilleFormatter instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3142,7 +3142,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         {
             try
             {
-                winrt::Windows::Globalization::NumberFormatting::PermilleFormatter instance{  };
+                winrt::Windows::Globalization::NumberFormatting::PermilleFormatter instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3918,7 +3918,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         {
             try
             {
-                winrt::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder instance{  };
+                winrt::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

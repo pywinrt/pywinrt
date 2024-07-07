@@ -19,7 +19,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         {
             try
             {
-                winrt::Windows::UI::Xaml::Shapes::Ellipse instance{  };
+                winrt::Windows::UI::Xaml::Shapes::Ellipse instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7648,7 +7648,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         {
             try
             {
-                winrt::Windows::UI::Xaml::Shapes::Line instance{  };
+                winrt::Windows::UI::Xaml::Shapes::Line instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -15574,7 +15574,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         {
             try
             {
-                winrt::Windows::UI::Xaml::Shapes::Path instance{  };
+                winrt::Windows::UI::Xaml::Shapes::Path instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -23296,7 +23296,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         {
             try
             {
-                winrt::Windows::UI::Xaml::Shapes::Polygon instance{  };
+                winrt::Windows::UI::Xaml::Shapes::Polygon instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -31086,7 +31086,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         {
             try
             {
-                winrt::Windows::UI::Xaml::Shapes::Polyline instance{  };
+                winrt::Windows::UI::Xaml::Shapes::Polyline instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -38876,7 +38876,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         {
             try
             {
-                winrt::Windows::UI::Xaml::Shapes::Rectangle instance{  };
+                winrt::Windows::UI::Xaml::Shapes::Rectangle instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

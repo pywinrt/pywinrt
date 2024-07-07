@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         {
             try
             {
-                winrt::Windows::Media::MediaProperties::AudioEncodingProperties instance{  };
+                winrt::Windows::Media::MediaProperties::AudioEncodingProperties instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1068,7 +1068,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         {
             try
             {
-                winrt::Windows::Media::MediaProperties::ContainerEncodingProperties instance{  };
+                winrt::Windows::Media::MediaProperties::ContainerEncodingProperties instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2026,7 +2026,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         {
             try
             {
-                winrt::Windows::Media::MediaProperties::ImageEncodingProperties instance{  };
+                winrt::Windows::Media::MediaProperties::ImageEncodingProperties instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2535,7 +2535,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         {
             try
             {
-                winrt::Windows::Media::MediaProperties::MediaEncodingProfile instance{  };
+                winrt::Windows::Media::MediaProperties::MediaEncodingProfile instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4545,7 +4545,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         {
             try
             {
-                winrt::Windows::Media::MediaProperties::MediaPropertySet instance{  };
+                winrt::Windows::Media::MediaProperties::MediaPropertySet instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5298,7 +5298,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         {
             try
             {
-                winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties instance{  };
+                winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5725,7 +5725,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         {
             try
             {
-                winrt::Windows::Media::MediaProperties::VideoEncodingProperties instance{  };
+                winrt::Windows::Media::MediaProperties::VideoEncodingProperties instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

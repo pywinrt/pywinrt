@@ -19,7 +19,7 @@ namespace py::cpp::Windows::System::Display
         {
             try
             {
-                winrt::Windows::System::Display::DisplayRequest instance{  };
+                winrt::Windows::System::Display::DisplayRequest instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

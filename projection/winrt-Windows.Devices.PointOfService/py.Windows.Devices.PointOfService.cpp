@@ -1085,7 +1085,7 @@ namespace py::cpp::Windows::Devices::PointOfService
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
 
-                winrt::Windows::Devices::PointOfService::BarcodeScannerReport instance{ param0, param1, param2 };
+                winrt::Windows::Devices::PointOfService::BarcodeScannerReport instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -19011,7 +19011,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         {
             try
             {
-                winrt::Windows::Devices::PointOfService::PosPrinterPrintOptions instance{  };
+                winrt::Windows::Devices::PointOfService::PosPrinterPrintOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -22948,7 +22948,7 @@ namespace py::cpp::Windows::Devices::PointOfService
                 auto param2 = py::convert_to<winrt::Windows::Devices::PointOfService::UnifiedPosErrorReason>(args, 2);
                 auto param3 = py::convert_to<uint32_t>(args, 3);
 
-                winrt::Windows::Devices::PointOfService::UnifiedPosErrorData instance{ param0, param1, param2, param3 };
+                winrt::Windows::Devices::PointOfService::UnifiedPosErrorData instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)

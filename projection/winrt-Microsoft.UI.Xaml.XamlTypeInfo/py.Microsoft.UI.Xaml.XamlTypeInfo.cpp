@@ -19,7 +19,7 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::XamlTypeInfo::XamlControlsXamlMetaDataProvider instance{  };
+                winrt::Microsoft::UI::Xaml::XamlTypeInfo::XamlControlsXamlMetaDataProvider instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

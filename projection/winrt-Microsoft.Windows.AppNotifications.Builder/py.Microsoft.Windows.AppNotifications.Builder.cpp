@@ -19,7 +19,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         {
             try
             {
-                winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder instance{  };
+                winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -982,7 +982,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton instance{ param0 };
+                winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -995,7 +995,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         {
             try
             {
-                winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton instance{  };
+                winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1846,7 +1846,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox instance{ param0 };
+                winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2175,7 +2175,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         {
             try
             {
-                winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar instance{  };
+                winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2703,7 +2703,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         {
             try
             {
-                winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties instance{  };
+                winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

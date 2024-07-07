@@ -1162,7 +1162,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions instance{ param0 };
+                winrt::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

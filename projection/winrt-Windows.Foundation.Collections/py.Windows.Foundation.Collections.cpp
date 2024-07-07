@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Foundation::Collections
         {
             try
             {
-                winrt::Windows::Foundation::Collections::PropertySet instance{  };
+                winrt::Windows::Foundation::Collections::PropertySet instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -499,7 +499,7 @@ namespace py::cpp::Windows::Foundation::Collections
         {
             try
             {
-                winrt::Windows::Foundation::Collections::StringMap instance{  };
+                winrt::Windows::Foundation::Collections::StringMap instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -979,7 +979,7 @@ namespace py::cpp::Windows::Foundation::Collections
         {
             try
             {
-                winrt::Windows::Foundation::Collections::ValueSet instance{  };
+                winrt::Windows::Foundation::Collections::ValueSet instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

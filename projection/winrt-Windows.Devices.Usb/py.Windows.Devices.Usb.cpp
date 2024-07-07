@@ -1064,7 +1064,7 @@ namespace py::cpp::Windows::Devices::Usb
         {
             try
             {
-                winrt::Windows::Devices::Usb::UsbControlRequestType instance{  };
+                winrt::Windows::Devices::Usb::UsbControlRequestType instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1931,7 +1931,7 @@ namespace py::cpp::Windows::Devices::Usb
         {
             try
             {
-                winrt::Windows::Devices::Usb::UsbDeviceClass instance{  };
+                winrt::Windows::Devices::Usb::UsbDeviceClass instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4363,7 +4363,7 @@ namespace py::cpp::Windows::Devices::Usb
             {
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                winrt::Windows::Devices::Usb::UsbSetupPacket instance{ param0 };
+                winrt::Windows::Devices::Usb::UsbSetupPacket instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4376,7 +4376,7 @@ namespace py::cpp::Windows::Devices::Usb
         {
             try
             {
-                winrt::Windows::Devices::Usb::UsbSetupPacket instance{  };
+                winrt::Windows::Devices::Usb::UsbSetupPacket instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

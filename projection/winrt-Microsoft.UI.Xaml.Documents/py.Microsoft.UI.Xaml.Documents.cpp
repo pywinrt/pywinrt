@@ -2510,7 +2510,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Documents::Bold instance{  };
+                winrt::Microsoft::UI::Xaml::Documents::Bold instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4095,7 +4095,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Documents::Glyphs instance{  };
+                winrt::Microsoft::UI::Xaml::Documents::Glyphs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -12317,7 +12317,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Documents::Hyperlink instance{  };
+                winrt::Microsoft::UI::Xaml::Documents::Hyperlink instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -17230,7 +17230,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Documents::InlineUIContainer instance{  };
+                winrt::Microsoft::UI::Xaml::Documents::InlineUIContainer instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -18815,7 +18815,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Documents::Italic instance{  };
+                winrt::Microsoft::UI::Xaml::Documents::Italic instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -20400,7 +20400,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Documents::LineBreak instance{  };
+                winrt::Microsoft::UI::Xaml::Documents::LineBreak instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -21937,7 +21937,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Documents::Paragraph instance{  };
+                winrt::Microsoft::UI::Xaml::Documents::Paragraph instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -23827,7 +23827,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Documents::Run instance{  };
+                winrt::Microsoft::UI::Xaml::Documents::Run instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -25505,7 +25505,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Documents::Span instance{  };
+                winrt::Microsoft::UI::Xaml::Documents::Span instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -28990,7 +28990,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Documents::TextHighlighter instance{  };
+                winrt::Microsoft::UI::Xaml::Documents::TextHighlighter instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -33595,7 +33595,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Documents::Underline instance{  };
+                winrt::Microsoft::UI::Xaml::Documents::Underline instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

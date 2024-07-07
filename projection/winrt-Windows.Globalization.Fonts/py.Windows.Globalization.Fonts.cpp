@@ -187,7 +187,7 @@ namespace py::cpp::Windows::Globalization::Fonts
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Globalization::Fonts::LanguageFontGroup instance{ param0 };
+                winrt::Windows::Globalization::Fonts::LanguageFontGroup instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

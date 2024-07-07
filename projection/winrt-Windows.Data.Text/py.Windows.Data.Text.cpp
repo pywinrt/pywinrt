@@ -253,7 +253,7 @@ namespace py::cpp::Windows::Data::Text
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Data::Text::SelectableWordsSegmenter instance{ param0 };
+                winrt::Windows::Data::Text::SelectableWordsSegmenter instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -463,7 +463,7 @@ namespace py::cpp::Windows::Data::Text
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Data::Text::SemanticTextQuery instance{ param0 };
+                winrt::Windows::Data::Text::SemanticTextQuery instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -479,7 +479,7 @@ namespace py::cpp::Windows::Data::Text
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Data::Text::SemanticTextQuery instance{ param0, param1 };
+                winrt::Windows::Data::Text::SemanticTextQuery instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -634,7 +634,7 @@ namespace py::cpp::Windows::Data::Text
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Data::Text::TextConversionGenerator instance{ param0 };
+                winrt::Windows::Data::Text::TextConversionGenerator instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -923,7 +923,7 @@ namespace py::cpp::Windows::Data::Text
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Data::Text::TextPredictionGenerator instance{ param0 };
+                winrt::Windows::Data::Text::TextPredictionGenerator instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1210,7 +1210,7 @@ namespace py::cpp::Windows::Data::Text
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Data::Text::TextReverseConversionGenerator instance{ param0 };
+                winrt::Windows::Data::Text::TextReverseConversionGenerator instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2145,7 +2145,7 @@ namespace py::cpp::Windows::Data::Text
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Data::Text::WordsSegmenter instance{ param0 };
+                winrt::Windows::Data::Text::WordsSegmenter instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

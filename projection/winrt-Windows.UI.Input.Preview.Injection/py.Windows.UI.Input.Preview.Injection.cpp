@@ -21,7 +21,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
             {
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::GamepadReading>(args, 0);
 
-                winrt::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo instance{ param0 };
+                winrt::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -34,7 +34,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         {
             try
             {
-                winrt::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo instance{  };
+                winrt::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -458,7 +458,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         {
             try
             {
-                winrt::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo instance{  };
+                winrt::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -690,7 +690,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         {
             try
             {
-                winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo instance{  };
+                winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1018,7 +1018,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         {
             try
             {
-                winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo instance{  };
+                winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1442,7 +1442,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         {
             try
             {
-                winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo instance{  };
+                winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

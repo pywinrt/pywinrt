@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Media::Transcoding
         {
             try
             {
-                winrt::Windows::Media::Transcoding::MediaTranscoder instance{  };
+                winrt::Windows::Media::Transcoding::MediaTranscoder instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

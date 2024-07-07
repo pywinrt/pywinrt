@@ -1264,7 +1264,7 @@ namespace py::cpp::Windows::Security::Isolation
         {
             try
             {
-                winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions instance{  };
+                winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2076,7 +2076,7 @@ namespace py::cpp::Windows::Security::Isolation
         {
             try
             {
-                winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData instance{  };
+                winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2656,7 +2656,7 @@ namespace py::cpp::Windows::Security::Isolation
         {
             try
             {
-                winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions instance{  };
+                winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2918,7 +2918,7 @@ namespace py::cpp::Windows::Security::Isolation
         {
             try
             {
-                winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions instance{  };
+                winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3286,7 +3286,7 @@ namespace py::cpp::Windows::Security::Isolation
         {
             try
             {
-                winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters instance{  };
+                winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

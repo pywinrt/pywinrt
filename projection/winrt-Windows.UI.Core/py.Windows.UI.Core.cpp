@@ -1972,7 +1972,7 @@ namespace py::cpp::Windows::UI::Core
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreCursorType>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                winrt::Windows::UI::Core::CoreCursor instance{ param0, param1 };
+                winrt::Windows::UI::Core::CoreCursor instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5429,7 +5429,7 @@ namespace py::cpp::Windows::UI::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::UI::Core::CoreWindowDialog instance{ param0 };
+                winrt::Windows::UI::Core::CoreWindowDialog instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5442,7 +5442,7 @@ namespace py::cpp::Windows::UI::Core
         {
             try
             {
-                winrt::Windows::UI::Core::CoreWindowDialog instance{  };
+                winrt::Windows::UI::Core::CoreWindowDialog instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6021,7 +6021,7 @@ namespace py::cpp::Windows::UI::Core
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
-                winrt::Windows::UI::Core::CoreWindowFlyout instance{ param0 };
+                winrt::Windows::UI::Core::CoreWindowFlyout instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6037,7 +6037,7 @@ namespace py::cpp::Windows::UI::Core
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::UI::Core::CoreWindowFlyout instance{ param0, param1 };
+                winrt::Windows::UI::Core::CoreWindowFlyout instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Web::Syndication
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                winrt::Windows::Web::Syndication::SyndicationAttribute instance{ param0, param1, param2 };
+                winrt::Windows::Web::Syndication::SyndicationAttribute instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -36,7 +36,7 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                winrt::Windows::Web::Syndication::SyndicationAttribute instance{  };
+                winrt::Windows::Web::Syndication::SyndicationAttribute instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -270,7 +270,7 @@ namespace py::cpp::Windows::Web::Syndication
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Syndication::SyndicationCategory instance{ param0 };
+                winrt::Windows::Web::Syndication::SyndicationCategory instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -287,7 +287,7 @@ namespace py::cpp::Windows::Web::Syndication
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                winrt::Windows::Web::Syndication::SyndicationCategory instance{ param0, param1, param2 };
+                winrt::Windows::Web::Syndication::SyndicationCategory instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -300,7 +300,7 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                winrt::Windows::Web::Syndication::SyndicationCategory instance{  };
+                winrt::Windows::Web::Syndication::SyndicationCategory instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -846,7 +846,7 @@ namespace py::cpp::Windows::Web::Syndication
             {
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(args, 0);
 
-                winrt::Windows::Web::Syndication::SyndicationClient instance{ param0 };
+                winrt::Windows::Web::Syndication::SyndicationClient instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -859,7 +859,7 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                winrt::Windows::Web::Syndication::SyndicationClient instance{  };
+                winrt::Windows::Web::Syndication::SyndicationClient instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1256,7 +1256,7 @@ namespace py::cpp::Windows::Web::Syndication
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationTextType>(args, 1);
 
-                winrt::Windows::Web::Syndication::SyndicationContent instance{ param0, param1 };
+                winrt::Windows::Web::Syndication::SyndicationContent instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1271,7 +1271,7 @@ namespace py::cpp::Windows::Web::Syndication
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                winrt::Windows::Web::Syndication::SyndicationContent instance{ param0 };
+                winrt::Windows::Web::Syndication::SyndicationContent instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1284,7 +1284,7 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                winrt::Windows::Web::Syndication::SyndicationContent instance{  };
+                winrt::Windows::Web::Syndication::SyndicationContent instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1968,7 +1968,7 @@ namespace py::cpp::Windows::Web::Syndication
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 2);
 
-                winrt::Windows::Web::Syndication::SyndicationFeed instance{ param0, param1, param2 };
+                winrt::Windows::Web::Syndication::SyndicationFeed instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1981,7 +1981,7 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                winrt::Windows::Web::Syndication::SyndicationFeed instance{  };
+                winrt::Windows::Web::Syndication::SyndicationFeed instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3033,7 +3033,7 @@ namespace py::cpp::Windows::Web::Syndication
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Syndication::SyndicationGenerator instance{ param0 };
+                winrt::Windows::Web::Syndication::SyndicationGenerator instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3046,7 +3046,7 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                winrt::Windows::Web::Syndication::SyndicationGenerator instance{  };
+                winrt::Windows::Web::Syndication::SyndicationGenerator instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3594,7 +3594,7 @@ namespace py::cpp::Windows::Web::Syndication
                 auto param1 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationContent>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 2);
 
-                winrt::Windows::Web::Syndication::SyndicationItem instance{ param0, param1, param2 };
+                winrt::Windows::Web::Syndication::SyndicationItem instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3607,7 +3607,7 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                winrt::Windows::Web::Syndication::SyndicationItem instance{  };
+                winrt::Windows::Web::Syndication::SyndicationItem instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4667,7 +4667,7 @@ namespace py::cpp::Windows::Web::Syndication
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                winrt::Windows::Web::Syndication::SyndicationLink instance{ param0 };
+                winrt::Windows::Web::Syndication::SyndicationLink instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4686,7 +4686,7 @@ namespace py::cpp::Windows::Web::Syndication
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<uint32_t>(args, 4);
 
-                winrt::Windows::Web::Syndication::SyndicationLink instance{ param0, param1, param2, param3, param4 };
+                winrt::Windows::Web::Syndication::SyndicationLink instance{param0, param1, param2, param3, param4};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4699,7 +4699,7 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                winrt::Windows::Web::Syndication::SyndicationLink instance{  };
+                winrt::Windows::Web::Syndication::SyndicationLink instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5391,7 +5391,7 @@ namespace py::cpp::Windows::Web::Syndication
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                winrt::Windows::Web::Syndication::SyndicationNode instance{ param0, param1, param2 };
+                winrt::Windows::Web::Syndication::SyndicationNode instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5404,7 +5404,7 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                winrt::Windows::Web::Syndication::SyndicationNode instance{  };
+                winrt::Windows::Web::Syndication::SyndicationNode instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5806,7 +5806,7 @@ namespace py::cpp::Windows::Web::Syndication
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Syndication::SyndicationPerson instance{ param0 };
+                winrt::Windows::Web::Syndication::SyndicationPerson instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5823,7 +5823,7 @@ namespace py::cpp::Windows::Web::Syndication
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 2);
 
-                winrt::Windows::Web::Syndication::SyndicationPerson instance{ param0, param1, param2 };
+                winrt::Windows::Web::Syndication::SyndicationPerson instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5836,7 +5836,7 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                winrt::Windows::Web::Syndication::SyndicationPerson instance{  };
+                winrt::Windows::Web::Syndication::SyndicationPerson instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6382,7 +6382,7 @@ namespace py::cpp::Windows::Web::Syndication
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Web::Syndication::SyndicationText instance{ param0 };
+                winrt::Windows::Web::Syndication::SyndicationText instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6398,7 +6398,7 @@ namespace py::cpp::Windows::Web::Syndication
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationTextType>(args, 1);
 
-                winrt::Windows::Web::Syndication::SyndicationText instance{ param0, param1 };
+                winrt::Windows::Web::Syndication::SyndicationText instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6411,7 +6411,7 @@ namespace py::cpp::Windows::Web::Syndication
         {
             try
             {
-                winrt::Windows::Web::Syndication::SyndicationText instance{  };
+                winrt::Windows::Web::Syndication::SyndicationText instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                winrt::Windows::Data::Json::JsonArray instance{  };
+                winrt::Windows::Data::Json::JsonArray instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1246,7 +1246,7 @@ namespace py::cpp::Windows::Data::Json
         {
             try
             {
-                winrt::Windows::Data::Json::JsonObject instance{  };
+                winrt::Windows::Data::Json::JsonObject instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

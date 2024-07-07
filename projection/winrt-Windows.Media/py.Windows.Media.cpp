@@ -237,7 +237,7 @@ namespace py::cpp::Windows::Media
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                winrt::Windows::Media::AudioFrame instance{ param0 };
+                winrt::Windows::Media::AudioFrame instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1717,7 +1717,7 @@ namespace py::cpp::Windows::Media
         {
             try
             {
-                winrt::Windows::Media::MediaExtensionManager instance{  };
+                winrt::Windows::Media::MediaExtensionManager instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2353,7 +2353,7 @@ namespace py::cpp::Windows::Media
         {
             try
             {
-                winrt::Windows::Media::MediaTimelineController instance{  };
+                winrt::Windows::Media::MediaTimelineController instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5365,7 +5365,7 @@ namespace py::cpp::Windows::Media
         {
             try
             {
-                winrt::Windows::Media::SystemMediaTransportControlsTimelineProperties instance{  };
+                winrt::Windows::Media::SystemMediaTransportControlsTimelineProperties instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5955,7 +5955,7 @@ namespace py::cpp::Windows::Media
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
 
-                winrt::Windows::Media::VideoFrame instance{ param0, param1, param2 };
+                winrt::Windows::Media::VideoFrame instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5973,7 +5973,7 @@ namespace py::cpp::Windows::Media
                 auto param2 = py::convert_to<int32_t>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 3);
 
-                winrt::Windows::Media::VideoFrame instance{ param0, param1, param2, param3 };
+                winrt::Windows::Media::VideoFrame instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -433,7 +433,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         {
             try
             {
-                winrt::Microsoft::UI::Input::DragDrop::DragOperation instance{  };
+                winrt::Microsoft::UI::Input::DragDrop::DragOperation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

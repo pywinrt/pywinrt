@@ -21,7 +21,7 @@ namespace py::cpp::Windows::UI::Popups
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::UI::Popups::MessageDialog instance{ param0 };
+                winrt::Windows::UI::Popups::MessageDialog instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -37,7 +37,7 @@ namespace py::cpp::Windows::UI::Popups
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::UI::Popups::MessageDialog instance{ param0, param1 };
+                winrt::Windows::UI::Popups::MessageDialog instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -415,7 +415,7 @@ namespace py::cpp::Windows::UI::Popups
         {
             try
             {
-                winrt::Windows::UI::Popups::PopupMenu instance{  };
+                winrt::Windows::UI::Popups::PopupMenu instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -610,7 +610,7 @@ namespace py::cpp::Windows::UI::Popups
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::UI::Popups::UICommand instance{ param0 };
+                winrt::Windows::UI::Popups::UICommand instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -626,7 +626,7 @@ namespace py::cpp::Windows::UI::Popups
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Popups::UICommandInvokedHandler>(args, 1);
 
-                winrt::Windows::UI::Popups::UICommand instance{ param0, param1 };
+                winrt::Windows::UI::Popups::UICommand instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -643,7 +643,7 @@ namespace py::cpp::Windows::UI::Popups
                 auto param1 = py::convert_to<winrt::Windows::UI::Popups::UICommandInvokedHandler>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
 
-                winrt::Windows::UI::Popups::UICommand instance{ param0, param1, param2 };
+                winrt::Windows::UI::Popups::UICommand instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -656,7 +656,7 @@ namespace py::cpp::Windows::UI::Popups
         {
             try
             {
-                winrt::Windows::UI::Popups::UICommand instance{  };
+                winrt::Windows::UI::Popups::UICommand instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -888,7 +888,7 @@ namespace py::cpp::Windows::UI::Popups
         {
             try
             {
-                winrt::Windows::UI::Popups::UICommandSeparator instance{  };
+                winrt::Windows::UI::Popups::UICommandSeparator instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

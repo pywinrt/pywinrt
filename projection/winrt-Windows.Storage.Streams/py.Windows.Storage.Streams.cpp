@@ -21,7 +21,7 @@ namespace py::cpp::Windows::Storage::Streams
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                winrt::Windows::Storage::Streams::Buffer instance{ param0 };
+                winrt::Windows::Storage::Streams::Buffer instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -283,7 +283,7 @@ namespace py::cpp::Windows::Storage::Streams
             {
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
-                winrt::Windows::Storage::Streams::DataReader instance{ param0 };
+                winrt::Windows::Storage::Streams::DataReader instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1497,7 +1497,7 @@ namespace py::cpp::Windows::Storage::Streams
             {
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 0);
 
-                winrt::Windows::Storage::Streams::DataWriter instance{ param0 };
+                winrt::Windows::Storage::Streams::DataWriter instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1510,7 +1510,7 @@ namespace py::cpp::Windows::Storage::Streams
         {
             try
             {
-                winrt::Windows::Storage::Streams::DataWriter instance{  };
+                winrt::Windows::Storage::Streams::DataWriter instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3770,7 +3770,7 @@ namespace py::cpp::Windows::Storage::Streams
         {
             try
             {
-                winrt::Windows::Storage::Streams::InMemoryRandomAccessStream instance{  };
+                winrt::Windows::Storage::Streams::InMemoryRandomAccessStream instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -19,7 +19,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs instance{  };
+                winrt::Microsoft::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -107,7 +107,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs instance{  };
+                winrt::Microsoft::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -215,7 +215,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::AccessKeyInvokedEventArgs instance{  };
+                winrt::Microsoft::UI::Xaml::Input::AccessKeyInvokedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -927,7 +927,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::ContextRequestedEventArgs instance{  };
+                winrt::Microsoft::UI::Xaml::Input::ContextRequestedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1128,7 +1128,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::DoubleTappedRoutedEventArgs instance{  };
+                winrt::Microsoft::UI::Xaml::Input::DoubleTappedRoutedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1422,7 +1422,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::FindNextElementOptions instance{  };
+                winrt::Microsoft::UI::Xaml::Input::FindNextElementOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3022,7 +3022,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::HoldingRoutedEventArgs instance{  };
+                winrt::Microsoft::UI::Xaml::Input::HoldingRoutedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3736,7 +3736,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::InputScope instance{  };
+                winrt::Microsoft::UI::Xaml::Input::InputScope instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4116,7 +4116,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::InputScopeNameValue>(args, 0);
 
-                winrt::Microsoft::UI::Xaml::Input::InputScopeName instance{ param0 };
+                winrt::Microsoft::UI::Xaml::Input::InputScopeName instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4129,7 +4129,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::InputScopeName instance{  };
+                winrt::Microsoft::UI::Xaml::Input::InputScopeName instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4749,7 +4749,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator instance{  };
+                winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5995,7 +5995,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::ManipulationCompletedRoutedEventArgs instance{  };
+                winrt::Microsoft::UI::Xaml::Input::ManipulationCompletedRoutedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6271,7 +6271,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::ManipulationDeltaRoutedEventArgs instance{  };
+                winrt::Microsoft::UI::Xaml::Input::ManipulationDeltaRoutedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6598,7 +6598,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs instance{  };
+                winrt::Microsoft::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7001,7 +7001,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Input::ManipulationPivot instance{ param0, param1 };
+                winrt::Microsoft::UI::Xaml::Input::ManipulationPivot instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7014,7 +7014,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::ManipulationPivot instance{  };
+                winrt::Microsoft::UI::Xaml::Input::ManipulationPivot instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7198,7 +7198,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs instance{  };
+                winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7465,7 +7465,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::ManipulationStartingRoutedEventArgs instance{  };
+                winrt::Microsoft::UI::Xaml::Input::ManipulationStartingRoutedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8497,7 +8497,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::RightTappedRoutedEventArgs instance{  };
+                winrt::Microsoft::UI::Xaml::Input::RightTappedRoutedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8705,7 +8705,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::StandardUICommand instance{  };
+                winrt::Microsoft::UI::Xaml::Input::StandardUICommand instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -8720,7 +8720,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::StandardUICommandKind>(args, 0);
 
-                winrt::Microsoft::UI::Xaml::Input::StandardUICommand instance{ param0 };
+                winrt::Microsoft::UI::Xaml::Input::StandardUICommand instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9662,7 +9662,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::TappedRoutedEventArgs instance{  };
+                winrt::Microsoft::UI::Xaml::Input::TappedRoutedEventArgs instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9870,7 +9870,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Input::XamlUICommand instance{  };
+                winrt::Microsoft::UI::Xaml::Input::XamlUICommand instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

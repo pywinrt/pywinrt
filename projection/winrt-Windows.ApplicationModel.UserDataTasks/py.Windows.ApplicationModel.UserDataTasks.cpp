@@ -19,7 +19,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         {
             try
             {
-                winrt::Windows::ApplicationModel::UserDataTasks::UserDataTask instance{  };
+                winrt::Windows::ApplicationModel::UserDataTasks::UserDataTask instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2059,7 +2059,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         {
             try
             {
-                winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions instance{  };
+                winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2339,7 +2339,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         {
             try
             {
-                winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties instance{  };
+                winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2811,7 +2811,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         {
             try
             {
-                winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties instance{  };
+                winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

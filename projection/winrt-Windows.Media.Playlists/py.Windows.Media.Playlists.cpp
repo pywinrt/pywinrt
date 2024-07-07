@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Media::Playlists
         {
             try
             {
-                winrt::Windows::Media::Playlists::Playlist instance{  };
+                winrt::Windows::Media::Playlists::Playlist instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -9215,7 +9215,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration instance{ param0 };
+                winrt::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -11321,7 +11321,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                winrt::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions instance{  };
+                winrt::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

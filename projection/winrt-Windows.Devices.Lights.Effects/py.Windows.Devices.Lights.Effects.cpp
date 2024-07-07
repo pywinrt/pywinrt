@@ -22,7 +22,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 auto param0 = py::convert_to<winrt::Windows::Devices::Lights::LampArray>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
-                winrt::Windows::Devices::Lights::Effects::LampArrayBitmapEffect instance{ param0, param1 };
+                winrt::Windows::Devices::Lights::Effects::LampArrayBitmapEffect instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -489,7 +489,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 auto param0 = py::convert_to<winrt::Windows::Devices::Lights::LampArray>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
-                winrt::Windows::Devices::Lights::Effects::LampArrayBlinkEffect instance{ param0, param1 };
+                winrt::Windows::Devices::Lights::Effects::LampArrayBlinkEffect instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1012,7 +1012,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 auto param0 = py::convert_to<winrt::Windows::Devices::Lights::LampArray>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
-                winrt::Windows::Devices::Lights::Effects::LampArrayColorRampEffect instance{ param0, param1 };
+                winrt::Windows::Devices::Lights::Effects::LampArrayColorRampEffect instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1343,7 +1343,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 auto param0 = py::convert_to<winrt::Windows::Devices::Lights::LampArray>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
-                winrt::Windows::Devices::Lights::Effects::LampArrayCustomEffect instance{ param0, param1 };
+                winrt::Windows::Devices::Lights::Effects::LampArrayCustomEffect instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1620,7 +1620,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         {
             try
             {
-                winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist instance{  };
+                winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2401,7 +2401,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 auto param0 = py::convert_to<winrt::Windows::Devices::Lights::LampArray>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
-                winrt::Windows::Devices::Lights::Effects::LampArraySolidEffect instance{ param0, param1 };
+                winrt::Windows::Devices::Lights::Effects::LampArraySolidEffect instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)

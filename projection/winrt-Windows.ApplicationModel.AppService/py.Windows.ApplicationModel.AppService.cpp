@@ -193,7 +193,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         {
             try
             {
-                winrt::Windows::ApplicationModel::AppService::AppServiceConnection instance{  };
+                winrt::Windows::ApplicationModel::AppService::AppServiceConnection instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

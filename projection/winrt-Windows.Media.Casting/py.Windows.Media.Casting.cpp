@@ -822,7 +822,7 @@ namespace py::cpp::Windows::Media::Casting
         {
             try
             {
-                winrt::Windows::Media::Casting::CastingDevicePicker instance{  };
+                winrt::Windows::Media::Casting::CastingDevicePicker instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

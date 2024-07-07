@@ -212,7 +212,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
             {
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::AnnotationType>(args, 0);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationAnnotation instance{ param0 };
+                winrt::Microsoft::UI::Xaml::Automation::AutomationAnnotation instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -228,7 +228,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Automation::AnnotationType>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 1);
 
-                winrt::Microsoft::UI::Xaml::Automation::AutomationAnnotation instance{ param0, param1 };
+                winrt::Microsoft::UI::Xaml::Automation::AutomationAnnotation instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -241,7 +241,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
         {
             try
             {
-                winrt::Microsoft::UI::Xaml::Automation::AutomationAnnotation instance{  };
+                winrt::Microsoft::UI::Xaml::Automation::AutomationAnnotation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

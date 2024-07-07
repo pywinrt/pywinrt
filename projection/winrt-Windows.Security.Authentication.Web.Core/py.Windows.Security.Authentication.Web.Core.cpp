@@ -910,7 +910,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Security::Authentication::Web::Core::WebProviderError instance{ param0, param1 };
+                winrt::Windows::Security::Authentication::Web::Core::WebProviderError instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1062,7 +1062,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest instance{ param0, param1, param2 };
+                winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1080,7 +1080,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequestPromptType>(args, 3);
 
-                winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest instance{ param0, param1, param2, param3 };
+                winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1095,7 +1095,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
             {
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccountProvider>(args, 0);
 
-                winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest instance{ param0 };
+                winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1111,7 +1111,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccountProvider>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest instance{ param0, param1 };
+                winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1525,7 +1525,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Security::Authentication::Web::Core::WebTokenResponse instance{ param0 };
+                winrt::Windows::Security::Authentication::Web::Core::WebTokenResponse instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1541,7 +1541,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 1);
 
-                winrt::Windows::Security::Authentication::Web::Core::WebTokenResponse instance{ param0, param1 };
+                winrt::Windows::Security::Authentication::Web::Core::WebTokenResponse instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1558,7 +1558,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 auto param1 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebProviderError>(args, 2);
 
-                winrt::Windows::Security::Authentication::Web::Core::WebTokenResponse instance{ param0, param1, param2 };
+                winrt::Windows::Security::Authentication::Web::Core::WebTokenResponse instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1571,7 +1571,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         {
             try
             {
-                winrt::Windows::Security::Authentication::Web::Core::WebTokenResponse instance{  };
+                winrt::Windows::Security::Authentication::Web::Core::WebTokenResponse instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

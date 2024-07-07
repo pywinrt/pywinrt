@@ -19,7 +19,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
         {
             try
             {
-                winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentInitializeOptions instance{  };
+                winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentInitializeOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -342,7 +342,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentStatus>(args, 0);
                 auto param1 = py::convert_to<winrt::hresult>(args, 1);
 
-                winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentResult instance{ param0, param1 };
+                winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentResult instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)

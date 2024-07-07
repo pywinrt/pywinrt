@@ -22,7 +22,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletBarcodeSymbology>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::ApplicationModel::Wallet::WalletBarcode instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Wallet::WalletBarcode instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -37,7 +37,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
             {
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
 
-                winrt::Windows::ApplicationModel::Wallet::WalletBarcode instance{ param0 };
+                winrt::Windows::ApplicationModel::Wallet::WalletBarcode instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -198,7 +198,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletItemKind>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::ApplicationModel::Wallet::WalletItem instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Wallet::WalletItem instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1513,7 +1513,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::ApplicationModel::Wallet::WalletItemCustomProperty instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Wallet::WalletItemCustomProperty instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2284,7 +2284,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         {
             try
             {
-                winrt::Windows::ApplicationModel::Wallet::WalletRelevantLocation instance{  };
+                winrt::Windows::ApplicationModel::Wallet::WalletRelevantLocation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2468,7 +2468,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         {
             try
             {
-                winrt::Windows::ApplicationModel::Wallet::WalletTransaction instance{  };
+                winrt::Windows::ApplicationModel::Wallet::WalletTransaction instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2846,7 +2846,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::ApplicationModel::Wallet::WalletVerb instance{ param0 };
+                winrt::Windows::ApplicationModel::Wallet::WalletVerb instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

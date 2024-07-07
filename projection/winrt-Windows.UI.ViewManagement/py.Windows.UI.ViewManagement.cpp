@@ -19,7 +19,7 @@ namespace py::cpp::Windows::UI::ViewManagement
         {
             try
             {
-                winrt::Windows::UI::ViewManagement::AccessibilitySettings instance{  };
+                winrt::Windows::UI::ViewManagement::AccessibilitySettings instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2957,7 +2957,7 @@ namespace py::cpp::Windows::UI::ViewManagement
         {
             try
             {
-                winrt::Windows::UI::ViewManagement::ApplicationViewTransferContext instance{  };
+                winrt::Windows::UI::ViewManagement::ApplicationViewTransferContext instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4649,7 +4649,7 @@ namespace py::cpp::Windows::UI::ViewManagement
         {
             try
             {
-                winrt::Windows::UI::ViewManagement::UISettings instance{  };
+                winrt::Windows::UI::ViewManagement::UISettings instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

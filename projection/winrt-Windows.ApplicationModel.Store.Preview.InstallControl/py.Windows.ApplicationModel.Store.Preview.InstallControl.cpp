@@ -769,7 +769,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         {
             try
             {
-                winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager instance{  };
+                winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2296,7 +2296,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         {
             try
             {
-                winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions instance{  };
+                winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3330,7 +3330,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         {
             try
             {
-                winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions instance{  };
+                winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                winrt::Windows::Management::Deployment::AddPackageOptions instance{  };
+                winrt::Windows::Management::Deployment::AddPackageOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1131,7 +1131,7 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                winrt::Windows::Management::Deployment::AutoUpdateSettingsOptions instance{  };
+                winrt::Windows::Management::Deployment::AutoUpdateSettingsOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1788,7 +1788,7 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                winrt::Windows::Management::Deployment::CreateSharedPackageContainerOptions instance{  };
+                winrt::Windows::Management::Deployment::CreateSharedPackageContainerOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2118,7 +2118,7 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                winrt::Windows::Management::Deployment::DeleteSharedPackageContainerOptions instance{  };
+                winrt::Windows::Management::Deployment::DeleteSharedPackageContainerOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2554,7 +2554,7 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                winrt::Windows::Management::Deployment::FindSharedPackageContainerOptions instance{  };
+                winrt::Windows::Management::Deployment::FindSharedPackageContainerOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2738,7 +2738,7 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                winrt::Windows::Management::Deployment::PackageAllUserProvisioningOptions instance{  };
+                winrt::Windows::Management::Deployment::PackageAllUserProvisioningOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2866,7 +2866,7 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                winrt::Windows::Management::Deployment::PackageManager instance{  };
+                winrt::Windows::Management::Deployment::PackageManager instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5619,7 +5619,7 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                winrt::Windows::Management::Deployment::RegisterPackageOptions instance{  };
+                winrt::Windows::Management::Deployment::RegisterPackageOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6779,7 +6779,7 @@ namespace py::cpp::Windows::Management::Deployment
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Management::Deployment::SharedPackageContainerMember instance{ param0 };
+                winrt::Windows::Management::Deployment::SharedPackageContainerMember instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6887,7 +6887,7 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                winrt::Windows::Management::Deployment::StagePackageOptions instance{  };
+                winrt::Windows::Management::Deployment::StagePackageOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -7507,7 +7507,7 @@ namespace py::cpp::Windows::Management::Deployment
         {
             try
             {
-                winrt::Windows::Management::Deployment::UpdateSharedPackageContainerOptions instance{  };
+                winrt::Windows::Management::Deployment::UpdateSharedPackageContainerOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

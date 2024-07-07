@@ -468,7 +468,7 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param2 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardEmulationCategory>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::Devices::SmartCards::SmartCardEmulationType>(args, 3);
 
-                winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroup instance{ param0, param1, param2, param3 };
+                winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroup instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -481,7 +481,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroup instance{  };
+                winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroup instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1235,7 +1235,7 @@ namespace py::cpp::Windows::Devices::SmartCards
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
-                winrt::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu instance{ param0, param1 };
+                winrt::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2749,7 +2749,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                winrt::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult instance{  };
+                winrt::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2877,7 +2877,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                winrt::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult instance{  };
+                winrt::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3005,7 +3005,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                winrt::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult instance{  };
+                winrt::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3133,7 +3133,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacteristics instance{  };
+                winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacteristics instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3381,7 +3381,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageCharacteristics instance{  };
+                winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageCharacteristics instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3655,7 +3655,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep instance{  };
+                winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4175,7 +4175,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharacteristics instance{  };
+                winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharacteristics instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5471,7 +5471,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         {
             try
             {
-                winrt::Windows::Devices::SmartCards::SmartCardPinPolicy instance{  };
+                winrt::Windows::Devices::SmartCards::SmartCardPinPolicy instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

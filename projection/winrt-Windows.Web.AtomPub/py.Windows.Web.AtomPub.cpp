@@ -21,7 +21,7 @@ namespace py::cpp::Windows::Web::AtomPub
             {
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(args, 0);
 
-                winrt::Windows::Web::AtomPub::AtomPubClient instance{ param0 };
+                winrt::Windows::Web::AtomPub::AtomPubClient instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -34,7 +34,7 @@ namespace py::cpp::Windows::Web::AtomPub
         {
             try
             {
-                winrt::Windows::Web::AtomPub::AtomPubClient instance{  };
+                winrt::Windows::Web::AtomPub::AtomPubClient instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

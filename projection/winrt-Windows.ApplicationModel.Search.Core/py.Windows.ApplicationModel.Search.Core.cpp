@@ -271,7 +271,7 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
         {
             try
             {
-                winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager instance{  };
+                winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

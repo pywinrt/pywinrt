@@ -1886,7 +1886,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
             {
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
-                winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelSourceFileContent instance{ param0 };
+                winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelSourceFileContent instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

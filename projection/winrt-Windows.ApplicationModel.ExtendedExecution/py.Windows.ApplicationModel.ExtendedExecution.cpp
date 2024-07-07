@@ -105,7 +105,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
         {
             try
             {
-                winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession instance{  };
+                winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

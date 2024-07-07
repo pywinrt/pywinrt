@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         {
             try
             {
-                winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter instance{  };
+                winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -420,7 +420,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo instance{ param0 };
+                winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

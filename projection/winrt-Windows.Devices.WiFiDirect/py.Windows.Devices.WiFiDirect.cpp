@@ -269,7 +269,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         {
             try
             {
-                winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher instance{  };
+                winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -610,7 +610,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         {
             try
             {
-                winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionListener instance{  };
+                winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionListener instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -743,7 +743,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         {
             try
             {
-                winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters instance{  };
+                winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1599,7 +1599,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         {
             try
             {
-                winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement instance{  };
+                winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

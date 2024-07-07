@@ -19,7 +19,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         {
             try
             {
-                winrt::Windows::ApplicationModel::Payments::PaymentAddress instance{  };
+                winrt::Windows::ApplicationModel::Payments::PaymentAddress instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -657,7 +657,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             {
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus>(args, 0);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult instance{ param0 };
+                winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -768,7 +768,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -785,7 +785,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount instance{ param0, param1, param2 };
+                winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1019,7 +1019,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             {
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentItem>(args, 0);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentDetails instance{ param0 };
+                winrt::Windows::ApplicationModel::Payments::PaymentDetails instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1035,7 +1035,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentItem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Payments::PaymentItem>>(args, 1);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentDetails instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Payments::PaymentDetails instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1048,7 +1048,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         {
             try
             {
-                winrt::Windows::ApplicationModel::Payments::PaymentDetails instance{  };
+                winrt::Windows::ApplicationModel::Payments::PaymentDetails instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1331,7 +1331,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentItem>(args, 1);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1348,7 +1348,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentItem>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Payments::PaymentItem>>(args, 2);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier instance{ param0, param1, param2 };
+                winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1366,7 +1366,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Payments::PaymentItem>>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier instance{ param0, param1, param2, param3 };
+                winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1537,7 +1537,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount>(args, 1);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentItem instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Payments::PaymentItem instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1769,7 +1769,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         {
             try
             {
-                winrt::Windows::ApplicationModel::Payments::PaymentMediator instance{  };
+                winrt::Windows::ApplicationModel::Payments::PaymentMediator instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1974,7 +1974,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo instance{ param0 };
+                winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1987,7 +1987,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         {
             try
             {
-                winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo instance{  };
+                winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2117,7 +2117,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentMethodData instance{ param0 };
+                winrt::Windows::ApplicationModel::Payments::PaymentMethodData instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2133,7 +2133,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentMethodData instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Payments::PaymentMethodData instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2261,7 +2261,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         {
             try
             {
-                winrt::Windows::ApplicationModel::Payments::PaymentOptions instance{  };
+                winrt::Windows::ApplicationModel::Payments::PaymentOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2595,7 +2595,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 auto param3 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentOptions>(args, 3);
                 auto param4 = py::convert_to<winrt::hstring>(args, 4);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentRequest instance{ param0, param1, param2, param3, param4 };
+                winrt::Windows::ApplicationModel::Payments::PaymentRequest instance{param0, param1, param2, param3, param4};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2611,7 +2611,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentDetails>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Payments::PaymentMethodData>>(args, 1);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentRequest instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Payments::PaymentRequest instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2628,7 +2628,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Payments::PaymentMethodData>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo>(args, 2);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentRequest instance{ param0, param1, param2 };
+                winrt::Windows::ApplicationModel::Payments::PaymentRequest instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2646,7 +2646,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo>(args, 2);
                 auto param3 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentOptions>(args, 3);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentRequest instance{ param0, param1, param2, param3 };
+                winrt::Windows::ApplicationModel::Payments::PaymentRequest instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2995,7 +2995,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             {
                 auto param0 = py::convert_to<bool>(args, 0);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult instance{ param0 };
+                winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3011,7 +3011,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 auto param0 = py::convert_to<bool>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentDetails>(args, 1);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3570,7 +3570,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount>(args, 1);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentShippingOption instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Payments::PaymentShippingOption instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3587,7 +3587,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentShippingOption instance{ param0, param1, param2 };
+                winrt::Windows::ApplicationModel::Payments::PaymentShippingOption instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3605,7 +3605,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 auto param2 = py::convert_to<bool>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentShippingOption instance{ param0, param1, param2, param3 };
+                winrt::Windows::ApplicationModel::Payments::PaymentShippingOption instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3887,7 +3887,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentToken instance{ param0 };
+                winrt::Windows::ApplicationModel::Payments::PaymentToken instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3903,7 +3903,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::ApplicationModel::Payments::PaymentToken instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Payments::PaymentToken instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)

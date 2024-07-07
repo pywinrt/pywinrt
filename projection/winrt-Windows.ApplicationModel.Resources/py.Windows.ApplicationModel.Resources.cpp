@@ -21,7 +21,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::ApplicationModel::Resources::ResourceLoader instance{ param0 };
+                winrt::Windows::ApplicationModel::Resources::ResourceLoader instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -34,7 +34,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
         {
             try
             {
-                winrt::Windows::ApplicationModel::Resources::ResourceLoader instance{  };
+                winrt::Windows::ApplicationModel::Resources::ResourceLoader instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

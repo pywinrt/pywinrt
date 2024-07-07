@@ -21,7 +21,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
             {
                 auto param0 = py::convert_to<winrt::Windows::Devices::Gpio::Provider::ProviderGpioPinEdge>(args, 0);
 
-                winrt::Windows::Devices::Gpio::Provider::GpioPinProviderValueChangedEventArgs instance{ param0 };
+                winrt::Windows::Devices::Gpio::Provider::GpioPinProviderValueChangedEventArgs instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -19,7 +19,7 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                winrt::Windows::UI::Input::Inking::InkDrawingAttributes instance{  };
+                winrt::Windows::UI::Input::Inking::InkDrawingAttributes instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1092,7 +1092,7 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                winrt::Windows::UI::Input::Inking::InkManager instance{  };
+                winrt::Windows::UI::Input::Inking::InkManager instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2120,7 +2120,7 @@ namespace py::cpp::Windows::UI::Input::Inking
                 auto param3 = py::convert_to<float>(args, 3);
                 auto param4 = py::convert_to<uint64_t>(args, 4);
 
-                winrt::Windows::UI::Input::Inking::InkPoint instance{ param0, param1, param2, param3, param4 };
+                winrt::Windows::UI::Input::Inking::InkPoint instance{param0, param1, param2, param3, param4};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2136,7 +2136,7 @@ namespace py::cpp::Windows::UI::Input::Inking
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
-                winrt::Windows::UI::Input::Inking::InkPoint instance{ param0, param1 };
+                winrt::Windows::UI::Input::Inking::InkPoint instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2880,7 +2880,7 @@ namespace py::cpp::Windows::UI::Input::Inking
             {
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkPresenter>(args, 0);
 
-                winrt::Windows::UI::Input::Inking::InkPresenterProtractor instance{ param0 };
+                winrt::Windows::UI::Input::Inking::InkPresenterProtractor instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3518,7 +3518,7 @@ namespace py::cpp::Windows::UI::Input::Inking
             {
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkPresenter>(args, 0);
 
-                winrt::Windows::UI::Input::Inking::InkPresenterRuler instance{ param0 };
+                winrt::Windows::UI::Input::Inking::InkPresenterRuler instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4242,7 +4242,7 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                winrt::Windows::UI::Input::Inking::InkRecognizerContainer instance{  };
+                winrt::Windows::UI::Input::Inking::InkRecognizerContainer instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4902,7 +4902,7 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                winrt::Windows::UI::Input::Inking::InkStrokeBuilder instance{  };
+                winrt::Windows::UI::Input::Inking::InkStrokeBuilder instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5208,7 +5208,7 @@ namespace py::cpp::Windows::UI::Input::Inking
         {
             try
             {
-                winrt::Windows::UI::Input::Inking::InkStrokeContainer instance{  };
+                winrt::Windows::UI::Input::Inking::InkStrokeContainer instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

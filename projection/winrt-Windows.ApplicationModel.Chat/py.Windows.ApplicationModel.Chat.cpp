@@ -1048,7 +1048,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo instance{  };
+                winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1348,7 +1348,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                winrt::Windows::ApplicationModel::Chat::ChatMessage instance{  };
+                winrt::Windows::ApplicationModel::Chat::ChatMessage instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2579,7 +2579,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 1);
 
-                winrt::Windows::ApplicationModel::Chat::ChatMessageAttachment instance{ param0, param1 };
+                winrt::Windows::ApplicationModel::Chat::ChatMessageAttachment instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5807,7 +5807,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                winrt::Windows::ApplicationModel::Chat::ChatQueryOptions instance{  };
+                winrt::Windows::ApplicationModel::Chat::ChatQueryOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5943,7 +5943,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         {
             try
             {
-                winrt::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo instance{  };
+                winrt::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

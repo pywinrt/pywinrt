@@ -19,7 +19,7 @@ namespace py::cpp::Microsoft::UI::Composition::Effects
         {
             try
             {
-                winrt::Microsoft::UI::Composition::Effects::SceneLightingEffect instance{  };
+                winrt::Microsoft::UI::Composition::Effects::SceneLightingEffect instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

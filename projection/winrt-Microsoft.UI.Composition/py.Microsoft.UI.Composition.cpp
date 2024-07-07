@@ -13692,7 +13692,7 @@ namespace py::cpp::Microsoft::UI::Composition
         {
             try
             {
-                winrt::Microsoft::UI::Composition::CompositionCapabilities instance{  };
+                winrt::Microsoft::UI::Composition::CompositionCapabilities instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -20389,7 +20389,7 @@ namespace py::cpp::Microsoft::UI::Composition
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Microsoft::UI::Composition::CompositionEffectSourceParameter instance{ param0 };
+                winrt::Microsoft::UI::Composition::CompositionEffectSourceParameter instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -29604,7 +29604,7 @@ namespace py::cpp::Microsoft::UI::Composition
             {
                 auto param0 = py::convert_to<winrt::Windows::Graphics::IGeometrySource2D>(args, 0);
 
-                winrt::Microsoft::UI::Composition::CompositionPath instance{ param0 };
+                winrt::Microsoft::UI::Composition::CompositionPath instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -46244,7 +46244,7 @@ namespace py::cpp::Microsoft::UI::Composition
         {
             try
             {
-                winrt::Microsoft::UI::Composition::Compositor instance{  };
+                winrt::Microsoft::UI::Composition::Compositor instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

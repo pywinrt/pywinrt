@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Web::Http::Filters
         {
             try
             {
-                winrt::Windows::Web::Http::Filters::HttpBaseProtocolFilter instance{  };
+                winrt::Windows::Web::Http::Filters::HttpBaseProtocolFilter instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

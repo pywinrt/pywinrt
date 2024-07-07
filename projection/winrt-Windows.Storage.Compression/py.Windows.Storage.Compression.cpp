@@ -21,7 +21,7 @@ namespace py::cpp::Windows::Storage::Compression
             {
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 0);
 
-                winrt::Windows::Storage::Compression::Compressor instance{ param0 };
+                winrt::Windows::Storage::Compression::Compressor instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -38,7 +38,7 @@ namespace py::cpp::Windows::Storage::Compression
                 auto param1 = py::convert_to<winrt::Windows::Storage::Compression::CompressAlgorithm>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
-                winrt::Windows::Storage::Compression::Compressor instance{ param0, param1, param2 };
+                winrt::Windows::Storage::Compression::Compressor instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -302,7 +302,7 @@ namespace py::cpp::Windows::Storage::Compression
             {
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
-                winrt::Windows::Storage::Compression::Decompressor instance{ param0 };
+                winrt::Windows::Storage::Compression::Decompressor instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

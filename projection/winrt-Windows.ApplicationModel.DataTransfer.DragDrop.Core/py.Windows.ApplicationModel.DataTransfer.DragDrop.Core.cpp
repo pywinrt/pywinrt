@@ -379,7 +379,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         {
             try
             {
-                winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation instance{  };
+                winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

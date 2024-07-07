@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Management
         {
             try
             {
-                winrt::Windows::Management::MdmAlert instance{  };
+                winrt::Windows::Management::MdmAlert instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

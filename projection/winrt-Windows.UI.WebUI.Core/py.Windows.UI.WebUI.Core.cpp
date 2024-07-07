@@ -625,7 +625,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
-                winrt::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon instance{ param0 };
+                winrt::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -638,7 +638,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
         {
             try
             {
-                winrt::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon instance{  };
+                winrt::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -774,7 +774,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
         {
             try
             {
-                winrt::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton instance{  };
+                winrt::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -955,7 +955,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
         {
             try
             {
-                winrt::Windows::UI::WebUI::Core::WebUICommandBarIconButton instance{  };
+                winrt::Windows::UI::WebUI::Core::WebUICommandBarIconButton instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1502,7 +1502,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon instance{ param0 };
+                winrt::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1515,7 +1515,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
         {
             try
             {
-                winrt::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon instance{  };
+                winrt::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

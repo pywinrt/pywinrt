@@ -21,7 +21,7 @@ namespace py::cpp::Windows::Foundation
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DeferralCompletedHandler>(args, 0);
 
-                winrt::Windows::Foundation::Deferral instance{ param0 };
+                winrt::Windows::Foundation::Deferral instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -333,7 +333,7 @@ namespace py::cpp::Windows::Foundation
             {
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
-                winrt::Windows::Foundation::MemoryBuffer instance{ param0 };
+                winrt::Windows::Foundation::MemoryBuffer instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1807,7 +1807,7 @@ namespace py::cpp::Windows::Foundation
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Foundation::Uri instance{ param0 };
+                winrt::Windows::Foundation::Uri instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1823,7 +1823,7 @@ namespace py::cpp::Windows::Foundation
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Foundation::Uri instance{ param0, param1 };
+                winrt::Windows::Foundation::Uri instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2450,7 +2450,7 @@ namespace py::cpp::Windows::Foundation
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Foundation::WwwFormUrlDecoder instance{ param0 };
+                winrt::Windows::Foundation::WwwFormUrlDecoder instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

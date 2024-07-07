@@ -19,7 +19,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         {
             try
             {
-                winrt::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator instance{  };
+                winrt::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -407,7 +407,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest instance{ param0, param1 };
+                winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -422,7 +422,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest instance{ param0 };
+                winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

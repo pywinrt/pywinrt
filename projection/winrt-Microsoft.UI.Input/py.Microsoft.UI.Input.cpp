@@ -1013,7 +1013,7 @@ namespace py::cpp::Microsoft::UI::Input
         {
             try
             {
-                winrt::Microsoft::UI::Input::GestureRecognizer instance{  };
+                winrt::Microsoft::UI::Input::GestureRecognizer instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

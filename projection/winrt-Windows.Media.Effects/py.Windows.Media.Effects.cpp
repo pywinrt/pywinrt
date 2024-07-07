@@ -248,7 +248,7 @@ namespace py::cpp::Windows::Media::Effects
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Media::Effects::AudioEffectDefinition instance{ param0 };
+                winrt::Windows::Media::Effects::AudioEffectDefinition instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -264,7 +264,7 @@ namespace py::cpp::Windows::Media::Effects
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 1);
 
-                winrt::Windows::Media::Effects::AudioEffectDefinition instance{ param0, param1 };
+                winrt::Windows::Media::Effects::AudioEffectDefinition instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1140,7 +1140,7 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                winrt::Windows::Media::Effects::SlowMotionEffectDefinition instance{  };
+                winrt::Windows::Media::Effects::SlowMotionEffectDefinition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1318,7 +1318,7 @@ namespace py::cpp::Windows::Media::Effects
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Media::Effects::VideoCompositorDefinition instance{ param0 };
+                winrt::Windows::Media::Effects::VideoCompositorDefinition instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1334,7 +1334,7 @@ namespace py::cpp::Windows::Media::Effects
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 1);
 
-                winrt::Windows::Media::Effects::VideoCompositorDefinition instance{ param0, param1 };
+                winrt::Windows::Media::Effects::VideoCompositorDefinition instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1464,7 +1464,7 @@ namespace py::cpp::Windows::Media::Effects
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::Media::Effects::VideoEffectDefinition instance{ param0 };
+                winrt::Windows::Media::Effects::VideoEffectDefinition instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1480,7 +1480,7 @@ namespace py::cpp::Windows::Media::Effects
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 1);
 
-                winrt::Windows::Media::Effects::VideoEffectDefinition instance{ param0, param1 };
+                winrt::Windows::Media::Effects::VideoEffectDefinition instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1608,7 +1608,7 @@ namespace py::cpp::Windows::Media::Effects
         {
             try
             {
-                winrt::Windows::Media::Effects::VideoTransformEffectDefinition instance{  };
+                winrt::Windows::Media::Effects::VideoTransformEffectDefinition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

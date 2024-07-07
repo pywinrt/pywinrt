@@ -933,7 +933,7 @@ namespace py::cpp::Windows::Graphics::Capture
         {
             try
             {
-                winrt::Windows::Graphics::Capture::GraphicsCapturePicker instance{  };
+                winrt::Windows::Graphics::Capture::GraphicsCapturePicker instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

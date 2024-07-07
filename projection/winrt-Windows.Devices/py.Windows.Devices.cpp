@@ -25,7 +25,7 @@ namespace py::cpp::Windows::Devices
                 auto param3 = py::convert_to<winrt::Windows::Devices::I2c::Provider::II2cControllerProvider>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider>(args, 4);
 
-                winrt::Windows::Devices::LowLevelDevicesAggregateProvider instance{ param0, param1, param2, param3, param4 };
+                winrt::Windows::Devices::LowLevelDevicesAggregateProvider instance{param0, param1, param2, param3, param4};
                 return py::wrap(instance, type);
             }
             catch (...)

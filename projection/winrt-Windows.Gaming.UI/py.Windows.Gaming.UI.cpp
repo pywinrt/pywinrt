@@ -575,7 +575,7 @@ namespace py::cpp::Windows::Gaming::UI
         {
             try
             {
-                winrt::Windows::Gaming::UI::GameChatOverlayMessageSource instance{  };
+                winrt::Windows::Gaming::UI::GameChatOverlayMessageSource instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

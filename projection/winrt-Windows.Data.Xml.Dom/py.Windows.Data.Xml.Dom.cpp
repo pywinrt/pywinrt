@@ -4878,7 +4878,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         {
             try
             {
-                winrt::Windows::Data::Xml::Dom::XmlDocument instance{  };
+                winrt::Windows::Data::Xml::Dom::XmlDocument instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -10409,7 +10409,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
         {
             try
             {
-                winrt::Windows::Data::Xml::Dom::XmlLoadSettings instance{  };
+                winrt::Windows::Data::Xml::Dom::XmlLoadSettings instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

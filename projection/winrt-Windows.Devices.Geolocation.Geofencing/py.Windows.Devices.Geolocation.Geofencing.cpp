@@ -22,7 +22,7 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::IGeoshape>(args, 1);
 
-                winrt::Windows::Devices::Geolocation::Geofencing::Geofence instance{ param0, param1 };
+                winrt::Windows::Devices::Geolocation::Geofencing::Geofence instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -40,7 +40,7 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 auto param2 = py::convert_to<winrt::Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates>(args, 2);
                 auto param3 = py::convert_to<bool>(args, 3);
 
-                winrt::Windows::Devices::Geolocation::Geofencing::Geofence instance{ param0, param1, param2, param3 };
+                winrt::Windows::Devices::Geolocation::Geofencing::Geofence instance{param0, param1, param2, param3};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -59,7 +59,7 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 auto param3 = py::convert_to<bool>(args, 3);
                 auto param4 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 4);
 
-                winrt::Windows::Devices::Geolocation::Geofencing::Geofence instance{ param0, param1, param2, param3, param4 };
+                winrt::Windows::Devices::Geolocation::Geofencing::Geofence instance{param0, param1, param2, param3, param4};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -80,7 +80,7 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
                 auto param5 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 5);
                 auto param6 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 6);
 
-                winrt::Windows::Devices::Geolocation::Geofencing::Geofence instance{ param0, param1, param2, param3, param4, param5, param6 };
+                winrt::Windows::Devices::Geolocation::Geofencing::Geofence instance{param0, param1, param2, param3, param4, param5, param6};
                 return py::wrap(instance, type);
             }
             catch (...)

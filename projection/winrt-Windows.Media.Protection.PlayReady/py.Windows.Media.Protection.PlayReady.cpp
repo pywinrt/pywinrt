@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param1 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDStreamParser>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDMessenger>(args, 2);
 
-                winrt::Windows::Media::Protection::PlayReady::NDClient instance{ param0, param1, param2 };
+                winrt::Windows::Media::Protection::PlayReady::NDClient instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -469,7 +469,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
-                winrt::Windows::Media::Protection::PlayReady::NDCustomData instance{ param0, param1 };
+                winrt::Windows::Media::Protection::PlayReady::NDCustomData instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -597,7 +597,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                winrt::Windows::Media::Protection::PlayReady::NDDownloadEngineNotifier instance{  };
+                winrt::Windows::Media::Protection::PlayReady::NDDownloadEngineNotifier instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -882,7 +882,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::INDCustomData>(args, 2);
 
-                winrt::Windows::Media::Protection::PlayReady::NDLicenseFetchDescriptor instance{ param0, param1, param2 };
+                winrt::Windows::Media::Protection::PlayReady::NDLicenseFetchDescriptor instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1058,7 +1058,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                winrt::Windows::Media::Protection::PlayReady::NDStorageFileHelper instance{  };
+                winrt::Windows::Media::Protection::PlayReady::NDStorageFileHelper instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1178,7 +1178,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                winrt::Windows::Media::Protection::PlayReady::NDStreamParserNotifier instance{  };
+                winrt::Windows::Media::Protection::PlayReady::NDStreamParserNotifier instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1409,7 +1409,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
-                winrt::Windows::Media::Protection::PlayReady::NDTCPMessenger instance{ param0, param1 };
+                winrt::Windows::Media::Protection::PlayReady::NDTCPMessenger instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1642,7 +1642,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param6 = py::convert_to<winrt::hstring>(args, 6);
                 auto param7 = py::convert_to<winrt::guid>(args, 7);
 
-                winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader instance{ param0, param1, param2, param3, param4, param5, param6, param7 };
+                winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader instance{param0, param1, param2, param3, param4, param5, param6, param7};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1661,7 +1661,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
                 auto param4 = py::convert_to<winrt::guid>(args, 4);
 
-                winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader instance{ param0, param1, param2, param3, param4 };
+                winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader instance{param0, param1, param2, param3, param4};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1682,7 +1682,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param5 = py::convert_to<winrt::hstring>(args, 5);
                 auto param6 = py::convert_to<winrt::guid>(args, 6);
 
-                winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader instance{ param0, param1, param2, param3, param4, param5, param6 };
+                winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader instance{param0, param1, param2, param3, param4, param5, param6};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1697,7 +1697,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             {
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader instance{ param0 };
+                winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2291,7 +2291,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             {
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
-                winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainIterable instance{ param0 };
+                winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainIterable instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2620,7 +2620,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest instance{  };
+                winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3130,7 +3130,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainLeaveServiceRequest instance{  };
+                winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainLeaveServiceRequest instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3592,7 +3592,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                winrt::Windows::Media::Protection::PlayReady::PlayReadyITADataGenerator instance{  };
+                winrt::Windows::Media::Protection::PlayReady::PlayReadyITADataGenerator instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3715,7 +3715,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                winrt::Windows::Media::Protection::PlayReady::PlayReadyIndividualizationServiceRequest instance{  };
+                winrt::Windows::Media::Protection::PlayReady::PlayReadyIndividualizationServiceRequest instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4379,7 +4379,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest instance{  };
+                winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4894,7 +4894,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterable instance{  };
+                winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterable instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4910,7 +4910,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterable instance{ param0, param1 };
+                winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterable instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5329,7 +5329,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             {
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 0);
 
-                winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseSession instance{ param0 };
+                winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseSession instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5513,7 +5513,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                winrt::Windows::Media::Protection::PlayReady::PlayReadyMeteringReportServiceRequest instance{  };
+                winrt::Windows::Media::Protection::PlayReady::PlayReadyMeteringReportServiceRequest instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5927,7 +5927,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         {
             try
             {
-                winrt::Windows::Media::Protection::PlayReady::PlayReadyRevocationServiceRequest instance{  };
+                winrt::Windows::Media::Protection::PlayReady::PlayReadyRevocationServiceRequest instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6295,7 +6295,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             {
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterable instance{ param0 };
+                winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterable instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6626,7 +6626,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             {
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest instance{ param0 };
+                winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6642,7 +6642,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
-                winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest instance{ param0, param1 };
+                winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)

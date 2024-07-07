@@ -2005,7 +2005,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties instance{ param0 };
+                winrt::Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2018,7 +2018,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
         {
             try
             {
-                winrt::Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties instance{  };
+                winrt::Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

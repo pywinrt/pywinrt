@@ -820,7 +820,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         {
             try
             {
-                winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement instance{  };
+                winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

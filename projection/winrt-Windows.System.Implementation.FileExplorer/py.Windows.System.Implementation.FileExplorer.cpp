@@ -21,7 +21,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Windows::System::Implementation::FileExplorer::SysStorageProviderEventReceivedEventArgs instance{ param0 };
+                winrt::Windows::System::Implementation::FileExplorer::SysStorageProviderEventReceivedEventArgs instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

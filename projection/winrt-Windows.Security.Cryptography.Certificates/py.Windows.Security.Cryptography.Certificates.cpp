@@ -21,7 +21,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
             {
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                winrt::Windows::Security::Cryptography::Certificates::Certificate instance{ param0 };
+                winrt::Windows::Security::Cryptography::Certificates::Certificate instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1004,7 +1004,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                winrt::Windows::Security::Cryptography::Certificates::CertificateExtension instance{  };
+                winrt::Windows::Security::Cryptography::Certificates::CertificateExtension instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1269,7 +1269,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                winrt::Windows::Security::Cryptography::Certificates::CertificateKeyUsages instance{  };
+                winrt::Windows::Security::Cryptography::Certificates::CertificateKeyUsages instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1741,7 +1741,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                winrt::Windows::Security::Cryptography::Certificates::CertificateQuery instance{  };
+                winrt::Windows::Security::Cryptography::Certificates::CertificateQuery instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2185,7 +2185,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                winrt::Windows::Security::Cryptography::Certificates::CertificateRequestProperties instance{  };
+                winrt::Windows::Security::Cryptography::Certificates::CertificateRequestProperties instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3511,7 +3511,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                winrt::Windows::Security::Cryptography::Certificates::ChainBuildingParameters instance{  };
+                winrt::Windows::Security::Cryptography::Certificates::ChainBuildingParameters instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3879,7 +3879,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                winrt::Windows::Security::Cryptography::Certificates::ChainValidationParameters instance{  };
+                winrt::Windows::Security::Cryptography::Certificates::ChainValidationParameters instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4065,7 +4065,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
             {
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                winrt::Windows::Security::Cryptography::Certificates::CmsAttachedSignature instance{ param0 };
+                winrt::Windows::Security::Cryptography::Certificates::CmsAttachedSignature instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4304,7 +4304,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
             {
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
-                winrt::Windows::Security::Cryptography::Certificates::CmsDetachedSignature instance{ param0 };
+                winrt::Windows::Security::Cryptography::Certificates::CmsDetachedSignature instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -4523,7 +4523,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                winrt::Windows::Security::Cryptography::Certificates::CmsSignerInfo instance{  };
+                winrt::Windows::Security::Cryptography::Certificates::CmsSignerInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5386,7 +5386,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                winrt::Windows::Security::Cryptography::Certificates::PfxImportParameters instance{  };
+                winrt::Windows::Security::Cryptography::Certificates::PfxImportParameters instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5926,7 +5926,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         {
             try
             {
-                winrt::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo instance{  };
+                winrt::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

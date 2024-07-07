@@ -542,7 +542,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         {
             try
             {
-                winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions instance{  };
+                winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -907,7 +907,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
         {
             try
             {
-                winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver instance{  };
+                winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

@@ -4993,7 +4993,7 @@ namespace py::cpp::Windows::Media::Audio
             {
                 auto param0 = py::convert_to<winrt::Windows::Media::Render::AudioRenderCategory>(args, 0);
 
-                winrt::Windows::Media::Audio::AudioGraphSettings instance{ param0 };
+                winrt::Windows::Media::Audio::AudioGraphSettings instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5507,7 +5507,7 @@ namespace py::cpp::Windows::Media::Audio
                 auto param1 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeEmitterDecayModel>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeEmitterSettings>(args, 2);
 
-                winrt::Windows::Media::Audio::AudioNodeEmitter instance{ param0, param1, param2 };
+                winrt::Windows::Media::Audio::AudioNodeEmitter instance{param0, param1, param2};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -5520,7 +5520,7 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                winrt::Windows::Media::Audio::AudioNodeEmitter instance{  };
+                winrt::Windows::Media::Audio::AudioNodeEmitter instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -6670,7 +6670,7 @@ namespace py::cpp::Windows::Media::Audio
         {
             try
             {
-                winrt::Windows::Media::Audio::AudioNodeListener instance{  };
+                winrt::Windows::Media::Audio::AudioNodeListener instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9130,7 +9130,7 @@ namespace py::cpp::Windows::Media::Audio
             {
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::AudioGraph>(args, 0);
 
-                winrt::Windows::Media::Audio::EchoEffectDefinition instance{ param0 };
+                winrt::Windows::Media::Audio::EchoEffectDefinition instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9614,7 +9614,7 @@ namespace py::cpp::Windows::Media::Audio
             {
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::AudioGraph>(args, 0);
 
-                winrt::Windows::Media::Audio::EqualizerEffectDefinition instance{ param0 };
+                winrt::Windows::Media::Audio::EqualizerEffectDefinition instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -9850,7 +9850,7 @@ namespace py::cpp::Windows::Media::Audio
             {
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::AudioGraph>(args, 0);
 
-                winrt::Windows::Media::Audio::LimiterEffectDefinition instance{ param0 };
+                winrt::Windows::Media::Audio::LimiterEffectDefinition instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -10947,7 +10947,7 @@ namespace py::cpp::Windows::Media::Audio
             {
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::AudioGraph>(args, 0);
 
-                winrt::Windows::Media::Audio::ReverbEffectDefinition instance{ param0 };
+                winrt::Windows::Media::Audio::ReverbEffectDefinition instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)

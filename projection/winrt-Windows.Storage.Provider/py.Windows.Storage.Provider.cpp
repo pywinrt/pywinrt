@@ -857,7 +857,7 @@ namespace py::cpp::Windows::Storage::Provider
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Windows::Storage::Provider::StorageProviderFileTypeInfo instance{ param0, param1 };
+                winrt::Windows::Storage::Provider::StorageProviderFileTypeInfo instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -985,7 +985,7 @@ namespace py::cpp::Windows::Storage::Provider
         {
             try
             {
-                winrt::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult instance{  };
+                winrt::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1217,7 +1217,7 @@ namespace py::cpp::Windows::Storage::Provider
         {
             try
             {
-                winrt::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult instance{  };
+                winrt::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1490,7 +1490,7 @@ namespace py::cpp::Windows::Storage::Provider
         {
             try
             {
-                winrt::Windows::Storage::Provider::StorageProviderItemProperty instance{  };
+                winrt::Windows::Storage::Provider::StorageProviderItemProperty instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1722,7 +1722,7 @@ namespace py::cpp::Windows::Storage::Provider
         {
             try
             {
-                winrt::Windows::Storage::Provider::StorageProviderItemPropertyDefinition instance{  };
+                winrt::Windows::Storage::Provider::StorageProviderItemPropertyDefinition instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -1906,7 +1906,7 @@ namespace py::cpp::Windows::Storage::Provider
         {
             try
             {
-                winrt::Windows::Storage::Provider::StorageProviderKnownFolderEntry instance{  };
+                winrt::Windows::Storage::Provider::StorageProviderKnownFolderEntry instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2090,7 +2090,7 @@ namespace py::cpp::Windows::Storage::Provider
         {
             try
             {
-                winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo instance{  };
+                winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2400,7 +2400,7 @@ namespace py::cpp::Windows::Storage::Provider
         {
             try
             {
-                winrt::Windows::Storage::Provider::StorageProviderMoreInfoUI instance{  };
+                winrt::Windows::Storage::Provider::StorageProviderMoreInfoUI instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2584,7 +2584,7 @@ namespace py::cpp::Windows::Storage::Provider
         {
             try
             {
-                winrt::Windows::Storage::Provider::StorageProviderQuotaUI instance{  };
+                winrt::Windows::Storage::Provider::StorageProviderQuotaUI instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -2864,7 +2864,7 @@ namespace py::cpp::Windows::Storage::Provider
         {
             try
             {
-                winrt::Windows::Storage::Provider::StorageProviderStatusUI instance{  };
+                winrt::Windows::Storage::Provider::StorageProviderStatusUI instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -3336,7 +3336,7 @@ namespace py::cpp::Windows::Storage::Provider
         {
             try
             {
-                winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo instance{  };
+                winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

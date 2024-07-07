@@ -258,7 +258,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceCandidateKind>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceCandidate instance{ param0, param1 };
+                winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceCandidate instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -273,7 +273,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
             {
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
-                winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceCandidate instance{ param0 };
+                winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceCandidate instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -529,7 +529,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceLoader instance{ param0 };
+                winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceLoader instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -545,7 +545,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceLoader instance{ param0, param1 };
+                winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceLoader instance{param0, param1};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -558,7 +558,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         {
             try
             {
-                winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceLoader instance{  };
+                winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceLoader instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -767,7 +767,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
             {
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceManager instance{ param0 };
+                winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceManager instance{param0};
                 return py::wrap(instance, type);
             }
             catch (...)
@@ -780,7 +780,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         {
             try
             {
-                winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceManager instance{  };
+                winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceManager instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

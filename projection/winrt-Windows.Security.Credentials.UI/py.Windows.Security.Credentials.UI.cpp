@@ -150,7 +150,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
         {
             try
             {
-                winrt::Windows::Security::Credentials::UI::CredentialPickerOptions instance{  };
+                winrt::Windows::Security::Credentials::UI::CredentialPickerOptions instance{};
                 return py::wrap(instance, type);
             }
             catch (...)

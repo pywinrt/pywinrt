@@ -19,7 +19,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
         {
             try
             {
-                winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin instance{  };
+                winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin instance{};
                 return py::wrap(instance, type);
             }
             catch (...)
