@@ -340,6 +340,7 @@ namespace py::cpp::_winrt
         Py_VISIT(state->object_type);
         Py_VISIT(state->array_type);
         Py_VISIT(state->mapping_iter_type);
+        Py_VISIT(state->uuid_type);
 
         return 0;
     }
@@ -351,6 +352,7 @@ namespace py::cpp::_winrt
         Py_CLEAR(state->object_type);
         Py_CLEAR(state->array_type);
         Py_CLEAR(state->mapping_iter_type);
+        Py_CLEAR(state->uuid_type);
 
         return 0;
     }
@@ -362,6 +364,7 @@ namespace py::cpp::_winrt
         Py_XDECREF(state->object_type);
         Py_XDECREF(state->array_type);
         Py_XDECREF(state->mapping_iter_type);
+        Py_XDECREF(state->uuid_type);
     }
 
     PyDoc_STRVAR(module_doc, "_winrt");
@@ -461,9 +464,22 @@ namespace py::cpp::_winrt
             return nullptr;
         }
 
+        pyobj_handle uuid_module{PyImport_ImportModule("uuid")};
+        if (!uuid_module)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle uuid_type{PyObject_GetAttrString(uuid_module.get(), "UUID")};
+        if (!uuid_type)
+        {
+            return nullptr;
+        }
+
         state->object_type = object_type.detach();
         state->array_type = array_type.detach();
         state->mapping_iter_type = mapping_iter_type.detach();
+        state->uuid_type = uuid_type.detach();
 
         return module.detach();
     }
