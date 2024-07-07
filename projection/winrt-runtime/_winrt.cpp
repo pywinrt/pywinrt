@@ -4,6 +4,7 @@
 
 #define PYWINRT_RUNTIME_MODULE
 #include "pybase.h"
+#include "pyruntime.h"
 #include <winrt/base.h>
 
 namespace py::cpp::_winrt
@@ -330,6 +331,37 @@ namespace py::cpp::_winrt
         Py_RETURN_NONE;
     }
 
+    static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
+    {
+        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
+
+        Py_VISIT(state->object_type);
+        Py_VISIT(state->array_type);
+        Py_VISIT(state->mapping_iter_type);
+
+        return 0;
+    }
+
+    static int module_clear(PyObject* module) noexcept
+    {
+        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
+
+        Py_CLEAR(state->object_type);
+        Py_CLEAR(state->array_type);
+        Py_CLEAR(state->mapping_iter_type);
+
+        return 0;
+    }
+
+    static void module_free(PyObject* module) noexcept
+    {
+        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
+
+        Py_XDECREF(state->object_type);
+        Py_XDECREF(state->array_type);
+        Py_XDECREF(state->mapping_iter_type);
+    }
+
     PyDoc_STRVAR(module_doc, "_winrt");
 
     static PyMethodDef module_methods[]{
@@ -358,12 +390,12 @@ namespace py::cpp::_winrt
         = {PyModuleDef_HEAD_INIT,
            "_winrt",
            module_doc,
-           0,
+           sizeof(module_state),
            module_methods,
            nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
+           module_traverse,
+           module_clear,
+           reinterpret_cast<freefunc>(module_free)};
 
     static PyObject* module_init() noexcept
     {
@@ -373,11 +405,12 @@ namespace py::cpp::_winrt
             = static_cast<long>(winrt::apartment_type::single_threaded);
 
         py::pyobj_handle module{PyModule_Create(&module_def)};
-
         if (!module)
         {
             return nullptr;
         }
+
+        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
 
         py::pytype_handle object_type{py::register_python_type(
             module.get(), &Object_type_spec, nullptr, nullptr)};
@@ -426,6 +459,10 @@ namespace py::cpp::_winrt
             return nullptr;
         }
 
+        state->object_type = object_type.detach();
+        state->array_type = array_type.detach();
+        state->mapping_iter_type = mapping_iter_type.detach();
+
         return module.detach();
     }
 } // namespace py::cpp::_winrt
@@ -435,35 +472,24 @@ PyMODINIT_FUNC PyInit__winrt(void) noexcept
     return py::cpp::_winrt::module_init();
 }
 
+py::cpp::_winrt::module_state* py::cpp::_winrt::get_module_state() noexcept
+{
+    auto module = PyState_FindModule(&py::cpp::_winrt::module_def);
+    if (!module)
+    {
+        return nullptr;
+    }
+
+    return reinterpret_cast<py::cpp::_winrt::module_state*>(PyModule_GetState(module));
+}
+
 PyTypeObject* py::get_object_type() noexcept
 {
-    py::pyobj_handle system_module{PyImport_ImportModule("winrt.system")};
-
-    if (!system_module)
+    auto state = py::cpp::_winrt::get_module_state();
+    if (!state)
     {
         return nullptr;
     }
 
-    py::pyobj_handle object_type{PyObject_GetAttrString(system_module.get(), "Object")};
-
-    if (!object_type)
-    {
-        return nullptr;
-    }
-
-    if (!PyType_Check(object_type.get()))
-    {
-        PyErr_SetString(PyExc_TypeError, "winrt.system.Object is not a type object!");
-        return nullptr;
-    }
-
-    if (reinterpret_cast<PyTypeObject*>(object_type.get())->tp_new
-        != py::cpp::_winrt::Object_new)
-    {
-        PyErr_SetString(
-            PyExc_TypeError, "winrt.system.Object is not the expected type!");
-        return nullptr;
-    }
-
-    return reinterpret_cast<PyTypeObject*>(object_type.get());
+    return state->object_type;
 }

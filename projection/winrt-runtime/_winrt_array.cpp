@@ -1,5 +1,6 @@
 #define PYWINRT_RUNTIME_MODULE
 #include "pybase.h"
+#include "pyruntime.h"
 #include "py.Windows.Foundation.h"
 #include <winrt/base.h>
 
@@ -538,36 +539,13 @@ namespace py::cpp::_winrt
 
     static PyTypeObject* get_array_type() noexcept
     {
-        py::pyobj_handle system_module{PyImport_ImportModule("winrt.system")};
-
-        if (!system_module)
+        auto state = py::cpp::_winrt::get_module_state();
+        if (!state)
         {
             return nullptr;
         }
 
-        py::pyobj_handle array_type{
-            PyObject_GetAttrString(system_module.get(), "Array")};
-
-        if (!array_type)
-        {
-            return nullptr;
-        }
-
-        if (!PyType_Check(array_type.get()))
-        {
-            PyErr_SetString(
-                PyExc_TypeError, "winrt.system.Array is not a type object!");
-            return nullptr;
-        }
-
-        if (reinterpret_cast<PyTypeObject*>(array_type.get())->tp_new != Array_tp_new)
-        {
-            PyErr_SetString(
-                PyExc_TypeError, "winrt.system.Array is not the expected type!");
-            return nullptr;
-        }
-
-        return reinterpret_cast<PyTypeObject*>(array_type.get());
+        return state->array_type;
     }
 
 } // namespace py::cpp::_winrt

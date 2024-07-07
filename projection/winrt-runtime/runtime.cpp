@@ -6,6 +6,7 @@
 
 #define PYWINRT_RUNTIME_MODULE
 #include "pybase.h"
+#include "pyruntime.h"
 
 // "backport" of Python 3.12 function.
 #if PY_VERSION_HEX < 0x030C0000
@@ -201,22 +202,14 @@ PyTypeObject* py::register_python_type(
  */
 PyObject* py::wrap_mapping_iter(PyObject* iter) noexcept
 {
-    py::pyobj_handle winrt_module{PyImport_ImportModule("winrt._winrt")};
-
-    if (!winrt_module)
+    auto state = py::cpp::_winrt::get_module_state();
+    if (!state)
     {
         return nullptr;
     }
 
-    py::pyobj_handle mapping_iter_type{
-        PyObject_GetAttrString(winrt_module.get(), "MappingIter")};
-
-    if (!mapping_iter_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle wrapper{PyObject_CallOneArg(mapping_iter_type.get(), iter)};
+    py::pyobj_handle wrapper{PyObject_CallOneArg(
+        reinterpret_cast<PyObject*>(state->mapping_iter_type), iter)};
 
     if (!wrapper)
     {
