@@ -402,29 +402,13 @@ PyObject* py::convert_guid(winrt::guid value) noexcept
     *reinterpret_cast<uint16_t*>(buffer + 6) = _byteswap_ushort(value.Data3);
     std::memcpy(buffer + 8, value.Data4, sizeof(value.Data4));
 
-    pyobj_handle valueAsBytes{PyBytes_FromStringAndSize(buffer, sizeof(buffer))};
-    if (!valueAsBytes)
-    {
-        return nullptr;
-    }
-    pyobj_handle args{PyTuple_New(0)};
-    if (!args)
-    {
-        return nullptr;
-    }
-    pyobj_handle kwargs{PyDict_New()};
-    if (!kwargs)
+    pyobj_handle value_as_bytes{PyBytes_FromStringAndSize(buffer, sizeof(buffer))};
+    if (!value_as_bytes)
     {
         return nullptr;
     }
 
-    auto result = PyDict_SetItemString(kwargs.get(), "bytes", valueAsBytes.get());
-    if (result == -1)
-    {
-        return nullptr;
-    }
-
-    return PyObject_Call(state->uuid_type, args.get(), kwargs.get());
+    return PyObject_CallFunction(state->uuid_type, "sO", nullptr, value_as_bytes.get());
 }
 
 winrt::guid py::convert_to_guid(PyObject* obj)
