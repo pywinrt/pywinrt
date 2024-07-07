@@ -9480,7 +9480,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_diagnostics(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AsyncCausalityTracer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AsyncCausalityTracer_Static.get())) == -1)
+    py::pytype_handle AsyncCausalityTracer_type{py::register_python_type(module.get(), &type_spec_AsyncCausalityTracer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AsyncCausalityTracer_Static.get()))};
+    if (!AsyncCausalityTracer_type)
     {
         return nullptr;
     }
@@ -9491,82 +9492,98 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_diagnostics(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ErrorDetails, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ErrorDetails_Static.get())) == -1)
+    py::pytype_handle ErrorDetails_type{py::register_python_type(module.get(), &type_spec_ErrorDetails, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ErrorDetails_Static.get()))};
+    if (!ErrorDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileLoggingSession, object_bases.get(), nullptr) == -1)
+    py::pytype_handle FileLoggingSession_type{py::register_python_type(module.get(), &type_spec_FileLoggingSession, object_bases.get(), nullptr)};
+    if (!FileLoggingSession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LogFileGeneratedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LogFileGeneratedEventArgs_type{py::register_python_type(module.get(), &type_spec_LogFileGeneratedEventArgs, object_bases.get(), nullptr)};
+    if (!LogFileGeneratedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LoggingActivity, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LoggingActivity_type{py::register_python_type(module.get(), &type_spec_LoggingActivity, object_bases.get(), nullptr)};
+    if (!LoggingActivity_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LoggingChannel, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LoggingChannel_type{py::register_python_type(module.get(), &type_spec_LoggingChannel, object_bases.get(), nullptr)};
+    if (!LoggingChannel_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LoggingChannelOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LoggingChannelOptions_type{py::register_python_type(module.get(), &type_spec_LoggingChannelOptions, object_bases.get(), nullptr)};
+    if (!LoggingChannelOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LoggingFields, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LoggingFields_type{py::register_python_type(module.get(), &type_spec_LoggingFields, object_bases.get(), nullptr)};
+    if (!LoggingFields_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LoggingOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LoggingOptions_type{py::register_python_type(module.get(), &type_spec_LoggingOptions, object_bases.get(), nullptr)};
+    if (!LoggingOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LoggingSession, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LoggingSession_type{py::register_python_type(module.get(), &type_spec_LoggingSession, object_bases.get(), nullptr)};
+    if (!LoggingSession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RuntimeBrokerErrorSettings, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RuntimeBrokerErrorSettings_type{py::register_python_type(module.get(), &type_spec_RuntimeBrokerErrorSettings, object_bases.get(), nullptr)};
+    if (!RuntimeBrokerErrorSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TracingStatusChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle TracingStatusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_TracingStatusChangedEventArgs, object_bases.get(), nullptr)};
+    if (!TracingStatusChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IErrorReportingSettings, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IErrorReportingSettings_type{py::register_python_type(module.get(), &type_spec_IErrorReportingSettings, object_bases.get(), nullptr)};
+    if (!IErrorReportingSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IFileLoggingSession, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IFileLoggingSession_type{py::register_python_type(module.get(), &type_spec_IFileLoggingSession, object_bases.get(), nullptr)};
+    if (!IFileLoggingSession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ILoggingChannel, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ILoggingChannel_type{py::register_python_type(module.get(), &type_spec_ILoggingChannel, object_bases.get(), nullptr)};
+    if (!ILoggingChannel_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ILoggingSession, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ILoggingSession_type{py::register_python_type(module.get(), &type_spec_ILoggingSession, object_bases.get(), nullptr)};
+    if (!ILoggingSession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ILoggingTarget, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ILoggingTarget_type{py::register_python_type(module.get(), &type_spec_ILoggingTarget, object_bases.get(), nullptr)};
+    if (!ILoggingTarget_type)
     {
         return nullptr;
     }

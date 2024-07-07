@@ -3667,27 +3667,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_preview_injection(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InjectedInputGamepadInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InjectedInputGamepadInfo_type{py::register_python_type(module.get(), &type_spec_InjectedInputGamepadInfo, object_bases.get(), nullptr)};
+    if (!InjectedInputGamepadInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InjectedInputKeyboardInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InjectedInputKeyboardInfo_type{py::register_python_type(module.get(), &type_spec_InjectedInputKeyboardInfo, object_bases.get(), nullptr)};
+    if (!InjectedInputKeyboardInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InjectedInputMouseInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InjectedInputMouseInfo_type{py::register_python_type(module.get(), &type_spec_InjectedInputMouseInfo, object_bases.get(), nullptr)};
+    if (!InjectedInputMouseInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InjectedInputPenInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InjectedInputPenInfo_type{py::register_python_type(module.get(), &type_spec_InjectedInputPenInfo, object_bases.get(), nullptr)};
+    if (!InjectedInputPenInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InjectedInputTouchInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InjectedInputTouchInfo_type{py::register_python_type(module.get(), &type_spec_InjectedInputTouchInfo, object_bases.get(), nullptr)};
+    if (!InjectedInputTouchInfo_type)
     {
         return nullptr;
     }
@@ -3698,22 +3703,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_preview_injection(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InputInjector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputInjector_Static.get())) == -1)
+    py::pytype_handle InputInjector_type{py::register_python_type(module.get(), &type_spec_InputInjector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputInjector_Static.get()))};
+    if (!InputInjector_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InjectedInputPoint, nullptr, nullptr) == -1)
+    py::pytype_handle InjectedInputPoint_type{py::register_python_type(module.get(), &type_spec_InjectedInputPoint, nullptr, nullptr)};
+    if (!InjectedInputPoint_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InjectedInputPointerInfo, nullptr, nullptr) == -1)
+    py::pytype_handle InjectedInputPointerInfo_type{py::register_python_type(module.get(), &type_spec_InjectedInputPointerInfo, nullptr, nullptr)};
+    if (!InjectedInputPointerInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InjectedInputRectangle, nullptr, nullptr) == -1)
+    py::pytype_handle InjectedInputRectangle_type{py::register_python_type(module.get(), &type_spec_InjectedInputRectangle, nullptr, nullptr)};
+    if (!InjectedInputRectangle_type)
     {
         return nullptr;
     }

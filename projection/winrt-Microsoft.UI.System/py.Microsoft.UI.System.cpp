@@ -298,7 +298,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_system(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ThemeSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ThemeSettings_Static.get())) == -1)
+    py::pytype_handle ThemeSettings_type{py::register_python_type(module.get(), &type_spec_ThemeSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ThemeSettings_Static.get()))};
+    if (!ThemeSettings_type)
     {
         return nullptr;
     }

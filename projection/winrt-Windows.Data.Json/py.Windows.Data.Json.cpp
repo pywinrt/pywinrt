@@ -3786,7 +3786,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_json(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JsonArray, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JsonArray_Static.get())) == -1)
+    py::pytype_handle JsonArray_type{py::register_python_type(module.get(), &type_spec_JsonArray, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JsonArray_Static.get()))};
+    if (!JsonArray_type)
     {
         return nullptr;
     }
@@ -3797,7 +3798,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_json(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JsonError, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JsonError_Static.get())) == -1)
+    py::pytype_handle JsonError_type{py::register_python_type(module.get(), &type_spec_JsonError, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JsonError_Static.get()))};
+    if (!JsonError_type)
     {
         return nullptr;
     }
@@ -3808,7 +3810,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_json(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JsonObject, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JsonObject_Static.get())) == -1)
+    py::pytype_handle JsonObject_type{py::register_python_type(module.get(), &type_spec_JsonObject, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JsonObject_Static.get()))};
+    if (!JsonObject_type)
     {
         return nullptr;
     }
@@ -3819,12 +3822,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_json(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JsonValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JsonValue_Static.get())) == -1)
+    py::pytype_handle JsonValue_type{py::register_python_type(module.get(), &type_spec_JsonValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JsonValue_Static.get()))};
+    if (!JsonValue_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IJsonValue, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IJsonValue_type{py::register_python_type(module.get(), &type_spec_IJsonValue, object_bases.get(), nullptr)};
+    if (!IJsonValue_type)
     {
         return nullptr;
     }

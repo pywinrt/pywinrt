@@ -1803,7 +1803,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_speechsynthesis(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechSynthesisStream, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpeechSynthesisStream_type{py::register_python_type(module.get(), &type_spec_SpeechSynthesisStream, object_bases.get(), nullptr)};
+    if (!SpeechSynthesisStream_type)
     {
         return nullptr;
     }
@@ -1814,17 +1815,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_speechsynthesis(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechSynthesizer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechSynthesizer_Static.get())) == -1)
+    py::pytype_handle SpeechSynthesizer_type{py::register_python_type(module.get(), &type_spec_SpeechSynthesizer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechSynthesizer_Static.get()))};
+    if (!SpeechSynthesizer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechSynthesizerOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpeechSynthesizerOptions_type{py::register_python_type(module.get(), &type_spec_SpeechSynthesizerOptions, object_bases.get(), nullptr)};
+    if (!SpeechSynthesizerOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VoiceInformation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle VoiceInformation_type{py::register_python_type(module.get(), &type_spec_VoiceInformation, object_bases.get(), nullptr)};
+    if (!VoiceInformation_type)
     {
         return nullptr;
     }

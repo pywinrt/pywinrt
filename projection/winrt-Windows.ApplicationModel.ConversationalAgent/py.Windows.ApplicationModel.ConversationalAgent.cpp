@@ -5146,17 +5146,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_conversationalagent(void) 
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ActivationSignalDetectionConfiguration, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ActivationSignalDetectionConfiguration_type{py::register_python_type(module.get(), &type_spec_ActivationSignalDetectionConfiguration, object_bases.get(), nullptr)};
+    if (!ActivationSignalDetectionConfiguration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ActivationSignalDetectionConfigurationCreationResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ActivationSignalDetectionConfigurationCreationResult_type{py::register_python_type(module.get(), &type_spec_ActivationSignalDetectionConfigurationCreationResult, object_bases.get(), nullptr)};
+    if (!ActivationSignalDetectionConfigurationCreationResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ActivationSignalDetector, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ActivationSignalDetector_type{py::register_python_type(module.get(), &type_spec_ActivationSignalDetector, object_bases.get(), nullptr)};
+    if (!ActivationSignalDetector_type)
     {
         return nullptr;
     }
@@ -5167,7 +5170,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_conversationalagent(void) 
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ConversationalAgentDetectorManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ConversationalAgentDetectorManager_Static.get())) == -1)
+    py::pytype_handle ConversationalAgentDetectorManager_type{py::register_python_type(module.get(), &type_spec_ConversationalAgentDetectorManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ConversationalAgentDetectorManager_Static.get()))};
+    if (!ConversationalAgentDetectorManager_type)
     {
         return nullptr;
     }
@@ -5178,37 +5182,44 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_conversationalagent(void) 
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ConversationalAgentSession, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ConversationalAgentSession_Static.get())) == -1)
+    py::pytype_handle ConversationalAgentSession_type{py::register_python_type(module.get(), &type_spec_ConversationalAgentSession, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ConversationalAgentSession_Static.get()))};
+    if (!ConversationalAgentSession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ConversationalAgentSessionInterruptedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ConversationalAgentSessionInterruptedEventArgs_type{py::register_python_type(module.get(), &type_spec_ConversationalAgentSessionInterruptedEventArgs, object_bases.get(), nullptr)};
+    if (!ConversationalAgentSessionInterruptedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ConversationalAgentSignal, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ConversationalAgentSignal_type{py::register_python_type(module.get(), &type_spec_ConversationalAgentSignal, object_bases.get(), nullptr)};
+    if (!ConversationalAgentSignal_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ConversationalAgentSignalDetectedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ConversationalAgentSignalDetectedEventArgs_type{py::register_python_type(module.get(), &type_spec_ConversationalAgentSignalDetectedEventArgs, object_bases.get(), nullptr)};
+    if (!ConversationalAgentSignalDetectedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ConversationalAgentSystemStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ConversationalAgentSystemStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ConversationalAgentSystemStateChangedEventArgs, object_bases.get(), nullptr)};
+    if (!ConversationalAgentSystemStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DetectionConfigurationAvailabilityChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DetectionConfigurationAvailabilityChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_DetectionConfigurationAvailabilityChangedEventArgs, object_bases.get(), nullptr)};
+    if (!DetectionConfigurationAvailabilityChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DetectionConfigurationAvailabilityInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DetectionConfigurationAvailabilityInfo_type{py::register_python_type(module.get(), &type_spec_DetectionConfigurationAvailabilityInfo, object_bases.get(), nullptr)};
+    if (!DetectionConfigurationAvailabilityInfo_type)
     {
         return nullptr;
     }

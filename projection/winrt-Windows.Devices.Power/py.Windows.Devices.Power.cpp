@@ -573,12 +573,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_power(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Battery, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Battery_Static.get())) == -1)
+    py::pytype_handle Battery_type{py::register_python_type(module.get(), &type_spec_Battery, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Battery_Static.get()))};
+    if (!Battery_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BatteryReport, object_bases.get(), nullptr) == -1)
+    py::pytype_handle BatteryReport_type{py::register_python_type(module.get(), &type_spec_BatteryReport, object_bases.get(), nullptr)};
+    if (!BatteryReport_type)
     {
         return nullptr;
     }

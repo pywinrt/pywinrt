@@ -342,7 +342,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_playlists(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Playlist, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Playlist_Static.get())) == -1)
+    py::pytype_handle Playlist_type{py::register_python_type(module.get(), &type_spec_Playlist, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Playlist_Static.get()))};
+    if (!Playlist_type)
     {
         return nullptr;
     }

@@ -1227,32 +1227,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IGeometrySource2D, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IGeometrySource2D_type{py::register_python_type(module.get(), &type_spec_IGeometrySource2D, object_bases.get(), nullptr)};
+    if (!IGeometrySource2D_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayAdapterId, nullptr, nullptr) == -1)
+    py::pytype_handle DisplayAdapterId_type{py::register_python_type(module.get(), &type_spec_DisplayAdapterId, nullptr, nullptr)};
+    if (!DisplayAdapterId_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayId, nullptr, nullptr) == -1)
+    py::pytype_handle DisplayId_type{py::register_python_type(module.get(), &type_spec_DisplayId, nullptr, nullptr)};
+    if (!DisplayId_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PointInt32, nullptr, nullptr) == -1)
+    py::pytype_handle PointInt32_type{py::register_python_type(module.get(), &type_spec_PointInt32, nullptr, nullptr)};
+    if (!PointInt32_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RectInt32, nullptr, nullptr) == -1)
+    py::pytype_handle RectInt32_type{py::register_python_type(module.get(), &type_spec_RectInt32, nullptr, nullptr)};
+    if (!RectInt32_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SizeInt32, nullptr, nullptr) == -1)
+    py::pytype_handle SizeInt32_type{py::register_python_type(module.get(), &type_spec_SizeInt32, nullptr, nullptr)};
+    if (!SizeInt32_type)
     {
         return nullptr;
     }

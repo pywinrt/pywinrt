@@ -17511,27 +17511,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Accelerometer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Accelerometer_Static.get())) == -1)
+    py::pytype_handle Accelerometer_type{py::register_python_type(module.get(), &type_spec_Accelerometer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Accelerometer_Static.get()))};
+    if (!Accelerometer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AccelerometerDataThreshold, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AccelerometerDataThreshold_type{py::register_python_type(module.get(), &type_spec_AccelerometerDataThreshold, object_bases.get(), nullptr)};
+    if (!AccelerometerDataThreshold_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AccelerometerReading, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AccelerometerReading_type{py::register_python_type(module.get(), &type_spec_AccelerometerReading, object_bases.get(), nullptr)};
+    if (!AccelerometerReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AccelerometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AccelerometerReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AccelerometerReadingChangedEventArgs, object_bases.get(), nullptr)};
+    if (!AccelerometerReadingChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AccelerometerShakenEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AccelerometerShakenEventArgs_type{py::register_python_type(module.get(), &type_spec_AccelerometerShakenEventArgs, object_bases.get(), nullptr)};
+    if (!AccelerometerShakenEventArgs_type)
     {
         return nullptr;
     }
@@ -17542,32 +17547,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ActivitySensor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ActivitySensor_Static.get())) == -1)
+    py::pytype_handle ActivitySensor_type{py::register_python_type(module.get(), &type_spec_ActivitySensor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ActivitySensor_Static.get()))};
+    if (!ActivitySensor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ActivitySensorReading, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ActivitySensorReading_type{py::register_python_type(module.get(), &type_spec_ActivitySensorReading, object_bases.get(), nullptr)};
+    if (!ActivitySensorReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ActivitySensorReadingChangeReport, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ActivitySensorReadingChangeReport_type{py::register_python_type(module.get(), &type_spec_ActivitySensorReadingChangeReport, object_bases.get(), nullptr)};
+    if (!ActivitySensorReadingChangeReport_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ActivitySensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ActivitySensorReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ActivitySensorReadingChangedEventArgs, object_bases.get(), nullptr)};
+    if (!ActivitySensorReadingChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ActivitySensorTriggerDetails, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ActivitySensorTriggerDetails_type{py::register_python_type(module.get(), &type_spec_ActivitySensorTriggerDetails, object_bases.get(), nullptr)};
+    if (!ActivitySensorTriggerDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AdaptiveDimmingOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AdaptiveDimmingOptions_type{py::register_python_type(module.get(), &type_spec_AdaptiveDimmingOptions, object_bases.get(), nullptr)};
+    if (!AdaptiveDimmingOptions_type)
     {
         return nullptr;
     }
@@ -17578,17 +17589,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Altimeter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Altimeter_Static.get())) == -1)
+    py::pytype_handle Altimeter_type{py::register_python_type(module.get(), &type_spec_Altimeter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Altimeter_Static.get()))};
+    if (!Altimeter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AltimeterReading, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AltimeterReading_type{py::register_python_type(module.get(), &type_spec_AltimeterReading, object_bases.get(), nullptr)};
+    if (!AltimeterReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AltimeterReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AltimeterReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AltimeterReadingChangedEventArgs, object_bases.get(), nullptr)};
+    if (!AltimeterReadingChangedEventArgs_type)
     {
         return nullptr;
     }
@@ -17599,22 +17613,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Barometer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Barometer_Static.get())) == -1)
+    py::pytype_handle Barometer_type{py::register_python_type(module.get(), &type_spec_Barometer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Barometer_Static.get()))};
+    if (!Barometer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BarometerDataThreshold, object_bases.get(), nullptr) == -1)
+    py::pytype_handle BarometerDataThreshold_type{py::register_python_type(module.get(), &type_spec_BarometerDataThreshold, object_bases.get(), nullptr)};
+    if (!BarometerDataThreshold_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BarometerReading, object_bases.get(), nullptr) == -1)
+    py::pytype_handle BarometerReading_type{py::register_python_type(module.get(), &type_spec_BarometerReading, object_bases.get(), nullptr)};
+    if (!BarometerReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BarometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle BarometerReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_BarometerReadingChangedEventArgs, object_bases.get(), nullptr)};
+    if (!BarometerReadingChangedEventArgs_type)
     {
         return nullptr;
     }
@@ -17625,22 +17643,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Compass, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Compass_Static.get())) == -1)
+    py::pytype_handle Compass_type{py::register_python_type(module.get(), &type_spec_Compass, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Compass_Static.get()))};
+    if (!Compass_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompassDataThreshold, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CompassDataThreshold_type{py::register_python_type(module.get(), &type_spec_CompassDataThreshold, object_bases.get(), nullptr)};
+    if (!CompassDataThreshold_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompassReading, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CompassReading_type{py::register_python_type(module.get(), &type_spec_CompassReading, object_bases.get(), nullptr)};
+    if (!CompassReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompassReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CompassReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_CompassReadingChangedEventArgs, object_bases.get(), nullptr)};
+    if (!CompassReadingChangedEventArgs_type)
     {
         return nullptr;
     }
@@ -17651,27 +17673,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Gyrometer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Gyrometer_Static.get())) == -1)
+    py::pytype_handle Gyrometer_type{py::register_python_type(module.get(), &type_spec_Gyrometer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Gyrometer_Static.get()))};
+    if (!Gyrometer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GyrometerDataThreshold, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GyrometerDataThreshold_type{py::register_python_type(module.get(), &type_spec_GyrometerDataThreshold, object_bases.get(), nullptr)};
+    if (!GyrometerDataThreshold_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GyrometerReading, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GyrometerReading_type{py::register_python_type(module.get(), &type_spec_GyrometerReading, object_bases.get(), nullptr)};
+    if (!GyrometerReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GyrometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GyrometerReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_GyrometerReadingChangedEventArgs, object_bases.get(), nullptr)};
+    if (!GyrometerReadingChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HingeAngleReading, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HingeAngleReading_type{py::register_python_type(module.get(), &type_spec_HingeAngleReading, object_bases.get(), nullptr)};
+    if (!HingeAngleReading_type)
     {
         return nullptr;
     }
@@ -17682,17 +17709,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HingeAngleSensor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HingeAngleSensor_Static.get())) == -1)
+    py::pytype_handle HingeAngleSensor_type{py::register_python_type(module.get(), &type_spec_HingeAngleSensor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HingeAngleSensor_Static.get()))};
+    if (!HingeAngleSensor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HingeAngleSensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HingeAngleSensorReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_HingeAngleSensorReadingChangedEventArgs, object_bases.get(), nullptr)};
+    if (!HingeAngleSensorReadingChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HumanPresenceFeatures, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HumanPresenceFeatures_type{py::register_python_type(module.get(), &type_spec_HumanPresenceFeatures, object_bases.get(), nullptr)};
+    if (!HumanPresenceFeatures_type)
     {
         return nullptr;
     }
@@ -17703,22 +17733,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HumanPresenceSensor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HumanPresenceSensor_Static.get())) == -1)
+    py::pytype_handle HumanPresenceSensor_type{py::register_python_type(module.get(), &type_spec_HumanPresenceSensor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HumanPresenceSensor_Static.get()))};
+    if (!HumanPresenceSensor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HumanPresenceSensorReading, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HumanPresenceSensorReading_type{py::register_python_type(module.get(), &type_spec_HumanPresenceSensorReading, object_bases.get(), nullptr)};
+    if (!HumanPresenceSensorReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HumanPresenceSensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HumanPresenceSensorReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_HumanPresenceSensorReadingChangedEventArgs, object_bases.get(), nullptr)};
+    if (!HumanPresenceSensorReadingChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HumanPresenceSensorReadingUpdate, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HumanPresenceSensorReadingUpdate_type{py::register_python_type(module.get(), &type_spec_HumanPresenceSensorReadingUpdate, object_bases.get(), nullptr)};
+    if (!HumanPresenceSensorReadingUpdate_type)
     {
         return nullptr;
     }
@@ -17729,7 +17763,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HumanPresenceSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HumanPresenceSettings_Static.get())) == -1)
+    py::pytype_handle HumanPresenceSettings_type{py::register_python_type(module.get(), &type_spec_HumanPresenceSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HumanPresenceSettings_Static.get()))};
+    if (!HumanPresenceSettings_type)
     {
         return nullptr;
     }
@@ -17740,22 +17775,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Inclinometer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Inclinometer_Static.get())) == -1)
+    py::pytype_handle Inclinometer_type{py::register_python_type(module.get(), &type_spec_Inclinometer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Inclinometer_Static.get()))};
+    if (!Inclinometer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InclinometerDataThreshold, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InclinometerDataThreshold_type{py::register_python_type(module.get(), &type_spec_InclinometerDataThreshold, object_bases.get(), nullptr)};
+    if (!InclinometerDataThreshold_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InclinometerReading, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InclinometerReading_type{py::register_python_type(module.get(), &type_spec_InclinometerReading, object_bases.get(), nullptr)};
+    if (!InclinometerReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InclinometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InclinometerReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_InclinometerReadingChangedEventArgs, object_bases.get(), nullptr)};
+    if (!InclinometerReadingChangedEventArgs_type)
     {
         return nullptr;
     }
@@ -17766,27 +17805,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LightSensor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LightSensor_Static.get())) == -1)
+    py::pytype_handle LightSensor_type{py::register_python_type(module.get(), &type_spec_LightSensor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LightSensor_Static.get()))};
+    if (!LightSensor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LightSensorDataThreshold, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LightSensorDataThreshold_type{py::register_python_type(module.get(), &type_spec_LightSensorDataThreshold, object_bases.get(), nullptr)};
+    if (!LightSensorDataThreshold_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LightSensorReading, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LightSensorReading_type{py::register_python_type(module.get(), &type_spec_LightSensorReading, object_bases.get(), nullptr)};
+    if (!LightSensorReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LightSensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LightSensorReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_LightSensorReadingChangedEventArgs, object_bases.get(), nullptr)};
+    if (!LightSensorReadingChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LockOnLeaveOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LockOnLeaveOptions_type{py::register_python_type(module.get(), &type_spec_LockOnLeaveOptions, object_bases.get(), nullptr)};
+    if (!LockOnLeaveOptions_type)
     {
         return nullptr;
     }
@@ -17797,22 +17841,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Magnetometer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Magnetometer_Static.get())) == -1)
+    py::pytype_handle Magnetometer_type{py::register_python_type(module.get(), &type_spec_Magnetometer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Magnetometer_Static.get()))};
+    if (!Magnetometer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MagnetometerDataThreshold, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MagnetometerDataThreshold_type{py::register_python_type(module.get(), &type_spec_MagnetometerDataThreshold, object_bases.get(), nullptr)};
+    if (!MagnetometerDataThreshold_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MagnetometerReading, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MagnetometerReading_type{py::register_python_type(module.get(), &type_spec_MagnetometerReading, object_bases.get(), nullptr)};
+    if (!MagnetometerReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MagnetometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MagnetometerReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_MagnetometerReadingChangedEventArgs, object_bases.get(), nullptr)};
+    if (!MagnetometerReadingChangedEventArgs_type)
     {
         return nullptr;
     }
@@ -17823,17 +17871,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OrientationSensor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OrientationSensor_Static.get())) == -1)
+    py::pytype_handle OrientationSensor_type{py::register_python_type(module.get(), &type_spec_OrientationSensor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OrientationSensor_Static.get()))};
+    if (!OrientationSensor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OrientationSensorReading, object_bases.get(), nullptr) == -1)
+    py::pytype_handle OrientationSensorReading_type{py::register_python_type(module.get(), &type_spec_OrientationSensorReading, object_bases.get(), nullptr)};
+    if (!OrientationSensorReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OrientationSensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle OrientationSensorReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_OrientationSensorReadingChangedEventArgs, object_bases.get(), nullptr)};
+    if (!OrientationSensorReadingChangedEventArgs_type)
     {
         return nullptr;
     }
@@ -17844,22 +17895,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Pedometer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Pedometer_Static.get())) == -1)
+    py::pytype_handle Pedometer_type{py::register_python_type(module.get(), &type_spec_Pedometer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Pedometer_Static.get()))};
+    if (!Pedometer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PedometerDataThreshold, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PedometerDataThreshold_type{py::register_python_type(module.get(), &type_spec_PedometerDataThreshold, object_bases.get(), nullptr)};
+    if (!PedometerDataThreshold_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PedometerReading, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PedometerReading_type{py::register_python_type(module.get(), &type_spec_PedometerReading, object_bases.get(), nullptr)};
+    if (!PedometerReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PedometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PedometerReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PedometerReadingChangedEventArgs, object_bases.get(), nullptr)};
+    if (!PedometerReadingChangedEventArgs_type)
     {
         return nullptr;
     }
@@ -17870,42 +17925,50 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProximitySensor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProximitySensor_Static.get())) == -1)
+    py::pytype_handle ProximitySensor_type{py::register_python_type(module.get(), &type_spec_ProximitySensor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProximitySensor_Static.get()))};
+    if (!ProximitySensor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProximitySensorDataThreshold, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ProximitySensorDataThreshold_type{py::register_python_type(module.get(), &type_spec_ProximitySensorDataThreshold, object_bases.get(), nullptr)};
+    if (!ProximitySensorDataThreshold_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProximitySensorDisplayOnOffController, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ProximitySensorDisplayOnOffController_type{py::register_python_type(module.get(), &type_spec_ProximitySensorDisplayOnOffController, object_bases.get(), nullptr)};
+    if (!ProximitySensorDisplayOnOffController_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProximitySensorReading, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ProximitySensorReading_type{py::register_python_type(module.get(), &type_spec_ProximitySensorReading, object_bases.get(), nullptr)};
+    if (!ProximitySensorReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProximitySensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ProximitySensorReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ProximitySensorReadingChangedEventArgs, object_bases.get(), nullptr)};
+    if (!ProximitySensorReadingChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SensorDataThresholdTriggerDetails, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SensorDataThresholdTriggerDetails_type{py::register_python_type(module.get(), &type_spec_SensorDataThresholdTriggerDetails, object_bases.get(), nullptr)};
+    if (!SensorDataThresholdTriggerDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SensorQuaternion, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SensorQuaternion_type{py::register_python_type(module.get(), &type_spec_SensorQuaternion, object_bases.get(), nullptr)};
+    if (!SensorQuaternion_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SensorRotationMatrix, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SensorRotationMatrix_type{py::register_python_type(module.get(), &type_spec_SensorRotationMatrix, object_bases.get(), nullptr)};
+    if (!SensorRotationMatrix_type)
     {
         return nullptr;
     }
@@ -17916,27 +17979,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SimpleOrientationSensor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SimpleOrientationSensor_Static.get())) == -1)
+    py::pytype_handle SimpleOrientationSensor_type{py::register_python_type(module.get(), &type_spec_SimpleOrientationSensor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SimpleOrientationSensor_Static.get()))};
+    if (!SimpleOrientationSensor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SimpleOrientationSensorOrientationChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SimpleOrientationSensorOrientationChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_SimpleOrientationSensorOrientationChangedEventArgs, object_bases.get(), nullptr)};
+    if (!SimpleOrientationSensorOrientationChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WakeOnApproachOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WakeOnApproachOptions_type{py::register_python_type(module.get(), &type_spec_WakeOnApproachOptions, object_bases.get(), nullptr)};
+    if (!WakeOnApproachOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IHumanPresenceSensorExtension, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IHumanPresenceSensorExtension_type{py::register_python_type(module.get(), &type_spec_IHumanPresenceSensorExtension, object_bases.get(), nullptr)};
+    if (!IHumanPresenceSensorExtension_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISensorDataThreshold, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ISensorDataThreshold_type{py::register_python_type(module.get(), &type_spec_ISensorDataThreshold, object_bases.get(), nullptr)};
+    if (!ISensorDataThreshold_type)
     {
         return nullptr;
     }

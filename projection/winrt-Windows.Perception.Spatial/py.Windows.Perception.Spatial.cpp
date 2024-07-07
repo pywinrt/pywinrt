@@ -5872,12 +5872,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialAnchor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAnchor_Static.get())) == -1)
+    py::pytype_handle SpatialAnchor_type{py::register_python_type(module.get(), &type_spec_SpatialAnchor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAnchor_Static.get()))};
+    if (!SpatialAnchor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialAnchorExportSufficiency, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpatialAnchorExportSufficiency_type{py::register_python_type(module.get(), &type_spec_SpatialAnchorExportSufficiency, object_bases.get(), nullptr)};
+    if (!SpatialAnchorExportSufficiency_type)
     {
         return nullptr;
     }
@@ -5888,7 +5890,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialAnchorExporter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAnchorExporter_Static.get())) == -1)
+    py::pytype_handle SpatialAnchorExporter_type{py::register_python_type(module.get(), &type_spec_SpatialAnchorExporter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAnchorExporter_Static.get()))};
+    if (!SpatialAnchorExporter_type)
     {
         return nullptr;
     }
@@ -5899,17 +5902,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialAnchorManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAnchorManager_Static.get())) == -1)
+    py::pytype_handle SpatialAnchorManager_type{py::register_python_type(module.get(), &type_spec_SpatialAnchorManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAnchorManager_Static.get()))};
+    if (!SpatialAnchorManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialAnchorRawCoordinateSystemAdjustedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpatialAnchorRawCoordinateSystemAdjustedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialAnchorRawCoordinateSystemAdjustedEventArgs, object_bases.get(), nullptr)};
+    if (!SpatialAnchorRawCoordinateSystemAdjustedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialAnchorStore, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpatialAnchorStore_type{py::register_python_type(module.get(), &type_spec_SpatialAnchorStore, object_bases.get(), nullptr)};
+    if (!SpatialAnchorStore_type)
     {
         return nullptr;
     }
@@ -5920,7 +5926,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialAnchorTransferManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAnchorTransferManager_Static.get())) == -1)
+    py::pytype_handle SpatialAnchorTransferManager_type{py::register_python_type(module.get(), &type_spec_SpatialAnchorTransferManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAnchorTransferManager_Static.get()))};
+    if (!SpatialAnchorTransferManager_type)
     {
         return nullptr;
     }
@@ -5931,27 +5938,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialBoundingVolume, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialBoundingVolume_Static.get())) == -1)
+    py::pytype_handle SpatialBoundingVolume_type{py::register_python_type(module.get(), &type_spec_SpatialBoundingVolume, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialBoundingVolume_Static.get()))};
+    if (!SpatialBoundingVolume_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialCoordinateSystem, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpatialCoordinateSystem_type{py::register_python_type(module.get(), &type_spec_SpatialCoordinateSystem, object_bases.get(), nullptr)};
+    if (!SpatialCoordinateSystem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialEntity, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpatialEntity_type{py::register_python_type(module.get(), &type_spec_SpatialEntity, object_bases.get(), nullptr)};
+    if (!SpatialEntity_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialEntityAddedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpatialEntityAddedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialEntityAddedEventArgs, object_bases.get(), nullptr)};
+    if (!SpatialEntityAddedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialEntityRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpatialEntityRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialEntityRemovedEventArgs, object_bases.get(), nullptr)};
+    if (!SpatialEntityRemovedEventArgs_type)
     {
         return nullptr;
     }
@@ -5962,22 +5974,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialEntityStore, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialEntityStore_Static.get())) == -1)
+    py::pytype_handle SpatialEntityStore_type{py::register_python_type(module.get(), &type_spec_SpatialEntityStore, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialEntityStore_Static.get()))};
+    if (!SpatialEntityStore_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialEntityUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpatialEntityUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialEntityUpdatedEventArgs, object_bases.get(), nullptr)};
+    if (!SpatialEntityUpdatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialEntityWatcher, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpatialEntityWatcher_type{py::register_python_type(module.get(), &type_spec_SpatialEntityWatcher, object_bases.get(), nullptr)};
+    if (!SpatialEntityWatcher_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialLocation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpatialLocation_type{py::register_python_type(module.get(), &type_spec_SpatialLocation, object_bases.get(), nullptr)};
+    if (!SpatialLocation_type)
     {
         return nullptr;
     }
@@ -5988,17 +6004,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialLocator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialLocator_Static.get())) == -1)
+    py::pytype_handle SpatialLocator_type{py::register_python_type(module.get(), &type_spec_SpatialLocator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialLocator_Static.get()))};
+    if (!SpatialLocator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialLocatorAttachedFrameOfReference, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpatialLocatorAttachedFrameOfReference_type{py::register_python_type(module.get(), &type_spec_SpatialLocatorAttachedFrameOfReference, object_bases.get(), nullptr)};
+    if (!SpatialLocatorAttachedFrameOfReference_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialLocatorPositionalTrackingDeactivatingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpatialLocatorPositionalTrackingDeactivatingEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialLocatorPositionalTrackingDeactivatingEventArgs, object_bases.get(), nullptr)};
+    if (!SpatialLocatorPositionalTrackingDeactivatingEventArgs_type)
     {
         return nullptr;
     }
@@ -6009,37 +6028,44 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialStageFrameOfReference, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialStageFrameOfReference_Static.get())) == -1)
+    py::pytype_handle SpatialStageFrameOfReference_type{py::register_python_type(module.get(), &type_spec_SpatialStageFrameOfReference, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialStageFrameOfReference_Static.get()))};
+    if (!SpatialStageFrameOfReference_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialStationaryFrameOfReference, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpatialStationaryFrameOfReference_type{py::register_python_type(module.get(), &type_spec_SpatialStationaryFrameOfReference, object_bases.get(), nullptr)};
+    if (!SpatialStationaryFrameOfReference_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialBoundingBox, nullptr, nullptr) == -1)
+    py::pytype_handle SpatialBoundingBox_type{py::register_python_type(module.get(), &type_spec_SpatialBoundingBox, nullptr, nullptr)};
+    if (!SpatialBoundingBox_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialBoundingFrustum, nullptr, nullptr) == -1)
+    py::pytype_handle SpatialBoundingFrustum_type{py::register_python_type(module.get(), &type_spec_SpatialBoundingFrustum, nullptr, nullptr)};
+    if (!SpatialBoundingFrustum_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialBoundingOrientedBox, nullptr, nullptr) == -1)
+    py::pytype_handle SpatialBoundingOrientedBox_type{py::register_python_type(module.get(), &type_spec_SpatialBoundingOrientedBox, nullptr, nullptr)};
+    if (!SpatialBoundingOrientedBox_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialBoundingSphere, nullptr, nullptr) == -1)
+    py::pytype_handle SpatialBoundingSphere_type{py::register_python_type(module.get(), &type_spec_SpatialBoundingSphere, nullptr, nullptr)};
+    if (!SpatialBoundingSphere_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialRay, nullptr, nullptr) == -1)
+    py::pytype_handle SpatialRay_type{py::register_python_type(module.get(), &type_spec_SpatialRay, nullptr, nullptr)};
+    if (!SpatialRay_type)
     {
         return nullptr;
     }

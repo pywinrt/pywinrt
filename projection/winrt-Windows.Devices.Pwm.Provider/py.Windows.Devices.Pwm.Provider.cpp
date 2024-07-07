@@ -567,12 +567,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pwm_provider(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPwmControllerProvider, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPwmControllerProvider_type{py::register_python_type(module.get(), &type_spec_IPwmControllerProvider, object_bases.get(), nullptr)};
+    if (!IPwmControllerProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPwmProvider, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPwmProvider_type{py::register_python_type(module.get(), &type_spec_IPwmProvider, object_bases.get(), nullptr)};
+    if (!IPwmProvider_type)
     {
         return nullptr;
     }

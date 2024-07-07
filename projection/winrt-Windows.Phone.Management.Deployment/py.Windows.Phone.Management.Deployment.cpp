@@ -1116,7 +1116,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_management_deployment(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Enterprise, object_bases.get(), nullptr) == -1)
+    py::pytype_handle Enterprise_type{py::register_python_type(module.get(), &type_spec_Enterprise, object_bases.get(), nullptr)};
+    if (!Enterprise_type)
     {
         return nullptr;
     }
@@ -1127,12 +1128,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_management_deployment(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EnterpriseEnrollmentManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EnterpriseEnrollmentManager_Static.get())) == -1)
+    py::pytype_handle EnterpriseEnrollmentManager_type{py::register_python_type(module.get(), &type_spec_EnterpriseEnrollmentManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EnterpriseEnrollmentManager_Static.get()))};
+    if (!EnterpriseEnrollmentManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EnterpriseEnrollmentResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EnterpriseEnrollmentResult_type{py::register_python_type(module.get(), &type_spec_EnterpriseEnrollmentResult, object_bases.get(), nullptr)};
+    if (!EnterpriseEnrollmentResult_type)
     {
         return nullptr;
     }
@@ -1143,12 +1146,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_management_deployment(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InstallationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InstallationManager_Static.get())) == -1)
+    py::pytype_handle InstallationManager_type{py::register_python_type(module.get(), &type_spec_InstallationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InstallationManager_Static.get()))};
+    if (!InstallationManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageInstallResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PackageInstallResult_type{py::register_python_type(module.get(), &type_spec_PackageInstallResult, object_bases.get(), nullptr)};
+    if (!PackageInstallResult_type)
     {
         return nullptr;
     }

@@ -1199,12 +1199,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_preview_notes(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NotePlacementChangedPreviewEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle NotePlacementChangedPreviewEventArgs_type{py::register_python_type(module.get(), &type_spec_NotePlacementChangedPreviewEventArgs, object_bases.get(), nullptr)};
+    if (!NotePlacementChangedPreviewEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NoteVisibilityChangedPreviewEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle NoteVisibilityChangedPreviewEventArgs_type{py::register_python_type(module.get(), &type_spec_NoteVisibilityChangedPreviewEventArgs, object_bases.get(), nullptr)};
+    if (!NoteVisibilityChangedPreviewEventArgs_type)
     {
         return nullptr;
     }
@@ -1215,12 +1217,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_preview_notes(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NotesWindowManagerPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NotesWindowManagerPreview_Static.get())) == -1)
+    py::pytype_handle NotesWindowManagerPreview_type{py::register_python_type(module.get(), &type_spec_NotesWindowManagerPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NotesWindowManagerPreview_Static.get()))};
+    if (!NotesWindowManagerPreview_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NotesWindowManagerPreviewShowNoteOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle NotesWindowManagerPreviewShowNoteOptions_type{py::register_python_type(module.get(), &type_spec_NotesWindowManagerPreviewShowNoteOptions, object_bases.get(), nullptr)};
+    if (!NotesWindowManagerPreviewShowNoteOptions_type)
     {
         return nullptr;
     }

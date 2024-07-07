@@ -377,7 +377,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation_provisioning(void
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactPartnerProvisioningManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactPartnerProvisioningManager_Static.get())) == -1)
+    py::pytype_handle ContactPartnerProvisioningManager_type{py::register_python_type(module.get(), &type_spec_ContactPartnerProvisioningManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactPartnerProvisioningManager_Static.get()))};
+    if (!ContactPartnerProvisioningManager_type)
     {
         return nullptr;
     }
@@ -388,7 +389,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation_provisioning(void
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MessagePartnerProvisioningManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MessagePartnerProvisioningManager_Static.get())) == -1)
+    py::pytype_handle MessagePartnerProvisioningManager_type{py::register_python_type(module.get(), &type_spec_MessagePartnerProvisioningManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MessagePartnerProvisioningManager_Static.get()))};
+    if (!MessagePartnerProvisioningManager_type)
     {
         return nullptr;
     }

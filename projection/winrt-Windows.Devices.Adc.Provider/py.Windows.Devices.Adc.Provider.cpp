@@ -546,12 +546,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_adc_provider(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAdcControllerProvider, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IAdcControllerProvider_type{py::register_python_type(module.get(), &type_spec_IAdcControllerProvider, object_bases.get(), nullptr)};
+    if (!IAdcControllerProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAdcProvider, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IAdcProvider_type{py::register_python_type(module.get(), &type_spec_IAdcProvider, object_bases.get(), nullptr)};
+    if (!IAdcProvider_type)
     {
         return nullptr;
     }

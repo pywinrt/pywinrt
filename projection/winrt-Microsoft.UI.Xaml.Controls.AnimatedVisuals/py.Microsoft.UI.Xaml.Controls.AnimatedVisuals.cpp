@@ -1713,42 +1713,50 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_animatedvisuals(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AnimatedAcceptVisualSource, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AnimatedAcceptVisualSource_type{py::register_python_type(module.get(), &type_spec_AnimatedAcceptVisualSource, object_bases.get(), nullptr)};
+    if (!AnimatedAcceptVisualSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AnimatedBackVisualSource, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AnimatedBackVisualSource_type{py::register_python_type(module.get(), &type_spec_AnimatedBackVisualSource, object_bases.get(), nullptr)};
+    if (!AnimatedBackVisualSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AnimatedChevronDownSmallVisualSource, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AnimatedChevronDownSmallVisualSource_type{py::register_python_type(module.get(), &type_spec_AnimatedChevronDownSmallVisualSource, object_bases.get(), nullptr)};
+    if (!AnimatedChevronDownSmallVisualSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AnimatedChevronRightDownSmallVisualSource, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AnimatedChevronRightDownSmallVisualSource_type{py::register_python_type(module.get(), &type_spec_AnimatedChevronRightDownSmallVisualSource, object_bases.get(), nullptr)};
+    if (!AnimatedChevronRightDownSmallVisualSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AnimatedChevronUpDownSmallVisualSource, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AnimatedChevronUpDownSmallVisualSource_type{py::register_python_type(module.get(), &type_spec_AnimatedChevronUpDownSmallVisualSource, object_bases.get(), nullptr)};
+    if (!AnimatedChevronUpDownSmallVisualSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AnimatedFindVisualSource, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AnimatedFindVisualSource_type{py::register_python_type(module.get(), &type_spec_AnimatedFindVisualSource, object_bases.get(), nullptr)};
+    if (!AnimatedFindVisualSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AnimatedGlobalNavigationButtonVisualSource, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AnimatedGlobalNavigationButtonVisualSource_type{py::register_python_type(module.get(), &type_spec_AnimatedGlobalNavigationButtonVisualSource, object_bases.get(), nullptr)};
+    if (!AnimatedGlobalNavigationButtonVisualSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AnimatedSettingsVisualSource, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AnimatedSettingsVisualSource_type{py::register_python_type(module.get(), &type_spec_AnimatedSettingsVisualSource, object_bases.get(), nullptr)};
+    if (!AnimatedSettingsVisualSource_type)
     {
         return nullptr;
     }

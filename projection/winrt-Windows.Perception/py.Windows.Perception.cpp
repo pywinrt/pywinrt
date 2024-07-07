@@ -330,7 +330,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionTimestamp, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionTimestamp_type{py::register_python_type(module.get(), &type_spec_PerceptionTimestamp, object_bases.get(), nullptr)};
+    if (!PerceptionTimestamp_type)
     {
         return nullptr;
     }
@@ -341,7 +342,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionTimestampHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerceptionTimestampHelper_Static.get())) == -1)
+    py::pytype_handle PerceptionTimestampHelper_type{py::register_python_type(module.get(), &type_spec_PerceptionTimestampHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerceptionTimestampHelper_Static.get()))};
+    if (!PerceptionTimestampHelper_type)
     {
         return nullptr;
     }

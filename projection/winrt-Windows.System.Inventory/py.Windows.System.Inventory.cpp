@@ -342,7 +342,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_inventory(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InstalledDesktopApp, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InstalledDesktopApp_Static.get())) == -1)
+    py::pytype_handle InstalledDesktopApp_type{py::register_python_type(module.get(), &type_spec_InstalledDesktopApp, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InstalledDesktopApp_Static.get()))};
+    if (!InstalledDesktopApp_type)
     {
         return nullptr;
     }

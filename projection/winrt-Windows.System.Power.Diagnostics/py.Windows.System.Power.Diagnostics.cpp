@@ -371,7 +371,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_power_diagnostics(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BackgroundEnergyDiagnostics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundEnergyDiagnostics_Static.get())) == -1)
+    py::pytype_handle BackgroundEnergyDiagnostics_type{py::register_python_type(module.get(), &type_spec_BackgroundEnergyDiagnostics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundEnergyDiagnostics_Static.get()))};
+    if (!BackgroundEnergyDiagnostics_type)
     {
         return nullptr;
     }
@@ -382,7 +383,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_power_diagnostics(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ForegroundEnergyDiagnostics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ForegroundEnergyDiagnostics_Static.get())) == -1)
+    py::pytype_handle ForegroundEnergyDiagnostics_type{py::register_python_type(module.get(), &type_spec_ForegroundEnergyDiagnostics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ForegroundEnergyDiagnostics_Static.get()))};
+    if (!ForegroundEnergyDiagnostics_type)
     {
         return nullptr;
     }

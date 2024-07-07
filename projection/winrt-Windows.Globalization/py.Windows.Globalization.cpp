@@ -11360,12 +11360,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ApplicationLanguages, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationLanguages_Static.get())) == -1)
+    py::pytype_handle ApplicationLanguages_type{py::register_python_type(module.get(), &type_spec_ApplicationLanguages, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationLanguages_Static.get()))};
+    if (!ApplicationLanguages_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Calendar, object_bases.get(), nullptr) == -1)
+    py::pytype_handle Calendar_type{py::register_python_type(module.get(), &type_spec_Calendar, object_bases.get(), nullptr)};
+    if (!Calendar_type)
     {
         return nullptr;
     }
@@ -11376,7 +11378,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CalendarIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CalendarIdentifiers_Static.get())) == -1)
+    py::pytype_handle CalendarIdentifiers_type{py::register_python_type(module.get(), &type_spec_CalendarIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CalendarIdentifiers_Static.get()))};
+    if (!CalendarIdentifiers_type)
     {
         return nullptr;
     }
@@ -11387,12 +11390,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ClockIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClockIdentifiers_Static.get())) == -1)
+    py::pytype_handle ClockIdentifiers_type{py::register_python_type(module.get(), &type_spec_ClockIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClockIdentifiers_Static.get()))};
+    if (!ClockIdentifiers_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CurrencyAmount, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CurrencyAmount_type{py::register_python_type(module.get(), &type_spec_CurrencyAmount, object_bases.get(), nullptr)};
+    if (!CurrencyAmount_type)
     {
         return nullptr;
     }
@@ -11403,7 +11408,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CurrencyIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrencyIdentifiers_Static.get())) == -1)
+    py::pytype_handle CurrencyIdentifiers_type{py::register_python_type(module.get(), &type_spec_CurrencyIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrencyIdentifiers_Static.get()))};
+    if (!CurrencyIdentifiers_type)
     {
         return nullptr;
     }
@@ -11414,12 +11420,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GeographicRegion, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeographicRegion_Static.get())) == -1)
+    py::pytype_handle GeographicRegion_type{py::register_python_type(module.get(), &type_spec_GeographicRegion, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeographicRegion_Static.get()))};
+    if (!GeographicRegion_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JapanesePhoneme, object_bases.get(), nullptr) == -1)
+    py::pytype_handle JapanesePhoneme_type{py::register_python_type(module.get(), &type_spec_JapanesePhoneme, object_bases.get(), nullptr)};
+    if (!JapanesePhoneme_type)
     {
         return nullptr;
     }
@@ -11430,7 +11438,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JapanesePhoneticAnalyzer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JapanesePhoneticAnalyzer_Static.get())) == -1)
+    py::pytype_handle JapanesePhoneticAnalyzer_type{py::register_python_type(module.get(), &type_spec_JapanesePhoneticAnalyzer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JapanesePhoneticAnalyzer_Static.get()))};
+    if (!JapanesePhoneticAnalyzer_type)
     {
         return nullptr;
     }
@@ -11441,7 +11450,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Language, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Language_Static.get())) == -1)
+    py::pytype_handle Language_type{py::register_python_type(module.get(), &type_spec_Language, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Language_Static.get()))};
+    if (!Language_type)
     {
         return nullptr;
     }
@@ -11452,7 +11462,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NumeralSystemIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NumeralSystemIdentifiers_Static.get())) == -1)
+    py::pytype_handle NumeralSystemIdentifiers_type{py::register_python_type(module.get(), &type_spec_NumeralSystemIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NumeralSystemIdentifiers_Static.get()))};
+    if (!NumeralSystemIdentifiers_type)
     {
         return nullptr;
     }

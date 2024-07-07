@@ -185,7 +185,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ApplicationDataManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationDataManager_Static.get())) == -1)
+    py::pytype_handle ApplicationDataManager_type{py::register_python_type(module.get(), &type_spec_ApplicationDataManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationDataManager_Static.get()))};
+    if (!ApplicationDataManager_type)
     {
         return nullptr;
     }

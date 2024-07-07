@@ -604,17 +604,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_licensemanagement(vo
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LicenseManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LicenseManager_Static.get())) == -1)
+    py::pytype_handle LicenseManager_type{py::register_python_type(module.get(), &type_spec_LicenseManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LicenseManager_Static.get()))};
+    if (!LicenseManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LicenseSatisfactionInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LicenseSatisfactionInfo_type{py::register_python_type(module.get(), &type_spec_LicenseSatisfactionInfo, object_bases.get(), nullptr)};
+    if (!LicenseSatisfactionInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LicenseSatisfactionResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LicenseSatisfactionResult_type{py::register_python_type(module.get(), &type_spec_LicenseSatisfactionResult, object_bases.get(), nullptr)};
+    if (!LicenseSatisfactionResult_type)
     {
         return nullptr;
     }

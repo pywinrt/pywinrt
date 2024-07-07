@@ -2931,7 +2931,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_systembackdrops(void) noex
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DesktopAcrylicController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DesktopAcrylicController_Static.get())) == -1)
+    py::pytype_handle DesktopAcrylicController_type{py::register_python_type(module.get(), &type_spec_DesktopAcrylicController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DesktopAcrylicController_Static.get()))};
+    if (!DesktopAcrylicController_type)
     {
         return nullptr;
     }
@@ -2942,22 +2943,26 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_systembackdrops(void) noex
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MicaController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MicaController_Static.get())) == -1)
+    py::pytype_handle MicaController_type{py::register_python_type(module.get(), &type_spec_MicaController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MicaController_Static.get()))};
+    if (!MicaController_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemBackdropConfiguration, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SystemBackdropConfiguration_type{py::register_python_type(module.get(), &type_spec_SystemBackdropConfiguration, object_bases.get(), nullptr)};
+    if (!SystemBackdropConfiguration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISystemBackdropController, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ISystemBackdropController_type{py::register_python_type(module.get(), &type_spec_ISystemBackdropController, object_bases.get(), nullptr)};
+    if (!ISystemBackdropController_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISystemBackdropControllerWithTargets, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ISystemBackdropControllerWithTargets_type{py::register_python_type(module.get(), &type_spec_ISystemBackdropControllerWithTargets, object_bases.get(), nullptr)};
+    if (!ISystemBackdropControllerWithTargets_type)
     {
         return nullptr;
     }

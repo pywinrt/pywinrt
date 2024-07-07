@@ -680,17 +680,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_offlinemaps(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OfflineMapPackage, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OfflineMapPackage_Static.get())) == -1)
+    py::pytype_handle OfflineMapPackage_type{py::register_python_type(module.get(), &type_spec_OfflineMapPackage, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OfflineMapPackage_Static.get()))};
+    if (!OfflineMapPackage_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OfflineMapPackageQueryResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle OfflineMapPackageQueryResult_type{py::register_python_type(module.get(), &type_spec_OfflineMapPackageQueryResult, object_bases.get(), nullptr)};
+    if (!OfflineMapPackageQueryResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OfflineMapPackageStartDownloadResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle OfflineMapPackageStartDownloadResult_type{py::register_python_type(module.get(), &type_spec_OfflineMapPackageStartDownloadResult, object_bases.get(), nullptr)};
+    if (!OfflineMapPackageStartDownloadResult_type)
     {
         return nullptr;
     }

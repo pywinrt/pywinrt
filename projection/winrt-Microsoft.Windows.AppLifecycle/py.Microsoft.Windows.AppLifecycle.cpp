@@ -978,12 +978,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applifecycle(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ActivationRegistrationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ActivationRegistrationManager_Static.get())) == -1)
+    py::pytype_handle ActivationRegistrationManager_type{py::register_python_type(module.get(), &type_spec_ActivationRegistrationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ActivationRegistrationManager_Static.get()))};
+    if (!ActivationRegistrationManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppActivationArguments, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppActivationArguments_type{py::register_python_type(module.get(), &type_spec_AppActivationArguments, object_bases.get(), nullptr)};
+    if (!AppActivationArguments_type)
     {
         return nullptr;
     }
@@ -994,7 +996,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applifecycle(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppInstance, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppInstance_Static.get())) == -1)
+    py::pytype_handle AppInstance_type{py::register_python_type(module.get(), &type_spec_AppInstance, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppInstance_Static.get()))};
+    if (!AppInstance_type)
     {
         return nullptr;
     }

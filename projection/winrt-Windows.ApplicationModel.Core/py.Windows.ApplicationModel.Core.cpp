@@ -2862,7 +2862,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppListEntry, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppListEntry_type{py::register_python_type(module.get(), &type_spec_AppListEntry, object_bases.get(), nullptr)};
+    if (!AppListEntry_type)
     {
         return nullptr;
     }
@@ -2873,47 +2874,56 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreApplication, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreApplication_Static.get())) == -1)
+    py::pytype_handle CoreApplication_type{py::register_python_type(module.get(), &type_spec_CoreApplication, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreApplication_Static.get()))};
+    if (!CoreApplication_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreApplicationView, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CoreApplicationView_type{py::register_python_type(module.get(), &type_spec_CoreApplicationView, object_bases.get(), nullptr)};
+    if (!CoreApplicationView_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreApplicationViewTitleBar, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CoreApplicationViewTitleBar_type{py::register_python_type(module.get(), &type_spec_CoreApplicationViewTitleBar, object_bases.get(), nullptr)};
+    if (!CoreApplicationViewTitleBar_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HostedViewClosingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HostedViewClosingEventArgs_type{py::register_python_type(module.get(), &type_spec_HostedViewClosingEventArgs, object_bases.get(), nullptr)};
+    if (!HostedViewClosingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UnhandledError, object_bases.get(), nullptr) == -1)
+    py::pytype_handle UnhandledError_type{py::register_python_type(module.get(), &type_spec_UnhandledError, object_bases.get(), nullptr)};
+    if (!UnhandledError_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UnhandledErrorDetectedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle UnhandledErrorDetectedEventArgs_type{py::register_python_type(module.get(), &type_spec_UnhandledErrorDetectedEventArgs, object_bases.get(), nullptr)};
+    if (!UnhandledErrorDetectedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ICoreApplicationUnhandledError, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ICoreApplicationUnhandledError_type{py::register_python_type(module.get(), &type_spec_ICoreApplicationUnhandledError, object_bases.get(), nullptr)};
+    if (!ICoreApplicationUnhandledError_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IFrameworkView, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IFrameworkView_type{py::register_python_type(module.get(), &type_spec_IFrameworkView, object_bases.get(), nullptr)};
+    if (!IFrameworkView_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IFrameworkViewSource, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IFrameworkViewSource_type{py::register_python_type(module.get(), &type_spec_IFrameworkViewSource, object_bases.get(), nullptr)};
+    if (!IFrameworkViewSource_type)
     {
         return nullptr;
     }

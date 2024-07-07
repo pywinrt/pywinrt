@@ -483,7 +483,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialGraphInteropFrameOfReferencePreview, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpatialGraphInteropFrameOfReferencePreview_type{py::register_python_type(module.get(), &type_spec_SpatialGraphInteropFrameOfReferencePreview, object_bases.get(), nullptr)};
+    if (!SpatialGraphInteropFrameOfReferencePreview_type)
     {
         return nullptr;
     }
@@ -494,7 +495,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialGraphInteropPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialGraphInteropPreview_Static.get())) == -1)
+    py::pytype_handle SpatialGraphInteropPreview_type{py::register_python_type(module.get(), &type_spec_SpatialGraphInteropPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialGraphInteropPreview_Static.get()))};
+    if (!SpatialGraphInteropPreview_type)
     {
         return nullptr;
     }

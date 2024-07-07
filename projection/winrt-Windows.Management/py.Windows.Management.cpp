@@ -1048,12 +1048,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_management(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MdmAlert, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MdmAlert_type{py::register_python_type(module.get(), &type_spec_MdmAlert, object_bases.get(), nullptr)};
+    if (!MdmAlert_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MdmSession, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MdmSession_type{py::register_python_type(module.get(), &type_spec_MdmSession, object_bases.get(), nullptr)};
+    if (!MdmSession_type)
     {
         return nullptr;
     }
@@ -1064,7 +1066,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_management(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MdmSessionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MdmSessionManager_Static.get())) == -1)
+    py::pytype_handle MdmSessionManager_type{py::register_python_type(module.get(), &type_spec_MdmSessionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MdmSessionManager_Static.get()))};
+    if (!MdmSessionManager_type)
     {
         return nullptr;
     }

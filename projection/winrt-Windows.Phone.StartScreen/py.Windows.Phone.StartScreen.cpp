@@ -771,12 +771,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_startscreen(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DualSimTile, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DualSimTile_Static.get())) == -1)
+    py::pytype_handle DualSimTile_type{py::register_python_type(module.get(), &type_spec_DualSimTile, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DualSimTile_Static.get()))};
+    if (!DualSimTile_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IToastNotificationManagerStatics3, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IToastNotificationManagerStatics3_type{py::register_python_type(module.get(), &type_spec_IToastNotificationManagerStatics3, object_bases.get(), nullptr)};
+    if (!IToastNotificationManagerStatics3_type)
     {
         return nullptr;
     }

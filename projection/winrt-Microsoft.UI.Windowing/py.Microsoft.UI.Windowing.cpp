@@ -5365,22 +5365,26 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_windowing(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppWindow, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppWindow_Static.get())) == -1)
+    py::pytype_handle AppWindow_type{py::register_python_type(module.get(), &type_spec_AppWindow, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppWindow_Static.get()))};
+    if (!AppWindow_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppWindowChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppWindowChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppWindowChangedEventArgs, object_bases.get(), nullptr)};
+    if (!AppWindowChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppWindowClosingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppWindowClosingEventArgs_type{py::register_python_type(module.get(), &type_spec_AppWindowClosingEventArgs, object_bases.get(), nullptr)};
+    if (!AppWindowClosingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppWindowPresenter, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppWindowPresenter_type{py::register_python_type(module.get(), &type_spec_AppWindowPresenter, object_bases.get(), nullptr)};
+    if (!AppWindowPresenter_type)
     {
         return nullptr;
     }
@@ -5391,7 +5395,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_windowing(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppWindowTitleBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppWindowTitleBar_Static.get())) == -1)
+    py::pytype_handle AppWindowTitleBar_type{py::register_python_type(module.get(), &type_spec_AppWindowTitleBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppWindowTitleBar_Static.get()))};
+    if (!AppWindowTitleBar_type)
     {
         return nullptr;
     }
@@ -5402,7 +5407,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_windowing(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompactOverlayPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompactOverlayPresenter_Static.get())) == -1)
+    py::pytype_handle CompactOverlayPresenter_type{py::register_python_type(module.get(), &type_spec_CompactOverlayPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompactOverlayPresenter_Static.get()))};
+    if (!CompactOverlayPresenter_type)
     {
         return nullptr;
     }
@@ -5413,12 +5419,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_windowing(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayArea, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayArea_Static.get())) == -1)
+    py::pytype_handle DisplayArea_type{py::register_python_type(module.get(), &type_spec_DisplayArea, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayArea_Static.get()))};
+    if (!DisplayArea_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayAreaWatcher, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DisplayAreaWatcher_type{py::register_python_type(module.get(), &type_spec_DisplayAreaWatcher, object_bases.get(), nullptr)};
+    if (!DisplayAreaWatcher_type)
     {
         return nullptr;
     }
@@ -5429,7 +5437,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_windowing(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FullScreenPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FullScreenPresenter_Static.get())) == -1)
+    py::pytype_handle FullScreenPresenter_type{py::register_python_type(module.get(), &type_spec_FullScreenPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FullScreenPresenter_Static.get()))};
+    if (!FullScreenPresenter_type)
     {
         return nullptr;
     }
@@ -5440,7 +5449,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_windowing(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OverlappedPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OverlappedPresenter_Static.get())) == -1)
+    py::pytype_handle OverlappedPresenter_type{py::register_python_type(module.get(), &type_spec_OverlappedPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OverlappedPresenter_Static.get()))};
+    if (!OverlappedPresenter_type)
     {
         return nullptr;
     }

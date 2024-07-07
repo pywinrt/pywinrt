@@ -4186,27 +4186,32 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TestRunner, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TestRunner_Static.get())) == -1)
+    py::pytype_handle TestRunner_type{py::register_python_type(module.get(), &type_spec_TestRunner, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TestRunner_Static.get()))};
+    if (!TestRunner_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ITests, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ITests_type{py::register_python_type(module.get(), &type_spec_ITests, object_bases.get(), nullptr)};
+    if (!ITests_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Blittable, nullptr, nullptr) == -1)
+    py::pytype_handle Blittable_type{py::register_python_type(module.get(), &type_spec_Blittable, nullptr, nullptr)};
+    if (!Blittable_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Nested, nullptr, nullptr) == -1)
+    py::pytype_handle Nested_type{py::register_python_type(module.get(), &type_spec_Nested, nullptr, nullptr)};
+    if (!Nested_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NonBlittable, nullptr, nullptr) == -1)
+    py::pytype_handle NonBlittable_type{py::register_python_type(module.get(), &type_spec_NonBlittable, nullptr, nullptr)};
+    if (!NonBlittable_type)
     {
         return nullptr;
     }

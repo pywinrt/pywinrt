@@ -9721,7 +9721,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_deployment(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AddPackageOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AddPackageOptions_type{py::register_python_type(module.get(), &type_spec_AddPackageOptions, object_bases.get(), nullptr)};
+    if (!AddPackageOptions_type)
     {
         return nullptr;
     }
@@ -9732,7 +9733,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_deployment(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppInstallerManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppInstallerManager_Static.get())) == -1)
+    py::pytype_handle AppInstallerManager_type{py::register_python_type(module.get(), &type_spec_AppInstallerManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppInstallerManager_Static.get()))};
+    if (!AppInstallerManager_type)
     {
         return nullptr;
     }
@@ -9743,72 +9745,86 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_deployment(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AutoUpdateSettingsOptions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutoUpdateSettingsOptions_Static.get())) == -1)
+    py::pytype_handle AutoUpdateSettingsOptions_type{py::register_python_type(module.get(), &type_spec_AutoUpdateSettingsOptions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutoUpdateSettingsOptions_Static.get()))};
+    if (!AutoUpdateSettingsOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CreateSharedPackageContainerOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CreateSharedPackageContainerOptions_type{py::register_python_type(module.get(), &type_spec_CreateSharedPackageContainerOptions, object_bases.get(), nullptr)};
+    if (!CreateSharedPackageContainerOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CreateSharedPackageContainerResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CreateSharedPackageContainerResult_type{py::register_python_type(module.get(), &type_spec_CreateSharedPackageContainerResult, object_bases.get(), nullptr)};
+    if (!CreateSharedPackageContainerResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DeleteSharedPackageContainerOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DeleteSharedPackageContainerOptions_type{py::register_python_type(module.get(), &type_spec_DeleteSharedPackageContainerOptions, object_bases.get(), nullptr)};
+    if (!DeleteSharedPackageContainerOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DeleteSharedPackageContainerResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DeleteSharedPackageContainerResult_type{py::register_python_type(module.get(), &type_spec_DeleteSharedPackageContainerResult, object_bases.get(), nullptr)};
+    if (!DeleteSharedPackageContainerResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DeploymentResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DeploymentResult_type{py::register_python_type(module.get(), &type_spec_DeploymentResult, object_bases.get(), nullptr)};
+    if (!DeploymentResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FindSharedPackageContainerOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle FindSharedPackageContainerOptions_type{py::register_python_type(module.get(), &type_spec_FindSharedPackageContainerOptions, object_bases.get(), nullptr)};
+    if (!FindSharedPackageContainerOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageAllUserProvisioningOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PackageAllUserProvisioningOptions_type{py::register_python_type(module.get(), &type_spec_PackageAllUserProvisioningOptions, object_bases.get(), nullptr)};
+    if (!PackageAllUserProvisioningOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageManager, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PackageManager_type{py::register_python_type(module.get(), &type_spec_PackageManager, object_bases.get(), nullptr)};
+    if (!PackageManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageManagerDebugSettings, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PackageManagerDebugSettings_type{py::register_python_type(module.get(), &type_spec_PackageManagerDebugSettings, object_bases.get(), nullptr)};
+    if (!PackageManagerDebugSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageUserInformation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PackageUserInformation_type{py::register_python_type(module.get(), &type_spec_PackageUserInformation, object_bases.get(), nullptr)};
+    if (!PackageUserInformation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageVolume, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PackageVolume_type{py::register_python_type(module.get(), &type_spec_PackageVolume, object_bases.get(), nullptr)};
+    if (!PackageVolume_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RegisterPackageOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RegisterPackageOptions_type{py::register_python_type(module.get(), &type_spec_RegisterPackageOptions, object_bases.get(), nullptr)};
+    if (!RegisterPackageOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SharedPackageContainer, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SharedPackageContainer_type{py::register_python_type(module.get(), &type_spec_SharedPackageContainer, object_bases.get(), nullptr)};
+    if (!SharedPackageContainer_type)
     {
         return nullptr;
     }
@@ -9819,32 +9835,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_deployment(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SharedPackageContainerManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SharedPackageContainerManager_Static.get())) == -1)
+    py::pytype_handle SharedPackageContainerManager_type{py::register_python_type(module.get(), &type_spec_SharedPackageContainerManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SharedPackageContainerManager_Static.get()))};
+    if (!SharedPackageContainerManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SharedPackageContainerMember, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SharedPackageContainerMember_type{py::register_python_type(module.get(), &type_spec_SharedPackageContainerMember, object_bases.get(), nullptr)};
+    if (!SharedPackageContainerMember_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StagePackageOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle StagePackageOptions_type{py::register_python_type(module.get(), &type_spec_StagePackageOptions, object_bases.get(), nullptr)};
+    if (!StagePackageOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UpdateSharedPackageContainerOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle UpdateSharedPackageContainerOptions_type{py::register_python_type(module.get(), &type_spec_UpdateSharedPackageContainerOptions, object_bases.get(), nullptr)};
+    if (!UpdateSharedPackageContainerOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UpdateSharedPackageContainerResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle UpdateSharedPackageContainerResult_type{py::register_python_type(module.get(), &type_spec_UpdateSharedPackageContainerResult, object_bases.get(), nullptr)};
+    if (!UpdateSharedPackageContainerResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DeploymentProgress, nullptr, nullptr) == -1)
+    py::pytype_handle DeploymentProgress_type{py::register_python_type(module.get(), &type_spec_DeploymentProgress, nullptr, nullptr)};
+    if (!DeploymentProgress_type)
     {
         return nullptr;
     }

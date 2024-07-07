@@ -4997,47 +4997,56 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_scanners(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ImageScanner, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ImageScanner_Static.get())) == -1)
+    py::pytype_handle ImageScanner_type{py::register_python_type(module.get(), &type_spec_ImageScanner, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ImageScanner_Static.get()))};
+    if (!ImageScanner_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ImageScannerAutoConfiguration, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ImageScannerAutoConfiguration_type{py::register_python_type(module.get(), &type_spec_ImageScannerAutoConfiguration, object_bases.get(), nullptr)};
+    if (!ImageScannerAutoConfiguration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ImageScannerFeederConfiguration, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ImageScannerFeederConfiguration_type{py::register_python_type(module.get(), &type_spec_ImageScannerFeederConfiguration, object_bases.get(), nullptr)};
+    if (!ImageScannerFeederConfiguration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ImageScannerFlatbedConfiguration, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ImageScannerFlatbedConfiguration_type{py::register_python_type(module.get(), &type_spec_ImageScannerFlatbedConfiguration, object_bases.get(), nullptr)};
+    if (!ImageScannerFlatbedConfiguration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ImageScannerPreviewResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ImageScannerPreviewResult_type{py::register_python_type(module.get(), &type_spec_ImageScannerPreviewResult, object_bases.get(), nullptr)};
+    if (!ImageScannerPreviewResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ImageScannerScanResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ImageScannerScanResult_type{py::register_python_type(module.get(), &type_spec_ImageScannerScanResult, object_bases.get(), nullptr)};
+    if (!ImageScannerScanResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IImageScannerFormatConfiguration, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IImageScannerFormatConfiguration_type{py::register_python_type(module.get(), &type_spec_IImageScannerFormatConfiguration, object_bases.get(), nullptr)};
+    if (!IImageScannerFormatConfiguration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IImageScannerSourceConfiguration, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IImageScannerSourceConfiguration_type{py::register_python_type(module.get(), &type_spec_IImageScannerSourceConfiguration, object_bases.get(), nullptr)};
+    if (!IImageScannerSourceConfiguration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ImageScannerResolution, nullptr, nullptr) == -1)
+    py::pytype_handle ImageScannerResolution_type{py::register_python_type(module.get(), &type_spec_ImageScannerResolution, nullptr, nullptr)};
+    if (!ImageScannerResolution_type)
     {
         return nullptr;
     }

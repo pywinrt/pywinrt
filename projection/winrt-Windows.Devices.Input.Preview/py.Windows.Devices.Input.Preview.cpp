@@ -2042,37 +2042,44 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_input_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GazeDevicePreview, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GazeDevicePreview_type{py::register_python_type(module.get(), &type_spec_GazeDevicePreview, object_bases.get(), nullptr)};
+    if (!GazeDevicePreview_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GazeDeviceWatcherAddedPreviewEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GazeDeviceWatcherAddedPreviewEventArgs_type{py::register_python_type(module.get(), &type_spec_GazeDeviceWatcherAddedPreviewEventArgs, object_bases.get(), nullptr)};
+    if (!GazeDeviceWatcherAddedPreviewEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GazeDeviceWatcherPreview, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GazeDeviceWatcherPreview_type{py::register_python_type(module.get(), &type_spec_GazeDeviceWatcherPreview, object_bases.get(), nullptr)};
+    if (!GazeDeviceWatcherPreview_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GazeDeviceWatcherRemovedPreviewEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GazeDeviceWatcherRemovedPreviewEventArgs_type{py::register_python_type(module.get(), &type_spec_GazeDeviceWatcherRemovedPreviewEventArgs, object_bases.get(), nullptr)};
+    if (!GazeDeviceWatcherRemovedPreviewEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GazeDeviceWatcherUpdatedPreviewEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GazeDeviceWatcherUpdatedPreviewEventArgs_type{py::register_python_type(module.get(), &type_spec_GazeDeviceWatcherUpdatedPreviewEventArgs, object_bases.get(), nullptr)};
+    if (!GazeDeviceWatcherUpdatedPreviewEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GazeEnteredPreviewEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GazeEnteredPreviewEventArgs_type{py::register_python_type(module.get(), &type_spec_GazeEnteredPreviewEventArgs, object_bases.get(), nullptr)};
+    if (!GazeEnteredPreviewEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GazeExitedPreviewEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GazeExitedPreviewEventArgs_type{py::register_python_type(module.get(), &type_spec_GazeExitedPreviewEventArgs, object_bases.get(), nullptr)};
+    if (!GazeExitedPreviewEventArgs_type)
     {
         return nullptr;
     }
@@ -2083,17 +2090,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_input_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GazeInputSourcePreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GazeInputSourcePreview_Static.get())) == -1)
+    py::pytype_handle GazeInputSourcePreview_type{py::register_python_type(module.get(), &type_spec_GazeInputSourcePreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GazeInputSourcePreview_Static.get()))};
+    if (!GazeInputSourcePreview_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GazeMovedPreviewEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GazeMovedPreviewEventArgs_type{py::register_python_type(module.get(), &type_spec_GazeMovedPreviewEventArgs, object_bases.get(), nullptr)};
+    if (!GazeMovedPreviewEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GazePointPreview, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GazePointPreview_type{py::register_python_type(module.get(), &type_spec_GazePointPreview, object_bases.get(), nullptr)};
+    if (!GazePointPreview_type)
     {
         return nullptr;
     }

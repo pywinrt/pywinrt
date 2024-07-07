@@ -2002,47 +2002,56 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_xboxlive_storage(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameSaveBlobGetResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameSaveBlobGetResult_type{py::register_python_type(module.get(), &type_spec_GameSaveBlobGetResult, object_bases.get(), nullptr)};
+    if (!GameSaveBlobGetResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameSaveBlobInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameSaveBlobInfo_type{py::register_python_type(module.get(), &type_spec_GameSaveBlobInfo, object_bases.get(), nullptr)};
+    if (!GameSaveBlobInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameSaveBlobInfoGetResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameSaveBlobInfoGetResult_type{py::register_python_type(module.get(), &type_spec_GameSaveBlobInfoGetResult, object_bases.get(), nullptr)};
+    if (!GameSaveBlobInfoGetResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameSaveBlobInfoQuery, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameSaveBlobInfoQuery_type{py::register_python_type(module.get(), &type_spec_GameSaveBlobInfoQuery, object_bases.get(), nullptr)};
+    if (!GameSaveBlobInfoQuery_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameSaveContainer, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameSaveContainer_type{py::register_python_type(module.get(), &type_spec_GameSaveContainer, object_bases.get(), nullptr)};
+    if (!GameSaveContainer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameSaveContainerInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameSaveContainerInfo_type{py::register_python_type(module.get(), &type_spec_GameSaveContainerInfo, object_bases.get(), nullptr)};
+    if (!GameSaveContainerInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameSaveContainerInfoGetResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameSaveContainerInfoGetResult_type{py::register_python_type(module.get(), &type_spec_GameSaveContainerInfoGetResult, object_bases.get(), nullptr)};
+    if (!GameSaveContainerInfoGetResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameSaveContainerInfoQuery, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameSaveContainerInfoQuery_type{py::register_python_type(module.get(), &type_spec_GameSaveContainerInfoQuery, object_bases.get(), nullptr)};
+    if (!GameSaveContainerInfoQuery_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameSaveOperationResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameSaveOperationResult_type{py::register_python_type(module.get(), &type_spec_GameSaveOperationResult, object_bases.get(), nullptr)};
+    if (!GameSaveOperationResult_type)
     {
         return nullptr;
     }
@@ -2053,12 +2062,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_xboxlive_storage(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameSaveProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameSaveProvider_Static.get())) == -1)
+    py::pytype_handle GameSaveProvider_type{py::register_python_type(module.get(), &type_spec_GameSaveProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameSaveProvider_Static.get()))};
+    if (!GameSaveProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameSaveProviderGetResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameSaveProviderGetResult_type{py::register_python_type(module.get(), &type_spec_GameSaveProviderGetResult, object_bases.get(), nullptr)};
+    if (!GameSaveProviderGetResult_type)
     {
         return nullptr;
     }

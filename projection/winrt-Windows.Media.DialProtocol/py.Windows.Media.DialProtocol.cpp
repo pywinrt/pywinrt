@@ -1747,12 +1747,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_dialprotocol(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DialApp, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DialApp_type{py::register_python_type(module.get(), &type_spec_DialApp, object_bases.get(), nullptr)};
+    if (!DialApp_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DialAppStateDetails, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DialAppStateDetails_type{py::register_python_type(module.get(), &type_spec_DialAppStateDetails, object_bases.get(), nullptr)};
+    if (!DialAppStateDetails_type)
     {
         return nullptr;
     }
@@ -1763,27 +1765,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_dialprotocol(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DialDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DialDevice_Static.get())) == -1)
+    py::pytype_handle DialDevice_type{py::register_python_type(module.get(), &type_spec_DialDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DialDevice_Static.get()))};
+    if (!DialDevice_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DialDevicePicker, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DialDevicePicker_type{py::register_python_type(module.get(), &type_spec_DialDevicePicker, object_bases.get(), nullptr)};
+    if (!DialDevicePicker_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DialDevicePickerFilter, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DialDevicePickerFilter_type{py::register_python_type(module.get(), &type_spec_DialDevicePickerFilter, object_bases.get(), nullptr)};
+    if (!DialDevicePickerFilter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DialDeviceSelectedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DialDeviceSelectedEventArgs_type{py::register_python_type(module.get(), &type_spec_DialDeviceSelectedEventArgs, object_bases.get(), nullptr)};
+    if (!DialDeviceSelectedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DialDisconnectButtonClickedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DialDisconnectButtonClickedEventArgs_type{py::register_python_type(module.get(), &type_spec_DialDisconnectButtonClickedEventArgs, object_bases.get(), nullptr)};
+    if (!DialDisconnectButtonClickedEventArgs_type)
     {
         return nullptr;
     }
@@ -1794,7 +1801,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_dialprotocol(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DialReceiverApp, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DialReceiverApp_Static.get())) == -1)
+    py::pytype_handle DialReceiverApp_type{py::register_python_type(module.get(), &type_spec_DialReceiverApp, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DialReceiverApp_Static.get()))};
+    if (!DialReceiverApp_type)
     {
         return nullptr;
     }

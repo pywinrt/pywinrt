@@ -1936,17 +1936,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_preview_gamesenumeration(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameList, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameList_Static.get())) == -1)
+    py::pytype_handle GameList_type{py::register_python_type(module.get(), &type_spec_GameList, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameList_Static.get()))};
+    if (!GameList_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameListEntry, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameListEntry_type{py::register_python_type(module.get(), &type_spec_GameListEntry, object_bases.get(), nullptr)};
+    if (!GameListEntry_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameModeConfiguration, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameModeConfiguration_type{py::register_python_type(module.get(), &type_spec_GameModeConfiguration, object_bases.get(), nullptr)};
+    if (!GameModeConfiguration_type)
     {
         return nullptr;
     }
@@ -1957,12 +1960,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_preview_gamesenumeration(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameModeUserConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameModeUserConfiguration_Static.get())) == -1)
+    py::pytype_handle GameModeUserConfiguration_type{py::register_python_type(module.get(), &type_spec_GameModeUserConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameModeUserConfiguration_Static.get()))};
+    if (!GameModeUserConfiguration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IGameListEntry, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IGameListEntry_type{py::register_python_type(module.get(), &type_spec_IGameListEntry, object_bases.get(), nullptr)};
+    if (!IGameListEntry_type)
     {
         return nullptr;
     }

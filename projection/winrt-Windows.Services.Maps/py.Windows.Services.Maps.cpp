@@ -4369,22 +4369,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EnhancedWaypoint, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EnhancedWaypoint_type{py::register_python_type(module.get(), &type_spec_EnhancedWaypoint, object_bases.get(), nullptr)};
+    if (!EnhancedWaypoint_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ManeuverWarning, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ManeuverWarning_type{py::register_python_type(module.get(), &type_spec_ManeuverWarning, object_bases.get(), nullptr)};
+    if (!ManeuverWarning_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MapAddress, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MapAddress_type{py::register_python_type(module.get(), &type_spec_MapAddress, object_bases.get(), nullptr)};
+    if (!MapAddress_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MapLocation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MapLocation_type{py::register_python_type(module.get(), &type_spec_MapLocation, object_bases.get(), nullptr)};
+    if (!MapLocation_type)
     {
         return nullptr;
     }
@@ -4395,12 +4399,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MapLocationFinder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapLocationFinder_Static.get())) == -1)
+    py::pytype_handle MapLocationFinder_type{py::register_python_type(module.get(), &type_spec_MapLocationFinder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapLocationFinder_Static.get()))};
+    if (!MapLocationFinder_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MapLocationFinderResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MapLocationFinderResult_type{py::register_python_type(module.get(), &type_spec_MapLocationFinderResult, object_bases.get(), nullptr)};
+    if (!MapLocationFinderResult_type)
     {
         return nullptr;
     }
@@ -4411,17 +4417,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MapManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapManager_Static.get())) == -1)
+    py::pytype_handle MapManager_type{py::register_python_type(module.get(), &type_spec_MapManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapManager_Static.get()))};
+    if (!MapManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MapRoute, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MapRoute_type{py::register_python_type(module.get(), &type_spec_MapRoute, object_bases.get(), nullptr)};
+    if (!MapRoute_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MapRouteDrivingOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MapRouteDrivingOptions_type{py::register_python_type(module.get(), &type_spec_MapRouteDrivingOptions, object_bases.get(), nullptr)};
+    if (!MapRouteDrivingOptions_type)
     {
         return nullptr;
     }
@@ -4432,22 +4441,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MapRouteFinder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapRouteFinder_Static.get())) == -1)
+    py::pytype_handle MapRouteFinder_type{py::register_python_type(module.get(), &type_spec_MapRouteFinder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapRouteFinder_Static.get()))};
+    if (!MapRouteFinder_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MapRouteFinderResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MapRouteFinderResult_type{py::register_python_type(module.get(), &type_spec_MapRouteFinderResult, object_bases.get(), nullptr)};
+    if (!MapRouteFinderResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MapRouteLeg, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MapRouteLeg_type{py::register_python_type(module.get(), &type_spec_MapRouteLeg, object_bases.get(), nullptr)};
+    if (!MapRouteLeg_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MapRouteManeuver, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MapRouteManeuver_type{py::register_python_type(module.get(), &type_spec_MapRouteManeuver, object_bases.get(), nullptr)};
+    if (!MapRouteManeuver_type)
     {
         return nullptr;
     }
@@ -4458,7 +4471,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MapService, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapService_Static.get())) == -1)
+    py::pytype_handle MapService_type{py::register_python_type(module.get(), &type_spec_MapService, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapService_Static.get()))};
+    if (!MapService_type)
     {
         return nullptr;
     }
@@ -4469,12 +4483,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlaceInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlaceInfo_Static.get())) == -1)
+    py::pytype_handle PlaceInfo_type{py::register_python_type(module.get(), &type_spec_PlaceInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlaceInfo_Static.get()))};
+    if (!PlaceInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlaceInfoCreateOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlaceInfoCreateOptions_type{py::register_python_type(module.get(), &type_spec_PlaceInfoCreateOptions, object_bases.get(), nullptr)};
+    if (!PlaceInfoCreateOptions_type)
     {
         return nullptr;
     }

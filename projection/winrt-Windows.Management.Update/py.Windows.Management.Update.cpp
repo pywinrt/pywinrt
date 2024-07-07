@@ -4772,32 +4772,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_update(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PreviewBuildsManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PreviewBuildsManager_Static.get())) == -1)
+    py::pytype_handle PreviewBuildsManager_type{py::register_python_type(module.get(), &type_spec_PreviewBuildsManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PreviewBuildsManager_Static.get()))};
+    if (!PreviewBuildsManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PreviewBuildsState, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PreviewBuildsState_type{py::register_python_type(module.get(), &type_spec_PreviewBuildsState, object_bases.get(), nullptr)};
+    if (!PreviewBuildsState_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowsUpdate, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowsUpdate_type{py::register_python_type(module.get(), &type_spec_WindowsUpdate, object_bases.get(), nullptr)};
+    if (!WindowsUpdate_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateActionCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowsUpdateActionCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowsUpdateActionCompletedEventArgs, object_bases.get(), nullptr)};
+    if (!WindowsUpdateActionCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateActionProgress, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowsUpdateActionProgress_type{py::register_python_type(module.get(), &type_spec_WindowsUpdateActionProgress, object_bases.get(), nullptr)};
+    if (!WindowsUpdateActionProgress_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateActionResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowsUpdateActionResult_type{py::register_python_type(module.get(), &type_spec_WindowsUpdateActionResult, object_bases.get(), nullptr)};
+    if (!WindowsUpdateActionResult_type)
     {
         return nullptr;
     }
@@ -4808,52 +4814,62 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_update(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateAdministrator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowsUpdateAdministrator_Static.get())) == -1)
+    py::pytype_handle WindowsUpdateAdministrator_type{py::register_python_type(module.get(), &type_spec_WindowsUpdateAdministrator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowsUpdateAdministrator_Static.get()))};
+    if (!WindowsUpdateAdministrator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateApprovalData, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowsUpdateApprovalData_type{py::register_python_type(module.get(), &type_spec_WindowsUpdateApprovalData, object_bases.get(), nullptr)};
+    if (!WindowsUpdateApprovalData_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateAttentionRequiredInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowsUpdateAttentionRequiredInfo_type{py::register_python_type(module.get(), &type_spec_WindowsUpdateAttentionRequiredInfo, object_bases.get(), nullptr)};
+    if (!WindowsUpdateAttentionRequiredInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateAttentionRequiredReasonChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowsUpdateAttentionRequiredReasonChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowsUpdateAttentionRequiredReasonChangedEventArgs, object_bases.get(), nullptr)};
+    if (!WindowsUpdateAttentionRequiredReasonChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateGetAdministratorResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowsUpdateGetAdministratorResult_type{py::register_python_type(module.get(), &type_spec_WindowsUpdateGetAdministratorResult, object_bases.get(), nullptr)};
+    if (!WindowsUpdateGetAdministratorResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateItem, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowsUpdateItem_type{py::register_python_type(module.get(), &type_spec_WindowsUpdateItem, object_bases.get(), nullptr)};
+    if (!WindowsUpdateItem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateManager, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowsUpdateManager_type{py::register_python_type(module.get(), &type_spec_WindowsUpdateManager, object_bases.get(), nullptr)};
+    if (!WindowsUpdateManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateProgressChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowsUpdateProgressChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowsUpdateProgressChangedEventArgs, object_bases.get(), nullptr)};
+    if (!WindowsUpdateProgressChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateRestartRequestOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowsUpdateRestartRequestOptions_type{py::register_python_type(module.get(), &type_spec_WindowsUpdateRestartRequestOptions, object_bases.get(), nullptr)};
+    if (!WindowsUpdateRestartRequestOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateScanCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowsUpdateScanCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowsUpdateScanCompletedEventArgs, object_bases.get(), nullptr)};
+    if (!WindowsUpdateScanCompletedEventArgs_type)
     {
         return nullptr;
     }

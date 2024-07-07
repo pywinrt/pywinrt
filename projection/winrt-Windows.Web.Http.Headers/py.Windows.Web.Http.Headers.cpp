@@ -20915,7 +20915,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpCacheDirectiveHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HttpCacheDirectiveHeaderValueCollection_type{py::register_python_type(module.get(), &type_spec_HttpCacheDirectiveHeaderValueCollection, object_bases.get(), nullptr)};
+    if (!HttpCacheDirectiveHeaderValueCollection_type)
     {
         return nullptr;
     }
@@ -20926,12 +20927,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpChallengeHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpChallengeHeaderValue_Static.get())) == -1)
+    py::pytype_handle HttpChallengeHeaderValue_type{py::register_python_type(module.get(), &type_spec_HttpChallengeHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpChallengeHeaderValue_Static.get()))};
+    if (!HttpChallengeHeaderValue_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpChallengeHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HttpChallengeHeaderValueCollection_type{py::register_python_type(module.get(), &type_spec_HttpChallengeHeaderValueCollection, object_bases.get(), nullptr)};
+    if (!HttpChallengeHeaderValueCollection_type)
     {
         return nullptr;
     }
@@ -20942,12 +20945,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpConnectionOptionHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpConnectionOptionHeaderValue_Static.get())) == -1)
+    py::pytype_handle HttpConnectionOptionHeaderValue_type{py::register_python_type(module.get(), &type_spec_HttpConnectionOptionHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpConnectionOptionHeaderValue_Static.get()))};
+    if (!HttpConnectionOptionHeaderValue_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpConnectionOptionHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HttpConnectionOptionHeaderValueCollection_type{py::register_python_type(module.get(), &type_spec_HttpConnectionOptionHeaderValueCollection, object_bases.get(), nullptr)};
+    if (!HttpConnectionOptionHeaderValueCollection_type)
     {
         return nullptr;
     }
@@ -20958,12 +20963,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpContentCodingHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpContentCodingHeaderValue_Static.get())) == -1)
+    py::pytype_handle HttpContentCodingHeaderValue_type{py::register_python_type(module.get(), &type_spec_HttpContentCodingHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpContentCodingHeaderValue_Static.get()))};
+    if (!HttpContentCodingHeaderValue_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpContentCodingHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HttpContentCodingHeaderValueCollection_type{py::register_python_type(module.get(), &type_spec_HttpContentCodingHeaderValueCollection, object_bases.get(), nullptr)};
+    if (!HttpContentCodingHeaderValueCollection_type)
     {
         return nullptr;
     }
@@ -20974,12 +20981,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpContentCodingWithQualityHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpContentCodingWithQualityHeaderValue_Static.get())) == -1)
+    py::pytype_handle HttpContentCodingWithQualityHeaderValue_type{py::register_python_type(module.get(), &type_spec_HttpContentCodingWithQualityHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpContentCodingWithQualityHeaderValue_Static.get()))};
+    if (!HttpContentCodingWithQualityHeaderValue_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpContentCodingWithQualityHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HttpContentCodingWithQualityHeaderValueCollection_type{py::register_python_type(module.get(), &type_spec_HttpContentCodingWithQualityHeaderValueCollection, object_bases.get(), nullptr)};
+    if (!HttpContentCodingWithQualityHeaderValueCollection_type)
     {
         return nullptr;
     }
@@ -20990,12 +20999,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpContentDispositionHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpContentDispositionHeaderValue_Static.get())) == -1)
+    py::pytype_handle HttpContentDispositionHeaderValue_type{py::register_python_type(module.get(), &type_spec_HttpContentDispositionHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpContentDispositionHeaderValue_Static.get()))};
+    if (!HttpContentDispositionHeaderValue_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpContentHeaderCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HttpContentHeaderCollection_type{py::register_python_type(module.get(), &type_spec_HttpContentHeaderCollection, object_bases.get(), nullptr)};
+    if (!HttpContentHeaderCollection_type)
     {
         return nullptr;
     }
@@ -21006,7 +21017,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpContentRangeHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpContentRangeHeaderValue_Static.get())) == -1)
+    py::pytype_handle HttpContentRangeHeaderValue_type{py::register_python_type(module.get(), &type_spec_HttpContentRangeHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpContentRangeHeaderValue_Static.get()))};
+    if (!HttpContentRangeHeaderValue_type)
     {
         return nullptr;
     }
@@ -21017,12 +21029,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpCookiePairHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpCookiePairHeaderValue_Static.get())) == -1)
+    py::pytype_handle HttpCookiePairHeaderValue_type{py::register_python_type(module.get(), &type_spec_HttpCookiePairHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpCookiePairHeaderValue_Static.get()))};
+    if (!HttpCookiePairHeaderValue_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpCookiePairHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HttpCookiePairHeaderValueCollection_type{py::register_python_type(module.get(), &type_spec_HttpCookiePairHeaderValueCollection, object_bases.get(), nullptr)};
+    if (!HttpCookiePairHeaderValueCollection_type)
     {
         return nullptr;
     }
@@ -21033,7 +21047,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpCredentialsHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpCredentialsHeaderValue_Static.get())) == -1)
+    py::pytype_handle HttpCredentialsHeaderValue_type{py::register_python_type(module.get(), &type_spec_HttpCredentialsHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpCredentialsHeaderValue_Static.get()))};
+    if (!HttpCredentialsHeaderValue_type)
     {
         return nullptr;
     }
@@ -21044,7 +21059,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpDateOrDeltaHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpDateOrDeltaHeaderValue_Static.get())) == -1)
+    py::pytype_handle HttpDateOrDeltaHeaderValue_type{py::register_python_type(module.get(), &type_spec_HttpDateOrDeltaHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpDateOrDeltaHeaderValue_Static.get()))};
+    if (!HttpDateOrDeltaHeaderValue_type)
     {
         return nullptr;
     }
@@ -21055,17 +21071,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpExpectationHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpExpectationHeaderValue_Static.get())) == -1)
+    py::pytype_handle HttpExpectationHeaderValue_type{py::register_python_type(module.get(), &type_spec_HttpExpectationHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpExpectationHeaderValue_Static.get()))};
+    if (!HttpExpectationHeaderValue_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpExpectationHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HttpExpectationHeaderValueCollection_type{py::register_python_type(module.get(), &type_spec_HttpExpectationHeaderValueCollection, object_bases.get(), nullptr)};
+    if (!HttpExpectationHeaderValueCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpLanguageHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HttpLanguageHeaderValueCollection_type{py::register_python_type(module.get(), &type_spec_HttpLanguageHeaderValueCollection, object_bases.get(), nullptr)};
+    if (!HttpLanguageHeaderValueCollection_type)
     {
         return nullptr;
     }
@@ -21076,12 +21095,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpLanguageRangeWithQualityHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpLanguageRangeWithQualityHeaderValue_Static.get())) == -1)
+    py::pytype_handle HttpLanguageRangeWithQualityHeaderValue_type{py::register_python_type(module.get(), &type_spec_HttpLanguageRangeWithQualityHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpLanguageRangeWithQualityHeaderValue_Static.get()))};
+    if (!HttpLanguageRangeWithQualityHeaderValue_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpLanguageRangeWithQualityHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HttpLanguageRangeWithQualityHeaderValueCollection_type{py::register_python_type(module.get(), &type_spec_HttpLanguageRangeWithQualityHeaderValueCollection, object_bases.get(), nullptr)};
+    if (!HttpLanguageRangeWithQualityHeaderValueCollection_type)
     {
         return nullptr;
     }
@@ -21092,7 +21113,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpMediaTypeHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpMediaTypeHeaderValue_Static.get())) == -1)
+    py::pytype_handle HttpMediaTypeHeaderValue_type{py::register_python_type(module.get(), &type_spec_HttpMediaTypeHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpMediaTypeHeaderValue_Static.get()))};
+    if (!HttpMediaTypeHeaderValue_type)
     {
         return nullptr;
     }
@@ -21103,17 +21125,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpMediaTypeWithQualityHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpMediaTypeWithQualityHeaderValue_Static.get())) == -1)
+    py::pytype_handle HttpMediaTypeWithQualityHeaderValue_type{py::register_python_type(module.get(), &type_spec_HttpMediaTypeWithQualityHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpMediaTypeWithQualityHeaderValue_Static.get()))};
+    if (!HttpMediaTypeWithQualityHeaderValue_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpMediaTypeWithQualityHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HttpMediaTypeWithQualityHeaderValueCollection_type{py::register_python_type(module.get(), &type_spec_HttpMediaTypeWithQualityHeaderValueCollection, object_bases.get(), nullptr)};
+    if (!HttpMediaTypeWithQualityHeaderValueCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpMethodHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HttpMethodHeaderValueCollection_type{py::register_python_type(module.get(), &type_spec_HttpMethodHeaderValueCollection, object_bases.get(), nullptr)};
+    if (!HttpMethodHeaderValueCollection_type)
     {
         return nullptr;
     }
@@ -21124,7 +21149,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpNameValueHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpNameValueHeaderValue_Static.get())) == -1)
+    py::pytype_handle HttpNameValueHeaderValue_type{py::register_python_type(module.get(), &type_spec_HttpNameValueHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpNameValueHeaderValue_Static.get()))};
+    if (!HttpNameValueHeaderValue_type)
     {
         return nullptr;
     }
@@ -21135,7 +21161,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpProductHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpProductHeaderValue_Static.get())) == -1)
+    py::pytype_handle HttpProductHeaderValue_type{py::register_python_type(module.get(), &type_spec_HttpProductHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpProductHeaderValue_Static.get()))};
+    if (!HttpProductHeaderValue_type)
     {
         return nullptr;
     }
@@ -21146,22 +21173,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpProductInfoHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpProductInfoHeaderValue_Static.get())) == -1)
+    py::pytype_handle HttpProductInfoHeaderValue_type{py::register_python_type(module.get(), &type_spec_HttpProductInfoHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpProductInfoHeaderValue_Static.get()))};
+    if (!HttpProductInfoHeaderValue_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpProductInfoHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HttpProductInfoHeaderValueCollection_type{py::register_python_type(module.get(), &type_spec_HttpProductInfoHeaderValueCollection, object_bases.get(), nullptr)};
+    if (!HttpProductInfoHeaderValueCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpRequestHeaderCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HttpRequestHeaderCollection_type{py::register_python_type(module.get(), &type_spec_HttpRequestHeaderCollection, object_bases.get(), nullptr)};
+    if (!HttpRequestHeaderCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpResponseHeaderCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HttpResponseHeaderCollection_type{py::register_python_type(module.get(), &type_spec_HttpResponseHeaderCollection, object_bases.get(), nullptr)};
+    if (!HttpResponseHeaderCollection_type)
     {
         return nullptr;
     }
@@ -21172,12 +21203,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpTransferCodingHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpTransferCodingHeaderValue_Static.get())) == -1)
+    py::pytype_handle HttpTransferCodingHeaderValue_type{py::register_python_type(module.get(), &type_spec_HttpTransferCodingHeaderValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpTransferCodingHeaderValue_Static.get()))};
+    if (!HttpTransferCodingHeaderValue_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpTransferCodingHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HttpTransferCodingHeaderValueCollection_type{py::register_python_type(module.get(), &type_spec_HttpTransferCodingHeaderValueCollection, object_bases.get(), nullptr)};
+    if (!HttpTransferCodingHeaderValueCollection_type)
     {
         return nullptr;
     }

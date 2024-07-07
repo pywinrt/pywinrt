@@ -593,17 +593,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_resources_management(void)
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IndexedResourceCandidate, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IndexedResourceCandidate_type{py::register_python_type(module.get(), &type_spec_IndexedResourceCandidate, object_bases.get(), nullptr)};
+    if (!IndexedResourceCandidate_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IndexedResourceQualifier, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IndexedResourceQualifier_type{py::register_python_type(module.get(), &type_spec_IndexedResourceQualifier, object_bases.get(), nullptr)};
+    if (!IndexedResourceQualifier_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceIndexer, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ResourceIndexer_type{py::register_python_type(module.get(), &type_spec_ResourceIndexer, object_bases.get(), nullptr)};
+    if (!ResourceIndexer_type)
     {
         return nullptr;
     }

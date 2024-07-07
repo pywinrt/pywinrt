@@ -138,7 +138,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_system_profile(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RetailMode, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RetailMode_Static.get())) == -1)
+    py::pytype_handle RetailMode_type{py::register_python_type(module.get(), &type_spec_RetailMode, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RetailMode_Static.get()))};
+    if (!RetailMode_type)
     {
         return nullptr;
     }

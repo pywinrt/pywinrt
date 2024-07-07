@@ -1065,7 +1065,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_graphics_display(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayAdvancedColorInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DisplayAdvancedColorInfo_type{py::register_python_type(module.get(), &type_spec_DisplayAdvancedColorInfo, object_bases.get(), nullptr)};
+    if (!DisplayAdvancedColorInfo_type)
     {
         return nullptr;
     }
@@ -1076,7 +1077,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_graphics_display(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayInformation_Static.get())) == -1)
+    py::pytype_handle DisplayInformation_type{py::register_python_type(module.get(), &type_spec_DisplayInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayInformation_Static.get()))};
+    if (!DisplayInformation_type)
     {
         return nullptr;
     }

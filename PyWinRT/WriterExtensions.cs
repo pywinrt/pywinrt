@@ -1254,8 +1254,9 @@ static class WriterExtensions
                 : "nullptr";
 
         w.WriteLine(
-            $"if (py::register_python_type(module.get(), &type_spec_{name}, {baseType}, {metaclass}) == -1)"
+            $"py::pytype_handle {name}_type{{py::register_python_type(module.get(), &type_spec_{name}, {baseType}, {metaclass})}};"
         );
+        w.WriteLine($"if (!{name}_type)");
         w.WriteLine("{");
         w.Indent++;
         w.WriteLine("return nullptr;");

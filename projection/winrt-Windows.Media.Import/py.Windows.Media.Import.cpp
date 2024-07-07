@@ -5199,27 +5199,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_import_(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhotoImportDeleteImportedItemsFromSourceResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PhotoImportDeleteImportedItemsFromSourceResult_type{py::register_python_type(module.get(), &type_spec_PhotoImportDeleteImportedItemsFromSourceResult, object_bases.get(), nullptr)};
+    if (!PhotoImportDeleteImportedItemsFromSourceResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhotoImportFindItemsResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PhotoImportFindItemsResult_type{py::register_python_type(module.get(), &type_spec_PhotoImportFindItemsResult, object_bases.get(), nullptr)};
+    if (!PhotoImportFindItemsResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhotoImportImportItemsResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PhotoImportImportItemsResult_type{py::register_python_type(module.get(), &type_spec_PhotoImportImportItemsResult, object_bases.get(), nullptr)};
+    if (!PhotoImportImportItemsResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhotoImportItem, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PhotoImportItem_type{py::register_python_type(module.get(), &type_spec_PhotoImportItem, object_bases.get(), nullptr)};
+    if (!PhotoImportItem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhotoImportItemImportedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PhotoImportItemImportedEventArgs_type{py::register_python_type(module.get(), &type_spec_PhotoImportItemImportedEventArgs, object_bases.get(), nullptr)};
+    if (!PhotoImportItemImportedEventArgs_type)
     {
         return nullptr;
     }
@@ -5230,27 +5235,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_import_(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhotoImportManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhotoImportManager_Static.get())) == -1)
+    py::pytype_handle PhotoImportManager_type{py::register_python_type(module.get(), &type_spec_PhotoImportManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhotoImportManager_Static.get()))};
+    if (!PhotoImportManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhotoImportOperation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PhotoImportOperation_type{py::register_python_type(module.get(), &type_spec_PhotoImportOperation, object_bases.get(), nullptr)};
+    if (!PhotoImportOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhotoImportSelectionChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PhotoImportSelectionChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PhotoImportSelectionChangedEventArgs, object_bases.get(), nullptr)};
+    if (!PhotoImportSelectionChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhotoImportSession, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PhotoImportSession_type{py::register_python_type(module.get(), &type_spec_PhotoImportSession, object_bases.get(), nullptr)};
+    if (!PhotoImportSession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhotoImportSidecar, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PhotoImportSidecar_type{py::register_python_type(module.get(), &type_spec_PhotoImportSidecar, object_bases.get(), nullptr)};
+    if (!PhotoImportSidecar_type)
     {
         return nullptr;
     }
@@ -5261,22 +5271,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_import_(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhotoImportSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhotoImportSource_Static.get())) == -1)
+    py::pytype_handle PhotoImportSource_type{py::register_python_type(module.get(), &type_spec_PhotoImportSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhotoImportSource_Static.get()))};
+    if (!PhotoImportSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhotoImportStorageMedium, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PhotoImportStorageMedium_type{py::register_python_type(module.get(), &type_spec_PhotoImportStorageMedium, object_bases.get(), nullptr)};
+    if (!PhotoImportStorageMedium_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhotoImportVideoSegment, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PhotoImportVideoSegment_type{py::register_python_type(module.get(), &type_spec_PhotoImportVideoSegment, object_bases.get(), nullptr)};
+    if (!PhotoImportVideoSegment_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhotoImportProgress, nullptr, nullptr) == -1)
+    py::pytype_handle PhotoImportProgress_type{py::register_python_type(module.get(), &type_spec_PhotoImportProgress, nullptr, nullptr)};
+    if (!PhotoImportProgress_type)
     {
         return nullptr;
     }

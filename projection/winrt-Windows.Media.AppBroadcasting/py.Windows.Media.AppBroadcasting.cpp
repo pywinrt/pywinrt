@@ -867,17 +867,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_appbroadcasting(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastingMonitor, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastingMonitor_type{py::register_python_type(module.get(), &type_spec_AppBroadcastingMonitor, object_bases.get(), nullptr)};
+    if (!AppBroadcastingMonitor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastingStatus, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastingStatus_type{py::register_python_type(module.get(), &type_spec_AppBroadcastingStatus, object_bases.get(), nullptr)};
+    if (!AppBroadcastingStatus_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastingStatusDetails, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastingStatusDetails_type{py::register_python_type(module.get(), &type_spec_AppBroadcastingStatusDetails, object_bases.get(), nullptr)};
+    if (!AppBroadcastingStatusDetails_type)
     {
         return nullptr;
     }
@@ -888,7 +891,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_appbroadcasting(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastingUI, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBroadcastingUI_Static.get())) == -1)
+    py::pytype_handle AppBroadcastingUI_type{py::register_python_type(module.get(), &type_spec_AppBroadcastingUI, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBroadcastingUI_Static.get()))};
+    if (!AppBroadcastingUI_type)
     {
         return nullptr;
     }

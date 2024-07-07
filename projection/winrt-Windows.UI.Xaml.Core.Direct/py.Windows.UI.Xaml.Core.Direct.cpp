@@ -2363,12 +2363,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_core_direct(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XamlDirect, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlDirect_Static.get())) == -1)
+    py::pytype_handle XamlDirect_type{py::register_python_type(module.get(), &type_spec_XamlDirect, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlDirect_Static.get()))};
+    if (!XamlDirect_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IXamlDirectObject, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IXamlDirectObject_type{py::register_python_type(module.get(), &type_spec_IXamlDirectObject, object_bases.get(), nullptr)};
+    if (!IXamlDirectObject_type)
     {
         return nullptr;
     }

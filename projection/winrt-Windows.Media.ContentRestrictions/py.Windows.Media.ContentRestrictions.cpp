@@ -875,17 +875,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_contentrestrictions(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContentRestrictionsBrowsePolicy, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ContentRestrictionsBrowsePolicy_type{py::register_python_type(module.get(), &type_spec_ContentRestrictionsBrowsePolicy, object_bases.get(), nullptr)};
+    if (!ContentRestrictionsBrowsePolicy_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RatedContentDescription, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RatedContentDescription_type{py::register_python_type(module.get(), &type_spec_RatedContentDescription, object_bases.get(), nullptr)};
+    if (!RatedContentDescription_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RatedContentRestrictions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RatedContentRestrictions_type{py::register_python_type(module.get(), &type_spec_RatedContentRestrictions, object_bases.get(), nullptr)};
+    if (!RatedContentRestrictions_type)
     {
         return nullptr;
     }

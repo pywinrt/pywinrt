@@ -776,17 +776,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics_deviceportal(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DevicePortalConnection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DevicePortalConnection_Static.get())) == -1)
+    py::pytype_handle DevicePortalConnection_type{py::register_python_type(module.get(), &type_spec_DevicePortalConnection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DevicePortalConnection_Static.get()))};
+    if (!DevicePortalConnection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DevicePortalConnectionClosedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DevicePortalConnectionClosedEventArgs_type{py::register_python_type(module.get(), &type_spec_DevicePortalConnectionClosedEventArgs, object_bases.get(), nullptr)};
+    if (!DevicePortalConnectionClosedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DevicePortalConnectionRequestReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DevicePortalConnectionRequestReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_DevicePortalConnectionRequestReceivedEventArgs, object_bases.get(), nullptr)};
+    if (!DevicePortalConnectionRequestReceivedEventArgs_type)
     {
         return nullptr;
     }

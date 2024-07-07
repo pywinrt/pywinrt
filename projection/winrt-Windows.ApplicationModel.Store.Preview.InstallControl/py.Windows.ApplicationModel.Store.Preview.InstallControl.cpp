@@ -4539,37 +4539,44 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_preview_installcontr
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppInstallItem, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppInstallItem_type{py::register_python_type(module.get(), &type_spec_AppInstallItem, object_bases.get(), nullptr)};
+    if (!AppInstallItem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppInstallManager, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppInstallManager_type{py::register_python_type(module.get(), &type_spec_AppInstallManager, object_bases.get(), nullptr)};
+    if (!AppInstallManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppInstallManagerItemEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppInstallManagerItemEventArgs_type{py::register_python_type(module.get(), &type_spec_AppInstallManagerItemEventArgs, object_bases.get(), nullptr)};
+    if (!AppInstallManagerItemEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppInstallOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppInstallOptions_type{py::register_python_type(module.get(), &type_spec_AppInstallOptions, object_bases.get(), nullptr)};
+    if (!AppInstallOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppInstallStatus, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppInstallStatus_type{py::register_python_type(module.get(), &type_spec_AppInstallStatus, object_bases.get(), nullptr)};
+    if (!AppInstallStatus_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppUpdateOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppUpdateOptions_type{py::register_python_type(module.get(), &type_spec_AppUpdateOptions, object_bases.get(), nullptr)};
+    if (!AppUpdateOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GetEntitlementResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GetEntitlementResult_type{py::register_python_type(module.get(), &type_spec_GetEntitlementResult, object_bases.get(), nullptr)};
+    if (!GetEntitlementResult_type)
     {
         return nullptr;
     }

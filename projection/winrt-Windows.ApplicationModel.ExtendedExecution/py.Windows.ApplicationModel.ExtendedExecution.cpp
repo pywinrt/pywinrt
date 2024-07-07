@@ -571,12 +571,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_extendedexecution(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ExtendedExecutionRevokedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ExtendedExecutionRevokedEventArgs_type{py::register_python_type(module.get(), &type_spec_ExtendedExecutionRevokedEventArgs, object_bases.get(), nullptr)};
+    if (!ExtendedExecutionRevokedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ExtendedExecutionSession, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ExtendedExecutionSession_type{py::register_python_type(module.get(), &type_spec_ExtendedExecutionSession, object_bases.get(), nullptr)};
+    if (!ExtendedExecutionSession_type)
     {
         return nullptr;
     }

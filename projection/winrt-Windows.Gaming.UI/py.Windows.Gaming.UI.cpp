@@ -1117,12 +1117,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_ui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameBar_Static.get())) == -1)
+    py::pytype_handle GameBar_type{py::register_python_type(module.get(), &type_spec_GameBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameBar_Static.get()))};
+    if (!GameBar_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameChatMessageReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameChatMessageReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_GameChatMessageReceivedEventArgs, object_bases.get(), nullptr)};
+    if (!GameChatMessageReceivedEventArgs_type)
     {
         return nullptr;
     }
@@ -1133,17 +1135,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_ui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameChatOverlay, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameChatOverlay_Static.get())) == -1)
+    py::pytype_handle GameChatOverlay_type{py::register_python_type(module.get(), &type_spec_GameChatOverlay, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameChatOverlay_Static.get()))};
+    if (!GameChatOverlay_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameChatOverlayMessageSource, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameChatOverlayMessageSource_type{py::register_python_type(module.get(), &type_spec_GameChatOverlayMessageSource, object_bases.get(), nullptr)};
+    if (!GameChatOverlayMessageSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameUIProviderActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameUIProviderActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_GameUIProviderActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!GameUIProviderActivatedEventArgs_type)
     {
         return nullptr;
     }

@@ -152,7 +152,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ToastOcclusionManagerPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToastOcclusionManagerPreview_Static.get())) == -1)
+    py::pytype_handle ToastOcclusionManagerPreview_type{py::register_python_type(module.get(), &type_spec_ToastOcclusionManagerPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToastOcclusionManagerPreview_Static.get()))};
+    if (!ToastOcclusionManagerPreview_type)
     {
         return nullptr;
     }

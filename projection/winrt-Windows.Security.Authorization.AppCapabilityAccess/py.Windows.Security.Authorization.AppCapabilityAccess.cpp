@@ -620,12 +620,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authorization_appcapabilityaccess(
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppCapability, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppCapability_Static.get())) == -1)
+    py::pytype_handle AppCapability_type{py::register_python_type(module.get(), &type_spec_AppCapability, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppCapability_Static.get()))};
+    if (!AppCapability_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppCapabilityAccessChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppCapabilityAccessChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppCapabilityAccessChangedEventArgs, object_bases.get(), nullptr)};
+    if (!AppCapabilityAccessChangedEventArgs_type)
     {
         return nullptr;
     }

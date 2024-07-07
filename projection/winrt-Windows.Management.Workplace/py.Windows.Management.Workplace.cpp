@@ -379,7 +379,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_workplace(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MdmPolicy, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MdmPolicy_Static.get())) == -1)
+    py::pytype_handle MdmPolicy_type{py::register_python_type(module.get(), &type_spec_MdmPolicy, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MdmPolicy_Static.get()))};
+    if (!MdmPolicy_type)
     {
         return nullptr;
     }
@@ -390,7 +391,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_workplace(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WorkplaceSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WorkplaceSettings_Static.get())) == -1)
+    py::pytype_handle WorkplaceSettings_type{py::register_python_type(module.get(), &type_spec_WorkplaceSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WorkplaceSettings_Static.get()))};
+    if (!WorkplaceSettings_type)
     {
         return nullptr;
     }

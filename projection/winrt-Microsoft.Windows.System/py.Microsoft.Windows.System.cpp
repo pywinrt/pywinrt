@@ -588,7 +588,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_system(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EnvironmentManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EnvironmentManager_Static.get())) == -1)
+    py::pytype_handle EnvironmentManager_type{py::register_python_type(module.get(), &type_spec_EnvironmentManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EnvironmentManager_Static.get()))};
+    if (!EnvironmentManager_type)
     {
         return nullptr;
     }

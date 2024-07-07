@@ -1535,7 +1535,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_dispatching(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DispatcherExitDeferral, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DispatcherExitDeferral_type{py::register_python_type(module.get(), &type_spec_DispatcherExitDeferral, object_bases.get(), nullptr)};
+    if (!DispatcherExitDeferral_type)
     {
         return nullptr;
     }
@@ -1546,7 +1547,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_dispatching(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DispatcherQueue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DispatcherQueue_Static.get())) == -1)
+    py::pytype_handle DispatcherQueue_type{py::register_python_type(module.get(), &type_spec_DispatcherQueue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DispatcherQueue_Static.get()))};
+    if (!DispatcherQueue_type)
     {
         return nullptr;
     }
@@ -1557,17 +1559,20 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_dispatching(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DispatcherQueueController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DispatcherQueueController_Static.get())) == -1)
+    py::pytype_handle DispatcherQueueController_type{py::register_python_type(module.get(), &type_spec_DispatcherQueueController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DispatcherQueueController_Static.get()))};
+    if (!DispatcherQueueController_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DispatcherQueueShutdownStartingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DispatcherQueueShutdownStartingEventArgs_type{py::register_python_type(module.get(), &type_spec_DispatcherQueueShutdownStartingEventArgs, object_bases.get(), nullptr)};
+    if (!DispatcherQueueShutdownStartingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DispatcherQueueTimer, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DispatcherQueueTimer_type{py::register_python_type(module.get(), &type_spec_DispatcherQueueTimer, object_bases.get(), nullptr)};
+    if (!DispatcherQueueTimer_type)
     {
         return nullptr;
     }

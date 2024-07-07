@@ -2383,32 +2383,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_wifi(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WiFiAdapter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WiFiAdapter_Static.get())) == -1)
+    py::pytype_handle WiFiAdapter_type{py::register_python_type(module.get(), &type_spec_WiFiAdapter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WiFiAdapter_Static.get()))};
+    if (!WiFiAdapter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WiFiAvailableNetwork, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WiFiAvailableNetwork_type{py::register_python_type(module.get(), &type_spec_WiFiAvailableNetwork, object_bases.get(), nullptr)};
+    if (!WiFiAvailableNetwork_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WiFiConnectionResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WiFiConnectionResult_type{py::register_python_type(module.get(), &type_spec_WiFiConnectionResult, object_bases.get(), nullptr)};
+    if (!WiFiConnectionResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WiFiNetworkReport, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WiFiNetworkReport_type{py::register_python_type(module.get(), &type_spec_WiFiNetworkReport, object_bases.get(), nullptr)};
+    if (!WiFiNetworkReport_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotConnectTriggerDetails, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WiFiOnDemandHotspotConnectTriggerDetails_type{py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotConnectTriggerDetails, object_bases.get(), nullptr)};
+    if (!WiFiOnDemandHotspotConnectTriggerDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotConnectionResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WiFiOnDemandHotspotConnectionResult_type{py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotConnectionResult, object_bases.get(), nullptr)};
+    if (!WiFiOnDemandHotspotConnectionResult_type)
     {
         return nullptr;
     }
@@ -2419,17 +2425,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_wifi(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotNetwork, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WiFiOnDemandHotspotNetwork_Static.get())) == -1)
+    py::pytype_handle WiFiOnDemandHotspotNetwork_type{py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotNetwork, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WiFiOnDemandHotspotNetwork_Static.get()))};
+    if (!WiFiOnDemandHotspotNetwork_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotNetworkProperties, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WiFiOnDemandHotspotNetworkProperties_type{py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotNetworkProperties, object_bases.get(), nullptr)};
+    if (!WiFiOnDemandHotspotNetworkProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WiFiWpsConfigurationResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WiFiWpsConfigurationResult_type{py::register_python_type(module.get(), &type_spec_WiFiWpsConfigurationResult, object_bases.get(), nullptr)};
+    if (!WiFiWpsConfigurationResult_type)
     {
         return nullptr;
     }

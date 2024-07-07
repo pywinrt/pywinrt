@@ -275,7 +275,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PalmRejectionDelayZonePreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PalmRejectionDelayZonePreview_Static.get())) == -1)
+    py::pytype_handle PalmRejectionDelayZonePreview_type{py::register_python_type(module.get(), &type_spec_PalmRejectionDelayZonePreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PalmRejectionDelayZonePreview_Static.get()))};
+    if (!PalmRejectionDelayZonePreview_type)
     {
         return nullptr;
     }

@@ -1760,22 +1760,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_filters(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpBaseProtocolFilter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpBaseProtocolFilter_Static.get())) == -1)
+    py::pytype_handle HttpBaseProtocolFilter_type{py::register_python_type(module.get(), &type_spec_HttpBaseProtocolFilter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpBaseProtocolFilter_Static.get()))};
+    if (!HttpBaseProtocolFilter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpCacheControl, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HttpCacheControl_type{py::register_python_type(module.get(), &type_spec_HttpCacheControl, object_bases.get(), nullptr)};
+    if (!HttpCacheControl_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpServerCustomValidationRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HttpServerCustomValidationRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_HttpServerCustomValidationRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!HttpServerCustomValidationRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IHttpFilter, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IHttpFilter_type{py::register_python_type(module.get(), &type_spec_IHttpFilter, object_bases.get(), nullptr)};
+    if (!IHttpFilter_type)
     {
         return nullptr;
     }

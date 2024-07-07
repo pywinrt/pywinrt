@@ -549,7 +549,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CryptographicBuffer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CryptographicBuffer_Static.get())) == -1)
+    py::pytype_handle CryptographicBuffer_type{py::register_python_type(module.get(), &type_spec_CryptographicBuffer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CryptographicBuffer_Static.get()))};
+    if (!CryptographicBuffer_type)
     {
         return nullptr;
     }

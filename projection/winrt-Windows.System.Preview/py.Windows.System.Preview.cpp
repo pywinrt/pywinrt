@@ -600,17 +600,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TwoPanelHingedDevicePosturePreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TwoPanelHingedDevicePosturePreview_Static.get())) == -1)
+    py::pytype_handle TwoPanelHingedDevicePosturePreview_type{py::register_python_type(module.get(), &type_spec_TwoPanelHingedDevicePosturePreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TwoPanelHingedDevicePosturePreview_Static.get()))};
+    if (!TwoPanelHingedDevicePosturePreview_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TwoPanelHingedDevicePosturePreviewReading, object_bases.get(), nullptr) == -1)
+    py::pytype_handle TwoPanelHingedDevicePosturePreviewReading_type{py::register_python_type(module.get(), &type_spec_TwoPanelHingedDevicePosturePreviewReading, object_bases.get(), nullptr)};
+    if (!TwoPanelHingedDevicePosturePreviewReading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs, object_bases.get(), nullptr)};
+    if (!TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs_type)
     {
         return nullptr;
     }

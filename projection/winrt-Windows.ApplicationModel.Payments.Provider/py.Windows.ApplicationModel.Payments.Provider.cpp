@@ -967,7 +967,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_payments_provider(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentAppCanMakePaymentTriggerDetails, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PaymentAppCanMakePaymentTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PaymentAppCanMakePaymentTriggerDetails, object_bases.get(), nullptr)};
+    if (!PaymentAppCanMakePaymentTriggerDetails_type)
     {
         return nullptr;
     }
@@ -978,7 +979,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_payments_provider(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaymentAppManager_Static.get())) == -1)
+    py::pytype_handle PaymentAppManager_type{py::register_python_type(module.get(), &type_spec_PaymentAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaymentAppManager_Static.get()))};
+    if (!PaymentAppManager_type)
     {
         return nullptr;
     }
@@ -989,12 +991,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_payments_provider(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentTransaction, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaymentTransaction_Static.get())) == -1)
+    py::pytype_handle PaymentTransaction_type{py::register_python_type(module.get(), &type_spec_PaymentTransaction, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaymentTransaction_Static.get()))};
+    if (!PaymentTransaction_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentTransactionAcceptResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PaymentTransactionAcceptResult_type{py::register_python_type(module.get(), &type_spec_PaymentTransactionAcceptResult, object_bases.get(), nullptr)};
+    if (!PaymentTransactionAcceptResult_type)
     {
         return nullptr;
     }

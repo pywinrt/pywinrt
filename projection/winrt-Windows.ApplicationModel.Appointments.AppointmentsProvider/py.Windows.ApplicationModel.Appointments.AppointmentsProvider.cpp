@@ -1147,7 +1147,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appointments_appointmentsp
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AddAppointmentOperation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AddAppointmentOperation_type{py::register_python_type(module.get(), &type_spec_AddAppointmentOperation, object_bases.get(), nullptr)};
+    if (!AddAppointmentOperation_type)
     {
         return nullptr;
     }
@@ -1158,17 +1159,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appointments_appointmentsp
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppointmentsProviderLaunchActionVerbs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppointmentsProviderLaunchActionVerbs_Static.get())) == -1)
+    py::pytype_handle AppointmentsProviderLaunchActionVerbs_type{py::register_python_type(module.get(), &type_spec_AppointmentsProviderLaunchActionVerbs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppointmentsProviderLaunchActionVerbs_Static.get()))};
+    if (!AppointmentsProviderLaunchActionVerbs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoveAppointmentOperation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoveAppointmentOperation_type{py::register_python_type(module.get(), &type_spec_RemoveAppointmentOperation, object_bases.get(), nullptr)};
+    if (!RemoveAppointmentOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ReplaceAppointmentOperation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ReplaceAppointmentOperation_type{py::register_python_type(module.get(), &type_spec_ReplaceAppointmentOperation, object_bases.get(), nullptr)};
+    if (!ReplaceAppointmentOperation_type)
     {
         return nullptr;
     }

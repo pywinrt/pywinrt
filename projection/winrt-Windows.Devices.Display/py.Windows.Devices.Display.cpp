@@ -840,7 +840,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_display(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayMonitor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayMonitor_Static.get())) == -1)
+    py::pytype_handle DisplayMonitor_type{py::register_python_type(module.get(), &type_spec_DisplayMonitor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayMonitor_Static.get()))};
+    if (!DisplayMonitor_type)
     {
         return nullptr;
     }

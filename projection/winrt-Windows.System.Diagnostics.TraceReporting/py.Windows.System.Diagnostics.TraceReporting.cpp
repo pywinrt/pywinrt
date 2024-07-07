@@ -782,17 +782,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics_tracereporting(void) noe
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlatformDiagnosticActions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlatformDiagnosticActions_Static.get())) == -1)
+    py::pytype_handle PlatformDiagnosticActions_type{py::register_python_type(module.get(), &type_spec_PlatformDiagnosticActions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlatformDiagnosticActions_Static.get()))};
+    if (!PlatformDiagnosticActions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlatformDiagnosticTraceInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlatformDiagnosticTraceInfo_type{py::register_python_type(module.get(), &type_spec_PlatformDiagnosticTraceInfo, object_bases.get(), nullptr)};
+    if (!PlatformDiagnosticTraceInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlatformDiagnosticTraceRuntimeInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlatformDiagnosticTraceRuntimeInfo_type{py::register_python_type(module.get(), &type_spec_PlatformDiagnosticTraceRuntimeInfo, object_bases.get(), nullptr)};
+    if (!PlatformDiagnosticTraceRuntimeInfo_type)
     {
         return nullptr;
     }

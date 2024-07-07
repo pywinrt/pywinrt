@@ -10187,112 +10187,134 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkDrawingAttributes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkDrawingAttributes_Static.get())) == -1)
+    py::pytype_handle InkDrawingAttributes_type{py::register_python_type(module.get(), &type_spec_InkDrawingAttributes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkDrawingAttributes_Static.get()))};
+    if (!InkDrawingAttributes_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkDrawingAttributesPencilProperties, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkDrawingAttributesPencilProperties_type{py::register_python_type(module.get(), &type_spec_InkDrawingAttributesPencilProperties, object_bases.get(), nullptr)};
+    if (!InkDrawingAttributesPencilProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkInputConfiguration, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkInputConfiguration_type{py::register_python_type(module.get(), &type_spec_InkInputConfiguration, object_bases.get(), nullptr)};
+    if (!InkInputConfiguration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkInputProcessingConfiguration, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkInputProcessingConfiguration_type{py::register_python_type(module.get(), &type_spec_InkInputProcessingConfiguration, object_bases.get(), nullptr)};
+    if (!InkInputProcessingConfiguration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkManager, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkManager_type{py::register_python_type(module.get(), &type_spec_InkManager, object_bases.get(), nullptr)};
+    if (!InkManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkModelerAttributes, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkModelerAttributes_type{py::register_python_type(module.get(), &type_spec_InkModelerAttributes, object_bases.get(), nullptr)};
+    if (!InkModelerAttributes_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkPoint, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkPoint_type{py::register_python_type(module.get(), &type_spec_InkPoint, object_bases.get(), nullptr)};
+    if (!InkPoint_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkPresenter, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkPresenter_type{py::register_python_type(module.get(), &type_spec_InkPresenter, object_bases.get(), nullptr)};
+    if (!InkPresenter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkPresenterProtractor, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkPresenterProtractor_type{py::register_python_type(module.get(), &type_spec_InkPresenterProtractor, object_bases.get(), nullptr)};
+    if (!InkPresenterProtractor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkPresenterRuler, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkPresenterRuler_type{py::register_python_type(module.get(), &type_spec_InkPresenterRuler, object_bases.get(), nullptr)};
+    if (!InkPresenterRuler_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkRecognitionResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkRecognitionResult_type{py::register_python_type(module.get(), &type_spec_InkRecognitionResult, object_bases.get(), nullptr)};
+    if (!InkRecognitionResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkRecognizer, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkRecognizer_type{py::register_python_type(module.get(), &type_spec_InkRecognizer, object_bases.get(), nullptr)};
+    if (!InkRecognizer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkRecognizerContainer, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkRecognizerContainer_type{py::register_python_type(module.get(), &type_spec_InkRecognizerContainer, object_bases.get(), nullptr)};
+    if (!InkRecognizerContainer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkStroke, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkStroke_type{py::register_python_type(module.get(), &type_spec_InkStroke, object_bases.get(), nullptr)};
+    if (!InkStroke_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkStrokeBuilder, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkStrokeBuilder_type{py::register_python_type(module.get(), &type_spec_InkStrokeBuilder, object_bases.get(), nullptr)};
+    if (!InkStrokeBuilder_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkStrokeContainer, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkStrokeContainer_type{py::register_python_type(module.get(), &type_spec_InkStrokeContainer, object_bases.get(), nullptr)};
+    if (!InkStrokeContainer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkStrokeInput, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkStrokeInput_type{py::register_python_type(module.get(), &type_spec_InkStrokeInput, object_bases.get(), nullptr)};
+    if (!InkStrokeInput_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkStrokeRenderingSegment, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkStrokeRenderingSegment_type{py::register_python_type(module.get(), &type_spec_InkStrokeRenderingSegment, object_bases.get(), nullptr)};
+    if (!InkStrokeRenderingSegment_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkStrokesCollectedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkStrokesCollectedEventArgs_type{py::register_python_type(module.get(), &type_spec_InkStrokesCollectedEventArgs, object_bases.get(), nullptr)};
+    if (!InkStrokesCollectedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkStrokesErasedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkStrokesErasedEventArgs_type{py::register_python_type(module.get(), &type_spec_InkStrokesErasedEventArgs, object_bases.get(), nullptr)};
+    if (!InkStrokesErasedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkSynchronizer, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkSynchronizer_type{py::register_python_type(module.get(), &type_spec_InkSynchronizer, object_bases.get(), nullptr)};
+    if (!InkSynchronizer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkUnprocessedInput, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InkUnprocessedInput_type{py::register_python_type(module.get(), &type_spec_InkUnprocessedInput, object_bases.get(), nullptr)};
+    if (!InkUnprocessedInput_type)
     {
         return nullptr;
     }
@@ -10303,32 +10325,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PenAndInkSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PenAndInkSettings_Static.get())) == -1)
+    py::pytype_handle PenAndInkSettings_type{py::register_python_type(module.get(), &type_spec_PenAndInkSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PenAndInkSettings_Static.get()))};
+    if (!PenAndInkSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IInkPointFactory, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IInkPointFactory_type{py::register_python_type(module.get(), &type_spec_IInkPointFactory, object_bases.get(), nullptr)};
+    if (!IInkPointFactory_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IInkPresenterRulerFactory, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IInkPresenterRulerFactory_type{py::register_python_type(module.get(), &type_spec_IInkPresenterRulerFactory, object_bases.get(), nullptr)};
+    if (!IInkPresenterRulerFactory_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IInkPresenterStencil, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IInkPresenterStencil_type{py::register_python_type(module.get(), &type_spec_IInkPresenterStencil, object_bases.get(), nullptr)};
+    if (!IInkPresenterStencil_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IInkRecognizerContainer, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IInkRecognizerContainer_type{py::register_python_type(module.get(), &type_spec_IInkRecognizerContainer, object_bases.get(), nullptr)};
+    if (!IInkRecognizerContainer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IInkStrokeContainer, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IInkStrokeContainer_type{py::register_python_type(module.get(), &type_spec_IInkStrokeContainer, object_bases.get(), nullptr)};
+    if (!IInkStrokeContainer_type)
     {
         return nullptr;
     }

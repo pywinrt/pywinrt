@@ -1935,37 +1935,44 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_interop(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NotifyCollectionChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle NotifyCollectionChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_NotifyCollectionChangedEventArgs, object_bases.get(), nullptr)};
+    if (!NotifyCollectionChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IBindableIterable, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IBindableIterable_type{py::register_python_type(module.get(), &type_spec_IBindableIterable, object_bases.get(), nullptr)};
+    if (!IBindableIterable_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IBindableIterator, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IBindableIterator_type{py::register_python_type(module.get(), &type_spec_IBindableIterator, object_bases.get(), nullptr)};
+    if (!IBindableIterator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IBindableObservableVector, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IBindableObservableVector_type{py::register_python_type(module.get(), &type_spec_IBindableObservableVector, object_bases.get(), nullptr)};
+    if (!IBindableObservableVector_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IBindableVector, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IBindableVector_type{py::register_python_type(module.get(), &type_spec_IBindableVector, object_bases.get(), nullptr)};
+    if (!IBindableVector_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IBindableVectorView, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IBindableVectorView_type{py::register_python_type(module.get(), &type_spec_IBindableVectorView, object_bases.get(), nullptr)};
+    if (!IBindableVectorView_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INotifyCollectionChanged, object_bases.get(), nullptr) == -1)
+    py::pytype_handle INotifyCollectionChanged_type{py::register_python_type(module.get(), &type_spec_INotifyCollectionChanged, object_bases.get(), nullptr)};
+    if (!INotifyCollectionChanged_type)
     {
         return nullptr;
     }

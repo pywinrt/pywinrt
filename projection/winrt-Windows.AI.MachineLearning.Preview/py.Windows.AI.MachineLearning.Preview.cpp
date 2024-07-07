@@ -2951,27 +2951,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ImageVariableDescriptorPreview, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ImageVariableDescriptorPreview_type{py::register_python_type(module.get(), &type_spec_ImageVariableDescriptorPreview, object_bases.get(), nullptr)};
+    if (!ImageVariableDescriptorPreview_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InferencingOptionsPreview, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InferencingOptionsPreview_type{py::register_python_type(module.get(), &type_spec_InferencingOptionsPreview, object_bases.get(), nullptr)};
+    if (!InferencingOptionsPreview_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LearningModelBindingPreview, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LearningModelBindingPreview_type{py::register_python_type(module.get(), &type_spec_LearningModelBindingPreview, object_bases.get(), nullptr)};
+    if (!LearningModelBindingPreview_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LearningModelDescriptionPreview, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LearningModelDescriptionPreview_type{py::register_python_type(module.get(), &type_spec_LearningModelDescriptionPreview, object_bases.get(), nullptr)};
+    if (!LearningModelDescriptionPreview_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LearningModelEvaluationResultPreview, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LearningModelEvaluationResultPreview_type{py::register_python_type(module.get(), &type_spec_LearningModelEvaluationResultPreview, object_bases.get(), nullptr)};
+    if (!LearningModelEvaluationResultPreview_type)
     {
         return nullptr;
     }
@@ -2982,32 +2987,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LearningModelPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LearningModelPreview_Static.get())) == -1)
+    py::pytype_handle LearningModelPreview_type{py::register_python_type(module.get(), &type_spec_LearningModelPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LearningModelPreview_Static.get()))};
+    if (!LearningModelPreview_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LearningModelVariableDescriptorPreview, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LearningModelVariableDescriptorPreview_type{py::register_python_type(module.get(), &type_spec_LearningModelVariableDescriptorPreview, object_bases.get(), nullptr)};
+    if (!LearningModelVariableDescriptorPreview_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MapVariableDescriptorPreview, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MapVariableDescriptorPreview_type{py::register_python_type(module.get(), &type_spec_MapVariableDescriptorPreview, object_bases.get(), nullptr)};
+    if (!MapVariableDescriptorPreview_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SequenceVariableDescriptorPreview, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SequenceVariableDescriptorPreview_type{py::register_python_type(module.get(), &type_spec_SequenceVariableDescriptorPreview, object_bases.get(), nullptr)};
+    if (!SequenceVariableDescriptorPreview_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TensorVariableDescriptorPreview, object_bases.get(), nullptr) == -1)
+    py::pytype_handle TensorVariableDescriptorPreview_type{py::register_python_type(module.get(), &type_spec_TensorVariableDescriptorPreview, object_bases.get(), nullptr)};
+    if (!TensorVariableDescriptorPreview_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ILearningModelVariableDescriptorPreview, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ILearningModelVariableDescriptorPreview_type{py::register_python_type(module.get(), &type_spec_ILearningModelVariableDescriptorPreview, object_bases.get(), nullptr)};
+    if (!ILearningModelVariableDescriptorPreview_type)
     {
         return nullptr;
     }
