@@ -385,3 +385,69 @@ winrt::Windows::Foundation::DateTime py::convert_to_datetime(PyObject* obj)
 
     return value;
 }
+
+PyObject* py::convert_guid(winrt::guid value) noexcept
+{
+    pyobj_handle valueAsBytes{PyBytes_FromStringAndSize((char*)&value, sizeof(value))};
+    if (!valueAsBytes)
+    {
+        return nullptr;
+    }
+    pyobj_handle uuidModule{PyImport_ImportModule("uuid")};
+    if (!uuidModule)
+    {
+        return nullptr;
+    }
+    pyobj_handle uuidClass{PyObject_GetAttrString(uuidModule.get(), "UUID")};
+    if (!uuidClass)
+    {
+        return nullptr;
+    }
+    pyobj_handle args{PyTuple_New(0)};
+    if (!args)
+    {
+        return nullptr;
+    }
+    pyobj_handle kwargs{PyDict_New()};
+    if (!kwargs)
+    {
+        return nullptr;
+    }
+
+    auto result = PyDict_SetItemString(kwargs.get(), "bytes_le", valueAsBytes.get());
+    if (result == -1)
+    {
+        return nullptr;
+    }
+
+    return PyObject_Call(uuidClass.get(), args.get(), kwargs.get());
+}
+
+winrt::guid py::convert_to_guid(PyObject* obj)
+{
+    throw_if_pyobj_null(obj);
+
+    pyobj_handle bytes{PyObject_GetAttrString(obj, "bytes_le")};
+    if (!bytes)
+    {
+        throw python_exception();
+    }
+
+    winrt::guid result;
+    char* buffer;
+    Py_ssize_t size;
+    if (PyBytes_AsStringAndSize(bytes.get(), &buffer, &size) == -1)
+    {
+        throw python_exception();
+    }
+
+    if (size != sizeof(result))
+    {
+        PyErr_SetString(PyExc_ValueError, "bytes_le is wrong size");
+        throw python_exception();
+    }
+
+    memcpy(&result, buffer, size);
+
+    return result;
+}

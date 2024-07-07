@@ -228,6 +228,8 @@ namespace py::cpp::_winrt
         .is_buffer_compatible = py::is_buffer_compatible,
         .convert_datetime = py::convert_datetime,
         .convert_to_datetime = py::convert_to_datetime,
+        .convert_guid = py::convert_guid,
+        .convert_to_guid = py::convert_to_guid,
         .get_object_type = py::get_object_type,
         .array_new = py::cpp::_winrt::Array_New,
         .array_assign = &py::cpp::_winrt::Array_Assign,

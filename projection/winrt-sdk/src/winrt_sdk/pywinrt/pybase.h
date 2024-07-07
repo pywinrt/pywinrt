@@ -387,6 +387,8 @@ namespace py
         Py_buffer const& view, Py_ssize_t itemsize, const char* format) noexcept;
     PyObject* convert_datetime(winrt::Windows::Foundation::DateTime value) noexcept;
     winrt::Windows::Foundation::DateTime convert_to_datetime(PyObject* obj);
+    PyObject* convert_guid(winrt::guid value) noexcept;
+    winrt::guid convert_to_guid(PyObject* obj);
     PyTypeObject* get_object_type() noexcept;
 
     struct runtime_api
@@ -399,6 +401,8 @@ namespace py
         decltype(is_buffer_compatible)* is_buffer_compatible;
         decltype(convert_datetime)* convert_datetime;
         decltype(convert_to_datetime)* convert_to_datetime;
+        decltype(convert_guid)* convert_guid;
+        decltype(convert_to_guid)* convert_to_guid;
         decltype(get_object_type)* get_object_type;
         decltype(cpp::_winrt::Array_New)* array_new;
         decltype(cpp::_winrt::Array_Assign)* array_assign;
@@ -488,6 +492,18 @@ namespace py
     {
         WINRT_ASSERT(PyWinRT_API && PyWinRT_API->convert_to_datetime);
         return (*PyWinRT_API->convert_to_datetime)(obj);
+    }
+
+    inline PyObject* convert_guid(winrt::guid value) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->convert_guid);
+        return (*PyWinRT_API->convert_guid)(value);
+    }
+
+    inline winrt::guid convert_to_guid(PyObject* obj)
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->convert_to_guid);
+        return (*PyWinRT_API->convert_to_guid)(obj);
     }
 
     inline PyTypeObject* get_object_type() noexcept
@@ -1205,70 +1221,12 @@ namespace py
     {
         static PyObject* convert(winrt::guid value) noexcept
         {
-            pyobj_handle valueAsBytes{
-                PyBytes_FromStringAndSize((char*)&value, sizeof(value))};
-            if (!valueAsBytes)
-            {
-                return nullptr;
-            }
-            pyobj_handle uuidModule{PyImport_ImportModule("uuid")};
-            if (!uuidModule)
-            {
-                return nullptr;
-            }
-            pyobj_handle uuidClass{PyObject_GetAttrString(uuidModule.get(), "UUID")};
-            if (!uuidClass)
-            {
-                return nullptr;
-            }
-            pyobj_handle args{PyTuple_New(0)};
-            if (!args)
-            {
-                return nullptr;
-            }
-            pyobj_handle kwargs{PyDict_New()};
-            if (!kwargs)
-            {
-                return nullptr;
-            }
-
-            auto result
-                = PyDict_SetItemString(kwargs.get(), "bytes_le", valueAsBytes.get());
-            if (result == -1)
-            {
-                return nullptr;
-            }
-
-            return PyObject_Call(uuidClass.get(), args.get(), kwargs.get());
+            return convert_guid(value);
         }
 
         static winrt::guid convert_to(PyObject* obj)
         {
-            throw_if_pyobj_null(obj);
-
-            pyobj_handle bytes{PyObject_GetAttrString(obj, "bytes_le")};
-            if (!bytes)
-            {
-                throw python_exception();
-            }
-
-            winrt::guid result;
-            char* buffer;
-            Py_ssize_t size;
-            if (PyBytes_AsStringAndSize(bytes.get(), &buffer, &size) == -1)
-            {
-                throw python_exception();
-            }
-
-            if (size != sizeof(result))
-            {
-                PyErr_SetString(PyExc_ValueError, "bytes_le is wrong size");
-                throw python_exception();
-            }
-
-            memcpy(&result, buffer, size);
-
-            return result;
+            return convert_to_guid(obj);
         }
     };
 
